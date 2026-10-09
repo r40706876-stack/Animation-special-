@@ -8,9 +8,9 @@ import urllib.parse
 import requests
 from PIL import Image, ImageDraw, ImageFilter
 
-STYLE = (", flat 2D vector cartoon illustration, Indian devotional storybook art, warm soft colours, "
-         "clean shapes, vertical 9:16 composition, empty foreground ground area at the bottom, "
-         "no people, no animals, no text, no watermark")
+STYLE = (", completely empty scene with nobody in it, flat 2D vector cartoon background, Indian setting, "
+         "soft warm colours, clean simple shapes, vertical 9:16, wide empty floor or ground in the lower half, "
+         "no people, no person, no silhouettes, no crowd, no animals, no horses, no characters, no text, no watermark")
 
 URL = "https://image.pollinations.ai/prompt/{p}?width=1080&height=1920&nologo=true&seed={seed}&model=flux"
 

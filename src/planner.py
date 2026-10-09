@@ -97,10 +97,10 @@ def _call_one(model, body):
     return text, None
 
 
-def _gemini(prompt, json_mode=False, temperature=0.8):
+def _gemini(prompt, json_mode=False, temperature=0.8, extra_parts=None):
     global _working
     body = {
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "contents": [{"role": "user", "parts": list(extra_parts or []) + [{"text": prompt}]}],
         "generationConfig": {"temperature": temperature},
     }
     if json_mode:
@@ -129,12 +129,26 @@ def _gemini(prompt, json_mode=False, temperature=0.8):
 
 
 # ---------------------------------------------------------------- plan
-PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi audio (kahani, katha, itihaas ya jaankari) ka transcript hai,
+PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi audio ka transcript hai,
 har line ke aage uska start time (seconds) hai. Is audio ke upar 9:16 vertical 2D cartoon animation banana hai.
 Jo shabd bola ja raha ho, wahi screen par dikhna chahiye.
 
+AUDIO KYA HAI: {kind}
+KYA HO RAHA HAI: {summary}
+KAUN BOL RAHA HAI: {speakers}
+
 TRANSCRIPT (total {dur:.1f} seconds):
 {lines}
+
+SABSE ZAROORI NIYAM:
+- Sirf wahi dikhao jo transcript mein sach mein bola gaya hai. Apni taraf se koi kahani, yuddh, raja, bhagwan
+  ya naya vishay mat jodo. Agar koi shabd sirf misaal ya mazaak mein aaya hai, to use mazaak ki tarah hi dikhao.
+- Audio ke type ke hisaab se dikhao:
+  * stand-up comedy: ek comedian (mic ke saath) stage par, peeche spotlight. Jab wo kisi cheez/insaan ki baat kare
+    (biwi, boss, padosi, dost...), to wo character usi scene mein aaye aur joke wala kaam karta dikhe. Mazedaar emote use karo.
+  * comedy sketch: jo log baat kar rahe hain wahi characters, rozmarra ki jagah (ghar, office, dukaan, gali).
+  * katha/kahani: kahani ke log aur jagah.
+  * jaankari/itihaas: jis cheez ki baat ho rahi hai wahi cheez aur ek samjhane wala character.
 
 Sirf JSON lauto, is format mein:
 {{
@@ -156,7 +170,7 @@ Sirf JSON lauto, is format mein:
 }}
 
 NIYAM:
-- backgrounds: 2 se 5. Har prompt mein sirf jagah ho, jo kahani ke samay aur jagah se mel khaaye (gaon, khet, jungle, mandir, purana shehar, factory, raat...). Koi insaan/janwar nahi.
+- backgrounds: 2 se 5. Har prompt mein sirf KHAALI jagah ho jo audio se mel khaaye (comedy stage with spotlight, ghar ka kamra, office, gali, gaon, mandir...). Prompt mein "empty, nobody" likho; koi insaan, janwar, parchhaai, bheed nahi.
 - characters: kahani ke saare zaroori log, janwar aur khaas cheezein (jaise khichdi ki katori, deepak, machine, aujaar). 2 se 8. id chhote english shabd.
 - scenes: har 3-7 second par naya scene, jab kahani mein kuch naya ho. start time transcript ke time se milao. Pehla scene 0.0 se.
 - Har scene mein 1-4 actors. x = 0.1 se 0.9 (screen ki chaudai ka hissa, actor ka beech). y = pairon ki line (0.75-0.88 zameen; aasmaan wali cheez 0.4-0.6). size = screen ki oonchai ka hissa (insaan 0.30-0.42, janwar 0.15-0.25, cheez 0.06-0.12, rakshas/bhagwan 0.5-0.65).
@@ -287,9 +301,13 @@ def make_character_svgs(characters):
     return characters
 
 
-def make_plan(words, duration):
+def make_plan(words, duration, info=None):
+    info = info or {}
     lines = _transcript_lines(words)
     prompt = PLAN_PROMPT.format(
+        kind=info.get("type") or "pata nahi (transcript se samjho)",
+        summary=info.get("summary") or "transcript se samjho",
+        speakers=info.get("speakers") or "transcript se samjho",
         dur=duration, lines=lines,
         enters="|".join(ENTERS), exits="|".join(EXITS),
         actions="|".join(ACTIONS), emotes="|".join(EMOTES),
@@ -377,3 +395,71 @@ def correct_words(words):
         out.extend(_retime(line, new_words))
     print(f"[fix] {changed} shabd sudhaare")
     return out
+
+
+# ---------------------------------------------------------------- character jaanch
+MEASURE_JS = """(svgText) => {
+  const box = document.createElement('div');
+  box.style.cssText = 'width:200px;height:300px;position:absolute;left:0;top:0';
+  box.innerHTML = svgText;
+  document.body.appendChild(box);
+  const svg = box.querySelector('svg');
+  if (!svg) { box.remove(); return null; }
+  let bb = null;
+  try { const b = svg.getBBox(); bb = {x: b.x, y: b.y, w: b.width, h: b.height}; } catch (e) {}
+  const shapes = svg.querySelectorAll('path,rect,circle,ellipse,polygon,polyline,line').length;
+  box.remove();
+  return {bb, shapes};
+}"""
+
+
+def _fit_svg(svg, bb):
+    """viewBox ko asli drawing ke hisaab se set karo, taaki character box mein poora bhare aur pair neeche hon."""
+    pad = max(bb["w"], bb["h"]) * 0.04
+    vb = f'{bb["x"] - pad:.1f} {bb["y"] - pad:.1f} {bb["w"] + 2 * pad:.1f} {bb["h"] + 2 * pad:.1f}'
+    head_end = svg.index(">")
+    head = svg[:head_end]
+    head = re.sub(r'\s(viewBox|width|height|preserveAspectRatio)\s*=\s*("[^"]*"|\'[^\']*\')', "", head)
+    head += f' viewBox="{vb}" preserveAspectRatio="xMidYMax meet"'
+    return head + svg[head_end:]
+
+
+def _measure_all(svgs):
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        page = b.new_page()
+        page.set_content("<html><body></body></html>")
+        res = [page.evaluate(MEASURE_JS, s) for s in svgs]
+        b.close()
+    return res
+
+
+def _is_bad(m):
+    """Khaali, bahut kam shapes, ya box (200x300) ke chauthai se bhi chhota tukda = toota."""
+    if not m or not m.get("bb") or m.get("shapes", 0) < 6:
+        return True
+    w, h = m["bb"]["w"], m["bb"]["h"]
+    return (w < 50 and h < 75) or w < 10 or h < 10
+
+
+def check_characters(characters):
+    """Toote/chhote/khaali SVG dobara banwao, aur sabko box mein fit karo."""
+    for round_no in range(2):
+        ms = _measure_all([c["svg"] for c in characters])
+        bad = [c for c, m in zip(characters, ms) if _is_bad(m)]
+        if not bad or round_no == 1:
+            break
+        print(f"[svg] toote characters dobara: {[c['id'] for c in bad]}")
+        for c in bad:
+            c.pop("svg", None)
+        make_character_svgs(bad)
+    ms = _measure_all([c["svg"] for c in characters])
+    for i, (c, m) in enumerate(zip(characters, ms)):
+        if _is_bad(m):
+            print(f"[svg] {c['id']} ab bhi toota -> simple character")
+            c["svg"] = FALLBACK_SVG.format(skin="#c68a5a", cloth=_FALLBACK_COLORS[i % len(_FALLBACK_COLORS)])
+            continue
+        c["svg"] = _fit_svg(c["svg"], m["bb"])
+        print(f"[svg] {c['id']} ok ({m['shapes']} shapes, size {m['bb']['w']:.0f}x{m['bb']['h']:.0f})")
+    return characters

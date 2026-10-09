@@ -12,8 +12,9 @@ def transcribe(audio_path):
         str(audio_path),
         language="hi",
         word_timestamps=True,
-        vad_filter=True,
-        initial_prompt="यह एक हिंदी धार्मिक कथा है। भगवान, संत, राजा, गाँव की कहानी।",
+        vad_filter=False,  # music ke saath VAD boli kaat deta hai
+        condition_on_previous_text=False,
+        initial_prompt="यह हिंदी में बोली गई बात है।",
     )
     words = []
     for seg in segments:
