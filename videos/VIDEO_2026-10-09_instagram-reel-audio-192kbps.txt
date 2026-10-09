@@ -1,0 +1,39 @@
+TITLE: अरुणाचल का करारा जवाब
+TYPE: stand-up comedy
+SUMMARY: इस स्टैंड-अप कॉमेडी क्लिप में, कॉमेडियन अरुणाचल प्रदेश की एक दर्शक से बातचीत कर रहा है। वह लड़की कॉमेडियन की मज़ाकिया अंदाज़ में बेइज़्ज़ती करती है, जिससे पूरी ऑडियंस हँस पड़ती है।
+SPEAKERS: एक कॉमेडियन स्टेज पर और एक लड़की ऑडियंस में से
+
+=== SUBTITLE (jo suna gaya) ===
+[  0.0] क्या बोलते हैं अरुणाचल में मेरे बारे में
+[  1.4] लोग नहीं बोलते हैं पता नहीं नहीं हो
+[  7.4] सकता है आपके फ्रेंड सर्कल में नहीं हो
+[  9.5] ऐसा कुछ मैं शो डालूँगा अरुणाचल में अभी
+[ 10.8] दिखाऊँगा सोल्ड आउट करूँगा वहाँ पे मैं वो
+[ 12.2] मतलब पता नहीं आपका जोक फिर वो लोग
+[ 14.6] को समझ में आएगा कि नहीं दिल से
+[ 19.5] करी बेइज़्ज़ती है भाई इसको इसको भी मारो
+[ 23.0] इसको भी कुछ बोलो मतलब आप जो क्या
+[ 25.1] क्या जानना मतलब क्या बोल रहे हो अरे
+[ 26.9] इसको गंदा बोलो कुछ मेरे को बोल रहे
+[ 29.2] हो ना तब से इसको भी बोलो ना
+[ 30.8] कुछ नहीं वो जो डिज़र्व करते हैं उसको
+[ 33.3] ही बोलते हैं
+
+=== SCENES (jo dikhaya gaya) ===
+[  0.0-  3.1] bg=bg_stage | comedian(talk)
+[  3.1-  7.0] bg=bg_audience | girl(talk)
+[  7.0- 10.0] bg=bg_stage | comedian(talk)
+[ 10.0- 11.9] bg=bg_stage | comedian(talk)
+[ 11.9- 19.0] bg=bg_audience | girl(talk)
+[ 19.0- 23.5] bg=bg_stage | comedian(shake)
+[ 23.5- 26.6] bg=bg_audience | girl(talk)
+[ 26.6- 32.7] bg=bg_stage | comedian(talk)
+[ 32.7- 45.7] bg=bg_audience | girl(talk)
+
+=== CHARACTERS ===
+comedian: A young Indian male stand-up comedian in his mid-20s, wearing a black casual t-shirt, a stylish blue denim jacket, and jeans, holding a microphone, expressive face
+girl: A young, smart North-East Indian girl in her early 20s, wearing a trendy pastel green hoodie, with a confident and mischievous smile
+
+=== BACKGROUNDS ===
+bg_stage: An empty dark stand-up comedy stage with a single bright spotlight shining down, a classic brick wall in the background, vertical 9:16 aspect ratio, no people
+bg_audience: An empty, dimly lit comedy club audience seating area with cozy red theater seats, vertical 9:16 aspect ratio, no people
