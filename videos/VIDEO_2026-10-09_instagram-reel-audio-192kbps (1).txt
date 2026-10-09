@@ -1,0 +1,28 @@
+TITLE: भगवान की स्टोरी और पाप
+TYPE: comedy sketch
+SUMMARY: एक व्यक्ति सोशल मीडिया पर भगवान की स्टोरी लगाने वाले लोगों पर मजाकिया अंदाज में तंज कस रहा है कि इससे उनके पाप कम नहीं होंगे।
+SPEAKERS: एक पुरुष
+
+=== SUBTITLE (jo suna gaya) ===
+[  0.0] अरे तू क्या सोच रहा है ये जो
+[  1.9] तू भगवान की स्टोरी लगा देगा तो तेरे
+[  3.5] पाप कम हो जाएंगे क्या अबे साले पापी
+[  5.6] इंसान इतने गंदे गंदे तू पाप करता है
+[  8.3] तू भाई सुधर जा भाई साले नरक में
+[ 10.7] ना तेरी फील्डिंग सेट है मैं बता रहा
+[ 12.3] हूं
+
+=== SCENES (jo dikhaya gaya) ===
+[  0.0-  2.7] bg=bg_room | roaster(talk), dost(idle)
+[  2.7-  5.6] bg=bg_room | roaster(talk), dost(shake)
+[  5.6-  9.7] bg=bg_room | roaster(talk), dost(shake)
+[  9.7- 13.0] bg=bg_hell | dost(shake), yamdoot(talk)
+
+=== CHARACTERS ===
+roaster: Young Indian guy, expressive cartoon style, wearing yellow graphic t-shirt and blue jeans, spiky black hair, comedic sarcastic expressions
+dost: Chubby young Indian guy holding a glowing smartphone, wearing green hoodie and trackpants, sheepish nervous guilty expression
+yamdoot: Chubby comical red-skinned underworld guard with small bull horns, wearing dhoti and holding a cricket bat and trident, grinning slyly
+
+=== BACKGROUNDS ===
+bg_room: Cozy modern bachelor bedroom, vibrant 2D cartoon illustration, wooden floor, colourful poster walls, beanbag, sofa, empty room, nobody
+bg_hell: Comical cartoon underworld hell, fiery lava cracks, red rocks, glowing embers, comical cricket pitch boundary flags, empty, nobody
