@@ -1,28 +1,27 @@
-TITLE: भगवान की स्टोरी और पाप
+TITLE: पाप और भगवान की स्टोरी
 TYPE: comedy sketch
-SUMMARY: एक व्यक्ति सोशल मीडिया पर भगवान की स्टोरी लगाने वाले लोगों पर मजाकिया अंदाज में तंज कस रहा है कि इससे उनके पाप कम नहीं होंगे।
-SPEAKERS: एक पुरुष
+SUMMARY: एक व्यक्ति मज़ाकिया लहज़े में अपने दोस्त को कह रहा है कि सोशल मीडिया पर भगवान की स्टोरी लगाने से पाप कम नहीं होंगे। माहौल अनौपचारिक और मज़ाकिया है।
+SPEAKERS: एक पुरुष बोल रहा है
 
 === SUBTITLE (jo suna gaya) ===
 [  0.0] अरे तू क्या सोच रहा है ये जो
-[  1.9] तू भगवान की स्टोरी लगा देगा तो तेरे
-[  3.5] पाप कम हो जाएंगे क्या अबे साले पापी
-[  5.6] इंसान इतने गंदे गंदे तू पाप करता है
-[  8.3] तू भाई सुधर जा भाई साले नरक में
-[ 10.7] ना तेरी फील्डिंग सेट है मैं बता रहा
-[ 12.3] हूं
+[  2.3] तू भगवान की स्टोरी लगा देगा तो तेरे
+[  4.6] पाप कम हो जाएंगे क्या अबे साले पापी
+[  6.9] इंसान इतने गंदे गंदे तू पाप करता है
+[  9.4] तू भाई सुधर जा भाई साले नर्क में
+[ 11.2] ना तेरी फील्डिंग सेट है मैं बता रहा
+[ 12.4] हूँ
 
 === SCENES (jo dikhaya gaya) ===
-[  0.0-  2.7] bg=bg_room | roaster(talk), dost(idle)
-[  2.7-  5.6] bg=bg_room | roaster(talk), dost(shake)
-[  5.6-  9.7] bg=bg_room | roaster(talk), dost(shake)
-[  9.7- 13.0] bg=bg_hell | dost(shake), yamdoot(talk)
+[  0.0-  3.5] bg=bg_room | roaster(talk), friend(idle)
+[  3.5-  6.9] bg=bg_room | roaster(shake), friend(idle)
+[  6.9- 10.5] bg=bg_room | roaster(talk), friend(jump)
+[ 10.5- 13.0] bg=bg_hell | roaster(talk), friend(shake)
 
 === CHARACTERS ===
-roaster: Young Indian guy, expressive cartoon style, wearing yellow graphic t-shirt and blue jeans, spiky black hair, comedic sarcastic expressions
-dost: Chubby young Indian guy holding a glowing smartphone, wearing green hoodie and trackpants, sheepish nervous guilty expression
-yamdoot: Chubby comical red-skinned underworld guard with small bull horns, wearing dhoti and holding a cricket bat and trident, grinning slyly
+roaster: Young Indian guy in his early 20s, bright yellow casual graphic t-shirt, blue denim jeans, expressive animated face, stylish messy hair, 2d cartoon illustration
+friend: Young Indian guy in his early 20s, grey hoodie, holding a black smartphone in hand, sheepish guilty expression, sneakers, 2d cartoon illustration
 
 === BACKGROUNDS ===
-bg_room: Cozy modern bachelor bedroom, vibrant 2D cartoon illustration, wooden floor, colourful poster walls, beanbag, sofa, empty room, nobody
-bg_hell: Comical cartoon underworld hell, fiery lava cracks, red rocks, glowing embers, comical cricket pitch boundary flags, empty, nobody
+bg_room: Interior of a modern messy bachelor apartment living room, cozy sofa, snack table, gaming posters on the wall, bright warm lighting, 2d cartoon animation style, no people, empty scene
+bg_hell: Funny comical cartoon underworld hell, bubbling fiery lava pit with smoke clouds, dramatic red and orange rocks, humorous fantasy setting, 2d cartoon animation style, no people, empty scene
