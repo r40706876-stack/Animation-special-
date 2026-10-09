@@ -75,9 +75,12 @@ def _fallback(prompt, seed):
 def get_backgrounds(plan, workdir):
     workdir.mkdir(parents=True, exist_ok=True)
     out = {}
+    pollinations_ok = True
     for bg in plan["backgrounds"]:
         seed = int(hashlib.md5(bg["prompt"].encode()).hexdigest()[:6], 16)
-        img = _pollinations(bg["prompt"], seed)
+        img = _pollinations(bg["prompt"], seed) if pollinations_ok else None
+        if img is None:
+            pollinations_ok = False  # ek baar fail = baaki ke liye seedha backup
         if img is None:
             print(f"[bg] {bg['id']} -> fallback gradient")
             img = _fallback(bg["prompt"], seed)

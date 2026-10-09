@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 90
     env:
       WHISPER_MODEL: small          # behtar hindi chahiye to: medium (dheema)
-      GEMINI_MODEL: gemini-2.5-flash
+      GEMINI_MODEL: ""             # khaali = code khud sabse naya free model chunega
       FPS: "24"
     steps:
       - uses: actions/checkout@v4

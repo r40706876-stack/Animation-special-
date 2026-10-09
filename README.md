@@ -33,7 +33,7 @@ naye characters, background, aur shabd-dar-shabd Hindi subtitles ke saath.
 | Setting | Matlab |
 |---|---|
 | `WHISPER_MODEL: small` | Subtitle ki shuddhta. `medium` = zyada sahi, par dheema |
-| `GEMINI_MODEL` | Agar Google naya free model laaye to naam yahan badlo |
+| `GEMINI_MODEL` | Khaali chhodo, code khud model chunta hai. Koi khaas model chahiye to uska naam likho |
 | `FPS: "24"` | Smoothness. `30` = zyada smooth, render dheema |
 | `cron` | Roz ka time (UTC mein). `22 3 * * *` = 8:52 IST |
 

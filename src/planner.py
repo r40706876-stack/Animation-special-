@@ -7,7 +7,8 @@ import xml.etree.ElementTree as ET
 
 import requests
 
-API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+BASE = "https://generativelanguage.googleapis.com/v1beta"
+API = BASE + "/models/{model}:generateContent"
 
 ACTIONS = ["idle", "talk", "walk", "jump", "shake", "glow", "bow", "eat", "rise", "sit"]
 ENTERS = ["none", "left", "right", "pop", "fade", "top"]
@@ -16,34 +17,115 @@ EMOTES = ["none", "heart", "sparkle", "surprise", "anger", "sweat", "tears", "qu
 
 
 # ---------------------------------------------------------------- Gemini call
-def _gemini(prompt, json_mode=False, temperature=0.8):
-    key = os.environ.get("GEMINI_API_KEY")
+SKIP_WORDS = ("tts", "audio", "image", "live", "embed", "robotic", "computer", "vision", "aqa", "learnlm", "gemma", "omni")
+_models_cache = None
+_working = None  # jo model chal gaya, aage wahi use hoga
+
+
+def _key():
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not key:
         raise SystemExit("GEMINI_API_KEY nahi mila. GitHub repo Settings > Secrets mein daalo.")
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    return key
+
+
+def _rank(name):
+    """Naya Flash pehle, phir Pro, phir Lite; preview/exp sabse peeche."""
+    n = name.lower()
+    ver = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+    v = float(ver.group(1)) if ver else 0.0
+    if "flash" in n and "lite" not in n:
+        tier = 0
+    elif "pro" in n:
+        tier = 1
+    elif "lite" in n:
+        tier = 2
+    else:
+        tier = 3
+    unstable = 1 if ("preview" in n or "exp" in n) else 0
+    return (unstable, tier, -v, n)
+
+
+def candidate_models():
+    """Aapki key par jo models generateContent kar sakte hain, unki list (best pehle)."""
+    global _models_cache
+    if _models_cache is not None:
+        return _models_cache
+    names = []
+    try:
+        r = requests.get(f"{BASE}/models", params={"key": _key(), "pageSize": 1000}, timeout=60)
+        r.raise_for_status()
+        for m in r.json().get("models", []):
+            name = m.get("name", "").replace("models/", "")
+            if "generateContent" not in m.get("supportedGenerationMethods", []):
+                continue
+            if not name.startswith("gemini") or any(w in name.lower() for w in SKIP_WORDS):
+                continue
+            names.append(name)
+    except (requests.RequestException, ValueError) as e:
+        print(f"[gemini] model list nahi mili ({e}), default naam try karenge")
+    names = sorted(set(names), key=_rank)
+    for fallback in ("gemini-flash-latest", "gemini-2.5-flash", "gemini-2.0-flash"):
+        if fallback not in names:
+            names.append(fallback)
+    pinned = os.getenv("GEMINI_MODEL", "").strip()
+    if pinned:
+        names = [pinned] + [n for n in names if n != pinned]
+    _models_cache = names
+    print(f"[gemini] models (pehle 6): {names[:6]}")
+    return names
+
+
+def _call_one(model, body):
+    """Ek model par call. Lautata hai (text, None) ya (None, 'skip'/'retry' + reason)."""
+    try:
+        r = requests.post(API.format(model=model), params={"key": _key()}, json=body, timeout=240)
+    except requests.RequestException as e:
+        return None, ("retry", str(e))
+    if r.status_code in (400, 403, 404):
+        return None, ("skip", f"HTTP {r.status_code}: {r.text[:200]}")
+    if r.status_code == 429 or r.status_code >= 500:
+        return None, ("retry", f"HTTP {r.status_code}: {r.text[:200]}")
+    try:
+        data = r.json()
+        parts = data["candidates"][0]["content"]["parts"]
+        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
+    except (ValueError, KeyError, IndexError):
+        return None, ("retry", f"khaali jawab: {r.text[:200]}")
+    if not text.strip():
+        return None, ("retry", "khaali jawab")
+    return text, None
+
+
+def _gemini(prompt, json_mode=False, temperature=0.8):
+    global _working
     body = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": temperature},
     }
     if json_mode:
         body["generationConfig"]["responseMimeType"] = "application/json"
-    last = None
-    for attempt in range(5):
-        try:
-            r = requests.post(API.format(model=model), params={"key": key}, json=body, timeout=180)
-            if r.status_code == 429 or r.status_code >= 500:
-                last = f"HTTP {r.status_code}: {r.text[:200]}"
-                wait = 20 * (attempt + 1)
-                print(f"[gemini] {last} -> {wait}s ruk ke dobara")
-                time.sleep(wait)
-                continue
-            r.raise_for_status()
-            data = r.json()
-            return "".join(p.get("text", "") for p in data["candidates"][0]["content"]["parts"])
-        except (requests.RequestException, KeyError, IndexError) as e:
-            last = str(e)
-            time.sleep(10 * (attempt + 1))
-    raise RuntimeError(f"Gemini fail: {last}")
+    models = candidate_models()
+    if _working in models:
+        models = [_working] + [m for m in models if m != _working]
+    errors = []
+    for model in models[:8]:
+        for attempt in range(3):
+            text, err = _call_one(model, body)
+            if text is not None:
+                if _working != model:
+                    print(f"[gemini] model chal gaya: {model}")
+                _working = model
+                return text
+            kind, msg = err
+            errors.append(f"{model}: {msg}")
+            if kind == "skip":
+                print(f"[gemini] {model} nahi chala ({msg[:80]}) -> agla model")
+                break
+            wait = 15 * (attempt + 1)
+            print(f"[gemini] {model} busy ({msg[:80]}) -> {wait}s ruk ke dobara")
+            time.sleep(wait)
+    raise RuntimeError("Koi Gemini model nahi chala:\n" + "\n".join(errors[-6:]))
 
 
 # ---------------------------------------------------------------- plan
