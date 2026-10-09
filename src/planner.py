@@ -20,8 +20,7 @@ _working = None
 
 def _key():
     key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not key:
-        raise SystemExit("GEMINI_API_KEY nahi mila. GitHub repo Settings > Secrets mein daalo.")
+    if not key: raise SystemExit("GEMINI_API_KEY nahi mila.")
     return key
 
 def _rank(name):
@@ -47,8 +46,7 @@ def candidate_models():
             if "generateContent" not in m.get("supportedGenerationMethods", []): continue
             if not name.startswith("gemini") or any(w in name.lower() for w in SKIP_WORDS): continue
             names.append(name)
-    except Exception as e:
-        print(f"[gemini] model list nahi mili ({e})")
+    except Exception as e: print(f"[gemini] model list fail: {e}")
     names = sorted(set(names), key=_rank)
     for fallback in ("gemini-flash-latest", "gemini-2.5-flash", "gemini-2.0-flash"):
         if fallback not in names: names.append(fallback)
@@ -60,16 +58,14 @@ def candidate_models():
 def _call_one(model, body):
     try:
         r = requests.post(API.format(model=model), params={"key": _key()}, json=body, timeout=240)
-    except requests.RequestException as e:
-        return None, ("retry", str(e))
+    except requests.RequestException as e: return None, ("retry", str(e))
     if r.status_code in (400, 403, 404): return None, ("skip", f"HTTP {r.status_code}")
     if r.status_code == 429 or r.status_code >= 500: return None, ("retry", f"HTTP {r.status_code}")
     try:
         data = r.json()
         parts = data["candidates"][0]["content"]["parts"]
         text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
-    except Exception:
-        return None, ("retry", "khaali jawab")
+    except Exception: return None, ("retry", "khaali jawab")
     if not text.strip(): return None, ("retry", "khaali jawab")
     return text, None
 
@@ -105,20 +101,20 @@ KAUN BOL RAHA HAI: {speakers}
 TRANSCRIPT (total {dur:.1f} seconds):
 {lines}
 
-SABSE ZAROORI NIYAM:
-- Sirf wahi dikhao jo transcript mein bola gaya hai.
-- Audio ke mahaul (comedy, office, katha, gaon) ke hisaab se scene aur log dikhao.
-- characters: Kahani ke mutabik log. Agar audio modern (comedy/office) hai, to 'look' mein modern kapde (jeans, t-shirt, suit) likho. Agar bhagwan/itihas ki katha hai, tabhi dharmik kapde likho.
+SABSE ZAROORI NIYAM (ENGAGING VIDEO KE LIYE):
+1. Sirf wahi dikhao jo transcript mein sach mein bola gaya hai.
+2. CONVERSATION LOGIC: Jo character bol raha hai, SIRF uska action 'talk' rakho. Jo sun raha hai, uska action 'idle' rakho.
+3. NAYA SCENE: Jab koi naya insaan bolna shuru kare, toh naya scene banao taaki camera us par focus kare.
+4. LOOK & MAHAUL: Agar audio comedy ya office ka hai, toh look mein "modern casual wear, jeans, t-shirt" likho.
 
 Sirf JSON lauto, is format mein:
 {{
-  "title": "<3-6 shabd ka aakarshak Hindi title>",
+  "title": "<3-6 shabd ka title>",
   "backgrounds": [
-    {{"id": "bg1", "prompt": "<ENGLISH description of an empty scene, no people, no animals, no text>"}}
+    {{"id": "bg1", "prompt": "<ENGLISH description>"}}
   ],
   "characters": [
-    {{"id": "bhola", "kind": "person|animal|god|demon|object",
-      "look": "<ENGLISH visual description: age, clothes, colours, key features>"}}
+    {{"id": "bhola", "kind": "person", "look": "<ENGLISH visual description>"}}
   ],
   "scenes": [
     {{"start": 0.0, "bg": "bg1",
@@ -130,7 +126,7 @@ Sirf JSON lauto, is format mein:
 }}
 
 NIYAM:
-- backgrounds: 2 se 5. Har prompt mein sirf KHAALI jagah ho.
+- backgrounds: Har prompt ke aage "High quality, 4k, vibrant colors, beautiful detailed 2D vector art, empty background" ZAROOR likhein.
 - Har scene mein 1-4 actors. x = 0.1 se 0.9. y = 0.75-0.88. size = 0.30-0.42.
 - enter: {enters}. exit: {exits}. action: {actions}. emote: {emotes}.
 """
@@ -175,31 +171,34 @@ def _clean_plan(plan, duration):
     return plan
 
 SVG_PROMPT = """Ek single SVG banao: {kind} character for a 2D cartoon animation.
-Story Context / Mahaul: {context}
+Story Context: {context}
 Look: {look}
 
-ZAROORI:
+ZAROORI NIYAM (ANIMATION KE LIYE):
 - <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300"> ... </svg>
-- Pura shareer (full body) dikhe, side-3/4 view, chehra DAAYEIN (right) taraf. Pair bilkul neeche y=300 ko chhuen.{obj_note}
-- Har character ki ek moti GARDAN (neck) zaroor banayein jo sir aur dhar (torso) ko aapas mein jode. Sir hawa mein nahi tairna chahiye.
-- Haath aur pair (limbs) patli line (stroke) ki jagah proper moti shapes (filled paths) hone chahiye.
-- Flat 2D vector cartoon style: saaf moti shapes, garam rang, halki shading (ek gehra shade).
-- Background transparent (koi rect background nahi). Koi text, <image>, <script> nahi.
+- Pura shareer dikhe, side-3/4 view, chehra DAAYEIN (right) taraf. Pair y=300 ko chhuen.{obj_note}
+- Ek moti GARDAN (neck) zaroor banayein jo sir aur dhar ko jode.
+- **LIP-SYNC & BLINKING:** Aankhon wale hisse ko ZAROOR id="eyes" dein. Muh wale hisse ko ZAROOR id="mouth" dein. Ye animation ke liye zaroori hai.
+- **GESTURE:** Ek aage wale haath ko ZAROOR id="arm" dein taaki use hilaaya ja sake.
+- Flat 2D vector cartoon style: saaf moti shapes.
+- Background transparent. Koi text, image, script nahi.
 - Kam se kam 25 shapes.
-Sirf SVG code lautao, aur kuch nahi."""
+Sirf SVG code lautao."""
 
+# Fallback SVG me ab eyes, mouth aur arm ki IDs mojud hain (Crash-proof)
 FALLBACK_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
 <ellipse cx="100" cy="292" rx="46" ry="7" fill="#000" opacity=".15"/>
 <rect x="78" y="215" width="18" height="78" rx="8" fill="{skin}"/><rect x="104" y="215" width="18" height="78" rx="8" fill="{skin}"/>
 <path d="M60 120 Q100 100 140 120 L150 230 L50 230 Z" fill="{cloth}"/>
 <rect x="94" y="85" width="12" height="20" fill="{skin}"/>
-<path d="M62 125 Q40 170 56 205" stroke="{skin}" stroke-width="16" fill="none" stroke-linecap="round"/>
+<path id="arm" d="M62 125 Q40 170 56 205" stroke="{skin}" stroke-width="16" fill="none" stroke-linecap="round"/>
 <path d="M138 125 Q160 170 146 205" stroke="{skin}" stroke-width="16" fill="none" stroke-linecap="round"/>
 <rect x="90" y="96" width="20" height="20" fill="{skin}"/>
 <circle cx="104" cy="70" r="36" fill="{skin}"/>
-<path d="M68 62 Q100 20 140 62 Q104 46 68 62Z" fill="#2b1a0e"/>
-<circle cx="116" cy="70" r="4.5" fill="#2b1a0e"/><circle cx="96" cy="70" r="4.5" fill="#2b1a0e"/>
-<path d="M98 88 Q108 94 118 88" stroke="#5a2e14" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g id="eyes">
+    <circle cx="116" cy="70" r="4.5" fill="#2b1a0e"/><circle cx="96" cy="70" r="4.5" fill="#2b1a0e"/>
+</g>
+<path id="mouth" d="M98 88 Q108 94 118 88" stroke="#5a2e14" stroke-width="3" fill="none" stroke-linecap="round"/>
 </svg>"""
 
 _FALLBACK_COLORS = ["#e65100", "#1565c0", "#2e7d32", "#6a1b9a", "#c62828", "#00838f"]
@@ -226,12 +225,10 @@ def make_character_svgs(characters, context=""):
             try:
                 txt = _gemini(SVG_PROMPT.format(kind=kind, look=c.get("look", c["id"]), context=context, obj_note=obj_note), temperature=0.7)
                 svg = _sanitize_svg(txt)
-            except Exception as e:
-                print(f"[svg] {c['id']} error: {e}")
+            except Exception as e: print(f"[svg] {c['id']} error: {e}")
             if svg: break
             print(f"[svg] {c['id']} SVG kharab, dobara ({attempt + 1})")
-        if not svg:
-            svg = FALLBACK_SVG.format(skin="#c68a5a", cloth=_FALLBACK_COLORS[i % len(_FALLBACK_COLORS)])
+        if not svg: svg = FALLBACK_SVG.format(skin="#c68a5a", cloth=_FALLBACK_COLORS[i % len(_FALLBACK_COLORS)])
         c["svg"] = svg
         time.sleep(4)
     return characters
@@ -250,24 +247,14 @@ def make_plan(words, duration, info=None):
         try:
             plan = json.loads(raw[raw.find("{"): raw.rfind("}") + 1])
             break
-        except json.JSONDecodeError:
-            print(f"[plan] JSON kharab, dobara ({attempt + 1})")
-    else:
-        raise RuntimeError("Gemini se plan JSON nahi bana")
+        except json.JSONDecodeError: print(f"[plan] JSON kharab, dobara ({attempt + 1})")
+    else: raise RuntimeError("Gemini se plan JSON nahi bana")
     plan = _clean_plan(plan, duration)
     print(f"[plan] {len(plan['scenes'])} scenes")
-    # YAHAN CONTEXT BHEJA GAYA HAI
     plan["characters"] = make_character_svgs(plan["characters"], info.get("summary", ""))
     return plan
 
-FIX_PROMPT = """Neeche ek Hindi audio ka speech-to-text hai, line by line (JSON list). Machine ne bahut si spelling
-galat likhi hai. Har line ki sahi shuddh Hindi (Devanagari) spelling likho.
-
-NIYAM:
-- Lines ki ginti bilkul utni hi rahe ({n} lines), kram wahi.
-- Har line mein shabd utne hi rakhne ki koshish karo.
-- Punctuation mat lagao.
-
+FIX_PROMPT = """Neeche ek Hindi audio ka speech-to-text hai. Sahi shuddh Hindi spelling likho.
 Sirf JSON lautao: {{"lines": ["...", "..."]}}
 INPUT:
 {lines}"""
@@ -355,7 +342,7 @@ def check_characters(characters):
         bad = [c for c, m in zip(characters, ms) if _is_bad(m)]
         if not bad or round_no == 1: break
         for c in bad: c.pop("svg", None)
-        make_character_svgs(bad, "Story Character") # Safe fallback passed
+        make_character_svgs(bad, "Story Character")
     ms = _measure_all([c["svg"] for c in characters])
     for i, (c, m) in enumerate(zip(characters, ms)):
         if _is_bad(m):
