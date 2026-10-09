@@ -13,7 +13,7 @@ Audio ki lambai {dur:.1f} second hai.
 Sirf JSON lautao:
 {{
   "type": "<stand-up comedy | comedy sketch | katha | kahani | itihaas | jaankari | motivational | gaana | aur kuch>",
-  "summary": "<Hindi mein 2-3 line: kaun bol raha hai, kis baare mein, joke/kahani kya hai>",
+  "summary": "<Hindi mein 2-3 line: kaun bol raha hai, kis baare mein, joke/kahani kya hai, aur MAHAUL kaisa hai (jaise: modern city, office, gaon, mandir, comedy stage)>",
   "speakers": "<kitne log bol rahe, kaise hain, jaise 'ek comedian stage par'>",
   "lines": [
     {{"start": 0.0, "end": 2.5, "text": "<bilkul wahi shabd jo bole gaye>"}}
@@ -27,14 +27,12 @@ NIYAM:
 - Jo samajh na aaye use chhod do, andaaza mat lagao.
 """
 
-
 def _to_small_mp3(audio_path):
     tmp = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
     tmp.close()
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(audio_path),
                     "-vn", "-ac", "1", "-ar", "22050", "-b:a", "64k", tmp.name], check=True)
     return tmp.name
-
 
 def gemini_listen(audio_path, duration):
     """Lautata hai dict(type, summary, speakers, lines) ya None."""
@@ -45,7 +43,7 @@ def gemini_listen(audio_path, duration):
         try:
             raw = _gemini(LISTEN_PROMPT.format(dur=duration), json_mode=True, temperature=0.1, extra_parts=[part])
             res = json.loads(raw[raw.find("{"): raw.rfind("}") + 1])
-        except Exception as e:  # noqa: BLE001
+        except Exception as e:
             print(f"[listen] Gemini audio nahi sun paya ({e})")
             continue
         lines = []
@@ -66,22 +64,18 @@ def gemini_listen(audio_path, duration):
         print("[listen] Gemini ne lines nahi di, dobara")
     return None
 
-
 def merge_timing(lines, whisper_words, duration):
     """Gemini ke sahi shabd + Whisper ki timing. Har line ka start/end Whisper ke paas wale shabdon se sudhaaro."""
     out = []
     for i, ln in enumerate(lines):
         s, e = ln["start"], ln["end"]
-        # Gemini ke time ke aas-paas Whisper ke shabd dhoondho
         near = [w for w in whisper_words if w["s"] < e + 0.6 and w["e"] > s - 0.6]
         if near:
             s2, e2 = min(w["s"] for w in near), max(w["e"] for w in near)
-            # bahut door na ho to Whisper ki timing lo
             if abs(s2 - s) < 1.5:
                 s = s2
             if abs(e2 - e) < 1.5:
                 e = e2
-        # agli line se takraav na ho
         if out and s < out[-1]["e"]:
             s = out[-1]["e"]
         nxt = lines[i + 1]["start"] if i + 1 < len(lines) else duration
