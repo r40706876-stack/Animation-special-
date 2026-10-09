@@ -23,10 +23,15 @@ naye characters, background, aur shabd-dar-shabd Hindi subtitles ke saath.
 
 ## Roz ka kaam
 
-1. `audio/` folder mein audio upload karo (mp3/m4a/wav). Naam aise rakho: `01_bhola_khichdi.mp3`, `02_...`. Har din ek file, number ke kram se.
+| Folder | Kya hai |
+|---|---|
+| `audio/` | **Yahan audio upload karo** (mp3/m4a/wav). Naam: `01_...`, `02_...` |
+| `videos/` | **Bani hui video yahan apne aap aayegi.** File par click → Download |
+| `purani_audio/` | Jin audio ki video ban chuki, wo yahan chali jaati hain |
+
+1. `audio/` folder kholo → **Add file → Upload files** → audio daalo.
 2. Subah 8:52 par video apne aap banegi. Abhi chahiye to: **Actions → Daily Katha Reel → Run workflow**.
-3. Video lene ke liye: **Actions** → upar wala hara ✅ run → neeche **Artifacts** → `katha-reel-…` download (zip ke andar mp4).
-4. Ek video banne mein lagbhag 10–20 minute lagte hain (70 sec audio ke liye).
+3. 10–20 minute baad `videos/` folder kholo, video wahan milegi.
 
 ## Settings (`.github/workflows/daily.yml` mein)
 
@@ -43,4 +48,3 @@ naye characters, background, aur shabd-dar-shabd Hindi subtitles ke saath.
 - **"GEMINI_API_KEY nahi mila":** step 3 dobara karo.
 - **Background saade rang ke aaye:** Pollinations us din busy tha, code ne backup background laga diya. Agle din theek ho jaata hai.
 - **Koi character saada "aadmi" jaisa aaya:** Gemini ka SVG kharab tha, backup laga. Workflow dobara chalao.
-- `work/<naam>/plan.json` (artifact mein) dikhata hai ki AI ne kaun se scene socha.

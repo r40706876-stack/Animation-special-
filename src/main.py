@@ -4,8 +4,8 @@ Chalane ka tarika:
     python src/main.py                 # audio/ folder ki agli file se video
     python src/main.py audio/xyz.mp3   # koi khaas file
 
-Bani hui video: output/<audio ka naam>.mp4
-Kaam ho chuki audio: audio/done/ mein chali jaati hai.
+Bani hui video: videos/<audio ka naam>.mp4
+Kaam ho chuki audio: purani_audio/ mein chali jaati hai.
 """
 import json
 import pathlib
@@ -19,13 +19,14 @@ from transcribe import transcribe
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 AUDIO = ROOT / "audio"
-DONE = AUDIO / "done"
-OUT = ROOT / "output"
+DONE = ROOT / "purani_audio"
+OUT = ROOT / "videos"
 WORK = ROOT / "work"
 EXTS = {".mp3", ".wav", ".m4a", ".aac", ".ogg", ".opus", ".mp4"}
 
 
 def next_audio():
+    AUDIO.mkdir(exist_ok=True)
     files = sorted(p for p in AUDIO.iterdir() if p.is_file() and p.suffix.lower() in EXTS)
     return files[0] if files else None
 

@@ -49,19 +49,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python src/main.py
 
-      - name: Video download ke liye rakho
-        uses: actions/upload-artifact@v4
-        with:
-          name: katha-reel-${{ github.run_number }}
-          path: |
-            output/*.mp4
-            work/*/plan.json
-          if-no-files-found: ignore
-          retention-days: 30
-
-      - name: Kaam ho chuki audio ko done/ mein save karo
+      - name: Video ko videos/ folder mein save karo
         run: |
           git config user.name "katha-bot"
           git config user.email "katha-bot@users.noreply.github.com"
-          git add -A audio
-          git diff --cached --quiet || (git commit -m "reel bana: $(date +%F)" && git push)
+          git add -A audio purani_audio videos
+          if git diff --cached --quiet; then echo "Kuch naya nahi"; exit 0; fi
+          git commit -m "Nayi video: $(date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 10
+          done
+          exit 1
