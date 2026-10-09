@@ -135,7 +135,6 @@ function actorTransform(o, t, s){
 
   const ph = lt + o.a.x * 3;
   switch (a.action){
-    // Talk animation sudhari gayi hai taaki wo normal lage
     case 'talk': rot += Math.sin(ph*6)*1.2; sy *= 1 + Math.abs(Math.sin(ph*10))*0.008; break;
     case 'walk': walking = true; x += Math.sin(ph*1.2)*14; break;
     case 'jump': { const j = Math.abs(Math.sin(ph*4.5)); y -= j*o.h*0.12; sy *= 1 - (1-j)*0.04; break; }
@@ -176,7 +175,6 @@ window.render = function(t){
       o.box.style.opacity = tr.op;
       o.box.style.transform = `rotate(${tr.rot}deg) scale(${tr.sx},${tr.sy})`;
       
-      // Base shadow jodi gayi hai
       const baseShadow = 'drop-shadow(3px 5px 6px rgba(0,0,0,0.45))';
       o.box.style.filter = tr.glow > 0 ? `drop-shadow(0 0 ${8+tr.glow*16}px rgba(255,215,90,${0.5+tr.glow*0.5}))` : baseShadow;
       
