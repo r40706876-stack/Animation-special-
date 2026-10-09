@@ -35,7 +35,6 @@ def _to_small_mp3(audio_path):
     return tmp.name
 
 def gemini_listen(audio_path, duration):
-    """Lautata hai dict(type, summary, speakers, lines) ya None."""
     mp3 = _to_small_mp3(audio_path)
     data = base64.b64encode(open(mp3, "rb").read()).decode()
     part = {"inline_data": {"mime_type": "audio/mp3", "data": data}}
@@ -65,19 +64,15 @@ def gemini_listen(audio_path, duration):
     return None
 
 def merge_timing(lines, whisper_words, duration):
-    """Gemini ke sahi shabd + Whisper ki timing. Har line ka start/end Whisper ke paas wale shabdon se sudhaaro."""
     out = []
     for i, ln in enumerate(lines):
         s, e = ln["start"], ln["end"]
         near = [w for w in whisper_words if w["s"] < e + 0.6 and w["e"] > s - 0.6]
         if near:
             s2, e2 = min(w["s"] for w in near), max(w["e"] for w in near)
-            if abs(s2 - s) < 1.5:
-                s = s2
-            if abs(e2 - e) < 1.5:
-                e = e2
-        if out and s < out[-1]["e"]:
-            s = out[-1]["e"]
+            if abs(s2 - s) < 1.5: s = s2
+            if abs(e2 - e) < 1.5: e = e2
+        if out and s < out[-1]["e"]: s = out[-1]["e"]
         nxt = lines[i + 1]["start"] if i + 1 < len(lines) else duration
         e = max(min(e, nxt if nxt > s + 0.3 else e), s + 0.3)
         words = ln["words"]
