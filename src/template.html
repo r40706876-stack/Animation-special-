@@ -4,21 +4,26 @@
   html,body{margin:0;padding:0;background:#000;}
   #stage{width:540px;height:960px;position:relative;overflow:hidden;
          font-family:"Noto Sans Devanagari","FreeSans",sans-serif;}
-  .scene{position:absolute;inset:0;opacity:0;}
-  .bg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transform-origin:50% 60%;filter:blur(2px) saturate(1.05) brightness(.92);}
+  .scene{position:absolute;inset:0;opacity:0;} /* FADE transition removed for jump cuts */
+  /* BLUR HATA DIYA HAI - Vibrant & Crisp */
+  .bg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transform-origin:50% 60%;
+      filter:saturate(1.2) brightness(1.05);}
   .actor{position:absolute;transform-origin:50% 100%;}
   .actor svg{width:100%;height:100%;display:block;overflow:visible;}
   .shadow{position:absolute;border-radius:50%;background:rgba(0,0,0,.35);}
   .emote{position:absolute;width:44px;height:44px;margin-left:-22px;opacity:0;}
   #vignette{position:absolute;inset:0;pointer-events:none;
-            background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 74%,rgba(0,0,0,.45) 100%);}
-  #title{position:absolute;top:60px;left:16px;right:16px;text-align:center;font-weight:800;font-size:28px;color:#fff6d6;
-         text-shadow:0 2px 0 #6b3300,0 0 10px rgba(0,0,0,.5);}
-  #sub{position:absolute;left:18px;right:18px;bottom:96px;text-align:center;font-weight:800;font-size:36px;line-height:1.4;color:#fff;
-       text-shadow:0 3px 0 #000,0 -2px 0 #000,2px 0 0 #000,-2px 0 0 #000,0 0 14px rgba(0,0,0,.7);}
-  #sub span{display:inline-block;margin:0 5px;opacity:.55;}
-  #sub span.done{opacity:1;}
-  #sub span.now{opacity:1;color:#ffd43b;transform:scale(1.12);}
+            background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 15%,rgba(0,0,0,0) 70%,rgba(0,0,0,.5) 100%);}
+  #title{position:absolute;top:60px;left:16px;right:16px;text-align:center;font-weight:900;font-size:32px;color:#fff6d6;
+         text-shadow:0 3px 0 #000, 0 0 15px rgba(0,0,0,.8);}
+  /* Punchy Viral Subtitles */
+  #sub{position:absolute;left:18px;right:18px;bottom:120px;text-align:center;font-weight:900;font-size:38px;line-height:1.4;color:#fff;
+       text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 5px 15px rgba(0,0,0,.9);}
+  #sub span{display:inline-block; margin:0 6px; opacity:0.6; transition: 0.1s ease-out all;}
+  #sub span.done{opacity:1; color:#ffffff;}
+  #sub span.now{opacity:1; color:#fff200; transform:scale(1.35) translateY(-8px) rotate(-2deg); 
+                text-shadow: 3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 0 8px 20px rgba(255, 200, 0, 0.6); 
+                z-index:10; position:relative;}
 </style></head>
 <body>
 <div id="stage">
@@ -29,7 +34,7 @@
 </div>
 <script>
 const DATA = __DATA__;
-const W = 540, H = 960, FADE = 0.35;
+const W = 540, H = 960;
 
 const EMOTES = {
   heart:'<svg viewBox="0 0 40 40"><path d="M20 34C4 22 6 8 14 8c3 0 5 2 6 4 1-2 3-4 6-4 8 0 10 14-6 26z" fill="#ff4d6d" stroke="#fff" stroke-width="2.5"/></svg>',
@@ -110,7 +115,7 @@ function renderSubs(t){
   });
 }
 
-function actorTransform(o, t, s){
+function actorTransform(o, t, s, isSpeakingNow){
   const a = o.a, dur = s.end - s.start, lt = t - s.start;
   let x = a.x * W, y = a.y * H, sx = 1, sy = 1, rot = 0, op = 1, glow = 0;
   let walking = false;
@@ -134,8 +139,17 @@ function actorTransform(o, t, s){
   if ((a.enter === 'left' && ep < 1) || (a.exit === 'right' && xp > 0)) flip = false;
 
   const ph = lt + o.a.x * 3;
+  const isActiveSpeaker = a.action === 'talk' && isSpeakingNow;
+
   switch (a.action){
-    case 'talk': rot += Math.sin(ph*6)*1.2; sy *= 1 + Math.abs(Math.sin(ph*10))*0.008; break;
+    case 'talk': 
+      if (isActiveSpeaker) {
+        rot += Math.sin(ph*10)*1.5; 
+        sy *= 1 + Math.abs(Math.sin(ph*12))*0.015; 
+      } else {
+        sy *= 1 + Math.sin(ph*2.4)*0.012; // Chup rehne par normal saans
+      }
+      break;
     case 'walk': walking = true; x += Math.sin(ph*1.2)*14; break;
     case 'jump': { const j = Math.abs(Math.sin(ph*4.5)); y -= j*o.h*0.12; sy *= 1 - (1-j)*0.04; break; }
     case 'shake': x += Math.sin(ph*45)*3; rot += Math.sin(ph*38)*1.5; break;
@@ -149,27 +163,42 @@ function actorTransform(o, t, s){
   if (walking){ y -= Math.abs(Math.sin(ph*11))*6; rot += Math.sin(ph*11)*3; }
   if (o.floating && a.action !== 'rise') y += Math.sin(ph*2)*6;
 
-  return {x, y, sx: sx*(flip?-1:1), sy, rot, op, glow};
+  return {x, y, sx: sx*(flip?-1:1), sy, rot, op, glow, isActiveSpeaker};
 }
 
 window.render = function(t){
   renderSubs(t);
+
+  let isSpeakingNow = false;
+  for(let i=0; i<DATA.words.length; i++){
+    if(t >= DATA.words[i].s - 0.05 && t <= DATA.words[i].e + 0.1) { 
+      isSpeakingNow = true; break; 
+    }
+  }
+
   scenes.forEach(sc => {
     const s = sc.s;
     let op = 0;
-    if (t >= s.start - FADE && t < s.end) {
-      op = sc.si === 0 ? 1 : clamp((t - (s.start - FADE)) / FADE);
+    
+    // BUG FIX: t <= s.end + 0.1 kiya gaya taaki aakhiri frame black na ho
+    if (t >= s.start && t <= s.end + 0.1) {
+      op = 1; // HARD CUT (Jump Cut)
     }
+    
     sc.el.style.opacity = op;
     sc.el.style.display = op > 0 ? 'block' : 'none';
     if (op <= 0) return;
     
+    // Dynamic Camera Zoom + Bounce
     const p = clamp((t - s.start) / Math.max(0.1, s.end - s.start));
-    const z = 1 + 0.06 * p, pan = (sc.si % 2 ? -1 : 1) * 10 * p;
+    let z = 1.05 + 0.05 * p;
+    if (isSpeakingNow) z += Math.sin(t * 15) * 0.005; // Speaking bounce
+    
+    const pan = (sc.si % 2 ? -1 : 1) * 12 * p;
     sc.bg.style.transform = `translateX(${pan}px) scale(${z})`;
 
     sc.actors.forEach(o => {
-      const tr = actorTransform(o, Math.max(t, s.start), s);
+      const tr = actorTransform(o, Math.max(t, s.start), s, isSpeakingNow);
       o.box.style.left = (tr.x - o.w/2) + 'px';
       o.box.style.top = (tr.y - o.h) + 'px';
       o.box.style.opacity = tr.op;
@@ -177,6 +206,40 @@ window.render = function(t){
       
       const baseShadow = 'drop-shadow(3px 5px 6px rgba(0,0,0,0.45))';
       o.box.style.filter = tr.glow > 0 ? `drop-shadow(0 0 ${8+tr.glow*16}px rgba(255,215,90,${0.5+tr.glow*0.5}))` : baseShadow;
+      
+      // 1. Blinking Eyes
+      const eyes = o.box.querySelector('[id$="_eyes"], [id*="eye"]');
+      if (eyes) {
+         eyes.style.transformOrigin = 'center';
+         eyes.style.transformBox = 'fill-box';
+         const isBlinking = (t % 3.5) < 0.15; 
+         eyes.style.transform = isBlinking ? 'scaleY(0.1)' : 'scaleY(1)';
+      }
+
+      // 2. Hand Gesture
+      const arm = o.box.querySelector('[id$="_arm"], [id*="arm"]');
+      if (arm) {
+         arm.style.transformOrigin = 'top center';
+         arm.style.transformBox = 'fill-box';
+         if (tr.isActiveSpeaker) {
+             arm.style.transform = `rotate(${Math.sin(t*12)*15}deg)`; 
+         } else {
+             arm.style.transform = 'rotate(0deg)';
+         }
+      }
+
+      // 3. Lip-Sync (Mouth) - BUG FIX: transformBox added for safety
+      const mouth = o.box.querySelector('[id$="_mouth"], [id*="mouth"]');
+      if (mouth) {
+         mouth.style.transformOrigin = 'center';
+         mouth.style.transformBox = 'fill-box';
+         if (tr.isActiveSpeaker) {
+             const open = 0.2 + Math.abs(Math.sin(t * 35)) * 0.9 + Math.abs(Math.cos(t * 15)) * 0.4;
+             mouth.style.transform = `scaleY(${open})`; 
+         } else {
+             mouth.style.transform = 'scaleY(1)'; 
+         }
+      }
       
       const sw = o.w * 0.7;
       o.sh.style.display = o.floating ? 'none' : 'block';
