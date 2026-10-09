@@ -42,6 +42,23 @@ const EMOTES = {
 };
 
 const chars = {}; DATA.characters.forEach(c => chars[c.id] = c);
+
+// Har copy ke SVG ids alag karo, warna gradient/rang dusre (chhupe) scene se takraate hain aur character kaala ho jata hai
+let uidCounter = 0;
+function uniqueIds(svgText){
+  const p = 'u' + (uidCounter++) + '_';
+  const ids = [...svgText.matchAll(/\sid\s*=\s*["']([^"']+)["']/g)].map(m => m[1]);
+  if (!ids.length) return svgText;
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  let out = svgText;
+  ids.forEach(id => {
+    const e = esc(id);
+    out = out.replace(new RegExp(`(\\sid\\s*=\\s*["'])${e}(["'])`, 'g'), `$1${p}${id}$2`)
+             .replace(new RegExp(`url\\(\\s*#${e}\\s*\\)`, 'g'), `url(#${p}${id})`)
+             .replace(new RegExp(`(href\\s*=\\s*["'])#${e}(["'])`, 'g'), `$1#${p}${id}$2`);
+  });
+  return out;
+}
 const clamp = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
 const ease = x => x<.5 ? 2*x*x : 1-Math.pow(-2*x+2,2)/2;
 const easeOutBack = x => { const c=1.7; return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2); };
@@ -57,7 +74,7 @@ const scenes = DATA.scenes.map((s, si) => {
     const sh = document.createElement('div'); sh.className = 'shadow';
     const box = document.createElement('div'); box.className = 'actor';
     box.style.width = w+'px'; box.style.height = h+'px';
-    box.innerHTML = (chars[a.id] || {}).svg || '';
+    box.innerHTML = uniqueIds((chars[a.id] || {}).svg || '');
     const em = document.createElement('div'); em.className = 'emote';
     em.innerHTML = EMOTES[a.emote] || '';
     el.appendChild(sh); el.appendChild(box); el.appendChild(em);
