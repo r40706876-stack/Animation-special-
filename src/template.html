@@ -8,7 +8,7 @@
   .bg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transform-origin:50% 60%;filter:blur(2px) saturate(1.05) brightness(.92);}
   .actor{position:absolute;transform-origin:50% 100%;}
   .actor svg{width:100%;height:100%;display:block;overflow:visible;}
-  .shadow{position:absolute;border-radius:50%;background:rgba(0,0,0,.22);}
+  .shadow{position:absolute;border-radius:50%;background:rgba(0,0,0,.35);}
   .emote{position:absolute;width:44px;height:44px;margin-left:-22px;opacity:0;}
   #vignette{position:absolute;inset:0;pointer-events:none;
             background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 74%,rgba(0,0,0,.45) 100%);}
@@ -43,7 +43,6 @@ const EMOTES = {
 
 const chars = {}; DATA.characters.forEach(c => chars[c.id] = c);
 
-// Har copy ke SVG ids alag karo, warna gradient/rang dusre (chhupe) scene se takraate hain aur character kaala ho jata hai
 let uidCounter = 0;
 function uniqueIds(svgText){
   const p = 'u' + (uidCounter++) + '_';
@@ -63,7 +62,6 @@ const clamp = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
 const ease = x => x<.5 ? 2*x*x : 1-Math.pow(-2*x+2,2)/2;
 const easeOutBack = x => { const c=1.7; return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2); };
 
-// ---------- build DOM
 document.getElementById('title').textContent = DATA.title;
 const root = document.getElementById('scenes');
 const scenes = DATA.scenes.map((s, si) => {
@@ -86,7 +84,6 @@ const scenes = DATA.scenes.map((s, si) => {
   return {s, el, bg, actors, si};
 });
 
-// ---------- subtitles: chhote groups
 const groups = []; let cur = [];
 DATA.words.forEach(w => {
   const len = cur.reduce((n,x)=>n+x.w.length+1,0);
@@ -113,13 +110,11 @@ function renderSubs(t){
   });
 }
 
-// ---------- actor motion
 function actorTransform(o, t, s){
   const a = o.a, dur = s.end - s.start, lt = t - s.start;
   let x = a.x * W, y = a.y * H, sx = 1, sy = 1, rot = 0, op = 1, glow = 0;
   let walking = false;
 
-  // enter
   const ENTER_T = a.enter === 'left' || a.enter === 'right' ? 1.1 : 0.5;
   const ep = clamp(lt / ENTER_T);
   if (a.enter === 'left'){ x = (-o.w) + (x + o.w) * ease(ep); walking = ep < 1; }
@@ -128,22 +123,20 @@ function actorTransform(o, t, s){
   if (a.enter === 'fade'){ op *= ep; }
   if (a.enter === 'top'){ y = -o.h*0.2 + (y + o.h*0.2) * ease(ep); }
 
-  // exit (last 0.9s)
   const EX = Math.min(0.9, dur*0.4), xp = clamp((lt - (dur - EX)) / EX);
   if (a.exit === 'left'){ x -= (x + o.w) * ease(xp); walking = walking || xp > 0; }
   if (a.exit === 'right'){ x += (W + o.w - x) * ease(xp); walking = walking || xp > 0; }
   if (a.exit === 'fade'){ op *= 1 - xp; }
   if (a.exit === 'up'){ y -= (y + o.h) * ease(xp); op *= 1 - xp*0.6; glow = Math.max(glow, xp); }
 
-  // direction while walking
   let flip = o.flip;
   if ((a.enter === 'right' && ep < 1) || (a.exit === 'left' && xp > 0)) flip = true;
   if ((a.enter === 'left' && ep < 1) || (a.exit === 'right' && xp > 0)) flip = false;
 
-  // action
   const ph = lt + o.a.x * 3;
   switch (a.action){
-    case 'talk': rot += Math.sin(ph*7)*1.8; sy *= 1 + Math.abs(Math.sin(ph*7))*0.015; break;
+    // Talk animation sudhari gayi hai taaki wo normal lage
+    case 'talk': rot += Math.sin(ph*6)*1.2; sy *= 1 + Math.abs(Math.sin(ph*10))*0.008; break;
     case 'walk': walking = true; x += Math.sin(ph*1.2)*14; break;
     case 'jump': { const j = Math.abs(Math.sin(ph*4.5)); y -= j*o.h*0.12; sy *= 1 - (1-j)*0.04; break; }
     case 'shake': x += Math.sin(ph*45)*3; rot += Math.sin(ph*38)*1.5; break;
@@ -152,7 +145,7 @@ function actorTransform(o, t, s){
     case 'eat': rot += (flip?-1:1) * (8 + Math.sin(ph*14)*3); break;
     case 'rise': y -= ease(clamp(lt/dur)) * H * 0.35; glow = 1; break;
     case 'sit': sy *= 0.97; break;
-    default: sy *= 1 + Math.sin(ph*2.4)*0.012; // idle saans
+    default: sy *= 1 + Math.sin(ph*2.4)*0.012;
   }
   if (walking){ y -= Math.abs(Math.sin(ph*11))*6; rot += Math.sin(ph*11)*3; }
   if (o.floating && a.action !== 'rise') y += Math.sin(ph*2)*6;
@@ -171,7 +164,7 @@ window.render = function(t){
     sc.el.style.opacity = op;
     sc.el.style.display = op > 0 ? 'block' : 'none';
     if (op <= 0) return;
-    // ken burns
+    
     const p = clamp((t - s.start) / Math.max(0.1, s.end - s.start));
     const z = 1 + 0.06 * p, pan = (sc.si % 2 ? -1 : 1) * 10 * p;
     sc.bg.style.transform = `translateX(${pan}px) scale(${z})`;
@@ -182,14 +175,17 @@ window.render = function(t){
       o.box.style.top = (tr.y - o.h) + 'px';
       o.box.style.opacity = tr.op;
       o.box.style.transform = `rotate(${tr.rot}deg) scale(${tr.sx},${tr.sy})`;
-      o.box.style.filter = tr.glow > 0 ? `drop-shadow(0 0 ${8+tr.glow*16}px rgba(255,215,90,${0.5+tr.glow*0.5}))` : 'none';
-      // shadow on ground
+      
+      // Base shadow jodi gayi hai
+      const baseShadow = 'drop-shadow(3px 5px 6px rgba(0,0,0,0.45))';
+      o.box.style.filter = tr.glow > 0 ? `drop-shadow(0 0 ${8+tr.glow*16}px rgba(255,215,90,${0.5+tr.glow*0.5}))` : baseShadow;
+      
       const sw = o.w * 0.7;
       o.sh.style.display = o.floating ? 'none' : 'block';
       o.sh.style.width = sw+'px'; o.sh.style.height = (sw*0.16)+'px';
       o.sh.style.left = (tr.x - sw/2)+'px'; o.sh.style.top = (o.a.y*H - sw*0.08)+'px';
       o.sh.style.opacity = tr.op;
-      // emote
+      
       if (o.a.emote && o.a.emote !== 'none'){
         const lt = t - s.start, ep = clamp((lt - 0.4)/0.35);
         o.em.style.left = (tr.x + (tr.sx<0?-1:1)*o.w*0.15)+'px';
