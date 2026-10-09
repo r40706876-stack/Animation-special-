@@ -1,0 +1,39 @@
+TITLE: अरुणाचल में रोस्ट • स्टैंड-अप कॉमेडी
+TYPE: stand-up comedy
+SUMMARY: कॉमेडियन अरुणाचल से आई एक दर्शक से पूछता है कि वहां के लोग उसके बारे में क्या कहते हैं, जिस पर वह दर्शक उसे रोस्ट कर देती है।
+SPEAKERS: एक कॉमेडियन और दर्शक में बैठी एक लड़की
+
+=== SUBTITLE (jo suna gaya) ===
+[  0.0] क्या बोलते हैं अरुणाचल में मेरे बारे में
+[  1.9] लोग नहीं बोलते हैं पता नहीं नहीं हो
+[  8.5] सकता है आपके फ्रेंड सर्कल में नहीं हो
+[ 10.8] ऐसा कुछ मैं शो डालूंगा अरुणाचल में अभी
+[ 12.6] दिखाऊंगा सोल्ड आउट करूंगा वहां पर मैं वो
+[ 14.5] मतलब पता नहीं आपका जोक फिर वो लोगों
+[ 16.9] को समझ में आएगा कि नहीं दिल से
+[ 20.4] करी हुई बेइज्जती है भाई ये इसको इसको
+[ 22.8] भी मारो इसको भी कुछ बोलो मतलब आप
+[ 24.4] जो क्या कर जानना मतलब क्या बोल रहे
+[ 26.0] हो अरे इसको गंदा बोलो कुछ मेरे को
+[ 28.6] बोल रहे हो ना तब से इसको भी
+[ 30.1] बोलो ना नहीं वो जो डिज़र्व करते हैं
+[ 31.4] उसको ही बोलती हूं
+
+=== SCENES (jo dikhaya gaya) ===
+[  0.0-  3.4] bg=bg_stage | comedian(talk)
+[  3.4-  8.1] bg=bg_audience | girl(talk)
+[  8.1- 11.4] bg=bg_stage | comedian(talk)
+[ 11.4- 14.1] bg=bg_stage | comedian(shake)
+[ 14.1- 20.0] bg=bg_audience | girl(talk), guy_audience(idle)
+[ 20.0- 25.6] bg=bg_stage | comedian(jump)
+[ 25.6- 29.0] bg=bg_stage | comedian(talk)
+[ 29.0- 45.7] bg=bg_audience | girl(talk)
+
+=== CHARACTERS ===
+comedian: Young Indian male stand-up comedian in his mid-20s, wearing a denim jacket over a black t-shirt, holding a microphone, animated and expressive face, 2d cartoon style.
+girl: Young Northeast Indian girl from Arunachal Pradesh in her early 20s, trendy yellow sweatshirt, stylish short haircut, mischievous confident smile, 2d cartoon style.
+guy_audience: Young Indian male in casual gray t-shirt, short dark hair, sitting in audience, 2d cartoon style.
+
+=== BACKGROUNDS ===
+bg_stage: Empty stand-up comedy club stage with wooden flooring, dark background with glowing neon lights, single bright overhead spotlight, clean 2d cartoon style, vertical composition.
+bg_audience: Dimly lit comedy club audience seating area, dark atmospheric background, dim red and blue accent lighting, empty seats, clean 2d cartoon style, vertical composition.
