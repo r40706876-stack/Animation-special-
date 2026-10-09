@@ -95,8 +95,7 @@ def _gemini(prompt, json_mode=False, temperature=0.8, extra_parts=None):
             time.sleep(15 * (attempt + 1))
     raise RuntimeError("Koi Gemini model nahi chala:\n" + "\n".join(errors[-6:]))
 
-PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi audio ka transcript hai,
-har line ke aage uska start time (seconds) hai. Is audio ke upar 9:16 vertical 2D cartoon animation banana hai.
+PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi audio ka transcript hai.
 Jo shabd bola ja raha ho, wahi screen par dikhna chahiye.
 
 AUDIO KYA HAI: {kind}
@@ -107,9 +106,9 @@ TRANSCRIPT (total {dur:.1f} seconds):
 {lines}
 
 SABSE ZAROORI NIYAM:
-- Sirf wahi dikhao jo transcript mein sach mein bola gaya hai. Apni taraf se naya vishay mat jodo.
-- Audio ke type (mahaul) ke hisaab se dikhao (comedy, office, katha, gaon, modern).
-- characters: kahani ke saare zaroori log. 'look' mein bahut detailed aur accurate description likho (jaise "25 year old modern boy wearing blue jeans and yellow t-shirt"). Audio jis mahaul ki ho, kapde aur look bilkul waise hi hone chahiye.
+- Sirf wahi dikhao jo transcript mein bola gaya hai.
+- Audio ke mahaul (comedy, office, katha, gaon) ke hisaab se scene aur log dikhao.
+- characters: Kahani ke mutabik log. Agar audio modern (comedy/office) hai, to 'look' mein modern kapde (jeans, t-shirt, suit) likho. Agar bhagwan/itihas ki katha hai, tabhi dharmik kapde likho.
 
 Sirf JSON lauto, is format mein:
 {{
@@ -193,7 +192,7 @@ FALLBACK_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
 <ellipse cx="100" cy="292" rx="46" ry="7" fill="#000" opacity=".15"/>
 <rect x="78" y="215" width="18" height="78" rx="8" fill="{skin}"/><rect x="104" y="215" width="18" height="78" rx="8" fill="{skin}"/>
 <path d="M60 120 Q100 100 140 120 L150 230 L50 230 Z" fill="{cloth}"/>
-<rect x="94" y="85" width="12" height="20" fill="{skin}"/> <!-- Nayi neck jodi gayi -->
+<rect x="94" y="85" width="12" height="20" fill="{skin}"/>
 <path d="M62 125 Q40 170 56 205" stroke="{skin}" stroke-width="16" fill="none" stroke-linecap="round"/>
 <path d="M138 125 Q160 170 146 205" stroke="{skin}" stroke-width="16" fill="none" stroke-linecap="round"/>
 <rect x="90" y="96" width="20" height="20" fill="{skin}"/>
@@ -356,7 +355,7 @@ def check_characters(characters):
         bad = [c for c, m in zip(characters, ms) if _is_bad(m)]
         if not bad or round_no == 1: break
         for c in bad: c.pop("svg", None)
-        make_character_svgs(bad, "context recovery") # pass dummy context if retry
+        make_character_svgs(bad, "Story Character") # Safe fallback passed
     ms = _measure_all([c["svg"] for c in characters])
     for i, (c, m) in enumerate(zip(characters, ms)):
         if _is_bad(m):
