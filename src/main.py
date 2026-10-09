@@ -13,7 +13,7 @@ import shutil
 import sys
 
 from backgrounds import get_backgrounds
-from planner import make_plan
+from planner import correct_words, make_plan
 from render import audio_duration, render_video
 from transcribe import transcribe
 
@@ -43,6 +43,8 @@ def main():
     words = transcribe(audio)
     if not words:
         raise SystemExit("Audio mein koi shabd nahi mila.")
+    (work / "words_raw.json").write_text(json.dumps(words, ensure_ascii=False, indent=1), encoding="utf-8")
+    words = correct_words(words)
     (work / "words.json").write_text(json.dumps(words, ensure_ascii=False, indent=1), encoding="utf-8")
 
     plan = make_plan(words, duration)

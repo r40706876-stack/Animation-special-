@@ -17,9 +17,9 @@ URL = "https://image.pollinations.ai/prompt/{p}?width=1080&height=1920&nologo=tr
 
 def _pollinations(prompt, seed):
     url = URL.format(p=urllib.parse.quote(prompt + STYLE), seed=seed)
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            r = requests.get(url, timeout=180)
+            r = requests.get(url, timeout=150)
             if r.ok and r.headers.get("content-type", "").startswith("image"):
                 img = Image.open(io.BytesIO(r.content)).convert("RGB")
                 if img.width >= 400:
@@ -27,7 +27,7 @@ def _pollinations(prompt, seed):
             print(f"[bg] pollinations HTTP {r.status_code}")
         except requests.RequestException as e:
             print(f"[bg] pollinations error: {e}")
-        time.sleep(15 * (attempt + 1))
+        time.sleep(20)
     return None
 
 
@@ -72,26 +72,35 @@ def _fallback(prompt, seed):
     return img.filter(ImageFilter.GaussianBlur(1))
 
 
+def _crop_save(img, path):
+    tw, th = 1080, 1920
+    scale = max(tw / img.width, th / img.height)
+    img = img.resize((int(img.width * scale) + 1, int(img.height * scale) + 1), Image.LANCZOS)
+    left, top = (img.width - tw) // 2, (img.height - th) // 2
+    img.crop((left, top, left + tw, top + th)).save(path, quality=88)
+    return path
+
+
 def get_backgrounds(plan, workdir):
     workdir.mkdir(parents=True, exist_ok=True)
-    out = {}
-    pollinations_ok = True
+    real, missing = {}, []
     for bg in plan["backgrounds"]:
         seed = int(hashlib.md5(bg["prompt"].encode()).hexdigest()[:6], 16)
-        img = _pollinations(bg["prompt"], seed) if pollinations_ok else None
+        img = _pollinations(bg["prompt"], seed)
         if img is None:
-            pollinations_ok = False  # ek baar fail = baaki ke liye seedha backup
-        if img is None:
-            print(f"[bg] {bg['id']} -> fallback gradient")
-            img = _fallback(bg["prompt"], seed)
-        # 9:16 crop
-        tw, th = 1080, 1920
-        scale = max(tw / img.width, th / img.height)
-        img = img.resize((int(img.width * scale) + 1, int(img.height * scale) + 1), Image.LANCZOS)
-        left, top = (img.width - tw) // 2, (img.height - th) // 2
-        img = img.crop((left, top, left + tw, top + th))
-        path = workdir / f"{bg['id']}.jpg"
-        img.save(path, quality=88)
-        out[bg["id"]] = path
+            missing.append(bg)
+        else:
+            real[bg["id"]] = _crop_save(img, workdir / f"{bg['id']}.jpg")
         time.sleep(3)
+    out = dict(real)
+    real_paths = list(real.values())
+    for i, bg in enumerate(missing):
+        if real_paths:
+            # saada gradient ki jagah koi asli tasveer, taaki look ek jaisa rahe
+            out[bg["id"]] = real_paths[i % len(real_paths)]
+            print(f"[bg] {bg['id']} -> asli background dobara use")
+        else:
+            seed = int(hashlib.md5(bg["prompt"].encode()).hexdigest()[:6], 16)
+            out[bg["id"]] = _crop_save(_fallback(bg["prompt"], seed), workdir / f"{bg['id']}.jpg")
+            print(f"[bg] {bg['id']} -> fallback gradient")
     return out

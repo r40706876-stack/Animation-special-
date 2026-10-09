@@ -129,7 +129,7 @@ def _gemini(prompt, json_mode=False, temperature=0.8):
 
 
 # ---------------------------------------------------------------- plan
-PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi katha (dharmik kahani) ka audio transcript hai,
+PLAN_PROMPT = """Tum ek animation director ho. Neeche ek Hindi audio (kahani, katha, itihaas ya jaankari) ka transcript hai,
 har line ke aage uska start time (seconds) hai. Is audio ke upar 9:16 vertical 2D cartoon animation banana hai.
 Jo shabd bola ja raha ho, wahi screen par dikhna chahiye.
 
@@ -138,7 +138,7 @@ TRANSCRIPT (total {dur:.1f} seconds):
 
 Sirf JSON lauto, is format mein:
 {{
-  "title": "कथा • <chhota hindi naam>",
+  "title": "<3-6 shabd ka aakarshak Hindi title, jaisa vishay ho (katha ho to 'कथा • ...', warna seedha naam)>",
   "backgrounds": [
     {{"id": "bg1", "prompt": "<ENGLISH description of an empty scene, no people, no animals, no text>"}}
   ],
@@ -156,8 +156,8 @@ Sirf JSON lauto, is format mein:
 }}
 
 NIYAM:
-- backgrounds: 2 se 5. Har prompt mein sirf jagah ho (gaon, khet, jungle, kuan, mandir, raat, mahal, aasmaan...). Koi insaan/janwar nahi.
-- characters: kahani ke saare zaroori log, janwar aur khaas cheezein (jaise khichdi ki katori, deepak, bansuri). 2 se 8. id chhote english shabd.
+- backgrounds: 2 se 5. Har prompt mein sirf jagah ho, jo kahani ke samay aur jagah se mel khaaye (gaon, khet, jungle, mandir, purana shehar, factory, raat...). Koi insaan/janwar nahi.
+- characters: kahani ke saare zaroori log, janwar aur khaas cheezein (jaise khichdi ki katori, deepak, machine, aujaar). 2 se 8. id chhote english shabd.
 - scenes: har 3-7 second par naya scene, jab kahani mein kuch naya ho. start time transcript ke time se milao. Pehla scene 0.0 se.
 - Har scene mein 1-4 actors. x = 0.1 se 0.9 (screen ki chaudai ka hissa, actor ka beech). y = pairon ki line (0.75-0.88 zameen; aasmaan wali cheez 0.4-0.6). size = screen ki oonchai ka hissa (insaan 0.30-0.42, janwar 0.15-0.25, cheez 0.06-0.12, rakshas/bhagwan 0.5-0.65).
 - Sab characters default mein DAAYEIN (right) dekhte hain. flip:true = baayein dekhe.
@@ -169,16 +169,8 @@ NIYAM:
 """
 
 
-def _transcript_lines(words, gap=0.6, max_words=12):
-    lines, cur = [], []
-    for w in words:
-        if cur and (w["s"] - cur[-1]["e"] > gap or len(cur) >= max_words):
-            lines.append(cur)
-            cur = []
-        cur.append(w)
-    if cur:
-        lines.append(cur)
-    return "\n".join(f"[{l[0]['s']:.1f}] " + " ".join(x["w"] for x in l) for l in lines)
+def _transcript_lines(words):
+    return "\n".join(f"[{l[0]['s']:.1f}] " + " ".join(x["w"] for x in l) for l in _split_lines(words))
 
 
 def _clean_plan(plan, duration):
@@ -221,7 +213,7 @@ def _clean_plan(plan, duration):
     plan["characters"] = list(chars.values())
     plan["backgrounds"] = bgs
     plan["scenes"] = dedup
-    plan["title"] = plan.get("title") or "कथा"
+    plan["title"] = (plan.get("title") or "").strip()[:40]
     return plan
 
 
@@ -316,3 +308,72 @@ def make_plan(words, duration):
     print(f"[plan] {len(plan['scenes'])} scenes, {len(plan['characters'])} characters, {len(plan['backgrounds'])} backgrounds")
     plan["characters"] = make_character_svgs(plan["characters"])
     return plan
+
+
+# ---------------------------------------------------------------- subtitle spelling fix
+FIX_PROMPT = """Neeche ek Hindi audio ka speech-to-text hai, line by line (JSON list). Machine ne bahut si spelling
+galat likhi hai (jaise "आंदर" -> "अंदर", "कुथ समवे" -> "कुछ समय", "सलंडर" -> "सिलेंडर").
+Har line ki sahi shuddh Hindi (Devanagari) spelling likho. Angrezi shabd bhi Devanagari mein hi rakho.
+
+NIYAM:
+- Lines ki ginti bilkul utni hi rahe ({n} lines), kram wahi.
+- Har line mein shabd utne hi rakhne ki koshish karo, naye vaakya mat jodo, matlab mat badlo.
+- Sirf spelling/shabd sudhaaro. Punctuation mat lagao.
+
+Sirf JSON lautao: {{"lines": ["...", "..."]}}
+
+INPUT:
+{lines}
+"""
+
+
+def _split_lines(words, gap=0.6, max_words=12):
+    lines, cur = [], []
+    for w in words:
+        if cur and (w["s"] - cur[-1]["e"] > gap or len(cur) >= max_words):
+            lines.append(cur)
+            cur = []
+        cur.append(w)
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def _retime(line, new_words):
+    """Purane shabdon ki timing naye shabdon par baanto."""
+    if len(new_words) == len(line):
+        return [{"w": nw, "s": o["s"], "e": o["e"]} for nw, o in zip(new_words, line)]
+    start, end = line[0]["s"], line[-1]["e"]
+    total = sum(len(w) for w in new_words) or 1
+    out, t = [], start
+    for nw in new_words:
+        d = (end - start) * len(nw) / total
+        out.append({"w": nw, "s": round(t, 2), "e": round(t + d, 2)})
+        t += d
+    return out
+
+
+def correct_words(words):
+    lines = _split_lines(words)
+    texts = [" ".join(w["w"] for w in l) for l in lines]
+    try:
+        raw = _gemini(FIX_PROMPT.format(n=len(texts), lines=json.dumps(texts, ensure_ascii=False)),
+                      json_mode=True, temperature=0.2)
+        fixed = json.loads(raw[raw.find("{"): raw.rfind("}") + 1]).get("lines", [])
+    except Exception as e:  # noqa: BLE001
+        print(f"[fix] spelling sudhaar nahi hua ({e}), purane shabd hi rahenge")
+        return words
+    if len(fixed) != len(lines):
+        print(f"[fix] lines ki ginti mismatch ({len(fixed)} vs {len(lines)}), purane shabd hi rahenge")
+        return words
+    out, changed = [], 0
+    for line, new_text in zip(lines, fixed):
+        new_words = [w for w in re.sub(r"[।,.!?;:\"']", " ", str(new_text)).split() if w]
+        # bahut zyada badla ho to purana rakho (galat line se bachne ke liye)
+        if not new_words or abs(len(new_words) - len(line)) > max(2, len(line) // 2):
+            out.extend(line)
+            continue
+        changed += sum(1 for a, b in zip(new_words, line) if a != b["w"])
+        out.extend(_retime(line, new_words))
+    print(f"[fix] {changed} shabd sudhaare")
+    return out

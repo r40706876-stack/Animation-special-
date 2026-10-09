@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      WHISPER_MODEL: small          # behtar hindi chahiye to: medium (dheema)
+      WHISPER_MODEL: large-v3-turbo # Hindi ke liye behtar (pehli baar ~1.5GB download, phir cache)
       GEMINI_MODEL: ""             # khaali = code khud sabse naya free model chunega
       FPS: "24"
     steps:
