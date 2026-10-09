@@ -1,0 +1,189 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#000;}
+  #stage{width:540px;height:960px;position:relative;overflow:hidden;
+         font-family:"Noto Sans Devanagari","FreeSans",sans-serif;}
+  .scene{position:absolute;inset:0;opacity:0;}
+  .bg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transform-origin:50% 60%;}
+  .actor{position:absolute;transform-origin:50% 100%;will-change:transform;}
+  .actor svg{width:100%;height:100%;display:block;overflow:visible;}
+  .shadow{position:absolute;border-radius:50%;background:rgba(0,0,0,.22);}
+  .emote{position:absolute;width:44px;height:44px;margin-left:-22px;opacity:0;}
+  #vignette{position:absolute;inset:0;pointer-events:none;
+            background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 74%,rgba(0,0,0,.45) 100%);}
+  #title{position:absolute;top:60px;left:16px;right:16px;text-align:center;font-weight:800;font-size:28px;color:#fff6d6;
+         text-shadow:0 2px 0 #6b3300,0 0 10px rgba(0,0,0,.5);}
+  #sub{position:absolute;left:18px;right:18px;bottom:96px;text-align:center;font-weight:800;font-size:36px;line-height:1.4;color:#fff;
+       text-shadow:0 3px 0 #000,0 -2px 0 #000,2px 0 0 #000,-2px 0 0 #000,0 0 14px rgba(0,0,0,.7);}
+  #sub span{display:inline-block;margin:0 5px;opacity:.55;}
+  #sub span.done{opacity:1;}
+  #sub span.now{opacity:1;color:#ffd43b;transform:scale(1.12);}
+</style></head>
+<body>
+<div id="stage">
+  <div id="scenes"></div>
+  <div id="vignette"></div>
+  <div id="title"></div>
+  <div id="sub"></div>
+</div>
+<script>
+const DATA = __DATA__;
+const W = 540, H = 960, FADE = 0.35;
+
+const EMOTES = {
+  heart:'<svg viewBox="0 0 40 40"><path d="M20 34C4 22 6 8 14 8c3 0 5 2 6 4 1-2 3-4 6-4 8 0 10 14-6 26z" fill="#ff4d6d" stroke="#fff" stroke-width="2.5"/></svg>',
+  sparkle:'<svg viewBox="0 0 40 40"><path d="M20 2l4 14 14 4-14 4-4 14-4-14-14-4 14-4z" fill="#ffe066" stroke="#fff" stroke-width="2"/></svg>',
+  surprise:'<svg viewBox="0 0 40 40"><rect x="15" y="2" width="10" height="24" rx="5" fill="#ff922b" stroke="#fff" stroke-width="2"/><circle cx="20" cy="34" r="5" fill="#ff922b" stroke="#fff" stroke-width="2"/></svg>',
+  anger:'<svg viewBox="0 0 40 40"><g stroke="#e03131" stroke-width="5" stroke-linecap="round" fill="none"><path d="M6 14q8 0 8-8M34 14q-8 0-8-8M6 26q8 0 8 8M34 26q-8 0-8 8"/></g></svg>',
+  sweat:'<svg viewBox="0 0 40 40"><path d="M20 4C14 16 10 22 10 27a10 10 0 0 0 20 0c0-5-4-11-10-23z" fill="#74c0fc" stroke="#fff" stroke-width="2.5"/></svg>',
+  tears:'<svg viewBox="0 0 40 40"><path d="M12 8C8 16 6 20 6 23a6 6 0 0 0 12 0c0-3-2-7-6-15zM28 12c-4 8-6 12-6 15a6 6 0 0 0 12 0c0-3-2-7-6-15z" fill="#74c0fc" stroke="#fff" stroke-width="2"/></svg>',
+  question:'<svg viewBox="0 0 40 40"><text x="20" y="32" font-size="34" font-weight="900" text-anchor="middle" fill="#4dabf7" stroke="#fff" stroke-width="2" font-family="sans-serif">?</text></svg>'
+};
+
+const chars = {}; DATA.characters.forEach(c => chars[c.id] = c);
+const clamp = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
+const ease = x => x<.5 ? 2*x*x : 1-Math.pow(-2*x+2,2)/2;
+const easeOutBack = x => { const c=1.7; return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2); };
+
+// ---------- build DOM
+document.getElementById('title').textContent = DATA.title;
+const root = document.getElementById('scenes');
+const scenes = DATA.scenes.map((s, si) => {
+  const el = document.createElement('div'); el.className = 'scene';
+  const bg = document.createElement('img'); bg.className = 'bg'; bg.src = DATA.bgs[s.bg]; el.appendChild(bg);
+  const actors = s.actors.map(a => {
+    const h = a.size * H, w = h * 2/3;
+    const sh = document.createElement('div'); sh.className = 'shadow';
+    const box = document.createElement('div'); box.className = 'actor';
+    box.style.width = w+'px'; box.style.height = h+'px';
+    box.innerHTML = (chars[a.id] || {}).svg || '';
+    const em = document.createElement('div'); em.className = 'emote';
+    em.innerHTML = EMOTES[a.emote] || '';
+    el.appendChild(sh); el.appendChild(box); el.appendChild(em);
+    const floating = a.y < 0.7;
+    let flip = a.flip;
+    return {a, box, sh, em, w, h, flip, floating};
+  });
+  root.appendChild(el);
+  return {s, el, bg, actors, si};
+});
+
+// ---------- subtitles: chhote groups
+const groups = []; let cur = [];
+DATA.words.forEach(w => {
+  const len = cur.reduce((n,x)=>n+x.w.length+1,0);
+  if (cur.length && (w.s - cur[cur.length-1].e > 0.55 || len + w.w.length > 22 || cur.length >= 5)) { groups.push(cur); cur = []; }
+  cur.push(w);
+});
+if (cur.length) groups.push(cur);
+const sub = document.getElementById('sub');
+let shownGroup = -1, spans = [];
+
+function renderSubs(t){
+  let gi = -1;
+  for (let i=0;i<groups.length;i++){ if (t >= groups[i][0].s - 0.05) gi = i; }
+  if (gi >= 0) { const g = groups[gi]; if (t > g[g.length-1].e + 0.8) gi = -1; }
+  if (gi !== shownGroup){
+    shownGroup = gi;
+    sub.textContent = '';
+    if (gi >= 0) groups[gi].forEach(w => { const sp = document.createElement('span'); sp.textContent = w.w; sub.appendChild(sp); sub.append(' '); });
+    spans = [...sub.children];
+  }
+  if (gi < 0) return;
+  groups[gi].forEach((w,i) => {
+    spans[i].className = t >= w.e ? 'done' : (t >= w.s ? 'now' : '');
+  });
+}
+
+// ---------- actor motion
+function actorTransform(o, t, s){
+  const a = o.a, dur = s.end - s.start, lt = t - s.start;
+  let x = a.x * W, y = a.y * H, sx = 1, sy = 1, rot = 0, op = 1, glow = 0;
+  let walking = false;
+
+  // enter
+  const ENTER_T = a.enter === 'left' || a.enter === 'right' ? 1.1 : 0.5;
+  const ep = clamp(lt / ENTER_T);
+  if (a.enter === 'left'){ x = (-o.w) + (x + o.w) * ease(ep); walking = ep < 1; }
+  if (a.enter === 'right'){ x = (W + o.w) - (W + o.w - x) * ease(ep); walking = ep < 1; }
+  if (a.enter === 'pop'){ const k = ep<1 ? easeOutBack(ep) : 1; sx *= k; sy *= k; }
+  if (a.enter === 'fade'){ op *= ep; }
+  if (a.enter === 'top'){ y = -o.h*0.2 + (y + o.h*0.2) * ease(ep); }
+
+  // exit (last 0.9s)
+  const EX = Math.min(0.9, dur*0.4), xp = clamp((lt - (dur - EX)) / EX);
+  if (a.exit === 'left'){ x -= (x + o.w) * ease(xp); walking = walking || xp > 0; }
+  if (a.exit === 'right'){ x += (W + o.w - x) * ease(xp); walking = walking || xp > 0; }
+  if (a.exit === 'fade'){ op *= 1 - xp; }
+  if (a.exit === 'up'){ y -= (y + o.h) * ease(xp); op *= 1 - xp*0.6; glow = Math.max(glow, xp); }
+
+  // direction while walking
+  let flip = o.flip;
+  if ((a.enter === 'right' && ep < 1) || (a.exit === 'left' && xp > 0)) flip = true;
+  if ((a.enter === 'left' && ep < 1) || (a.exit === 'right' && xp > 0)) flip = false;
+
+  // action
+  const ph = lt + o.a.x * 3;
+  switch (a.action){
+    case 'talk': rot += Math.sin(ph*7)*1.8; sy *= 1 + Math.abs(Math.sin(ph*7))*0.015; break;
+    case 'walk': walking = true; x += Math.sin(ph*1.2)*14; break;
+    case 'jump': { const j = Math.abs(Math.sin(ph*4.5)); y -= j*o.h*0.12; sy *= 1 - (1-j)*0.04; break; }
+    case 'shake': x += Math.sin(ph*45)*3; rot += Math.sin(ph*38)*1.5; break;
+    case 'glow': glow = Math.max(glow, 0.6 + 0.4*Math.sin(ph*3)); break;
+    case 'bow': rot += (flip?-1:1) * 14 * Math.max(0, Math.sin(ph*1.6)); break;
+    case 'eat': rot += (flip?-1:1) * (8 + Math.sin(ph*14)*3); break;
+    case 'rise': y -= ease(clamp(lt/dur)) * H * 0.35; glow = 1; break;
+    case 'sit': sy *= 0.97; break;
+    default: sy *= 1 + Math.sin(ph*2.4)*0.012; // idle saans
+  }
+  if (walking){ y -= Math.abs(Math.sin(ph*11))*6; rot += Math.sin(ph*11)*3; }
+  if (o.floating && a.action !== 'rise') y += Math.sin(ph*2)*6;
+
+  return {x, y, sx: sx*(flip?-1:1), sy, rot, op, glow};
+}
+
+window.render = function(t){
+  renderSubs(t);
+  scenes.forEach(sc => {
+    const s = sc.s;
+    let op = 0;
+    if (t >= s.start - FADE && t < s.end) {
+      op = sc.si === 0 ? 1 : clamp((t - (s.start - FADE)) / FADE);
+    }
+    sc.el.style.opacity = op;
+    sc.el.style.display = op > 0 ? 'block' : 'none';
+    if (op <= 0) return;
+    // ken burns
+    const p = clamp((t - s.start) / Math.max(0.1, s.end - s.start));
+    const z = 1 + 0.06 * p, pan = (sc.si % 2 ? -1 : 1) * 10 * p;
+    sc.bg.style.transform = `translateX(${pan}px) scale(${z})`;
+
+    sc.actors.forEach(o => {
+      const tr = actorTransform(o, Math.max(t, s.start), s);
+      o.box.style.left = (tr.x - o.w/2) + 'px';
+      o.box.style.top = (tr.y - o.h) + 'px';
+      o.box.style.opacity = tr.op;
+      o.box.style.transform = `rotate(${tr.rot}deg) scale(${tr.sx},${tr.sy})`;
+      o.box.style.filter = tr.glow > 0 ? `drop-shadow(0 0 ${8+tr.glow*16}px rgba(255,215,90,${0.5+tr.glow*0.5}))` : 'none';
+      // shadow on ground
+      const sw = o.w * 0.7;
+      o.sh.style.display = o.floating ? 'none' : 'block';
+      o.sh.style.width = sw+'px'; o.sh.style.height = (sw*0.16)+'px';
+      o.sh.style.left = (tr.x - sw/2)+'px'; o.sh.style.top = (o.a.y*H - sw*0.08)+'px';
+      o.sh.style.opacity = tr.op;
+      // emote
+      if (o.a.emote && o.a.emote !== 'none'){
+        const lt = t - s.start, ep = clamp((lt - 0.4)/0.35);
+        o.em.style.left = (tr.x + (tr.sx<0?-1:1)*o.w*0.15)+'px';
+        o.em.style.top = (tr.y - o.h - 34 - Math.sin(lt*4)*5)+'px';
+        o.em.style.opacity = ep * tr.op;
+        o.em.style.transform = `scale(${0.4 + 0.6*easeOutBack(ep)})`;
+      }
+    });
+  });
+};
+window.render(0);
+window.READY = true;
+</script>
+</body></html>

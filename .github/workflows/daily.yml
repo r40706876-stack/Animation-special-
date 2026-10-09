@@ -1,0 +1,67 @@
+name: Daily Katha Reel
+
+on:
+  schedule:
+    - cron: "22 3 * * *"   # roz subah 8:52 IST
+  workflow_dispatch:        # Actions tab se "Run workflow" dabakar kabhi bhi
+
+permissions:
+  contents: write
+
+concurrency:
+  group: katha-reel
+  cancel-in-progress: false
+
+jobs:
+  make-reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      WHISPER_MODEL: small          # behtar hindi chahiye to: medium (dheema)
+      GEMINI_MODEL: gemini-2.5-flash
+      FPS: "24"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: System packages (ffmpeg + Hindi font)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg fonts-noto-core
+
+      - name: Python packages
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Whisper model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-${{ env.WHISPER_MODEL }}
+
+      - name: Video banao
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python src/main.py
+
+      - name: Video download ke liye rakho
+        uses: actions/upload-artifact@v4
+        with:
+          name: katha-reel-${{ github.run_number }}
+          path: |
+            output/*.mp4
+            work/*/plan.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Kaam ho chuki audio ko done/ mein save karo
+        run: |
+          git config user.name "katha-bot"
+          git config user.email "katha-bot@users.noreply.github.com"
+          git add -A audio
+          git diff --cached --quiet || (git commit -m "reel bana: $(date +%F)" && git push)
