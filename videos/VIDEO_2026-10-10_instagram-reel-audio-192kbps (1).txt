@@ -1,0 +1,25 @@
+TITLE: Paap Aur Social Media Story
+TYPE: comedy sketch
+SUMMARY: एक व्यक्ति अपने दोस्त पर मज़ाकिया अंदाज़ में तंज कस रहा है कि सोशल मीडिया पर भगवान की स्टोरी लगाने से उसके पाप कम नहीं होंगे। माहौल हल्का-फुल्का और दोस्तों के बीच की अनौपचारिक बातचीत जैसा है।
+SPEAKERS: एक युवक मज़ाकिया अंदाज़ में बोलते हुए
+
+=== SUBTITLE (jo suna gaya) ===
+[  0.0] नहीं तू क्या सोच रहा है जो तू
+[  1.9] भगवान की स्टोरी लगा देगा तो तेरे पाप
+[  3.4] कम हो जाएंगे क्या अबे साले पापी इंसान
+[  6.4] इतने गंदे गंदे तू पाप करता है तू
+[  9.0] भाई सुधर जा भाई साले नर्क में ना
+[ 11.2] तेरी फील्डिंग सेट है मैं बता रहा हूं
+
+=== SCENES (jo dikhaya gaya) ===
+[  0.0-  2.5] bg=bg1 | bunty(talk), rohit(idle)
+[  2.5-  6.4] bg=bg1 | bunty(talk), rohit(idle)
+[  6.4- 10.5] bg=bg1 | bunty(talk), rohit(idle)
+[ 10.5- 13.0] bg=bg1 | bunty(talk), rohit(idle)
+
+=== CHARACTERS ===
+bunty: Young Indian man in his early 20s, expressive animated face, wearing modern casual wear, yellow graphic t-shirt and blue jeans, 2D vector art
+rohit: Young Indian man sitting with smartphone in hand, wearing modern casual wear, grey hoodie and denim jeans, looking sheepish, 2D vector art
+
+=== BACKGROUNDS ===
+bg1: Cozy modern bachelor living room with casual couch and ambient lighting, High quality, 4k, vibrant colors, beautiful detailed 2D vector art, empty background
