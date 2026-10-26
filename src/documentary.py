@@ -33,6 +33,8 @@ def image_for(scene,idx):
     prompt=scene["prompt"]+", editorial science documentary, accurate anatomy, richly textured engraved illustration, deep teal and warm amber, 9:16, no typography, no watermark"
     im=_pollinations(prompt, 9100+idx)
     if im is None:
+        if os.getenv("ALLOW_PLACEHOLDER_IMAGES","0") != "1":
+            raise RuntimeError("Image API failed: refusing to publish placeholder-only documentary")
         print("IMAGE_API_UNAVAILABLE: using explicitly marked procedural backup")
         im=Image.new("RGB",(W,H),(15,28,37))
         d=ImageDraw.Draw(im); rng=random.Random(idx)
@@ -109,6 +111,10 @@ def main():
     command(["ffmpeg","-y","-loglevel","error","-i",str(silent),"-i",str(audio),
              "-map","0:v:0","-map","1:a:0","-c:v","copy","-c:a","aac","-b:a","160k",
              "-t",str(length),"-movflags","+faststart",str(output)])
+    # Verify that the encoded output is not empty or truncated.
+    actual=duration(output)
+    if abs(actual-length)>1.5 or output.stat().st_size<100000:
+        raise RuntimeError(f"Video QA failed: expected {length:.1f}s, got {actual:.1f}s")
     (OUT/f"SCIENCE_EP_{index+1:03}.json").write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
     state.write_text(json.dumps({"next":index+1},indent=2))
     print("SUCCESS",output)
