@@ -18,43 +18,55 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
-      - name: Install Blender
-        timeout-minutes: 22
+      - name: Clear previous checkout outputs
+        run: |
+          # Old MP4s are tracked on main. They must never be mistaken for a new render.
+          mkdir -p videos
+          rm -f videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg videos/blender_render.log
+      - name: Install Blender and FFmpeg
+        timeout-minutes: 28
         shell: bash
         run: |
           set -euo pipefail
-          export DEBIAN_FRONTEND=noninteractive
-          if command -v blender >/dev/null && command -v ffmpeg >/dev/null && command -v xvfb-run >/dev/null; then
-            echo "Using installed Blender, FFmpeg and Xvfb"
-          else
-            # Bound apt/network stalls so the run fails with a useful error
-            # instead of spending most of the 90-minute job timeout here.
-            for attempt in 1 2; do
-              echo "Blender package installation attempt ${attempt}/2"
-              if timeout --signal=TERM --kill-after=30s 300s sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq &&
-                 timeout --signal=TERM --kill-after=30s 540s sudo apt-get install -y --no-install-recommends blender ffmpeg xvfb; then
-                break
-              fi
-              if [ "$attempt" -eq 2 ]; then
-                echo "::error::Blender dependencies could not be installed after two bounded attempts"
-                exit 1
-              fi
-              sleep 10
-            done
+          # The apt Blender dependency tree previously stalled on the Azure Ubuntu
+          # mirror for >18 minutes. Prefer the portable official Blender release.
+          if ! command -v blender >/dev/null; then
+            mkdir -p "$RUNNER_TEMP/blender"
+            if timeout --signal=TERM --kill-after=15s 600s curl -fL --retry 3 --retry-delay 3 --connect-timeout 25 \
+              -o "$RUNNER_TEMP/blender.tar.xz" \
+              "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz" &&
+              tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1 &&
+              test -x "$RUNNER_TEMP/blender/blender"; then
+              echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+              export PATH="$RUNNER_TEMP/blender:$PATH"
+            else
+              echo "::warning::Portable Blender download unavailable; trying Ubuntu packages"
+              # Alternate Ubuntu mirror avoids the slow Azure mirror seen in the logs.
+              sudo sed -i 's@azure.archive.ubuntu.com@archive.ubuntu.com@g' /etc/apt/sources.list.d/ubuntu.sources 2>/dev/null || true
+              timeout 180s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=25 update -qq
+              timeout 720s sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender
+            fi
+          fi
+          if ! command -v ffmpeg >/dev/null; then
+            # Much smaller than the full apt FFmpeg dependency tree.
+            python -m pip install --disable-pip-version-check --quiet imageio-ffmpeg
+            FFMPEG_PATH="$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
+            sudo ln -sf "$FFMPEG_PATH" /usr/local/bin/ffmpeg
           fi
           command -v blender
           command -v ffmpeg
-          command -v xvfb-run
           blender --version | head -n 2
+          ffmpeg -version | head -n 1
       - name: Render 3D demo
+        id: render
         run: |
           mkdir -p videos
           set -o pipefail
-          BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" xvfb-run -a blender -b -t 2 --python src/blender_octopus_demo.py 2>&1 | tee videos/blender_render.log
+          BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" blender -b -t 2 --python src/blender_octopus_demo.py 2>&1 | tee videos/blender_render.log
           test -s videos/OCTOPUS_3D_DEMO.mp4
           # ffprobe alone does not prove that all frames are decodable.
           ffmpeg -v error -xerror -i videos/OCTOPUS_3D_DEMO.mp4 -f null -
-          ffprobe -v error -show_entries format=duration,size -of json videos/OCTOPUS_3D_DEMO.mp4
+          ffmpeg -hide_banner -i videos/OCTOPUS_3D_DEMO.mp4 2>&1 | grep -E 'Duration:|Video:' || true
           ffmpeg -y -loglevel error -ss 2.5 -i videos/OCTOPUS_3D_DEMO.mp4 -frames:v 1 videos/OCTOPUS_3D_PREVIEW.jpg
           ffmpeg -y -loglevel error -i videos/OCTOPUS_3D_DEMO.mp4 -vf "select=eq(n\\,12)+eq(n\\,60)+eq(n\\,108),scale=270:480,tile=3x1" -frames:v 1 videos/OCTOPUS_3D_CONTACT.jpg
       - name: Save rendered video
@@ -73,19 +85,33 @@ jobs:
         if: always()
         run: |
           python - <<'PY'
-          import json, pathlib, subprocess
+          import json, os, pathlib, re, shutil, subprocess
           folder=pathlib.Path("videos")
           folder.mkdir(exist_ok=True)
           video=folder/"OCTOPUS_3D_DEMO.mp4"
           log=folder/"blender_render.log"
-          result={"video_exists":video.exists(),"video_bytes":video.stat().st_size if video.exists() else 0}
-          if video.exists():
-              probe=subprocess.run(["ffprobe","-v","error","-show_entries","format=duration,size","-of","json",str(video)],capture_output=True,text=True)
-              if probe.returncode==0:
-                  result["probe"]=json.loads(probe.stdout).get("format",{})
+          result={"source_commit":os.environ.get("GITHUB_SHA"),
+                  "render_step_outcome":"${{ steps.render.outcome }}",
+                  "video_exists":video.exists(),
+                  "video_bytes":video.stat().st_size if video.exists() else 0,
+                  "decode_ok":False}
+          if video.exists() and shutil.which("ffmpeg"):
+              decode=subprocess.run(["ffmpeg","-v","error","-xerror","-i",str(video),"-f","null","-"],
+                                    capture_output=True,text=True,timeout=180)
+              result["decode_ok"]=decode.returncode==0
+              if not result["decode_ok"]:
+                  result["decode_error"]=decode.stderr[-1500:]
+              probe=subprocess.run(["ffmpeg","-hide_banner","-i",str(video)],
+                                   capture_output=True,text=True,timeout=30)
+              match=re.search(r"Duration: (\\d+):(\\d+):(\\d+(?:\\.\\d+)?)",probe.stderr)
+              if match:
+                  h,m,sec=match.groups()
+                  result["duration_seconds"]=int(h)*3600+int(m)*60+float(sec)
           if log.exists():
               result["log_tail"]=log.read_text(errors="replace").splitlines()[-45:]
-          result["render_verified"]=bool(result.get("video_bytes",0)>100000 and float(result.get("probe",{}).get("duration",0))>=4.0)
+          result["render_verified"]=bool(
+              result["render_step_outcome"]=="success" and result["video_bytes"]>100000
+              and result["decode_ok"] and result.get("duration_seconds",0)>=4.0)
           (folder/"blender_run_status.json").write_text(json.dumps(result,ensure_ascii=False,indent=2))
           print("BLENDER_QA",json.dumps({k:v for k,v in result.items() if k!="log_tail"}))
           PY
@@ -93,9 +119,9 @@ jobs:
           git config user.email "blender-demo-bot@users.noreply.github.com"
           git add -f videos/blender_run_status.json
           if [ -f videos/blender_render.log ]; then git add -f videos/blender_render.log; fi
-          if [ -s videos/OCTOPUS_3D_DEMO.mp4 ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
-          if [ -s videos/OCTOPUS_3D_PREVIEW.jpg ]; then git add -f videos/OCTOPUS_3D_PREVIEW.jpg; fi
-          if [ -s videos/OCTOPUS_3D_CONTACT.jpg ]; then git add -f videos/OCTOPUS_3D_CONTACT.jpg; fi
+          if [ -s videos/OCTOPUS_3D_DEMO.mp4 ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
+          if [ -s videos/OCTOPUS_3D_PREVIEW.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_PREVIEW.jpg; fi
+          if [ -s videos/OCTOPUS_3D_CONTACT.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_CONTACT.jpg; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Record Blender 3D demo render and QA result"
           for attempt in 1 2 3; do
