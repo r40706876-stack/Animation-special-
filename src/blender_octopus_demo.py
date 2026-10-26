@@ -60,7 +60,7 @@ for k in range(8):
  rings=26; sides=10
  for j in range(rings):
   t=j/(rings-1)
-  distance=.43+2.55*t
+  distance=.43+1.85*t
   angle=theta+.20*math.sin(t*math.pi*1.5+k)
   center=Vector((distance*math.cos(angle),distance*math.sin(angle),.58+.26*math.sin(math.pi*t)+.30*t*t))
   radius=.245*(1-t)**1.15+.018
@@ -83,8 +83,8 @@ for k in range(8):
   phase=math.tau*(frame-1)/119
   for j in range(rings):
    t=j/(rings-1)
-   shift=.27*t*t*math.sin(phase+k*.8+t*4)
-   rise=.20*t*t*math.cos(phase+k*.9+t*5)
+   shift=.38*t*t*math.sin(phase+k*.8+t*4)
+   rise=.29*t*t*math.cos(phase+k*.9+t*5)
    for q in range(sides):
     n=j*sides+q
     key.data[n].co=Vector(verts[n])+Vector((-math.sin(theta)*shift,math.cos(theta)*shift,rise))
@@ -97,13 +97,17 @@ uv('Sea floor',(0,0,-.55),(9,9,.16),floor)
 for i in range(22):
  a=i*2.39996
  r=2.4+(i%5)*.46
- uv('Bubble '+str(i),(r*math.cos(a),r*math.sin(a),.4+(i%9)*.29),(.035,.035,.055),nerve)
+ bubble=uv('Bubble '+str(i),(r*math.cos(a),r*math.sin(a),.4+(i%9)*.29),(.035,.035,.055),nerve)
+ start=bubble.location.copy()
+ for frame in (1,60,120):
+  bubble.location=start+Vector((.09*math.sin(frame*.045+i),0,.65*(frame-1)/119))
+  bubble.keyframe_insert(data_path='location',frame=frame)
 bpy.ops.object.light_add(type='AREA',location=(1,-4,7))
 bpy.context.object.data.energy=1400;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=7
 bpy.ops.object.camera_add(location=(0,-8,6))
 cam=bpy.context.object;direction=Vector((0,0,.7))-cam.location
 cam.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
-cam.data.type='ORTHO';cam.data.ortho_scale=7.5
+cam.data.type='ORTHO';cam.data.ortho_scale=9.4
 scene.camera=cam
 for frame,ang in [(1,-.12),(60,.10),(120,-.12)]:
  cam.rotation_euler[2]=ang
