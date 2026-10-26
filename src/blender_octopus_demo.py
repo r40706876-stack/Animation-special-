@@ -44,45 +44,66 @@ def uv(name,loc,scale,material):
  bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=16,location=loc)
  o=bpy.context.object;o.name=name;o.scale=scale;o.data.materials.append(material)
  bpy.ops.object.shade_smooth();return o
-head=uv('Octopus mantle', (0,0,1.0),(.8,.7,.95),skin)
-eyes=[]
-for x in [-.45,.45]:
- eye=uv('Eye', (x,-.57,.82),(.14,.12,.14),nerve);eyes.append(eye)
-arms=[]
+# Continuous tapered tentacles built as one skinned tube per arm.
+# Animate each ring of vertices with shape keys, avoiding disconnected spheres.
+head=uv('Octopus mantle',(0,0,1.45),(.72,.62,.86),skin)
+face=mat('Eye white',(.96,.94,.82))
+pupil=mat('Pupils',(.012,.025,.045))
+for x in [-.32,.32]:
+ uv('Eye white',(x,-.53,1.35),(.24,.15,.27),face)
+ uv('Pupil',(x,-.665,1.33),(.115,.065,.15),pupil)
+ uv('Eye glint',(x-.045,-.727,1.41),(.035,.022,.045),face)
+# All arm vertices are continuous rings, with smoothly decreasing radii.
 for k in range(8):
- theta=k*math.tau/8
- parent=bpy.data.objects.new('Arm control '+str(k),None)
- bpy.context.collection.objects.link(parent);parent.location=(0,0,.35)
- for j in range(8):
-  t=(j+.5)/8
-  radius=1.15+2.4*t
-  x=radius*math.cos(theta);y=radius*math.sin(theta)
-  z=.32+.35*math.sin(t*math.pi)
-  seg=uv('Arm %d segment %d'%(k,j),(x,y,z),(.27*(1-t)+.055,.27*(1-t)+.055,.18*(1-t)+.05),skin)
-  seg.parent=parent
-  seg.matrix_parent_inverse=parent.matrix_world.inverted()
-  if j%2==0:
-   uv('Sucker %d %d'%(k,j),(x,y,z-.17),(.11,.11,.045),sucker)
- arms.append(parent)
- for frame in [1,31,61,91,120]:
-  parent.rotation_euler[2]=.09*math.sin(frame*.065+k)
-  parent.rotation_euler[0]=.08*math.sin(frame*.07+k)
-  parent.keyframe_insert(data_path='rotation_euler',frame=frame)
-for k in range(8):
- theta=k*math.tau/8
- for j in range(6):
-  t=j/5
-  pulse=uv('Neural impulse %d-%d'%(k,j),((1.15+2.35*t)*math.cos(theta),(1.15+2.35*t)*math.sin(theta),.65),(.09,.09,.09),nerve)
-  pulse.hide_render=True;pulse.keyframe_insert(data_path='hide_render',frame=1)
-  for frame in range(1,121,20):
-   on=((frame//20+k+j)%3==0)
-   pulse.hide_render=not on;pulse.keyframe_insert(data_path='hide_render',frame=frame)
+ theta=math.tau*k/8
+ verts=[];faces=[]
+ rings=26; sides=10
+ for j in range(rings):
+  t=j/(rings-1)
+  distance=.43+2.55*t
+  angle=theta+.20*math.sin(t*math.pi*1.5+k)
+  center=Vector((distance*math.cos(angle),distance*math.sin(angle),.58+.26*math.sin(math.pi*t)+.30*t*t))
+  radius=.245*(1-t)**1.15+.018
+  for q in range(sides):
+   a=math.tau*q/sides
+   verts.append(tuple(center+Vector((radius*math.cos(a)*math.cos(angle),radius*math.cos(a)*math.sin(angle),radius*math.sin(a)))))
+ for j in range(rings-1):
+  for q in range(sides):
+   a=j*sides+q;b=j*sides+(q+1)%sides
+   faces.append((a,b,b+sides,a+sides))
+ faces.append(tuple(reversed(range(sides))))
+ faces.append(tuple((rings-1)*sides+q for q in range(sides)))
+ mesh=bpy.data.meshes.new('Tentacle mesh');mesh.from_pydata(verts,[],faces);mesh.update()
+ obj=bpy.data.objects.new('Smooth tentacle '+str(k),mesh);bpy.context.collection.objects.link(obj)
+ obj.data.materials.append(skin)
+ for poly in mesh.polygons: poly.use_smooth=True
+ basis=obj.shape_key_add(name='Rest')
+ for index,frame in enumerate([1,31,61,91,120]):
+  key=obj.shape_key_add(name='Swim '+str(frame))
+  phase=math.tau*(frame-1)/119
+  for j in range(rings):
+   t=j/(rings-1)
+   shift=.27*t*t*math.sin(phase+k*.8+t*4)
+   rise=.20*t*t*math.cos(phase+k*.9+t*5)
+   for q in range(sides):
+    n=j*sides+q
+    key.data[n].co=Vector(verts[n])+Vector((-math.sin(theta)*shift,math.cos(theta)*shift,rise))
+  key.value=0
+  for f in [1,31,61,91,120]:
+   key.value=1 if f==frame else 0
+   key.keyframe_insert(data_path='value',frame=f)
+# Ground and underwater context
+uv('Sea floor',(0,0,-.55),(9,9,.16),floor)
+for i in range(22):
+ a=i*2.39996
+ r=2.4+(i%5)*.46
+ uv('Bubble '+str(i),(r*math.cos(a),r*math.sin(a),.4+(i%9)*.29),(.035,.035,.055),nerve)
 bpy.ops.object.light_add(type='AREA',location=(1,-4,7))
 bpy.context.object.data.energy=1400;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=7
 bpy.ops.object.camera_add(location=(0,-8,6))
 cam=bpy.context.object;direction=Vector((0,0,.7))-cam.location
 cam.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
-cam.data.type='ORTHO';cam.data.ortho_scale=8.5
+cam.data.type='ORTHO';cam.data.ortho_scale=7.5
 scene.camera=cam
 for frame,ang in [(1,-.12),(60,.10),(120,-.12)]:
  cam.rotation_euler[2]=ang
