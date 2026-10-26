@@ -51,6 +51,18 @@ jobs:
               timeout 720s sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender
             fi
           fi
+          # Portable Blender needs EGL/OpenGL runtime libraries not present on
+          # the minimal GitHub runner image (confirmed: libEGL.so.1 missing).
+          if ! ldconfig -p | grep -q 'libEGL.so.1'; then
+            sudo sed -i 's@azure.archive.ubuntu.com@archive.ubuntu.com@g' /etc/apt/sources.list.d/ubuntu.sources 2>/dev/null || true
+            timeout 180s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=25 update -qq
+            timeout 300s sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libegl1 libgl1 libopengl0 xvfb
+          fi
+          # Fail early if the portable Blender still has missing shared libraries.
+          if ldd "$(command -v blender)" | grep 'not found'; then
+            echo "::error::Blender runtime libraries are missing"
+            exit 1
+          fi
           if ! command -v ffmpeg >/dev/null; then
             # Much smaller than the full apt FFmpeg dependency tree.
             python -m pip install --disable-pip-version-check --quiet imageio-ffmpeg
@@ -129,6 +141,9 @@ jobs:
           if [ -s videos/OCTOPUS_3D_DEMO.mp4 ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
           if [ -s videos/OCTOPUS_3D_PREVIEW.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_PREVIEW.jpg; fi
           if [ -s videos/OCTOPUS_3D_CONTACT.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_CONTACT.jpg; fi
+          # Clean unstaged deletions of tracked old outputs before rebase.
+          # Do not stage deletions on a failed render: preserve last good MP4.
+          git restore --worktree -- videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Record Blender 3D demo render and QA result"
           for attempt in 1 2 3; do
