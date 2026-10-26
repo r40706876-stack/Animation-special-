@@ -59,29 +59,81 @@ def font(size):
         if pathlib.Path(p).exists(): return ImageFont.truetype(p,size)
     return ImageFont.load_default()
 def offline_science_visual(scene,idx):
-    im=Image.new("RGB",(W,H),(10,29,43))
+    """Eight distinct illustrated beats for the jewel-wasp episode."""
+    im=Image.new("RGB",(W,H),[(9,28,39),(24,38,43),(17,42,51),(22,32,38),
+                            (13,29,51),(31,42,45),(30,35,28),(35,27,28)][idx%8])
     d=ImageDraw.Draw(im)
-    rng=random.Random(1024+idx)
-    for n in range(90):
-        x=rng.randrange(W);y=rng.randrange(200,1050);rad=rng.randrange(3,24)
-        d.ellipse((x-rad,y-rad,x+rad,y+rad),outline=(28,69,82),width=2)
-    # Original stylised insect anatomy illustration.
-    for j in range(6):
-        y=490+j*72
-        d.line((320,y,125,y-75,65,y+45),fill=(179,149,89),width=8)
-        d.line((400,y,590,y-75,655,y+45),fill=(179,149,89),width=8)
-    d.ellipse((255,420,465,920),fill=(113,77,43),outline=(245,180,93),width=7)
-    for j in range(7):
-        y=545+j*47
-        d.arc((270,y,450,y+54),0,180,fill=(223,159,84),width=5)
-    d.ellipse((275,335,445,525),fill=(121,86,49),outline=(242,183,96),width=7)
-    d.arc((145,160,350,430),200,350,fill=(247,203,117),width=5)
-    d.arc((370,160,575,430),190,340,fill=(247,203,117),width=5)
-    d.ellipse((235,365,490,630),outline=(106,231,219),width=9)
-    d.line((485,390,615,285),fill=(106,231,219),width=7)
-    for j in range(8):
-        x=140+j*62
-        d.ellipse((x,1115,x+13,1128),fill=(255,198,91) if j==idx else (64,111,126))
+    rng=random.Random(913+idx)
+    for n in range(70):
+        x=rng.randrange(W); y=rng.randrange(190,1060); rad=rng.randrange(2,14)
+        d.ellipse((x-rad,y-rad,x+rad,y+rad),outline=(40,74,83),width=2)
+    def roach(x,y,s=1):
+        def oval(box,fill,outline=(227,157,82),width=4):
+            d.ellipse(tuple(int(v) for v in box),fill=fill,outline=outline,width=width)
+        oval((x-80*s,y-130*s,x+80*s,y+150*s),(116,68,39))
+        for k in range(5):
+            yy=y-45*s+k*36*s
+            d.arc((x-68*s,yy,x+68*s,yy+35*s),0,180,fill=(238,173,95),width=3)
+        oval((x-65*s,y-205*s,x+65*s,y-95*s),(137,87,47))
+        for sign in (-1,1):
+            for k in range(3):
+                yy=y-65*s+k*83*s
+                d.line([(int(x+sign*65*s),int(yy)),(int(x+sign*135*s),int(yy+sign*35*s)),
+                        (int(x+sign*165*s),int(yy+65*s))],fill=(231,167,92),width=6)
+            d.arc((int(x+sign*10*s-95*s),int(y-355*s),int(x+sign*10*s+95*s),int(y-150*s)),
+                  190 if sign<0 else 0,350 if sign<0 else 160,fill=(243,201,122),width=3)
+    def wasp(x,y,s=1):
+        d.ellipse((x-48*s,y-40*s,x+48*s,y+120*s),fill=(21,127,125),outline=(97,241,191),width=5)
+        d.ellipse((x-45*s,y-120*s,x+45*s,y-20*s),fill=(19,133,95),outline=(114,241,174),width=5)
+        d.ellipse((x-35*s,y-170*s,x+35*s,y-100*s),fill=(16,107,127),outline=(107,235,217),width=4)
+        d.polygon([(x,y-55*s),(x-135*s,y-150*s),(x-100*s,y+30*s)],fill=(62,137,156))
+        d.polygon([(x,y-55*s),(x+135*s,y-150*s),(x+100*s,y+30*s)],fill=(62,137,156))
+        for sign in (-1,1):
+            for k in range(3):
+                yy=y-45*s+k*44*s
+                d.line([(x+sign*38*s,yy),(x+sign*105*s,yy+65*s)],fill=(112,236,172),width=5)
+    def target(x,y,r=85):
+        d.ellipse((x-r,y-r,x+r,y+r),outline=(255,200,91),width=8)
+        d.line((x+r,y-r,x+r+70,y-r-65),fill=(255,200,91),width=5)
+    if idx==0:
+        roach(455,720,1.0);wasp(185,470,0.8);target(345,545,100)
+    elif idx==1:
+        roach(380,740,1.25);wasp(165,465,0.75);target(300,610,85)
+        d.line((230,520,325,620),fill=(255,194,87),width=9)
+    elif idx==2:
+        roach(360,740,1.25)
+        for x in (195,525):
+            target(x,795,60)
+        d.line((195,795,525,795),fill=(106,229,216),width=8)
+    elif idx==3:
+        roach(390,750,1.2);wasp(190,355,0.8);target(385,515,100)
+    elif idx==4:
+        d.ellipse((110,335,610,935),fill=(54,86,103),outline=(107,221,211),width=9)
+        for k in range(9):
+            x=165+(k%3)*150;y=430+(k//3)*165
+            d.ellipse((x,y,x+95,y+95),fill=(26,114,128),outline=(112,220,211),width=4)
+        target(360,620,145)
+        d.line((340,810,340,1030),fill=(255,202,100),width=9)
+    elif idx==5:
+        d.line((360,270,360,1010),fill=(108,221,220),width=8)
+        roach(185,700,0.65);roach(540,700,0.65)
+        d.line((100,1030,290,1030),fill=(248,177,91),width=12)
+        d.line((430,1030,620,1030),fill=(110,221,216),width=12)
+    elif idx==6:
+        d.polygon([(0,1010),(220,760),(420,1010),(720,770),(720,1280),(0,1280)],fill=(94,67,43))
+        d.ellipse((390,930,680,1130),fill=(10,25,32))
+        roach(430,735,0.7);wasp(235,600,0.55)
+        d.line((260,510,350,530),fill=(255,200,98),width=6)
+    else:
+        d.polygon([(0,840),(160,780),(350,820),(550,760),(720,820),(720,1280),(0,1280)],fill=(104,73,46))
+        d.ellipse((115,870,620,1180),fill=(15,30,34))
+        roach(360,955,0.65)
+        d.ellipse((335,790,383,845),fill=(252,223,153),outline=(255,255,228),width=4)
+        d.line((360,843,360,890),fill=(255,210,138),width=4)
+        target(360,825,65)
+    for k in range(8):
+        x=130+k*65
+        d.ellipse((x,1155,x+16,1171),fill=(255,197,92) if k==idx else (66,114,125))
     return im
 
 def image_for(scene,idx):
