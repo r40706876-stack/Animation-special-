@@ -1,8 +1,6 @@
 name: Daily Katha Reel
 
 on:
-  schedule:
-    - cron: "22 3 * * *"   # roz subah 8:52 IST
   workflow_dispatch:        # Actions tab se "Run workflow" dabakar kabhi bhi
 
 permissions:
