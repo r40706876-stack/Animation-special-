@@ -119,12 +119,12 @@ def render_scene(im,scene,idx,seconds,path):
     caption(d,scene.get("label","रहस्य"),60,(255,218,133),46)
     caption(d,scene.get("fact",""),H-210,(245,246,236),31)
     # Animated infographic: a highlighted subject ring and a directional callout.
-    if idx % 3 == 1:
+    if scene.get("visual_type") in ("diagram","mechanism") or (idx % 3 == 1 and scene.get("visual_type")!="cinematic"):
         cx,cy=W//2,H//2-55
         d.ellipse((cx-150,cy-150,cx+150,cy+150),outline=(255,199,95,230),width=7)
         d.line((cx+110,cy-110,cx+190,cy-200),fill=(255,199,95,240),width=6)
         d.ellipse((cx+184,cy-206,cx+196,cy-194),fill=(255,199,95,255))
-    elif idx % 3 == 2:
+    elif scene.get("visual_type")=="comparison" or idx % 3 == 2:
         for j in range(4):
             yline=320+j*120
             d.line((38,yline,W-38,yline),fill=(121,217,216,90),width=2)
