@@ -23,6 +23,7 @@ def write_story(topic):
     raw=_gemini(prompt,json_mode=True,temperature=0.65)
     data=json.loads(raw[raw.find("{"):raw.rfind("}")+1])
     if len(data.get("scenes",[]))!=8 or not data.get("narration"): raise ValueError("Invalid storyboard")
+    if len(str(data["narration"]).split()) < 65: raise ValueError("Narration too short for documentary")
     for scene in data["scenes"]:
         if not isinstance(scene,dict) or len(str(scene.get("prompt",""))) < 35:
             raise ValueError("Scene is missing a detailed scientific visual prompt")
@@ -115,12 +116,14 @@ def main():
     asyncio.run(voice(data["narration"],audio))
     length=duration(audio)
     scenes=data["scenes"]
-    segment=length/len(scenes)
+    # Allocate more screen time to complex captions, instead of equal-length slides.
+    weights=[max(8,len(str(s.get("fact","")))+len(str(s.get("label","")))) for s in scenes]
+    total_weight=sum(weights)
     clips=[]
     for i,scene in enumerate(scenes):
         im=image_for(scene,i)
         clip=WORK/f"clip_{i:02}.mp4"
-        render_scene(im,scene,i,segment,clip)
+        render_scene(im,scene,i,length*weights[i]/total_weight,clip)
         clips.append(clip)
     manifest=WORK/"concat.txt"
     manifest.write_text("".join("file '"+str(p.resolve())+"'\n" for p in clips))
