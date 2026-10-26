@@ -27,7 +27,18 @@ def write_story(topic):
       "Require at least three diagram/mechanism/comparison scenes; alternate cinematic and explanatory scenes. "
       "In the first scene depict the hook's subject prominently, not an abstract title card. "
       "No copyrighted characters or misleading claims.")
-    raw=_gemini(prompt,json_mode=True,temperature=0.65)
+    try:
+        raw=_gemini(prompt,json_mode=True,temperature=0.65)
+    except RuntimeError as exc:
+        if "429" not in str(exc) and "quota" not in str(exc).lower():
+            raise
+        cached=ROOT/"src"/"documentary_fallback.json"
+        library=json.loads(cached.read_text(encoding="utf-8")) if cached.exists() else {}
+        story=library.get(topic["subject"])
+        if not story:
+            raise RuntimeError("Gemini quota exhausted and no fact-reviewed offline storyboard for this topic") from exc
+        print("GEMINI_QUOTA_FALLBACK: using curated offline science storyboard")
+        raw=json.dumps(story,ensure_ascii=False)
     data=json.loads(raw[raw.find("{"):raw.rfind("}")+1])
     if len(data.get("scenes",[]))!=8 or not data.get("narration"): raise ValueError("Invalid storyboard")
     if len(str(data["narration"]).split()) < 65: raise ValueError("Narration too short for documentary")
