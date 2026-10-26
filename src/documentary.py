@@ -166,7 +166,7 @@ def image_for(scene,idx):
         print(f"[image QA] Scene {idx}: low-detail image rejected, attempt {attempt+1}")
     if im is None:
         print("IMAGE_API_UNAVAILABLE: using scene-specific scientific illustration",idx)
-        im=offline_science_visual(scene,idx)
+        raise RuntimeError("VISUAL_QA_BLOCKED: AI image unavailable; refusing to render unrelated insect fallback for topic: "+str(scene.get("label",scene.get("prompt","unknown"))))
     return im.convert("RGB")
 def caption(draw,text,y,fill,fontsize=45):
     f=font(fontsize)
