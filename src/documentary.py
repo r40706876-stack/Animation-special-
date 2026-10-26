@@ -11,19 +11,29 @@ W,H=720,1280
 def command(args):
     subprocess.run(args,check=True)
 def write_story(topic):
-    prompt=("Write an ORIGINAL, accurate, suspenseful Hindi nature documentary, 110-145 Hindi words, "
-      "about "+topic["subject"]+". Begin with a striking factual hook. Each sentence advances "
-      "the story; avoid invented statistics, anthropomorphism as fact, and unverified claims. "
-      "End with an intriguing but factual conclusion. Return ONLY JSON with keys "
-      "title (Hindi), narration (Hindi), scenes (array of exactly 8 objects, each with "
-      "prompt (English, richly detailed scientific natural-history illustration matching the "
-      "specific spoken facts, subject clearly visible, cinematic lighting, portrait composition, "
-      "no words), label (2-5 Hindi words), motion (one of zoom, panleft, panright, push), "
-      "fact (short Hindi factual line)). No copyrighted characters.")
+    prompt=("Create an ORIGINAL, fact-checked Hindi science explainer documentary about "+topic["subject"]+". "
+      "Audience: curious Hindi speakers, age 12+. 110-145 natural conversational Hindi words. "
+      "OPEN within the first 2 seconds with a startling specific question, never greetings or channel introduction. "
+      "Build a connected causal story: surprising observation, common misconception, reveal, "
+      "three clear mechanisms demonstrated visually, surprising implication and memorable factual ending. "
+      "Avoid invented statistics, false certainty, fake experiments and anthropomorphism as fact. "
+      "Do not copy either reference video's wording, story or composition. "
+      "Return ONLY JSON: title (Hindi), narration (Hindi), scenes (exactly 8 objects). "
+      "Each scene must have prompt (English, very specific biological subject or anatomical cross-section, "
+      "accurate morphology, precise mechanism, clean educational visual, portrait 9:16, no text), "
+      "label (2-5 Hindi words), fact (one short accurate Hindi line), "
+      "motion (zoom, panleft, panright or push), visual_type (one of cinematic, diagram, comparison, mechanism), "
+      "and beat (one of hook, observation, misconception, reveal, mechanism, consequence, conclusion). "
+      "Require at least three diagram/mechanism/comparison scenes; alternate cinematic and explanatory scenes. "
+      "In the first scene depict the hook's subject prominently, not an abstract title card. "
+      "No copyrighted characters or misleading claims.")
     raw=_gemini(prompt,json_mode=True,temperature=0.65)
     data=json.loads(raw[raw.find("{"):raw.rfind("}")+1])
     if len(data.get("scenes",[]))!=8 or not data.get("narration"): raise ValueError("Invalid storyboard")
     if len(str(data["narration"]).split()) < 65: raise ValueError("Narration too short for documentary")
+    kinds=[s.get("visual_type","cinematic") for s in data["scenes"]]
+    if sum(t in ("diagram","comparison","mechanism") for t in kinds)<3:
+        raise ValueError("Storyboard needs at least three explanatory visual scenes")
     for scene in data["scenes"]:
         if not isinstance(scene,dict) or len(str(scene.get("prompt",""))) < 35:
             raise ValueError("Scene is missing a detailed scientific visual prompt")
@@ -34,7 +44,8 @@ def font(size):
         if pathlib.Path(p).exists(): return ImageFont.truetype(p,size)
     return ImageFont.load_default()
 def image_for(scene,idx):
-    prompt=scene["prompt"]+", editorial science documentary, accurate anatomy, richly textured engraved illustration, deep teal and warm amber, 9:16, no typography, no watermark"
+    style=(", crisp educational scientific diagram, readable visual comparison, isolated anatomy, clean ivory background, clear spatial separation, vivid subject colors" if scene.get("visual_type") in ("diagram","comparison","mechanism") else ", cinematic macro natural history photography, anatomically accurate subject, dramatic depth, rich organic detail")
+    prompt=scene["prompt"]+style+", vertical 9:16, no text, no typography, no watermark"
     im=None
     for attempt in range(3):
         url="https://image.pollinations.ai/prompt/"+urllib.parse.quote(prompt)+"?width=720&height=1280&nologo=true&seed="+str(9100+idx+attempt*109)+"&model=flux"
