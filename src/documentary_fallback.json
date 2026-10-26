@@ -68,5 +68,565 @@
         "motion": "zoom"
       }
     ]
+  },
+  "octopus cognition": {
+    "title": "ऑक्टोपस का दिमाग",
+    "narration": "क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है? उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है। हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है। सकरों से वह सतह को पकड़ता और रसायन महसूस करता है। वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है। रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं। लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा। समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "ऑक्टोपस • 1",
+        "fact": "क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है?",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "ऑक्टोपस • 2",
+        "fact": "उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "ऑक्टोपस • 3",
+        "fact": "हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "ऑक्टोपस • 4",
+        "fact": "सकरों से वह सतह को पकड़ता और रसायन महसूस करता है।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: सकरों से वह सतह को पकड़ता और रसायन महसूस करता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "ऑक्टोपस • 5",
+        "fact": "वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "ऑक्टोपस • 6",
+        "fact": "रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "ऑक्टोपस • 7",
+        "fact": "लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "ऑक्टोपस • 8",
+        "fact": "समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है।",
+        "prompt": "Scientifically accurate octopus cognition, scene showing: समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "marine bioluminescence": {
+    "title": "समुद्र की रोशनी",
+    "narration": "समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं? इसे बायोल्यूमिनेसेंस कहते हैं। कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है। इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं। कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं। कुछ अपनी चमक से शिकारी को भ्रमित करती हैं। सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते। गहरे समुद्र में रोशनी जीवित रहने का एक साधन है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "समुद्री रोशनी • 1",
+        "fact": "समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं?",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "समुद्री रोशनी • 2",
+        "fact": "इसे बायोल्यूमिनेसेंस कहते हैं।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: इसे बायोल्यूमिनेसेंस कहते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "समुद्री रोशनी • 3",
+        "fact": "कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "समुद्री रोशनी • 4",
+        "fact": "इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "समुद्री रोशनी • 5",
+        "fact": "कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "समुद्री रोशनी • 6",
+        "fact": "कुछ अपनी चमक से शिकारी को भ्रमित करती हैं।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ अपनी चमक से शिकारी को भ्रमित करती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "समुद्री रोशनी • 7",
+        "fact": "सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "समुद्री रोशनी • 8",
+        "fact": "गहरे समुद्र में रोशनी जीवित रहने का एक साधन है।",
+        "prompt": "Scientifically accurate marine bioluminescence, scene showing: गहरे समुद्र में रोशनी जीवित रहने का एक साधन है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "leafcutter ants cultivate fungus in underground colonies": {
+    "title": "लीफकटर चींटियों का खेत",
+    "narration": "क्या चींटियाँ इंसानों से बहुत पहले खेती कर रही थीं? लीफकटर चींटियाँ पत्तियों के टुकड़े काटती हैं। वे इन टुकड़ों को भूमिगत कॉलोनी तक पहुँचाती हैं। पत्तियों पर खास फंगस उगाया जाता है। चींटियाँ उसी फंगस को भोजन के रूप में इस्तेमाल करती हैं। कॉलोनी में फंगस की देखभाल और सफाई होती है। पत्तियाँ सीधे खाने के बजाय खेती के काम आती हैं। यह कीड़ों और फंगस के सहयोग का अद्भुत उदाहरण है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "फंगस की खेती • 1",
+        "fact": "क्या चींटियाँ इंसानों से बहुत पहले खेती कर रही थीं?",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: क्या चींटियाँ इंसानों से बहुत पहले खेती कर रही थीं?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "फंगस की खेती • 2",
+        "fact": "लीफकटर चींटियाँ पत्तियों के टुकड़े काटती हैं।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: लीफकटर चींटियाँ पत्तियों के टुकड़े काटती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "फंगस की खेती • 3",
+        "fact": "वे इन टुकड़ों को भूमिगत कॉलोनी तक पहुँचाती हैं।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: वे इन टुकड़ों को भूमिगत कॉलोनी तक पहुँचाती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "फंगस की खेती • 4",
+        "fact": "पत्तियों पर खास फंगस उगाया जाता है।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: पत्तियों पर खास फंगस उगाया जाता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "फंगस की खेती • 5",
+        "fact": "चींटियाँ उसी फंगस को भोजन के रूप में इस्तेमाल करती हैं।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: चींटियाँ उसी फंगस को भोजन के रूप में इस्तेमाल करती हैं।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "फंगस की खेती • 6",
+        "fact": "कॉलोनी में फंगस की देखभाल और सफाई होती है।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: कॉलोनी में फंगस की देखभाल और सफाई होती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "फंगस की खेती • 7",
+        "fact": "पत्तियाँ सीधे खाने के बजाय खेती के काम आती हैं।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: पत्तियाँ सीधे खाने के बजाय खेती के काम आती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "फंगस की खेती • 8",
+        "fact": "यह कीड़ों और फंगस के सहयोग का अद्भुत उदाहरण है।",
+        "prompt": "Scientifically accurate leafcutter ants cultivate fungus in underground colonies, scene showing: यह कीड़ों और फंगस के सहयोग का अद्भुत उदाहरण है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "tardigrade cryptobiosis, limitations and scientific evidence": {
+    "title": "टार्डिग्रेड की असली ताकत",
+    "narration": "क्या टार्डिग्रेड सच में लगभग हर आपदा झेल सकता है? यह सूक्ष्म जीव पानी की पतली परत में सक्रिय रहता है। पानी कम होने पर कुछ प्रजातियाँ सिकुड़कर टन जैसी अवस्था में जाती हैं। इस अवस्था में उनका चयापचय बहुत कम हो सकता है। सही परिस्थितियों में पानी मिलने पर कुछ फिर सक्रिय हो जाते हैं। प्रयोगों में कुछ ने अत्यधिक ठंड और सूखे को सहा है। लेकिन इसका मतलब यह नहीं कि वे अमर या अजेय हैं। उनकी सीमाएँ समझना विज्ञान का जरूरी हिस्सा है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "टार्डिग्रेड • 1",
+        "fact": "क्या टार्डिग्रेड सच में लगभग हर आपदा झेल सकता है?",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: क्या टार्डिग्रेड सच में लगभग हर आपदा झेल सकता है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "टार्डिग्रेड • 2",
+        "fact": "यह सूक्ष्म जीव पानी की पतली परत में सक्रिय रहता है।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: यह सूक्ष्म जीव पानी की पतली परत में सक्रिय रहता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "टार्डिग्रेड • 3",
+        "fact": "पानी कम होने पर कुछ प्रजातियाँ सिकुड़कर टन जैसी अवस्था में जाती हैं।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: पानी कम होने पर कुछ प्रजातियाँ सिकुड़कर टन जैसी अवस्था में जाती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "टार्डिग्रेड • 4",
+        "fact": "इस अवस्था में उनका चयापचय बहुत कम हो सकता है।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: इस अवस्था में उनका चयापचय बहुत कम हो सकता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "टार्डिग्रेड • 5",
+        "fact": "सही परिस्थितियों में पानी मिलने पर कुछ फिर सक्रिय हो जाते हैं।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: सही परिस्थितियों में पानी मिलने पर कुछ फिर सक्रिय हो जाते हैं।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "टार्डिग्रेड • 6",
+        "fact": "प्रयोगों में कुछ ने अत्यधिक ठंड और सूखे को सहा है।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: प्रयोगों में कुछ ने अत्यधिक ठंड और सूखे को सहा है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "टार्डिग्रेड • 7",
+        "fact": "लेकिन इसका मतलब यह नहीं कि वे अमर या अजेय हैं।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: लेकिन इसका मतलब यह नहीं कि वे अमर या अजेय हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "टार्डिग्रेड • 8",
+        "fact": "उनकी सीमाएँ समझना विज्ञान का जरूरी हिस्सा है।",
+        "prompt": "Scientifically accurate tardigrade cryptobiosis, limitations and scientific evidence, scene showing: उनकी सीमाएँ समझना विज्ञान का जरूरी हिस्सा है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "mantis shrimp vision and specialized striking appendages": {
+    "title": "मैंटिस श्रिम्प की दृष्टि",
+    "narration": "क्या समुद्र का यह छोटा जीव बिजली जैसी तेज़ चोट कर सकता है? मैंटिस श्रिम्प के कुछ प्रकारों के अगले अंग हथौड़े जैसे होते हैं। ये अंग बहुत तेज़ी से आगे बढ़ते हैं। पानी में इस प्रहार से कैविटेशन बुलबुले बन सकते हैं। बुलबुले के ढहने से भी प्रभाव पैदा होता है। उसकी आँखों में जटिल प्रकाश-संवेदी संरचनाएँ होती हैं। लेकिन रंग देखने की क्षमता को सीधे इंसानों से बेहतर कहना गलत है। इस जीव में दृष्टि और शिकार की अनोखी विशेषज्ञता मिलती है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "मैंटिस श्रिम्प • 1",
+        "fact": "क्या समुद्र का यह छोटा जीव बिजली जैसी तेज़ चोट कर सकता है?",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: क्या समुद्र का यह छोटा जीव बिजली जैसी तेज़ चोट कर सकता है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 2",
+        "fact": "मैंटिस श्रिम्प के कुछ प्रकारों के अगले अंग हथौड़े जैसे होते हैं।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: मैंटिस श्रिम्प के कुछ प्रकारों के अगले अंग हथौड़े जैसे होते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 3",
+        "fact": "ये अंग बहुत तेज़ी से आगे बढ़ते हैं।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: ये अंग बहुत तेज़ी से आगे बढ़ते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 4",
+        "fact": "पानी में इस प्रहार से कैविटेशन बुलबुले बन सकते हैं।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: पानी में इस प्रहार से कैविटेशन बुलबुले बन सकते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 5",
+        "fact": "बुलबुले के ढहने से भी प्रभाव पैदा होता है।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: बुलबुले के ढहने से भी प्रभाव पैदा होता है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 6",
+        "fact": "उसकी आँखों में जटिल प्रकाश-संवेदी संरचनाएँ होती हैं।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: उसकी आँखों में जटिल प्रकाश-संवेदी संरचनाएँ होती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 7",
+        "fact": "लेकिन रंग देखने की क्षमता को सीधे इंसानों से बेहतर कहना गलत है।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: लेकिन रंग देखने की क्षमता को सीधे इंसानों से बेहतर कहना गलत है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "मैंटिस श्रिम्प • 8",
+        "fact": "इस जीव में दृष्टि और शिकार की अनोखी विशेषज्ञता मिलती है।",
+        "prompt": "Scientifically accurate mantis shrimp vision and specialized striking appendages, scene showing: इस जीव में दृष्टि और शिकार की अनोखी विशेषज्ञता मिलती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "Ophiocordyceps fungi and infected ants": {
+    "title": "फंगस जो कीड़ों को प्रभावित करता है",
+    "narration": "क्या कोई फंगस चींटी के व्यवहार को बदल सकता है? कुछ ओफिओकॉर्डिसेप्स फंगस चींटियों को संक्रमित करते हैं। संक्रमण के दौरान चींटी का व्यवहार बदल सकता है। कुछ संक्रमित चींटियाँ पौधों पर विशेष जगह पकड़ लेती हैं। वहाँ फंगस आगे बढ़कर बीजाणु बनाने वाली संरचना विकसित करता है। बीजाणु फैलकर नए मेज़बानों तक पहुँच सकते हैं। यह कोई जादुई दिमाग नियंत्रण नहीं, जटिल परजीवी संबंध है। प्रकृति में परजीवी और मेज़बान का संघर्ष चौंकाता है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "ज़ॉम्बी फंगस • 1",
+        "fact": "क्या कोई फंगस चींटी के व्यवहार को बदल सकता है?",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: क्या कोई फंगस चींटी के व्यवहार को बदल सकता है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 2",
+        "fact": "कुछ ओफिओकॉर्डिसेप्स फंगस चींटियों को संक्रमित करते हैं।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: कुछ ओफिओकॉर्डिसेप्स फंगस चींटियों को संक्रमित करते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 3",
+        "fact": "संक्रमण के दौरान चींटी का व्यवहार बदल सकता है।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: संक्रमण के दौरान चींटी का व्यवहार बदल सकता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 4",
+        "fact": "कुछ संक्रमित चींटियाँ पौधों पर विशेष जगह पकड़ लेती हैं।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: कुछ संक्रमित चींटियाँ पौधों पर विशेष जगह पकड़ लेती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 5",
+        "fact": "वहाँ फंगस आगे बढ़कर बीजाणु बनाने वाली संरचना विकसित करता है।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: वहाँ फंगस आगे बढ़कर बीजाणु बनाने वाली संरचना विकसित करता है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 6",
+        "fact": "बीजाणु फैलकर नए मेज़बानों तक पहुँच सकते हैं।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: बीजाणु फैलकर नए मेज़बानों तक पहुँच सकते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 7",
+        "fact": "यह कोई जादुई दिमाग नियंत्रण नहीं, जटिल परजीवी संबंध है।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: यह कोई जादुई दिमाग नियंत्रण नहीं, जटिल परजीवी संबंध है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "ज़ॉम्बी फंगस • 8",
+        "fact": "प्रकृति में परजीवी और मेज़बान का संघर्ष चौंकाता है।",
+        "prompt": "Scientifically accurate Ophiocordyceps fungi and infected ants, scene showing: प्रकृति में परजीवी और मेज़बान का संघर्ष चौंकाता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "bat echolocation and navigating in darkness": {
+    "title": "चमगादड़ों की आवाज़ का नक्शा",
+    "narration": "अँधेरे में चमगादड़ टकराए बिना उड़ता कैसे है? कई चमगादड़ ऊँची आवृत्ति की आवाज़ें निकालते हैं। ये ध्वनि तरंगें आसपास की वस्तुओं से टकराकर लौटती हैं। कान लौटती प्रतिध्वनि को ग्रहण करते हैं। प्रतिध्वनि के समय और बदलाव से दूरी का अंदाज़ मिलता है। शिकार के पास पहुँचते समय आवाज़ों की गति बदल सकती है। सभी चमगादड़ एक जैसे तरीके से इकोलोकेशन नहीं करते। अँधेरे में आवाज़ उनके लिए एक तरह का नक्शा बनाती है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "चमगादड़ • 1",
+        "fact": "अँधेरे में चमगादड़ टकराए बिना उड़ता कैसे है?",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: अँधेरे में चमगादड़ टकराए बिना उड़ता कैसे है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "चमगादड़ • 2",
+        "fact": "कई चमगादड़ ऊँची आवृत्ति की आवाज़ें निकालते हैं।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: कई चमगादड़ ऊँची आवृत्ति की आवाज़ें निकालते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "चमगादड़ • 3",
+        "fact": "ये ध्वनि तरंगें आसपास की वस्तुओं से टकराकर लौटती हैं।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: ये ध्वनि तरंगें आसपास की वस्तुओं से टकराकर लौटती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "चमगादड़ • 4",
+        "fact": "कान लौटती प्रतिध्वनि को ग्रहण करते हैं।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: कान लौटती प्रतिध्वनि को ग्रहण करते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "चमगादड़ • 5",
+        "fact": "प्रतिध्वनि के समय और बदलाव से दूरी का अंदाज़ मिलता है।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: प्रतिध्वनि के समय और बदलाव से दूरी का अंदाज़ मिलता है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "चमगादड़ • 6",
+        "fact": "शिकार के पास पहुँचते समय आवाज़ों की गति बदल सकती है।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: शिकार के पास पहुँचते समय आवाज़ों की गति बदल सकती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "चमगादड़ • 7",
+        "fact": "सभी चमगादड़ एक जैसे तरीके से इकोलोकेशन नहीं करते।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: सभी चमगादड़ एक जैसे तरीके से इकोलोकेशन नहीं करते।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "चमगादड़ • 8",
+        "fact": "अँधेरे में आवाज़ उनके लिए एक तरह का नक्शा बनाती है।",
+        "prompt": "Scientifically accurate bat echolocation and navigating in darkness, scene showing: अँधेरे में आवाज़ उनके लिए एक तरह का नक्शा बनाती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
+  },
+  "deep sea anglerfish bioluminescent lure and symbiosis": {
+    "title": "समुद्री एंगलरफिश का प्रकाश",
+    "narration": "गहरे अँधेरे समुद्र में मछली रोशनी का जाल कैसे बिछाती है? कुछ एंगलरफिश के सिर के आगे चमकने वाला ल्यूअर होता है। इस चमक में सहजीवी बैक्टीरिया योगदान दे सकते हैं। प्रकाश संभावित शिकार का ध्यान आकर्षित करता है। शिकार करीब आए तो मछली उसे पकड़ सकती है। गहराई में सूरज की रोशनी बहुत कम पहुँचती है। सभी एंगलरफिश एक जैसी रोशनी नहीं बनातीं। यह अँधेरे समुद्र में जीवित रहने का विशेष अनुकूलन है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+    "scenes": [
+      {
+        "label": "एंगलरफिश • 1",
+        "fact": "गहरे अँधेरे समुद्र में मछली रोशनी का जाल कैसे बिछाती है?",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: गहरे अँधेरे समुद्र में मछली रोशनी का जाल कैसे बिछाती है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "hook",
+        "motion": "push"
+      },
+      {
+        "label": "एंगलरफिश • 2",
+        "fact": "कुछ एंगलरफिश के सिर के आगे चमकने वाला ल्यूअर होता है।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: कुछ एंगलरफिश के सिर के आगे चमकने वाला ल्यूअर होता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "observation",
+        "motion": "zoom"
+      },
+      {
+        "label": "एंगलरफिश • 3",
+        "fact": "इस चमक में सहजीवी बैक्टीरिया योगदान दे सकते हैं।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: इस चमक में सहजीवी बैक्टीरिया योगदान दे सकते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "mechanism",
+        "motion": "panleft"
+      },
+      {
+        "label": "एंगलरफिश • 4",
+        "fact": "प्रकाश संभावित शिकार का ध्यान आकर्षित करता है।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: प्रकाश संभावित शिकार का ध्यान आकर्षित करता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "reveal",
+        "motion": "panright"
+      },
+      {
+        "label": "एंगलरफिश • 5",
+        "fact": "शिकार करीब आए तो मछली उसे पकड़ सकती है।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: शिकार करीब आए तो मछली उसे पकड़ सकती है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "cinematic",
+        "beat": "mechanism",
+        "motion": "push"
+      },
+      {
+        "label": "एंगलरफिश • 6",
+        "fact": "गहराई में सूरज की रोशनी बहुत कम पहुँचती है।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: गहराई में सूरज की रोशनी बहुत कम पहुँचती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "consequence",
+        "motion": "zoom"
+      },
+      {
+        "label": "एंगलरफिश • 7",
+        "fact": "सभी एंगलरफिश एक जैसी रोशनी नहीं बनातीं।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: सभी एंगलरफिश एक जैसी रोशनी नहीं बनातीं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "comparison",
+        "beat": "misconception",
+        "motion": "panleft"
+      },
+      {
+        "label": "एंगलरफिश • 8",
+        "fact": "यह अँधेरे समुद्र में जीवित रहने का विशेष अनुकूलन है।",
+        "prompt": "Scientifically accurate deep sea anglerfish bioluminescent lure and symbiosis, scene showing: यह अँधेरे समुद्र में जीवित रहने का विशेष अनुकूलन है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+        "visual_type": "mechanism",
+        "beat": "conclusion",
+        "motion": "panright"
+      }
+    ]
   }
 }
