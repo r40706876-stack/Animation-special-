@@ -1,5 +1,10 @@
 name: Science Documentary Studio
 on:
+  push:
+    paths:
+      - "src/documentary.py"
+      - "src/documentary_topics.json"
+      - ".github/workflows/documentary.yml"
   workflow_dispatch:
   schedule:
     - cron: "30 12 * * *"
