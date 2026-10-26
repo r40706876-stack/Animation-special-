@@ -62,10 +62,10 @@ def image_for(scene,idx):
     style=(", crisp educational scientific diagram, readable visual comparison, isolated anatomy, clean ivory background, clear spatial separation, vivid subject colors" if scene.get("visual_type") in ("diagram","comparison","mechanism") else ", cinematic macro natural history photography, anatomically accurate subject, dramatic depth, rich organic detail")
     prompt=scene["prompt"]+style+", vertical 9:16, no text, no typography, no watermark"
     im=None
-    for attempt in range(3):
+    for attempt in range(2):
         url="https://image.pollinations.ai/prompt/"+urllib.parse.quote(prompt)+"?width=720&height=1280&nologo=true&seed="+str(9100+idx+attempt*109)+"&model=flux"
         try:
-            response=requests.get(url,timeout=90)
+            response=requests.get(url,timeout=35)
             response.raise_for_status()
             if not response.headers.get("content-type","").startswith("image/"): raise ValueError("Non-image response")
             candidate=Image.open(io.BytesIO(response.content)).convert("RGB")
