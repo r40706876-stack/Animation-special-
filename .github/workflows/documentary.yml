@@ -33,6 +33,21 @@ jobs:
           pip install requests Pillow edge-tts
       - name: Validate Python source
         run: python -m compileall -q src
+      - name: Validate offline scripts for every topic
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          topics=json.loads(Path("src/documentary_topics.json").read_text(encoding="utf-8"))["topics"]
+          backup=json.loads(Path("src/documentary_fallback.json").read_text(encoding="utf-8"))
+          for topic in topics:
+              item=backup.get(topic["subject"])
+              assert item, "Missing backup: "+topic["subject"]
+              assert len(item["scenes"])==8, "Wrong scene count: "+topic["subject"]
+              assert len(item["narration"].split())>=65, "Narration too short: "+topic["subject"]
+              assert sum(s.get("visual_type") in ("diagram","comparison","mechanism") for s in item["scenes"])>=3
+          print("OFFLINE_STORYBOARDS_PASS",len(topics))
+          PY
       - name: Offline cinematic render smoke test
         run: python tests/test_documentary_render.py
       - name: Generate cinematic documentary
