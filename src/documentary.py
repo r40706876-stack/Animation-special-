@@ -137,15 +137,15 @@ def offline_science_visual(scene,idx):
     return im
 
 def image_for(scene,idx):
-    if os.getenv("SCIENCE_IMAGE_PROVIDER","offline")=="offline":
+    if os.getenv("SCIENCE_IMAGE_PROVIDER","auto")=="offline":
         return offline_science_visual(scene,idx)
     style=(", crisp educational scientific diagram, readable visual comparison, isolated anatomy, clean ivory background, clear spatial separation, vivid subject colors" if scene.get("visual_type") in ("diagram","comparison","mechanism") else ", cinematic macro natural history photography, anatomically accurate subject, dramatic depth, rich organic detail")
     prompt=scene["prompt"]+style+", vertical 9:16, no text, no typography, no watermark"
     im=None
-    for attempt in range(2):
+    for attempt in range(1):
         url="https://image.pollinations.ai/prompt/"+urllib.parse.quote(prompt)+"?width=720&height=1280&nologo=true&seed="+str(9100+idx+attempt*109)+"&model=flux"
         try:
-            response=requests.get(url,timeout=35)
+            response=requests.get(url,timeout=15)
             response.raise_for_status()
             if not response.headers.get("content-type","").startswith("image/"): raise ValueError("Non-image response")
             candidate=Image.open(io.BytesIO(response.content)).convert("RGB")
@@ -165,14 +165,8 @@ def image_for(scene,idx):
             break
         print(f"[image QA] Scene {idx}: low-detail image rejected, attempt {attempt+1}")
     if im is None:
-        if os.getenv("ALLOW_PLACEHOLDER_IMAGES","0") != "1":
-            raise RuntimeError("Image API failed: refusing to publish placeholder-only documentary")
-        print("IMAGE_API_UNAVAILABLE: using explicitly marked procedural backup")
-        im=Image.new("RGB",(W,H),(15,28,37))
-        d=ImageDraw.Draw(im); rng=random.Random(idx)
-        for j in range(85):
-            x=rng.randrange(W);y=rng.randrange(H)
-            r=rng.randrange(3,45);d.ellipse((x-r,y-r,x+r,y+r),outline=(55,95,100),width=2)
+        print("IMAGE_API_UNAVAILABLE: using scene-specific scientific illustration",idx)
+        im=offline_science_visual(scene,idx)
     return im.convert("RGB")
 def caption(draw,text,y,fill,fontsize=45):
     f=font(fontsize)
