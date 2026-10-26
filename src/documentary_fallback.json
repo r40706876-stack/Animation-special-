@@ -74,7 +74,7 @@
     "narration": "क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है? उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है। हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है। सकरों से वह सतह को पकड़ता और रसायन महसूस करता है। वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है। रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं। लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा। समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
     "scenes": [
       {
-        "label": "ऑक्टोपस • 1",
+        "label": "आठ भुजाएँ",
         "fact": "क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है?",
         "prompt": "Scientifically accurate octopus cognition, scene showing: क्या ऑक्टोपस अपनी आठ भुजाओं से दुनिया को महसूस करता है?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "cinematic",
@@ -82,7 +82,7 @@
         "motion": "push"
       },
       {
-        "label": "ऑक्टोपस • 2",
+        "label": "अलग तंत्रिका नेटवर्क",
         "fact": "उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: उसके न्यूरॉन्स का बड़ा हिस्सा भुजाओं में होता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "mechanism",
@@ -90,7 +90,7 @@
         "motion": "zoom"
       },
       {
-        "label": "ऑक्टोपस • 3",
+        "label": "सकर्स का स्पर्श",
         "fact": "हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: हर भुजा में स्थानीय तंत्रिका नेटवर्क होता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "comparison",
@@ -98,7 +98,7 @@
         "motion": "panleft"
       },
       {
-        "label": "ऑक्टोपस • 4",
+        "label": "रसायन पहचानना",
         "fact": "सकरों से वह सतह को पकड़ता और रसायन महसूस करता है।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: सकरों से वह सतह को पकड़ता और रसायन महसूस करता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "mechanism",
@@ -106,7 +106,7 @@
         "motion": "panright"
       },
       {
-        "label": "ऑक्टोपस • 5",
+        "label": "पहेली सुलझाना",
         "fact": "वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: वह चीज़ों को खोलना और रास्ते ढूँढ़ना सीख सकता है।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "cinematic",
@@ -114,7 +114,7 @@
         "motion": "push"
       },
       {
-        "label": "ऑक्टोपस • 6",
+        "label": "त्वचा के रंग",
         "fact": "रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: रंग बदलने में उसकी त्वचा के विशेष रंगद्रव्य अंग मदद करते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "mechanism",
@@ -122,7 +122,7 @@
         "motion": "zoom"
       },
       {
-        "label": "ऑक्टोपस • 7",
+        "label": "सीखने की क्षमता",
         "fact": "लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: लेकिन हर व्यवहार को इंसानों जैसी सोच समझना गलत होगा।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "comparison",
@@ -130,7 +130,7 @@
         "motion": "panleft"
       },
       {
-        "label": "ऑक्टोपस • 8",
+        "label": "अद्भुत बुद्धिमत्ता",
         "fact": "समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है।",
         "prompt": "Scientifically accurate octopus cognition, scene showing: समुद्र का यह जीव बुद्धिमत्ता का बिल्कुल अलग रूप दिखाता है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
         "visual_type": "mechanism",
