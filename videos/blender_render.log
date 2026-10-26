@@ -1,133 +1,133 @@
 Blender 4.0.2
-Fra:1 Mem:39.54M (Peak 40.62M) | Time:00:09.40 | Syncing Octopus mantle
-Fra:1 Mem:39.62M (Peak 40.62M) | Time:00:09.94 | Syncing Eye.001
-Fra:1 Mem:39.68M (Peak 40.62M) | Time:00:09.94 | Syncing Eye
-Fra:1 Mem:39.73M (Peak 40.62M) | Time:00:09.94 | Syncing Arm control 0
-Fra:1 Mem:39.73M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 0
-Fra:1 Mem:39.79M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 0 0
-Fra:1 Mem:39.84M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 1
-Fra:1 Mem:39.90M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 2
-Fra:1 Mem:39.95M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 0 2
-Fra:1 Mem:40.01M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 3
-Fra:1 Mem:40.06M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 4
-Fra:1 Mem:40.12M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 0 4
-Fra:1 Mem:40.17M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 5
-Fra:1 Mem:40.23M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 6
-Fra:1 Mem:40.28M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 0 6
-Fra:1 Mem:40.34M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 0 segment 7
-Fra:1 Mem:40.39M (Peak 40.62M) | Time:00:09.94 | Syncing Arm control 1
-Fra:1 Mem:40.39M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 1 segment 0
-Fra:1 Mem:40.45M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 1 0
-Fra:1 Mem:40.50M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 1 segment 1
-Fra:1 Mem:40.56M (Peak 40.62M) | Time:00:09.94 | Syncing Arm 1 segment 2
-Fra:1 Mem:40.61M (Peak 40.62M) | Time:00:09.94 | Syncing Sucker 1 2
-Fra:1 Mem:40.67M (Peak 40.67M) | Time:00:09.94 | Syncing Arm 1 segment 3
-Fra:1 Mem:40.72M (Peak 40.72M) | Time:00:09.94 | Syncing Arm 1 segment 4
-Fra:1 Mem:40.78M (Peak 40.78M) | Time:00:09.94 | Syncing Sucker 1 4
-Fra:1 Mem:40.83M (Peak 40.83M) | Time:00:09.94 | Syncing Arm 1 segment 5
-Fra:1 Mem:40.89M (Peak 40.89M) | Time:00:09.94 | Syncing Arm 1 segment 6
-Fra:1 Mem:40.94M (Peak 40.94M) | Time:00:09.94 | Syncing Sucker 1 6
-Fra:1 Mem:41.00M (Peak 41.00M) | Time:00:09.94 | Syncing Arm 1 segment 7
-Fra:1 Mem:41.05M (Peak 41.05M) | Time:00:09.94 | Syncing Arm control 2
-Fra:1 Mem:41.05M (Peak 41.05M) | Time:00:09.94 | Syncing Arm 2 segment 0
-Fra:1 Mem:41.11M (Peak 41.11M) | Time:00:09.94 | Syncing Sucker 2 0
-Fra:1 Mem:41.16M (Peak 41.16M) | Time:00:09.94 | Syncing Arm 2 segment 1
-Fra:1 Mem:41.22M (Peak 41.22M) | Time:00:09.94 | Syncing Arm 2 segment 2
-Fra:1 Mem:41.27M (Peak 41.27M) | Time:00:09.94 | Syncing Sucker 2 2
-Fra:1 Mem:41.33M (Peak 41.33M) | Time:00:09.94 | Syncing Arm 2 segment 3
-Fra:1 Mem:41.38M (Peak 41.38M) | Time:00:09.94 | Syncing Arm 2 segment 4
-Fra:1 Mem:41.44M (Peak 41.44M) | Time:00:09.94 | Syncing Sucker 2 4
-Fra:1 Mem:41.49M (Peak 41.49M) | Time:00:09.94 | Syncing Arm 2 segment 5
-Fra:1 Mem:41.55M (Peak 41.55M) | Time:00:09.94 | Syncing Arm 2 segment 6
-Fra:1 Mem:41.60M (Peak 41.60M) | Time:00:09.94 | Syncing Sucker 2 6
-Fra:1 Mem:41.66M (Peak 41.66M) | Time:00:09.94 | Syncing Arm 2 segment 7
-Fra:1 Mem:41.71M (Peak 41.71M) | Time:00:09.94 | Syncing Arm control 3
-Fra:1 Mem:41.71M (Peak 41.71M) | Time:00:09.94 | Syncing Arm 3 segment 0
-Fra:1 Mem:41.77M (Peak 41.77M) | Time:00:09.94 | Syncing Sucker 3 0
-Fra:1 Mem:41.82M (Peak 41.82M) | Time:00:09.94 | Syncing Arm 3 segment 1
-Fra:1 Mem:41.88M (Peak 41.88M) | Time:00:09.94 | Syncing Arm 3 segment 2
-Fra:1 Mem:41.93M (Peak 41.93M) | Time:00:09.94 | Syncing Sucker 3 2
-Fra:1 Mem:41.99M (Peak 41.99M) | Time:00:09.94 | Syncing Arm 3 segment 3
-Fra:1 Mem:42.04M (Peak 42.04M) | Time:00:09.94 | Syncing Arm 3 segment 4
-Fra:1 Mem:42.10M (Peak 42.10M) | Time:00:09.94 | Syncing Sucker 3 4
-Fra:1 Mem:42.15M (Peak 42.15M) | Time:00:09.94 | Syncing Arm 3 segment 5
-Fra:1 Mem:42.21M (Peak 42.21M) | Time:00:09.94 | Syncing Arm 3 segment 6
-Fra:1 Mem:42.26M (Peak 42.26M) | Time:00:09.94 | Syncing Sucker 3 6
-Fra:1 Mem:42.32M (Peak 42.32M) | Time:00:09.94 | Syncing Arm 3 segment 7
-Fra:1 Mem:42.37M (Peak 42.37M) | Time:00:09.94 | Syncing Arm control 4
-Fra:1 Mem:42.37M (Peak 42.37M) | Time:00:09.94 | Syncing Arm 4 segment 0
-Fra:1 Mem:42.43M (Peak 42.43M) | Time:00:09.94 | Syncing Sucker 4 0
-Fra:1 Mem:42.48M (Peak 42.48M) | Time:00:09.94 | Syncing Arm 4 segment 1
-Fra:1 Mem:42.54M (Peak 42.54M) | Time:00:09.94 | Syncing Arm 4 segment 2
-Fra:1 Mem:42.59M (Peak 42.59M) | Time:00:09.94 | Syncing Sucker 4 2
-Fra:1 Mem:42.65M (Peak 42.65M) | Time:00:09.94 | Syncing Arm 4 segment 3
-Fra:1 Mem:42.70M (Peak 42.70M) | Time:00:09.94 | Syncing Arm 4 segment 4
-Fra:1 Mem:42.76M (Peak 42.76M) | Time:00:09.94 | Syncing Sucker 4 4
-Fra:1 Mem:42.81M (Peak 42.81M) | Time:00:09.94 | Syncing Arm 4 segment 5
-Fra:1 Mem:42.87M (Peak 42.87M) | Time:00:09.94 | Syncing Arm 4 segment 6
-Fra:1 Mem:42.92M (Peak 42.92M) | Time:00:09.94 | Syncing Sucker 4 6
-Fra:1 Mem:42.98M (Peak 42.98M) | Time:00:09.94 | Syncing Arm 4 segment 7
-Fra:1 Mem:43.03M (Peak 43.03M) | Time:00:09.94 | Syncing Arm control 5
-Fra:1 Mem:43.03M (Peak 43.03M) | Time:00:09.94 | Syncing Arm 5 segment 0
-Fra:1 Mem:43.09M (Peak 43.09M) | Time:00:09.94 | Syncing Sucker 5 0
-Fra:1 Mem:43.14M (Peak 43.14M) | Time:00:09.94 | Syncing Arm 5 segment 1
-Fra:1 Mem:43.20M (Peak 43.20M) | Time:00:09.94 | Syncing Arm 5 segment 2
-Fra:1 Mem:43.25M (Peak 43.25M) | Time:00:09.94 | Syncing Sucker 5 2
-Fra:1 Mem:43.31M (Peak 43.31M) | Time:00:09.94 | Syncing Arm 5 segment 3
-Fra:1 Mem:43.36M (Peak 43.36M) | Time:00:09.94 | Syncing Arm 5 segment 4
-Fra:1 Mem:43.42M (Peak 43.42M) | Time:00:09.94 | Syncing Sucker 5 4
-Fra:1 Mem:43.47M (Peak 43.47M) | Time:00:09.94 | Syncing Arm 5 segment 5
-Fra:1 Mem:43.53M (Peak 43.53M) | Time:00:09.94 | Syncing Arm 5 segment 6
-Fra:1 Mem:43.58M (Peak 43.58M) | Time:00:09.94 | Syncing Sucker 5 6
-Fra:1 Mem:43.64M (Peak 43.64M) | Time:00:09.94 | Syncing Arm 5 segment 7
-Fra:1 Mem:43.69M (Peak 43.69M) | Time:00:09.94 | Syncing Arm control 6
-Fra:1 Mem:43.69M (Peak 43.69M) | Time:00:09.94 | Syncing Arm 6 segment 0
-Fra:1 Mem:43.75M (Peak 43.75M) | Time:00:09.94 | Syncing Sucker 6 0
-Fra:1 Mem:43.80M (Peak 43.80M) | Time:00:09.94 | Syncing Arm 6 segment 1
-Fra:1 Mem:43.86M (Peak 43.86M) | Time:00:09.94 | Syncing Arm 6 segment 2
-Fra:1 Mem:43.91M (Peak 43.91M) | Time:00:09.94 | Syncing Sucker 6 2
-Fra:1 Mem:43.97M (Peak 43.97M) | Time:00:09.94 | Syncing Arm 6 segment 3
-Fra:1 Mem:44.02M (Peak 44.02M) | Time:00:09.94 | Syncing Arm 6 segment 4
-Fra:1 Mem:44.08M (Peak 44.08M) | Time:00:09.94 | Syncing Sucker 6 4
-Fra:1 Mem:44.13M (Peak 44.13M) | Time:00:09.94 | Syncing Arm 6 segment 5
-Fra:1 Mem:44.19M (Peak 44.19M) | Time:00:09.94 | Syncing Arm 6 segment 6
-Fra:1 Mem:44.24M (Peak 44.24M) | Time:00:09.94 | Syncing Sucker 6 6
-Fra:1 Mem:44.30M (Peak 44.30M) | Time:00:09.94 | Syncing Arm 6 segment 7
-Fra:1 Mem:44.35M (Peak 44.35M) | Time:00:09.94 | Syncing Arm control 7
-Fra:1 Mem:44.35M (Peak 44.35M) | Time:00:09.94 | Syncing Arm 7 segment 0
-Fra:1 Mem:44.41M (Peak 44.41M) | Time:00:09.94 | Syncing Sucker 7 0
-Fra:1 Mem:44.46M (Peak 44.46M) | Time:00:09.94 | Syncing Arm 7 segment 1
-Fra:1 Mem:44.52M (Peak 44.52M) | Time:00:09.94 | Syncing Arm 7 segment 2
-Fra:1 Mem:44.57M (Peak 44.57M) | Time:00:09.94 | Syncing Sucker 7 2
-Fra:1 Mem:44.63M (Peak 44.63M) | Time:00:09.94 | Syncing Arm 7 segment 3
-Fra:1 Mem:44.68M (Peak 44.68M) | Time:00:09.94 | Syncing Arm 7 segment 4
-Fra:1 Mem:44.74M (Peak 44.74M) | Time:00:09.94 | Syncing Sucker 7 4
-Fra:1 Mem:44.79M (Peak 44.79M) | Time:00:09.94 | Syncing Arm 7 segment 5
-Fra:1 Mem:44.85M (Peak 44.85M) | Time:00:09.94 | Syncing Arm 7 segment 6
-Fra:1 Mem:44.90M (Peak 44.90M) | Time:00:09.94 | Syncing Sucker 7 6
-Fra:1 Mem:44.96M (Peak 44.96M) | Time:00:09.94 | Syncing Arm 7 segment 7
-Fra:1 Mem:45.01M (Peak 45.01M) | Time:00:09.94 | Syncing Neural impulse 0-0
-Fra:1 Mem:45.07M (Peak 45.07M) | Time:00:09.94 | Syncing Neural impulse 0-3
-Fra:1 Mem:45.12M (Peak 45.12M) | Time:00:09.94 | Syncing Neural impulse 1-2
-Fra:1 Mem:45.18M (Peak 45.18M) | Time:00:09.94 | Syncing Neural impulse 1-5
-Fra:1 Mem:45.23M (Peak 45.23M) | Time:00:09.94 | Syncing Neural impulse 2-1
-Fra:1 Mem:45.29M (Peak 45.29M) | Time:00:09.94 | Syncing Neural impulse 2-4
-Fra:1 Mem:45.34M (Peak 45.34M) | Time:00:09.94 | Syncing Neural impulse 3-0
-Fra:1 Mem:45.40M (Peak 45.40M) | Time:00:09.94 | Syncing Neural impulse 3-3
-Fra:1 Mem:45.45M (Peak 45.45M) | Time:00:09.94 | Syncing Neural impulse 4-2
-Fra:1 Mem:45.51M (Peak 45.51M) | Time:00:09.94 | Syncing Neural impulse 4-5
-Fra:1 Mem:45.56M (Peak 45.56M) | Time:00:09.94 | Syncing Neural impulse 5-1
-Fra:1 Mem:45.62M (Peak 45.62M) | Time:00:09.94 | Syncing Neural impulse 5-4
-Fra:1 Mem:45.67M (Peak 45.67M) | Time:00:09.94 | Syncing Neural impulse 6-0
-Fra:1 Mem:45.73M (Peak 45.73M) | Time:00:09.94 | Syncing Neural impulse 6-3
-Fra:1 Mem:45.78M (Peak 45.78M) | Time:00:09.94 | Syncing Neural impulse 7-2
-Fra:1 Mem:45.84M (Peak 45.84M) | Time:00:09.94 | Syncing Neural impulse 7-5
-Fra:1 Mem:45.89M (Peak 45.89M) | Time:00:09.94 | Syncing Area
-Fra:1 Mem:45.89M (Peak 45.89M) | Time:00:09.94 | Syncing Camera
-Fra:1 Mem:45.82M (Peak 45.89M) | Time:00:09.95 | Rendering 1 / 16 samples
-Fra:1 Mem:41.62M (Peak 45.89M) | Time:00:12.74 | Rendering 16 / 16 samples
+Fra:1 Mem:39.54M (Peak 40.62M) | Time:00:08.26 | Syncing Octopus mantle
+Fra:1 Mem:39.62M (Peak 40.62M) | Time:00:08.84 | Syncing Eye.001
+Fra:1 Mem:39.68M (Peak 40.62M) | Time:00:08.84 | Syncing Eye
+Fra:1 Mem:39.73M (Peak 40.62M) | Time:00:08.84 | Syncing Arm control 0
+Fra:1 Mem:39.73M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 0
+Fra:1 Mem:39.79M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 0 0
+Fra:1 Mem:39.84M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 1
+Fra:1 Mem:39.90M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 2
+Fra:1 Mem:39.95M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 0 2
+Fra:1 Mem:40.01M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 3
+Fra:1 Mem:40.06M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 4
+Fra:1 Mem:40.12M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 0 4
+Fra:1 Mem:40.17M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 5
+Fra:1 Mem:40.23M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 6
+Fra:1 Mem:40.28M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 0 6
+Fra:1 Mem:40.34M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 0 segment 7
+Fra:1 Mem:40.39M (Peak 40.62M) | Time:00:08.84 | Syncing Arm control 1
+Fra:1 Mem:40.39M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 1 segment 0
+Fra:1 Mem:40.45M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 1 0
+Fra:1 Mem:40.50M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 1 segment 1
+Fra:1 Mem:40.56M (Peak 40.62M) | Time:00:08.84 | Syncing Arm 1 segment 2
+Fra:1 Mem:40.61M (Peak 40.62M) | Time:00:08.84 | Syncing Sucker 1 2
+Fra:1 Mem:40.67M (Peak 40.67M) | Time:00:08.84 | Syncing Arm 1 segment 3
+Fra:1 Mem:40.72M (Peak 40.72M) | Time:00:08.84 | Syncing Arm 1 segment 4
+Fra:1 Mem:40.78M (Peak 40.78M) | Time:00:08.84 | Syncing Sucker 1 4
+Fra:1 Mem:40.83M (Peak 40.83M) | Time:00:08.84 | Syncing Arm 1 segment 5
+Fra:1 Mem:40.89M (Peak 40.89M) | Time:00:08.84 | Syncing Arm 1 segment 6
+Fra:1 Mem:40.94M (Peak 40.94M) | Time:00:08.84 | Syncing Sucker 1 6
+Fra:1 Mem:41.00M (Peak 41.00M) | Time:00:08.84 | Syncing Arm 1 segment 7
+Fra:1 Mem:41.05M (Peak 41.05M) | Time:00:08.84 | Syncing Arm control 2
+Fra:1 Mem:41.05M (Peak 41.05M) | Time:00:08.84 | Syncing Arm 2 segment 0
+Fra:1 Mem:41.11M (Peak 41.11M) | Time:00:08.84 | Syncing Sucker 2 0
+Fra:1 Mem:41.16M (Peak 41.16M) | Time:00:08.84 | Syncing Arm 2 segment 1
+Fra:1 Mem:41.22M (Peak 41.22M) | Time:00:08.84 | Syncing Arm 2 segment 2
+Fra:1 Mem:41.27M (Peak 41.27M) | Time:00:08.84 | Syncing Sucker 2 2
+Fra:1 Mem:41.33M (Peak 41.33M) | Time:00:08.84 | Syncing Arm 2 segment 3
+Fra:1 Mem:41.38M (Peak 41.38M) | Time:00:08.84 | Syncing Arm 2 segment 4
+Fra:1 Mem:41.44M (Peak 41.44M) | Time:00:08.84 | Syncing Sucker 2 4
+Fra:1 Mem:41.49M (Peak 41.49M) | Time:00:08.84 | Syncing Arm 2 segment 5
+Fra:1 Mem:41.55M (Peak 41.55M) | Time:00:08.84 | Syncing Arm 2 segment 6
+Fra:1 Mem:41.60M (Peak 41.60M) | Time:00:08.84 | Syncing Sucker 2 6
+Fra:1 Mem:41.66M (Peak 41.66M) | Time:00:08.84 | Syncing Arm 2 segment 7
+Fra:1 Mem:41.71M (Peak 41.71M) | Time:00:08.84 | Syncing Arm control 3
+Fra:1 Mem:41.71M (Peak 41.71M) | Time:00:08.84 | Syncing Arm 3 segment 0
+Fra:1 Mem:41.77M (Peak 41.77M) | Time:00:08.84 | Syncing Sucker 3 0
+Fra:1 Mem:41.82M (Peak 41.82M) | Time:00:08.84 | Syncing Arm 3 segment 1
+Fra:1 Mem:41.88M (Peak 41.88M) | Time:00:08.84 | Syncing Arm 3 segment 2
+Fra:1 Mem:41.93M (Peak 41.93M) | Time:00:08.84 | Syncing Sucker 3 2
+Fra:1 Mem:41.99M (Peak 41.99M) | Time:00:08.84 | Syncing Arm 3 segment 3
+Fra:1 Mem:42.04M (Peak 42.04M) | Time:00:08.84 | Syncing Arm 3 segment 4
+Fra:1 Mem:42.10M (Peak 42.10M) | Time:00:08.84 | Syncing Sucker 3 4
+Fra:1 Mem:42.15M (Peak 42.15M) | Time:00:08.84 | Syncing Arm 3 segment 5
+Fra:1 Mem:42.21M (Peak 42.21M) | Time:00:08.84 | Syncing Arm 3 segment 6
+Fra:1 Mem:42.26M (Peak 42.26M) | Time:00:08.84 | Syncing Sucker 3 6
+Fra:1 Mem:42.32M (Peak 42.32M) | Time:00:08.84 | Syncing Arm 3 segment 7
+Fra:1 Mem:42.37M (Peak 42.37M) | Time:00:08.84 | Syncing Arm control 4
+Fra:1 Mem:42.37M (Peak 42.37M) | Time:00:08.84 | Syncing Arm 4 segment 0
+Fra:1 Mem:42.43M (Peak 42.43M) | Time:00:08.84 | Syncing Sucker 4 0
+Fra:1 Mem:42.48M (Peak 42.48M) | Time:00:08.84 | Syncing Arm 4 segment 1
+Fra:1 Mem:42.54M (Peak 42.54M) | Time:00:08.84 | Syncing Arm 4 segment 2
+Fra:1 Mem:42.59M (Peak 42.59M) | Time:00:08.84 | Syncing Sucker 4 2
+Fra:1 Mem:42.65M (Peak 42.65M) | Time:00:08.84 | Syncing Arm 4 segment 3
+Fra:1 Mem:42.70M (Peak 42.70M) | Time:00:08.84 | Syncing Arm 4 segment 4
+Fra:1 Mem:42.76M (Peak 42.76M) | Time:00:08.84 | Syncing Sucker 4 4
+Fra:1 Mem:42.81M (Peak 42.81M) | Time:00:08.84 | Syncing Arm 4 segment 5
+Fra:1 Mem:42.87M (Peak 42.87M) | Time:00:08.84 | Syncing Arm 4 segment 6
+Fra:1 Mem:42.92M (Peak 42.92M) | Time:00:08.84 | Syncing Sucker 4 6
+Fra:1 Mem:42.98M (Peak 42.98M) | Time:00:08.84 | Syncing Arm 4 segment 7
+Fra:1 Mem:43.03M (Peak 43.03M) | Time:00:08.84 | Syncing Arm control 5
+Fra:1 Mem:43.03M (Peak 43.03M) | Time:00:08.84 | Syncing Arm 5 segment 0
+Fra:1 Mem:43.09M (Peak 43.09M) | Time:00:08.84 | Syncing Sucker 5 0
+Fra:1 Mem:43.14M (Peak 43.14M) | Time:00:08.84 | Syncing Arm 5 segment 1
+Fra:1 Mem:43.20M (Peak 43.20M) | Time:00:08.84 | Syncing Arm 5 segment 2
+Fra:1 Mem:43.25M (Peak 43.25M) | Time:00:08.84 | Syncing Sucker 5 2
+Fra:1 Mem:43.31M (Peak 43.31M) | Time:00:08.84 | Syncing Arm 5 segment 3
+Fra:1 Mem:43.36M (Peak 43.36M) | Time:00:08.84 | Syncing Arm 5 segment 4
+Fra:1 Mem:43.42M (Peak 43.42M) | Time:00:08.84 | Syncing Sucker 5 4
+Fra:1 Mem:43.47M (Peak 43.47M) | Time:00:08.84 | Syncing Arm 5 segment 5
+Fra:1 Mem:43.53M (Peak 43.53M) | Time:00:08.84 | Syncing Arm 5 segment 6
+Fra:1 Mem:43.58M (Peak 43.58M) | Time:00:08.84 | Syncing Sucker 5 6
+Fra:1 Mem:43.64M (Peak 43.64M) | Time:00:08.84 | Syncing Arm 5 segment 7
+Fra:1 Mem:43.69M (Peak 43.69M) | Time:00:08.84 | Syncing Arm control 6
+Fra:1 Mem:43.69M (Peak 43.69M) | Time:00:08.84 | Syncing Arm 6 segment 0
+Fra:1 Mem:43.75M (Peak 43.75M) | Time:00:08.84 | Syncing Sucker 6 0
+Fra:1 Mem:43.80M (Peak 43.80M) | Time:00:08.84 | Syncing Arm 6 segment 1
+Fra:1 Mem:43.86M (Peak 43.86M) | Time:00:08.84 | Syncing Arm 6 segment 2
+Fra:1 Mem:43.91M (Peak 43.91M) | Time:00:08.84 | Syncing Sucker 6 2
+Fra:1 Mem:43.97M (Peak 43.97M) | Time:00:08.84 | Syncing Arm 6 segment 3
+Fra:1 Mem:44.02M (Peak 44.02M) | Time:00:08.84 | Syncing Arm 6 segment 4
+Fra:1 Mem:44.08M (Peak 44.08M) | Time:00:08.84 | Syncing Sucker 6 4
+Fra:1 Mem:44.13M (Peak 44.13M) | Time:00:08.84 | Syncing Arm 6 segment 5
+Fra:1 Mem:44.19M (Peak 44.19M) | Time:00:08.84 | Syncing Arm 6 segment 6
+Fra:1 Mem:44.24M (Peak 44.24M) | Time:00:08.84 | Syncing Sucker 6 6
+Fra:1 Mem:44.30M (Peak 44.30M) | Time:00:08.84 | Syncing Arm 6 segment 7
+Fra:1 Mem:44.35M (Peak 44.35M) | Time:00:08.84 | Syncing Arm control 7
+Fra:1 Mem:44.35M (Peak 44.35M) | Time:00:08.84 | Syncing Arm 7 segment 0
+Fra:1 Mem:44.41M (Peak 44.41M) | Time:00:08.84 | Syncing Sucker 7 0
+Fra:1 Mem:44.46M (Peak 44.46M) | Time:00:08.84 | Syncing Arm 7 segment 1
+Fra:1 Mem:44.52M (Peak 44.52M) | Time:00:08.84 | Syncing Arm 7 segment 2
+Fra:1 Mem:44.57M (Peak 44.57M) | Time:00:08.84 | Syncing Sucker 7 2
+Fra:1 Mem:44.63M (Peak 44.63M) | Time:00:08.84 | Syncing Arm 7 segment 3
+Fra:1 Mem:44.68M (Peak 44.68M) | Time:00:08.84 | Syncing Arm 7 segment 4
+Fra:1 Mem:44.74M (Peak 44.74M) | Time:00:08.84 | Syncing Sucker 7 4
+Fra:1 Mem:44.79M (Peak 44.79M) | Time:00:08.84 | Syncing Arm 7 segment 5
+Fra:1 Mem:44.85M (Peak 44.85M) | Time:00:08.84 | Syncing Arm 7 segment 6
+Fra:1 Mem:44.90M (Peak 44.90M) | Time:00:08.84 | Syncing Sucker 7 6
+Fra:1 Mem:44.96M (Peak 44.96M) | Time:00:08.84 | Syncing Arm 7 segment 7
+Fra:1 Mem:45.01M (Peak 45.01M) | Time:00:08.84 | Syncing Neural impulse 0-0
+Fra:1 Mem:45.07M (Peak 45.07M) | Time:00:08.84 | Syncing Neural impulse 0-3
+Fra:1 Mem:45.12M (Peak 45.12M) | Time:00:08.84 | Syncing Neural impulse 1-2
+Fra:1 Mem:45.18M (Peak 45.18M) | Time:00:08.84 | Syncing Neural impulse 1-5
+Fra:1 Mem:45.23M (Peak 45.23M) | Time:00:08.84 | Syncing Neural impulse 2-1
+Fra:1 Mem:45.29M (Peak 45.29M) | Time:00:08.84 | Syncing Neural impulse 2-4
+Fra:1 Mem:45.34M (Peak 45.34M) | Time:00:08.84 | Syncing Neural impulse 3-0
+Fra:1 Mem:45.40M (Peak 45.40M) | Time:00:08.84 | Syncing Neural impulse 3-3
+Fra:1 Mem:45.45M (Peak 45.45M) | Time:00:08.84 | Syncing Neural impulse 4-2
+Fra:1 Mem:45.51M (Peak 45.51M) | Time:00:08.84 | Syncing Neural impulse 4-5
+Fra:1 Mem:45.56M (Peak 45.56M) | Time:00:08.84 | Syncing Neural impulse 5-1
+Fra:1 Mem:45.62M (Peak 45.62M) | Time:00:08.84 | Syncing Neural impulse 5-4
+Fra:1 Mem:45.67M (Peak 45.67M) | Time:00:08.84 | Syncing Neural impulse 6-0
+Fra:1 Mem:45.73M (Peak 45.73M) | Time:00:08.84 | Syncing Neural impulse 6-3
+Fra:1 Mem:45.78M (Peak 45.78M) | Time:00:08.84 | Syncing Neural impulse 7-2
+Fra:1 Mem:45.84M (Peak 45.84M) | Time:00:08.84 | Syncing Neural impulse 7-5
+Fra:1 Mem:45.89M (Peak 45.89M) | Time:00:08.84 | Syncing Area
+Fra:1 Mem:45.89M (Peak 45.89M) | Time:00:08.85 | Syncing Camera
+Fra:1 Mem:45.82M (Peak 45.89M) | Time:00:08.85 | Rendering 1 / 16 samples
+Fra:1 Mem:41.62M (Peak 45.89M) | Time:00:12.30 | Rendering 16 / 16 samples
 Append frame 1
-Time: 00:12.97 (Saving: 00:00.16)
+Time: 00:12.56 (Saving: 00:00.18)
 
 Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -255,9 +255,9 @@ Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:2 Mem:41.62M (Peak 50.72M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 2
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.15 (Saving: 00:00.04)
 
 Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -385,9 +385,9 @@ Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:3 Mem:41.62M (Peak 50.72M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 3
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.05)
 
 Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -515,9 +515,9 @@ Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:00.91 | Rendering 16 / 16 samples
+Fra:4 Mem:41.62M (Peak 50.72M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 4
-Time: 00:01.03 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -645,9 +645,9 @@ Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:00.97 | Rendering 16 / 16 samples
+Fra:5 Mem:41.62M (Peak 50.72M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 5
-Time: 00:01.11 (Saving: 00:00.05)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -775,9 +775,9 @@ Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:6 Mem:41.62M (Peak 50.72M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 6
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -905,9 +905,9 @@ Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:7 Mem:41.62M (Peak 50.72M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 7
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1035,9 +1035,9 @@ Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:8 Mem:41.62M (Peak 50.72M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 8
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1165,9 +1165,9 @@ Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:9 Mem:41.62M (Peak 50.72M) | Time:00:01.21 | Rendering 16 / 16 samples
 Append frame 9
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.35 (Saving: 00:00.05)
 
 Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1295,9 +1295,9 @@ Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:10 Mem:41.62M (Peak 50.72M) | Time:00:01.25 | Rendering 16 / 16 samples
 Append frame 10
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.41 (Saving: 00:00.06)
 
 Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1425,9 +1425,9 @@ Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:11 Mem:41.62M (Peak 50.72M) | Time:00:01.14 | Rendering 16 / 16 samples
 Append frame 11
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.27 (Saving: 00:00.04)
 
 Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1555,9 +1555,9 @@ Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:12 Mem:41.62M (Peak 50.72M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 12
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1685,9 +1685,9 @@ Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:13 Mem:41.62M (Peak 50.72M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 13
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1815,9 +1815,9 @@ Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:14 Mem:41.62M (Peak 50.72M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 14
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -1945,9 +1945,9 @@ Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:15 Mem:41.62M (Peak 50.72M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 15
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.05)
 
 Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2075,9 +2075,9 @@ Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:16 Mem:41.62M (Peak 50.72M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 16
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.05)
 
 Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2205,9 +2205,9 @@ Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:17 Mem:41.62M (Peak 50.72M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 17
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2335,9 +2335,9 @@ Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:18 Mem:41.62M (Peak 50.72M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 18
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2465,9 +2465,9 @@ Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:19 Mem:41.62M (Peak 50.72M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 19
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.21 (Saving: 00:00.04)
 
 Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2595,9 +2595,9 @@ Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:20 Mem:41.62M (Peak 50.72M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 20
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:21 Mem:41.76M (Peak 50.72M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:21 Mem:41.76M (Peak 50.72M) | Time:00:00.00 | Syncing Eye.001
@@ -2725,9 +2725,9 @@ Fra:21 Mem:42.59M (Peak 50.72M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:21 Mem:42.64M (Peak 50.72M) | Time:00:00.00 | Syncing Area
 Fra:21 Mem:42.64M (Peak 50.72M) | Time:00:00.00 | Syncing Camera
 Fra:21 Mem:42.63M (Peak 50.72M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:21 Mem:42.05M (Peak 50.72M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:21 Mem:42.05M (Peak 50.72M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 21
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -2855,9 +2855,9 @@ Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:22 Mem:42.05M (Peak 51.16M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 22
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -2985,9 +2985,9 @@ Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:23 Mem:42.05M (Peak 51.16M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 23
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.05)
 
 Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3115,9 +3115,9 @@ Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:24 Mem:42.05M (Peak 51.16M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 24
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3245,9 +3245,9 @@ Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:25 Mem:42.05M (Peak 51.16M) | Time:00:01.12 | Rendering 16 / 16 samples
 Append frame 25
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.25 (Saving: 00:00.04)
 
 Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3375,9 +3375,9 @@ Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:26 Mem:42.05M (Peak 51.16M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 26
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.04)
 
 Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3505,9 +3505,9 @@ Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:27 Mem:42.05M (Peak 51.16M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 27
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.04)
 
 Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3635,9 +3635,9 @@ Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:28 Mem:42.05M (Peak 51.16M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 28
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.04)
 
 Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3765,9 +3765,9 @@ Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:29 Mem:42.05M (Peak 51.16M) | Time:00:01.14 | Rendering 16 / 16 samples
 Append frame 29
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.27 (Saving: 00:00.04)
 
 Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -3895,9 +3895,9 @@ Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:30 Mem:42.05M (Peak 51.16M) | Time:00:01.15 | Rendering 16 / 16 samples
 Append frame 30
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.28 (Saving: 00:00.04)
 
 Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4025,9 +4025,9 @@ Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:31 Mem:42.05M (Peak 51.16M) | Time:00:01.14 | Rendering 16 / 16 samples
 Append frame 31
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.27 (Saving: 00:00.04)
 
 Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4155,9 +4155,9 @@ Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:32 Mem:42.05M (Peak 51.16M) | Time:00:01.14 | Rendering 16 / 16 samples
 Append frame 32
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.28 (Saving: 00:00.05)
 
 Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4285,9 +4285,9 @@ Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:33 Mem:42.05M (Peak 51.16M) | Time:00:01.14 | Rendering 16 / 16 samples
 Append frame 33
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.04)
 
 Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4414,10 +4414,10 @@ Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-1
 Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
-Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:34 Mem:42.05M (Peak 51.16M) | Time:00:01.15 | Rendering 16 / 16 samples
 Append frame 34
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.28 (Saving: 00:00.04)
 
 Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4545,9 +4545,9 @@ Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:35 Mem:42.05M (Peak 51.16M) | Time:00:01.15 | Rendering 16 / 16 samples
 Append frame 35
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.28 (Saving: 00:00.05)
 
 Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4675,9 +4675,9 @@ Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:36 Mem:42.05M (Peak 51.16M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 36
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.04)
 
 Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4805,9 +4805,9 @@ Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:37 Mem:42.05M (Peak 51.16M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 37
-Time: 00:00.96 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -4934,10 +4934,10 @@ Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-1
 Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
-Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.01 | Rendering 1 / 16 samples
-Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
+Fra:38 Mem:42.05M (Peak 51.16M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 38
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.05)
 
 Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -5065,9 +5065,9 @@ Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:39 Mem:42.05M (Peak 51.16M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 39
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -5195,9 +5195,9 @@ Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:40 Mem:42.05M (Peak 51.16M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 40
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:41 Mem:42.19M (Peak 51.16M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:41 Mem:42.20M (Peak 51.16M) | Time:00:00.00 | Syncing Eye.001
@@ -5325,9 +5325,9 @@ Fra:41 Mem:43.03M (Peak 51.16M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:41 Mem:43.07M (Peak 51.16M) | Time:00:00.00 | Syncing Area
 Fra:41 Mem:43.07M (Peak 51.16M) | Time:00:00.00 | Syncing Camera
 Fra:41 Mem:43.07M (Peak 51.16M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:41 Mem:42.48M (Peak 51.16M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:41 Mem:42.48M (Peak 51.16M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 41
-Time: 00:00.96 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -5455,9 +5455,9 @@ Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:42 Mem:42.48M (Peak 51.59M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 42
-Time: 00:00.96 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -5585,9 +5585,9 @@ Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:43 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 43
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.05)
 
 Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -5715,9 +5715,9 @@ Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:44 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 44
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -5845,9 +5845,9 @@ Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:45 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 45
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.21 (Saving: 00:00.05)
 
 Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -5974,10 +5974,10 @@ Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:46 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 46
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6105,9 +6105,9 @@ Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:47 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 47
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6235,9 +6235,9 @@ Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:48 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 48
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6365,9 +6365,9 @@ Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:49 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 49
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6495,9 +6495,9 @@ Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:50 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 50
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6625,9 +6625,9 @@ Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:51 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 51
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6755,9 +6755,9 @@ Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:52 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 52
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -6885,9 +6885,9 @@ Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:53 Mem:42.48M (Peak 51.59M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 53
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.05)
 
 Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7014,10 +7014,10 @@ Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
-Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
+Fra:54 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 54
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7145,9 +7145,9 @@ Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:55 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 55
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7275,9 +7275,9 @@ Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:56 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 56
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7405,9 +7405,9 @@ Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:57 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 57
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7535,9 +7535,9 @@ Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:58 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 58
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7665,9 +7665,9 @@ Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:59 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 59
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7794,10 +7794,10 @@ Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
-Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
+Fra:60 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 60
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -7925,9 +7925,9 @@ Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:00.78 | Rendering 16 / 16 samples
+Fra:61 Mem:42.48M (Peak 51.59M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 61
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.15 (Saving: 00:00.04)
 
 Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8055,9 +8055,9 @@ Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:00.78 | Rendering 16 / 16 samples
+Fra:62 Mem:42.48M (Peak 51.59M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 62
-Time: 00:00.88 (Saving: 00:00.04)
+Time: 00:01.15 (Saving: 00:00.04)
 
 Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8185,9 +8185,9 @@ Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:00.78 | Rendering 16 / 16 samples
+Fra:63 Mem:42.48M (Peak 51.59M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 63
-Time: 00:00.88 (Saving: 00:00.04)
+Time: 00:01.15 (Saving: 00:00.04)
 
 Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8315,9 +8315,9 @@ Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:64 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 64
-Time: 00:00.89 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8445,9 +8445,9 @@ Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:00.78 | Rendering 16 / 16 samples
+Fra:65 Mem:42.48M (Peak 51.59M) | Time:00:01.03 | Rendering 16 / 16 samples
 Append frame 65
-Time: 00:00.88 (Saving: 00:00.04)
+Time: 00:01.15 (Saving: 00:00.04)
 
 Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8575,9 +8575,9 @@ Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:66 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 66
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.05)
 
 Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8705,9 +8705,9 @@ Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:67 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 67
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8835,9 +8835,9 @@ Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:68 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 68
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -8965,9 +8965,9 @@ Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:69 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 69
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9095,9 +9095,9 @@ Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:70 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 70
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9225,9 +9225,9 @@ Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:71 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 71
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9355,9 +9355,9 @@ Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:72 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 72
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9485,9 +9485,9 @@ Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:73 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 73
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.05)
 
 Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9615,9 +9615,9 @@ Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:74 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 74
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9745,9 +9745,9 @@ Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:75 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 75
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -9875,9 +9875,9 @@ Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:76 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 76
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.05)
 
 Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10005,9 +10005,9 @@ Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:77 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 77
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.05)
 
 Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10135,9 +10135,9 @@ Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:78 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 78
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10265,9 +10265,9 @@ Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:79 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 79
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10395,9 +10395,9 @@ Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-5
 Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:80 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 80
-Time: 00:00.96 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10525,9 +10525,9 @@ Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:81 Mem:42.48M (Peak 51.59M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 81
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10655,9 +10655,9 @@ Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:82 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 82
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10785,9 +10785,9 @@ Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:83 Mem:42.48M (Peak 51.59M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 83
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -10914,10 +10914,10 @@ Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-1
 Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:84 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 84
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.25 (Saving: 00:00.05)
 
 Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11045,9 +11045,9 @@ Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:85 Mem:42.48M (Peak 51.59M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 85
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.25 (Saving: 00:00.04)
 
 Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11175,9 +11175,9 @@ Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:86 Mem:42.48M (Peak 51.59M) | Time:00:01.13 | Rendering 16 / 16 samples
 Append frame 86
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.26 (Saving: 00:00.05)
 
 Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11305,9 +11305,9 @@ Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:87 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 87
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11435,9 +11435,9 @@ Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:00.87 | Rendering 16 / 16 samples
+Fra:88 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 88
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11565,9 +11565,9 @@ Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:89 Mem:42.48M (Peak 51.59M) | Time:00:01.12 | Rendering 16 / 16 samples
 Append frame 89
-Time: 00:00.99 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11695,9 +11695,9 @@ Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:00.88 | Rendering 16 / 16 samples
+Fra:90 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 90
-Time: 00:00.98 (Saving: 00:00.04)
+Time: 00:01.24 (Saving: 00:00.04)
 
 Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11825,9 +11825,9 @@ Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:00.86 | Rendering 16 / 16 samples
+Fra:91 Mem:42.48M (Peak 51.59M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 91
-Time: 00:00.97 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -11954,10 +11954,10 @@ Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-1
 Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:92 Mem:42.48M (Peak 51.59M) | Time:00:01.11 | Rendering 16 / 16 samples
 Append frame 92
-Time: 00:00.96 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12085,9 +12085,9 @@ Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:93 Mem:42.48M (Peak 51.59M) | Time:00:01.10 | Rendering 16 / 16 samples
 Append frame 93
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.23 (Saving: 00:00.04)
 
 Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12215,9 +12215,9 @@ Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:94 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 94
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.04)
 
 Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12345,9 +12345,9 @@ Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:95 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 95
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.21 (Saving: 00:00.04)
 
 Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12475,9 +12475,9 @@ Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:96 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 96
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.22 (Saving: 00:00.05)
 
 Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12605,9 +12605,9 @@ Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:97 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 97
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12734,10 +12734,10 @@ Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-1
 Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.85 | Rendering 16 / 16 samples
+Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:98 Mem:42.48M (Peak 51.59M) | Time:00:01.09 | Rendering 16 / 16 samples
 Append frame 98
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.21 (Saving: 00:00.04)
 
 Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12865,9 +12865,9 @@ Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:00.84 | Rendering 16 / 16 samples
+Fra:99 Mem:42.48M (Peak 51.59M) | Time:00:01.08 | Rendering 16 / 16 samples
 Append frame 99
-Time: 00:00.95 (Saving: 00:00.04)
+Time: 00:01.21 (Saving: 00:00.04)
 
 Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -12995,9 +12995,9 @@ Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-4
 Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:100 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 100
-Time: 00:00.94 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.05)
 
 Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13125,9 +13125,9 @@ Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:00.83 | Rendering 16 / 16 samples
+Fra:101 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 101
-Time: 00:00.93 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13255,9 +13255,9 @@ Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:102 Mem:42.48M (Peak 51.59M) | Time:00:01.06 | Rendering 16 / 16 samples
 Append frame 102
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13385,9 +13385,9 @@ Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:103 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 103
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13515,9 +13515,9 @@ Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:104 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 104
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13645,9 +13645,9 @@ Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:00.82 | Rendering 16 / 16 samples
+Fra:105 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 105
-Time: 00:00.92 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.05)
 
 Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13775,9 +13775,9 @@ Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:106 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 106
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.19 (Saving: 00:00.04)
 
 Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -13905,9 +13905,9 @@ Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:107 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 107
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14035,9 +14035,9 @@ Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:108 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 108
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14165,9 +14165,9 @@ Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:109 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 109
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14294,10 +14294,10 @@ Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:110 Mem:42.48M (Peak 51.59M) | Time:00:01.07 | Rendering 16 / 16 samples
 Append frame 110
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.20 (Saving: 00:00.04)
 
 Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14425,9 +14425,9 @@ Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:111 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 111
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14555,9 +14555,9 @@ Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:112 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 112
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14685,9 +14685,9 @@ Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:00.79 | Rendering 16 / 16 samples
+Fra:113 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 113
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.16 (Saving: 00:00.04)
 
 Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14814,10 +14814,10 @@ Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:114 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 114
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.18 (Saving: 00:00.04)
 
 Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -14945,9 +14945,9 @@ Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:115 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 115
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -15075,9 +15075,9 @@ Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:116 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 116
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.05)
 
 Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -15205,9 +15205,9 @@ Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:117 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 117
-Time: 00:00.90 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -15334,10 +15334,10 @@ Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-0
 Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
-Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:00.01 | Rendering 1 / 16 samples
+Fra:118 Mem:42.48M (Peak 51.59M) | Time:00:01.04 | Rendering 16 / 16 samples
 Append frame 118
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -15465,9 +15465,9 @@ Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:00.81 | Rendering 16 / 16 samples
+Fra:119 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 119
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Octopus mantle
 Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Eye.001
@@ -15595,9 +15595,9 @@ Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Neural impulse 7-3
 Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Area
 Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Syncing Camera
 Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.00 | Rendering 1 / 16 samples
-Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:00.80 | Rendering 16 / 16 samples
+Fra:120 Mem:42.48M (Peak 51.59M) | Time:00:01.05 | Rendering 16 / 16 samples
 Append frame 120
-Time: 00:00.91 (Saving: 00:00.04)
+Time: 00:01.17 (Saving: 00:00.04)
 
 RENDER_ENGINE BLENDER_EEVEE
 BLENDER_3D_RENDER_COMPLETE /home/runner/work/Animation-special-/Animation-special-/videos/OCTOPUS_3D_DEMO.mp4
