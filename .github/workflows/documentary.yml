@@ -1,0 +1,46 @@
+name: Science Documentary Studio
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 12 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: science-documentary
+  cancel-in-progress: false
+jobs:
+  documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      STORY_VOICE: hi-IN-SwaraNeural
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core
+          pip install requests Pillow edge-tts
+      - name: Generate cinematic documentary
+        run: python src/documentary.py
+      - name: Save output
+        run: |
+          git config user.name "documentary-bot"
+          git config user.email "documentary-bot@users.noreply.github.com"
+          git add documentary_state.json videos/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Generate science documentary episode"
+          git pull --rebase origin main
+          git push
+      - name: Upload video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentary-output
+          path: videos/SCIENCE_EP_*
+          if-no-files-found: warn
