@@ -74,6 +74,11 @@ def render_scene(im,scene,idx,seconds,path):
     d=ImageDraw.Draw(overlay)
     d.rectangle((0,0,W,175),fill=(5,13,22,145))
     d.rectangle((0,H-280,W,H),fill=(5,13,22,185))
+    # Documentary identity, chapter counter, and a visible progress line.
+    d.rounded_rectangle((28,16,245,51),radius=12,fill=(10,31,39,220))
+    d.text((43,21),"SCIENCE FILES",font=font(20),fill=(255,221,148))
+    d.text((W-100,22),f"{idx+1:02}/08",font=font(24),fill=(255,255,255))
+    d.rectangle((0,H-9,round(W*(idx+1)/8),H),fill=(255,194,91))
     caption(d,scene.get("label","रहस्य"),60,(255,218,133),46)
     caption(d,scene.get("fact",""),H-210,(245,246,236),31)
     canvas=Image.alpha_composite(canvas.convert("RGBA"),overlay).convert("RGB")
