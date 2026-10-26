@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "src/blender_octopus_demo.py"
+      - "src/animation_library.py"
+      - "src/scene_library.py"
       - ".github/workflows/blender_3d.yml"
 concurrency:
   group: blender-octopus-3d
