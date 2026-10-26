@@ -122,7 +122,7 @@ jobs:
                   result["decode_error"]=decode.stderr[-1500:]
               probe=subprocess.run(["ffmpeg","-hide_banner","-i",str(video)],
                                    capture_output=True,text=True,timeout=30)
-              match=re.search(r"Duration: (\\d+):(\\d+):(\\d+(?:\\.\\d+)?)",probe.stderr)
+              match=re.search(r"Duration: (\d+):(\d+):(\d+(?:\.\d+)?)",probe.stderr)
               if match:
                   h,m,sec=match.groups()
                   result["duration_seconds"]=int(h)*3600+int(m)*60+float(sec)
