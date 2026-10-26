@@ -31,8 +31,10 @@ def mat(name,color,metal=0,emission=0):
  bs.inputs['Metallic'].default_value=metal
  bs.inputs['Roughness'].default_value=.36
  if emission:
-  bs.inputs['Emission Color'].default_value=(*color,1)
-  bs.inputs['Emission Strength'].default_value=emission
+  emission_color=bs.inputs.get('Emission Color') or bs.inputs.get('Emission')
+  if emission_color: emission_color.default_value=(*color,1)
+  emission_strength=bs.inputs.get('Emission Strength')
+  if emission_strength: emission_strength.default_value=emission
  return m
 skin=mat('Living octopus skin',(.62,.19,.14),.24)
 nerve=mat('Animated neural signal',(.08,.8,.94),.15,2.0)
