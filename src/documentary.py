@@ -136,6 +136,53 @@ def offline_science_visual(scene,idx):
         d.ellipse((x,1155,x+16,1171),fill=(255,197,92) if k==idx else (66,114,125))
     return im
 
+def free_science_photo(scene, idx):
+    """Keyless Wikimedia Commons subject-specific media; respect licenses and credit."""
+    subject=os.getenv("SCIENCE_CURRENT_SUBJECT","").lower()
+    queries={
+      "jewel wasp and cockroach":"Ampulex compressa",
+      "octopus cognition":"Octopus vulgaris",
+      "marine bioluminescence":"bioluminescent jellyfish",
+      "leafcutter ants":"Atta cephalotes",
+      "tardigrade":"tardigrade microscopy",
+      "mantis shrimp":"Odontodactylus scyllarus",
+      "ophiocordyceps":"Ophiocordyceps unilateralis",
+      "bat echolocation":"bat flying",
+      "anglerfish":"deep sea anglerfish",
+    }
+    query=next((v for k,v in queries.items() if k in subject),None)
+    if not query: return None
+    # Search Commons file titles, not a generic stock-photo endpoint.
+    api="https://commons.wikimedia.org/w/api.php"
+    params={"action":"query","format":"json","generator":"search","gsrsearch":"filetype:bitmap "+query,
+            "gsrnamespace":6,"gsrlimit":24,"prop":"imageinfo",
+            "iiprop":"url|extmetadata|size","iiurlwidth":1100}
+    try:
+        resp=requests.get(api,params=params,headers={"User-Agent":"ScienceDocumentaryStudio/1.0 (educational video)"},timeout=12)
+        resp.raise_for_status()
+        pages=resp.json().get("query",{}).get("pages",{})
+        accepted=[]
+        for page in pages.values():
+            info=(page.get("imageinfo") or [{}])[0]
+            meta=info.get("extmetadata",{})
+            license_name=meta.get("LicenseShortName",{}).get("value","").lower()
+            if not any(tag in license_name for tag in ("cc0","cc-by","public domain","pdm")): continue
+            title=page.get("title","").lower()
+            if not any(word in title for word in query.lower().split() if len(word)>4): continue
+            url=info.get("thumburl") or info.get("url")
+            if url and info.get("width",0)>=500 and info.get("height",0)>=400:
+                accepted.append((title,url,license_name,meta.get("Artist",{}).get("value","")))
+        if not accepted: return None
+        title,url,license_name,artist=sorted(accepted)[idx%len(accepted)]
+        result=requests.get(url,timeout=18)
+        result.raise_for_status()
+        photo=Image.open(io.BytesIO(result.content)).convert("RGB")
+        print("COMMONS_LICENSED_IMAGE",title,license_name,"artist",re.sub("<[^>]+>","",artist)[:80])
+        return photo
+    except (requests.RequestException,ValueError,OSError,KeyError) as exc:
+        print("COMMONS_UNAVAILABLE",str(exc)[:140])
+        return None
+
 def image_for(scene,idx):
     if os.getenv("SCIENCE_IMAGE_PROVIDER","auto")=="offline":
         return offline_science_visual(scene,idx)
@@ -164,8 +211,10 @@ def image_for(scene,idx):
             im=candidate
             break
         print(f"[image QA] Scene {idx}: low-detail image rejected, attempt {attempt+1}")
+    if im is None and scene.get("visual_type")=="cinematic":
+        im=free_science_photo(scene,idx)
     if im is None:
-        print("IMAGE_API_UNAVAILABLE: using scene-specific scientific illustration",idx)
+        print("VISUAL_SOURCE_UNAVAILABLE",idx)
         raise RuntimeError("VISUAL_QA_BLOCKED: AI image unavailable; refusing to render unrelated insect fallback for topic: "+str(scene.get("label",scene.get("prompt","unknown"))))
     return im.convert("RGB")
 def caption(draw,text,y,fill,fontsize=45):
@@ -250,6 +299,7 @@ def main():
     index=json.loads(state.read_text()).get("next",0) if state.exists() else 0
     topic=TOPICS[index%len(TOPICS)]
     data=write_story(topic)
+    os.environ["SCIENCE_CURRENT_SUBJECT"]=topic["subject"]
     audio=WORK/"narration.mp3"
     asyncio.run(voice(data["narration"],audio))
     length=duration(audio)
