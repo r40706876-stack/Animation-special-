@@ -3,7 +3,7 @@ import asyncio, json, math, os, pathlib, random, re, subprocess, sys
 import requests
 from PIL import Image, ImageDraw, ImageFont
 from planner import _gemini
-from backgrounds import _pollinations
+import io, urllib.parse, time
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 OUT=ROOT/"videos"; WORK=ROOT/"work"/"documentary"
 TOPICS=json.loads((ROOT/"src"/"documentary_topics.json").read_text(encoding="utf-8"))["topics"]
@@ -37,7 +37,16 @@ def image_for(scene,idx):
     prompt=scene["prompt"]+", editorial science documentary, accurate anatomy, richly textured engraved illustration, deep teal and warm amber, 9:16, no typography, no watermark"
     im=None
     for attempt in range(3):
-        candidate=_pollinations(prompt, 9100+idx+attempt*109)
+        url="https://image.pollinations.ai/prompt/"+urllib.parse.quote(prompt)+"?width=720&height=1280&nologo=true&seed="+str(9100+idx+attempt*109)+"&model=flux"
+        try:
+            response=requests.get(url,timeout=90)
+            response.raise_for_status()
+            if not response.headers.get("content-type","").startswith("image/"): raise ValueError("Non-image response")
+            candidate=Image.open(io.BytesIO(response.content)).convert("RGB")
+        except (requests.RequestException,ValueError,OSError) as exc:
+            print("IMAGE_RETRY",idx,attempt,str(exc)[:150])
+            time.sleep(2)
+            continue
         if candidate is None:
             continue
         probe=candidate.convert("RGB").resize((32,32))
