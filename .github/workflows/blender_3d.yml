@@ -19,13 +19,41 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Blender
-        run: sudo apt-get update -qq && sudo apt-get install -y blender ffmpeg xvfb
+        timeout-minutes: 22
+        shell: bash
+        run: |
+          set -euo pipefail
+          export DEBIAN_FRONTEND=noninteractive
+          if command -v blender >/dev/null && command -v ffmpeg >/dev/null && command -v xvfb-run >/dev/null; then
+            echo "Using installed Blender, FFmpeg and Xvfb"
+          else
+            # Bound apt/network stalls so the run fails with a useful error
+            # instead of spending most of the 90-minute job timeout here.
+            for attempt in 1 2; do
+              echo "Blender package installation attempt ${attempt}/2"
+              if timeout --signal=TERM --kill-after=30s 300s sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq &&
+                 timeout --signal=TERM --kill-after=30s 540s sudo apt-get install -y --no-install-recommends blender ffmpeg xvfb; then
+                break
+              fi
+              if [ "$attempt" -eq 2 ]; then
+                echo "::error::Blender dependencies could not be installed after two bounded attempts"
+                exit 1
+              fi
+              sleep 10
+            done
+          fi
+          command -v blender
+          command -v ffmpeg
+          command -v xvfb-run
+          blender --version | head -n 2
       - name: Render 3D demo
         run: |
           mkdir -p videos
           set -o pipefail
           BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" xvfb-run -a blender -b -t 2 --python src/blender_octopus_demo.py 2>&1 | tee videos/blender_render.log
           test -s videos/OCTOPUS_3D_DEMO.mp4
+          # ffprobe alone does not prove that all frames are decodable.
+          ffmpeg -v error -xerror -i videos/OCTOPUS_3D_DEMO.mp4 -f null -
           ffprobe -v error -show_entries format=duration,size -of json videos/OCTOPUS_3D_DEMO.mp4
           ffmpeg -y -loglevel error -ss 2.5 -i videos/OCTOPUS_3D_DEMO.mp4 -frames:v 1 videos/OCTOPUS_3D_PREVIEW.jpg
           ffmpeg -y -loglevel error -i videos/OCTOPUS_3D_DEMO.mp4 -vf "select=eq(n\\,12)+eq(n\\,60)+eq(n\\,108),scale=270:480,tile=3x1" -frames:v 1 videos/OCTOPUS_3D_CONTACT.jpg
