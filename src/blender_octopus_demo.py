@@ -1,6 +1,9 @@
 """Keyless procedural 3D octopus neural-system demo; Blender background mode."""
-import bpy, math, os
+import bpy, math, os, sys
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from mathutils import Vector
+from animation_library import animate_character_float
+from scene_library import populate_underwater
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene
@@ -40,6 +43,7 @@ skin=mat('Living octopus skin',(.62,.19,.14),.24)
 nerve=mat('Animated neural signal',(.08,.8,.94),.15,2.0)
 sucker=mat('Sucker rings',(.89,.52,.35))
 floor=mat('Ocean background',(.015,.07,.13))
+coral=mat('Warm reef coral',(.76,.26,.34))
 def uv(name,loc,scale,material):
  bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=16,location=loc)
  o=bpy.context.object;o.name=name;o.scale=scale;o.data.materials.append(material)
@@ -53,6 +57,7 @@ for x in [-.32,.32]:
  uv('Eye white',(x,-.53,1.35),(.24,.15,.27),face)
  uv('Pupil',(x,-.665,1.33),(.115,.065,.15),pupil)
  uv('Eye glint',(x-.045,-.727,1.41),(.035,.022,.045),face)
+uv('Little smile',(0,-.635,1.02),(.14,.048,.06),pupil)
 # All arm vertices are continuous rings, with smoothly decreasing radii.
 for k in range(8):
  theta=math.tau*k/8
@@ -92,16 +97,10 @@ for k in range(8):
   for f in [1,31,61,91,120]:
    key.value=1 if f==frame else 0
    key.keyframe_insert(data_path='value',frame=f)
-# Ground and underwater context
-uv('Sea floor',(0,0,-.55),(9,9,.16),floor)
-for i in range(22):
- a=i*2.39996
- r=2.4+(i%5)*.46
- bubble=uv('Bubble '+str(i),(r*math.cos(a),r*math.sin(a),.4+(i%9)*.29),(.035,.035,.055),nerve)
- start=bubble.location.copy()
- for frame in (1,60,120):
-  bubble.location=start+Vector((.09*math.sin(frame*.045+i),0,.65*(frame-1)/119))
-  bubble.keyframe_insert(data_path='location',frame=frame)
+# Reusable character controller, independent of the environment.
+animate_character_float(bpy,list(bpy.context.scene.objects))
+# Environment assets are kept in their own reusable scene module.
+populate_underwater(uv,floor,nerve,coral)
 bpy.ops.object.light_add(type='AREA',location=(1,-4,7))
 bpy.context.object.data.energy=1400;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=7
 bpy.ops.object.camera_add(location=(0,-8,6))
