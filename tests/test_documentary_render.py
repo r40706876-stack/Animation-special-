@@ -11,5 +11,8 @@ def main():
         d.render_scene(Image.new("RGB",(720,1280),(24,55,65)),scene,0,1.0,out)
         assert out.exists() and out.stat().st_size>1000
         assert abs(d.duration(out)-1.0)<0.25
-        print("RENDER_SMOKE_PASS",out.stat().st_size)
+        scan=d.WORK/"scan.mp4"
+        d.render_scene(Image.new("RGB",(720,1280),(24,55,65)),scene,2,1.0,scan)
+        assert scan.exists() and scan.stat().st_size>1000
+        print("RENDER_SMOKE_PASS")
 if __name__=="__main__":main()
