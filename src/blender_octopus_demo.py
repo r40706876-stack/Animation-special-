@@ -2,7 +2,7 @@
 import bpy, math, os, sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from mathutils import Vector
-from animation_library import animate_character_float
+from animation_library import animate_character_float, animate_eye_blink
 from scene_library import populate_underwater
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
@@ -53,10 +53,12 @@ def uv(name,loc,scale,material):
 head=uv('Octopus mantle',(0,0,1.45),(.72,.62,.86),skin)
 face=mat('Eye white',(.96,.94,.82))
 pupil=mat('Pupils',(.012,.025,.045))
+eye_parts=[]
 for x in [-.32,.32]:
- uv('Eye white',(x,-.53,1.35),(.24,.15,.27),face)
- uv('Pupil',(x,-.665,1.33),(.115,.065,.15),pupil)
- uv('Eye glint',(x-.045,-.727,1.41),(.035,.022,.045),face)
+ eye_parts.append(uv('Eye white',(x,-.53,1.35),(.24,.15,.27),face))
+ eye_parts.append(uv('Pupil',(x,-.665,1.33),(.115,.065,.15),pupil))
+ eye_parts.append(uv('Eye glint',(x-.045,-.727,1.41),(.035,.022,.045),face))
+animate_eye_blink(eye_parts)
 uv('Little smile',(0,-.635,1.02),(.14,.048,.06),pupil)
 # All arm vertices are continuous rings, with smoothly decreasing radii.
 for k in range(8):

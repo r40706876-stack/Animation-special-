@@ -16,6 +16,22 @@ def animate_character_float(bpy, objects, name="Octopus Rig"):
         root.keyframe_insert(data_path="rotation_euler",frame=frame)
     return root
 
+def animate_eye_blink(eye_objects, blink_frames=(39, 82)):
+    """Reusable eyelid-like squash for stylized character eyes.
+
+    Objects retain their original scales; only vertical scale is animated.
+    """
+    timeline = {1: 1.0, 120: 1.0}
+    for center in blink_frames:
+        timeline.update({center - 4: 1.0, center: 0.13,
+                         center + 2: 0.13, center + 6: 1.0})
+    for eye in eye_objects:
+        original_z = eye.scale.z
+        for frame, factor in sorted(timeline.items()):
+            eye.scale.z = original_z * factor
+            eye.keyframe_insert(data_path="scale", frame=frame)
+        eye.scale.z = original_z
+
 def animate_rising_bubble(bubble,index):
     start=bubble.location.copy()
     for frame in (1,60,120):
