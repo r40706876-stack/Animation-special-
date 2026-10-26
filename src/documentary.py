@@ -58,7 +58,35 @@ def font(size):
               "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf"]:
         if pathlib.Path(p).exists(): return ImageFont.truetype(p,size)
     return ImageFont.load_default()
+def offline_science_visual(scene,idx):
+    im=Image.new("RGB",(W,H),(10,29,43))
+    d=ImageDraw.Draw(im)
+    rng=random.Random(1024+idx)
+    for n in range(90):
+        x=rng.randrange(W);y=rng.randrange(200,1050);rad=rng.randrange(3,24)
+        d.ellipse((x-rad,y-rad,x+rad,y+rad),outline=(28,69,82),width=2)
+    # Original stylised insect anatomy illustration.
+    for j in range(6):
+        y=490+j*72
+        d.line((320,y,125,y-75,65,y+45),fill=(179,149,89),width=8)
+        d.line((400,y,590,y-75,655,y+45),fill=(179,149,89),width=8)
+    d.ellipse((255,420,465,920),fill=(113,77,43),outline=(245,180,93),width=7)
+    for j in range(7):
+        y=545+j*47
+        d.arc((270,y,450,y+54),0,180,fill=(223,159,84),width=5)
+    d.ellipse((275,335,445,525),fill=(121,86,49),outline=(242,183,96),width=7)
+    d.arc((145,160,350,430),200,350,fill=(247,203,117),width=5)
+    d.arc((370,160,575,430),190,340,fill=(247,203,117),width=5)
+    d.ellipse((235,365,490,630),outline=(106,231,219),width=9)
+    d.line((485,390,615,285),fill=(106,231,219),width=7)
+    for j in range(8):
+        x=140+j*62
+        d.ellipse((x,1115,x+13,1128),fill=(255,198,91) if j==idx else (64,111,126))
+    return im
+
 def image_for(scene,idx):
+    if os.getenv("SCIENCE_IMAGE_PROVIDER","offline")=="offline":
+        return offline_science_visual(scene,idx)
     style=(", crisp educational scientific diagram, readable visual comparison, isolated anatomy, clean ivory background, clear spatial separation, vivid subject colors" if scene.get("visual_type") in ("diagram","comparison","mechanism") else ", cinematic macro natural history photography, anatomically accurate subject, dramatic depth, rich organic detail")
     prompt=scene["prompt"]+style+", vertical 9:16, no text, no typography, no watermark"
     im=None
