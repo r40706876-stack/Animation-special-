@@ -6,7 +6,7 @@ on:
       - "src/blender_octopus_demo.py"
       - ".github/workflows/blender_3d.yml"
 permissions:
-  contents: read
+  contents: write
 jobs:
   render:
     runs-on: ubuntu-latest
@@ -31,3 +31,36 @@ jobs:
             videos/OCTOPUS_3D_DEMO.mp4
             videos/blender_render.log
           if-no-files-found: warn
+
+      - name: Persist Blender QA result for automatic inspection
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib, subprocess
+          folder=pathlib.Path("videos")
+          folder.mkdir(exist_ok=True)
+          video=folder/"OCTOPUS_3D_DEMO.mp4"
+          log=folder/"blender_render.log"
+          result={"video_exists":video.exists(),"video_bytes":video.stat().st_size if video.exists() else 0}
+          if video.exists():
+              probe=subprocess.run(["ffprobe","-v","error","-show_entries","format=duration,size","-of","json",str(video)],capture_output=True,text=True)
+              if probe.returncode==0:
+                  result["probe"]=json.loads(probe.stdout).get("format",{})
+          if log.exists():
+              result["log_tail"]=log.read_text(errors="replace").splitlines()[-45:]
+          result["render_verified"]=bool(result.get("video_bytes",0)>100000 and float(result.get("probe",{}).get("duration",0))>=4.0)
+          (folder/"blender_run_status.json").write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          print("BLENDER_QA",json.dumps({k:v for k,v in result.items() if k!="log_tail"}))
+          PY
+          git config user.name "blender-demo-bot"
+          git config user.email "blender-demo-bot@users.noreply.github.com"
+          git add -f videos/blender_run_status.json
+          if [ -f videos/blender_render.log ]; then git add -f videos/blender_render.log; fi
+          if [ -s videos/OCTOPUS_3D_DEMO.mp4 ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record Blender 3D demo render and QA result"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 8
+          done
+          exit 1
