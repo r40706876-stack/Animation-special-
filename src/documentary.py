@@ -23,6 +23,9 @@ def write_story(topic):
     raw=_gemini(prompt,json_mode=True,temperature=0.65)
     data=json.loads(raw[raw.find("{"):raw.rfind("}")+1])
     if len(data.get("scenes",[]))!=8 or not data.get("narration"): raise ValueError("Invalid storyboard")
+    for scene in data["scenes"]:
+        if not isinstance(scene,dict) or len(str(scene.get("prompt",""))) < 35:
+            raise ValueError("Scene is missing a detailed scientific visual prompt")
     return data
 def font(size):
     for p in ["/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf",
@@ -81,6 +84,17 @@ def render_scene(im,scene,idx,seconds,path):
     d.rectangle((0,H-9,round(W*(idx+1)/8),H),fill=(255,194,91))
     caption(d,scene.get("label","रहस्य"),60,(255,218,133),46)
     caption(d,scene.get("fact",""),H-210,(245,246,236),31)
+    # Animated infographic: a highlighted subject ring and a directional callout.
+    if idx % 3 == 1:
+        cx,cy=W//2,H//2-55
+        d.ellipse((cx-150,cy-150,cx+150,cy+150),outline=(255,199,95,230),width=7)
+        d.line((cx+110,cy-110,cx+190,cy-200),fill=(255,199,95,240),width=6)
+        d.ellipse((cx+184,cy-206,cx+196,cy-194),fill=(255,199,95,255))
+    elif idx % 3 == 2:
+        for j in range(4):
+            yline=320+j*120
+            d.line((38,yline,W-38,yline),fill=(121,217,216,90),width=2)
+        d.rectangle((32,310,W-32,790),outline=(121,217,216,155),width=3)
     canvas=Image.alpha_composite(canvas.convert("RGBA"),overlay).convert("RGB")
     canvas.save(base)
     frames=max(1,round(seconds*24))
