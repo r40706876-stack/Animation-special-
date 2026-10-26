@@ -33,6 +33,8 @@ jobs:
           pip install requests Pillow edge-tts
       - name: Validate Python source
         run: python -m compileall -q src
+      - name: Offline cinematic render smoke test
+        run: python tests/test_documentary_render.py
       - name: Generate cinematic documentary
         run: python src/documentary.py
       - name: Save output
