@@ -35,7 +35,20 @@ def font(size):
     return ImageFont.load_default()
 def image_for(scene,idx):
     prompt=scene["prompt"]+", editorial science documentary, accurate anatomy, richly textured engraved illustration, deep teal and warm amber, 9:16, no typography, no watermark"
-    im=_pollinations(prompt, 9100+idx)
+    im=None
+    for attempt in range(3):
+        candidate=_pollinations(prompt, 9100+idx+attempt*109)
+        if candidate is None:
+            continue
+        probe=candidate.convert("RGB").resize((32,32))
+        pixels=list(probe.getdata())
+        spread=sum(max(px)-min(px) for px in pixels)/len(pixels)
+        luminance=[sum(px)/3 for px in pixels]
+        variance=sum((v-sum(luminance)/len(luminance))**2 for v in luminance)/len(luminance)
+        if variance>180 and spread>8:
+            im=candidate
+            break
+        print(f"[image QA] Scene {idx}: low-detail image rejected, attempt {attempt+1}")
     if im is None:
         if os.getenv("ALLOW_PLACEHOLDER_IMAGES","0") != "1":
             raise RuntimeError("Image API failed: refusing to publish placeholder-only documentary")
@@ -104,8 +117,8 @@ def render_scene(im,scene,idx,seconds,path):
     elif direction=="panright": xexpr="0"
     else:xexpr="(iw-iw/zoom)/2"
     vf=f"zoompan=z='min(zoom+0.00065,1.16)':x='{xexpr}':y='(ih-ih/zoom)/2':d={frames}:s={W}x{H}:fps=24,format=yuv420p"
-    # A timed color pulse adds motion to the scientific HUD independently of camera motion.
-    vf += ",eq=brightness=0.008*sin(2*PI*t/3):saturation=1.10"
+    # Mild cinematic grade, stable across FFmpeg versions.
+    vf += ",eq=contrast=1.05:saturation=1.10"
     command(["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(base),"-vf",vf,
              "-frames:v",str(frames),"-c:v","libx264","-preset","ultrafast","-crf","23",str(path)])
 def main():
