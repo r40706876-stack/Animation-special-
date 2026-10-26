@@ -119,8 +119,22 @@ def render_scene(im,scene,idx,seconds,path):
     vf=f"zoompan=z='min(zoom+0.00065,1.16)':x='{xexpr}':y='(ih-ih/zoom)/2':d={frames}:s={W}x{H}:fps=24,format=yuv420p"
     # Mild cinematic grade, stable across FFmpeg versions.
     vf += ",eq=contrast=1.05:saturation=1.10"
-    command(["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(base),"-vf",vf,
-             "-frames:v",str(frames),"-c:v","libx264","-preset","ultrafast","-crf","23",str(path)])
+    if idx % 3 == 2:
+        # Independently animated translucent scanner, moving across the anatomy frame.
+        scanner=Image.new("RGBA",(W,160),(0,0,0,0))
+        sd=ImageDraw.Draw(scanner)
+        for yy in range(160):
+            strength=max(0,1-abs(yy-80)/80)
+            sd.line((0,yy,W,yy),fill=(74,225,223,int(45*strength)))
+        sd.line((0,80,W,80),fill=(160,255,244,210),width=5)
+        scanfile=WORK/f"scanner_{idx:02}.png"
+        scanner.save(scanfile)
+        graph=f"[0:v]{vf}[bg];[bg][1:v]overlay=x=0:y='-160+mod(t*260,{H+160})':eval=frame:shortest=1,format=yuv420p[v]"
+        args=["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(base),
+              "-loop","1","-i",str(scanfile),"-filter_complex",graph,"-map","[v]"]
+    else:
+        args=["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(base),"-vf",vf]
+    command(args+["-frames:v",str(frames),"-c:v","libx264","-preset","ultrafast","-crf","23",str(path)])
 def main():
     OUT.mkdir(exist_ok=True);WORK.mkdir(parents=True,exist_ok=True)
     state=ROOT/"documentary_state.json"
