@@ -104,6 +104,8 @@ def render_scene(im,scene,idx,seconds,path):
     elif direction=="panright": xexpr="0"
     else:xexpr="(iw-iw/zoom)/2"
     vf=f"zoompan=z='min(zoom+0.00065,1.16)':x='{xexpr}':y='(ih-ih/zoom)/2':d={frames}:s={W}x{H}:fps=24,format=yuv420p"
+    # A timed color pulse adds motion to the scientific HUD independently of camera motion.
+    vf += ",eq=brightness=0.008*sin(2*PI*t/3):saturation=1.10"
     command(["ffmpeg","-y","-loglevel","error","-loop","1","-i",str(base),"-vf",vf,
              "-frames:v",str(frames),"-c:v","libx264","-preset","ultrafast","-crf","23",str(path)])
 def main():
