@@ -1,0 +1,70 @@
+{
+  "title": "ज्वेल वास्प: कॉकरोच का व्यवहार कैसे बदलता है?",
+  "narration": "क्या एक छोटी सी ततैया, कॉकरोच के फैसले बदल सकती है? सुनने में अजीब लगता है, लेकिन ज्वेल वास्प ऐसा करती है। सबसे पहले वह कॉकरोच के शरीर में डंक मारती है। इससे उसके आगे के पैरों की गतिविधि कुछ समय के लिए प्रभावित होती है। फिर ततैया सिर के पास दूसरा, बेहद सटीक डंक लगाती है। उसके ज़हर का असर कॉकरोच के तंत्रिका तंत्र पर पड़ता है। खास बात यह है कि कॉकरोच पूरी तरह लकवाग्रस्त नहीं होता। वह चल सकता है, लेकिन भागने की उसकी सामान्य प्रतिक्रिया बहुत कम हो जाती है। अब ततैया उसका एंटीना पकड़कर उसे अपने बिल तक ले जाती है। वहाँ अंडा देती है और बाद में उसका लार्वा कॉकरोच से पोषण पाता है। प्रकृति में यह एक असाधारण परजीवी रणनीति है।",
+  "scenes": [
+    {
+      "label": "दिमाग पर हमला?",
+      "fact": "क्या एक छोटी ततैया कॉकरोच के फैसले बदल सकती है?",
+      "prompt": "Macro close-up of metallic emerald jewel wasp facing a brown cockroach on tropical forest floor, scientifically accurate insect anatomy, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "cinematic",
+      "beat": "hook",
+      "motion": "push"
+    },
+    {
+      "label": "पहला डंक",
+      "fact": "ज्वेल वास्प पहले कॉकरोच के शरीर में डंक मारती है।",
+      "prompt": "Accurate side-view diagram of emerald cockroach wasp stinging cockroach thorax, labeled zones visually separated without text, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "mechanism",
+      "beat": "observation",
+      "motion": "zoom"
+    },
+    {
+      "label": "पैरों पर असर",
+      "fact": "पहला डंक आगे के पैरों की गतिविधि को थोड़ी देर प्रभावित करता है।",
+      "prompt": "Educational anatomy diagram of cockroach thoracic nervous system and front legs with wasp stinger, no text, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "diagram",
+      "beat": "mechanism",
+      "motion": "panleft"
+    },
+    {
+      "label": "दूसरा डंक",
+      "fact": "फिर वह सिर के पास एक और सटीक डंक लगाती है।",
+      "prompt": "Extreme macro natural history illustration of emerald jewel wasp inserting stinger near cockroach head, realistic, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "cinematic",
+      "beat": "reveal",
+      "motion": "push"
+    },
+    {
+      "label": "भागने की इच्छा",
+      "fact": "इस डंक का ज़हर कॉकरोच के भागने की इच्छा घटा देता है।",
+      "prompt": "Cutaway scientific educational diagram of cockroach head and central nervous system with small highlighted venom target region, no words, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "mechanism",
+      "beat": "mechanism",
+      "motion": "zoom"
+    },
+    {
+      "label": "लकवा नहीं!",
+      "fact": "कॉकरोच पूरी तरह लकवाग्रस्त नहीं होता; वह चल सकता है।",
+      "prompt": "Side by side comparison of normal fleeing cockroach and slow walking stung cockroach, jewel wasp nearby, no text, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "comparison",
+      "beat": "misconception",
+      "motion": "panright"
+    },
+    {
+      "label": "बिल तक सफर",
+      "fact": "ततैया उसके एंटीना को पकड़कर उसे अपने बिल तक ले जाती है।",
+      "prompt": "Cinematic macro illustration of emerald jewel wasp guiding cockroach by antenna toward underground burrow, natural history accuracy, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "cinematic",
+      "beat": "consequence",
+      "motion": "panleft"
+    },
+    {
+      "label": "अगली पीढ़ी",
+      "fact": "वहाँ वह अंडा देती है। बाद में लार्वा उसी कॉकरोच से पोषण पाता है।",
+      "prompt": "Educational cutaway illustration of wasp egg attached to cockroach inside burrow, accurate parasite life cycle, no labels, portrait 9:16, detailed biological illustration, no typography",
+      "visual_type": "diagram",
+      "beat": "conclusion",
+      "motion": "zoom"
+    }
+  ]
+}
