@@ -18,6 +18,10 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Python for portable FFmpeg
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Clear previous checkout outputs
         run: |
           # Old MP4s are tracked on main. They must never be mistaken for a new render.
@@ -62,7 +66,10 @@ jobs:
         run: |
           mkdir -p videos
           set -o pipefail
-          BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" blender -b -t 2 --python src/blender_octopus_demo.py 2>&1 | tee videos/blender_render.log
+          # Eevee may need an X display even in background mode on some runners.
+          blender_cmd=(blender -b -t 2 --python src/blender_octopus_demo.py)
+          if command -v xvfb-run >/dev/null; then blender_cmd=(xvfb-run -a "${blender_cmd[@]}"); fi
+          BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" "${blender_cmd[@]}" 2>&1 | tee videos/blender_render.log
           test -s videos/OCTOPUS_3D_DEMO.mp4
           # ffprobe alone does not prove that all frames are decodable.
           ffmpeg -v error -xerror -i videos/OCTOPUS_3D_DEMO.mp4 -f null -
