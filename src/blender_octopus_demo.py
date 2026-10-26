@@ -6,6 +6,10 @@ bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene
 scene.render.engine='CYCLES'
 scene.cycles.samples=12
+scene.cycles.use_denoising=False
+for layer in scene.view_layers:
+    if hasattr(layer,'cycles'):
+        layer.cycles.use_denoising=False
 scene.render.resolution_x=540
 scene.render.resolution_y=960
 scene.render.resolution_percentage=100
