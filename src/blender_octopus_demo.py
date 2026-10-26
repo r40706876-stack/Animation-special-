@@ -4,12 +4,15 @@ from mathutils import Vector
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene
-scene.render.engine='CYCLES'
-scene.cycles.samples=12
-scene.cycles.use_denoising=False
-for layer in scene.view_layers:
-    if hasattr(layer,'cycles'):
-        layer.cycles.use_denoising=False
+# Use Eevee instead of Cycles: Ubuntu's packaged Cycles build can lack
+# OpenImageDenoiser and fail at render time even when the scene loads.
+try:
+    scene.render.engine='BLENDER_EEVEE'
+except TypeError:
+    scene.render.engine='BLENDER_EEVEE_NEXT'
+if hasattr(scene,'eevee') and hasattr(scene.eevee,'taa_render_samples'):
+    scene.eevee.taa_render_samples=16
+print('RENDER_ENGINE',scene.render.engine)
 scene.render.resolution_x=540
 scene.render.resolution_y=960
 scene.render.resolution_percentage=100
