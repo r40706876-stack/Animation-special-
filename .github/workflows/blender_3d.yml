@@ -1,0 +1,29 @@
+name: Blender Octopus 3D Demo
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/blender_octopus_demo.py"
+      - ".github/workflows/blender_3d.yml"
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender
+        run: sudo apt-get update -qq && sudo apt-get install -y blender ffmpeg
+      - name: Render 3D demo
+        run: |
+          mkdir -p videos
+          BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" blender -b -t 2 --python src/blender_octopus_demo.py
+          test -s videos/OCTOPUS_3D_DEMO.mp4
+      - name: Save rendered video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: octopus-3d-demo
+          path: videos/OCTOPUS_3D_DEMO.mp4
+          if-no-files-found: warn
