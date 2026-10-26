@@ -45,8 +45,11 @@ jobs:
           git add documentary_state.json videos/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Generate science documentary episode"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 8
+          done
+          exit 1
       - name: Upload video artifact
         if: always()
         uses: actions/upload-artifact@v4
