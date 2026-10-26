@@ -22,6 +22,7 @@ jobs:
           BLENDER_OUTPUT="$PWD/videos/OCTOPUS_3D_DEMO.mp4" xvfb-run -a blender -b -t 2 --python src/blender_octopus_demo.py 2>&1 | tee videos/blender_render.log
           test -s videos/OCTOPUS_3D_DEMO.mp4
           ffprobe -v error -show_entries format=duration,size -of json videos/OCTOPUS_3D_DEMO.mp4
+          ffmpeg -y -loglevel error -ss 2.5 -i videos/OCTOPUS_3D_DEMO.mp4 -frames:v 1 videos/OCTOPUS_3D_PREVIEW.jpg
       - name: Save rendered video
         if: always()
         uses: actions/upload-artifact@v4
@@ -30,6 +31,7 @@ jobs:
           path: |
             videos/OCTOPUS_3D_DEMO.mp4
             videos/blender_render.log
+            videos/OCTOPUS_3D_PREVIEW.jpg
           if-no-files-found: warn
 
       - name: Persist Blender QA result for automatic inspection
@@ -57,6 +59,7 @@ jobs:
           git add -f videos/blender_run_status.json
           if [ -f videos/blender_render.log ]; then git add -f videos/blender_render.log; fi
           if [ -s videos/OCTOPUS_3D_DEMO.mp4 ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
+          if [ -s videos/OCTOPUS_3D_PREVIEW.jpg ]; then git add -f videos/OCTOPUS_3D_PREVIEW.jpg; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Record Blender 3D demo render and QA result"
           for attempt in 1 2 3; do
