@@ -26,9 +26,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg fonts-noto-core
           pip install requests Pillow edge-tts
+      - name: Validate Python source
+        run: python -m compileall -q src
       - name: Generate cinematic documentary
         run: python src/documentary.py
       - name: Save output
+        if: success()
         run: |
           git config user.name "documentary-bot"
           git config user.email "documentary-bot@users.noreply.github.com"
