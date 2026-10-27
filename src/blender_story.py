@@ -18,9 +18,12 @@ runpy.run_path(os.path.join(here, "blender_octopus_demo.py"), run_name="__main__
 
 import bpy
 from shot_library import apply_story_shot, SHOT_TITLES
+from story_events import add_story_event
 
 index = int(os.environ.get("STORY_SHOT", "0"))
 apply_story_shot(bpy.context.scene, index)
+# Each chapter now has its own physical event, not just different captions.
+add_story_event(bpy.context.scene, index)
 output = os.environ.get("BLENDER_OUTPUT", "/tmp/octopus_story_%02d.mp4" % index)
 bpy.context.scene.render.filepath = output
 bpy.context.scene.render.resolution_x = 540

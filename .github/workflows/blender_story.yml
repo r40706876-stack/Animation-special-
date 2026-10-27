@@ -5,6 +5,7 @@ on:
     paths:
       - "src/blender_story.py"
       - "src/shot_library.py"
+      - "src/story_events.py"
       - "src/blender_octopus_demo.py"
       - "src/animation_library.py"
       - "src/scene_library.py"
@@ -74,6 +75,7 @@ jobs:
             xvfb-run -a blender -b -t 2 --python src/blender_story.py \
             2>&1 | tee "story_segments/shot_${{ matrix.shot }}.log"
           test -s "$output"
+          grep -q "STORY_EVENT_READY ${{ matrix.shot }}" "story_segments/shot_${{ matrix.shot }}.log"
           ffmpeg -v error -xerror -i "$output" -f null -
           ffmpeg -y -loglevel error -ss 2.5 -i "$output" -frames:v 1 "story_segments/shot_${{ matrix.shot }}.jpg"
           echo "STORY_CHAPTER_DECODE_VERIFIED ${{ matrix.shot }}"
