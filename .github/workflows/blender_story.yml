@@ -104,11 +104,11 @@ jobs:
       - name: Install FFmpeg tools if needed
         run: |
           set -euo pipefail
-          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+          if ! command -v ffmpeg >/dev/null; then
             python -m pip install --quiet imageio-ffmpeg
             ffmpeg_path="$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
             sudo ln -sf "$ffmpeg_path" /usr/local/bin/ffmpeg
-            sudo ln -sf "$ffmpeg_path" /usr/local/bin/ffprobe
+            # imageio-ffmpeg bundles ffmpeg only; use ffmpeg for stream QA.
             ffmpeg -version | head -n 1
           fi
       - name: Assemble and verify full video
@@ -129,13 +129,18 @@ jobs:
           python - <<'PY'
           import json, os, subprocess, pathlib
           path = pathlib.Path("videos/OCTOPUS_3D_STORY_25S.mp4")
-          data = json.loads(subprocess.check_output([
-              "ffprobe","-v","error","-count_frames","-select_streams","v:0",
-              "-show_entries","stream=width,height,r_frame_rate,nb_read_frames,duration",
-              "-of","json",str(path)], text=True))
-          stream = data["streams"][0]
-          frames = int(stream["nb_read_frames"])
-          duration = float(stream["duration"])
+          import re
+          metadata = subprocess.run(["ffmpeg","-hide_banner","-i",str(path),"-f","null","-"], capture_output=True,text=True)
+          report = metadata.stderr
+          duration_match = re.search(r"Duration:\\s*(\\d+):(\\d+):(\\d+(?:\\.\\d+)?)", report)
+          resolution_match = re.search(r"(\\d{3,5})x(\\d{3,5})", report)
+          fps_match = re.search(r"(\\d+(?:\\.\\d+)?) fps", report)
+          frame_matches = re.findall(r"frame=\\s*(\\d+)", report)
+          if not (duration_match and resolution_match and fps_match and frame_matches):
+              raise SystemExit("Cannot parse FFmpeg video verification metadata: "+report[-2500:])
+          duration = int(duration_match[1])*3600 + int(duration_match[2])*60 + float(duration_match[3])
+          frames = int(frame_matches[-1])
+          stream = {"width":int(resolution_match[1]),"height":int(resolution_match[2]),"r_frame_rate":fps_match[1]}
           result = {"video": str(path), "bytes": path.stat().st_size,
                     "frames": frames, "duration_seconds": duration,
                     "width": stream["width"], "height": stream["height"],
