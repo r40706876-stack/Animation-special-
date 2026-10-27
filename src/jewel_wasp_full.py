@@ -57,11 +57,13 @@ for rig,positions in ((roach,rpath),(wasp,wpath)):
  for frame in (1,60,120,180,240):
   rig.rotation_euler[2]=(.035 if rig==roach else .09)*math.sin(frame*.11+chapter)
   rig.keyframe_insert(data_path='rotation_euler',frame=frame)
-# V2 camera: track the actual pair, never an unrelated fixed target.
-# Wider 9-12 unit framing avoids the wing/head cropping seen in V1 contact sheets.
-wide=chapter in (0,1,2,7,9,10,13)
-camera_distance=12.5 if wide else 10.8
-cam.data.lens=34 if wide else 35
+# V3 cinematography: use narrative-specific shot scales and subjects instead of
+# repeating the same distant two-insect composition for all 14 chapters.
+# Preserve the animation paths, frame count and the finished V2 artifact.
+shot_distance=[11.2,9.7,8.8,7.8,8.2,7.5,8.4,9.3,8.5,10.6,10.5,8.0,7.7,12.0]
+shot_lens=[36,39,42,44,43,46,42,39,42,36,38,44,46,35]
+shot_azimuth=[24,34,43,55,22,62,36,45,52,29,60,48,32,18]
+cam.data.lens=shot_lens[chapter]
 cam.data.sensor_fit='VERTICAL'
 def interp(points,frame):
     if frame<=120:
@@ -73,14 +75,30 @@ def interp(points,frame):
     return Vector(a).lerp(Vector(b),max(0,min(1,t)))
 for frame in (1,48,96,144,192,240):
     rp=interp(rpath,frame);wp=interp(wpath,frame)
-    focus=rp*.56+wp*.44+Vector((0,-.16,.18))
-    # Cinematic three-quarter view, with gentle arc movement and stable tracking.
-    az=math.radians(28+chapter*7%36)+.08*math.sin(frame/240*math.pi)
-    direction=Vector((math.sin(az)*.55,-.84, .48)).normalized()
-    cam.location=focus+direction*camera_distance
+    focus=rp*.56+wp*.44+Vector((0,-.16,.20))
+    # Sting: camera favors the wasp's abdomen and the roach's thorax.
+    if chapter in (3,5):
+        focus=rp*.62+wp*.38+Vector((0,-.25,.33))
+    # Neurological explanation: stay near the roach's head.
+    elif chapter in (4,6):
+        focus=rp*.78+wp*.22+Vector((0,-.50,.38))
+    # Antenna grasp: favor the roach's face.
+    elif chapter==8:
+        focus=rp*.72+wp*.28+Vector((0,-.58,.35))
+    # Burrow and egg sequence: make the entrance and developing egg visible.
+    elif chapter==10:
+        focus=Vector((1.35,1.05,.16))*.72+focus*.28
+    elif chapter in (11,12):
+        focus=rp*.85+Vector((0,.08,.55))*.85+wp*.15
+    elif chapter==13:
+        focus=wp*.70+rp*.30+Vector((0,0,.24))
+    az=math.radians(shot_azimuth[chapter])+.065*math.sin(frame/240*math.pi)
+    direction=Vector((math.sin(az)*.55,-.84,.49)).normalized()
+    cam.location=focus+direction*shot_distance[chapter]
     aim(cam,focus)
     cam.keyframe_insert(data_path='location',frame=frame)
     cam.keyframe_insert(data_path='rotation_euler',frame=frame)
+print('JEWEL_V3_STORY_CAMERA',chapter,shot_distance[chapter],shot_lens[chapter],flush=True)
 # A large empty band above the subjects is not useful in a vertical documentary.
 # Tracking the actual center also keeps the wasp visible during sting and flight.
 # Physically distinct event markers: stinger, neural pathways, burrow, egg and larva.
