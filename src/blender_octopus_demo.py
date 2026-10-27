@@ -106,9 +106,12 @@ populate_underwater(uv,floor,nerve,coral)
 bpy.ops.object.light_add(type='AREA',location=(1,-4,7))
 bpy.context.object.data.energy=1400;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=7
 bpy.ops.object.camera_add(location=(0,-8,6))
-cam=bpy.context.object;direction=Vector((0,0,.7))-cam.location
+cam=bpy.context.object
+# Frame the full tentacle sweep with safe margins in the narrow 9:16 output.
+# Aim closer to the character's body instead of the empty space below it.
+direction=Vector((0,0,1.55))-cam.location
 cam.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
-cam.data.type='ORTHO';cam.data.ortho_scale=9.4
+cam.data.type='ORTHO';cam.data.ortho_scale=10.6
 scene.camera=cam
 for frame,ang in [(1,-.12),(60,.10),(120,-.12)]:
  cam.rotation_euler[2]=ang
