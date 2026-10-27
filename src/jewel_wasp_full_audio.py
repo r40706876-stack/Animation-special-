@@ -34,7 +34,7 @@ async def main():
   await make(i,line)
   subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'voice/{i:02d}.mp3','-af','apad','-t','10','-ar','44100','-ac','2','-c:a','aac',f'voice/{i:02d}.m4a'],check=True)
  with open('voice/concat.txt','w') as f:
-  for i in range(len(lines)):f.write(f"file '{i:02d}.m4a'\\n")
+  for i in range(len(lines)):f.write(f"file '{i:02d}.m4a'\n")
  subprocess.run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i','voice/concat.txt','-t','140','-ar','44100','-ac','2','-c:a','aac','voice/narration.m4a'],check=True)
  print('JEWEL_FULL_HINDI_NARRATION_READY',len(lines),flush=True)
 if __name__=='__main__':asyncio.run(main())
