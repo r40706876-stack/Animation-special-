@@ -2,7 +2,6 @@ name: Blender 3D Story (25 seconds)
 on:
   workflow_dispatch:
   push:
-    branches: [main]
     paths:
       - "src/blender_story.py"
       - "src/shot_library.py"
@@ -12,7 +11,7 @@ on:
       - "src/scene_library.py"
       - ".github/workflows/blender_story.yml"
 concurrency:
-  group: blender-3d-story-${{ github.ref }}
+  group: blender-3d-story
   cancel-in-progress: true
 permissions:
   contents: write
