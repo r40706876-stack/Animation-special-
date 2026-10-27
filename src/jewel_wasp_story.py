@@ -48,7 +48,9 @@ def animate(o,keys):
 animate(roach,rp);animate(wasp,wp)
 for f,loc in cp:
  cam.location=loc;aim(cam,target);cam.keyframe_insert(data_path='location',frame=f);cam.keyframe_insert(data_path='rotation_euler',frame=f)
-cam.data.lens=[38,48,50,55,43,40][shot]
+cam.data.lens=[32,34,36,38,32,30][shot]
+# Keep the entire animal/action readable in portrait; avoid eye-only macro crops.
+cam.data.sensor_fit='VERTICAL'
 # Active body motion; leg geometry is articulated rig hierarchy, parent translates.
 for f in [1,30,60,90,120]:
  roach.rotation_euler[2]=.05*math.sin(f*.15) if shot in (0,4,5) else 0
