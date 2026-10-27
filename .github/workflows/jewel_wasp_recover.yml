@@ -8,7 +8,7 @@ on:
       source_run_id:
         description: "Run containing six verified 5-second shot artifacts"
         required: true
-        default: "40469153029"
+        default: "40483655340"
 permissions:
   actions: read
   contents: write
@@ -33,7 +33,7 @@ jobs:
           pattern: jewel-wasp-shot-*
           path: story_segments
           merge-multiple: true
-          run-id: ${{ inputs.source_run_id || '40469153029' }}
+          run-id: ${{ inputs.source_run_id || '40483655340' }}
           github-token: ${{ github.token }}
       - name: Assemble, narrate and verify 30s
         run: |
@@ -70,13 +70,13 @@ jobs:
           meta=json.loads(x);v=next(s for s in meta['streams'] if s['codec_type']=='video')
           audio=any(s['codec_type']=='audio' for s in meta['streams'])
           ok=int(v['nb_read_frames'])==720 and (v['width'],v['height'])==(540,960) and 29.9<float(meta['format']['duration'])<30.1 and audio
-          report={'video':p,'frames':int(v['nb_read_frames']),'width':v['width'],'height':v['height'],'duration':float(meta['format']['duration']),'bytes':pathlib.Path(p).stat().st_size,'audio_present':audio,'narration_present':os.getenv('NARRATION')=='true','decode_ok':True,'visual_quality_reviewed':False,'technical_qa_pass':ok,'source_shot_run':os.getenv('SOURCE_RUN_ID','40469153029'),'source_commit':os.getenv('GITHUB_SHA')}
+          report={'video':p,'frames':int(v['nb_read_frames']),'width':v['width'],'height':v['height'],'duration':float(meta['format']['duration']),'bytes':pathlib.Path(p).stat().st_size,'audio_present':audio,'narration_present':os.getenv('NARRATION')=='true','decode_ok':True,'visual_quality_reviewed':False,'technical_qa_pass':ok,'source_shot_run':os.getenv('SOURCE_RUN_ID','40483655340'),'source_commit':os.getenv('GITHUB_SHA')}
           pathlib.Path('videos/jewel_wasp_qa.json').write_text(json.dumps(report,indent=2))
           print('JEWEL_WASP_30S_QA',json.dumps(report))
           assert ok,report
           PY
         env:
-          SOURCE_RUN_ID: ${{ inputs.source_run_id || '40469153029' }}
+          SOURCE_RUN_ID: ${{ inputs.source_run_id || '40483655340' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
