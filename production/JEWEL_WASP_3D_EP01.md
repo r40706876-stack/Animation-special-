@@ -1,0 +1,38 @@
+# EP01 — Jewel Wasp vs Cockroach | 3D scientific story
+
+## Production target
+Original Hindi 9:16 cinematic **30-second** 3D documentary inspired by the *scientific storytelling techniques* of the user's first reference (not a shot-for-shot copy). This is the PRIMARY project; octopus was a Blender render smoke test only. Do not substitute still images with Ken Burns motion and call them 3D.
+
+## Factual guardrails
+Emerald cockroach wasp (Ampulex compressa) initially stings the cockroach's thoracic ganglia to temporarily impair its front legs, then delivers a targeted sting to the head ganglia. The cockroach remains able to walk but shows reduced spontaneous escape behavior. The wasp guides it by an antenna to a burrow; its larva later feeds on the host. Do not claim literal mind control, complete paralysis, or a scientifically proven single 'decision center'. Anatomical highlights must be schematic, not fabricated clinical imaging.
+
+## 30-second timed story — VO + 3D action
+| Seconds | Narration (Hindi) | Actual animated action | Camera / reveal |
+|---|---|---|---|
+| 0–3 | “एक छोटी ततैया… कॉकरोच को भागने से रोक सकती है?” | Cockroach races across wet leaf; metallic green wasp swoops into frame | Ground-level macro tracking, rapid rack-focus to wasp |
+| 3–7 | “पहले डंक से उसके आगे के पैर कुछ देर कमजोर पड़ते हैं।” | Wasp lands, curls abdomen and stings thorax; front legs buckle | Side macro → translucent thorax cutaway showing thoracic nerve ganglia |
+| 7–11 | “लेकिन असली चाल दूसरा डंक है—सिर के पास।” | Wasp repositions and delivers targeted head sting | Extreme macro, 180-degree camera arc; thin anatomical cutaway |
+| 11–15 | “ज़हर उसके भागने के व्यवहार को बदल देता है।” | Glowing schematic nerve pathway transitions to real cockroach | Camera passes through translucent head and pulls out |
+| 15–19 | “वह लकवाग्रस्त नहीं है… फिर भी भाग नहीं रहा!” | Split-action: normal cockroach flees; affected one moves slowly | Wide comparison with moving subjects, not static cards |
+| 19–24 | “ततैया उसका एंटीना पकड़कर बिल की ओर ले जाती है।” | Wasp grips antenna and leads walking cockroach across roots | Low tracking dolly following two rigged insects |
+| 24–28 | “वहीं अगली पीढ़ी के लिए कहानी बदल जाती है।” | Camera enters burrow; wasp places egg on host, non-graphic | Smooth descending crane and cave cutaway |
+| 28–30 | “प्रकृति का सबसे अजीब व्यवहार-परिवर्तन!” | Burrow silhouette, rapid pullback to forest floor | Final wide reveal with clear conclusion |
+
+## Reusable Blender assets required
+- Rigged cockroach: six articulated legs, antennae, thorax, abdomen, wing covers, walk/run/hesitate actions.
+- Rigged jewel wasp: six legs, jointed abdomen, stinger, translucent wings, fly/land/sting/lead actions.
+- Forest floor kit: leaf, twigs, roots, stones, burrow entrance and interior, wet material, volumetric light.
+- Scientific overlay kit: toggleable translucent cutaway and schematic ganglia, animated path glow.
+- Camera kit: macro tracking, rack focus, orbit, push-through, low dolly, split comparison, burrow crane.
+- Lighting kit: dramatic rim light, diffuse forest canopy, cave interior; consistent color and readable silhouettes.
+- Sound: original ambient forest, wing buzz, footfalls, subtle impact, Hindi VO; licensed/free only.
+
+## Quality gate (mandatory)
+1. Story is **30 s ±1 s**, 9:16, 24 or 30 fps, continuous A/V decode, audio present, and no clipped Hindi captions.
+2. Every 3–5 s there is a visible new **animated action**; no 5-second stationary characters or recycled octopus underwater set.
+3. Frames at 0.5, 2, 5, 9, 13, 17, 21, 26, 29 seconds inspected as a contact sheet; confirm anatomy, poses, camera variety and no intersections.
+4. Camera movements and body motion must be observable across adjacent frames, not merely stated in code.
+5. Publish MP4 and contact sheet with source commit, frame count, dimensions, duration, audio and decode QA. **Do not report final success without visual inspection.**
+
+## Execution order
+Build reusable wasp/cockroach rigs and forest scene; render 3-second motion proof; expand to seven continuous action beats; render full 30 seconds in parallel shot jobs; assemble and run visual QA. Fix failures in the GitHub workflow before cosmetic iteration. The existing 2D documentary generator is NOT the final rendering engine for this project.
