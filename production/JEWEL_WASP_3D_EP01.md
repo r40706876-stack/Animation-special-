@@ -1,12 +1,12 @@
 # EP01 — Jewel Wasp vs Cockroach | 3D scientific story
 
 ## Production target
-Original Hindi 9:16 cinematic **30-second** 3D documentary inspired by the *scientific storytelling techniques* of the user's first reference (not a shot-for-shot copy). This is the PRIMARY project; octopus was a Blender render smoke test only. Do not substitute still images with Ken Burns motion and call them 3D.
+Original Hindi 9:16 cinematic **full-length 120–150-second** 3D documentary inspired by the *scientific storytelling techniques* of the user's first reference (not a shot-for-shot copy). This is the PRIMARY project; octopus was a Blender render smoke test only. Do not substitute still images with Ken Burns motion and call them 3D.
 
 ## Factual guardrails
 Emerald cockroach wasp (Ampulex compressa) initially stings the cockroach's thoracic ganglia to temporarily impair its front legs, then delivers a targeted sting to the head ganglia. The cockroach remains able to walk but shows reduced spontaneous escape behavior. The wasp guides it by an antenna to a burrow; its larva later feeds on the host. Do not claim literal mind control, complete paralysis, or a scientifically proven single 'decision center'. Anatomical highlights must be schematic, not fabricated clinical imaging.
 
-## 30-second timed story — VO + 3D action
+## Legacy 30-second proof (NOT the complete story) — VO + 3D action
 | Seconds | Narration (Hindi) | Actual animated action | Camera / reveal |
 |---|---|---|---|
 | 0–3 | “एक छोटी ततैया… कॉकरोच को भागने से रोक सकती है?” | Cockroach races across wet leaf; metallic green wasp swoops into frame | Ground-level macro tracking, rapid rack-focus to wasp |
@@ -36,3 +36,30 @@ Emerald cockroach wasp (Ampulex compressa) initially stings the cockroach's thor
 
 ## Execution order
 Build reusable wasp/cockroach rigs and forest scene; render 3-second motion proof; expand to seven continuous action beats; render full 30 seconds in parallel shot jobs; assemble and run visual QA. Fix failures in the GitHub workflow before cosmetic iteration. The existing 2D documentary generator is NOT the final rendering engine for this project.
+
+
+## REQUIRED COMPLETE FILM — 120–150 seconds, not a 30s summary
+The 30s proof is a technical milestone only. Never label it the finished reference-inspired film. Use 24 fps, 9:16, 12–15 distinct 8–12-second chapters; prioritize readable movement and visual continuity over artificial length.
+
+| Chapter | Approx seconds | On-screen narrative/action |
+|---|---|---|
+| 1 | 0–10 | Establish forest floor, live cockroach foraging and wasp entering scene; clear scale and geography |
+| 2 | 10–20 | Wasp searches, approaches and pursues the cockroach; believable flying/leg contact |
+| 3 | 20–30 | Cockroach attempts escape, wasp positions its body; visible spatial continuity |
+| 4 | 30–40 | First sting into thoracic nerve region; anatomical schematic labels, not fabricated imaging |
+| 5 | 40–50 | Transient front-leg impairment, wasp repositions, cockroach response |
+| 6 | 50–60 | Second targeted head sting and accurate schematic of head ganglia |
+| 7 | 60–70 | Venom mechanism explained with restrained, explicitly schematic neural overlays |
+| 8 | 70–80 | Cockroach regains walking capacity but displays reduced escape motivation |
+| 9 | 80–90 | Wasp cleans/inspects, grabs antenna; show contact and scale clearly |
+| 10 | 90–100 | Antenna-led walking along roots and leaf litter toward burrow |
+| 11 | 100–110 | Entrance and inside-burrow camera reveal; cockroach enters |
+| 12 | 110–120 | Egg attached to host, wasp closes burrow; non-graphic |
+| 13 | 120–130 | Time-lapse egg hatching and larva development, schematic/non-graphic |
+| 14 | 130–140 | Life cycle conclusion and return to forest; science recap |
+
+### Full-film acceptance criteria
+- Render all chapters and assemble 140 seconds with original Hindi narration timed to visible actions; no frozen filler, no repeated 5-second shots.
+- Reusable rigged insects, natural walk cycles, distinct wasp fly/land/sting/antenna-grip motions, credible burrow and forest environment, multiple camera types.
+- Verify each chapter's actual frames, 9:16 resolution, decode, audio, total runtime, and inspect contact sheets before calling it complete.
+- Existing 30s MP4 is only a technical proof. Build a separate full-length workflow and output `videos/JEWEL_WASP_FULL_STORY.mp4`; do not overwrite the verified 30s proof.
