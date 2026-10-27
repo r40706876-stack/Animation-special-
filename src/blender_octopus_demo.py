@@ -67,7 +67,7 @@ for k in range(8):
  rings=26; sides=10
  for j in range(rings):
   t=j/(rings-1)
-  distance=.43+1.85*t
+  distance=.43+1.55*t
   angle=theta+.20*math.sin(t*math.pi*1.5+k)
   center=Vector((distance*math.cos(angle),distance*math.sin(angle),.58+.26*math.sin(math.pi*t)+.30*t*t))
   radius=.245*(1-t)**1.15+.018
@@ -90,7 +90,7 @@ for k in range(8):
   phase=math.tau*(frame-1)/119
   for j in range(rings):
    t=j/(rings-1)
-   shift=.38*t*t*math.sin(phase+k*.8+t*4)
+   shift=.27*t*t*math.sin(phase+k*.8+t*4)
    rise=.29*t*t*math.cos(phase+k*.9+t*5)
    for q in range(sides):
     n=j*sides+q
@@ -111,7 +111,7 @@ cam=bpy.context.object
 # Aim closer to the character's body instead of the empty space below it.
 direction=Vector((0,0,1.55))-cam.location
 cam.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
-cam.data.type='ORTHO';cam.data.ortho_scale=10.6
+cam.data.type='ORTHO';cam.data.ortho_scale=8.9
 scene.camera=cam
 for frame,ang in [(1,-.12),(60,.10),(120,-.12)]:
  cam.rotation_euler[2]=ang
