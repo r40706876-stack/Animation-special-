@@ -26,7 +26,7 @@ jobs:
         run: |
           # Old MP4s are tracked on main. They must never be mistaken for a new render.
           mkdir -p videos
-          rm -f videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg videos/blender_render.log
+          rm -f videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg videos/OCTOPUS_3D_BLINK_QA.jpg videos/blender_render.log
       - name: Install Blender and FFmpeg
         timeout-minutes: 28
         shell: bash
@@ -88,6 +88,8 @@ jobs:
           ffmpeg -hide_banner -i videos/OCTOPUS_3D_DEMO.mp4 2>&1 | grep -E 'Duration:|Video:' || true
           ffmpeg -y -loglevel error -ss 2.5 -i videos/OCTOPUS_3D_DEMO.mp4 -frames:v 1 videos/OCTOPUS_3D_PREVIEW.jpg
           ffmpeg -y -loglevel error -i videos/OCTOPUS_3D_DEMO.mp4 -vf "select=eq(n\\,12)+eq(n\\,60)+eq(n\\,108),scale=270:480,tile=3x1" -frames:v 1 videos/OCTOPUS_3D_CONTACT.jpg
+          # Explicitly sample both blink windows; the normal contact sheet misses them.
+          ffmpeg -y -loglevel error -i videos/OCTOPUS_3D_DEMO.mp4 -vf "select=eq(n\\,35)+eq(n\\,39)+eq(n\\,42)+eq(n\\,82)+eq(n\\,86),scale=216:384,tile=5x1" -frames:v 1 videos/OCTOPUS_3D_BLINK_QA.jpg
       - name: Save rendered video
         if: always()
         uses: actions/upload-artifact@v4
@@ -98,6 +100,7 @@ jobs:
             videos/blender_render.log
             videos/OCTOPUS_3D_PREVIEW.jpg
             videos/OCTOPUS_3D_CONTACT.jpg
+            videos/OCTOPUS_3D_BLINK_QA.jpg
           if-no-files-found: warn
 
       - name: Persist Blender QA result for automatic inspection
@@ -141,9 +144,10 @@ jobs:
           if [ -s videos/OCTOPUS_3D_DEMO.mp4 ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_DEMO.mp4; fi
           if [ -s videos/OCTOPUS_3D_PREVIEW.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_PREVIEW.jpg; fi
           if [ -s videos/OCTOPUS_3D_CONTACT.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_CONTACT.jpg; fi
+          if [ -s videos/OCTOPUS_3D_BLINK_QA.jpg ] && [ "${{ steps.render.outcome }}" = success ]; then git add -f videos/OCTOPUS_3D_BLINK_QA.jpg; fi
           # Clean unstaged deletions of tracked old outputs before rebase.
           # Do not stage deletions on a failed render: preserve last good MP4.
-          git restore --worktree -- videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg 2>/dev/null || true
+          git restore --worktree -- videos/OCTOPUS_3D_DEMO.mp4 videos/OCTOPUS_3D_PREVIEW.jpg videos/OCTOPUS_3D_CONTACT.jpg videos/OCTOPUS_3D_BLINK_QA.jpg 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Record Blender 3D demo render and QA result"
           for attempt in 1 2 3; do
