@@ -14,6 +14,11 @@ assert 0<=chapter<14
 scene.frame_start=1;scene.frame_end=240;scene.render.fps=24
 scene.render.filepath=os.getenv('BLENDER_OUTPUT','/tmp/jewel_full_%02d.mp4'%chapter)
 scene.render.resolution_x=540;scene.render.resolution_y=960;scene.render.resolution_percentage=100
+# Eevee CPU rendering: halve default 64 samples while keeping full 540x960 pixels.
+# Restores feasibility on free runners; review contact sheet before declaring visual QA.
+if hasattr(scene, 'eevee') and hasattr(scene.eevee, 'taa_render_samples'):
+ scene.eevee.taa_render_samples=32
+print('JEWEL_EEVEE_RENDER_SAMPLES',getattr(scene.eevee,'taa_render_samples','unavailable'),flush=True)
 # Preserve reusable joint animations; loop them across the entire chapter.
 for ob in bpy.data.objects:
  if ob.parent in (roach,wasp) and ob.animation_data and ob.animation_data.action:
