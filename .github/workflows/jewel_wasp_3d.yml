@@ -1,0 +1,54 @@
+name: Jewel Wasp 3D Motion Proof
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/jewel_wasp_3d.py"
+      - ".github/workflows/jewel_wasp_3d.yml"
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install portable Blender
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0
+      - name: Render and decode real 3D motion
+        run: |
+          set -euo pipefail
+          mkdir -p videos
+          BLENDER_OUTPUT="$PWD/videos/JEWEL_WASP_3D_PROOF.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_3d.py 2>&1 | tee videos/jewel_wasp_render.log
+          grep -q JEWEL_WASP_3D_RENDER_DONE videos/jewel_wasp_render.log
+          test -s videos/JEWEL_WASP_3D_PROOF.mp4
+          ffmpeg -v error -xerror -i videos/JEWEL_WASP_3D_PROOF.mp4 -f null -
+          ffmpeg -y -loglevel error -i videos/JEWEL_WASP_3D_PROOF.mp4 -vf "fps=1,scale=270:480,tile=4x1" -frames:v 1 videos/JEWEL_WASP_3D_CONTACT.jpg
+          python - <<'PY'
+          import json,subprocess,os
+          p='videos/JEWEL_WASP_3D_PROOF.mp4'
+          x=subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-count_frames','-show_entries','stream=width,height,nb_read_frames,r_frame_rate','-of','json',p],text=True)
+          s=json.loads(x)['streams'][0]
+          assert int(s['nb_read_frames'])==96,s
+          assert (int(s['width']),int(s['height']))==(540,960),s
+          print('MOTION_PROOF_DECODE_VERIFIED',s)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-3d-motion-proof
+          path: |
+            videos/JEWEL_WASP_3D_PROOF.mp4
+            videos/JEWEL_WASP_3D_CONTACT.jpg
+            videos/jewel_wasp_render.log
+          if-no-files-found: warn
