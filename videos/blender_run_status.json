@@ -4,7 +4,7 @@
   "video_exists": true,
   "video_bytes": 321388,
   "decode_ok": true,
-  "duration_seconds": 5.0,
+  "duration_seconds": 5,
   "log_tail": [
     "Time: 00:11.26 (Saving: 00:00.04)",
     "",
@@ -52,5 +52,7 @@
     "",
     "Blender quit"
   ],
-  "render_verified": false
+  "render_verified": true,
+  "qa_reconciled_from_run": 40425471359,
+  "qa_reconciliation_note": "Run log reported BLENDER_QA render_verified=true and the saved MP4 was independently found on main."
 }
