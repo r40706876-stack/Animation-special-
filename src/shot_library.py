@@ -21,19 +21,29 @@ SHOT_TITLES = [
 # Camera zoom progression per five-second story beat. Orthographic scale is
 # animated, not held static, so each chapter has a purposeful push or pull.
 SHOT_ZOOMS = [
-    (1.08, 1.00, .92),  # discover: push toward the pearl
-    (.94, 1.02, 1.12),  # theft: reveal the fish's getaway
-    (.90, 1.04, 1.18),  # chase: open up the playing field
-    (1.12, 1.00, .92),  # return: focus on the reveal
-    (1.04, .97, .90),  # friends: warm final push-in
+    (1.10, 1.00, .91),  # discovery: pearl close-up
+    (.88, 1.00, 1.15),  # theft: snap close then pull out
+    (.95, 1.05, 1.13),  # chase: wider moving shot
+    (1.15, 1.00, .87),  # return: reveal the pearl
+    (1.06, 1.00, .91),  # friendship: intimate final push
+]
+
+# Animated framing targets are independent of camera position. The previous
+# camera always aimed at X=0, keeping all five scenes almost identical.
+SHOT_FOCUS_X = [
+    (.10, .40, .70),
+    (-.35, .25, 1.10),
+    (1.00, -.15, -1.10),
+    (.75, .35, .05),
+    (.50, .45, .35),
 ]
 
 SHOT_PLANS = [
-    (7.2, -.25, .15, 5.5, 1.40, -.16, .08, -.08, .08),
-    (6.1, .38, -.24, 4.9, 1.35, .16, -.14, .18, -.20),
-    (8.0, .48, -.65, 5.7, 1.47, .30, -.65, -.09, -.28),
-    (6.5, -.45, .28, 5.0, 1.40, -.35, .20, -.18, .12),
-    (7.0, .20, -.16, 5.2, 1.45, .10, -.10, .18, -.08),
+    (6.4, -.25, .25, 5.4, 1.43, -.16, .08, -.08, .08),
+    (5.5, .38, -.24, 4.8, 1.40, .16, -.14, .18, -.20),
+    (7.8, .55, -1.05, 5.8, 1.48, .30, -1.05, -.09, -.28),
+    (5.9, -.45, .28, 5.0, 1.40, -.35, .20, -.18, .12),
+    (5.0, .20, -.16, 4.9, 1.47, .10, -.10, .18, -.08),
 ]
 
 def _camera_text(name, message, camera, top, size_fraction, color):
@@ -58,10 +68,14 @@ def _camera_text(name, message, camera, top, size_fraction, color):
     bpy.context.collection.objects.link(obj)
     obj.parent = camera
     obj.location = (-.41 * screen_width,
-                    (.38 if top else -.40) * camera.data.ortho_scale,
+                    (.38 if top else -.35) * camera.data.ortho_scale,
                     -3.0)
     obj.rotation_euler = (0, 0, 0)
     obj.data.materials.append(material)
+    # A quick pop-in is more legible than completely static overlay typography.
+    for frame, scale in ((1, .82), (12, 1.05), (23, 1.0), (120, 1.0)):
+        obj.scale = (scale, scale, scale)
+        obj.keyframe_insert(data_path="scale", frame=frame)
     return obj
 
 def apply_story_shot(scene, index):
@@ -79,7 +93,8 @@ def apply_story_shot(scene, index):
         camera.data.keyframe_insert(data_path="ortho_scale", frame=frame)
         camera.location = (camera_start + (camera_end - camera_start) * fraction,
                            -8.0, height)
-        aim = Vector((0, 0, target_z)) - camera.location
+        focus_x = SHOT_FOCUS_X[index][key_index]
+        aim = Vector((focus_x, 0, target_z)) - camera.location
         camera.rotation_euler = aim.to_track_quat("-Z", "Y").to_euler()
         camera.keyframe_insert(data_path="location", frame=frame)
         camera.keyframe_insert(data_path="rotation_euler", frame=frame)
@@ -93,8 +108,8 @@ def apply_story_shot(scene, index):
         rig.keyframe_insert(data_path="rotation_euler", index=2, frame=frame)
 
     title, subtitle = SHOT_TITLES[index]
-    _camera_text("Story title", title, camera, True, .080, (.94, .99, 1.0))
-    _camera_text("Story caption", subtitle, camera, False, .057, (.72, .95, 1.0))
+    _camera_text("Story title", title, camera, True, .094, (.94, .99, 1.0))
+    _camera_text("Story caption", subtitle, camera, False, .084, (.86, .98, 1.0))
     scene.frame_start = 1
     scene.frame_end = 120
     scene.frame_set(1)
