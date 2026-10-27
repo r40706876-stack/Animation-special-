@@ -17,6 +17,28 @@ def _coral_branch(name, base, tip, bottom_radius, material):
     bpy.ops.object.shade_smooth()
     return branch
 
+def add_swaying_kelp(material, count=6):
+    """Reusable background kelp silhouettes with gentle looping sway."""
+    for i in range(count):
+        side = -1 if i % 2 == 0 else 1
+        depth = i // 2
+        x = side * (1.93 + .13 * depth)
+        y = 1.6 + .22 * depth
+        height = 1.25 + .24 * (i % 3)
+        stem = _coral_branch(
+            'Swaying kelp %d' % i,
+            (x, y, -.50),
+            (x + side * .10, y, height),
+            .038, material
+        )
+        base_rotation = stem.rotation_euler.copy()
+        for frame, sway in ((1, -.06), (31, .07), (61, -.05),
+                            (91, .06), (120, -.06)):
+            stem.rotation_euler[1] = base_rotation[1] + side * sway
+            stem.keyframe_insert(data_path='rotation_euler', frame=frame)
+        stem.rotation_euler = base_rotation
+
+
 def populate_underwater(uv, floor_mat, bubble_mat, coral_mat):
     """Add ocean floor, gently rising bubbles and branching reef silhouettes."""
     # A real horizontal seabed avoids the artificial curved horizon created
@@ -42,6 +64,12 @@ def populate_underwater(uv, floor_mat, bubble_mat, coral_mat):
     fill.data.color=(.35,.75,1.0)
     fill.data.shape='DISK'
     fill.data.size=6
+    # Tall, gently moving kelp gives the portrait frame depth at its edges.
+    kelp_mat = bpy.data.materials.new('Deep sea kelp')
+    kelp_mat.diffuse_color = (.045, .24, .16, 1)
+    kelp_mat.use_nodes = True
+    kelp_mat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (.045, .24, .16, 1)
+    add_swaying_kelp(kelp_mat)
     for i in range(22):
         a=i*2.39996
         r=2.4+(i%5)*.46
