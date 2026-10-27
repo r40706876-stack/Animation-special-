@@ -63,3 +63,11 @@ The 30s proof is a technical milestone only. Never label it the finished referen
 - Reusable rigged insects, natural walk cycles, distinct wasp fly/land/sting/antenna-grip motions, credible burrow and forest environment, multiple camera types.
 - Verify each chapter's actual frames, 9:16 resolution, decode, audio, total runtime, and inspect contact sheets before calling it complete.
 - Existing 30s MP4 is only a technical proof. Build a separate full-length workflow and output `videos/JEWEL_WASP_FULL_STORY.mp4`; do not overwrite the verified 30s proof.
+
+## Execution checkpoint — 2026-10-27
+- Reusable procedural forest props, smoother insect meshes and cockroach wing covers: `src/jewel_wasp_3d.py`, commit `8afe0604`.
+- New full-film source: `src/jewel_wasp_full.py` with fourteen independently animated 240-frame chapters (10 seconds each).
+- Timed original Hindi narration source: `src/jewel_wasp_full_audio.py`, each chapter fit to 10 seconds without clipping.
+- Parallel Blender workflow: `.github/workflows/jewel_wasp_full.yml`; initial run **40506557738** (https://github.com/r40706876-stack/Animation-special-/actions/runs/40506557738).
+- At checkpoint, chapters are running/queued; **no 140-second MP4 exists yet**. Do not call this a polished final film until frame-by-frame visual inspection and technical QA pass.
+- Previous 30-second render is a technical proof only. Do not overwrite it or present it as the complete film.
