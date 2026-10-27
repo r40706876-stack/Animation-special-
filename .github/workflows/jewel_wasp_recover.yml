@@ -1,0 +1,103 @@
+name: Recover Jewel Wasp 30s Assembly
+on:
+  push:
+    paths:
+      - ".github/workflows/jewel_wasp_recover.yml"
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: "Run containing six verified 5-second shot artifacts"
+        required: true
+        default: "40469153029"
+permissions:
+  actions: read
+  contents: write
+concurrency:
+  group: jewel-wasp-assembly-recovery
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install assembly tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-noto-core
+          python -m pip install --quiet edge-tts
+          ffmpeg -version | head -n 1
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: jewel-wasp-shot-*
+          path: story_segments
+          merge-multiple: true
+          run-id: ${{ inputs.source_run_id || '40469153029' }}
+          github-token: ${{ github.token }}
+      - name: Assemble, narrate and verify 30s
+        run: |
+          set -euo pipefail
+          mkdir -p videos
+          : > story_segments/concat.txt
+          for shot in 0 1 2 3 4 5; do
+            test -s "story_segments/shot_$shot.mp4"
+            frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "story_segments/shot_$shot.mp4")"
+            test "$frames" = "120"
+            printf "file 'shot_%s.mp4'\n" "$shot" >> story_segments/concat.txt
+          done
+          ffmpeg -y -loglevel error -f concat -safe 0 -i story_segments/concat.txt -c copy videos/jewel_silent.mp4
+          ffmpeg -y -loglevel error -f lavfi -i "anoisesrc=color=brown:amplitude=0.01:sample_rate=44100:duration=30" -c:a aac videos/jewel_ambient.m4a
+          cat > videos/voice.py <<'PY'
+          import asyncio,edge_tts
+          words="क्या एक छोटी ततैया कॉकरोच के भागने का फैसला बदल सकती है? पहले वह उसके सीने के पास डंक मारती है, जिससे अगले पैर कुछ देर कमजोर पड़ते हैं। फिर दूसरा डंक सिर के पास! ज़हर तंत्रिका तंत्र पर असर डालता है। कॉकरोच चल सकता है, मगर सामान्य तरह से भागता नहीं। अब ज्वेल वास्प उसका एंटीना पकड़कर बिल तक ले जाती है। वहाँ उसके लार्वा को भोजन मिलता है।"
+          asyncio.run(edge_tts.Communicate(words,"hi-IN-SwaraNeural",rate="+18%").save("videos/jewel_narration.mp3"))
+          PY
+          narration=false
+          if timeout 65s python videos/voice.py && test -s videos/jewel_narration.mp3; then
+            narration=true
+            ffmpeg -y -loglevel error -i videos/jewel_narration.mp3 -i videos/jewel_ambient.m4a -filter_complex "[0:a]volume=1.0,apad=pad_dur=30[voice];[1:a]volume=0.13[bed];[voice][bed]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[a]" -t 30 -c:a aac videos/jewel_audio.m4a
+          else
+            cp videos/jewel_ambient.m4a videos/jewel_audio.m4a
+          fi
+          ffmpeg -y -loglevel error -i videos/jewel_silent.mp4 -i videos/jewel_audio.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -t 30 -movflags +faststart videos/JEWEL_WASP_3D_STORY_30S.mp4
+          ffmpeg -v error -xerror -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -f null -
+          ffmpeg -y -loglevel error -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -vf "fps=0.3,scale=180:320,tile=3x3" -frames:v 1 videos/JEWEL_WASP_3D_CONTACT.jpg
+          NARRATION="$narration" python - <<'PY'
+          import json,subprocess,os,pathlib
+          p='videos/JEWEL_WASP_3D_STORY_30S.mp4'
+          x=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames:format=duration','-of','json',p],text=True)
+          meta=json.loads(x);v=next(s for s in meta['streams'] if s['codec_type']=='video')
+          audio=any(s['codec_type']=='audio' for s in meta['streams'])
+          ok=int(v['nb_read_frames'])==720 and (v['width'],v['height'])==(540,960) and 29.9<float(meta['format']['duration'])<30.1 and audio
+          report={'video':p,'frames':int(v['nb_read_frames']),'width':v['width'],'height':v['height'],'duration':float(meta['format']['duration']),'bytes':pathlib.Path(p).stat().st_size,'audio_present':audio,'narration_present':os.getenv('NARRATION')=='true','decode_ok':True,'visual_quality_reviewed':False,'technical_qa_pass':ok,'source_shot_run':os.getenv('SOURCE_RUN_ID','40469153029'),'source_commit':os.getenv('GITHUB_SHA')}
+          pathlib.Path('videos/jewel_wasp_qa.json').write_text(json.dumps(report,indent=2))
+          print('JEWEL_WASP_30S_QA',json.dumps(report))
+          assert ok,report
+          PY
+        env:
+          SOURCE_RUN_ID: ${{ inputs.source_run_id || '40469153029' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-3d-30s-recovered
+          path: |
+            videos/JEWEL_WASP_3D_STORY_30S.mp4
+            videos/JEWEL_WASP_3D_CONTACT.jpg
+            videos/jewel_wasp_qa.json
+          if-no-files-found: warn
+      - name: Publish technically verified video
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name "jewel-wasp-render-bot"
+          git config user.email "jewel-wasp-render-bot@users.noreply.github.com"
+          git add -f videos/JEWEL_WASP_3D_STORY_30S.mp4 videos/JEWEL_WASP_3D_CONTACT.jpg videos/jewel_wasp_qa.json
+          git commit -m "Publish verified 30-second jewel wasp 3D technical render"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase -X theirs origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 8
+          done
+          exit 1
