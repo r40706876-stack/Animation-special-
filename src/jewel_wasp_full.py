@@ -6,7 +6,7 @@ import os,runpy,pathlib,math
 import bpy
 from mathutils import Vector
 os.environ['JEWEL_SKIP_RENDER']='1'
-ns=runpy.run_path(str(pathlib.Path(__file__).with_name('jewel_wasp_3d.py')))
+ns=runpy.run_path(str(pathlib.Path(__file__).with_name('jewel_wasp_v2.py')))
 scene=ns['scene'];roach=ns['roach'];wasp=ns['wasp'];cam=ns['cam']
 ell=ns['ell'];mat=ns['mat'];aim=ns['aim'];link=ns['link']
 chapter=int(os.getenv('STORY_CHAPTER','0'))
@@ -57,36 +57,32 @@ for rig,positions in ((roach,rpath),(wasp,wpath)):
  for frame in (1,60,120,180,240):
   rig.rotation_euler[2]=(.035 if rig==roach else .09)*math.sin(frame*.11+chapter)
   rig.keyframe_insert(data_path='rotation_euler',frame=frame)
-# A wide/medium/macro camera grammar with visible subjects and changing angles.
+# V2 camera: track the actual pair, never an unrelated fixed target.
+# Wider 9-12 unit framing avoids the wing/head cropping seen in V1 contact sheets.
 wide=chapter in (0,1,2,7,9,10,13)
-if chapter>=10:
- target=(1.1,.65,.38)
-elif chapter in (3,4,5,6,8):
- target=(0,-.65,.42)
-else:
- target=(0,-.2,.48)
-camera_paths=[
- ((3.7,-5.7,3.0),(3.2,-5.0,2.8),(2.8,-4.7,2.6)),
- ((-3.7,-5.2,3.0),(-3.1,-4.6,2.4),(-2.8,-4.1,2.3)),
- ((3.1,-4.8,2.6),(2.7,-4.3,2.1),(2.4,-4.0,2.0)),
- ((2.2,-3.5,1.7),(1.9,-3.2,1.5),(2.0,-3.1,1.6)),
- ((-2.6,-3.6,1.9),(-2.2,-3.2,1.6),(-2.0,-3.0,1.6)),
- ((2.4,-3.8,1.9),(2.0,-3.2,1.6),(-1.9,-3.2,1.7)),
- ((-2.2,-3.3,1.8),(-1.9,-3.1,1.6),(2.1,-3.5,1.8)),
- ((3.5,-5.2,3.0),(3.2,-4.8,2.7),(2.8,-4.4,2.5)),
- ((-2.7,-4.0,2.0),(-2.3,-3.7,1.8),(-2.1,-3.4,1.7)),
- ((3.8,-5.4,3.1),(3.4,-4.9,2.7),(3.0,-4.5,2.5)),
- ((3.8,-4.8,3.0),(3.4,-4.4,2.7),(3.0,-4.0,2.4)),
- ((2.8,-3.9,2.1),(2.5,-3.5,1.8),(2.3,-3.2,1.6)),
- ((-2.6,-3.7,2.0),(-2.4,-3.5,1.9),(-2.1,-3.3,1.8)),
- ((4.1,-5.8,3.5),(4.6,-6.4,4.0),(5.0,-7.0,4.5)),
-]
-for frame,position in zip((1,120,240),camera_paths[chapter]):
- cam.location=position;aim(cam,target)
- cam.keyframe_insert(data_path='location',frame=frame)
- cam.keyframe_insert(data_path='rotation_euler',frame=frame)
-cam.data.lens=32 if wide else 38
+camera_distance=12.5 if wide else 10.8
+cam.data.lens=34 if wide else 35
 cam.data.sensor_fit='VERTICAL'
+def interp(points,frame):
+    if frame<=120:
+        t=(frame-1)/119
+        a,b=points[0],points[1]
+    else:
+        t=(frame-120)/120
+        a,b=points[1],points[2]
+    return Vector(a).lerp(Vector(b),max(0,min(1,t)))
+for frame in (1,48,96,144,192,240):
+    rp=interp(rpath,frame);wp=interp(wpath,frame)
+    focus=rp*.56+wp*.44+Vector((0,-.16,.18))
+    # Cinematic three-quarter view, with gentle arc movement and stable tracking.
+    az=math.radians(28+chapter*7%36)+.08*math.sin(frame/240*math.pi)
+    direction=Vector((math.sin(az)*.55,-.84, .48)).normalized()
+    cam.location=focus+direction*camera_distance
+    aim(cam,focus)
+    cam.keyframe_insert(data_path='location',frame=frame)
+    cam.keyframe_insert(data_path='rotation_euler',frame=frame)
+# A large empty band above the subjects is not useful in a vertical documentary.
+# Tracking the actual center also keeps the wasp visible during sting and flight.
 # Physically distinct event markers: stinger, neural pathways, burrow, egg and larva.
 if chapter in (3,5):
  stinger=ell('sting tip',(0,.87,.32),(.025,.13,.025),ns['black'],wasp)
@@ -114,8 +110,18 @@ if chapter in (11,12,13):
   larva=ell('schematic larva',(.05,.16,.78),(.12,.28,.11),eggmat,roach)
   for frame,size in ((1,.05),(120,.4),(240,1)):
    larva.scale=(.12*size,.28*size,.11*size);larva.keyframe_insert(data_path='scale',frame=frame)
-scene.render.image_settings.file_format='FFMPEG'
-scene.render.ffmpeg.format='MPEG4';scene.render.ffmpeg.codec='H264'
-print('JEWEL_FULL_CHAPTER_READY',chapter,scene.render.filepath,flush=True)
-bpy.ops.render.render(animation=True)
-print('JEWEL_FULL_CHAPTER_DONE',chapter,flush=True)
+if os.getenv('JEWEL_PREVIEW','0')=='1':
+ scene.frame_set(int(os.getenv('JEWEL_PREVIEW_FRAME','120')))
+ scene.render.resolution_percentage=70
+ if hasattr(scene.eevee,'taa_render_samples'):scene.eevee.taa_render_samples=16
+ scene.render.image_settings.file_format='PNG'
+ scene.render.filepath=os.getenv('BLENDER_OUTPUT','/tmp/jewel_v2_preview.png')
+ print('JEWEL_V2_PREVIEW_READY',chapter,scene.render.filepath,flush=True)
+ bpy.ops.render.render(write_still=True)
+ print('JEWEL_V2_PREVIEW_DONE',chapter,flush=True)
+else:
+ scene.render.image_settings.file_format='FFMPEG'
+ scene.render.ffmpeg.format='MPEG4';scene.render.ffmpeg.codec='H264'
+ print('JEWEL_FULL_CHAPTER_READY',chapter,scene.render.filepath,flush=True)
+ bpy.ops.render.render(animation=True)
+ print('JEWEL_FULL_CHAPTER_DONE',chapter,flush=True)
