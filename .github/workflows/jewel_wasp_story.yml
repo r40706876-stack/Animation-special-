@@ -1,0 +1,107 @@
+name: Jewel Wasp 30s 3D Documentary
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_story.py"
+      - ".github/workflows/jewel_wasp_story.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: jewel-wasp-3d-documentary
+  cancel-in-progress: false
+jobs:
+  render:
+    name: Render 3D story shot ${{ matrix.shot }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        shot: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render animated chapter and verify decoding
+        run: |
+          set -euo pipefail
+          mkdir -p story_segments
+          STORY_SHOT=${{ matrix.shot }} BLENDER_OUTPUT="$PWD/story_segments/shot_${{ matrix.shot }}.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_story.py 2>&1 | tee story_segments/shot_${{ matrix.shot }}.log
+          grep -q "JEWEL_WASP_STORY_CHAPTER_DONE ${{ matrix.shot }}" story_segments/shot_${{ matrix.shot }}.log
+          test -s story_segments/shot_${{ matrix.shot }}.mp4
+          ffmpeg -v error -xerror -i story_segments/shot_${{ matrix.shot }}.mp4 -f null -
+          frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 story_segments/shot_${{ matrix.shot }}.mp4)"
+          test "$frames" = "120"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-shot-${{ matrix.shot }}
+          path: story_segments/
+          if-no-files-found: warn
+  assemble:
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: jewel-wasp-shot-*
+          path: story_segments
+          merge-multiple: true
+      - name: Assemble 30s and verify frames/audio
+        run: |
+          set -euo pipefail
+          mkdir -p videos
+          : > story_segments/concat.txt
+          for shot in 0 1 2 3 4 5; do
+            test -s "story_segments/shot_$shot.mp4"
+            printf "file 'shot_%s.mp4'\n" "$shot" >> story_segments/concat.txt
+          done
+          ffmpeg -y -loglevel error -f concat -safe 0 -i story_segments/concat.txt -c copy videos/jewel_silent.mp4
+          # Temporary original ambient bed; narration is a separate quality milestone.
+          ffmpeg -y -loglevel error -f lavfi -i "anoisesrc=color=brown:amplitude=0.015:sample_rate=44100:duration=30" -c:a aac videos/jewel_ambient.m4a
+          ffmpeg -y -loglevel error -i videos/jewel_silent.mp4 -i videos/jewel_ambient.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a copy -t 30 -movflags +faststart videos/JEWEL_WASP_3D_STORY_30S.mp4
+          ffmpeg -v error -xerror -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -f null -
+          ffmpeg -y -loglevel error -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -vf "fps=0.3,scale=180:320,tile=3x3" -frames:v 1 videos/JEWEL_WASP_3D_CONTACT.jpg
+          python - <<'PY'
+          import json,subprocess,os,pathlib
+          p='videos/JEWEL_WASP_3D_STORY_30S.mp4'
+          x=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames:format=duration','-of','json',p],text=True)
+          meta=json.loads(x);v=next(s for s in meta['streams'] if s['codec_type']=='video')
+          ok=int(v['nb_read_frames'])==720 and (v['width'],v['height'])==(540,960) and 29.9<float(meta['format']['duration'])<30.1 and any(s['codec_type']=='audio' for s in meta['streams'])
+          report={'video':p,'frames':v['nb_read_frames'],'width':v['width'],'height':v['height'],'duration':meta['format']['duration'],'audio_present':True,'decode_ok':True,'narration_present':False,'visual_quality_reviewed':False,'source_commit':os.getenv('GITHUB_SHA'),'technical_qa_pass':ok}
+          pathlib.Path('videos/jewel_wasp_qa.json').write_text(json.dumps(report,indent=2))
+          print('JEWEL_WASP_30S_QA',json.dumps(report))
+          assert ok,report
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jewel-wasp-3d-30s
+          path: |
+            videos/JEWEL_WASP_3D_STORY_30S.mp4
+            videos/JEWEL_WASP_3D_CONTACT.jpg
+            videos/jewel_wasp_qa.json
+          if-no-files-found: error
+      - name: Publish verified technical render
+        run: |
+          set -euo pipefail
+          git config user.name "jewel-wasp-render-bot"
+          git config user.email "jewel-wasp-render-bot@users.noreply.github.com"
+          git add -f videos/JEWEL_WASP_3D_STORY_30S.mp4 videos/JEWEL_WASP_3D_CONTACT.jpg videos/jewel_wasp_qa.json
+          git commit -m "Publish 30-second 3D jewel wasp technical render"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase -X theirs origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 8
+          done
+          exit 1
