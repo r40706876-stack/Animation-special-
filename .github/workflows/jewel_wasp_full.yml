@@ -1,0 +1,108 @@
+name: Jewel Wasp Full 140s 3D Film
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_full.py"
+      - "src/jewel_wasp_full_audio.py"
+      - ".github/workflows/jewel_wasp_full.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jewel-wasp-full-film
+  cancel-in-progress: false
+jobs:
+  render:
+    name: Render full-film chapter ${{ matrix.chapter }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        chapter: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and video tools
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render actual animated 10-second 3D chapter
+        run: |
+          set -euo pipefail
+          mkdir -p full_segments
+          STORY_CHAPTER=${{ matrix.chapter }} BLENDER_OUTPUT="$PWD/full_segments/chapter_${{ matrix.chapter }}.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_full.py 2>&1 | tee full_segments/chapter_${{ matrix.chapter }}.log
+          grep -q "JEWEL_FULL_CHAPTER_DONE ${{ matrix.chapter }}" full_segments/chapter_${{ matrix.chapter }}.log
+          test -s full_segments/chapter_${{ matrix.chapter }}.mp4
+          ffmpeg -v error -xerror -i full_segments/chapter_${{ matrix.chapter }}.mp4 -f null -
+          frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 full_segments/chapter_${{ matrix.chapter }}.mp4)"
+          test "$frames" = "240"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-full-chapter-${{ matrix.chapter }}
+          path: full_segments/
+          if-no-files-found: warn
+          retention-days: 14
+  assemble:
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg and narration dependency
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python -m pip install --quiet edge-tts
+          ffmpeg -version | head -n 1
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: jewel-full-chapter-*
+          path: full_segments
+          merge-multiple: true
+      - name: Assemble 140s film with original Hindi narration
+        run: |
+          set -euo pipefail
+          mkdir -p videos
+          : > full_segments/concat.txt
+          for chapter in $(seq 0 13); do
+            test -s "full_segments/chapter_$chapter.mp4"
+            frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "full_segments/chapter_$chapter.mp4")"
+            test "$frames" = "240"
+            printf "file 'chapter_%s.mp4'\n" "$chapter" >> full_segments/concat.txt
+          done
+          ffmpeg -y -loglevel error -f concat -safe 0 -i full_segments/concat.txt -c copy videos/jewel_full_silent.mp4
+          python src/jewel_wasp_full_audio.py
+          test -s voice/narration.m4a
+          ffmpeg -y -loglevel error -i videos/jewel_full_silent.mp4 -i voice/narration.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -t 140 -movflags +faststart videos/JEWEL_WASP_FULL_STORY.mp4
+          ffmpeg -v error -xerror -i videos/JEWEL_WASP_FULL_STORY.mp4 -f null -
+          ffmpeg -y -loglevel error -i videos/JEWEL_WASP_FULL_STORY.mp4 -vf "fps=0.1,scale=180:320,tile=4x4" -frames:v 1 videos/JEWEL_WASP_FULL_CONTACT.jpg
+          python - <<'PY'
+          import json,subprocess,pathlib,os
+          p='videos/JEWEL_WASP_FULL_STORY.mp4'
+          raw=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames:format=duration','-of','json',p],text=True)
+          meta=json.loads(raw);video=next(s for s in meta['streams'] if s['codec_type']=='video')
+          audio=any(s['codec_type']=='audio' for s in meta['streams'])
+          duration=float(meta['format']['duration']);frames=int(video['nb_read_frames'])
+          ok=frames==3360 and video['width']==540 and video['height']==960 and 139.9<=duration<=140.1 and audio
+          report={'file':p,'frames':frames,'width':video['width'],'height':video['height'],'duration':duration,'audio_present':audio,'narration_generated':True,'decode_ok':True,'technical_qa_pass':ok,'visual_quality_reviewed':False,'source_commit':os.getenv('GITHUB_SHA')}
+          pathlib.Path('videos/jewel_full_qa.json').write_text(json.dumps(report,indent=2))
+          print('JEWEL_FULL_FILM_QA',json.dumps(report),flush=True)
+          assert ok,report
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-full-140s-technical-render
+          path: |
+            videos/JEWEL_WASP_FULL_STORY.mp4
+            videos/JEWEL_WASP_FULL_CONTACT.jpg
+            videos/jewel_full_qa.json
+          if-no-files-found: warn
+          retention-days: 14
