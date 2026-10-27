@@ -73,9 +73,9 @@ jobs:
             printf "file 'shot_%s.mp4'\n" "$shot" >> story_segments/concat.txt
           done
           ffmpeg -y -loglevel error -f concat -safe 0 -i story_segments/concat.txt -c copy videos/jewel_silent.mp4
-          # Temporary original ambient bed; narration is a separate quality milestone.
-          ffmpeg -y -loglevel error -f lavfi -i "anoisesrc=color=brown:amplitude=0.015:sample_rate=44100:duration=30" -c:a aac videos/jewel_ambient.m4a
-          ffmpeg -y -loglevel error -i videos/jewel_silent.mp4 -i videos/jewel_ambient.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a copy -t 30 -movflags +faststart videos/JEWEL_WASP_3D_STORY_30S.mp4
+          python -m pip install --quiet edge-tts
+          python src/jewel_wasp_audio.py
+          ffmpeg -y -loglevel error -i videos/jewel_silent.mp4 -i videos/jewel_audio.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -t 30 -movflags +faststart videos/JEWEL_WASP_3D_STORY_30S.mp4
           ffmpeg -v error -xerror -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -f null -
           ffmpeg -y -loglevel error -i videos/JEWEL_WASP_3D_STORY_30S.mp4 -vf "fps=0.3,scale=180:320,tile=3x3" -frames:v 1 videos/JEWEL_WASP_3D_CONTACT.jpg
           python - <<'PY'
@@ -84,7 +84,7 @@ jobs:
           x=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames:format=duration','-of','json',p],text=True)
           meta=json.loads(x);v=next(s for s in meta['streams'] if s['codec_type']=='video')
           ok=int(v['nb_read_frames'])==720 and (v['width'],v['height'])==(540,960) and 29.9<float(meta['format']['duration'])<30.1 and any(s['codec_type']=='audio' for s in meta['streams'])
-          report={'video':p,'frames':v['nb_read_frames'],'width':v['width'],'height':v['height'],'duration':meta['format']['duration'],'audio_present':True,'decode_ok':True,'narration_present':False,'visual_quality_reviewed':False,'source_commit':os.getenv('GITHUB_SHA'),'technical_qa_pass':ok}
+          report={'video':p,'frames':v['nb_read_frames'],'width':v['width'],'height':v['height'],'duration':meta['format']['duration'],'audio_present':True,'decode_ok':True,'narration_present':pathlib.Path('videos/jewel_narration_present.txt').read_text().strip()=='true','visual_quality_reviewed':False,'source_commit':os.getenv('GITHUB_SHA'),'technical_qa_pass':ok}
           pathlib.Path('videos/jewel_wasp_qa.json').write_text(json.dumps(report,indent=2))
           print('JEWEL_WASP_30S_QA',json.dumps(report))
           assert ok,report
