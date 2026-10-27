@@ -77,5 +77,6 @@ bpy.ops.object.light_add(type='AREA',location=(0,-2,5));bpy.context.object.data.
 scene.render.film_transparent=False
 scene.render.image_settings.file_format='FFMPEG'
 print('JEWEL_WASP_3D_SCENE_READY',scene.frame_end,scene.render.filepath)
-bpy.ops.render.render(animation=True)
-print('JEWEL_WASP_3D_RENDER_DONE')
+if os.getenv('JEWEL_SKIP_RENDER','0') != '1':
+ bpy.ops.render.render(animation=True)
+ print('JEWEL_WASP_3D_RENDER_DONE')
