@@ -62,9 +62,9 @@ def apply_story_shot(scene, index):
     start, end = shifts[index]
     for frame, x in ((1, start), (60, (start+end)/2), (120, end)):
         rig.location.x = x
-        rig.rotation_euler[2] = .05 * math.sin(index + frame/30)
-        rig.keyframe_insert(data_path="location", frame=frame)
-        rig.keyframe_insert(data_path="rotation_euler", frame=frame)
+        # Key only the X channel: keep the existing Z bobbing animation.
+        # Keying the whole location would create a sudden vertical jump at frame 61.
+        rig.keyframe_insert(data_path="location", index=0, frame=frame)
 
     # Text is placed as actual 3D typography, not burned into a static image.
     _text("Story title", title, (-1.72, -2.8, 3.95), .38, (.91, .98, 1.0))
