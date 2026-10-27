@@ -1,12 +1,12 @@
 {
   "video": "videos/OCTOPUS_3D_STORY_25S.mp4",
-  "bytes": 2401093,
+  "bytes": 2813071,
   "frames": 600,
   "duration_seconds": 25.0,
   "width": 540,
   "height": 960,
   "fps": "24",
   "decode_ok": true,
-  "source_commit": "abd6763ebbdbcf35e5fbd1b9a46bbd9d253e35ef",
+  "source_commit": "a1235336bcff0d749c6b4a1b83a6fa994d662aa3",
   "verified": true
 }
