@@ -18,12 +18,20 @@ def mat(name,color,metal=0,rough=.55):
  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True
  p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*color,1);p.inputs['Metallic'].default_value=metal;p.inputs['Roughness'].default_value=rough
  return m
-soil=mat('forest floor',(0.13,.095,.06));roachmat=mat('roach chestnut',(.25,.085,.025),.18);wingmat=mat('roach wing covers',(.38,.16,.055),.1)
+soil=mat('forest floor',(0.13,.095,.06));
+# Procedural microtexture for the soil.
+soil_bsdf=soil.node_tree.nodes.get('Principled BSDF')
+soil_noise=soil.node_tree.nodes.new('ShaderNodeTexNoise');soil_noise.inputs['Scale'].default_value=34
+soil_bump=soil.node_tree.nodes.new('ShaderNodeBump');soil_bump.inputs['Strength'].default_value=.18;soil_bump.inputs['Distance'].default_value=.08
+soil.node_tree.links.new(soil_noise.outputs['Fac'],soil_bump.inputs['Height'])
+soil.node_tree.links.new(soil_bump.outputs['Normal'],soil_bsdf.inputs['Normal'])
+roachmat=mat('roach chestnut',(.25,.085,.025),.18);wingmat=mat('roach wing covers',(.38,.16,.055),.1)
 green=mat('jewel wasp iridescent emerald',(.012,.47,.24),.72,.19);blue=mat('wasp blue thorax',(.012,.22,.42),.65)
 trans=mat('wing pale cyan',(.33,.72,.78),.1);black=mat('eye black',(.009,.012,.015));leaf=mat('leaf green',(.13,.25,.055))
 def ell(name,loc,scale,material,parent=None):
- bpy.ops.mesh.primitive_uv_sphere_add(segments=16,ring_count=8,location=loc);o=bpy.context.object;o.name=name;o.scale=scale;o.data.materials.append(material)
+ bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=12,location=loc);o=bpy.context.object;o.name=name;o.scale=scale;o.data.materials.append(material)
  if parent:o.parent=parent
+ for face in o.data.polygons: face.use_smooth=True
  return o
 def link(name,a,b,r,material,parent):
  a,b=Vector(a),Vector(b);d=b-a
@@ -34,11 +42,33 @@ bpy.ops.mesh.primitive_plane_add(size=200);bpy.context.object.name='forest floor
 for i in range(14):
  x=-4+(i%7)*1.3;y=-3+(i//7)*5
  ell('leaf litter', (x,y,.04),(.45,.17,.03),leaf)
+# Reusable forest-floor dressing; central action corridor remains clear.
+stone=mat('mossy pebbles',(.21,.20,.15),0,.95)
+leafgold=mat('dry ochre leaves',(.38,.23,.07),0,.95)
+twigmat=mat('fallen twigs',(.20,.115,.045),0,.95)
+for i in range(54):
+ x=-4.4+((i*37)%89)/10.0
+ y=-3.6+((i*29)%77)/10.0
+ if abs(x)<1.4 and -2.4<y<1.9:continue
+ a=math.sin(i*1.91)
+ if i%5==0:
+  ell('forest pebble %02d'%i,(x,y,.06),(.10+.05*abs(a),.09,.045),stone)
+ elif i%4==0:
+  link('fallen twig %02d'%i,(x-.27,y-.10,.07),(x+.27,y+.11,.07),.017,twigmat,None)
+ else:
+  ob=ell('curled forest leaf %02d'%i,(x,y,.055),(.19+.09*abs(a),.075,.018),leafgold if i%3 else leaf)
+  ob.rotation_euler[2]=i*2.399
 def root(name):
  o=bpy.data.objects.new(name,None);scene.collection.objects.link(o);return o
 roach=root('RIG cockroach')
 ell('cockroach abdomen',(0,0,.39),(.43,.8,.28),roachmat,roach)
 ell('cockroach thorax',(0,-.63,.4),(.38,.35,.22),wingmat,roach)
+# Paired wing covers and abdominal segments make the cockroach readable.
+for side in [-1,1]:
+ cover=ell('cockroach wing cover',(side*.20,.10,.62),(.21,.62,.07),wingmat,roach)
+ cover.rotation_euler[1]=side*.13
+for seg in range(4):
+ ell('cockroach abdomen segment %d'%seg,(0,.12+seg*.20,.26),(.37-seg*.027,.13,.10),roachmat,roach)
 ell('cockroach head',(0,-.98,.36),(.29,.23,.2),roachmat,roach)
 for side in [-1,1]:
  ell('cockroach eye',(.22*side,-1.02,.43),(.075,.09,.085),black,roach)
@@ -73,7 +103,7 @@ bpy.ops.object.camera_add(location=(3,-5,3.3));cam=bpy.context.object;aim(cam,(0
 for f,loc in [(1,(3,-5,3.3)),(49,(2.4,-4,2.5)),(96,(1.8,-3.2,1.9))]:
  cam.location=loc;aim(cam,(0,-.25,.5));cam.keyframe_insert(data_path='location',frame=f);cam.keyframe_insert(data_path='rotation_euler',frame=f)
 world=bpy.data.worlds.new('Forest ambient');scene.world=world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs['Color'].default_value=(.25,.31,.22,1)
-bpy.ops.object.light_add(type='AREA',location=(0,-2,5));bpy.context.object.data.energy=850;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=5
+bpy.ops.object.light_add(type='AREA',location=(0,-2,5));bpy.context.object.data.energy=1050;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=5
 scene.render.film_transparent=False
 scene.render.image_settings.file_format='FFMPEG'
 print('JEWEL_WASP_3D_SCENE_READY',scene.frame_end,scene.render.filepath)
