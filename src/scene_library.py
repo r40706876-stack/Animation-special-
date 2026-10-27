@@ -31,7 +31,7 @@ def populate_underwater(uv, floor_mat, bubble_mat, coral_mat):
     rock_mat.use_nodes=True
     rock_mat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.15,.26,.31,1)
     for i in range(12):
-        x=(-2.25 if i%2==0 else 2.25)+.20*math.sin(i*2.1)
+        x=(-1.7 if i%2==0 else 1.7)+.20*math.sin(i*2.1)
         y=.6+(i%4)*.28
         uv('Seabed pebble '+str(i),(x,y,-.46),(.13+.025*(i%3),.10,.075),rock_mat)
     # Soft underwater fill light separates the character from the background.
@@ -49,7 +49,7 @@ def populate_underwater(uv, floor_mat, bubble_mat, coral_mat):
                   (.035,.035,.055),bubble_mat)
         animate_rising_bubble(bubble,i)
     # Unlike disconnected oval decorations, each coral is a branching stem.
-    for cluster,x in enumerate((-1.95,1.95)):
+    for cluster,x in enumerate((-1.58,1.58)):
         for i in range(3):
             stem_x=x+(i-1)*.21
             base=(stem_x,1.05,-.37)
