@@ -13,7 +13,7 @@ scene.render.image_settings.file_format='FFMPEG' if False else 'PNG'
 scene.render.filepath=os.getenv('BLENDER_OUTPUT','/tmp/JEWEL_WASP_3D_PROOF.mp4')
 scene.render.image_settings.color_mode='RGB'
 scene.render.ffmpeg.format='MPEG4';scene.render.ffmpeg.codec='H264';scene.render.ffmpeg.constant_rate_factor='MEDIUM'
-scene.render.file_extension=True
+scene.render.use_file_extension=True
 def mat(name,color,metal=0,rough=.55):
  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True
  p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*color,1);p.inputs['Metallic'].default_value=metal;p.inputs['Roughness'].default_value=rough
