@@ -32,7 +32,10 @@ async def main():
  pathlib.Path('voice').mkdir(exist_ok=True)
  for i,line in enumerate(lines):
   await make(i,line)
-  subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'voice/{i:02d}.mp3','-af','apad','-t','10','-ar','44100','-ac','2','-c:a','aac',f'voice/{i:02d}.m4a'],check=True)
+  duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',f'voice/{i:02d}.mp3'],text=True))
+  speed=max(1.0,duration/9.65)
+  if speed>2.0:raise RuntimeError(f'Chapter {i} narration too long: {duration:.1f}s')
+  subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'voice/{i:02d}.mp3','-af',f'atempo={speed:.3f},apad','-t','10','-ar','44100','-ac','2','-c:a','aac',f'voice/{i:02d}.m4a'],check=True)
  with open('voice/concat.txt','w') as f:
   for i in range(len(lines)):f.write(f"file '{i:02d}.m4a'\n")
  subprocess.run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i','voice/concat.txt','-t','140','-ar','44100','-ac','2','-c:a','aac','voice/narration.m4a'],check=True)
