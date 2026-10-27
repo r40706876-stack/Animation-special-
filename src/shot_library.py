@@ -68,7 +68,7 @@ def apply_story_shot(scene, index):
 
     # Text is placed as actual 3D typography, not burned into a static image.
     _text("Story title", title, (-1.72, -2.8, 3.95), .38, (.91, .98, 1.0))
-    _text("Story caption", subtitle, (-1.72, -2.8, -.73), .20, (.72, .94, 1.0))
+    _text("Story caption", subtitle, (-1.72, -2.8, .05), .20, (.72, .94, 1.0))
     scene.frame_start = 1
     scene.frame_end = 120
     scene.frame_set(1)
