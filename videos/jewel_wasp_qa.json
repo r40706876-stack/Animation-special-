@@ -1,0 +1,15 @@
+{
+  "video": "videos/JEWEL_WASP_3D_STORY_30S.mp4",
+  "frames": 720,
+  "width": 540,
+  "height": 960,
+  "duration": 30.0,
+  "bytes": 2399604,
+  "audio_present": true,
+  "narration_present": true,
+  "decode_ok": true,
+  "visual_quality_reviewed": false,
+  "technical_qa_pass": true,
+  "source_shot_run": "40483655340",
+  "source_commit": "f05b68fb254ea2446fc30085a8d88c6263e9507d"
+}
