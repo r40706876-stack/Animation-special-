@@ -108,10 +108,10 @@ if chapter in (3,5):
   stinger.rotation_euler[0]=angle;stinger.keyframe_insert(data_path='rotation_euler',frame=frame)
 if chapter in (4,6):
  nerve=mat('schematic neural signal',(0.02,.86,1.0),.15,.15)
-  node_bsdf=nerve.node_tree.nodes.get('Principled BSDF')
-  if node_bsdf:
-   node_bsdf.inputs['Emission Color'].default_value=(.02,.7,1.0,1)
-   node_bsdf.inputs['Emission Strength'].default_value=3.0
+ node_bsdf=nerve.node_tree.nodes.get('Principled BSDF')
+ if node_bsdf:
+  node_bsdf.inputs['Emission Color'].default_value=(.02,.7,1.0,1)
+  node_bsdf.inputs['Emission Strength'].default_value=3.0
  for i in range(4):
   p=ell('schematic nerve node %d'%i,(0,-.55-i*.17,.69),(.11,.11,.075),nerve,roach)
   for frame,scale in ((1,.001),(60,.085),(120,.13),(180,.11),(240,.001)):
