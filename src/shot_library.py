@@ -18,6 +18,16 @@ SHOT_TITLES = [
 # The face close-up intentionally crops the arms; wide shots show all eight.
 # (orthographic scale, camera start X, camera end X, camera height, target Z,
 #  rig start X, rig end X, start yaw, end yaw)
+# Camera zoom progression per five-second story beat. Orthographic scale is
+# animated, not held static, so each chapter has a purposeful push or pull.
+SHOT_ZOOMS = [
+    (1.08, 1.00, .92),  # discover: push toward the pearl
+    (.94, 1.02, 1.12),  # theft: reveal the fish's getaway
+    (.90, 1.04, 1.18),  # chase: open up the playing field
+    (1.12, 1.00, .92),  # return: focus on the reveal
+    (1.04, .97, .90),  # friends: warm final push-in
+]
+
 SHOT_PLANS = [
     (7.2, -.25, .15, 5.5, 1.40, -.16, .08, -.08, .08),
     (6.1, .38, -.24, 4.9, 1.35, .16, -.14, .18, -.20),
@@ -63,8 +73,10 @@ def apply_story_shot(scene, index):
     if camera is None or rig is None:
         raise RuntimeError("Base octopus scene has no camera or motion rig")
     scale, camera_start, camera_end, height, target_z, x_start, x_end, yaw_start, yaw_end = SHOT_PLANS[index]
-    camera.data.ortho_scale = scale
-    for frame, fraction in ((1, 0.0), (61, .5), (120, 1.0)):
+    zooms = SHOT_ZOOMS[index]
+    for key_index, (frame, fraction) in enumerate(((1, 0.0), (61, .5), (120, 1.0))):
+        camera.data.ortho_scale = scale * zooms[key_index]
+        camera.data.keyframe_insert(data_path="ortho_scale", frame=frame)
         camera.location = (camera_start + (camera_end - camera_start) * fraction,
                            -8.0, height)
         aim = Vector((0, 0, target_z)) - camera.location
@@ -81,8 +93,8 @@ def apply_story_shot(scene, index):
         rig.keyframe_insert(data_path="rotation_euler", index=2, frame=frame)
 
     title, subtitle = SHOT_TITLES[index]
-    _camera_text("Story title", title, camera, True, .073, (.94, .99, 1.0))
-    _camera_text("Story caption", subtitle, camera, False, .040, (.72, .95, 1.0))
+    _camera_text("Story title", title, camera, True, .080, (.94, .99, 1.0))
+    _camera_text("Story caption", subtitle, camera, False, .057, (.72, .95, 1.0))
     scene.frame_start = 1
     scene.frame_end = 120
     scene.frame_set(1)
