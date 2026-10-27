@@ -117,5 +117,8 @@ for frame,ang in [(1,-.12),(60,.10),(120,-.12)]:
  cam.rotation_euler[2]=ang
  cam.keyframe_insert(data_path='rotation_euler',frame=frame)
 scene.render.film_transparent=False
-bpy.ops.render.render(animation=True)
-print('BLENDER_3D_RENDER_COMPLETE',scene.render.filepath)
+if os.environ.get('BLENDER_BUILD_ONLY') == '1':
+ print('BLENDER_SCENE_READY')
+else:
+ bpy.ops.render.render(animation=True)
+ print('BLENDER_3D_RENDER_COMPLETE',scene.render.filepath)
