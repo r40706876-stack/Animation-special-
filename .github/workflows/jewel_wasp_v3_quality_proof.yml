@@ -1,0 +1,45 @@
+name: Jewel Wasp V3 Quality Proof
+on:
+  push:
+    branches: [feature/jewel-wasp-quality-v3]
+    paths:
+      - "src/jewel_wasp_full.py"
+      - "src/jewel_wasp_v2.py"
+      - ".github/workflows/jewel_wasp_v3_quality_proof.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and headless display
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render seven distinct narrative scene previews
+        run: |
+          set -euo pipefail
+          mkdir -p preview
+          for chapter in 0 3 5 8 10 11 12 13; do
+            echo "V3_PROOF_CHAPTER_START $chapter"
+            JEWEL_PREVIEW=1 JEWEL_PREVIEW_FRAME=145 STORY_CHAPTER="$chapter" BLENDER_OUTPUT="$PWD/preview/chapter_$chapter.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_full.py > "preview/chapter_$chapter.log" 2>&1
+            test -s "preview/chapter_$chapter.png"
+            grep -q "JEWEL_V2_PREVIEW_DONE $chapter" "preview/chapter_$chapter.log"
+          done
+          ffmpeg -y -loglevel error -pattern_type glob -i 'preview/chapter_*.png' -vf 'scale=270:480,tile=4x2' -frames:v 1 preview/contact_v3.jpg
+          test -s preview/contact_v3.jpg
+          echo V3_PROOF_READY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v3-narrative-camera-proof
+          path: preview/
+          retention-days: 14
