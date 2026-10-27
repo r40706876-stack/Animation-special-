@@ -48,21 +48,52 @@ def animate(o,keys):
 animate(roach,rp);animate(wasp,wp)
 for f,loc in cp:
  cam.location=loc;aim(cam,target);cam.keyframe_insert(data_path='location',frame=f);cam.keyframe_insert(data_path='rotation_euler',frame=f)
-cam.data.lens=[38,60,68,75,43,40][shot]
+cam.data.lens=[38,48,50,55,43,40][shot]
 # Active body motion; leg geometry is articulated rig hierarchy, parent translates.
 for f in [1,30,60,90,120]:
  roach.rotation_euler[2]=.05*math.sin(f*.15) if shot in (0,4,5) else 0
  roach.keyframe_insert(data_path='rotation_euler',frame=f)
  wasp.rotation_euler[2]=.09*math.sin(f*.12)
  wasp.keyframe_insert(data_path='rotation_euler',frame=f)
-# Explicit schematic highlights only in nerve mechanism chapters.
+# Articulated limb motion: actual 3D legs, antennae and wings move.
+for obj in bpy.data.objects:
+ if obj.parent == roach and obj.name.startswith('cockroach leg'):
+  initial=obj.rotation_euler.copy()
+  for frame in range(1,121,8):
+   stride=0.13*math.sin(frame*.27 + obj.location.y*13 + (1.6 if obj.location.x<0 else 0))
+   obj.rotation_euler=(initial.x,initial.y+stride,initial.z)
+   obj.keyframe_insert(data_path='rotation_euler',frame=frame)
+ if obj.parent == roach and obj.name.startswith('cockroach antenna'):
+  initial=obj.rotation_euler.copy()
+  for frame in range(1,121,12):
+   obj.rotation_euler=(initial.x,initial.y,initial.z+.12*math.sin(frame*.16+obj.location.x*3))
+   obj.keyframe_insert(data_path='rotation_euler',frame=frame)
+ if obj.parent == wasp and obj.name.startswith('wasp leg'):
+  initial=obj.rotation_euler.copy()
+  for frame in range(1,121,8):
+   obj.rotation_euler=(initial.x,initial.y+.10*math.sin(frame*.28+obj.location.y*11),initial.z)
+   obj.keyframe_insert(data_path='rotation_euler',frame=frame)
+ if obj.parent == wasp and obj.name.startswith('animated wasp wing'):
+  for frame in range(1,121,4):
+   obj.rotation_euler[1]=(.12 if frame%8<4 else .65) * (1 if obj.location.x>=0 else -1)
+   obj.keyframe_insert(data_path='rotation_euler',frame=frame)
+# Tapered physical stinger on the wasp abdomen.
+bpy.ops.mesh.primitive_cone_add(vertices=12,radius1=.042,radius2=.002,depth=.30,location=(0,.88,.34))
+stinger=bpy.context.object;stinger.name='wasp articulated stinger'
+stinger.rotation_euler[0]=math.pi/2
+stinger.data.materials.append(ns['black']);stinger.parent=wasp
+if shot in (1,3):
+ for frame,angle in [(1,.0),(55,-.25),(90,.28),(120,.0)]:
+  stinger.rotation_euler[0]=math.pi/2+angle
+  stinger.keyframe_insert(data_path='rotation_euler',frame=frame)
+# Schematic neural diagram: small connected ganglia rather than giant egg-like blobs.
 if shot in (2,3):
- glow=mat('schematic neural highlight',(1.0,.35,.035),.15,.25)
- for idx,(x,y,z) in enumerate([(0,-.62,.66),(-.08,-.84,.62),(.08,-1.03,.58)]):
-  orb=ell('schematic nerve ganglion %d'%idx,(x,y,z),(.10,.11,.10),glow,roach)
-  orb.hide_render=False
- for a,b in [((0,-.62,.66),(-.08,-.84,.62)),((-.08,-.84,.62),(.08,-1.03,.58))]:
-  link('schematic neural pathway',a,b,.025,glow,roach)
+ glow=mat('schematic neural highlight',(1.0,.32,.02),.12,.22)
+ nodes=[(0,-.60,.59),(-.06,-.82,.57),(.04,-1.02,.54)]
+ for idx,(x,y,z) in enumerate(nodes):
+  ell('schematic ganglion %d'%idx,(x,y,z),(.046,.055,.045),glow,roach)
+ for a,b in zip(nodes,nodes[1:]):
+  link('schematic neural pathway',a,b,.012,glow,roach)
 # Burrow landmark only in finale, with a visibly descending camera.
 if shot==5:
  dark=mat('burrow cavity',(.009,.008,.006))
@@ -70,6 +101,12 @@ if shot==5:
  for i in range(9):
   theta=i*math.pi*2/9
   ell('burrow stone',(1.8+math.cos(theta)*.85,1.3+math.sin(theta)*.64,.12),(.14,.13,.1),ns['soil'])
+# Non-graphic egg detail in the final burrow sequence.
+if shot==5:
+ egg=ell('single jewel wasp egg',(.11,.05,.65),(.065,.11,.055),mat('ivory egg',(.88,.81,.62)),roach)
+ for frame,scale in [(1,(0.001,0.001,0.001)),(90,(0.001,0.001,0.001)),(120,(.065,.11,.055))]:
+  egg.scale=scale
+  egg.keyframe_insert(data_path='scale',frame=frame)
 # Speed-conscious software rendering, consistent real 3D geometry and camera.
 scene.render.image_settings.file_format='FFMPEG'
 scene.render.ffmpeg.format='MPEG4'
