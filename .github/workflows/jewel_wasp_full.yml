@@ -31,16 +31,22 @@ jobs:
           set -euo pipefail
           mkdir -p full_segments
           chapter="${{ matrix.chapter }}"
-          previous_run=40506557738
+          previous_run=40624338637
           completed_job="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$previous_run/jobs?per_page=100" | jq -r --arg chapter "$chapter" '.jobs[] | select(.name == ("Render full-film chapter " + $chapter) and .conclusion == "success") | .id' | head -n 1)"
           if [ -n "$completed_job" ]; then
             echo "Chapter $chapter previously succeeded (job $completed_job); attempting reuse."
             if gh run download "$previous_run" --name "jewel-full-chapter-$chapter" --dir full_segments; then
-              if [ -s "full_segments/chapter_$chapter.mp4" ]; then
-                echo "Reusing previously validated chapter $chapter."
-                echo "reused=true" >> "$GITHUB_OUTPUT"
-                exit 0
+              # Reuse only a complete, decodable 240-frame chapter. Do not trust mere file existence.
+              if [ -s "full_segments/chapter_$chapter.mp4" ] && command -v ffprobe >/dev/null && command -v ffmpeg >/dev/null; then
+                frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "full_segments/chapter_$chapter.mp4" || true)"
+                if [ "$frames" = "240" ] && ffmpeg -v error -xerror -i "full_segments/chapter_$chapter.mp4" -f null -; then
+                  echo "Reusing validated 240-frame chapter $chapter from run $previous_run."
+                  echo "reused=true" >> "$GITHUB_OUTPUT"
+                  exit 0
+                fi
               fi
+              echo "Prior artifact for chapter $chapter did not pass frame/decode QA; render anew."
+              rm -f "full_segments/chapter_$chapter.mp4"
             fi
           fi
           echo "No validated reusable MP4 for chapter $chapter; rendering anew."
