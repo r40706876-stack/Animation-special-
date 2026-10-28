@@ -1,0 +1,124 @@
+name: Jewel Wasp V6 One-Pass Visual and Motion Proof
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_v6_proof.py"
+      - ".github/workflows/jewel_wasp_v6_proof.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: jewel-wasp-v6-proof
+  cancel-in-progress: false
+jobs:
+  stills:
+    name: V6 still chapter ${{ matrix.chapter }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        chapter: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender and FFmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render Blender chapter still
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          frame=120
+          if [ "${{ matrix.chapter }}" -ge 11 ]; then frame=210; fi
+          file="proof/chapter_$(printf '%02d' ${{ matrix.chapter }}).png"
+          STORY_CHAPTER=${{ matrix.chapter }} PROOF_FRAME="$frame" BLENDER_OUTPUT="$PWD/$file" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v6_proof.py > "proof/chapter_${{ matrix.chapter }}.log" 2>&1 || { tail -n 100 "proof/chapter_${{ matrix.chapter }}.log"; exit 1; }
+          grep -q "JEWEL_V6_RENDER_DONE ${{ matrix.chapter }}" "proof/chapter_${{ matrix.chapter }}.log"
+          test -s "$file"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v6-still-${{ matrix.chapter }}
+          path: proof/
+          if-no-files-found: warn
+          retention-days: 14
+  motion:
+    name: V6 animated chapter ${{ matrix.chapter }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 160
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        chapter: [0, 3, 5, 10, 12]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender and FFmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render and decode 24-frame motion proof
+        run: |
+          set -euo pipefail
+          mkdir -p motion
+          file="motion/motion_${{ matrix.chapter }}.mp4"
+          V6_MOTION=1 STORY_CHAPTER=${{ matrix.chapter }} BLENDER_OUTPUT="$PWD/$file" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v6_proof.py > "motion/motion_${{ matrix.chapter }}.log" 2>&1 || { tail -n 100 "motion/motion_${{ matrix.chapter }}.log"; exit 1; }
+          grep -q "JEWEL_V6_RENDER_DONE ${{ matrix.chapter }}" "motion/motion_${{ matrix.chapter }}.log"
+          test -s "$file"
+          ffmpeg -v error -xerror -i "$file" -f null -
+          frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$file")"
+          test "$frames" = "24"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v6-motion-${{ matrix.chapter }}
+          path: motion/
+          if-no-files-found: warn
+          retention-days: 14
+  contact:
+    needs: [stills, motion]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Install FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v6-still-*
+          path: proof
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v6-motion-*
+          path: motion
+          merge-multiple: true
+      - name: Build contact sheet and validate artifacts
+        run: |
+          set -euo pipefail
+          test "$(find proof -maxdepth 1 -name 'chapter_??.png' | wc -l)" -eq 14
+          test "$(find motion -maxdepth 1 -name 'motion_*.mp4' | wc -l)" -eq 5
+          ffmpeg -y -loglevel error -framerate 1 -i proof/chapter_%02d.png -vf "scale=180:320,tile=4x4" -frames:v 1 proof/contact_v6.png
+          test -s proof/contact_v6.png
+          echo "V6_TECHNICAL_PROOF_READY_VISUAL_REVIEW_REQUIRED"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v6-master-quality-proof
+          path: |
+            proof/
+            motion/
+          if-no-files-found: warn
+          retention-days: 14
