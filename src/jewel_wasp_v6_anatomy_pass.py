@@ -130,3 +130,43 @@ if chapter==12:
         for f,s in ((1,.20),(95,.55),(175,.82),(240,1)):
             seg.scale=(.115*taper*s,.063*s,.104*taper*s)
             seg.keyframe_insert(data_path="scale",frame=f)
+
+
+# V6.2 visual correction from the actual 40775022479 stills/motion strips:
+# a readable ground aperture must NOT be hidden under the roach in chapter 10.
+if chapter >= 10:
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6.1 clearly visible burrow aperture", "V6.1 low earth rim")):
+            ob.hide_render = True
+    opening = (2.05, 2.60)
+    cavity = organic_material("V6.2 burrow deep shadow", (.0015,.0012,.0008),(.014,.009,.005),11,.99)
+    ell("V6.2 visible dark burrow mouth",
+        (opening[0],opening[1],.09),(.87,.63,.018),cavity)
+    for i in range(32):
+        a=math.tau*i/32
+        x=opening[0]+(.98+.04*math.sin(3*a))*math.cos(a)
+        y=opening[1]+(.72+.04*math.cos(5*a))*math.sin(a)
+        clod=ell("V6.2 irregular low earth lip",
+            (x,y,.10),(.085+.025*abs(math.sin(a*2)),.075,.038),soil)
+        clod.rotation_euler[2]=a
+
+# Actual motion proof sampled frames 95..118, where the old sting was held
+# motionless. Animate a needle extension and withdrawal through that window.
+if chapter in (3,5):
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V4 visible sting needle","sting tip")):
+            ob.hide_render=True
+    needle_mat=mat("V6.2 dark chitin stinger",(.025,.013,.010),.12,.39)
+    needle=ell("V6.2 animated contact needle",(0,.94,.30),(.017,.26,.017),needle_mat,wasp)
+    for f,extension in ((1,.03),(78,.03),(94,.22),(107,1.0),(121,1.0),(145,.18),(175,.03),(240,.03)):
+        needle.scale=(.017,.26*extension,.017)
+        needle.location=(0,.83+.11*extension,.30)
+        needle.keyframe_insert(data_path="scale",frame=f)
+        needle.keyframe_insert(data_path="location",frame=f)
+
+# The insect antennae should not look like unrelated floating black rods
+# around the developing larva in the extreme-macro chapter.
+if chapter == 12:
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("cockroach antenna","V4 articulated roach antenna")):
+            ob.hide_render=True
