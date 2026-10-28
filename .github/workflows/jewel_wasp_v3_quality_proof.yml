@@ -24,17 +24,17 @@ jobs:
           echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
-      - name: Render seven distinct narrative scene previews
+      - name: Render all fourteen narrative scene previews
         run: |
           set -euo pipefail
           mkdir -p preview
-          for chapter in 0 3 5 8 10 11 12 13; do
+          for chapter in $(seq 0 13); do
             echo "V3_PROOF_CHAPTER_START $chapter"
             JEWEL_PREVIEW=1 JEWEL_PREVIEW_FRAME=145 STORY_CHAPTER="$chapter" BLENDER_OUTPUT="$PWD/preview/chapter_$chapter.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_full.py > "preview/chapter_$chapter.log" 2>&1
             test -s "preview/chapter_$chapter.png"
             grep -q "JEWEL_V2_PREVIEW_DONE $chapter" "preview/chapter_$chapter.log"
           done
-          ffmpeg -y -loglevel error -pattern_type glob -i 'preview/chapter_*.png' -vf 'scale=270:480,tile=4x2' -frames:v 1 preview/contact_v3.jpg
+          ffmpeg -y -loglevel error -pattern_type glob -i 'preview/chapter_*.png' -vf 'scale=270:480,tile=4x4' -frames:v 1 preview/contact_v3.jpg
           test -s preview/contact_v3.jpg
           echo V3_PROOF_READY
       - uses: actions/upload-artifact@v4
@@ -60,7 +60,7 @@ jobs:
             "source_sha":os.environ["GITHUB_SHA"],
             "job_status":os.environ["PROOF_JOB_STATUS"],
             "run_url":f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
-            "expected_previews":[0,3,5,8,10,11,12,13],
+            "expected_previews":list(range(14)),
             "contact_sheet_present":pathlib.Path("preview/contact_v3.jpg").is_file()
           }
           pathlib.Path("/tmp/jewel_v3_proof_status.json").write_text(json.dumps(p,indent=2)+"\n")
