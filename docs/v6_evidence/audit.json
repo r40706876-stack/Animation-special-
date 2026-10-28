@@ -4,7 +4,7 @@
   "stills": [
     {
       "file": "chapter_00.png",
-      "brightness": 79.8,
+      "brightness": 79.9,
       "hash": "0000000000000000000000000111111111111111111111111111111100111110"
     },
     {
@@ -14,38 +14,38 @@
     },
     {
       "file": "chapter_02.png",
-      "brightness": 133.6,
+      "brightness": 133.0,
       "hash": "0000000000000000111111111111111011111000111111111111111111111111"
     },
     {
       "file": "chapter_03.png",
-      "brightness": 110.2,
-      "hash": "0000000000000000001111001111111011100001111111111111111111111111"
+      "brightness": 130.2,
+      "hash": "0000000000000000111111111111111100001100111111111111111111111111"
     },
     {
       "file": "chapter_04.png",
-      "brightness": 135.4,
-      "hash": "0000000000000000111111111111111110011111111000111111111111111111"
+      "brightness": 134.8,
+      "hash": "0000000000000000111111111111111110000111111111111111111111111111"
     },
     {
       "file": "chapter_05.png",
-      "brightness": 115.9,
-      "hash": "0000000000000000111111111111111000011000111111111111111111111111"
+      "brightness": 117.3,
+      "hash": "0000000000000000111111110101111100011100111110001111111011111111"
     },
     {
       "file": "chapter_06.png",
-      "brightness": 162.6,
-      "hash": "0111110011111111111110111101100110111001000000010000011100100111"
+      "brightness": 161.2,
+      "hash": "1111110011111111111110111101100100010001000000011110011100100111"
     },
     {
       "file": "chapter_07.png",
-      "brightness": 80.6,
+      "brightness": 80.7,
       "hash": "0000000000000000000000001011111111111111111111111111111101111111"
     },
     {
       "file": "chapter_08.png",
-      "brightness": 107.7,
-      "hash": "0000000000000000000000001011111111111001111111111111111111111111"
+      "brightness": 108.0,
+      "hash": "0000000000000000000000001111111111111001111111111111111111111111"
     },
     {
       "file": "chapter_09.png",
@@ -59,17 +59,17 @@
     },
     {
       "file": "chapter_11.png",
-      "brightness": 86.6,
-      "hash": "0000000000000000000000001111111011111110111111001111110011111100"
+      "brightness": 92.9,
+      "hash": "0000000000000000111111101111111111111011111000001000001111111111"
     },
     {
       "file": "chapter_12.png",
-      "brightness": 98.7,
-      "hash": "0000000000000000000000000000000011111111111111111111111111111111"
+      "brightness": 94.0,
+      "hash": "0000000000000000111111111111111111111111111100001100000000000001"
     },
     {
       "file": "chapter_13.png",
-      "brightness": 83.7,
+      "brightness": 83.5,
       "hash": "0000000000000000000000000011000011111110111111111111111111111111"
     }
   ],
@@ -77,36 +77,32 @@
     {
       "file": "motion_0.mp4",
       "frames": 24,
-      "sampled_frame_differences": 0.55
+      "sampled_frame_differences": 0.64
     },
     {
       "file": "motion_10.mp4",
       "frames": 24,
-      "sampled_frame_differences": 1.06
+      "sampled_frame_differences": 1.12
     },
     {
       "file": "motion_12.mp4",
       "frames": 24,
-      "sampled_frame_differences": 3.21
+      "sampled_frame_differences": 4.03
     },
     {
       "file": "motion_3.mp4",
       "frames": 24,
-      "sampled_frame_differences": 3.14
+      "sampled_frame_differences": 4.22
     },
     {
       "file": "motion_5.mp4",
       "frames": 24,
-      "sampled_frame_differences": 4.29
+      "sampled_frame_differences": 10.91
     }
   ],
   "issues": [
-    "Nearly identical compositions: chapter_02.png / chapter_05.png",
-    "Nearly identical compositions: chapter_07.png / chapter_08.png",
     "Nearly identical compositions: chapter_07.png / chapter_10.png",
-    "Nearly identical compositions: chapter_08.png / chapter_10.png",
-    "Nearly identical compositions: chapter_12.png / chapter_13.png",
-    "motion_0.mp4 appears static"
+    "Nearly identical compositions: chapter_08.png / chapter_10.png"
   ],
   "automated_checks_pass": false,
   "human_visual_review_pass": false,
