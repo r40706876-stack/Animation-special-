@@ -185,16 +185,20 @@ elif chapter==6:
  pos,target,lens=(.6,-2.0,3.8),(0,-.32,.62),28
 elif chapter==7:
  pos,target,lens=(-4.9,-6.8,3.6),(-.2,-.65,.54),23
+elif chapter==8:
+ # Extreme close-up of the antenna-guiding action; not another burrow-wide shot.
+ pos,target,lens=(-2.1,-2.3,1.35),(-.35,-1.12,.48),31
 elif chapter==9:
  pos,target,lens=(4.5,-6.8,3.8),(.4,-.2,.45),24
 elif chapter==10:
- pos,target,lens=(4.9,-5.2,3.9),(1.55,1.1,.25),24
+ # Distinct wide approach with an unobstructed burrow beyond the roach.
+ pos,target,lens=(4.0,-3.5,2.9),(1.75,2.0,.18),30
 elif chapter==11:
  pos,target,lens=(3.2,-3.2,2.6),(1.55,1.2,.75),26
 elif chapter==12:
  pos,target,lens=(-2.6,-3.1,2.4),(1.6,1.2,.77),27
 elif chapter==13:
- pos,target,lens=(4.5,-5.8,4.0),(1.4,.6,1.7),24
+ pos,target,lens=(4.2,-4.3,3.4),(1.8,1.8,1.4),27
 
 # Never allow a foreground trunk to block the burrow or final flying wasp.
 if chapter>=10:
@@ -245,10 +249,23 @@ elif chapter==11:
 elif chapter==12:
  pos,target,lens=(3.0,-1.0,1.85),(1.65,1.24,.79),35
 
+# The first proof motion clip was nearly static because the insects were
+# minuscule in a distant shot. Give the pursuing wasp an observable dart,
+# and sample that movement rather than the first second of a ten-second shot.
+if chapter==0:
+ wasp.location=(-1.6,-1.5,1.25)
+ wasp.keyframe_insert(data_path="location",frame=48)
+ wasp.location=(-1.0,-1.15,1.05)
+ wasp.keyframe_insert(data_path="location",frame=72)
+ wasp.location=(-.85,-1.0,.9)
+ wasp.keyframe_insert(data_path="location",frame=120)
+ wasp.location=(-.6,-.85,.65)
+ wasp.keyframe_insert(data_path="location",frame=240)
+
 cam.animation_data_clear()
-for f,factor in ((1,1.55 if chapter in (0,1,7,9,10,13) else 1.25),
-                 (120,1.45 if chapter in (0,1,7,9,10,13) else 1.18),
-                 (240,1.35 if chapter in (0,1,7,9,10,13) else 1.13)):
+for f,factor in ((1,1.32 if chapter in (0,1,10,13) else (1.55 if chapter in (7,9) else 1.25)),
+                 (120,1.24 if chapter in (0,1,10,13) else (1.45 if chapter in (7,9) else 1.18)),
+                 (240,1.20 if chapter in (0,1,10,13) else (1.35 if chapter in (7,9) else 1.13))):
  cam.location=Vector(target)+(Vector(pos)-Vector(target))*factor
  aim(cam,target)
  cam.keyframe_insert(data_path="location",frame=f)
@@ -261,7 +278,7 @@ scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.getenv("BLENDER_OUTPUT","/tmp/jewel_v6_proof.png")
 motion=os.getenv("V6_MOTION","0")=="1"
 if motion:
- scene.frame_start=95 if chapter in (3,5,10,12) else 1
+ scene.frame_start=48 if chapter==0 else (90 if chapter in (3,5) else (95 if chapter in (10,12) else 1))
  scene.frame_end=scene.frame_start+23
  scene.render.resolution_percentage=50
  if hasattr(scene,"eevee") and hasattr(scene.eevee,"taa_render_samples"):
