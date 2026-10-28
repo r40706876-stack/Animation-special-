@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   actions: read
-  contents: read
+  contents: write
 jobs:
   evidence:
     runs-on: ubuntu-latest
@@ -89,3 +89,44 @@ jobs:
             evidence/
             proof_source.txt
           retention-days: 14
+      - name: Publish auditable V6 evidence and run IDs to repository
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p docs/v6_evidence
+          python - <<'PY'
+          from pathlib import Path
+          import json,os
+          src=Path('proof_source.txt')
+          Path('docs/v6_evidence/audit_status.json').write_text(json.dumps({
+            'audit_workflow_run':os.getenv('GITHUB_RUN_ID'),
+            'audit_source_commit':os.getenv('GITHUB_SHA'),
+            'source_proof_run':src.read_text().strip() if src.exists() else None,
+            'audit_report_present':Path('evidence/audit.json').exists(),
+            'visual_review_approved':False,
+            'full_render_authorized':False
+          },indent=2))
+          PY
+          if test -s evidence/audit.json; then cp evidence/audit.json docs/v6_evidence/audit.json; fi
+          if test -s evidence/proof/contact_v6.png; then cp evidence/proof/contact_v6.png docs/v6_evidence/contact_v6.png; fi
+          if test -d evidence/motion_strips; then
+            mkdir -p docs/v6_evidence/motion_strips
+            cp evidence/motion_strips/*.jpg docs/v6_evidence/motion_strips/ 2>/dev/null || true
+          fi
+          gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/jewel_wasp_v6_proof.yml/runs?per_page=5" > docs/v6_evidence/proof_runs.json || true
+          gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/jewel_wasp_v6_full.yml/runs?per_page=5" > docs/v6_evidence/full_runs.json || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/v6_evidence/
+          if git diff --cached --quiet; then echo "Evidence already published"; exit 0; fi
+          git commit -m "Publish V6 proof audit report, preview sheets and run IDs for independent review"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          echo "::error::Unable to publish evidence to repository"
+          exit 1
