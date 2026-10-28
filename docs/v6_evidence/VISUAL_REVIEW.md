@@ -26,3 +26,22 @@ Reviewed the real 14-shot contact sheet and all five six-frame motion strips fro
 - A successful Blender render or a 24-frame clip decode is **not** a substitute for visual quality approval. Hindi narration listening review and 140-second final decode are later independent gates.
 
 Evidence: [original contact sheet](contact_v6.png), [automatic audit](audit.json), [motion strip folder](motion_strips/).
+
+## Fresh direct visual review — successful proof 40767077776
+
+Reviewed the actual artifact `12854115550` (14 still PNGs, contact sheet and five 24-frame motion MP4s). This is the newer proof, not an assumption from green CI. **Decision remains FAIL.**
+
+- Chapters 2, 3, 5 and 8: oversized pale cockroach dorsal plates and spherical teal wasp sections still resemble toy insects. The white crossing wings look like opaque paddles rather than transparent venated membranes.
+- Chapters 0 and 1: the animals are very small relative to the frame; the forest is an open beige floor with repetitive fern ladders and sparse stick trunks.
+- Chapters 3 and 5: nearly identical camera angles, no clearly readable stinger-to-body contact in sampled 24-frame motion strips.
+- Chapter 10: obstruction is reduced, but the burrow reads as a grey pebble pile; a dark opening is not obvious.
+- Chapters 11 and 12: egg and larva are tiny pale marks on the roach while the wasp dominates the shot. Larval development is not visually legible.
+- Motion 0: movement is still hard to see in a wide shot; 3/5 have visible wing movement but no convincing sting, 10/12 still lack decisive narrative action.
+
+### New V6.1 corrective pass, pending fresh proof
+
+- Commit `ad666c51`: add a reusable anatomy/story pass with darkened and narrowed roach dorsal plates, a segmented jewel-wasp gaster and petiole, compound-eye facets, animated pointed translucent wings and venation, a dark burrow aperture, and a visible nine-segment larva without an obscuring hovering wasp.
+- Commit `7514e1a8`: load the V6.1 pass and give chapters 3/5 distinct sting camera angles and chapters 11/12 tighter egg/larva macro framing.
+- Commit `59e12b44`: strengthen the expensive full-render approval gate to fingerprint all dependent Blender scene files, preventing stale visual approvals after anatomical changes.
+
+**Do not approve the full render based on these code changes.** The revised Blender proof still needs to complete and its actual stills and animated motion must be inspected. V4 remains untouched.
