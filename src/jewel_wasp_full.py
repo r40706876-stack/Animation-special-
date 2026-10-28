@@ -60,8 +60,8 @@ for rig,positions in ((roach,rpath),(wasp,wpath)):
 # V3 cinematography: use narrative-specific shot scales and subjects instead of
 # repeating the same distant two-insect composition for all 14 chapters.
 # Preserve the animation paths, frame count and the finished V2 artifact.
-shot_distance=[11.2,9.7,8.8,6.9,7.5,6.7,7.5,9.3,7.4,10.6,6.8,6.4,6.2,10.2]
-shot_lens=[36,39,42,44,43,46,42,39,44,36,38,43,43,35]
+shot_distance=[11.2,9.7,8.8,6.9,7.5,6.7,7.5,9.3,7.4,10.6,6.8,4.7,4.4,5.0]
+shot_lens=[36,39,42,44,43,46,42,39,44,36,38,49,51,47]
 shot_azimuth=[24,34,43,55,22,62,36,45,52,29,60,48,32,18]
 cam.data.lens=shot_lens[chapter]
 cam.data.sensor_fit='VERTICAL'
@@ -89,9 +89,13 @@ for frame in (1,48,96,144,192,240):
     elif chapter==10:
         focus=Vector((2.02,1.48,.13))*.80+focus*.20
     elif chapter in (11,12):
-        focus=rp*.82+wp*.18+Vector((.25,.20,.42))
+        # True macro view: the egg and growing larva live on the roach's back.
+        focus=rp+Vector((.05,.13,.82))
     elif chapter==13:
-        focus=wp*.70+rp*.30+Vector((0,0,.24))
+        # Begin on the developing larva, then reveal the departing adult wasp.
+        macro=rp+Vector((.05,.13,.87))
+        flight=wp+Vector((0,0,.24))
+        focus=macro.lerp(flight,max(0,min(1,(frame-150)/90)))
     az=math.radians(shot_azimuth[chapter])+.065*math.sin(frame/240*math.pi)
     direction=Vector((math.sin(az)*.35,-.52,.98)).normalized() if chapter in (10,11,12) else (Vector((math.sin(az)*.45,-.72,.78)).normalized() if chapter in (3,4,5,6,8) else Vector((math.sin(az)*.55,-.84,.49)).normalized())
     cam.location=focus+direction*shot_distance[chapter]
@@ -114,24 +118,30 @@ if chapter in (4,6):
   node_bsdf.inputs['Emission Strength'].default_value=3.0
  for i in range(4):
   p=ell('schematic nerve node %d'%i,(0,-.55-i*.17,.69),(.11,.11,.075),nerve,roach)
-  for frame,scale in ((1,.001),(60,.085),(120,.13),(180,.11),(240,.001)):
+  for frame,scale in ((1,.015),(60,.15),(120,.21),(180,.17),(240,.015)):
    p.scale=(scale,scale,scale*.78);p.keyframe_insert(data_path='scale',frame=frame)
 if chapter>=10:
  dark=mat('burrow entrance dark',(.014,.011,.008),0,.98)
- ell('burrow entrance',(2.72,1.75,.055),(.84,.64,.06),dark)
+ ell('burrow entrance',(1.94,1.48,.055),(.84,.64,.06),dark)
  for i in range(12):
   angle=i*math.tau/12
-  ell('burrow edge pebble %d'%i,(2.72+math.cos(angle)*.80,1.75+math.sin(angle)*.60,.10),(.13,.11,.08),ns['soil'])
+  ell('burrow edge pebble %d'%i,(1.94+math.cos(angle)*.80,1.48+math.sin(angle)*.60,.10),(.13,.11,.08),ns['soil'])
 if chapter in (11,12,13):
  eggmat=mat('ivory egg',(0.88,.78,.52),0,.38)
- egg=ell('wasp egg on cockroach',(.05,.1,.70),(.15,.24,.12),eggmat,roach)
+ egg=ell('wasp egg on cockroach',(.05,.1,.77),(.20,.30,.16),eggmat,roach)
  if chapter==11:
-  for frame,size in ((1,.001),(130,.001),(200,1),(240,1)):
-   egg.scale=(.15*size,.24*size,.12*size);egg.keyframe_insert(data_path='scale',frame=frame)
+  for frame,size in ((1,.02),(55,.38),(120,1.0),(240,1.10)):
+   egg.scale=(.20*size,.30*size,.16*size);egg.keyframe_insert(data_path='scale',frame=frame)
  if chapter>=12:
-  larva=ell('schematic larva',(.05,.16,.84),(.19,.38,.15),eggmat,roach)
-  for frame,size in ((1,.05),(120,.4),(240,1)):
-   larva.scale=(.19*size,.38*size,.15*size);larva.keyframe_insert(data_path='scale',frame=frame)
+  larva=ell('schematic larva',(.05,.16,.96),(.29,.48,.23),eggmat,roach)
+  for frame,size in ((1,.20),(120,.75),(240,1)):
+   larva.scale=(.29*size,.48*size,.23*size);larva.keyframe_insert(data_path='scale',frame=frame)
+  # Segmentation distinguishes the growing larva from the egg in macro shots.
+  bandmat=mat('larva segmentation amber',(0.63,.46,.23),0,.58)
+  for i in range(4):
+   band=ell('larva segment %d'%i,(.05,.16+(i-1.5)*.17,1.14),(.28,.032,.035),bandmat,roach)
+   for frame,size in ((1,.2),(120,.75),(240,1)):
+    band.scale=(.28*size,.032*size,.035*size);band.keyframe_insert(data_path='scale',frame=frame)
 # Visible anatomical cues distinguish sting and antenna-grasp chapters.
 if chapter in (3,5,8):
  cue=mat('anatomy cue amber',(1.0,.34,.035),.12,.12)
