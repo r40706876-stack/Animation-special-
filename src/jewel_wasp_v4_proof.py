@@ -51,27 +51,51 @@ for i in range(10):
    ob=ell("V4 fern leaflet",(x+side*(.13+j*.045),y,z),(.19,.075,.018),leaf_mat)
    ob.rotation_euler[1]=side*.34
 
+# Depth-layered forest rather than a bare studio floor. Keep the insect corridor
+# unobstructed and distribute trunks, moss and foliage outside its silhouette.
+bark=mat("V4 damp tree bark",(.075,.055,.035),0,.96)
+fern_dark=mat("V4 deep forest green",(.018,.095,.043),0,.81)
+moss=mat("V4 moss patches",(.06,.13,.035),0,.93)
+for i in range(18):
+ side=-1 if i%2 else 1
+ x=side*(2.8+(i%5)*.67)
+ y=-2.1+(i//2)*.84
+ h=2.5+(i%4)*.48
+ link("V4 forest trunk %02d"%i,(x,y,0),(x+.12*math.sin(i),y+.08,h),.14+(i%3)*.035,bark,None)
+ for j in range(3):
+  ell("V4 layered forest foliage",(x+.21*math.sin(i+j),y+.16*math.cos(i+j),h-.24+j*.37),(.66,.50,.38),fern_dark)
+for i in range(26):
+ side=-1 if i%2 else 1
+ x=side*(1.9+(i%6)*.53)
+ y=-3.0+(i//2)*.56
+ patch=ell("V4 forest moss", (x,y,.035),(.35,.25,.018),moss)
+ patch.rotation_euler[2]=i*.67
+
 # A clear visual grammar: different scale, angle and focal action for each chapter.
 # Each camera location looks toward a specific event, not the same generic center.
+# Portrait video has a narrow horizontal FOV. Prior 57-67 mm macro lenses
+# cut away heads, wings and most of the action. Pull back and use 24-30 mm.
+# Keep the action readable before attempting detail-only inserts.
 camera_specs=[
- ((3.3,-5.5,2.7),(0,-.25,.4),34),     # 0 forest encounter
- ((-3.2,-4.3,2.0),(-.35,-.65,.5),42), # 1 pursuit
- ((2.5,-3.7,1.5),(0,-.95,.45),50),   # 2 chase
- ((1.55,-2.8,1.15),(0,-.70,.46),57), # 3 thoracic sting
- ((-1.35,-2.65,1.15),(0,-.45,.48),61),# 4 leg nerve effect
- ((1.35,-2.65,1.20),(0,-1.02,.48),64),# 5 head sting
- ((-1.25,-2.6,1.22),(0,-.95,.46),65), # 6 neural signaling
- ((3.1,-4.1,2.0),(-.15,-.65,.43),42), # 7 altered behavior
- ((1.45,-2.85,1.12),(0,-1.25,.45),59),# 8 antenna guidance
- ((-3.2,-4.2,2.35),(.25,.10,.38),38), # 9 journey
- ((3.15,-2.4,2.15),(1.52,1.0,.25),45),# 10 burrow
- ((2.55,-.65,1.36),(1.58,1.19,.69),62),# 11 egg
- ((2.48,-.60,1.43),(1.60,1.25,.77),67),# 12 larva
- ((3.5,-3.25,2.65),(1.50,1.2,.6),40),# 13 next generation
+ ((3.3,-5.5,2.7),(-.65,-.65,.65),24),
+ ((-3.2,-4.3,2.0),(-.65,-.8,.60),25),
+ ((2.5,-3.7,1.5),(-.25,-.85,.50),26),
+ ((1.55,-2.8,1.15),(0,-.82,.48),29),
+ ((-1.35,-2.65,1.15),(0,-.45,.48),28),
+ ((1.35,-2.65,1.20),(0,-1.05,.50),29),
+ ((-1.25,-2.6,1.22),(0,-.75,.52),28),
+ ((3.1,-4.1,2.0),(-.25,-.65,.48),25),
+ ((1.45,-2.85,1.12),(0,-1.15,.48),28),
+ ((-3.2,-4.2,2.35),(.10,-.1,.48),24),
+ ((3.15,-2.4,2.15),(1.45,1.0,.35),26),
+ ((2.55,-.65,1.36),(1.55,1.18,.67),29),
+ ((2.48,-.60,1.43),(1.58,1.20,.75),29),
+ ((3.5,-3.25,2.65),(1.25,.75,1.12),25),
 ]
 position,target,lens=camera_specs[chapter]
 cam.animation_data_clear()
-for frame,factor in ((1,1.10),(120,1.0),(240,.92)):
+# Wider coverage in the 540x960 portrait aspect, with a restrained dolly.
+for frame,factor in ((1,1.42),(120,1.34),(240,1.28)):
  cam.location=Vector(target)+(Vector(position)-Vector(target))*factor
  aim(cam,target)
  cam.keyframe_insert(data_path="location",frame=frame)
