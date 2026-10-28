@@ -3,6 +3,12 @@ on:
   push:
     paths:
       - "src/jewel_wasp_v6_proof.py"
+      - "src/jewel_wasp_v6_anatomy_pass.py"
+      - "src/jewel_wasp_v63_story_pass.py"
+      - "src/jewel_wasp_v5_proof.py"
+      - "src/jewel_wasp_v4_proof.py"
+      - "src/jewel_wasp_full.py"
+      - "src/jewel_wasp_3d.py"
       - ".github/workflows/jewel_wasp_v6_proof.yml"
   workflow_dispatch:
 permissions:
