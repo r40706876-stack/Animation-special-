@@ -60,8 +60,8 @@ for rig,positions in ((roach,rpath),(wasp,wpath)):
 # V3 cinematography: use narrative-specific shot scales and subjects instead of
 # repeating the same distant two-insect composition for all 14 chapters.
 # Preserve the animation paths, frame count and the finished V2 artifact.
-shot_distance=[7.8,8.2,8.0,6.9,7.5,6.7,7.5,8.5,7.4,9.2,7.4,5.5,5.1,8.1]
-shot_lens=[42,41,42,44,43,46,42,41,44,38,42,47,49,43]
+shot_distance=[7.8,8.2,8.0,5.4,7.5,5.1,7.5,8.5,7.4,9.2,7.4,5.5,5.1,8.1]
+shot_lens=[42,41,42,54,43,56,42,41,44,38,42,47,49,43]
 shot_azimuth=[24,34,43,55,22,62,36,45,52,29,60,75,83,31]
 cam.data.lens=shot_lens[chapter]
 cam.data.sensor_fit='VERTICAL'
@@ -78,7 +78,7 @@ for frame in (1,48,96,144,192,240):
     focus=rp*.56+wp*.44+Vector((0,-.16,.20))
     # Sting: camera favors the wasp's abdomen and the roach's thorax.
     if chapter in (3,5):
-        focus=rp*.62+wp*.38+Vector((0,-.25,.33))
+        focus=rp+Vector((.12,-.68 if chapter==3 else -.96,.43))
     # Neurological explanation: stay near the roach's head.
     elif chapter in (4,6):
         focus=rp*.78+wp*.22+Vector((0,-.50,.38))
@@ -101,7 +101,8 @@ for frame in (1,48,96,144,192,240):
     direction=(Vector((.85,-.66,.34)).normalized() if chapter==11 else
                Vector((.94,-.23,.40)).normalized() if chapter==12 else
                Vector((math.sin(az)*.35,-.52,.98)).normalized() if chapter==10 else
-               Vector((math.sin(az)*.45,-.72,.78)).normalized() if chapter in (3,4,5,6,8) else
+               Vector((.84,-.54,.52)).normalized() if chapter in (3,5) else
+               Vector((math.sin(az)*.45,-.72,.78)).normalized() if chapter in (4,6,8) else
                Vector((math.sin(az)*.55,-.84,.49)).normalized())
     cam.location=focus+direction*shot_distance[chapter]
     aim(cam,focus)
@@ -163,7 +164,7 @@ if chapter in (3,5,8):
   cue_bsdf.inputs['Emission Strength'].default_value=2.0
  target_y=-.62 if chapter==3 else (-1.10 if chapter==5 else -1.72)
  cue_z=.52 if chapter==3 else (.43 if chapter==5 else .46)
- bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(.40,target_y,cue_z),major_radius=.24 if chapter!=8 else .20,minor_radius=.018)
+ bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(.30,target_y,cue_z),major_radius=.11 if chapter!=8 else .14,minor_radius=.018)
  target=bpy.context.object
  target.name='visible anatomy target %d'%chapter
  target.rotation_euler[1]=1.10
@@ -187,11 +188,11 @@ if chapter in (3,5):
  needle=bpy.context.object
  needle.name='ANIMATED stinger contacting roach '+str(chapter)
  needle.data.materials.append(needle_mat)
- bead=ell('sting site contact glow',(.40,sting_y,sting_z),(.085,.085,.085),glow_mat,roach)
+ bead=ell('sting site contact glow',(.30,sting_y,sting_z),(.05,.05,.05),glow_mat,roach)
  for f in (1,55,90,120,150,195,240):
   rp=interp(rpath,f);wp=interp(wpath,f)
   start=wp+Vector((0,.80,.30))
-  contact=rp+Vector((.40,sting_y,sting_z))
+  contact=rp+Vector((.30,sting_y,sting_z))
   delta=contact-start
   needle.location=(start+contact)*.5
   needle.rotation_euler=delta.to_track_quat('Z','Y').to_euler()
@@ -200,7 +201,7 @@ if chapter in (3,5):
   needle.keyframe_insert(data_path='location',frame=f)
   needle.keyframe_insert(data_path='rotation_euler',frame=f)
   needle.keyframe_insert(data_path='scale',frame=f)
-  bead.scale=(.085*active,.085*active,.085*active)
+  bead.scale=(.05*active,.05*active,.05*active)
   bead.keyframe_insert(data_path='scale',frame=f)
  # A warm grazing light isolates the sting from the forest floor.
  bpy.ops.object.light_add(type='AREA',location=(1.0,-1.9,2.4))
