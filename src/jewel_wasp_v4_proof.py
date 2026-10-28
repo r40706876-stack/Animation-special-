@@ -80,22 +80,29 @@ camera_specs=[
  ((3.3,-5.5,2.7),(-.65,-.65,.65),24),
  ((-3.2,-4.3,2.0),(-.65,-.8,.60),25),
  ((2.5,-3.7,1.5),(-.25,-.85,.50),26),
- ((1.55,-2.8,1.15),(0,-.82,.48),29),
- ((-1.35,-2.65,1.15),(0,-.45,.48),28),
- ((1.35,-2.65,1.20),(0,-1.05,.50),29),
- ((-1.25,-2.6,1.22),(0,-.75,.52),28),
+ ((2.65,-4.0,1.75),(0,-.82,.48),25),
+ ((-2.75,-3.9,1.65),(0,-.45,.48),24),
+ ((2.65,-3.95,1.70),(0,-1.05,.50),25),
+ ((-2.70,-3.85,1.65),(0,-.75,.52),24),
  ((3.1,-4.1,2.0),(-.25,-.65,.48),25),
- ((1.45,-2.85,1.12),(0,-1.15,.48),28),
+ ((2.6,-4.1,1.65),(0,-1.15,.48),24),
  ((-3.2,-4.2,2.35),(.10,-.1,.48),24),
- ((3.15,-2.4,2.15),(1.45,1.0,.35),26),
- ((2.55,-.65,1.36),(1.55,1.18,.67),29),
- ((2.48,-.60,1.43),(1.58,1.20,.75),29),
- ((3.5,-3.25,2.65),(1.25,.75,1.12),25),
+ ((4.4,-4.2,2.8),(1.35,.80,.36),24), # 10: full burrow and entering pair
+ ((3.7,-3.5,2.6),(1.55,1.10,.69),24), # 11: egg and roach both in view
+ ((-1.6,-3.6,2.6),(1.60,1.18,.76),24),# 12: larva on roach, different side
+ ((4.6,-4.2,3.2),(1.45,.55,1.55),24), # 13: wasp flying above burrow
 ]
 position,target,lens=camera_specs[chapter]
 cam.animation_data_clear()
-# Wider coverage in the 540x960 portrait aspect, with a restrained dolly.
-for frame,factor in ((1,1.42),(120,1.34),(240,1.28)):
+# Keep full bodies visible in portrait framing, especially for 3-6 and 10-13.
+# The previous contact sheet still cropped roach/wasp wings and showed a tree
+# completely blocking the burrow and the final take-off shot.
+if chapter>=10:
+ for ob in bpy.data.objects:
+  if ob.name.startswith(("V4 forest trunk","V4 layered forest foliage")):
+   ob.hide_render=True
+dolly=1.52 if chapter in (3,4,5,6,8,10,11,12,13) else 1.34
+for frame,factor in ((1,dolly*1.06),(120,dolly),(240,dolly*.97)):
  cam.location=Vector(target)+(Vector(position)-Vector(target))*factor
  aim(cam,target)
  cam.keyframe_insert(data_path="location",frame=frame)
