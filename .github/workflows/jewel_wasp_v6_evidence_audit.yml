@@ -76,7 +76,7 @@ jobs:
         if: always()
         run: |
           mkdir -p evidence/motion_strips
-          for f in evidence/motion_*.mp4; do
+          for f in evidence/motion_*.mp4 evidence/motion/motion_*.mp4; do
             test -f "$f" || continue
             base="$(basename "$f" .mp4)"
             ffmpeg -y -loglevel error -i "$f" -vf "fps=6,scale=180:320,tile=6x1" -frames:v 1 "evidence/motion_strips/${base}.jpg" || true
