@@ -45,3 +45,23 @@ Reviewed the actual artifact `12854115550` (14 still PNGs, contact sheet and fiv
 - Commit `59e12b44`: strengthen the expensive full-render approval gate to fingerprint all dependent Blender scene files, preventing stale visual approvals after anatomical changes.
 
 **Do not approve the full render based on these code changes.** The revised Blender proof still needs to complete and its actual stills and animated motion must be inspected. V4 remains untouched.
+
+
+## V6.1 proof 40775022479 — inspected directly (2026-10-29 IST)
+
+Source commit: `7514e1a8`. All 20 jobs completed successfully, including 14 stills, five 24-frame motion clips, and the contact assembly. Master artifact `12857675999`. Evidence audit `40781184450` also succeeded and published its contact sheet and motion strips in this folder.
+
+**Decision: FAIL, not approved for the expensive full film.** Direct inspection of `contact_v6.png` and `motion_strips/motion_{0,3,5,10,12}.jpg` showed:
+- Chapter 0 and 1: tiny wasp/roach in a huge empty beige clearing; the 24-frame chapter-0 strip is essentially static. Audit sampled-frame difference 0.64.
+- Chapters 3 and 5: wing flutter is visible, but the sting needle does not extend or make an unmistakable body contact during the sampled interval. Most movement is in the wings.
+- Chapters 7/8/10: similar beige-forest wide compositions, including two near-duplicate image pairs flagged by the audit (7/10 and 8/10).
+- Chapter 10: dark burrow entrance not identifiable; the insects are in an ordinary clearing instead of visibly entering an aperture.
+- Chapter 12: the larva is more legible, but protruding black antenna/leg rods clutter the macro composition. The forest remains repetitive and both insects still look like simple procedural 3D models, not realistic documentary animals.
+- Chapter 13: final wide shot is sparse; the intended departure from the burrow is not visually clear.
+
+### V6.2 targeted corrections (new proof pending)
+
+- Commit `079f82ac`: move the burrow opening beyond the cockroach to keep its dark mouth unobstructed, animate the sting needle through frames 90–121, and hide distracting roach antennae in the larva macro.
+- Commit `30e755f5`: give chapter 8 a distinct close-up, reframe chapter 10 on the burrow, reframe chapter 13 on departure, move the first wide shots closer, and animate a short pursuit dart. Sample chapter-0 motion at frames 48–71 and sting at 90–113, instead of static frames.
+- `src/jewel_wasp_v6_proof.py` was updated to trigger the next V6 proof run. Its run ID, outcome and actual images **must be verified independently**; no automatic approval is permitted.
+- Do not authorize V6 full render until the latest source's 14 stills and all five motion strips are inspected and the actual anatomy, contact, burrow and larva shots are acceptable. V4 remains preserved.
