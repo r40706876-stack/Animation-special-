@@ -170,8 +170,70 @@ shots=[
  ((-1.2,-2.6,1.6),(1.55,1.15,.72),30),
  ((4.0,-3.8,2.6),(1.5,.7,1.25),28)]
 pos,target,lens=shots[chapter]
+# Evidence audit 40748149982: the first ten proof images repeat similar
+# centered compositions; burrow chapters 10/13 have an obstructing trunk.
+# Reframe by story beat and preserve enough context for the full insect bodies.
+if chapter==0:
+ pos,target,lens=(4.8,-7.6,3.9),(-.7,-.6,.55),23
+elif chapter==1:
+ pos,target,lens=(-4.7,-6.7,3.0),(-.6,-.8,.58),24
+elif chapter==2:
+ pos,target,lens=(2.7,-3.5,2.7),(-.1,-.9,.42),27
+elif chapter==4:
+ pos,target,lens=(-2.1,-2.8,2.7),(0,-.45,.61),27
+elif chapter==6:
+ pos,target,lens=(.6,-2.0,3.8),(0,-.32,.62),28
+elif chapter==7:
+ pos,target,lens=(-4.9,-6.8,3.6),(-.2,-.65,.54),23
+elif chapter==9:
+ pos,target,lens=(4.5,-6.8,3.8),(.4,-.2,.45),24
+elif chapter==10:
+ pos,target,lens=(4.9,-5.2,3.9),(1.55,1.1,.25),24
+elif chapter==11:
+ pos,target,lens=(3.2,-3.2,2.6),(1.55,1.2,.75),26
+elif chapter==12:
+ pos,target,lens=(-2.6,-3.1,2.4),(1.6,1.2,.77),27
+elif chapter==13:
+ pos,target,lens=(4.5,-5.8,4.0),(1.4,.6,1.7),24
+
+# Never allow a foreground trunk to block the burrow or final flying wasp.
+if chapter>=10:
+ dx=target[0]-pos[0];dy=target[1]-pos[1]
+ denom=dx*dx+dy*dy
+ for ob in bpy.data.objects:
+  if ob.name.startswith(("V6 irregular trunk","V6 branch","V6 asymmetrical canopy")):
+   ox=ob.location.x-pos[0];oy=ob.location.y-pos[1]
+   q=(ox*dx+oy*dy)/denom
+   dist=math.hypot(ox-q*dx,oy-q*dy)
+   if .05<q<1.0 and dist<1.65:
+    ob.hide_render=True
+
+# A real egg/larva should be identifiable in its own chapter, not a
+# hovering sphere or an indistinct white dot on the cockroach.
+if chapter in (11,12,13):
+ for ob in bpy.data.objects:
+  if ob.name.startswith("wasp egg on cockroach"):
+   ob.location=(.02,-.02,.66)
+   if chapter==11:
+    ob.scale=(.068,.118,.052)
+if chapter==12:
+ for ob in bpy.data.objects:
+  if ob.name.startswith(("schematic larva","V4 larva segment")):
+   ob.hide_render=True
+ larva_skin=organic_material("V6 larva creamy cuticle",(.52,.42,.27),(.91,.83,.60),14,.68)
+ for i in range(7):
+  taper=max(.35,1-abs(i-3)*.17)
+  segment=ell("V6 segmented larva %02d"%i,
+              (.04,-.24+i*.105,.72+.018*math.sin(i*.7)),
+              (.094*taper,.077,.081*taper),larva_skin,roach)
+  segment.rotation_euler[0]=.14*math.sin(i*.7)
+if chapter==13:
+ for ob in bpy.data.objects:
+  if ob.name.startswith(("wasp egg on cockroach","schematic larva","V4 larva segment")):
+   ob.hide_render=True
+
 cam.animation_data_clear()
-for f,factor in ((1,1.14),(120,1.0),(240,.92)):
+for f,factor in ((1,1.55 if chapter in (0,1,7,9,10,13) else 1.25),\n                 (120,1.45 if chapter in (0,1,7,9,10,13) else 1.18),\n                 (240,1.35 if chapter in (0,1,7,9,10,13) else 1.13)):
  cam.location=Vector(target)+(Vector(pos)-Vector(target))*factor
  aim(cam,target)
  cam.keyframe_insert(data_path="location",frame=f)
