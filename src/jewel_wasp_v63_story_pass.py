@@ -39,8 +39,8 @@ if chapter in (3,5):
              (.07,.06,.012),mark_mat,roach)
     for frame,reach in ((1,.03),(84,.03),(93,.32),(102,.74),(110,1.0),(121,1.0),(138,.25),(160,.03),(240,.03)):
         scene.frame_set(frame)
-        start=Vector(wasp.location)+(0,.40,.50)
-        target=Vector(roach.location)+(0,-.54 if chapter==3 else -.91,.62)
+        start=Vector(wasp.location)+Vector((0,.40,.50))
+        target=Vector(roach.location)+Vector((0,-.54 if chapter==3 else -.91,.62))
         tip=start+(target-start)*reach
         direction=tip-start
         length=max(.002,direction.length)
