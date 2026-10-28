@@ -1,10 +1,10 @@
 {
   "workflow": "jewel_wasp_v3_quality_proof.yml",
-  "run_id": 40617486312,
+  "run_id": 40623379059,
   "run_attempt": 1,
-  "source_sha": "25b1202007787a2397f7a22908c97c957be74748",
+  "source_sha": "8bdde663b3d6906375f8a327aac320ab8ff24f13",
   "job_status": "success",
-  "run_url": "https://github.com/r40706876-stack/Animation-special-/actions/runs/40617486312",
+  "run_url": "https://github.com/r40706876-stack/Animation-special-/actions/runs/40623379059",
   "expected_previews": [
     0,
     1,
