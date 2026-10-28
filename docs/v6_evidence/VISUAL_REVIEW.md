@@ -65,3 +65,24 @@ Source commit: `7514e1a8`. All 20 jobs completed successfully, including 14 stil
 - Commit `30e755f5`: give chapter 8 a distinct close-up, reframe chapter 10 on the burrow, reframe chapter 13 on departure, move the first wide shots closer, and animate a short pursuit dart. Sample chapter-0 motion at frames 48–71 and sting at 90–113, instead of static frames.
 - `src/jewel_wasp_v6_proof.py` was updated to trigger the next V6 proof run. Its run ID, outcome and actual images **must be verified independently**; no automatic approval is permitted.
 - Do not authorize V6 full render until the latest source's 14 stills and all five motion strips are inspected and the actual anatomy, contact, burrow and larva shots are acceptable. V4 remains preserved.
+
+
+## V6.2 direct visual review — successful proof 40782659283 (2026-10-29 IST)
+
+The 14 actual 540×960 PNG stills and five actual 24-frame MP4 motion proofs were downloaded from artifact `12859863265`, decoded, and inspected as a 14-shot contact sheet and five six-frame motion strips. All 20 jobs passed technical execution. **VISUAL DECISION: FAIL.**
+
+- Automated evidence audit `40788295796` reports 14 stills, 5 clips, 24 frames each, and **five near-duplicate composition pairs** (0/1, 0/7, 0/10, 1/7, 1/10). No automated visual approval.
+- Ch 0/1/7/9 are nearly interchangeable sparse wide forest shots; the characters are too small to establish the story.
+- Ch 2/3/4/5/8 show bright rounded turquoise wasp sections, pale broad membrane wings and slab-like roach plates; still conspicuously procedural/toy-like rather than documentary-quality insects.
+- Sting motion clips 3 and 5 mostly show wing flutter; the actual needle entering the cockroach is not legible in the sampled frames.
+- Ch 10 shows a dark flat oval separated from a partially cropped roach, not the cockroach entering a convincing burrow; motion strip shows minimal approach.
+- Ch 12 contains detached-looking black leg rods over a creamy segmented larva. The sampled strip shows little larval growth.
+- Ch 13 wasp departure is not unmistakable in the still. Forest foliage remains regular, with an open beige ground and a dark empty horizon.
+
+### V6.3 corrections applied, new proof required
+
+- `5bfce908` and `11fc2b54`: new `src/jewel_wasp_v63_story_pass.py` with world-space keyed ovipositor-to-roach contact, closer burrow placement, larva macro cleanup, distinct pursuit/antenna/burrow camera compositions, and removal of accidentally visible wasp anatomy in neural-explanation chapters.
+- `ff063fe2`: load the new story pass into the 14-chapter V6 proof scene.
+- `7aa440d2`: include the V6.3 story pass in the full-render source-fingerprint approval gate, invalidating stale approvals.
+- `2337637e`: proof workflow now watches all upstream scene dependencies and cancels outdated in-progress proofs when newer source is pushed.
+- **Do not approve the 140-second render yet.** Inspect the new V6.3 proof stills and motion, and specifically verify a readable sting contact, burrow entry, larva development, less repetitive shots and acceptable insect anatomy. The 140-second V4 film is preserved.
