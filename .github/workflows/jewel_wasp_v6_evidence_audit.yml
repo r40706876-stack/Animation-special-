@@ -1,0 +1,91 @@
+name: Jewel Wasp V6 Proof Evidence Audit
+on:
+  push:
+    paths:
+      - ".github/workflows/jewel_wasp_v6_evidence_audit.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install audit tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python -m pip install --quiet pillow
+      - name: Locate newest successful V6 proof and download real artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/jewel_wasp_v6_proof.yml/runs?per_page=15" --jq '.workflow_runs[] | select(.conclusion=="success") | .id' | head -n 1)"
+          test -n "$run_id"
+          echo "SOURCE_PROOF_RUN=$run_id" | tee proof_source.txt
+          mkdir -p evidence
+          gh run download "$run_id" -R "$GITHUB_REPOSITORY" -n jewel-wasp-v6-master-quality-proof -D evidence
+          find evidence -type f | sort | tee evidence/files.txt
+      - name: Verify all stills and real animated movement
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageChops, ImageStat
+          import subprocess, json, statistics
+          root=Path('evidence')
+          stills=sorted(root.rglob('chapter_??.png'))
+          motions=sorted(root.rglob('motion_*.mp4'))
+          report={'still_count':len(stills),'motion_count':len(motions),'stills':[],'motion':[],'issues':[]}
+          if len(stills)!=14:report['issues'].append('Expected 14 chapter stills')
+          if len(motions)!=5:report['issues'].append('Expected 5 animated motion clips')
+          hashes=[]
+          for p in stills:
+            im=Image.open(p).convert('RGB').resize((32,32))
+            mean=ImageStat.Stat(im).mean
+            thumb=im.convert('L').resize((8,8))
+            pixels=list(thumb.getdata()); avg=sum(pixels)/len(pixels)
+            h=''.join('1' if x>avg else '0' for x in pixels)
+            hashes.append(h)
+            report['stills'].append({'file':p.name,'brightness':round(sum(mean)/3,1),'hash':h})
+            if sum(mean)/3<18:report['issues'].append(p.name+' almost black')
+          for i in range(len(hashes)):
+            for j in range(i+1,len(hashes)):
+              distance=sum(a!=b for a,b in zip(hashes[i],hashes[j]))
+              if distance<=3:report['issues'].append('Nearly identical compositions: '+stills[i].name+' / '+stills[j].name)
+          for p in motions:
+            probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-count_frames','-select_streams','v:0','-show_entries','stream=nb_read_frames','-of','json',str(p)]))
+            frames=int(probe['streams'][0].get('nb_read_frames',0))
+            raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(p),'-vf','fps=4,scale=64:64,format=gray','-f','rawvideo','-'])
+            size=64*64; sampled=[raw[i:i+size] for i in range(0,len(raw),size) if len(raw[i:i+size])==size]
+            differences=[sum(abs(a-b) for a,b in zip(x,y))/size for x,y in zip(sampled,sampled[1:])]
+            movement=max(differences,default=0)
+            report['motion'].append({'file':p.name,'frames':frames,'sampled_frame_differences':round(movement,2)})
+            if frames!=24:report['issues'].append(p.name+' not 24 frames')
+            if movement<0.6:report['issues'].append(p.name+' appears static')
+          report['automated_checks_pass']=not report['issues']
+          report['human_visual_review_pass']=False
+          report['note']='Automated QA cannot certify anatomy, narrative clarity, realism or Hindi audio. Review contact and motion previews manually.'
+          Path('evidence/audit.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Generate motion contact strips for visual inspection
+        if: always()
+        run: |
+          mkdir -p evidence/motion_strips
+          for f in evidence/motion_*.mp4; do
+            test -f "$f" || continue
+            base="$(basename "$f" .mp4)"
+            ffmpeg -y -loglevel error -i "$f" -vf "fps=6,scale=180:320,tile=6x1" -frames:v 1 "evidence/motion_strips/${base}.jpg" || true
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-v6-audited-visual-evidence
+          path: |
+            evidence/
+            proof_source.txt
+          retention-days: 14
