@@ -1,7 +1,7 @@
 name: Jewel Wasp Full 140s 3D Film
 on:
   push:
-    branches: [main, feature/jewel-wasp-visual-v2]
+    branches: [main, feature/jewel-wasp-visual-v2, feature/jewel-wasp-quality-v3]
     paths:
       - "src/jewel_wasp_full.py"
       - "src/jewel_wasp_full_audio.py"
@@ -14,6 +14,36 @@ concurrency:
   group: jewel-wasp-full-film
   cancel-in-progress: false
 jobs:
+  announce:
+    name: Publish full-film run locator
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Record current 140-second V3 render run
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,pathlib
+          data={"run_id":int(os.environ["GITHUB_RUN_ID"]),
+                "run_url":f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+                "source_sha":os.environ["GITHUB_SHA"],
+                "branch":os.environ["GITHUB_REF_NAME"],
+                "expected_chapters":list(range(14)),
+                "target_frames":3360,
+                "target_duration_seconds":140,
+                "status":"started; verify all 14 jobs and assembly before claiming completion"}
+          pathlib.Path("/tmp/jewel_full_status.json").write_text(json.dumps(data,indent=2)+"\\n")
+          print("JEWEL_FULL_RUN_LOCATOR",json.dumps(data),flush=True)
+          PY
+          content="$(base64 -w0 /tmp/jewel_full_status.json)"
+          existing="$(gh api "repos/$GITHUB_REPOSITORY/contents/status/jewel_wasp_full_latest.json?ref=$GITHUB_REF_NAME" --jq .sha 2>/dev/null || true)"
+          args=(-f "message=Track full 140s render $GITHUB_RUN_ID" -f "content=$content" -f "branch=$GITHUB_REF_NAME")
+          if [ -n "$existing" ]; then args+=(-f "sha=$existing"); fi
+          gh api --method PUT "repos/$GITHUB_REPOSITORY/contents/status/jewel_wasp_full_latest.json" "${args[@]}" >/dev/null
   render:
     name: Render full-film chapter ${{ matrix.chapter }}
     runs-on: ubuntu-latest
@@ -24,9 +54,9 @@ jobs:
         chapter: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     steps:
       - uses: actions/checkout@v4
-      # V2 changes geometry, forest and camera: old V1 chapters are not visually compatible.
-      # Preserve the complete V1 artifacts in run 40524910322; never silently reuse them for V2.
-      - name: Require fresh V2 render for every changed chapter
+      # V3 changes every chapter's geometry and camera: never mix old V2 chapters into this render.
+      # Preserve V1/V2 artifacts in their successful earlier runs; render all 14 V3 chapters.
+      - name: Require fresh chapter render for the active source revision
         id: reuse
         run: echo "reused=false" >> "$GITHUB_OUTPUT"
       - name: Install Blender 4.2 and video tools
