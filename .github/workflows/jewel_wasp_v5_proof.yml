@@ -1,0 +1,50 @@
+name: Jewel Wasp V5 Organic Visual Proof (14 Story Frames)
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_v5_proof.py"
+      - ".github/workflows/jewel_wasp_v5_proof.yml"
+  workflow_dispatch:
+# Re-run proof after 08f3883 camera and forest-occlusion fixes.
+permissions:
+  contents: read
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and FFmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render all 14 distinct story moments as real Blender stills
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          for chapter in $(seq 0 13); do
+            frame=120
+            if [ "$chapter" -eq 11 ] || [ "$chapter" -eq 12 ]; then frame=210; fi
+            file="proof/chapter_$(printf '%02d' "$chapter").png"
+            STORY_CHAPTER="$chapter" PROOF_FRAME="$frame" BLENDER_OUTPUT="$PWD/$file" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v5_proof.py > "proof/chapter_$chapter.log" 2>&1 || { tail -n 90 "proof/chapter_$chapter.log"; exit 1; }
+            grep -q "JEWEL_V5_RENDER_DONE $chapter" "proof/chapter_$chapter.log"
+            test -s "$file"
+            echo "V5 chapter $chapter preview ready"
+          done
+          test "$(find proof -name 'chapter_??.png' | wc -l)" -eq 14
+          ffmpeg -y -loglevel error -framerate 1 -i proof/chapter_%02d.png -vf "scale=180:320,tile=4x4" -frames:v 1 proof/contact_v5.png
+          test -s proof/contact_v5.png
+          test "$(sha256sum proof/chapter_??.png | cut -d' ' -f1 | sort -u | wc -l)" -eq 14
+          echo "JEWEL_V5_ALL_14_STILLS_PASS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v5-14-scene-quality-proof
+          path: proof/
+          if-no-files-found: warn
+          retention-days: 14
