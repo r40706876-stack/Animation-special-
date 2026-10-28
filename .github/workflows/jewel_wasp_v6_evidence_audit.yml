@@ -4,11 +4,15 @@ on:
     paths:
       - ".github/workflows/jewel_wasp_v6_evidence_audit.yml"
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Jewel Wasp V6 One-Pass Visual and Motion Proof"]
+    types: [completed]
 permissions:
   actions: read
   contents: write
 jobs:
   evidence:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
