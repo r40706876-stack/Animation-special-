@@ -1,0 +1,8 @@
+{
+  "audit_workflow_run": "40766656144",
+  "audit_source_commit": "fadca3fd852894e65d775962cf0114140c8057b2",
+  "source_proof_run": "SOURCE_PROOF_RUN=40748149982",
+  "audit_report_present": true,
+  "visual_review_approved": false,
+  "full_render_authorized": false
+}

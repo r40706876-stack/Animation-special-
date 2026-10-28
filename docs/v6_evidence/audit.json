@@ -1,0 +1,123 @@
+{
+  "still_count": 14,
+  "motion_count": 5,
+  "stills": [
+    {
+      "file": "chapter_00.png",
+      "brightness": 112.3,
+      "hash": "0000000000000000000000001111111111111111111111111111111111111111"
+    },
+    {
+      "file": "chapter_01.png",
+      "brightness": 110.4,
+      "hash": "0000000000000000000000001110111111111111111111111111111111111111"
+    },
+    {
+      "file": "chapter_02.png",
+      "brightness": 110.2,
+      "hash": "0000000000000000000000000111111111111100111111111111111111111111"
+    },
+    {
+      "file": "chapter_03.png",
+      "brightness": 110.5,
+      "hash": "0000000000000000011111111111111111100000111111111111111111111111"
+    },
+    {
+      "file": "chapter_04.png",
+      "brightness": 107.8,
+      "hash": "0000000000000000000000001111111111000111111111111111111111111111"
+    },
+    {
+      "file": "chapter_05.png",
+      "brightness": 116.2,
+      "hash": "0000000000000000111111111111111100011000111111111111111111111111"
+    },
+    {
+      "file": "chapter_06.png",
+      "brightness": 106.3,
+      "hash": "0000000000000000000000001111111111000111111111111111111111111111"
+    },
+    {
+      "file": "chapter_07.png",
+      "brightness": 107.6,
+      "hash": "0000000000000000000000001111111111100111111111111111111111111111"
+    },
+    {
+      "file": "chapter_08.png",
+      "brightness": 109.0,
+      "hash": "0000000000000000000000001011111111110000111111111111111111111111"
+    },
+    {
+      "file": "chapter_09.png",
+      "brightness": 109.6,
+      "hash": "0000000000000000000000001111111111111111111111111111111111111111"
+    },
+    {
+      "file": "chapter_10.png",
+      "brightness": 76.9,
+      "hash": "0000000000000000001111100011111100011111001111110001111110011111"
+    },
+    {
+      "file": "chapter_11.png",
+      "brightness": 87.5,
+      "hash": "0000000000000000101000001111111111111011111000011111111111111111"
+    },
+    {
+      "file": "chapter_12.png",
+      "brightness": 95.4,
+      "hash": "0001111000000000000000000001100011111111111100111111111111111111"
+    },
+    {
+      "file": "chapter_13.png",
+      "brightness": 60.6,
+      "hash": "0110000000000000000000000001111100011111000111110001111100011111"
+    }
+  ],
+  "motion": [
+    {
+      "file": "motion_0.mp4",
+      "frames": 24,
+      "sampled_frame_differences": 0.83
+    },
+    {
+      "file": "motion_10.mp4",
+      "frames": 24,
+      "sampled_frame_differences": 3.95
+    },
+    {
+      "file": "motion_12.mp4",
+      "frames": 24,
+      "sampled_frame_differences": 5.65
+    },
+    {
+      "file": "motion_3.mp4",
+      "frames": 24,
+      "sampled_frame_differences": 4.56
+    },
+    {
+      "file": "motion_5.mp4",
+      "frames": 24,
+      "sampled_frame_differences": 5.72
+    }
+  ],
+  "issues": [
+    "Nearly identical compositions: chapter_00.png / chapter_01.png",
+    "Nearly identical compositions: chapter_00.png / chapter_02.png",
+    "Nearly identical compositions: chapter_00.png / chapter_04.png",
+    "Nearly identical compositions: chapter_00.png / chapter_06.png",
+    "Nearly identical compositions: chapter_00.png / chapter_07.png",
+    "Nearly identical compositions: chapter_00.png / chapter_09.png",
+    "Nearly identical compositions: chapter_01.png / chapter_07.png",
+    "Nearly identical compositions: chapter_01.png / chapter_09.png",
+    "Nearly identical compositions: chapter_02.png / chapter_09.png",
+    "Nearly identical compositions: chapter_04.png / chapter_06.png",
+    "Nearly identical compositions: chapter_04.png / chapter_07.png",
+    "Nearly identical compositions: chapter_04.png / chapter_09.png",
+    "Nearly identical compositions: chapter_06.png / chapter_07.png",
+    "Nearly identical compositions: chapter_06.png / chapter_09.png",
+    "Nearly identical compositions: chapter_07.png / chapter_09.png"
+  ],
+  "automated_checks_pass": false,
+  "human_visual_review_pass": false,
+  "note": "Automated QA cannot certify anatomy, narrative clarity, realism or Hindi audio. Review contact and motion previews manually."
+}
