@@ -232,6 +232,19 @@ if chapter==13:
   if ob.name.startswith(("wasp egg on cockroach","schematic larva","V4 larva segment")):
    ob.hide_render=True
 
+# V6.1: targeted anatomy and story-action fixes from visual review of run 40767077776.
+# Executed after existing scene objects are created and before camera keyframes.
+_anatomy=pathlib.Path(__file__).with_name("jewel_wasp_v6_anatomy_pass.py")
+exec(compile(_anatomy.read_text(),str(_anatomy),"exec"),globals())
+if chapter==3:
+ pos,target,lens=(2.0,-3.0,1.75),(-.12,-1.12,.48),32
+elif chapter==5:
+ pos,target,lens=(-2.6,-3.4,1.8),(-.12,-1.35,.48),33
+elif chapter==11:
+ pos,target,lens=(3.0,-1.5,1.85),(1.65,1.15,.72),33
+elif chapter==12:
+ pos,target,lens=(3.0,-1.0,1.85),(1.65,1.24,.79),35
+
 cam.animation_data_clear()
 for f,factor in ((1,1.55 if chapter in (0,1,7,9,10,13) else 1.25),
                  (120,1.45 if chapter in (0,1,7,9,10,13) else 1.18),
