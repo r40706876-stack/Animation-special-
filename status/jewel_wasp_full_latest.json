@@ -1,0 +1,25 @@
+{
+  "run_id": 40624338637,
+  "run_url": "https://github.com/r40706876-stack/Animation-special-/actions/runs/40624338637",
+  "source_sha": "68c44907c7752728b5fa22bf5ad64269270cf9b1",
+  "branch": "feature/jewel-wasp-quality-v3",
+  "expected_chapters": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "target_frames": 3360,
+  "target_duration_seconds": 140,
+  "status": "started; verify all 14 jobs and assembly before claiming completion"
+}\n
