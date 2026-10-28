@@ -233,7 +233,9 @@ if chapter==13:
    ob.hide_render=True
 
 cam.animation_data_clear()
-for f,factor in ((1,1.55 if chapter in (0,1,7,9,10,13) else 1.25),\n                 (120,1.45 if chapter in (0,1,7,9,10,13) else 1.18),\n                 (240,1.35 if chapter in (0,1,7,9,10,13) else 1.13)):
+for f,factor in ((1,1.55 if chapter in (0,1,7,9,10,13) else 1.25),
+                 (120,1.45 if chapter in (0,1,7,9,10,13) else 1.18),
+                 (240,1.35 if chapter in (0,1,7,9,10,13) else 1.13)):
  cam.location=Vector(target)+(Vector(pos)-Vector(target))*factor
  aim(cam,target)
  cam.keyframe_insert(data_path="location",frame=f)
