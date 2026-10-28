@@ -1,6 +1,6 @@
 """V6 one-pass cinematic proof: anatomy, forest, action cameras and motion.
 Build on the verified V5 setup, but do not run its final still render.
-Default 14-scene still proof; V6_MOTION=1 renders 48 animated frames.
+Default 14-scene still proof; V6_MOTION=1 renders 24 animated frames.
 This is a visual prototype, not an approved final 140-second film.
 """
 import os, math, random, pathlib
@@ -18,7 +18,7 @@ ell,link,mat,aim=ctx["ell"],ctx["link"],ctx["mat"],ctx["aim"]
 rng=random.Random(601+chapter)
 # Anatomy: replace conspicuous spherical eyes with small dark compound-eye clusters.
 for obj in bpy.data.objects:
- if obj.name in ("cockroach eye","wasp eye"):
+ if obj.name.startswith(("cockroach eye","wasp eye")):
   obj.scale=tuple(v*.55 for v in obj.scale)
  if obj.name=="cockroach abdomen":
   obj.scale=(.41,.88,.24)
@@ -28,9 +28,9 @@ for obj in bpy.data.objects:
   obj.scale=(.165,.17,.16)
  if obj.name=="wasp thorax":
   obj.scale=(.22,.28,.18)
- if obj.name=="animated wasp wing":
+ if obj.name.startswith("animated wasp wing"):
   obj.scale=(.43,.105,.009)
- if obj.name in ("V5 narrow fern leaf","V5 irregular canopy"):
+ if obj.name.startswith(("V5 narrow fern leaf","V5 irregular canopy")):
   obj.hide_render=True
 
 # Deep, natural pigment variation: noise-based colors, not flat toy surfaces.
@@ -119,7 +119,7 @@ wall.data.materials.append(back)
 # Articulated legs: original straight cylinders are hidden, animated replacements
 # use independent body-local hip pivots and alternating tripod phase.
 for ob in bpy.data.objects:
- if ob.name in ("cockroach leg upper","cockroach leg lower","wasp leg"):
+ if ob.name.startswith(("cockroach leg upper","cockroach leg lower","wasp leg")):
   ob.hide_render=True
 dark=mat("V6 insect joint dark",(.028,.017,.012),.13,.52)
 def leg_rig(rig,side,idx,hip,span,front):
