@@ -5,6 +5,7 @@ on:
       - "src/jewel_wasp_v4_proof.py"
       - ".github/workflows/jewel_wasp_v4_proof.yml"
   workflow_dispatch:
+# Re-run proof after 08f3883 camera and forest-occlusion fixes.
 permissions:
   contents: read
 jobs:
