@@ -10,7 +10,7 @@ permissions:
   actions: read
 concurrency:
   group: jewel-wasp-v6-proof
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   stills:
     name: V6 still chapter ${{ matrix.chapter }}
