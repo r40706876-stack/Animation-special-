@@ -109,12 +109,18 @@ jobs:
           python - <<'PY'
           import json,subprocess,pathlib,os
           p='videos/JEWEL_WASP_FULL_STORY.mp4'
-          raw=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames:format=duration','-of','json',p],text=True)
+          raw=subprocess.check_output(['ffprobe','-v','error','-count_frames','-show_entries','stream=codec_type,width,height,nb_read_frames,duration:format=duration','-of','json',p],text=True)
           meta=json.loads(raw);video=next(s for s in meta['streams'] if s['codec_type']=='video')
-          audio=any(s['codec_type']=='audio' for s in meta['streams'])
+          audio_stream=next((s for s in meta['streams'] if s['codec_type']=='audio'),None)
           duration=float(meta['format']['duration']);frames=int(video['nb_read_frames'])
-          ok=frames==3360 and video['width']==540 and video['height']==960 and 139.9<=duration<=140.1 and audio
-          report={'file':p,'frames':frames,'width':video['width'],'height':video['height'],'duration':duration,'audio_present':audio,'narration_generated':True,'decode_ok':True,'technical_qa_pass':ok,'visual_quality_reviewed':False,'quality_gate':'V6 proof must be independently visually approved before render','source_commit':os.getenv('GITHUB_SHA')}
+          audio_duration=float(audio_stream.get('duration',0)) if audio_stream else 0
+          volume=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',p,'-vn','-af','volumedetect','-f','null','-'],capture_output=True,text=True)
+          import re
+          match=re.search(r'max_volume:\\s*(-?\\d+(?:\\.\\d+)?) dB',volume.stderr)
+          peak_db=float(match.group(1)) if match else None
+          audio_non_silent=volume.returncode==0 and peak_db is not None and peak_db>-35
+          ok=frames==3360 and video['width']==540 and video['height']==960 and 139.9<=duration<=140.1 and audio_duration>=139.5 and audio_non_silent
+          report={'file':p,'frames':frames,'width':video['width'],'height':video['height'],'duration':duration,'audio_present':bool(audio_stream),'audio_duration':audio_duration,'audio_peak_db':peak_db,'audio_non_silent':audio_non_silent,'narration_generated':True,'decode_ok':True,'technical_qa_pass':ok,'visual_quality_reviewed':False,'hindi_intelligibility_listen_verified':False,'quality_gate':'V6 proof and final film require independent visual and Hindi listening review','source_commit':os.getenv('GITHUB_SHA')}
           pathlib.Path('videos/jewel_full_qa.json').write_text(json.dumps(report,indent=2))
           print('JEWEL_FULL_FILM_QA',json.dumps(report),flush=True)
           assert ok,report
