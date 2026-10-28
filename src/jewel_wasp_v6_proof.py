@@ -184,7 +184,8 @@ scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.getenv("BLENDER_OUTPUT","/tmp/jewel_v6_proof.png")
 motion=os.getenv("V6_MOTION","0")=="1"
 if motion:
- scene.frame_start=1;scene.frame_end=48
+ scene.frame_start=95 if chapter in (3,5,10,12) else 1
+ scene.frame_end=scene.frame_start+47
  scene.render.image_settings.file_format="FFMPEG"
  scene.render.ffmpeg.format="MPEG4";scene.render.ffmpeg.codec="H264"
  print("JEWEL_V6_MOTION_START",chapter,flush=True)
