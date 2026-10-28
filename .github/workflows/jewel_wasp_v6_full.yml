@@ -116,7 +116,7 @@ jobs:
           audio_duration=float(audio_stream.get('duration',0)) if audio_stream else 0
           volume=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',p,'-vn','-af','volumedetect','-f','null','-'],capture_output=True,text=True)
           import re
-          match=re.search(r'max_volume:\\s*(-?\\d+(?:\\.\\d+)?) dB',volume.stderr)
+          match=re.search(r'max_volume:\s*(-?\d+(?:\.\d+)?) dB',volume.stderr)
           peak_db=float(match.group(1)) if match else None
           audio_non_silent=volume.returncode==0 and peak_db is not None and peak_db>-35
           ok=frames==3360 and video['width']==540 and video['height']==960 and 139.9<=duration<=140.1 and audio_duration>=139.5 and audio_non_silent
