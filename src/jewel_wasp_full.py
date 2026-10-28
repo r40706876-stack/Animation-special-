@@ -163,13 +163,73 @@ if chapter in (3,5,8):
   cue_bsdf.inputs['Emission Strength'].default_value=2.0
  target_y=-.62 if chapter==3 else (-1.10 if chapter==5 else -1.72)
  cue_z=.52 if chapter==3 else (.43 if chapter==5 else .46)
- bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(0,target_y,cue_z),major_radius=.24 if chapter!=8 else .20,minor_radius=.018)
+ bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(.40,target_y,cue_z),major_radius=.24 if chapter!=8 else .20,minor_radius=.018)
  target=bpy.context.object
  target.name='visible anatomy target %d'%chapter
+ target.rotation_euler[1]=1.10
  target.parent=roach
  target.data.materials.append(cue)
  for f,s in ((1,.5),(80,1.0),(150,1.18),(240,.75)):
   target.scale=(s,s,s);target.keyframe_insert(data_path='scale',frame=f)
+# V3B visual QA: reveal the actual injection contact instead of hiding the
+# stinger under overlapping insect bodies. This is an animated 3D needle,
+# not a 2D overlay; it follows the existing chapter motion.
+if chapter in (3,5):
+ sting_y=-.62 if chapter==3 else -1.10
+ sting_z=.52 if chapter==3 else .43
+ needle_mat=mat('sting needle metallic amber',(0.68,.31,.04),.38,.25)
+ glow_mat=mat('sting contact illuminated',(1.0,.28,.015),.0,.28)
+ glow_bsdf=glow_mat.node_tree.nodes.get('Principled BSDF')
+ if glow_bsdf:
+  glow_bsdf.inputs['Emission Color'].default_value=(1.0,.20,.008,1)
+  glow_bsdf.inputs['Emission Strength'].default_value=2.5
+ bpy.ops.mesh.primitive_cone_add(vertices=12,radius1=.028,radius2=.003,depth=1)
+ needle=bpy.context.object
+ needle.name='ANIMATED stinger contacting roach '+str(chapter)
+ needle.data.materials.append(needle_mat)
+ bead=ell('sting site contact glow',(.40,sting_y,sting_z),(.085,.085,.085),glow_mat,roach)
+ for f in (1,55,90,120,150,195,240):
+  rp=interp(rpath,f);wp=interp(wpath,f)
+  start=wp+Vector((0,.80,.30))
+  contact=rp+Vector((.40,sting_y,sting_z))
+  delta=contact-start
+  needle.location=(start+contact)*.5
+  needle.rotation_euler=delta.to_track_quat('Z','Y').to_euler()
+  active=.98 if 70<=f<=160 else .015
+  needle.scale=(active,active,max(.01,delta.length)*active)
+  needle.keyframe_insert(data_path='location',frame=f)
+  needle.keyframe_insert(data_path='rotation_euler',frame=f)
+  needle.keyframe_insert(data_path='scale',frame=f)
+  bead.scale=(.085*active,.085*active,.085*active)
+  bead.keyframe_insert(data_path='scale',frame=f)
+ # A warm grazing light isolates the sting from the forest floor.
+ bpy.ops.object.light_add(type='AREA',location=(1.0,-1.9,2.4))
+ bpy.context.object.data.energy=260
+ bpy.context.object.data.size=1.6
+# Wing-cover vein details improve the host's silhouette in every chapter.
+# Parent geometry to the animated rig so the veins move with the cockroach.
+veinmat=mat('cockroach wing vein umber',(0.095,.029,.011),.04,.63)
+for side in (-1,1):
+ for offset in (-.07,.06):
+  x=side*(.20+offset)
+  link('wing cover longitudinal vein %s %s'%(side,offset),
+       (x,-.38,.685),(x+side*.035,.53,.69),.009,veinmat,roach)
+ for y in (-.20,.04,.28,.47):
+  link('wing cover cross vein %s %s'%(side,y),
+       (side*.10,y,.681),(side*.29,y+.055,.686),.006,veinmat,roach)
+# More convincing burrow lip: raised soil, dark inner shaft, uneven rim.
+if chapter==10:
+ darkshaft=mat('burrow deep shaft',(0.004,.005,.003),0,.99)
+ ell('burrow dark inner depth',(1.94,1.48,.065),(.59,.43,.015),darkshaft)
+ moundmat=mat('burrow excavated rim',(0.16,.11,.065),0,.97)
+ for i in range(20):
+  a=math.tau*i/20
+  rad=1.03+.06*math.sin(i*2.3)
+  pebble=ell('burrow raised soil %02d'%i,
+       (1.94+rad*.78*math.cos(a),1.48+rad*.60*math.sin(a),.10),
+       (.16,.12,.075),moundmat)
+  pebble.rotation_euler[2]=a
+print('JEWEL_V3B_STING_DETAIL_READY',chapter,flush=True)
 if os.getenv('JEWEL_PREVIEW','0')=='1':
  scene.frame_set(int(os.getenv('JEWEL_PREVIEW_FRAME','120')))
  scene.render.resolution_percentage=70
