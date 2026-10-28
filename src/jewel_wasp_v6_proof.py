@@ -240,6 +240,9 @@ if chapter==13:
 # Executed after existing scene objects are created and before camera keyframes.
 _anatomy=pathlib.Path(__file__).with_name("jewel_wasp_v6_anatomy_pass.py")
 exec(compile(_anatomy.read_text(),str(_anatomy),"exec"),globals())
+# V6.3: direct visual corrections from actual successful V6.2 run 40782659283.
+_story=pathlib.Path(__file__).with_name("jewel_wasp_v63_story_pass.py")
+exec(compile(_story.read_text(),str(_story),"exec"),globals())
 if chapter==3:
  pos,target,lens=(2.0,-3.0,1.75),(-.12,-1.12,.48),32
 elif chapter==5:
