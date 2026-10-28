@@ -11,7 +11,7 @@ base=pathlib.Path(__file__).with_name("jewel_wasp_full.py")
 source=base.read_text()
 marker="bpy.ops.render.render(animation=True)"
 assert source.count(marker)==1, "Original chapter render boundary changed; review wrapper"
-context={"__name__":"__main__"}
+context={"__name__":"__main__","__file__":str(base)}
 exec(compile(source.split(marker)[0],str(base),"exec"),context)
 scene=context["scene"];cam=context["cam"];roach=context["roach"];wasp=context["wasp"]
 ell=context["ell"];link=context["link"];mat=context["mat"];aim=context["aim"]
