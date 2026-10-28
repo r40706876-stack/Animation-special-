@@ -60,9 +60,9 @@ for rig,positions in ((roach,rpath),(wasp,wpath)):
 # V3 cinematography: use narrative-specific shot scales and subjects instead of
 # repeating the same distant two-insect composition for all 14 chapters.
 # Preserve the animation paths, frame count and the finished V2 artifact.
-shot_distance=[11.2,9.7,8.8,6.9,7.5,6.7,7.5,9.3,7.4,10.6,6.8,4.7,4.4,5.0]
-shot_lens=[36,39,42,44,43,46,42,39,44,36,38,49,51,47]
-shot_azimuth=[24,34,43,55,22,62,36,45,52,29,60,48,32,18]
+shot_distance=[7.8,8.2,8.0,6.9,7.5,6.7,7.5,8.5,7.4,9.2,7.4,5.5,5.1,8.1]
+shot_lens=[42,41,42,44,43,46,42,41,44,38,42,47,49,43]
+shot_azimuth=[24,34,43,55,22,62,36,45,52,29,60,75,83,31]
 cam.data.lens=shot_lens[chapter]
 cam.data.sensor_fit='VERTICAL'
 def interp(points,frame):
@@ -88,16 +88,21 @@ for frame in (1,48,96,144,192,240):
     # Burrow and egg sequence: make the entrance and developing egg visible.
     elif chapter==10:
         focus=Vector((2.02,1.48,.13))*.80+focus*.20
-    elif chapter in (11,12):
-        # True macro view: the egg and growing larva live on the roach's back.
-        focus=rp+Vector((.05,.13,.82))
+    elif chapter==11:
+        # A small egg beside the middle leg, not a giant egg on the back.
+        focus=rp+Vector((.36,-.38,.31))
+    elif chapter==12:
+        # Side-on larval feeding view, distinct from the egg-laying camera.
+        focus=rp+Vector((.43,.03,.32))
     elif chapter==13:
-        # Begin on the developing larva, then reveal the departing adult wasp.
-        macro=rp+Vector((.05,.13,.87))
-        flight=wp+Vector((0,0,.24))
-        focus=macro.lerp(flight,max(0,min(1,(frame-150)/90)))
+        # End on the departing adult wasp, avoiding another identical macro shot.
+        focus=wp+Vector((0,0,.16))
     az=math.radians(shot_azimuth[chapter])+.065*math.sin(frame/240*math.pi)
-    direction=Vector((math.sin(az)*.35,-.52,.98)).normalized() if chapter in (10,11,12) else (Vector((math.sin(az)*.45,-.72,.78)).normalized() if chapter in (3,4,5,6,8) else Vector((math.sin(az)*.55,-.84,.49)).normalized())
+    direction=(Vector((.85,-.66,.34)).normalized() if chapter==11 else
+               Vector((.94,-.23,.40)).normalized() if chapter==12 else
+               Vector((math.sin(az)*.35,-.52,.98)).normalized() if chapter==10 else
+               Vector((math.sin(az)*.45,-.72,.78)).normalized() if chapter in (3,4,5,6,8) else
+               Vector((math.sin(az)*.55,-.84,.49)).normalized())
     cam.location=focus+direction*shot_distance[chapter]
     aim(cam,focus)
     cam.keyframe_insert(data_path='location',frame=frame)
@@ -126,22 +131,29 @@ if chapter>=10:
  for i in range(12):
   angle=i*math.tau/12
   ell('burrow edge pebble %d'%i,(1.94+math.cos(angle)*.80,1.48+math.sin(angle)*.60,.10),(.13,.11,.08),ns['soil'])
-if chapter in (11,12,13):
- eggmat=mat('ivory egg',(0.88,.78,.52),0,.38)
- egg=ell('wasp egg on cockroach',(.05,.1,.77),(.20,.30,.16),eggmat,roach)
- if chapter==11:
-  for frame,size in ((1,.02),(55,.38),(120,1.0),(240,1.10)):
-   egg.scale=(.20*size,.30*size,.16*size);egg.keyframe_insert(data_path='scale',frame=frame)
- if chapter>=12:
-  larva=ell('schematic larva',(.05,.16,.96),(.29,.48,.23),eggmat,roach)
-  for frame,size in ((1,.20),(120,.75),(240,1)):
-   larva.scale=(.29*size,.48*size,.23*size);larva.keyframe_insert(data_path='scale',frame=frame)
-  # Segmentation distinguishes the growing larva from the egg in macro shots.
-  bandmat=mat('larva segmentation amber',(0.63,.46,.23),0,.58)
-  for i in range(4):
-   band=ell('larva segment %d'%i,(.05,.16+(i-1.5)*.17,1.14),(.28,.032,.035),bandmat,roach)
-   for frame,size in ((1,.2),(120,.75),(240,1)):
-    band.scale=(.28*size,.032*size,.035*size);band.keyframe_insert(data_path='scale',frame=frame)
+if chapter==11:
+ # Jewel wasps attach a small egg beside the cockroach middle leg (coxal region).
+ # Earlier V3 accidentally drew a giant egg on the dorsal wing cover.
+ eggmat=mat('ivory egg',(0.89,.79,.55),0,.45)
+ egg=ell('small egg beside roach leg',(.40,-.40,.30),(.072,.13,.055),eggmat,roach)
+ for frame,size in ((1,.02),(55,.35),(120,1.0),(240,1.0)):
+  egg.scale=(.072*size,.13*size,.055*size);egg.keyframe_insert(data_path='scale',frame=frame)
+if chapter==12:
+ # Later stage: an external segmented larva feeds at the host's side, not on top.
+ eggmat=mat('larval ivory',(0.87,.78,.56),0,.48)
+ larva=ell('feeding larva beside roach',(.46,.03,.34),(.16,.30,.13),eggmat,roach)
+ for frame,size in ((1,.20),(120,.72),(240,1.0)):
+  larva.scale=(.16*size,.30*size,.13*size);larva.keyframe_insert(data_path='scale',frame=frame)
+ bandmat=mat('larval segment amber',(0.61,.43,.22),0,.64)
+ for i in range(4):
+  band=ell('larva segment %d'%i,(.56,.03+(i-1.5)*.105,.40),(.035,.022,.075),bandmat,roach)
+  for frame,size in ((1,.2),(120,.72),(240,1)):
+   band.scale=(.035*size,.022*size,.075*size);band.keyframe_insert(data_path='scale',frame=frame)
+if chapter==13:
+ # Emergence and departure: a small spent pupal casing remains on the host.
+ shellmat=mat('spent cocoon',(0.57,.40,.22),0,.84)
+ shell=ell('split spent pupal casing',(.43,.12,.35),(.13,.25,.10),shellmat,roach)
+ shell.rotation_euler[1]=.30
 # Visible anatomical cues distinguish sting and antenna-grasp chapters.
 if chapter in (3,5,8):
  cue=mat('anatomy cue amber',(1.0,.34,.035),.12,.12)
@@ -150,7 +162,8 @@ if chapter in (3,5,8):
   cue_bsdf.inputs['Emission Color'].default_value=(1.0,.26,.01,1)
   cue_bsdf.inputs['Emission Strength'].default_value=2.0
  target_y=-.62 if chapter==3 else (-1.10 if chapter==5 else -1.72)
- bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(0,target_y,.73),major_radius=.27 if chapter!=8 else .20,minor_radius=.022)
+ cue_z=.52 if chapter==3 else (.43 if chapter==5 else .46)
+ bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,location=(0,target_y,cue_z),major_radius=.24 if chapter!=8 else .20,minor_radius=.018)
  target=bpy.context.object
  target.name='visible anatomy target %d'%chapter
  target.parent=roach
