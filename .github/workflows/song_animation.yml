@@ -44,7 +44,7 @@ jobs:
     env:
       AUDIO_PATH: ${{ inputs.audio_path || 'song_animation/inputs/reference.mp3' }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_MODEL: gemini-2.5-flash
+      GEMINI_MODEL: ""
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: song-whisper-small-v1
+          key: song-whisper-large-v3-turbo-v1
       - name: Lyrics to connected animation draft
         run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080
       - uses: actions/upload-artifact@v4

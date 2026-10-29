@@ -15,22 +15,32 @@ Use 3..10 readable shots where possible, >=1 second each. First starts at word 0
 SUPPORTED: '''+json.dumps(ACTIONS)+'\nLYRICS: '+json.dumps(lyrics,ensure_ascii=False)+'\nMUSIC: '+json.dumps(music)
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
-    model=os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash'
+    # Discover actual available models; never retry a retired model indefinitely.
+    try:
+        listing=requests.get('https://generativelanguage.googleapis.com/v1beta/models',headers={'x-goog-api-key':key},params={'pageSize':1000},timeout=25)
+        listing.raise_for_status()
+        models=[m['name'].removeprefix('models/') for m in listing.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and 'flash' in m['name'] and not any(x in m['name'] for x in ('image','tts','audio','live','robotics'))]
+    except requests.RequestException:raise RuntimeError('Could not discover available planner models') from None
+    import re
+    def rank(m):
+        v=re.search(r'gemini-(\d+(?:\.\d+)?)',m)
+        return ('lite' in m, 'preview' in m or 'exp' in m, -float(v.group(1)) if v else 0,m)
+    models=sorted(set(models),key=rank)
+    pinned=os.environ.get('GEMINI_MODEL','')
+    if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     raw=None
-    for attempt in range(2):
+    for model in models[:3]:
         try:
             r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                 headers={'x-goog-api-key':key},json={'contents':[{'parts':[{'text':prompt}]}],
                 'generationConfig':{'responseMimeType':'application/json','temperature':.35}},timeout=90)
-        except requests.RequestException:
-            if attempt==1:raise RuntimeError('Planner transport failed after two attempts') from None
-            time.sleep(3);continue
+        except requests.RequestException:continue
         if r.status_code==200:
             parts=r.json().get('candidates',[{}])[0].get('content',{}).get('parts',[])
-            raw=''.join(p.get('text','') for p in parts if not p.get('thought'));break
-        if r.status_code not in (429,500,502,503,504):raise RuntimeError('Planner HTTP '+str(r.status_code))
-        time.sleep(3)
-    if not raw:raise RuntimeError('Planner unavailable; draft retained, no visual fallback')
+            raw=''.join(p.get('text','') for p in parts if not p.get('thought'))
+            if raw:break
+        print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
+    if not raw:raise RuntimeError('Planner unavailable after at most three discovered models')
     return compile_plan(json.loads(raw[raw.find('{'):raw.rfind('}')+1]),lyrics,fps)
 
 def compile_plan(data,lyrics,fps=24):

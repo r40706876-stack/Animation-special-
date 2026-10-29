@@ -6,7 +6,7 @@ Original 2D illustration renderer plus optional audio → timed ASR → Gemini s
 
 - Five supported visual actions: one hand gives a rose, rose opens into the next scene, moving top-down crowd with a stationary rose owner, diverging paths, heart/memory paths.
 - Deterministic original layered artwork; individual hands/people/petals move. No stock clips or static-image Ken Burns substitution.
-- Actual faster-whisper word timestamps retained; no time distribution by word length.
+- Actual faster-whisper large-v3-turbo word timestamps retained; no time distribution by word length.
 - Optional supplied timed-lyrics JSON (`--lyrics`) in the same format as generated `lyrics.json`.
 - Whole-segment meaning supplied to Gemini; unsupported themes must fail rather than invent assets or force unrelated visuals.
 - Continuous integer frame timeline, cue-word validation, all transcript words covered once, MP4 decode/duration/frame count checks, contact sheet and sampled pixel-motion report.
@@ -29,7 +29,7 @@ Your audio (up to 180 seconds; `GEMINI_API_KEY` required):
 python -m song_animation.run --audio path/to/song.mp3 --out song_draft --width 1080
 ```
 
-Outputs: `preview.mp4`, `contact.jpg`, `motion.json`, `receipt.json`, `plan.json`. Automatic mode additionally emits `lyrics.json`, `music.json`, `status.json` when stages complete. API retries are bounded to two calls. Render cache requires identical plan, source audio, renderer source and width.
+Outputs: `preview.mp4`, `contact.jpg`, `motion.json`, `receipt.json`, `plan.json`. Automatic mode additionally emits `lyrics.json`, `music.json`, `status.json` when stages complete. Planner calls are bounded to three actually discovered text models. Render cache requires identical plan, source audio, renderer source and width.
 
 GitHub workflow runs a proof first, then the reference song on changes to this feature branch. `workflow_dispatch` supports a repository audio path once workflow is available on the default branch; the feature-branch push trigger does not require merging. Standard CPU runner, no GPU required. The included reference audio is extracted from the user's supplied 34-second reference for this requested experiment; it is not an original soundtrack or a stock asset for distribution.
 

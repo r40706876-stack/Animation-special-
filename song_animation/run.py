@@ -6,7 +6,7 @@ from .render import render
 from .contract import validate_lyrics
 
 def main():
-    a=argparse.ArgumentParser();a.add_argument('--audio',required=True);a.add_argument('--out',default='song_output');a.add_argument('--lyrics');a.add_argument('--model',default='small');a.add_argument('--width',type=int,default=540)
+    a=argparse.ArgumentParser();a.add_argument('--audio',required=True);a.add_argument('--out',default='song_output');a.add_argument('--lyrics');a.add_argument('--model',default='large-v3-turbo');a.add_argument('--width',type=int,default=540)
     args=a.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
     try:
         if args.lyrics:

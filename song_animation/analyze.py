@@ -5,7 +5,7 @@ from .contract import validate_lyrics
 
 def duration(path):return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(path)]))
 
-def analyze(audio,out,model='small'):
+def analyze(audio,out,model='large-v3-turbo'):
     from faster_whisper import WhisperModel
     dur=duration(audio)
     if not 1<=dur<=180:raise ValueError('First version accepts 1..180 second segments')
@@ -17,7 +17,7 @@ def analyze(audio,out,model='small'):
             if w.word.strip() and w.end>w.start:words.append({'id':len(words),'text':w.word.strip(),'start':round(w.start,3),'end':round(w.end,3),'probability':round(w.probability,4)})
     if not words:raise ValueError('No lyric words detected; supply verified timed lyrics')
     validate_lyrics(words,dur)
-    result={'duration':dur,'language':'hi','timing_method':'faster-whisper word timestamps','timing_verified':False,
+    result={'asr_model':model,'duration':dur,'language':'hi','timing_method':'faster-whisper word timestamps','timing_verified':False,
       'warnings':['Singing timestamps require listening review; no character-count retiming used'],
       'low_confidence_word_ids':[w['id'] for w in words if w['probability']<.55],'words':words}
     (out/'lyrics.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
