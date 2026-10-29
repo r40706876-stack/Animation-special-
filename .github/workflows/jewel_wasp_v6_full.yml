@@ -34,7 +34,7 @@ jobs:
           }
           # Hash every Blender source that contributes to the final scene, not
           # only the V6 wrapper. This prevents stale approvals after anatomy edits.
-          bundle="$(sha256sum src/jewel_wasp_3d.py src/jewel_wasp_full.py src/jewel_wasp_v4_proof.py src/jewel_wasp_v5_proof.py src/jewel_wasp_v6_proof.py src/jewel_wasp_v6_anatomy_pass.py src/jewel_wasp_v63_story_pass.py src/jewel_wasp_v6_full.py | sha256sum | cut -d' ' -f1)"
+          bundle="$(sha256sum src/jewel_wasp_3d.py src/jewel_wasp_full.py src/jewel_wasp_v4_proof.py src/jewel_wasp_v5_proof.py src/jewel_wasp_v6_proof.py src/jewel_wasp_v6_anatomy_pass.py src/jewel_wasp_v63_story_pass.py src/jewel_wasp_v64_visual_pass.py src/jewel_wasp_v6_full.py | sha256sum | cut -d' ' -f1)"
           grep -qx "V6_SOURCE_BUNDLE_SHA256=$bundle" "$approval" || {
             echo "::error::V6 scene dependency bundle changed; new visual approval required"
             exit 1
