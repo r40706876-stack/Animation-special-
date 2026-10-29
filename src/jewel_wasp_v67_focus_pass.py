@@ -566,3 +566,121 @@ if chapter == 12:
     lens = 49
 
 scene.frame_set(120)
+
+
+# V6.7.6 visual-root-cause experiment, based on actual V6.7.5 clips.
+# The older V4 needle and four straight antenna rods remained visible and
+# overwhelmed the intended sting. Hide them; no V4 source is modified.
+if chapter in (3, 5):
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("sting tip", "V4 visible sting needle",
+            "cockroach antenna", "V4 articulated roach antenna",
+            "V5 cockroach tibia spines", "V5 wasp wing veins",
+            "animated wasp wing")):
+            ob.hide_render = True
+
+    antenna_mat = mat("V6.7.6 brown flexible antenna", (.06,.032,.018), .05, .70)
+    for side in (-1,1):
+        curve = bpy.data.curves.new("V6.7.6 curved antenna", "CURVE")
+        curve.dimensions = "3D"
+        curve.bevel_depth = .006
+        curve.bevel_resolution = 2
+        spline = curve.splines.new("BEZIER")
+        pts = [(side*.12,-1.15,.43),(side*.24,-1.38,.47),
+               (side*.38,-1.61,.41),(side*.53,-1.89,.30)]
+        spline.bezier_points.add(len(pts)-1)
+        for bp, xyz in zip(spline.bezier_points, pts):
+            bp.co = xyz
+            bp.handle_left_type = "AUTO"
+            bp.handle_right_type = "AUTO"
+        ob = bpy.data.objects.new("V6.7.6 flexible antenna",curve)
+        scene.collection.objects.link(ob)
+        ob.parent = roach
+        curve.materials.append(antenna_mat)
+
+    # Wasp fore/hind wings must read as thin membranes, not opaque oval shells.
+    wingmat = mat("V6.7.6 translucent wing", (.19,.31,.28), .06, .40)
+    wingmat.node_tree.nodes["Principled BSDF"].inputs["Alpha"].default_value=.34
+    if hasattr(wingmat,"surface_render_method"):
+        wingmat.surface_render_method="DITHERED"
+    veinmat = mat("V6.7.6 wing veins",(.07,.13,.12),.04,.65)
+    for side in (-1,1):
+        for pair in (0,1):
+            hinge=bpy.data.objects.new("V6.7.6 wing hinge",None)
+            scene.collection.objects.link(hinge)
+            hinge.parent=wasp
+            hinge.location=(side*.14,-.13+pair*.20,.59)
+            span=.73 if pair==0 else .56
+            sweep=-.22 if pair==0 else .30
+            verts=[];faces=[]
+            for i in range(17):
+                t=i/16
+                width=(.10 if pair==0 else .08)*max(0,math.sin(math.pi*t))**.75
+                for edge in (-1,1):
+                    verts.append((side*span*t,sweep*t+edge*width,
+                                  .018+.035*math.sin(math.pi*t)))
+            for i in range(16):
+                a=2*i
+                faces.append((a,a+1,a+3,a+2))
+            mesh=bpy.data.meshes.new("V6.7.6 membrane")
+            mesh.from_pydata(verts,[],faces)
+            mesh.update()
+            wing=bpy.data.objects.new("V6.7.6 veined wing",mesh)
+            scene.collection.objects.link(wing)
+            wing.parent=hinge
+            mesh.materials.append(wingmat)
+            for face in mesh.polygons:
+                face.use_smooth=True
+            link("V6.7.6 central wing vein",(0,0,.018),
+                 (side*span*.88,sweep*.88,.035),.0035,veinmat,hinge)
+            for f,tilt in ((1,.10),(90,.10),(108,.16),
+                           (126,.13),(150,.10),(240,.10)):
+                hinge.rotation_euler[1]=side*tilt
+                hinge.keyframe_insert(data_path="rotation_euler",frame=f)
+
+    # Both complete insect bodies must fit a portrait frame; previous
+    # close-up was centered on an invisible needle and cropped both actors.
+    scene.frame_set(114)
+    c=(roach.matrix_world @ Vector((0,-.2,.47))+
+       wasp.matrix_world @ Vector((0,.12,.44)))*.5
+    side=1 if chapter==3 else -1
+    pos=tuple(c+Vector((side*3.4,-5.0,2.05)))
+    target=tuple(c)
+    lens=24 if chapter==3 else 27
+
+if chapter==12:
+    larva=bpy.data.objects.get("V6.7.1 continuous crawling larva")
+    if not larva or not larva.data.shape_keys:
+        raise RuntimeError("V6.7.6 continuous larva missing")
+    skin=mat("V6.7.6 muted ribbed larva",(.42,.31,.20),0,.86)
+    n=skin.node_tree.nodes
+    links=skin.node_tree.links
+    wave=n.new("ShaderNodeTexWave")
+    wave.wave_type="BANDS"
+    wave.bands_direction="Y"
+    wave.inputs["Scale"].default_value=9
+    wave.inputs["Distortion"].default_value=.15
+    ramp=n.new("ShaderNodeValToRGB")
+    ramp.color_ramp.elements[0].position=.36
+    ramp.color_ramp.elements[0].color=(.31,.22,.14,1)
+    ramp.color_ramp.elements[1].position=.67
+    ramp.color_ramp.elements[1].color=(.55,.43,.29,1)
+    links.new(wave.outputs["Color"],ramp.inputs["Fac"])
+    links.new(ramp.outputs["Color"],n["Principled BSDF"].inputs["Base Color"])
+    larva.data.materials.clear()
+    larva.data.materials.append(skin)
+    larva.animation_data_clear()
+    for f,x,y,sy in ((1,0,-.03,.91),(95,0,-.03,.91),
+        (103,-.02,.005,.84),(111,.03,.045,1.01),
+        (119,-.015,.07,.85),(127,.035,.12,1.00),
+        (135,-.01,.145,.87),(143,.02,.17,.98),(240,.02,.20,.91)):
+        larva.location=(x,y,0)
+        larva.scale=(.91,sy,.91)
+        larva.keyframe_insert(data_path="location",frame=f)
+        larva.keyframe_insert(data_path="scale",frame=f)
+    scene.frame_set(120)
+    c=roach.matrix_world @ Vector((.035,.23,.77))
+    pos=tuple(c+Vector((1.52,-1.86,1.02)))
+    target=tuple(c)
+    lens=45
+scene.frame_set(120)
