@@ -106,7 +106,7 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.012
     return obj
 
-wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.63),-.10)
+wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 ell("wasp head",(.39,0,.05),(.17,.16,.13),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.24,.19,.17),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
@@ -154,7 +154,7 @@ for s in (-1,1):
             pivot.rotation_euler.x=s*(.13+.10*math.sin(f*.72+hind))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
-roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.26),math.pi)
+roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 ell("roach ventral abdomen",(-.12,0,0),(.55,.31,.17),tan,roach)
 ell("roach pronotum",(.41,0,.08),(.24,.33,.12),bronze,roach)
 ell("roach head",(.64,0,-.015),(.17,.19,.13),brown,roach)
@@ -220,9 +220,9 @@ direction=Vector((0,0,.32))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.2
 for f in (1,24,48):
-    wasp.location=(-.68+.06*(f-1)/47,-.18,.63+.022*math.sin(f*.14))
+    wasp.location=(-.68+.06*(f-1)/47,-.18,.43+.022*math.sin(f*.14))
     wasp.keyframe_insert(data_path="location",frame=f)
-    roach.location=(.72-.12*(f-1)/47,.20,.26)
+    roach.location=(.72-.12*(f-1)/47,.20,.20)
     roach.keyframe_insert(data_path="location",frame=f)
     camera.location=(2.3-.10*(f-1)/47,-4.5,2.15)
     camera.keyframe_insert(data_path="location",frame=f)
