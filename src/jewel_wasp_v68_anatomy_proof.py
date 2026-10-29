@@ -225,7 +225,14 @@ for s in (-1,1):
 
 # Organic leaf silhouettes, subdued debris and background-only vegetation.
 # No tall foreground sticks should bisect the two specimens.
-ell("earth base",(0,0,-.24),(25,25,.17),soil)
+# The former flattened UV sphere exposed its silhouette as a black horizontal band
+# at the bottom of the portrait image. A broad soil plane covers the entire
+# orthographic camera footprint, including its near/bottom rays.
+bpy.ops.mesh.primitive_plane_add(size=2, location=(0,0,-.066))
+earth=bpy.context.object
+earth.name="continuous forest floor - no visible edge"
+earth.scale=(80,80,1)
+earth.data.materials.append(soil)
 rng=random.Random(6801)
 def leaf_blade(name,center,length,width,heading,material_ref):
     verts=[];faces=[]
@@ -297,16 +304,16 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(.8,-5.0,1.7)
-direction=Vector((0,0,.38))-camera.location
+camera.location=(.8,-5.0,3.05)
+direction=Vector((0,0,.24))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.6
 # Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
 for frame,shift,scale in [(1,-.14,6.75),(13,-.08,6.60),
                           (24,0,6.50),(36,.07,6.60),(48,.13,6.75)]:
-    camera.location=(.8+shift*.35,-5.0,1.7)
-    target=Vector((shift*.6,0,.38))
+    camera.location=(.8+shift*.35,-5.0,3.05)
+    target=Vector((shift*.6,0,.24))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
@@ -316,11 +323,11 @@ for frame,shift,scale in [(1,-.14,6.75),(13,-.08,6.60),
 # Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
 for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
-    wasp.location=(-.82+.43*t,-.18+.06*math.sin(math.pi*t),.43+.25*math.sin(math.pi*t))
+    wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),.43+.33*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
-    roach.location=(.82-.15*t,.20,.20+.024*math.sin(math.pi*3*t))
+    roach.location=(.84-.19*t,.20,.20+.024*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
     roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
     roach.keyframe_insert(data_path="rotation_euler",frame=f)
