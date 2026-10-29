@@ -19,8 +19,8 @@
     },
     {
       "file": "chapter_03.png",
-      "brightness": 92.0,
-      "hash": "0000000000000000000000001111111111111111100000001000000011111111"
+      "brightness": 88.6,
+      "hash": "0000000000000000101111111111111111111111111110001000000010011111"
     },
     {
       "file": "chapter_04.png",
@@ -29,8 +29,8 @@
     },
     {
       "file": "chapter_05.png",
-      "brightness": 92.6,
-      "hash": "0000000000000000111000101111111111111100000000010000011111111111"
+      "brightness": 84.3,
+      "hash": "0000000000000000111111111111111111111111000000000000001111100001"
     },
     {
       "file": "chapter_06.png",
@@ -39,8 +39,8 @@
     },
     {
       "file": "chapter_07.png",
-      "brightness": 96.1,
-      "hash": "0000000000000000000000001111111111100111111111111111111111111111"
+      "brightness": 135.0,
+      "hash": "1100011111111111111100111111110011101100001111000110000001000000"
     },
     {
       "file": "chapter_08.png",
@@ -54,8 +54,8 @@
     },
     {
       "file": "chapter_10.png",
-      "brightness": 95.6,
-      "hash": "0000000000000000111110001111011111000011000111111111111111111111"
+      "brightness": 96.1,
+      "hash": "0000000000000000111100001111111111101111111111111111111111111111"
     },
     {
       "file": "chapter_11.png",
@@ -64,8 +64,8 @@
     },
     {
       "file": "chapter_12.png",
-      "brightness": 86.4,
-      "hash": "0000000000000000111111001111111111111111111100001110000100000111"
+      "brightness": 97.9,
+      "hash": "0000000000000000000000001111111111111111111111101111110011111100"
     },
     {
       "file": "chapter_13.png",
@@ -77,33 +77,31 @@
     {
       "file": "motion_0.mp4",
       "frames": 24,
-      "sampled_frame_differences": 5.05
+      "sampled_frame_differences": 5.06
     },
     {
       "file": "motion_10.mp4",
       "frames": 24,
-      "sampled_frame_differences": 10.41
+      "sampled_frame_differences": 4.58
     },
     {
       "file": "motion_12.mp4",
       "frames": 24,
-      "sampled_frame_differences": 3.37
+      "sampled_frame_differences": 1.74
     },
     {
       "file": "motion_3.mp4",
       "frames": 24,
-      "sampled_frame_differences": 2.21
+      "sampled_frame_differences": 2.38
     },
     {
       "file": "motion_5.mp4",
       "frames": 24,
-      "sampled_frame_differences": 0.99
+      "sampled_frame_differences": 2.23
     }
   ],
-  "issues": [
-    "Nearly identical compositions: chapter_00.png / chapter_07.png"
-  ],
-  "automated_checks_pass": false,
+  "issues": [],
+  "automated_checks_pass": true,
   "human_visual_review_pass": false,
   "note": "Automated QA cannot certify anatomy, narrative clarity, realism or Hindi audio. Review contact and motion previews manually."
 }
