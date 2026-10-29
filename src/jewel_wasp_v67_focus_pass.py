@@ -128,3 +128,120 @@ if chapter == 12:
     pos,target,lens=(2.05,-.78,1.50),(1.53,1.21,.76),39
 
 scene.frame_set(120)
+
+
+# V6.7.1 focused corrections from the *actual* 4-still/4-motion evidence
+# in run 40814728556. Never treat technical green as a visual pass.
+if chapter in (3, 5):
+    # The V6.7 close-up cropped the wasp and the roach so far that a viewer
+    # could not identify the sting. Keep both bodies and the moving tip in view.
+    scene.frame_set(114)
+    start = wasp.matrix_world @ Vector((0, 1.00, .37))
+    flank = roach.matrix_world @ Vector((-.24, -.58 if chapter == 3 else -.83, .73))
+    midpoint = (start + flank) * .5
+    target = tuple(midpoint)
+    offset = Vector((1.55 if chapter == 3 else -1.55, -3.2, 1.25))
+    pos = tuple(midpoint + offset)
+    lens = 25
+    # A second, more readable needle targets the exposed upper flank.
+    shaft = bpy.data.objects.get("V6.7 world-space extending ovipositor")
+    tip = bpy.data.objects.get("V6.7 sting needle tip")
+    if shaft and tip:
+        shaft.animation_data_clear()
+        tip.animation_data_clear()
+        for frame, reach in ((1, .02), (84, .02), (90, .08),
+                             (96, .28), (102, .56), (108, .82),
+                             (114, 1.0), (120, 1.0), (126, .70),
+                             (138, .12), (160, .02), (240, .02)):
+            scene.frame_set(frame)
+            base = wasp.matrix_world @ Vector((0, 1.00, .37))
+            hit = roach.matrix_world @ Vector(
+                (-.24, -.58 if chapter == 3 else -.83, .73))
+            endpoint = base.lerp(hit, reach)
+            delta = endpoint - base
+            shaft.location = (base + endpoint) * .5
+            shaft.rotation_euler = delta.to_track_quat('Z', 'Y').to_euler()
+            shaft.scale = (1.0, 1.0, max(.003, delta.length))
+            tip.location = endpoint
+            for path in ("location", "rotation_euler", "scale"):
+                shaft.keyframe_insert(data_path=path, frame=frame)
+            tip.keyframe_insert(data_path="location", frame=frame)
+    mark = bpy.data.objects.get("V6.7 roach flank entry")
+    if mark:
+        mark.location = (-.24, -.58 if chapter == 3 else -.83, .73)
+    scene.frame_set(120)
+
+if chapter == 10:
+    # V6.7 frames 210–233 showed almost no readable entry. Move the roach
+    # decisively through the aperture, with a downward burrow trajectory.
+    roach.animation_data_clear()
+    for frame, loc in ((1, (.40, -.45, .03)),
+                       (120, (1.15, .43, .03)),
+                       (185, (1.43, 1.02, .03)),
+                       (205, (1.48, 1.35, .02)),
+                       (215, (1.48, 1.55, -.02)),
+                       (225, (1.48, 1.95, -.18)),
+                       (240, (1.48, 2.65, -.46))):
+        roach.location = loc
+        roach.rotation_euler = (0, 0, math.pi)
+        roach.keyframe_insert(data_path="location", frame=frame)
+        roach.keyframe_insert(data_path="rotation_euler", frame=frame)
+    # Center the arched mouth and animal rather than an empty floor.
+    pos, target, lens = (3.10, -1.55, 1.70), (1.48, 1.80, .20), 29
+
+if chapter == 12:
+    # Replace nine separated spherical beads with a continuous tapered,
+    # lightly ribbed mesh that can contract and extend organically.
+    for ob in bpy.data.objects:
+        if ob.name.startswith("V6.1 growing larva segment"):
+            ob.hide_render = True
+    rings, sides = 25, 14
+    verts, faces = [], []
+    for i in range(rings):
+        t = i / (rings - 1)
+        radius = .013 + .096 * (math.sin(math.pi * t) ** .65)
+        radius *= 1.0 - .045 * math.cos(t * 17 * math.pi)
+        for j in range(sides):
+            a = 2 * math.pi * j / sides
+            verts.append((.035 + radius * math.cos(a),
+                          -.12 + .72 * t,
+                          .75 + .014 * math.sin(math.pi * t) +
+                          .82 * radius * math.sin(a)))
+    for i in range(rings - 1):
+        for j in range(sides):
+            faces.append((i * sides + j,
+                          i * sides + (j + 1) % sides,
+                          (i + 1) * sides + (j + 1) % sides,
+                          (i + 1) * sides + j))
+    faces.append(tuple(reversed(range(sides))))
+    faces.append(tuple((rings - 1) * sides + j for j in range(sides)))
+    larva_mesh = bpy.data.meshes.new("V6.7.1 continuous larva mesh")
+    larva_mesh.from_pydata(verts, [], faces)
+    larva_mesh.update()
+    larva_body = bpy.data.objects.new("V6.7.1 continuous crawling larva", larva_mesh)
+    scene.collection.objects.link(larva_body)
+    larva_body.parent = roach
+    larva_body.data.materials.append(
+        organic_material("V6.7.1 warm larval cuticle",
+                         (.28, .19, .105), (.66, .51, .29), 9, .78))
+    for polygon in larva_mesh.polygons:
+        polygon.use_smooth = True
+    larva_body.shape_key_add(name="Basis")
+    wave_a = larva_body.shape_key_add(name="Peristalsis A")
+    wave_b = larva_body.shape_key_add(name="Peristalsis B")
+    for key, phase in ((wave_a, 0.0), (wave_b, math.pi)):
+        for index, vertex in enumerate(key.data):
+            t = (index // sides) / (rings - 1)
+            x, y, z = verts[index]
+            bulge = 1 + .16 * math.sin(t * 4 * math.pi + phase)
+            vertex.co = (x + (x - .035) * (bulge - 1),
+                         y + .020 * math.sin(t * 3 * math.pi + phase),
+                         .75 + (z - .75) * bulge)
+    for frame in (90, 98, 106, 114, 122, 130, 138, 154, 180, 210, 240):
+        wave_a.value = .5 + .5 * math.sin(frame * .24)
+        wave_b.value = 1 - wave_a.value
+        wave_a.keyframe_insert(data_path="value", frame=frame)
+        wave_b.keyframe_insert(data_path="value", frame=frame)
+    pos, target, lens = (1.88, -.65, 1.55), (1.53, 1.20, .77), 42
+
+scene.frame_set(120)

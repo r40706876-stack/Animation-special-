@@ -40,8 +40,9 @@ jobs:
           set -euo pipefail
           mkdir -p proof motion
           chapter=${{ matrix.chapter }}
-          frame=120
-          if [ "$chapter" -eq 12 ]; then frame=210; fi
+          frame=114
+          if [ "$chapter" -eq 10 ]; then frame=225; fi
+          if [ "$chapter" -eq 12 ]; then frame=120; fi
           still="proof/chapter_$(printf '%02d' "$chapter").png"
           STORY_CHAPTER="$chapter" PROOF_FRAME="$frame" BLENDER_OUTPUT="$PWD/$still" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v67_focus_proof.py > "proof/chapter_${{ matrix.chapter }}.log" 2>&1 || { tail -n 100 "proof/chapter_${{ matrix.chapter }}.log"; exit 1; }
           test -s "$still"
