@@ -1,0 +1,96 @@
+name: Jewel Wasp V6.7 Isolated Action Proof
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_v67_focus_pass.py"
+      - "src/jewel_wasp_v67_focus_proof.py"
+      - ".github/workflows/jewel_wasp_v67_focus.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: jewel-wasp-v67-focus
+  cancel-in-progress: true
+jobs:
+  focus:
+    name: V6.7 action still and motion chapter ${{ matrix.chapter }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 160
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        chapter: [3, 5, 10, 12]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender and FFmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Check source syntax
+        run: python3 -m py_compile src/jewel_wasp_v67_focus_pass.py src/jewel_wasp_v67_focus_proof.py
+      - name: Render focused still and animated proof
+        run: |
+          set -euo pipefail
+          mkdir -p proof motion
+          chapter=${{ matrix.chapter }}
+          frame=120
+          if [ "$chapter" -eq 12 ]; then frame=210; fi
+          still="proof/chapter_$(printf '%02d' "$chapter").png"
+          STORY_CHAPTER="$chapter" PROOF_FRAME="$frame" BLENDER_OUTPUT="$PWD/$still" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v67_focus_proof.py > "proof/chapter_${{ matrix.chapter }}.log" 2>&1 || { tail -n 100 "proof/chapter_${{ matrix.chapter }}.log"; exit 1; }
+          test -s "$still"
+          grep -q "JEWEL_V6_RENDER_DONE $chapter" "proof/chapter_${{ matrix.chapter }}.log"
+          video="motion/motion_${{ matrix.chapter }}.mp4"
+          STORY_CHAPTER="$chapter" V6_MOTION=1 BLENDER_OUTPUT="$PWD/$video" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v67_focus_proof.py > "motion/motion_${{ matrix.chapter }}.log" 2>&1 || { tail -n 100 "motion/motion_${{ matrix.chapter }}.log"; exit 1; }
+          test -s "$video"
+          grep -q "JEWEL_V6_RENDER_DONE $chapter" "motion/motion_${{ matrix.chapter }}.log"
+          ffmpeg -v error -xerror -i "$video" -f null -
+          frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$video")"
+          test "$frames" = "24"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v67-focus-${{ matrix.chapter }}
+          path: |
+            proof/
+            motion/
+          if-no-files-found: warn
+          retention-days: 14
+  contact:
+    needs: [focus]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Install FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v67-focus-*
+          path: evidence
+          merge-multiple: true
+      - name: Assemble actual visual evidence, not approval
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/strips
+          test "$(find evidence/proof -maxdepth 1 -name 'chapter_??.png' | wc -l)" -eq 4
+          test "$(find evidence/motion -maxdepth 1 -name 'motion_*.mp4' | wc -l)" -eq 4
+          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'evidence/proof/chapter_*.png' -vf "scale=270:480,tile=2x2" -frames:v 1 evidence/contact_v67.png
+          for chapter in 3 5 10 12; do
+            ffmpeg -y -loglevel error -i "evidence/motion/motion_${chapter}.mp4" -vf "fps=5,scale=180:320,tile=5x1" -frames:v 1 "evidence/strips/motion_${chapter}.jpg"
+          done
+          test -s evidence/contact_v67.png
+          echo "V67_TECHNICAL_PROOF_READY_HUMAN_VISUAL_REVIEW_REQUIRED"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v67-focused-visual-evidence
+          path: evidence/
+          if-no-files-found: warn
+          retention-days: 14
