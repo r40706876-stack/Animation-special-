@@ -41,6 +41,13 @@ def material(name, rgb, rough=.65, metal=0, alpha=1, noise=0):
         bump.inputs["Distance"].default_value=.012
         m.node_tree.links.new(n.outputs["Fac"],bump.inputs["Height"])
         m.node_tree.links.new(bump.outputs["Normal"],bs.inputs["Normal"])
+        ramp=m.node_tree.nodes.new("ShaderNodeValToRGB")
+        ramp.color_ramp.elements[0].position=.20
+        ramp.color_ramp.elements[1].position=.80
+        ramp.color_ramp.elements[0].color=(*(max(0,min(1,c*.74)) for c in rgb),1)
+        ramp.color_ramp.elements[1].color=(*(max(0,min(1,c*1.17)) for c in rgb),1)
+        m.node_tree.links.new(n.outputs["Fac"],ramp.inputs["Fac"])
+        m.node_tree.links.new(ramp.outputs["Color"],bs.inputs["Base Color"])
     return m
 
 emerald=material("iridescent emerald cuticle",(.018,.27,.18),.29,.56,noise=37)
@@ -141,6 +148,10 @@ for s in (-1,1):
     curve("wasp geniculate antenna %d"%s,
         [(.50,s*.07,.12),(.63,s*.12,.19),(.71,s*.17,.19),(.80,s*.18,.13)],
         .007,dark,wasp)
+    # Small paired mandibles and palps distinguish the wasp face from a sphere.
+    curve("wasp mandibular palp %d"%s,
+          [(.52,s*.065,-.015),(.59,s*.09,-.06),(.64,s*.075,-.085)],
+          .008,dark,wasp)
     for leg in range(3):
         x=.29-leg*.19;y=s*.15
         hip=(x,y,.01);knee=(x+.10-leg*.075,s*(.34+.035*leg),-.16)
@@ -174,6 +185,11 @@ roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 ell("roach ventral abdomen",(-.12,0,0),(.55,.31,.17),tan,roach)
 ell("roach pronotum",(.41,0,.08),(.24,.33,.12),bronze,roach)
 ell("roach head",(.64,0,-.015),(.17,.19,.13),brown,roach)
+ell("roach pronotal dark marking",(.44,0,.192),(.105,.21,.012),brown,roach)
+for s in (-1,1):
+    curve("roach rear cercus %d"%s,
+          [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
+          .012,brown,roach)
 for i in range(7):
     x=.20-i*.12
     ell("roach abdominal sternite %02d"%i,(x,0,-.065),
@@ -201,24 +217,48 @@ for s in (-1,1):
         taper("roach tarsus",foot,
               (foot[0]+.13,foot[1]+s*.03,foot[2]-.01),.010,.002,dark,roach)
 
-# Grounded set with depth layers, not identical pencil trunks.
+# Organic leaf silhouettes, subdued debris and background-only vegetation.
+# No tall foreground sticks should bisect the two specimens.
 ell("earth base",(0,0,-.24),(9,9,.17),soil)
 rng=random.Random(6801)
-for i in range(125):
+def leaf_blade(name,center,length,width,heading,material_ref):
+    verts=[];faces=[]
+    for i in range(9):
+        t=i/8
+        w=width*(math.sin(math.pi*t)**.72)
+        for side in (-1,1):
+            along=length*(t-.5)
+            across=side*w
+            x=center[0]+along*math.cos(heading)-across*math.sin(heading)
+            y=center[1]+along*math.sin(heading)+across*math.cos(heading)
+            z=center[2]+.015*math.sin(math.pi*t)+.005*side
+            verts.append((x,y,z))
+    for i in range(8):
+        a=i*2;faces.append((a,a+2,a+3,a+1))
+    mesh=bpy.data.meshes.new(name);mesh.from_pydata(verts,[],faces);mesh.update()
+    obj=bpy.data.objects.new(name,mesh);scene.collection.objects.link(obj)
+    mesh.materials.append(material_ref)
+    for poly in mesh.polygons:poly.use_smooth=True
+    return obj
+for i in range(190):
     x=rng.uniform(-4.2,4.2);y=rng.uniform(-3.6,3.8)
-    if abs(x)<1.5 and abs(y)<.8:continue
-    o=ell("forest litter", (x,y,-.064),
-          (rng.uniform(.035,.17),rng.uniform(.02,.07),.009),
-          leafmat if i%3 else green,segments=12,rings=6)
-    o.rotation_euler.z=rng.uniform(0,6.28)
-for i in range(22):
-    x=rng.uniform(-4.0,4.0);y=rng.choice([-1,1])*rng.uniform(1.7,4.2)
-    if i%3==0:
-        taper("irregular sapling",(x,y,-.12),(x+.13,y,.9+rng.random()),.065,.025,soil)
+    if abs(x)<1.45 and abs(y)<.65:continue
+    leaf_blade("curved fallen leaf",(x,y,-.066),rng.uniform(.09,.33),
+               rng.uniform(.015,.065),rng.uniform(-math.pi,math.pi),
+               leafmat if i%4 else green)
+# Rear-only vegetation, away from the subjects and their camera sightlines.
+for i in range(30):
+    x=rng.uniform(-3.7,3.7);y=rng.uniform(1.45,3.65)
+    if i%5==0:
+        taper("distant mossy stem",(x,y,-.12),
+              (x+rng.uniform(-.12,.12),y,.45+rng.random()*.55),
+              .025,.008,brown)
     for j in range(3):
-        ell("understory fern",(x+rng.uniform(-.24,.24),
-            y+rng.uniform(-.2,.2),.12+j*.08),
-            (.30,.09,.035),green,segments=12,rings=6)
+        heading=rng.uniform(-math.pi,math.pi)
+        leaf_blade("layered understory blade",
+                   (x+rng.uniform(-.13,.13),y+rng.uniform(-.13,.13),.04+j*.09),
+                   rng.uniform(.23,.53),rng.uniform(.045,.10),
+                   heading,green)
 
 for name,loc,power,size in [
     ("large softbox",(-2.6,-3.2,4.0),600,4.0),
@@ -231,17 +271,32 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(2.3,-4.5,2.15)
-direction=Vector((0,0,.32))-camera.location
+camera.location=(1.6,-4.7,1.60)
+direction=Vector((0,0,.33))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=6.2
-for f in (1,24,48):
-    wasp.location=(-.68+.16*(f-1)/47,-.18,.43+.018*math.sin(f*.29))
+camera_data.type="ORTHO";camera_data.ortho_scale=6.1
+# A legible two-second action: approach, hovering lift and leg/antenna response.
+# Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
+for f in (1,7,13,19,25,31,37,43,48):
+    t=(f-1)/47
+    wasp.location=(-.95+.36*t,-.18,.43+.12*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
-    roach.location=(.72-.15*(f-1)/47,.20,.20+.006*math.sin(f*.65))
+    wasp.rotation_euler.z=-.16+.13*t
+    wasp.keyframe_insert(data_path="rotation_euler",frame=f)
+    roach.location=(.90-.11*t,.20,.20+.015*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
-    camera.location=(2.3-.10*(f-1)/47,-4.5,2.15)
-    camera.keyframe_insert(data_path="location",frame=f)
+    roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
+    roach.keyframe_insert(data_path="rotation_euler",frame=f)
+for obj in list(bpy.data.objects):
+    if obj.name.startswith(("wasp coxa","wasp tibia","roach femur","roach tibia")):
+        phase=(sum(ord(c) for c in obj.name)%7)*.67
+        for f in (1,7,13,19,25,31,37,43,48):
+            obj.rotation_euler.y=.08*math.sin((f-1)*.29+phase)
+            obj.keyframe_insert(data_path="rotation_euler",frame=f)
+    if obj.name.startswith("roach filiform antenna"):
+        for f in (1,13,25,37,48):
+            obj.rotation_euler.z=.055*math.sin((f-1)*.17)
+            obj.keyframe_insert(data_path="rotation_euler",frame=f)
 
 output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
 motion=os.environ.get("V68_MOTION","0")=="1"
@@ -253,6 +308,8 @@ if motion:
     scene.render.filepath=output
     bpy.ops.render.render(animation=True)
 else:
+    scene.render.resolution_x=540
+    scene.render.resolution_y=960
     scene.frame_set(24)
     scene.render.filepath=output
     bpy.ops.render.render(write_still=True)
