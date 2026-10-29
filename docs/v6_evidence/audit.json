@@ -19,8 +19,8 @@
     },
     {
       "file": "chapter_03.png",
-      "brightness": 88.6,
-      "hash": "0000000000000000101111111111111111111111111110001000000010011111"
+      "brightness": 91.6,
+      "hash": "0000000100000000000000001111111100100001110001111111111111111111"
     },
     {
       "file": "chapter_04.png",
@@ -29,8 +29,8 @@
     },
     {
       "file": "chapter_05.png",
-      "brightness": 84.3,
-      "hash": "0000000000000000111111111111111111111111000000000000001111100001"
+      "brightness": 95.2,
+      "hash": "0000000000000000000001101111111100011000111111111111111111111111"
     },
     {
       "file": "chapter_06.png",
@@ -54,8 +54,8 @@
     },
     {
       "file": "chapter_10.png",
-      "brightness": 96.1,
-      "hash": "0000000000000000111100001111111111101111111111111111111111111111"
+      "brightness": 94.1,
+      "hash": "0000000000000000110000001111000111101111111111111111111111111111"
     },
     {
       "file": "chapter_11.png",
@@ -77,27 +77,27 @@
     {
       "file": "motion_0.mp4",
       "frames": 24,
-      "sampled_frame_differences": 5.06
+      "sampled_frame_differences": 5.07
     },
     {
       "file": "motion_10.mp4",
       "frames": 24,
-      "sampled_frame_differences": 4.58
+      "sampled_frame_differences": 1.96
     },
     {
       "file": "motion_12.mp4",
       "frames": 24,
-      "sampled_frame_differences": 1.74
+      "sampled_frame_differences": 1.75
     },
     {
       "file": "motion_3.mp4",
       "frames": 24,
-      "sampled_frame_differences": 2.38
+      "sampled_frame_differences": 5.74
     },
     {
       "file": "motion_5.mp4",
       "frames": 24,
-      "sampled_frame_differences": 2.23
+      "sampled_frame_differences": 4.9
     }
   ],
   "issues": [],
