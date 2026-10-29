@@ -1,4 +1,4 @@
-name: Jewel Wasp V6.7 Isolated Action Proof
+name: Jewel Wasp V6.7.4 Focused Sting Larva Proof
 on:
   push:
     paths:
@@ -10,7 +10,7 @@ permissions:
   contents: read
   actions: read
 concurrency:
-  group: jewel-wasp-v67-focus
+  group: jewel-wasp-v674-sting-larva
   cancel-in-progress: true
 jobs:
   focus:
@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        chapter: [3, 5, 10, 12]
+        chapter: [3, 5, 12]
     steps:
       - uses: actions/checkout@v4
       - name: Install Blender and FFmpeg
@@ -80,10 +80,10 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p evidence/strips
-          test "$(find evidence/proof -maxdepth 1 -name 'chapter_??.png' | wc -l)" -eq 4
-          test "$(find evidence/motion -maxdepth 1 -name 'motion_*.mp4' | wc -l)" -eq 4
+          test "$(find evidence/proof -maxdepth 1 -name 'chapter_??.png' | wc -l)" -eq 3
+          test "$(find evidence/motion -maxdepth 1 -name 'motion_*.mp4' | wc -l)" -eq 3
           ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'evidence/proof/chapter_*.png' -vf "scale=270:480,tile=2x2" -frames:v 1 evidence/contact_v67.png
-          for chapter in 3 5 10 12; do
+          for chapter in 3 5 12; do
             ffmpeg -y -loglevel error -i "evidence/motion/motion_${chapter}.mp4" -vf "fps=5,scale=180:320,tile=5x2" -frames:v 1 "evidence/strips/motion_${chapter}.jpg"
           done
           test -s evidence/contact_v67.png
@@ -91,7 +91,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: jewel-wasp-v67-focused-visual-evidence
+          name: jewel-wasp-v674-focused-visual-evidence
           path: evidence/
           if-no-files-found: warn
           retention-days: 14

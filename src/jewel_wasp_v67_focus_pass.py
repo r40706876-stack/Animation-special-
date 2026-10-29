@@ -195,12 +195,12 @@ if chapter == 12:
     for ob in bpy.data.objects:
         if ob.name.startswith("V6.1 growing larva segment"):
             ob.hide_render = True
-    rings, sides = 25, 14
+    rings, sides = 65, 20
     verts, faces = [], []
     for i in range(rings):
         t = i / (rings - 1)
         radius = .013 + .096 * (math.sin(math.pi * t) ** .65)
-        radius *= 1.0 - .045 * math.cos(t * 17 * math.pi)
+        radius *= 1.0 - .105 * (math.sin(t * 9 * math.pi) ** 10)
         for j in range(sides):
             a = 2 * math.pi * j / sides
             verts.append((.035 + radius * math.cos(a),
@@ -367,4 +367,74 @@ if chapter == 12:
                     animated_point.co = base_point.co + (
                         animated_point.co - base_point.co) * 1.7
 
+scene.frame_set(120)
+
+# V6.7.4 focused: actual 40844741407 evidence review; keep V4 untouched.
+if chapter in (3, 5):
+    # The old needle spans an implausibly large gap. Stage a shorter,
+    # posterior-to-flank insertion with two clearly separated views.
+    wx, wy = (-.59, -1.56) if chapter == 3 else (.58, -1.73)
+    hx, hy = (-.24, -.58) if chapter == 3 else (.24, -.83)
+    wasp.animation_data_clear()
+    for f, z in ((1,.70),(90,.68),(102,.63),(114,.59),
+                 (126,.60),(145,.67),(240,.70)):
+        wasp.location = (wx,wy,z)
+        wasp.rotation_euler = (0,0,0)
+        wasp.keyframe_insert(data_path="location",frame=f)
+        wasp.keyframe_insert(data_path="rotation_euler",frame=f)
+    shaft = bpy.data.objects.get("V6.7 world-space extending ovipositor")
+    tip = bpy.data.objects.get("V6.7 sting needle tip")
+    mark = bpy.data.objects.get("V6.7 roach flank entry")
+    if not shaft or not tip:
+        raise RuntimeError("Missing sting objects")
+    shaft.animation_data_clear()
+    tip.animation_data_clear()
+    for f, reach in ((1,.02),(90,.02),(96,.15),(102,.47),
+                     (108,.85),(114,1.0),(120,1.0),
+                     (126,.62),(138,.06),(160,.02),(240,.02)):
+        scene.frame_set(f)
+        base = wasp.matrix_world @ Vector((0,1.0,.37))
+        hit = roach.matrix_world @ Vector((hx,hy,.73))
+        endpoint = base.lerp(hit,reach)
+        delta = endpoint-base
+        shaft.location = (base+endpoint)*.5
+        shaft.rotation_euler = delta.to_track_quat('Z','Y').to_euler()
+        shaft.scale = (.50,.50,max(.003,delta.length))
+        tip.location = endpoint
+        tip.scale = (.013,.013,.013)
+        for prop in ("location","rotation_euler","scale"):
+            shaft.keyframe_insert(data_path=prop,frame=f)
+        tip.keyframe_insert(data_path="location",frame=f)
+        tip.keyframe_insert(data_path="scale",frame=f)
+    if mark:
+        mark.location = (hx,hy,.73)
+    scene.frame_set(114)
+    base = wasp.matrix_world @ Vector((0,1.0,.37))
+    hit = roach.matrix_world @ Vector((hx,hy,.73))
+    center = (base+hit)*.5
+    side = 1 if chapter == 3 else -1
+    pos = tuple(center + Vector((side*2.7,-4.05,1.75)))
+    target = tuple(center)
+    lens = 27
+
+if chapter == 12:
+    # No detached white protruding 'folds': sculpt grooves into the
+    # continuous 65-ring mesh and mute the chalk-white cuticle.
+    for ob in bpy.data.objects:
+        if ob.name.startswith("V6.7.2 dorsal cuticle fold"):
+            ob.hide_render = True
+        elif ob.name.startswith("V6.7.2 lateral spiracle"):
+            ob.scale = tuple(v*.45 for v in ob.scale)
+    larva = bpy.data.objects.get("V6.7.1 continuous crawling larva")
+    if not larva or not larva.data.shape_keys:
+        raise RuntimeError("Missing animated continuous larva")
+    skin = organic_material("V6.7.4 muted larval cuticle",
+                            (.38,.28,.16),(.67,.54,.36),19,.86)
+    larva.data.materials.clear()
+    larva.data.materials.append(skin)
+    scene.frame_set(120)
+    center = roach.matrix_world @ Vector((.035,.25,.78))
+    pos = tuple(center + Vector((1.35,-1.65,.90)))
+    target = tuple(center)
+    lens = 51
 scene.frame_set(120)
