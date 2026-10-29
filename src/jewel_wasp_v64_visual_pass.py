@@ -147,3 +147,96 @@ if chapter==12:
                 ob.keyframe_insert(data_path="location",frame=f)
 
 scene.frame_set(120)
+
+
+# V6.5: direct correction from V6.4 proof 40796041871
+# Verified 14-still contact and all five motion strips: chapters 3/5 have no
+# legible needle insertion, 10 shows no visible hole, 12 shows a floating
+# emerald gaster, and 0/7 are composition duplicates.
+if chapter in (3,5):
+    # Rebuild the already-created needle's actual world-space trajectory from
+    # evaluated rig transforms. A static green abdomen is not a sting.
+    shaft=next((ob for ob in bpy.data.objects
+                if ob.name.startswith("V6.3 visible articulated stinger")),None)
+    if shaft is not None:
+        shaft.animation_data_clear()
+        for frame,reach in ((1,.015),(84,.015),(90,.10),(96,.36),
+                            (102,.67),(110,1.0),(118,1.0),(126,.60),
+                            (140,.12),(170,.015),(240,.015)):
+            scene.frame_set(frame)
+            start=wasp.matrix_world @ Vector((0,.94,.31))
+            target_point=roach.matrix_world @ Vector((0,-.54 if chapter==3 else -.91,.69))
+            tip=start.lerp(target_point,reach)
+            delta=tip-start
+            shaft.location=(start+tip)*.5
+            shaft.rotation_euler=delta.to_track_quat('Z','Y').to_euler()
+            shaft.scale=(1.30,1.30,max(.003,delta.length))
+            for path in ("location","rotation_euler","scale"):
+                shaft.keyframe_insert(data_path=path,frame=frame)
+    wound=mat("V6.5 dark amber sting entry",(.12,.026,.008),.10,.56)
+    contact=ell("V6.5 visible sting contact",
+                (0,-.54 if chapter==3 else -.91,.70),
+                (.045,.047,.012),wound,roach)
+    for frame,scale in ((1,.001),(96,.001),(108,.40),(114,1.0),
+                        (138,1.0),(240,.60)):
+        contact.scale=(.045*scale,.047*scale,.012*scale)
+        contact.keyframe_insert(data_path="scale",frame=frame)
+    if chapter==3:
+        pos,target,lens=(1.65,-1.95,1.25),(-.06,-.57,.64),36
+    else:
+        pos,target,lens=(-1.65,-2.08,1.26),(-.06,-.92,.64),36
+
+if chapter==7:
+    # Change visual grammar to a high oblique inspection, not another pursuit
+    # profile that the automated audit correctly flags as chapter-0 duplicate.
+    pos,target,lens=(-1.45,-1.65,3.20),(-.25,-.68,.50),34
+
+if chapter==10:
+    # The entrance was outside the close-up motion framing. Move the mouth
+    # and low rim together into the head-first approach, then keep it on screen.
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6.3 burrow dark opening",
+                               "V6.3 uneven burrow lip")):
+            ob.location.y-=.40
+    for frame,loc in ((1,(.40,-.45,.03)),(120,(1.12,.35,.03)),
+                      (240,(1.52,1.35,.03))):
+        roach.location=loc
+        roach.rotation_euler.z=math.pi
+        roach.keyframe_insert(data_path="location",frame=frame)
+        roach.keyframe_insert(data_path="rotation_euler",frame=frame)
+    pos,target,lens=(3.30,-3.45,3.15),(1.42,1.18,.20),25
+    # Clear only foreground geometry that obstructs this actual sightline.
+    dx=target[0]-pos[0]
+    dy=target[1]-pos[1]
+    denom=dx*dx+dy*dy
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6 irregular trunk","V6 branch",
+                               "V6 asymmetrical canopy")):
+            ox=ob.location.x-pos[0]
+            oy=ob.location.y-pos[1]
+            q=(ox*dx+oy*dy)/denom
+            if .08<q<1.0 and math.hypot(ox-q*dx,oy-q*dy)<.95:
+                ob.hide_render=True
+
+if chapter==12:
+    # V6.4 created a NEW gaster after the older chapter-12 hide pass. It
+    # remained visible as a detached turquoise oval over the larva.
+    for ob in bpy.data.objects:
+        ancestor=ob
+        while ancestor is not None:
+            if ancestor==wasp:
+                ob.hide_render=True
+                break
+            ancestor=ancestor.parent
+    for ob in bpy.data.objects:
+        if ob.name.startswith("V6.1 growing larva segment"):
+            base=ob.location.copy()
+            for frame in (90,95,100,105,110,115,120,126,138,162,192,240):
+                phase=frame*.29+base.y*11
+                ob.location=(base.x+.032*math.sin(phase),
+                             base.y+.036*math.cos(phase),
+                             base.z+.022*math.sin(phase+.8))
+                ob.keyframe_insert(data_path="location",frame=frame)
+    pos,target,lens=(2.20,-.70,1.42),(1.52,1.22,.75),38
+
+scene.frame_set(120)
