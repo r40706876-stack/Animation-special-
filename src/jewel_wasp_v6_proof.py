@@ -286,7 +286,7 @@ scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.getenv("BLENDER_OUTPUT","/tmp/jewel_v6_proof.png")
 motion=os.getenv("V6_MOTION","0")=="1"
 if motion:
- scene.frame_start=48 if chapter==0 else (90 if chapter in (3,5) else (95 if chapter in (10,12) else 1))
+ scene.frame_start=48 if chapter==0 else (90 if chapter in (3,5) else (185 if chapter==10 else (95 if chapter==12 else 1)))
  scene.frame_end=scene.frame_start+23
  scene.render.resolution_percentage=50
  if hasattr(scene,"eevee") and hasattr(scene.eevee,"taa_render_samples"):

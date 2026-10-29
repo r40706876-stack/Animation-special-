@@ -240,3 +240,94 @@ if chapter==12:
     pos,target,lens=(2.20,-.70,1.42),(1.52,1.22,.75),38
 
 scene.frame_set(120)
+
+
+# V6.6: correct actual V6.5 proof 40802877587 (14 stills + 5 motion clips).
+# The previous needle began almost exactly on its roach target, so it could
+# never read as a penetrating stinger. Separate the insects and use a lateral
+# camera; place the burrow mouth ahead of the roach, not beneath its head.
+if chapter in (3, 5):
+    side = -1 if chapter == 3 else 1
+    wasp.animation_data_clear()
+    for frame, height in ((1,.64),(84,.58),(90,.54),(96,.49),
+                          (102,.46),(110,.44),(118,.44),(126,.47),
+                          (140,.54),(170,.60),(240,.66)):
+        wasp.location = (side*.53, -2.18 if chapter==3 else -2.55, height)
+        wasp.rotation_euler = (0,0,0)
+        wasp.keyframe_insert(data_path="location", frame=frame)
+        wasp.keyframe_insert(data_path="rotation_euler", frame=frame)
+    shaft = next((ob for ob in bpy.data.objects
+                  if ob.name.startswith("V6.3 visible articulated stinger")), None)
+    if shaft:
+        shaft.hide_render = False
+        shaft.animation_data_clear()
+        shaft.data.materials.clear()
+        shaft.data.materials.append(
+            mat("V6.6 copper ovipositor readable in side light",
+                (.26,.105,.023),.20,.30))
+        for frame, reach in ((1,.02),(84,.02),(90,.10),(96,.34),
+                             (102,.72),(110,1.0),(118,1.0),
+                             (126,.72),(140,.12),(170,.02),(240,.02)):
+            scene.frame_set(frame)
+            start = wasp.matrix_world @ Vector((0,.94,.31))
+            tip_target = roach.matrix_world @ Vector(
+                (side*.23,-.54 if chapter==3 else -.91,.69))
+            tip = start.lerp(tip_target, reach)
+            direction = tip-start
+            shaft.location = (start+tip)*.5
+            shaft.rotation_euler = direction.to_track_quat('Z','Y').to_euler()
+            shaft.scale = (1.65,1.65,max(.004,direction.length))
+            for path in ("location","rotation_euler","scale"):
+                shaft.keyframe_insert(data_path=path,frame=frame)
+    for ob in bpy.data.objects:
+        if ob.name.startswith("V6.5 visible sting contact"):
+            ob.location.x = side*.23
+    if chapter == 3:
+        pos,target,lens = (-2.45,-2.85,1.42),(-.29,-1.02,.65),33
+    else:
+        pos,target,lens = (2.50,-3.00,1.47),(.27,-1.26,.65),33
+
+if chapter == 10:
+    # The V6.5 opening was an invisible flat oval directly under the insect.
+    # Build an elevated, camera-facing tunnel mouth with a true dark interior.
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6.3 burrow dark opening",
+                               "V6.3 uneven burrow lip")):
+            ob.hide_render = True
+    hole_x, hole_y = 1.48, 2.52
+    cave = organic_material("V6.6 deep tunnel black",
+                            (.0005,.0004,.0003),(.009,.006,.004),10,.98)
+    ell("V6.6 excavated earth mound",(hole_x,hole_y+.36,.23),
+        (.92,.52,.37),soil)
+    ell("V6.6 vertical shadowed tunnel entrance",(hole_x,hole_y-.08,.27),
+        (.57,.055,.32),cave)
+    for j in range(19):
+        a = math.pi*j/18
+        x = hole_x+.60*math.cos(a)
+        z = .27+.34*math.sin(a)
+        ell("V6.6 uneven arched earthen rim",(x,hole_y-.14,z),
+            (.065,.09,.065),soil)
+    # Clear foliage from the entrance itself; leave the rest of the forest.
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6 fern frond","V6 natural fern stem",
+                               "V6 irregular leaf litter",
+                               "V6.4 uneven moss cluster")):
+            if (ob.location.x-hole_x)**2+(ob.location.y-hole_y)**2 < 1.05**2:
+                ob.hide_render = True
+    roach.animation_data_clear()
+    for frame,loc in ((1,(.40,-.45,.03)),(120,(1.10,.40,.03)),
+                      (185,(1.28,.97,.01)),(240,(1.48,1.66,-.08))):
+        roach.location=loc
+        roach.rotation_euler.z=math.pi
+        roach.keyframe_insert(data_path="location",frame=frame)
+        roach.keyframe_insert(data_path="rotation_euler",frame=frame)
+    wasp.animation_data_clear()
+    for frame,loc in ((1,(.30,-.25,.48)),(120,(.55,.40,.44)),
+                      (185,(.65,.83,.41)),(240,(.76,1.25,.35))):
+        wasp.location=loc
+        wasp.rotation_euler.z=math.pi
+        wasp.keyframe_insert(data_path="location",frame=frame)
+        wasp.keyframe_insert(data_path="rotation_euler",frame=frame)
+    pos,target,lens=(3.25,-2.85,2.80),(1.36,1.30,.30),24
+
+scene.frame_set(120)

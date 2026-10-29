@@ -122,3 +122,17 @@ The source-specific [proof run](https://github.com/r40706876-stack/Animation-spe
 - `src/jewel_wasp_v64_visual_pass.py` is already watched by the V6 proof workflow, so the push requests a fresh proof without authorizing a full render.
 
 The new V6.5 render must complete, its stills and animated frames must be inspected again, and any remaining realism/action failures corrected before the approval file is written. **No full V6 render authorized. V4 remains unchanged.**
+
+
+## V6.5 direct inspection — proof 40802877587 (2026-10-29 IST)
+
+The latest source's 14 actual still PNGs and five actual 24-frame MP4 motion proofs were downloaded independently from the 19 completed chapter jobs, even while the contact assembly job was still queued. A manual 14-panel contact sheet and five six-frame motion strips were assembled locally and inspected visually. All 19 chapter jobs passed technical execution; this does **not** establish visual approval.
+
+**Visual decision: FAIL.** Chapters 3/5 still show a teal wasp abdomen pressed against the roach, not a readable penetrating stinger; in the rig the old needle start and target were almost coincident. Chapter 10 shows the wasp standing over a roach, with the dark ground-level burrow hidden beneath them and the entrance obscured by fronds. Chapter 12's larva is finally unobstructed and visible, but its movement remains stylized. Chapter 13 crops the departing wasp at the top-left. Forest floor, foliage, wings and roach plates remain obviously procedural, not documentary quality. No V6 full render authorized.
+
+### V6.6 targeted corrective code — awaiting fresh rendered evidence
+
+- Separate wasp and roach during chapters 3/5, rekeyframe a side-visible copper ovipositor with a real gap and timed insertion, and focus two opposite lateral cameras on the contact.
+- Replace the flat chapter-10 oval with an arched vertical black tunnel mouth and earthen mound in front of the roach, clear only the entrance foliage, and animate the roach head-first toward it while the wasp stays off the sightline.
+- Sample chapter-10 motion late in the ten-second shot (frames 185–208) to test the actual approach/entry instead of early static setup.
+- The new proof must be inspected before further corrections or expensive full render. All prior V4 outputs and V6.5 evidence are preserved.
