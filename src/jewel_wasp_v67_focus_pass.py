@@ -261,11 +261,11 @@ if chapter in (3, 5):
     near = 1 if chapter == 3 else -1
     mark = bpy.data.objects.get("V6.7 roach flank entry")
     if mark:
-        mark.location = (near*.29,-.63 if chapter==3 else -.86,.72)
+        mark.location = (-.24,-.58 if chapter==3 else -.83,.73)
     # Compose around the actual evaluated needle endpoints.
     scene.frame_set(114)
     a = wasp.matrix_world @ Vector((0,.97,.36))
-    b = roach.matrix_world @ Vector((near*.29,-.63 if chapter==3 else -.86,.72))
+    b = roach.matrix_world @ Vector((-.24,-.58 if chapter==3 else -.83,.73))
     mid = (a+b)*.5
     pos = tuple(mid + Vector((near*1.8,-2.65,.86)))
     target = tuple(mid)
