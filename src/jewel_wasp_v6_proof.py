@@ -252,6 +252,11 @@ elif chapter==11:
 elif chapter==12:
  pos,target,lens=(3.0,-1.0,1.85),(1.65,1.24,.79),35
 
+# V6.4: apply geometry, camera and actual story-action corrections from
+# direct inspection of the V6.3 contact sheet and five motion strips.
+_v64=pathlib.Path(__file__).with_name("jewel_wasp_v64_visual_pass.py")
+exec(compile(_v64.read_text(),str(_v64),"exec"),globals())
+
 # The first proof motion clip was nearly static because the insects were
 # minuscule in a distant shot. Give the pursuing wasp an observable dart,
 # and sample that movement rather than the first second of a ten-second shot.
