@@ -218,7 +218,7 @@ scene.collection.objects.link(camera);scene.camera=camera
 camera.location=(2.3,-4.5,2.15)
 direction=Vector((0,0,.32))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=3.2
+camera_data.type="ORTHO";camera_data.ortho_scale=6.2
 for f in (1,24,48):
     wasp.location=(-.68+.06*(f-1)/47,-.18,.63+.022*math.sin(f*.14))
     wasp.keyframe_insert(data_path="location",frame=f)
