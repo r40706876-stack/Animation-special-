@@ -191,9 +191,9 @@ for s in (-1,1):
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 roach.scale=(.78,.78,.78)
 ell("roach ventral abdomen",(-.12,0,0),(.55,.32,.13),tan,roach)
-ell("roach pronotum",(.41,0,.08),(.22,.275,.095),bronze,roach)
+ell("roach pronotum",(.41,0,.08),(.185,.245,.073),bronze,roach)
 ell("roach head",(.64,0,-.015),(.16,.155,.115),brown,roach)
-ell("roach pronotal dark marking",(.44,0,.169),(.085,.155,.009),brown,roach)
+ell("roach pronotal dark marking",(.44,0,.150),(.080,.125,.008),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
@@ -211,7 +211,7 @@ for s in (-1,1):
               [(.20,s*(.14+offset),.182),(-.18,s*(.14+offset),.196),
                (-.52,s*(.14+offset*.60),.153)],
               .0035,brown,roach)
-    ell("roach compound eye %d"%s,(.71,s*.15,.025),(.064,.029,.060),eye,roach)
+    ell("roach compound eye %d"%s,(.71,s*.15,.025),(.050,.025,.049),eye,roach)
     curve("roach filiform antenna %d"%s,
         [(.76,s*.10,.025),(.96,s*.17,.06),(1.22,s*.25,.02),
          (1.45,s*.34,-.10)],.005,dark,roach)
@@ -301,6 +301,26 @@ for i in range(30):
                    rng.uniform(.23,.53),rng.uniform(.045,.10),
                    heading,green)
 
+# Asymmetric understory clusters at mid-depth create a real layered forest
+# rather than an empty soil stage. Keep the insect corridor unobstructed.
+for i in range(55):
+    side=-1 if i%2 else 1
+    x=side*rng.uniform(1.50,3.65)
+    y=rng.uniform(.85,3.2)
+    z=rng.uniform(.14,.70)
+    leaf_blade("midground fern leaflet",
+               (x,y,z),rng.uniform(.22,.55),rng.uniform(.035,.11),
+               rng.uniform(-math.pi,math.pi),green)
+# Exposed branching roots interrupt the cylindrical bases of distant trees.
+for i in range(11):
+    x=-3.3+i*.64
+    y=3.7+rng.uniform(-.20,.30)
+    for side in (-1,1):
+        curve("buried tree root",
+              [(x,y,-.05),(x+side*.23,y-.18,-.03),
+               (x+side*.48,y-.34,-.045)],
+              .022,bark,None)
+
 # Layered forest: hide the infinite grey horizon and create depth silhouettes.
 # Everything is behind the specimens; no foreground obstructions.
 back_verts=[(-9,6,-.35),(9,6,-.35),(9,6,7),(-9,6,7)]
@@ -332,18 +352,20 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(.8,-5.0,2.45)
-direction=Vector((0,0,.30))-camera.location
+camera.location=(.8,-5.3,3.75)
+direction=Vector((0,0,.32))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=6.6
-# Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
+camera_data.type="ORTHO";camera_data.ortho_scale=6.7
+# V6.8.7 review exposed clipped roach at frame 1 and an unlit bottom band.\n# V6.8.8: aim the elevated camera at the midpoint of BOTH insects, not one.\n# Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
 # Camera language: wasp anatomy -> complete two-subject encounter -> roach anatomy.
 # The middle still remains a wide safety shot; the ends intentionally isolate each rig.
-for frame,focus,scale in [(1,-.50,6.25),(12,-.38,6.10),
-                          (24,0,5.85),(36,.26,6.15),(48,.35,6.30)]:
-    camera.location=(.8+focus*.60,-5.0,2.45)
-    target=Vector((focus,0,.30))
+for frame,focus,scale in [(1,-.04,6.70),(12,-.02,6.65),
+                          (24,.02,6.55),(36,.05,6.65),(48,.08,6.70)]:
+    # Preserve BOTH insect silhouettes: earlier focus=-.50 clipped the roach.
+    # Higher camera elevation also keeps every bottom image ray above the soil.
+    camera.location=(.8+focus*.60,-5.3,3.75)
+    target=Vector((focus,0,.32))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
