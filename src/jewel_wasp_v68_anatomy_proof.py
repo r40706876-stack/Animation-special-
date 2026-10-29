@@ -55,9 +55,9 @@ blue=material("blue-green sclerites",(.018,.075,.095),.48,.28,noise=42)
 dark=material("joint membranes",(.016,.022,.018),.76)
 leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
-brown=material("roach dark chitin",(.092,.034,.018),.66,.10,noise=33)
-bronze=material("roach elytra",(.145,.055,.025),.63,.12,noise=41)
-tan=material("ventral segment",(.10,.036,.017),.70)
+brown=material("roach dark chitin",(.043,.018,.010),.82,.04,noise=21)
+bronze=material("roach elytra",(.078,.033,.017),.78,.06,noise=26)
+tan=material("ventral segment",(.056,.024,.014),.83)
 wing=material("transparent wasp wing membrane",(.12,.22,.19),.62,0,.23)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
@@ -203,6 +203,12 @@ for i in range(7):
 for s in (-1,1):
     shield("curved articulated elytron %d"%s,.23,-.69,s*.14,.18,.13,.060,
            bronze,roach)
+    # Low-relief longitudinal wing veins break the smooth toy-like roach shell.
+    for vein_idx, offset in enumerate((-.060,.015,.078)):
+        curve("roach elytron vein %d %d"%(s,vein_idx),
+              [(.20,s*(.14+offset),.182),(-.18,s*(.14+offset),.196),
+               (-.52,s*(.14+offset*.60),.153)],
+              .0035,brown,roach)
     ell("roach compound eye %d"%s,(.71,s*.15,.025),(.064,.029,.060),eye,roach)
     curve("roach filiform antenna %d"%s,
         [(.76,s*.10,.025),(.96,s*.17,.06),(1.22,s*.25,.02),
@@ -259,6 +265,24 @@ for i in range(190):
     leaf_blade("curved fallen leaf",(x,y,-.066),rng.uniform(.09,.33),
                rng.uniform(.015,.065),rng.uniform(-math.pi,math.pi),
                leafmat if i%4 else green)
+# Low foreground moss/leaf litter supplies depth without obscuring the insect silhouettes.
+# Place clusters outside the central encounter corridor; preserve clean anatomy visibility.
+for i in range(120):
+    x=rng.uniform(-3.3,3.3);y=rng.uniform(-2.8,-1.0)
+    if abs(x)<1.55 and y>-1.9:
+        continue
+    leaf_blade("foreground organic litter",
+               (x,y,-.045+rng.uniform(0,.025)),
+               rng.uniform(.11,.42),rng.uniform(.025,.095),
+               rng.uniform(-math.pi,math.pi),
+               green if i%5==0 else leafmat)
+for i in range(35):
+    x=rng.uniform(-3.1,3.1);y=rng.uniform(-2.7,2.9)
+    if abs(x)<1.4 and abs(y)<.9:
+        continue
+    ell("irregular soil pebble",(x,y,-.045),
+        (rng.uniform(.018,.052),rng.uniform(.014,.038),rng.uniform(.008,.024)),
+        soil,segments=10,rings=6)
 # Rear-only vegetation, away from the subjects and their camera sightlines.
 for i in range(30):
     x=rng.uniform(-3.7,3.7);y=rng.uniform(1.45,3.65)
@@ -310,10 +334,12 @@ camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.6
 # Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
-for frame,shift,scale in [(1,-.14,6.75),(13,-.08,6.60),
-                          (24,0,6.50),(36,.07,6.60),(48,.13,6.75)]:
-    camera.location=(.8+shift*.35,-5.0,3.05)
-    target=Vector((shift*.6,0,.24))
+# Camera language: wasp anatomy -> complete two-subject encounter -> roach anatomy.
+# The middle still remains a wide safety shot; the ends intentionally isolate each rig.
+for frame,focus,scale in [(1,-.88,4.95),(12,-.70,5.15),
+                          (24,0,6.45),(36,.45,5.65),(48,.66,5.05)]:
+    camera.location=(.8+focus*.60,-5.0,3.05)
+    target=Vector((focus,0,.24))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
