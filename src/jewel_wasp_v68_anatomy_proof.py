@@ -101,7 +101,7 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     verts=[];faces=[];nx=15;ny=10
     for i in range(nx+1):
         t=i/nx
-        width=halfwidth*(.48+.52*math.sin(math.pi*(.15+.72*t)))
+        width=halfwidth*(.15+.85*math.sin(math.pi*t)**.72)
         for j in range(ny+1):
             s=2*j/ny-1
             verts.append((x0+(x1-x0)*t,ycenter+s*width,
@@ -159,13 +159,15 @@ for s in (-1,1):
           .008,dark,wasp)
     for leg in range(3):
         x=.29-leg*.19;y=s*.15
-        hip=(x,y,.01);knee=(x+.10-leg*.075,s*(.34+.035*leg),-.16)
-        ankle=(x+.13-leg*.10,s*(.39+.065*leg),-.48)
-        taper("wasp coxa %d %d"%(s,leg),hip,knee,.036,.022,leg_amber,wasp)
-        ell("wasp joint %d %d"%(s,leg),knee,(.033,.033,.033),dark,wasp)
-        taper("wasp tibia %d %d"%(s,leg),knee,ankle,.019,.008,leg_amber,wasp)
-        taper("wasp tarsus %d %d"%(s,leg),ankle,
-              (ankle[0]+.09,ankle[1]+s*.025,ankle[2]-.02),.009,.002,dark,wasp)
+        hip=Vector((x,y,.01));knee=Vector((x+.10-leg*.075,s*(.34+.035*leg),-.16))
+        ankle=Vector((x+.13-leg*.10,s*(.39+.065*leg),-.48))
+        gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
+        gait.parent=wasp;gait.location=hip
+        taper("wasp coxa %d %d"%(s,leg),(0,0,0),knee-hip,.036,.022,leg_amber,gait)
+        ell("wasp joint %d %d"%(s,leg),knee-hip,(.033,.033,.033),dark,gait)
+        taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.019,.008,leg_amber,gait)
+        taper("wasp tarsus %d %d"%(s,leg),ankle-hip,
+              ankle-hip+Vector((.09,s*.025,-.02)),.009,.002,dark,gait)
     for hind in (0,1):
         pivot=root("wing hinge %d %d"%(s,hind),(0,0,0))
         pivot.parent=wasp;pivot.location=(.08-hind*.12,s*.14,.16)
@@ -189,9 +191,9 @@ for s in (-1,1):
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 roach.scale=(.78,.78,.78)
 ell("roach ventral abdomen",(-.12,0,0),(.55,.32,.13),tan,roach)
-ell("roach pronotum",(.41,0,.08),(.24,.33,.12),bronze,roach)
-ell("roach head",(.64,0,-.015),(.17,.19,.13),brown,roach)
-ell("roach pronotal dark marking",(.44,0,.192),(.105,.21,.012),brown,roach)
+ell("roach pronotum",(.41,0,.08),(.22,.275,.095),bronze,roach)
+ell("roach head",(.64,0,-.015),(.16,.155,.115),brown,roach)
+ell("roach pronotal dark marking",(.44,0,.169),(.085,.155,.009),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
@@ -215,19 +217,21 @@ for s in (-1,1):
          (1.45,s*.34,-.10)],.005,dark,roach)
     for leg in range(3):
         x=.35-leg*.34
-        hip=(x,s*.20,-.04)
-        femur=(x+.15-leg*.12,s*.43,-.14)
-        foot=(x+.23-leg*.18,s*.53,-.27)
-        taper("roach femur %d %d"%(s,leg),hip,femur,.054,.026,brown,roach)
-        ell("roach knee %d %d"%(s,leg),femur,(.035,.035,.035),dark,roach)
-        taper("roach tibia %d %d"%(s,leg),femur,foot,.024,.009,brown,roach)
+        hip=Vector((x,s*.20,-.04))
+        femur=Vector((x+.15-leg*.12,s*.43,-.14))
+        foot=Vector((x+.23-leg*.18,s*.53,-.27))
+        gait=root("roach gait pivot %d %d"%(s,leg),(0,0,0))
+        gait.parent=roach;gait.location=hip
+        taper("roach femur %d %d"%(s,leg),(0,0,0),femur-hip,.054,.026,brown,gait)
+        ell("roach knee %d %d"%(s,leg),femur-hip,(.035,.035,.035),dark,gait)
+        taper("roach tibia %d %d"%(s,leg),femur-hip,foot-hip,.024,.009,brown,gait)
         for spike in range(4):
             t=(spike+1)/5
-            p=Vector(femur).lerp(Vector(foot),t)
+            p=(femur-hip).lerp(foot-hip,t)
             taper("roach tibial spine",p,
-                  p+Vector((-.04,s*.035,.015)),.007,.001,dark,roach)
-        taper("roach tarsus",foot,
-              (foot[0]+.13,foot[1]+s*.03,foot[2]-.01),.010,.002,dark,roach)
+                  p+Vector((-.04,s*.035,.015)),.007,.001,dark,gait)
+        taper("roach tarsus",foot-hip,
+              foot-hip+Vector((.13,s*.03,-.01)),.010,.002,dark,gait)
 
 # Organic leaf silhouettes, subdued debris and background-only vegetation.
 # No tall foreground sticks should bisect the two specimens.
@@ -309,7 +313,7 @@ for i in range(17):
     height=rng.uniform(2.0,4.9)
     taper("rough layered tree trunk",(x,y,-.12),
           (x+rng.uniform(-.22,.22),y+.08,height),
-          rng.uniform(.13,.29),rng.uniform(.07,.16),bark)
+          rng.uniform(.085,.18),rng.uniform(.055,.12),bark)
     for j in range(7):
         leaf_blade("high background foliage",
                    (x+rng.uniform(-.65,.65),y+rng.uniform(-.5,.5),
@@ -328,18 +332,18 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(.8,-5.0,3.05)
-direction=Vector((0,0,.24))-camera.location
+camera.location=(.8,-5.0,2.45)
+direction=Vector((0,0,.30))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.6
 # Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
 # Camera language: wasp anatomy -> complete two-subject encounter -> roach anatomy.
 # The middle still remains a wide safety shot; the ends intentionally isolate each rig.
-for frame,focus,scale in [(1,-.88,4.95),(12,-.70,5.15),
-                          (24,0,6.45),(36,.45,5.65),(48,.66,5.05)]:
-    camera.location=(.8+focus*.60,-5.0,3.05)
-    target=Vector((focus,0,.24))
+for frame,focus,scale in [(1,-.50,6.25),(12,-.38,6.10),
+                          (24,0,5.85),(36,.26,6.15),(48,.35,6.30)]:
+    camera.location=(.8+focus*.60,-5.0,2.45)
+    target=Vector((focus,0,.30))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
@@ -358,10 +362,14 @@ for f in (1,7,13,19,25,31,37,43,48):
     roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
     roach.keyframe_insert(data_path="rotation_euler",frame=f)
 for obj in list(bpy.data.objects):
-    if obj.name.startswith(("wasp coxa","wasp tibia","roach femur","roach tibia")):
+    if obj.name.startswith(("wasp gait pivot","roach gait pivot")):
+        # Rotate the entire articulated leg from its hip, not isolated femur
+        # and tibia meshes around their centers (which visibly disconnected joints).
         phase=(sum(ord(c) for c in obj.name)%7)*.67
+        amplitude=.20 if obj.name.startswith("roach") else .29
         for f in (1,7,13,19,25,31,37,43,48):
-            obj.rotation_euler.y=.21*math.sin((f-1)*.29+phase)
+            obj.rotation_euler.y=amplitude*math.sin((f-1)*.29+phase)
+            obj.rotation_euler.z=.11*math.cos((f-1)*.29+phase)
             obj.keyframe_insert(data_path="rotation_euler",frame=f)
     if obj.name.startswith("roach filiform antenna"):
         for f in (1,13,25,37,48):
