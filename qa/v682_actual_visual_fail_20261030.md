@@ -1,0 +1,7 @@
+# V6.8.2 anatomy visual gate — FAIL (2026-10-30 IST)
+
+Evidence: GitHub Actions run https://github.com/r40706876-stack/Animation-special-/actions/runs/40924978949 ; artifact `jewel-wasp-v68-anatomy-gate` (ID 12922235700; head SHA a9157745d20638f741a93a52b1ec118aaf2a43ea). Independently downloaded and inspected `anatomy_still.png`, `motion_strip.png`, and decoded `anatomy_motion.mp4` with ffmpeg. ffprobe confirmed 270x480, 48 frames, 24/1 fps, 2.000000 s; full decode returned no errors.
+
+Visual assessment: NOT APPROVED. The wasp's long segmented tail, oversized pale wing blades and spherical thorax still read as a stylized toy rather than a jewel wasp. The cockroach resembles a beetle due to broad plate-like wings and a rounded head. The forest has improved bark depth, but bare soil and repeated small leaves remain synthetic. In the five-frame strip, framing shifts but insects occupy a relatively small middle band, with extensive empty lower image; movement and leg articulation remain weak. There is no validated sting, burrow, egg, or larval action. Technical pass is not a cinematic pass.
+
+Action: commit 043b71b012d4392ce121dd957c361cbbd3fad1f9 introduces V6.8.3 adjustments to wing transparency/span, abdominal proportions, flatter cockroach body, wing animation sampling, and a subject-aimed tracking camera. Await its own actual still and motion proof before approval or full rendering. Preserve V4 and all prior artifacts; do not approve 14-chapter full render.
