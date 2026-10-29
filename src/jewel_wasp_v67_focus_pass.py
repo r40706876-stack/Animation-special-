@@ -438,3 +438,131 @@ if chapter == 12:
     target = tuple(center)
     lens = 51
 scene.frame_set(120)
+
+
+# V6.7.5: V6.7.4 real stills and 48-frame strips were independently viewed.
+# The wing covers remain bread-shaped, the two insects barely interact and
+# the larva is a pale slug. This is an anatomical/staging experiment, NOT approval.
+if chapter in (3, 5, 12):
+    # Replace flat ellipsoid elytra with sculpted tapered shell surfaces.
+    # This is a true mesh replacement, not a camera or post-production overlay.
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("cockroach wing cover", "V4 wing cover seam")):
+            ob.hide_render = True
+    shell_mat = organic_material(
+        "V6.7.5 sculpted roach elytra",
+        (.042, .017, .008), (.20, .080, .032), 25, .48, .08)
+    for side in (-1, 1):
+        vertices, faces = [], []
+        length_steps, width_steps = 28, 10
+        for i in range(length_steps + 1):
+            t = i / length_steps
+            width = .018 + .33 * (max(.0, math.sin(math.pi * t)) ** .72)
+            y = -.67 + 1.49 * t
+            for j in range(width_steps + 1):
+                u = j / width_steps
+                x = side * (.022 + width * u)
+                z = (.60 + .065 * math.sin(math.pi * t)
+                     + .073 * (1 - u * u) * math.sin(math.pi * t)
+                     + .012 * math.sin(t * 5 * math.pi) * (1 - u))
+                vertices.append((x, y, z))
+        for i in range(length_steps):
+            for j in range(width_steps):
+                a = i * (width_steps + 1) + j
+                faces.append((a, a + 1, a + width_steps + 2,
+                              a + width_steps + 1))
+        mesh = bpy.data.meshes.new("V6.7.5 curved elytron mesh")
+        mesh.from_pydata(vertices, [], faces)
+        mesh.update()
+        shell = bpy.data.objects.new(
+            "V6.7.5 left elytron" if side < 0 else "V6.7.5 right elytron",
+            mesh)
+        scene.collection.objects.link(shell)
+        shell.parent = roach
+        mesh.materials.append(shell_mat)
+        for polygon in mesh.polygons:
+            polygon.use_smooth = True
+        solid = shell.modifiers.new("Thin chitin shell", "SOLIDIFY")
+        solid.thickness = .018
+        solid.offset = -1
+
+if chapter in (3, 5):
+    # Move the posterior gaster close to the flank: previously the needle
+    # bridged empty air while both actors looked disconnected in the proof.
+    x, y = ((-.44, -1.45) if chapter == 3 else (.43, -1.75))
+    hx, hy = ((-.27, -.58) if chapter == 3 else (.26, -.83))
+    wasp.animation_data_clear()
+    for f, z in ((1,.71),(90,.67),(102,.61),(114,.57),
+                 (126,.59),(150,.67),(240,.71)):
+        wasp.location = (x,y,z)
+        wasp.rotation_euler = (0,0,0)
+        wasp.keyframe_insert(data_path="location",frame=f)
+        wasp.keyframe_insert(data_path="rotation_euler",frame=f)
+    shaft = bpy.data.objects.get("V6.7 world-space extending ovipositor")
+    tip = bpy.data.objects.get("V6.7 sting needle tip")
+    mark = bpy.data.objects.get("V6.7 roach flank entry")
+    if not shaft or not tip:
+        raise RuntimeError("V6.7.5 requires real animated needle and tip")
+    shaft.animation_data_clear()
+    tip.animation_data_clear()
+    for f, reach in ((1,.02),(90,.02),(96,.12),(102,.42),
+                     (108,.82),(114,1.0),(120,1.0),
+                     (126,.58),(138,.05),(160,.02),(240,.02)):
+        scene.frame_set(f)
+        base = wasp.matrix_world @ Vector((0,1.0,.37))
+        hit = roach.matrix_world @ Vector((hx,hy,.73))
+        endpoint = base.lerp(hit,reach)
+        vector = endpoint-base
+        shaft.location = (base+endpoint)*.5
+        shaft.rotation_euler = vector.to_track_quat('Z','Y').to_euler()
+        shaft.scale = (.78,.78,max(.003,vector.length))
+        tip.location = endpoint
+        tip.scale = (.013,.013,.013)
+        for prop in ("location","rotation_euler","scale"):
+            shaft.keyframe_insert(data_path=prop,frame=f)
+        for prop in ("location","scale"):
+            tip.keyframe_insert(data_path=prop,frame=f)
+    if mark:
+        mark.location = (hx,hy,.73)
+    scene.frame_set(114)
+    base = wasp.matrix_world @ Vector((0,1.0,.37))
+    hit = roach.matrix_world @ Vector((hx,hy,.73))
+    center = (base+hit)*.5
+    side = 1 if chapter == 3 else -1
+    # Chapter 3 is a two-actor medium; chapter 5 is a contact macro.
+    if chapter == 3:
+        pos = tuple(center+Vector((side*2.3,-3.15,1.38)))
+        lens = 32
+    else:
+        pos = tuple(center+Vector((side*1.70,-2.40,1.05)))
+        lens = 38
+    target = tuple(center)
+
+if chapter == 12:
+    larva = bpy.data.objects.get("V6.7.1 continuous crawling larva")
+    if not larva or not larva.data.shape_keys:
+        raise RuntimeError("V6.7.5 requires continuous shape-key larva")
+    skin = organic_material("V6.7.5 warm matte larval cuticle",
+                            (.23,.17,.105),(.50,.39,.245),18,.92)
+    larva.data.materials.clear()
+    larva.data.materials.append(skin)
+    wave = larva.shape_key_add(name="V6.7.5 body flexion")
+    rings, sides = 65, 20
+    for index, vertex in enumerate(wave.data):
+        t = (index // sides) / (rings - 1)
+        vertex.co.x += .045 * math.sin(math.tau * t)
+        vertex.co.z += .012 * math.sin(math.tau * t + .6)
+    for f, amount in ((1,0),(95,0),(103,1),(111,0),
+                      (119,1),(127,0),(135,1),(143,0),(240,0)):
+        wave.value = amount
+        wave.keyframe_insert(data_path="value",frame=f)
+    head = mat("V6.7.5 muted larval head",(.25,.16,.085),0,.76)
+    ell("V6.7.5 small larval head capsule",
+        (.035,-.12,.755),(.037,.045,.033),head,larva)
+    scene.frame_set(120)
+    center = roach.matrix_world @ Vector((.035,.22,.76))
+    pos = tuple(center + Vector((1.26,-1.46,.92)))
+    target = tuple(center)
+    lens = 49
+
+scene.frame_set(120)

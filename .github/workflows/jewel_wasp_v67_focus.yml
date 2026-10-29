@@ -1,4 +1,4 @@
-name: Jewel Wasp V6.7.4 Focused Sting Larva Proof
+name: Jewel Wasp V6.7.5 Anatomical Sting and Larva Proof
 on:
   push:
     paths:
@@ -10,7 +10,7 @@ permissions:
   contents: read
   actions: read
 concurrency:
-  group: jewel-wasp-v674-sting-larva
+  group: jewel-wasp-v675-sting-larva
   cancel-in-progress: true
 jobs:
   focus:
@@ -91,7 +91,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: jewel-wasp-v674-focused-visual-evidence
+          name: jewel-wasp-v675-focused-visual-evidence
           path: evidence/
           if-no-files-found: warn
           retention-days: 14
