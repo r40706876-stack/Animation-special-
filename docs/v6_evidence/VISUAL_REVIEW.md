@@ -161,3 +161,15 @@ The latest V6.6 source proof is **still running** at review time: 14 of the 19 c
 **Motion audit from decoded 24-frame clips** (mean absolute adjacent-frame pixel change, 8-bit RGB scale, images resized to 160×280 for consistent comparison): chapter 0 **1.78**, chapter 3 **1.71**, chapter 5 **1.24**, chapter 10 **0.90**, chapter 12 **0.83**. These numbers alone cannot measure biological plausibility, but corroborate the almost-static burrow and larva action observed in the real five-frame strips. All five clips decode, but none is sufficient proof of a believable 10-second chapter animation.
 
 **Focused follow-up:** V6.7 source and isolated 4-chapter proof workflow are already committed; their results have **not** been independently inspected in this QA. Preserve V6.6's successful artifacts and V4. One additional QA design issue to fix *after* inspecting the V6.7 results: its chapter-10 still is currently sampled at frame **120** and the motion test at frames **210–233**, whereas the head-first approach/entry keyframe is at **240**. A late still around frame 232 and motion samples through frame 240 are needed to actually assess entry. Do not claim visual PASS or trigger full render before these real proofs are viewed.
+
+
+## V6.7 focused proof 40814728556 — direct visual review, 2026-10-29 11:20 IST
+
+The isolated [V6.7 run](https://github.com/r40706876-stack/Animation-special-/actions/runs/40814728556) completed all four focused chapter jobs and its contact assembly. Artifact \`jewel-wasp-v67-focused-visual-evidence\` (ID 12873987552) was downloaded, unzipped and the **actual 4-panel contact sheet and all four 5-frame animated motion strips were viewed**. Technical proof passes, but **visual decision: FAIL**.
+
+- Chapters 3 and 5: both close-ups crop essential wasp/roach anatomy; the amber needle floats between foreground shapes rather than showing unmistakable ovipositor insertion. Most sampled movement is minimal.
+- Chapter 10: the roach remains visibly outside a small grey tyre-like entrance in the late motion strip; no clear head-first disappearance into the tunnel. The still frame at 120 sampled approach rather than entry.
+- Chapter 12: nine white spherical larval segments resemble a string of beads; motion shows simple bead movement, not convincing muscular peristalsis.
+- Forest remains sparse, flat, and visibly procedural. Insect anatomical realism remains below the requested film quality.
+
+Commit \`bf08e23b\` is a **hypothesis to test**, not an approval: it widens sting framing, retargets the visible tip, makes burrow entry faster and samples frame 225, and replaces the bead larva with a tapered, animated continuous mesh. [Fresh focused proof](https://github.com/r40706876-stack/Animation-special-/actions/runs/40825822293) was queued at review time. Reinspect the actual new contact and motion strips before deciding on further changes. V4 and successful artifacts remain untouched. Full V6 140-second render is **not approved**.
