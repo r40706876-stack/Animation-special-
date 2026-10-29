@@ -17,6 +17,8 @@ code = code.replace(boundary, "\n"+injection+boundary)
 # For the burrow, inspect actual entry at the end of the shot, not the approach.
 old_motion = "scene.frame_start=48 if chapter==0 else (90 if chapter in (3,5) else (185 if chapter==10 else (95 if chapter==12 else 1)))"
 assert code.count(old_motion)==1, "V6 motion timing changed"
-code = code.replace(old_motion, "scene.frame_start=(210 if chapter==10 else (90 if chapter in (3,5) else (95 if chapter==12 else 48)))")
+code = code.replace(old_motion, "scene.frame_start=(193 if chapter==10 else (90 if chapter in (3,5) else (95 if chapter==12 else 48)))")
+assert code.count('scene.frame_end=scene.frame_start+23') == 1, 'V6 duration changed'
+code = code.replace('scene.frame_end=scene.frame_start+23', 'scene.frame_end=scene.frame_start+47')
 ctx = {"__name__":"__main__","__file__":str(source)}
 exec(compile(code,str(source),"exec"),ctx)

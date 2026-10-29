@@ -53,7 +53,7 @@ jobs:
           grep -q "JEWEL_V6_RENDER_DONE $chapter" "motion/motion_${{ matrix.chapter }}.log"
           ffmpeg -v error -xerror -i "$video" -f null -
           frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$video")"
-          test "$frames" = "24"
+          test "$frames" = "48"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -84,7 +84,7 @@ jobs:
           test "$(find evidence/motion -maxdepth 1 -name 'motion_*.mp4' | wc -l)" -eq 4
           ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'evidence/proof/chapter_*.png' -vf "scale=270:480,tile=2x2" -frames:v 1 evidence/contact_v67.png
           for chapter in 3 5 10 12; do
-            ffmpeg -y -loglevel error -i "evidence/motion/motion_${chapter}.mp4" -vf "fps=5,scale=180:320,tile=5x1" -frames:v 1 "evidence/strips/motion_${chapter}.jpg"
+            ffmpeg -y -loglevel error -i "evidence/motion/motion_${chapter}.mp4" -vf "fps=5,scale=180:320,tile=5x2" -frames:v 1 "evidence/strips/motion_${chapter}.jpg"
           done
           test -s evidence/contact_v67.png
           echo "V67_TECHNICAL_PROOF_READY_HUMAN_VISUAL_REVIEW_REQUIRED"

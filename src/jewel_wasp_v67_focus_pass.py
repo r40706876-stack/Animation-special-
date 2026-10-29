@@ -245,3 +245,90 @@ if chapter == 12:
     pos, target, lens = (1.88, -.65, 1.55), (1.53, 1.20, .77), 42
 
 scene.frame_set(120)
+
+# V6.7.2 corrections from actual V6.7.1 4-still/4-motion review:
+# technical pass but no legible sting, no credible burrow entry, oval larva.
+if chapter in (3, 5):
+    shaft = bpy.data.objects.get("V6.7 world-space extending ovipositor")
+    if shaft:
+        copper = mat("V6.7.2 visible amber ovipositor", (.47,.21,.055),.35,.30)
+        shaft.data.materials.clear()
+        shaft.data.materials.append(copper)
+        # Thicken actual taper mesh, not an overlay, for 540x960 visibility.
+        for vertex in shaft.data.vertices:
+            vertex.co.x *= 1.9
+            vertex.co.y *= 1.9
+    near = 1 if chapter == 3 else -1
+    mark = bpy.data.objects.get("V6.7 roach flank entry")
+    if mark:
+        mark.location = (near*.29,-.63 if chapter==3 else -.86,.72)
+    # Compose around the actual evaluated needle endpoints.
+    scene.frame_set(114)
+    a = wasp.matrix_world @ Vector((0,.97,.36))
+    b = roach.matrix_world @ Vector((near*.29,-.63 if chapter==3 else -.86,.72))
+    mid = (a+b)*.5
+    pos = tuple(mid + Vector((near*1.8,-2.65,.86)))
+    target = tuple(mid)
+    lens = 32
+
+if chapter == 10:
+    # Previous shot shows a disconnected gray ring, not a recessed tunnel.
+    for ob in bpy.data.objects:
+        if ob.name.startswith(("V6.2 visible dark burrow mouth",
+          "V6.2 irregular low earth lip", "V6.6 excavated earth mound",
+          "V6.6 vertical shadowed tunnel entrance",
+          "V6.6 uneven arched earthen rim", "V6.7 asymmetric excavated rim")):
+            ob.hide_render = True
+    earth = organic_material("V6.7.2 compacted forest soil",
+        (.027,.021,.013),(.12,.071,.034),16,.97)
+    hole = mat("V6.7.2 deep dark tunnel",(.001,.001,.001),0,.98)
+    ell("V6.7.2 integrated mound",(1.48,2.61,.30),(.96,.68,.46),earth)
+    ell("V6.7.2 recessed opening",(1.48,2.02,.32),(.52,.034,.34),hole)
+    for i in range(23):
+        angle=math.pi*i/22
+        x=1.48+(.56+.025*math.sin(i*2.3))*math.cos(angle)
+        z=.30+(.38+.02*math.cos(i*1.7))*math.sin(angle)
+        ell("V6.7.2 broken soil lip",(x,1.99,z),
+            (.053,.071,.047),earth)
+    roach.animation_data_clear()
+    for frame,p in ((1,(.40,-.45,.03)),(185,(1.44,1.03,.03)),
+        (200,(1.48,1.28,.01)),(210,(1.48,1.49,-.06)),
+        (220,(1.48,1.77,-.20)),(230,(1.48,2.05,-.36)),
+        (240,(1.48,2.38,-.56))):
+        roach.location=p
+        roach.rotation_euler=(0,0,math.pi)
+        roach.keyframe_insert(data_path="location",frame=frame)
+        roach.keyframe_insert(data_path="rotation_euler",frame=frame)
+    pos,target,lens=(2.85,-1.7,1.65),(1.48,1.97,.34),30
+
+if chapter == 12:
+    larva=bpy.data.objects.get("V6.7.1 continuous crawling larva")
+    if larva:
+        larva.scale=(.91,.91,.91)
+        for frame,y in ((1,-.03),(90,-.03),(95,-.025),
+                        (105,.015),(115,.055),(125,.095),
+                        (135,.12),(160,.15),(240,.19)):
+            larva.location=(.012*math.sin(frame*.22),y,
+                            .012*math.sin(frame*.16))
+            larva.keyframe_insert(data_path="location",frame=frame)
+        skin=organic_material("V6.7.2 cream larval cuticle",
+            (.34,.27,.16),(.81,.72,.52),15,.79)
+        larva.data.materials.clear()
+        larva.data.materials.append(skin)
+        dots=mat("V6.7.2 spiracle pigment",(.12,.07,.035),0,.84)
+        folds=mat("V6.7.2 subtle larval folds",(.35,.27,.17),0,.87)
+        for i in range(1,9):
+            t=i/9
+            r=.013+.096*math.sin(math.pi*t)**.65
+            y=-.12+.72*t
+            for side in (-1,1):
+                ell("V6.7.2 lateral spiracle",
+                    (.035+side*r*.88,y,.77),
+                    (.007,.009,.005),dots,larva)
+            if i<8:
+                ell("V6.7.2 dorsal cuticle fold",
+                    (.035,y,.75+r*.78),
+                    (r*.74,.006,.005),folds,larva)
+    pos,target,lens=(1.92,-.92,1.62),(1.52,1.16,.77),39
+
+scene.frame_set(120)
