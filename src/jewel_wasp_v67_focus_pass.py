@@ -331,4 +331,40 @@ if chapter == 12:
                     (r*.74,.006,.005),folds,larva)
     pos,target,lens=(1.92,-.92,1.62),(1.52,1.16,.77),39
 
+# V6.7.3: evidence-led framing fix after independently viewing run 40831728886.
+# V6.7.2 stills cropped both sting actors; do not crop the actual needle to
+# create an artificial close-up. This changes composition, not anatomy.
+if chapter in (3, 5):
+    scene.frame_set(114)
+    anchor = wasp.matrix_world @ Vector((0, 1.0, .37))
+    contact_world = roach.matrix_world @ Vector(
+        (-.24, -.58 if chapter == 3 else -.83, .73))
+    center = (anchor + contact_world) * .5
+    # Opposite viewing sides keep the two stings compositionally distinct.
+    side = 1 if chapter == 3 else -1
+    pos = tuple(center + Vector((side * 2.65, -4.65, 1.90)))
+    target = tuple(center)
+    lens = 24
+
+if chapter == 12:
+    scene.frame_set(120)
+    # Frame the living larva rather than the entire cockroach wing cover.
+    larva_center = roach.matrix_world @ Vector((.035, .25, .78))
+    pos = tuple(larva_center + Vector((1.20, -1.48, .95)))
+    target = tuple(larva_center)
+    lens = 56
+    larva = bpy.data.objects.get("V6.7.1 continuous crawling larva")
+    if larva and larva.data.shape_keys:
+        keys = larva.data.shape_keys.key_blocks
+        basis = keys.get("Basis")
+        if basis:
+            for key in keys:
+                if key.name == "Basis":
+                    continue
+                # Increase visible cuticle deformation without separating
+                # body segments or replacing the continuous surface.
+                for base_point, animated_point in zip(basis.data, key.data):
+                    animated_point.co = base_point.co + (
+                        animated_point.co - base_point.co) * 1.7
+
 scene.frame_set(120)
