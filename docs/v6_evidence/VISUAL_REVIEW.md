@@ -86,3 +86,18 @@ The 14 actual 540×960 PNG stills and five actual 24-frame MP4 motion proofs wer
 - `7aa440d2`: include the V6.3 story pass in the full-render source-fingerprint approval gate, invalidating stale approvals.
 - `2337637e`: proof workflow now watches all upstream scene dependencies and cancels outdated in-progress proofs when newer source is pushed.
 - **Do not approve the 140-second render yet.** Inspect the new V6.3 proof stills and motion, and specifically verify a readable sting contact, burrow entry, larva development, less repetitive shots and acceptable insect anatomy. The 140-second V4 film is preserved.
+
+
+## V6.3 direct review — successful proof 40789821190 (2026-10-29 IST)
+
+Actual current-source proof: all 14 stills and five 24-frame motion jobs succeeded; master artifact `12862799033`. The published `contact_v6.png` and all five `motion_strips/motion_{0,3,5,10,12}.jpg` were inspected visually, not inferred from a green CI check.
+
+**Visual decision: FAIL.** The 14-panel contact still shows a bead-shaped turquoise wasp abdomen, broad slab-like cockroach plates, sparse beige ground, and weakly distinct compositions. Motion 0 shows six nearly indistinguishable positions. Motion 3 and 5 show wing flutter obscuring the needle, with no unmistakable insertion. Chapter 10 shows the cockroach beside a flat black oval rather than walking into a burrow: the hole is behind the roach's local forward-facing head. Chapter 12's larva is recognizable but its six-frame proof is nearly static. The automatic audit's PASS only means 14 images, five decodable 24-frame clips and basic pixel-change checks passed; it is **not** a visual-quality pass.
+
+### V6.4 corrective source changes, fresh proof pending
+
+- `557db0ea`: add `src/jewel_wasp_v64_visual_pass.py` to replace green bead-gaster with a continuous tapered mesh, hide stacked roach plates, darken and populate forest ground, fold wings during sting close-ups, move the camera to show insertion, rotate/animate the roach head-first toward the burrow in chapter 10, enlarge opening pursuit framing and animate larval crawling.
+- `e440ed4c`: include V6.4 source in the full-film visual-approval SHA-256 bundle so stale proof approvals cannot authorize an expensive render.
+- `4ed561f8` and `a6624690`: watch the V6.4 source and load the new pass in the proof scene; trigger a fresh 14-still/five-motion proof. Its run ID and results must be verified before approving or rendering the full film.
+
+**Full-film approval remains blocked.** Reinspect the real new contact sheet and motion strips, especially needle insertion, roach heading into the hole, larval motion and visual realism. Preserve V4.
