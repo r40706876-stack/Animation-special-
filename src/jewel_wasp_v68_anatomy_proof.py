@@ -53,6 +53,7 @@ def material(name, rgb, rough=.65, metal=0, alpha=1, noise=0):
 emerald=material("iridescent emerald cuticle",(.012,.15,.115),.43,.34,noise=37)
 blue=material("blue-green sclerites",(.018,.075,.095),.48,.28,noise=42)
 dark=material("joint membranes",(.016,.022,.018),.76)
+leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
 brown=material("roach dark chitin",(.092,.034,.018),.66,.10,noise=33)
 bronze=material("roach elytra",(.145,.055,.025),.63,.12,noise=41)
@@ -116,6 +117,8 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     return obj
 
 wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
+# Scale both complete insect rigs to fit the narrow 9:16 composition.
+wasp.scale=(.78,.78,.78)
 ell("wasp head",(.39,0,.05),(.17,.16,.13),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.24,.19,.17),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
@@ -158,9 +161,9 @@ for s in (-1,1):
         x=.29-leg*.19;y=s*.15
         hip=(x,y,.01);knee=(x+.10-leg*.075,s*(.34+.035*leg),-.16)
         ankle=(x+.13-leg*.10,s*(.39+.065*leg),-.48)
-        taper("wasp coxa %d %d"%(s,leg),hip,knee,.036,.022,emerald,wasp)
+        taper("wasp coxa %d %d"%(s,leg),hip,knee,.036,.022,leg_amber,wasp)
         ell("wasp joint %d %d"%(s,leg),knee,(.033,.033,.033),dark,wasp)
-        taper("wasp tibia %d %d"%(s,leg),knee,ankle,.019,.008,dark,wasp)
+        taper("wasp tibia %d %d"%(s,leg),knee,ankle,.019,.008,leg_amber,wasp)
         taper("wasp tarsus %d %d"%(s,leg),ankle,
               (ankle[0]+.09,ankle[1]+s*.025,ankle[2]-.02),.009,.002,dark,wasp)
     for hind in (0,1):
@@ -184,6 +187,7 @@ for s in (-1,1):
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
+roach.scale=(.78,.78,.78)
 ell("roach ventral abdomen",(-.12,0,0),(.55,.32,.13),tan,roach)
 ell("roach pronotum",(.41,0,.08),(.24,.33,.12),bronze,roach)
 ell("roach head",(.64,0,-.015),(.17,.19,.13),brown,roach)
@@ -221,7 +225,7 @@ for s in (-1,1):
 
 # Organic leaf silhouettes, subdued debris and background-only vegetation.
 # No tall foreground sticks should bisect the two specimens.
-ell("earth base",(0,0,-.24),(9,9,.17),soil)
+ell("earth base",(0,0,-.24),(25,25,.17),soil)
 rng=random.Random(6801)
 def leaf_blade(name,center,length,width,heading,material_ref):
     verts=[];faces=[]
@@ -293,16 +297,16 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(2.4,-4.3,1.95)
+camera.location=(.8,-5.0,1.7)
 direction=Vector((0,0,.38))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=5.55
-# Intentional tracking camera: wasp close-up -> two-shot -> roach close-up.
-# Re-aim each shot at its subject; translating a fixed-angle camera crops insects unpredictably.
-for frame,shift,scale in [(1,-.40,4.35),(13,-.18,4.75),
-                          (24,0,5.40),(36,.18,4.75),(48,.40,4.35)]:
-    camera.location=(2.4+shift,-4.3,1.95)
-    target=Vector((shift*.65,0,.40))
+camera_data.type="ORTHO";camera_data.ortho_scale=6.6
+# Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
+# Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
+for frame,shift,scale in [(1,-.14,6.75),(13,-.08,6.60),
+                          (24,0,6.50),(36,.07,6.60),(48,.13,6.75)]:
+    camera.location=(.8+shift*.35,-5.0,1.7)
+    target=Vector((shift*.6,0,.38))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
@@ -312,11 +316,11 @@ for frame,shift,scale in [(1,-.40,4.35),(13,-.18,4.75),
 # Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
 for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
-    wasp.location=(-1.05+.59*t,-.18+.06*math.sin(math.pi*t),.43+.25*math.sin(math.pi*t))
+    wasp.location=(-.82+.43*t,-.18+.06*math.sin(math.pi*t),.43+.25*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
-    roach.location=(.90-.18*t,.20,.20+.024*math.sin(math.pi*3*t))
+    roach.location=(.82-.15*t,.20,.20+.024*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
     roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
     roach.keyframe_insert(data_path="rotation_euler",frame=f)
