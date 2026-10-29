@@ -136,3 +136,17 @@ The latest source's 14 actual still PNGs and five actual 24-frame MP4 motion pro
 - Replace the flat chapter-10 oval with an arched vertical black tunnel mouth and earthen mound in front of the roach, clear only the entrance foliage, and animate the roach head-first toward it while the wasp stays off the sightline.
 - Sample chapter-10 motion late in the ten-second shot (frames 185–208) to test the actual approach/entry instead of early static setup.
 - The new proof must be inspected before further corrections or expensive full render. All prior V4 outputs and V6.5 evidence are preserved.
+
+
+## V6.6 independent partial visual QA — run 40808502331 (2026-10-29, 09:20–09:25 IST)
+
+The latest V6.6 source proof is **still running** at review time: 14 of the 19 chapter jobs had succeeded, five later still jobs remained in progress. Downloaded nine actual still PNGs (chapters 0–8) and all five actual 24-frame MP4 motion artifacts (0, 3, 5, 10, 12); extracted sampled motion frames and inspected them as a partial contact sheet and five 5-frame strips. The successful Blender/FFmpeg jobs do **not** establish visual quality.
+
+**Visual decision for the available evidence: FAIL.** The cockroach still looks like a smooth brown wooden toy with large plate-like wing covers, and the wasp like a turquoise bead-bodied model. Chapters 0–8 have sparse, flat forest floor and repetitive straight tree trunks. Sting chapters 3 and 5 show no unambiguous ovipositor entering the roach in their 24-frame animated samples; the turquoise gaster remains the dominant foreground object. Chapter 10 shows a detached black tyre-like opening behind the cockroach rather than clear head-first entry, even when sampled later (frames 185–208). Chapter 12 shows a white segmented larva, but its movement remains visibly schematic. The chapter 9–13 still images were not yet available, so this is **not** a completed 14-still QA review. No full-render approval.
+
+### Cost-conscious V6.7 targeted follow-up
+
+- New src/jewel_wasp_v67_focus_pass.py builds a side-separated, world-space extending needle and flank contact, an aligned asymmetric burrow mouth with a late head-first approach, and a larval peristalsis wave. These are hypotheses, **not yet verified visual improvements**.
+- New src/jewel_wasp_v67_focus_proof.py injects those corrections into the existing V6 setup without changing the canonical V6.6 proof or its successful artifacts. Burrow motion samples frames 210–233 to capture actual entry.
+- New .github/workflows/jewel_wasp_v67_focus.yml tests **only chapters 3, 5, 10, and 12**, generating stills, 24-frame clips and visual strips, with a separate concurrency group. It does not cancel V6.6 or trigger the expensive 14-chapter full render.
+- Inspect V6.7 actual proof artifacts and correct remaining defects. The target remains anatomical insect models, a credible forest, readable contact, burrow entry and larval action. No visual approval or 140-second full-render authorization is recorded. V4 is untouched.
