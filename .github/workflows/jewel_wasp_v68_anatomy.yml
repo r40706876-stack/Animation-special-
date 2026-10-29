@@ -1,0 +1,55 @@
+name: Jewel Wasp V6.8 Clean Anatomy Gate (single specimen)
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_v68_anatomy_proof.py"
+      - ".github/workflows/jewel_wasp_v68_anatomy.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jewel-wasp-v68-anatomy
+  cancel-in-progress: true
+jobs:
+  clean-anatomy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and ffmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Syntax check clean-room source
+        run: python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py
+      - name: Render specimen still
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          BLENDER_OUTPUT="$PWD/proof/anatomy_still.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/still.log 2>&1 || { tail -n 120 proof/still.log; exit 1; }
+          grep -q "JEWEL_V68_ANATOMY_RENDER_DONE still" proof/still.log
+          test -s proof/anatomy_still.png
+      - name: Render and independently decode 48-frame motion
+        run: |
+          set -euo pipefail
+          V68_MOTION=1 BLENDER_OUTPUT="$PWD/proof/anatomy_motion.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/motion.log 2>&1 || { tail -n 120 proof/motion.log; exit 1; }
+          grep -q "JEWEL_V68_ANATOMY_RENDER_DONE motion" proof/motion.log
+          test -s proof/anatomy_motion.mp4
+          ffmpeg -v error -xerror -i proof/anatomy_motion.mp4 -f null -
+          test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 proof/anatomy_motion.mp4)" = 48
+          test "$(ffprobe -v error -show_entries stream=r_frame_rate -of default=nw=1:nk=1 proof/anatomy_motion.mp4 | head -n 1)" = 24/1
+          ffmpeg -y -loglevel error -i proof/anatomy_motion.mp4 -vf "select='eq(n,0)+eq(n,11)+eq(n,23)+eq(n,35)+eq(n,47)',scale=270:480,tile=5x1" -frames:v 1 proof/motion_strip.png
+          test -s proof/motion_strip.png
+          echo "TECHNICAL_SPECIMEN_PASS_VISUAL_QA_STILL_REQUIRED"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v68-anatomy-gate
+          path: proof/
+          if-no-files-found: warn
+          retention-days: 14
