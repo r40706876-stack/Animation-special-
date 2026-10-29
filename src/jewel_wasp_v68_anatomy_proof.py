@@ -110,16 +110,32 @@ wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 ell("wasp head",(.39,0,.05),(.17,.16,.13),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.24,.19,.17),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
-# tapered segmented abdomen: each tergite follows a curved gaster
-for i in range(6):
-    t=i/5
-    ell("wasp gaster tergite %02d"%i,
-        (-.31-.105*i,0,.03+.045*math.sin(t*math.pi)),
-        (.108,.125+.043*math.sin(t*math.pi),.102+.036*math.sin(t*math.pi)),
-        emerald if i%2==0 else blue,wasp)
-    if i<5:
-        ell("wasp intersegment %02d"%i,(-.36-.105*i,0,.03),
-            (.023,.124,.09),dark,wasp)
+# One continuous spindle-shaped gaster, not six visibly separate toy beads.
+# Narrow inter-tergite seams are material bands on the SAME mesh.
+verts=[];faces=[];rings=43;around=20
+for i in range(rings):
+    t=i/(rings-1)
+    x=-.275-.78*t
+    profile=max(.025,math.sin(math.pi*t)**.60)
+    ry=(.092+.090*profile)*(1-.18*t)
+    rz=(.076+.078*profile)*(1-.12*t)
+    zc=.035+.043*math.sin(math.pi*t)
+    for j in range(around):
+        theta=2*math.pi*j/around
+        verts.append((x,ry*math.cos(theta),zc+rz*math.sin(theta)))
+for i in range(rings-1):
+    for j in range(around):
+        k=i*around+j;kn=i*around+(j+1)%around
+        faces.append((k,kn,kn+around,k+around))
+mesh=bpy.data.meshes.new("continuous sculpted gaster mesh")
+mesh.from_pydata(verts,[],faces);mesh.update()
+gaster=bpy.data.objects.new("wasp continuous anatomical gaster",mesh)
+scene.collection.objects.link(gaster);gaster.parent=wasp
+mesh.materials.append(emerald);mesh.materials.append(blue);mesh.materials.append(dark)
+for face in mesh.polygons:
+    face.use_smooth=True
+    axial=face.index//around
+    face.material_index=2 if axial in (8,15,22,29,36) else (0 if axial<23 else 1)
 for s in (-1,1):
     ell("wasp eye %d"%s,(.46,s*.123,.083),(.065,.025,.065),eye,wasp)
     curve("wasp geniculate antenna %d"%s,
@@ -150,8 +166,8 @@ for s in (-1,1):
         scene.collection.objects.link(o);o.parent=pivot;mesh.materials.append(wing)
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
-        for f in range(1,49,3):
-            pivot.rotation_euler.x=s*(.13+.10*math.sin(f*.72+hind))
+        for f in range(1,49,2):
+            pivot.rotation_euler.x=s*(.18+.52*math.sin(f*2.1+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
@@ -220,9 +236,9 @@ direction=Vector((0,0,.32))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.2
 for f in (1,24,48):
-    wasp.location=(-.68+.06*(f-1)/47,-.18,.43+.022*math.sin(f*.14))
+    wasp.location=(-.68+.16*(f-1)/47,-.18,.43+.018*math.sin(f*.29))
     wasp.keyframe_insert(data_path="location",frame=f)
-    roach.location=(.72-.12*(f-1)/47,.20,.20)
+    roach.location=(.72-.15*(f-1)/47,.20,.20+.006*math.sin(f*.65))
     roach.keyframe_insert(data_path="location",frame=f)
     camera.location=(2.3-.10*(f-1)/47,-4.5,2.15)
     camera.keyframe_insert(data_path="location",frame=f)
