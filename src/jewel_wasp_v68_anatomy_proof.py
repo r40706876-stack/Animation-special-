@@ -57,7 +57,7 @@ eye=material("compound eye dark",(.008,.012,.011),.24,.10)
 brown=material("roach dark chitin",(.092,.034,.018),.66,.10,noise=33)
 bronze=material("roach elytra",(.145,.055,.025),.63,.12,noise=41)
 tan=material("ventral segment",(.10,.036,.017),.70)
-wing=material("transparent wasp wing membrane",(.31,.42,.39),.42,0,.37)
+wing=material("transparent wasp wing membrane",(.12,.22,.19),.62,0,.23)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
@@ -124,10 +124,10 @@ ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
 verts=[];faces=[];rings=43;around=20
 for i in range(rings):
     t=i/(rings-1)
-    x=-.275-.78*t
+    x=-.275-.66*t
     profile=max(.025,math.sin(math.pi*t)**.60)
-    ry=(.092+.090*profile)*(1-.18*t)
-    rz=(.076+.078*profile)*(1-.12*t)
+    ry=(.078+.073*profile)*(1-.18*t)
+    rz=(.069+.064*profile)*(1-.12*t)
     zc=.035+.043*math.sin(math.pi*t)
     for j in range(around):
         theta=2*math.pi*j/around
@@ -166,7 +166,7 @@ for s in (-1,1):
     for hind in (0,1):
         pivot=root("wing hinge %d %d"%(s,hind),(0,0,0))
         pivot.parent=wasp;pivot.location=(.08-hind*.12,s*.14,.16)
-        span=.78 if hind==0 else .57
+        span=.65 if hind==0 else .46
         verts=[];faces=[]
         for i in range(17):
             t=i/16;breadth=(.13 if hind==0 else .09)*math.sin(math.pi*t)**.8
@@ -179,12 +179,12 @@ for s in (-1,1):
         scene.collection.objects.link(o);o.parent=pivot;mesh.materials.append(wing)
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
-        for f in range(1,49,2):
-            pivot.rotation_euler.x=s*(.23+.82*math.sin(f*2.1+hind*.9))
+        for f in range(1,49):
+            pivot.rotation_euler.x=s*(.25+.74*math.sin(f*1.73+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
-ell("roach ventral abdomen",(-.12,0,0),(.55,.31,.17),tan,roach)
+ell("roach ventral abdomen",(-.12,0,0),(.55,.32,.13),tan,roach)
 ell("roach pronotum",(.41,0,.08),(.24,.33,.12),bronze,roach)
 ell("roach head",(.64,0,-.015),(.17,.19,.13),brown,roach)
 ell("roach pronotal dark marking",(.44,0,.192),(.105,.21,.012),brown,roach)
@@ -197,7 +197,7 @@ for i in range(7):
     ell("roach abdominal sternite %02d"%i,(x,0,-.065),
         (.08,.29-.02*i,.12),brown if i%2==0 else tan,roach)
 for s in (-1,1):
-    shield("curved articulated elytron %d"%s,.23,-.69,s*.14,.18,.14,.085,
+    shield("curved articulated elytron %d"%s,.23,-.69,s*.14,.18,.13,.060,
            bronze,roach)
     ell("roach compound eye %d"%s,(.71,s*.15,.025),(.064,.029,.060),eye,roach)
     curve("roach filiform antenna %d"%s,
@@ -293,22 +293,26 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(2.8,-4.7,2.35)
+camera.location=(2.4,-4.3,1.95)
 direction=Vector((0,0,.38))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=5.55
-# Close-up to two-shot to close-up, with fixed camera orientation.
-for frame,shift,scale in [(1,-.78,3.85),(13,-.42,4.65),
-                          (24,0,5.55),(36,.37,4.65),(48,.72,3.85)]:
-    camera.location=(2.8+shift,-4.7,2.35)
+# Intentional tracking camera: wasp close-up -> two-shot -> roach close-up.
+# Re-aim each shot at its subject; translating a fixed-angle camera crops insects unpredictably.
+for frame,shift,scale in [(1,-.40,4.35),(13,-.18,4.75),
+                          (24,0,5.40),(36,.18,4.75),(48,.40,4.35)]:
+    camera.location=(2.4+shift,-4.3,1.95)
+    target=Vector((shift*.65,0,.40))
+    camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
+    camera.keyframe_insert(data_path="rotation_euler",frame=frame)
     camera_data.ortho_scale=scale
     camera_data.keyframe_insert(data_path="ortho_scale",frame=frame)
 # A legible two-second action: approach, hovering lift and leg/antenna response.
 # Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
 for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
-    wasp.location=(-.95+.48*t,-.18,.43+.23*math.sin(math.pi*t))
+    wasp.location=(-1.05+.59*t,-.18+.06*math.sin(math.pi*t),.43+.25*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
