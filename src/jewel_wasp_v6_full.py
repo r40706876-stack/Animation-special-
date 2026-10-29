@@ -8,6 +8,16 @@ import bpy
 
 source = pathlib.Path(__file__).with_name("jewel_wasp_v6_proof.py")
 code = source.read_text()
+# Use the same V6.7 action correction as the reviewed focused proof.
+# Without this insertion the approved full render would silently use stale V6
+# sting, burrow and larva scenes even if the focused V6.7 proof looked good.
+camera_boundary = "\ncam.animation_data_clear()\n"
+assert code.count(camera_boundary) == 1, "V6 camera injection point changed"
+injection = """
+_v67 = pathlib.Path(__file__).with_name("jewel_wasp_v67_focus_pass.py")
+exec(compile(_v67.read_text(), str(_v67), "exec"), globals())
+"""
+code = code.replace(camera_boundary, "\n" + injection + camera_boundary)
 boundary = 'motion=os.getenv("V6_MOTION","0")=="1"'
 assert code.count(boundary) == 1, "V6 proof render boundary changed; review required"
 ctx = {"__name__": "__main__", "__file__": str(source)}
