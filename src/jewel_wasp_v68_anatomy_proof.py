@@ -356,7 +356,9 @@ camera.location=(.8,-5.3,3.75)
 direction=Vector((0,0,.32))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.7
-# V6.8.7 review exposed clipped roach at frame 1 and an unlit bottom band.\n# V6.8.8: aim the elevated camera at the midpoint of BOTH insects, not one.\n# Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
+# V6.8.7 review exposed clipped roach at frame 1 and an unlit bottom band.
+# V6.8.8: aim the elevated camera at the midpoint of BOTH insects, not one.
+# Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
 # Camera language: wasp anatomy -> complete two-subject encounter -> roach anatomy.
 # The middle still remains a wide safety shot; the ends intentionally isolate each rig.
