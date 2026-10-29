@@ -1,0 +1,80 @@
+name: Song Animation - draft and motion proof
+on:
+  workflow_dispatch:
+    inputs:
+      audio_path:
+        description: Repository audio path (empty runs motion proof only)
+        required: false
+        default: song_animation/inputs/reference.mp3
+        type: string
+  push:
+    branches: ['feature/song-animation-*']
+    paths: ['song_animation/**', '.github/workflows/song_animation.yml']
+permissions:
+  contents: read
+concurrency:
+  group: song-animation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3' 'requests>=2.31,<3'
+      - run: python -m unittest discover -s song_animation/tests -v
+      - run: python -m song_animation.render --plan song_animation/examples/proof.json --out song_proof --width 1080
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-motion-proof-${{ github.run_id }}
+          path: song_proof/
+          retention-days: 7
+  song-draft:
+    needs: proof
+    if: github.event_name == 'push' || inputs.audio_path != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AUDIO_PATH: ${{ inputs.audio_path || 'song_animation/inputs/reference.mp3' }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: gemini-2.5-flash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: song_animation/requirements.txt
+      - name: Check input and planner access
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          p=Path(os.environ['AUDIO_PATH']).resolve()
+          assert p.is_relative_to(Path.cwd()) and p.is_file(), 'Audio must be a repository file'
+          assert os.environ.get('GEMINI_API_KEY'), 'Missing GEMINI_API_KEY'
+          PY
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install -r song_animation/requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: song-whisper-small-v1
+      - name: Lyrics to connected animation draft
+        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-draft-review-${{ github.run_id }}
+          path: song_draft/
+          if-no-files-found: warn
+          retention-days: 7
