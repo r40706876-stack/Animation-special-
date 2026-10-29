@@ -101,3 +101,24 @@ Actual current-source proof: all 14 stills and five 24-frame motion jobs succeed
 - `4ed561f8` and `a6624690`: watch the V6.4 source and load the new pass in the proof scene; trigger a fresh 14-still/five-motion proof. Its run ID and results must be verified before approving or rendering the full film.
 
 **Full-film approval remains blocked.** Reinspect the real new contact sheet and motion strips, especially needle insertion, roach heading into the hole, larval motion and visual realism. Preserve V4.
+
+
+## V6.4 actual proof review — run 40796041871 (2026-10-29, 07:19 IST)
+
+The source-specific [proof run](https://github.com/r40706876-stack/Animation-special-/actions/runs/40796041871) completed successfully with 14 still jobs, five animated jobs and contact assembly (20 successful jobs). Master artifact `12865673682`; automated [audit run](https://github.com/r40706876-stack/Animation-special-/actions/runs/40801382782) published the current contact sheet and all five motion strips. I inspected those **actual images** directly. **Visual approval: FAIL.**
+
+- Chapter 0 and 7 stills remain similar (automated audit explicitly flags this pair). The environment is still repetitive, with a dark flat background and conspicuously straight trunks.
+- Chapter 3 and 5 motion strips show a nearly stationary turquoise gaster resting on the roach; **no unmistakable stinger insertion** is visible, even though the job decodes and its pixels change.
+- Chapter 10 motion strip shows the wasp climbing across the roach but **no burrow mouth** in the sampled frame. The hole is not readable as a real entrance.
+- Chapter 12 shows a white larva on the roach, but an isolated large turquoise ellipsoid floats above it. This is the newly created V6.4 gaster, which was added **after** the previous wasp-hide pass. The larval movement remains subtle.
+- Anatomical realism remains limited: roach wings resemble two thick leather panels, the wasp has a simplified metallic cylinder, and wings still look synthetic. This is not documentary-quality insect animation.
+
+### V6.5 correction submitted, new proof pending
+
+- Commit `aaded865`: rekeyframe the existing stinger using evaluated wasp and roach world-space transforms, add a timed small contact mark, and focus distinct side-angle cameras on the needle target.
+- Move the burrow aperture and its earthen rim into the roach's head-first approach, widen/reframe the chapter-10 camera, and keep its sightline clear.
+- Use a distinct high oblique chapter-7 camera to avoid repeating chapter 0.
+- Hide **all** wasp descendants after the V6.4 gaster is created in chapter 12, strengthen larval segment undulation, and focus the macro camera.
+- `src/jewel_wasp_v64_visual_pass.py` is already watched by the V6 proof workflow, so the push requests a fresh proof without authorizing a full render.
+
+The new V6.5 render must complete, its stills and animated frames must be inspected again, and any remaining realism/action failures corrected before the approval file is written. **No full V6 render authorized. V4 remains unchanged.**
