@@ -34,12 +34,13 @@ jobs:
           }
           # Hash every Blender source that contributes to the final scene, not
           # only the V6 wrapper. This prevents stale approvals after anatomy edits.
-          bundle="$(sha256sum src/jewel_wasp_3d.py src/jewel_wasp_full.py src/jewel_wasp_v4_proof.py src/jewel_wasp_v5_proof.py src/jewel_wasp_v6_proof.py src/jewel_wasp_v6_anatomy_pass.py src/jewel_wasp_v63_story_pass.py src/jewel_wasp_v64_visual_pass.py src/jewel_wasp_v6_full.py | sha256sum | cut -d' ' -f1)"
+          bundle="$(sha256sum src/jewel_wasp_3d.py src/jewel_wasp_full.py src/jewel_wasp_v4_proof.py src/jewel_wasp_v5_proof.py src/jewel_wasp_v6_proof.py src/jewel_wasp_v6_anatomy_pass.py src/jewel_wasp_v63_story_pass.py src/jewel_wasp_v64_visual_pass.py src/jewel_wasp_v67_focus_pass.py src/jewel_wasp_v67_focus_proof.py src/jewel_wasp_v6_full.py | sha256sum | cut -d' ' -f1)"
           grep -qx "V6_SOURCE_BUNDLE_SHA256=$bundle" "$approval" || {
             echo "::error::V6 scene dependency bundle changed; new visual approval required"
             exit 1
           }
-          echo "Current V6 proof source and explicit still/motion reviews verified"
+          grep -q "jewel_wasp_v67_focus_pass.py" src/jewel_wasp_v6_full.py || { echo "::error::Full renderer does not use V6.7 action pass"; exit 1; }
+          echo "Current V6+V6.7 scene sources and explicit still/motion reviews verified"
   render:
     needs: approval
     name: Render full-film chapter ${{ matrix.chapter }}
