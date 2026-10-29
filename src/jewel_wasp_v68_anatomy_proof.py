@@ -50,18 +50,20 @@ def material(name, rgb, rough=.65, metal=0, alpha=1, noise=0):
         m.node_tree.links.new(ramp.outputs["Color"],bs.inputs["Base Color"])
     return m
 
-emerald=material("iridescent emerald cuticle",(.018,.27,.18),.29,.56,noise=37)
-blue=material("blue-green sclerites",(.018,.10,.16),.34,.45,noise=42)
+emerald=material("iridescent emerald cuticle",(.012,.15,.115),.43,.34,noise=37)
+blue=material("blue-green sclerites",(.018,.075,.095),.48,.28,noise=42)
 dark=material("joint membranes",(.016,.022,.018),.76)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
-brown=material("roach dark chitin",(.17,.052,.020),.45,.16,noise=33)
-bronze=material("roach elytra",(.25,.092,.029),.40,.23,noise=41)
+brown=material("roach dark chitin",(.092,.034,.018),.66,.10,noise=33)
+bronze=material("roach elytra",(.145,.055,.025),.63,.12,noise=41)
 tan=material("ventral segment",(.10,.036,.017),.70)
 wing=material("transparent wasp wing membrane",(.31,.42,.39),.42,0,.37)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
-green=material("understory leaves",(.047,.14,.054),.79,noise=17)
+green=material("understory leaves",(.037,.10,.042),.83,noise=17)
+bark=material("rough distant bark",(.045,.036,.026),.94,noise=29)
+forest_depth=material("deep forest shadow backdrop",(.017,.038,.024),.99,noise=4)
 
 def root(name, location, angle=0):
     o=bpy.data.objects.new(name,None);scene.collection.objects.link(o)
@@ -178,7 +180,7 @@ for s in (-1,1):
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
         for f in range(1,49,2):
-            pivot.rotation_euler.x=s*(.18+.52*math.sin(f*2.1+hind*.9))
+            pivot.rotation_euler.x=s*(.23+.82*math.sin(f*2.1+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
@@ -260,6 +262,26 @@ for i in range(30):
                    rng.uniform(.23,.53),rng.uniform(.045,.10),
                    heading,green)
 
+# Layered forest: hide the infinite grey horizon and create depth silhouettes.
+# Everything is behind the specimens; no foreground obstructions.
+back_verts=[(-9,6,-.35),(9,6,-.35),(9,6,7),(-9,6,7)]
+back_mesh=bpy.data.meshes.new("forest depth curtain mesh")
+back_mesh.from_pydata(back_verts,[],[(0,1,2,3)]);back_mesh.update()
+back_obj=bpy.data.objects.new("deep forest background",back_mesh)
+scene.collection.objects.link(back_obj);back_mesh.materials.append(forest_depth)
+for i in range(17):
+    x=rng.uniform(-6.4,6.4);y=rng.uniform(3.9,5.7)
+    height=rng.uniform(2.0,4.9)
+    taper("rough layered tree trunk",(x,y,-.12),
+          (x+rng.uniform(-.22,.22),y+.08,height),
+          rng.uniform(.13,.29),rng.uniform(.07,.16),bark)
+    for j in range(7):
+        leaf_blade("high background foliage",
+                   (x+rng.uniform(-.65,.65),y+rng.uniform(-.5,.5),
+                    height*.65+rng.uniform(-.35,.6)),
+                   rng.uniform(.35,.8),rng.uniform(.09,.20),
+                   rng.uniform(-math.pi,math.pi),green)
+
 for name,loc,power,size in [
     ("large softbox",(-2.6,-3.2,4.0),600,4.0),
     ("forest rim",(2.0,1.7,3.2),450,3.0)]:
@@ -271,19 +293,26 @@ for name,loc,power,size in [
 camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
-camera.location=(1.6,-4.7,1.60)
-direction=Vector((0,0,.33))-camera.location
+camera.location=(2.8,-4.7,2.35)
+direction=Vector((0,0,.38))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=6.1
+camera_data.type="ORTHO";camera_data.ortho_scale=5.55
+# Close-up to two-shot to close-up, with fixed camera orientation.
+for frame,shift,scale in [(1,-.78,3.85),(13,-.42,4.65),
+                          (24,0,5.55),(36,.37,4.65),(48,.72,3.85)]:
+    camera.location=(2.8+shift,-4.7,2.35)
+    camera.keyframe_insert(data_path="location",frame=frame)
+    camera_data.ortho_scale=scale
+    camera_data.keyframe_insert(data_path="ortho_scale",frame=frame)
 # A legible two-second action: approach, hovering lift and leg/antenna response.
 # Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
 for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
-    wasp.location=(-.95+.36*t,-.18,.43+.12*math.sin(math.pi*t))
+    wasp.location=(-.95+.48*t,-.18,.43+.23*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
-    roach.location=(.90-.11*t,.20,.20+.015*math.sin(math.pi*3*t))
+    roach.location=(.90-.18*t,.20,.20+.024*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
     roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
     roach.keyframe_insert(data_path="rotation_euler",frame=f)
@@ -291,7 +320,7 @@ for obj in list(bpy.data.objects):
     if obj.name.startswith(("wasp coxa","wasp tibia","roach femur","roach tibia")):
         phase=(sum(ord(c) for c in obj.name)%7)*.67
         for f in (1,7,13,19,25,31,37,43,48):
-            obj.rotation_euler.y=.08*math.sin((f-1)*.29+phase)
+            obj.rotation_euler.y=.21*math.sin((f-1)*.29+phase)
             obj.keyframe_insert(data_path="rotation_euler",frame=f)
     if obj.name.startswith("roach filiform antenna"):
         for f in (1,13,25,37,48):
