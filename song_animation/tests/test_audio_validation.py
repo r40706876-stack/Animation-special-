@@ -15,7 +15,7 @@ class AudioValidation(unittest.TestCase):
   from unittest.mock import patch
   from song_animation.audio_lyrics import analyze_audio
   data={'language':'Hindi','has_vocals':True,'segments':[{'text':'मेरे दिल में','uncertain':False,'start':0,'end':2}],'unclear':[]}
-  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.audio_lyrics.generate_json',side_effect=[data,{'valid':False,'reasons':['Different words in audio']},data,{'valid':False,'reasons':['Different words in audio']}]) as api,patch('song_animation.recognition.recovery_evidence',return_value={}):
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.independent_audio_text',return_value={'status':'available','words':[]}),patch('song_animation.audio_lyrics.generate_json',side_effect=[data,{'valid':False,'reasons':['Different words in audio']},data,{'valid':False,'reasons':['Different words in audio']}]) as api,patch('song_animation.recognition.recovery_evidence',return_value={}):
    with self.assertRaisesRegex(ValueError,'meaning review'):analyze_audio('unused',td)
    self.assertFalse((Path(td)/'lyrics.json').exists())
    self.assertEqual(api.call_count,4)
@@ -31,7 +31,19 @@ class AudioValidation(unittest.TestCase):
   from song_animation.audio_lyrics import analyze_audio
   bad={'language':'Hindi','segments':[{'text':'ja ja te','uncertain':False}]}
   good={'language':'Saraiki','has_vocals':True,'segments':[{'text':'Chalre chalre waal','uncertain':False,'start':0,'end':2}],'unclear':[],'instrumental':[]}
-  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.recovery_evidence',return_value={'identity':{'title':'Chalre Chalre Waal'}}) as recovery,patch('song_animation.audio_lyrics.generate_json',side_effect=[bad,good,{'valid':True,'meaning':'curly hair'}]) as api:
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.independent_audio_text',return_value={'status':'available','words':[]}),patch('song_animation.recognition.recovery_evidence',return_value={'identity':{'title':'Chalre Chalre Waal'}}) as recovery,patch('song_animation.audio_lyrics.generate_json',side_effect=[bad,good,{'valid':True,'meaning':'curly hair'}]) as api:
    result=analyze_audio('source',td)
    self.assertEqual(result['language'],'Saraiki');self.assertTrue(result['recovery_used']);recovery.assert_called_once()
    self.assertIn('Chalre Chalre Waal',api.call_args_list[1].args[0])
+
+ def test_independent_verb_disagreement_is_sent_into_review_and_correction(self):
+  import tempfile
+  from unittest.mock import patch
+  from song_animation.audio_lyrics import analyze_audio
+  wrong={'language':'Hindi','has_vocals':True,'segments':[{'text':'जाम उठा लिया','uncertain':False,'start':0,'end':2}],'unclear':[],'instrumental':[]}
+  right=dict(wrong,segments=[{'text':'जाम लिख दिया','uncertain':False,'start':0,'end':2}])
+  independent={'status':'available','words':[{'text':'लिख','probability':.98}]}
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.independent_audio_text',return_value=independent) as asr,patch('song_animation.recognition.recovery_evidence',return_value={}),patch('song_animation.audio_lyrics.generate_json',side_effect=[wrong,{'valid':False,'reasons':['The audible verb is लिख, not उठा']},right,{'valid':True,'reasons':[]}]) as api:
+   result=analyze_audio('source',td)
+   self.assertEqual(result['words'][0]['text'],'जाम लिख दिया');self.assertTrue(result['independent_asr_used']);asr.assert_called_once()
+   self.assertIn('लिख',api.call_args_list[1].args[0]);self.assertIn('audible verb',api.call_args_list[2].args[0])

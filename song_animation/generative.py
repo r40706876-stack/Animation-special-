@@ -21,6 +21,7 @@ PACKAGE_SCHEMA={'type':'OBJECT','properties':{
 def storyboard(lyrics,music,out,fps=24):
     duration=lyrics['duration']
     prompt=f'''Direct a visually sophisticated LYRIC-MEANING FILM, not a presenter video. First interpret each sung phrase: its central subject, literal meaning, emotional metaphor and visible cause/consequence. Then design an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
+USER LIGHTING: normal bright, readable warm daylight. Do not invent a dark/moonlit setting merely to convey poetry or sadness.
 STORY FIRST: Build ONE short emotional story for the whole clip, rather than one illustration for each noun. Establish a subject/relationship and a small emotional desire; show an encounter, choice, obstacle or discovery; carry its consequence across the next shots; end with an earned gesture or visual callback. Connection can be tenderness, joy, longing, trust, humour, devotion or change, not compulsory tragedy. Objects can be the subjects for instrumental or symbolic music. Choose a story appropriate to THIS song; never force lovers, a sad man, roses or any fixed plot onto every genre.
 Lyrics are emotional truth and timing anchors, not a shopping list of props. Metaphors and actions may connect several lines into one scene, and several shots may develop one feeling. A line about heart wounds need not become an anatomical-heart diagram. Show who cares, what changes and why it matters. Never reverse an explicit causal meaning, such as replacing harm from flowers with an unrelated thorn injury. Keep original audio/captions faithful. The story is a creative illustration, not a factual claim about the singer.
 Maintain stable subjects, appearance and carried prop/relationship states. Every shot begins from the previous shot's consequence. No unexplained healing, returning lost props, changing costumes/people, disconnected new setting, repeated standing portrait or arbitrary metaphor reset. Each shot has a visible narrative purpose and emotional change that remains understandable with captions hidden. A cut may change framing, but it must advance the SAME story.
@@ -113,17 +114,21 @@ def normalize_package(data):
         if corrected!=svg:
             asset['svg']=svg=corrected
             changes.append({'asset':asset.get('id'),'removed_redundant_defs_close':True})
-        if re.search(r'<(?:[A-Za-z_]+:)?text(?:\s|>)',svg) and '<!' not in svg:
+        if re.search(r'<(?:[A-Za-z_]+:)?(?:text|animate|animateTransform|animateMotion|set)(?:\s|>)',svg) and '<!' not in svg:
             try:root=ET.fromstring(svg)
             except ET.ParseError:continue
-            removed=0
+            removed=0;removed_animation=0
             for parent in root.iter():
                 for child in list(parent):
-                    if child.tag.split('}')[-1]=='text':parent.remove(child);removed+=1
-            if removed:
+                    tag=child.tag.split('}')[-1]
+                    if tag=='text':parent.remove(child);removed+=1
+                    elif tag in {'animate','animateTransform','animateMotion','set'} and not list(child) and not any(k.lower().startswith('on') for k in child.attrib):
+                        parent.remove(child);removed_animation+=1
+            if removed or removed_animation:
                 ET.register_namespace('', 'http://www.w3.org/2000/svg')
                 asset['svg']=ET.tostring(root,encoding='unicode')
-                changes.append({'asset':asset.get('id'),'removed_decorative_text':removed})
+                if removed:changes.append({'asset':asset.get('id'),'removed_decorative_text':removed})
+                if removed_animation:changes.append({'asset':asset.get('id'),'removed_svg_animation':removed_animation})
     for node in data.get('nodes',[]):
         keys=node.get('keys',[])
         ts=[k.get('t') for k in keys]
@@ -159,7 +164,7 @@ AVAILABLE REUSABLE ASSETS: {json.dumps(reusable,ensure_ascii=False)}
 {ART_GUIDE}
 JSON shape: {{"background":"#RRGGBB","assets":[{{"id":"unique_safe_id","description":"what this artwork depicts","width":180,"height":260,"reusable":true,"svg":"<svg ...>...</svg>"}}],"nodes":[{{"id":"hero_body","asset":"asset_id","parent":null,"role":"foreground","pivot":[0.5,0.8],"easing":"smooth","keys":[{{"t":0,"x":270,"y":550,"rotation":0,"scale":1,"opacity":1}},{{"t":1,"x":300,"y":530,"rotation":0,"scale":1,"opacity":1}}],"wave":{{"rotation":0,"x":0,"y":0,"cycles":1,"phase":0}}}}]}}.
 Use about 5..14 nodes, no more than 24. PREFER parent=null and animate each part in CANVAS coordinates, including heads and arms. This avoids accidental double translations. If parenting is necessary, child x/y MUST be SMALL LOCAL OFFSETS from its parent pivot (e.g. head x=0,y=-100, NEVER x=270,y=480 for a parent already at 270,580). Parent must appear BEFORE child. A group node may have asset=null with children. Node x/y are its PIVOT position in canvas pixels, or relative to the parent pivot when parent exists. Rotation is degrees around its pivot; scale is uniform. Keys at normalized shot time t=0..1, 2..8 ordered keys, MUST start at 0 and end at 1. Each key has x,y,rotation,scale,opacity. Scale must be 0.05..4 (never zero); opacity 0..1. Use opacity=0 for invisible endpoints. Decorative symbols must use paths, never SVG text or font attributes. Wave adds optional sinusoidal x/y/rotation movement, cycles per shot, phase in cycles. Keep amplitudes small/readable. At least TWO foreground assets need INDEPENDENT object/limb movement, not identical whole-picture pans. Animate the story action (handing, walking, bowing, dancing, a machine operating, water flowing, flight, etc.) with appropriate parts and trajectories. Background movement or camera zoom does not satisfy this. Static environment layers are fine. Art fills the frame and the main subject must remain legible at phone size. Do not place faces in the lyric safe area. Nodes have role=background or foreground only.
-At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose clear curves and rich detail over hundreds of tiny shapes. Reuse an existing id without redefining it, or return its IDENTICAL SVG. New pose variant must have a new id. Do not draw text or watermarks. All geometry and ids must be valid. Avoid clipping the main action. Asset dimensions 4..1080 wide, 4..1920 tall.'''
+At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose clear curves and rich detail over hundreds of tiny shapes. Reuse an existing id without redefining it, or return its IDENTICAL SVG. New pose variant must have a new id. Do not draw text or watermarks. SVG artwork must be static: no animate, animateTransform, animateMotion or set tags. All real motion belongs in node keys/waves. All geometry and ids must be valid. Avoid clipping the main action. Asset dimensions 4..1080 wide, 4..1920 tall.'''
     key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest();cache=folder/f'scene_{index}_{key[:12]}.json'
     error=None
     for attempt in range(3):

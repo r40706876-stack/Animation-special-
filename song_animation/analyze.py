@@ -5,14 +5,15 @@ from .contract import validate_lyrics
 
 def duration(path):return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(path)]))
 
-def analyze(audio,out,model='large-v3-turbo'):
+def analyze(audio,out,model='large-v3-turbo',language_hint=None):
     from faster_whisper import WhisperModel
     dur=duration(audio)
     if not 1<=dur<=180:raise ValueError('First version accepts 1..180 second segments')
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     engine=WhisperModel(model,device='cpu',compute_type='int8')
     def recognize(path,offset=0):
-        segments,info=engine.transcribe(str(path),word_timestamps=True,vad_filter=False,
+        kwargs={'language':language_hint} if language_hint else {}
+        segments,info=engine.transcribe(str(path),**kwargs,word_timestamps=True,vad_filter=False,
             condition_on_previous_text=False,beam_size=5,no_speech_threshold=None)
         result=[]
         for seg in segments:

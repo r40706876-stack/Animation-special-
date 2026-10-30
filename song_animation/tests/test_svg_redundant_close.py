@@ -12,3 +12,9 @@ class StructuralRecovery(unittest.TestCase):
  def test_safety_validation_still_rejects_scripts_after_structural_repair(self):
   s='<svg><defs></defs><script>bad()</script><path d="M0 0L1 1"/></defs></svg>'
   with self.assertRaisesRegex(ValueError,'Unsupported'):sanitize_svg(self.fix(s))
+ def test_leaf_svg_animation_is_removed_from_artwork(self):
+  s='<svg xmlns="http://www.w3.org/2000/svg"><circle r="10"><animate attributeName="opacity" values="0;1" dur="1s"/></circle></svg>'
+  fixed=self.fix(s);sanitize_svg(fixed);self.assertNotIn('<animate',fixed)
+ def test_animation_wrapper_cannot_hide_unsafe_children(self):
+  s='<svg><path d="M0 0L1 1"/><animate><script>bad()</script></animate></svg>'
+  with self.assertRaises(ValueError):sanitize_svg(self.fix(s))
