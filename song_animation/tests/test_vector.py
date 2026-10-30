@@ -42,7 +42,11 @@ class StoryboardTests(unittest.TestCase):
         from song_animation.generative import compile_storyboard
         lyrics={'duration':6,'timing_granularity':'phrase','words':[{'text':'a phrase','start':0,'end':5.5}]}
         raw={'bible':{'style':'daylight'},'scenes':[{'start':0,'label':'a meaningful journey','visual':'a person on a hill','action':'walk and wave a hand','lyric_ids':[0]},{'start':5.8,'label':'a short ending','visual':'the same hill','action':'the person settles','lyric_ids':[]}]}
+        raw['story']={'premise':'A traveller reaches a friend','emotional_goal':'Share a small happy reunion','opening':'Waiting on the hill alone','turning_point':'A familiar friend waves back','payoff':'The traveller settles beside the friend','entities':{'traveller':{'description':'Traveller in one stable outfit','initial_state':'Alone at the hill entrance'}}}
+        raw['scenes'][0]['story']={'purpose':'Reach the meeting point','link_from_previous':'Opening setup on the hill','emotional_change':'Anticipation becomes recognition','state_in':{'traveller':'Alone at the hill entrance'},'state_out':{'traveller':'Arrived and waving to friend'}}
+        raw['scenes'][1]['story']={'purpose':'Resolve the meeting gently','link_from_previous':'The friend has waved back','emotional_change':'Recognition becomes shared ease','state_in':{'traveller':'Arrived and waving to friend'},'state_out':{'traveller':'Settled beside the waiting friend'}}
         p=compile_storyboard(raw,lyrics)
+        self.assertEqual(p['scenes'][0]['story']['state_out']['traveller'],'Settled beside the waiting friend')
         self.assertEqual(len(p['scenes']),1)
         self.assertEqual(p['scenes'][0]['lyric_ids'],[0])
         self.assertEqual(p['scenes'][0]['end_frame'],144)
@@ -129,4 +133,3 @@ class GeneratedRecovery(unittest.TestCase):
             scene,assets=scene_package(p,0,td,{})
             self.assertEqual(api.call_count,2)
             self.assertTrue(list((Path(td)/'vector_assets').glob('scene_*.json')))
-

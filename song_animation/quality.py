@@ -1,6 +1,7 @@
 """Explicit output gates. Passing automated checks is not universal/human approval."""
 import json,subprocess,math,hashlib
 from pathlib import Path
+from .narrative import narrative_decision
 import numpy as np
 CHECKS=('lyric_meaning','artwork_detail','story_motion','anatomy_continuity','caption_legibility')
 class QualityHold(RuntimeError):pass
@@ -19,6 +20,8 @@ def visual_decision(review,scene_count):
     if not isinstance(model,str) or not model or 'lite' in model.lower():
         reasons.append('Full-capability visual reviewer did not verify this film')
         return {'passed':False,'reasons':reasons,'repair_issues':[]}
+    story_reasons,story_repairs=narrative_decision(review,scene_count)
+    reasons.extend(story_reasons);repair.extend(story_repairs)
     if review.get('reference_quality_met') is not True:
         reasons.append('Artwork did not meet the stored finish reference')
         repair.extend({'shot':i,'issue':'Artwork is below the stored finish reference. Redraw large detailed organic objects with legible bright composition, not placeholder geometric shapes.'} for i in range(scene_count))

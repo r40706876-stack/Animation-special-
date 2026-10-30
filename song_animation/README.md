@@ -69,3 +69,12 @@ The actual encoded MP4 is decoded for every shot's visual review. Five explicit 
 Only an output passing these checks receives `checked.mp4` and a `song-checked-*` artifact. A blocked run keeps a clearly labelled review draft and diagnostics; stale checked/preview files are removed before a new attempt. These automated checks are not a guarantee of human approval, exact word timing, reference-beating artwork, performance metrics or universal song support. Uploads remain reviewable; automatic publishing remains off.
 
 Full-model audio meaning and encoded-frame reviews are required. Lite-model approval is never sufficient to create checked.mp4. The stored original-artwork finish reference accompanies the visual review, and bright daylight treatments have a measured brightness floor before scene caching. If suitable model access is unavailable, the run holds instead of lowering the standard.
+
+
+### One connected emotional story per song
+
+Lyrics provide meaning, emotion and timing; they are not a list of nouns to illustrate. The director now plans one premise, emotional desire, encounter/choice, carried consequence and earned final gesture. Persistent subjects may be people, relationships or objects depending on the song. Romance, sadness and human protagonists are never mandatory.
+
+Every shot records its narrative purpose, emotional change and the incoming/outgoing state of each persistent subject. A scene cannot reset a lost object, wound or relationship, or substitute a camera move for story progression. Structurally valid plans also receive a full-model story critique before assets are generated; failed plans are replanned within a bounded three-attempt budget. The new protocol invalidates old standalone-metaphor scene caches.
+
+The artist receives the whole story and state chain. Encoded-video review checks every adjacent shot for causal connection, persistent state and emotional progression, as well as whether the ending pays off the setup. Individually attractive but disconnected pictures cannot clear the output gate. These checks enforce the production workflow; they do not prove that a particular audience will emotionally connect.
