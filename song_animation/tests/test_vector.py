@@ -36,3 +36,14 @@ class ClipTests(unittest.TestCase):
                 _,selection=prepare(audio,root/'out')
                 self.assertAlmostEqual(selection['duration'],min(30,seconds),places=2)
                 self.assertFalse(selection['short_inputs_padded'])
+
+class StoryboardTests(unittest.TestCase):
+    def test_tiny_instrumental_ending_merges_without_losing_lyrics(self):
+        from song_animation.generative import compile_storyboard
+        lyrics={'duration':6,'timing_granularity':'phrase','words':[{'text':'a phrase','start':0,'end':5.5}]}
+        raw={'bible':{'style':'daylight'},'scenes':[{'start':0,'label':'a meaningful journey','visual':'a person on a hill','action':'walk and wave a hand','lyric_ids':[0]},{'start':5.8,'label':'a short ending','visual':'the same hill','action':'the person settles','lyric_ids':[]}]}
+        p=compile_storyboard(raw,lyrics)
+        self.assertEqual(len(p['scenes']),1)
+        self.assertEqual(p['scenes'][0]['lyric_ids'],[0])
+        self.assertEqual(p['scenes'][0]['end_frame'],144)
+        self.assertTrue(p['timeline_adjustments'])

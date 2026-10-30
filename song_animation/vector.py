@@ -13,7 +13,8 @@ ATTRS={'id','xmlns','viewBox','width','height','x','y','x1','y1','x2','y2','cx',
 def sanitize_svg(svg):
     if not isinstance(svg,str) or not 30<=len(svg)<=40000:raise ValueError('SVG size outside supported bounds')
     if re.search(r'<!|<\?|\b(?:https?|file|data|javascript):|@import',svg.replace('http://www.w3.org/2000/svg',''),re.I):raise ValueError('External or executable SVG content rejected')
-    root=ET.fromstring(svg)
+    try:root=ET.fromstring(svg)
+    except ET.ParseError as e:raise ValueError('Malformed SVG XML: '+str(e)) from None
     if root.tag.split('}')[-1]!='svg':raise ValueError('Asset must be SVG')
     if len(list(root.iter()))>600:raise ValueError('SVG too complex')
     shapes=0

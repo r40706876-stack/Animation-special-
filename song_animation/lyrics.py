@@ -1,7 +1,7 @@
 """Timed Hindi phrase captions with real Devanagari shaping.
 No fabricated word-level karaoke. The supplied phrase interval controls visibility.
 """
-import os,re
+import os,re,subprocess
 from pathlib import Path
 from functools import lru_cache
 from PIL import Image,ImageDraw,ImageFont,features
@@ -19,7 +19,14 @@ def font(size,text="दिल"):
     paths=[base+chosen]
     if re.search(r'[\u0900-\u097f]',text):paths.insert(0,os.getenv('SONG_LYRICS_FONT',''))
     if re.search(r'[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]',text):paths.insert(0,'/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc')
-    if chosen=='NotoSans-Bold.ttf':paths.append('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')
+    if chosen=='NotoSans-Bold.ttf':
+        if any(ord(c)>0x500 for c in text):
+            try:
+                charset=' '.join(format(ord(c),'x') for c in set(text) if not c.isspace())
+                found=subprocess.check_output(['fc-match','-f','%{file}',':style=Bold:charset='+charset],text=True,timeout=3).strip()
+                if found:paths.insert(0,found)
+            except (OSError,subprocess.SubprocessError):pass
+        paths.append('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')
     for p in paths:
         if p and Path(p).is_file():return ImageFont.truetype(p,size,layout_engine=ImageFont.Layout.RAQM)
     raise RuntimeError('Install fonts-noto-core or set SONG_LYRICS_FONT to a Devanagari font')

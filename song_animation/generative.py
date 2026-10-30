@@ -5,8 +5,8 @@ from .provider import generate_json
 from .vector import validate_vector,sanitize_svg
 from .lyrics import cues_from_lyrics
 
-PROTOCOL='open-vector-v1'
-ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..750; a separate lyric panel may cover y=770..850. Bright balanced colours preferred, with night palettes only when the story calls for them. Maintain the same character identity, clothing, recurring objects and art style across shots.
+PROTOCOL='open-vector-v2'
+ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..750; a separate lyric panel may cover y=770..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
 Each SVG is one independent asset drawn in its OWN local viewBox. SVG must be self-contained, no scripts, text, images, use, foreignObject, style, filters, URLs or external resources. Allowed elements: svg,g,path,rect,circle,ellipse,line,polyline,polygon,defs,linearGradient,radialGradient,stop,clipPath. Inline fill/stroke/transform attributes only. Use xmlns="http://www.w3.org/2000/svg". Gradients may reference local #ids only. A detailed full setting can be a background asset at width=540,height=960 with pivot [0,0] at x=0,y=0. Characters/props use tight local viewBoxes with transparent background, raster widths/heights matching their intended pixel size. Do not put a full character AND its separately animated arm into both assets: rig separate body/head/limbs where useful. Draw enough paths/shapes to look illustrated rather than geometric placeholder art.'''
 
 
@@ -15,11 +15,21 @@ def storyboard(lyrics,music,out,fps=24):
     prompt=f'''Direct an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
 Return JSON: {{"title":"short title","bible":{{"style":"detailed shared art direction","palette":"shared colours","characters":"consistent identities/clothes","locations":"settings","motifs":"recurring objects","arc":"connected emotional progression"}},"scenes":[{{"start":0.0,"label":"shot meaning","visual":"precise original illustration composition","action":"what visibly happens; describe independently moving parts/objects and their causal interaction","lyric_ids":[0]}}]}}.
 Plan about 5..8 shots for 30 seconds, fewer for a short input. First start=0, strictly increasing start seconds, each shot 1..8 seconds, final shot ends automatically at {duration:.3f}. Every lyric id must be referenced at least once. Empty ids allowed for instrumental shots. Include breathing space for instruments and a resolved ending, not an unrelated outro. Choose meaningful phrase/nearby beat boundaries. No captions in the artwork; those are added separately. Your setting and assets will be newly generated as layered vector art, so invent appropriate objects freely, but motions must be achievable by layered articulated 2D animation. No impossible promises of photorealistic 3D.
-{ART_GUIDE}
+Style direction: elegant richly illustrated 2D, expressive human figures where appropriate, detailed custom settings, balanced bright colours and layered depth. Sad songs may use muted warm daylight; avoid near-black whole frames. IMPORTANT: visual must be a PROSE description, never SVG/code. The illustration assets will be generated in the next stage.
 AUDIO ANALYSIS: {json.dumps(lyrics,ensure_ascii=False)}
 MUSIC: {json.dumps(music)}'''
     data=generate_json(prompt,out=out,tag='storyboard')
-    scenes=data.get('scenes',[])
+    return compile_storyboard(data,lyrics,fps)
+
+def compile_storyboard(data,lyrics,fps=24):
+    duration=lyrics['duration']
+    scenes=copy.deepcopy(data.get('scenes',[]))
+    adjustments=[]
+    if len(scenes)>1 and 0<duration-float(scenes[-1].get('start',duration))<1:
+        ending=scenes.pop()
+        scenes[-1]['action']+=' Ending: '+ending.get('action','Hold the resolved composition')
+        scenes[-1]['lyric_ids']=list(dict.fromkeys(scenes[-1].get('lyric_ids',[])+ending.get('lyric_ids',[])))
+        adjustments.append({'start':ending['start'],'reason':'Sub-second ending merged into previous readable shot'})
     if not 1<=len(scenes)<=12:raise ValueError('Storyboard needs 1..12 shots')
     starts=[s.get('start') for s in scenes]
     if any(type(v) not in (int,float) or not math.isfinite(v) or not 0<=v<duration for v in starts) or starts[0]!=0 or starts!=sorted(set(starts)):raise ValueError('Invalid storyboard shot starts')
@@ -38,7 +48,7 @@ MUSIC: {json.dumps(music)}'''
     return {'version':2,'title':data.get('title','Song film'),'bible':data['bible'],'fps':fps,'total_frames':total,
         'lyrics':cues_from_lyrics(lyrics,fps),'timing_granularity':lyrics.get('timing_granularity','phrase'),
         'timing_verified':False,'scenes':compiled,'assets':{},'planner':'generated_vector','review_status':'draft',
-        'open_vocabulary':True,'protocol':PROTOCOL}
+        'open_vocabulary':True,'protocol':PROTOCOL,'timeline_adjustments':adjustments}
 
 
 def scene_package(plan,index,out,previous_assets):
