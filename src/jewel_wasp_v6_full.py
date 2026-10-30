@@ -26,6 +26,16 @@ exec(compile(code.split(boundary)[0], str(source), "exec"), ctx)
 scene = ctx["scene"]
 chapter = ctx["chapter"]
 assert 0 <= chapter < 14
+# Fail closed: the V6.7 full-scene builder does not yet include V6.8 anatomy.
+# An approved V6.8 macro proof must never silently render 14 chapters with
+# stale V5/V6.7 insect models. Replace this guard only after actual rig
+# integration plus independent chapter-specific motion/visual approval.
+required_v68_roots = {"ANATOMY_WASP_ROOT", "ANATOMY_ROACH_ROOT"}
+missing_v68_roots = required_v68_roots.difference(bpy.data.objects.keys())
+assert not missing_v68_roots, (
+    "V6.8 anatomy rigs not integrated into 14-chapter renderer: "
+    + ", ".join(sorted(missing_v68_roots))
+)
 assert os.getenv("V6_FULL_APPROVED") == "YES", (
     "V6 full render blocked until visual and motion proof approval"
 )
