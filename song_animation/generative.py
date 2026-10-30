@@ -113,6 +113,17 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             additions={a['id']:a for a in data.get('assets',[])}
             if len(additions)>14:raise ValueError('Scene asset budget exceeded')
             assets=copy.deepcopy(previous_assets)
+            variants={}
+            for aid,a in list(additions.items()):
+                if aid in assets and any(assets[aid].get(k)!=a.get(k) for k in ('svg','width','height')):
+                    identity=json.dumps([a.get(k) for k in ('svg','width','height')])
+                    new_id=aid[:65]+'_'+hashlib.sha256(identity.encode()).hexdigest()[:10]
+                    variants[aid]=new_id
+                    additions.pop(aid);additions[new_id]=dict(a,id=new_id)
+            for node in data['nodes']:
+                if node.get('asset') in variants:node['asset']=variants[node['asset']]
+            if variants:data['normalizations']=data.get('normalizations',[])+[{'asset_variants':variants}]
+            data['assets']=list(additions.values())
             for aid,a in additions.items():
                 sanitize_svg(a['svg'])
                 if aid in assets and assets[aid]['svg']!=a['svg']:raise ValueError('Existing asset identity changed: '+aid)

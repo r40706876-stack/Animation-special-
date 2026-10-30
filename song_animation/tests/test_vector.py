@@ -81,3 +81,17 @@ class GeneratedRecovery(unittest.TestCase):
         node['parent']=p['scenes'][0]['nodes'][1]['id']
         for k in node['keys']:k.update(x=1500,y=2500)
         self.assertIn(node['id'],invisible_foreground_nodes(p))
+
+    def test_changed_asset_becomes_variant_without_rewriting_previous_shots(self):
+        from unittest.mock import patch
+        from song_animation.generative import scene_package
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text());p['bible']={'style':'daylight'}
+        for scene in p['scenes']:scene.update(visual=scene['label'],action='independent movement')
+        previous=copy.deepcopy(p['assets']);aid=next(iter(previous));old=previous[aid]['svg']
+        data={'background':p['scenes'][0]['background'],'assets':[dict(v,id=k) for k,v in p['assets'].items()],'nodes':copy.deepcopy(p['scenes'][0]['nodes'])}
+        data['assets'][0]['svg']=old.replace('</svg>','<circle cx="8" cy="8" r="2" fill="#fff"/></svg>')
+        with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',return_value=data):
+            scene,assets=scene_package(p,0,td,previous)
+        self.assertEqual(assets[aid]['svg'],old)
+        self.assertTrue(any(k.startswith(aid+'_') for k in assets))
+        self.assertTrue(scene['normalizations'])
