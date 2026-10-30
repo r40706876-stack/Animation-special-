@@ -1,0 +1,69 @@
+{
+  "audio_sha256": "08653628ee5a8d00391ee748f27757cd5c66d0050a85a193591aecd1f6c3d830",
+  "lyrics": {
+    "duration": 15.27873,
+    "language": "Saraiki",
+    "genre": "romantic folk acoustic",
+    "mood": "admiration, tenderness",
+    "has_vocals": true,
+    "summary": "The singer says people everywhere cite the beloved as an example, then admires his wavy curly hair. The final audible phrase begins a description of what he wears on his shoulder and is cut off. Do not add words beyond this clip. Show warm admiration, curly hair and the shoulder cloth, not drums or bhangra.",
+    "words": [
+      {
+        "id": 0,
+        "text": "Jha-jha te, har jha te",
+        "start": 0,
+        "end": 3.28,
+        "uncertain": false
+      },
+      {
+        "id": 1,
+        "text": "Paye dende lok misaal",
+        "start": 3.48,
+        "end": 6.81,
+        "uncertain": false
+      },
+      {
+        "id": 2,
+        "text": "Chalre-chalre waal",
+        "start": 7.14,
+        "end": 9.7,
+        "uncertain": false
+      },
+      {
+        "id": 3,
+        "text": "Mondhe rakhdae…",
+        "start": 9.86,
+        "end": 11.12,
+        "uncertain": false
+      }
+    ],
+    "timing_method": "approximate phrase intervals from independent ASR, crosschecked to the fingerprint-identified song",
+    "timing_granularity": "phrase",
+    "timing_verified": false,
+    "instrumental": [
+      {
+        "start": 11.22,
+        "end": 15.27873
+      }
+    ],
+    "unclear": [],
+    "provenance": {
+      "identity": "Chalre Chalre Waal",
+      "fingerprint_windows": [
+        0,
+        3
+      ],
+      "matching_track_id": "903407118",
+      "match_offsets": [
+        47.407625,
+        50.40765625
+      ],
+      "artist_attribution_verified": false,
+      "caption_script": "Roman transliteration",
+      "last_line_incomplete": true
+    },
+    "warnings": [
+      "Approximate phrase timing, not certified word timing. Final vocal phrase is incomplete. Fingerprint uploader attribution is not verified original authorship."
+    ]
+  }
+}
