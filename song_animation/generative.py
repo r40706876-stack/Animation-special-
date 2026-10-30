@@ -58,6 +58,35 @@ def compile_storyboard(data,lyrics,fps=24):
         'open_vocabulary':True,'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
 
 
+
+def normalize_package(data):
+    """Remove decorative art text and regularize an invisible zero-scale endpoint.
+    Everything else still passes the strict SVG and motion contracts.
+    """
+    from xml.etree import ElementTree as ET
+    data=copy.deepcopy(data);changes=[]
+    for asset in data.get('assets',[]):
+        svg=asset.get('svg','')
+        if re.search(r'<(?:[A-Za-z_]+:)?text(?:\s|>)',svg) and '<!' not in svg:
+            try:root=ET.fromstring(svg)
+            except ET.ParseError:continue
+            removed=0
+            for parent in root.iter():
+                for child in list(parent):
+                    if child.tag.split('}')[-1]=='text':parent.remove(child);removed+=1
+            if removed:
+                ET.register_namespace('', 'http://www.w3.org/2000/svg')
+                asset['svg']=ET.tostring(root,encoding='unicode')
+                changes.append({'asset':asset.get('id'),'removed_decorative_text':removed})
+    for node in data.get('nodes',[]):
+        for key in node.get('keys',[]):
+            if key.get('scale')==0 and key.get('opacity')==0:
+                key['scale']=.05
+                changes.append({'node':node.get('id'),'invisible_zero_scale_endpoint':key.get('t')})
+    if changes:data['normalizations']=data.get('normalizations',[])+changes
+    return data
+
+
 def scene_package(plan,index,out,previous_assets):
     shot=plan['scenes'][index];folder=Path(out)/'vector_assets';folder.mkdir(parents=True,exist_ok=True)
     # Reuse established character assets exactly when practical; scenery remains shot-specific.
@@ -71,7 +100,7 @@ THIS SHOT: {json.dumps(shot,ensure_ascii=False)}
 AVAILABLE REUSABLE ASSETS: {json.dumps(reusable,ensure_ascii=False)}
 {ART_GUIDE}
 JSON shape: {{"background":"#RRGGBB","assets":[{{"id":"unique_safe_id","description":"what this artwork depicts","width":180,"height":260,"reusable":true,"svg":"<svg ...>...</svg>"}}],"nodes":[{{"id":"hero_body","asset":"asset_id","parent":null,"role":"foreground","pivot":[0.5,0.8],"easing":"smooth","keys":[{{"t":0,"x":270,"y":550,"rotation":0,"scale":1,"opacity":1}},{{"t":1,"x":300,"y":530,"rotation":0,"scale":1,"opacity":1}}],"wave":{{"rotation":0,"x":0,"y":0,"cycles":1,"phase":0}}}}]}}.
-Use about 5..14 nodes, no more than 24. Parent must appear BEFORE child. A group node may have asset=null with children. Node x/y are its PIVOT position in canvas pixels, or relative to the parent pivot when parent exists. Rotation is degrees around its pivot; scale is uniform. Keys at normalized shot time t=0..1, 2..8 ordered keys, MUST start at 0 and end at 1. Each key has x,y,rotation,scale,opacity. Wave adds optional sinusoidal x/y/rotation movement, cycles per shot, phase in cycles. Keep amplitudes small/readable. At least TWO foreground assets need INDEPENDENT object/limb movement, not identical whole-picture pans. Animate the story action (handing, walking, bowing, dancing, a machine operating, water flowing, flight, etc.) with appropriate parts and trajectories. Background movement or camera zoom does not satisfy this. Static environment layers are fine. Art fills the frame and the main subject must remain legible at phone size. Do not place faces in the lyric safe area. Nodes have role=background or foreground only.
+Use about 5..14 nodes, no more than 24. Parent must appear BEFORE child. A group node may have asset=null with children. Node x/y are its PIVOT position in canvas pixels, or relative to the parent pivot when parent exists. Rotation is degrees around its pivot; scale is uniform. Keys at normalized shot time t=0..1, 2..8 ordered keys, MUST start at 0 and end at 1. Each key has x,y,rotation,scale,opacity. Scale must be 0.05..4 (never zero); opacity 0..1. Use opacity=0 for invisible endpoints. Decorative symbols must use paths, never SVG text or font attributes. Wave adds optional sinusoidal x/y/rotation movement, cycles per shot, phase in cycles. Keep amplitudes small/readable. At least TWO foreground assets need INDEPENDENT object/limb movement, not identical whole-picture pans. Animate the story action (handing, walking, bowing, dancing, a machine operating, water flowing, flight, etc.) with appropriate parts and trajectories. Background movement or camera zoom does not satisfy this. Static environment layers are fine. Art fills the frame and the main subject must remain legible at phone size. Do not place faces in the lyric safe area. Nodes have role=background or foreground only.
 At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose clear curves and rich detail over hundreds of tiny shapes. Reuse an existing id without redefining it, or return its IDENTICAL SVG. New pose variant must have a new id. Do not draw text or watermarks. All geometry and ids must be valid. Avoid clipping the main action. Asset dimensions 4..1080 wide, 4..1920 tall.'''
     key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest();cache=folder/f'scene_{index}_{key[:12]}.json'
     error=None
@@ -80,6 +109,7 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             if cache.exists() and attempt==0:data=json.loads(cache.read_text())
             else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}_attempt_{attempt}',schema=PACKAGE_SCHEMA)
 
+            data=normalize_package(data)
             additions={a['id']:a for a in data.get('assets',[])}
             if len(additions)>14:raise ValueError('Scene asset budget exceeded')
             assets=copy.deepcopy(previous_assets)
@@ -87,7 +117,7 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
                 sanitize_svg(a['svg'])
                 if aid in assets and assets[aid]['svg']!=a['svg']:raise ValueError('Existing asset identity changed: '+aid)
                 assets[aid]=a
-            s=dict(shot,background=data['background'],nodes=data['nodes'])
+            s=dict(shot,background=data['background'],nodes=data['nodes'],normalizations=data.get('normalizations',[]))
             check=dict(plan,assets=assets,scenes=[dict(s,start_frame=0,end_frame=s['end_frame']-s['start_frame'])],total_frames=s['end_frame']-s['start_frame'])
             validate_vector(check)
             from .vector import render_vector

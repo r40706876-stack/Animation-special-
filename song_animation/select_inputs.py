@@ -19,8 +19,10 @@ def select(root,before='',head='',manual=None,event='push'):
     files=[]
     for p in changed:
         if p and Path(p).suffix.lower() in EXTS and (root/p).is_file():files.append(checked(p))
-    # Code-only pushes run the checked-in reference as an integration test.
-    if not files:files=[checked('song_animation/inputs/reference.mp3')]
+    # Code-only changes exercise the vocal reference plus available original QA fixtures.
+    if not files:
+        samples=['reference.mp3','DEMO_festival_12s.mp3','DEMO_meditation_12s.mp3']
+        files=[checked('song_animation/inputs/'+name) for name in samples if (root/'song_animation/inputs'/name).is_file()]
     return sorted(set(files))
 
 def main():

@@ -63,3 +63,13 @@ class GeneratedRecovery(unittest.TestCase):
             scene,assets=scene_package(p,0,td,{})
             self.assertEqual(api.call_count,2)
             self.assertEqual(scene['kind'],'vector')
+
+    def test_decorative_text_and_invisible_scale_are_repaired_without_relaxing_svg_validation(self):
+        from song_animation.generative import normalize_package
+        data={'assets':[{'id':'coin','svg':'<svg xmlns="http://www.w3.org/2000/svg"><circle r="10"/><text font-family="bad">$</text></svg>'}], 'nodes':[{'id':'head','keys':[{'t':0,'scale':0,'opacity':0},{'t':1,'scale':1,'opacity':1}]}]}
+        result=normalize_package(data)
+        sanitize_svg(result['assets'][0]['svg'])
+        self.assertNotIn('<text',result['assets'][0]['svg'])
+        self.assertEqual(result['nodes'][0]['keys'][0]['scale'],.05)
+        self.assertEqual(data['nodes'][0]['keys'][0]['scale'],0)
+        self.assertEqual(len(result['normalizations']),2)
