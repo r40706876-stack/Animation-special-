@@ -18,7 +18,7 @@ scene.render.film_transparent=False
 scene.render.image_settings.color_mode="RGBA"
 scene.render.fps=24
 scene.frame_start=1
-scene.frame_end=48
+scene.frame_end=int(os.environ.get("V68_FRAMES","48"))
 scene.render.image_settings.file_format="PNG"
 scene.view_settings.view_transform="AgX"
 scene.world.color=(.13,.14,.11)
@@ -56,13 +56,13 @@ dark=material("joint membranes",(.016,.022,.018),.76)
 leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
 brown=material("roach dark chitin",(.043,.018,.010),.55,.06,noise=29)
-bronze=material("roach elytra",(.078,.033,.017),.51,.08,noise=31)
+bronze=material("roach elytra",(.052,.021,.011),.62,.06,noise=31)
 tan=material("ventral segment",(.056,.024,.014),.83)
-wing=material("transparent wasp wing membrane",(.09,.15,.13),.67,0,.16)
+wing=material("transparent wasp wing membrane",(.10,.19,.16),.53,0,.32)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
-green=material("understory leaves",(.037,.10,.042),.83,noise=17)
+green=material("understory leaves",(.028,.073,.031),.86,noise=17)
 bark=material("rough distant bark",(.045,.036,.026),.94,noise=29)
 forest_depth=material("deep forest shadow backdrop",(.017,.038,.024),.99,noise=4)
 
@@ -129,8 +129,8 @@ for i in range(rings):
     t=i/(rings-1)
     x=-.275-.66*t
     profile=max(.025,math.sin(math.pi*t)**.60)
-    ry=(.078+.073*profile)*(1-.18*t)
-    rz=(.069+.064*profile)*(1-.12*t)
+    ry=.156*profile*(1-.16*t)
+    rz=.134*profile*(1-.12*t)
     zc=.035+.043*math.sin(math.pi*t)
     for j in range(around):
         theta=2*math.pi*j/around
@@ -397,7 +397,7 @@ camera_data=bpy.data.cameras.new("portrait specimen camera")
 camera=bpy.data.objects.new("portrait specimen camera",camera_data)
 scene.collection.objects.link(camera);scene.camera=camera
 camera.location=(.8,-5.3,3.75)
-direction=Vector((0,0,.32))-camera.location
+direction=Vector((0,0,.82))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
 camera_data.type="ORTHO";camera_data.ortho_scale=6.7
 # V6.8.7 review exposed clipped roach at frame 1 and an unlit bottom band.
@@ -411,7 +411,7 @@ for frame,focus,scale in [(1,-.04,6.70),(12,-.02,6.65),
     # Preserve BOTH insect silhouettes: earlier focus=-.50 clipped the roach.
     # Higher camera elevation also keeps every bottom image ray above the soil.
     camera.location=(.8+focus*.60,-5.3,3.75)
-    target=Vector((focus,0,.32))
+    target=Vector((focus,0,.82))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
@@ -453,9 +453,9 @@ if os.environ.get("V68_SHOT","").lower()=="roach_macro":
     for f in (1,24,48):
         scene.frame_set(f)
         focus=roach.matrix_world @ Vector((-.08,0,.06))
-        camera.location=focus+Vector((.30,-2.75,1.62))
+        camera.location=focus+Vector((1.05,-2.80,1.52))
         camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
-        camera_data.ortho_scale=3.35
+        camera_data.ortho_scale=3.10
         camera.keyframe_insert(data_path="location",frame=f)
         camera.keyframe_insert(data_path="rotation_euler",frame=f)
         camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
@@ -468,10 +468,10 @@ if os.environ.get("V68_SHOT","").lower()=="wasp_macro":
     camera_data.animation_data_clear()
     for f in (1,24,48):
         scene.frame_set(f)
-        focus=wasp.matrix_world @ Vector((-.10,0,.055))
-        camera.location=focus+Vector((.10,-2.85,1.42))
+        focus=wasp.matrix_world @ Vector((-.30,0,.055))
+        camera.location=focus+Vector((1.45,-2.55,1.40))
         camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
-        camera_data.ortho_scale=3.25
+        camera_data.ortho_scale=3.00
         camera.keyframe_insert(data_path="location",frame=f)
         camera.keyframe_insert(data_path="rotation_euler",frame=f)
         camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
