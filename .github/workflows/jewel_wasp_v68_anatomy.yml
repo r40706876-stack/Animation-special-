@@ -71,6 +71,13 @@ jobs:
           ffmpeg -y -loglevel error -i proof/anatomy_motion.mp4 -vf "select='eq(n,0)+eq(n,11)+eq(n,23)+eq(n,35)+eq(n,47)',scale=270:480,tile=5x1" -frames:v 1 proof/motion_strip.png
           test -s proof/motion_strip.png
           echo "TECHNICAL_SPECIMEN_PASS_VISUAL_QA_STILL_REQUIRED"
+      - name: Render actual frame-48 touchdown macro for grounded-foot visual QA
+        run: |
+          set -euo pipefail
+          V68_SHOT=wasp_macro V68_STILL_FRAME=48 BLENDER_OUTPUT="$PWD/proof/wasp_touchdown_frame48.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/touchdown.log 2>&1 || { tail -n 120 proof/touchdown.log; exit 1; }
+          grep -q "JEWEL_V68_ANATOMY_RENDER_DONE still" proof/touchdown.log
+          test -s proof/wasp_touchdown_frame48.png
+          echo "TOUCHDOWN_FRAME48_RENDERED_VISUAL_CONTACT_NOT_YET_APPROVED"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
