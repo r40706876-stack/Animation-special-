@@ -55,10 +55,10 @@ blue=material("blue-green sclerites",(.018,.075,.095),.48,.28,noise=42)
 dark=material("joint membranes",(.016,.022,.018),.76)
 leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
-brown=material("roach dark chitin",(.043,.018,.010),.82,.04,noise=21)
-bronze=material("roach elytra",(.078,.033,.017),.78,.06,noise=26)
+brown=material("roach dark chitin",(.043,.018,.010),.55,.06,noise=29)
+bronze=material("roach elytra",(.078,.033,.017),.51,.08,noise=31)
 tan=material("ventral segment",(.056,.024,.014),.83)
-wing=material("transparent wasp wing membrane",(.12,.22,.19),.62,0,.23)
+wing=material("transparent wasp wing membrane",(.09,.15,.13),.67,0,.16)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
@@ -190,7 +190,31 @@ for s in (-1,1):
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 roach.scale=(.78,.78,.78)
-ell("roach ventral abdomen",(-.12,0,0),(.55,.32,.13),tan,roach)
+# V6.8.9: continuous flattened cockroach abdomen with cuticular seam bands.
+# The earlier seven intersecting oval sternites resembled toy beads.
+abd_verts=[];abd_faces=[];abd_rings=42;abd_sides=24
+for i in range(abd_rings):
+    t=i/(abd_rings-1)
+    x=-.75+1.13*t
+    profile=max(.025,math.sin(math.pi*(.07+.86*t))**.52)
+    ry=.305*profile*(1+.08*math.sin(math.pi*t))
+    rz=.145*profile
+    for j in range(abd_sides):
+        angle=math.tau*j/abd_sides
+        abd_verts.append((x,ry*math.cos(angle),-.012+rz*math.sin(angle)))
+for i in range(abd_rings-1):
+    for j in range(abd_sides):
+        k=i*abd_sides+j;kn=i*abd_sides+(j+1)%abd_sides
+        abd_faces.append((k,kn,kn+abd_sides,k+abd_sides))
+abd_mesh=bpy.data.meshes.new("roach continuous cuticular abdomen mesh")
+abd_mesh.from_pydata(abd_verts,[],abd_faces);abd_mesh.update()
+abd_obj=bpy.data.objects.new("roach continuous abdomen",abd_mesh)
+scene.collection.objects.link(abd_obj);abd_obj.parent=roach
+abd_mesh.materials.append(brown);abd_mesh.materials.append(tan)
+for polygon in abd_mesh.polygons:
+    polygon.use_smooth=True
+    axial=polygon.index//abd_sides
+    polygon.material_index=0 if axial in (7,13,19,25,31,37) else 1
 ell("roach pronotum",(.41,0,.08),(.185,.245,.073),bronze,roach)
 ell("roach head",(.64,0,-.015),(.16,.155,.115),brown,roach)
 ell("roach pronotal dark marking",(.44,0,.150),(.080,.125,.008),brown,roach)
@@ -198,10 +222,6 @@ for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
           .012,brown,roach)
-for i in range(7):
-    x=.20-i*.12
-    ell("roach abdominal sternite %02d"%i,(x,0,-.065),
-        (.08,.29-.02*i,.12),brown if i%2==0 else tan,roach)
 for s in (-1,1):
     shield("curved articulated elytron %d"%s,.23,-.69,s*.14,.18,.13,.060,
            bronze,roach)
@@ -301,6 +321,30 @@ for i in range(30):
                    rng.uniform(.23,.53),rng.uniform(.045,.10),
                    heading,green)
 
+# V6.8.9: upright, multi-plane fern crowns behind the action corridor.
+# Horizontal ground litter alone looked like flat stickers in the actual proof.
+for i in range(32):
+    x=rng.uniform(-2.25,2.25)
+    y=rng.uniform(1.15,3.25)
+    height=rng.uniform(.38,1.05)
+    lean=rng.uniform(-.22,.22)
+    taper("living fern rachis",(x,y,-.04),
+          (x+lean,y+.08,height),.012,.003,green)
+    for j in range(4):
+        z=.12+height*(j+.7)/5
+        spread=(.12+.13*math.sin(math.pi*(j+1)/5))
+        for side in (-1,1):
+            leaf_blade("raised fern pinna",
+                       (x+lean*(z/height)+side*spread,y+.02,z),
+                       rng.uniform(.17,.32),rng.uniform(.035,.07),
+                       side*rng.uniform(.10,.52),green)
+# Broken decaying wood and roots establish forest scale in the rear plane.
+for i in range(5):
+    x=rng.uniform(-2.5,2.5);y=rng.uniform(1.45,3.4)
+    taper("fallen decaying branch",(x,y,-.025),
+          (x+rng.uniform(-.8,.8),y+rng.uniform(-.2,.2),.025),
+          rng.uniform(.045,.085),rng.uniform(.022,.048),bark)
+
 # Asymmetric understory clusters at mid-depth create a real layered forest
 # rather than an empty soil stage. Keep the insect corridor unobstructed.
 for i in range(55):
@@ -399,6 +443,22 @@ for obj in list(bpy.data.objects):
         for f in (1,13,25,37,48):
             obj.rotation_euler.z=.055*math.sin((f-1)*.17)
             obj.keyframe_insert(data_path="rotation_euler",frame=f)
+
+# Independent roach macro still complements the safe two-insect motion proof
+# and makes leg joints, pronotum and abdomen inspectable at useful pixel scale.
+# It is diagnostic evidence, not an approval or a new film chapter.
+if os.environ.get("V68_SHOT","").lower()=="roach_macro":
+    camera.animation_data_clear()
+    camera_data.animation_data_clear()
+    for f in (1,24,48):
+        scene.frame_set(f)
+        focus=roach.matrix_world @ Vector((-.08,0,.06))
+        camera.location=focus+Vector((.30,-2.75,1.62))
+        camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
+        camera_data.ortho_scale=3.35
+        camera.keyframe_insert(data_path="location",frame=f)
+        camera.keyframe_insert(data_path="rotation_euler",frame=f)
+        camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
 
 output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
 motion=os.environ.get("V68_MOTION","0")=="1"
