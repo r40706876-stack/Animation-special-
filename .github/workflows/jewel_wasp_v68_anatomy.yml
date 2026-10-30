@@ -35,6 +35,12 @@ jobs:
           BLENDER_OUTPUT="$PWD/proof/anatomy_still.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/still.log 2>&1 || { tail -n 120 proof/still.log; exit 1; }
           grep -q "JEWEL_V68_ANATOMY_RENDER_DONE still" proof/still.log
           test -s proof/anatomy_still.png
+      - name: Render independent cockroach macro diagnostic still
+        run: |
+          set -euo pipefail
+          V68_SHOT=roach_macro BLENDER_OUTPUT="$PWD/proof/roach_macro.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/macro.log 2>&1 || { tail -n 120 proof/macro.log; exit 1; }
+          grep -q "JEWEL_V68_ANATOMY_RENDER_DONE still" proof/macro.log
+          test -s proof/roach_macro.png
       - name: Render and independently decode 48-frame motion
         run: |
           set -euo pipefail
