@@ -30,7 +30,7 @@ def prepare(audio,out,limit=30,start=None):
     seconds=min(float(limit),source_duration-start)
     if seconds<1:raise ValueError('At least one second of audio is required')
     target=out/'source_clip.wav'
-    subprocess.run(['ffmpeg','-y','-v','error','-ss',str(start),'-i',str(audio),'-vn','-t',str(seconds),'-ac','1','-ar','22050','-c:a','pcm_s16le',str(target)],check=True)
+    subprocess.run(['ffmpeg','-y','-v','error','-ss',str(start),'-i',str(audio),'-vn','-t',str(seconds),'-c:a','pcm_s16le',str(target)],check=True)
     info={'source_sha256':hashlib.sha256(audio.read_bytes()).hexdigest(),'source_duration':source_duration,
         'start':start,'duration':duration(target),'limit':limit,'method':method,'short_inputs_padded':False}
     (out/'selection.json').write_text(json.dumps(info,indent=2));return target,info

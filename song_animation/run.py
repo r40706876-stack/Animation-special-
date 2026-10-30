@@ -27,7 +27,7 @@ def main():
     a.add_argument('--audio',required=True);a.add_argument('--out',default='song_output');a.add_argument('--lyrics')
     a.add_argument('--model',default='large-v3-turbo');a.add_argument('--width',type=int,default=1080)
     a.add_argument('--start',type=float);a.add_argument('--engine',choices=['generated','classic'],default='generated')
-    a.add_argument('--artwork',choices=['vector','painted-sets'],default='vector')
+    a.add_argument('--artwork',choices=['vector','painted-sets','painted-layers'],default='vector')
     a.add_argument('--transcriber',choices=['audio-model','whisper'],default='audio-model')
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
     args=a.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
@@ -70,9 +70,12 @@ def main():
                 except RuntimeError:
                     if not args.allow_local_recovery:raise
                     plan=local_plan(lyrics);plan['provider_recovery_used']=True
-        if args.engine=='generated' and args.artwork=='painted-sets':
+        if args.engine=='generated' and args.artwork in ('painted-sets','painted-layers'):
             from .environments import paint_environments
             plan=paint_environments(plan,out)
+            if args.artwork=='painted-layers':
+                from .paint_layers import paint_foreground
+                plan=paint_foreground(plan,out)
         plan['selection']=selection
         (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
         render(plan,out,clip,args.width)
@@ -88,7 +91,8 @@ def main():
                 plan,replaced=refine(plan,out,dict(assessment,issues=decision['repair_issues']),pass_index=pass_index+1)
                 changed=changed or replaced
                 if not replaced:break
-                if args.artwork=='painted-sets':plan=paint_environments(plan,out)
+                if args.artwork in ('painted-sets','painted-layers'):plan=paint_environments(plan,out)
+                if args.artwork=='painted-layers':plan=paint_foreground(plan,out)
                 render(plan,out,clip,args.width)
             plan['visual_issues_remaining']=decision['reasons']
             (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
@@ -103,7 +107,11 @@ def main():
             status['checked_file']='checked.mp4'
         (out/'status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2))
         if not passed:raise QualityHold('Video checks did not pass; only review draft retained')
-    except QualityHold:
+    except QualityHold as e:
+        status_path=out/'status.json'
+        current=json.loads(status_path.read_text()) if status_path.exists() else {}
+        if current.get('status')!='blocked':
+            status_path.write_text(json.dumps({'status':'blocked','error_type':'QualityHold','error':str(e)[:1200],'automatic_publish':False,'universal_quality_certified':False}))
         raise
     except Exception as e:
         (out/'status.json').write_text(json.dumps({'status':'failed','error_type':type(e).__name__,'error':str(e)[:1200],'automatic_publish':False}))

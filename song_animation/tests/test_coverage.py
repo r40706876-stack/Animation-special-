@@ -33,6 +33,28 @@ class MultiScene(unittest.TestCase):
         self.assertIn('no people',a)
 
 class PaintedSafety(unittest.TestCase):
+    def test_original_stereo_is_not_replaced_with_analysis_mono(self):
+        import subprocess,json
+        from pathlib import Path
+        from song_animation.clip import prepare
+        with tempfile.TemporaryDirectory() as td:
+            source=Path(td)/'stereo.wav'
+            subprocess.run(['ffmpeg','-v','error','-y','-f','lavfi','-i','sine=frequency=440:duration=1','-f','lavfi','-i','sine=frequency=880:duration=1','-filter_complex','[0:a][1:a]amerge=inputs=2[a]','-map','[a]',str(source)],check=True)
+            clip,_=prepare(source,Path(td)/'clip')
+            meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',str(clip)]))
+            self.assertEqual(meta['streams'][0]['channels'],2)
+            self.assertEqual(meta['streams'][0]['sample_rate'],'44100')
+
+    def test_painting_retains_cutout_shape_and_rig_pivot_dimensions(self):
+        from song_animation.paint_layers import prepared_asset,restore_painted
+        asset={'svg':'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 140"><ellipse cx="40" cy="70" rx="28" ry="65" fill="#b76442"/></svg>','width':80,'height':140}
+        original,canvas,box=prepared_asset(asset)
+        painted=restore_painted(Image.new('RGB',(512,512),'#c9ac73'),original,box)
+        self.assertEqual(painted.size,original.size)
+        self.assertEqual(painted.getchannel('A').tobytes(),original.getchannel('A').tobytes())
+        self.assertEqual(painted.getpixel((0,0))[3],0)
+        self.assertEqual(painted.getpixel((40,70))[:3],(201,172,115))
+
     def test_cached_painted_sets_preserve_foreground_actor_motion(self):
         import json
         from pathlib import Path

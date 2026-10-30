@@ -4,11 +4,21 @@ CPU inference is an art backend, not a quality certificate. Existing actual-MP4
 meaning, action, anatomy, variety and finish reviews still decide acceptance.
 """
 import base64,hashlib,io,json,copy
+from functools import lru_cache
 from pathlib import Path
 from PIL import Image
 
 MODEL='stabilityai/sd-turbo'
 REVISION='b261bac6fd2cf515557d5d0707481eafa0485ec2'
+
+@lru_cache(maxsize=1)
+def inference_pipeline():
+    import torch
+    from diffusers import AutoPipelineForText2Image
+    torch.set_num_threads(2)
+    pipe=AutoPipelineForText2Image.from_pretrained(MODEL,revision=REVISION,variant='fp16',torch_dtype=torch.float32,use_safetensors=True,low_cpu_mem_usage=True)
+    pipe.to('cpu');pipe.enable_attention_slicing('max')
+    return pipe
 
 def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
@@ -33,10 +43,7 @@ def paint_environments(plan,out,pipeline=None):
         if not path.exists():
             import torch
             if pipe is None:
-                from diffusers import AutoPipelineForText2Image
-                torch.set_num_threads(2)
-                pipe=AutoPipelineForText2Image.from_pretrained(MODEL,revision=REVISION,variant='fp16',torch_dtype=torch.float32,use_safetensors=True,low_cpu_mem_usage=True)
-                pipe.to('cpu');pipe.enable_attention_slicing('max')
+                pipe=inference_pipeline()
             image=pipe(prompt=prompt,num_inference_steps=4,guidance_scale=0.0,height=896,width=512,
                 generator=torch.Generator(device='cpu').manual_seed(int(key[:8],16))).images[0]
             if image.convert('RGB').getextrema()==((0,0),(0,0),(0,0)):raise RuntimeError('Painted set is blank')

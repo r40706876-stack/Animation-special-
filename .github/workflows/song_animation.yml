@@ -105,11 +105,12 @@ jobs:
             song_draft/storyboard.json
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
+            song_draft/painted_actors/
           key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
           restore-keys: |
             song-generated-v7-${{ hashFiles(matrix.audio) }}-
       - name: Lyrics to connected animation draft
-        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-sets --allow-local-recovery
+        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-layers --allow-local-recovery
       - uses: actions/cache/save@v4
         if: always()
         with:
@@ -120,6 +121,7 @@ jobs:
             song_draft/storyboard.json
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
+            song_draft/painted_actors/
           key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         if: always()

@@ -96,3 +96,5 @@ python -m song_animation.run --audio song_animation/inputs/YOUR_SONG.mp3 --out s
 ```
 
 Only `checked.mp4` is a cleared automatic output; a review draft or a successful directed-example workflow is not proof the automatic song pipeline cleared. No universal quality or retention guarantee is made. The included `poet_multiscene` film is separately directed original artwork for the supplied recording and is labelled as such.
+
+`--artwork painted-layers` also paints organic detail into up to 24 large foreground assets per clip using image-to-image inference, their original drawn poses and the shared character/style bible. It keeps the exact alpha silhouette, dimensions, node pivots and independent motion rigs. Small accents remain vectors. Reused assets share their painted texture; paint caches include the actual SVG and style prompt. This is the upload workflow's current default. A separate full-model review of decoded frames can still hold imperfect anatomy or artwork; painting texture is not proof of character consistency or reference-level quality.
