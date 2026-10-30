@@ -49,8 +49,11 @@ def retarget(plan,index,notes):
     nodes=[n for n in nodes if n['id'] not in remove]
     if walk:
         for n in nodes:
-            if 'vine_layer' in n['id']:
-                side=-1 if '1' in n['id'] else 1
+            a=assets.get(n.get('asset'),{})
+            label=n['id']+' '+str(n.get('asset',''))+' '+a.get('description','')
+            if n.get('role')!='background' and re.search(r'thorn|vine_layer',label,re.I) and a.get('width',0)>=270 and a.get('height',999)<=300:
+                side=-1 if not any(x.get('rig_border_side')==-1 for x in nodes) else 1
+                n['rig_border_side']=side
                 for k in n['keys']:k.update(x=-120 if side<0 else 660,y=825,rotation=side*12)
     prefix='connected_'+str(index)+'_'
     def node(name,asset,keys,parent=None,pivot=(.5,.5),wave=None):
