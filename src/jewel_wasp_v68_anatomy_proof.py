@@ -1,4 +1,4 @@
-"""V6.8.23 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.24 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -171,7 +171,7 @@ for s in (-1,1):
                      -.17 if leg<2 else -.13))
         ankle=Vector((x+( .27 if leg==0 else .01 if leg==1 else -.31),
                       s*(.39 if leg==0 else .49 if leg==1 else .43),
-                      -.35 if leg==0 else -.37 if leg==1 else -.36))
+                      -.35 if leg==0 else (-.381 if s==-1 else -.37) if leg==1 else -.36))
         gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=wasp;gait.location=hip
         femur_joint=(knee-hip)*.35+Vector((.015,s*.015,.028))
@@ -533,16 +533,16 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     and os.environ.get("V68_MOTION","0")!="1"
     and os.environ.get("V68_STILL_FRAME","24")=="48"):
     scene.frame_set(48)
-    contact_focus=wasp.matrix_world @ Vector((-.04,0,-.18))
+    contact_focus=wasp.matrix_world @ Vector((.14,0,-.18))
     camera.animation_data_clear()
     camera_data.animation_data_clear()
     # The previous 0.62m rise looked below the infinite soil plane at the
     # bottom of the portrait frame (large black band in actual V6.8.20 still).
     # Raise the lens while keeping a near-ground, tarsus-visible oblique view.
-    camera.location=contact_focus+Vector((.55,-2.65,1.08))
+    camera.location=contact_focus+Vector((.55,-2.70,1.65))
     camera.rotation_euler=(contact_focus-camera.location).to_track_quat("-Z","Y").to_euler()
-    camera_data.ortho_scale=2.80
-    print("V68_TOUCHDOWN_OBLIQUE_NO_UNDERGROUND_CAMERA", flush=True)
+    camera_data.ortho_scale=3.05
+    print("V68_TOUCHDOWN_HIGH_ORIGIN_NO_BOTTOM_WORLD_BAND", flush=True)
 
 # Independent numeric contact gate: check actual animated mesh vertices in
 # world coordinates, not only a low-angle image. Tarsi may not float above
@@ -564,11 +564,12 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     final_z=foot_bottoms(48)
     gaps=[round(z-ground_z,4) for z in final_z]
     print("V68_TOUCHDOWN_TARSUS_GAPS_METERS", gaps, flush=True)
+    print("V68_TOUCHDOWN_TARSUS_NAMED_GAPS", [(o.name, g) for o,g in zip(foot_meshes,gaps)], flush=True)
     print("V68_INITIAL_TARSUS_GAPS_METERS",
           [round(z-ground_z,4) for z in initial_z], flush=True)
     # At least three supporting tarsi near soil, and no tarsus may sink more than 6mm.
     # V6.8.22 technically passed despite a 20mm-deep foot; visual QA rejected it.
-    grounded=sum(abs(g)<=.025 for g in gaps)
+    grounded=sum(abs(g)<=.012 for g in gaps)
     no_deep_penetration=min(gaps)>=-.006
     initial_airborne=min(initial_z)-ground_z>.065
     print("V68_TOUCHDOWN_GEOMETRY", "PASS" if (
