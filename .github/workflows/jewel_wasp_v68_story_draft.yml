@@ -9,7 +9,7 @@ permissions:
   contents: read
 concurrency:
   group: jewel-wasp-v68-story-draft-preview
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   preview:
     runs-on: ubuntu-latest
