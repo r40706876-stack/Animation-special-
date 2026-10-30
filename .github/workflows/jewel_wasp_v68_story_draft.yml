@@ -1,0 +1,87 @@
+name: Jewel Wasp V6.8 14-Chapter Story DRAFT Previews
+on:
+  push:
+    paths:
+      - "src/jewel_wasp_v68_story_draft.py"
+      - ".github/workflows/jewel_wasp_v68_story_draft.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jewel-wasp-v68-story-draft-preview
+  cancel-in-progress: false
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and ffmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Preflight source and 14-chapter story contract
+        run: |
+          set -euo pipefail
+          python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_draft.py
+          python3 - <<'PY'
+          from pathlib import Path
+          source=Path("src/jewel_wasp_v68_story_draft.py").read_text()
+          anatomy=Path("src/jewel_wasp_v68_anatomy_proof.py").read_text()
+          assert anatomy.count("# Independent roach macro still complements")==1
+          assert "ANATOMY_WASP_ROOT" in anatomy and "ANATOMY_ROACH_ROOT" in anatomy
+          assert "assert 0 <= chapter < 14" in source
+          assert "scene.frame_end=240" in source
+          assert "exec(compile(code.split(boundary)[0]" in source
+          print("V68_DRAFT_INTEGRATION_PREFLIGHT_PASS")
+          PY
+      - name: Render 14 genuinely different 3D chapter stills (DRAFT)
+        run: |
+          set -euo pipefail
+          mkdir -p preview
+          for chapter in $(seq 0 13); do
+            echo "RENDER_DRAFT_CHAPTER_STILL $chapter"
+            JW_MODE=still JW_CHAPTER="$chapter" JW_RES_PERCENT=50 BLENDER_OUTPUT="$PWD/preview/chapter_$(printf '%02d' "$chapter").png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/chapter_$(printf '%02d' "$chapter").log" 2>&1 || { tail -n 100 "preview/chapter_$(printf '%02d' "$chapter").log"; exit 1; }
+            grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $chapter still" "preview/chapter_$(printf '%02d' "$chapter").log"
+            test -s "preview/chapter_$(printf '%02d' "$chapter").png"
+          done
+          ffmpeg -y -loglevel error -framerate 1 -i preview/chapter_%02d.png -vf "scale=135:240,tile=7x2" -frames:v 1 preview/DRAFT_14_CHAPTER_CONTACT.png
+          test -s preview/DRAFT_14_CHAPTER_CONTACT.png
+      - name: Render real 1-second animated action previews
+        run: |
+          set -euo pipefail
+          for chapter in 3 5 10 12; do
+            echo "RENDER_DRAFT_ACTION_MOTION $chapter"
+            JW_MODE=motion JW_CHAPTER="$chapter" JW_RES_PERCENT=50 BLENDER_OUTPUT="$PWD/preview/action_$chapter.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/action_$chapter.log" 2>&1 || { tail -n 100 "preview/action_$chapter.log"; exit 1; }
+            grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $chapter motion" "preview/action_$chapter.log"
+            ffmpeg -v error -xerror -i "preview/action_$chapter.mp4" -f null -
+            frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "preview/action_$chapter.mp4")"
+            test "$frames" = 24
+            ffmpeg -y -loglevel error -i "preview/action_$chapter.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=135:240,tile=4x1" -frames:v 1 "preview/action_$chapter-strip.png"
+          done
+          echo "DRAFT_MOTION_TECHNICAL_PASS__VISUAL_REVIEW_PENDING"
+      - name: Stamp proof-only draft metadata
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path('preview');p.mkdir(exist_ok=True)
+          report=dict(source_sha=os.environ.get('GITHUB_SHA'),draft_only=True,
+                      final_film=False,visual_approved=False,
+                      expected_chapters=14,expected_chapter_seconds=10,
+                      proof_motion_chapters=[3,5,10,12],
+                      status='DRAFT technical proof; inspect contact sheet AND action motion')
+          (p/'DRAFT_QA.json').write_text(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v68-story-draft-preview
+          path: preview/
+          if-no-files-found: warn
+          retention-days: 14
