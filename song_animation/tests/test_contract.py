@@ -76,3 +76,22 @@ class Continuity(unittest.TestCase):
         base['scenes'][0]['kind']='gift'
         fresh=render_frame(base,96)
         self.assertIsNotNone(ImageChops.difference(wounded.crop((160,350,370,610)),fresh.crop((160,350,370,610))).getbbox())
+
+class LyricCaptions(unittest.TestCase):
+    def test_phrase_cues_keep_source_boundaries_and_text(self):
+        from song_animation.lyrics import cues_from_lyrics
+        d={'timing_granularity':'phrase','words':[{'text':'दिल पर ज़ख्म','start':1,'end':3.5}]}
+        self.assertEqual(cues_from_lyrics(d,24),[{'start_frame':24,'end_frame':84,'text':'दिल पर ज़ख्म','timing':'phrase'}])
+    def test_instrumental_interval_has_no_caption(self):
+        from song_animation.lyrics import overlay
+        from PIL import Image
+        im=Image.new('RGB',(540,960),'white')
+        p={'fps':24,'lyrics':[{'start_frame':0,'end_frame':24,'text':'दिल'}]}
+        self.assertEqual(im.tobytes(),overlay(im,p,25).tobytes())
+    def test_all_reference_lines_fit_two_readable_lines(self):
+        from song_animation.lyrics import layout
+        source=Path(__file__).parents[1]/'fixtures/lyrics_by_sha'
+        data=json.loads(next(source.glob('*.json')).read_text())
+        for cue in data['lyrics']['words']:
+            size,lines=layout(cue['text'])
+            self.assertGreaterEqual(size,22);self.assertLessEqual(len(lines),2)

@@ -18,7 +18,7 @@ Actual song audio → directly transcribed Hindi phrases → approximate phrase 
 
 ## Local use
 
-Python 3.11 and FFmpeg required:
+Python 3.11, FFmpeg and fonts-noto-core required (Pillow must support RAQM for Hindi shaping):
 
 ```bash
 pip install -r song_animation/requirements.txt
@@ -45,3 +45,9 @@ The included `reference.mp3` was extracted from the user's supplied 34-second re
 ## Limits
 
 This is a limited eight-action prototype, not arbitrary-song animation. New visual subjects and actions require new assets/renderer support. Hindi singing recognition, approximate phrase cues, symbolism and scene continuity need actual listening/viewing review. Technical PASS does not certify emotional quality or retention. Art is drawn at 540×960 and upscaled to 1080×1920. Automatic asset generation, Hindi forced word alignment, semantic output judging and persistent per-shot rendering are further stages. Existing Katha/Jewel Wasp/other workflows are unaffected.
+
+## Visible lyrics and stronger motion
+
+Each supplied timed phrase is burned into the video as properly shaped Hindi text in a bright safe-area panel; key emotion words use an accent colour. Captions appear and disappear at the source phrase boundaries and remain absent during instrumental portions. An editable lyrics.srt is exported too. This is phrase-timed text, not verified word-level karaoke.
+
+The illustration now includes coordinated walker arm swing, more pedestrians and moving petals, a hand recoil at the thorn event, a stronger heart pulse and a restrained illustration push-in. Captions remain on a fixed plane. The existing actual object actions and scar continuity remain in place.

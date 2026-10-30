@@ -90,11 +90,11 @@ def gift(im,u,p,phase):
 def bloom(im,u,p,phase):
     d=ImageDraw.Draw(im)
     # Individual petal paths, not movement of an entire static picture.
-    for j in range(17):
+    for j in range(24):
         a=j*2.399;dist=45+((j*37)%130)+phase*150
         x=270+math.cos(a+phase*.4)*dist;y=468+math.sin(a+phase*.4)*dist*1.25
         d.ellipse((x-5,y-8,x+5,y+8),fill=p['accent'],outline=p['ink'])
-    rose(d,270,468,lerp(75,150,ease(phase)),p,open_=phase)
+    rose(d,270,468,lerp(75,180,ease(phase)),p,open_=phase)
     rr=3+ease((phase-.72)/.28)*72
     ellipse(d,(270-rr,468-rr,270+rr,468+rr),p['ink'])
 
@@ -104,6 +104,9 @@ def person(d,x,y,p,col=None,step=0,scale=1,rose_=False):
     for side in (-1,1):
         yy=y+12*s+side*math.sin(step)*8*s
         d.rounded_rectangle((x+side*9*s-4*s,yy,x+side*9*s+4*s,yy+14*s),radius=3,fill=p['ink'])
+    for side in (-1,1):
+        ay=y+side*math.sin(step)*7*s
+        line(d,[(x+side*16*s,y),(x+side*23*s,ay+12*s)],'#b68665',max(2,int(4*s)))
     ellipse(d,(x-19*s,y-10*s,x+19*s,y+15*s),col,p['ink'])
     ellipse(d,(x-10*s,y-19*s,x+10*s,y+2*s),'#d3a584',p['ink'])
     d.arc((x-10*s,y-19*s,x+10*s,y+2*s),180,355,fill=p['ink'],width=max(2,int(5*s)))
@@ -121,7 +124,7 @@ def crowd(im,u,p,phase):
             d.rectangle((x,y,x+41,y+90),fill='#fff7e6',outline=p['ink'])
             for k in range(5):d.rectangle((x,y+k*18,x+41,y+k*18+8),fill=p['blue'] if j%2 else p['green'])
     # Reproducible lanes; foreground walkers avoid the central owner.
-    for j in range(18):
+    for j in range(24):
         lane=j%6;xx=80+lane*75
         direction=1 if lane%2 else -1
         yy=((j*139+u*direction*72)%1150)-95
@@ -147,7 +150,7 @@ def paths(im,u,p,phase):
 
 def heart(im,u,p,phase):
     d=ImageDraw.Draw(im)
-    pulse=1+.012*math.sin(u*math.tau*1.1)
+    pulse=1+.035*math.sin(u*math.tau*1.1)
     pts=[]
     for i in range(161):
         t=i/160*math.tau
@@ -183,7 +186,7 @@ def state(plan,index,frame):
     DRAWERS[s['kind']](im,u,p,max(0,min(1,phase)))
     return im
 
-def render_frame(plan,frame):
+def render_art(plan,frame):
     index=next(i for i,s in enumerate(plan['scenes']) if s['start_frame']<=frame<s['end_frame'])
     s=plan['scenes'][index];im=state(plan,index,frame)
     if index+1<len(plan['scenes']) and s['kind']=='bloom':
@@ -198,11 +201,12 @@ def render_frame(plan,frame):
 
 def thorn(im,u,p,phase):
     d=ImageDraw.Draw(im)
-    palm(d,270,592,p,grip=ease((phase-.35)/.35))
+    recoil=16*math.sin(math.pi*max(0,min(1,(phase-.64)/.28)))
+    palm(d,270,592+recoil,p,grip=ease((phase-.35)/.35))
     press=ease(phase/.64)
-    flower(d,270,lerp(415,475,press),2.0,p)
+    flower(d,270,lerp(415,475,press)+recoil,2.0,p)
     # An explicit thorn on the persistent stem reaches the palm.
-    tipy=lerp(415,475,press)+102
+    tipy=lerp(415,475,press)+102+recoil
     d.polygon([(270,tipy),(288,tipy-9),(273,tipy-18)],fill=p['green'],outline=p['ink'])
     injury=ease((phase-.64)/.25)
     if injury:
@@ -250,3 +254,21 @@ def thorns(im,u,p,phase):
     x,y=pts[n];person(d,x,y,p,p['blue'],u*7,1.3)
 
 DRAWERS.update(thorn=thorn,wounded_heart=wounded_heart,thorns=thorns)
+
+
+def render_frame(plan,frame):
+    im=render_art(plan,frame)
+    # A restrained push-in accompanies the separate object/character actions.
+    scene=next(s for s in plan['scenes'] if s['start_frame']<=frame<s['end_frame'])
+    progress=(frame-scene['start_frame'])/max(1,scene['end_frame']-scene['start_frame']-1)
+    zoom=1+.035*ease(progress)
+    if scene['kind']=='bloom' and scene is not plan['scenes'][-1]:
+        portal_frames=max(1,round(.45*plan['fps']))
+        portal_start=scene['end_frame']-portal_frames
+        if frame>=portal_start:zoom=1+(zoom-1)*(1-ease((frame-portal_start)/max(1,portal_frames-1)))
+    # Keep the caption plane fixed while the illustration moves below it.
+    cx,cy=270,455
+    from PIL import Image as PILImage
+    im=im.transform((W,H),PILImage.Transform.AFFINE,(1/zoom,0,cx-cx/zoom,0,1/zoom,cy-cy/zoom),resample=PILImage.Resampling.BICUBIC)
+    from .lyrics import overlay
+    return overlay(im,plan,frame)

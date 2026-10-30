@@ -38,6 +38,9 @@ def render(plan,out,audio=None,width=540):
     contact=Image.new('RGB',(540,320*len(plan['scenes'])),'white')
     for i,im in enumerate(sheets):contact.paste(im,((i%3)*180,(i//3)*320))
     contact.save(out/'contact.jpg',quality=92)
+    if plan.get('lyrics'):
+        from .lyrics import export_srt
+        export_srt(plan,out/'lyrics.srt')
     (out/'motion.json').write_text(json.dumps(motion,indent=2));(out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
     with open(out/'ffmpeg.log','w') as log:
         proc=subprocess.Popen(cmd,stdin=subprocess.PIPE,stderr=log)
@@ -57,7 +60,7 @@ def render(plan,out,audio=None,width=540):
     subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(temp),'-f','null','-'],check=True)
     temp.replace(final)
     receipt.write_text(json.dumps({'video_sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'cache_key':key,'frames':total,'duration':duration,'dimensions':[width,width*16//9],
-        'audio':'source' if audio else 'intentional silent animation proof','status':'review_draft','lyric_sync_verified':False,'technical_checks':'passed','human_review_required':True},indent=2))
+        'lyrics_enabled':bool(plan.get('lyrics')),'caption_timing':'phrase' if plan.get('lyrics') else None,'audio':'source' if audio else 'intentional silent animation proof','status':'review_draft','lyric_sync_verified':False,'technical_checks':'passed','human_review_required':True},indent=2))
     return final
 
 def main():
