@@ -1,0 +1,81 @@
+{
+  "audio_sha256": "12f18332c9718743af3f2274918426548ca061079fe30365a70bee2b522c118c",
+  "lyrics": {
+    "duration": 34.179773,
+    "language": "hi",
+    "timing_method": "direct audio-model phrase boundaries",
+    "timing_granularity": "phrase",
+    "timing_verified": false,
+    "words": [
+      {
+        "id": 0,
+        "text": "जितने भी जख्म हैं मेरे दिल पर",
+        "start": 0.0,
+        "end": 4.54,
+        "uncertain": false
+      },
+      {
+        "id": 1,
+        "text": "दोस्तों के लगाए हुए हैं",
+        "start": 4.54,
+        "end": 9.42,
+        "uncertain": false
+      },
+      {
+        "id": 2,
+        "text": "लोग कांटों से बच के चलते हैं",
+        "start": 9.42,
+        "end": 12.38,
+        "uncertain": false
+      },
+      {
+        "id": 3,
+        "text": "हमने फूलों से जख्म खाए हैं",
+        "start": 12.38,
+        "end": 16.22,
+        "uncertain": false
+      },
+      {
+        "id": 4,
+        "text": "तुम तो गैरों की बात करती हो",
+        "start": 16.22,
+        "end": 18.96,
+        "uncertain": false
+      },
+      {
+        "id": 5,
+        "text": "हमने अपने भी आजमाए हैं",
+        "start": 18.96,
+        "end": 22.3,
+        "uncertain": false
+      },
+      {
+        "id": 6,
+        "text": "जितने भी जख्म हैं मेरे दिल पर",
+        "start": 22.3,
+        "end": 26.36,
+        "uncertain": false
+      },
+      {
+        "id": 7,
+        "text": "दोस्तों के लगाए हुए हैं",
+        "start": 26.36,
+        "end": 29.84,
+        "uncertain": false
+      }
+    ],
+    "instrumental": [
+      {
+        "start": 29.84,
+        "end": 34.18
+      }
+    ],
+    "unclear": [],
+    "leading_untranscribed_seconds": 0.0,
+    "warnings": [
+      "Approximate phrase timing only; ids identify phrases, not individual words. Listening review required."
+    ],
+    "source_analysis_run": 40995814943,
+    "analysis_review": "Transcript structure checked; exact sung wording and timing remain unverified"
+  }
+}
