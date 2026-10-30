@@ -17,7 +17,7 @@ def render(plan,out,audio=None,width=540):
     fps=plan['fps'];total=plan['total_frames'];duration=total/fps
     if width not in (540,1080):raise ValueError('Supported widths: 540 or 1080')
     final=out/'preview.mp4';key=digest(plan,audio)+f'-{width}';receipt=out/'receipt.json'
-    if final.exists() and receipt.exists() and json.loads(receipt.read_text()).get('cache_key')==key:
+    if final.exists() and receipt.exists() and json.loads(receipt.read_text()).get('cache_key')==key and json.loads(receipt.read_text()).get('video_sha256')==hashlib.sha256(final.read_bytes()).hexdigest():
         print('Matching cached render',final);return final
     temp=out/'rendering.mp4'
     cmd=['ffmpeg','-y','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r',str(fps),'-i','-']
@@ -56,7 +56,7 @@ def render(plan,out,audio=None,width=540):
     if not any(s['codec_type']=='audio' for s in probe['streams']):raise ValueError('Missing audio stream')
     subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(temp),'-f','null','-'],check=True)
     temp.replace(final)
-    receipt.write_text(json.dumps({'cache_key':key,'frames':total,'duration':duration,'dimensions':[width,width*16//9],
+    receipt.write_text(json.dumps({'video_sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'cache_key':key,'frames':total,'duration':duration,'dimensions':[width,width*16//9],
         'audio':'source' if audio else 'intentional silent animation proof','status':'review_draft','lyric_sync_verified':False,'technical_checks':'passed','human_review_required':True},indent=2))
     return final
 

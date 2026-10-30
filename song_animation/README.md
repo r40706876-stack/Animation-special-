@@ -1,50 +1,47 @@
-# Song animation — first working module
+# Song Animation: illustrated music-video drafts
 
-Original 2D illustration renderer plus optional audio → timed ASR → Gemini scene plan → MP4 pipeline. All generated videos are **review drafts**. Existing Katha/Jewel Wasp/other workflows are unchanged.
+Upload short audio under `song_animation/inputs/`. The workflow chooses the new/changed songs and processes each in an independent job (two simultaneously). Code-only changes use the reference song for integration testing. The workflow runs on `main` after merge and on the song-animation feature branch before merge. Manual runs accept one exact repository audio path; empty input runs the motion proof only.
 
-## Working now
+## Current pipeline
 
-- Eight supported visual actions: one hand gives a rose, rose opens into the next scene, moving top-down crowd with a stationary rose owner, diverging paths, heart/memory paths, symbolic rose-prick, wounded heart and thorn avoidance.
-- Deterministic original layered artwork; individual hands/people/petals move. No stock clips or static-image Ken Burns substitution.
-- Actual faster-whisper large-v3-turbo word timestamps retained; no time distribution by word length.
-- Optional supplied timed-lyrics JSON (`--lyrics`) in the same format as generated `lyrics.json`.
-- Whole-segment meaning supplied to Gemini; unsupported themes must fail rather than invent assets or force unrelated visuals.
-- Continuous integer frame timeline, cue-word validation, all transcript words covered once, MP4 decode/duration/frame count checks, contact sheet and sampled pixel-motion report.
-- No Instagram, Telegram or other automatic publishing.
+Actual song audio → directly transcribed Hindi phrases → approximate phrase cues → whole-segment Gemini direction → supported illustrated actions → MP4 and review artifacts.
 
-## Run
+- Eight original actions: rose handover, flower portal, moving crowd, diverging paths, memory heart, rose-prick, wounded heart, thorn avoidance.
+- Characters, hands, petals and paths actually move. No downloaded stock clips or static-image zoom substitution.
+- Direct-audio mode keeps honest **phrase-level** timestamps. It does not pretend each word has been force-aligned. Unclear lyrics and unexplained missing openings stop rendering.
+- `--transcriber whisper` compares faster-whisper large-v3-turbo with a separate retry of omitted opening audio. Its timestamps also require listening review.
+- Available text models are discovered; up to three are attempted, preferring stable lighter models. The script never executes model-written code.
+- `--allow-local-recovery` can make an explicitly labelled local-rule draft when direction API access fails. It supports only the pain/relationship vocabulary represented by the eight actions. Unrelated themes are rejected.
+- Exact-audio/transcriber checkpoints resume lyric analysis. Restored caches contain analysis only, never an old preview that could be mistaken for a new result. Render reuse checks inputs, renderer code, dimensions and output SHA-256.
+- Integer-frame timeline rejects gaps, overlaps, unsupported actions and unreadably short or over-eight-second shots. Every lyric unit must belong to exactly one scene.
+- Technical checks include decoded frames, dimensions, duration, audio stream and sampled movement. All outputs remain review drafts and are never automatically posted.
 
-Install FFmpeg, Python 3.11 and `pip install -r song_animation/requirements.txt`.
+## Local use
 
-Silent original motion proof (no model/API dependency):
+Python 3.11 and FFmpeg required:
 
 ```bash
+pip install -r song_animation/requirements.txt
 python -m unittest discover -s song_animation/tests -v
 python -m song_animation.render --plan song_animation/examples/proof.json --out song_proof --width 1080
 ```
 
-Your audio (up to 180 seconds; `GEMINI_API_KEY` required):
+The 16-second motion proof is silent and uses a hand-authored plan. It proves the renderer, not lyric understanding.
+
+For a song (up to 180 seconds), set `GEMINI_API_KEY` and run:
 
 ```bash
-python -m song_animation.run --audio path/to/song.mp3 --out song_draft --width 1080
+python -m song_animation.run --audio path/to/song.mp3 --out song_draft --width 1080 --allow-local-recovery
 ```
 
-Outputs: `preview.mp4`, `contact.jpg`, `motion.json`, `receipt.json`, `plan.json`. Automatic mode additionally emits `lyrics.json`, `music.json`, `status.json` when stages complete. Planner calls are bounded to three actually discovered text models. Render cache requires identical plan, source audio, renderer source and width.
+Optional: `--lyrics timed_lyrics.json` uses supplied units/timings; `--planner local` selects local rules explicitly. No character-count timing distribution is used.
 
-GitHub workflow runs a proof first, then the reference song on changes to this feature branch. `workflow_dispatch` supports a repository audio path once workflow is available on the default branch; the feature-branch push trigger does not require merging. Standard CPU runner, no GPU required. The included reference audio is extracted from the user's supplied 34-second reference for this requested experiment; it is not an original soundtrack or a stock asset for distribution.
+## Review files
 
-## Honest limits
+`preview.mp4`, `contact.jpg`, `plan.json`, `motion.json`, `receipt.json`, `lyrics.json`, `music.json`, `status.json`; raw AI responses and HTTP/model attempt summaries accompany their completed stages. `plan.planner` identifies Gemini versus local rules. `lyrics.timing_granularity` distinguishes phrases from word-timestamp ASR. Failure keeps diagnostics; it does not produce a generic unrelated export.
 
-This is a **limited eight-action prototype**, not arbitrary-song animation. Lyrics recognition for singing can be inaccurate. Hindi forced alignment, expanded character/asset generation, semantic output scoring, scene-level persistent caching and automatic upload detection are future stages. Music beats are available to the planner; actions currently use lyric cues, not a guaranteed beat-synchronized choreography. Artwork is rendered at 540×960 and cleanly upscaled to 1080×1920, not native high-detail 1080p illustration. Contact sheets/technical PASS do not certify lyric meaning or retention. Full original-art film quality requires visual review and iteration.
+The included `reference.mp3` was extracted from the user's supplied 34-second reference for this experiment. It is not an original soundtrack for reuse in other productions.
 
-The silent proof uses a hand-authored plan to verify motion; it does not prove the automatic song planner. Inspect the separate real-song draft and transcript before evaluating that pipeline.
+## Limits
 
-## Recovery added after live runs
-
-Model names are discovered rather than assuming a retired endpoint exists. Stable lighter text models are preferred; at most three discovered models are attempted. The opening ASR window is retried when full-song decoding omits more than 1.5 seconds. Exact-audio/model/version checkpoints preserve analysis on provider failure.
-
-`--allow-local-recovery` enables an explicitly labelled local-rule draft if the text provider is unavailable. It handles only the supported pain/relationship vocabulary; it rejects unrelated topics and an untranscribed opening. `--planner local` selects this route directly. Neither route silently corrects ASR text. See `planner` and `provider_recovery_used` in the exported plan. Local rules are not an LLM and do not prove general song understanding.
-
-## Direct audio transcription
-
-The default transcriber now sends an analysis copy of the actual audio to the available audio-capable Gemini model, retaining approximate phrase boundaries and repeated refrains. `lyrics.json` explicitly declares `timing_granularity: phrase`; ids are phrase ids, not fabricated exact word timestamps. Unclear phrases and unexplained missing openings stop rendering. `--transcriber whisper` retains the large-v3-turbo/opening-recovery option for comparison. All lyric and scene interpretations still require listening review.
+This is a limited eight-action prototype, not arbitrary-song animation. New visual subjects and actions require new assets/renderer support. Hindi singing recognition, approximate phrase cues, symbolism and scene continuity need actual listening/viewing review. Technical PASS does not certify emotional quality or retention. Art is drawn at 540×960 and upscaled to 1080×1920. Automatic asset generation, Hindi forced word alignment, semantic output judging and persistent per-shot rendering are further stages. Existing Katha/Jewel Wasp/other workflows are unaffected.

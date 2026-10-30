@@ -39,3 +39,31 @@ class LocalDirector(unittest.TestCase):
     def test_unrelated_song_needs_other_assets(self):
         from song_animation.local_director import local_plan
         with self.assertRaises(ValueError):local_plan({'duration':4,'words':[{'text':'पहाड़ नदी मौसम','start':0,'end':3}]})
+
+class InputSelection(unittest.TestCase):
+    def test_manual_path_must_be_inside_repository(self):
+        import tempfile
+        from song_animation.select_inputs import select
+        with tempfile.TemporaryDirectory() as td:
+            with self.assertRaises(ValueError):select(td,manual='../outside.mp3',event='workflow_dispatch')
+    def test_changed_uploads_are_each_selected_instead_of_old_reference(self):
+        import tempfile,subprocess
+        from song_animation.select_inputs import select
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);folder=root/'song_animation/inputs';folder.mkdir(parents=True)
+            (folder/'reference.mp3').write_bytes(b'ref')
+            def git(*args):return subprocess.check_output(['git',*args],cwd=root).decode().strip()
+            git('init','-q');git('config','user.email','test@example.invalid');git('config','user.name','test')
+            git('add','.');git('commit','-qm','base');before=git('rev-parse','HEAD')
+            for name in ('first song.mp3','second.wav'):(folder/name).write_bytes(b'audio')
+            git('add','.');git('commit','-qm','upload');head=git('rev-parse','HEAD')
+            self.assertEqual(select(root,before,head),['song_animation/inputs/first song.mp3','song_animation/inputs/second.wav'])
+
+class PhraseTiming(unittest.TestCase):
+    def test_explicit_instrumental_tail_is_not_extended_lyric_shot(self):
+        lyrics={'duration':12,'timing_granularity':'phrase','instrumental':[{'start':8,'end':12}], 'words':[{'text':'दिल पर जख्म','start':0,'end':4},{'text':'अपने दूर','start':4,'end':8}]}
+        raw={'palette':'memory','scenes':[{'kind':'wounded_heart','start_word_id':0,'cue_word_id':0,'lyric_ids':[0],'reason':'pain'},{'kind':'paths','start_word_id':1,'cue_word_id':1,'lyric_ids':[1],'reason':'distance'}]}
+        p=compile_plan(raw,lyrics)
+        self.assertEqual(p['scenes'][-1]['lyric_ids'],[])
+        self.assertEqual(p['scenes'][-1]['start_frame'],192)
+        self.assertEqual(p['cue_method'],'art-directed emphasis within timed phrases')
