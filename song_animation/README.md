@@ -12,7 +12,7 @@ Actual song audio → directly transcribed Hindi phrases → approximate phrase 
 - `--transcriber whisper` compares faster-whisper large-v3-turbo with a separate retry of omitted opening audio. Its timestamps also require listening review.
 - Available text models are discovered; up to three are attempted, preferring stable lighter models. The script never executes model-written code.
 - `--allow-local-recovery` can make an explicitly labelled local-rule draft when direction API access fails. It supports only the pain/relationship vocabulary represented by the eight actions. Unrelated themes are rejected.
-- Exact-audio/transcriber checkpoints resume lyric analysis. Restored caches contain analysis only, never an old preview that could be mistaken for a new result. Render reuse checks inputs, renderer code, dimensions and output SHA-256.
+- Exact-audio/transcriber checkpoints resume lyric analysis. The included reference also has its completed direct-audio analysis keyed by SHA-256; a different audio cannot use that transcript, and its scene plan is still generated afresh. Restored caches contain analysis only, never an old preview that could be mistaken for a new result. Render reuse checks inputs, renderer code, dimensions and output SHA-256.
 - Integer-frame timeline rejects gaps, overlaps, unsupported actions and unreadably short or over-eight-second shots. Every lyric unit must belong to exactly one scene.
 - Technical checks include decoded frames, dimensions, duration, audio stream and sampled movement. All outputs remain review drafts and are never automatically posted.
 

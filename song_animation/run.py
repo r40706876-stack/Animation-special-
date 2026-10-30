@@ -14,14 +14,22 @@ def main():
             if abs(lyrics['duration']-actual)>.1:raise ValueError('Lyrics duration does not match audio')
             validate_lyrics(lyrics['words'],actual)
         else:
-            key=hashlib.sha256(Path(args.audio).read_bytes()).hexdigest()+'-'+args.model+'-'+args.transcriber+'-v3'
+            audio_hash=hashlib.sha256(Path(args.audio).read_bytes()).hexdigest()
+            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-v3'
             checkpoint=out/'analysis_checkpoint.json'
             if checkpoint.exists() and (out/'lyrics.json').exists() and json.loads(checkpoint.read_text()).get('key')==key:
                 lyrics=json.loads((out/'lyrics.json').read_text());validate_lyrics(lyrics['words'],duration(args.audio))
                 print('Resuming matching ASR checkpoint',flush=True)
             else:
-                
-                if args.transcriber=='audio-model':
+                cached=Path(__file__).parent/'fixtures'/'lyrics_by_sha'/(audio_hash+'.json')
+                if args.transcriber=='audio-model' and cached.exists():
+                    saved=json.loads(cached.read_text())
+                    if saved['audio_sha256']!=audio_hash:raise ValueError('Cached lyrics belong to another audio')
+                    lyrics=saved['lyrics'];validate_lyrics(lyrics['words'],duration(args.audio))
+                    lyrics['source_analysis']='cached direct-audio analysis for matching SHA-256'
+                    (out/'lyrics.json').write_text(json.dumps(lyrics,ensure_ascii=False,indent=2))
+                    print('Using matching completed direct-audio transcript; scene planning remains fresh',flush=True)
+                elif args.transcriber=='audio-model':
                     from .audio_lyrics import analyze_audio
                     lyrics=analyze_audio(args.audio,out)
                 else:lyrics=analyze(args.audio,out,args.model)

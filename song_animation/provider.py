@@ -2,7 +2,7 @@
 import json,os
 from pathlib import Path
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -21,13 +21,15 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None):
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]
     if audio_part:parts.insert(0,audio_part)
+    config={'responseMimeType':'application/json','temperature':.15 if audio_part else .35}
+    if schema:config['responseSchema']=schema
     raw=None
     attempts=[]
     for model in models[:3]:
         try:
             r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                 headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
-                'generationConfig':{'responseMimeType':'application/json','temperature':.35}},timeout=90)
+                'generationConfig':config},timeout=90)
         except requests.RequestException:continue
         attempts.append({'model':model,'http_status':r.status_code})
         if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))

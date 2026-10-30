@@ -11,7 +11,7 @@ def make_plan(lyrics,music,fps=24,out=None):
 Understand the whole segment's emotional progression. Use only supported actions when their visible action fits the meaning. No invented unsupported assets/actions. If incompatible, return {"unsupported_reason":"reason"}.
 Same rose recurs: gift transfers it, bloom opens it, crowd has a central rose owner, paths separates two people, heart holds a memory rose. Thorn visibly pricks a palm, thorns shows avoiding branches, wounded_heart shows scars. For pain/betrayal lyrics choose these supported injury metaphors, not cheerful romantic gifts. This is a LIMITED visual vocabulary. Do not force rose romance onto incompatible devotional, comic, political or unrelated lyrics.
 Return JSON: {"title":"short Hindi title","intent":"Hindi emotional arc","palette":"warm|hope|memory","scenes":[{"kind":"supported kind","start_word_id":0,"cue_word_id":3,"lyric_ids":[0,1,2,3],"reason":"Hindi meaning and actual visible action"}]}.
-Use 3..10 readable shots where possible, >=1 second each and no more than 8 seconds per shot. First starts at word 0, increasing start_word_id. Cover every word exactly once in contiguous lyric_ids ranges. Cue belongs to its shot; choose meaningful word for action. Group phrases rather than single words. Do not correct uncertain words. Code derives timestamps and covers instrumental gaps. No banners.
+Use 3..10 readable shots where possible, >=1 second each and no more than 8 seconds per shot. First starts at word 0, increasing start_word_id. Cover every word exactly once in contiguous lyric_ids ranges. Cue belongs to its shot; choose meaningful word for action. Group phrases rather than single words. Do not correct uncertain words. Code derives timestamps and covers instrumental gaps. Avoid adjacent heart/heart-scar shots with the same composition; for friends/strangers choose a supported crowd or separating-people scene when meaningful. Return epilogue_kind=bloom for an instrumental rose callback if the final sung shot is a heart. No banners.
 Timing granularity may be phrase-level; then each supplied id is a whole timed phrase, not a word. Do not invent within-phrase word timestamps. Use each original id exactly once.
 SUPPORTED: '''+json.dumps(ACTIONS)+'\nLYRICS: '+json.dumps(lyrics,ensure_ascii=False)+'\nMUSIC: '+json.dumps(music)
     from .provider import generate_json
@@ -40,7 +40,7 @@ def compile_plan(data,lyrics,fps=24):
         if not a<=cf<b:raise ValueError('Cue outside shot after quantization')
         out.append({'kind':s['kind'],'start_frame':a,'end_frame':b,'cue_frame':cf,'lyric_ids':s['lyric_ids'],'reason':s['reason']})
     if tail:
-        kind=data.get('epilogue_kind','heart')
+        kind=data.get('epilogue_kind','bloom')
         if kind not in ACTIONS:raise ValueError('Unsupported instrumental epilogue')
         out.append({'kind':kind,'start_frame':vocal_end,'end_frame':total,'cue_frame':(vocal_end+total)//2,
             'lyric_ids':[],'reason':'Instrumental ending: return to the established rose motif; no invented sung words.'})
