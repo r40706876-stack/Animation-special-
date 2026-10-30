@@ -1,4 +1,4 @@
-"""V6.8.13 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.14 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -54,9 +54,9 @@ emerald=material("iridescent emerald cuticle",(.008,.095,.075),.39,.48,noise=57)
 blue=material("blue-green sclerites",(.011,.050,.064),.48,.36,noise=52)
 dark=material("joint membranes",(.016,.022,.018),.76)
 leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
-eye=material("compound eye dark",(.008,.012,.011),.24,.10)
+eye=material("micro-faceted compound eye dark",(.008,.012,.011),.35,.06,noise=165)
 brown=material("roach dark chitin",(.035,.015,.008),.59,.07,noise=47)
-bronze=material("roach elytra",(.041,.017,.009),.65,.08,noise=41)
+bronze=material("roach elytra",(.026,.010,.005),.78,.035,noise=95)
 tan=material("ventral segment",(.056,.024,.014),.83)
 wing=material("transparent wasp wing membrane",(.10,.19,.16),.53,0,.45)
 vein=material("membrane veins",(.11,.16,.14),.59)
@@ -113,13 +113,15 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     obj=bpy.data.objects.new(name,mesh);scene.collection.objects.link(obj)
     obj.parent=parent;mesh.materials.append(mat)
     for f in mesh.polygons:f.use_smooth=True
-    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.004
+    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.003
+    # Subtle smoothing keeps the elytral contour from reading as a hard plate.
+    bevel=obj.modifiers.new("soft elytron contour","SUBSURF");bevel.levels=1
     return obj
 
 wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 # Scale both complete insect rigs to fit the narrow 9:16 composition.
 wasp.scale=(.78,.78,.78)
-ell("wasp head",(.39,0,.05),(.130,.114,.097),emerald,wasp)
+ell("wasp head",(.39,0,.05),(.157,.101,.082),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.270,.166,.151),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
 # One continuous spindle-shaped gaster, not six visibly separate toy beads.
@@ -220,19 +222,23 @@ for polygon in abd_mesh.polygons:
     polygon.material_index=1 if axial in (7,13,19,25,31,37) else 0
 ell("roach pronotum",(.43,0,.086),(.230,.210,.050),bronze,roach)
 ell("roach tucked head",(.56,0,.007),(.111,.101,.061),brown,roach)
-ell("roach pronotal dark marking",(.425,0,.157),(.095,.068,.003),brown,roach)
+# A raised round disk looked like a button on the pronotum in the actual macro.
+# Use a low-contrast, flattened tapered mark that follows the shield instead.
+ell("roach pronotal cuticle shading",(.425,0,.135),(.082,.050,.002),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
           .012,brown,roach)
 for s in (-1,1):
-    shield("overlapping dorsal elytron %d"%s,.27,-.78,s*.105,.165,.122,.028,
+    # Lower the elytra onto the abdomen, curve them over the body and taper
+    # their outline. The old raised flat plates looked like detached toy wings.
+    shield("overlapping dorsal elytron %d"%s,.27,-.74,s*.096,.164,.095,.060,
            bronze,roach)
     # Low-relief longitudinal wing veins break the smooth toy-like roach shell.
     for vein_idx, offset in enumerate((-.060,.015,.078)):
         curve("roach elytron vein %d %d"%(s,vein_idx),
-              [(.19,s*(.105+offset),.143),(-.18,s*(.105+offset),.150),
-               (-.54,s*(.105+offset*.60),.136)],
+              [(.19,s*(.096+offset),.123),(-.18,s*(.096+offset),.151),
+               (-.54,s*(.096+offset*.60),.129)],
               .0035,brown,roach)
     ell("roach compound eye %d"%s,(.605,s*.102,.025),(.030,.018,.032),eye,roach)
     curve("roach filiform antenna %d"%s,
