@@ -1,4 +1,4 @@
-"""V6.8.14 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.15 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -58,9 +58,9 @@ eye=material("micro-faceted compound eye dark",(.008,.012,.011),.35,.06,noise=16
 brown=material("roach dark chitin",(.035,.015,.008),.59,.07,noise=47)
 bronze=material("roach elytra",(.026,.010,.005),.78,.035,noise=95)
 tan=material("ventral segment",(.056,.024,.014),.83)
-wing=material("transparent wasp wing membrane",(.10,.19,.16),.53,0,.45)
+wing=material("transparent wasp wing membrane",(.075,.145,.135),.64,0,.30)
 vein=material("membrane veins",(.11,.16,.14),.59)
-soil=material("soil granular",(.095,.071,.049),.98,noise=23)
+soil=material("soil granular",(.065,.053,.037),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
 green=material("understory leaves",(.028,.073,.031),.86,noise=17)
 bark=material("rough distant bark",(.045,.036,.026),.94,noise=29)
@@ -121,7 +121,7 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
 wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 # Scale both complete insect rigs to fit the narrow 9:16 composition.
 wasp.scale=(.78,.78,.78)
-ell("wasp head",(.39,0,.05),(.157,.101,.082),emerald,wasp)
+ell("wasp head",(.39,0,.05),(.142,.090,.073),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.270,.166,.151),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
 # One continuous spindle-shaped gaster, not six visibly separate toy beads.
@@ -151,7 +151,7 @@ for face in mesh.polygons:
     axial=face.index//around
     face.material_index=1 if axial in (8,15,22,29,36) else (0 if axial<23 else 1)
 for s in (-1,1):
-    ell("wasp eye %d"%s,(.443,s*.114,.074),(.030,.014,.036),eye,wasp)
+    ell("wasp eye %d"%s,(.433,s*.094,.073),(.025,.012,.030),eye,wasp)
     curve("wasp geniculate antenna %d"%s,
         [(.50,s*.07,.12),(.63,s*.12,.19),(.71,s*.17,.19),(.80,s*.18,.13)],
         .007,dark,wasp)
@@ -161,24 +161,24 @@ for s in (-1,1):
           .008,dark,wasp)
     for leg in range(3):
         x=.29-leg*.19;y=s*.15
-        hip=Vector((x,y,.01));knee=Vector((x+.10-leg*.075,s*(.34+.035*leg),-.16))
-        ankle=Vector((x+.13-leg*.10,s*(.39+.065*leg),-.48))
+        hip=Vector((x,y,.01));knee=Vector((x+.09-leg*.075,s*(.29+.035*leg),-.115))
+        ankle=Vector((x+.16-leg*.11,s*(.40+.055*leg),-.445))
         gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=wasp;gait.location=hip
-        taper("wasp coxa %d %d"%(s,leg),(0,0,0),knee-hip,.036,.022,leg_amber,gait)
-        ell("wasp joint %d %d"%(s,leg),knee-hip,(.021,.021,.021),dark,gait)
-        taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.019,.008,leg_amber,gait)
+        taper("wasp coxa %d %d"%(s,leg),(0,0,0),knee-hip,.024,.015,leg_amber,gait)
+        ell("wasp joint %d %d"%(s,leg),knee-hip,(.015,.015,.015),dark,gait)
+        taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.013,.005,leg_amber,gait)
         taper("wasp tarsus %d %d"%(s,leg),ankle-hip,
               ankle-hip+Vector((.09,s*.025,-.02)),.009,.002,dark,gait)
     for hind in (0,1):
         pivot=root("wing hinge %d %d"%(s,hind),(0,0,0))
         pivot.parent=wasp;pivot.location=(.08-hind*.12,s*.14,.16)
-        span=.65 if hind==0 else .46
+        span=.56 if hind==0 else .39
         verts=[];faces=[]
         for i in range(17):
-            t=i/16;breadth=(.13 if hind==0 else .09)*math.sin(math.pi*t)**.8
+            t=i/16;breadth=(.086 if hind==0 else .058)*math.sin(math.pi*t)**.8
             for side in (-1,1):
-                verts.append((-.18*t+side*breadth,s*span*t,.03*math.sin(math.pi*t)))
+                verts.append((-.29*t+side*breadth,s*span*t,.018*math.sin(math.pi*t)))
         for i in range(16):
             a=2*i;faces.append((a,a+2,a+3,a+1))
         mesh=bpy.data.meshes.new("wasp wing membrane");mesh.from_pydata(verts,[],faces)
@@ -187,7 +187,7 @@ for s in (-1,1):
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
         for f in range(1,49):
-            pivot.rotation_euler.x=s*(.25+.74*math.sin(f*1.73+hind*.9))
+            pivot.rotation_euler.x=s*(.20+.38*math.sin(f*1.73+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
@@ -232,7 +232,7 @@ for s in (-1,1):
 for s in (-1,1):
     # Lower the elytra onto the abdomen, curve them over the body and taper
     # their outline. The old raised flat plates looked like detached toy wings.
-    shield("overlapping dorsal elytron %d"%s,.27,-.74,s*.096,.164,.095,.060,
+    shield("overlapping dorsal elytron %d"%s,.27,-.74,s*.083,.165,.094,.038,
            bronze,roach)
     # Low-relief longitudinal wing veins break the smooth toy-like roach shell.
     for vein_idx, offset in enumerate((-.060,.015,.078)):
