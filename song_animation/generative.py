@@ -93,7 +93,7 @@ def scene_package(plan,index,out,previous_assets):
     reusable={k:{'width':v['width'],'height':v['height'],'description':v.get('description',''),'svg':v['svg']} for k,v in previous_assets.items() if v.get('reusable')}
     if len(json.dumps(reusable))>40000:reusable={k:{x:v[x] for x in ('width','height','description')} for k,v in reusable.items()}
     prompt=f'''You are the illustrator AND 2D rig animator for shot {index+1} of this music film. Generate NEW layered vector assets suitable for the shot; no fixed object list. Return ONLY JSON.
-LIGHTING: {'Night is supported by the source lyrics, but keep subjects legible.' if plan.get('allow_night') else 'The source does not require night. Use warm daylight or bright soft overcast. Do not paint a dark/twilight whole-frame background, even if a poetic description suggests it.'}
+LIGHTING: Keep subjects and story props legible. Warm daylight is preferred for natural settings. A coherent neon/celestial/night world may keep its own lighting; give faces and moving parts enough contrast. Do not turn the main action into near-black silhouettes.
 FILM BIBLE: {json.dumps(plan['bible'],ensure_ascii=False)}
 FULL STORY: {json.dumps([{k:s[k] for k in ('label','visual','action')} for s in plan['scenes']],ensure_ascii=False)}
 THIS SHOT: {json.dumps(shot,ensure_ascii=False)}
@@ -138,8 +138,10 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             import numpy as np
             sample=render_vector(check,0,check['total_frames']//2)
             sample.save(folder/f'preflight_{index}.png')
-            if not plan.get('allow_night') and float(np.asarray(sample.convert('L')).mean())<78:
-                raise ValueError('Rendered scene is too dark for the requested bright illustrated style; use daylight colours across the actual background SVG and legible foreground faces/props')
+            luminance=float(np.asarray(sample.convert('L')).mean())
+            s['visibility_review']={'mean_luminance':round(luminance,2),'check_contrast':luminance<65,'advisory_only':True}
+            # A neon or night composition can be legible with a dark average.
+            # Never reject an entire musical genre from a global brightness mean.
             cache.write_text(json.dumps(data,ensure_ascii=False,indent=2))
             return s,assets
         except (ValueError,KeyError,TypeError) as e:error=str(e)
