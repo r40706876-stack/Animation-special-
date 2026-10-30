@@ -1,0 +1,27 @@
+name: Identify supplied song
+on:
+  push:
+    branches: ['feature/song-animation-metaphors-20261030']
+    paths: ['.github/workflows/song_identification.yml']
+permissions:
+  contents: read
+jobs:
+  identify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install shazamio
+      - run: python -m song_animation.identify_supplied_song
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-identity
+          path: song_identity/
+          retention-days: 7
