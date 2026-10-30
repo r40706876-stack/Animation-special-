@@ -17,6 +17,9 @@ PALETTES = {
 }
 
 def validate(plan):
+    if plan.get('version')==2:
+        from .vector import validate_vector
+        return validate_vector(plan)
     if plan.get('version') != 1: raise ValueError('Unsupported plan version')
     fps=plan.get('fps')
     if type(fps) is not int or not 12<=fps<=30: raise ValueError('fps must be an integer in 12..30')

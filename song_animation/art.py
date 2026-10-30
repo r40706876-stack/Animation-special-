@@ -188,7 +188,11 @@ def state(plan,index,frame):
 
 def render_art(plan,frame):
     index=next(i for i,s in enumerate(plan['scenes']) if s['start_frame']<=frame<s['end_frame'])
-    s=plan['scenes'][index];im=state(plan,index,frame)
+    s=plan['scenes'][index]
+    if plan.get('version')==2:
+        from .vector import render_vector
+        return render_vector(plan,index,frame)
+    im=state(plan,index,frame)
     if index+1<len(plan['scenes']) and s['kind']=='bloom':
         # Reveal the actual next scene through the flower centre, not a black filler.
         n=max(1,round(.45*plan['fps']));start=s['end_frame']-n

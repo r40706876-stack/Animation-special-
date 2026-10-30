@@ -41,15 +41,18 @@ jobs:
           python-version: '3.11'
       - run: |
           sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg fonts-noto-core
-          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3' 'requests>=2.31,<3'
+          sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
+          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3' 'requests>=2.31,<3' 'CairoSVG>=2.7,<3'
       - run: python -m unittest discover -s song_animation/tests -v
       - run: python -m song_animation.render --plan song_animation/examples/proof.json --out song_proof --width 1080
+      - run: python -m song_animation.render --plan song_animation/examples/vector_smoke.json --out vector_proof --width 1080
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: song-motion-proof-${{ github.run_id }}
-          path: song_proof/
+          path: |
+            song_proof/
+            vector_proof/
           retention-days: 7
   song-draft:
     needs: [proof, inputs]
@@ -60,7 +63,7 @@ jobs:
       matrix:
         audio: ${{ fromJSON(needs.inputs.outputs.audio) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     env:
       AUDIO_PATH: ${{ matrix.audio }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -83,18 +86,17 @@ jobs:
           PY
       - run: |
           sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg fonts-noto-core
+          sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
           pip install -r song_animation/requirements.txt
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/huggingface
-          key: song-whisper-large-v3-turbo-v1
       - uses: actions/cache/restore@v4
         with:
           path: |
             song_draft/analysis_checkpoint.json
             song_draft/lyrics.json
-          key: song-analysis-v3-${{ hashFiles(matrix.audio) }}
+            song_draft/vector_assets/
+            song_draft/storyboard.json
+            song_draft/vector_checkpoint.json
+          key: song-generated-v4-${{ hashFiles(matrix.audio) }}
       - name: Lyrics to connected animation draft
         run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --allow-local-recovery
       - uses: actions/cache/save@v4
@@ -103,7 +105,10 @@ jobs:
           path: |
             song_draft/analysis_checkpoint.json
             song_draft/lyrics.json
-          key: song-analysis-v3-${{ hashFiles(matrix.audio) }}
+            song_draft/vector_assets/
+            song_draft/storyboard.json
+            song_draft/vector_checkpoint.json
+          key: song-generated-v4-${{ hashFiles(matrix.audio) }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

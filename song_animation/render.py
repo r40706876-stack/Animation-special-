@@ -28,7 +28,11 @@ def render(plan,out,audio=None,width=540):
     for i,s in enumerate(plan['scenes']):
         fs=[s['start_frame']+int((s['end_frame']-s['start_frame']-1)*q) for q in (.1,.45,.8)]
         imgs=[render_frame(plan,f) for f in fs]
-        arrays=[np.asarray(x.resize((135,240)),dtype=np.float32) for x in imgs]
+        if plan.get('version')==2:
+            from .vector import render_vector
+            motion_imgs=[render_vector(plan,i,f) for f in fs]
+        else:motion_imgs=imgs
+        arrays=[np.asarray(x.resize((135,240)),dtype=np.float32) for x in motion_imgs]
         delta=max(float(np.abs(arrays[0]-x).mean()) for x in arrays[1:])
         motion.append({'shot':i,'kind':s['kind'],'sample_difference':round(delta,4),'note':'Pixel motion only; not semantic/retention certification'})
         if delta<.2:raise ValueError(f'Shot {i} has no readable sampled motion')

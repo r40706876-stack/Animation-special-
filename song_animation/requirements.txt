@@ -1,5 +1,5 @@
 Pillow>=10,<13
 numpy>=1.26,<3
-faster-whisper>=1.1,<2
 librosa>=0.10,<1
 requests>=2.31,<3
+CairoSVG>=2.7,<3

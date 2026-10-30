@@ -2,7 +2,7 @@
 import json,os
 from pathlib import Path
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -21,6 +21,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None):
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]
     if audio_part:parts.insert(0,audio_part)
+    if extra_parts:parts=list(extra_parts)+parts
     config={'responseMimeType':'application/json','temperature':.15 if audio_part else .35}
     if schema:config['responseSchema']=schema
     raw=None

@@ -7,9 +7,19 @@ from functools import lru_cache
 from PIL import Image,ImageDraw,ImageFont,features
 
 @lru_cache(maxsize=16)
-def font(size):
+def font(size,text="दिल"):
     if not features.check_feature('raqm'):raise RuntimeError('Hindi captions require Pillow with RAQM shaping')
-    paths=[os.getenv('SONG_LYRICS_FONT',''),'/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf','/usr/share/fonts/opentype/noto/NotoSansDevanagari-Bold.otf']
+    base='/usr/share/fonts/truetype/noto/'
+    scripts=[(r'[\u0900-\u097f]','NotoSansDevanagari-Bold.ttf'),(r'[\u0a00-\u0a7f]','NotoSansGurmukhi-Bold.ttf'),
+        (r'[\u0980-\u09ff]','NotoSansBengali-Bold.ttf'),(r'[\u0a80-\u0aff]','NotoSansGujarati-Bold.ttf'),
+        (r'[\u0b80-\u0bff]','NotoSansTamil-Bold.ttf'),(r'[\u0c00-\u0c7f]','NotoSansTelugu-Bold.ttf'),
+        (r'[\u0c80-\u0cff]','NotoSansKannada-Bold.ttf'),(r'[\u0d00-\u0d7f]','NotoSansMalayalam-Bold.ttf'),
+        (r'[\u0600-\u06ff]','NotoNaskhArabic-Bold.ttf'),(r'[\u0e00-\u0e7f]','NotoSansThai-Bold.ttf')]
+    chosen=next((name for pattern,name in scripts if re.search(pattern,text)), 'NotoSans-Bold.ttf')
+    paths=[base+chosen]
+    if re.search(r'[\u0900-\u097f]',text):paths.insert(0,os.getenv('SONG_LYRICS_FONT',''))
+    if re.search(r'[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]',text):paths.insert(0,'/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc')
+    if chosen=='NotoSans-Bold.ttf':paths.append('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')
     for p in paths:
         if p and Path(p).is_file():return ImageFont.truetype(p,size,layout_engine=ImageFont.Layout.RAQM)
     raise RuntimeError('Install fonts-noto-core or set SONG_LYRICS_FONT to a Devanagari font')
@@ -31,9 +41,10 @@ def cues_from_lyrics(lyrics,fps):
 def layout(text):
     probe=ImageDraw.Draw(Image.new('RGB',(1,1)))
     for size in range(31,21,-1):
-        f=font(size);lines=[];line=''
-        for word in text.split():
-            candidate=(line+' '+word).strip()
+        f=font(size,text);lines=[];line=''
+        cjk=bool(re.search(r'[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]',text))
+        for word in (list(text) if cjk else text.split()):
+            candidate=(line+('' if cjk else ' ')+word).strip()
             if line and probe.textlength(candidate,font=f,language='hi')>448:
                 lines.append(line);line=word
             else:line=candidate
@@ -44,7 +55,7 @@ def layout(text):
 def overlay(im,plan,frame):
     cue=next((c for c in plan.get('lyrics',[]) if c['start_frame']<=frame<c['end_frame']),None)
     if not cue:return im
-    size,lines=layout(cue['text']);f=font(size)
+    size,lines=layout(cue['text']);f=font(size,cue['text'])
     height=28+len(lines)*(size+10);top=842-height
     canvas=Image.new('RGBA',im.size);d=ImageDraw.Draw(canvas)
     fps=plan['fps'];age=(frame-cue['start_frame'])/fps
