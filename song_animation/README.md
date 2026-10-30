@@ -14,6 +14,16 @@ The default pipeline now generates a new storyboard, custom SVG artwork and laye
 
 The workflow runs automatically on `main` after deployment and on the song-animation feature branch before merge. Existing Katha/Jewel Wasp workflows are separate. No social publishing occurs.
 
+## GitHub पर कैसे चलाएँ
+
+- इस folder के `inputs/` में **Add file → Upload files** से अपना गाना upload करके commit करें। Merge के बाद `main` branch चुनें; उससे पहले feature branch पर परीक्षण चलता है।
+- **Actions → Song Animation - draft and motion proof** में नया run खोलें। पहले proof, फिर प्रत्येक नए गाने का अलग generation job चलेगा।
+- Run पूरा होने पर नीचे **Artifacts → song-draft-review-…** download करें और ZIP के अंदर `preview.mp4` खोलें। `lyrics.srt` भी साथ मिलेगा।
+- पुराने गाने को दोबारा चलाने के लिए **Run workflow** में उसका repository path दें। Download किए गए artifacts 7 दिन तक रखे जाते हैं; अपने वीडियो को अलग सुरक्षित रखें।
+- Repository secret `GEMINI_API_KEY` और उस key पर उपलब्ध model/quota ज़रूरी हैं। AI service बंद या quota खत्म होने पर run स्पष्ट failure और checkpoints रखेगा।
+
+The two `DEMO_*_12s.mp3` inputs are original synthetic instrumental QA fixtures. They exercise different musical moods and multiple-upload selection; they are not a claim of real-song quality across all genres.
+
 ## Run locally
 
 Python 3.11, FFmpeg, libcairo2, fonts-noto-core and optionally fonts-noto-cjk are required. Pillow must support RAQM. Set the existing `GEMINI_API_KEY`.
