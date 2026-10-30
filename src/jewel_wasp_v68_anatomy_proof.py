@@ -1,4 +1,4 @@
-"""V6.8.24 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.25 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -61,7 +61,10 @@ tan=material("ventral segment",(.056,.024,.014),.83)
 wing=material("transparent wasp wing membrane",(.075,.145,.135),.72,0,.19)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.065,.053,.037),.98,noise=23)
-leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
+leafmat=material("aged ochre leaf litter",(.19,.13,.052),.94,noise=14)
+leaf_brown=material("damp brown decomposing litter",(.075,.046,.022),.98,noise=37)
+leaf_russet=material("russet curled fallen leaves",(.145,.067,.028),.95,noise=24)
+leaf_olive=material("dull olive decaying leaf litter",(.066,.071,.029),.97,noise=28)
 green=material("understory leaves",(.028,.073,.031),.86,noise=17)
 green_shadow=material("shadowed understory leaves",(.019,.045,.020),.91,noise=22)
 green_olive=material("olive understory leaves",(.053,.068,.028),.87,noise=19)
@@ -198,6 +201,22 @@ for s in (-1,1):
         scene.collection.objects.link(o);o.parent=pivot;mesh.materials.append(wing)
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
+        # Thin perimeter and cross-veins, rather than a featureless glass triangle.
+        # The vein ends follow the actual membrane width at each span station.
+        for edge in (-1,1):
+            outline=[]
+            for t in (.06,.22,.42,.63,.82,.96):
+                breadth=(.067 if hind==0 else .044)*math.sin(math.pi*t)**.8
+                outline.append((-.29*t+edge*breadth,s*span*t,
+                                .018*math.sin(math.pi*t)))
+            curve("wing flexible marginal vein",outline,.0017,vein,pivot)
+        for t in (.29,.51,.72):
+            breadth=(.067 if hind==0 else .044)*math.sin(math.pi*t)**.8
+            curve("wing fine cross vein",
+                  [(-.29*t-breadth*.8,s*span*t,.018*math.sin(math.pi*t)),
+                   (-.29*t,s*span*(t+.015),.019*math.sin(math.pi*t)),
+                   (-.29*t+breadth*.8,s*span*t,.018*math.sin(math.pi*t))],
+                  .0013,vein,pivot)
         for f in range(1,49):
             pivot.rotation_euler.x=s*(.10+.25*math.sin(f*1.73+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
@@ -311,7 +330,8 @@ for i in range(190):
     if abs(x)<1.45 and abs(y)<.65:continue
     leaf_blade("curved fallen leaf",(x,y,-.066),rng.uniform(.09,.33),
                rng.uniform(.015,.065),rng.uniform(-math.pi,math.pi),
-               leafmat if i%4 else (green_olive if i%8 else green_shadow))
+               (leaf_brown if i%7==0 else leaf_russet if i%5==0 else
+                leaf_olive if i%9==0 else leafmat if i%3 else green_olive))
 # Low foreground moss/leaf litter supplies depth without obscuring the insect silhouettes.
 # Place clusters outside the central encounter corridor; preserve clean anatomy visibility.
 for i in range(120):
@@ -322,7 +342,8 @@ for i in range(120):
                (x,y,-.045+rng.uniform(0,.025)),
                rng.uniform(.11,.42),rng.uniform(.025,.095),
                rng.uniform(-math.pi,math.pi),
-               green if i%5==0 else leafmat)
+               (green if i%13==0 else leaf_brown if i%3==0 else
+                leaf_russet if i%5==0 else leaf_olive if i%7==0 else leafmat))
 for i in range(35):
     x=rng.uniform(-3.1,3.1);y=rng.uniform(-2.7,2.9)
     if abs(x)<1.4 and abs(y)<.9:
