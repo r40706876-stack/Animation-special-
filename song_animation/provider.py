@@ -2,7 +2,14 @@
 import json,os
 from pathlib import Path
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None):
+def parse_object(raw):
+    start=raw.find('{')
+    if start<0:raise ValueError('Provider returned no JSON object')
+    data,_=json.JSONDecoder().raw_decode(raw[start:])
+    if not isinstance(data,dict):raise ValueError('Provider response must be an object')
+    return data
+
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -22,7 +29,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     parts=[{'text':prompt}]
     if audio_part:parts.insert(0,audio_part)
     if extra_parts:parts=list(extra_parts)+parts
-    config={'responseMimeType':'application/json','temperature':.15 if audio_part else .35}
+    config={'responseMimeType':'application/json','temperature':.15 if audio_part else .35,'maxOutputTokens':max_tokens}
     if schema:config['responseSchema']=schema
     raw=None
     attempts=[]
@@ -40,6 +47,9 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             if raw:break
         print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
     if not raw:raise RuntimeError('Planner unavailable after at most three discovered models')
-    data=json.loads(raw[raw.find('{'):raw.rfind('}')+1])
+    if out:Path(out,tag+'_response.txt').write_text(raw,encoding='utf-8')
+    # Decode exactly the first complete object; trailing prose/duplicate objects
+    # cannot make a valid package unparsable. The caller still validates fields.
+    data=parse_object(raw)
     if out:Path(out,tag+'_raw.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
     return data

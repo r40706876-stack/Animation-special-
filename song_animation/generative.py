@@ -1,5 +1,5 @@
 """Song-specific storyboards and original layered SVG artwork, not a scene menu."""
-import copy,hashlib,json,math
+import copy,hashlib,json,math,re
 from pathlib import Path
 from .provider import generate_json
 from .vector import validate_vector,sanitize_svg
@@ -9,6 +9,13 @@ PROTOCOL='open-vector-v2'
 ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..750; a separate lyric panel may cover y=770..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
 Each SVG is one independent asset drawn in its OWN local viewBox. SVG must be self-contained, no scripts, text, images, use, foreignObject, style, filters, URLs or external resources. Allowed elements: svg,g,path,rect,circle,ellipse,line,polyline,polygon,defs,linearGradient,radialGradient,stop,clipPath. Inline fill/stroke/transform attributes only. Use xmlns="http://www.w3.org/2000/svg". Gradients may reference local #ids only. A detailed full setting can be a background asset at width=540,height=960 with pivot [0,0] at x=0,y=0. Characters/props use tight local viewBoxes with transparent background, raster widths/heights matching their intended pixel size. Do not put a full character AND its separately animated arm into both assets: rig separate body/head/limbs where useful. Draw enough paths/shapes to look illustrated rather than geometric placeholder art.'''
 
+
+NUMBER={'type':'NUMBER'}
+KEY_SCHEMA={'type':'OBJECT','properties':{k:NUMBER for k in ('t','x','y','rotation','scale','opacity')},'required':['t','x','y','rotation','scale','opacity']}
+PACKAGE_SCHEMA={'type':'OBJECT','properties':{
+ 'background':{'type':'STRING'},
+ 'assets':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'description':{'type':'STRING'},'width':NUMBER,'height':NUMBER,'reusable':{'type':'BOOLEAN'},'svg':{'type':'STRING'}},'required':['id','width','height','svg']}},
+ 'nodes':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'asset':{'type':'STRING','nullable':True},'parent':{'type':'STRING','nullable':True},'role':{'type':'STRING','enum':['background','foreground']},'pivot':{'type':'ARRAY','items':NUMBER,'minItems':2,'maxItems':2},'easing':{'type':'STRING'},'keys':{'type':'ARRAY','items':KEY_SCHEMA},'wave':{'type':'OBJECT','properties':{k:NUMBER for k in ('x','y','rotation','cycles','phase')}}},'required':['id','keys']}}},'required':['background','assets','nodes']}
 
 def storyboard(lyrics,music,out,fps=24):
     duration=lyrics['duration']
@@ -48,7 +55,7 @@ def compile_storyboard(data,lyrics,fps=24):
     return {'version':2,'title':data.get('title','Song film'),'bible':data['bible'],'fps':fps,'total_frames':total,
         'lyrics':cues_from_lyrics(lyrics,fps),'timing_granularity':lyrics.get('timing_granularity','phrase'),
         'timing_verified':False,'scenes':compiled,'assets':{},'planner':'generated_vector','review_status':'draft',
-        'open_vocabulary':True,'protocol':PROTOCOL,'timeline_adjustments':adjustments}
+        'open_vocabulary':True,'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
 
 
 def scene_package(plan,index,out,previous_assets):
@@ -57,6 +64,7 @@ def scene_package(plan,index,out,previous_assets):
     reusable={k:{'width':v['width'],'height':v['height'],'description':v.get('description',''),'svg':v['svg']} for k,v in previous_assets.items() if v.get('reusable')}
     if len(json.dumps(reusable))>40000:reusable={k:{x:v[x] for x in ('width','height','description')} for k,v in reusable.items()}
     prompt=f'''You are the illustrator AND 2D rig animator for shot {index+1} of this music film. Generate NEW layered vector assets suitable for the shot; no fixed object list. Return ONLY JSON.
+LIGHTING: {'Night is supported by the source lyrics, but keep subjects legible.' if plan.get('allow_night') else 'The source does not require night. Use warm daylight or bright soft overcast. Do not paint a dark/twilight whole-frame background, even if a poetic description suggests it.'}
 FILM BIBLE: {json.dumps(plan['bible'],ensure_ascii=False)}
 FULL STORY: {json.dumps([{k:s[k] for k in ('label','visual','action')} for s in plan['scenes']],ensure_ascii=False)}
 THIS SHOT: {json.dumps(shot,ensure_ascii=False)}
@@ -68,9 +76,10 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
     key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest();cache=folder/f'scene_{index}_{key[:12]}.json'
     error=None
     for attempt in range(2):
-        if cache.exists() and attempt==0:data=json.loads(cache.read_text())
-        else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}_attempt_{attempt}')
         try:
+            if cache.exists() and attempt==0:data=json.loads(cache.read_text())
+            else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}_attempt_{attempt}',schema=PACKAGE_SCHEMA)
+
             additions={a['id']:a for a in data.get('assets',[])}
             if len(additions)>14:raise ValueError('Scene asset budget exceeded')
             assets=copy.deepcopy(previous_assets)
@@ -81,6 +90,12 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             s=dict(shot,background=data['background'],nodes=data['nodes'])
             check=dict(plan,assets=assets,scenes=[dict(s,start_frame=0,end_frame=s['end_frame']-s['start_frame'])],total_frames=s['end_frame']-s['start_frame'])
             validate_vector(check)
+            from .vector import render_vector
+            import numpy as np
+            sample=render_vector(check,0,check['total_frames']//2)
+            sample.save(folder/f'preflight_{index}.png')
+            if not plan.get('allow_night') and float(np.asarray(sample.convert('L')).mean())<78:
+                raise ValueError('Rendered scene is too dark for the requested bright illustrated style; use daylight colours across the actual background SVG and legible foreground faces/props')
             cache.write_text(json.dumps(data,ensure_ascii=False,indent=2))
             return s,assets
         except (ValueError,KeyError,TypeError) as e:error=str(e)

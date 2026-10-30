@@ -47,3 +47,19 @@ class StoryboardTests(unittest.TestCase):
         self.assertEqual(p['scenes'][0]['lyric_ids'],[0])
         self.assertEqual(p['scenes'][0]['end_frame'],144)
         self.assertTrue(p['timeline_adjustments'])
+
+class GeneratedRecovery(unittest.TestCase):
+    def test_complete_first_object_survives_trailing_duplicate_json(self):
+        from song_animation.provider import parse_object
+        self.assertEqual(parse_object('{"assets":[],"nodes":[]}\n{"notes":"extra"}'),{'assets':[],'nodes':[]})
+    def test_bad_package_json_has_one_bounded_repair(self):
+        from unittest.mock import patch
+        from song_animation.generative import scene_package
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text())
+        p['bible']={'style':'bright daylight'}
+        for s in p['scenes']:s.update(visual=s['label'],action='independent character and prop movement')
+        data={'background':p['scenes'][0]['background'],'assets':[dict(v,id=k) for k,v in p['assets'].items()],'nodes':p['scenes'][0]['nodes']}
+        with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',side_effect=[json.JSONDecodeError('truncated','{',1),data]) as api:
+            scene,assets=scene_package(p,0,td,{})
+            self.assertEqual(api.call_count,2)
+            self.assertEqual(scene['kind'],'vector')
