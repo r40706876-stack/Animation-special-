@@ -1,4 +1,4 @@
-"""V6.8.18 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.19 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -527,6 +527,19 @@ if os.environ.get("V68_SHOT","").lower()=="wasp_macro":
 
 output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
 motion=os.environ.get("V68_MOTION","0")=="1"
+# A 24-frame close-up must show the ENTIRE approach-to-touchdown, not just
+# source frames 1-24 (which ended while the insect was still hovering).
+# Preserve the 48-frame master animation and compress only short motion proofs.
+if motion and scene.frame_end == 24:
+    factor=(scene.frame_end-1)/47.0
+    for action in bpy.data.actions:
+        for fc in action.fcurves:
+            for key in fc.keyframe_points:
+                key.co.x=1+(key.co.x-1)*factor
+                key.handle_left.x=1+(key.handle_left.x-1)*factor
+                key.handle_right.x=1+(key.handle_right.x-1)*factor
+            fc.update()
+    print("V68_MACRO_FULL_ACTION_RETIMED_48_TO_24", flush=True)
 if motion:
     scene.render.image_settings.file_format="FFMPEG"
     scene.render.ffmpeg.format="MPEG4"
@@ -537,7 +550,7 @@ if motion:
 else:
     scene.render.resolution_x=540
     scene.render.resolution_y=960
-    scene.frame_set(24)
+    scene.frame_set(int(os.environ.get("V68_STILL_FRAME","24")))
     scene.render.filepath=output
     bpy.ops.render.render(write_still=True)
 print("JEWEL_V68_ANATOMY_RENDER_DONE", "motion" if motion else "still")
