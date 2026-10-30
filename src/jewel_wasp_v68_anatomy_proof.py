@@ -50,15 +50,15 @@ def material(name, rgb, rough=.65, metal=0, alpha=1, noise=0):
         m.node_tree.links.new(ramp.outputs["Color"],bs.inputs["Base Color"])
     return m
 
-emerald=material("iridescent emerald cuticle",(.012,.15,.115),.43,.34,noise=37)
-blue=material("blue-green sclerites",(.018,.075,.095),.48,.28,noise=42)
+emerald=material("iridescent emerald cuticle",(.008,.095,.075),.39,.48,noise=57)
+blue=material("blue-green sclerites",(.011,.050,.064),.48,.36,noise=52)
 dark=material("joint membranes",(.016,.022,.018),.76)
 leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
 eye=material("compound eye dark",(.008,.012,.011),.24,.10)
-brown=material("roach dark chitin",(.043,.018,.010),.55,.06,noise=29)
-bronze=material("roach elytra",(.052,.021,.011),.62,.06,noise=31)
+brown=material("roach dark chitin",(.035,.015,.008),.59,.07,noise=47)
+bronze=material("roach elytra",(.041,.017,.009),.65,.08,noise=41)
 tan=material("ventral segment",(.056,.024,.014),.83)
-wing=material("transparent wasp wing membrane",(.10,.19,.16),.53,0,.32)
+wing=material("transparent wasp wing membrane",(.10,.19,.16),.53,0,.45)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.095,.071,.049),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
@@ -119,8 +119,8 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
 wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 # Scale both complete insect rigs to fit the narrow 9:16 composition.
 wasp.scale=(.78,.78,.78)
-ell("wasp head",(.39,0,.05),(.17,.16,.13),emerald,wasp)
-ell("wasp thorax",(.11,0,.06),(.24,.19,.17),blue,wasp)
+ell("wasp head",(.39,0,.05),(.148,.133,.109),emerald,wasp)
+ell("wasp thorax",(.11,0,.06),(.270,.166,.151),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
 # One continuous spindle-shaped gaster, not six visibly separate toy beads.
 # Narrow inter-tergite seams are material bands on the SAME mesh.
@@ -129,8 +129,8 @@ for i in range(rings):
     t=i/(rings-1)
     x=-.275-.66*t
     profile=max(.025,math.sin(math.pi*t)**.60)
-    ry=.156*profile*(1-.16*t)
-    rz=.134*profile*(1-.12*t)
+    ry=.145*profile*(1-.30*t)
+    rz=.118*profile*(1-.26*t)
     zc=.035+.043*math.sin(math.pi*t)
     for j in range(around):
         theta=2*math.pi*j/around
@@ -149,7 +149,7 @@ for face in mesh.polygons:
     axial=face.index//around
     face.material_index=2 if axial in (8,15,22,29,36) else (0 if axial<23 else 1)
 for s in (-1,1):
-    ell("wasp eye %d"%s,(.46,s*.123,.083),(.065,.025,.065),eye,wasp)
+    ell("wasp eye %d"%s,(.443,s*.114,.074),(.045,.018,.050),eye,wasp)
     curve("wasp geniculate antenna %d"%s,
         [(.50,s*.07,.12),(.63,s*.12,.19),(.71,s*.17,.19),(.80,s*.18,.13)],
         .007,dark,wasp)
@@ -197,8 +197,8 @@ for i in range(abd_rings):
     t=i/(abd_rings-1)
     x=-.75+1.13*t
     profile=max(.025,math.sin(math.pi*(.07+.86*t))**.52)
-    ry=.305*profile*(1+.08*math.sin(math.pi*t))
-    rz=.145*profile
+    ry=.285*profile*(1+.06*math.sin(math.pi*t))
+    rz=.119*profile
     for j in range(abd_sides):
         angle=math.tau*j/abd_sides
         abd_verts.append((x,ry*math.cos(angle),-.012+rz*math.sin(angle)))
@@ -215,8 +215,8 @@ for polygon in abd_mesh.polygons:
     polygon.use_smooth=True
     axial=polygon.index//abd_sides
     polygon.material_index=1 if axial in (7,13,19,25,31,37) else 0
-ell("roach pronotum",(.43,0,.095),(.235,.238,.066),bronze,roach)
-ell("roach tucked head",(.56,0,.012),(.123,.116,.075),brown,roach)
+ell("roach pronotum",(.43,0,.086),(.230,.210,.050),bronze,roach)
+ell("roach tucked head",(.56,0,.007),(.111,.101,.061),brown,roach)
 ell("roach pronotal dark marking",(.425,0,.157),(.118,.095,.004),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
@@ -323,7 +323,7 @@ for i in range(30):
 
 # V6.8.9: upright, multi-plane fern crowns behind the action corridor.
 # Horizontal ground litter alone looked like flat stickers in the actual proof.
-for i in range(32):
+for i in range(20):
     x=rng.uniform(-2.25,2.25)
     y=rng.uniform(1.15,3.25)
     height=rng.uniform(.38,1.05)
@@ -399,15 +399,15 @@ scene.collection.objects.link(camera);scene.camera=camera
 camera.location=(.8,-5.3,3.75)
 direction=Vector((0,0,.82))-camera.location
 camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler()
-camera_data.type="ORTHO";camera_data.ortho_scale=6.7
+camera_data.type="ORTHO";camera_data.ortho_scale=5.9
 # V6.8.7 review exposed clipped roach at frame 1 and an unlit bottom band.
 # V6.8.8: aim the elevated camera at the midpoint of BOTH insects, not one.
 # Portrait-safe specimen tracking: complete insects must remain within horizontal margins.
 # Earlier V6.8.3 preview visibly clipped both subjects at frame 1/48.
 # Camera language: wasp anatomy -> complete two-subject encounter -> roach anatomy.
 # The middle still remains a wide safety shot; the ends intentionally isolate each rig.
-for frame,focus,scale in [(1,-.04,6.70),(12,-.02,6.65),
-                          (24,.02,6.55),(36,.05,6.65),(48,.08,6.70)]:
+for frame,focus,scale in [(1,-.04,5.95),(12,-.02,5.90),
+                          (24,.02,5.80),(36,.05,5.90),(48,.08,5.95)]:
     # Preserve BOTH insect silhouettes: earlier focus=-.50 clipped the roach.
     # Higher camera elevation also keeps every bottom image ray above the soil.
     camera.location=(.8+focus*.60,-5.3,3.75)
@@ -424,6 +424,8 @@ for f in (1,7,13,19,25,31,37,43,48):
     wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),.43+.33*math.sin(math.pi*t))
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
+    wasp.rotation_euler.x=.065*math.sin(2*math.pi*t)
+    wasp.rotation_euler.y=.095*math.sin(2*math.pi*t)
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
     roach.location=(.84-.19*t,.20,.20+.024*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
