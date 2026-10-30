@@ -1,0 +1,9 @@
+# V6.8.14 independently inspected artifact — 2026-10-30
+
+**Source run:** https://github.com/r40706876-stack/Animation-special-/actions/runs/41010834487
+**Artifact:** `jewel-wasp-v68-anatomy-gate`, id `12959446021`, ZIP 3,017,772 bytes (not expired at inspection).
+**Technical verdict: PASS for short proofs only.** Independently downloaded ZIP and used local `ffprobe` plus full `ffmpeg -v error -i input.mp4 -f null -` decode. `anatomy_motion.mp4`: 270×480, 48 frames, 24 fps, 2.000 s. `wasp_macro_motion.mp4`: 270×480, 24 frames, 24 fps, 1.000 s. Both decoded without errors. Still evidence: `anatomy_still.png`, `roach_macro.png`, `wasp_macro.png`; strips: `motion_strip.png`, `wasp_macro_motion_strip.png`.
+
+**Independent visual verdict: FAIL.** Actual macro stills and both four/five-frame motion strips were viewed. Roach is still simplified: shield/elytra look like smooth flat overlapping leaves, legs are stiff angular rods, and forest vegetation consists of repeated flat leaf cutouts on vertical stems. Wasp has an unnaturally bulbous head, bright tubular orange legs with too few natural bends, oversized pale wing panels that swing upright, and a torpedo-like gaster. Across the short strip, action reads as hovering/sliding rather than convincing interaction; no sting, burrow, egg or larva motion is proven.
+
+**Approval:** Full 14-chapter render remains **BLOCKED**. Green CI proves only technical completion. Current `src/jewel_wasp_v6_full.py` constructs its scene from `jewel_wasp_v6_proof.py` and V6.7 correction, **not** the V6.8 anatomy rigs. Integration and separate action-specific short animated proofs must precede full-film approval. Preserve V4 and all successful chapter artifacts. Next iteration should reduce rod-like leg proportions, tame wing flap silhouettes, improve roach wing shells and ground depth; rerender independent macros and motion before accepting any improvement.
