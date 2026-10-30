@@ -32,6 +32,7 @@ def validate(plan):
         if type(a) is not int or type(b) is not int or a!=cursor or b<=a or b>total:
             raise ValueError(f'Shot {i}: gap/overlap/invalid frame bounds')
         if b-a<fps: raise ValueError('Shot too short to read action')
+        if b-a>fps*8: raise ValueError('Shot exceeds eight-second action budget; split at a timed phrase')
         if not isinstance(s.get('reason'),str) or not s['reason'].strip(): raise ValueError('Missing visual meaning')
         cue=s.get('cue_frame')
         if type(cue) is not int or not a<=cue<b: raise ValueError('Cue must lie inside shot')

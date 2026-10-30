@@ -24,3 +24,18 @@ class Contracts(unittest.TestCase):
         end=self.p['scenes'][1]['end_frame'];self.assertEqual(render_frame(self.p,end-1).tobytes(),render_frame(self.p,end).tobytes())
     def test_deterministic_render(self):self.assertEqual(render_frame(self.p,230).tobytes(),render_frame(self.p,230).tobytes())
 if __name__=='__main__':unittest.main()
+
+class LocalDirector(unittest.TestCase):
+    def test_untranscribed_opening_is_not_visualized_as_known_lyrics(self):
+        from song_animation.local_director import local_plan
+        with self.assertRaisesRegex(ValueError,'Untranscribed opening'):
+            local_plan({'duration':15,'words':[{'text':'दिल फूल','start':8,'end':10}]})
+    def test_supported_phrases_cover_words_and_show_planner_identity(self):
+        from song_animation.local_director import local_plan
+        words=[{'text':t,'start':i*1.,'end':i+0.8} for i,t in enumerate(['दिल','ज़ख्म,','फूल','चोट,','अपने','दूर'])]
+        p=local_plan({'duration':7,'words':words})
+        self.assertEqual(p['planner'],'local_rules')
+        self.assertEqual([i for s in p['scenes'] for i in s['lyric_ids']],list(range(6)))
+    def test_unrelated_song_needs_other_assets(self):
+        from song_animation.local_director import local_plan
+        with self.assertRaises(ValueError):local_plan({'duration':4,'words':[{'text':'पहाड़ नदी मौसम','start':0,'end':3}]})

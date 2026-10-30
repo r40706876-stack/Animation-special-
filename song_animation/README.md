@@ -4,7 +4,7 @@ Original 2D illustration renderer plus optional audio → timed ASR → Gemini s
 
 ## Working now
 
-- Five supported visual actions: one hand gives a rose, rose opens into the next scene, moving top-down crowd with a stationary rose owner, diverging paths, heart/memory paths.
+- Eight supported visual actions: one hand gives a rose, rose opens into the next scene, moving top-down crowd with a stationary rose owner, diverging paths, heart/memory paths, symbolic rose-prick, wounded heart and thorn avoidance.
 - Deterministic original layered artwork; individual hands/people/petals move. No stock clips or static-image Ken Burns substitution.
 - Actual faster-whisper large-v3-turbo word timestamps retained; no time distribution by word length.
 - Optional supplied timed-lyrics JSON (`--lyrics`) in the same format as generated `lyrics.json`.
@@ -35,6 +35,16 @@ GitHub workflow runs a proof first, then the reference song on changes to this f
 
 ## Honest limits
 
-This is a **limited five-action prototype**, not arbitrary-song animation. Lyrics recognition for singing can be inaccurate. Hindi forced alignment, expanded character/asset generation, semantic output scoring, scene-level persistent caching and automatic upload detection are future stages. Music beats are available to the planner; actions currently use lyric cues, not a guaranteed beat-synchronized choreography. Artwork is rendered at 540×960 and cleanly upscaled to 1080×1920, not native high-detail 1080p illustration. Contact sheets/technical PASS do not certify lyric meaning or retention. Full original-art film quality requires visual review and iteration.
+This is a **limited eight-action prototype**, not arbitrary-song animation. Lyrics recognition for singing can be inaccurate. Hindi forced alignment, expanded character/asset generation, semantic output scoring, scene-level persistent caching and automatic upload detection are future stages. Music beats are available to the planner; actions currently use lyric cues, not a guaranteed beat-synchronized choreography. Artwork is rendered at 540×960 and cleanly upscaled to 1080×1920, not native high-detail 1080p illustration. Contact sheets/technical PASS do not certify lyric meaning or retention. Full original-art film quality requires visual review and iteration.
 
 The silent proof uses a hand-authored plan to verify motion; it does not prove the automatic song planner. Inspect the separate real-song draft and transcript before evaluating that pipeline.
+
+## Recovery added after live runs
+
+Model names are discovered rather than assuming a retired endpoint exists. Stable lighter text models are preferred; at most three discovered models are attempted. The opening ASR window is retried when full-song decoding omits more than 1.5 seconds. Exact-audio/model/version checkpoints preserve analysis on provider failure.
+
+`--allow-local-recovery` enables an explicitly labelled local-rule draft if the text provider is unavailable. It handles only the supported pain/relationship vocabulary; it rejects unrelated topics and an untranscribed opening. `--planner local` selects this route directly. Neither route silently corrects ASR text. See `planner` and `provider_recovery_used` in the exported plan. Local rules are not an LLM and do not prove general song understanding.
+
+## Direct audio transcription
+
+The default transcriber now sends an analysis copy of the actual audio to the available audio-capable Gemini model, retaining approximate phrase boundaries and repeated refrains. `lyrics.json` explicitly declares `timing_granularity: phrase`; ids are phrase ids, not fabricated exact word timestamps. Unclear phrases and unexplained missing openings stop rendering. `--transcriber whisper` retains the large-v3-turbo/opening-recovery option for comparison. All lyric and scene interpretations still require listening review.
