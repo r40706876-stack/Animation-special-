@@ -1,4 +1,4 @@
-"""V6.8.22 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.23 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -453,7 +453,7 @@ for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
     landing=smoothstep((t-.46)/.54)
     wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),
-                   .50+.16*math.sin(math.pi*t)-.253*landing)
+                   .50+.16*math.sin(math.pi*t)-.237*landing)
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.rotation_euler.x=.065*math.sin(2*math.pi*t)
@@ -533,15 +533,15 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     and os.environ.get("V68_MOTION","0")!="1"
     and os.environ.get("V68_STILL_FRAME","24")=="48"):
     scene.frame_set(48)
-    contact_focus=wasp.matrix_world @ Vector((-.20,0,-.18))
+    contact_focus=wasp.matrix_world @ Vector((-.04,0,-.18))
     camera.animation_data_clear()
     camera_data.animation_data_clear()
     # The previous 0.62m rise looked below the infinite soil plane at the
     # bottom of the portrait frame (large black band in actual V6.8.20 still).
     # Raise the lens while keeping a near-ground, tarsus-visible oblique view.
-    camera.location=contact_focus+Vector((1.05,-2.65,1.08))
+    camera.location=contact_focus+Vector((.55,-2.65,1.08))
     camera.rotation_euler=(contact_focus-camera.location).to_track_quat("-Z","Y").to_euler()
-    camera_data.ortho_scale=2.40
+    camera_data.ortho_scale=2.80
     print("V68_TOUCHDOWN_OBLIQUE_NO_UNDERGROUND_CAMERA", flush=True)
 
 # Independent numeric contact gate: check actual animated mesh vertices in
@@ -566,9 +566,10 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     print("V68_TOUCHDOWN_TARSUS_GAPS_METERS", gaps, flush=True)
     print("V68_INITIAL_TARSUS_GAPS_METERS",
           [round(z-ground_z,4) for z in initial_z], flush=True)
-    # Anatomically meaningful tripod contact: at least three tarsi within 2.5cm of soil.
+    # At least three supporting tarsi near soil, and no tarsus may sink more than 6mm.
+    # V6.8.22 technically passed despite a 20mm-deep foot; visual QA rejected it.
     grounded=sum(abs(g)<=.025 for g in gaps)
-    no_deep_penetration=min(gaps)>=-.025
+    no_deep_penetration=min(gaps)>=-.006
     initial_airborne=min(initial_z)-ground_z>.065
     print("V68_TOUCHDOWN_GEOMETRY", "PASS" if (
           grounded>=3 and no_deep_penetration and initial_airborne
