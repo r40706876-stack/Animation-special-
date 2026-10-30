@@ -31,6 +31,12 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         flash=[m for m in full if 'flash' in m]
         models=list(dict.fromkeys(pro[:1]+flash[:1]+lite[:1]+models))
     if require_full_model:models=[m for m in models if 'lite' not in m.lower()]
+    if prefer_quality:
+        preference_file=Path(__file__).with_name('provider_preferences.json')
+        if preference_file.is_file():
+            preferred=json.loads(preference_file.read_text()).get('preferred_full_models',[])
+            known=[m for m in preferred if m in models and 'lite' not in m.lower()]
+            models=list(dict.fromkeys(known+models))
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]

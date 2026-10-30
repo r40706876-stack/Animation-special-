@@ -1,0 +1,7 @@
+{
+  "preferred_full_models": [
+    "gemini-3-flash-preview"
+  ],
+  "last_probe_date": "2026-10-30",
+  "evidence": "Successful live generateContent JSON response in Actions run 41075669914. Preference applies only when model is still returned by model discovery; ordinary bounded failover remains enabled."
+}
