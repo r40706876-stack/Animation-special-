@@ -68,11 +68,18 @@ def main():
         (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
         render(plan,out,clip,args.width)
         if args.engine=='generated':
-            from .review import review
-            review(plan,out)
+            from .review import review,refine
+            assessment=review(plan,out)
+            (out/'visual_review_before.json').write_text(json.dumps(assessment,ensure_ascii=False,indent=2))
+            plan,changed=refine(plan,out,assessment)
+            if changed:
+                render(plan,out,clip,args.width)
+                assessment=review(plan,out)
+            plan['visual_issues_remaining']=assessment.get('issues',[])
+            (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
         (out/'status.json').write_text(json.dumps({'status':'review_draft','engine':args.engine,
             'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,
-            'universal_quality_certified':False,'warnings':lyrics.get('warnings',[])},ensure_ascii=False,indent=2))
+            'universal_quality_certified':False,'visual_review_issues':assessment.get('issues',[]) if args.engine=='generated' else [],'visual_repair_applied':changed if args.engine=='generated' else False,'warnings':lyrics.get('warnings',[])},ensure_ascii=False,indent=2))
     except Exception as e:
         (out/'status.json').write_text(json.dumps({'status':'failed','error_type':type(e).__name__,'automatic_publish':False}))
         raise

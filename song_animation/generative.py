@@ -96,7 +96,7 @@ def normalize_package(data):
     return data
 
 
-def scene_package(plan,index,out,previous_assets):
+def scene_package(plan,index,out,previous_assets,reference_image=None):
     shot=plan['scenes'][index];folder=Path(out)/'vector_assets';folder.mkdir(parents=True,exist_ok=True)
     # Reuse established character assets exactly when practical; scenery remains shot-specific.
     reusable={k:{'width':v['width'],'height':v['height'],'description':v.get('description',''),'svg':v['svg']} for k,v in previous_assets.items() if v.get('reusable')}
@@ -116,7 +116,7 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
     for attempt in range(3):
         try:
             if cache.exists() and attempt==0:data=json.loads(cache.read_text())
-            else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True)
+            else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}'+('_repair' if reference_image else '')+f'_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True,extra_parts=[reference_image] if reference_image else None)
 
             data=normalize_package(data)
             additions={a['id']:a for a in data.get('assets',[])}
