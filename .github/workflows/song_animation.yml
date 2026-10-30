@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       audio_path:
-        description: Repository audio path (empty runs motion proof only)
+        description: 'Song path on the selected branch; choose main for current uploads'
         required: false
-        default: song_animation/inputs/reference.mp3
+        default: song_animation/inputs/song_1000076620.m4a
         type: string
   push:
     branches: ['main', 'feature/song-animation-*']

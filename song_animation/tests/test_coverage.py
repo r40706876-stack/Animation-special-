@@ -31,6 +31,8 @@ class MultiScene(unittest.TestCase):
         other['coverage']['environment']='a snowy mountain'
         self.assertNotEqual(cache_key(a),cache_key(environment_prompt(p,other)))
         self.assertIn('no people',a)
+        self.assertTrue(a.startswith(s['coverage']['environment']))
+        self.assertNotIn('architecture',a)
 
 class PaintedSafety(unittest.TestCase):
     def test_original_stereo_is_not_replaced_with_analysis_mono(self):

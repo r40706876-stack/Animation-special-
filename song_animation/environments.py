@@ -22,15 +22,13 @@ def inference_pipeline():
 
 def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
-    # Set art must never paint another copy of a separately animated actor.
-    return ('A beautiful detailed engraved watercolor film environment, vertical composition, '
-        'organic architecture and nature, layered foreground middle distance and background, '
-        'bright readable warm daylight, rich cream paper texture. EMPTY SET, no people, no animals, '
-        'no characters, no foreground hero props, no text, no letters, no watermark. '
-        'Leave the middle action area clear for separately animated characters and objects. '
-        'Location: '+str(coverage.get('environment',scene.get('visual','')))[:500]+
-        '. Shared setting and palette: '+str(plan.get('bible',{}).get('locations',''))[:350]+
-        ', '+str(plan.get('bible',{}).get('palette',''))[:250])
+    # CLIP's short text window must see the requested world FIRST. Long style
+    # preambles previously truncated the location and turned a valley into arches.
+    location=str(coverage.get('environment',scene.get('visual','a sunlit open landscape')))[:150]
+    palette=str(plan.get('bible',{}).get('palette','bright natural colors'))[:65]
+    return (location+'. Colorful watercolor painting, '+palette+
+        '. Bright daylight, layered depth, clear central action area, empty setting, '
+        'no people, no animals, no hero props, no text.')
 
 def cache_key(prompt):return hashlib.sha256((MODEL+REVISION+prompt).encode()).hexdigest()
 
