@@ -22,9 +22,9 @@ jobs:
           python-version: '3.11'
       - run: |
           sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y ffmpeg libsndfile1
           pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
-          pip install 'numpy<2' demucs==4.0.1 'faster-whisper>=1.1,<2' 'requests>=2.31,<3'
+          pip install 'numpy<2' 'soundfile>=0.12,<1' demucs==4.0.1 'faster-whisper>=1.1,<2' 'requests>=2.31,<3'
       - run: python -m song_animation.voice_recovery
       - uses: actions/upload-artifact@v4
         if: always()
