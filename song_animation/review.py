@@ -6,10 +6,20 @@ from .provider import generate_json
 def review(plan,out):
     out=Path(out)
     try:
-        image={'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode((out/'review_contact.jpg').read_bytes()).decode()}}
+        import io
+        from PIL import Image
+        from .art import render_frame
+        images=[]
+        for index,scene in enumerate(plan['scenes']):
+            strip=Image.new('RGB',(1620,960))
+            for column,q in enumerate((.1,.5,.9)):
+                frame=scene['start_frame']+int((scene['end_frame']-scene['start_frame']-1)*q)
+                strip.paste(render_frame(plan,frame),(column*540,0))
+            buffer=io.BytesIO();strip.save(buffer,format='JPEG',quality=88)
+            images.extend([{'text':f'SHOT {index}: left=10%, middle=50%, right=90% of shot time.'},{'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(buffer.getvalue()).decode()}}])
         descriptions=[{'shot':i,'meaning':s.get('label',s.get('reason','')),'action':s.get('action','')} for i,s in enumerate(plan['scenes'])]
-        prompt='''Review the ACTUAL sampled rendered frames of this illustrated song film. Each row contains three moments from one shot. Compare recognisable objects/actions against the shot descriptions and shared art bible. Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Return JSON {"needs_review":true,"issues":[{"shot":0,"issue":"specific visible problem"}],"strengths":["visible strengths"]}. If no concrete issue is visible return issues=[], but never certify human approval or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)
-        result=generate_json(prompt,out=out,tag='visual_review',extra_parts=[image])
+        prompt='''Review the ACTUAL sampled rendered frames of this illustrated song film. Each labelled input image contains three full-size moments from one shot. Compare positions and limb poses across the three panels. Compare recognisable objects/actions against the shot descriptions and shared art bible. Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Return JSON {"needs_review":true,"issues":[{"shot":0,"issue":"specific visible problem"}],"strengths":["visible strengths"]}. If no concrete issue is visible return issues=[], but never certify human approval or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)
+        result=generate_json(prompt,out=out,tag='visual_review',extra_parts=images)
         result['advisory_only']=True;result['human_approval']=False
     except (RuntimeError,ValueError,KeyError) as e:
         result={'status':'unavailable','error_type':type(e).__name__,'advisory_only':True,'human_approval':False}
@@ -36,7 +46,9 @@ def refine(plan,out,assessment):
         try:
             scene,assets=scene_package(candidate,index,out,candidate['assets'],reference_image=image)
             candidate['scenes'][index]=scene;candidate['assets']=assets
-            report.append({'shot':index,'status':'replaced','issues':notes})
+            from .choreography import retarget
+            candidate,rigged=retarget(candidate,index,notes)
+            report.append({'shot':index,'status':'replaced','connected_rig':rigged,'issues':notes})
         except (ValueError,RuntimeError,KeyError,TypeError) as e:
             candidate['scenes'][index]=copy.deepcopy(plan['scenes'][index])
             report.append({'shot':index,'status':'failed','error':str(e)[:1200]})

@@ -177,4 +177,6 @@ def build(lyrics,music,out):
         scene,assets=scene_package(plan,i,out,plan['assets'])
         plan['scenes'][i]=scene;plan['assets']=assets
         (out/'partial_plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
+    from .choreography import retarget
+    for i in range(len(plan['scenes'])):plan,_=retarget(plan,i,[])
     return validate_vector(plan)
