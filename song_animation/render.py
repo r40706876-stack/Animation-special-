@@ -24,7 +24,7 @@ def render(plan,out,audio=None,width=540):
     if audio:cmd+=['-i',str(audio)]
     else:cmd+=['-f','lavfi','-i',f'anullsrc=r=44100:cl=stereo:d={duration}']
     cmd+=['-map','0:v','-map','1:a','-vf',f'scale={width}:{width*16//9}:flags=lanczos','-c:v','libx264','-crf','19','-preset','fast','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','apad','-t',str(duration),'-movflags','+faststart',str(temp)]
-    sheets=[];motion=[]
+    sheets=[];clean_sheets=[];motion=[]
     for i,s in enumerate(plan['scenes']):
         fs=[s['start_frame']+int((s['end_frame']-s['start_frame']-1)*q) for q in (.1,.45,.8)]
         imgs=[render_frame(plan,f) for f in fs]
@@ -37,11 +37,14 @@ def render(plan,out,audio=None,width=540):
         motion.append({'shot':i,'kind':s['kind'],'sample_difference':round(delta,4),'note':'Pixel motion only; not semantic/retention certification'})
         if delta<.2:raise ValueError(f'Shot {i} has no readable sampled motion')
         for f,im in zip(fs,imgs):
-            tile=im.resize((180,320));d=ImageDraw.Draw(tile);d.rectangle((0,297,180,320),fill='#fff7e6')
+            tile=im.resize((180,320));clean_sheets.append(tile.copy());d=ImageDraw.Draw(tile);d.rectangle((0,297,180,320),fill='#fff7e6')
             d.text((5,302),f'{i+1} {s["kind"]} | {f/fps:.2f}s',fill='#343434');sheets.append(tile)
     contact=Image.new('RGB',(540,320*len(plan['scenes'])),'white')
     for i,im in enumerate(sheets):contact.paste(im,((i%3)*180,(i//3)*320))
     contact.save(out/'contact.jpg',quality=92)
+    clean=Image.new('RGB',contact.size,'white')
+    for i,im in enumerate(clean_sheets):clean.paste(im,((i%3)*180,(i//3)*320))
+    clean.save(out/'review_contact.jpg',quality=92)
     if plan.get('lyrics'):
         from .lyrics import export_srt
         export_srt(plan,out/'lyrics.srt')
