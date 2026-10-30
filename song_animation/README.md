@@ -80,3 +80,19 @@ Every shot records its narrative purpose, emotional change and the incoming/outg
 The artist receives the whole story and state chain. Encoded-video review checks every adjacent shot for causal connection, persistent state and emotional progression, as well as whether the ending pays off the setup. Individually attractive but disconnected pictures cannot clear the output gate. These checks enforce the production workflow; they do not prove that a particular audience will emotionally connect.
 
 Lyric acceptance now includes an independent ASR decoder even when the direct model initially sounds confident. An established language may guide that decoder for this clip only; unknown languages keep automatic detection. The full audio reviewer receives both transcripts and must resolve disagreements in actual words/verbs. Its rejection reasons are carried into the automatic correction attempt, preventing a coherent but wrong action such as lifting versus writing from silently passing.
+
+### Multiple visual setups for new songs
+
+For 20–30 seconds the director must plan at least five shots, three distinct story setups and four visible events. Concrete locations and blocking are tracked separately from camera framing: different zooms on one desk remain one setup. Three consecutive repeats are rejected before illustration. The full-model reviewer separately checks the actual decoded MP4 for visual variety, so changing setup names cannot pass a repetitive film.
+
+Repository uploads under `song_animation/inputs/` automatically use `--artwork painted-sets`. This backend paints original song-specific environments on a CPU with the pinned `stabilityai/sd-turbo` model and keeps independently animated vector actors/props in front. It caches by actual environment, shared setting/palette and model revision. It does not reuse this poet's courtyard for unrelated genres. PNG data is bounded, decoded and embedded in the render plan; arbitrary file paths and external image URLs are not accepted. Existing lyric, narrative, meaningful motion, anatomy and finish checks still apply. A painted background alone does not certify animation quality.
+
+Local installation for this optional backend:
+
+```bash
+pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+pip install -r song_animation/requirements.txt -r song_animation/requirements-painted.txt
+python -m song_animation.run --audio song_animation/inputs/YOUR_SONG.mp3 --out song_output --width 1080 --artwork painted-sets
+```
+
+Only `checked.mp4` is a cleared automatic output; a review draft or a successful directed-example workflow is not proof the automatic song pipeline cleared. No universal quality or retention guarantee is made. The included `poet_multiscene` film is separately directed original artwork for the supplied recording and is labelled as such.

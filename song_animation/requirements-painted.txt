@@ -1,0 +1,7 @@
+# Install CPU torch separately, using the PyTorch CPU wheel index.
+diffusers==0.32.2
+transformers==4.48.3
+accelerate==1.2.1
+huggingface_hub>=0.26,<0.31
+safetensors>=0.4,<1
+numpy>=1.26,<2

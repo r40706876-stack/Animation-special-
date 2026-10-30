@@ -9,7 +9,7 @@ def parse_object(raw):
     if not isinstance(data,dict):raise ValueError('Provider response must be an object')
     return data
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False,require_full_model=False):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False,require_full_model=False,timeout_seconds=90):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -50,7 +50,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         try:
             r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                 headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
-                'generationConfig':config},timeout=90)
+                'generationConfig':config},timeout=max(30,min(180,timeout_seconds)))
         except requests.RequestException:continue
         attempts.append({'model':model,'http_status':r.status_code})
         if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))

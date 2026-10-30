@@ -1,7 +1,7 @@
 """Choose exact new/changed uploads; never inject file names into shell source."""
 import json,os,subprocess
 from pathlib import Path
-EXTS={'.mp3','.wav','.m4a','.aac','.ogg','.opus','.mp4'}
+EXTS={'.mp3','.wav','.m4a','.aac','.ogg','.opus','.mp4','.flac','.aiff','.aif','.webm','.mov'}
 
 def select(root,before='',head='',manual=None,event='push'):
     root=Path(root).resolve()

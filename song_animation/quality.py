@@ -2,6 +2,7 @@
 import json,subprocess,math,hashlib
 from pathlib import Path
 from .narrative import narrative_decision
+from .coverage import coverage_decision
 import numpy as np
 CHECKS=('lyric_meaning','artwork_detail','story_motion','anatomy_continuity','caption_legibility')
 class QualityHold(RuntimeError):pass
@@ -20,6 +21,8 @@ def visual_decision(review,scene_count):
     if not isinstance(model,str) or not model or 'lite' in model.lower():
         reasons.append('Full-capability visual reviewer did not verify this film')
         return {'passed':False,'reasons':reasons,'repair_issues':[]}
+    coverage_reasons,coverage_repairs=coverage_decision(review,scene_count)
+    reasons.extend(coverage_reasons);repair.extend(coverage_repairs)
     story_reasons,story_repairs=narrative_decision(review,scene_count)
     reasons.extend(story_reasons);repair.extend(story_repairs)
     if review.get('reference_quality_met') is not True:

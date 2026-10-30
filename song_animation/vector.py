@@ -1,7 +1,7 @@
 """Open-vocabulary vector assets + hierarchical keyframe animation.
 The artwork is data (sanitized SVG), never executable generated Python/JS.
 """
-import io,json,math,re,hashlib
+import io,json,math,re,hashlib,base64
 from functools import lru_cache
 from xml.etree import ElementTree as ET
 import numpy as np
@@ -39,7 +39,8 @@ def validate_vector(plan):
     for key,a in assets.items():
         if not re.fullmatch(r'[A-Za-z0-9_-]{1,80}',key):raise ValueError('Invalid asset id')
         if not finite(a.get('width'),4,1080) or not finite(a.get('height'),4,1920):raise ValueError('Invalid asset raster dimensions')
-        sanitize_svg(a.get('svg'))
+        if 'raster_png' in a:decode_painted(a['raster_png'])
+        else:sanitize_svg(a.get('svg'))
     cursor=0
     for s in scenes:
         if s.get('kind')!='vector' or s.get('start_frame')!=cursor or type(s.get('end_frame')) is not int or not cursor<s['end_frame']<=total:raise ValueError('Invalid vector shot timeline')
@@ -76,6 +77,21 @@ def validate_vector(plan):
     if cursor!=total:raise ValueError('Missing vector film ending')
     return plan
 
+@lru_cache(maxsize=24)
+def decode_painted(encoded):
+    if not isinstance(encoded,str) or len(encoded)>4_000_000:raise ValueError('Painted asset exceeds bounded size')
+    try:
+        raw=base64.b64decode(encoded,validate=True)
+        if not raw.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('Painted assets must be PNG')
+        im=Image.open(io.BytesIO(raw))
+        if im.width>1080 or im.height>1920 or im.width<4 or im.height<4:raise ValueError('Painted image dimensions exceed bounds')
+        im.load();return im.convert('RGBA')
+    except (OSError,ValueError) as e:raise ValueError('Invalid painted PNG: '+str(e)) from None
+
+@lru_cache(maxsize=24)
+def painted(encoded,width,height):
+    return decode_painted(encoded).resize((width,height),Image.Resampling.LANCZOS)
+
 @lru_cache(maxsize=192)
 def raster(svg,width,height):
     import cairosvg
@@ -99,7 +115,7 @@ def basis(v):
     return np.array([[c,-s,v['x']],[s,c,v['y']],[0,0,1.]])
 
 def paste(im,asset,M,opacity,pivot,shadow=False):
-    layer=raster(asset['svg'],int(asset['width']),int(asset['height']));w,h=layer.size
+    layer=(painted(asset['raster_png'],int(asset['width']),int(asset['height'])) if 'raster_png' in asset else raster(asset['svg'],int(asset['width']),int(asset['height'])));w,h=layer.size
     T=M@np.array([[1,0,-pivot[0]*w],[0,1,-pivot[1]*h],[0,0,1.]])
     corners=T@np.array([[0,w,w,0],[0,0,h,h],[1,1,1,1]])
     left=max(0,math.floor(corners[0].min()));right=min(W,math.ceil(corners[0].max()))

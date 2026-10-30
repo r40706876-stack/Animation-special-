@@ -1,0 +1,27 @@
+name: Directed multiscene update of supplied song
+on:
+  push:
+    branches: ['main']
+    paths: ['song_animation/examples/poet_multiscene.py', 'song_animation/assets/poet_story_v2/**', '.github/workflows/song_poet_multiscene.yml']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core
+          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3'
+      - run: python -m song_animation.examples.poet_multiscene --audio song_animation/inputs/song_1000076620.m4a --out directed_multiscene
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: directed-multiscene-song
+          path: directed_multiscene/
+          retention-days: 7

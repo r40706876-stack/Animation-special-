@@ -68,6 +68,8 @@ jobs:
       AUDIO_PATH: ${{ matrix.audio }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_MODEL: ""
+      HF_HUB_DISABLE_XET: "1"
+      HF_HUB_DOWNLOAD_TIMEOUT: "120"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -88,6 +90,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
           pip install -r song_animation/requirements.txt
+          pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r song_animation/requirements-painted.txt
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
+          key: song-painted-sd-turbo-b261bac6
       - uses: actions/cache/restore@v4
         with:
           path: |
@@ -96,11 +104,12 @@ jobs:
             song_draft/vector_assets/
             song_draft/storyboard.json
             song_draft/vector_checkpoint.json
-          key: song-generated-v6-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
+            song_draft/painted_environments/
+          key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
           restore-keys: |
-            song-generated-v6-${{ hashFiles(matrix.audio) }}-
+            song-generated-v7-${{ hashFiles(matrix.audio) }}-
       - name: Lyrics to connected animation draft
-        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --allow-local-recovery
+        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-sets --allow-local-recovery
       - uses: actions/cache/save@v4
         if: always()
         with:
@@ -110,7 +119,8 @@ jobs:
             song_draft/vector_assets/
             song_draft/storyboard.json
             song_draft/vector_checkpoint.json
-          key: song-generated-v6-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
+            song_draft/painted_environments/
+          key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
