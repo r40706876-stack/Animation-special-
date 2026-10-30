@@ -157,7 +157,7 @@ for f in (1,120,240):
 
 scene.render.engine="BLENDER_EEVEE_NEXT"
 scene.render.resolution_x=270;scene.render.resolution_y=480
-scene.render.resolution_percentage=int(os.getenv("JW_RES_PERCENT","50"))
+scene.render.resolution_percentage=int(os.getenv("JW_RES_PERCENT","60"))
 scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.environ["BLENDER_OUTPUT"]
 if mode=="still":
