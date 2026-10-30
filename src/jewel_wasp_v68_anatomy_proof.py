@@ -1,4 +1,4 @@
-"""V6.8.16 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.17 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -163,8 +163,15 @@ for s in (-1,1):
           .008,dark,wasp)
     for leg in range(3):
         x=.29-leg*.19;y=s*.15
-        hip=Vector((x,y,.01));knee=Vector((x+.09-leg*.075,s*(.29+.035*leg),-.115))
-        ankle=Vector((x+.16-leg*.11,s*(.40+.055*leg),-.445))
+        # Front/mid/hind legs need different femur directions and a real
+        # knee-to-tibia bend; V6.8.16 read as six near-vertical stilts.
+        hip=Vector((x,y,.01))
+        knee=Vector((x+( .18 if leg==0 else -.05 if leg==1 else -.19),
+                     s*(.28 if leg==0 else .33 if leg==1 else .30),
+                     -.17 if leg<2 else -.13))
+        ankle=Vector((x+( .27 if leg==0 else .01 if leg==1 else -.31),
+                      s*(.39 if leg==0 else .49 if leg==1 else .43),
+                      -.35 if leg==0 else -.37 if leg==1 else -.36))
         gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=wasp;gait.location=hip
         femur_joint=(knee-hip)*.35+Vector((.015,s*.015,.028))
@@ -225,11 +232,11 @@ for polygon in abd_mesh.polygons:
     polygon.use_smooth=True
     axial=polygon.index//abd_sides
     polygon.material_index=1 if axial in (7,13,19,25,31,37) else 0
-ell("roach pronotum",(.43,0,.086),(.230,.210,.050),bronze,roach)
+# A real cockroach pronotum is a low, broad protective dorsal plate.
+# The V6.8.16 oval sphere and button-like top read as toy geometry.
+shield("roach integrated pronotal shield",.68,.24,0,.215,.082,.046,
+       bronze,roach)
 ell("roach tucked head",(.56,0,.007),(.111,.101,.061),brown,roach)
-# A raised round disk looked like a button on the pronotum in the actual macro.
-# Use a low-contrast, flattened tapered mark that follows the shield instead.
-ell("roach pronotal cuticle shading",(.425,0,.135),(.082,.050,.002),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
@@ -240,11 +247,12 @@ for s in (-1,1):
     shield("overlapping dorsal elytron %d"%s,.27,-.74,s*.083,.165,.094,.038,
            bronze,roach)
     # Low-relief longitudinal wing veins break the smooth toy-like roach shell.
-    for vein_idx, offset in enumerate((-.060,.015,.078)):
+    for vein_idx, offset in enumerate((-.045,.055)):
+        # Keep veins embedded as subtle relief, not elevated rail tracks.
         curve("roach elytron vein %d %d"%(s,vein_idx),
-              [(.19,s*(.096+offset),.123),(-.18,s*(.096+offset),.151),
-               (-.54,s*(.096+offset*.60),.129)],
-              .0035,brown,roach)
+              [(.19,s*(.096+offset),.115),(-.18,s*(.096+offset),.131),
+               (-.54,s*(.096+offset*.60),.116)],
+              .0022,brown,roach)
     ell("roach compound eye %d"%s,(.605,s*.102,.025),(.030,.018,.032),eye,roach)
     curve("roach filiform antenna %d"%s,
         [(.65,s*.095,.025),(.86,s*.16,.06),(1.13,s*.25,.02),
