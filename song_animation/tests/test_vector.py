@@ -73,3 +73,11 @@ class GeneratedRecovery(unittest.TestCase):
         self.assertEqual(result['nodes'][0]['keys'][0]['scale'],.05)
         self.assertEqual(data['nodes'][0]['keys'][0]['scale'],0)
         self.assertEqual(len(result['normalizations']),2)
+
+    def test_parented_canvas_coordinates_are_detected_as_invisible(self):
+        from song_animation.vector import invisible_foreground_nodes
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text())
+        node=p['scenes'][0]['nodes'][2]
+        node['parent']=p['scenes'][0]['nodes'][1]['id']
+        for k in node['keys']:k.update(x=1500,y=2500)
+        self.assertIn(node['id'],invisible_foreground_nodes(p))

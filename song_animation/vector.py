@@ -120,3 +120,24 @@ def render_vector(plan,index,frame):
         matrices[node['id']]=M;alphas[node['id']]=opacity
         if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]))
     return im.convert('RGB')
+
+
+def invisible_foreground_nodes(plan,index=0):
+    """Find non-transparent foreground layers that never reach the canvas.
+    Catches canvas coordinates accidentally applied again through a parent.
+    Intentional entrances/exits are accepted when visible at any sampled time.
+    """
+    scene=plan['scenes'][index];seen=set();active=set()
+    for t in (0,.1,.25,.5,.75,.9,1):
+        matrices={};alphas={}
+        for node in scene['nodes']:
+            v=values(node,t);M=basis(v);alpha=v['opacity']
+            if node.get('parent'):M=matrices[node['parent']]@M;alpha*=alphas[node['parent']]
+            matrices[node['id']]=M;alphas[node['id']]=alpha
+            if not node.get('asset') or node.get('role')=='background' or alpha<.2:continue
+            active.add(node['id']);a=plan['assets'][node['asset']];w,h=a['width'],a['height'];px,py=node.get('pivot',[.5,.5])
+            corners=M@np.array([[-px*w,(1-px)*w,(1-px)*w,-px*w],[-py*h,-py*h,(1-py)*h,(1-py)*h],[1,1,1,1]])
+            left,right=corners[0].min(),corners[0].max();top,bottom=corners[1].min(),corners[1].max()
+            overlap=max(0,min(W,right)-max(0,left))*max(0,min(H,bottom)-max(0,top))
+            if overlap>=max(4,(right-left)*(bottom-top)*.03):seen.add(node['id'])
+    return sorted(active-seen)

@@ -43,7 +43,7 @@ The old eight-action renderer remains available only with `--engine classic`, fo
 ## Checks and recovery
 
 - Original source SHA-256 plus clip selection and transcriber version guard analysis reuse. An included prior transcript is reusable only for its exact source and uncut phrases; it is not an artwork or scene-plan preset.
-- Storyboard/scene checkpoints reuse matching successful scene packages. Invalid layers receive at most one package repair attempt. Provider calls try at most three discovered models per request.
+- Storyboard/scene checkpoints reuse matching successful scene packages. Invalid layers receive at most two package repair attempts. Provider calls try at most three discovered models per request.
 - SVGs contain only bounded vector geometry and local gradients/clip paths. Scripts, external URLs, images, embedded HTML, external references and generated executable code are rejected.
 - At least two independent foreground motions are required per scene. Captions and camera movement do not satisfy that check. Pixel-motion checks inspect the underlying scene, not caption changes.
 - Font selection covers common Latin, Indic, Arabic, Thai and CJK scripts where the installed Noto fonts support them. Phrase timing remains approximate; this is not force-aligned word karaoke.
