@@ -190,7 +190,7 @@ for s in (-1,1):
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
 roach.scale=(.78,.78,.78)
-# V6.8.9: continuous flattened cockroach abdomen with cuticular seam bands.
+# V6.8.10: visual macro review: dark continuous dorsal cuticle, overlapping\n# elytra, tucked head, and smaller eyes instead of a bead-like toy face.\n# V6.8.9: continuous flattened cockroach abdomen with cuticular seam bands.
 # The earlier seven intersecting oval sternites resembled toy beads.
 abd_verts=[];abd_faces=[];abd_rings=42;abd_sides=24
 for i in range(abd_rings):
@@ -214,27 +214,27 @@ abd_mesh.materials.append(brown);abd_mesh.materials.append(tan)
 for polygon in abd_mesh.polygons:
     polygon.use_smooth=True
     axial=polygon.index//abd_sides
-    polygon.material_index=0 if axial in (7,13,19,25,31,37) else 1
-ell("roach pronotum",(.41,0,.08),(.185,.245,.073),bronze,roach)
-ell("roach head",(.64,0,-.015),(.16,.155,.115),brown,roach)
-ell("roach pronotal dark marking",(.44,0,.150),(.080,.125,.008),brown,roach)
+    polygon.material_index=1 if axial in (7,13,19,25,31,37) else 0
+ell("roach pronotum",(.43,0,.095),(.235,.238,.066),bronze,roach)
+ell("roach tucked head",(.56,0,.012),(.123,.116,.075),brown,roach)
+ell("roach pronotal dark marking",(.425,0,.157),(.118,.095,.004),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
           .012,brown,roach)
 for s in (-1,1):
-    shield("curved articulated elytron %d"%s,.23,-.69,s*.14,.18,.13,.060,
+    shield("overlapping dorsal elytron %d"%s,.27,-.78,s*.105,.165,.122,.028,
            bronze,roach)
     # Low-relief longitudinal wing veins break the smooth toy-like roach shell.
     for vein_idx, offset in enumerate((-.060,.015,.078)):
         curve("roach elytron vein %d %d"%(s,vein_idx),
-              [(.20,s*(.14+offset),.182),(-.18,s*(.14+offset),.196),
-               (-.52,s*(.14+offset*.60),.153)],
+              [(.19,s*(.105+offset),.143),(-.18,s*(.105+offset),.150),
+               (-.54,s*(.105+offset*.60),.136)],
               .0035,brown,roach)
-    ell("roach compound eye %d"%s,(.71,s*.15,.025),(.050,.025,.049),eye,roach)
+    ell("roach compound eye %d"%s,(.605,s*.102,.025),(.030,.018,.032),eye,roach)
     curve("roach filiform antenna %d"%s,
-        [(.76,s*.10,.025),(.96,s*.17,.06),(1.22,s*.25,.02),
-         (1.45,s*.34,-.10)],.005,dark,roach)
+        [(.65,s*.095,.025),(.86,s*.16,.06),(1.13,s*.25,.02),
+         (1.38,s*.34,-.10)],.005,dark,roach)
     for leg in range(3):
         x=.35-leg*.34
         hip=Vector((x,s*.20,-.04))
@@ -242,9 +242,9 @@ for s in (-1,1):
         foot=Vector((x+.23-leg*.18,s*.53,-.27))
         gait=root("roach gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=roach;gait.location=hip
-        taper("roach femur %d %d"%(s,leg),(0,0,0),femur-hip,.054,.026,brown,gait)
+        taper("roach femur %d %d"%(s,leg),(0,0,0),femur-hip,.040,.018,brown,gait)
         ell("roach knee %d %d"%(s,leg),femur-hip,(.035,.035,.035),dark,gait)
-        taper("roach tibia %d %d"%(s,leg),femur-hip,foot-hip,.024,.009,brown,gait)
+        taper("roach tibia %d %d"%(s,leg),femur-hip,foot-hip,.019,.006,brown,gait)
         for spike in range(4):
             t=(spike+1)/5
             p=(femur-hip).lerp(foot-hip,t)
@@ -456,6 +456,22 @@ if os.environ.get("V68_SHOT","").lower()=="roach_macro":
         camera.location=focus+Vector((.30,-2.75,1.62))
         camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
         camera_data.ortho_scale=3.35
+        camera.keyframe_insert(data_path="location",frame=f)
+        camera.keyframe_insert(data_path="rotation_euler",frame=f)
+        camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
+
+
+# Independent wasp close-up: diagnostic of compound eyes, petiole, transparent
+# wing hinge and six attached legs. This is NOT full-film visual approval.
+if os.environ.get("V68_SHOT","").lower()=="wasp_macro":
+    camera.animation_data_clear()
+    camera_data.animation_data_clear()
+    for f in (1,24,48):
+        scene.frame_set(f)
+        focus=wasp.matrix_world @ Vector((-.10,0,.055))
+        camera.location=focus+Vector((.10,-2.85,1.42))
+        camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
+        camera_data.ortho_scale=3.25
         camera.keyframe_insert(data_path="location",frame=f)
         camera.keyframe_insert(data_path="rotation_euler",frame=f)
         camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
