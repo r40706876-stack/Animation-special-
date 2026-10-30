@@ -15,6 +15,13 @@ def visual_decision(review,scene_count):
         reasons.append('Unresolved visual issues')
         for issue in review['issues']:
             if isinstance(issue,dict) and type(issue.get('shot')) is int and isinstance(issue.get('issue'),str):repair.append(issue)
+    model=review.get('reviewer_model')
+    if not isinstance(model,str) or not model or 'lite' in model.lower():
+        reasons.append('Full-capability visual reviewer did not verify this film')
+        return {'passed':False,'reasons':reasons,'repair_issues':[]}
+    if review.get('reference_quality_met') is not True:
+        reasons.append('Artwork did not meet the stored finish reference')
+        repair.extend({'shot':i,'issue':'Artwork is below the stored finish reference. Redraw large detailed organic objects with legible bright composition, not placeholder geometric shapes.'} for i in range(scene_count))
     shots=review.get('shots')
     if not isinstance(shots,list) or len(shots)!=scene_count:
         reasons.append('Missing complete per-shot visual evidence')

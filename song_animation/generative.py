@@ -57,7 +57,7 @@ def compile_storyboard(data,lyrics,fps=24):
     return {'version':2,'title':data.get('title','Song film'),'bible':data['bible'],'fps':fps,'total_frames':total,
         'lyrics':cues_from_lyrics(lyrics,fps),'timing_granularity':lyrics.get('timing_granularity','phrase'),
         'timing_verified':False,'scenes':compiled,'assets':{},'planner':'generated_vector','review_status':'draft',
-        'open_vocabulary':True,'finish':data['bible'].get('finish','paper'),'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
+        'open_vocabulary':True,'lighting_preference':'bright','finish':data['bible'].get('finish','paper'),'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
 
 
 
@@ -184,7 +184,9 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             sample.save(folder/f'preflight_{index}.png')
             luminance=float(np.asarray(sample.convert('L')).mean())
             s['visibility_review']={'mean_luminance':round(luminance,2),'check_contrast':luminance<65,'advisory_only':True}
-            # A neon or night composition can be legible with a dark average.
+            if plan.get('lighting_preference','bright')=='bright' and not plan.get('allow_night') and luminance<85:
+                raise ValueError('Default bright treatment failed: the actual frame is too dark. Use a warm light background and readable shaded foreground; sadness does not require a dark whole frame.')
+            # An explicitly night-themed composition still requires readable contrast.
             # Never reject an entire musical genre from a global brightness mean.
             cache.write_text(json.dumps(data,ensure_ascii=False,indent=2))
             return s,assets

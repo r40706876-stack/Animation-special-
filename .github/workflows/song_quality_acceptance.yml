@@ -1,7 +1,7 @@
 name: Song quality acceptance - three different inputs
 on:
   push:
-    branches: ['feature/song-animation-metaphors-20261030']
+    branches: ['feature/song-animation-*']
     paths: ['.github/workflows/song_quality_acceptance.yml']
 permissions:
   contents: read

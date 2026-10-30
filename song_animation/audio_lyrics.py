@@ -46,7 +46,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
             if data.get('has_vocals',True) and not units:raise ValueError('Vocal text omitted')
             for region in data.get('instrumental',[])+data.get('unclear',[]):
                 if not 0<=region['start']<region['end']<=dur+.03:raise ValueError('Audio interval exceeds selected clip')
-            verification=generate_json('Independently listen to the AUDIO, not just the proposed text. Reject pseudo-words, wrong language or meaning, invented lyrics, missing/repeated vocals labelled instrumental, or completing a cut-off line from song memory. Return JSON {"valid":boolean,"reasons":["specific reason"],"meaning":"literal meaning only if audible"}. A genre, beat or fingerprint match is not proof of words. Proposed transcript: '+json.dumps(data,ensure_ascii=False),out=out,tag='audio_verification_'+str(attempt),audio_part=part,prefer_quality=True)
+            verification=generate_json('Independently listen to the AUDIO, not just the proposed text. Reject pseudo-words, wrong language or meaning, invented lyrics, missing/repeated vocals labelled instrumental, or completing a cut-off line from song memory. Return JSON {"valid":boolean,"reasons":["specific reason"],"meaning":"literal meaning only if audible"}. A genre, beat or fingerprint match is not proof of words. Proposed transcript: '+json.dumps(data,ensure_ascii=False),out=out,tag='audio_verification_'+str(attempt),audio_part=part,prefer_quality=True,require_full_model=True)
             if verification.get('valid') is not True:raise ValueError('Audio transcript failed independent meaning review')
             break
         except (ValueError,RuntimeError,KeyError,TypeError) as e:

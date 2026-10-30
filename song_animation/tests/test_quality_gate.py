@@ -5,12 +5,15 @@ from song_animation.quality import CHECKS,QualityHold,visual_decision,inspect_ex
 from song_animation.recognition import consistent_matches
 
 def clear_review(n=1):
- return {'needs_review':False,'issues':[],'shots':[dict(shot=i,**{k:True for k in CHECKS}) for i in range(n)]}
+ return {'needs_review':False,'issues':[],'reviewer_model':'gemini-quality-pro','reference_quality_met':True,'shots':[dict(shot=i,**{k:True for k in CHECKS}) for i in range(n)]}
 class OutputPolicy(unittest.TestCase):
  def test_old_empty_advisory_review_cannot_clear_film(self):
   self.assertFalse(visual_decision({'needs_review':False,'issues':[]},1)['passed'])
  def test_unavailable_review_cannot_clear_film(self):
   self.assertFalse(visual_decision({'status':'unavailable'},1)['passed'])
+ def test_lite_cannot_clear_even_with_all_positive_flags(self):
+  r=clear_review();r['reviewer_model']='gemini-flash-lite'
+  self.assertFalse(visual_decision(r,1)['passed'])
  def test_all_scenes_and_explicit_booleans_required(self):
   a=clear_review(2);a['shots'][1]['lyric_meaning']='true'
   self.assertFalse(visual_decision(a,2)['passed'])

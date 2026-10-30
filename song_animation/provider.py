@@ -9,7 +9,7 @@ def parse_object(raw):
     if not isinstance(data,dict):raise ValueError('Provider response must be an object')
     return data
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False,require_full_model=False):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -30,6 +30,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         pro=[m for m in full if 'pro' in m]
         flash=[m for m in full if 'flash' in m]
         models=list(dict.fromkeys(pro[:1]+flash[:1]+lite[:1]+models))
+    if require_full_model:models=[m for m in models if 'lite' not in m.lower()]
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]
@@ -57,5 +58,6 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     # Decode exactly the first complete object; trailing prose/duplicate objects
     # cannot make a valid package unparsable. The caller still validates fields.
     data=parse_object(raw)
+    data['_provider_model']=model
     if out:Path(out,tag+'_raw.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
     return data
