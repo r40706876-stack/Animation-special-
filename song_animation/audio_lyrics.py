@@ -1,5 +1,5 @@
 """Direct-audio phrase transcription. No fabricated word-level precision."""
-import base64,json,tempfile,subprocess
+import base64,json,tempfile,subprocess,re
 from pathlib import Path
 from .analyze import duration
 from .contract import validate_lyrics
@@ -14,6 +14,14 @@ LYRICS_SCHEMA={'type':'OBJECT','properties':{
     'instrumental':{'type':'ARRAY','items':INTERVAL},'unclear':{'type':'ARRAY','items':INTERVAL}},
     'required':['segments','instrumental','unclear','language','genre','mood','summary','has_vocals']}
 
+def validate_transcript_script(data):
+    """Reject an original-script violation; not a semantic certificate."""
+    language=str(data.get('language','')).lower()
+    text=' '.join(str(s.get('text','')) for s in data.get('segments',[]) if not s.get('uncertain',True))
+    if ('hindi' in language or language=='hi') and re.search(r'[A-Za-z]',text) and not re.search(r'[\u0900-\u097f]',text):
+        raise ValueError('Hindi transcript contains only Roman letters; original sung words need correction')
+
+
 def analyze_audio(audio,out):
     out=Path(out);dur=duration(audio)
     if not 1<=dur<=180:raise ValueError('Use a 1..180 second song segment')
@@ -24,7 +32,13 @@ def analyze_audio(audio,out):
     prompt=f'''Listen to this actual {dur:.3f}-second song clip (language and genre unknown; identify them from the audio) from beginning to end. Transcribe exactly the audible sung words in their original script (Hindi, Punjabi, English or the actual detected language). This is audio transcription, not lyric recall: do not fill words from a known song, infer missing endings or put sung text into instrumental/outro music. Include the opening and repeated final refrain; do not skip a repeated lyric. Keep original word choices, gender and repetition. If unclear, mark an unclear interval instead of guessing.
 Return JSON only: {{"segments":[{{"start":0.0,"end":2.2,"text":"exact audible words","uncertain":false}}],"instrumental":[{{"start":30,"end":34}}],"unclear":[],"language":"detected language","genre":"free description","mood":"free description","summary":"what the music/lyrics express","has_vocals":true}}.
 Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundaries in seconds. These are approximate phrase timings; do not fabricate individual-word timestamps or divide time evenly. Every audible vocal phrase must appear once and in order, including the very beginning. Instrumental portions contain no invented lyrics. Times must be within 0..{dur:.3f}. Instrumental-only music is valid: return segments=[] and has_vocals=false, describing genre/mood/summary. Describe unclear vocals in unclear intervals without inventing captions. No translation, commentary, visual prompts or lyrics beyond this clip.'''
-    data=generate_json(prompt,out=out,tag='audio_lyrics',audio_part=part,schema=LYRICS_SCHEMA)
+    data=generate_json(prompt,out=out,tag='audio_lyrics',audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True)
+    validate_transcript_script(data)
+    if data.get('has_vocals',True) and (data.get('unclear') or any(x.get('uncertain',True) for x in data.get('segments',[]))):
+        raise ValueError('Unclear sung words require correction before semantic scenes are generated')
+    verification=generate_json('Independently listen to this audio and compare the proposed transcript. Reject pseudo-words, incorrect language, invented lyrics, missing vocals mislabeled instrumental, or a summary unsupported by actual words. Return JSON with valid (boolean), reasons (list of strings), and meaning (literal meaning in English, only if understood). A danceable beat is no evidence that words are correct. Proposed transcript: '+json.dumps(data,ensure_ascii=False),out=out,tag='audio_verification',audio_part=part,prefer_quality=True)
+    if verification.get('valid') is not True:
+        raise ValueError('Audio transcript failed independent meaning review; no invented scene will be rendered')
     words=[]
     for segment in data.get('segments',[]):
         text=str(segment.get('text','')).strip()
@@ -34,7 +48,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
     if not words and data.get('has_vocals',True) and not data.get('unclear'):raise ValueError('Audio model omitted vocal text without marking uncertainty')
     validate_lyrics(words,dur)
     result={'duration':dur,'language':data.get('language','unknown'),'genre':data.get('genre',''),'mood':data.get('mood',''),'summary':data.get('summary',''),'has_vocals':data.get('has_vocals',bool(words)),'timing_method':'direct audio-model phrase boundaries',
-        'timing_granularity':'phrase','timing_verified':False,'words':words,
+        'timing_granularity':'phrase','timing_verified':False,'audio_verification':verification,'words':words,
         'instrumental':data.get('instrumental',[]),'unclear':data.get('unclear',[]),
         'leading_untranscribed_seconds':words[0]['start'] if words else 0,
         'warnings':['Approximate phrase timing only; ids identify phrases, not individual words. Listening review required.']}

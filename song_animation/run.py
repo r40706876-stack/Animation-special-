@@ -37,7 +37,7 @@ def main():
             validate_lyrics(lyrics['words'],selection['duration'])
         else:
             audio_hash=hashlib.sha256(clip.read_bytes()).hexdigest()
-            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v4'
+            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v5-meaning-review'
             checkpoint=out/'analysis_checkpoint.json'
             if checkpoint.exists() and (out/'lyrics.json').exists() and json.loads(checkpoint.read_text()).get('key')==key:
                 lyrics=json.loads((out/'lyrics.json').read_text());validate_lyrics(lyrics['words'],selection['duration'])
