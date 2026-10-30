@@ -161,6 +161,7 @@ def heart(im,u,p,phase):
         line(d,cr[:count], [p['accent'],p['blue'],p['green']][j%3],2)
         if progress: x,y=cr[count-1];ellipse(d,(x-4,y-4,x+4,y+4),p['accent'])
     rose(d,270,480,20,p)
+    scars(d,p.get('_scar_base',0),p)
     base=730
     wave=[]
     for x in range(72,469,3):
@@ -172,7 +173,8 @@ def heart(im,u,p,phase):
 DRAWERS={'gift':gift,'bloom':bloom,'crowd':crowd,'paths':paths,'heart':heart}
 
 def state(plan,index,frame):
-    s=plan['scenes'][index];p=PALETTES[plan['palette']]
+    s=plan['scenes'][index];p=dict(PALETTES[plan['palette']])
+    p['_scar_base']=min(8,4*sum(x['kind']=='wounded_heart' for x in plan['scenes'][:index]))
     im=paper(p);a,b=s['start_frame'],s['end_frame']
     u=(frame-a)/plan['fps'];cue=s['cue_frame']
     # The main action lands at the actual selected cue; easing before/after is continuous.
@@ -214,17 +216,21 @@ def thorn(im,u,p,phase):
             a=-.8+k*.6
             line(d,[(x+22*math.cos(a),y+22*math.sin(a)),(x+34*math.cos(a),y+34*math.sin(a))],p['accent'],2)
 
-def wounded_heart(im,u,p,phase):
-    heart(im,u,p,phase)
-    d=ImageDraw.Draw(im)
-    for j,(xx,yy) in enumerate([(205,425),(288,393),(320,490),(245,530)]):
-        q=ease((phase-j*.14)/.22)
+def scars(d,count,p):
+    positions=[(205,425),(288,393),(320,490),(245,530),(185,460),(313,433),(273,570),(225,400)]
+    for j,(xx,yy) in enumerate(positions):
+        q=max(0,min(1,count-j))
         if q<=0:continue
         x2=xx+34*q;y2=yy+24*q
         line(d,[(xx,yy),(x2,y2)],p['accent'],3)
         for k in range(1,int(q*5)+1):
             a=xx+k*6;b=yy+k*4
             line(d,[(a-3,b+5),(a+3,b-5)],p['ink'],1)
+
+def wounded_heart(im,u,p,phase):
+    heart(im,u,p,phase)
+    d=ImageDraw.Draw(im)
+    scars(d,min(8,p.get('_scar_base',0)+4*ease(phase)),p)
 
 
 def thorns(im,u,p,phase):
@@ -237,7 +243,7 @@ def thorns(im,u,p,phase):
             x=xx+15+k*24;y=yy-3
             d.polygon([(x,y),(x+3,y-18),(x+8,y)],fill=p['green'],outline=p['ink'])
     # People follow a curved safe route between the thorns.
-    pts=curve([(400,870),(70,650),(470,400),(390,70)],100)
+    pts=curve([(435,870),(455,650),(425,400),(440,70)],100)
     n=int(phase*100)
     for j in range(0,max(0,n-5),6):
         x,y=pts[j];ellipse(d,(x-3,y-6,x+3,y+6),p['muted'])

@@ -67,3 +67,12 @@ class PhraseTiming(unittest.TestCase):
         self.assertEqual(p['scenes'][-1]['lyric_ids'],[])
         self.assertEqual(p['scenes'][-1]['start_frame'],192)
         self.assertEqual(p['cue_method'],'art-directed emphasis within timed phrases')
+
+class Continuity(unittest.TestCase):
+    def test_heart_retains_wounds_from_previous_shot(self):
+        from PIL import ImageChops
+        base={'version':1,'fps':24,'palette':'memory','total_frames':192,'scenes':[{'kind':'wounded_heart','start_frame':0,'end_frame':96,'cue_frame':50,'lyric_ids':[],'reason':'wounds'},{'kind':'heart','start_frame':96,'end_frame':192,'cue_frame':145,'lyric_ids':[],'reason':'memory'}]}
+        wounded=render_frame(base,96)
+        base['scenes'][0]['kind']='gift'
+        fresh=render_frame(base,96)
+        self.assertIsNotNone(ImageChops.difference(wounded.crop((160,350,370,610)),fresh.crop((160,350,370,610))).getbbox())
