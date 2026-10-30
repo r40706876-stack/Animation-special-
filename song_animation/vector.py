@@ -5,7 +5,7 @@ import io,json,math,re,hashlib
 from functools import lru_cache
 from xml.etree import ElementTree as ET
 import numpy as np
-from PIL import Image
+from PIL import Image,ImageFilter
 W,H=540,960
 TAGS={'svg','g','path','rect','circle','ellipse','line','polyline','polygon','defs','linearGradient','radialGradient','stop','clipPath'}
 ATTRS={'id','xmlns','viewBox','width','height','x','y','x1','y1','x2','y2','cx','cy','r','rx','ry','d','points','fill','fill-opacity','fill-rule','stroke','stroke-width','stroke-opacity','stroke-linecap','stroke-linejoin','stroke-dasharray','opacity','transform','offset','stop-color','stop-opacity','gradientUnits','gradientTransform','clip-path','clip-rule','preserveAspectRatio','fx','fy','spreadMethod','stroke-miterlimit','vector-effect','paint-order','color'}
@@ -98,7 +98,7 @@ def basis(v):
     a=math.radians(v['rotation']);c=math.cos(a)*v['scale'];s=math.sin(a)*v['scale']
     return np.array([[c,-s,v['x']],[s,c,v['y']],[0,0,1.]])
 
-def paste(im,asset,M,opacity,pivot):
+def paste(im,asset,M,opacity,pivot,shadow=False):
     layer=raster(asset['svg'],int(asset['width']),int(asset['height']));w,h=layer.size
     T=M@np.array([[1,0,-pivot[0]*w],[0,1,-pivot[1]*h],[0,0,1.]])
     corners=T@np.array([[0,w,w,0],[0,0,h,h],[1,1,1,1]])
@@ -109,6 +109,10 @@ def paste(im,asset,M,opacity,pivot):
     coeff=(inv[0,0],inv[0,1],offset[0],inv[1,0],inv[1,1],offset[1])
     tile=layer.transform((right-left,bottom-top),Image.Transform.AFFINE,coeff,resample=Image.Resampling.BICUBIC)
     if opacity<.999:tile.putalpha(tile.getchannel('A').point(lambda x:int(x*opacity)))
+    if shadow:
+        alpha=tile.getchannel('A').filter(ImageFilter.GaussianBlur(2)).point(lambda v:int(v*.18))
+        shade=Image.new('RGBA',tile.size,(54,38,32,0));shade.putalpha(alpha)
+        im.alpha_composite(shade,(left+3,top+4))
     im.alpha_composite(tile,(left,top))
 
 def render_vector(plan,index,frame):
@@ -118,8 +122,11 @@ def render_vector(plan,index,frame):
         v=values(node,t);M=basis(v);opacity=v['opacity']
         if node.get('parent'):M=matrices[node['parent']]@M;opacity*=alphas[node['parent']]
         matrices[node['id']]=M;alphas[node['id']]=opacity
-        if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]))
-    return im.convert('RGB')
+        if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background')
+    result=im.convert('RGB')
+    if plan.get('finish')=='paper':
+        result=Image.fromarray(np.clip(np.asarray(result,dtype=np.int16)+paper_grain(),0,255).astype(np.uint8))
+    return result
 
 
 def invisible_foreground_nodes(plan,index=0):
@@ -141,3 +148,10 @@ def invisible_foreground_nodes(plan,index=0):
             overlap=max(0,min(W,right)-max(0,left))*max(0,min(H,bottom)-max(0,top))
             if overlap>=max(4,(right-left)*(bottom-top)*.03):seen.add(node['id'])
     return sorted(active-seen)
+
+
+@lru_cache(maxsize=1)
+def paper_grain():
+    # Static material texture, never random frame-to-frame noise.
+    noise=np.random.default_rng(417).normal(0,1.7,(H,W,1))
+    return np.rint(noise).astype(np.int16)
