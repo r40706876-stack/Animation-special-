@@ -1,0 +1,10 @@
+STILL_PREVIEW_REVIEWED=PASS_FOR_DRAFT_ONLY
+MOTION_PREVIEW_REVIEWED=PASS_FOR_DRAFT_ONLY
+DRAFT_ONLY=YES
+PROOF_RUN_ID=41101655504
+STORY_BLOB_SHA=3bae50813b68ce8d9a666cb758d0bdbd2915c77c
+ANATOMY_BLOB_SHA=7c40a314ec3fe4edc2b4beb06a6251901ff0532e
+REVIEW_DATE=2026-10-31
+REVIEW_NOTE=Downloaded artifact 13003965287; inspected actual 14-chapter contact sheet and all four action strips, independently probed action_3 24frames 24fps 1s.
+DRAFT_LIMITATION=Sting penetration not clearly legible in chapter 3 and 5; burrow entry and larva are schematic; poses and forest repetitive. No final visual approval.
+DRAFT_SCOPE=Approve placeholder-quality low-resolution 140-second rough cut only to expose continuity, narration, and integration problems; must improve action readability before final.
