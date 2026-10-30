@@ -1,0 +1,142 @@
+name: Jewel Wasp V6.8 DRAFT 140s Rough Cut (preview-gated)
+on:
+  push:
+    paths:
+      - "ops/JW_V68_DRAFT_PREVIEW_REVIEWED.txt"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jewel-wasp-v68-draft-140s
+  cancel-in-progress: false
+jobs:
+  preview-approval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require actual visual and motion proof review for DRAFT only
+        run: |
+          set -euo pipefail
+          marker=ops/JW_V68_DRAFT_PREVIEW_REVIEWED.txt
+          test -s "$marker" || { echo "::error::DRAFT preview review marker absent"; exit 1; }
+          grep -qx 'STILL_PREVIEW_REVIEWED=PASS_FOR_DRAFT_ONLY' "$marker"
+          grep -qx 'MOTION_PREVIEW_REVIEWED=PASS_FOR_DRAFT_ONLY' "$marker"
+          grep -qx 'DRAFT_ONLY=YES' "$marker"
+          grep -Eq '^PROOF_RUN_ID=[0-9]+$' "$marker"
+          source_sha="$(git hash-object src/jewel_wasp_v68_story_draft.py)"
+          anatomy_sha="$(git hash-object src/jewel_wasp_v68_anatomy_proof.py)"
+          grep -qx "STORY_BLOB_SHA=$source_sha" "$marker"
+          grep -qx "ANATOMY_BLOB_SHA=$anatomy_sha" "$marker"
+          echo "Draft rough cut authorized; final visual quality NOT approved"
+  render:
+    needs: preview-approval
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        chapter: [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+    runs-on: ubuntu-latest
+    timeout-minutes: 160
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reuse previously successful chapter for exact source fingerprint
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: draft_segments/chapter_${{ matrix.chapter }}.mp4
+          key: jewel-v68-draft-${{ runner.os }}-${{ hashFiles('src/jewel_wasp_v68_story_draft.py','src/jewel_wasp_v68_anatomy_proof.py') }}-chapter-${{ matrix.chapter }}
+      - name: Install Blender 4.2 only for missing chapter
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Render one complete 240-frame DRAFT chapter
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p draft_segments
+          JW_MODE=draft JW_CHAPTER=${{ matrix.chapter }} JW_RES_PERCENT=50 BLENDER_OUTPUT="$PWD/draft_segments/chapter_${{ matrix.chapter }}.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > draft_segments/chapter_${{ matrix.chapter }}.log 2>&1 || { tail -n 100 draft_segments/chapter_${{ matrix.chapter }}.log; exit 1; }
+          grep -q "JW_V68_STORY_DRAFT_RENDER_DONE ${{ matrix.chapter }} draft" draft_segments/chapter_${{ matrix.chapter }}.log
+      - name: Independently verify chapter decodes and contains 240 frames
+        run: |
+          set -euo pipefail
+          f="draft_segments/chapter_${{ matrix.chapter }}.mp4"
+          test -s "$f"
+          ffmpeg -v error -xerror -i "$f" -f null -
+          test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$f")" = 240
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-v68-draft-chapter-${{ matrix.chapter }}
+          path: draft_segments/chapter_${{ matrix.chapter }}.mp4
+          if-no-files-found: warn
+          retention-days: 14
+  assemble:
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg and Hindi voice dependency
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python -m pip install --quiet edge-tts
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: jewel-v68-draft-chapter-*
+          path: draft_segments
+          merge-multiple: true
+      - name: Assemble exactly 140s DRAFT and attempt synchronized Hindi narration
+        run: |
+          set -euo pipefail
+          mkdir -p draft
+          : > draft_segments/concat.txt
+          for i in $(seq 0 13); do
+            test -s "draft_segments/chapter_$i.mp4"
+            test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "draft_segments/chapter_$i.mp4")" = 240
+            printf "file 'chapter_%s.mp4'\n" "$i" >> draft_segments/concat.txt
+          done
+          ffmpeg -y -loglevel error -f concat -safe 0 -i draft_segments/concat.txt -c copy draft/silent.mp4
+          # A narration outage must not discard an otherwise useful rough cut.
+          if python src/jewel_wasp_full_audio.py > draft/voice.log 2>&1 && test -s voice/narration.m4a; then
+            ffmpeg -y -loglevel error -i draft/silent.mp4 -i voice/narration.m4a -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -t 140 draft/with_voice.mp4
+            audio_status=generated_not_listen_verified
+          else
+            cp draft/silent.mp4 draft/with_voice.mp4
+            audio_status=missing_narration_generation_failed
+          fi
+          ffmpeg -y -loglevel error -i draft/with_voice.mp4 -vf "drawtext=text='DRAFT - NOT FINAL':fontcolor=white:fontsize=13:x=5:y=10:box=1:boxcolor=black@0.7" -c:v libx264 -preset ultrafast -crf 26 -c:a copy -movflags +faststart draft/JEWEL_WASP_140S_ROUGH_CUT_DRAFT.mp4
+          ffmpeg -v error -xerror -i draft/JEWEL_WASP_140S_ROUGH_CUT_DRAFT.mp4 -f null -
+          ffmpeg -y -loglevel error -i draft/JEWEL_WASP_140S_ROUGH_CUT_DRAFT.mp4 -vf "fps=0.1,scale=135:240,tile=7x2" -frames:v 1 draft/DRAFT_14_CHAPTER_CONTACT.jpg
+          AUDIO_STATUS="$audio_status" python - <<'PY'
+          import json,os,subprocess,pathlib
+          p="draft/JEWEL_WASP_140S_ROUGH_CUT_DRAFT.mp4"
+          raw=subprocess.check_output(["ffprobe","-v","error","-count_frames","-show_entries","stream=codec_type,nb_read_frames,width,height,duration:format=duration","-of","json",p],text=True)
+          m=json.loads(raw);v=next(x for x in m["streams"] if x["codec_type"]=="video")
+          frames=int(v["nb_read_frames"]);duration=float(m["format"]["duration"])
+          audio=any(x["codec_type"]=="audio" for x in m["streams"])
+          report={"draft_only":True,"final_quality_approved":False,"visual_reviewed":False,
+                  "hindi_listen_verified":False,"source_commit":os.environ.get("GITHUB_SHA"),
+                  "frames":frames,"fps":24,"duration_seconds":duration,
+                  "chapters":14,"resolution":[v["width"],v["height"]],
+                  "audio_present":audio,"audio_status":os.environ["AUDIO_STATUS"],
+                  "full_decode_ok":True,
+                  "technical_draft_pass":frames==3360 and 139.9<=duration<=140.1}
+          pathlib.Path("draft/DRAFT_QA.json").write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          assert report["technical_draft_pass"],report
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v68-140s-rough-cut-DRAFT-NOT-FINAL
+          path: draft/
+          if-no-files-found: warn
+          retention-days: 14
