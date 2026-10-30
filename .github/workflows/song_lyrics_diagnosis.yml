@@ -1,0 +1,31 @@
+name: Diagnose actual sung words
+on:
+  push:
+    branches: ['feature/song-animation-metaphors-20261030']
+    paths: ['.github/workflows/song_lyrics_diagnosis.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      HF_HUB_DISABLE_XET: '1'
+      HF_HUB_DOWNLOAD_TIMEOUT: '120'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install 'faster-whisper>=1.1,<2' 'requests>=2.31,<3'
+      - run: python -m song_animation.lyrics_diagnosis
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-lyrics-diagnosis
+          path: song_diagnosis/
+          retention-days: 7
