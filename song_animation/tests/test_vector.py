@@ -95,3 +95,10 @@ class GeneratedRecovery(unittest.TestCase):
         self.assertEqual(assets[aid]['svg'],old)
         self.assertTrue(any(k.startswith(aid+'_') for k in assets))
         self.assertTrue(scene['normalizations'])
+
+    def test_quiet_independent_breathing_and_flicker_are_valid_motion(self):
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text())
+        scene=p['scenes'][0];p['scenes']=[scene];p['total_frames']=scene['end_frame']
+        for i,n in enumerate(scene['nodes']):
+            n['wave']={};a=copy.deepcopy(n['keys'][0]);n['keys']=[dict(a,t=0),dict(a,t=.5,y=a.get('y',0)+2+i*.25),dict(a,t=1)]
+        validate_vector(p)

@@ -69,7 +69,7 @@ def validate_vector(plan):
             for k,lo,hi in [('x',-80,80),('y',-80,80),('rotation',-50,50),('cycles',0,20),('phase',-10,10)]:
                 if k in wave and not finite(wave[k],lo,hi):raise ValueError('Invalid motion wave')
             signature=json.dumps([[(k['t'],round(k.get('x',0)-keys[0].get('x',0),4),round(k.get('y',0)-keys[0].get('y',0),4),round(k.get('rotation',0)-keys[0].get('rotation',0),4),round(k.get('scale',1)/keys[0].get('scale',1),4)) for k in keys],wave],sort_keys=True)
-            meaningful=any(any(abs(k.get(name,default)-keys[0].get(name,default))>threshold for name,default,threshold in [('x',0,3),('y',0,3),('rotation',0,3),('scale',1,.04)]) for k in keys[1:]) or any(abs(wave.get(k,0))>v for k,v in [('x',3),('y',3),('rotation',3)])
+            meaningful=any(any(abs(k.get(name,default)-keys[0].get(name,default))>threshold for name,default,threshold in [('x',0,1),('y',0,1),('rotation',0,.5),('scale',1,.008)]) for k in keys[1:]) or any(abs(wave.get(k,0))>v for k,v in [('x',1),('y',1),('rotation',.5)])
             if node.get('asset') and node.get('role','foreground')!='background' and meaningful:moves.append(signature)
         if len(set(moves))<2:raise ValueError('Need at least two independent foreground motions; camera motion does not count')
         cursor=s['end_frame']
