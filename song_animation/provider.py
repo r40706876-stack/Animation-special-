@@ -9,7 +9,7 @@ def parse_object(raw):
     if not isinstance(data,dict):raise ValueError('Provider response must be an object')
     return data
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -24,6 +24,10 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         v=re.search(r'gemini-(\d+(?:\.\d+)?)',m)
         return ('preview' in m or 'exp' in m, 'lite' not in m, -float(v.group(1)) if v else 0,m)
     models=sorted(set(models),key=rank)
+    if prefer_quality:
+        full=[m for m in models if 'lite' not in m]
+        lite=[m for m in models if 'lite' in m]
+        models=list(dict.fromkeys(full[:1]+lite[:1]+full[1:2]+models))
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]
@@ -42,7 +46,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         attempts.append({'model':model,'http_status':r.status_code})
         if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
         if r.status_code==200:
-            response_parts=r.json().get('candidates',[{}])[0].get('content',{}).get('parts',[])
+            response_parts=(r.json().get('candidates') or [{}])[0].get('content',{}).get('parts',[])
             raw=''.join(p.get('text','') for p in response_parts if not p.get('thought'))
             if raw:break
         print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)

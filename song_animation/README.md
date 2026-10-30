@@ -8,7 +8,7 @@ The default pipeline now generates a new storyboard, custom SVG artwork and laye
 2. The upload diff selects each new/changed audio independently; two songs can run simultaneously.
 3. A source of 30 seconds or less stays its available length. Longer sources produce a 30-second clip. Short reel sources up to 45 seconds use the opening; longer songs use the strongest sustained-energy window. This is an energy heuristic, not a guarantee of the best lyrical chorus. CLI `--start SECONDS` overrides selection.
 4. Audio analysis detects language, genre and mood, transcribes phrases in the original script, and marks unclear/instrumental portions. Uncertain words are not invented.
-5. The director writes a shared style/character bible and a connected song-specific storyboard. The illustrator generates original scene layers and rigs; no fixed theme/object list is used.
+5. The director writes a shared style/character bible and a connected song-specific storyboard. The illustrator generates original scene layers and rigs; no fixed theme/object list is used. Storyboard/art calls try an available full Flash model before the lighter model, within the same bounded three-model transport budget.
 6. SVG validation, relative-motion checks, bounded scene-package repair, rendering, phrase captions, original soundtrack, decoding and duration checks run. Actual-frame advisory review accompanies the draft. Dark-scene contrast is flagged for review rather than rejecting a valid neon/night art style.
 7. Download the Actions artifact's `preview.mp4`; `lyrics.srt`, selection, lyrics, storyboard, plan, SVG assets, contact sheet, motion report and visual review are included.
 
