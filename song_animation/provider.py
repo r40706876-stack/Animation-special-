@@ -17,7 +17,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     try:
         listing=requests.get('https://generativelanguage.googleapis.com/v1beta/models',headers={'x-goog-api-key':key},params={'pageSize':1000},timeout=25)
         listing.raise_for_status()
-        models=[m['name'].removeprefix('models/') for m in listing.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and 'flash' in m['name'] and not any(x in m['name'] for x in ('image','tts','audio','live','robotics'))]
+        models=[m['name'].removeprefix('models/') for m in listing.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and ('flash' in m['name'] or (prefer_quality and 'pro' in m['name'])) and not any(x in m['name'] for x in ('image','tts','audio','live','robotics'))]
     except requests.RequestException:raise RuntimeError('Could not discover available planner models') from None
     import re
     def rank(m):
@@ -27,7 +27,9 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     if prefer_quality:
         full=[m for m in models if 'lite' not in m]
         lite=[m for m in models if 'lite' in m]
-        models=list(dict.fromkeys(full[:1]+lite[:1]+full[1:2]+models))
+        pro=[m for m in full if 'pro' in m]
+        flash=[m for m in full if 'flash' in m]
+        models=list(dict.fromkeys(pro[:1]+flash[:1]+lite[:1]+models))
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     parts=[{'text':prompt}]

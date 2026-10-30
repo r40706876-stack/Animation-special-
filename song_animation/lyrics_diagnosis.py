@@ -11,11 +11,5 @@ try:
     generate_json(prompt,out=out,tag="independent_audio",audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True)
 except Exception as e:
     (out/"audio_error.json").write_text(json.dumps({"error":type(e).__name__}))
-from faster_whisper import WhisperModel
-engine=WhisperModel("large-v3-turbo",device="cpu",compute_type="int8",cpu_threads=2,num_workers=1)
-for speed in [1.0,0.85]:
-    wav=out/("speech_"+str(speed)+".wav")
-    subprocess.run(["ffmpeg","-v","error","-y","-i",str(p),"-af",f"atempo={speed}","-ac","1","-ar","16000",str(wav)],check=True)
-    segments,info=engine.transcribe(str(wav),word_timestamps=True,vad_filter=False,condition_on_previous_text=False,beam_size=5)
-    data={"language":info.language,"language_probability":info.language_probability,"speed":speed,"segments":[{"start":s.start*speed,"end":s.end*speed,"text":s.text,"avg_logprob":s.avg_logprob,"words":[{"start":w.start*speed,"end":w.end*speed,"text":w.word,"probability":w.probability} for w in s.words or []]} for s in segments]}
-    (out/("whisper_"+str(speed)+".json")).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+
+print("Audio-only corrected model selection finished",flush=True)
