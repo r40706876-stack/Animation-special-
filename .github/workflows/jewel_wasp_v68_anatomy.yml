@@ -47,6 +47,18 @@ jobs:
           V68_SHOT=wasp_macro BLENDER_OUTPUT="$PWD/proof/wasp_macro.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/wasp_macro.log 2>&1 || { tail -n 120 proof/wasp_macro.log; exit 1; }
           grep -q "JEWEL_V68_ANATOMY_RENDER_DONE still" proof/wasp_macro.log
           test -s proof/wasp_macro.png
+      - name: Render and independently decode 24-frame jewel wasp close-up motion
+        run: |
+          set -euo pipefail
+          V68_SHOT=wasp_macro V68_FRAMES=24 V68_MOTION=1 BLENDER_OUTPUT="$PWD/proof/wasp_macro_motion.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > proof/wasp_macro_motion.log 2>&1 || { tail -n 120 proof/wasp_macro_motion.log; exit 1; }
+          grep -q "JEWEL_V68_ANATOMY_RENDER_DONE motion" proof/wasp_macro_motion.log
+          test -s proof/wasp_macro_motion.mp4
+          ffmpeg -v error -xerror -i proof/wasp_macro_motion.mp4 -f null -
+          test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 proof/wasp_macro_motion.mp4)" = 24
+          test "$(ffprobe -v error -show_entries stream=r_frame_rate -of default=nw=1:nk=1 proof/wasp_macro_motion.mp4 | head -n 1)" = 24/1
+          ffmpeg -y -loglevel error -i proof/wasp_macro_motion.mp4 -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 proof/wasp_macro_motion_strip.png
+          test -s proof/wasp_macro_motion_strip.png
+          echo "WASP_CLOSEUP_MOTION_TECHNICAL_PASS_VISUAL_REVIEW_REQUIRED"
       - name: Render and independently decode 48-frame motion
         run: |
           set -euo pipefail
