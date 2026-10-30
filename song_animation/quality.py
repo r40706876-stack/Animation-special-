@@ -1,5 +1,5 @@
 """Explicit output gates. Passing automated checks is not universal/human approval."""
-import json,subprocess
+import json,subprocess,math,hashlib
 from pathlib import Path
 import numpy as np
 CHECKS=('lyric_meaning','artwork_detail','story_motion','anatomy_continuity','caption_legibility')
@@ -12,7 +12,9 @@ def visual_decision(review,scene_count):
     if review.get('needs_review') is not False:reasons.append('Review did not explicitly clear the film')
     if not isinstance(review.get('issues'),list):reasons.append('Missing issue list')
     elif review['issues']:
-        reasons.append('Unresolved visual issues');repair.extend(review['issues'])
+        reasons.append('Unresolved visual issues')
+        for issue in review['issues']:
+            if isinstance(issue,dict) and type(issue.get('shot')) is int and isinstance(issue.get('issue'),str):repair.append(issue)
     shots=review.get('shots')
     if not isinstance(shots,list) or len(shots)!=scene_count:
         reasons.append('Missing complete per-shot visual evidence')
@@ -42,7 +44,7 @@ def inspect_export(video,audio,plan,width):
         data={'duration':actual,'width':v['width'],'height':v['height'],'video_codec':v['codec_name'],'audio_codec':a['codec_name']}
         if v['codec_name']!='h264' or v.get('pix_fmt')!='yuv420p' or a['codec_name']!='aac':reasons.append('Unsupported playback codec')
         if v['width']!=width or abs(v['height']-width*16/9)>2:reasons.append('Wrong output size')
-        if abs(actual-target)>.12 or actual>30.12:reasons.append('Wrong clip duration')
+        if not math.isfinite(actual) or abs(actual-target)>.12 or actual>30.12:reasons.append('Wrong clip duration')
         subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(video),'-f','null','-'],check=True,capture_output=True,timeout=90)
         def pcm(p):
             return np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',str(p),'-vn','-ac','1','-ar','8000','-f','f32le','-']),dtype='<f4')
@@ -53,7 +55,10 @@ def inspect_export(video,audio,plan,width):
         elif np.dot(source,source)>1e-8:
             correlation=float(np.dot(source,encoded)/max(1e-12,np.linalg.norm(source)*np.linalg.norm(encoded)))
             data['source_audio_correlation']=round(correlation,5)
-            if correlation<.9:reasons.append('Export audio does not match original clip')
+            if not math.isfinite(correlation) or correlation<.9:reasons.append('Export audio does not match original clip')
     except (OSError,ValueError,KeyError,StopIteration,subprocess.SubprocessError) as e:
         reasons.append('Export validation failed: '+type(e).__name__)
+    if not reasons:
+        data['video_sha256']=hashlib.sha256(video.read_bytes()).hexdigest()
+        data['source_clip_sha256']=hashlib.sha256(Path(audio).read_bytes()).hexdigest()
     return dict(data,passed=not reasons,reasons=reasons)

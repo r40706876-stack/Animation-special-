@@ -13,14 +13,16 @@ def review(plan,out):
     try:
         import io
         from PIL import Image
-        images=[]
+        images=[];contact=Image.new('RGB',(540,320*len(plan['scenes'])))
         for index,scene in enumerate(plan['scenes']):
             strip=Image.new('RGB',(1620,960))
             for column,q in enumerate((.1,.5,.9)):
                 frame=scene['start_frame']+int((scene['end_frame']-scene['start_frame']-1)*q)
                 strip.paste(encoded_sample(out/'preview.mp4',frame/plan['fps']),(column*540,0))
+            contact.paste(strip.resize((540,320)),(0,index*320))
             buffer=io.BytesIO();strip.save(buffer,format='JPEG',quality=88)
             images.extend([{'text':f'SHOT {index}: left=10%, middle=50%, right=90% of shot time.'},{'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(buffer.getvalue()).decode()}}])
+        contact.save(out/'review_contact.jpg',quality=90)
         from .lyrics import shot_phrases
         descriptions=[{'shot':i,'sung_words':shot_phrases(plan,s),'meaning':s.get('meaning',s.get('label',s.get('reason',''))),'action':s.get('action','')} for i,s in enumerate(plan['scenes'])]
         prompt='''Review the ACTUAL decoded MP4 frames of this illustrated song film. Each labelled input image contains three full-size moments from one shot. Compare positions and limb poses across the three panels. Compare recognisable objects/actions FIRST against the actual sung_words and their meaning, then against the proposed action and art bible. A visually successful but lyrically unrelated storyboard is still a failure. Flag missing central objects, absent causes/consequences, repetitive generic standing people and metaphors that reverse the lyric (e.g. thorns causing the wound where the words say flowers caused it). Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Return JSON with needs_review:boolean, issues:[{shot:0,issue:"specific visible problem"}], strengths:["visible strengths"], and shots:[{shot:0,lyric_meaning:boolean,artwork_detail:boolean,story_motion:boolean,anatomy_continuity:boolean,caption_legibility:boolean,reason:"visible evidence"}]. Review EVERY shot exactly once. All five checks must be explicitly true to clear a shot. Artwork_detail requires finished attractive organic illustration at phone size, not rough geometric people, icons or placeholders. Story_motion requires a visible meaningful action/change, not only camera pans, particles or a wobbling still picture. Judge the actual images, not promises in the plan. Missing/ambiguous evidence is false. If no issue is visible return needs_review=false and issues=[], but never certify human approval, exact lyric timing or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)

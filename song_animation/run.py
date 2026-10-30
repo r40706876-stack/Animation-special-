@@ -31,7 +31,7 @@ def main():
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
     args=a.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
     # Never leave a stale checked output visible after a failed rerun.
-    for name in ('checked.mp4','preview.mp4','quality_gate.json'):
+    for name in ('checked.mp4','preview.mp4','quality_gate.json','audio_hold.json'):
         (out/name).unlink(missing_ok=True)
     (out/'status.json').write_text(json.dumps({'status':'running','automatic_publish':False}))
     try:

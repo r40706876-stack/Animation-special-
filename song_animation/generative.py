@@ -61,6 +61,28 @@ def compile_storyboard(data,lyrics,fps=24):
 
 
 
+def redundant_defs_close(svg):
+    """Repair only a redundant closing defs tag, then retain strict SVG validation."""
+    from xml.etree import ElementTree as ET
+    if not isinstance(svg,str) or len(svg)>40000 or '<!' in svg or '<?' in svg:return svg
+    try:ET.fromstring(svg);return svg
+    except ET.ParseError:pass
+    stack=[];remove=[]
+    for m in re.finditer(r'<(/?)([A-Za-z_][A-Za-z0-9_:.-]*)\b[^>]*>',svg):
+        closing,name=m.group(1),m.group(2)
+        if closing:
+            if stack and stack[-1]==name:stack.pop()
+            elif name=='defs' and name not in stack and stack:remove.append(m.span())
+            else:return svg
+        elif not m.group(0).rstrip().endswith('/>'):stack.append(name)
+    if not remove:return svg
+    result=svg
+    for start,end in reversed(remove):result=result[:start]+result[end:]
+    try:ET.fromstring(result)
+    except ET.ParseError:return svg
+    return result
+
+
 def normalize_package(data):
     """Remove decorative art text and regularize an invisible zero-scale endpoint.
     Everything else still passes the strict SVG and motion contracts.
@@ -69,6 +91,10 @@ def normalize_package(data):
     data=copy.deepcopy(data);changes=[]
     for asset in data.get('assets',[]):
         svg=asset.get('svg','')
+        corrected=redundant_defs_close(svg)
+        if corrected!=svg:
+            asset['svg']=svg=corrected
+            changes.append({'asset':asset.get('id'),'removed_redundant_defs_close':True})
         if re.search(r'<(?:[A-Za-z_]+:)?text(?:\s|>)',svg) and '<!' not in svg:
             try:root=ET.fromstring(svg)
             except ET.ParseError:continue
