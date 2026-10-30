@@ -1,6 +1,9 @@
 import math
 
 ACTIONS = {
+    'thorn': 'A rose is pressed into an open palm; its thorn causes a small symbolic wound and red drop.',
+    'wounded_heart': 'A heart develops visible scars; the recurring rose stays inside it.',
+    'thorns': 'A walking person follows a curved route around thorn branches, leaving footprints.',
     'gift': 'One articulated hand brings a rose into the other palm; giver releases it.',
     'bloom': 'A layered rose opens and its centre expands into the following shot.',
     'crowd': 'Top-down pedestrians move past a solitary central person holding the rose.',

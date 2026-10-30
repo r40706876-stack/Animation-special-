@@ -69,8 +69,17 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: song-whisper-large-v3-turbo-v1
+      - uses: actions/cache/restore@v4
+        with:
+          path: song_draft/
+          key: song-analysis-v2-${{ hashFiles('song_animation/inputs/**') }}-${{ inputs.audio_path || 'reference' }}
       - name: Lyrics to connected animation draft
         run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: song_draft/
+          key: song-analysis-v2-${{ hashFiles('song_animation/inputs/**') }}-${{ inputs.audio_path || 'reference' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

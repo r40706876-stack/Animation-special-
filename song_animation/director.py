@@ -4,12 +4,12 @@ from pathlib import Path
 from .contract import ACTIONS,validate,validate_lyrics
 ROOT=Path(__file__).resolve().parents[1]
 
-def make_plan(lyrics,music,fps=24):
+def make_plan(lyrics,music,fps=24,out=None):
     import requests
     validate_lyrics(lyrics['words'],lyrics['duration'])
     prompt='''Direct a connected illustrated music film. Hindi transcript below is imperfect ASR, not authoritative lyrics.
 Understand the whole segment's emotional progression. Use only supported actions when their visible action fits the meaning. No invented unsupported assets/actions. If incompatible, return {"unsupported_reason":"reason"}.
-Same rose recurs: gift transfers it, bloom opens it, crowd has a central rose owner, paths separates two people, heart holds a memory rose. This is a LIMITED visual vocabulary. Do not force rose romance onto incompatible devotional, comic, political or unrelated lyrics.
+Same rose recurs: gift transfers it, bloom opens it, crowd has a central rose owner, paths separates two people, heart holds a memory rose. Thorn visibly pricks a palm, thorns shows avoiding branches, wounded_heart shows scars. For pain/betrayal lyrics choose these supported injury metaphors, not cheerful romantic gifts. This is a LIMITED visual vocabulary. Do not force rose romance onto incompatible devotional, comic, political or unrelated lyrics.
 Return JSON: {"title":"short Hindi title","intent":"Hindi emotional arc","palette":"warm|hope|memory","scenes":[{"kind":"supported kind","start_word_id":0,"cue_word_id":3,"lyric_ids":[0,1,2,3],"reason":"Hindi meaning and actual visible action"}]}.
 Use 3..10 readable shots where possible, >=1 second each. First starts at word 0, increasing start_word_id. Cover every word exactly once in contiguous lyric_ids ranges. Cue belongs to its shot; choose meaningful word for action. Group phrases rather than single words. Do not correct uncertain words. Code derives timestamps and covers instrumental gaps. No banners.
 SUPPORTED: '''+json.dumps(ACTIONS)+'\nLYRICS: '+json.dumps(lyrics,ensure_ascii=False)+'\nMUSIC: '+json.dumps(music)
@@ -24,24 +24,29 @@ SUPPORTED: '''+json.dumps(ACTIONS)+'\nLYRICS: '+json.dumps(lyrics,ensure_ascii=F
     import re
     def rank(m):
         v=re.search(r'gemini-(\d+(?:\.\d+)?)',m)
-        return ('lite' in m, 'preview' in m or 'exp' in m, -float(v.group(1)) if v else 0,m)
+        return ('preview' in m or 'exp' in m, 'lite' not in m, -float(v.group(1)) if v else 0,m)
     models=sorted(set(models),key=rank)
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
     raw=None
+    attempts=[]
     for model in models[:3]:
         try:
             r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                 headers={'x-goog-api-key':key},json={'contents':[{'parts':[{'text':prompt}]}],
                 'generationConfig':{'responseMimeType':'application/json','temperature':.35}},timeout=90)
         except requests.RequestException:continue
+        attempts.append({'model':model,'http_status':r.status_code})
+        if out:Path(out,'planner_attempts.json').write_text(json.dumps(attempts,indent=2))
         if r.status_code==200:
             parts=r.json().get('candidates',[{}])[0].get('content',{}).get('parts',[])
             raw=''.join(p.get('text','') for p in parts if not p.get('thought'))
             if raw:break
         print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
     if not raw:raise RuntimeError('Planner unavailable after at most three discovered models')
-    return compile_plan(json.loads(raw[raw.find('{'):raw.rfind('}')+1]),lyrics,fps)
+    data=json.loads(raw[raw.find('{'):raw.rfind('}')+1])
+    if out:Path(out,'planner_raw.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
+    return compile_plan(data,lyrics,fps)
 
 def compile_plan(data,lyrics,fps=24):
     if data.get('unsupported_reason'):raise ValueError('Unsupported song/story: '+str(data['unsupported_reason']))

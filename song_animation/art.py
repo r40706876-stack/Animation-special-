@@ -193,3 +193,54 @@ def render_frame(plan,frame):
             mask=Image.new('L',(W,H));ImageDraw.Draw(mask).ellipse((270-rr,468-rr,270+rr,468+rr),fill=255)
             im=Image.composite(nxt,im,mask)
     return im
+
+def thorn(im,u,p,phase):
+    d=ImageDraw.Draw(im)
+    palm(d,270,592,p,grip=ease((phase-.35)/.35))
+    press=ease(phase/.64)
+    flower(d,270,lerp(415,475,press),2.0,p)
+    # An explicit thorn on the persistent stem reaches the palm.
+    tipy=lerp(415,475,press)+102
+    d.polygon([(270,tipy),(288,tipy-9),(273,tipy-18)],fill=p['green'],outline=p['ink'])
+    injury=ease((phase-.64)/.25)
+    if injury:
+        x,y=289,tipy-8
+        r=3+injury*4
+        ellipse(d,(x-r,y-r,x+r,y+r),p['accent'])
+        yy=y+injury*38
+        d.polygon([(x,yy-9),(x-5,yy),(x+5,yy)],fill=p['accent'])
+        ellipse(d,(x-5,yy-3,x+5,yy+7),p['accent'])
+        for k in range(3):
+            a=-.8+k*.6
+            line(d,[(x+22*math.cos(a),y+22*math.sin(a)),(x+34*math.cos(a),y+34*math.sin(a))],p['accent'],2)
+
+def wounded_heart(im,u,p,phase):
+    heart(im,u,p,phase)
+    d=ImageDraw.Draw(im)
+    for j,(xx,yy) in enumerate([(205,425),(288,393),(320,490),(245,530)]):
+        q=ease((phase-j*.14)/.22)
+        if q<=0:continue
+        x2=xx+34*q;y2=yy+24*q
+        line(d,[(xx,yy),(x2,y2)],p['accent'],3)
+        for k in range(1,int(q*5)+1):
+            a=xx+k*6;b=yy+k*4
+            line(d,[(a-3,b+5),(a+3,b-5)],p['ink'],1)
+
+
+def thorns(im,u,p,phase):
+    d=ImageDraw.Draw(im)
+    for j in range(6):
+        yy=150+j*122;xx=60+(j%2)*175
+        pts=[(xx,yy),(xx+45,yy-9),(xx+90,yy+6),(xx+137,yy-7)]
+        line(d,pts,p['ink'],3)
+        for k in range(5):
+            x=xx+15+k*24;y=yy-3
+            d.polygon([(x,y),(x+3,y-18),(x+8,y)],fill=p['green'],outline=p['ink'])
+    # People follow a curved safe route between the thorns.
+    pts=curve([(400,870),(70,650),(470,400),(390,70)],100)
+    n=int(phase*100)
+    for j in range(0,max(0,n-5),6):
+        x,y=pts[j];ellipse(d,(x-3,y-6,x+3,y+6),p['muted'])
+    x,y=pts[n];person(d,x,y,p,p['blue'],u*7,1.3)
+
+DRAWERS.update(thorn=thorn,wounded_heart=wounded_heart,thorns=thorns)
