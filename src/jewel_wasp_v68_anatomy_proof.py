@@ -1,4 +1,4 @@
-"""V6.8.15 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.16 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -53,16 +53,18 @@ def material(name, rgb, rough=.65, metal=0, alpha=1, noise=0):
 emerald=material("iridescent emerald cuticle",(.008,.095,.075),.39,.48,noise=57)
 blue=material("blue-green sclerites",(.011,.050,.064),.48,.36,noise=52)
 dark=material("joint membranes",(.016,.022,.018),.76)
-leg_amber=material("jewel wasp warm amber leg cuticle",(.22,.074,.028),.62,.08,noise=25)
+leg_amber=material("jewel wasp muted amber leg cuticle",(.115,.044,.020),.70,.06,noise=31)
 eye=material("micro-faceted compound eye dark",(.008,.012,.011),.35,.06,noise=165)
 brown=material("roach dark chitin",(.035,.015,.008),.59,.07,noise=47)
 bronze=material("roach elytra",(.026,.010,.005),.78,.035,noise=95)
 tan=material("ventral segment",(.056,.024,.014),.83)
-wing=material("transparent wasp wing membrane",(.075,.145,.135),.64,0,.30)
+wing=material("transparent wasp wing membrane",(.075,.145,.135),.72,0,.19)
 vein=material("membrane veins",(.11,.16,.14),.59)
 soil=material("soil granular",(.065,.053,.037),.98,noise=23)
 leafmat=material("leaf litter",(.19,.13,.052),.94,noise=14)
 green=material("understory leaves",(.028,.073,.031),.86,noise=17)
+green_shadow=material("shadowed understory leaves",(.019,.045,.020),.91,noise=22)
+green_olive=material("olive understory leaves",(.053,.068,.028),.87,noise=19)
 bark=material("rough distant bark",(.045,.036,.026),.94,noise=29)
 forest_depth=material("deep forest shadow backdrop",(.017,.038,.024),.99,noise=4)
 
@@ -113,7 +115,7 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     obj=bpy.data.objects.new(name,mesh);scene.collection.objects.link(obj)
     obj.parent=parent;mesh.materials.append(mat)
     for f in mesh.polygons:f.use_smooth=True
-    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.003
+    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.002
     # Subtle smoothing keeps the elytral contour from reading as a hard plate.
     bevel=obj.modifiers.new("soft elytron contour","SUBSURF");bevel.levels=1
     return obj
@@ -165,18 +167,21 @@ for s in (-1,1):
         ankle=Vector((x+.16-leg*.11,s*(.40+.055*leg),-.445))
         gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=wasp;gait.location=hip
-        taper("wasp coxa %d %d"%(s,leg),(0,0,0),knee-hip,.024,.015,leg_amber,gait)
-        ell("wasp joint %d %d"%(s,leg),knee-hip,(.015,.015,.015),dark,gait)
-        taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.013,.005,leg_amber,gait)
+        femur_joint=(knee-hip)*.35+Vector((.015,s*.015,.028))
+        taper("wasp coxa %d %d"%(s,leg),(0,0,0),femur_joint,.020,.016,leg_amber,gait)
+        ell("wasp femur joint %d %d"%(s,leg),femur_joint,(.016,.016,.016),dark,gait)
+        taper("wasp femur %d %d"%(s,leg),femur_joint,knee-hip,.018,.013,leg_amber,gait)
+        ell("wasp knee %d %d"%(s,leg),knee-hip,(.014,.014,.014),dark,gait)
+        taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.011,.004,leg_amber,gait)
         taper("wasp tarsus %d %d"%(s,leg),ankle-hip,
               ankle-hip+Vector((.09,s*.025,-.02)),.009,.002,dark,gait)
     for hind in (0,1):
         pivot=root("wing hinge %d %d"%(s,hind),(0,0,0))
         pivot.parent=wasp;pivot.location=(.08-hind*.12,s*.14,.16)
-        span=.56 if hind==0 else .39
+        span=.50 if hind==0 else .34
         verts=[];faces=[]
         for i in range(17):
-            t=i/16;breadth=(.086 if hind==0 else .058)*math.sin(math.pi*t)**.8
+            t=i/16;breadth=(.067 if hind==0 else .044)*math.sin(math.pi*t)**.8
             for side in (-1,1):
                 verts.append((-.29*t+side*breadth,s*span*t,.018*math.sin(math.pi*t)))
         for i in range(16):
@@ -187,7 +192,7 @@ for s in (-1,1):
         curve("wing longitudinal vein",[(0,0,0),(-.08,s*span*.50,.02),
              (-.16,s*span*.92,0)],.003,vein,pivot)
         for f in range(1,49):
-            pivot.rotation_euler.x=s*(.20+.38*math.sin(f*1.73+hind*.9))
+            pivot.rotation_euler.x=s*(.10+.25*math.sin(f*1.73+hind*.9))
             pivot.keyframe_insert(data_path="rotation_euler",frame=f)
 
 roach=root("ANATOMY_ROACH_ROOT",(.72,.20,.20),math.pi)
@@ -283,7 +288,8 @@ def leaf_blade(name,center,length,width,heading,material_ref):
             across=side*w
             x=center[0]+along*math.cos(heading)-across*math.sin(heading)
             y=center[1]+along*math.sin(heading)+across*math.cos(heading)
-            z=center[2]+.042*math.sin(math.pi*t)+.012*side*math.sin(2*math.pi*t)
+            # Raised midrib, curled tip and asymmetric edge break paper-flat leaf silhouettes.
+            z=center[2]+.075*math.sin(math.pi*t)+.025*t*t+.016*side*math.sin(2*math.pi*t)
             verts.append((x,y,z))
     for i in range(8):
         a=i*2;faces.append((a,a+2,a+3,a+1))
@@ -297,7 +303,7 @@ for i in range(190):
     if abs(x)<1.45 and abs(y)<.65:continue
     leaf_blade("curved fallen leaf",(x,y,-.066),rng.uniform(.09,.33),
                rng.uniform(.015,.065),rng.uniform(-math.pi,math.pi),
-               leafmat if i%4 else green)
+               leafmat if i%4 else (green_olive if i%8 else green_shadow))
 # Low foreground moss/leaf litter supplies depth without obscuring the insect silhouettes.
 # Place clusters outside the central encounter corridor; preserve clean anatomy visibility.
 for i in range(120):
@@ -328,7 +334,7 @@ for i in range(30):
         leaf_blade("layered understory blade",
                    (x+rng.uniform(-.13,.13),y+rng.uniform(-.13,.13),.04+j*.09),
                    rng.uniform(.23,.53),rng.uniform(.045,.10),
-                   heading,green)
+                   heading,(green_shadow if (i+j)%4==0 else green_olive if (i+j)%5==0 else green))
 
 # V6.8.9: upright, multi-plane fern crowns behind the action corridor.
 # Horizontal ground litter alone looked like flat stickers in the actual proof.
@@ -363,7 +369,7 @@ for i in range(55):
     z=rng.uniform(.14,.70)
     leaf_blade("midground fern leaflet",
                (x,y,z),rng.uniform(.22,.55),rng.uniform(.035,.11),
-               rng.uniform(-math.pi,math.pi),green)
+               rng.uniform(-math.pi,math.pi),(green_shadow if i%3==0 else green_olive if i%5==0 else green))
 # Exposed branching roots interrupt the cylindrical bases of distant trees.
 for i in range(11):
     x=-3.3+i*.64
@@ -392,7 +398,7 @@ for i in range(17):
                    (x+rng.uniform(-.65,.65),y+rng.uniform(-.5,.5),
                     height*.65+rng.uniform(-.35,.6)),
                    rng.uniform(.35,.8),rng.uniform(.09,.20),
-                   rng.uniform(-math.pi,math.pi),green)
+                   rng.uniform(-math.pi,math.pi),(green_shadow if i%3==0 else green_olive if i%5==0 else green))
 
 for name,loc,power,size in [
     ("large softbox",(-2.6,-3.2,4.0),600,4.0),
@@ -420,7 +426,7 @@ for frame,focus,scale in [(1,-.04,5.95),(12,-.02,5.90),
     # Preserve BOTH insect silhouettes: earlier focus=-.50 clipped the roach.
     # Higher camera elevation also keeps every bottom image ray above the soil.
     camera.location=(.8+focus*.60,-5.3,3.75)
-    target=Vector((focus,0,.82))
+    target=Vector((focus,0,.66))
     camera.rotation_euler=(target-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=frame)
     camera.keyframe_insert(data_path="rotation_euler",frame=frame)
