@@ -1,0 +1,27 @@
+name: Song Artwork Image Capability
+on:
+  push:
+    branches: ['main', 'feature/song-animation-*']
+    paths: ['song_animation/probe_image_art.py', '.github/workflows/song_image_art_probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  image-art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests Pillow
+      - run: python -m song_animation.probe_image_art
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-art-image-capability-${{ github.run_id }}
+          path: image_art_probe/
+          retention-days: 7

@@ -3,9 +3,9 @@ import copy,hashlib,json,math,re
 from pathlib import Path
 from .provider import generate_json
 from .vector import validate_vector,sanitize_svg
-from .lyrics import cues_from_lyrics
+from .lyrics import cues_from_lyrics,shot_phrases
 
-PROTOCOL='open-vector-v3-quality'
+PROTOCOL='open-vector-v4-lyric-metaphors'
 ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..750; a separate lyric panel may cover y=770..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
 Each SVG is one independent asset drawn in its OWN local viewBox. SVG must be self-contained, no scripts, text, images, use, foreignObject, style, filters, URLs or external resources. Allowed elements: svg,g,path,rect,circle,ellipse,line,polyline,polygon,defs,linearGradient,radialGradient,stop,clipPath. Inline fill/stroke/transform attributes only. Use xmlns="http://www.w3.org/2000/svg". Gradients may reference local #ids only. A detailed full setting can be a background asset at width=540,height=960 with pivot [0,0] at x=0,y=0. Characters/props use tight local viewBoxes with transparent background, raster widths/heights matching their intended pixel size. Do not put a full character AND its separately animated arm into both assets: rig separate body/head/limbs where useful. Draw enough paths/shapes to look illustrated rather than geometric placeholder art.'''
 
@@ -19,10 +19,12 @@ PACKAGE_SCHEMA={'type':'OBJECT','properties':{
 
 def storyboard(lyrics,music,out,fps=24):
     duration=lyrics['duration']
-    prompt=f'''Direct an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
-Return JSON: {{"title":"short title","bible":{{"style":"detailed shared art direction","palette":"shared colours","characters":"consistent identities/clothes","locations":"settings","motifs":"recurring objects","arc":"connected emotional progression"}},"scenes":[{{"start":0.0,"label":"shot meaning","visual":"precise original illustration composition","action":"what visibly happens; describe independently moving parts/objects and their causal interaction","lyric_ids":[0]}}]}}.
+    prompt=f'''Direct a visually sophisticated LYRIC-MEANING FILM, not a presenter video. First interpret each sung phrase: its central subject, literal meaning, emotional metaphor and visible cause/consequence. Then design an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
+CRITICAL: Never substitute the same standing/walking poet in the same courtyard for different lyrics. There is NO obligatory protagonist. Let the actual sung objects and relationships become the film's focal imagery. A line about scars on a heart should show a recognisable heart and accumulating scars; avoiding thorns should show footsteps routing around thorns; flowers causing wounds should show a soft flower/petal visibly causing a mark, not an unrelated sad man or a generic thorn prick. Those are illustrative examples, NOT a scene menu: invent the appropriate new metaphor for any other song. Preserve metaphorical meaning rather than blindly illustrating isolated nouns. Change visual composition when the lyrical concept changes. Physical people are useful only when their acting is essential and can be drawn well.
+Prefer elegant organic linework, richly modelled hero objects, tactile light paper, restrained colour and clear visual hierarchy over geometric puppets/icons. The main meaning-bearing object should occupy a readable 35..65% of the frame. Plan action as a visible setup, contact/change and consequence. Gentle camera motion supports that transformation but never substitutes for it. In the bible add finish="paper" for tactile editorial illustration or finish="clean" only where the music calls for another treatment.
+Return JSON: {{"title":"short title","bible":{{"style":"detailed shared art direction","palette":"shared colours","characters":"consistent identities/clothes","locations":"settings","motifs":"recurring objects","arc":"connected emotional progression"}},"scenes":[{{"start":0.0,"label":"shot meaning","visual":"precise original illustration composition","action":"what visibly happens; describe independently moving parts/objects and their causal interaction","meaning":"what this sung phrase actually means","hero_object":"the main readable lyric-specific object or metaphor","before":"visible starting state","after":"visible consequence matching the words","lyric_ids":[0]}}]}}.
 Plan about 5..8 shots for 30 seconds, fewer for a short input. First start=0, strictly increasing start seconds, each shot 1..8 seconds, final shot ends automatically at {duration:.3f}. Every lyric id must be referenced at least once. Empty ids allowed for instrumental shots. Include breathing space for instruments and a resolved ending, not an unrelated outro. Choose meaningful phrase/nearby beat boundaries. No captions in the artwork; those are added separately. Your setting and assets will be newly generated as layered vector art, so invent appropriate objects freely, but motions must be achievable by layered articulated 2D animation. No impossible promises of photorealistic 3D.
-Style direction: elegant richly illustrated 2D, expressive human figures where appropriate, detailed custom settings, balanced bright colours and layered depth. Sad songs may use muted warm daylight; avoid near-black whole frames. IMPORTANT: visual must be a PROSE description, never SVG/code. The illustration assets will be generated in the next stage.
+Style direction: elegant richly illustrated 2D, song-specific symbolic objects and expressive interaction where appropriate, detailed custom settings, balanced bright colours and layered depth. Sad songs may use muted warm daylight; avoid near-black whole frames. IMPORTANT: visual must be a PROSE description, never SVG/code. The illustration assets will be generated in the next stage.
 AUDIO ANALYSIS: {json.dumps(lyrics,ensure_ascii=False)}
 MUSIC: {json.dumps(music)}'''
     data=generate_json(prompt,out=out,tag='storyboard',prefer_quality=True)
@@ -55,8 +57,30 @@ def compile_storyboard(data,lyrics,fps=24):
     return {'version':2,'title':data.get('title','Song film'),'bible':data['bible'],'fps':fps,'total_frames':total,
         'lyrics':cues_from_lyrics(lyrics,fps),'timing_granularity':lyrics.get('timing_granularity','phrase'),
         'timing_verified':False,'scenes':compiled,'assets':{},'planner':'generated_vector','review_status':'draft',
-        'open_vocabulary':True,'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
+        'open_vocabulary':True,'lighting_preference':'bright','finish':data['bible'].get('finish','paper'),'protocol':PROTOCOL,'timeline_adjustments':adjustments,'allow_night':bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|\bnight\b|\bmoon\b|\bdarkness\b',' '.join(w['text'] for w in lyrics['words']),re.I))}
 
+
+
+def redundant_defs_close(svg):
+    """Repair only a redundant closing defs tag, then retain strict SVG validation."""
+    from xml.etree import ElementTree as ET
+    if not isinstance(svg,str) or len(svg)>40000 or '<!' in svg or '<?' in svg:return svg
+    try:ET.fromstring(svg);return svg
+    except ET.ParseError:pass
+    stack=[];remove=[]
+    for m in re.finditer(r'<(/?)([A-Za-z_][A-Za-z0-9_:.-]*)\b[^>]*>',svg):
+        closing,name=m.group(1),m.group(2)
+        if closing:
+            if stack and stack[-1]==name:stack.pop()
+            elif name=='defs' and name not in stack and stack:remove.append(m.span())
+            else:return svg
+        elif not m.group(0).rstrip().endswith('/>'):stack.append(name)
+    if not remove:return svg
+    result=svg
+    for start,end in reversed(remove):result=result[:start]+result[end:]
+    try:ET.fromstring(result)
+    except ET.ParseError:return svg
+    return result
 
 
 def normalize_package(data):
@@ -67,6 +91,10 @@ def normalize_package(data):
     data=copy.deepcopy(data);changes=[]
     for asset in data.get('assets',[]):
         svg=asset.get('svg','')
+        corrected=redundant_defs_close(svg)
+        if corrected!=svg:
+            asset['svg']=svg=corrected
+            changes.append({'asset':asset.get('id'),'removed_redundant_defs_close':True})
         if re.search(r'<(?:[A-Za-z_]+:)?text(?:\s|>)',svg) and '<!' not in svg:
             try:root=ET.fromstring(svg)
             except ET.ParseError:continue
@@ -106,6 +134,8 @@ LIGHTING: Keep subjects and story props legible. Warm daylight is preferred for 
 FILM BIBLE: {json.dumps(plan['bible'],ensure_ascii=False)}
 FULL STORY: {json.dumps([{k:s[k] for k in ('label','visual','action')} for s in plan['scenes']],ensure_ascii=False)}
 THIS SHOT: {json.dumps(shot,ensure_ascii=False)}
+ACTUAL SUNG WORDS IN THIS TIME INTERVAL: {json.dumps(shot_phrases(plan,shot),ensure_ascii=False)}
+The actual words are the ground truth. Show their central object and meaning, not merely the mood in the bible. The viewer should understand what changes because of this phrase, even with captions hidden. Avoid a generic stationary person. For lyrical metaphors, animate the metaphor itself through a clear causal change. Use large, beautifully drawn organic artwork with curved contours, ink detail and restrained shading rather than tiny geometric tokens.
 AVAILABLE REUSABLE ASSETS: {json.dumps(reusable,ensure_ascii=False)}
 {ART_GUIDE}
 JSON shape: {{"background":"#RRGGBB","assets":[{{"id":"unique_safe_id","description":"what this artwork depicts","width":180,"height":260,"reusable":true,"svg":"<svg ...>...</svg>"}}],"nodes":[{{"id":"hero_body","asset":"asset_id","parent":null,"role":"foreground","pivot":[0.5,0.8],"easing":"smooth","keys":[{{"t":0,"x":270,"y":550,"rotation":0,"scale":1,"opacity":1}},{{"t":1,"x":300,"y":530,"rotation":0,"scale":1,"opacity":1}}],"wave":{{"rotation":0,"x":0,"y":0,"cycles":1,"phase":0}}}}]}}.
@@ -154,7 +184,9 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             sample.save(folder/f'preflight_{index}.png')
             luminance=float(np.asarray(sample.convert('L')).mean())
             s['visibility_review']={'mean_luminance':round(luminance,2),'check_contrast':luminance<65,'advisory_only':True}
-            # A neon or night composition can be legible with a dark average.
+            if plan.get('lighting_preference','bright')=='bright' and not plan.get('allow_night') and luminance<85:
+                raise ValueError('Default bright treatment failed: the actual frame is too dark. Use a warm light background and readable shaded foreground; sadness does not require a dark whole frame.')
+            # An explicitly night-themed composition still requires readable contrast.
             # Never reject an entire musical genre from a global brightness mean.
             cache.write_text(json.dumps(data,ensure_ascii=False,indent=2))
             return s,assets

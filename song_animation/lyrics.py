@@ -90,3 +90,8 @@ def export_srt(plan,path):
         return f'{h:02}:{m:02}:{s:02},{ms:03}'
     cues=plan.get('lyrics',[])
     Path(path).write_text('\n\n'.join(f"{i+1}\n{stamp(c['start_frame'])} --> {stamp(c['end_frame'])}\n{c['text']}" for i,c in enumerate(cues))+'\n',encoding='utf-8')
+
+
+def shot_phrases(plan,shot):
+    """Actual sung phrases overlapping this shot, independent of planner labels."""
+    return [c['text'] for c in plan.get('lyrics',[]) if c['end_frame']>shot['start_frame'] and c['start_frame']<shot['end_frame']]

@@ -1,0 +1,29 @@
+name: Corrected supplied song film
+on:
+  push:
+    branches: ['feature/song-animation-metaphors-20261030']
+    paths: ['song_animation/examples/chalre_film.py', 'song_animation/assets/chalre_demo/**', '.github/workflows/song_chalre_film.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core
+          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3'
+      - run: python -m song_animation.examples.chalre_film --audio song_animation/inputs/ritik_new_song_20261030.mp3 --out corrected_film
+      - run: ffmpeg -v error -xerror -i corrected_film/chalre_corrected.mp4 -f null -
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: corrected-chalre-film
+          path: corrected_film/
+          retention-days: 7

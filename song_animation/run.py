@@ -1,9 +1,10 @@
-import argparse,copy,hashlib,json
+import argparse,copy,hashlib,json,shutil
 from pathlib import Path
 from .analyze import analyze,music_features,duration
 from .clip import prepare
 from .render import render
 from .contract import validate_lyrics
+from .quality import QualityHold,visual_decision,inspect_export
 
 def cached_reference(source,selection):
     """Only reuse exact-source analysis when no vocal phrase was cut in half."""
@@ -29,6 +30,10 @@ def main():
     a.add_argument('--transcriber',choices=['audio-model','whisper'],default='audio-model')
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
     args=a.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
+    # Never leave a stale checked output visible after a failed rerun.
+    for name in ('checked.mp4','preview.mp4','quality_gate.json','audio_hold.json'):
+        (out/name).unlink(missing_ok=True)
+    (out/'status.json').write_text(json.dumps({'status':'running','automatic_publish':False}))
     try:
         clip,selection=prepare(args.audio,out,limit=30,start=args.start)
         if args.lyrics:
@@ -37,7 +42,7 @@ def main():
             validate_lyrics(lyrics['words'],selection['duration'])
         else:
             audio_hash=hashlib.sha256(clip.read_bytes()).hexdigest()
-            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v4'
+            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v6-auto-recovery'
             checkpoint=out/'analysis_checkpoint.json'
             if checkpoint.exists() and (out/'lyrics.json').exists() and json.loads(checkpoint.read_text()).get('key')==key:
                 lyrics=json.loads((out/'lyrics.json').read_text());validate_lyrics(lyrics['words'],selection['duration'])
@@ -67,20 +72,35 @@ def main():
         plan['selection']=selection
         (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
         render(plan,out,clip,args.width)
+        changed=False;assessment={};passes=[]
         if args.engine=='generated':
             from .review import review,refine
-            assessment=review(plan,out)
-            (out/'visual_review_before.json').write_text(json.dumps(assessment,ensure_ascii=False,indent=2))
-            plan,changed=refine(plan,out,assessment)
-            if changed:
-                render(plan,out,clip,args.width)
+            for pass_index in range(3):
                 assessment=review(plan,out)
-            plan['visual_issues_remaining']=assessment.get('issues',[])
+                decision=visual_decision(assessment,len(plan['scenes']))
+                (out/f'visual_review_pass_{pass_index}.json').write_text(json.dumps(assessment,ensure_ascii=False,indent=2))
+                passes.append({'pass':pass_index,**decision})
+                if decision['passed'] or pass_index==2 or not decision['repair_issues']:break
+                plan,replaced=refine(plan,out,dict(assessment,issues=decision['repair_issues']),pass_index=pass_index+1)
+                changed=changed or replaced
+                if not replaced:break
+                render(plan,out,clip,args.width)
+            plan['visual_issues_remaining']=decision['reasons']
             (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
-        (out/'status.json').write_text(json.dumps({'status':'review_draft','engine':args.engine,
-            'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,
-            'universal_quality_certified':False,'visual_review_issues':assessment.get('issues',[]) if args.engine=='generated' else [],'visual_repair_applied':changed if args.engine=='generated' else False,'warnings':lyrics.get('warnings',[])},ensure_ascii=False,indent=2))
+        else:decision={'passed':False,'reasons':['Classic engine output is an unchecked draft']}
+        technical=inspect_export(out/'preview.mp4',clip,plan,args.width)
+        passed=decision['passed'] and technical['passed']
+        gate={'passed':passed,'visual':decision,'technical':technical,'repair_passes':passes,'human_approval':False,'universal_quality_certified':False}
+        (out/'quality_gate.json').write_text(json.dumps(gate,ensure_ascii=False,indent=2))
+        status={'status':'checks_passed' if passed else 'blocked','engine':args.engine,'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,'universal_quality_certified':False,'visual_repair_applied':changed,'warnings':lyrics.get('warnings',[]),'quality_gate':gate}
+        if passed:
+            shutil.copyfile(out/'preview.mp4',out/'checked.mp4')
+            status['checked_file']='checked.mp4'
+        (out/'status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2))
+        if not passed:raise QualityHold('Video checks did not pass; only review draft retained')
+    except QualityHold:
+        raise
     except Exception as e:
-        (out/'status.json').write_text(json.dumps({'status':'failed','error_type':type(e).__name__,'automatic_publish':False}))
+        (out/'status.json').write_text(json.dumps({'status':'failed','error_type':type(e).__name__,'error':str(e)[:1200],'automatic_publish':False}))
         raise
 if __name__=='__main__':main()

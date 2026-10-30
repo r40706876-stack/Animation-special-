@@ -1,0 +1,36 @@
+name: Song quality acceptance - three different inputs
+on:
+  push:
+    branches: ['feature/song-animation-*']
+    paths: ['.github/workflows/song_quality_acceptance.yml']
+permissions:
+  contents: read
+jobs:
+  exercise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        audio: [reference.mp3, ritik_new_song_20261030.mp3, DEMO_festival_12s.mp3]
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      HF_HUB_DISABLE_XET: '1'
+      HF_HUB_DOWNLOAD_TIMEOUT: '120'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
+          pip install -r song_animation/requirements.txt
+      - run: python -m song_animation.run --audio "song_animation/inputs/${{ matrix.audio }}" --out acceptance --width 1080
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-acceptance-${{ matrix.audio }}
+          path: acceptance/
+          retention-days: 7

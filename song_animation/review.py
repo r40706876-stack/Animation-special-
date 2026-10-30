@@ -1,32 +1,43 @@
 """Advisory visual review of the actual export samples; not audience certification."""
-import base64,json
+import base64,json,subprocess,io
 from pathlib import Path
 from .provider import generate_json
+
+def encoded_sample(video,seconds):
+    from PIL import Image
+    raw=subprocess.check_output(['ffmpeg','-v','error','-ss',str(max(0,seconds)),'-i',str(video),'-frames:v','1','-vf','scale=540:960','-f','image2pipe','-vcodec','png','-'],timeout=25)
+    im=Image.open(io.BytesIO(raw));im.load();return im.convert('RGB')
 
 def review(plan,out):
     out=Path(out)
     try:
         import io
         from PIL import Image
-        from .art import render_frame
-        images=[]
+        images=[];contact=Image.new('RGB',(540,320*len(plan['scenes'])))
         for index,scene in enumerate(plan['scenes']):
             strip=Image.new('RGB',(1620,960))
             for column,q in enumerate((.1,.5,.9)):
                 frame=scene['start_frame']+int((scene['end_frame']-scene['start_frame']-1)*q)
-                strip.paste(render_frame(plan,frame),(column*540,0))
+                strip.paste(encoded_sample(out/'preview.mp4',frame/plan['fps']),(column*540,0))
+            contact.paste(strip.resize((540,320)),(0,index*320))
             buffer=io.BytesIO();strip.save(buffer,format='JPEG',quality=88)
             images.extend([{'text':f'SHOT {index}: left=10%, middle=50%, right=90% of shot time.'},{'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(buffer.getvalue()).decode()}}])
-        descriptions=[{'shot':i,'meaning':s.get('label',s.get('reason','')),'action':s.get('action','')} for i,s in enumerate(plan['scenes'])]
-        prompt='''Review the ACTUAL sampled rendered frames of this illustrated song film. Each labelled input image contains three full-size moments from one shot. Compare positions and limb poses across the three panels. Compare recognisable objects/actions against the shot descriptions and shared art bible. Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Return JSON {"needs_review":true,"issues":[{"shot":0,"issue":"specific visible problem"}],"strengths":["visible strengths"]}. If no concrete issue is visible return issues=[], but never certify human approval or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)
-        result=generate_json(prompt,out=out,tag='visual_review',extra_parts=images)
+        contact.save(out/'review_contact.jpg',quality=90)
+        benchmark=Path(__file__).parent/'assets'/'quality'/'finish_reference.jpg'
+        if not benchmark.is_file():raise RuntimeError('Stored finish reference is missing')
+        images.extend([{'text':'FINISH REFERENCE ONLY: the next image shows the required illustration detail and readability. Do NOT borrow its objects or story; select subjects from the actual song. Compare the film against this finish, rather than rewarding any internally consistent simple geometric style.'},{'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(benchmark.read_bytes()).decode()}}])
+        from .lyrics import shot_phrases
+        descriptions=[{'shot':i,'sung_words':shot_phrases(plan,s),'meaning':s.get('meaning',s.get('label',s.get('reason',''))),'action':s.get('action','')} for i,s in enumerate(plan['scenes'])]
+        prompt='''Review the ACTUAL decoded MP4 frames of this illustrated song film. Each labelled input image contains three full-size moments from one shot. Compare positions and limb poses across the three panels. Compare recognisable objects/actions FIRST against the actual sung_words and their meaning, then against the proposed action and art bible. A visually successful but lyrically unrelated storyboard is still a failure. Flag missing central objects, absent causes/consequences, repetitive generic standing people and metaphors that reverse the lyric (e.g. thorns causing the wound where the words say flowers caused it). Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Return JSON with reference_quality_met:boolean (true only when the actual film matches the supplied illustration finish/detail/readability), needs_review:boolean, issues:[{shot:0,issue:"specific visible problem"}], strengths:["visible strengths"], and shots:[{shot:0,lyric_meaning:boolean,artwork_detail:boolean,story_motion:boolean,anatomy_continuity:boolean,caption_legibility:boolean,reason:"visible evidence"}]. Review EVERY shot exactly once. All five checks must be explicitly true to clear a shot. Artwork_detail requires finished attractive organic illustration at phone size, not rough geometric people, icons or placeholders. Story_motion requires a visible meaningful action/change, not only camera pans, particles or a wobbling still picture. Judge the actual images, not promises in the plan. Missing/ambiguous evidence is false. If no issue is visible return needs_review=false and issues=[], but never certify human approval, exact lyric timing or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)
+        result=generate_json(prompt,out=out,tag='visual_review',extra_parts=images,prefer_quality=True,require_full_model=True)
+        result['reviewer_model']=result.pop('_provider_model',None)
         result['advisory_only']=True;result['human_approval']=False
-    except (RuntimeError,ValueError,KeyError) as e:
+    except (RuntimeError,ValueError,KeyError,OSError,subprocess.SubprocessError) as e:
         result={'status':'unavailable','error_type':type(e).__name__,'advisory_only':True,'human_approval':False}
     (out/'visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
 
 
-def refine(plan,out,assessment):
+def refine(plan,out,assessment,pass_index=1,scene_limit=6):
     """One bounded visual correction pass using actual shot images and review notes."""
     import copy,hashlib,io
     from PIL import Image
@@ -37,7 +48,7 @@ def refine(plan,out,assessment):
         if type(index) is int and 0<=index<len(plan['scenes']) and isinstance(note,str) and note.strip():
             groups.setdefault(index,[]).append(note[:1800])
     contact=Image.open(out/'review_contact.jpg') if groups else None
-    for index,notes in list(groups.items())[:3]:
+    for index,notes in list(groups.items())[:scene_limit]:
         row=contact.crop((0,index*320,540,(index+1)*320));buf=io.BytesIO();row.save(buf,format='JPEG')
         raw=buf.getvalue();image={'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(raw).decode()}}
         candidate['scenes'][index]['visual_correction']={
@@ -52,5 +63,6 @@ def refine(plan,out,assessment):
         except (ValueError,RuntimeError,KeyError,TypeError) as e:
             candidate['scenes'][index]=copy.deepcopy(plan['scenes'][index])
             report.append({'shot':index,'status':'failed','error':str(e)[:1200]})
-    (out/'visual_repair.json').write_text(json.dumps({'pass_limit':1,'scene_limit':3,'results':report},ensure_ascii=False,indent=2))
+    (out/f'visual_repair_{pass_index}.json').write_text(json.dumps({'pass_limit':2,'pass':pass_index,'scene_limit':scene_limit,'results':report},ensure_ascii=False,indent=2))
+    (out/'visual_repair.json').write_text((out/f'visual_repair_{pass_index}.json').read_text())
     return candidate,any(x['status']=='replaced' for x in report)

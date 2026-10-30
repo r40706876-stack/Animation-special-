@@ -12,17 +12,16 @@ def analyze(audio,out,model='large-v3-turbo'):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     engine=WhisperModel(model,device='cpu',compute_type='int8')
     def recognize(path,offset=0):
-        segments,_=engine.transcribe(str(path),language='hi',word_timestamps=True,vad_filter=False,
-            condition_on_previous_text=False,beam_size=5,no_speech_threshold=None,
-            initial_prompt='यह हिंदी में गाया हुआ गाना है।')
+        segments,info=engine.transcribe(str(path),word_timestamps=True,vad_filter=False,
+            condition_on_previous_text=False,beam_size=5,no_speech_threshold=None)
         result=[]
         for seg in segments:
             for w in seg.words or []:
                 if w.word.strip() and w.end>w.start:
                     result.append({'text':w.word.strip(),'start':round(w.start+offset,3),
                         'end':round(min(dur,w.end+offset),3),'probability':round(w.probability,4)})
-        return result
-    words=recognize(audio)
+        return result,info.language
+    words,detected_language=recognize(audio)
     recovered=False
     # Songs can lose their opening in a full-window decode. Retry that uncovered
     # leading window using the SAME model, without inventing or evenly spacing text.
@@ -31,13 +30,13 @@ def analyze(audio,out,model='large-v3-turbo'):
         with tempfile.TemporaryDirectory() as td:
             clip=Path(td)/'opening.wav'
             subprocess.run(['ffmpeg','-y','-v','error','-i',str(audio),'-t',str(boundary),'-ac','1','-ar','16000',str(clip)],check=True)
-            prefix=[w for w in recognize(clip) if w['end']<=boundary+.05]
+            prefix=[w for w in recognize(clip)[0] if w['end']<=boundary+.05]
         if prefix:
             words=prefix+words;recovered=True
     for i,w in enumerate(words):w['id']=i
     if not words:raise ValueError('No lyric words detected; supply verified timed lyrics')
     validate_lyrics(words,dur)
-    result={'asr_model':model,'duration':dur,'language':'hi','timing_method':'faster-whisper word timestamps','timing_verified':False,'opening_recovery_used':recovered,
+    result={'asr_model':model,'duration':dur,'language':detected_language,'timing_method':'faster-whisper word timestamps','timing_verified':False,'opening_recovery_used':recovered,
       'leading_untranscribed_seconds':words[0]['start'],
       'warnings':['Singing timestamps require listening review; no character-count retiming used'],
       'low_confidence_word_ids':[w['id'] for w in words if w['probability']<.55],'words':words}

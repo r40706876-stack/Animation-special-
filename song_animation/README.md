@@ -58,3 +58,14 @@ python -m song_animation.render --plan song_animation/examples/vector_smoke.json
 ```
 
 The synthetic proof shows journey/kite, devotional lamp/bell and festival/drum compositions with original authored SVG test data. It tests renderer versatility, not live model generation or real-song genre quality. The real uploaded reference runs separately through the generated-art pipeline.
+
+
+### Automatic corrections and output checks
+
+New uploads use the actual source clip (up to 30 seconds). A failed lyric/language or literal-meaning check triggers one automatic recovery attempt using two consistent audio-fingerprint windows, or independent multilingual ASR if a match is unavailable. Recognition is a hint, never proof of the lyrics or original authorship. The second transcript still has to match the actual audio. Unresolved/unclear words stop semantic scene generation. No Hindi language is forced onto other songs.
+
+The actual encoded MP4 is decoded for every shot's visual review. Five explicit checks are required for every shot: lyric meaning, finished illustration, meaningful object/character motion, anatomy/continuity and readable captions. A missing review is a hold. Up to two repair passes rebuild the failing shots and re-render/re-review. Audio is compared with the original clip; codecs, duration, dimensions and complete decoding are also checked.
+
+Only an output passing these checks receives `checked.mp4` and a `song-checked-*` artifact. A blocked run keeps a clearly labelled review draft and diagnostics; stale checked/preview files are removed before a new attempt. These automated checks are not a guarantee of human approval, exact word timing, reference-beating artwork, performance metrics or universal song support. Uploads remain reviewable; automatic publishing remains off.
+
+Full-model audio meaning and encoded-frame reviews are required. Lite-model approval is never sufficient to create checked.mp4. The stored original-artwork finish reference accompanies the visual review, and bright daylight treatments have a measured brightness floor before scene caching. If suitable model access is unavailable, the run holds instead of lowering the standard.
