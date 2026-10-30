@@ -2,6 +2,15 @@ import os,unittest
 from unittest.mock import patch,Mock
 from song_animation.provider import generate_json
 class QualityModelDiscovery(unittest.TestCase):
+ def test_discovered_full_flash_is_used_before_retired_pro_after_primary_quota(self):
+  listing=Mock();listing.json.return_value={'models':[{'name':'models/'+m,'supportedGenerationMethods':['generateContent']} for m in ['gemini-3-flash-preview','gemini-2.5-flash','gemini-2.5-pro','gemini-3.8-flash']]}
+  good=Mock(status_code=200);good.json.return_value={'candidates':[{'content':{'parts':[{'text':'{"valid":true}'}]}}]}
+  def post(url,**kwargs):return good if '/gemini-2.5-flash:' in url else Mock(status_code=429)
+  with patch.dict(os.environ,{'GEMINI_API_KEY':'test-key','GEMINI_MODEL':''}),patch('requests.get',return_value=listing),patch('requests.post',side_effect=post) as api:
+   self.assertTrue(generate_json('finish storyboard',prefer_quality=True,require_full_model=True)['valid'])
+   self.assertEqual(api.call_count,2)
+   self.assertIn('/gemini-2.5-flash:',api.call_args.args[0])
+
  def test_temporary_503_retries_the_same_available_full_model_once(self):
   listing=Mock();listing.json.return_value={'models':[{'name':'models/gemini-3-flash-preview','supportedGenerationMethods':['generateContent']}]}
   busy=Mock(status_code=503);good=Mock(status_code=200);good.json.return_value={'candidates':[{'content':{'parts':[{'text':'{"valid":true}'}]}}]}

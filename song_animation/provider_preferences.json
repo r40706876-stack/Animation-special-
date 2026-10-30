@@ -1,7 +1,10 @@
 {
   "preferred_full_models": [
-    "gemini-3-flash-preview"
+    "gemini-3-flash-preview",
+    "gemini-2.5-flash",
+    "gemini-3.5-flash"
   ],
   "last_probe_date": "2026-10-30",
-  "evidence": "Successful live generateContent JSON response in Actions run 41075669914. Preference applies only when model is still returned by model discovery; ordinary bounded failover remains enabled."
+  "evidence": "Successful live generateContent JSON response in Actions run 41075669914. Preference applies only when model is still returned by model discovery; ordinary bounded failover remains enabled.",
+  "fallback_note": "Fallbacks are attempted only if returned by live discovery; no lite model can clear audio meaning or rendered-frame review."
 }

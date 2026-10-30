@@ -59,7 +59,19 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
                 if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
                 if retry==0 and model_index==0:time.sleep(3);continue
                 break
-            attempts.append({'model':model,'http_status':r.status_code,'retry':retry})
+            item={'model':model,'http_status':r.status_code,'retry':retry}
+            if r.status_code!=200:
+                try:
+                    body=r.json()
+                    error=body.get('error',{}) if isinstance(body,dict) else {}
+                    if isinstance(error.get('status'),str):item['error_status']=error['status']
+                    for detail in error.get('details',[]):
+                        if not isinstance(detail,dict):continue
+                        if isinstance(detail.get('retryDelay'),str):item['retry_delay']=detail['retryDelay']
+                        limits=[{k:v[k] for k in ('quotaId','quotaValue') if k in v} for v in detail.get('violations',[]) if isinstance(v,dict)]
+                        if limits:item['quota_limits']=limits[:6]
+                except (ValueError,TypeError):pass
+            attempts.append(item)
             if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
             if r.status_code==200:
                 response_parts=(r.json().get('candidates') or [{}])[0].get('content',{}).get('parts',[])
