@@ -14,6 +14,15 @@ def narrative():
  return {'story':story,'bible':{'style':'warm bright illustration'},'scenes':scenes}
 
 class ConnectedStory(unittest.TestCase):
+ def test_provider_outage_preserves_candidate_without_repeating_story_generation(self):
+  good=narrative()
+  with tempfile.TemporaryDirectory() as td:
+   with patch('song_animation.generative.generate_json',side_effect=[good,RuntimeError('quota')]):
+    with self.assertRaises(RuntimeError):storyboard({'duration':6,'words':[]},{},td)
+   with patch('song_animation.generative.generate_json',return_value={'valid':True,'issues':[]}) as api:
+    result=storyboard({'duration':6,'words':[]},{},td)
+    self.assertEqual(api.call_count,1);self.assertIn('Evaluate this proposed',api.call_args.args[0]);self.assertEqual(result['story']['payoff'],good['story']['payoff'])
+
  def test_connected_story_is_carried_into_render_plan(self):
   d=narrative();p=compile_storyboard(d,{'duration':6,'words':[]})
   self.assertEqual(p['story']['payoff'],d['story']['payoff'])

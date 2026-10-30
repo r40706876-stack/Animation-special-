@@ -1,5 +1,7 @@
 name: Song Animation - verified checks and review drafts
 on:
+  schedule:
+    - cron: '5 7 * * *'
   workflow_dispatch:
     inputs:
       audio_path:
@@ -55,6 +57,8 @@ jobs:
             vector_proof/
           retention-days: 7
   song-draft:
+    permissions:
+      contents: write
     needs: [proof, inputs]
     if: needs.inputs.outputs.audio != '[]'
     strategy:
@@ -103,6 +107,7 @@ jobs:
             song_draft/lyrics.json
             song_draft/vector_assets/
             song_draft/storyboard.json
+            song_draft/story_candidate.json
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
             song_draft/painted_actors/
@@ -119,6 +124,7 @@ jobs:
             song_draft/lyrics.json
             song_draft/vector_assets/
             song_draft/storyboard.json
+            song_draft/story_candidate.json
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
             song_draft/painted_actors/
@@ -142,3 +148,9 @@ jobs:
             song_draft/lyrics.srt
           if-no-files-found: error
           retention-days: 7
+
+      - name: Record cleared source for automatic retry queue
+        if: success()
+        env:
+          GH_RECEIPT_TOKEN: ${{ github.token }}
+        run: python -m song_animation.completion --audio "$AUDIO_PATH" --out song_draft

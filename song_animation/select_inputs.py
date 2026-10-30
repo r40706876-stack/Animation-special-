@@ -13,7 +13,13 @@ def select(root,before='',head='',manual=None,event='push'):
         return str(p.relative_to(root))
     if event=='workflow_dispatch':return [checked(manual)] if manual else []
     changed=[]
-    if before and before.strip('0'):
+    if event=='schedule':
+        config=json.loads((root/'song_animation/queue_config.json').read_text())
+        p=subprocess.run(['git','diff','--name-only','-z',config['baseline_commit'],head or 'HEAD','--','song_animation/inputs/'],cwd=root,capture_output=True,check=False)
+        if p.returncode:raise ValueError('Cannot resolve the pending-upload queue')
+        changed=p.stdout.decode().split('\0')
+        changed += [str(p.relative_to(root)) for p in (root/'song_animation/requests').glob('*.json')]
+    if event!='schedule' and before and before.strip('0'):
         p=subprocess.run(['git','diff','--name-only','-z',before,head,'--','song_animation/inputs/','song_animation/requests/'],cwd=root,capture_output=True,check=False)
         if p.returncode:raise ValueError('Cannot resolve upload diff; refusing to process the wrong audio')
         changed=p.stdout.decode().split('\0')
@@ -22,9 +28,16 @@ def select(root,before='',head='',manual=None,event='push'):
         if p and Path(p).suffix.lower() in EXTS and (root/p).is_file():files.append(checked(p))
         if p.startswith('song_animation/requests/') and Path(p).suffix.lower()=='.json' and (root/p).is_file():
             request=json.loads((root/p).read_text())
+            if event=='schedule' and isinstance(request.get('audio_path'),str) and not (root/request['audio_path']).is_file():continue
             files.append(checked(request.get('audio_path')))
     # Code-only commits run the proof job; real uploads and manual dispatch render songs.
-    return sorted(set(files))
+    files=sorted(set(files))
+    if event=='schedule':
+        from .completion import completed
+        files=[p for p in files if not completed(root,root/p)]
+        # One pending song per daily retry protects the limited model allowance.
+        return files[:1]
+    return files
 
 def main():
     files=select(Path.cwd(),os.getenv('PUSH_BEFORE',''),os.getenv('PUSH_HEAD',''),os.getenv('MANUAL_AUDIO'),os.getenv('EVENT_NAME','push'))

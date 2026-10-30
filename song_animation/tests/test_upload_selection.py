@@ -4,6 +4,34 @@ from unittest.mock import patch
 from song_animation.select_inputs import select
 
 class UploadSelection(unittest.TestCase):
+    def test_scheduled_retry_skips_cleared_source_and_picks_pending_upload(self):
+        from song_animation.completion import source_hash
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);inputs=root/'song_animation/inputs';inputs.mkdir(parents=True)
+            (inputs/'a.m4a').write_bytes(b'finished');(inputs/'b.m4a').write_bytes(b'pending')
+            (root/'song_animation/queue_config.json').write_text(json.dumps({'baseline_commit':'baseline'}))
+            done=root/'song_animation/completed';done.mkdir();sha=source_hash(inputs/'a.m4a')
+            (done/(sha+'.json')).write_text(json.dumps({'status':'checks_passed','source_sha256':sha}))
+            diff=subprocess.CompletedProcess([],0,stdout=b'song_animation/inputs/a.m4a\0song_animation/inputs/b.m4a\0',stderr=b'')
+            with patch('song_animation.select_inputs.subprocess.run',return_value=diff):
+                self.assertEqual(select(root,event='schedule'),['song_animation/inputs/b.m4a'])
+
+    def test_draft_cannot_be_marked_complete(self):
+        from song_animation.completion import receipt
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);(root/'status.json').write_text('{"status":"failed"}');(root/'quality_gate.json').write_text('{"passed":false}')
+            with self.assertRaises(ValueError):receipt(root/'audio.m4a',root)
+
+    def test_receipt_requires_the_actual_checked_video_hash(self):
+        from song_animation.completion import receipt,source_hash
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);audio=root/'audio.m4a';audio.write_bytes(b'original audio');video=root/'checked.mp4';video.write_bytes(b'checked bytes')
+            (root/'status.json').write_text('{"status":"checks_passed"}')
+            (root/'quality_gate.json').write_text(json.dumps({'passed':True,'technical':{'video_sha256':source_hash(video)}}))
+            self.assertEqual(receipt(audio,root)['source_sha256'],source_hash(audio))
+            video.write_bytes(b'tampered')
+            with self.assertRaisesRegex(ValueError,'does not match'):receipt(audio,root)
+
     def test_explicit_render_request_selects_the_existing_song_without_reupload(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);audio=root/'song_animation/inputs/my song.m4a';audio.parent.mkdir(parents=True);audio.write_bytes(b'audio')

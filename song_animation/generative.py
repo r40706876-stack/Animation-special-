@@ -35,15 +35,21 @@ Style direction: elegant richly illustrated 2D, song-specific symbolic objects a
 AUDIO ANALYSIS: {json.dumps(lyrics,ensure_ascii=False)}
 MUSIC: {json.dumps(music)}'''
     error=None
+    candidate_path=Path(out)/'story_candidate.json'
+    candidate_key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest()
     for attempt in range(3):
         try:
-            data=generate_json(prompt+('\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.' if error else ''),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True)
+            saved=json.loads(candidate_path.read_text()) if attempt==0 and candidate_path.exists() else {}
+            data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+('\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.' if error else ''),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True)
             plan=compile_storyboard(data,lyrics,fps)
+            candidate_path.write_text(json.dumps({'key':candidate_key,'data':data},ensure_ascii=False))
             critique=generate_json('Evaluate this proposed short song story BEFORE illustration. Does it form one understandable emotional progression, with a subject/relationship, desire, visible event/choice, consequences that carry across shots and an earned ending? Reject a 20..30 second film confined to repeated desk/portrait crops or one staging, even if its prose claims emotional changes. Require at least three visibly distinct narrative setups; new camera zooms do not qualify. Reject a disconnected sequence of lyric-noun pictures, generic state labels with no real event, forced romance/tragedy, unrelated subplots or unexplained prop/identity resets. Do NOT require literal objects for every noun; emotional faithfulness matters. The plot must fit the provided song meaning/mood and be achievable by articulated 2D actions. Return JSON {"valid":boolean,"issues":["specific repair"],"reason":"why this narrative connects or fails"}.\nAUDIO ANALYSIS: '+json.dumps(lyrics,ensure_ascii=False)+'\nSTORY AND SCENES: '+json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False),out=out,tag=f'story_review_{attempt}',prefer_quality=True,require_full_model=True)
             if critique.get('valid') is not True or critique.get('issues')!=[]:raise ValueError('Story does not connect: '+json.dumps(critique.get('issues',[]),ensure_ascii=False))
             plan['story_review']=critique
+            candidate_path.unlink(missing_ok=True)
             return plan
-        except (ValueError,KeyError,TypeError) as e:error=str(e)
+        except (ValueError,KeyError,TypeError) as e:
+            candidate_path.unlink(missing_ok=True);error=str(e)
     raise ValueError('Connected story could not be planned: '+str(error))
 
 def compile_storyboard(data,lyrics,fps=24):

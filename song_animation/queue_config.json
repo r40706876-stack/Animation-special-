@@ -1,0 +1,4 @@
+{
+  "baseline_commit": "46862b4aeec6294fc4f7b409d900c86efd1de6f7",
+  "purpose": "Retry current explicit song requests and future uploads after provider limits reset; completed source hashes are skipped."
+}
