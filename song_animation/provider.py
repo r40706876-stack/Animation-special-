@@ -1,5 +1,5 @@
 """Bounded provider transport; safe diagnostics, no model code execution."""
-import json,os
+import json,os,time
 from pathlib import Path
 
 def parse_object(raw):
@@ -46,19 +46,30 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     if schema:config['responseSchema']=schema
     raw=None
     attempts=[]
-    for model in models[:3]:
-        try:
-            r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
-                headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
-                'generationConfig':config},timeout=max(30,min(180,timeout_seconds)))
-        except requests.RequestException:continue
-        attempts.append({'model':model,'http_status':r.status_code})
-        if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
-        if r.status_code==200:
-            response_parts=(r.json().get('candidates') or [{}])[0].get('content',{}).get('parts',[])
-            raw=''.join(p.get('text','') for p in response_parts if not p.get('thought'))
-            if raw:break
-        print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
+    for model_index,model in enumerate(models[:3]):
+        # One transient retry for the preferred available model. Never spin on
+        # exhausted quota, auth failures or an actually retired model.
+        for retry in range(2 if model_index==0 else 1):
+            try:
+                r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
+                    headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
+                    'generationConfig':config},timeout=max(30,min(180,timeout_seconds)))
+            except requests.RequestException:
+                attempts.append({'model':model,'error':'transport','retry':retry})
+                if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
+                if retry==0 and model_index==0:time.sleep(3);continue
+                break
+            attempts.append({'model':model,'http_status':r.status_code,'retry':retry})
+            if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
+            if r.status_code==200:
+                response_parts=(r.json().get('candidates') or [{}])[0].get('content',{}).get('parts',[])
+                raw=''.join(p.get('text','') for p in response_parts if not p.get('thought'))
+                break
+            print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
+            if r.status_code in (408,500,502,503,504) and retry==0 and model_index==0:
+                time.sleep(3);continue
+            break
+        if raw:break
     if not raw:raise RuntimeError('Planner unavailable after at most three discovered models')
     if out:Path(out,tag+'_response.txt').write_text(raw,encoding='utf-8')
     # Decode exactly the first complete object; trailing prose/duplicate objects

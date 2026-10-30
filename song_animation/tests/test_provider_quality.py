@@ -2,6 +2,19 @@ import os,unittest
 from unittest.mock import patch,Mock
 from song_animation.provider import generate_json
 class QualityModelDiscovery(unittest.TestCase):
+ def test_temporary_503_retries_the_same_available_full_model_once(self):
+  listing=Mock();listing.json.return_value={'models':[{'name':'models/gemini-3-flash-preview','supportedGenerationMethods':['generateContent']}]}
+  busy=Mock(status_code=503);good=Mock(status_code=200);good.json.return_value={'candidates':[{'content':{'parts':[{'text':'{"valid":true}'}]}}]}
+  with patch.dict(os.environ,{'GEMINI_API_KEY':'test-key','GEMINI_MODEL':''}),patch('requests.get',return_value=listing),patch('requests.post',side_effect=[busy,good]) as api,patch('song_animation.provider.time.sleep') as sleep:
+   self.assertTrue(generate_json('continue scene',prefer_quality=True,require_full_model=True)['valid'])
+   self.assertEqual(api.call_count,2);self.assertEqual(api.call_args_list[0].args,api.call_args_list[1].args);sleep.assert_called_once_with(3)
+
+ def test_exhausted_quota_does_not_enter_transient_retry(self):
+  listing=Mock();listing.json.return_value={'models':[{'name':'models/gemini-3-flash-preview','supportedGenerationMethods':['generateContent']}]}
+  with patch.dict(os.environ,{'GEMINI_API_KEY':'test-key','GEMINI_MODEL':''}),patch('requests.get',return_value=listing),patch('requests.post',return_value=Mock(status_code=429)) as api,patch('song_animation.provider.time.sleep') as sleep:
+   with self.assertRaises(RuntimeError):generate_json('continue scene',prefer_quality=True,require_full_model=True)
+   self.assertEqual(api.call_count,1);sleep.assert_not_called()
+
  def test_quality_request_can_use_discovered_pro_model(self):
   listing=Mock();listing.json.return_value={'models':[{'name':'models/gemini-2.5-pro','supportedGenerationMethods':['generateContent']},{'name':'models/gemini-3.5-flash-lite','supportedGenerationMethods':['generateContent']}]}
   response=Mock(status_code=200);response.json.return_value={'candidates':[{'content':{'parts':[{'text':'{"valid":true}'}]}}]}

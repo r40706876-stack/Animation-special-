@@ -165,6 +165,7 @@ ACTUAL SUNG WORDS IN THIS TIME INTERVAL: {json.dumps(shot_phrases(plan,shot),ens
 Preserve the emotional meaning of the actual words while staging THIS part of the connected story. Do not insert a literal object for every noun. Render the promised carried state, interaction and reaction from this shot story, then its consequence; preserve the previous shot identity/props. The viewer should understand what changes because of this phrase, even with captions hidden. Avoid a generic stationary person. For lyrical metaphors, animate the metaphor itself through a clear causal change. Use large, beautifully drawn organic artwork with curved contours, ink detail and restrained shading rather than tiny geometric tokens.
 AVAILABLE REUSABLE ASSETS: {json.dumps(reusable,ensure_ascii=False)}
 {ART_GUIDE}
+{('PAINTED SET BACKEND: The environment will be painted separately from this exact song-specific setting. Do not draw full-canvas scenery or background artwork. Return a bright plain background colour and concentrate 3..8 original assets on beautiful expressive actors, hands, props and their articulated causal motion. Do not leave out characters or story props. The shared setting is still essential for correct perspective and staging.' if plan.get('art_backend') in ('painted-sets','painted-layers') else '')}
 JSON shape: {{"background":"#RRGGBB","assets":[{{"id":"unique_safe_id","description":"what this artwork depicts","width":180,"height":260,"reusable":true,"svg":"<svg ...>...</svg>"}}],"nodes":[{{"id":"hero_body","asset":"asset_id","parent":null,"role":"foreground","pivot":[0.5,0.8],"easing":"smooth","keys":[{{"t":0,"x":270,"y":550,"rotation":0,"scale":1,"opacity":1}},{{"t":1,"x":300,"y":530,"rotation":0,"scale":1,"opacity":1}}],"wave":{{"rotation":0,"x":0,"y":0,"cycles":1,"phase":0}}}}]}}.
 Use about 5..14 nodes, no more than 24. PREFER parent=null and animate each part in CANVAS coordinates, including heads and arms. This avoids accidental double translations. If parenting is necessary, child x/y MUST be SMALL LOCAL OFFSETS from its parent pivot (e.g. head x=0,y=-100, NEVER x=270,y=480 for a parent already at 270,580). Parent must appear BEFORE child. A group node may have asset=null with children. Node x/y are its PIVOT position in canvas pixels, or relative to the parent pivot when parent exists. Rotation is degrees around its pivot; scale is uniform. Keys at normalized shot time t=0..1, 2..8 ordered keys, MUST start at 0 and end at 1. Each key has x,y,rotation,scale,opacity. Scale must be 0.05..4 (never zero); opacity 0..1. Use opacity=0 for invisible endpoints. Decorative symbols must use paths, never SVG text or font attributes. Wave adds optional sinusoidal x/y/rotation movement, cycles per shot, phase in cycles. Keep amplitudes small/readable. At least TWO foreground assets need INDEPENDENT object/limb movement, not identical whole-picture pans. Animate the story action (handing, walking, bowing, dancing, a machine operating, water flowing, flight, etc.) with appropriate parts and trajectories. Background movement or camera zoom does not satisfy this. Static environment layers are fine. Art fills the frame and the main subject must remain legible at phone size. Do not place faces in the lyric safe area. Nodes have role=background or foreground only.
 At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose clear curves and rich detail over hundreds of tiny shapes. Reuse an existing id without redefining it, or return its IDENTICAL SVG. New pose variant must have a new id. Do not draw text or watermarks. SVG artwork must be static: no animate, animateTransform, animateMotion or set tags. All real motion belongs in node keys/waves. All geometry and ids must be valid. Avoid clipping the main action. Asset dimensions 4..1080 wide, 4..1920 tall.'''
@@ -221,15 +222,16 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
     raise ValueError(f'Custom shot {index+1} could not be generated: {error}')
 
 
-def build(lyrics,music,out):
+def build(lyrics,music,out,artwork='vector'):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     checkpoint=out/'vector_checkpoint.json'
-    key=hashlib.sha256((PROTOCOL+json.dumps([lyrics,music],sort_keys=True,ensure_ascii=False)).encode()).hexdigest()
+    key=hashlib.sha256((PROTOCOL+artwork+json.dumps([lyrics,music],sort_keys=True,ensure_ascii=False)).encode()).hexdigest()
     if checkpoint.exists() and (out/'storyboard.json').exists() and json.loads(checkpoint.read_text()).get('key')==key:
         plan=json.loads((out/'storyboard.json').read_text())
     else:
         plan=storyboard(lyrics,music,out)
         checkpoint.write_text(json.dumps({'key':key}))
+    plan['art_backend']=artwork
     (out/'storyboard.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
     for i in range(len(plan['scenes'])):
         print(f'Generating custom illustrated shot {i+1}/{len(plan["scenes"])}',flush=True)

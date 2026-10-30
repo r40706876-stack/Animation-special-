@@ -60,7 +60,7 @@ def main():
         music=music_features(clip,out)
         if args.engine=='generated':
             from .generative import build
-            plan=build(lyrics,music,out)
+            plan=build(lyrics,music,out,artwork=args.artwork)
         else:
             from .director import make_plan
             from .local_director import local_plan
