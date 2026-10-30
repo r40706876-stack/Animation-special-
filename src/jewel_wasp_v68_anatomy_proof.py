@@ -1,4 +1,4 @@
-"""V6.8.20 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.21 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -533,13 +533,48 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     and os.environ.get("V68_MOTION","0")!="1"
     and os.environ.get("V68_STILL_FRAME","24")=="48"):
     scene.frame_set(48)
-    contact_focus=wasp.matrix_world @ Vector((-.20,0,-.22))
+    contact_focus=wasp.matrix_world @ Vector((-.20,0,-.18))
     camera.animation_data_clear()
     camera_data.animation_data_clear()
-    camera.location=contact_focus+Vector((1.15,-2.85,.62))
+    # The previous 0.62m rise looked below the infinite soil plane at the
+    # bottom of the portrait frame (large black band in actual V6.8.20 still).
+    # Raise the lens while keeping a near-ground, tarsus-visible oblique view.
+    camera.location=contact_focus+Vector((1.05,-2.65,1.08))
     camera.rotation_euler=(contact_focus-camera.location).to_track_quat("-Z","Y").to_euler()
-    camera_data.ortho_scale=2.75
-    print("V68_TOUCHDOWN_LOW_ANGLE_DIAGNOSTIC_ONLY", flush=True)
+    camera_data.ortho_scale=2.40
+    print("V68_TOUCHDOWN_OBLIQUE_NO_UNDERGROUND_CAMERA", flush=True)
+
+# Independent numeric contact gate: check actual animated mesh vertices in
+# world coordinates, not only a low-angle image. Tarsi may not float above
+# the soil or penetrate it deeply at the final touchdown frame.
+# This is a geometry-only gate, NOT proof of natural insect locomotion.
+if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
+    and os.environ.get("V68_MOTION","0")!="1"
+    and os.environ.get("V68_STILL_FRAME","24")=="48"):
+    ground_z=earth.location.z
+    foot_meshes=[o for o in bpy.data.objects
+                 if o.type=="MESH" and o.name.startswith("wasp tarsus ")]
+    assert len(foot_meshes)==6, "Expected six distinct wasp tarsi"
+    def foot_bottoms(frame):
+        scene.frame_set(frame)
+        bpy.context.view_layer.update()
+        return [min((o.matrix_world @ v.co).z for v in o.data.vertices)
+                for o in foot_meshes]
+    initial_z=foot_bottoms(1)
+    final_z=foot_bottoms(48)
+    gaps=[round(z-ground_z,4) for z in final_z]
+    print("V68_TOUCHDOWN_TARSUS_GAPS_METERS", gaps, flush=True)
+    print("V68_INITIAL_TARSUS_GAPS_METERS",
+          [round(z-ground_z,4) for z in initial_z], flush=True)
+    grounded=sum(abs(g)<=.055 for g in gaps)
+    no_deep_penetration=min(gaps)>=-.055
+    initial_airborne=min(initial_z)-ground_z>.065
+    print("V68_TOUCHDOWN_GEOMETRY", "PASS" if (
+          grounded>=2 and no_deep_penetration and initial_airborne
+          ) else "FAIL", "grounded", grounded, flush=True)
+    assert grounded>=2 and no_deep_penetration and initial_airborne, (
+        "Wasp touchdown geometry failed; adjust root/tarsi and rerender proof")
+    scene.frame_set(48)
 
 output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
 motion=os.environ.get("V68_MOTION","0")=="1"
