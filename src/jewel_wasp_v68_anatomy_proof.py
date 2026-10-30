@@ -1,4 +1,4 @@
-"""V6.8.19 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.20 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -524,6 +524,22 @@ if os.environ.get("V68_SHOT","").lower()=="wasp_macro":
         camera.keyframe_insert(data_path="location",frame=f)
         camera.keyframe_insert(data_path="rotation_euler",frame=f)
         camera_data.keyframe_insert(data_path="ortho_scale",frame=f)
+
+# The previous touchdown still reused an elevated camera: a tarsus near the
+# ground was visually indistinguishable from a hovering tarsus. For the
+# independent frame-48 STILL only, use a low oblique diagnostic angle.
+# Do not change the 24-frame macro motion or its animated camera.
+if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
+    and os.environ.get("V68_MOTION","0")!="1"
+    and os.environ.get("V68_STILL_FRAME","24")=="48"):
+    scene.frame_set(48)
+    contact_focus=wasp.matrix_world @ Vector((-.20,0,-.22))
+    camera.animation_data_clear()
+    camera_data.animation_data_clear()
+    camera.location=contact_focus+Vector((1.15,-2.85,.62))
+    camera.rotation_euler=(contact_focus-camera.location).to_track_quat("-Z","Y").to_euler()
+    camera_data.ortho_scale=2.75
+    print("V68_TOUCHDOWN_LOW_ANGLE_DIAGNOSTIC_ONLY", flush=True)
 
 output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
 motion=os.environ.get("V68_MOTION","0")=="1"
