@@ -1,0 +1,49 @@
+name: Song full-model access check
+on:
+  push:
+    branches: ['main']
+    paths: ['.github/workflows/song_text_access_probe.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: |
+          python - <<'PY'
+          import os,json,re
+          from pathlib import Path
+          import requests
+          key=os.environ['GEMINI_API_KEY'];headers={'x-goog-api-key':key}
+          listing=requests.get('https://generativelanguage.googleapis.com/v1beta/models',headers=headers,params={'pageSize':1000},timeout=25)
+          listing.raise_for_status()
+          models=[m['name'].removeprefix('models/') for m in listing.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and any(s in m['name'] for s in ('flash','pro')) and not any(s in m['name'] for s in ('lite','image','tts','audio','live','robotics'))]
+          def order(name):
+              match=re.search(r'gemini-(\\d+(?:\\.\\d+)?)',name)
+              return float(match.group(1)) if match else 0
+          models=sorted(set(models),key=order,reverse=True)
+          chosen=list(dict.fromkeys(models[:2]+models[-2:]+models[2:-2]))[:8]
+          report={'discovered_full_models':models,'probes':[]}
+          for model in chosen:
+              try:
+                  r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',headers=headers,json={'contents':[{'parts':[{'text':'Return only JSON: {"valid":true}'}]}],'generationConfig':{'responseMimeType':'application/json','maxOutputTokens':256,'temperature':0}},timeout=30)
+                  item={'model':model,'http_status':r.status_code}
+                  if r.status_code==200:item['text_available']=bool((r.json().get('candidates') or [{}])[0].get('content',{}).get('parts'))
+              except requests.RequestException as e:item={'model':model,'error_type':type(e).__name__}
+              report['probes'].append(item)
+              print(json.dumps(item),flush=True)
+          Path('model_access.json').write_text(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-full-model-access
+          path: model_access.json
+          retention-days: 7
