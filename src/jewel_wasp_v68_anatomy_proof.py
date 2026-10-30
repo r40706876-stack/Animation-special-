@@ -1,4 +1,4 @@
-"""V6.8.21 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.22 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -453,7 +453,7 @@ for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
     landing=smoothstep((t-.46)/.54)
     wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),
-                   .50+.16*math.sin(math.pi*t)-.295*landing)
+                   .50+.16*math.sin(math.pi*t)-.253*landing)
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.rotation_euler.x=.065*math.sin(2*math.pi*t)
@@ -566,42 +566,48 @@ if (os.environ.get("V68_SHOT","").lower()=="wasp_macro"
     print("V68_TOUCHDOWN_TARSUS_GAPS_METERS", gaps, flush=True)
     print("V68_INITIAL_TARSUS_GAPS_METERS",
           [round(z-ground_z,4) for z in initial_z], flush=True)
-    grounded=sum(abs(g)<=.055 for g in gaps)
-    no_deep_penetration=min(gaps)>=-.055
+    # Anatomically meaningful tripod contact: at least three tarsi within 2.5cm of soil.
+    grounded=sum(abs(g)<=.025 for g in gaps)
+    no_deep_penetration=min(gaps)>=-.025
     initial_airborne=min(initial_z)-ground_z>.065
     print("V68_TOUCHDOWN_GEOMETRY", "PASS" if (
-          grounded>=2 and no_deep_penetration and initial_airborne
+          grounded>=3 and no_deep_penetration and initial_airborne
           ) else "FAIL", "grounded", grounded, flush=True)
-    assert grounded>=2 and no_deep_penetration and initial_airborne, (
+    assert grounded>=3 and no_deep_penetration and initial_airborne, (
         "Wasp touchdown geometry failed; adjust root/tarsi and rerender proof")
     scene.frame_set(48)
 
-output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
-motion=os.environ.get("V68_MOTION","0")=="1"
-# A 24-frame close-up must show the ENTIRE approach-to-touchdown, not just
-# source frames 1-24 (which ended while the insect was still hovering).
-# Preserve the 48-frame master animation and compress only short motion proofs.
-if motion and scene.frame_end == 24:
-    factor=(scene.frame_end-1)/47.0
-    for action in bpy.data.actions:
-        for fc in action.fcurves:
-            for key in fc.keyframe_points:
-                key.co.x=1+(key.co.x-1)*factor
-                key.handle_left.x=1+(key.handle_left.x-1)*factor
-                key.handle_right.x=1+(key.handle_right.x-1)*factor
-            fc.update()
-    print("V68_MACRO_FULL_ACTION_RETIMED_48_TO_24", flush=True)
-if motion:
-    scene.render.image_settings.file_format="FFMPEG"
-    scene.render.ffmpeg.format="MPEG4"
-    scene.render.ffmpeg.codec="H264"
-    scene.render.ffmpeg.constant_rate_factor="MEDIUM"
-    scene.render.filepath=output
-    bpy.ops.render.render(animation=True)
+# Fast numerical preflight avoids rerendering successful motion artifacts when
+# the grounded-foot geometry is invalid. Full diagnostic still remains mandatory.
+if os.environ.get("V68_GEOMETRY_ONLY","0")=="1":
+    print("V68_TOUCHDOWN_GEOMETRY_PREFLIGHT_PASS",flush=True)
 else:
-    scene.render.resolution_x=540
-    scene.render.resolution_y=960
-    scene.frame_set(int(os.environ.get("V68_STILL_FRAME","24")))
-    scene.render.filepath=output
-    bpy.ops.render.render(write_still=True)
-print("JEWEL_V68_ANATOMY_RENDER_DONE", "motion" if motion else "still")
+    output=os.environ.get("BLENDER_OUTPUT","/tmp/jewel_wasp_v68_anatomy.png")
+    motion=os.environ.get("V68_MOTION","0")=="1"
+    # A 24-frame close-up must show the ENTIRE approach-to-touchdown, not just
+    # source frames 1-24 (which ended while the insect was still hovering).
+    # Preserve the 48-frame master animation and compress only short motion proofs.
+    if motion and scene.frame_end == 24:
+        factor=(scene.frame_end-1)/47.0
+        for action in bpy.data.actions:
+            for fc in action.fcurves:
+                for key in fc.keyframe_points:
+                    key.co.x=1+(key.co.x-1)*factor
+                    key.handle_left.x=1+(key.handle_left.x-1)*factor
+                    key.handle_right.x=1+(key.handle_right.x-1)*factor
+                fc.update()
+        print("V68_MACRO_FULL_ACTION_RETIMED_48_TO_24", flush=True)
+    if motion:
+        scene.render.image_settings.file_format="FFMPEG"
+        scene.render.ffmpeg.format="MPEG4"
+        scene.render.ffmpeg.codec="H264"
+        scene.render.ffmpeg.constant_rate_factor="MEDIUM"
+        scene.render.filepath=output
+        bpy.ops.render.render(animation=True)
+    else:
+        scene.render.resolution_x=540
+        scene.render.resolution_y=960
+        scene.frame_set(int(os.environ.get("V68_STILL_FRAME","24")))
+        scene.render.filepath=output
+        bpy.ops.render.render(write_still=True)
+    print("JEWEL_V68_ANATOMY_RENDER_DONE", "motion" if motion else "still")

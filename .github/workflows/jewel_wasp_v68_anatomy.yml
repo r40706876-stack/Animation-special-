@@ -28,6 +28,12 @@ jobs:
           sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
       - name: Syntax check clean-room source
         run: python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py
+      - name: Preflight grounded-foot geometry before expensive renders
+        run: |
+          set -euo pipefail
+          V68_SHOT=wasp_macro V68_STILL_FRAME=48 V68_GEOMETRY_ONLY=1 xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_anatomy_proof.py > /tmp/v68_geometry.log 2>&1 || { tail -n 100 /tmp/v68_geometry.log; exit 1; }
+          grep -q "V68_TOUCHDOWN_GEOMETRY PASS" /tmp/v68_geometry.log
+          grep -q "V68_TOUCHDOWN_GEOMETRY_PREFLIGHT_PASS" /tmp/v68_geometry.log
       - name: Render specimen still
         run: |
           set -euo pipefail
