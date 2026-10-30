@@ -58,7 +58,7 @@ def validate_vector(plan):
             pivot=node.get('pivot',[.5,.5])
             if not isinstance(pivot,list) or len(pivot)!=2 or not all(finite(v,0,1) for v in pivot):raise ValueError('Invalid pivot')
             keys=node.get('keys',[])
-            if not 2<=len(keys)<=10 or keys[0].get('t')!=0 or keys[-1].get('t')!=1:raise ValueError('Keyframes must cover 0..1')
+            if not 2<=len(keys)<=12 or keys[0].get('t')!=0 or keys[-1].get('t')!=1:raise ValueError('Keyframes must cover 0..1')
             prev=-1
             for k in keys:
                 if not finite(k.get('t'),0,1) or k['t']<=prev:raise ValueError('Unordered keyframes')

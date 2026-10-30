@@ -79,6 +79,15 @@ def normalize_package(data):
                 asset['svg']=ET.tostring(root,encoding='unicode')
                 changes.append({'asset':asset.get('id'),'removed_decorative_text':removed})
     for node in data.get('nodes',[]):
+        keys=node.get('keys',[])
+        ts=[k.get('t') for k in keys]
+        if keys and len(keys)<=10 and all(type(t) in (int,float) and math.isfinite(t) and 0<=t<=1 for t in ts) and ts==sorted(set(ts)):
+            if ts[0]>0:
+                keys.insert(0,dict(keys[0],t=0))
+                changes.append({'node':node.get('id'),'held_first_pose_from':0})
+            if ts[-1]<1:
+                keys.append(dict(keys[-1],t=1))
+                changes.append({'node':node.get('id'),'held_last_pose_until':1})
         for key in node.get('keys',[]):
             if key.get('scale')==0 and key.get('opacity')==0:
                 key['scale']=.05

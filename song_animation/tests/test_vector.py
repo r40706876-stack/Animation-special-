@@ -102,3 +102,13 @@ class GeneratedRecovery(unittest.TestCase):
         for i,n in enumerate(scene['nodes']):
             n['wave']={};a=copy.deepcopy(n['keys'][0]);n['keys']=[dict(a,t=0),dict(a,t=.5,y=a.get('y',0)+2+i*.25),dict(a,t=1)]
         validate_vector(p)
+
+    def test_missing_key_endpoints_hold_the_existing_poses(self):
+        from song_animation.generative import normalize_package
+        start={'t':.2,'x':10,'y':20,'opacity':0,'scale':1}
+        end={'t':.8,'x':20,'y':30,'opacity':1,'scale':1}
+        data=normalize_package({'nodes':[{'id':'note','keys':[start,end]}]})
+        keys=data['nodes'][0]['keys']
+        self.assertEqual([k['t'] for k in keys],[0,.2,.8,1])
+        self.assertEqual(keys[0],dict(start,t=0))
+        self.assertEqual(keys[-1],dict(end,t=1))
