@@ -145,6 +145,11 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             if hidden:raise ValueError("Foreground layers never enter the frame: "+str(hidden)+". Prefer parent=null and CANVAS coordinates; parented children must use local offsets, never repeated canvas positions.")
             from .vector import render_vector
             import numpy as np
+            frames=[int((check['total_frames']-1)*q) for q in (.1,.45,.8)]
+            samples=[np.asarray(render_vector(check,0,f).resize((135,240)),dtype=np.float32) for f in frames]
+            delta=max(float(np.abs(samples[0]-x).mean()) for x in samples[1:])
+            if delta<.2:
+                raise ValueError('Actual rendered object motion is too small to read. Increase independent foreground limb/prop motion while keeping parts connected; camera movement does not count.')
             sample=render_vector(check,0,check['total_frames']//2)
             sample.save(folder/f'preflight_{index}.png')
             luminance=float(np.asarray(sample.convert('L')).mean())

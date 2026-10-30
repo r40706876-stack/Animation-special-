@@ -112,3 +112,21 @@ class GeneratedRecovery(unittest.TestCase):
         self.assertEqual([k['t'] for k in keys],[0,.2,.8,1])
         self.assertEqual(keys[0],dict(start,t=0))
         self.assertEqual(keys[-1],dict(end,t=1))
+
+    def test_unreadable_rendered_motion_repairs_before_package_is_cached(self):
+        from unittest.mock import patch
+        from PIL import Image
+        from song_animation.generative import scene_package
+        from song_animation.vector import render_vector as real_render
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text());p['bible']={'style':'daylight'}
+        for s in p['scenes']:s.update(visual=s['label'],action='independent movement')
+        data={'background':p['scenes'][0]['background'],'assets':[dict(v,id=k) for k,v in p['assets'].items()],'nodes':p['scenes'][0]['nodes']}
+        calls=[0]
+        def sampled(plan,index,frame):
+            calls[0]+=1
+            return Image.new('RGB',(540,960),'white') if calls[0]<=3 else real_render(plan,index,frame)
+        with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',return_value=data) as api,patch('song_animation.vector.render_vector',side_effect=sampled):
+            scene,assets=scene_package(p,0,td,{})
+            self.assertEqual(api.call_count,2)
+            self.assertTrue(list((Path(td)/'vector_assets').glob('scene_*.json')))
+
