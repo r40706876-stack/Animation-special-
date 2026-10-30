@@ -1,0 +1,31 @@
+name: Song CPU Artwork Experiment
+on:
+  push:
+    branches: ['main', 'feature/song-animation-*']
+    paths: ['song_animation/cpu_art_probe.py', '.github/workflows/song_cpu_art_probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu-art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      HF_HUB_DISABLE_XET: '1'
+      HF_HUB_DOWNLOAD_TIMEOUT: '120'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU-only inference dependencies
+        run: |
+          pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install 'numpy<2' 'diffusers==0.32.2' 'transformers==4.48.3' 'accelerate==1.2.1' 'huggingface_hub>=0.26,<0.31' safetensors Pillow
+      - run: python -m song_animation.cpu_art_probe
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: song-cpu-art-experiment-${{ github.run_id }}
+          path: cpu_art_probe/
+          retention-days: 7

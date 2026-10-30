@@ -21,9 +21,9 @@ def scarred_heart(t,count=4,base=0):
  for j,(x,y,x2,y2) in enumerate(sites):
   q=max(0,min(1,count-j))
   if not q:continue
-  pts=curve([(w*x,h*y),(w*(x+.1),h*(y-.03)),(w*(x2-.06),h*(y2+.03)),(w*x2,h*y2)],50);n=max(2,int(q*50));d.line(pts[:n],fill='#732e3a',width=3);d.line([(xx,yy+2) for xx,yy in pts[:n]],fill='#f9d5bb',width=1)
+  pts=curve([(w*x,h*y),(w*(x+.1),h*(y-.03)),(w*(x2-.06),h*(y2+.03)),(w*x2,h*y2)],50);n=max(2,int(q*50));d.line(pts[:n],fill='#612d36',width=7);d.line([(xx,yy-1) for xx,yy in pts[:n]],fill='#fae0c4',width=3)
   for k in range(6,n,8):
-   xx,yy=pts[k];d.line((xx-2,yy+4,xx+3,yy-3),fill='#683743',width=1)
+   xx,yy=pts[k];d.line((xx-3,yy+5,xx+4,yy-5),fill='#683743',width=2)
  return a
 
 def heart_scene(t,reprise=False):
