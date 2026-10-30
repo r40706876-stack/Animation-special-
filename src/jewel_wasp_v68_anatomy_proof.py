@@ -1,4 +1,4 @@
-"""V6.8.17 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.18 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -442,27 +442,51 @@ for frame,focus,scale in [(1,-.04,5.95),(12,-.02,5.90),
     camera_data.keyframe_insert(data_path="ortho_scale",frame=frame)
 # A legible two-second action: approach, hovering lift and leg/antenna response.
 # Preserve enough clearance for anatomy inspection; this is NOT a sting shot.
+def smoothstep(v):
+    v=max(0.0,min(1.0,v))
+    return v*v*(3.0-2.0*v)
+
+# A two-second approach-to-touchdown diagnostic, not a fabricated sting.
+# At frame 48, the scaled tarsi reach the soil; earlier proofs ended with
+# the wasp hovering far above the ground and could not evaluate leg contact.
 for f in (1,7,13,19,25,31,37,43,48):
     t=(f-1)/47
-    wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),.43+.33*math.sin(math.pi*t))
+    landing=smoothstep((t-.46)/.54)
+    wasp.location=(-.90+.62*t,-.18+.06*math.sin(math.pi*t),
+                   .50+.16*math.sin(math.pi*t)-.295*landing)
     wasp.keyframe_insert(data_path="location",frame=f)
     wasp.rotation_euler.z=-.16+.13*t
     wasp.rotation_euler.x=.065*math.sin(2*math.pi*t)
     wasp.rotation_euler.y=.095*math.sin(2*math.pi*t)
     wasp.keyframe_insert(data_path="rotation_euler",frame=f)
-    roach.location=(.84-.19*t,.20,.20+.024*math.sin(math.pi*3*t))
+    # Cockroach tarsi, too, should meet the floor instead of levitating.
+    roach.location=(.84-.19*t,.20,.15+.012*math.sin(math.pi*3*t))
     roach.keyframe_insert(data_path="location",frame=f)
     roach.rotation_euler.z=math.pi+.05*math.sin(math.pi*2*t)
     roach.keyframe_insert(data_path="rotation_euler",frame=f)
 for obj in list(bpy.data.objects):
     if obj.name.startswith(("wasp gait pivot","roach gait pivot")):
-        # Rotate the entire articulated leg from its hip, not isolated femur
-        # and tibia meshes around their centers (which visibly disconnected joints).
-        phase=(sum(ord(c) for c in obj.name)%7)*.67
-        amplitude=.20 if obj.name.startswith("roach") else .29
-        for f in (1,7,13,19,25,31,37,43,48):
-            obj.rotation_euler.y=amplitude*math.sin((f-1)*.29+phase)
-            obj.rotation_euler.z=.11*math.cos((f-1)*.29+phase)
+        # Alternating tripods, not six unrelated hash-based phases. Wasp
+        # leg swing increases only as it approaches ground contact.
+        side,leg=map(int,obj.name.split()[-2:])
+        phase=0.0 if (leg+(1 if side>0 else 0))%2==0 else math.pi
+        is_wasp=obj.name.startswith("wasp")
+        for f in list(range(1,49,3))+[48]:
+            t=(f-1)/47
+            contact=smoothstep((t-.46)/.54)
+            amplitude=(.06+.12*contact) if is_wasp else .19
+            cycle=(f-1)*.36+phase
+            obj.rotation_euler.y=amplitude*math.sin(cycle)
+            obj.rotation_euler.z=(.025+.045*contact if is_wasp else .075)*math.cos(cycle)
+            obj.keyframe_insert(data_path="rotation_euler",frame=f)
+    if obj.name.startswith("wing hinge"):
+        # Visible flight beats decelerate and settle during landing.
+        # Overwrite the initial per-frame wing keys with a landing envelope.
+        side,hind=map(int,obj.name.split()[-2:])
+        for f in range(1,49):
+            contact=smoothstep(((f-1)/47-.55)/.45)
+            obj.rotation_euler.x=side*(.14+(1-contact)*.48*math.sin(f*1.32+hind*.65))
+            obj.rotation_euler.y=contact*(.12 if hind==0 else .07)
             obj.keyframe_insert(data_path="rotation_euler",frame=f)
     if obj.name.startswith("roach filiform antenna"):
         for f in (1,13,25,37,48):
