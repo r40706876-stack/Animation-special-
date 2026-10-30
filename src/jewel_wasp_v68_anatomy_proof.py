@@ -1,4 +1,4 @@
-"""V6.8 clean-room insect anatomy/rig proof, NOT a film approval.
+"""V6.8.13 clean-room insect anatomy/rig proof, NOT a film approval.
 Independent of V4/V5/V6 scene mutations; keep all prior artifacts untouched.
 Renders one 48-frame 24-fps portrait motion proof and a still. This is an
 anatomy-first gate before spending runner hours on 14 chapters.
@@ -101,7 +101,7 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     verts=[];faces=[];nx=15;ny=10
     for i in range(nx+1):
         t=i/nx
-        width=halfwidth*(.15+.85*math.sin(math.pi*t)**.72)
+        width=halfwidth*(.04+.96*math.sin(math.pi*t)**.72)
         for j in range(ny+1):
             s=2*j/ny-1
             verts.append((x0+(x1-x0)*t,ycenter+s*width,
@@ -113,13 +113,13 @@ def shield(name, x0,x1, ycenter, halfwidth, zbase, lift, mat, parent):
     obj=bpy.data.objects.new(name,mesh);scene.collection.objects.link(obj)
     obj.parent=parent;mesh.materials.append(mat)
     for f in mesh.polygons:f.use_smooth=True
-    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.012
+    sol=obj.modifiers.new("thin organic shell","SOLIDIFY");sol.thickness=.004
     return obj
 
 wasp=root("ANATOMY_WASP_ROOT",(-.68,-.18,.43),-.10)
 # Scale both complete insect rigs to fit the narrow 9:16 composition.
 wasp.scale=(.78,.78,.78)
-ell("wasp head",(.39,0,.05),(.148,.133,.109),emerald,wasp)
+ell("wasp head",(.39,0,.05),(.130,.114,.097),emerald,wasp)
 ell("wasp thorax",(.11,0,.06),(.270,.166,.151),blue,wasp)
 ell("wasp petiole",(-.17,0,.03),(.18,.075,.075),dark,wasp)
 # One continuous spindle-shaped gaster, not six visibly separate toy beads.
@@ -147,9 +147,9 @@ mesh.materials.append(emerald);mesh.materials.append(blue);mesh.materials.append
 for face in mesh.polygons:
     face.use_smooth=True
     axial=face.index//around
-    face.material_index=2 if axial in (8,15,22,29,36) else (0 if axial<23 else 1)
+    face.material_index=1 if axial in (8,15,22,29,36) else (0 if axial<23 else 1)
 for s in (-1,1):
-    ell("wasp eye %d"%s,(.443,s*.114,.074),(.045,.018,.050),eye,wasp)
+    ell("wasp eye %d"%s,(.443,s*.114,.074),(.030,.014,.036),eye,wasp)
     curve("wasp geniculate antenna %d"%s,
         [(.50,s*.07,.12),(.63,s*.12,.19),(.71,s*.17,.19),(.80,s*.18,.13)],
         .007,dark,wasp)
@@ -164,7 +164,7 @@ for s in (-1,1):
         gait=root("wasp gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=wasp;gait.location=hip
         taper("wasp coxa %d %d"%(s,leg),(0,0,0),knee-hip,.036,.022,leg_amber,gait)
-        ell("wasp joint %d %d"%(s,leg),knee-hip,(.033,.033,.033),dark,gait)
+        ell("wasp joint %d %d"%(s,leg),knee-hip,(.021,.021,.021),dark,gait)
         taper("wasp tibia %d %d"%(s,leg),knee-hip,ankle-hip,.019,.008,leg_amber,gait)
         taper("wasp tarsus %d %d"%(s,leg),ankle-hip,
               ankle-hip+Vector((.09,s*.025,-.02)),.009,.002,dark,gait)
@@ -196,7 +196,7 @@ abd_verts=[];abd_faces=[];abd_rings=42;abd_sides=24
 for i in range(abd_rings):
     t=i/(abd_rings-1)
     x=-.75+1.13*t
-    profile=max(.025,math.sin(math.pi*(.07+.86*t))**.52)
+    profile=max(.006,math.sin(math.pi*(.01+.98*t))**.52)
     ry=.285*profile*(1+.06*math.sin(math.pi*t))
     rz=.119*profile
     for j in range(abd_sides):
@@ -206,6 +206,9 @@ for i in range(abd_rings-1):
     for j in range(abd_sides):
         k=i*abd_sides+j;kn=i*abd_sides+(j+1)%abd_sides
         abd_faces.append((k,kn,kn+abd_sides,k+abd_sides))
+# Close the two abdomen ends: the V6.8.12 macro exposed an open ring.
+abd_faces.append(tuple(reversed(range(abd_sides))))
+abd_faces.append(tuple((abd_rings-1)*abd_sides+j for j in range(abd_sides)))
 abd_mesh=bpy.data.meshes.new("roach continuous cuticular abdomen mesh")
 abd_mesh.from_pydata(abd_verts,[],abd_faces);abd_mesh.update()
 abd_obj=bpy.data.objects.new("roach continuous abdomen",abd_mesh)
@@ -217,7 +220,7 @@ for polygon in abd_mesh.polygons:
     polygon.material_index=1 if axial in (7,13,19,25,31,37) else 0
 ell("roach pronotum",(.43,0,.086),(.230,.210,.050),bronze,roach)
 ell("roach tucked head",(.56,0,.007),(.111,.101,.061),brown,roach)
-ell("roach pronotal dark marking",(.425,0,.157),(.118,.095,.004),brown,roach)
+ell("roach pronotal dark marking",(.425,0,.157),(.095,.068,.003),brown,roach)
 for s in (-1,1):
     curve("roach rear cercus %d"%s,
           [(-.63,s*.12,-.05),(-.79,s*.19,-.07),(-.91,s*.25,-.09)],
@@ -242,16 +245,16 @@ for s in (-1,1):
         foot=Vector((x+.23-leg*.18,s*.53,-.27))
         gait=root("roach gait pivot %d %d"%(s,leg),(0,0,0))
         gait.parent=roach;gait.location=hip
-        taper("roach femur %d %d"%(s,leg),(0,0,0),femur-hip,.040,.018,brown,gait)
-        ell("roach knee %d %d"%(s,leg),femur-hip,(.035,.035,.035),dark,gait)
-        taper("roach tibia %d %d"%(s,leg),femur-hip,foot-hip,.019,.006,brown,gait)
+        taper("roach femur %d %d"%(s,leg),(0,0,0),femur-hip,.027,.015,brown,gait)
+        ell("roach knee %d %d"%(s,leg),femur-hip,(.020,.020,.020),dark,gait)
+        taper("roach tibia %d %d"%(s,leg),femur-hip,foot-hip,.013,.005,brown,gait)
         for spike in range(4):
             t=(spike+1)/5
             p=(femur-hip).lerp(foot-hip,t)
             taper("roach tibial spine",p,
                   p+Vector((-.04,s*.035,.015)),.007,.001,dark,gait)
         taper("roach tarsus",foot-hip,
-              foot-hip+Vector((.13,s*.03,-.01)),.010,.002,dark,gait)
+              foot-hip+Vector((.09,s*.03,-.01)),.007,.002,dark,gait)
 
 # Organic leaf silhouettes, subdued debris and background-only vegetation.
 # No tall foreground sticks should bisect the two specimens.
@@ -274,7 +277,7 @@ def leaf_blade(name,center,length,width,heading,material_ref):
             across=side*w
             x=center[0]+along*math.cos(heading)-across*math.sin(heading)
             y=center[1]+along*math.sin(heading)+across*math.cos(heading)
-            z=center[2]+.015*math.sin(math.pi*t)+.005*side
+            z=center[2]+.042*math.sin(math.pi*t)+.012*side*math.sin(2*math.pi*t)
             verts.append((x,y,z))
     for i in range(8):
         a=i*2;faces.append((a,a+2,a+3,a+1))
