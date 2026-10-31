@@ -47,5 +47,5 @@ def independent_audio_text(audio,out,language):
     hints={'hindi':'hi','urdu':'ur','punjabi':'pa','english':'en','bengali':'bn','marathi':'mr','gujarati':'gu','tamil':'ta','telugu':'te','kannada':'kn','malayalam':'ml','nepali':'ne','spanish':'es','french':'fr','arabic':'ar'}
     hint=hints.get(str(language).strip().lower())
     folder=Path(out)/'independent_verification';folder.mkdir(parents=True,exist_ok=True)
-    result=analyze(audio,folder,'large-v3-turbo',language_hint=hint)
+    result=analyze(audio,folder,'large-v3',language_hint=hint)
     return {'status':'available','language_hint':hint,'language':result['language'],'words':result['words'],'note':'ASR is independent evidence, not automatic ground truth. High-confidence verb differences require focused listening.'}

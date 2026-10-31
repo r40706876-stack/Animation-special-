@@ -1,5 +1,5 @@
 """Direct-audio phrase transcription. No fabricated word-level precision."""
-import base64,json,tempfile,subprocess,re
+import base64,json,tempfile,subprocess,re,unicodedata
 from pathlib import Path
 from .analyze import duration
 from .contract import validate_lyrics
@@ -20,6 +20,31 @@ def validate_transcript_script(data):
     text=' '.join(str(s.get('text','')) for s in data.get('segments',[]) if not s.get('uncertain',True))
     if ('hindi' in language or language=='hi') and re.search(r'[A-Za-z]',text) and not re.search(r'[\u0900-\u097f]',text):
         raise ValueError('Hindi transcript contains only Roman letters; original sung words need correction')
+
+
+def strong_word_conflicts(segments,independent):
+    """Hold consecutive confident lexical disagreements; never substitute ASR as truth."""
+    def tokens(text):
+        text=unicodedata.normalize('NFD',str(text)).casefold().replace('\u093c','')
+        return [''.join(c for c in word if unicodedata.category(c)[0] in 'LM') for word in text.split()]
+    def script(text):
+        return {unicodedata.name(c,'').split()[0] for c in text if unicodedata.category(c).startswith('L')}
+    conflicts=[];previous=None
+    for word in (independent or {}).get('words',[]):
+        try:
+            start=float(word['start']);end=float(word['end']);confidence=float(word['probability'])
+        except (KeyError,TypeError,ValueError):
+            previous=None;continue
+        lexical=tokens(word.get('text',''));lexical=[t for t in lexical if len(t)>=2]
+        nearby=' '.join(str(s.get('text','')) for s in segments if float(s['start'])<end+.6 and float(s['end'])>start-.6)
+        absent=bool(lexical) and confidence>=.95 and 0<=start<end and script(''.join(lexical))==script(nearby) and any(t not in tokens(nearby) for t in lexical)
+        if absent:
+            current={'start':start,'end':end,'text':word['text']}
+            if previous and start-previous['end']<=.7 and tokens(previous['text'])!=lexical:
+                conflicts.append({'start':previous['start'],'end':end,'decoder_words':previous['text']+' '+word['text'],'proposed':nearby})
+            previous=current
+        else:previous=None
+    return conflicts
 
 
 def analyze_audio(audio,out):
@@ -51,6 +76,9 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
             if data.get('has_vocals',True) and independent is None:
                 from .recognition import independent_audio_text
                 independent=independent_audio_text(audio,out,data.get('language'))
+            conflicts=strong_word_conflicts(data.get('segments',[]),independent)
+            if conflicts:
+                raise ValueError('Strong independent word disagreement; listen again before scenes: '+json.dumps(conflicts,ensure_ascii=False))
             verification=generate_json('Independently listen to the AUDIO, not just the proposed text. Reject pseudo-words, wrong language or meaning, invented lyrics, missing/repeated vocals labelled instrumental, or completing a cut-off line from song memory. Return JSON {"valid":boolean,"reasons":["specific reason"],"meaning":"literal meaning only if audible"}. A genre, beat or fingerprint match is not proof of words. Compare the independent ASR too: a coherent transcript can still contain a wrong action verb (writing versus lifting, for example). Resolve disagreements by listening to the actual audio; do not rubber-stamp the proposed text or blindly trust ASR. Proposed transcript: '+json.dumps(data,ensure_ascii=False)+'\nINDEPENDENT DECODER EVIDENCE: '+json.dumps(independent,ensure_ascii=False),out=out,tag='audio_verification_'+str(attempt),audio_part=part,prefer_quality=True,require_full_model=True)
             if verification.get('valid') is not True:raise ValueError('Audio transcript failed independent meaning review: '+json.dumps(verification.get('reasons',[]),ensure_ascii=False))
             break
@@ -60,7 +88,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
             errors.append(str(e)[:1200])
             if attempt==0:
                 from .recognition import recovery_evidence
-                evidence=recovery_evidence(audio,out,dur)
+                evidence={'independent_asr':independent} if independent else recovery_evidence(audio,out,dur)
     else:
         (out/'audio_hold.json').write_text(json.dumps({'status':'needs_lyrics','attempts':2,'reasons':errors},ensure_ascii=False,indent=2))
         raise ValueError('Audio meaning review failed after automatic recovery; invented scenes blocked')
@@ -73,7 +101,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
     if not words and data.get('has_vocals',True) and not data.get('unclear'):raise ValueError('Audio model omitted vocal text without marking uncertainty')
     validate_lyrics(words,dur)
     result={'duration':dur,'language':data.get('language','unknown'),'genre':data.get('genre',''),'mood':data.get('mood',''),'summary':data.get('summary',''),'has_vocals':data.get('has_vocals',bool(words)),'timing_method':'direct audio-model phrase boundaries',
-        'timing_granularity':'phrase','timing_verified':False,'audio_verification':verification,'independent_asr_used':independent is not None,'recovery_used':bool(errors),'words':words,
+        'timing_granularity':'phrase','timing_verified':False,'audio_verification':verification,'independent_asr_used':independent is not None,'independent_asr':independent,'recovery_used':bool(errors),'words':words,
         'instrumental':data.get('instrumental',[]),'unclear':data.get('unclear',[]),
         'leading_untranscribed_seconds':words[0]['start'] if words else 0,
         'warnings':['Approximate phrase timing only; ids identify phrases, not individual words. Listening review required.']}
