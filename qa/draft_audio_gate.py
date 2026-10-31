@@ -48,18 +48,30 @@ def main(video, report_path):
                     continue
                 rms = math.sqrt(sum(v*v for v in block) / len(block)) / 32768
                 levels.append(20 * math.log10(max(rms, 1e-6)))
-            active = sum(v > THRESHOLD_DBFS for v in levels)
+            active_flags = [v > THRESHOLD_DBFS for v in levels]
+            active = sum(active_flags)
+            longest_gap = 0
+            gap = 0
+            for audible in active_flags:
+                gap = 0 if audible else gap + 1
+                longest_gap = max(longest_gap, gap)
             report["chapters"].append({
                 "chapter": i, "active_half_second_windows": active,
                 "total_half_second_windows": windows_per_chapter,
                 "peak_window_dbfs": round(max(levels), 2),
                 "signal_present": active >= 4,
+                "longest_silent_interval_seconds": round(longest_gap * WINDOW_SECONDS, 2),
+                "long_silence_warning": longest_gap * WINDOW_SECONDS > 2.0,
+                "speech_density_precheck": active >= 14 and longest_gap * WINDOW_SECONDS <= 2.0,
             })
     report["all_chapters_have_signal"] = bool(
         audio_present and len(report["chapters"]) == CHAPTERS
         and all(c["signal_present"] for c in report["chapters"]))
+    report["speech_density_precheck_pass"] = bool(
+        report["all_chapters_have_signal"] and
+        all(c["speech_density_precheck"] for c in report["chapters"]))
     report["interpretation"] = (
-        "Signal presence only; human listening and script alignment still required."
+        "Signal and 0.5s silence-gap checks only; human Hindi listening and action sync still required."
         if audio_present else "No audio stream; narration missing.")
     pathlib.Path(report_path).write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     print(json.dumps(report, ensure_ascii=False))
