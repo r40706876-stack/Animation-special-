@@ -1,0 +1,28 @@
+name: Song isolated illustration finish check
+on:
+  push:
+    branches: ['main']
+    paths: ['song_animation/illustration.py', 'song_animation/examples/illustration_probe.json', '.github/workflows/song_illustration_probe.yml']
+permissions: {contents: read}
+jobs:
+  artwork:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libcairo2 fonts-noto-core
+          pip install 'Pillow>=10,<13' 'CairoSVG>=2.7,<3' 'requests>=2.31,<3' numpy
+      - name: Draw and review one finished character before rendering a film
+        run: python -m song_animation.resume --run-module song_animation.illustration --input song_animation/examples/illustration_probe.json --out illustration_probe
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: illustration-finish-proof
+          path: illustration_probe/
+          retention-days: 7

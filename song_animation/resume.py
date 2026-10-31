@@ -2,7 +2,7 @@
 import argparse,json,os,subprocess,sys,time
 from pathlib import Path
 
-def execute(args,delays=(20,40,60)):
+def execute(args,delays=(20,40,60),module='song_animation.run'):
     parser=argparse.ArgumentParser(add_help=False)
     parser.add_argument('--out',default='song_output')
     known,_=parser.parse_known_args(args)
@@ -11,7 +11,7 @@ def execute(args,delays=(20,40,60)):
     for attempt in range(len(delays)+1):
         # Never retry based on a stale status from an earlier invocation.
         (out/'status.json').unlink(missing_ok=True)
-        result=subprocess.run([sys.executable,'-m','song_animation.run',*args],env=environment)
+        result=subprocess.run([sys.executable,'-m',module,*args],env=environment)
         if result.returncode==0:return 0
         try:status=json.loads((out/'status.json').read_text())
         except (OSError,ValueError):return result.returncode
@@ -30,4 +30,8 @@ def execute(args,delays=(20,40,60)):
         time.sleep(wait)
     return 1
 
-if __name__=='__main__':sys.exit(execute(sys.argv[1:]))
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(add_help=False)
+    parser.add_argument('--run-module',choices=['song_animation.run','song_animation.illustration'],default='song_animation.run')
+    options,remaining=parser.parse_known_args()
+    sys.exit(execute(remaining,module=options.run_module))

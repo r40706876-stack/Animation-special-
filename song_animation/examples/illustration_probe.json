@@ -1,0 +1,18 @@
+{
+  "asset": {
+    "id": "arjun_body",
+    "width": 300,
+    "height": 400,
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 400\"><path d=\"M80 380c0-80 20-180 70-180s70 100 70 180H80z\" fill=\"#FFFDD0\"/><path d=\"M150 200c-30 0-50-20-50-50s20-50 50-50 50 20 50 50-20 50-50 50z\" fill=\"#E0C9A6\"/><path d=\"M100 120c0-20 20-40 50-40s50 20 50 40-20 30-50 30-50-10-50-30z\" fill=\"#4B3621\"/><path d=\"M140 150s5 10 10 10 10-10 10-10\" fill=\"none\" stroke=\"#8B4513\" stroke-width=\"2\"/></svg>",
+    "description": "Arjun sitting cross-legged in a cream kurta.",
+    "reusable": true
+  },
+  "bible": {
+    "style": "Elegant organic 2D illustration with a tactile paper finish. Richly modeled objects with soft shadows and visible ink-bleed textures.",
+    "palette": "Warm terracotta, deep indigo ink, cream paper, and sun-washed ochre.",
+    "characters": "Arjun: expressive hands, focused gaze, traditional but simple attire.",
+    "locations": "A Mughal-inspired studio balcony overlooking a garden of orange trees; bright, warm daylight.",
+    "motifs": "Flowing ink, reed pens, stylized floral borders, and the 'jaam' (goblet) metaphor.",
+    "arc": "From the stillness of a blank page to the fluid motion of inspired creation."
+  }
+}
