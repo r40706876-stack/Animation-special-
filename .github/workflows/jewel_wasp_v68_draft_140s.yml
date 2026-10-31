@@ -36,7 +36,7 @@ jobs:
       matrix:
         chapter: [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
     runs-on: ubuntu-latest
-    timeout-minutes: 160
+    timeout-minutes: 220
     steps:
       - uses: actions/checkout@v4
       - name: Reuse previously successful chapter for exact source fingerprint
@@ -60,8 +60,19 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p draft_segments
-          JW_MODE=draft JW_CHAPTER=${{ matrix.chapter }} JW_RES_PERCENT=60 BLENDER_OUTPUT="$PWD/draft_segments/chapter_${{ matrix.chapter }}.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > draft_segments/chapter_${{ matrix.chapter }}.log 2>&1 || { tail -n 100 draft_segments/chapter_${{ matrix.chapter }}.log; exit 1; }
-          grep -q "JW_V68_STORY_DRAFT_RENDER_DONE ${{ matrix.chapter }} draft" draft_segments/chapter_${{ matrix.chapter }}.log
+          # Chapter 10 previously hit the 160-minute job limit. Render ONLY
+          # this missing burrow shot at cheaper DRAFT resolution, then upscale
+          # to the same 216x384 dimensions as the cached 60%-resolution chapters.
+          # Never invalidate the 13 other exact-source chapter caches.
+          ch=${{ matrix.chapter }}
+          percent=60
+          if [ "$ch" = 10 ]; then percent=50; fi
+          JW_MODE=draft JW_CHAPTER="$ch" JW_RES_PERCENT="$percent" BLENDER_OUTPUT="$PWD/draft_segments/chapter_$ch.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "draft_segments/chapter_$ch.log" 2>&1 || { tail -n 100 "draft_segments/chapter_$ch.log"; exit 1; }
+          grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $ch draft" "draft_segments/chapter_$ch.log"
+          if [ "$ch" = 10 ]; then
+            ffmpeg -y -loglevel error -i "draft_segments/chapter_10.mp4" -vf "scale=216:384:flags=lanczos,setsar=1" -an -c:v libx264 -preset ultrafast -crf 23 -pix_fmt yuv420p "draft_segments/chapter_10_normalized.mp4"
+            mv "draft_segments/chapter_10_normalized.mp4" "draft_segments/chapter_10.mp4"
+          fi
       - name: Ensure ffmpeg is available even on cache hits
         run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg)
       - name: Independently verify chapter decodes and contains 240 frames
@@ -71,8 +82,10 @@ jobs:
           test -s "$f"
           ffmpeg -v error -xerror -i "$f" -f null -
           test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$f")" = 240
+          # A mismatched frame size breaks stream-copy chapter concatenation.
+          test "$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0:s=x "$f")" = 216x384
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: success()
         with:
           name: jewel-v68-draft-chapter-${{ matrix.chapter }}
           path: draft_segments/chapter_${{ matrix.chapter }}.mp4
