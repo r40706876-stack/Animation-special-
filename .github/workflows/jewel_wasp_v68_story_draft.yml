@@ -44,7 +44,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p preview
-          for chapter in 3 5 10 11 12; do
+          for chapter in 1 3 5 8 10 11 12; do
             echo "BLENDER_PREFLIGHT_CHAPTER $chapter"
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/preflight_$chapter.log" 2>&1 || { tail -n 120 "preview/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "preview/preflight_$chapter.log"
@@ -55,19 +55,40 @@ jobs:
           mkdir -p preview
           for chapter in $(seq 0 13); do
             echo "RENDER_DRAFT_CHAPTER_STILL $chapter"
-            JW_MODE=still JW_CHAPTER="$chapter" JW_RES_PERCENT=60 BLENDER_OUTPUT="$PWD/preview/chapter_$(printf '%02d' "$chapter").png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/chapter_$(printf '%02d' "$chapter").log" 2>&1 || { tail -n 100 "preview/chapter_$(printf '%02d' "$chapter").log"; exit 1; }
+            # Inspect the actual narrative action, not a generic mid-chapter frame.
+            case "$chapter" in
+              3|5) still=145 ;;
+              10) still=195 ;;
+              11) still=205 ;;
+              12) still=180 ;;
+              *) still=120 ;;
+            esac
+            JW_STILL_FRAME="$still" JW_MODE=still JW_CHAPTER="$chapter" JW_RES_PERCENT=60 BLENDER_OUTPUT="$PWD/preview/chapter_$(printf '%02d' "$chapter").png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/chapter_$(printf '%02d' "$chapter").log" 2>&1 || { tail -n 100 "preview/chapter_$(printf '%02d' "$chapter").log"; exit 1; }
             grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $chapter still" "preview/chapter_$(printf '%02d' "$chapter").log"
             test -s "preview/chapter_$(printf '%02d' "$chapter").png"
           done
-          ffmpeg -y -loglevel error -framerate 1 -i preview/chapter_%02d.png -vf "scale=360:640,tile=7x2" -frames:v 1 preview/DRAFT_14_CHAPTER_CONTACT.png
+          ffmpeg -y -loglevel error -framerate 1 -i preview/chapter_%02d.png -vf "scale=360:640,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH %{n}':x=12:y=12:fontsize=21:fontcolor=white:box=1:boxcolor=black@0.65,tile=7x2" -frames:v 1 preview/DRAFT_14_CHAPTER_CONTACT.png
           test -s preview/DRAFT_14_CHAPTER_CONTACT.png
       - name: Render real 1-second animated action previews
         run: |
           set -euo pipefail
-          for chapter in 3 5 10 11 12; do
+          for chapter in 1 3 5 8 10 11 12; do
+            # Motion proofs must overlap the actual action: the previous generic
+            # 108-131 window missed burrow descent and egg placement entirely.
+            case "$chapter" in
+              1) motion_start=90 ;;
+              3|5) motion_start=118 ;;
+              8) motion_start=118 ;;
+              10) motion_start=168 ;;
+              11) motion_start=152 ;;
+              12) motion_start=112 ;;
+            esac
             echo "RENDER_DRAFT_ACTION_MOTION $chapter"
-            JW_MODE=motion JW_CHAPTER="$chapter" JW_RES_PERCENT=60 BLENDER_OUTPUT="$PWD/preview/action_$chapter.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/action_$chapter.log" 2>&1 || { tail -n 100 "preview/action_$chapter.log"; exit 1; }
+            JW_MOTION_START="$motion_start" JW_MODE=motion JW_CHAPTER="$chapter" JW_RES_PERCENT=60 BLENDER_OUTPUT="$PWD/preview/action_$chapter.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/action_$chapter.log" 2>&1 || { tail -n 100 "preview/action_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $chapter motion" "preview/action_$chapter.log"
+            # Visibly mark every preview video; never pass a proof off as final.
+            ffmpeg -y -loglevel error -i "preview/action_$chapter.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH $chapter':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.55" -an -c:v libx264 -preset veryfast -crf 24 "preview/action_${chapter}_marked.mp4"
+            mv "preview/action_${chapter}_marked.mp4" "preview/action_$chapter.mp4"
             ffmpeg -v error -xerror -i "preview/action_$chapter.mp4" -f null -
             frames="$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "preview/action_$chapter.mp4")"
             test "$frames" = 24
@@ -83,7 +104,9 @@ jobs:
           report=dict(source_sha=os.environ.get('GITHUB_SHA'),draft_only=True,
                       final_film=False,visual_approved=False,
                       expected_chapters=14,expected_chapter_seconds=10,
-                      proof_motion_chapters=[3,5,10,11,12],
+                      proof_motion_chapters=[1,3,5,8,10,11,12],
+                      action_still_frames={'3':145,'5':145,'10':195,'11':205,'12':180},
+                      action_motion_start={'1':90,'3':118,'5':118,'8':118,'10':168,'11':152,'12':112},
                       status='DRAFT technical proof; inspect contact sheet AND action motion')
           (p/'DRAFT_QA.json').write_text(json.dumps(report,indent=2))
           PY
