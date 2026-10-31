@@ -165,6 +165,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         if: success()
+        id: ready-export
         with:
           name: song-checked-${{ github.run_id }}-${{ strategy.job-index }}
           path: |
@@ -179,6 +180,7 @@ jobs:
         if: success()
         env:
           GH_RECEIPT_TOKEN: ${{ github.token }}
+          SONG_CHECKED_ARTIFACT_URL: ${{ steps.ready-export.outputs.artifact-url }}
         run: python -m song_animation.completion --audio "$AUDIO_PATH" --out song_draft
 
       - name: Record attempt so one failed song cannot starve the retry queue
@@ -189,5 +191,7 @@ jobs:
 
       - name: Show the actual song production status
         if: always()
+        env:
+          SONG_CHECKED_ARTIFACT_URL: ${{ steps.ready-export.outputs.artifact-url }}
         run: python -m song_animation.status_summary --out song_draft
 

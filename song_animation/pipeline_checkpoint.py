@@ -8,8 +8,9 @@ def identity(audio,lyrics,engine,artwork,width):
     data={'audio_sha256':hashlib.sha256(Path(audio).read_bytes()).hexdigest(),'lyrics':lyrics,'engine':engine,'artwork':artwork,'width':width,'film_standard':fingerprint()}
     return hashlib.sha256(json.dumps(data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 
-def save(out,key,plan,pass_index=0,assessment=None,completed=(),pending=False):
+def save(out,key,plan,pass_index=0,assessment=None,completed=(),pending=False,not_before_attempt=None):
     record={'key':key,'plan':plan,'pass_index':pass_index,'assessment':assessment,'completed_shots':list(completed),'pending_repair':pending}
+    if not_before_attempt is not None:record['not_before_attempt']=not_before_attempt
     path=Path(out)/'pipeline_checkpoint.json';temporary=path.with_suffix('.tmp')
     temporary.write_text(json.dumps(record,ensure_ascii=False));temporary.replace(path)
 
@@ -20,6 +21,7 @@ def load(out,key):
         if type(record.get('pass_index')) is not int or not 0<=record['pass_index']<=2:return None
         validate_vector(record['plan'])
         if type(record.get('pending_repair')) is not bool:return None
+        if 'not_before_attempt' in record and (not isinstance(record['not_before_attempt'],str) or not 1<=len(record['not_before_attempt'])<=200 or not record['pending_repair']):return None
         done=record.get('completed_shots')
         if not isinstance(done,list) or any(type(i) is not int or not 0<=i<len(record['plan']['scenes']) for i in done):return None
         if record['pending_repair'] and (not isinstance(record.get('assessment'),dict) or not (Path(out)/'review_contact.jpg').is_file()):return None

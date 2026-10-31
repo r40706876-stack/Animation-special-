@@ -35,7 +35,7 @@ def receipt(audio,out):
     clip_hash=source_hash(out/'source_clip.wav')
     if gate.get('technical',{}).get('source_clip_sha256')!=clip_hash:raise ValueError('The checked audio excerpt has changed')
     return {'source_sha256':source,'source_clip_sha256':clip_hash,'clip_start':selection['start'],'clip_duration':selection['duration'],'status':'checks_passed','video_sha256':actual,
-        'run_id':os.getenv('GITHUB_RUN_ID',''),'commit':os.getenv('GITHUB_SHA',''),
+        'run_id':os.getenv('GITHUB_RUN_ID',''),'commit':os.getenv('GITHUB_SHA',''),'artifact_url':os.getenv('SONG_CHECKED_ARTIFACT_URL',''),
         'human_approval':False,'universal_quality_certified':False}
 
 def save_record(session,repo,token,folder,data):

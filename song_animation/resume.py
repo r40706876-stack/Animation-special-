@@ -1,5 +1,5 @@
 """Resume checkpoints after bounded transient provider outages within the same job."""
-import argparse,json,os,subprocess,sys,time
+import argparse,json,os,subprocess,sys,time,uuid
 from pathlib import Path
 
 def execute(args,delays=(20,40,60),module='song_animation.run'):
@@ -8,6 +8,9 @@ def execute(args,delays=(20,40,60),module='song_animation.run'):
     known,_=parser.parse_known_args(args)
     out=Path(known.out);out.mkdir(parents=True,exist_ok=True)
     history=[];environment=dict(os.environ);blocked=set()
+    # Provider subprocess retries share one repair budget. A later queued job
+    # receives a fresh id and may continue the failed shots with a new budget.
+    environment.setdefault('SONG_PRODUCTION_ATTEMPT',uuid.uuid4().hex)
     for attempt in range(len(delays)+1):
         # Never retry based on a stale status from an earlier invocation.
         (out/'status.json').unlink(missing_ok=True)

@@ -1,4 +1,4 @@
-import argparse,copy,hashlib,json,shutil,math
+import argparse,copy,hashlib,json,shutil,math,os,uuid
 from pathlib import Path
 from .analyze import analyze,music_features,duration
 from .clip import prepare
@@ -46,6 +46,7 @@ def main():
     a.add_argument('--transcriber',choices=['audio-model','whisper'],default='audio-model')
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
     args=a.parse_args();out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
+    execution_id=os.getenv('SONG_PRODUCTION_ATTEMPT') or uuid.uuid4().hex
     # Never leave a stale checked output visible after a failed rerun.
     for name in ('checked.mp4','preview.mp4','quality_gate.json','audio_hold.json'):
         (out/name).unlink(missing_ok=True)
@@ -78,6 +79,9 @@ def main():
         from .pipeline_checkpoint import identity,load as load_pipeline,save as save_pipeline
         pipeline_key=identity(clip,lyrics,args.engine,args.artwork,args.width) if args.stage!='plan' and args.engine=='generated' else None
         recovery=load_pipeline(out,pipeline_key) if pipeline_key else None
+        if recovery and recovery.get('not_before_attempt')==execution_id:
+            (out/'status.json').write_text(json.dumps({'status':'blocked','automatic_repair_pending':True,'automatic_publish':False,'error':'This attempt used its bounded repair budget; saved failed shots are deferred to the next queued attempt'}))
+            raise QualityHold('This attempt used its bounded repair budget; the next automatic queued attempt will continue only the remaining failed shots')
         start_pass=recovery['pass_index'] if recovery else 0
         if args.engine=='generated':
             from .generative import build
@@ -98,7 +102,7 @@ def main():
             from .review import refine
             assessment=recovery['assessment']
             def progress(candidate,completed):save_pipeline(out,pipeline_key,candidate,start_pass,assessment,completed,True)
-            plan,_=refine(plan,out,assessment,pass_index=start_pass,completed_shots=recovery['completed_shots'],on_progress=progress)
+            plan,_=refine(plan,out,assessment,pass_index=start_pass,completed_shots=recovery['completed_shots'],on_progress=progress,attempt_id=execution_id)
         if pipeline_key:save_pipeline(out,pipeline_key,plan,start_pass)
         if args.engine=='generated' and args.artwork=='flux-layers':
             from .original_art import paint as paint_original
@@ -125,7 +129,7 @@ def main():
                 repair_assessment=dict(assessment,issues=decision['repair_issues'])
                 save_pipeline(out,pipeline_key,plan,pass_index+1,repair_assessment,pending=True)
                 def progress(candidate,completed):save_pipeline(out,pipeline_key,candidate,pass_index+1,repair_assessment,completed,True)
-                plan,replaced=refine(plan,out,repair_assessment,pass_index=pass_index+1,on_progress=progress)
+                plan,replaced=refine(plan,out,repair_assessment,pass_index=pass_index+1,on_progress=progress,attempt_id=execution_id)
                 save_pipeline(out,pipeline_key,plan,pass_index+1)
                 changed=changed or replaced
                 if not replaced:break
@@ -142,6 +146,16 @@ def main():
         gate={'passed':passed,'visual':decision,'technical':technical,'repair_passes':passes,'human_approval':False,'universal_quality_certified':False}
         (out/'quality_gate.json').write_text(json.dumps(gate,ensure_ascii=False,indent=2))
         status={'status':'checks_passed' if passed else 'blocked','engine':args.engine,'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,'universal_quality_certified':False,'visual_repair_applied':changed,'warnings':lyrics.get('warnings',[]),'quality_gate':gate}
+        if not passed and pipeline_key and decision.get('repair_issues'):
+            # The per-run two-pass ceiling must not become a permanent ceiling
+            # across all future daily jobs for this source. Keep the actual
+            # failed-shot assessment and frames, not an exhausted pass=2 state.
+            save_pipeline(out,pipeline_key,plan,1,dict(assessment,issues=decision['repair_issues']),pending=True,not_before_attempt=execution_id)
+            status['automatic_repair_pending']=True
+        if not technical['passed']:
+            # A technical failure must not restore the very same defective
+            # encoded bytes forever on future retries.
+            for name in ('preview.mp4','receipt.json'):(out/'render_cache'/name).unlink(missing_ok=True)
         if assessment.get('provider_wait'):status.update(provider_wait=True,retry_after_seconds=assessment.get('retry_after_seconds',0))
         if passed:
             shutil.copyfile(out/'preview.mp4',out/'checked.mp4')

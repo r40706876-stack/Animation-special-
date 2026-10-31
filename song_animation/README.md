@@ -58,3 +58,12 @@ Image repair now reaches the actual raster generator: visible correction notes, 
 A matching encoded draft is retained privately in `render_cache/`, verified by exact plan/code/profile/audio identity plus MP4 SHA. Provider-review retries can restore those bytes instead of encoding the whole film again. Corrupt/different-source/composition caches are rejected, stale public checked outputs are still removed, and every restored draft still requires the full visual/technical gates before `checked.mp4`. The workflow persists this cache across attempts.
 
 Regression checks cover real MP4 encode/reuse, changed audio/composition and corrupt cache rejection, changing raster bytes after a visible repair, preserving unrelated assets and passing corrected viewpoints into the actual image generator. A full live automatic film under this new standard remains unverified while the recorded provider quota/service block persists. The approved directed example is not substituted for arbitrary uploads.
+
+
+### Automatic recovery after a failed visual repair budget
+
+The two-pass repair budget belongs to one production attempt, not to the entire lifetime of an uploaded song. A blocked attempt saves its exact remaining shot issues, plan and actual review frames as a deferred repair. The next queued attempt resumes those shots with a fresh bounded budget instead of getting stuck at pass 2 forever or rebuilding the whole story. Provider subprocess retries share the same attempt identity; they cannot silently reset the budget. A repeated invocation with that same exhausted identity does not spend more model calls. A new attempt changes the actual image-repair request even when the previous frames/defect are identical.
+
+A failed technical export clears its private encoded cache so future retries cannot restore the same defective bytes indefinitely. A ready artifact's actual URL is shown in the Actions summary and saved in its completion receipt only after the checked export is uploaded. Blocked runs never display a ready download link. Actual completion still depends on model availability and passing the full film checks; these recovery tests do not certify arbitrary-song visual quality.
+
+Completed repair passes also prune abandoned, unreferenced pose variants while retaining assets used by every other shot. Repeated recovery must not grow old assets until the scene budget permanently prevents a new repair.

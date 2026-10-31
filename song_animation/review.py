@@ -48,12 +48,18 @@ def review(plan,out):
     (out/'visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
 
 
-def refine(plan,out,assessment,pass_index=1,scene_limit=6,completed_shots=(),on_progress=None):
+def refine(plan,out,assessment,pass_index=1,scene_limit=6,completed_shots=(),on_progress=None,attempt_id=None):
     """One bounded visual correction pass using actual shot images and review notes."""
-    import copy,hashlib,io
+    import copy,hashlib,io,uuid
     from PIL import Image
     from .generative import scene_package
-    out=Path(out);groups={};report=[];candidate=copy.deepcopy(plan)
+    out=Path(out);groups={};report=[];candidate=copy.deepcopy(plan);attempt_id=attempt_id or uuid.uuid4().hex
+    def prune():
+        used={n.get('asset') for s in candidate['scenes'] for n in s.get('nodes',[]) if n.get('asset')}
+        candidate['assets']={k:v for k,v in candidate['assets'].items() if k in used}
+    # Abandoned pose variants must not accumulate until the global asset budget
+    # makes every later automatic repair fail, while other shots stay intact.
+    prune()
     for item in assessment.get('issues',[]):
         index=item.get('shot');note=item.get('issue')
         if type(index) is int and 0<=index<len(plan['scenes']) and isinstance(note,str) and note.strip():
@@ -64,13 +70,14 @@ def refine(plan,out,assessment,pass_index=1,scene_limit=6,completed_shots=(),on_
         row=contact.crop((0,index*320,540,(index+1)*320));buf=io.BytesIO();row.save(buf,format='JPEG')
         raw=buf.getvalue();image={'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(raw).decode()}}
         candidate['scenes'][index]['visual_correction']={
-            'issues':notes,'reference_sha256':hashlib.sha256(raw).hexdigest(),'pass':pass_index,
+            'issues':notes,'reference_sha256':hashlib.sha256(raw).hexdigest(),'pass':pass_index,'attempt':attempt_id,
             'instruction':'Correct the VISIBLE mistakes in the attached three frames. Preserve lyric timing, character identity and the connected story. Keep this shot state_in consistent with the preceding shot state_out, and deliver the planned consequence for the next shot. Do not fix a shot by inventing an unrelated prop, scene or character. Missing people must be drawn and visible. Walking requires visible legs/feet, a clear change of position and alternating leg poses. Keep body parts attached. Show the described action through distinct start, middle and end poses; camera or particles alone cannot replace it. Keep main action above y=720. Return a complete corrected scene package.'}
         try:
             scene,assets=scene_package(candidate,index,out,candidate['assets'],reference_image=image)
             candidate['scenes'][index]=scene;candidate['assets']=assets
             from .choreography import retarget
             candidate,rigged=retarget(candidate,index,notes)
+            prune()
             report.append({'shot':index,'status':'replaced','connected_rig':rigged,'issues':notes})
             if on_progress:on_progress(candidate,list(completed_shots)+[r['shot'] for r in report if r['status']=='replaced'])
         except ProviderUnavailable:

@@ -31,11 +31,16 @@ class OutputPolicy(unittest.TestCase):
    out=Path(td)/'out';out.mkdir();(out/'checked.mp4').write_bytes(b'stale');(out/'preview.mp4').write_bytes(b'stale draft')
    lyrics=Path(td)/'given.json';lyrics.write_text(json.dumps({'duration':2,'words':[]}))
    source=Path(td)/'source.wav';source.write_bytes(b'selected original audio')
+   if technical and technical.get('passed') is False:
+    (out/'render_cache').mkdir()
+    for name in ('preview.mp4','receipt.json'):(out/'render_cache'/name).write_bytes(b'previous technically defective export')
    plan={'fps':24,'total_frames':48,'scenes':[{}]}
    def draw(*args):(out/'preview.mp4').write_bytes(b'new draft')
    with patch('sys.argv',['song','--audio','source','--out',str(out),'--lyrics',str(lyrics),'--artwork','vector']),patch('song_animation.run.prepare',return_value=(source,{'duration':2})),patch('song_animation.run.music_features',return_value={}),patch('song_animation.generative.build',return_value=plan),patch('song_animation.run.render',side_effect=draw) as rendered,patch('song_animation.review.review',side_effect=reviews),patch('song_animation.review.refine',return_value=(plan,repair)) as refine,patch('song_animation.run.inspect_export',return_value=technical or {'passed':True,'reasons':[]}):
     try:main()
     except QualityHold:pass
+    if technical and technical.get('passed') is False:
+     self.assertFalse((out/'render_cache/preview.mp4').exists());self.assertFalse((out/'render_cache/receipt.json').exists())
     return json.loads((out/'status.json').read_text()),(out/'checked.mp4').exists(),rendered.call_count,refine.call_count
  def test_missing_review_removes_stale_success_file(self):
   status,exists,_,_=self.exercise([{'status':'unavailable'}]);self.assertEqual(status['status'],'blocked');self.assertFalse(exists)
