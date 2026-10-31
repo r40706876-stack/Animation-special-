@@ -73,7 +73,7 @@ if chapter in (3,5,11):
                         (145,.58,-.13,.25),(171,.60,-.13,.25),
                         (205,.95,-.47,.50)):
         scene.frame_set(f);bpy.context.view_layer.update()
-        local=(Vector((.18,.30,-.08)) if chapter==11 else
+        local=(Vector((.18,.39,-.015)) if chapter==11 else
                Vector((.27 if chapter==3 else .56,0,.11)))
         target=roach.matrix_world @ local
         wasp.location=target+Vector((dx,dy,dz))
@@ -101,21 +101,46 @@ if chapter in (4,6,12):
                 ob.hide_render=True;break
             current=current.parent
 
-# Burrow is a dark opening with an uneven soil rim, not a floating black disc.
+# A real geometric opening: the original dark disc sat ON the opaque floor,
+# so the cockroach appeared to sink through solid soil instead of entering.
+# Preserve the V6.8 forest; only replace its ground plane in burrow chapters.
 if chapter in (9,10,11,12):
+    earth.hide_render=True
     holemat=material("burrow interior dark",(.007,.006,.004),rough=.99)
-    ell("burrow cavity",(1.60,1.10,-.054),(.65,.49,.012),holemat)
-    for i in range(20):
-        theta=2*math.pi*i/20
+    cx,cy=1.60,1.10
+    sides=64
+    rings=[(.54,-.54),(.56,-.35),(.59,-.17),(.65,-.066),
+           (.78,-.066),(1.4,-.066),(3.0,-.066),(30.0,-.066)]
+    vertices=[]
+    for radius,z in rings:
+        for i in range(sides):
+            theta=2*math.pi*i/sides
+            vertices.append((cx+radius*1.13*math.cos(theta),
+                             cy+radius*.91*math.sin(theta),z))
+    faces=[]
+    for ring in range(len(rings)-1):
+        for i in range(sides):
+            a=ring*sides+i
+            b=ring*sides+(i+1)%sides
+            faces.append((a,a+sides,b+sides,b))
+    mesh=bpy.data.meshes.new("burrow cutout ground and tunnel wall mesh")
+    mesh.from_pydata(vertices,[],faces);mesh.update()
+    floor=bpy.data.objects.new("actual open burrow soil geometry",mesh)
+    scene.collection.objects.link(floor)
+    mesh.materials.append(soil)
+    for poly in mesh.polygons:poly.use_smooth=True
+    ell("dark bottom INSIDE burrow",(cx,cy,-.57),(.62,.50,.018),holemat)
+    for i in range(24):
+        theta=2*math.pi*i/24
         ell("irregular earth rim",
-            (1.6+(.69+.07*math.sin(i*2.1))*math.cos(theta),
-             1.1+(.53+.04*math.cos(i*1.9))*math.sin(theta),-.035),
-            (.085,.075,.045),soil,segments=12,rings=8)
-    # A sloping near lip masks the descending roach and gives the mouth depth.
-    for i in range(13):
-        x=1.08+i*.087
-        ell("burrow near soil lip",(x,.65,-.08),
-            (.10,.13,.085),soil,segments=12,rings=8)
+            (cx+(.73+.05*math.sin(i*2.1))*math.cos(theta),
+             cy+(.60+.04*math.cos(i*1.9))*math.sin(theta),-.047),
+            (.075,.065,.040),soil,segments=12,rings=8)
+    # Hide nearby overgrowth from the burrow's action camera, not the forest.
+    for obj in bpy.data.objects:
+        if obj.name.startswith(("living fern rachis","raised fern pinna",
+                                "midground fern leaflet")):
+            obj.hide_render=True
 
 # Real contact geometry: a sting must touch the thorax/head during the hold.
 # Fail preflight rather than quietly rendering a floating fake sting.
@@ -152,7 +177,7 @@ if chapter in (4,6):
             node.keyframe_insert(data_path="scale",frame=f)
 if chapter==11:
     eggmat=material("egg ivory",(.76,.70,.49),rough=.78,noise=12)
-    egg=ell("single jewel wasp egg",(.18,.30,-.08),(.072,.13,.052),eggmat,roach)
+    egg=ell("single jewel wasp egg",(.18,.39,-.015),(.072,.13,.052),eggmat,roach)
     for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(240,1.0)):
         egg.scale=(.072*size,.13*size,.052*size)
         egg.keyframe_insert(data_path="scale",frame=f)
@@ -164,7 +189,7 @@ if chapter==11:
                     (168,1.0),(190,.25),(240,.001)):
         scene.frame_set(f);bpy.context.view_layer.update()
         a=wasp.matrix_world @ Vector((-.80,0,.04))
-        b=roach.matrix_world @ Vector((.18,.30,-.08))
+        b=roach.matrix_world @ Vector((.18,.39,-.015))
         d=b-a
         if f in (140,168):
             assert d.length<.60, "Oviposition contact gap %.3f"%d.length
@@ -184,8 +209,8 @@ if chapter==12:
         t=i/(nring-1)
         profile=max(.045,math.sin(math.pi*t)**.62)
         x=-.46+.82*t
-        yc=.30+.020*math.sin(2*math.pi*t)
-        zc=.10+.012*math.sin(math.pi*t)
+        yc=.39+.020*math.sin(2*math.pi*t)
+        zc=-.012+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
             verts.append((x,yc+.095*profile*math.cos(a),
@@ -246,7 +271,7 @@ for f in (1,120,240):
     elif chapter in (9,10):
         focus=Vector((1.5,.90,-.02))
     elif chapter==11:
-        focus=roach.matrix_world @ Vector((.18,.30,-.08))
+        focus=roach.matrix_world @ Vector((.18,.39,-.015))
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
