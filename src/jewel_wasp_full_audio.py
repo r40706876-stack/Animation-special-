@@ -22,7 +22,7 @@ lines=[
 async def make(i,s):
  for attempt in range(3):
   try:
-   await edge_tts.Communicate(s,'hi-IN-SwaraNeural',rate='+17%').save(f'voice/{i:02d}.mp3')
+   await edge_tts.Communicate(s,'hi-IN-SwaraNeural',rate='-12%').save(f'voice/{i:02d}.mp3')
    if pathlib.Path(f'voice/{i:02d}.mp3').stat().st_size>1000:return
   except Exception as exc:
    print('VOICE_RETRY',i,attempt,str(exc),flush=True)
@@ -33,11 +33,12 @@ async def main():
  for i,line in enumerate(lines):
   await make(i,line)
   duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',f'voice/{i:02d}.mp3'],text=True))
-  speed=max(1.0,duration/9.65)
+  speed=max(1.0,duration/9.55)
   if speed>2.0:raise RuntimeError(f'Chapter {i} narration too long: {duration:.1f}s')
+  print(f'VOICE_CHAPTER_TIMING {i:02d} source={duration:.3f}s tempo={speed:.3f} target=10.000s',flush=True)
   subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'voice/{i:02d}.mp3','-af',f'atempo={speed:.3f},apad','-t','10','-ar','44100','-ac','2','-c:a','aac',f'voice/{i:02d}.m4a'],check=True)
  with open('voice/concat.txt','w') as f:
   for i in range(len(lines)):f.write(f"file '{i:02d}.m4a'\n")
  subprocess.run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i','voice/concat.txt','-t','140','-ar','44100','-ac','2','-c:a','aac','voice/narration.m4a'],check=True)
- print('JEWEL_FULL_HINDI_NARRATION_READY',len(lines),flush=True)
+ print('JEWEL_FULL_HINDI_NARRATION_READY',len(lines),'VOICE_SPEECH_TIMING_REBALANCED_NOT_LISTEN_VERIFIED',flush=True)
 if __name__=='__main__':asyncio.run(main())
