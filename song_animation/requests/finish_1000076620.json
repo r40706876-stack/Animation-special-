@@ -1,5 +1,5 @@
 {
   "audio_path": "song_animation/inputs/song_1000076620.m4a",
-  "purpose": "Recheck actual lyrics with independent full decoder and block confident word conflicts before making the connected story",
-  "revision": 3
+  "purpose": "Resume using exact-source corrected lyrics and compact complete scene responses; reject truncated provider outputs",
+  "revision": 4
 }

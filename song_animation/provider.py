@@ -19,7 +19,7 @@ def parse_object(raw):
     if not isinstance(data,dict):raise ValueError('Provider response must be an object')
     return data
 
-def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False,require_full_model=False,timeout_seconds=90):
+def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extra_parts=None,max_tokens=32768,prefer_quality=False,require_full_model=False,timeout_seconds=90,thinking_level=None):
     import requests
     key=os.environ.get('GEMINI_API_KEY','').strip()
     if not key:raise RuntimeError('GEMINI_API_KEY is missing')
@@ -57,13 +57,17 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     raw=None
     attempts=[]
     for model_index,model in enumerate(models[:3]):
+        model_config=dict(config)
+        if thinking_level:
+            if re.match(r'gemini-[3-9](?:\.|-)',model):model_config['thinkingConfig']={'thinkingLevel':thinking_level}
+            elif model.startswith('gemini-2.5-'):model_config['thinkingConfig']={'thinkingBudget':2048}
         # One transient retry for the preferred available model. Never spin on
         # exhausted quota, auth failures or an actually retired model.
         for retry in range(2 if model_index==0 else 1):
             try:
                 r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                     headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
-                    'generationConfig':config},timeout=max(30,min(180,timeout_seconds)))
+                    'generationConfig':model_config},timeout=max(30,min(180,timeout_seconds)))
             except requests.RequestException:
                 attempts.append({'model':model,'error':'transport','retry':retry})
                 if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
@@ -85,8 +89,14 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             attempts.append(item)
             if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
             if r.status_code==200:
-                response_parts=(r.json().get('candidates') or [{}])[0].get('content',{}).get('parts',[])
+                body=r.json();candidate=(body.get('candidates') or [{}])[0]
+                response_parts=candidate.get('content',{}).get('parts',[])
                 raw=''.join(p.get('text','') for p in response_parts if not p.get('thought'))
+                if out:
+                    Path(out,tag+'_response_meta.json').write_text(json.dumps({'model':model,'finish_reason':candidate.get('finishReason'),'usage':body.get('usageMetadata',{})},indent=2))
+                    Path(out,tag+'_response.txt').write_text(raw,encoding='utf-8')
+                if candidate.get('finishReason') not in (None,'STOP'):
+                    raise ValueError('Provider response incomplete: '+str(candidate['finishReason'])+'. Regenerate a smaller complete package; never repair by closing truncated JSON.')
                 break
             print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
             if r.status_code in (408,500,502,503,504) and retry==0 and model_index==0:

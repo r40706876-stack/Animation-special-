@@ -186,7 +186,7 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
     for attempt in range(3):
         try:
             if cache.exists() and attempt==0:data=json.loads(cache.read_text())
-            else:data=generate_json(prompt+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning.' if error else ''),out=out,tag=f'scene_{index}'+('_repair' if reference_image else '')+f'_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True,require_full_model=True,timeout_seconds=180,extra_parts=[reference_image] if reference_image else None)
+            else:data=generate_json(prompt+'\nOUTPUT BUDGET: Keep all newly drawn SVG strings together under 24000 characters, each under 4000. Use concise curved paths, reusable assets and efficient shading; no repeated numbers or excessive decimal precision. Finish the entire JSON object.'+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning. Use at most 8 new assets, 16 nodes and 4 keys per node, and keep all SVG strings together under 12000 characters. Preserve actors, causal action and readable detail; reduce redundant geometry.' if error else ''),out=out,tag=f'scene_{index}'+('_repair' if reference_image else '')+f'_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True,require_full_model=True,timeout_seconds=180,thinking_level='low',extra_parts=[reference_image] if reference_image else None)
 
             data=normalize_package(data)
             additions={a['id']:a for a in data.get('assets',[])}

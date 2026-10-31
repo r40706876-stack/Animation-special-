@@ -13,6 +13,11 @@ class WordConflicts(unittest.TestCase):
     def test_confident_wrong_action_is_held(self):
         self.assertTrue(strong_word_conflicts([{'text':'जाम पी लिया','start':0,'end':2}],self.evidence()))
 
+    def test_real_decoder_moderate_verb_and_confident_ending_cannot_be_ignored(self):
+        evidence=self.evidence();evidence['words'][0].update(text='दिख',probability=.7532)
+        evidence['words'][1]['probability']=.9684
+        self.assertTrue(strong_word_conflicts([{'text':'जाम-ए-लब पी लिया','start':0,'end':2}],evidence))
+
     def test_correct_punctuation_and_weak_or_different_script_are_not_hard_conflicts(self):
         self.assertFalse(strong_word_conflicts([{'text':'जाम लिख दिया।','start':0,'end':2}],self.evidence()))
         self.assertFalse(strong_word_conflicts([{'text':'jaam likh diya','start':0,'end':2}],self.evidence()))

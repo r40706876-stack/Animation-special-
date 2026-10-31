@@ -56,7 +56,7 @@ def main():
             validate_lyrics(lyrics['words'],selection['duration'])
         else:
             audio_hash=hashlib.sha256(clip.read_bytes()).hexdigest()
-            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v8-strong-independent-words'
+            key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v9-word-disagreements'
             checkpoint=out/'analysis_checkpoint.json'
             lyrics=load_analysis_checkpoint(out,key,selection['duration'])
             if lyrics is not None:

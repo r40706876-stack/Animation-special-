@@ -1,0 +1,263 @@
+{
+  "audio_sha256": "e579e0bb99f4ff736964f5867e478f1e1e934a93907295e9785190e9b0f9dc5a",
+  "lyrics": {
+    "duration": 29.988118,
+    "language": "Hindi",
+    "genre": "Bollywood Sufi-Pop",
+    "mood": "Romantic and Passionate",
+    "summary": "Beauty inspires the speaker to write poetry; unable to name the beloved's lips, the poet writes the metaphor जाम. There is no audible drinking action.",
+    "has_vocals": true,
+    "timing_method": "direct audio-model phrase boundaries",
+    "timing_granularity": "phrase",
+    "timing_verified": false,
+    "audio_verification": {
+      "valid": true,
+      "method": "source-specific authored correction corroborated by focused independent large-v3 decoding",
+      "meaning": "Beauty inspires the speaker to write poetry; unable to name the beloved's lips, the poet writes the metaphor जाम. There is no audible drinking action.",
+      "generic_transcription_certified": false
+    },
+    "independent_asr_used": true,
+    "independent_asr": {
+      "status": "available",
+      "language_hint": "hi",
+      "language": "hi",
+      "words": [
+        {
+          "text": "हुआ",
+          "start": 0.0,
+          "end": 0.72,
+          "probability": 0.633,
+          "id": 0
+        },
+        {
+          "text": "है",
+          "start": 0.72,
+          "end": 1.24,
+          "probability": 0.6279,
+          "id": 1
+        },
+        {
+          "text": "हमको",
+          "start": 2.94,
+          "end": 4.24,
+          "probability": 0.9131,
+          "id": 2
+        },
+        {
+          "text": "किसी",
+          "start": 4.24,
+          "end": 4.82,
+          "probability": 0.9891,
+          "id": 3
+        },
+        {
+          "text": "के",
+          "start": 4.82,
+          "end": 5.5,
+          "probability": 0.9769,
+          "id": 4
+        },
+        {
+          "text": "हुस्न",
+          "start": 5.5,
+          "end": 5.98,
+          "probability": 0.8284,
+          "id": 5
+        },
+        {
+          "text": "ने",
+          "start": 5.98,
+          "end": 6.56,
+          "probability": 0.9899,
+          "id": 6
+        },
+        {
+          "text": "शायर",
+          "start": 6.56,
+          "end": 7.76,
+          "probability": 0.8494,
+          "id": 7
+        },
+        {
+          "text": "बना",
+          "start": 7.76,
+          "end": 8.38,
+          "probability": 0.9989,
+          "id": 8
+        },
+        {
+          "text": "दिया",
+          "start": 8.38,
+          "end": 9.58,
+          "probability": 0.9861,
+          "id": 9
+        },
+        {
+          "text": "दूंदूं",
+          "start": 16.52,
+          "end": 17.82,
+          "probability": 0.7466,
+          "id": 10
+        },
+        {
+          "text": "का",
+          "start": 17.82,
+          "end": 18.2,
+          "probability": 0.9483,
+          "id": 11
+        },
+        {
+          "text": "नाम",
+          "start": 18.2,
+          "end": 18.74,
+          "probability": 0.9994,
+          "id": 12
+        },
+        {
+          "text": "ने",
+          "start": 18.74,
+          "end": 19.28,
+          "probability": 0.9602,
+          "id": 13
+        },
+        {
+          "text": "नसके",
+          "start": 19.28,
+          "end": 20.32,
+          "probability": 0.8354,
+          "id": 14
+        },
+        {
+          "text": "जाम",
+          "start": 20.32,
+          "end": 24.68,
+          "probability": 0.836,
+          "id": 15
+        },
+        {
+          "text": "दिख",
+          "start": 24.68,
+          "end": 25.14,
+          "probability": 0.7532,
+          "id": 16
+        },
+        {
+          "text": "दिया",
+          "start": 25.14,
+          "end": 26.02,
+          "probability": 0.9684,
+          "id": 17
+        },
+        {
+          "text": "कर",
+          "start": 26.02,
+          "end": 28.14,
+          "probability": 0.4744,
+          "id": 18
+        },
+        {
+          "text": "दो",
+          "start": 28.14,
+          "end": 28.72,
+          "probability": 0.862,
+          "id": 19
+        }
+      ],
+      "note": "ASR is independent evidence, not automatic ground truth. High-confidence verb differences require focused listening."
+    },
+    "recovery_used": false,
+    "words": [
+      {
+        "id": 0,
+        "text": "आ...",
+        "start": 0.0,
+        "end": 3.4,
+        "uncertain": false
+      },
+      {
+        "id": 1,
+        "text": "हमको किसी के हुस्न ने",
+        "start": 3.4,
+        "end": 6.6,
+        "uncertain": false
+      },
+      {
+        "id": 2,
+        "text": "शायर बना दिया",
+        "start": 6.6,
+        "end": 9.8,
+        "uncertain": false
+      },
+      {
+        "id": 3,
+        "text": "हमको किसी के हुस्न ने",
+        "start": 9.8,
+        "end": 13.1,
+        "uncertain": false
+      },
+      {
+        "id": 4,
+        "text": "शायर बना दिया",
+        "start": 13.1,
+        "end": 16.4,
+        "uncertain": false
+      },
+      {
+        "id": 5,
+        "text": "होंठों का नाम ले ना सके",
+        "start": 16.4,
+        "end": 19.9,
+        "uncertain": false
+      },
+      {
+        "id": 6,
+        "text": "होंठों का नाम ले ना सके",
+        "start": 19.9,
+        "end": 23.3,
+        "uncertain": false
+      },
+      {
+        "id": 7,
+        "text": "जाम लिख दिया",
+        "start": 23.3,
+        "end": 26.6,
+        "uncertain": false
+      },
+      {
+        "id": 8,
+        "text": "होंठों का नाम ले ना सके",
+        "start": 26.6,
+        "end": 29.988,
+        "uncertain": false
+      }
+    ],
+    "instrumental": [],
+    "unclear": [],
+    "leading_untranscribed_seconds": 0.0,
+    "warnings": [
+      "Approximate phrase timing only; ids identify phrases, not individual words. Listening review required."
+    ],
+    "source_specific_correction": {
+      "interval": [
+        23.3,
+        26.6
+      ],
+      "text": "जाम लिख दिया",
+      "basis": "Focused full large-v3 Hindi decode, source interval 16..34 seconds; लिख and दिया both above 0.976 probability. Other decoder alternatives were not treated as truth."
+    },
+    "independent_focused_evidence": [
+      {
+        "text": " लिख",
+        "start": 24.8,
+        "end": 25.14,
+        "probability": 0.9768158197402954
+      },
+      {
+        "text": " दिया",
+        "start": 25.14,
+        "end": 26.0,
+        "probability": 0.9766481637954711
+      }
+    ]
+  }
+}

@@ -37,10 +37,10 @@ def strong_word_conflicts(segments,independent):
             previous=None;continue
         lexical=tokens(word.get('text',''));lexical=[t for t in lexical if len(t)>=2]
         nearby=' '.join(str(s.get('text','')) for s in segments if float(s['start'])<end+.6 and float(s['end'])>start-.6)
-        absent=bool(lexical) and confidence>=.95 and 0<=start<end and script(''.join(lexical))==script(nearby) and any(t not in tokens(nearby) for t in lexical)
+        absent=bool(lexical) and confidence>=.7 and 0<=start<end and script(''.join(lexical))==script(nearby) and any(t not in tokens(nearby) for t in lexical)
         if absent:
-            current={'start':start,'end':end,'text':word['text']}
-            if previous and start-previous['end']<=.7 and tokens(previous['text'])!=lexical:
+            current={'start':start,'end':end,'text':word['text'],'confidence':confidence}
+            if previous and start-previous['end']<=.7 and tokens(previous['text'])!=lexical and (confidence+previous['confidence'])/2>=.85:
                 conflicts.append({'start':previous['start'],'end':end,'decoder_words':previous['text']+' '+word['text'],'proposed':nearby})
             previous=current
         else:previous=None
