@@ -73,7 +73,7 @@ if chapter in (3,5,11):
                         (145,.58,-.13,.25),(171,.60,-.13,.25),
                         (205,.95,-.47,.50)):
         scene.frame_set(f);bpy.context.view_layer.update()
-        local=(Vector((.18,.39,-.015)) if chapter==11 else
+        local=(Vector((.18,.49,-.055)) if chapter==11 else
                Vector((.27 if chapter==3 else .56,0,.11)))
         target=roach.matrix_world @ local
         wasp.location=target+Vector((dx,dy,dz))
@@ -82,12 +82,17 @@ if chapter==10:
     # The animal must visibly cross the mouth and descend, not stop beside it.
     for f,xyz,scale in ((80,(1.14,.63,.18),1.0),
                         (125,(1.47,.88,.08),1.0),
-                        (175,(1.60,1.08,-.20),.86),
-                        (240,(1.60,1.10,-.56),.67)):
+                        (175,(1.60,1.08,-.20),1.0),
+                        (240,(1.60,1.10,-.56),1.0)):
         roach.location=xyz;roach.keyframe_insert(data_path="location",frame=f)
         roach.scale=(scale,)*3;roach.keyframe_insert(data_path="scale",frame=f)
     # Insect stays physically above ground until it reaches the entrance.
     assert roach.location.z<0
+# Keep the full-size roach rig as it enters; pitch head-down rather than shrink.
+if chapter==10:
+    for f,pitch in ((1,0.0),(110,0.0),(155,.12),(195,.42),(240,.50)):
+        roach.rotation_euler.y=pitch
+        roach.keyframe_insert(data_path="rotation_euler",frame=f)
 scene.frame_set(1)
 for actor in (wasp,roach):
     actor.keyframe_insert(data_path="rotation_euler",frame=1)
@@ -177,7 +182,7 @@ if chapter in (4,6):
             node.keyframe_insert(data_path="scale",frame=f)
 if chapter==11:
     eggmat=material("egg ivory",(.76,.70,.49),rough=.78,noise=12)
-    egg=ell("single jewel wasp egg",(.18,.39,-.015),(.072,.13,.052),eggmat,roach)
+    egg=ell("single jewel wasp egg",(.18,.49,-.055),(.072,.13,.052),eggmat,roach)
     for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(240,1.0)):
         egg.scale=(.072*size,.13*size,.052*size)
         egg.keyframe_insert(data_path="scale",frame=f)
@@ -189,7 +194,7 @@ if chapter==11:
                     (168,1.0),(190,.25),(240,.001)):
         scene.frame_set(f);bpy.context.view_layer.update()
         a=wasp.matrix_world @ Vector((-.80,0,.04))
-        b=roach.matrix_world @ Vector((.18,.39,-.015))
+        b=roach.matrix_world @ Vector((.18,.49,-.055))
         d=b-a
         if f in (140,168):
             assert d.length<.60, "Oviposition contact gap %.3f"%d.length
@@ -209,12 +214,12 @@ if chapter==12:
         t=i/(nring-1)
         profile=max(.045,math.sin(math.pi*t)**.62)
         x=-.46+.82*t
-        yc=.39+.020*math.sin(2*math.pi*t)
-        zc=-.012+.012*math.sin(math.pi*t)
+        yc=.46+.020*math.sin(2*math.pi*t)
+        zc=-.060+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
-            verts.append((x,yc+.095*profile*math.cos(a),
-                          zc+.076*profile*math.sin(a)))
+            verts.append((x,yc+.115*profile*math.cos(a),
+                          zc+.092*profile*math.sin(a)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;jnext=i*nsides+(j+1)%nsides
@@ -253,14 +258,14 @@ camera.animation_data_clear();camera_data.animation_data_clear()
 camera_data.type="PERSP"
 camera_data.sensor_fit="VERTICAL";camera_data.sensor_height=24
 camera_data.lens=45
-shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.15,1.9,
-            3.15,2.7,3.6,2.65,1.38,1.38,4.3]
+shot_sizes=[4.5,3.65,3.3,1.65,2.1,1.65,1.9,
+            3.15,2.7,3.6,2.30,1.15,1.18,4.3]
 offsets=[
     (1,-5.2,2.2),(-2.8,-4.0,1.1),(2.5,-4.0,1.0),
     (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
-    (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(1.6,-2.8,.65),
-    (1.0,-2.6,.5),(-2.0,-5.0,2.3)]
+    (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(.35,-3.0,.65),
+    (.45,-2.7,.65),(-2.0,-5.0,2.3)]
 for f in (1,120,240):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
@@ -271,7 +276,7 @@ for f in (1,120,240):
     elif chapter in (9,10):
         focus=Vector((1.5,.90,-.02))
     elif chapter==11:
-        focus=roach.matrix_world @ Vector((.18,.39,-.015))
+        focus=roach.matrix_world @ Vector((.18,.49,-.055))
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
@@ -303,7 +308,23 @@ scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.environ["BLENDER_OUTPUT"]
 if mode=="preflight":
     # Blender executes every action and camera assertion without costly pixels.
-    scene.frame_set(145);bpy.context.view_layer.update()
+    from bpy_extras.object_utils import world_to_camera_view
+    proof_frames={3:145,5:145,10:195,11:190,12:180}
+    frame=proof_frames.get(chapter,145)
+    scene.frame_set(frame);bpy.context.view_layer.update()
+    if chapter in (3,5):
+        target=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
+    elif chapter==10:
+        target=Vector((1.60,1.10,-.12))
+    elif chapter==11:
+        target=roach.matrix_world @ Vector((.18,.49,-.055))
+    elif chapter==12:
+        target=larva.matrix_world @ Vector((-.05,.46,-.06))
+    else:
+        target=Vector(roach.location)
+    projected=world_to_camera_view(scene,camera,target)
+    print("JW_ACTION_TARGET_PROJECTION",chapter,frame,tuple(round(float(v),3) for v in projected),flush=True)
+    assert .07<projected.x<.93 and .08<projected.y<.92 and projected.z>0, "Action focal point outside portrait view"
     assert scene.camera is camera and scene.render.fps==24
     print("JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS",chapter,flush=True)
 elif mode=="still":
