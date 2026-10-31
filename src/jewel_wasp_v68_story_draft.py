@@ -50,7 +50,7 @@ poses=[
     ((-.9,-.5,.52),(-.5,-.4,.44),(-.2,-.3,.42),(.75,.2,.18),(.3,.25,.18)),
     ((-.8,-.4,.42),(-.5,-.1,.40),(-.2,.15,.42),(.9,.2,.18),(.25,.45,.18)),
     ((-.7,-.5,.52),(.1,.1,.42),(.8,.5,.40),(.75,.0,.18),(1.45,.95,.18)),
-    ((.1,-.5,.52),(.7,.2,.43),(1.4,.9,.38),(.8,.1,.18),(1.5,1.0,.18)),
+    ((.1,-.5,.52),(.7,.2,.43),(1.4,.9,.38),(.8,.1,.18),(1.6,1.1,-.16)),
     ((1.0,.15,.50),(1.4,.6,.40),(1.7,.9,.42),(1.50,1.0,.18),(1.50,1.0,.18)),
     ((-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(1.5,1.0,.18),(1.5,1.0,.18)),
     ((.4,.0,.40),(.3,-.2,.95),(-1.1,-1.0,1.55),(.95,.2,.18),(.95,.2,.18))]
@@ -117,35 +117,65 @@ if chapter in (4,6):
             node.keyframe_insert(data_path="scale",frame=f)
 if chapter==11:
     eggmat=material("egg ivory",(.76,.70,.49),rough=.78)
-    egg=ell("single jewel wasp egg",(-.10,.01,.20),(.06,.12,.05),eggmat,roach)
+    # Egg attaches near a cockroach leg, not as a white bead on its dorsal shell.
+    egg=ell("single jewel wasp egg",(.18,.30,-.08),(.075,.13,.055),eggmat,roach)
     for f,s in ((1,.001),(110,.001),(170,.65),(240,1.0)):
-        egg.scale=(.06*s,.12*s,.05*s);egg.keyframe_insert(data_path="scale",frame=f)
+        egg.scale=(.075*s,.13*s,.055*s);egg.keyframe_insert(data_path="scale",frame=f)
 if chapter==12:
-    larvamat=material("cream larva cuticle",(.65,.54,.38),rough=.78,noise=18)
-    for i in range(8):
-        t=i/7
-        shape=.38+.62*math.sin(math.pi*t)**.7
-        segment=ell("growing larva segment %02d"%i,
-                    (-.46+i*.105,.03,.20),(.07*shape,.085,.065*shape),
-                    larvamat,roach)
-        for f,s in ((1,.25),(120,.60),(240,1.0)):
-            segment.scale=(.07*shape*s,.085*s,.065*shape*s)
-            segment.keyframe_insert(data_path="scale",frame=f)
+    # One continuous tapered larval cuticle, not eight detached pearl spheres.
+    # Shallow annular material changes are painted on the same watertight mesh.
+    larvamat=material("organic cream larval cuticle",(.65,.54,.38),rough=.82,noise=18)
+    groove=material("subtle larval segment grooves",(.48,.39,.29),rough=.91,noise=14)
+    verts=[];faces=[];nring=49;nsides=20
+    for i in range(nring):
+        t=i/(nring-1)
+        profile=max(.045,math.sin(math.pi*t)**.62)
+        x=-.46+.82*t
+        yc=.30+.020*math.sin(2*math.pi*t)
+        zc=.10+.012*math.sin(math.pi*t)
+        for j in range(nsides):
+            a=2*math.pi*j/nsides
+            verts.append((x,yc+.095*profile*math.cos(a),
+                          zc+.076*profile*math.sin(a)))
+    for i in range(nring-1):
+        for j in range(nsides):
+            k=i*nsides;jnext=i*nsides+(j+1)%nsides
+            faces.append((k,jnext,jnext+nsides,k+nsides))
+    faces.append(tuple(reversed(range(nsides))))
+    faces.append(tuple((nring-1)*nsides+j for j in range(nsides)))
+    larva_mesh=bpy.data.meshes.new("continuous organic larva mesh")
+    larva_mesh.from_pydata(verts,[],faces);larva_mesh.update()
+    larva=bpy.data.objects.new("single growing jewel wasp larva",larva_mesh)
+    scene.collection.objects.link(larva);larva.parent=roach
+    larva_mesh.materials.append(larvamat);larva_mesh.materials.append(groove)
+    for poly in larva_mesh.polygons:
+        poly.use_smooth=True
+        axial=poly.index//nsides
+        poly.material_index=1 if axial<nring-1 and axial%6==0 else 0
+    for frame,size,sway in ((1,.25,0),(60,.40,.025),(120,.62,-.020),
+                            (180,.83,.028),(240,1.0,0)):
+        larva.scale=(size,size,size)
+        larva.rotation_euler.z=sway
+        larva.keyframe_insert(data_path="scale",frame=frame)
+        larva.keyframe_insert(data_path="rotation_euler",frame=frame)
 # Independent shot compositions, focal points and lens moves.
 camera.animation_data_clear();camera_data.animation_data_clear()
 camera_data.type="ORTHO"
-shot_sizes=[5.8,4.4,4.2,3.15,2.9,2.9,2.7,4.0,3.7,5.2,4.6,3.1,2.45,5.5]
+shot_sizes=[5.8,4.4,4.2,3.15,2.9,2.9,2.7,4.0,3.7,5.2,4.6,1.75,1.75,5.5]
 offsets=[
     (1.0,-5.2,3.4),(-2.0,-4.4,2.5),(2.1,-4.2,2.7),
     (1.7,-3.2,1.9),(-.9,-3.3,2.3),(-1.6,-2.8,1.7),
     (2.0,-3.0,2.3),(-2.0,-4.0,2.3),(1.5,-3.5,1.9),
-    (1.0,-5.3,3.5),(-2.2,-4.0,2.8),(1.8,-2.8,2.0),
-    (1.1,-2.4,1.55),(-1.2,-5.0,3.4)]
+    (1.0,-5.3,3.5),(-2.2,-4.0,2.8),(1.8,-2.8,1.0),
+    (1.1,-2.4,1.0),(-1.2,-5.0,3.4)]
 for f in (1,120,240):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
     if chapter in (4,6,12):focus=Vector(roach.location)
-    if chapter in (9,10,11,12):focus=Vector((1.3,.80,.30))
+    if chapter in (9,10):focus=Vector((1.3,.80,.30))
+    if chapter in (11,12):
+        # Macro cutaway-style view: frame the near-side leg, egg and larva.
+        focus=Vector(roach.location)+Vector((0,-.18,.05))
     focus.z+=.12
     off=Vector(offsets[chapter])
     camera.location=focus+off*(1.05 if f==1 else .94 if f==240 else 1.0)
