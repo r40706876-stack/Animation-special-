@@ -37,12 +37,24 @@ def cues_from_lyrics(lyrics,fps):
     else:
         current=[]
         for w in units:
-            if current and (w['start']-current[-1]['end']>.35 or len(current)>=6 or re.search(r'[।!?]$',current[-1]['text'])):
+            fits=True
+            if current:
+                try:layout(' '.join(x['text'] for x in current+[w]))
+                except ValueError:fits=False
+            if current and (not fits or w['start']-current[-1]['end']>.35 or len(current)>=6 or re.search(r'[।!?]$',current[-1]['text'])):
                 groups.append(current);current=[]
             current.append(w)
         if current:groups.append(current)
     return [{'start_frame':round(g[0]['start']*fps),'end_frame':round(g[-1]['end']*fps),
         'text':' '.join(x['text'] for x in g),'timing':'phrase'} for g in groups]
+
+def preflight(lyrics,fps=24):
+    """Check readability before paying for story/art; never invent word times."""
+    report=[]
+    for cue in cues_from_lyrics(lyrics,fps):
+        size,lines=layout(cue['text'])
+        report.append({'text':cue['text'],'font_size':size,'lines':list(lines)})
+    return report
 
 @lru_cache(maxsize=256)
 def layout(text):

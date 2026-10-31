@@ -66,7 +66,7 @@ def retarget(plan,index,notes):
         node('shadow_right',shade,[key(0,360,550,opacity=.85),key(.5,430,520,8,opacity=.65),key(1,505,470,16,opacity=0)])
     pacing='pac' in text+' '+scene.get('action','').lower()
     xs=[160,380,200] if pacing else ([100,270,440] if walk else [270,270,270])
-    node('root',None,[key(0,xs[0],680),key(.5,xs[1],680),key(1,xs[2],680)])
+    node('root',None,[key(0,xs[0],650),key(.5,xs[1],650),key(1,xs[2],650)])
     gait=3 if walk else 0
     for side,phase,x in [('left',0,-18),('right',.5,18)]:
         node(side+'_leg',leg,[key(0,x,-55),key(1,x,-55)],parent='root',pivot=(.5,0),wave=dict(rotation=19 if walk else 0,cycles=gait,phase=phase))

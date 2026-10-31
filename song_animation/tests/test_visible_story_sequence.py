@@ -26,7 +26,7 @@ class ActualVisibleSequence(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for i in range(5):
-                im=picture();ImageDraw.Draw(im).rectangle((0,267,180,320),fill=['white','red','blue','green','black'][i]);im.save(root/(str(i)+'.png'))
+                im=picture();ImageDraw.Draw(im).rectangle((0,244,180,320),fill=['white','red','blue','green','black'][i]);im.save(root/(str(i)+'.png'))
             video=root/'repeated.mp4'
             subprocess.run(['ffmpeg','-v','error','-y','-framerate','1/6','-i',str(root/'%d.png'),'-t','30','-r','12','-c:v','libx264','-pix_fmt','yuv420p',str(video)],check=True)
             scenes=timeline();samples=[[encoded_sample(video,i*6+q*5.9) for q in (.1,.5,.9)] for i in range(5)]

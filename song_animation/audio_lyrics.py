@@ -43,6 +43,8 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
                 raise ValueError('Unclear sung words require correction before semantic scenes are generated')
             units=[dict(id=i,**{k:x[k] for k in ('text','start','end')}) for i,x in enumerate(data.get('segments',[]))]
             validate_lyrics(units,dur)
+            from .lyrics import preflight
+            preflight({'words':units,'timing_granularity':'phrase'})
             if data.get('has_vocals',True) and not units:raise ValueError('Vocal text omitted')
             for region in data.get('instrumental',[])+data.get('unclear',[]):
                 if not 0<=region['start']<region['end']<=dur+.03:raise ValueError('Audio interval exceeds selected clip')

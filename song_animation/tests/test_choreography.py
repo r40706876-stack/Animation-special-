@@ -16,6 +16,19 @@ class ConnectedBody(unittest.TestCase):
         self.assertEqual(nodes['connected_0_left_foot']['parent'],'connected_0_left_leg')
         self.assertGreater(abs(values(nodes['connected_0_root'],.8)['x']-values(nodes['connected_0_root'],.1)['x']),100)
         self.assertAlmostEqual(values(nodes['connected_0_left_leg'],.1)['rotation'],-values(nodes['connected_0_right_leg'],.1)['rotation'])
+        # Walking feet must remain above the two-line caption area in every pose.
+        import numpy as np
+        from song_animation.vector import basis
+        for t in (0,.1,.25,.5,.75,.9,1):
+            matrices={}
+            for n in fixed['scenes'][0]['nodes']:
+                m=basis(values(n,t))
+                if n.get('parent'):m=matrices[n['parent']]@m
+                matrices[n['id']]=m
+                if n['id'].endswith('_foot'):
+                    a=fixed['assets'][n['asset']];w,h=a['width'],a['height'];px,py=n['pivot']
+                    corners=m@np.array([[-px*w,(1-px)*w,(1-px)*w,-px*w],[-py*h,-py*h,(1-py)*h,(1-py)*h],[1,1,1,1]])
+                    self.assertLessEqual(corners[1].max(),720)
         self.assertEqual(p,original)
     def test_nonhuman_world_is_not_replaced_by_a_person(self):
         p={'bible':{'characters':'a mechanical bird'},'scenes':[{'action':'walking'}],'assets':{}}

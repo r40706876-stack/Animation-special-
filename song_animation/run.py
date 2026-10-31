@@ -1,4 +1,4 @@
-import argparse,copy,hashlib,json,shutil
+import argparse,copy,hashlib,json,shutil,math
 from pathlib import Path
 from .analyze import analyze,music_features,duration
 from .clip import prepare
@@ -6,6 +6,17 @@ from .render import render
 from .contract import validate_lyrics
 from .quality import QualityHold,visual_decision,inspect_export
 from .provider import ProviderUnavailable
+from .lyrics import preflight as caption_preflight
+
+def load_analysis_checkpoint(out,key,duration):
+    out=Path(out)
+    try:
+        if json.loads((out/'analysis_checkpoint.json').read_text()).get('key')!=key:return None
+        lyrics=json.loads((out/'lyrics.json').read_text())
+        if not math.isfinite(float(lyrics['duration'])) or abs(float(lyrics['duration'])-duration)>.05:return None
+        validate_lyrics(lyrics['words'],duration);caption_preflight(lyrics)
+        return lyrics
+    except (OSError,ValueError,KeyError,TypeError,AttributeError):return None
 
 def cached_reference(source,selection):
     """Only reuse exact-source analysis when no vocal phrase was cut in half."""
@@ -47,8 +58,8 @@ def main():
             audio_hash=hashlib.sha256(clip.read_bytes()).hexdigest()
             key=audio_hash+'-'+args.model+'-'+args.transcriber+'-multilingual-v7-independent-verbs'
             checkpoint=out/'analysis_checkpoint.json'
-            if checkpoint.exists() and (out/'lyrics.json').exists() and json.loads(checkpoint.read_text()).get('key')==key:
-                lyrics=json.loads((out/'lyrics.json').read_text());validate_lyrics(lyrics['words'],selection['duration'])
+            lyrics=load_analysis_checkpoint(out,key,selection['duration'])
+            if lyrics is not None:
                 print('Resuming matching clip transcript',flush=True)
             else:
                 lyrics=cached_reference(args.audio,selection) if args.transcriber=='audio-model' else None
@@ -59,6 +70,8 @@ def main():
                     else:lyrics=analyze(clip,out,args.model)
                 (out/'lyrics.json').write_text(json.dumps(lyrics,ensure_ascii=False,indent=2))
                 checkpoint.write_text(json.dumps({'key':key}))
+        captions=caption_preflight(lyrics)
+        (out/'caption_preflight.json').write_text(json.dumps(captions,ensure_ascii=False,indent=2))
         music=music_features(clip,out)
         if args.engine=='generated':
             from .generative import build

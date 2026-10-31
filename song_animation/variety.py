@@ -11,7 +11,8 @@ SIMILARITY=.97
 def signatures(image):
     im=image.convert('RGB');w,h=im.size
     # Captions live below the scene action; changing subtitles cannot create cuts.
-    im=im.crop((round(w*.025),round(h*.035),round(w*.975),round(h*.78)))
+    # Two-line captions can begin at y=732 in the 960px canvas.
+    im=im.crop((round(w*.025),round(h*.035),round(w*.975),round(h*.75)))
     w,h=im.size;result=[]
     for scale in (1,.92,.84):
         dx=(1-scale)*w/2;dy=(1-scale)*h/2

@@ -27,7 +27,9 @@ class UploadSelection(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);audio=root/'audio.m4a';audio.write_bytes(b'original audio');video=root/'checked.mp4';video.write_bytes(b'checked bytes')
             (root/'status.json').write_text('{"status":"checks_passed"}')
-            (root/'quality_gate.json').write_text(json.dumps({'passed':True,'technical':{'video_sha256':source_hash(video)}}))
+            clip=root/'source_clip.wav';clip.write_bytes(b'original excerpt')
+            (root/'selection.json').write_text(json.dumps({'source_sha256':source_hash(audio),'start':0,'duration':2}))
+            (root/'quality_gate.json').write_text(json.dumps({'passed':True,'technical':{'video_sha256':source_hash(video),'source_clip_sha256':source_hash(clip)}}))
             self.assertEqual(receipt(audio,root)['source_sha256'],source_hash(audio))
             video.write_bytes(b'tampered')
             with self.assertRaisesRegex(ValueError,'does not match'):receipt(audio,root)

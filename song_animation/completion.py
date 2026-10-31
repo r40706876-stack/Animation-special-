@@ -28,7 +28,11 @@ def receipt(audio,out):
     if status.get('status')!='checks_passed' or gate.get('passed') is not True or not video.is_file():raise ValueError('A failed/draft song cannot receive a completion receipt')
     actual=source_hash(video)
     if gate.get('technical',{}).get('video_sha256')!=actual:raise ValueError('Completion video does not match the checked export')
-    return {'source_sha256':source_hash(audio),'status':'checks_passed','video_sha256':actual,
+    source=source_hash(audio);selection=json.loads((out/'selection.json').read_text())
+    if selection.get('source_sha256')!=source:raise ValueError('Completion belongs to a different uploaded song')
+    clip_hash=source_hash(out/'source_clip.wav')
+    if gate.get('technical',{}).get('source_clip_sha256')!=clip_hash:raise ValueError('The checked audio excerpt has changed')
+    return {'source_sha256':source,'source_clip_sha256':clip_hash,'clip_start':selection['start'],'clip_duration':selection['duration'],'status':'checks_passed','video_sha256':actual,
         'run_id':os.getenv('GITHUB_RUN_ID',''),'commit':os.getenv('GITHUB_SHA',''),
         'human_approval':False,'universal_quality_certified':False}
 

@@ -7,8 +7,8 @@ from .lyrics import cues_from_lyrics,shot_phrases
 from .narrative import validate_story
 from .coverage import validate_coverage
 
-PROTOCOL='open-vector-v7-visible-sequence'
-ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..750; a separate lyric panel may cover y=770..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
+PROTOCOL='open-vector-v8-timed-story'
+ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..720; a two-line lyric panel may cover y=732..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
 Each SVG is one independent asset drawn in its OWN local viewBox. SVG must be self-contained, no scripts, text, images, use, foreignObject, style, filters, URLs or external resources. Allowed elements: svg,g,path,rect,circle,ellipse,line,polyline,polygon,defs,linearGradient,radialGradient,stop,clipPath. Inline fill/stroke/transform attributes only. Use xmlns="http://www.w3.org/2000/svg". Gradients may reference local #ids only. A detailed full setting can be a background asset at width=540,height=960 with pivot [0,0] at x=0,y=0. Characters/props use tight local viewBoxes with transparent background, raster widths/heights matching their intended pixel size. Do not put a full character AND its separately animated arm into both assets: rig separate body/head/limbs where useful. Draw enough paths/shapes to look illustrated rather than geometric placeholder art.'''
 
 
@@ -22,6 +22,7 @@ PACKAGE_SCHEMA={'type':'OBJECT','properties':{
 def storyboard(lyrics,music,out,fps=24):
     duration=lyrics['duration']
     prompt=f'''Direct a visually sophisticated LYRIC-MEANING FILM, not a presenter video. First interpret each sung phrase: its central subject, literal meaning, emotional metaphor and visible cause/consequence. Then design an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
+LYRIC TIMING: lyric_ids index the supplied timed phrases relative to the selected clip. Referenced phrases must overlap the shot interval, allowing one frame of rounding. Do not reference a later chorus in an earlier shot. Instrumental or preparation shots may use empty ids while carrying the same story forward.
 USER LIGHTING: normal bright, readable warm daylight. Do not invent a dark/moonlit setting merely to convey poetry or sadness.
 VISUAL PACING: Never hold one actual staged composition longer than eight seconds across adjacent cuts. Caption changes, recolouring, tiny zooms and decorative overlays do not create a new setup. The encoded video will be measured for repetition as well as semantically reviewed for causal story progression.
 VISUAL COVERAGE: For 20..30 seconds use at least five shots and at least THREE distinct narrative setups (environment plus staging), with no more than two consecutive shots in one setup. A desk with different crops/zoom/portraits is ONE setup. Show the encounter/world, a meaningful reaction or consequence in another staging, and a developed ending. A story can remain in one physical place, but the dramatic staging must visibly change. Never add unrelated travel just for variety. Reuse each environment/staging name exactly whenever returning to it. Include coverage in EVERY scene: environment (concrete location), staging (actual blocking/interaction, not framing), framing (wide, medium, close, etc.), visible_event (what visibly changes). The actual encoded shots will be rejected if they only reframe one image.
@@ -77,6 +78,10 @@ def compile_storyboard(data,lyrics,fps=24):
         if not fps<=b-a<=8*fps:raise ValueError('Storyboard shot must last 1..8 seconds')
         refs=s.get('lyric_ids',[])
         if not isinstance(refs,list) or any(type(n) is not int or not 0<=n<len(lyrics['words']) for n in refs):raise ValueError('Invalid lyric references')
+        for ref in refs:
+            word=lyrics['words'][ref]
+            if word['end']<a/fps-1/fps or word['start']>b/fps+1/fps:
+                raise ValueError(f'Shot {i} references a lyric far outside this shot; fix the timing/meaning, not just the id')
         covered.update(refs)
         for key in ('label','visual','action'):
             if not isinstance(s.get(key),str) or len(s[key].strip())<8:raise ValueError('Storyboard lacks '+key)
