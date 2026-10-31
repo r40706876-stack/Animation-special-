@@ -33,8 +33,12 @@ async def main():
  for i,line in enumerate(lines):
   await make(i,line)
   duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',f'voice/{i:02d}.mp3'],text=True))
-  speed=max(1.0,duration/9.55)
+  # Tempo may be BELOW 1.0: otherwise a 6s spoken line is padded with
+  # nearly four seconds of silence at the end of its 10s story chapter.
+  # Fit actual speech to ~9.4s while preserving pitch with ffmpeg atempo.
+  speed=max(0.5,duration/9.4)
   if speed>2.0:raise RuntimeError(f'Chapter {i} narration too long: {duration:.1f}s')
+  if duration/9.4<0.5:print('VOICE_SHORT_SOURCE_WARNING',i,duration,flush=True)
   print(f'VOICE_CHAPTER_TIMING {i:02d} source={duration:.3f}s tempo={speed:.3f} target=10.000s',flush=True)
   subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'voice/{i:02d}.mp3','-af',f'atempo={speed:.3f},apad','-t','10','-ar','44100','-ac','2','-c:a','aac',f'voice/{i:02d}.m4a'],check=True)
  with open('voice/concat.txt','w') as f:
