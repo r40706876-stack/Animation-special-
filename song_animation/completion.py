@@ -1,5 +1,5 @@
 """Durable completion receipts keep scheduled retries from redoing cleared songs."""
-import base64,hashlib,json,os,re,time
+import base64,hashlib,json,os,re,time,math
 from pathlib import Path
 
 def source_hash(path):
@@ -19,8 +19,10 @@ def completed(root,audio):
 def last_attempt(root,audio):
     p=Path(root)/'song_animation'/'attempted'/(source_hash(audio)+'.json')
     if not p.is_file():return 0
-    try:return float(json.loads(p.read_text()).get('attempted_at',0))
-    except (ValueError,TypeError):return 0
+    try:
+        value=float(json.loads(p.read_text()).get('attempted_at',0))
+        return value if math.isfinite(value) and value>=0 else 0
+    except (OSError,ValueError,TypeError,AttributeError):return 0
 
 def receipt(audio,out):
     out=Path(out);status=json.loads((out/'status.json').read_text());gate=json.loads((out/'quality_gate.json').read_text())

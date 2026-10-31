@@ -72,7 +72,7 @@ jobs:
       matrix:
         audio: ${{ fromJSON(needs.inputs.outputs.audio) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 90
     env:
       AUDIO_PATH: ${{ matrix.audio }}
       ARTWORK: ${{ inputs.artwork || 'flux-layers' }}
@@ -110,6 +110,9 @@ jobs:
             song_draft/storyboard.json
             song_draft/story_candidate.json
             song_draft/vector_checkpoint.json
+            song_draft/pipeline_checkpoint.json
+            song_draft/review_contact.jpg
+            song_draft/art_backend_choice.json
             song_draft/painted_environments/
             song_draft/painted_actors/
             song_draft/flux_images/
@@ -120,7 +123,6 @@ jobs:
       - name: Check lyrics and connected story before loading the image models
         run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork "$ARTWORK" --stage plan
       - uses: actions/cache@v4
-        if: env.ARTWORK == 'painted-layers'
         with:
           path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
           key: song-painted-sd-turbo-b261bac6
@@ -128,7 +130,6 @@ jobs:
         if: env.ARTWORK == 'flux-layers'
         run: pip install -r song_animation/requirements-cutouts.txt
       - name: Install CPU painting backend after planning passed
-        if: env.ARTWORK == 'painted-layers'
         run: |
           pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
           pip install -r song_animation/requirements-painted.txt
@@ -144,6 +145,9 @@ jobs:
             song_draft/storyboard.json
             song_draft/story_candidate.json
             song_draft/vector_checkpoint.json
+            song_draft/pipeline_checkpoint.json
+            song_draft/review_contact.jpg
+            song_draft/art_backend_choice.json
             song_draft/painted_environments/
             song_draft/painted_actors/
             song_draft/flux_images/
@@ -184,3 +188,4 @@ jobs:
       - name: Show the actual song production status
         if: always()
         run: python -m song_animation.status_summary --out song_draft
+

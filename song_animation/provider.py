@@ -2,11 +2,16 @@
 import json,os,time
 from pathlib import Path
 
+def skipped_models():
+    try:value=json.loads(os.environ.get('SONG_PROVIDER_SKIP_MODELS','[]'))
+    except ValueError:return set()
+    return {x for x in value if isinstance(x,str)} if isinstance(value,list) else set()
+
 class ProviderUnavailable(RuntimeError):
     def __init__(self,attempts):
         super().__init__('No usable model response; provider quota or service availability blocked this stage')
         self.attempts=attempts
-        self.blocked_models=sorted({x['model'] for x in attempts if isinstance(x.get('model'),str) and x.get('http_status') in (401,403,404,429)})
+        self.blocked_models=sorted(skipped_models()|{x['model'] for x in attempts if isinstance(x.get('model'),str) and x.get('http_status') in (401,403,404,429)})
         transient={x['model'] for x in attempts if isinstance(x.get('model'),str) and (x.get('error')=='transport' or x.get('http_status') in (408,500,502,503,504))}-set(self.blocked_models)
         self.retryable=bool(transient) or any(x.get('error')=='model_discovery_unavailable' for x in attempts)
         delays=[]
@@ -53,9 +58,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             models=list(dict.fromkeys(known+models))
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
-    try:blocked=json.loads(os.environ.get('SONG_PROVIDER_SKIP_MODELS','[]'))
-    except ValueError:blocked=[]
-    if isinstance(blocked,list):models=[m for m in models if m not in blocked]
+    models=[m for m in models if m not in skipped_models()]
     parts=[{'text':prompt}]
     if audio_part:parts.insert(0,audio_part)
     if extra_parts:parts=list(extra_parts)+parts
@@ -94,6 +97,10 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
                         if limits:item['quota_limits']=limits[:6]
                 except (ValueError,TypeError):pass
             attempts.append(item)
+            if r.status_code in (401,403,404,429):
+                # Remember failures even when a later model succeeds. Otherwise
+                # every subsequent asset repeats the same exhausted-model call.
+                os.environ['SONG_PROVIDER_SKIP_MODELS']=json.dumps(sorted(skipped_models()|{model}))
             if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
             if r.status_code==200:
                 body=r.json();candidate=(body.get('candidates') or [{}])[0]

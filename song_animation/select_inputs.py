@@ -1,7 +1,7 @@
 """Choose exact new/changed uploads; never inject file names into shell source."""
 import json,os,subprocess
 from pathlib import Path
-EXTS={'.mp3','.wav','.m4a','.aac','.ogg','.opus','.mp4','.flac','.aiff','.aif','.webm','.mov'}
+EXTS={'.mp3','.wav','.m4a','.aac','.ogg','.oga','.opus','.mp4','.flac','.aiff','.aif','.webm','.weba','.mov','.mkv','.m4b','.wma'}
 
 def select(root,before='',head='',manual=None,event='push'):
     root=Path(root).resolve()
@@ -22,6 +22,12 @@ def select(root,before='',head='',manual=None,event='push'):
     if event!='schedule' and before and before.strip('0'):
         p=subprocess.run(['git','diff','--name-only','-z',before,head,'--','song_animation/inputs/','song_animation/requests/'],cwd=root,capture_output=True,check=False)
         if p.returncode:raise ValueError('Cannot resolve upload diff; refusing to process the wrong audio')
+        changed=p.stdout.decode().split('\0')
+    elif event=='push' and before and not before.strip('0'):
+        # Compare an initial branch push with its parent; --root also supports
+        # a repository's very first commit without reprocessing inherited songs.
+        p=subprocess.run(['git','diff-tree','--root','--no-commit-id','--name-only','-r','-z',head or 'HEAD','--','song_animation/inputs/','song_animation/requests/'],cwd=root,capture_output=True,check=False)
+        if p.returncode:raise ValueError('Cannot resolve first-upload commit')
         changed=p.stdout.decode().split('\0')
     files=[]
     for p in changed:

@@ -41,7 +41,7 @@ def review(plan,out):
         result['reviewer_model']=result.pop('_provider_model',None)
         result['advisory_only']=True;result['human_approval']=False
     except ProviderUnavailable as e:
-        result={'status':'unavailable','provider_wait':True,'retry_after_seconds':e.retry_after_seconds,'advisory_only':True,'human_approval':False}
+        result={'status':'unavailable','provider_wait':True,'retry_after_seconds':e.retry_after_seconds,'provider_attempts':e.attempts,'advisory_only':True,'human_approval':False}
     except (RuntimeError,ValueError,KeyError,OSError,subprocess.SubprocessError) as e:
         result={'status':'unavailable','error_type':type(e).__name__,'advisory_only':True,'human_approval':False}
     # This field always comes from decoded frames, never from model assertions.
@@ -49,7 +49,7 @@ def review(plan,out):
     (out/'visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
 
 
-def refine(plan,out,assessment,pass_index=1,scene_limit=6):
+def refine(plan,out,assessment,pass_index=1,scene_limit=6,completed_shots=(),on_progress=None):
     """One bounded visual correction pass using actual shot images and review notes."""
     import copy,hashlib,io
     from PIL import Image
@@ -61,6 +61,7 @@ def refine(plan,out,assessment,pass_index=1,scene_limit=6):
             groups.setdefault(index,[]).append(note[:1800])
     contact=Image.open(out/'review_contact.jpg') if groups else None
     for index,notes in list(groups.items())[:scene_limit]:
+        if index in completed_shots:continue
         row=contact.crop((0,index*320,540,(index+1)*320));buf=io.BytesIO();row.save(buf,format='JPEG')
         raw=buf.getvalue();image={'inline_data':{'mime_type':'image/jpeg','data':base64.b64encode(raw).decode()}}
         candidate['scenes'][index]['visual_correction']={
@@ -72,6 +73,9 @@ def refine(plan,out,assessment,pass_index=1,scene_limit=6):
             from .choreography import retarget
             candidate,rigged=retarget(candidate,index,notes)
             report.append({'shot':index,'status':'replaced','connected_rig':rigged,'issues':notes})
+            if on_progress:on_progress(candidate,list(completed_shots)+[r['shot'] for r in report if r['status']=='replaced'])
+        except ProviderUnavailable:
+            raise
         except (ValueError,RuntimeError,KeyError,TypeError) as e:
             candidate['scenes'][index]=copy.deepcopy(plan['scenes'][index])
             report.append({'shot':index,'status':'failed','error':str(e)[:1200]})

@@ -73,9 +73,13 @@ def main():
         captions=caption_preflight(lyrics)
         (out/'caption_preflight.json').write_text(json.dumps(captions,ensure_ascii=False,indent=2))
         music=music_features(clip,out)
+        from .pipeline_checkpoint import identity,load as load_pipeline,save as save_pipeline
+        pipeline_key=identity(clip,lyrics,args.engine,args.artwork,args.width) if args.stage!='plan' and args.engine=='generated' else None
+        recovery=load_pipeline(out,pipeline_key) if pipeline_key else None
+        start_pass=recovery['pass_index'] if recovery else 0
         if args.engine=='generated':
             from .generative import build
-            plan=build(lyrics,music,out,artwork=args.artwork,plan_only=args.stage=='plan')
+            plan=recovery['plan'] if recovery else build(lyrics,music,out,artwork=args.artwork,plan_only=args.stage=='plan')
         else:
             from .director import make_plan
             from .local_director import local_plan
@@ -88,9 +92,15 @@ def main():
         if args.stage=='plan':
             (out/'status.json').write_text(json.dumps({'status':'planned','automatic_publish':False,'checked_file':None}))
             return
+        if pipeline_key and recovery and recovery['pending_repair']:
+            from .review import refine
+            assessment=recovery['assessment']
+            def progress(candidate,completed):save_pipeline(out,pipeline_key,candidate,start_pass,assessment,completed,True)
+            plan,_=refine(plan,out,assessment,pass_index=start_pass,completed_shots=recovery['completed_shots'],on_progress=progress)
+        if pipeline_key:save_pipeline(out,pipeline_key,plan,start_pass)
         if args.engine=='generated' and args.artwork=='flux-layers':
-            from .flux_layers import paint_environments,paint_foreground
-            plan=paint_environments(paint_foreground(plan,out),out)
+            from .original_art import paint as paint_original
+            plan=paint_original(plan,out,clip)
         elif args.engine=='generated' and args.artwork in ('painted-sets','painted-layers'):
             from .environments import paint_environments
             plan=paint_environments(plan,out)
@@ -100,20 +110,27 @@ def main():
         plan['selection']=selection
         (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
         render(plan,out,clip,args.width)
-        changed=False;assessment={};passes=[]
+        changed=bool(start_pass);assessment={};passes=[]
         if args.engine=='generated':
             from .review import review,refine
-            for pass_index in range(3):
+            for pass_index in range(start_pass,3):
                 assessment=review(plan,out)
+                if assessment.get('provider_wait'):raise ProviderUnavailable(assessment.get('provider_attempts') or [{'error':'model_discovery_unavailable'}])
                 decision=visual_decision(assessment,len(plan['scenes']))
                 (out/f'visual_review_pass_{pass_index}.json').write_text(json.dumps(assessment,ensure_ascii=False,indent=2))
                 passes.append({'pass':pass_index,**decision})
                 if decision['passed'] or pass_index==2 or not decision['repair_issues']:break
-                plan,replaced=refine(plan,out,dict(assessment,issues=decision['repair_issues']),pass_index=pass_index+1)
+                repair_assessment=dict(assessment,issues=decision['repair_issues'])
+                save_pipeline(out,pipeline_key,plan,pass_index+1,repair_assessment,pending=True)
+                def progress(candidate,completed):save_pipeline(out,pipeline_key,candidate,pass_index+1,repair_assessment,completed,True)
+                plan,replaced=refine(plan,out,repair_assessment,pass_index=pass_index+1,on_progress=progress)
+                save_pipeline(out,pipeline_key,plan,pass_index+1)
                 changed=changed or replaced
                 if not replaced:break
-                if args.artwork in ('painted-sets','painted-layers','flux-layers'):plan=paint_environments(plan,out)
-                if args.artwork in ('painted-layers','flux-layers'):plan=paint_foreground(plan,out)
+                if args.artwork=='flux-layers':plan=paint_original(plan,out,clip)
+                else:
+                    if args.artwork in ('painted-sets','painted-layers'):plan=paint_environments(plan,out)
+                    if args.artwork=='painted-layers':plan=paint_foreground(plan,out)
                 render(plan,out,clip,args.width)
             plan['visual_issues_remaining']=decision['reasons']
             (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))

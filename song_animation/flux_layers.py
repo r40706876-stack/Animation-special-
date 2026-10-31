@@ -32,20 +32,24 @@ def cutout(image,session):
     if (bounds[2]-bounds[0])*(bounds[3]-bounds[1])<image.width*image.height*.015:raise ValueError('Generated foreground subject is too small')
     return result.crop(bounds)
 
-def paint_foreground(plan,out):
+def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
     from rembg import new_session
     out=Path(out);folder=out/'flux_assets';folder.mkdir(parents=True,exist_ok=True)
     candidate=copy.deepcopy(plan);active={n.get('asset') for s in candidate['scenes'] for n in s['nodes'] if n.get('role')!='background'}
     session=None;report=[]
     for aid in sorted(active):
         a=candidate['assets'].get(aid)
-        if not a or 'svg' not in a or min(a['width'],a['height'])<45 or is_structural(a):continue
+        if not a or 'svg' not in a:continue
+        if is_structural(a):
+            a.pop('raster_png',None);a.pop('painted_actor',None)
+            continue
+        if min(a['width'],a['height'])<45:continue
         body='body' in aid.lower() or 'torso' in aid.lower()
         prompt=prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body)
         seed=seed_for(str(plan.get('bible',{}).get('characters',''))+aid.split('_')[0])
-        key=hashlib.sha256(('flux-cutout-v1'+prompt+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
+        key=hashlib.sha256((namespace+prompt+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
         if not path.exists():
-            raw=generate_image(prompt,out/'flux_images',seed)
+            raw=image_generator(prompt,out/'flux_images',seed)
             if session is None:session=new_session('u2netp',providers=['CPUExecutionProvider'])
             with Image.open(raw) as image:subject=cutout(image,session)
             canvas=Image.new('RGBA',(int(a['width']),int(a['height'])))
@@ -55,20 +59,20 @@ def paint_foreground(plan,out):
         with Image.open(path) as image:
             image.load()
             if image.size!=(int(a['width']),int(a['height'])) or not image.convert('RGBA').getchannel('A').getbbox():raise ValueError('Invalid cached raster cutout')
-        a['raster_png']=base64.b64encode(path.read_bytes()).decode();a['raster_art_provider']='public-flux';a.pop('painted_actor',None)
+        a['raster_png']=base64.b64encode(path.read_bytes()).decode();a['raster_art_provider']=namespace;a.pop('painted_actor',None)
         report.append({'asset':aid,'file':path.name,'quality_certified':False})
         (out/'flux_assets.json').write_text(json.dumps({'assets':report,'quality_certified':False},indent=2))
     return validate_vector(candidate)
 
 def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
-    return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('environment',scene.get('visual','')))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
+    return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('background_view',coverage.get('environment',scene.get('visual',''))))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
 
-def paint_environments(plan,out):
+def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
     out=Path(out);candidate=copy.deepcopy(plan)
     for scene in candidate['scenes']:
-        prompt=environment_prompt(plan,scene);path=generate_image(prompt,out/'flux_images',seed_for(prompt),768,1344)
-        aid='flux_set_'+hashlib.sha256(prompt.encode()).hexdigest()[:16]
+        prompt=environment_prompt(plan,scene);path=image_generator(prompt,out/'flux_images',seed_for(prompt),768,1344)
+        aid='flux_set_'+hashlib.sha256((namespace+prompt).encode()).hexdigest()[:16]
         candidate['assets'][aid]={'width':540,'height':960,'description':'Original viewpoint-specific painted setting','raster_png':base64.b64encode(path.read_bytes()).decode()}
         nodes=[n for n in scene['nodes'] if not n.get('painted_set')]
         for n in nodes:
