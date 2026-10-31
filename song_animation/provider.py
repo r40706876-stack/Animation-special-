@@ -6,14 +6,15 @@ class ProviderUnavailable(RuntimeError):
     def __init__(self,attempts):
         super().__init__('No usable model response; provider quota or service availability blocked this stage')
         self.attempts=attempts
+        self.blocked_models=sorted({x['model'] for x in attempts if isinstance(x.get('model'),str) and x.get('http_status') in (401,403,404,429)})
+        transient={x['model'] for x in attempts if isinstance(x.get('model'),str) and (x.get('error')=='transport' or x.get('http_status') in (408,500,502,503,504))}-set(self.blocked_models)
+        self.retryable=bool(transient) or any(x.get('error')=='model_discovery_unavailable' for x in attempts)
         delays=[]
         for item in attempts:
+            if self.retryable and item.get('model') not in transient:continue
             try:delays.append(float(str(item.get('retry_delay','0s')).removesuffix('s')))
             except ValueError:pass
         self.retry_after_seconds=max(delays,default=0)
-        # A busy service or transport interruption can recover shortly. Quota,
-        # authentication and permission failures need a different remedy.
-        self.retryable=any(x.get('error') in ('transport','model_discovery_unavailable') or x.get('http_status') in (408,500,502,503,504) for x in attempts) and not any(x.get('http_status') in (401,403,429) for x in attempts)
 
 def parse_object(raw):
     start=raw.find('{')
@@ -52,6 +53,9 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             models=list(dict.fromkeys(known+models))
     pinned=os.environ.get('GEMINI_MODEL','')
     if pinned in models:models=[pinned]+[m for m in models if m!=pinned]
+    try:blocked=json.loads(os.environ.get('SONG_PROVIDER_SKIP_MODELS','[]'))
+    except ValueError:blocked=[]
+    if isinstance(blocked,list):models=[m for m in models if m not in blocked]
     parts=[{'text':prompt}]
     if audio_part:parts.insert(0,audio_part)
     if extra_parts:parts=list(extra_parts)+parts

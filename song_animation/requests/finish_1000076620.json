@@ -1,5 +1,5 @@
 {
   "audio_path": "song_animation/inputs/song_1000076620.m4a",
-  "purpose": "Resume saved song work after transient 503/transport failures with bounded delayed retries and broader discovered full-model fallback",
-  "revision": 5
+  "purpose": "Keep completed scenes, skip quota-exhausted and retired models on retry, and resume only temporarily busy full-model alternatives",
+  "revision": 6
 }
