@@ -1,5 +1,5 @@
 """Self-hosted original cutouts: no public generation endpoint or GPU quota."""
-import hashlib,json
+import hashlib,json,re
 from pathlib import Path
 from PIL import Image
 from .environments import inference_pipeline,MODEL,REVISION
@@ -11,7 +11,8 @@ def compact_prompt(prompt):
         part=prompt.split('Show ONLY ',1)[-1].split('.',1)[0] if 'Show ONLY ' in prompt else ''
         # A short encoder otherwise drops rig constraints at the end of the
         # full prompt, painting duplicate hands beneath animated hand layers.
-        rig='Hands concealed behind the torso, no visible hands. ' if 'hands are hidden behind the body' in prompt else ''
+        rig='Arms folded behind the back. ' if 'hands are hidden behind the body' in prompt else ''
+        if rig:identity=re.sub(r'\bexpressive hands\b[, ]*','',identity,flags=re.I)
         return (' '.join(subject.split()[:14])+'. '+rig+('Only '+' '.join(part.split()[:10])+'. ' if part else '')+'Isolated, pure white background. '+' '.join(identity.split()[:12])+'. Detailed natural watercolor illustration, organic contours and expressive features.')
     if ' viewpoint.' in prompt:
         framing,rest=prompt.split(' viewpoint.',1)
