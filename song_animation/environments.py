@@ -17,7 +17,9 @@ def inference_pipeline():
     from diffusers import AutoPipelineForText2Image
     torch.set_num_threads(2)
     pipe=AutoPipelineForText2Image.from_pretrained(MODEL,revision=REVISION,variant='fp16',torch_dtype=torch.float32,use_safetensors=True,low_cpu_mem_usage=True)
-    pipe.to('cpu');pipe.enable_attention_slicing('max')
+    # PyTorch 2+ already selects SDPA. Replacing it with maximum slicing makes
+    # CPU painting needlessly slow; keep the native attention implementation.
+    pipe.to('cpu')
     return pipe
 
 def environment_prompt(plan,scene):
