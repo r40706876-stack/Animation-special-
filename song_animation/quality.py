@@ -4,8 +4,9 @@ from fractions import Fraction
 from pathlib import Path
 from .narrative import narrative_decision
 from .coverage import coverage_decision
+from .variety import decision as visible_variety_decision
 import numpy as np
-CHECKS=('lyric_meaning','artwork_detail','story_motion','anatomy_continuity','caption_legibility')
+CHECKS=('lyric_meaning','artwork_detail','story_motion','narrative_advance','anatomy_continuity','caption_legibility')
 class QualityHold(RuntimeError):pass
 
 def visual_decision(review,scene_count):
@@ -24,6 +25,11 @@ def visual_decision(review,scene_count):
         return {'passed':False,'reasons':reasons,'repair_issues':[]}
     coverage_reasons,coverage_repairs=coverage_decision(review,scene_count)
     reasons.extend(coverage_reasons);repair.extend(coverage_repairs)
+    measured_reasons,measured_repairs=visible_variety_decision(review.get('visual_variety_measurement'),scene_count)
+    reasons.extend(measured_reasons);repair.extend(measured_repairs)
+    if review.get('lyric_story_connection') is not True:
+        note='The overall visible story did not explicitly match the song emotion and meaning'
+        reasons.append(note);repair.extend({'shot':i,'issue':note} for i in range(scene_count))
     story_reasons,story_repairs=narrative_decision(review,scene_count)
     reasons.extend(story_reasons);repair.extend(story_repairs)
     if review.get('reference_quality_met') is not True:

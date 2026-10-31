@@ -5,7 +5,7 @@ from song_animation.quality import CHECKS,QualityHold,visual_decision,inspect_ex
 from song_animation.recognition import consistent_matches
 
 def clear_review(n=1):
- return {'visual_variety':True,'story_arc':True,'story_links':[{'from':i,'to':i+1,'causal_connection':True,'state_continuity':True,'emotional_progression':True} for i in range(n-1)],'needs_review':False,'issues':[],'reviewer_model':'gemini-quality-pro','reference_quality_met':True,'shots':[dict(shot=i,**{k:True for k in CHECKS}) for i in range(n)]}
+ return {'lyric_story_connection':True,'visual_variety_measurement':{'source':'decoded_mp4','passed':True,'sampled_shots':n,'sample_count':3*n,'required_groups':min(n,3),'observed_groups':n},'visual_variety':True,'story_arc':True,'story_links':[{'from':i,'to':i+1,'causal_connection':True,'state_continuity':True,'emotional_progression':True} for i in range(n-1)],'needs_review':False,'issues':[],'reviewer_model':'gemini-quality-pro','reference_quality_met':True,'shots':[dict(shot=i,**{k:True for k in CHECKS}) for i in range(n)]}
 class OutputPolicy(unittest.TestCase):
  def test_old_empty_advisory_review_cannot_clear_film(self):
   self.assertFalse(visual_decision({'needs_review':False,'issues':[]},1)['passed'])
