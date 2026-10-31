@@ -1,131 +1,47 @@
-# Upload a song → a new illustrated film of up to 30 seconds
+# Song upload → a connected animated story, up to 30 seconds
 
-The default pipeline now generates a new storyboard, custom SVG artwork and layered animation for the uploaded song. It no longer selects from the old eight-scene menu. Characters, objects, settings, palettes and narrative are open-vocabulary model outputs. Motion uses a general hierarchical keyframe renderer (translation, rotation, scale, opacity and articulated child layers).
+Upload a song under `song_animation/inputs/` on **main**. The changed audio is selected automatically by **Actions → Song Animation - verified checks and review drafts**. Multiple uploads enter separate jobs processed one at a time. Code-only pushes run renderer/tests; they do not process every old song or prove a finished song video.
 
-## Automatic workflow
+## What the pipeline does
 
-1. Upload MP3/WAV/M4A/OGG/OPUS/AAC/MP4 audio under `song_animation/inputs/` on the deployed branch.
-2. The upload diff selects each new/changed audio independently; two songs can run simultaneously.
-3. A source of 30 seconds or less stays its available length. Longer sources produce a 30-second clip. Short reel sources up to 45 seconds use the opening; longer songs use the strongest sustained-energy window. This is an energy heuristic, not a guarantee of the best lyrical chorus. CLI `--start SECONDS` overrides selection.
-4. Audio analysis detects language, genre and mood, transcribes phrases in the original script, and marks unclear/instrumental portions. Uncertain words are not invented.
-5. The director writes a shared style/character bible and a connected song-specific storyboard. The illustrator generates original scene layers and rigs; no fixed theme/object list is used. Storyboard/art calls try an available full Flash model before the lighter model, within the same bounded three-model transport budget.
-6. SVG validation, relative-motion checks, bounded scene-package repair, rendering, phrase captions, original soundtrack, decoding and duration checks run. Actual-frame advisory review accompanies the draft. Dark-scene contrast is flagged for review rather than rejecting a valid neon/night art style.
-7. Download the Actions artifact's `preview.mp4`; `lyrics.srt`, selection, lyrics, storyboard, plan, SVG assets, contact sheet, motion report and visual review are included.
+1. Keeps an input of 30 seconds or less at its available length. Longer sources produce an excerpt of up to 30 seconds. Short reel sources up to 45 seconds use the opening; longer songs use a sustained-energy window. This heuristic does not guarantee the best chorus. CLI `--start` overrides selection.
+2. Checks original-script lyrics against actual audio and an independent multilingual decoder. Unresolved words hold generation. An included transcript correction is reusable only for its exact source hash and uncut phrases. Phrase timing is not invented word-level karaoke.
+3. Writes one connected story with persistent subjects, choices, consequences and a shared style/character bible. Settings, subjects and actions are generated for the song, without an eight-animation menu. For 20–30 seconds, the story requires at least five shots, three setups and four visible events.
+4. Creates validated SVG motion rigs and original raster cutouts/settings. The upload default is `flux-layers`: public FLUX original images, or a coherent whole-source local SD-Turbo text-to-image fallback if that image service fails. CPU inference can be slow and lower quality; it is not an approval. The optional `HF_TOKEN` is passed only to the image service. `GEMINI_API_KEY` with usable full-model access is required for lyrics, story and video review.
+5. Animates independent foreground layers, adds readable lyrics, and exports the original soundtrack as a vertical MP4. Encoded-video review checks meaning, story progression, anatomy/continuity, illustration finish, motion and captions. Decoder measurements separately check repeated compositions, dimensions, duration, audio and complete decoding.
+6. Repairs failing shots within two passes. Only an output clearing every required gate receives **checked.mp4**. A failed or incomplete review retains a labelled draft/diagnostics instead of calling it ready.
 
-The workflow runs automatically on `main` after deployment and on the song-animation feature branch before merge. Existing Katha/Jewel Wasp workflows are separate. No social publishing occurs.
+## Download the result
 
-## GitHub पर कैसे चलाएँ
+Open the upload's Actions run. A cleared song has an artifact named **song-checked-…**, containing `checked.mp4`, `lyrics.srt`, `quality_gate.json` and `status.json`. The **song-draft-review-…** artifact contains `preview.mp4`, scene plans and diagnostics when available; a preview is not an approved export. Artifacts expire after seven days, so download videos you want to retain. No social publishing occurs.
 
-- इस folder के `inputs/` में **Add file → Upload files** से अपना गाना upload करके commit करें। Merge के बाद `main` branch चुनें; उससे पहले feature branch पर परीक्षण चलता है।
-- **Actions → Song Animation - draft and motion proof** में नया run खोलें। पहले proof, फिर प्रत्येक नए गाने का अलग generation job चलेगा।
-- Run पूरा होने पर नीचे **Artifacts → song-draft-review-…** download करें और ZIP के अंदर `preview.mp4` खोलें। `lyrics.srt` भी साथ मिलेगा।
-- पुराने गाने को दोबारा चलाने के लिए **Run workflow** में उसका repository path दें। Download किए गए artifacts 7 दिन तक रखे जाते हैं; अपने वीडियो को अलग सुरक्षित रखें।
-- Repository secret `GEMINI_API_KEY` और उस key पर उपलब्ध model/quota ज़रूरी हैं। AI service बंद या quota खत्म होने पर run स्पष्ट failure और checkpoints रखेगा।
+To retry an old song, use **Run workflow**, choose main and enter its repository audio path. One pending source is also retried daily at **07:05 UTC / 12:35 IST**. Failed attempts rotate behind untried songs; a completed receipt requires the exact source, selected clip, checked-video hashes and passed gate. Provider service/quota problems can still block a run.
 
-The two `DEMO_*_12s.mp3` inputs are original synthetic instrumental QA fixtures. They exercise different musical moods and multiple-upload selection; they are not a claim of real-song quality across all genres.
+## Recovery
 
-## Run locally
+Analysis, story candidates, validated scene packages, original images and repair checkpoints are cached. Repair checkpoints require the exact selected audio bytes, lyrics and render configuration. Successful repaired shots are saved individually, so a provider outage does not restart the whole repair. Quota-exhausted, unauthorized or retired models are skipped during that run; transient errors receive bounded retries. A source switched to CPU artwork retains that backend on resume, avoiding mixed styles from partial public generation. A new source cannot reuse that choice by filename alone.
 
-Python 3.11, FFmpeg, libcairo2, fonts-noto-core and optionally fonts-noto-cjk are required. Pillow must support RAQM. Set the existing `GEMINI_API_KEY`.
+Cache eviction or changes to source/configuration can require regeneration. Planning is checked before installing the large local image model. Song jobs have a 90-minute limit. No finite retry budget guarantees service availability.
 
-```bash
-pip install -r song_animation/requirements.txt
-python -m song_animation.run --audio path/to/full_song.mp3 --out song_draft
-python -m song_animation.run --audio path/to/full_song.mp3 --start 47 --out chosen_excerpt
-```
+## Local use
 
-Output never exceeds 30 seconds. Inputs shorter than 30 seconds are not silently stretched or padded into longer songs.
-
-Optional Whisper transcription needs `pip install -r song_animation/requirements-whisper.txt`. The default audio-model path does not download Whisper weights.
-
-The old eight-action renderer remains available only with `--engine classic`, for reproducibility. It is not the default fallback for unrelated new songs. Generated artwork requires working model access; provider failure retains diagnostics/checkpoints rather than substituting an unrelated template.
-
-## Checks and recovery
-
-- Original source SHA-256 plus clip selection and transcriber version guard analysis reuse. An included prior transcript is reusable only for its exact source and uncut phrases; it is not an artwork or scene-plan preset.
-- Storyboard/scene checkpoints reuse matching successful scene packages. Invalid layers receive at most two package repair attempts. Provider calls try at most three discovered models per request.
-- SVGs contain only bounded vector geometry and local gradients/clip paths. Scripts, external URLs, images, embedded HTML, external references and generated executable code are rejected.
-- At least two independent foreground motions are required per scene. Captions and camera movement do not satisfy that check. Pixel-motion checks inspect the underlying scene, not caption changes.
-- Font selection covers common Latin, Indic, Arabic, Thai and CJK scripts where the installed Noto fonts support them. Phrase timing remains approximate; this is not force-aligned word karaoke.
-- Source audio, frame count, 9:16 export dimensions, 30-second duration cap and full decoding are checked. Art is composed at 540×960 and exported at 1080×1920.
-- Visual review is advisory. It does not certify emotional connection, exact wording/timing, character consistency, beauty, or audience retention. Open vocabulary removes the eight-scene menu; it does not guarantee flawless output for every possible song/language/action.
-
-## Deterministic smoke checks
-
-```bash
-python -m unittest discover -s song_animation/tests -v
-python -m song_animation.render --plan song_animation/examples/vector_smoke.json --out vector_proof --width 1080
-```
-
-The synthetic proof shows journey/kite, devotional lamp/bell and festival/drum compositions with original authored SVG test data. It tests renderer versatility, not live model generation or real-song genre quality. The real uploaded reference runs separately through the generated-art pipeline.
-
-
-### Automatic corrections and output checks
-
-New uploads use the actual source clip (up to 30 seconds). A failed lyric/language or literal-meaning check triggers one automatic recovery attempt using two consistent audio-fingerprint windows, or independent multilingual ASR if a match is unavailable. Recognition is a hint, never proof of the lyrics or original authorship. The second transcript still has to match the actual audio. Unresolved/unclear words stop semantic scene generation. No Hindi language is forced onto other songs.
-
-The actual encoded MP4 is decoded for every shot's visual review. Five explicit checks are required for every shot: lyric meaning, finished illustration, meaningful object/character motion, anatomy/continuity and readable captions. A missing review is a hold. Up to two repair passes rebuild the failing shots and re-render/re-review. Audio is compared with the original clip; codecs, duration, dimensions and complete decoding are also checked.
-
-Only an output passing these checks receives `checked.mp4` and a `song-checked-*` artifact. A blocked run keeps a clearly labelled review draft and diagnostics; stale checked/preview files are removed before a new attempt. These automated checks are not a guarantee of human approval, exact word timing, reference-beating artwork, performance metrics or universal song support. Uploads remain reviewable; automatic publishing remains off.
-
-Full-model audio meaning and encoded-frame reviews are required. Lite-model approval is never sufficient to create checked.mp4. The stored original-artwork finish reference accompanies the visual review, and bright daylight treatments have a measured brightness floor before scene caching. If suitable model access is unavailable, the run holds instead of lowering the standard.
-
-
-### One connected emotional story per song
-
-Lyrics provide meaning, emotion and timing; they are not a list of nouns to illustrate. The director now plans one premise, emotional desire, encounter/choice, carried consequence and earned final gesture. Persistent subjects may be people, relationships or objects depending on the song. Romance, sadness and human protagonists are never mandatory.
-
-Every shot records its narrative purpose, emotional change and the incoming/outgoing state of each persistent subject. A scene cannot reset a lost object, wound or relationship, or substitute a camera move for story progression. Structurally valid plans also receive a full-model story critique before assets are generated; failed plans are replanned within a bounded three-attempt budget. The new protocol invalidates old standalone-metaphor scene caches.
-
-The artist receives the whole story and state chain. Encoded-video review checks every adjacent shot for causal connection, persistent state and emotional progression, as well as whether the ending pays off the setup. Individually attractive but disconnected pictures cannot clear the output gate. These checks enforce the production workflow; they do not prove that a particular audience will emotionally connect.
-
-Lyric acceptance now includes an independent ASR decoder even when the direct model initially sounds confident. An established language may guide that decoder for this clip only; unknown languages keep automatic detection. The full audio reviewer receives both transcripts and must resolve disagreements in actual words/verbs. Its rejection reasons are carried into the automatic correction attempt, preventing a coherent but wrong action such as lifting versus writing from silently passing.
-
-### Multiple visual setups for new songs
-
-For 20–30 seconds the director must plan at least five shots, three distinct story setups and four visible events. Concrete locations and blocking are tracked separately from camera framing: different zooms on one desk remain one setup. Three consecutive repeats are rejected before illustration. The full-model reviewer separately checks the actual decoded MP4 for visual variety, so changing setup names cannot pass a repetitive film.
-
-Repository uploads under `song_animation/inputs/` automatically use `--artwork painted-sets`. This backend paints original song-specific environments on a CPU with the pinned `stabilityai/sd-turbo` model and keeps independently animated vector actors/props in front. It caches by actual environment, shared setting/palette and model revision. It does not reuse this poet's courtyard for unrelated genres. PNG data is bounded, decoded and embedded in the render plan; arbitrary file paths and external image URLs are not accepted. Existing lyric, narrative, meaningful motion, anatomy and finish checks still apply. A painted background alone does not certify animation quality.
-
-Local installation for this optional backend:
+Python 3.11, FFmpeg, libcairo2 and Noto fonts are required; Pillow needs RAQM. Set `GEMINI_API_KEY` without placing it in source files.
 
 ```bash
 pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
-pip install -r song_animation/requirements.txt -r song_animation/requirements-painted.txt
-python -m song_animation.run --audio song_animation/inputs/YOUR_SONG.mp3 --out song_output --width 1080 --artwork painted-sets
+pip install -r song_animation/requirements.txt -r song_animation/requirements-painted.txt -r song_animation/requirements-cutouts.txt
+python -m song_animation.resume --audio path/to/song.mp3 --out song_output --width 1080 --artwork flux-layers
 ```
 
-Only `checked.mp4` is a cleared automatic output; a review draft or a successful directed-example workflow is not proof the automatic song pipeline cleared. No universal quality or retention guarantee is made. The included `poet_multiscene` film is separately directed original artwork for the supplied recording and is labelled as such.
+The plain CLI defaults to SVG artwork unless `--artwork` is specified. `painted-sets` and `painted-layers` retain earlier CPU painting experiments; `--engine classic` retains the old fixed renderer for reproducibility. These are not automatically substituted for unknown songs.
 
-`--artwork painted-layers` also paints organic detail into up to 24 large foreground assets per clip using image-to-image inference, their original drawn poses and the shared character/style bible. It keeps the exact alpha silhouette, dimensions, node pivots and independent motion rigs. Small accents remain vectors. Reused assets share their painted texture; paint caches include the actual SVG and style prompt. This is the upload workflow's current default. A separate full-model review of decoded frames can still hold imperfect anatomy or artwork; painting texture is not proof of character consistency or reference-level quality.
+```bash
+python -m unittest discover -s song_animation/tests -q
+python -m song_animation.cpu_character_probe
+```
 
-Transient 408/5xx/transport failures receive one bounded retry on the preferred full model. Exhausted 429 quota, auth and retired-model failures do not loop. Song acceptance checkpoints persist successful analysis, scene packages and painted assets across retries. Original export clips retain the source sample rate and stereo channels; mono low-rate copies are used for analysis only.
+The isolated CPU character workflow performs actual text-to-image generation and matting. It is a backend test, not a completed-song certificate. Synthetic renderer proofs similarly test code, not real-song quality.
 
-### Automatic recovery after provider limits
+## Verification boundary
 
-The upload workflow runs on main and retries one pending upload each day at 07:05 UTC. The queue includes the explicit render requests plus files added/changed under inputs after the queue baseline. Successful source hashes receive durable receipts under completed/; scheduled retries skip them. Receipts are written only after actual checked.mp4, its matching SHA and a passed quality gate exist. They do not claim human approval or universal quality. New uploads are still processed immediately on push; the schedule is recovery for held/failed uploads, not the primary trigger.
-
-A structurally validated story candidate is saved before its full-model critique. A provider outage retains this candidate so the next attempt can resume the critique without regenerating the same story. Changed lyrics, music or protocol invalidate this checkpoint. A semantically rejected candidate is discarded and replanned. The current external bottleneck observed in run 41111026216 was the preferred model's 20 requests/day free-tier quota; alternate full models returned 404/503. Quality requirements are not bypassed to make a run green.
-
-### Production audit: upload and recovery edges
-
-- Planning and full-model story approval run before Torch installation and multi-gigabyte image-weight restore. The second stage reuses the exact-source transcript and story checkpoints. A provider outage is reported as waiting_for_provider and does not trigger unnecessary recognition recovery as though the lyrics were wrong.
-- Retry records rotate a failed source behind songs that have not yet been attempted. Receipt writes handle concurrent branch updates without force pushes and update the latest cleared export. Invalid completion records cannot silently mark an unfinished song as done.
-- Actual exports are checked for frame rate/count and both stereo channels, including anti-phase audio. An audible export cannot pass against a silent source. Uploaded videos without an audio stream receive an explicit input error.
-- Replacing painted environments prunes nested empty groups and avoids node-id collisions. Night-themed settings retain readable night lighting when the lyric plan allows it. The existing semantic motion, connected-story, visual-variety and finish checks remain required.
-- Actions summaries distinguish code-only checks, planned stories, waiting providers, blocked drafts and cleared videos. A green code-only workflow still does not certify a new song film.
-
-### Actual visible sequence, not renamed cuts
-
-The encoded MP4 now supplies three decoded samples from every shot to a deterministic repetition check. It excludes the caption area, tolerates small zooms and colour grading, and clusters similar staged compositions. A 20–30 second film requires at least three distinct visible setups; an 8–20 second film requires two. A repeated setup cannot continue for over about eight seconds across nominal cuts. A callback after other setups remains allowed. The heuristic can conservatively hold a film; it is not a semantic or aesthetic certificate.
-
-Its measurements are assigned by the decoder code after the model response, so an AI's positive JSON assertion cannot overwrite a measured failure. Failing repeats produce shot-specific repair instructions and cannot receive checked.mp4. The full-model review separately requires overall lyric_story_connection and narrative_advance in every shot, alongside meaning, finished art, meaningful movement, anatomy/continuity and caption legibility. The story must advance through causally connected visible events, not simply list the sung nouns.
-
-An audit of the actual supplied-song samples found two visual setup groups in the original one-desk film (held) and five in the authored multiscene update (variety check passed). This is evidence for the repetition check on those files, not certification of universal automatic quality or of the complete authored film. Regression tests also encode a repeated-picture MP4 with changing caption colours and reject it, allow a connected visual callback, and exercise 1,230 invalid per-shot/transition flag cases. New storyboard protocol v7 invalidates older staged-plan caches.
-
-### Timing, caption and source-provenance preflight
-
-- Storyboard lyric references must lie within the actual shot interval, with one frame of boundary tolerance. Merely including every lyric id is insufficient if it is attached to the wrong part of the song. Protocol v8 invalidates earlier story-plan caches.
-- Caption readability is checked before story/art generation. Word-timed ASR can form shorter captions at its existing word boundaries; phrase-only input is never split into invented word timings. Oversized direct-audio phrases enter the existing correction attempt with an explicit readability error. Corrupt, mismatched or unreadable cached analyses are not resumed.
-- Meaning-bearing actions and articulated walking feet stay above y=720; a two-line caption can begin at y=732. The duplicate-frame detector also excludes that full caption region.
-- A completion receipt now verifies the uploaded source hash, the selected excerpt hash and the checked MP4 hash. It records the selected start and duration. A checked video for one song cannot mark a different upload, or a replaced excerpt, complete.
+A separately directed nine-shot film for the supplied recording is available through `examples/poet_gpu_film.py`; it uses original artwork and is not evidence that arbitrary uploads automatically achieve that quality. At the reliability update, 157 local tests passed. Earlier fully automatic supplied-song runs were held for flat artwork, repetitive staging or provider failures. The new CPU original-art fallback still needs actual aesthetic and full-song verification. Automated gates can miss errors: no claim is made of zero failures, every language/genre, exact word timing, reference-beating visuals, human approval or audience connection.

@@ -1,5 +1,5 @@
 {
   "audio_path": "song_animation/inputs/song_1000076620.m4a",
-  "purpose": "Keep completed scenes, skip quota-exhausted and retired models on retry, and resume only temporarily busy full-model alternatives",
-  "revision": 6
+  "purpose": "Verify original cutout artwork with coherent CPU fallback and resumable scene repairs on the actual source",
+  "revision": 7
 }
