@@ -2,7 +2,14 @@ name: Song original CPU character test
 on:
   push:
     branches: ['main']
-    paths: ['song_animation/cpu_character_probe.py', '.github/workflows/song_cpu_character.yml']
+    paths:
+      - song_animation/cpu_character_probe.py
+      - song_animation/local_image.py
+      - song_animation/flux_layers.py
+      - song_animation/environments.py
+      - song_animation/requirements-painted.txt
+      - song_animation/requirements-cutouts.txt
+      - .github/workflows/song_cpu_character.yml
 permissions: {contents: read}
 jobs:
   original-character:

@@ -9,7 +9,10 @@ def compact_prompt(prompt):
         subject=prompt.split('. Premium detailed',1)[0]
         identity=prompt.split('Character identity and clothing: ',1)[-1].split('. Palette:',1)[0] if 'Character identity and clothing: ' in prompt else ''
         part=prompt.split('Show ONLY ',1)[-1].split('.',1)[0] if 'Show ONLY ' in prompt else ''
-        return (' '.join(subject.split()[:14])+'. '+('Only '+' '.join(part.split()[:10])+'. ' if part else '')+'Isolated, pure white background. '+' '.join(identity.split()[:12])+'. Detailed natural watercolor illustration, organic contours and expressive features.')
+        # A short encoder otherwise drops rig constraints at the end of the
+        # full prompt, painting duplicate hands beneath animated hand layers.
+        rig='Hands concealed behind the torso, no visible hands. ' if 'hands are hidden behind the body' in prompt else ''
+        return (' '.join(subject.split()[:14])+'. '+rig+('Only '+' '.join(part.split()[:10])+'. ' if part else '')+'Isolated, pure white background. '+' '.join(identity.split()[:12])+'. Detailed natural watercolor illustration, organic contours and expressive features.')
     if ' viewpoint.' in prompt:
         framing,rest=prompt.split(' viewpoint.',1)
         location=rest.split('. Background supporting',1)[0]

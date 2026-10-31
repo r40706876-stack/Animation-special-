@@ -31,5 +31,7 @@ class OriginalArt(unittest.TestCase):
         prompt='A hand holding a pen. Premium detailed painterly illustration. Character identity and clothing: Indian poet with ivory sleeves and curly black hair. Palette: teal. Show ONLY the requested isolated hand with its cuff. One isolated subject.'
         short=compact_prompt(prompt)
         self.assertIn('ivory sleeves',short);self.assertIn('Only the requested isolated hand',short)
+        rig=compact_prompt('Seated poet in a cream kurta. Premium detailed illustration. This is the head and torso of a layered animation rig: hands are hidden behind the body. Character identity and clothing: Indian poet. Palette: teal.')
+        self.assertIn('no visible hands',rig)
         background=compact_prompt('Overhead close-up viewpoint. A balcony writing room. Background supporting this staging: A hand writes.')
         self.assertIn('supporting surface',background);self.assertNotIn('A hand writes',background)
