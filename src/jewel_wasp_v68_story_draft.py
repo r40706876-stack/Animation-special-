@@ -9,7 +9,7 @@ from mathutils import Vector
 chapter=int(os.getenv("JW_CHAPTER","0"))
 assert 0 <= chapter < 14
 mode=os.getenv("JW_MODE","still")
-assert mode in ("still","motion","draft")
+assert mode in ("preflight","still","motion","draft")
 source=pathlib.Path(__file__).with_name("jewel_wasp_v68_anatomy_proof.py")
 code=source.read_text()
 boundary="# Independent roach macro still complements"
@@ -270,11 +270,18 @@ scene.render.engine="BLENDER_EEVEE_NEXT"
 # Allow deliberate low-res draft assembly, but don't inspect tiny proofs.
 scene.render.resolution_x=360;scene.render.resolution_y=640
 requested=int(os.getenv("JW_RES_PERCENT","100" if mode!="draft" else "60"))
-scene.render.resolution_percentage=max(85,requested) if mode!="draft" else requested
+scene.render.resolution_percentage=(max(75,requested) if mode=="motion" else
+                                    max(100,requested) if mode in ("still","preflight")
+                                    else requested)
 assert 50<=scene.render.resolution_percentage<=100
 scene.render.image_settings.color_mode="RGB"
 scene.render.filepath=os.environ["BLENDER_OUTPUT"]
-if mode=="still":
+if mode=="preflight":
+    # Blender executes every action and camera assertion without costly pixels.
+    scene.frame_set(145);bpy.context.view_layer.update()
+    assert scene.camera is camera and scene.render.fps==24
+    print("JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS",chapter,flush=True)
+elif mode=="still":
     scene.frame_set(int(os.getenv("JW_STILL_FRAME","120")))
     scene.render.image_settings.file_format="PNG"
     bpy.ops.render.render(write_still=True)
