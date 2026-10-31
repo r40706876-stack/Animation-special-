@@ -11,6 +11,9 @@ class ProviderUnavailable(RuntimeError):
             try:delays.append(float(str(item.get('retry_delay','0s')).removesuffix('s')))
             except ValueError:pass
         self.retry_after_seconds=max(delays,default=0)
+        # A busy service or transport interruption can recover shortly. Quota,
+        # authentication and permission failures need a different remedy.
+        self.retryable=any(x.get('error') in ('transport','model_discovery_unavailable') or x.get('http_status') in (408,500,502,503,504) for x in attempts) and not any(x.get('http_status') in (401,403,429) for x in attempts)
 
 def parse_object(raw):
     start=raw.find('{')
@@ -56,7 +59,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
     if schema:config['responseSchema']=schema
     raw=None
     attempts=[]
-    for model_index,model in enumerate(models[:3]):
+    for model_index,model in enumerate(models[:5]):
         model_config=dict(config)
         if thinking_level:
             if re.match(r'gemini-[3-9](?:\.|-)',model):model_config['thinkingConfig']={'thinkingLevel':thinking_level}

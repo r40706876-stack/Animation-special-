@@ -127,7 +127,7 @@ def main():
         (out/'status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2))
         if not passed:raise QualityHold('Video checks did not pass; only review draft retained')
     except ProviderUnavailable as e:
-        (out/'status.json').write_text(json.dumps({'status':'waiting_for_provider','error':str(e),'retry_after_seconds':e.retry_after_seconds,'automatic_publish':False}))
+        (out/'status.json').write_text(json.dumps({'status':'waiting_for_provider','error':str(e),'retry_after_seconds':e.retry_after_seconds,'retryable':e.retryable,'provider_attempts':e.attempts,'automatic_publish':False}))
         raise
     except QualityHold as e:
         status_path=out/'status.json'

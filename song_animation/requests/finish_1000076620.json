@@ -1,5 +1,5 @@
 {
   "audio_path": "song_animation/inputs/song_1000076620.m4a",
-  "purpose": "Resume using exact-source corrected lyrics and compact complete scene responses; reject truncated provider outputs",
-  "revision": 4
+  "purpose": "Resume saved song work after transient 503/transport failures with bounded delayed retries and broader discovered full-model fallback",
+  "revision": 5
 }
