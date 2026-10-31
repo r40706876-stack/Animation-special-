@@ -60,18 +60,19 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p draft_segments
-          # Chapter 10 previously hit the 160-minute job limit. Render ONLY
-          # this missing burrow shot at cheaper DRAFT resolution, then upscale
-          # to the same 216x384 dimensions as the cached 60%-resolution chapters.
-          # Never invalidate the 13 other exact-source chapter caches.
+          # Chapters 10 (burrow) and 13 (finale) are the slowest CPU scenes.
+          # Only when an exact-source cache is missing, render these at 50%
+          # DRAFT resolution and normalize to 216x384 for stream concatenation.
+          # Keep the source-fingerprint cache key unchanged to reuse every
+          # successful 240-frame chapter. This is NOT final-quality approval.
           ch=${{ matrix.chapter }}
           percent=60
-          if [ "$ch" = 10 ]; then percent=50; fi
+          if [ "$ch" = 10 ] || [ "$ch" = 13 ]; then percent=50; fi
           JW_MODE=draft JW_CHAPTER="$ch" JW_RES_PERCENT="$percent" BLENDER_OUTPUT="$PWD/draft_segments/chapter_$ch.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "draft_segments/chapter_$ch.log" 2>&1 || { tail -n 100 "draft_segments/chapter_$ch.log"; exit 1; }
           grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $ch draft" "draft_segments/chapter_$ch.log"
-          if [ "$ch" = 10 ]; then
-            ffmpeg -y -loglevel error -i "draft_segments/chapter_10.mp4" -vf "scale=216:384:flags=lanczos,setsar=1" -an -c:v libx264 -preset ultrafast -crf 23 -pix_fmt yuv420p "draft_segments/chapter_10_normalized.mp4"
-            mv "draft_segments/chapter_10_normalized.mp4" "draft_segments/chapter_10.mp4"
+          if [ "$ch" = 10 ] || [ "$ch" = 13 ]; then
+            ffmpeg -y -loglevel error -i "draft_segments/chapter_$ch.mp4" -vf "scale=216:384:flags=lanczos,setsar=1" -an -c:v libx264 -preset ultrafast -crf 23 -pix_fmt yuv420p "draft_segments/chapter_${ch}_normalized.mp4"
+            mv "draft_segments/chapter_${ch}_normalized.mp4" "draft_segments/chapter_$ch.mp4"
           fi
       - name: Ensure ffmpeg is available even on cache hits
         run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg)
