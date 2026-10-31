@@ -3,7 +3,7 @@ import base64,json,tempfile,subprocess,re
 from pathlib import Path
 from .analyze import duration
 from .contract import validate_lyrics
-from .provider import generate_json
+from .provider import generate_json,ProviderUnavailable
 
 INTERVAL={'type':'OBJECT','properties':{'start':{'type':'NUMBER'},'end':{'type':'NUMBER'}},'required':['start','end']}
 LYRICS_SCHEMA={'type':'OBJECT','properties':{
@@ -52,6 +52,8 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
             verification=generate_json('Independently listen to the AUDIO, not just the proposed text. Reject pseudo-words, wrong language or meaning, invented lyrics, missing/repeated vocals labelled instrumental, or completing a cut-off line from song memory. Return JSON {"valid":boolean,"reasons":["specific reason"],"meaning":"literal meaning only if audible"}. A genre, beat or fingerprint match is not proof of words. Compare the independent ASR too: a coherent transcript can still contain a wrong action verb (writing versus lifting, for example). Resolve disagreements by listening to the actual audio; do not rubber-stamp the proposed text or blindly trust ASR. Proposed transcript: '+json.dumps(data,ensure_ascii=False)+'\nINDEPENDENT DECODER EVIDENCE: '+json.dumps(independent,ensure_ascii=False),out=out,tag='audio_verification_'+str(attempt),audio_part=part,prefer_quality=True,require_full_model=True)
             if verification.get('valid') is not True:raise ValueError('Audio transcript failed independent meaning review: '+json.dumps(verification.get('reasons',[]),ensure_ascii=False))
             break
+        except ProviderUnavailable:
+            raise
         except (ValueError,RuntimeError,KeyError,TypeError) as e:
             errors.append(str(e)[:1200])
             if attempt==0:

@@ -22,6 +22,8 @@ def select_start(audio,source_duration,limit=30):
 
 def prepare(audio,out,limit=30,start=None):
     audio=Path(audio);out=Path(out);out.mkdir(parents=True,exist_ok=True)
+    streams=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',str(audio)]))
+    if not any(s.get('codec_type')=='audio' for s in streams.get('streams',[])):raise ValueError('The uploaded file has no audio track')
     source_duration=duration(audio)
     if not math.isfinite(source_duration) or source_duration<=0:raise ValueError('Audio has no finite duration')
     if start is None:start,method=select_start(audio,source_duration,limit)
@@ -30,7 +32,7 @@ def prepare(audio,out,limit=30,start=None):
     seconds=min(float(limit),source_duration-start)
     if seconds<1:raise ValueError('At least one second of audio is required')
     target=out/'source_clip.wav'
-    subprocess.run(['ffmpeg','-y','-v','error','-ss',str(start),'-i',str(audio),'-vn','-t',str(seconds),'-c:a','pcm_s16le',str(target)],check=True)
+    subprocess.run(['ffmpeg','-y','-v','error','-ss',str(start),'-i',str(audio),'-map','0:a:0','-vn','-t',str(seconds),'-c:a','pcm_s16le',str(target)],check=True)
     info={'source_sha256':hashlib.sha256(audio.read_bytes()).hexdigest(),'source_duration':source_duration,
         'start':start,'duration':duration(target),'limit':limit,'method':method,'short_inputs_padded':False}
     (out/'selection.json').write_text(json.dumps(info,indent=2));return target,info

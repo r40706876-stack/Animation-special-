@@ -1,7 +1,7 @@
 """Advisory visual review of the actual export samples; not audience certification."""
 import base64,json,subprocess,io
 from pathlib import Path
-from .provider import generate_json
+from .provider import generate_json,ProviderUnavailable
 
 def encoded_sample(video,seconds):
     from PIL import Image
@@ -32,6 +32,8 @@ def review(plan,out):
         result=generate_json(prompt,out=out,tag='visual_review',extra_parts=images,prefer_quality=True,require_full_model=True)
         result['reviewer_model']=result.pop('_provider_model',None)
         result['advisory_only']=True;result['human_approval']=False
+    except ProviderUnavailable as e:
+        result={'status':'unavailable','provider_wait':True,'retry_after_seconds':e.retry_after_seconds,'advisory_only':True,'human_approval':False}
     except (RuntimeError,ValueError,KeyError,OSError,subprocess.SubprocessError) as e:
         result={'status':'unavailable','error_type':type(e).__name__,'advisory_only':True,'human_approval':False}
     (out/'visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result

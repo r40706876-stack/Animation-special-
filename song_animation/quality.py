@@ -1,5 +1,6 @@
 """Explicit output gates. Passing automated checks is not universal/human approval."""
 import json,subprocess,math,hashlib
+from fractions import Fraction
 from pathlib import Path
 from .narrative import narrative_decision
 from .coverage import coverage_decision
@@ -57,19 +58,22 @@ def inspect_export(video,audio,plan,width):
         data={'duration':actual,'width':v['width'],'height':v['height'],'video_codec':v['codec_name'],'audio_codec':a['codec_name']}
         if v['codec_name']!='h264' or v.get('pix_fmt')!='yuv420p' or a['codec_name']!='aac':reasons.append('Unsupported playback codec')
         if v['width']!=width or abs(v['height']-width*16/9)>2:reasons.append('Wrong output size')
+        if abs(float(Fraction(v.get('avg_frame_rate','0/1')))-plan['fps'])>.01:reasons.append('Wrong frame rate')
+        if v.get('nb_frames') and int(v['nb_frames'])!=plan['total_frames']:reasons.append('Wrong encoded frame count')
         if not math.isfinite(actual) or abs(actual-target)>.12 or actual>30.12:reasons.append('Wrong clip duration')
         subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(video),'-f','null','-'],check=True,capture_output=True,timeout=90)
         def pcm(p):
-            return np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',str(p),'-vn','-ac','1','-ar','8000','-f','f32le','-']),dtype='<f4')
+            return np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',str(p),'-vn','-ac','2','-ar','8000','-f','f32le','-']),dtype='<f4').reshape(-1,2)
         source=pcm(audio);encoded=pcm(video);n=min(len(source),len(encoded))
         if abs(len(source)-len(encoded))/8000>.12:reasons.append('Audio duration changed')
-        source=source[:n].astype(float);encoded=encoded[:n].astype(float)
+        source=source[:n].astype(float).ravel();encoded=encoded[:n].astype(float).ravel()
         if n==0:reasons.append('Missing decoded audio')
         elif np.dot(source,source)>1e-8:
             correlation=float(np.dot(source,encoded)/max(1e-12,np.linalg.norm(source)*np.linalg.norm(encoded)))
             data['source_audio_correlation']=round(correlation,5)
             if not math.isfinite(correlation) or correlation<.9:reasons.append('Export audio does not match original clip')
-    except (OSError,ValueError,KeyError,StopIteration,subprocess.SubprocessError) as e:
+        elif np.sqrt(np.mean(encoded*encoded))>1e-5:reasons.append('Silent source was replaced with audible sound')
+    except (OSError,ValueError,KeyError,ZeroDivisionError,StopIteration,subprocess.SubprocessError) as e:
         reasons.append('Export validation failed: '+type(e).__name__)
     if not reasons:
         data['video_sha256']=hashlib.sha256(video.read_bytes()).hexdigest()

@@ -2,6 +2,16 @@
 import json,os,time
 from pathlib import Path
 
+class ProviderUnavailable(RuntimeError):
+    def __init__(self,attempts):
+        super().__init__('No usable model response; provider quota or service availability blocked this stage')
+        self.attempts=attempts
+        delays=[]
+        for item in attempts:
+            try:delays.append(float(str(item.get('retry_delay','0s')).removesuffix('s')))
+            except ValueError:pass
+        self.retry_after_seconds=max(delays,default=0)
+
 def parse_object(raw):
     start=raw.find('{')
     if start<0:raise ValueError('Provider returned no JSON object')
@@ -18,7 +28,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
         listing=requests.get('https://generativelanguage.googleapis.com/v1beta/models',headers={'x-goog-api-key':key},params={'pageSize':1000},timeout=25)
         listing.raise_for_status()
         models=[m['name'].removeprefix('models/') for m in listing.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and ('flash' in m['name'] or (prefer_quality and 'pro' in m['name'])) and not any(x in m['name'] for x in ('image','tts','audio','live','robotics'))]
-    except requests.RequestException:raise RuntimeError('Could not discover available planner models') from None
+    except requests.RequestException:raise ProviderUnavailable([{'error':'model_discovery_unavailable'}]) from None
     import re
     def rank(m):
         v=re.search(r'gemini-(\d+(?:\.\d+)?)',m)
@@ -64,6 +74,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
                 try:
                     body=r.json()
                     error=body.get('error',{}) if isinstance(body,dict) else {}
+                    if not isinstance(error,dict):error={}
                     if isinstance(error.get('status'),str):item['error_status']=error['status']
                     for detail in error.get('details',[]):
                         if not isinstance(detail,dict):continue
@@ -82,7 +93,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
                 time.sleep(3);continue
             break
         if raw:break
-    if not raw:raise RuntimeError('Planner unavailable after at most three discovered models')
+    if not raw:raise ProviderUnavailable(attempts)
     if out:Path(out,tag+'_response.txt').write_text(raw,encoding='utf-8')
     # Decode exactly the first complete object; trailing prose/duplicate objects
     # cannot make a valid package unparsable. The caller still validates fields.

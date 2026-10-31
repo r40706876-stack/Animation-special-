@@ -26,8 +26,10 @@ def environment_prompt(plan,scene):
     # preambles previously truncated the location and turned a valley into arches.
     location=str(coverage.get('environment',scene.get('visual','a sunlit open landscape')))[:150]
     palette=str(plan.get('bible',{}).get('palette','bright natural colors'))[:65]
+    night=bool(plan.get('allow_night')) and any(w in location.lower() for w in ('night','moon','nocturnal','रात','चाँद','चांद'))
+    lighting='Bright readable moonlight and warm lamps' if night else 'Bright daylight'
     return (location+'. Colorful watercolor painting, '+palette+
-        '. Bright daylight, layered depth, clear central action area, empty setting, '
+        '. '+lighting+', layered depth, clear central action area, empty setting, '
         'no people, no animals, no hero props, no text.')
 
 def cache_key(prompt):return hashlib.sha256((MODEL+REVISION+prompt).encode()).hexdigest()
@@ -57,12 +59,19 @@ def paint_environments(plan,out,pipeline=None):
             if node.get('role')=='background' and node.get('asset'):
                 node['asset']=None
                 # Keep transform-only parents; unused leaves can be discarded.
-        nodes=[n for n in nodes if n.get('asset') or any(c.get('parent')==n['id'] for c in nodes)]
-        node={'id':'painted_environment','asset':aid,'role':'background','painted_set':True,'pivot':[0,0],
+        while True:
+            kept=[n for n in nodes if n.get('asset') or any(c.get('parent')==n['id'] for c in nodes)]
+            if len(kept)==len(nodes):break
+            nodes=kept
+        ids={n['id'] for n in nodes};nid='painted_environment'
+        while nid in ids:nid+='_' 
+        node={'id':nid,'asset':aid,'role':'background','painted_set':True,'pivot':[0,0],
             'keys':[dict(t=t,x=0,y=0,scale=1,rotation=0,opacity=1) for t in (0,1)]}
         scene['nodes']=[node]+nodes
         if len(scene['nodes'])>24:raise ValueError('Painted set exceeds scene layer budget')
         report.append({'shot':index,'key':key,'model':MODEL,'revision':REVISION,'file':path.name,'prompt':prompt})
+    used={n.get('asset') for s in candidate['scenes'] for n in s['nodes']}
+    candidate['assets']={k:v for k,v in candidate['assets'].items() if k in used or not k.startswith('painted_set_')}
     (out/'painted_environments.json').write_text(json.dumps({'backend':'cpu-sd-turbo','quality_certified':False,'shots':report},ensure_ascii=False,indent=2))
     from .vector import validate_vector
     return validate_vector(candidate)

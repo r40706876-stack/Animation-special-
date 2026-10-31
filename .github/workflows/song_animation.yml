@@ -63,7 +63,7 @@ jobs:
     if: needs.inputs.outputs.audio != '[]'
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 1
       matrix:
         audio: ${{ fromJSON(needs.inputs.outputs.audio) }}
     runs-on: ubuntu-latest
@@ -94,12 +94,6 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
           pip install -r song_animation/requirements.txt
-          pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
-          pip install -r song_animation/requirements-painted.txt
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
-          key: song-painted-sd-turbo-b261bac6
       - uses: actions/cache/restore@v4
         with:
           path: |
@@ -114,6 +108,16 @@ jobs:
           key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
           restore-keys: |
             song-generated-v7-${{ hashFiles(matrix.audio) }}-
+      - name: Check lyrics and connected story before loading the image models
+        run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-layers --stage plan
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
+          key: song-painted-sd-turbo-b261bac6
+      - name: Install CPU painting backend after planning passed
+        run: |
+          pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r song_animation/requirements-painted.txt
       - name: Lyrics to connected animation draft
         run: python -m song_animation.run --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-layers --allow-local-recovery
       - uses: actions/cache/save@v4
@@ -154,3 +158,13 @@ jobs:
         env:
           GH_RECEIPT_TOKEN: ${{ github.token }}
         run: python -m song_animation.completion --audio "$AUDIO_PATH" --out song_draft
+
+      - name: Record attempt so one failed song cannot starve the retry queue
+        if: always()
+        env:
+          GH_RECEIPT_TOKEN: ${{ github.token }}
+        run: python -m song_animation.completion --audio "$AUDIO_PATH" --out song_draft --attempt
+
+      - name: Show the actual song production status
+        if: always()
+        run: python -m song_animation.status_summary --out song_draft

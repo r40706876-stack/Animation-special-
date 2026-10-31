@@ -33,8 +33,9 @@ def select(root,before='',head='',manual=None,event='push'):
     # Code-only commits run the proof job; real uploads and manual dispatch render songs.
     files=sorted(set(files))
     if event=='schedule':
-        from .completion import completed
+        from .completion import completed,last_attempt
         files=[p for p in files if not completed(root,root/p)]
+        files.sort(key=lambda p:(last_attempt(root,root/p),p))
         # One pending song per daily retry protects the limited model allowance.
         return files[:1]
     return files
@@ -43,6 +44,9 @@ def main():
     files=select(Path.cwd(),os.getenv('PUSH_BEFORE',''),os.getenv('PUSH_HEAD',''),os.getenv('MANUAL_AUDIO'),os.getenv('EVENT_NAME','push'))
     value=json.dumps(files)
     print('Selected audio files:',value)
+    if os.getenv('GITHUB_STEP_SUMMARY'):
+        note='Song render requested: '+value if files else 'केवल कोड की जाँच: इस run में कोई गाना नहीं चुना गया। हरे check का अर्थ तैयार music video नहीं है।'
+        with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write('## Song selection\n\n'+note+'\n')
     if os.getenv('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('audio='+value+'\n')
 if __name__=='__main__':main()

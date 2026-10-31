@@ -228,7 +228,7 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
     raise ValueError(f'Custom shot {index+1} could not be generated: {error}')
 
 
-def build(lyrics,music,out,artwork='vector'):
+def build(lyrics,music,out,artwork='vector',plan_only=False):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     checkpoint=out/'vector_checkpoint.json'
     key=hashlib.sha256((PROTOCOL+artwork+json.dumps([lyrics,music],sort_keys=True,ensure_ascii=False)).encode()).hexdigest()
@@ -239,6 +239,7 @@ def build(lyrics,music,out,artwork='vector'):
         checkpoint.write_text(json.dumps({'key':key}))
     plan['art_backend']=artwork
     (out/'storyboard.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
+    if plan_only:return plan
     for i in range(len(plan['scenes'])):
         print(f'Generating custom illustrated shot {i+1}/{len(plan["scenes"])}',flush=True)
         scene,assets=scene_package(plan,i,out,plan['assets'])
