@@ -1,0 +1,9 @@
+{
+  "version": "approved-film-v1",
+  "duration_limit": 30,
+  "width": 1080,
+  "artwork": "flux-layers",
+  "reference": "approved_film_reference.jpg",
+  "finish": "Detailed original painterly storybook artwork, expressive organic faces and hands, believable proportions, consistent character identity and clothing, warm readable natural colours, layered environments and clear focal contrast. Match the supplied approved-film reference's finish and visual hierarchy. Its subjects, location, ethnicity, costumes and romantic plot are examples only: invent subjects appropriate to the current song, including nonhuman or instrumental stories.",
+  "direction": "Build one connected story from the actual sung meaning and emotion. Show an opening encounter or event, its carried consequence, an earned change and a resolved ending. Change staging and composition as the story advances. For 20–30 seconds retain at least five shots and three distinct visible setups, with no actual setup lasting over eight continuous seconds. Camera zooms, caption changes and decorative particles do not replace character/object action. Use the actual source audio, original-script readable lyrics, unobstructed faces and action, and accurate shot/lyric timing. A body must not contain a duplicate of its independently animated hand or limb. Match each background to the shot viewpoint. Do not copy the reference film's poem, people, props or settings into unrelated songs."
+}

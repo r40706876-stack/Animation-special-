@@ -113,6 +113,7 @@ jobs:
             song_draft/pipeline_checkpoint.json
             song_draft/review_contact.jpg
             song_draft/art_backend_choice.json
+            song_draft/render_cache/
             song_draft/painted_environments/
             song_draft/painted_actors/
             song_draft/flux_images/
@@ -148,6 +149,7 @@ jobs:
             song_draft/pipeline_checkpoint.json
             song_draft/review_contact.jpg
             song_draft/art_backend_choice.json
+            song_draft/render_cache/
             song_draft/painted_environments/
             song_draft/painted_actors/
             song_draft/flux_images/

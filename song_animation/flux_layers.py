@@ -7,8 +7,18 @@ from .vector import validate_vector
 
 def seed_for(text):return int(hashlib.sha256(text.encode()).hexdigest()[:8],16)%(2**31)
 
+def repair_context(plan,aid=None,scene=None):
+    """An image repair must change the image request, not only its SVG rig."""
+    selected=[scene] if scene is not None else [s for s in plan['scenes'] if any(n.get('asset')==aid for n in s['nodes'])]
+    notes=[s['visual_correction'] for s in selected if isinstance(s.get('visual_correction'),dict)]
+    if not notes:return ''
+    return json.dumps(notes,sort_keys=True,ensure_ascii=False)
+
+def corrected_prompt(prompt,context):
+    return prompt+('\nREPAIR THE ACTUAL IMAGE: '+context+'\nKeep the shared identity and clothing. Correct the specified pose, duplicated anatomy, framing or staging in the generated image itself; changing only its filename or motion rig is insufficient.' if context else '')
+
 def prompt_for_asset(asset,bible,separate_limbs=False):
-    subject=str(asset.get('description') or asset['id'].replace('_',' '))
+    subject=str(asset.get('image_prompt') or asset.get('description') or asset['id'].replace('_',' '))
     isolation='One isolated subject on a pure white background, complete silhouette with margins. No scenery, lettering or watermark.'
     extra=''
     if separate_limbs and asset.get('subject_kind','human')=='human':extra='This is the head and torso of a layered animation rig: hands are hidden behind the body. Do not show detached hands or extra arms.'
@@ -18,7 +28,7 @@ def prompt_for_asset(asset,bible,separate_limbs=False):
     elif human and re.search(r'\barms?\b',words) and not separate_limbs:extra='Show ONLY one isolated sleeved arm and hand in the requested pose. No face, torso or full person.'
     elif human and re.search(r'\b(head|face)\b',words) and not separate_limbs:extra='Show ONLY the requested portrait head and neck. No full body or extra people.'
     identity=' Character identity and clothing: '+str(bible.get('characters',''))[:550] if human else ' No people or extra objects.'
-    return (subject+'. Premium detailed painterly storybook illustration, expressive natural anatomy where appropriate, fine organic contours, rich modeled surfaces and restrained watercolor texture. '+extra+identity+'. Palette: '+str(bible.get('palette',''))[:160]+'. '+isolation)
+    return (subject+'. Premium detailed painterly storybook illustration, expressive natural anatomy where appropriate, fine organic contours, rich modeled surfaces and restrained watercolor texture. '+extra+identity+'. Palette: '+str(bible.get('palette',''))[:160]+'. Shared film style: '+str(bible.get('style',''))[:240]+'. '+isolation)
 
 def is_structural(asset):
     text=(asset['id']+' '+str(asset.get('description',''))).lower()
@@ -45,8 +55,10 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
             continue
         if min(a['width'],a['height'])<45:continue
         body='body' in aid.lower() or 'torso' in aid.lower()
-        prompt=prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body)
+        context=repair_context(plan,aid=aid)
+        prompt=corrected_prompt(prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body),context)
         seed=seed_for(str(plan.get('bible',{}).get('characters',''))+aid.split('_')[0])
+        if context:seed=seed_for(str(seed)+context)
         key=hashlib.sha256((namespace+prompt+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
         if not path.exists():
             raw=image_generator(prompt,out/'flux_images',seed)
@@ -60,18 +72,18 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
             image.load()
             if image.size!=(int(a['width']),int(a['height'])) or not image.convert('RGBA').getchannel('A').getbbox():raise ValueError('Invalid cached raster cutout')
         a['raster_png']=base64.b64encode(path.read_bytes()).decode();a['raster_art_provider']=namespace;a.pop('painted_actor',None)
-        report.append({'asset':aid,'file':path.name,'quality_certified':False})
+        report.append({'asset':aid,'file':path.name,'repair_context_sha256':hashlib.sha256(context.encode()).hexdigest() if context else None,'quality_certified':False})
         (out/'flux_assets.json').write_text(json.dumps({'assets':report,'quality_certified':False},indent=2))
     return validate_vector(candidate)
 
 def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
-    return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('background_view',coverage.get('environment',scene.get('visual',''))))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
+    return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('background_view',coverage.get('environment',scene.get('visual',''))))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Shared film style: '+str(plan.get('bible',{}).get('style',''))[:240]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
 
 def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
     out=Path(out);candidate=copy.deepcopy(plan)
     for scene in candidate['scenes']:
-        prompt=environment_prompt(plan,scene);path=image_generator(prompt,out/'flux_images',seed_for(prompt),768,1344)
+        prompt=corrected_prompt(environment_prompt(plan,scene),repair_context(plan,scene=scene));path=image_generator(prompt,out/'flux_images',seed_for(prompt),768,1344)
         aid='flux_set_'+hashlib.sha256((namespace+prompt).encode()).hexdigest()[:16]
         candidate['assets'][aid]={'width':540,'height':960,'description':'Original viewpoint-specific painted setting','raster_png':base64.b64encode(path.read_bytes()).decode()}
         nodes=[n for n in scene['nodes'] if not n.get('painted_set')]

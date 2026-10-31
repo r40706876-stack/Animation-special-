@@ -13,7 +13,7 @@ def compact_prompt(prompt):
         # full prompt, painting duplicate hands beneath animated hand layers.
         rig='Arms folded behind the back. ' if 'hands are hidden behind the body' in prompt else ''
         if rig:identity=re.sub(r'\bexpressive hands\b[, ]*','',identity,flags=re.I)
-        return (' '.join(subject.split()[:14])+'. '+rig+('Only '+' '.join(part.split()[:10])+'. ' if part else '')+'Isolated, pure white background. '+' '.join(identity.split()[:12])+'. Detailed natural watercolor illustration, organic contours and expressive features.')
+        return (' '.join(subject.split()[:24])+'. '+rig+('Only '+' '.join(part.split()[:10])+'. ' if part else '')+'Isolated, pure white background. '+' '.join(identity.split()[:12])+'. Detailed natural watercolor illustration, organic contours and expressive features.')
     if ' viewpoint.' in prompt:
         framing,rest=prompt.split(' viewpoint.',1)
         location=rest.split('. Background supporting',1)[0]

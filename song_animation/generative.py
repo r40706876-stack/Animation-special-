@@ -6,6 +6,7 @@ from .vector import validate_vector,sanitize_svg
 from .lyrics import cues_from_lyrics,shot_phrases
 from .narrative import validate_story
 from .coverage import validate_coverage
+from .film_standard import direction as film_direction,reference_parts
 
 PROTOCOL='open-vector-v8-timed-story'
 ART_GUIDE='''Create original, elegant illustrated 2D film artwork, not icons, slides or text cards. Use carefully drawn expressive silhouettes, curved paths, detailed clothing/hair, attractive cohesive colours, light and shadow shapes, rich environmental detail and clear focal contrast. Fill the vertical composition with a real setting, foreground and depth; do not leave most of the image blank. Keep the story action mostly in y=80..720; a two-line lyric panel may cover y=732..850. Use bright, legible, balanced editorial colours and softly lit daylight by default. Sadness can use muted warm daylight; do not make the whole frame near-black. Faces, hands and props must stay visible. Maintain the same character identity, clothing, recurring objects and art style across shots.
@@ -15,8 +16,8 @@ Each SVG is one independent asset drawn in its OWN local viewBox. SVG must be se
 NUMBER={'type':'NUMBER'}
 KEY_SCHEMA={'type':'OBJECT','properties':{k:NUMBER for k in ('t','x','y','rotation','scale','opacity')},'required':['t','x','y','rotation','scale','opacity']}
 PACKAGE_SCHEMA={'type':'OBJECT','properties':{
- 'background':{'type':'STRING'},
- 'assets':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'description':{'type':'STRING'},'subject_kind':{'type':'STRING','enum':['human','animal','plant','object','effect','environment']},'width':NUMBER,'height':NUMBER,'reusable':{'type':'BOOLEAN'},'svg':{'type':'STRING'}},'required':['id','width','height','svg','subject_kind']}},
+ 'background':{'type':'STRING'},'background_view':{'type':'STRING'},
+ 'assets':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'description':{'type':'STRING'},'image_prompt':{'type':'STRING'},'subject_kind':{'type':'STRING','enum':['human','animal','plant','object','effect','environment']},'width':NUMBER,'height':NUMBER,'reusable':{'type':'BOOLEAN'},'svg':{'type':'STRING'}},'required':['id','width','height','svg','subject_kind']}},
  'nodes':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'asset':{'type':'STRING','nullable':True},'parent':{'type':'STRING','nullable':True},'role':{'type':'STRING','enum':['background','foreground']},'pivot':{'type':'ARRAY','items':NUMBER,'minItems':2,'maxItems':2},'easing':{'type':'STRING'},'keys':{'type':'ARRAY','items':KEY_SCHEMA},'wave':{'type':'OBJECT','properties':{k:NUMBER for k in ('x','y','rotation','cycles','phase')}}},'required':['id','keys']}}},'required':['background','assets','nodes']}
 
 def storyboard(lyrics,music,out,fps=24):
@@ -36,13 +37,14 @@ Plan about 5..8 shots for 30 seconds, fewer for a short input. First start=0, st
 Style direction: elegant richly illustrated 2D, song-specific symbolic objects and expressive interaction where appropriate, detailed custom settings, balanced bright colours and layered depth. Sad songs may use muted warm daylight; avoid near-black whole frames. IMPORTANT: visual must be a PROSE description, never SVG/code. The illustration assets will be generated in the next stage.
 AUDIO ANALYSIS: {json.dumps(lyrics,ensure_ascii=False)}
 MUSIC: {json.dumps(music)}'''
+    prompt+='\nPERMANENT PRODUCTION STANDARD:\n'+film_direction()
     error=None
     candidate_path=Path(out)/'story_candidate.json'
     candidate_key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest()
     for attempt in range(3):
         try:
             saved=json.loads(candidate_path.read_text()) if attempt==0 and candidate_path.exists() else {}
-            data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+('\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.' if error else ''),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True)
+            data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+('\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.' if error else ''),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True,extra_parts=reference_parts())
             plan=compile_storyboard(data,lyrics,fps)
             candidate_path.write_text(json.dumps({'key':candidate_key,'data':data},ensure_ascii=False))
             critique=generate_json('Evaluate this proposed short song story BEFORE illustration. Does it form one understandable emotional progression, with a subject/relationship, desire, visible event/choice, consequences that carry across shots and an earned ending? Reject a 20..30 second film confined to repeated desk/portrait crops or one staging, even if its prose claims emotional changes. Require at least three visibly distinct narrative setups; new camera zooms do not qualify. Reject a disconnected sequence of lyric-noun pictures, generic state labels with no real event, forced romance/tragedy, unrelated subplots or unexplained prop/identity resets. Do NOT require literal objects for every noun; emotional faithfulness matters. The plot must fit the provided song meaning/mood and be achievable by articulated 2D actions. Return JSON {"valid":boolean,"issues":["specific repair"],"reason":"why this narrative connects or fails"}.\nAUDIO ANALYSIS: '+json.dumps(lyrics,ensure_ascii=False)+'\nSTORY AND SCENES: '+json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False),out=out,tag=f'story_review_{attempt}',prefer_quality=True,require_full_model=True)
@@ -181,12 +183,15 @@ AVAILABLE REUSABLE ASSETS: {json.dumps(reusable,ensure_ascii=False)}
 JSON shape: {{"background":"#RRGGBB","assets":[{{"id":"unique_safe_id","description":"what this artwork depicts","width":180,"height":260,"reusable":true,"svg":"<svg ...>...</svg>"}}],"nodes":[{{"id":"hero_body","asset":"asset_id","parent":null,"role":"foreground","pivot":[0.5,0.8],"easing":"smooth","keys":[{{"t":0,"x":270,"y":550,"rotation":0,"scale":1,"opacity":1}},{{"t":1,"x":300,"y":530,"rotation":0,"scale":1,"opacity":1}}],"wave":{{"rotation":0,"x":0,"y":0,"cycles":1,"phase":0}}}}]}}.
 Use about 5..14 nodes, no more than 24. PREFER parent=null and animate each part in CANVAS coordinates, including heads and arms. This avoids accidental double translations. If parenting is necessary, child x/y MUST be SMALL LOCAL OFFSETS from its parent pivot (e.g. head x=0,y=-100, NEVER x=270,y=480 for a parent already at 270,580). Parent must appear BEFORE child. A group node may have asset=null with children. Node x/y are its PIVOT position in canvas pixels, or relative to the parent pivot when parent exists. Rotation is degrees around its pivot; scale is uniform. Keys at normalized shot time t=0..1, 2..8 ordered keys, MUST start at 0 and end at 1. Each key has x,y,rotation,scale,opacity. Scale must be 0.05..4 (never zero); opacity 0..1. Use opacity=0 for invisible endpoints. Decorative symbols must use paths, never SVG text or font attributes. Wave adds optional sinusoidal x/y/rotation movement, cycles per shot, phase in cycles. Keep amplitudes small/readable. At least TWO foreground assets need INDEPENDENT object/limb movement, not identical whole-picture pans. Animate the story action (handing, walking, bowing, dancing, a machine operating, water flowing, flight, etc.) with appropriate parts and trajectories. Background movement or camera zoom does not satisfy this. Static environment layers are fine. Art fills the frame and the main subject must remain legible at phone size. Do not place faces in the lyric safe area. Nodes have role=background or foreground only.
 At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose clear curves and rich detail over hundreds of tiny shapes. Reuse an existing id without redefining it, or return its IDENTICAL SVG. New pose variant must have a new id. Do not draw text or watermarks. SVG artwork must be static: no animate, animateTransform, animateMotion or set tags. All real motion belongs in node keys/waves. All geometry and ids must be valid. Avoid clipping the main action. Asset dimensions 4..1080 wide, 4..1920 tall.'''
+    prompt+='\nPERMANENT PRODUCTION STANDARD:\n'+film_direction()
+    prompt+='\nFor each raster-illustrated asset include image_prompt: a concise positive visual description (about 20..35 words) with exact subject/part, required pose, camera angle and identifying clothes/colours first. Describe ONLY the part rendered in this asset, preserving independently animated limbs as separate parts. When repairing, rewrite this prompt to address the visible image defect, not just the SVG. Avoid contradictory poses and lists of unwanted anatomy.'
+    prompt+='\nFor a perspective or repeated-setting correction, optionally return background_view: a concrete description of the visible supporting surface/background from THIS camera viewpoint. This changes the painted setting without changing the carried story state.'
     key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest();cache=folder/f'scene_{index}_{key[:12]}.json'
     error=None
     for attempt in range(3):
         try:
             if cache.exists() and attempt==0:data=json.loads(cache.read_text())
-            else:data=generate_json(prompt+'\nOUTPUT BUDGET: Keep all newly drawn SVG strings together under 24000 characters, each under 4000. Use concise curved paths, reusable assets and efficient shading; no repeated numbers or excessive decimal precision. Finish the entire JSON object.'+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning. Use at most 8 new assets, 16 nodes and 4 keys per node, and keep all SVG strings together under 12000 characters. Preserve actors, causal action and readable detail; reduce redundant geometry.' if error else ''),out=out,tag=f'scene_{index}'+('_repair' if reference_image else '')+f'_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True,require_full_model=True,timeout_seconds=180,thinking_level='low',extra_parts=[reference_image] if reference_image else None)
+            else:data=generate_json(prompt+'\nOUTPUT BUDGET: Keep all newly drawn SVG strings together under 24000 characters, each under 4000. Use concise curved paths, reusable assets and efficient shading; no repeated numbers or excessive decimal precision. Finish the entire JSON object.'+('\nPREVIOUS PACKAGE FAILED VALIDATION: '+str(error)+'\nReturn a corrected complete JSON package, keeping the same meaning. Use at most 8 new assets, 16 nodes and 4 keys per node, and keep all SVG strings together under 12000 characters. Preserve actors, causal action and readable detail; reduce redundant geometry.' if error else ''),out=out,tag=f'scene_{index}'+('_repair' if reference_image else '')+f'_attempt_{attempt}',schema=PACKAGE_SCHEMA,prefer_quality=True,require_full_model=True,timeout_seconds=180,thinking_level='low',extra_parts=([reference_image] if reference_image else [])+reference_parts())
 
             data=normalize_package(data)
             additions={a['id']:a for a in data.get('assets',[])}
@@ -204,10 +209,15 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             if variants:data['normalizations']=data.get('normalizations',[])+[{'asset_variants':variants}]
             data['assets']=list(additions.values())
             for aid,a in additions.items():
+                if 'image_prompt' in a and (not isinstance(a['image_prompt'],str) or not 8<=len(a['image_prompt'].strip())<=1600):raise ValueError('Invalid asset image pose description')
                 sanitize_svg(a['svg'])
                 if aid in assets and assets[aid]['svg']!=a['svg']:raise ValueError('Existing asset identity changed: '+aid)
                 assets[aid]=a
             s=dict(shot,background=data['background'],nodes=data['nodes'],normalizations=data.get('normalizations',[]))
+            if 'background_view' in data:
+                view=data['background_view']
+                if not isinstance(view,str) or not 8<=len(view.strip())<=1200:raise ValueError('Invalid corrected background viewpoint')
+                s['coverage']=dict(s.get('coverage',{}),background_view=view.strip())
             check=dict(plan,assets=assets,scenes=[dict(s,start_frame=0,end_frame=s['end_frame']-s['start_frame'])],total_frames=s['end_frame']-s['start_frame'])
             validate_vector(check)
             from .vector import invisible_foreground_nodes

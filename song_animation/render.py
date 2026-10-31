@@ -1,4 +1,4 @@
-import argparse,hashlib,json,subprocess
+import argparse,hashlib,json,subprocess,shutil
 from pathlib import Path
 from PIL import Image,ImageDraw
 import numpy as np
@@ -9,16 +9,33 @@ HERE=Path(__file__).parent
 def digest(plan,audio):
     h=hashlib.sha256(json.dumps(plan,sort_keys=True).encode())
     for p in sorted(HERE.glob('*.py')):h.update(p.read_bytes())
+    from .film_standard import fingerprint
+    h.update(fingerprint().encode())
     if audio:h.update(Path(audio).read_bytes())
     return h.hexdigest()
+
+def matching_receipt(video,receipt,key):
+    try:
+        data=json.loads(receipt.read_text())
+        if data.get('cache_key')==key and data.get('video_sha256')==hashlib.sha256(video.read_bytes()).hexdigest():return data
+    except (OSError,ValueError,AttributeError):pass
+    return None
 
 def render(plan,out,audio=None,width=540):
     validate(plan);out=Path(out);out.mkdir(parents=True,exist_ok=True)
     fps=plan['fps'];total=plan['total_frames'];duration=total/fps
     if width not in (540,1080):raise ValueError('Supported widths: 540 or 1080')
     final=out/'preview.mp4';key=digest(plan,audio)+f'-{width}';receipt=out/'receipt.json'
-    if final.exists() and receipt.exists() and json.loads(receipt.read_text()).get('cache_key')==key and json.loads(receipt.read_text()).get('video_sha256')==hashlib.sha256(final.read_bytes()).hexdigest():
+    if matching_receipt(final,receipt,key):
         print('Matching cached render',final);return final
+    cache=out/'render_cache';cached=cache/'preview.mp4';cached_receipt=cache/'receipt.json'
+    if matching_receipt(cached,cached_receipt,key):
+        shutil.copyfile(cached,final);shutil.copyfile(cached_receipt,receipt)
+        if plan.get('lyrics'):
+            from .lyrics import export_srt
+            export_srt(plan,out/'lyrics.srt')
+        print('Resuming exact-plan encoded draft; visual approval still required',flush=True)
+        return final
     temp=out/'rendering.mp4'
     cmd=['ffmpeg','-y','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','540x960','-r',str(fps),'-i','-']
     if audio:cmd+=['-i',str(audio)]
@@ -68,6 +85,9 @@ def render(plan,out,audio=None,width=540):
     temp.replace(final)
     receipt.write_text(json.dumps({'video_sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'cache_key':key,'frames':total,'duration':duration,'dimensions':[width,width*16//9],
         'lyrics_enabled':bool(plan.get('lyrics')),'caption_timing':'phrase' if plan.get('lyrics') else None,'audio':'source' if audio else 'intentional silent animation proof','status':'review_draft','lyric_sync_verified':False,'technical_checks':'passed','human_review_required':True},indent=2))
+    cache.mkdir(exist_ok=True)
+    pending=cache/'rendering.mp4';shutil.copyfile(final,pending);pending.replace(cached)
+    pending_receipt=cache/'receipt.tmp';shutil.copyfile(receipt,pending_receipt);pending_receipt.replace(cached_receipt)
     return final
 
 def main():

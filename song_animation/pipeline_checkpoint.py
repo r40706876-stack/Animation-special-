@@ -4,7 +4,8 @@ from pathlib import Path
 from .vector import validate_vector
 
 def identity(audio,lyrics,engine,artwork,width):
-    data={'audio_sha256':hashlib.sha256(Path(audio).read_bytes()).hexdigest(),'lyrics':lyrics,'engine':engine,'artwork':artwork,'width':width}
+    from .film_standard import fingerprint
+    data={'audio_sha256':hashlib.sha256(Path(audio).read_bytes()).hexdigest(),'lyrics':lyrics,'engine':engine,'artwork':artwork,'width':width,'film_standard':fingerprint()}
     return hashlib.sha256(json.dumps(data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 
 def save(out,key,plan,pass_index=0,assessment=None,completed=(),pending=False):

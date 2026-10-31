@@ -35,11 +35,13 @@ def cached_reference(source,selection):
     return lyrics
 
 def main():
+    from .film_standard import profile
+    standard=profile()
     a=argparse.ArgumentParser()
     a.add_argument('--audio',required=True);a.add_argument('--out',default='song_output');a.add_argument('--lyrics')
-    a.add_argument('--model',default='large-v3-turbo');a.add_argument('--width',type=int,default=1080)
+    a.add_argument('--model',default='large-v3-turbo');a.add_argument('--width',type=int,default=standard['width'])
     a.add_argument('--start',type=float);a.add_argument('--engine',choices=['generated','classic'],default='generated')
-    a.add_argument('--artwork',choices=['vector','painted-sets','painted-layers','flux-layers'],default='vector')
+    a.add_argument('--artwork',choices=['vector','painted-sets','painted-layers','flux-layers'],default=standard['artwork'])
     a.add_argument('--stage',choices=['all','plan'],default='all')
     a.add_argument('--transcriber',choices=['audio-model','whisper'],default='audio-model')
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
@@ -49,7 +51,7 @@ def main():
         (out/name).unlink(missing_ok=True)
     (out/'status.json').write_text(json.dumps({'status':'running','automatic_publish':False}))
     try:
-        clip,selection=prepare(args.audio,out,limit=30,start=args.start)
+        clip,selection=prepare(args.audio,out,limit=standard['duration_limit'],start=args.start)
         if args.lyrics:
             lyrics=json.loads(Path(args.lyrics).read_text())
             if abs(lyrics['duration']-selection['duration'])>.1:raise ValueError('Supplied lyrics must be timed relative to the selected clip')

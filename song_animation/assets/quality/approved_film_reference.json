@@ -1,0 +1,15 @@
+{
+  "source_kind": "directed user-reviewed supplied-song film; not universal automation evidence",
+  "source_video_sha256": "477049bbcd3a6c39196ddeb3db56223b297060a07233c3d52ef3c9d829d26d99",
+  "sample_seconds": [
+    1.5,
+    4.8,
+    7.8,
+    17.5,
+    24.5,
+    28.0
+  ],
+  "crop": "top 75 percent, excluding lyric overlay",
+  "reference_sha256": "7de060d4f5ff29b7688fc7d2ce5dd63bda07883eee3bab31408d5f2b541f246e",
+  "use": "finish, readable staging and coherent visual progression only; no transfer of song-specific subjects or plot"
+}

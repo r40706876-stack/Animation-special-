@@ -33,7 +33,7 @@ class OutputPolicy(unittest.TestCase):
    source=Path(td)/'source.wav';source.write_bytes(b'selected original audio')
    plan={'fps':24,'total_frames':48,'scenes':[{}]}
    def draw(*args):(out/'preview.mp4').write_bytes(b'new draft')
-   with patch('sys.argv',['song','--audio','source','--out',str(out),'--lyrics',str(lyrics)]),patch('song_animation.run.prepare',return_value=(source,{'duration':2})),patch('song_animation.run.music_features',return_value={}),patch('song_animation.generative.build',return_value=plan),patch('song_animation.run.render',side_effect=draw) as rendered,patch('song_animation.review.review',side_effect=reviews),patch('song_animation.review.refine',return_value=(plan,repair)) as refine,patch('song_animation.run.inspect_export',return_value=technical or {'passed':True,'reasons':[]}):
+   with patch('sys.argv',['song','--audio','source','--out',str(out),'--lyrics',str(lyrics),'--artwork','vector']),patch('song_animation.run.prepare',return_value=(source,{'duration':2})),patch('song_animation.run.music_features',return_value={}),patch('song_animation.generative.build',return_value=plan),patch('song_animation.run.render',side_effect=draw) as rendered,patch('song_animation.review.review',side_effect=reviews),patch('song_animation.review.refine',return_value=(plan,repair)) as refine,patch('song_animation.run.inspect_export',return_value=technical or {'passed':True,'reasons':[]}):
     try:main()
     except QualityHold:pass
     return json.loads((out/'status.json').read_text()),(out/'checked.mp4').exists(),rendered.call_count,refine.call_count
