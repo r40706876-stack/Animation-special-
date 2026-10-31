@@ -9,6 +9,11 @@ on:
         required: false
         default: song_animation/inputs/song_1000076620.m4a
         type: string
+      artwork:
+        description: 'Original image cutouts or the legacy CPU renderer'
+        type: choice
+        default: flux-layers
+        options: [flux-layers, painted-layers]
   push:
     branches: ['main', 'feature/song-animation-*']
     paths: ['song_animation/**', '.github/workflows/song_animation.yml']
@@ -70,6 +75,8 @@ jobs:
     timeout-minutes: 50
     env:
       AUDIO_PATH: ${{ matrix.audio }}
+      ARTWORK: ${{ inputs.artwork || 'flux-layers' }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_MODEL: ""
       HF_HUB_DISABLE_XET: "1"
@@ -105,21 +112,28 @@ jobs:
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
             song_draft/painted_actors/
+            song_draft/flux_images/
+            song_draft/flux_assets/
           key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
           restore-keys: |
             song-generated-v7-${{ hashFiles(matrix.audio) }}-
       - name: Check lyrics and connected story before loading the image models
-        run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-layers --stage plan
+        run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork "$ARTWORK" --stage plan
       - uses: actions/cache@v4
+        if: env.ARTWORK == 'painted-layers'
         with:
           path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
           key: song-painted-sd-turbo-b261bac6
+      - name: Install original cutout image backend
+        if: env.ARTWORK == 'flux-layers'
+        run: pip install -r song_animation/requirements-cutouts.txt
       - name: Install CPU painting backend after planning passed
+        if: env.ARTWORK == 'painted-layers'
         run: |
           pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
           pip install -r song_animation/requirements-painted.txt
       - name: Lyrics to connected animation draft
-        run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork painted-layers --allow-local-recovery
+        run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork "$ARTWORK" --allow-local-recovery
       - uses: actions/cache/save@v4
         if: always()
         with:
@@ -132,6 +146,8 @@ jobs:
             song_draft/vector_checkpoint.json
             song_draft/painted_environments/
             song_draft/painted_actors/
+            song_draft/flux_images/
+            song_draft/flux_assets/
           key: song-generated-v7-${{ hashFiles(matrix.audio) }}-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         if: always()

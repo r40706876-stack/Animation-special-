@@ -39,7 +39,7 @@ def main():
     a.add_argument('--audio',required=True);a.add_argument('--out',default='song_output');a.add_argument('--lyrics')
     a.add_argument('--model',default='large-v3-turbo');a.add_argument('--width',type=int,default=1080)
     a.add_argument('--start',type=float);a.add_argument('--engine',choices=['generated','classic'],default='generated')
-    a.add_argument('--artwork',choices=['vector','painted-sets','painted-layers'],default='vector')
+    a.add_argument('--artwork',choices=['vector','painted-sets','painted-layers','flux-layers'],default='vector')
     a.add_argument('--stage',choices=['all','plan'],default='all')
     a.add_argument('--transcriber',choices=['audio-model','whisper'],default='audio-model')
     a.add_argument('--planner',choices=['auto','local'],default='auto');a.add_argument('--allow-local-recovery',action='store_true')
@@ -88,7 +88,10 @@ def main():
         if args.stage=='plan':
             (out/'status.json').write_text(json.dumps({'status':'planned','automatic_publish':False,'checked_file':None}))
             return
-        if args.engine=='generated' and args.artwork in ('painted-sets','painted-layers'):
+        if args.engine=='generated' and args.artwork=='flux-layers':
+            from .flux_layers import paint_environments,paint_foreground
+            plan=paint_environments(paint_foreground(plan,out),out)
+        elif args.engine=='generated' and args.artwork in ('painted-sets','painted-layers'):
             from .environments import paint_environments
             plan=paint_environments(plan,out)
             if args.artwork=='painted-layers':
@@ -109,8 +112,8 @@ def main():
                 plan,replaced=refine(plan,out,dict(assessment,issues=decision['repair_issues']),pass_index=pass_index+1)
                 changed=changed or replaced
                 if not replaced:break
-                if args.artwork in ('painted-sets','painted-layers'):plan=paint_environments(plan,out)
-                if args.artwork=='painted-layers':plan=paint_foreground(plan,out)
+                if args.artwork in ('painted-sets','painted-layers','flux-layers'):plan=paint_environments(plan,out)
+                if args.artwork in ('painted-layers','flux-layers'):plan=paint_foreground(plan,out)
                 render(plan,out,clip,args.width)
             plan['visual_issues_remaining']=decision['reasons']
             (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))

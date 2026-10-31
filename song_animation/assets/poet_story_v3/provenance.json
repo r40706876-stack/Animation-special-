@@ -1,0 +1,11 @@
+{
+  "provider": "black-forest-labs/FLUX.1-schnell public Space",
+  "prompt": "A premium detailed hand-painted watercolor illustration of a young Indian male poet, curly black hair, expressive brown eyes, subtle wistful smile, ivory cotton kurta with delicate woven texture and natural clothing folds, charcoal shawl over one shoulder. Seated cross-legged, three-quarter side view facing right, beautiful lifelike face, anatomically natural proportions, elegant original storybook painting, soft warm daylight, fine organic ink lines and tactile shaded colors. One isolated character centered on a pure white background, entire silhouette visible with comfortable margins, no scenery, no furniture, no lettering, no watermark.",
+  "seed": 6620,
+  "size_bytes": 36332,
+  "kind": "original generated character for source-specific directed sample",
+  "source_audio_sha256": "e579e0bb99f4ff736964f5867e478f1e1e934a93907295e9785190e9b0f9dc5a",
+  "alpha_matting": "rembg u2netp",
+  "mirrored_for_staging": true,
+  "universal_automation_certified": false
+}
