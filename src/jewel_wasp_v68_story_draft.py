@@ -50,10 +50,10 @@ poses=[
     ((-.9,-.5,.52),(-.5,-.4,.44),(-.2,-.3,.42),(.75,.2,.18),(.3,.25,.18)),
     ((-.8,-.4,.42),(-.5,-.1,.40),(-.2,.15,.42),(.9,.2,.18),(.25,.45,.18)),
     ((-.7,-.5,.52),(.1,.1,.42),(.8,.5,.40),(.75,.0,.18),(1.45,.95,.18)),
-    ((.1,-.5,.52),(.9,.4,.44),(1.6,.82,.38),(.8,.1,.18),(1.6,1.10,-.56)),
+    ((.1,-.5,.52),(.05,-.10,.58),(-.50,-.30,.64),(.8,.1,.18),(1.6,1.10,-1.02)),
     ((1.0,.15,.50),(1.4,.6,.40),(1.7,.9,.42),(1.50,1.0,.18),(1.50,1.0,.18)),
     ((-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(1.5,1.0,.18),(1.5,1.0,.18)),
-    ((.4,.0,.40),(.3,-.2,.95),(-1.1,-1.0,1.55),(.95,.2,.18),(.95,.2,.18))]
+    ((1.60,1.10,-.24),(1.60,1.10,.62),(-.35,-.70,1.60),(.95,.2,.18),(.95,.2,.18))]
 ws,wm,we,rs,re=poses[chapter]
 def key_loc(actor,frame,point):
     actor.location=point;actor.keyframe_insert(data_path="location",frame=frame)
@@ -82,8 +82,9 @@ if chapter==10:
     # The animal must visibly cross the mouth and descend, not stop beside it.
     for f,xyz,scale in ((80,(1.14,.63,.18),1.0),
                         (125,(1.47,.88,.08),1.0),
-                        (175,(1.60,1.08,-.20),1.0),
-                        (240,(1.60,1.10,-.56),1.0)):
+                        (175,(1.60,1.08,-.34),1.0),
+                        (210,(1.60,1.10,-.72),1.0),
+                        (240,(1.60,1.10,-1.02),1.0)):
         roach.location=xyz;roach.keyframe_insert(data_path="location",frame=f)
         roach.scale=(scale,)*3;roach.keyframe_insert(data_path="scale",frame=f)
     # Insect stays physically above ground until it reaches the entrance.
@@ -106,10 +107,20 @@ if chapter in (4,6,12):
                 ob.hide_render=True;break
             current=current.parent
 
+# Finale must be a different event: adult wasp emerges from the burrow.
+# Keep the original cockroach rig in memory but hide it only in this shot.
+if chapter==13:
+    for ob in bpy.data.objects:
+        current=ob
+        while current:
+            if current==roach:
+                ob.hide_render=True;break
+            current=current.parent
+
 # A real geometric opening: the original dark disc sat ON the opaque floor,
 # so the cockroach appeared to sink through solid soil instead of entering.
 # Preserve the V6.8 forest; only replace its ground plane in burrow chapters.
-if chapter in (9,10,11,12):
+if chapter in (9,10,11,12,13):
     earth.hide_render=True
     holemat=material("burrow interior dark",(.007,.006,.004),rough=.99)
     cx,cy=1.60,1.10
@@ -182,9 +193,9 @@ if chapter in (4,6):
             node.keyframe_insert(data_path="scale",frame=f)
 if chapter==11:
     eggmat=material("egg ivory",(.76,.70,.49),rough=.78,noise=12)
-    egg=ell("single jewel wasp egg",(.18,.49,-.055),(.072,.13,.052),eggmat,roach)
+    egg=ell("single jewel wasp egg",(.18,.49,-.055),(.135,.055,.048),eggmat,roach)
     for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(240,1.0)):
-        egg.scale=(.072*size,.13*size,.052*size)
+        egg.scale=(.135*size,.055*size,.048*size)
         egg.keyframe_insert(data_path="scale",frame=f)
     # Animated ovipositor must actually approach the leg-attached egg.
     bpy.ops.mesh.primitive_cone_add(vertices=12,radius1=.012,radius2=.001,depth=1)
@@ -207,19 +218,19 @@ if chapter==11:
 if chapter==12:
     # One continuous tapered larval cuticle, not eight detached pearl spheres.
     # Shallow annular material changes are painted on the same watertight mesh.
-    larvamat=material("organic cream larval cuticle",(.65,.54,.38),rough=.82,noise=18)
+    larvamat=material("organic warm-tan larval cuticle",(.51,.37,.24),rough=.88,noise=18)
     groove=material("subtle larval segment grooves",(.48,.39,.29),rough=.91,noise=14)
     verts=[];faces=[];nring=49;nsides=20
     for i in range(nring):
         t=i/(nring-1)
-        profile=max(.045,math.sin(math.pi*t)**.62)
+        profile=max(.045,math.sin(math.pi*t)**.62)*(1+.08*math.sin(16*math.pi*t))
         x=-.46+.82*t
         yc=.46+.020*math.sin(2*math.pi*t)
         zc=-.060+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
-            verts.append((x,yc+.115*profile*math.cos(a),
-                          zc+.092*profile*math.sin(a)))
+            verts.append((x,yc+.110*profile*math.cos(a),
+                          zc+.145*profile*math.sin(a)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;jnext=i*nsides+(j+1)%nsides
@@ -258,8 +269,8 @@ camera.animation_data_clear();camera_data.animation_data_clear()
 camera_data.type="PERSP"
 camera_data.sensor_fit="VERTICAL";camera_data.sensor_height=24
 camera_data.lens=45
-shot_sizes=[4.5,3.65,3.3,1.65,2.1,1.65,1.9,
-            3.15,2.7,3.6,2.30,1.15,1.18,4.3]
+shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.25,1.9,
+            3.15,2.7,3.6,2.30,1.15,1.18,3.2]
 offsets=[
     (1,-5.2,2.2),(-2.8,-4.0,1.1),(2.5,-4.0,1.0),
     (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
@@ -270,13 +281,18 @@ for f in (1,120,240):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
     if chapter in (3,5):
-        focus=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
+        contact=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
+        # Include the entire wasp abdomen and cockroach in the sting frame.
+        focus=contact*.72+Vector(wasp.location)*.28
     elif chapter in (4,6,7,12):
         focus=Vector(roach.location)
     elif chapter in (9,10):
         focus=Vector((1.5,.90,-.02))
     elif chapter==11:
         focus=roach.matrix_world @ Vector((.18,.49,-.055))
+    elif chapter==13:
+        # Track emergence and departure, not the hidden cockroach.
+        focus=Vector(wasp.location)
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
@@ -320,6 +336,8 @@ if mode=="preflight":
         target=roach.matrix_world @ Vector((.18,.49,-.055))
     elif chapter==12:
         target=larva.matrix_world @ Vector((-.05,.46,-.06))
+    elif chapter==13:
+        target=Vector(wasp.location)
     else:
         target=Vector(roach.location)
     projected=world_to_camera_view(scene,camera,target)
