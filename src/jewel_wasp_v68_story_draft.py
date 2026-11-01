@@ -239,7 +239,7 @@ if chapter==12:
         profile=max(.045,math.sin(math.pi*t)**.62)*(1+.025*math.sin(16*math.pi*t))
         x=-.32+.58*t
         # Place the body against the roach flank, not hovering beside it.
-        yc=.345+.012*math.sin(2*math.pi*t)
+        yc=.40+.012*math.sin(2*math.pi*t)
         zc=-.050+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
@@ -257,7 +257,7 @@ if chapter==12:
     scene.collection.objects.link(larva);larva.parent=roach
     larva_mesh.materials.append(larvamat);larva_mesh.materials.append(groove)
     headmat=material("larval amber head capsule",(.17,.075,.032),rough=.91)
-    ell("attached larva head capsule",(.252,.345,-.050),(.036,.044,.050),headmat,larva,
+    ell("attached larva head capsule",(.252,.40,-.050),(.036,.044,.050),headmat,larva,
         segments=20,rings=10)
     for poly in larva_mesh.polygons:
         poly.use_smooth=True
@@ -357,7 +357,7 @@ if mode=="preflight":
     elif chapter==11:
         target=egg.matrix_world.translation.copy()
     elif chapter==12:
-        target=larva.matrix_world @ Vector((-.05,.345,-.050))
+        target=larva.matrix_world @ Vector((-.05,.40,-.050))
     elif chapter==13:
         # Geometry-only assertions: never substitute for visual emergence QA.
         scene.frame_set(1); low=float(wasp.location.z)
@@ -378,10 +378,19 @@ if mode=="preflight":
         egg_offset=egg.matrix_world.translation-roach.matrix_world.translation
         assert egg_offset.dot(camera_side)>.20, "Egg occluded from action camera"
     if chapter==12:
-        larva_surface=larva.matrix_world @ Vector((-.05,.345,-.050))
+        larva_surface=larva.matrix_world @ Vector((-.05,.40,-.050))
         assert larva_surface.y < roach.location.y-.20, "Larva occluded on far side"
         camera_side=(camera.location-roach.matrix_world.translation).normalized()
-        assert (larva_surface-roach.matrix_world.translation).dot(camera_side)>.20, "Larva occluded from action camera"
+        # The roach root has a 0.78 scale and the growing larva has its own
+        # 0.83 scale here. 0.345 local Y failed the *world-space* visibility
+        # threshold; 0.40 gives camera separation while its inner cuticle
+        # remains in contact with the roach's ~0.285 local-Y abdomen shell.
+        larva_inner_edge=(.40-.072)*float(larva.scale.y)
+        assert larva_inner_edge<.285, "Larva floats away from abdomen cuticle"
+        facing=(larva_surface-roach.matrix_world.translation).dot(camera_side)
+        print("JW_LARVA_CAMERA_CONTACT",round(float(facing),4),
+              round(float(larva_inner_edge),4),flush=True)
+        assert facing>.20, "Larva occluded from action camera"
     projected=world_to_camera_view(scene,camera,target)
     print("JW_ACTION_TARGET_PROJECTION",chapter,frame,tuple(round(float(v),3) for v in projected),flush=True)
     assert .07<projected.x<.93 and .08<projected.y<.92 and projected.z>0, "Action focal point outside portrait view"
