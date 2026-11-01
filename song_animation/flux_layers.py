@@ -43,6 +43,8 @@ def cutout(image,session):
     return result.crop(bounds)
 
 def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
+    # Reject invalid geometry/references before importing or contacting image backends.
+    validate_vector(plan)
     from rembg import new_session
     out=Path(out);folder=out/'flux_assets';folder.mkdir(parents=True,exist_ok=True)
     candidate=copy.deepcopy(plan);active={n.get('asset') for s in candidate['scenes'] for n in s['nodes'] if n.get('role')!='background' and isinstance(n.get('asset'),str) and n.get('asset')}
@@ -50,6 +52,8 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
     for aid in sorted(active):
         a=candidate['assets'].get(aid)
         if not a or 'svg' not in a:continue
+        # The asset dictionary key is canonical; valid plans need no duplicated id.
+        a['id']=aid
         if is_structural(a):
             a.pop('raster_png',None);a.pop('painted_actor',None)
             continue
