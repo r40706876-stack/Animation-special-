@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - ".github/workflows/jewel_wasp_v68_egg_larva_targeted_draft.yml"
+      - "src/jewel_wasp_v68_story_draft.py"
+      - "src/jewel_wasp_v68_anatomy_proof.py"
 permissions:
   contents: read
 concurrency:
@@ -55,6 +57,10 @@ jobs:
             test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "targeted-proof/ch${chapter}_DRAFT.mp4")" = 24
             ffmpeg -y -loglevel error -i "targeted-proof/ch${chapter}_DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "targeted-proof/ch${chapter}_motion_strip.png"
           done
+          # The actual 4-shot contact sheet is evidence for human visual QA,
+          # not an automated visual approval or a replacement for motion review.
+          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'targeted-proof/ch*_f*_DRAFT.png' -vf "scale=270:480,tile=2x2" -frames:v 1 "targeted-proof/DRAFT_EGG_LARVA_CONTACT.png"
+          test -s "targeted-proof/DRAFT_EGG_LARVA_CONTACT.png"
           echo "TARGETED_DRAFT_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
       - name: Record evidence provenance and unapproved visual status
         if: always()
@@ -69,7 +75,7 @@ jobs:
             chapters=[11,12],still_frames={"11":[140,205],"12":[120,180]},
             motion_windows={"11":[140,163],"12":[108,131]},
             draft_only=True,visual_approved=False,final_film=False,
-            old_successful_chapters_reused=True,
+            old_successful_chapters_untouched=True,
             status="Technical evidence only; independent still and animated visual QA required"
           ),indent=2))
           PY
