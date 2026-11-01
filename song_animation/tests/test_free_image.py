@@ -6,6 +6,11 @@ from song_animation.free_image import generate_image,SPACE
 from song_animation.provider import ProviderUnavailable
 
 class PublicImage(unittest.TestCase):
+    def test_empty_queue_error_is_transient_but_explicit_quota_is_not(self):
+        from song_animation.provider import ProviderUnavailable
+        error=ProviderUnavailable([{'model':SPACE,'http_status':503,'error':'opaque_image_provider_failure'}])
+        self.assertTrue(error.retryable)
+        self.assertFalse(ProviderUnavailable([{'model':SPACE,'http_status':429}]).retryable)
     def test_cached_verified_image_spends_no_gpu_requests(self):
         prompt='Original isolated subject';params={'space':SPACE,'prompt':prompt,'seed':12,'width':768,'height':1024,'steps':4}
         key=hashlib.sha256(json.dumps(params,sort_keys=True).encode()).hexdigest()
