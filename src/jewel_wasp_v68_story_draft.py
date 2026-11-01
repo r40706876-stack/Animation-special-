@@ -81,6 +81,10 @@ if chapter in (3,5,11):
     for f,dx,dy,dz in ((75,.94,-.46,.48),(112,.61,-.14,.27),
                         (145,.58,-.13,.25),(171,.60,-.13,.25),
                         (205,.95,-.47,.50)):
+        # Move wasp behind the visible femur for the deposition shot.
+        if chapter==11:
+            dy=(.16 if f==205 else dy+.22)
+            dz-=.07
         scene.frame_set(f);bpy.context.view_layer.update()
         local=(Vector((.025,.34,-.11)) if chapter==11 else
                Vector((.27 if chapter==3 else .56,0,.11)))
@@ -201,17 +205,28 @@ if chapter in (4,6):
             node.scale=(.055*amp,.045*amp,.035*amp)
             node.keyframe_insert(data_path="scale",frame=f)
 if chapter==11:
-    eggmat=material("egg ivory",(.76,.70,.49),rough=.78,noise=12)
-    # Jewel wasp oviposits on a cockroach leg, not on the forest floor.
-    # Mid-leg femur is parented to the gait pivot, so the egg follows the leg.
+    eggmat=material("natural ivory jewel wasp egg",(.76,.67,.45),rough=.86,noise=8)
+    # The V6.8 mid-femur axis is (-.09,.23,-.10) in gait-pivot space.
+    # Old egg position (.10,.17,-.08) floated off the actual leg.
     egg_leg=bpy.data.objects.get("roach gait pivot 1 1")
     assert egg_leg is not None and egg_leg.parent==roach
-    egg=ell("single jewel wasp egg",(.10,.17,-.08),(.036,.100,.028),eggmat,egg_leg)
-    for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(240,1.0)):
-        egg.scale=(.036*size,.100*size,.028*size)
+    femur_axis=Vector((-.09,.23,-.10))
+    egg_local=femur_axis*.5+Vector((.030,.012,0))
+    egg=ell("single femur-attached jewel wasp egg",egg_local,
+            (.018,.076,.016),eggmat,egg_leg,segments=28,rings=14)
+    egg.rotation_euler=femur_axis.to_track_quat("Y","Z").to_euler()
+    for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(205,1.0),(240,1.0)):
+        egg.scale=(.018*size,.076*size,.016*size)
         egg.keyframe_insert(data_path="scale",frame=f)
-    # Animated ovipositor must actually approach the leg-attached egg.
-    bpy.ops.mesh.primitive_cone_add(vertices=12,radius1=.012,radius2=.001,depth=1)
+    # Verify actual animated femur contact, not merely camera framing.
+    for f in (145,170,205):
+        scene.frame_set(f);bpy.context.view_layer.update()
+        t=max(0.0,min(1.0,egg_local.dot(femur_axis)/femur_axis.length_squared))
+        closest=egg_leg.matrix_world @ (femur_axis*t)
+        gap=(egg.matrix_world.translation-closest).length
+        print("JW_EGG_FEMUR_WORLD_CONTACT",f,round(float(gap),4),flush=True)
+        assert .008<gap<.039, "Egg detached from animated femur at %d: %.4f"%(f,gap)
+    bpy.ops.mesh.primitive_cone_add(vertices=12,radius1=.010,radius2=.001,depth=1)
     ov=bpy.context.object;ov.name="DRAFT ovipositor depositing egg"
     ov.data.materials.append(leg_amber)
     for f,reach in ((1,.001),(90,.001),(115,.5),(140,1.0),
@@ -221,7 +236,7 @@ if chapter==11:
         b=egg.matrix_world.translation.copy()
         d=b-a
         if f in (140,168):
-            assert d.length<.60, "Oviposition contact gap %.3f"%d.length
+            assert .01<d.length<.60, "Oviposition contact gap %.3f"%d.length
         length=max(.002,d.length*reach)
         ov.location=a+d.normalized()*length*.5
         ov.rotation_euler=d.to_track_quat("Z","Y").to_euler()
@@ -229,56 +244,51 @@ if chapter==11:
         for attr in ("location","rotation_euler","scale"):
             ov.keyframe_insert(data_path=attr,frame=f)
 if chapter==12:
-    # One continuous tapered larval cuticle, not eight detached pearl spheres.
-    # Shallow annular material changes are painted on the same watertight mesh.
-    larvamat=material("organic warm-tan larval cuticle",(.53,.33,.17),rough=.92,noise=18)
-    groove=material("subtle larval segment grooves",(.25,.13,.065),rough=.94,noise=14)
+    # A short soft taper with gentle rings, not a striped rigid shell.
+    # Grow around the cuticle contact point, not the roach origin.
+    larvamat=material("soft warm tan larval cuticle",(.64,.44,.28),rough=.94,noise=8)
     verts=[];faces=[];nring=49;nsides=20
+    radial_y=.050
     for i in range(nring):
         t=i/(nring-1)
-        profile=max(.045,math.sin(math.pi*t)**.62)*(1+.025*math.sin(16*math.pi*t))
-        x=-.32+.58*t
-        # Place the body against the roach flank, not hovering beside it.
-        yc=.40+.012*math.sin(2*math.pi*t)
-        zc=-.050+.012*math.sin(math.pi*t)
+        profile=max(.035,math.sin(math.pi*t)**.75)*(1+.030*math.sin(12*math.pi*t))
+        x=-.20+.40*t
         for j in range(nsides):
-            a=2*math.pi*j/nsides
-            verts.append((x,yc+.072*profile*math.cos(a),
-                          zc+.130*profile*math.sin(a)))
+            angle=2*math.pi*j/nsides
+            verts.append((x,radial_y*profile*math.cos(angle),
+                          .008*math.sin(math.pi*t)+.064*profile*math.sin(angle)))
     for i in range(nring-1):
         for j in range(nsides):
-            k=i*nsides;jnext=i*nsides+(j+1)%nsides
-            faces.append((k,jnext,jnext+nsides,k+nsides))
+            k=i*nsides;kn=k+(j+1)%nsides
+            faces.append((k,kn,kn+nsides,k+nsides))
     faces.append(tuple(reversed(range(nsides))))
     faces.append(tuple((nring-1)*nsides+j for j in range(nsides)))
-    larva_mesh=bpy.data.meshes.new("continuous organic larva mesh")
+    larva_mesh=bpy.data.meshes.new("short tapered organic larva mesh")
     larva_mesh.from_pydata(verts,[],faces);larva_mesh.update()
-    larva=bpy.data.objects.new("single growing jewel wasp larva",larva_mesh)
+    larva=bpy.data.objects.new("anchored growing jewel wasp larva",larva_mesh)
     scene.collection.objects.link(larva);larva.parent=roach
-    larva_mesh.materials.append(larvamat);larva_mesh.materials.append(groove)
-    headmat=material("larval amber head capsule",(.17,.075,.032),rough=.91)
-    ell("attached larva head capsule",(.252,.40,-.050),(.036,.044,.050),headmat,larva,
-        segments=20,rings=10)
-    for poly in larva_mesh.polygons:
-        poly.use_smooth=True
-        axial=poly.index//nsides
-        poly.material_index=1 if axial<nring-1 and axial%9==0 else 0
-    # Mesh deformation, not merely scaling a static white object.
+    larva_mesh.materials.append(larvamat)
+    for polygon in larva_mesh.polygons:polygon.use_smooth=True
+    headmat=material("small integrated larval head",(.47,.29,.16),rough=.93,noise=7)
+    ell("connected small larva head",(.187,0,0),
+        (.022,.025,.026),headmat,larva,segments=20,rings=10)
     larva.shape_key_add(name="Basis",from_mix=False)
-    bend=larva.shape_key_add(name="Organic lateral contraction",from_mix=False)
+    bend=larva.shape_key_add(name="Soft larval contraction",from_mix=False)
     for idx,v in enumerate(bend.data):
-        axial=(idx//nsides)/(nring-1)
-        v.co.y+=.075*math.sin(math.pi*axial)*math.sin(2*math.pi*axial)
-        v.co.z+=.026*math.sin(math.pi*axial)
-    for f,size,sway,bendval in ((1,.25,0,0),(60,.40,.025,1),
-                               (108,.56,-.025,0),(120,.62,.020,1),
-                               (132,.68,-.020,0),(180,.83,.028,1),
-                               (240,.82,0,0)):
+        t=(idx//nsides)/(nring-1)
+        v.co.y+=.014*math.sin(math.pi*t)*math.sin(2*math.pi*t)
+        v.co.z+=.009*math.sin(math.pi*t)
+    for f,size,sway,bendval in ((1,.25,0,0),(60,.40,.015,1),
+                                (108,.56,-.015,0),(120,.62,.012,1),
+                                (132,.68,-.012,0),(180,.83,.018,1),
+                                (240,.82,0,0)):
+        # Inner edge stays at local Y=.280 against the .285 abdomen.
+        larva.location=(0,.280+size*radial_y,-.050)
         larva.scale=(size,size,size)
         larva.rotation_euler.z=sway
         bend.value=bendval
-        larva.keyframe_insert(data_path="scale",frame=f)
-        larva.keyframe_insert(data_path="rotation_euler",frame=f)
+        for attr in ("location","scale","rotation_euler"):
+            larva.keyframe_insert(data_path=attr,frame=f)
         bend.keyframe_insert(data_path="value",frame=f)
 # Shot grammar: 14 independent cinematic compositions. Use perspective,
 # eye-level/overhead alternation, close-ups and motivated tracking.
@@ -357,7 +367,7 @@ if mode=="preflight":
     elif chapter==11:
         target=egg.matrix_world.translation.copy()
     elif chapter==12:
-        target=larva.matrix_world @ Vector((-.05,.40,-.050))
+        target=larva.matrix_world @ Vector((-.03,0,0))
     elif chapter==13:
         # Geometry-only assertions: never substitute for visual emergence QA.
         scene.frame_set(1); low=float(wasp.location.z)
@@ -378,15 +388,11 @@ if mode=="preflight":
         egg_offset=egg.matrix_world.translation-roach.matrix_world.translation
         assert egg_offset.dot(camera_side)>.20, "Egg occluded from action camera"
     if chapter==12:
-        larva_surface=larva.matrix_world @ Vector((-.05,.40,-.050))
+        larva_surface=larva.matrix_world @ Vector((-.03,0,0))
         assert larva_surface.y < roach.location.y-.20, "Larva occluded on far side"
         camera_side=(camera.location-roach.matrix_world.translation).normalized()
-        # The roach root has a 0.78 scale and the growing larva has its own
-        # 0.83 scale here. 0.345 local Y failed the *world-space* visibility
-        # threshold; 0.40 gives camera separation while its inner cuticle
-        # remains in contact with the roach's ~0.285 local-Y abdomen shell.
-        larva_inner_edge=(.40-.072)*float(larva.scale.y)
-        assert larva_inner_edge<.285, "Larva floats away from abdomen cuticle"
+        larva_inner_edge=float(larva.location.y)-radial_y*float(larva.scale.y)
+        assert .265<larva_inner_edge<.295, "Larva floats away from abdomen cuticle"
         facing=(larva_surface-roach.matrix_world.translation).dot(camera_side)
         print("JW_LARVA_CAMERA_CONTACT",round(float(facing),4),
               round(float(larva_inner_edge),4),flush=True)
@@ -403,7 +409,7 @@ if mode=="preflight":
     for sample in proof_window_frames.get(chapter,()):
         scene.frame_set(sample);bpy.context.view_layer.update()
         sample_target=(egg.matrix_world.translation.copy() if chapter==11 else
-                       larva.matrix_world @ Vector((-.05,.40,-.050)))
+                       larva.matrix_world @ Vector((-.03,0,0)))
         p=world_to_camera_view(scene,camera,sample_target)
         print("JW_TARGETED_PROOF_WINDOW_PROJECTION",chapter,sample,
               tuple(round(float(v),3) for v in p),flush=True)
