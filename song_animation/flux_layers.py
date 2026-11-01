@@ -45,7 +45,7 @@ def cutout(image,session):
 def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
     from rembg import new_session
     out=Path(out);folder=out/'flux_assets';folder.mkdir(parents=True,exist_ok=True)
-    candidate=copy.deepcopy(plan);active={n.get('asset') for s in candidate['scenes'] for n in s['nodes'] if n.get('role')!='background'}
+    candidate=copy.deepcopy(plan);active={n.get('asset') for s in candidate['scenes'] for n in s['nodes'] if n.get('role')!='background' and isinstance(n.get('asset'),str) and n.get('asset')}
     session=None;report=[]
     for aid in sorted(active):
         a=candidate['assets'].get(aid)
