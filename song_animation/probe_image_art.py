@@ -18,10 +18,10 @@ def main():
   models=[m['name'].removeprefix('models/') for m in r.json().get('models',[]) if 'generateContent' in m.get('supportedGenerationMethods',[]) and any(x in m['name'] for x in ('image','banana')) and 'tts' not in m['name']]
   models=sorted(models,key=lambda m:('lite' not in m,'preview' in m,m))
   report['discovered_models']=models
-  prompt='Create a premium botanical editorial illustration: a richly detailed crimson rose with organically curled petals, finely engraved ink contours and watercolor depth. Three-quarter overhead view, isolated single rose with short stem and two leaves, genuine transparent background if supported, no text or watermark, not a flat geometric icon. This artwork will be independently animated to illustrate the Hindi metaphor that flowers can cause emotional wounds.'
+  prompt='Create one complete anatomically connected head-and-torso portrait of a young Indian woman in a teal traditional dress, three-quarter profile, natural face and shoulders, both arms folded behind her back and hands fully hidden. Isolated single subject on a plain white background with generous margins. Premium detailed warm watercolor storybook illustration. No detached hands, floating heads, duplicate faces, scenery, text or collage. This is an upper-body animation asset; preserve the connected neck, shoulders and torso.'
   for model in models[:2]:
    try:
-    r=requests.post('https://generativelanguage.googleapis.com/v1/models/'+model+':generateContent',headers=headers,json={'contents':[{'parts':[{'text':prompt}]}],'generationConfig':{'responseModalities':['TEXT','IMAGE']}},timeout=120)
+    r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',headers=headers,json={'contents':[{'parts':[{'text':prompt}]}],'generationConfig':{'responseModalities':['TEXT','IMAGE']}},timeout=120)
     item={'model':model,'http_status':r.status_code};report['attempts'].append(item)
     if r.status_code!=200:continue
     for candidate in r.json().get('candidates',[]):
