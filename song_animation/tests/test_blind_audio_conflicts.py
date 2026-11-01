@@ -32,6 +32,15 @@ class BlindAudioConflict(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.generate_json',side_effect=ProviderUnavailable([{'model':'full','http_status':429}])):
             with self.assertRaises(ProviderUnavailable):confirm_conflicts_from_audio({},td,[{'start':0,'end':3,'text':'actual phrase'}],[{'start':0,'end':1}])
 
+    def test_devanagari_half_r_variant_does_not_equate_different_words(self):
+        for heard,accepted in [('कल सरदी होगी',True),('कल गरमी होगी',False),('न कल सर्दी होगी',False)]:
+            reply={'regions':[{'region':0,'text':heard,'uncertain':False}],'_provider_model':'gemini-full'}
+            with self.subTest(heard=heard),tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.generate_json',return_value=reply):
+                args=({},td,[{'start':0,'end':3,'text':'कल सर्दी होगी'}],[{'start':1,'end':2}])
+                if accepted:self.assertEqual(confirm_conflicts_from_audio(*args),reply)
+                else:
+                    with self.assertRaises(ValueError):confirm_conflicts_from_audio(*args)
+
     def test_blind_production_request_receives_physical_audio_crops_not_the_full_song(self):
         from pathlib import Path
         import base64

@@ -78,7 +78,14 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
     rows=blind.get('regions')
     if not isinstance(model,str) or not model or 'lite' in model.lower() or not isinstance(rows,list) or len(rows)!=len(groups):
         raise ValueError('Strong independent word disagreement remains unresolved: missing full-model blind audio evidence')
-    def letters(text):return ''.join(c for c in unicodedata.normalize('NFC',str(text)).casefold() if unicodedata.category(c)[0] in 'LM')
+    def letters(text):
+        text=unicodedata.normalize('NFC',str(text)).casefold()
+        # Hindi alternatives such as a written half-r versus an implicit
+        # consonant cluster must not consume the correction budget. Preserve
+        # all other letters/vowels: different pronouns, negations and verbs
+        # still fail. Full-audio meaning review remains mandatory afterwards.
+        text=re.sub('र्(?=[क-ह])','र',text)
+        return ''.join(c for c in text if unicodedata.category(c)[0] in 'LM')
     seen=set()
     for row in rows:
         i=row.get('region') if isinstance(row,dict) else None
