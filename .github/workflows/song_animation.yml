@@ -7,7 +7,7 @@ on:
       audio_path:
         description: 'Song path on the selected branch; choose main for current uploads'
         required: false
-        default: song_animation/inputs/song_1000076620.m4a
+        default: song_animation/inputs/song_1000077365.m4a
         type: string
       artwork:
         description: 'Original image cutouts or the legacy CPU renderer'
@@ -24,7 +24,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   inputs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       audio: ${{ steps.select.outputs.audio }}
     steps:
@@ -39,7 +39,7 @@ jobs:
           MANUAL_AUDIO: ${{ inputs.audio_path }}
         run: python -m song_animation.select_inputs
   proof:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: |
-          sudo apt-get update -qq
+          sudo apt-get -o Acquire::Retries=3 update
           sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
           pip install 'Pillow>=10,<13' 'numpy>=1.26,<3' 'requests>=2.31,<3' 'CairoSVG>=2.7,<3'
       - run: python -m unittest discover -s song_animation/tests -v
@@ -71,7 +71,7 @@ jobs:
       max-parallel: 1
       matrix:
         audio: ${{ fromJSON(needs.inputs.outputs.audio) }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 90
     env:
       AUDIO_PATH: ${{ matrix.audio }}
@@ -98,7 +98,7 @@ jobs:
           assert os.environ.get('GEMINI_API_KEY'), 'Missing GEMINI_API_KEY'
           PY
       - run: |
-          sudo apt-get update -qq
+          sudo apt-get -o Acquire::Retries=3 update
           sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
           pip install -r song_animation/requirements.txt
       - uses: actions/cache/restore@v4
