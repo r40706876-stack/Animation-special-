@@ -98,7 +98,8 @@ def main():
         if args.stage=='plan':
             (out/'status.json').write_text(json.dumps({'status':'planned','automatic_publish':False,'checked_file':None}))
             return
-        if pipeline_key and recovery and recovery['pending_repair']:
+        from .pipeline_checkpoint import needs_scene_rewrite
+        if pipeline_key and needs_scene_rewrite(recovery,args.artwork):
             from .review import refine
             assessment=recovery['assessment']
             def progress(candidate,completed):save_pipeline(out,pipeline_key,candidate,start_pass,assessment,completed,True)

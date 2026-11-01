@@ -2,6 +2,13 @@
 import hashlib,json
 from pathlib import Path
 from .vector import validate_vector
+ARTWORK_REVISION='connected-bust-v2'
+
+def needs_scene_rewrite(recovery,artwork):
+    # Re-evaluate corrected deterministic artwork before paying to rewrite
+    # the same timed story because of defects from an older raster backend.
+    return bool(recovery and recovery.get('pending_repair') and
+                (artwork!='flux-layers' or recovery.get('artwork_revision')==ARTWORK_REVISION))
 
 def identity(audio,lyrics,engine,artwork,width):
     from .film_standard import fingerprint
@@ -10,6 +17,7 @@ def identity(audio,lyrics,engine,artwork,width):
 
 def save(out,key,plan,pass_index=0,assessment=None,completed=(),pending=False,not_before_attempt=None):
     record={'key':key,'plan':plan,'pass_index':pass_index,'assessment':assessment,'completed_shots':list(completed),'pending_repair':pending}
+    record['artwork_revision']=ARTWORK_REVISION
     if not_before_attempt is not None:record['not_before_attempt']=not_before_attempt
     path=Path(out)/'pipeline_checkpoint.json';temporary=path.with_suffix('.tmp')
     temporary.write_text(json.dumps(record,ensure_ascii=False));temporary.replace(path)
