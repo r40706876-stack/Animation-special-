@@ -7,6 +7,10 @@ from .vector import validate_vector
 
 def seed_for(text):return int(hashlib.sha256(text.encode()).hexdigest()[:8],16)%(2**31)
 
+def body_rig_asset(asset):
+    text=(asset.get('id','')+' '+str(asset.get('description',''))).lower().replace('_',' ')
+    return bool(re.search(r'\b(body|torso|bust)\b',text))
+
 def repair_context(plan,aid=None,scene=None):
     """An image repair must change the image request, not only its SVG rig."""
     selected=[scene] if scene is not None else [s for s in plan['scenes'] if any(n.get('asset')==aid for n in s['nodes'])]
@@ -18,6 +22,7 @@ def corrected_prompt(prompt,context):
     return prompt+('\nREPAIR THE ACTUAL IMAGE: '+context+'\nKeep the shared identity and clothing. Correct the specified pose, duplicated anatomy, framing or staging in the generated image itself; changing only its filename or motion rig is insufficient.' if context else '')
 
 def prompt_for_asset(asset,bible,separate_limbs=False):
+    separate_limbs=separate_limbs or body_rig_asset(asset)
     subject=str(asset.get('image_prompt') or asset.get('description') or asset['id'].replace('_',' '))
     isolation='One isolated subject on a pure white background, complete silhouette with margins. No scenery, lettering or watermark.'
     extra=''
@@ -58,7 +63,7 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
             a.pop('raster_png',None);a.pop('painted_actor',None)
             continue
         if min(a['width'],a['height'])<45:continue
-        body='body' in aid.lower() or 'torso' in aid.lower()
+        body=body_rig_asset(a)
         context=repair_context(plan,aid=aid)
         prompt=corrected_prompt(prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body),context)
         seed=seed_for(str(plan.get('bible',{}).get('characters',''))+aid.split('_')[0])
