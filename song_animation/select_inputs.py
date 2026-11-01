@@ -41,7 +41,10 @@ def select(root,before='',head='',manual=None,event='push'):
     if event=='schedule':
         from .completion import completed,last_attempt
         files=[p for p in files if not completed(root,root/p)]
-        files.sort(key=lambda p:(last_attempt(root,root/p),p))
+        # One explicitly active upload can resume ahead of older diagnostics.
+        # After it clears, completion filtering restores normal fair ordering.
+        preferred=config.get('preferred_audio')
+        files.sort(key=lambda p:(p!=preferred,last_attempt(root,root/p),p))
         # One pending song per daily retry protects the limited model allowance.
         return files[:1]
     return files

@@ -4,6 +4,21 @@ from unittest.mock import patch
 from song_animation.select_inputs import select
 
 class UploadSelection(unittest.TestCase):
+    def test_active_audio_resumes_first_then_completed_source_restores_fair_queue(self):
+        from song_animation.completion import source_hash
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);inputs=root/'song_animation/inputs';inputs.mkdir(parents=True)
+            old=inputs/'old.wav';current=inputs/'current.wav';old.write_bytes(b'old diagnostic');current.write_bytes(b'current uploaded song')
+            (root/'song_animation/queue_config.json').write_text(json.dumps({'baseline_commit':'base','preferred_audio':'song_animation/inputs/current.wav'}))
+            attempts=root/'song_animation/attempted';attempts.mkdir()
+            (attempts/(source_hash(current)+'.json')).write_text('{"attempted_at":100}')
+            diff=subprocess.CompletedProcess([],0,stdout=b'song_animation/inputs/old.wav\0song_animation/inputs/current.wav\0',stderr=b'')
+            with patch('song_animation.select_inputs.subprocess.run',return_value=diff):
+                self.assertEqual(select(root,event='schedule'),['song_animation/inputs/current.wav'])
+                done=root/'song_animation/completed';done.mkdir();sha=source_hash(current)
+                (done/(sha+'.json')).write_text(json.dumps({'status':'checks_passed','source_sha256':sha}))
+                self.assertEqual(select(root,event='schedule'),['song_animation/inputs/old.wav'])
+
     def test_scheduled_retry_skips_cleared_source_and_picks_pending_upload(self):
         from song_animation.completion import source_hash
         with tempfile.TemporaryDirectory() as td:
