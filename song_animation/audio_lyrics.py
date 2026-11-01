@@ -46,7 +46,7 @@ def strong_word_conflicts(segments,independent):
         else:previous=None
     return conflicts
 
-def confirm_conflicts_from_audio(part,out,segments,conflicts):
+def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language=None):
     """Blindly re-hear disputed phrases; never prefer ASR or a positive verdict.
 
     Independent singing ASR can split a compound into different words. Its high
@@ -63,7 +63,17 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts):
         else:groups.append({'start':s['start'],'end':s['end'],'texts':[s['text']]})
     if not groups:raise ValueError('Unresolved word disagreement has no audible phrase interval')
     windows=[{'region':i,'start':g['start'],'end':g['end']} for i,g in enumerate(groups)]
-    blind=generate_json('Listen to the attached audio independently. Transcribe ONLY the actual audible words within each of these time windows, preserving original script. No proposed words or song identity are supplied: do not recall lyrics or complete cut-off lines from memory. Singing ASR can confuse word boundaries, but do not assume either version is right. Return JSON {"regions":[{"region":0,"text":"exact heard phrase","uncertain":false}]}, exactly one result for each listed region. Mark uncertainty rather than guessing.\nTIME WINDOWS: '+json.dumps(windows),out=out,tag='audio_conflict_blind',audio_part=part,prefer_quality=True,require_full_model=True)
+    prompt='Listen to the attached audio independently. Transcribe ONLY the actual audible words in each labelled region clip, preserving original script. No proposed words or song identity are supplied: do not recall lyrics or complete cut-off lines from memory. Singing ASR can confuse word boundaries, but do not assume either version is right. Return JSON {"regions":[{"region":0,"text":"exact heard phrase","uncertain":false}]}, exactly one result for each region. Mark uncertainty rather than guessing. Never use Roman transliteration for Hindi: use Devanagari for audible Hindi.\nLANGUAGE/SCRIPT HINT (verify from audio): '+str(language or 'unknown')+'\nSOURCE TIME WINDOWS: '+json.dumps(windows)
+    if audio is not None:
+        parts=[]
+        with tempfile.TemporaryDirectory() as td:
+            for w in windows:
+                focused=Path(td)/f"region_{w['region']}.mp3"
+                subprocess.run(['ffmpeg','-y','-v','error','-ss',str(w['start']),'-i',str(audio),'-t',str(w['end']-w['start']),'-vn','-ac','1','-ar','22050','-b:a','64k',str(focused)],check=True)
+                parts.extend([{'text':f"REGION {w['region']}: this audio contains only the requested interval. Transcribe this clip only."},{'inline_data':{'mime_type':'audio/mpeg','data':base64.b64encode(focused.read_bytes()).decode()}}])
+        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',extra_parts=parts,prefer_quality=True,require_full_model=True)
+    else:
+        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',audio_part=part,prefer_quality=True,require_full_model=True)
     model=blind.get('_provider_model','')
     rows=blind.get('regions')
     if not isinstance(model,str) or not model or 'lite' in model.lower() or not isinstance(rows,list) or len(rows)!=len(groups):
@@ -122,7 +132,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
             conflict_evidence=None
             conflicts=strong_word_conflicts(data.get('segments',[]),independent)
             if conflicts:
-                conflict_evidence=confirm_conflicts_from_audio(part,out,data.get('segments',[]),conflicts)
+                conflict_evidence=confirm_conflicts_from_audio(part,out,data.get('segments',[]),conflicts,audio=audio,language=data.get('language'))
             verification=generate_json('Independently listen to the AUDIO, not just the proposed text. Reject pseudo-words, wrong language or meaning, invented lyrics, missing/repeated vocals labelled instrumental, or completing a cut-off line from song memory. Return JSON {"valid":boolean,"reasons":["specific reason"],"meaning":"literal meaning only if audible"}. A genre, beat or fingerprint match is not proof of words. Compare the independent ASR too: a coherent transcript can still contain a wrong action verb (writing versus lifting, for example). Resolve disagreements by listening to the actual audio; do not rubber-stamp the proposed text or blindly trust ASR. Proposed transcript: '+json.dumps(data,ensure_ascii=False)+'\nINDEPENDENT DECODER EVIDENCE: '+json.dumps(independent,ensure_ascii=False),out=out,tag='audio_verification_'+str(attempt),audio_part=part,prefer_quality=True,require_full_model=True)
             if verification.get('valid') is not True:raise ValueError('Audio transcript failed independent meaning review: '+json.dumps(verification.get('reasons',[]),ensure_ascii=False))
             break

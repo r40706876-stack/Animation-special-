@@ -32,6 +32,18 @@ class BlindAudioConflict(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.generate_json',side_effect=ProviderUnavailable([{'model':'full','http_status':429}])):
             with self.assertRaises(ProviderUnavailable):confirm_conflicts_from_audio({},td,[{'start':0,'end':3,'text':'actual phrase'}],[{'start':0,'end':1}])
 
+    def test_blind_production_request_receives_physical_audio_crops_not_the_full_song(self):
+        from pathlib import Path
+        import base64
+        def crop(cmd,**kwargs):Path(cmd[-1]).write_bytes(b'only the requested audio interval')
+        reply={'regions':[{'region':0,'text':'a sunflower blooms','uncertain':False}],'_provider_model':'gemini-full'}
+        with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.subprocess.run',side_effect=crop) as ffmpeg,patch('song_animation.audio_lyrics.generate_json',return_value=reply) as model:
+            confirm_conflicts_from_audio({'inline_data':{'data':'full-song-should-not-be-sent'}},td,[{'start':2,'end':5,'text':'a sunflower blooms'}],[{'start':3,'end':4}],audio='actual-source.wav',language='English')
+            cmd=ffmpeg.call_args.args[0];self.assertEqual(cmd[cmd.index('-ss')+1],'2');self.assertEqual(cmd[cmd.index('-t')+1],'3')
+            self.assertNotIn('audio_part',model.call_args.kwargs)
+            raw=model.call_args.kwargs['extra_parts'][1]['inline_data']['data']
+            self.assertEqual(base64.b64decode(raw),b'only the requested audio interval')
+
     def test_provider_resume_keeps_candidate_and_asr_but_still_requires_audio_review(self):
         from pathlib import Path
         from song_animation.audio_lyrics import analyze_audio
