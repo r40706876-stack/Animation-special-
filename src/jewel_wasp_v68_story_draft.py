@@ -82,7 +82,7 @@ if chapter in (3,5,11):
                         (145,.58,-.13,.25),(171,.60,-.13,.25),
                         (205,.95,-.47,.50)):
         scene.frame_set(f);bpy.context.view_layer.update()
-        local=(Vector((.025,.34,-.11)) if chapter==11 else
+        local=(Vector((.025,-.34,-.11)) if chapter==11 else
                Vector((.27 if chapter==3 else .56,0,.11)))
         target=roach.matrix_world @ local
         wasp.location=target+Vector((dx,dy,dz))
@@ -204,9 +204,9 @@ if chapter==11:
     eggmat=material("egg ivory",(.76,.70,.49),rough=.78,noise=12)
     # Jewel wasp oviposits on a cockroach leg, not on the forest floor.
     # Mid-leg femur is parented to the gait pivot, so the egg follows the leg.
-    egg_leg=bpy.data.objects.get("roach gait pivot 1 1")
+    egg_leg=bpy.data.objects.get("roach gait pivot -1 1")
     assert egg_leg is not None and egg_leg.parent==roach
-    egg=ell("single jewel wasp egg",(.015,.14,-.07),(.036,.100,.028),eggmat,egg_leg)
+    egg=ell("single jewel wasp egg",(.10,-.17,-.08),(.036,.100,.028),eggmat,egg_leg)
     for f,size in ((1,.001),(108,.001),(145,.28),(170,.85),(240,1.0)):
         egg.scale=(.036*size,.100*size,.028*size)
         egg.keyframe_insert(data_path="scale",frame=f)
@@ -231,16 +231,16 @@ if chapter==11:
 if chapter==12:
     # One continuous tapered larval cuticle, not eight detached pearl spheres.
     # Shallow annular material changes are painted on the same watertight mesh.
-    larvamat=material("organic warm-tan larval cuticle",(.28,.17,.095),rough=.92,noise=18)
-    groove=material("subtle larval segment grooves",(.16,.09,.055),rough=.94,noise=14)
+    larvamat=material("organic warm-tan larval cuticle",(.53,.33,.17),rough=.92,noise=18)
+    groove=material("subtle larval segment grooves",(.25,.13,.065),rough=.94,noise=14)
     verts=[];faces=[];nring=49;nsides=20
     for i in range(nring):
         t=i/(nring-1)
         profile=max(.045,math.sin(math.pi*t)**.62)*(1+.025*math.sin(16*math.pi*t))
         x=-.32+.58*t
         # Place the body against the roach flank, not hovering beside it.
-        yc=.285+.012*math.sin(2*math.pi*t)
-        zc=-.075+.012*math.sin(math.pi*t)
+        yc=-.345+.012*math.sin(2*math.pi*t)
+        zc=-.050+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
             verts.append((x,yc+.072*profile*math.cos(a),
@@ -257,7 +257,7 @@ if chapter==12:
     scene.collection.objects.link(larva);larva.parent=roach
     larva_mesh.materials.append(larvamat);larva_mesh.materials.append(groove)
     headmat=material("larval amber head capsule",(.17,.075,.032),rough=.91)
-    ell("attached larva head capsule",(.252,.285,-.075),(.036,.044,.050),headmat,larva,
+    ell("attached larva head capsule",(.252,-.345,-.050),(.036,.044,.050),headmat,larva,
         segments=20,rings=10)
     for poly in larva_mesh.polygons:
         poly.use_smooth=True
@@ -293,7 +293,7 @@ offsets=[
     (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
     (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(.35,-3.0,.65),
-    (.45,-2.7,.65),(-2.0,-5.0,2.3)]
+    (-.65,-2.7,.55),(-2.0,-5.0,2.3)]
 for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
@@ -357,7 +357,7 @@ if mode=="preflight":
     elif chapter==11:
         target=egg.matrix_world.translation.copy()
     elif chapter==12:
-        target=larva.matrix_world @ Vector((-.05,.285,-.075))
+        target=larva.matrix_world @ Vector((-.05,-.345,-.050))
     elif chapter==13:
         # Geometry-only assertions: never substitute for visual emergence QA.
         scene.frame_set(1); low=float(wasp.location.z)
@@ -369,6 +369,11 @@ if mode=="preflight":
         target=Vector(wasp.location)
     else:
         target=Vector(roach.location)
+    if chapter==11:
+        assert egg.matrix_world.translation.y < roach.location.y-.20, "Egg on hidden far-side leg"
+    if chapter==12:
+        larva_surface=larva.matrix_world @ Vector((-.05,-.345,-.050))
+        assert larva_surface.y < roach.location.y-.20, "Larva occluded on far side"
     projected=world_to_camera_view(scene,camera,target)
     print("JW_ACTION_TARGET_PROJECTION",chapter,frame,tuple(round(float(v),3) for v in projected),flush=True)
     assert .07<projected.x<.93 and .08<projected.y<.92 and projected.z>0, "Action focal point outside portrait view"
