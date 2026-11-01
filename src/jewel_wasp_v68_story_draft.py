@@ -53,7 +53,7 @@ poses=[
     ((.1,-.5,.52),(.05,-.10,.58),(-.50,-.30,.64),(.8,.1,.18),(1.6,1.10,-1.02)),
     ((1.0,.15,.50),(1.4,.6,.40),(1.7,.9,.42),(1.50,1.0,.18),(1.50,1.0,.18)),
     ((-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(1.5,1.0,.18),(1.5,1.0,.18)),
-    ((1.60,1.10,-.24),(1.60,1.10,.62),(-.35,-.70,1.60),(.95,.2,.18),(.95,.2,.18))]
+    ((1.60,1.10,-.92),(1.60,1.10,.70),(-.35,-.70,1.60),(.95,.2,.18),(.95,.2,.18))]
 ws,wm,we,rs,re=poses[chapter]
 def key_loc(actor,frame,point):
     actor.location=point;actor.keyframe_insert(data_path="location",frame=frame)
@@ -277,7 +277,7 @@ offsets=[
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
     (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(.35,-3.0,.65),
     (.45,-2.7,.65),(-2.0,-5.0,2.3)]
-for f in (1,120,240):
+for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
     if chapter in (3,5):
@@ -291,12 +291,17 @@ for f in (1,120,240):
     elif chapter==11:
         focus=roach.matrix_world @ Vector((.18,.49,-.055))
     elif chapter==13:
-        # Track emergence and departure, not the hidden cockroach.
-        focus=Vector(wasp.location)
+        # Hold on the burrow during the rise; following the wasp at every
+        # frame made it appear stationary against a sliding background.
+        # Follow the departure only after the body has cleared the rim.
+        mouth=Vector((1.60,1.10,-.03))
+        focus=(mouth if f<=120 else
+               mouth.lerp(Vector(wasp.location),(f-120)/120.0))
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
-    height=shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1)
+    height=(2.45+.85*max(0,f-120)/120.0 if chapter==13 else
+            shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1))
     camera.location=focus+off*(height*camera_data.lens/camera_data.sensor_height)
     camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=f)
@@ -337,6 +342,12 @@ if mode=="preflight":
     elif chapter==12:
         target=larva.matrix_world @ Vector((-.05,.46,-.06))
     elif chapter==13:
+        # Geometry-only assertions: never substitute for visual emergence QA.
+        scene.frame_set(1); low=float(wasp.location.z)
+        scene.frame_set(120); high=float(wasp.location.z)
+        assert low<-.75 and high>.55 and high-low>1.4, (
+            "Finale does not rise visibly through the opening")
+        scene.frame_set(frame);bpy.context.view_layer.update()
         target=Vector(wasp.location)
     else:
         target=Vector(roach.location)
