@@ -1,0 +1,9 @@
+{
+  "source_video_sha256": "ade9b647b0c6bd2c3096b14131d5fd8e0f7056a494330e4251234efbf8fbde44",
+  "extracted_audio_sha256": "abbaadd51a5a29fac9b7d781654de2a95c537cf3fefea920284f6cc4b70172ee",
+  "decoded_audio_unchanged": true,
+  "pcm_sha256": "be3d2533cd3bced1a4c96c1acf329a32ccc954773ae1d0587d6980d1f380f75a",
+  "bytes": 727778,
+  "original_visuals_used": false,
+  "instruction": "Use audio only. New story, artwork, lyrics and animation must be generated automatically from this audio; do not reuse visuals from the uploaded source video."
+}
