@@ -31,19 +31,23 @@ jobs:
           python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_draft.py
           JW_MODE=preflight JW_CHAPTER=13 BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > finale-proof/preflight.log 2>&1 || { tail -n 100 finale-proof/preflight.log; exit 1; }
           grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS 13" finale-proof/preflight.log
-      - name: Render two actual story frames and the burrow emergence motion
+      - name: Render actual emergence and departure story frames and short motion proofs
         run: |
           set -euo pipefail
-          for frame in 45 180; do
+          for frame in 25 90 180 230; do
             JW_MODE=still JW_CHAPTER=13 JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/finale-proof/ch13_f$frame.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "finale-proof/still_$frame.log" 2>&1 || { tail -n 100 "finale-proof/still_$frame.log"; exit 1; }
             test -s "finale-proof/ch13_f$frame.png"
           done
-          JW_MODE=motion JW_CHAPTER=13 JW_MOTION_START=25 JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/finale-proof/ch13_emergence_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > finale-proof/motion.log 2>&1 || { tail -n 100 finale-proof/motion.log; exit 1; }
-          ffmpeg -y -loglevel error -i finale-proof/ch13_emergence_raw.mp4 -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH 13':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.6" -an -c:v libx264 -preset veryfast -crf 24 finale-proof/ch13_emergence_DRAFT.mp4
-          rm finale-proof/ch13_emergence_raw.mp4
-          ffmpeg -v error -xerror -i finale-proof/ch13_emergence_DRAFT.mp4 -f null -
-          test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 finale-proof/ch13_emergence_DRAFT.mp4)" = 24
-          ffmpeg -y -loglevel error -i finale-proof/ch13_emergence_DRAFT.mp4 -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 finale-proof/ch13_emergence_strip.png
+          # Two distinct motion windows: actual rise through the rim and departure.
+          # Both remain short, silent, low-cost DRAFT proofs, not final footage.
+          for start in 80 175; do
+            JW_MODE=motion JW_CHAPTER=13 JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/finale-proof/ch13_${start}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "finale-proof/motion_${start}.log" 2>&1 || { tail -n 100 "finale-proof/motion_${start}.log"; exit 1; }
+            ffmpeg -y -loglevel error -i "finale-proof/ch13_${start}_raw.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH 13':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.6" -an -c:v libx264 -preset veryfast -crf 24 "finale-proof/ch13_${start}_DRAFT.mp4"
+            rm "finale-proof/ch13_${start}_raw.mp4"
+            ffmpeg -v error -xerror -i "finale-proof/ch13_${start}_DRAFT.mp4" -f null -
+            test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "finale-proof/ch13_${start}_DRAFT.mp4")" = 24
+            ffmpeg -y -loglevel error -i "finale-proof/ch13_${start}_DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "finale-proof/ch13_${start}_strip.png"
+          done
       - name: Record DRAFT-only unapproved QA metadata
         if: always()
         run: |
@@ -52,8 +56,8 @@ jobs:
           p=pathlib.Path("finale-proof");p.mkdir(exist_ok=True)
           (p/"QA.json").write_text(json.dumps(dict(
               source_sha=os.environ.get("GITHUB_SHA"),
-              chapter=13, still_frames=[45,180],
-              motion_frames=list(range(25,49)),
+              chapter=13, still_frames=[25,90,180,230],
+              motion_windows=[list(range(80,104)),list(range(175,199))],
               draft_only=True,visual_approved=False,final_film=False,
               status="Technical motion proof only; human visual review required"
           ),indent=2))
