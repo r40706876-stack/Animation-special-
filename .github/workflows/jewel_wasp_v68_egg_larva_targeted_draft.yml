@@ -1,0 +1,82 @@
+name: Jewel Wasp V6.8 Egg and Larva Targeted DRAFT QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/jewel_wasp_v68_egg_larva_targeted_draft.yml"
+permissions:
+  contents: read
+concurrency:
+  group: jewel-wasp-v68-egg-larva-targeted-draft
+  cancel-in-progress: false
+jobs:
+  egg-larva-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 105
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 and ffmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" "https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz"
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Validate current V6.8 story integration without rendering
+        run: |
+          set -euo pipefail
+          mkdir -p targeted-proof
+          python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_draft.py
+          for chapter in 11 12; do
+            echo "PREFLIGHT $chapter"
+            JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "targeted-proof/preflight_$chapter.log"; exit 1; }
+            grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "targeted-proof/preflight_$chapter.log"
+          done
+      - name: Render camera-facing egg and larva stills and actual motion
+        run: |
+          set -euo pipefail
+          for spec in 11:140 11:205 12:120 12:180; do
+            chapter="${spec%%:*}"; frame="${spec##*:}"
+            echo "DRAFT_STILL $chapter $frame"
+            JW_MODE=still JW_CHAPTER="$chapter" JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/targeted-proof/ch${chapter}_f${frame}_raw.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/still_${chapter}_${frame}.log" 2>&1 || { tail -n 100 "targeted-proof/still_${chapter}_${frame}.log"; exit 1; }
+            ffmpeg -y -loglevel error -i "targeted-proof/ch${chapter}_f${frame}_raw.png" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH ${chapter}':x=12:y=12:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.65" -frames:v 1 "targeted-proof/ch${chapter}_f${frame}_DRAFT.png"
+            rm "targeted-proof/ch${chapter}_f${frame}_raw.png"
+            test -s "targeted-proof/ch${chapter}_f${frame}_DRAFT.png"
+          done
+          for spec in 11:140 12:108; do
+            chapter="${spec%%:*}"; start="${spec##*:}"
+            echo "DRAFT_MOTION $chapter $start"
+            JW_MODE=motion JW_CHAPTER="$chapter" JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/targeted-proof/ch${chapter}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/motion_${chapter}.log" 2>&1 || { tail -n 120 "targeted-proof/motion_${chapter}.log"; exit 1; }
+            ffmpeg -y -loglevel error -i "targeted-proof/ch${chapter}_raw.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH ${chapter}':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.65" -an -c:v libx264 -preset veryfast -crf 24 "targeted-proof/ch${chapter}_DRAFT.mp4"
+            rm "targeted-proof/ch${chapter}_raw.mp4"
+            ffmpeg -v error -xerror -i "targeted-proof/ch${chapter}_DRAFT.mp4" -f null -
+            test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "targeted-proof/ch${chapter}_DRAFT.mp4")" = 24
+            ffmpeg -y -loglevel error -i "targeted-proof/ch${chapter}_DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "targeted-proof/ch${chapter}_motion_strip.png"
+          done
+          echo "TARGETED_DRAFT_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
+      - name: Record evidence provenance and unapproved visual status
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,hashlib
+          p=pathlib.Path("targeted-proof");p.mkdir(exist_ok=True)
+          source=pathlib.Path("src/jewel_wasp_v68_story_draft.py")
+          (p/"QA.json").write_text(json.dumps(dict(
+            source_sha=os.environ.get("GITHUB_SHA"),
+            story_renderer_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
+            chapters=[11,12],still_frames={"11":[140,205],"12":[120,180]},
+            motion_windows={"11":[140,163],"12":[108,131]},
+            draft_only=True,visual_approved=False,final_film=False,
+            old_successful_chapters_reused=True,
+            status="Technical evidence only; independent still and animated visual QA required"
+          ),indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jewel-wasp-v68-egg-larva-targeted-draft-proof
+          path: targeted-proof/
+          if-no-files-found: warn
+          retention-days: 14
