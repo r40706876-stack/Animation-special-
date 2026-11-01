@@ -143,6 +143,9 @@ def main():
         else:decision={'passed':False,'reasons':['Classic engine output is an unchecked draft']}
         technical=inspect_export(out/'preview.mp4',clip,plan,args.width)
         passed=decision['passed'] and technical['passed']
+        if not decision['passed'] and args.artwork=='flux-layers':
+            from .original_art import reject_local_backend
+            reject_local_backend(out)
         gate={'passed':passed,'visual':decision,'technical':technical,'repair_passes':passes,'human_approval':False,'universal_quality_certified':False}
         (out/'quality_gate.json').write_text(json.dumps(gate,ensure_ascii=False,indent=2))
         status={'status':'checks_passed' if passed else 'blocked','engine':args.engine,'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,'universal_quality_certified':False,'visual_repair_applied':changed,'warnings':lyrics.get('warnings',[]),'quality_gate':gate}

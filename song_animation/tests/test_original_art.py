@@ -7,6 +7,21 @@ from song_animation.free_image import SPACE
 from song_animation.local_image import compact_prompt
 
 class OriginalArt(unittest.TestCase):
+    def test_rejected_local_film_retries_remote_and_cannot_repeat_bad_cpu_fallback(self):
+        from song_animation.original_art import reject_local_backend
+        import hashlib
+        with tempfile.TemporaryDirectory() as td:
+            audio=Path(td,'clip.wav');audio.write_bytes(b'source')
+            state=Path(td,'art_backend_choice.json')
+            state.write_text(json.dumps({'source_clip_sha256':hashlib.sha256(b'source').hexdigest(),'backend':'cpu'}))
+            reject_local_backend(td)
+            with patch('song_animation.flux_layers.paint_foreground',side_effect=ProviderUnavailable([{'model':SPACE,'http_status':503}])) as remote,patch('song_animation.local_image.generate_image') as local:
+                with self.assertRaises(ProviderUnavailable):paint({},td,audio)
+                remote.assert_called_once_with({},Path(td))
+                local.assert_not_called()
+            with patch('song_animation.flux_layers.paint_foreground',return_value={'fresh':True}),patch('song_animation.flux_layers.paint_environments',return_value={'fresh':True}):
+                self.assertEqual(paint({},td,audio),{'fresh':True})
+
     def test_source_switches_as_a_whole_and_does_not_retry_public_images_on_resume(self):
         with tempfile.TemporaryDirectory() as td:
             audio=Path(td,'clip.wav');audio.write_bytes(b'actual source clip');calls=[]
