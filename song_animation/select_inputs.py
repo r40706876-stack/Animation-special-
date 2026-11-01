@@ -39,8 +39,8 @@ def select(root,before='',head='',manual=None,event='push'):
     # Code-only commits run the proof job; real uploads and manual dispatch render songs.
     files=sorted(set(files))
     if event=='schedule':
-        from .completion import completed,last_attempt
-        files=[p for p in files if not completed(root,root/p)]
+        from .completion import completed,last_attempt,retry_ready
+        files=[p for p in files if not completed(root,root/p) and retry_ready(root,root/p)]
         # One explicitly active upload can resume ahead of older diagnostics.
         # After it clears, completion filtering restores normal fair ordering.
         preferred=config.get('preferred_audio')

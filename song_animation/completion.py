@@ -24,6 +24,15 @@ def last_attempt(root,audio):
         return value if math.isfinite(value) and value>=0 else 0
     except (OSError,ValueError,TypeError,AttributeError):return 0
 
+def retry_ready(root,audio,now=None):
+    p=Path(root)/'song_animation'/'attempted'/(source_hash(audio)+'.json')
+    try:
+        data=json.loads(p.read_text())
+        if data.get('status')!='waiting_for_provider':return True
+        deadline=float(data.get('retry_not_before',0))
+        return math.isfinite(deadline) and deadline<=(time.time() if now is None else now)
+    except (OSError,ValueError,TypeError,AttributeError):return True
+
 def receipt(audio,out):
     out=Path(out);status=json.loads((out/'status.json').read_text());gate=json.loads((out/'quality_gate.json').read_text())
     video=out/'checked.mp4'
@@ -61,6 +70,11 @@ def main():
         if not status.is_file():print('No song processing status to record');return
         state=json.loads(status.read_text())
         data={'source_sha256':source_hash(args.audio),'status':state.get('status','unknown'),'attempted_at':time.time(),'run_id':os.getenv('GITHUB_RUN_ID','')}
+        if data['status']=='waiting_for_provider':
+            try:delay=float(state.get('retry_after_seconds',0))
+            except (TypeError,ValueError):delay=0
+            if not math.isfinite(delay) or delay<0:delay=0
+            data['retry_not_before']=data['attempted_at']+max(3600,delay)
     else:data=receipt(args.audio,args.out)
     repo=os.environ['GITHUB_REPOSITORY'];token=os.environ['GH_RECEIPT_TOKEN']
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo):raise ValueError('Invalid repository')
