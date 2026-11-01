@@ -1,6 +1,6 @@
 {
   "source_sha256": "abbaadd51a5a29fac9b7d781654de2a95c537cf3fefea920284f6cc4b70172ee",
-  "status": "waiting_for_provider",
-  "attempted_at": 1793548905.5099168,
-  "run_id": "41315926958"
+  "status": "blocked",
+  "attempted_at": 1793556180.186339,
+  "run_id": "41331216175"
 }
