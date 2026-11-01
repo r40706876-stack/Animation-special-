@@ -29,10 +29,10 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p larva-candidate-proof
-          python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_draft.py
+          python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_candidate_20261102.py
           for chapter in 12; do
             echo "PREFLIGHT $chapter"
-            JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "larva-candidate-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "larva-candidate-proof/preflight_$chapter.log"; exit 1; }
+            JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "larva-candidate-proof/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "larva-candidate-proof/preflight_$chapter.log"
           done
       - name: Render camera-facing egg and larva stills and actual motion
@@ -41,7 +41,7 @@ jobs:
           for spec in 12:120 12:180; do
             chapter="${spec%%:*}"; frame="${spec##*:}"
             echo "DRAFT_STILL $chapter $frame"
-            JW_MODE=still JW_CHAPTER="$chapter" JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_f${frame}_raw.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "larva-candidate-proof/still_${chapter}_${frame}.log" 2>&1 || { tail -n 100 "larva-candidate-proof/still_${chapter}_${frame}.log"; exit 1; }
+            JW_MODE=still JW_CHAPTER="$chapter" JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_f${frame}_raw.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/still_${chapter}_${frame}.log" 2>&1 || { tail -n 100 "larva-candidate-proof/still_${chapter}_${frame}.log"; exit 1; }
             ffmpeg -y -loglevel error -i "larva-candidate-proof/ch${chapter}_f${frame}_raw.png" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH ${chapter}':x=12:y=12:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.65" -frames:v 1 "larva-candidate-proof/ch${chapter}_f${frame}_DRAFT.png"
             rm "larva-candidate-proof/ch${chapter}_f${frame}_raw.png"
             test -s "larva-candidate-proof/ch${chapter}_f${frame}_DRAFT.png"
@@ -49,7 +49,7 @@ jobs:
           for spec in 12:108; do
             chapter="${spec%%:*}"; start="${spec##*:}"
             echo "DRAFT_MOTION $chapter $start"
-            JW_MODE=motion JW_CHAPTER="$chapter" JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "larva-candidate-proof/motion_${chapter}.log" 2>&1 || { tail -n 120 "larva-candidate-proof/motion_${chapter}.log"; exit 1; }
+            JW_MODE=motion JW_CHAPTER="$chapter" JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/motion_${chapter}.log" 2>&1 || { tail -n 120 "larva-candidate-proof/motion_${chapter}.log"; exit 1; }
             ffmpeg -y -loglevel error -i "larva-candidate-proof/ch${chapter}_raw.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH ${chapter}':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.65" -an -c:v libx264 -preset veryfast -crf 24 "larva-candidate-proof/ch${chapter}_DRAFT.mp4"
             rm "larva-candidate-proof/ch${chapter}_raw.mp4"
             ffmpeg -v error -xerror -i "larva-candidate-proof/ch${chapter}_DRAFT.mp4" -f null -
