@@ -8,7 +8,8 @@ def encoded_sample(video,seconds):
     raw=subprocess.check_output(['ffmpeg','-v','error','-ss',str(max(0,seconds)),'-i',str(video),'-frames:v','1','-vf','scale=540:960','-f','image2pipe','-vcodec','png','-'],timeout=25)
     im=Image.open(io.BytesIO(raw));im.load();return im.convert('RGB')
 
-def review(plan,out):
+def review(plan,out,source='export'):
+    if source not in ('export','composition'):raise ValueError('Unknown review source')
     out=Path(out)
     measured=None
     try:
@@ -20,7 +21,11 @@ def review(plan,out):
             shot_samples=[]
             for column,q in enumerate((.1,.5,.9)):
                 frame=scene['start_frame']+int((scene['end_frame']-scene['start_frame']-1)*q)
-                sample=encoded_sample(out/'preview.mp4',frame/plan['fps']);shot_samples.append(sample)
+                if source=='export':sample=encoded_sample(out/'preview.mp4',frame/plan['fps'])
+                else:
+                    from .art import render_frame
+                    sample=render_frame(plan,frame)
+                shot_samples.append(sample)
                 strip.paste(sample,(column*540,0))
             samples.append(shot_samples)
             contact.paste(strip.resize((540,320)),(0,index*320))
@@ -36,7 +41,9 @@ def review(plan,out):
         descriptions=[{'shot':i,'sung_words':shot_phrases(plan,s),'meaning':s.get('meaning',s.get('label',s.get('reason',''))),'action':s.get('action',''),'story':s.get('story')} for i,s in enumerate(plan['scenes'])]
         prompt='''Review the ACTUAL decoded MP4 frames of this illustrated song film. Each labelled input image contains three full-size moments from one shot. Compare positions and limb poses across the three panels. Evaluate the connected story across ALL shots, not a list of noun matches. Check who/what the viewer follows, the desire or relationship, visible event/choice, carried consequence and earned final gesture. Judge whether each shot makes the next matter emotionally, and whether prior physical/relationship states persist. The emotional meaning of sung_words must remain faithful, but a creative narrative need not literally illustrate every noun. Reject individually pretty but disconnected pictures, unexplained prop/identity/state resets and repeated portraits with no developing relationship. A visually successful but lyrically unrelated storyboard is still a failure. Flag missing central objects, absent causes/consequences, repetitive generic standing people and metaphors that reverse the lyric (e.g. thorns causing the wound where the words say flowers caused it). Identify concrete mismatches, blank/poorly composed art, clipping, inconsistent characters, unreadable captions and repeated static compositions. Do not assume a script instruction was rendered successfully. This is advisory AI review, not proof of exact lyric/audio timing, copyright status or viewer retention. Check VISUAL VARIETY across the actual decoded panels: for five or more shots require at least THREE distinct staged setups, including different blocking/interactions and meaningfully different compositions. Crops, camera pans/zooms, color changes, or new words drawn on the same desk are still ONE visual. Variety must remain causally connected; arbitrary new locations fail story continuity. Return JSON with lyric_story_connection:boolean, visual_variety:boolean, story_arc:boolean (coherent emotional progression and earned ending), story_links:[{from:0,to:1,causal_connection:boolean,state_continuity:boolean,emotional_progression:boolean,reason:"actual visible transition evidence"}] (EVERY adjacent shot pair, empty for one shot), reference_quality_met:boolean (true only when the actual film matches the supplied illustration finish/detail/readability), needs_review:boolean, issues:[{shot:0,issue:"specific visible problem"}], strengths:["visible strengths"], and shots:[{shot:0,lyric_meaning:boolean,artwork_detail:boolean,story_motion:boolean,narrative_advance:boolean,anatomy_continuity:boolean,caption_legibility:boolean,reason:"visible evidence"}]. Review EVERY shot exactly once. All six checks must be explicitly true to clear a shot. Artwork_detail requires finished attractive organic illustration at phone size, not rough geometric people, icons or placeholders. Story_motion requires a visible meaningful action/change, not only camera pans, particles or a wobbling still picture. Judge the actual images, not promises in the plan. Missing/ambiguous evidence is false. If no issue is visible return needs_review=false and issues=[], but never certify human approval, exact lyric timing or engagement.\nBIBLE: '''+json.dumps(plan.get('bible',{}),ensure_ascii=False)+'\nCONNECTED STORY: '+json.dumps(plan.get('story',{}),ensure_ascii=False)+'\nSHOTS: '+json.dumps(descriptions,ensure_ascii=False)
         prompt+='\nADDITIONAL REQUIRED CHECKS: Return lyric_story_connection:boolean for whether the overall story expresses THIS song, and narrative_advance:boolean inside EVERY shot for an actual visible event/reaction/consequence advancing the carried story. A pretty still portrait, a new camera crop, a decorative particle, or a new noun illustration alone is false. All SIX per-shot checks must pass.\nDECODED VISUAL-VARIETY MEASUREMENT: '+json.dumps(measured)
-        result=generate_json(prompt,out=out,tag='visual_review',extra_parts=images,prefer_quality=True,require_full_model=True)
+        if source=='composition':
+            prompt=prompt.replace('ACTUAL decoded MP4 frames','ACTUAL rendered scene compositions before video encoding').replace('actual decoded panels','actual rendered panels')
+        result=generate_json(prompt,out=out,tag='visual_review' if source=='export' else 'composition_review',extra_parts=images,prefer_quality=True,require_full_model=True)
         result['reviewer_model']=result.pop('_provider_model',None)
         result['advisory_only']=True;result['human_approval']=False
     except ProviderUnavailable as e:
@@ -45,7 +52,8 @@ def review(plan,out):
         result={'status':'unavailable','error_type':type(e).__name__,'advisory_only':True,'human_approval':False}
     # This field always comes from decoded frames, never from model assertions.
     result['visual_variety_measurement']=measured
-    (out/'visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
+    result['sample_source']=source
+    (out/('visual_review.json' if source=='export' else 'composition_review.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2));return result
 
 
 def refine(plan,out,assessment,pass_index=1,scene_limit=6,completed_shots=(),on_progress=None,attempt_id=None):

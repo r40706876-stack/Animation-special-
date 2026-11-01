@@ -115,6 +115,18 @@ def main():
                 plan=paint_foreground(plan,out)
         plan['selection']=selection
         (out/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
+        if args.engine=='generated' and args.artwork=='flux-layers':
+            from .review import review as composition_review
+            assessment=composition_review(plan,out,source='composition')
+            if assessment.get('provider_wait'):raise ProviderUnavailable(assessment.get('provider_attempts') or [{'error':'model_discovery_unavailable'}])
+            precheck=visual_decision(assessment,len(plan['scenes']))
+            if not precheck['passed']:
+                if args.artwork=='flux-layers':
+                    from .original_art import reject_local_backend
+                    reject_local_backend(out)
+                save_pipeline(out,pipeline_key,plan,1,dict(assessment,issues=precheck['repair_issues']),pending=True,not_before_attempt=execution_id)
+                (out/'status.json').write_text(json.dumps({'status':'blocked','stage':'composition_preflight','automatic_repair_pending':True,'automatic_publish':False,'error':'Rendered scene samples failed visual review before full export','reasons':precheck['reasons']}))
+                raise QualityHold('Scene samples need repair; full export skipped and repair checkpoint saved')
         render(plan,out,clip,args.width)
         changed=bool(start_pass);assessment={};passes=[]
         if args.engine=='generated':
