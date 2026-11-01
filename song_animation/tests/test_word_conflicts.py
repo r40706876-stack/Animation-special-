@@ -34,16 +34,17 @@ class WordConflicts(unittest.TestCase):
 
     def test_positive_reviewer_cannot_override_repeated_lexical_conflict(self):
         with tempfile.TemporaryDirectory() as td:
-            # Review is never called: both contradictory transcripts are held first.
+            # A bare positive verdict is not blind transcription evidence.
             with self.assertRaisesRegex(ValueError,'meaning review'):
-                self.run_audio([self.data('जाम पी लिया'),self.data('जाम पी लिया'),{'valid':True}],td)
+                self.run_audio([self.data('जाम पी लिया'),{'valid':True},self.data('जाम पी लिया'),{'valid':True}],td)
             self.assertTrue((Path(td)/'audio_hold.json').exists())
             self.assertFalse((Path(td)/'lyrics.json').exists())
 
     def test_native_correction_requires_audio_review_and_keeps_evidence(self):
         with tempfile.TemporaryDirectory() as td:
-            result,calls=self.run_audio([self.data('जाम पी लिया'),self.data('जाम लिख दिया'),{'valid':True}],td)
-            self.assertEqual(calls,3)
+            blind={'regions':[{'region':0,'text':'जाम लिख दिया','uncertain':False}],'_provider_model':'gemini-full'}
+            result,calls=self.run_audio([self.data('जाम पी लिया'),blind,self.data('जाम लिख दिया'),{'valid':True}],td)
+            self.assertEqual(calls,4)
             self.assertTrue(result['recovery_used'])
             self.assertEqual(result['words'][0]['text'],'जाम लिख दिया')
             self.assertEqual(result['independent_asr'],self.evidence())

@@ -1,0 +1,5 @@
+{
+  "audio_path": "song_animation/inputs/song_1000077365.m4a",
+  "revision": 1,
+  "purpose": "Audio only: automatically retry with blind full-model listening for actual speech-recognizer disagreements; no manual lyrics or source-video visuals."
+}

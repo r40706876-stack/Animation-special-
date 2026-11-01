@@ -67,3 +67,10 @@ The two-pass repair budget belongs to one production attempt, not to the entire 
 A failed technical export clears its private encoded cache so future retries cannot restore the same defective bytes indefinitely. A ready artifact's actual URL is shown in the Actions summary and saved in its completion receipt only after the checked export is uploaded. Blocked runs never display a ready download link. Actual completion still depends on model availability and passing the full film checks; these recovery tests do not certify arbitrary-song visual quality.
 
 Completed repair passes also prune abandoned, unreferenced pose variants while retaining assets used by every other shot. Repeated recovery must not grow old assets until the scene budget permanently prevents a new repair.
+
+
+### Blind listening for singing-ASR disagreements
+
+An independent singing decoder may split compounds or mishear a phrase with high token confidence. Strong word disagreements now require a separate full-model blind transcription of the disputed time windows: neither proposed wording is sent to that listening call. Acceptance requires matching letters (spacing/punctuation may vary), explicit certainty for every region, and the normal full-audio meaning review. A bare positive review, lite-model reply, changed verb, missing region or uncertain audio cannot clear the conflict. No source-specific lyrics are hand-filled.
+
+An unverified transcript candidate and independent ASR evidence can resume after a provider outage only for the exact selected audio bytes. The candidate is never a verified lyric output: validation, dispute listening and the full meaning review remain required. Rejected candidates are discarded. The workflow caches this pending state to avoid charging/recomputing the same transcript/decoder work on each provider retry.
