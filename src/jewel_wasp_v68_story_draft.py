@@ -395,6 +395,20 @@ if mode=="preflight":
     print("JW_ACTION_TARGET_PROJECTION",chapter,frame,tuple(round(float(v),3) for v in projected),flush=True)
     assert .07<projected.x<.93 and .08<projected.y<.92 and projected.z>0, "Action focal point outside portrait view"
     assert scene.camera is camera and scene.render.fps==24
+    # Inspect the *actual* targeted proof windows before spending render time.
+    # The primary chapter assertion above is deliberately kept unchanged.
+    # These are composition-only checks; pixels and action continuity still
+    # require independent inspection of the stills and animated proofs.
+    proof_window_frames={11:(140,163,205),12:(108,120,131)}
+    for sample in proof_window_frames.get(chapter,()):
+        scene.frame_set(sample);bpy.context.view_layer.update()
+        sample_target=(egg.matrix_world.translation.copy() if chapter==11 else
+                       larva.matrix_world @ Vector((-.05,.40,-.050)))
+        p=world_to_camera_view(scene,camera,sample_target)
+        print("JW_TARGETED_PROOF_WINDOW_PROJECTION",chapter,sample,
+              tuple(round(float(v),3) for v in p),flush=True)
+        assert .04<p.x<.96 and .04<p.y<.96 and p.z>0, (
+            "Targeted DRAFT action falls outside camera at proof frame %s" % sample)
     print("JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS",chapter,flush=True)
 elif mode=="still":
     scene.frame_set(int(os.getenv("JW_STILL_FRAME","120")))
