@@ -53,11 +53,20 @@ poses=[
     ((.1,-.5,.52),(.05,-.10,.58),(-.50,-.30,.64),(.8,.1,.18),(1.6,1.10,-1.02)),
     ((1.0,.15,.50),(1.4,.6,.40),(1.7,.9,.42),(1.50,1.0,.18),(1.50,1.0,.18)),
     ((-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(-1.6,-1.0,1.2),(1.5,1.0,.18),(1.5,1.0,.18)),
-    ((1.60,1.10,-.92),(1.60,1.10,.70),(-.35,-.70,1.60),(.95,.2,.18),(.95,.2,.18))]
+    ((1.60,1.10,-1.65),(1.60,1.10,-.62),(-.35,-.70,1.60),(.95,.2,.18),(.95,.2,.18))]
 ws,wm,we,rs,re=poses[chapter]
 def key_loc(actor,frame,point):
     actor.location=point;actor.keyframe_insert(data_path="location",frame=frame)
 for f,p in ((1,ws),(120,wm),(240,we)):key_loc(wasp,f,p)
+if chapter==13:
+    # A visible rise from inside the burrow, then a distinct flight departure.
+    # Keep adult scale constant throughout the shot, never grow the insect.
+    wasp.scale=(.72,.72,.72)
+    for f,p in ((1,(1.60,1.10,-1.65)),(50,(1.60,1.10,-1.48)),
+                (90,(1.60,1.10,-1.12)),(120,(1.60,1.10,-.62)),
+                (150,(1.60,1.10,-.04)),(180,(1.60,1.10,.72)),
+                (205,(1.10,.55,1.16)),(240,(-.35,-.70,1.60))):
+        key_loc(wasp,f,p)
 for f,p in ((1,rs),(120,tuple((a+b)/2 for a,b in zip(rs,re))),(240,re)):
     key_loc(roach,f,p)
 wasp.rotation_euler.z=-.10 if chapter<8 else .12
@@ -91,7 +100,7 @@ if chapter==10:
     assert roach.location.z<0
 # Keep the full-size roach rig as it enters; pitch head-down rather than shrink.
 if chapter==10:
-    for f,pitch in ((1,0.0),(110,0.0),(155,.12),(195,.42),(240,.50)):
+    for f,pitch in ((1,0.0),(110,0.0),(155,.22),(195,.76),(240,1.08)):
         roach.rotation_euler.y=pitch
         roach.keyframe_insert(data_path="rotation_euler",frame=f)
 scene.frame_set(1)
@@ -161,7 +170,7 @@ if chapter in (9,10,11,12,13):
 # Real contact geometry: a sting must touch the thorax/head during the hold.
 # Fail preflight rather than quietly rendering a floating fake sting.
 if chapter in (3,5):
-    bpy.ops.mesh.primitive_cone_add(vertices=14,radius1=.018,radius2=.001,depth=1)
+    bpy.ops.mesh.primitive_cone_add(vertices=14,radius1=.026,radius2=.001,depth=1)
     needle=bpy.context.object;needle.name="DRAFT anatomical sting contact"
     needle.data.materials.append(leg_amber)
     for frame,reach in ((1,.001),(80,.001),(108,.08),(120,1.0),
@@ -223,14 +232,14 @@ if chapter==12:
     verts=[];faces=[];nring=49;nsides=20
     for i in range(nring):
         t=i/(nring-1)
-        profile=max(.045,math.sin(math.pi*t)**.62)*(1+.08*math.sin(16*math.pi*t))
-        x=-.46+.82*t
+        profile=max(.045,math.sin(math.pi*t)**.62)*(1+.025*math.sin(16*math.pi*t))
+        x=-.32+.58*t
         yc=.46+.020*math.sin(2*math.pi*t)
         zc=-.060+.012*math.sin(math.pi*t)
         for j in range(nsides):
             a=2*math.pi*j/nsides
-            verts.append((x,yc+.110*profile*math.cos(a),
-                          zc+.145*profile*math.sin(a)))
+            verts.append((x,yc+.078*profile*math.cos(a),
+                          zc+.105*profile*math.sin(a)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;jnext=i*nsides+(j+1)%nsides
@@ -245,7 +254,7 @@ if chapter==12:
     for poly in larva_mesh.polygons:
         poly.use_smooth=True
         axial=poly.index//nsides
-        poly.material_index=1 if axial<nring-1 and axial%6==0 else 0
+        poly.material_index=1 if axial<nring-1 and axial%9==0 else 0
     # Mesh deformation, not merely scaling a static white object.
     larva.shape_key_add(name="Basis",from_mix=False)
     bend=larva.shape_key_add(name="Organic lateral contraction",from_mix=False)
@@ -256,7 +265,7 @@ if chapter==12:
     for f,size,sway,bendval in ((1,.25,0,0),(60,.40,.025,1),
                                (108,.56,-.025,0),(120,.62,.020,1),
                                (132,.68,-.020,0),(180,.83,.028,1),
-                               (240,1.0,0,0)):
+                               (240,.82,0,0)):
         larva.scale=(size,size,size)
         larva.rotation_euler.z=sway
         bend.value=bendval
@@ -295,12 +304,12 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
         # frame made it appear stationary against a sliding background.
         # Follow the departure only after the body has cleared the rim.
         mouth=Vector((1.60,1.10,-.03))
-        focus=(mouth if f<=120 else
-               mouth.lerp(Vector(wasp.location),(f-120)/120.0))
+        focus=(mouth if f<=180 else
+               mouth.lerp(Vector(wasp.location),(f-180)/60.0*.60))
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
-    height=(2.45+.85*max(0,f-120)/120.0 if chapter==13 else
+    height=(2.85+.75*max(0,f-180)/60.0 if chapter==13 else
             shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1))
     camera.location=focus+off*(height*camera_data.lens/camera_data.sensor_height)
     camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
@@ -344,9 +353,10 @@ if mode=="preflight":
     elif chapter==13:
         # Geometry-only assertions: never substitute for visual emergence QA.
         scene.frame_set(1); low=float(wasp.location.z)
-        scene.frame_set(120); high=float(wasp.location.z)
-        assert low<-.75 and high>.55 and high-low>1.4, (
-            "Finale does not rise visibly through the opening")
+        scene.frame_set(120); mid=float(wasp.location.z)
+        scene.frame_set(180); high=float(wasp.location.z)
+        assert low<-1.2 and mid<-.25 and high>.55 and high-low>1.8, (
+            "Finale must rise from underground before visible departure")
         scene.frame_set(frame);bpy.context.view_layer.update()
         target=Vector(wasp.location)
     else:
