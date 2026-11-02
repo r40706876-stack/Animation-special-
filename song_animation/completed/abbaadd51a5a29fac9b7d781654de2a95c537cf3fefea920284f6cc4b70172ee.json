@@ -1,0 +1,13 @@
+{
+  "source_sha256": "abbaadd51a5a29fac9b7d781654de2a95c537cf3fefea920284f6cc4b70172ee",
+  "source_clip_sha256": "ce14e61ef908a14ce98dd999415fa81eb4c449462de0d6cfbab97e62afb24441",
+  "clip_start": 0.0,
+  "clip_duration": 29.988118,
+  "status": "checks_passed",
+  "video_sha256": "6bde5928de3095322a91ef4bbe555367e1d75b8af9de3765cac3db4b017b1c55",
+  "run_id": "41394878172",
+  "commit": "3e14ddb4a227d0ab2cf7adb9497a4fb73b6d0afe",
+  "artifact_url": "https://github.com/r40706876-stack/Animation-special-/actions/runs/41394878172/artifacts/13119550935",
+  "human_approval": false,
+  "universal_quality_certified": false
+}
