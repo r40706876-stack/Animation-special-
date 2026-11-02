@@ -298,8 +298,10 @@ if chapter==12:
         if ob.name=="overlapping dorsal elytron 1" or ob.name.startswith("roach elytron vein 1 "):
             ob.hide_render=True
     cavity=material("DRAFT dark internal host cavity",(.021,.010,.006),rough=.99)
-    ell("DRAFT visible internal cavity",(-.21,.105,-.013),
-        (.36,.028,.092),cavity,roach,segments=32,rings=16)
+    # Dark recessed backing sits BEHIND the grub, not in front of it.
+    # The earlier thin .028-deep cavity made the larva look like a pale decal.
+    ell("DRAFT visible internal cavity",(-.21,.125,-.013),
+        (.36,.075,.113),cavity,roach,segments=32,rings=16)
     curve("DRAFT cutaway edge - upper rim",
           [(-.55,.16,.012),(-.48,.23,.070),(-.25,.27,.106),
            (-.01,.25,.082),(.16,.16,.012)],.007,bronze,roach)
@@ -312,17 +314,19 @@ if chapter==12:
     # No sharp equatorial seam, hard shell, oversized head or detached mass.
     larvamat=material("soft warm ochre internal larva",
                       (.43,.275,.155),rough=.98,noise=4)
-    verts=[];faces=[];nring=57;nsides=24;radial_y=.084
+    # Rounded radial section, not a flattened ribbon; keep the near
+    # surface at the same cuticle depth required by the preflight.
+    verts=[];faces=[];nring=57;nsides=24;radial_y=.124
     for i in range(nring):
         t=i/(nring-1)
         soft=max(.08,math.sin(math.pi*t)**.52)
-        segmentation=1-.24*(.5+.5*math.cos(14*math.pi*t))
+        segmentation=1-.29*(.5+.5*math.cos(14*math.pi*t))
         radius=soft*segmentation
         x=-.21+.42*t
         for j in range(nsides):
             angle=2*math.pi*j/nsides
             verts.append((x,radial_y*radius*math.cos(angle),
-                          .068*radius*math.sin(angle)+.012*math.sin(math.pi*t)))
+                          .110*radius*math.sin(angle)+.012*math.sin(math.pi*t)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;kn=k+(j+1)%nsides
@@ -348,15 +352,19 @@ if chapter==12:
                                 (108,.55,-.012,0),(120,.64,.018,1),
                                 (132,.56,-.016,0),(180,.76,.012,1),
                                 (240,.80,0,0)):
-        # Outer flank remains below the cuticle at local Y ~= .27.
-        larva.location=(-.19,.262-size*radial_y,.028)
-        larva.scale=(size,size,size)
+        # The soft body alternately SHORTENS and THICKENS in contraction,
+        # with an embedded outer flank; this makes the 108-132 proof useful.
+        xfactor=.88 if bendval else 1.08
+        yfactor=1.12 if bendval else .96
+        zfactor=1.13 if bendval else .95
+        larva.scale=(size*xfactor,size*yfactor,size*zfactor)
+        larva.location=(-.19,.262-larva.scale.y*radial_y,.028)
         larva.rotation_euler.z=sway
         bend.value=bendval
         for attr in ("location","scale","rotation_euler"):
             larva.keyframe_insert(data_path=attr,frame=f)
         bend.keyframe_insert(data_path="value",frame=f)
-    print("JW_LARVA_SCHEMATIC_CUTAWAY",cutaway_count,flush=True)
+    print("JW_LARVA_ROUNDED_VOLUME_PERISTALSIS",cutaway_count,flush=True)
 # Shot grammar: 14 independent cinematic compositions. Use perspective,
 # eye-level/overhead alternation, close-ups and motivated tracking.
 camera.animation_data_clear();camera_data.animation_data_clear()
