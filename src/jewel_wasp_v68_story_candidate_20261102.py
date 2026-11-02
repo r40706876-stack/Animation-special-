@@ -76,6 +76,34 @@ roach.rotation_euler.z=(math.atan2(re[1]-rs[1],re[0]-rs[0])
                          if chapter in (8,9,10) and
                          math.hypot(re[0]-rs[0],re[1]-rs[1])>.05
                          else math.pi)
+# Chapter 8 must SHOW an antenna being held, not another generic walk.
+# Animate the actual near-side roach antenna from its head to the wasp jaw.
+# The far-side antenna remains on the inherited V6.8 rig. This is a DRAFT
+# gesture only: world-space contact and image review are separate gates.
+if chapter==8:
+    original_antenna=bpy.data.objects.get("roach filiform antenna 1")
+    assert original_antenna is not None and original_antenna.parent==roach
+    original_antenna.hide_render=True
+    base=Vector((.65,.095,.025))
+    rest_tip=Vector((1.38,.34,-.10))
+    held_antenna=curve("DRAFT grasped near-side roach antenna",
+                       [base,base.lerp(rest_tip,.33),
+                        base.lerp(rest_tip,.72),rest_tip],
+                       .008,leg_amber,roach)
+    antenna_points=held_antenna.data.splines[0].bezier_points
+    for frame,grasp in ((1,0.0),(70,0.0),(100,.55),(120,1.0),
+                        (170,1.0),(205,.45),(240,.20)):
+        scene.frame_set(frame);bpy.context.view_layer.update()
+        jaw_world=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        jaw_local=roach.matrix_world.inverted() @ jaw_world
+        tip=rest_tip.lerp(jaw_local,grasp)
+        control=[base,base.lerp(tip,.34)+Vector((0,.075,.07)),
+                 base.lerp(tip,.72)+Vector((0,.035,.045)),tip]
+        for point,position in zip(antenna_points,control):
+            point.co=position
+            point.keyframe_insert(data_path="co",frame=frame)
+    print("JW_ANTENNA_GRASP_ANIMATED",flush=True)
+
 # Stage the sting and oviposition on the correct side of the roach.
 # Keyframe the complete root rig, not a disconnected floating needle.
 if chapter in (3,5,11):
@@ -348,6 +376,10 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
         contact=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
         # Include the entire wasp abdomen and cockroach in the sting frame.
         focus=contact*.72+Vector(wasp.location)*.28
+    elif chapter==8:
+        jaw=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        tip=roach.matrix_world @ held_antenna.data.splines[0].bezier_points[-1].co
+        focus=(jaw+tip)*.5
     elif chapter in (4,6,7):
         focus=Vector(roach.location)
     elif chapter==12:
@@ -401,6 +433,13 @@ if mode=="preflight":
     scene.frame_set(frame);bpy.context.view_layer.update()
     if chapter in (3,5):
         target=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
+    elif chapter==8:
+        jaw=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        tip=roach.matrix_world @ held_antenna.data.splines[0].bezier_points[-1].co
+        gap=(jaw-tip).length
+        print("JW_ANTENNA_JAW_WORLD_CONTACT",frame,round(float(gap),4),flush=True)
+        assert gap<.045, "Antenna does not reach wasp jaw during grasp"
+        target=(jaw+tip)*.5
     elif chapter==10:
         target=Vector((1.60,1.10,-.12))
     elif chapter==11:
