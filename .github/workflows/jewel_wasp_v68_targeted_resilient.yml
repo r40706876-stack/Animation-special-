@@ -30,9 +30,9 @@ jobs:
           - {ch: 5, stills: "145", motion: 0}
           - {ch: 8, stills: "155", motion: 118}
           - {ch: 10, stills: "145 195", motion: 168}
-          - {ch: 11, stills: "170", motion: 152}
+          - {ch: 11, stills: "170 205", motion: 152}
           - {ch: 12, stills: "120 180", motion: 112}
-          - {ch: 13, stills: "145 180", motion: 145}
+          - {ch: 13, stills: "115 145", motion: 110}
     env:
       CH: "${{ matrix.ch }}"
       STILLS: "${{ matrix.stills }}"
