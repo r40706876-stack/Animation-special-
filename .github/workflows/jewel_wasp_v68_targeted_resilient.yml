@@ -32,7 +32,7 @@ jobs:
           - {ch: 5, stills: "145", motion: 130}
           - {ch: 8, stills: "145", motion: 132}
           - {ch: 10, stills: "145 195", motion: 168}
-          - {ch: 11, stills: "145 170", motion: 145}
+          - {ch: 11, stills: "120 145 170", motion: 145}
           - {ch: 12, stills: "120 132", motion: 112}
           - {ch: 13, stills: "132 145 160", motion: 132}
     env:
@@ -107,12 +107,24 @@ jobs:
             ffmpeg -v error -xerror -i "proof/ch-$CH-DRAFT.mp4" -f null -
             test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "proof/ch-$CH-DRAFT.mp4")" = 24
             ffmpeg -y -loglevel error -i "proof/ch-$CH-DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "proof/ch-$CH-motion-strip.png"
+            # Chapter 11's existing 145-168 proof shows only the END of
+            # deposition. Sample 120-143 too, without re-rendering any other
+            # chapter or replacing its successful checkpoint.
+            if [[ "$CH" == 11 ]]; then
+              JW_MODE=motion JW_CHAPTER=11 JW_MOTION_START=120 JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/proof/raw-11-precontact.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "proof/motion-11-precontact.log" 2>&1 || { tail -n 100 "proof/motion-11-precontact.log"; exit 1; }
+              grep -q "JW_V68_STORY_DRAFT_RENDER_DONE 11 motion" "proof/motion-11-precontact.log"
+              ffmpeg -y -loglevel error -i "proof/raw-11-precontact.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH 11 PRE-CONTACT':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.65" -an -c:v libx264 -preset veryfast -crf 24 "proof/ch-11-precontact-DRAFT.mp4"
+              rm "proof/raw-11-precontact.mp4"
+              ffmpeg -v error -xerror -i "proof/ch-11-precontact-DRAFT.mp4" -f null -
+              test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "proof/ch-11-precontact-DRAFT.mp4")" = 24
+              ffmpeg -y -loglevel error -i "proof/ch-11-precontact-DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "proof/ch-11-precontact-motion-strip.png"
+            fi
           fi
           n="$(find proof -maxdepth 1 -name "ch-$CH-f-*-DRAFT.png" | wc -l)"
           if [[ "$n" == 1 ]]; then
             cp "$(find proof -maxdepth 1 -name "ch-$CH-f-*-DRAFT.png" | head -1)" "proof/ch-$CH-CONTACT.png"
           else
-            ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i "proof/ch-$CH-f-*-DRAFT.png" -vf "scale=270:480,tile=2x1" -frames:v 1 "proof/ch-$CH-CONTACT.png"
+            ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i "proof/ch-$CH-f-*-DRAFT.png" -vf "scale=270:480,tile=${n}x1" -frames:v 1 "proof/ch-$CH-CONTACT.png"
           fi
           test -s "proof/ch-$CH-CONTACT.png"
           echo "DRAFT_CHAPTER_$CH-TECHNICAL_PASS__VISUAL_QA_PENDING"
