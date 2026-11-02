@@ -33,3 +33,11 @@ These changes **have not been visually re-rendered or approved**. First run geom
 3. Re-render only failed chapters and reuse all unaffected successful artifacts, assemble updated DRAFT.
 4. Independently listen to Hindi narration and verify shot-level timing; only then consider costly final resolution.
 5. Keep V4 and final visual gate intact. No green CI substitutes for visual approval.
+
+## Follow-up: bounded integrated story proofs requested (2026-11-02)
+- Existing targeted workflow updated in commit `0f60aae330822c31191b1ca0d4fab8e769557521` to use the **actual integrated story renderer**, not the separate 2-second anatomy specimen.
+- Structural preflight targets action chapters **3, 5, 8, 10, 11, 12, 13**; source compilation and chapter geometry checks run before any pixels.
+- Explicit source-hash-bound request `ops/JW_V68_TARGETED_PROOF_REQUEST.txt` created in commit `12e8cd7b8f78339db1289f94093312e25e8ddec4` to trigger bounded DRAFT stills (10 selected frames) and 24-frame motion windows (3, 8, 10, 11, 12, 13).
+- Workflow continues to watermark previews, ffmpeg-decode motion clips, require 24 frames per clip, and save a contact sheet and provenance with `visual_approved=false`. It does **not** run the 14-chapter full render.
+- **Execution status not yet verified:** GitHub connector's commit-to-runs lookup does not return push-triggered runs. Do not report these proofs as rendered, passed, or visually inspected until actual run/jobs/artifacts are independently retrieved.
+- The already assembled 140-second DRAFT remains technically valid but visually failed. Hindi speech intelligibility and scene synchronization remain unapproved. V4, old chapters, and final gates remain untouched.
