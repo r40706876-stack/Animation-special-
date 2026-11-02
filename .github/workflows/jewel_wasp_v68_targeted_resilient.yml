@@ -92,7 +92,7 @@ jobs:
             ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i "proof/ch-$CH-f-*-DRAFT.png" -vf "scale=270:480,tile=2x1" -frames:v 1 "proof/ch-$CH-CONTACT.png"
           fi
           test -s "proof/ch-$CH-CONTACT.png"
-          echo "DRAFT_CHAPTER_$CH_TECHNICAL_PASS__VISUAL_QA_PENDING"
+          echo "DRAFT_CHAPTER_$CH-TECHNICAL_PASS__VISUAL_QA_PENDING"
       - name: Record source provenance without visual approval
         if: always()
         run: |
