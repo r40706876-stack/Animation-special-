@@ -5,11 +5,17 @@ on:
       - "src/jewel_wasp_v68_story_draft.py"
       - ".github/workflows/jewel_wasp_v68_story_draft.yml"
   workflow_dispatch:
+    inputs:
+      render_proofs:
+        description: 'Explicitly render costly 14 stills and 8 motion proofs after all preflights'
+        type: boolean
+        required: false
+        default: false
 permissions:
   contents: read
 concurrency:
   group: jewel-wasp-v68-story-draft-preview
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -44,12 +50,13 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p preview
-          for chapter in 1 3 5 8 10 11 12 13; do
+          for chapter in $(seq 0 13); do
             echo "BLENDER_PREFLIGHT_CHAPTER $chapter"
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "preview/preflight_$chapter.log" 2>&1 || { tail -n 120 "preview/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "preview/preflight_$chapter.log"
           done
-      - name: Render 14 genuinely different 3D chapter stills (DRAFT)
+      - name: Render 14 genuinely different 3D chapter stills (DRAFT; explicit opt-in)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.render_proofs == true }}
         run: |
           set -euo pipefail
           mkdir -p preview
@@ -70,7 +77,8 @@ jobs:
           done
           ffmpeg -y -loglevel error -framerate 1 -i preview/chapter_%02d.png -vf "scale=360:640,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH %{n}':x=12:y=12:fontsize=21:fontcolor=white:box=1:boxcolor=black@0.65,tile=7x2" -frames:v 1 preview/DRAFT_14_CHAPTER_CONTACT.png
           test -s preview/DRAFT_14_CHAPTER_CONTACT.png
-      - name: Render real 1-second animated action previews
+      - name: Render real 1-second animated action previews (explicit opt-in)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.render_proofs == true }}
         run: |
           set -euo pipefail
           for chapter in 1 3 5 8 10 11 12 13; do
@@ -109,7 +117,8 @@ jobs:
                       proof_motion_chapters=[1,3,5,8,10,11,12,13],
                       action_still_frames={'3':145,'5':145,'10':195,'11':205,'12':180,'13':165},
                       action_motion_start={'1':90,'3':118,'5':118,'8':118,'10':168,'11':152,'12':112,'13':132},
-                      status='DRAFT technical proof; inspect contact sheet AND action motion')
+                      proof_opt_in=os.environ.get('GITHUB_EVENT_NAME')=='workflow_dispatch',
+                      status='14-chapter geometry preflight; still/motion visual review NOT approved unless artifacts rendered and independently inspected')
           (p/'DRAFT_QA.json').write_text(json.dumps(report,indent=2))
           PY
       - uses: actions/upload-artifact@v4
