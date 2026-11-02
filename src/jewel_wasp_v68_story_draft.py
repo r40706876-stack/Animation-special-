@@ -1,6 +1,7 @@
-"""Jewel Wasp 14-chapter DRAFT scene builder using the actual V6.8.25 rigs.
-Not final, not V4, and never an approval of realism. Each chapter is 240 frames.
-Preview with JW_MODE=still or motion before running JW_MODE=draft.
+"""14-chapter Jewel Wasp V6.8.25 DRAFT story renderer (240 frames/chapter).
+Integrated from the independently 14/14 geometry-preflighted action candidate.
+All outputs remain UNAPPROVED DRAFT: no visual, audio, or final-film claim.
+V4 is preserved separately. Low-cost preflight precedes optional visual proofs.
 """
 import os, pathlib, math
 import bpy
@@ -75,6 +76,35 @@ roach.rotation_euler.z=(math.atan2(re[1]-rs[1],re[0]-rs[0])
                          if chapter in (8,9,10) and
                          math.hypot(re[0]-rs[0],re[1]-rs[1])>.05
                          else math.pi)
+# Chapter 8 must SHOW an antenna being held, not another generic walk.
+# Animate the actual near-side roach antenna from its head to the wasp jaw.
+# The far-side antenna remains on the inherited V6.8 rig. This is a DRAFT
+# gesture only: world-space contact and image review are separate gates.
+if chapter==8:
+    original_antenna=bpy.data.objects.get("roach filiform antenna 1")
+    assert original_antenna is not None and original_antenna.parent==roach
+    original_antenna.hide_render=True
+    base=Vector((.65,.095,.025))
+    rest_tip=Vector((1.38,.34,-.10))
+    held_antenna=curve("DRAFT grasped near-side roach antenna",
+                       [base,base.lerp(rest_tip,.33),
+                        base.lerp(rest_tip,.72),rest_tip],
+                       .008,leg_amber,roach)
+    antenna_points=held_antenna.data.splines[0].bezier_points
+    for frame,grasp in ((1,0.0),(70,0.0),(100,.55),(120,1.0),
+                        (132,1.0),(145,1.0),(158,1.0),(170,1.0),
+                        (205,.45),(240,.20)):
+        scene.frame_set(frame);bpy.context.view_layer.update()
+        jaw_world=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        jaw_local=roach.matrix_world.inverted() @ jaw_world
+        tip=rest_tip.lerp(jaw_local,grasp)
+        control=[base,base.lerp(tip,.34)+Vector((0,.075,.07)),
+                 base.lerp(tip,.72)+Vector((0,.035,.045)),tip]
+        for point,position in zip(antenna_points,control):
+            point.co=position
+            point.keyframe_insert(data_path="co",frame=frame)
+    print("JW_ANTENNA_GRASP_ANIMATED",flush=True)
+
 # Stage the sting and oviposition on the correct side of the roach.
 # Keyframe the complete root rig, not a disconnected floating needle.
 if chapter in (3,5,11):
@@ -244,52 +274,88 @@ if chapter==11:
         for attr in ("location","rotation_euler","scale"):
             ov.keyframe_insert(data_path=attr,frame=f)
 if chapter==12:
-    # A short soft taper with gentle rings, not a striped rigid shell.
-    # Grow around the cuticle contact point, not the roach origin.
-    larvamat=material("soft warm tan larval cuticle",(.64,.44,.28),rough=.94,noise=8)
-    verts=[];faces=[];nring=49;nsides=20
-    radial_y=.050
+    # Actual DRAFT cross-section, NOT another transparent oval pasted on top.
+    # Previous alpha-only cutaway still looked like a white external shell:
+    # the opaque elytron and abdomen were in front of the larva.
+    # Delete a bounded patch of NEAR-SIDE cuticle, preserve the far-side mesh,
+    # and remove only the near-side overlying elytron/veins for this chapter.
+    # This is explicitly a schematic explanatory view, not surgical realism.
+    import bmesh
+    bm=bmesh.new()
+    bm.from_mesh(abd_obj.data)
+    opening=[]
+    for face in bm.faces:
+        c=face.calc_center_median()
+        if -.56<c.x<.18 and c.y>.105 and -.12<c.z<.12:
+            opening.append(face)
+    cutaway_count=len(opening)
+    assert cutaway_count>=30, "No real near-side abdomen window"
+    bmesh.ops.delete(bm,geom=opening,context="FACES")
+    bm.to_mesh(abd_obj.data);bm.free()
+    abd_obj.data.update()
+    for ob in bpy.data.objects:
+        if ob.name=="overlapping dorsal elytron 1" or ob.name.startswith("roach elytron vein 1 "):
+            ob.hide_render=True
+    cavity=material("DRAFT dark internal host cavity",(.021,.010,.006),rough=.99)
+    ell("DRAFT visible internal cavity",(-.21,.105,-.013),
+        (.36,.028,.092),cavity,roach,segments=32,rings=16)
+    curve("DRAFT cutaway edge - upper rim",
+          [(-.55,.16,.012),(-.48,.23,.070),(-.25,.27,.106),
+           (-.01,.25,.082),(.16,.16,.012)],.007,bronze,roach)
+    curve("DRAFT cutaway edge - lower rim",
+          [(-.55,.16,-.015),(-.45,.23,-.075),(-.20,.27,-.112),
+           (.01,.23,-.077),(.16,.16,-.015)],.007,bronze,roach)
+    print("JW_REAL_CUTAWAY_OPEN_FACES",cutaway_count,flush=True)
+
+    # A compact, rounded, slightly segmented grub INSIDE the abdomen.
+    # No sharp equatorial seam, hard shell, oversized head or detached mass.
+    larvamat=material("soft warm ochre internal larva",
+                      (.43,.275,.155),rough=.98,noise=4)
+    verts=[];faces=[];nring=57;nsides=24;radial_y=.056
     for i in range(nring):
         t=i/(nring-1)
-        profile=max(.035,math.sin(math.pi*t)**.75)*(1+.030*math.sin(12*math.pi*t))
-        x=-.20+.40*t
+        soft=max(.08,math.sin(math.pi*t)**.52)
+        segmentation=1-.065*(.5+.5*math.cos(14*math.pi*t))
+        radius=soft*segmentation
+        x=-.21+.42*t
         for j in range(nsides):
             angle=2*math.pi*j/nsides
-            verts.append((x,radial_y*profile*math.cos(angle),
-                          .008*math.sin(math.pi*t)+.064*profile*math.sin(angle)))
+            verts.append((x,radial_y*radius*math.cos(angle),
+                          .046*radius*math.sin(angle)+.008*math.sin(math.pi*t)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;kn=k+(j+1)%nsides
             faces.append((k,kn,kn+nsides,k+nsides))
     faces.append(tuple(reversed(range(nsides))))
     faces.append(tuple((nring-1)*nsides+j for j in range(nsides)))
-    larva_mesh=bpy.data.meshes.new("short tapered organic larva mesh")
-    larva_mesh.from_pydata(verts,[],faces);larva_mesh.update()
-    larva=bpy.data.objects.new("anchored growing jewel wasp larva",larva_mesh)
+    mesh=bpy.data.meshes.new("compact soft internal larva mesh")
+    mesh.from_pydata(verts,[],faces);mesh.update()
+    larva=bpy.data.objects.new("DRAFT internal developing jewel wasp larva",mesh)
     scene.collection.objects.link(larva);larva.parent=roach
-    larva_mesh.materials.append(larvamat)
-    for polygon in larva_mesh.polygons:polygon.use_smooth=True
-    headmat=material("small integrated larval head",(.47,.29,.16),rough=.93,noise=7)
-    ell("connected small larva head",(.187,0,0),
-        (.022,.025,.026),headmat,larva,segments=20,rings=10)
+    mesh.materials.append(larvamat)
+    for polygon in mesh.polygons:polygon.use_smooth=True
+    headmat=material("subtle connected larval head",(.30,.18,.095),rough=.98)
+    ell("small connected larval head",(.197,0,.005),
+        (.021,.023,.022),headmat,larva,segments=20,rings=10)
     larva.shape_key_add(name="Basis",from_mix=False)
-    bend=larva.shape_key_add(name="Soft larval contraction",from_mix=False)
+    bend=larva.shape_key_add(name="Soft living contraction",from_mix=False)
     for idx,v in enumerate(bend.data):
         t=(idx//nsides)/(nring-1)
-        v.co.y+=.014*math.sin(math.pi*t)*math.sin(2*math.pi*t)
-        v.co.z+=.009*math.sin(math.pi*t)
-    for f,size,sway,bendval in ((1,.25,0,0),(60,.40,.015,1),
-                                (108,.56,-.015,0),(120,.62,.012,1),
-                                (132,.68,-.012,0),(180,.83,.018,1),
-                                (240,.82,0,0)):
-        # Inner edge stays at local Y=.280 against the .285 abdomen.
-        larva.location=(0,.280+size*radial_y,-.050)
+        v.co.y+=.008*math.sin(math.pi*t)*math.sin(2*math.pi*t)
+        v.co.z+=.007*math.sin(math.pi*t)
+    for f,size,sway,bendval in ((1,.24,0,0),(60,.36,.009,1),
+                                (108,.50,-.009,0),(120,.56,.008,1),
+                                (132,.61,-.008,0),(180,.76,.012,1),
+                                (240,.80,0,0)):
+        # Outer flank remains below the cuticle at local Y ~= .27.
+        larva.location=(-.19,.262-size*radial_y,.028)
         larva.scale=(size,size,size)
         larva.rotation_euler.z=sway
         bend.value=bendval
         for attr in ("location","scale","rotation_euler"):
             larva.keyframe_insert(data_path=attr,frame=f)
         bend.keyframe_insert(data_path="value",frame=f)
+    print("JW_LARVA_SCHEMATIC_CUTAWAY",cutaway_count,flush=True)
 # Shot grammar: 14 independent cinematic compositions. Use perspective,
 # eye-level/overhead alternation, close-ups and motivated tracking.
 camera.animation_data_clear();camera_data.animation_data_clear()
@@ -297,13 +363,13 @@ camera_data.type="PERSP"
 camera_data.sensor_fit="VERTICAL";camera_data.sensor_height=24
 camera_data.lens=45
 shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.25,1.9,
-            3.15,2.7,3.6,2.30,1.15,1.18,3.2]
+            3.15,2.7,3.6,2.30,1.15,.94,3.2]
 offsets=[
     (1,-5.2,2.2),(-2.8,-4.0,1.1),(2.5,-4.0,1.0),
     (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
     (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(.35,-3.0,.65),
-    (-.65,-2.7,.55),(-2.0,-5.0,2.3)]
+    (-.35,-3.6,1.2),(-2.0,-5.0,2.3)]
 for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
@@ -311,8 +377,14 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
         contact=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
         # Include the entire wasp abdomen and cockroach in the sting frame.
         focus=contact*.72+Vector(wasp.location)*.28
-    elif chapter in (4,6,7,12):
+    elif chapter==8:
+        jaw=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        tip=roach.matrix_world @ held_antenna.data.splines[0].bezier_points[-1].co
+        focus=(jaw+tip)*.5
+    elif chapter in (4,6,7):
         focus=Vector(roach.location)
+    elif chapter==12:
+        focus=larva.matrix_world.translation.copy()
     elif chapter in (9,10):
         focus=Vector((1.5,.90,-.02))
     elif chapter==11:
@@ -362,12 +434,19 @@ if mode=="preflight":
     scene.frame_set(frame);bpy.context.view_layer.update()
     if chapter in (3,5):
         target=roach.matrix_world @ Vector((.27 if chapter==3 else .56,0,.11))
+    elif chapter==8:
+        jaw=wasp.matrix_world @ Vector((.61,-.075,-.07))
+        tip=roach.matrix_world @ held_antenna.data.splines[0].bezier_points[-1].co
+        gap=(jaw-tip).length
+        print("JW_ANTENNA_JAW_WORLD_CONTACT",frame,round(float(gap),4),flush=True)
+        assert gap<.045, "Antenna does not reach wasp jaw during grasp"
+        target=(jaw+tip)*.5
     elif chapter==10:
         target=Vector((1.60,1.10,-.12))
     elif chapter==11:
         target=egg.matrix_world.translation.copy()
     elif chapter==12:
-        target=larva.matrix_world @ Vector((-.03,0,0))
+        target=larva.matrix_world.translation.copy()
     elif chapter==13:
         # Geometry-only assertions: never substitute for visual emergence QA.
         scene.frame_set(1); low=float(wasp.location.z)
@@ -388,15 +467,16 @@ if mode=="preflight":
         egg_offset=egg.matrix_world.translation-roach.matrix_world.translation
         assert egg_offset.dot(camera_side)>.20, "Egg occluded from action camera"
     if chapter==12:
-        larva_surface=larva.matrix_world @ Vector((-.03,0,0))
-        assert larva_surface.y < roach.location.y-.20, "Larva occluded on far side"
+        # The grub is deliberately INSIDE the transparent schematic cutaway.
+        larva_surface=larva.matrix_world.translation.copy()
+        assert larva_surface.y < roach.location.y-.10, "Internal larva not on visible side"
         camera_side=(camera.location-roach.matrix_world.translation).normalized()
-        larva_inner_edge=float(larva.location.y)-radial_y*float(larva.scale.y)
-        assert .265<larva_inner_edge<.295, "Larva floats away from abdomen cuticle"
+        larva_outer_edge=float(larva.location.y)+radial_y*float(larva.scale.y)
+        assert .24<larva_outer_edge<.28, "Larva not embedded beneath host cuticle"
         facing=(larva_surface-roach.matrix_world.translation).dot(camera_side)
-        print("JW_LARVA_CAMERA_CONTACT",round(float(facing),4),
-              round(float(larva_inner_edge),4),flush=True)
-        assert facing>.20, "Larva occluded from action camera"
+        print("JW_INTERNAL_LARVA_CUTAWAY_CONTACT",round(float(facing),4),
+              round(float(larva_outer_edge),4),cutaway_count,flush=True)
+        assert facing>.10 and cutaway_count>=30, "Internal cutaway not camera facing"
     projected=world_to_camera_view(scene,camera,target)
     print("JW_ACTION_TARGET_PROJECTION",chapter,frame,tuple(round(float(v),3) for v in projected),flush=True)
     assert .07<projected.x<.93 and .08<projected.y<.92 and projected.z>0, "Action focal point outside portrait view"
@@ -409,7 +489,7 @@ if mode=="preflight":
     for sample in proof_window_frames.get(chapter,()):
         scene.frame_set(sample);bpy.context.view_layer.update()
         sample_target=(egg.matrix_world.translation.copy() if chapter==11 else
-                       larva.matrix_world @ Vector((-.03,0,0)))
+                       larva.matrix_world.translation.copy())
         p=world_to_camera_view(scene,camera,sample_target)
         print("JW_TARGETED_PROOF_WINDOW_PROJECTION",chapter,sample,
               tuple(round(float(v),3) for v in p),flush=True)
