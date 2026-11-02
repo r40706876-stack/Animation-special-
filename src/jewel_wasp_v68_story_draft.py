@@ -65,7 +65,7 @@ if chapter==13:
     wasp.scale=(.72,.72,.72)
     for f,p in ((1,(1.60,1.10,-1.65)),(50,(1.60,1.10,-1.48)),
                 (90,(1.60,1.10,-1.12)),(120,(1.60,1.10,-.62)),
-                (150,(1.60,1.10,-.04)),(180,(1.60,1.10,.72)),
+                (150,(1.60,1.10,.30)),(180,(1.60,1.10,.72)),
                 (205,(1.10,.55,1.16)),(240,(-.35,-.70,1.60))):
         key_loc(wasp,f,p)
 for f,p in ((1,rs),(120,tuple((a+b)/2 for a,b in zip(rs,re))),(240,re)):
@@ -363,7 +363,7 @@ camera_data.type="PERSP"
 camera_data.sensor_fit="VERTICAL";camera_data.sensor_height=24
 camera_data.lens=45
 shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.25,1.9,
-            3.15,2.7,3.6,2.30,1.15,.94,3.2]
+            3.15,2.7,3.6,2.85,1.90,.94,3.2]
 offsets=[
     (1,-5.2,2.2),(-2.8,-4.0,1.1),(2.5,-4.0,1.0),
     (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
@@ -385,10 +385,16 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
         focus=Vector(roach.location)
     elif chapter==12:
         focus=larva.matrix_world.translation.copy()
-    elif chapter in (9,10):
+    elif chapter==9:
         focus=Vector((1.5,.90,-.02))
+    elif chapter==10:
+        # DRAFT QA: static hole-centering cut off the entering cockroach.
+        # Keep the actor and the opening in frame until it descends.
+        mouth=Vector((1.60,1.10,-.12))
+        focus=Vector(roach.location).lerp(mouth,.52 if f<=120 else .72)
     elif chapter==11:
-        focus=egg.matrix_world.translation.copy()
+        # DRAFT QA: egg-only extreme closeup hid the depositing wasp.
+        focus=egg.matrix_world.translation.lerp(Vector(wasp.location),.27)
     elif chapter==13:
         # Hold on the burrow during the rise; following the wasp at every
         # frame made it appear stationary against a sliding background.
@@ -399,7 +405,7 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
-    height=(2.85+.75*max(0,f-180)/60.0 if chapter==13 else
+    height=(2.50+.55*max(0,f-180)/60.0 if chapter==13 else
             shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1))
     camera.location=focus+off*(height*camera_data.lens/camera_data.sensor_height)
     camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
