@@ -41,7 +41,7 @@ class BlindAudioConflict(unittest.TestCase):
                 else:
                     with self.assertRaises(ValueError):confirm_conflicts_from_audio(*args)
 
-    def test_blind_production_request_receives_physical_audio_crops_not_the_full_song(self):
+    def test_blind_production_request_receives_physical_crops_and_unprompted_audio_context(self):
         from pathlib import Path
         import base64
         def crop(cmd,**kwargs):Path(cmd[-1]).write_bytes(b'only the requested audio interval')
@@ -50,8 +50,20 @@ class BlindAudioConflict(unittest.TestCase):
             confirm_conflicts_from_audio({'inline_data':{'data':'full-song-should-not-be-sent'}},td,[{'start':2,'end':5,'text':'a sunflower blooms'}],[{'start':3,'end':4}],audio='actual-source.wav',language='English')
             cmd=ffmpeg.call_args.args[0];self.assertEqual(cmd[cmd.index('-ss')+1],'2');self.assertEqual(cmd[cmd.index('-t')+1],'3')
             self.assertNotIn('audio_part',model.call_args.kwargs)
-            raw=model.call_args.kwargs['extra_parts'][1]['inline_data']['data']
+            parts=model.call_args.kwargs['extra_parts']
+            self.assertEqual(parts[1]['inline_data']['data'],'full-song-should-not-be-sent')
+            self.assertNotIn('sunflower',model.call_args.args[0])
+            raw=parts[-1]['inline_data']['data']
             self.assertEqual(base64.b64decode(raw),b'only the requested audio interval')
+
+    def test_nukta_and_word_spacing_variants_do_not_hide_real_verb_changes(self):
+        for heard,accepted in [('हमने फूलों से ज़ख़्म खाए हैं',True),('हमने फूलों से ज़ख़्म नहीं खाए हैं',False),('हमने फूलों से ज़ख़्म दिए हैं',False)]:
+            reply={'regions':[{'region':0,'text':heard,'uncertain':False}],'_provider_model':'gemini-full'}
+            with self.subTest(heard=heard),tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.generate_json',return_value=reply):
+                args=({},td,[{'start':0,'end':3,'text':'हम ने फूलों से ज़ख्म खाए हैं'}],[{'start':1,'end':2}])
+                if accepted:self.assertEqual(confirm_conflicts_from_audio(*args),reply)
+                else:
+                    with self.assertRaises(ValueError):confirm_conflicts_from_audio(*args)
 
     def test_provider_resume_keeps_candidate_and_asr_but_still_requires_audio_review(self):
         from pathlib import Path

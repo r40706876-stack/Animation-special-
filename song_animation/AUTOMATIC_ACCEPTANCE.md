@@ -10,7 +10,7 @@ The user authorized three further real supplied recordings to run without manual
 | `reference.mp3` | 34.25s | Hindi hurt/trust ghazal; automatic 30s excerpt |
 | `song_1000076620.m4a` | 41.19s | Hindi romantic ghazal; automatic 30s excerpt |
 
-The initial live run is **41410103196**, commit **c81b7e8291af9b1582d533a3f8ae83c2f0353b7a**. Its results are pending. This document is not a pass receipt.
+The initial live run **41410103196**, commit **c81b7e8291af9b1582d533a3f8ae83c2f0353b7a**, failed all three cases during fresh lyric verification before scene generation. No MP4 was produced. Its 8 MB artifact preserves the automatic analysis and exact selected audio for all three sources. Failures included Romanized Hindi, actual word disagreements, and a false rejection of the orthographic pair `ज़ख़्म`/`ज़ख्म`. A short blind-listening crop also lacked the musical phrase context. Recovery strengthens native-script instructions and full-model transcription, supplies the unprompted selected clip alongside physical region crops, and normalizes nukta consistently with the existing independent-ASR conflict comparison. Different verbs, negations and uncertain listening still fail. This document is not a pass receipt.
 
 `Song quality acceptance - three real inputs` runs one case at a time under the same workflow concurrency group as normal song production. It uses the same production entry point and image dependencies. `SONG_ACCEPTANCE_COLD_START=1` disables the hand-corrected lyric fixture and all preserved manually directed source art. No ordinary production-output cache is imported. The suite's own automatic checkpoints can resume after interruptions; successful outputs are rechecked before reuse.
 

@@ -19,6 +19,21 @@ def cases(root,manifest):
     if len(result)<3:raise ValueError('At least three distinct real audio inputs are required')
     return result
 
+def adopt_initial_analysis(root,manifest,out):
+    """Bind the inspected, automatic, pre-render artifact from the initial run.
+
+    The workflow downloads this exact artifact with its GitHub token. No local
+    hand-authored scene/art package may be adopted through this migration.
+    """
+    out=Path(out);report=load(out/'acceptance_report.json');items=cases(root,manifest)
+    if report.get('manual_source_art_allowed') is not False or report.get('input_count')!=3:raise ValueError('Initial artifact is not the inspected automatic acceptance report')
+    for i,item in enumerate(items):
+        record=report['cases'][i];folder=out/(str(i)+'-'+Path(item['audio_path']).stem)
+        if record.get('source_sha256')!=item['source_sha256'] or record.get('cold_start') is not True or record.get('passed') is not False:raise ValueError('Initial acceptance source or result changed')
+        if load(folder/'selection.json').get('source_sha256')!=item['source_sha256']:raise ValueError('Initial selection source changed')
+        if any((folder/n).exists() for n in ('plan.json','pipeline_checkpoint.json','checked.mp4','flux_assets','painted_actors')):raise ValueError('Migration accepts pre-render analysis only')
+        (folder/'acceptance_origin.json').write_text(json.dumps({'source_sha256':item['source_sha256'],'source_clip_sha256':sha(folder/'source_clip.wav'),'manual_source_art_allowed':False,'generation_commit':'c81b7e8291af9b1582d533a3f8ae83c2f0353b7a','imported_analysis_run':41410103196},indent=2))
+
 def assess(audio,out):
     from .quality import visual_decision,inspect_export
     out=Path(out);plan=load(out/'plan.json');status=load(out/'status.json');gate=load(out/'quality_gate.json')
@@ -55,7 +70,7 @@ def run(root,manifest,out,case_timeout=4800):
             provenance_path.write_text(json.dumps(origin,indent=2))
         previous=load(folder/'acceptance_case.json')
         if previous.get('passed') is True and assess(root/item['audio_path'],folder)['passed']:
-            records.append(dict(previous,reused_verified_output=True));continue
+            records.append(dict(previous,**item,case=index,out=str(folder.relative_to(out)),reused_verified_output=True));continue
         if previous.get('retry_not_before',0)>time.time():
             deferred=True;record['retry_not_before']=previous['retry_not_before']
         if deferred:
@@ -92,5 +107,6 @@ def run(root,manifest,out,case_timeout=4800):
     return 0 if report['passed'] else 1
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--out',default='song_acceptance');a=p.parse_args()
-    sys.exit(run(Path.cwd(),a.manifest,a.out))
+    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--out',default='song_acceptance');p.add_argument('--adopt-initial-analysis',action='store_true');a=p.parse_args()
+    if a.adopt_initial_analysis:adopt_initial_analysis(Path.cwd(),a.manifest,a.out)
+    else:sys.exit(run(Path.cwd(),a.manifest,a.out))

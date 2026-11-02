@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: song-animation-${{ github.ref }}
   cancel-in-progress: false
@@ -39,11 +40,23 @@ jobs:
       - name: Verify renderer regressions
         run: python -m unittest discover -s song_animation/tests -q
       - uses: actions/cache/restore@v4
+        id: acceptance-cache
         with:
           path: song_acceptance/
           key: song-real-acceptance-v1-${{ hashFiles('song_acceptance_requests/three_real_songs.json') }}-${{ github.run_id }}
           restore-keys: |
             song-real-acceptance-v1-${{ hashFiles('song_acceptance_requests/three_real_songs.json') }}-
+      - name: Recover inspected automatic analysis from the initial run
+        if: steps.acceptance-cache.outputs.cache-matched-key == ''
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 41410103196
+          name: song-real-input-acceptance-41410103196
+          path: song_acceptance/
+      - name: Bind recovered analysis provenance
+        if: steps.acceptance-cache.outputs.cache-matched-key == ''
+        run: python -m song_animation.acceptance_suite --manifest song_acceptance_requests/three_real_songs.json --out song_acceptance --adopt-initial-analysis
       - name: Three real songs from fresh analysis through full production gates
         run: python -m song_animation.acceptance_suite --manifest song_acceptance_requests/three_real_songs.json --out song_acceptance
       - uses: actions/cache/save@v4

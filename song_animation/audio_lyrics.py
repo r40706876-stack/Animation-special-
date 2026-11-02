@@ -65,7 +65,10 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
     windows=[{'region':i,'start':g['start'],'end':g['end']} for i,g in enumerate(groups)]
     prompt='Listen to the attached audio independently. Transcribe ONLY the actual audible words in each labelled region clip, preserving original script. No proposed words or song identity are supplied: do not recall lyrics or complete cut-off lines from memory. Singing ASR can confuse word boundaries, but do not assume either version is right. Return JSON {"regions":[{"region":0,"text":"exact heard phrase","uncertain":false}]}, exactly one result for each region. Mark uncertainty rather than guessing. Never use Roman transliteration for Hindi: use Devanagari for audible Hindi.\nLANGUAGE/SCRIPT HINT (verify from audio): '+str(language or 'unknown')+'\nSOURCE TIME WINDOWS: '+json.dumps(windows)
     if audio is not None:
-        parts=[]
+        # A phrase timestamp can begin inside a sustained sung syllable. Supply
+        # the same selected clip as listening context as well as physical region
+        # crops; neither proposed words nor decoder guesses are exposed here.
+        parts=[{'text':'CONTEXT AUDIO: use this selected clip only to recognize the musical phrase. Return words only for the labelled target regions below.'},part]
         with tempfile.TemporaryDirectory() as td:
             for w in windows:
                 focused=Path(td)/f"region_{w['region']}.mp3"
@@ -79,7 +82,7 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
     if not isinstance(model,str) or not model or 'lite' in model.lower() or not isinstance(rows,list) or len(rows)!=len(groups):
         raise ValueError('Strong independent word disagreement remains unresolved: missing full-model blind audio evidence')
     def letters(text):
-        text=unicodedata.normalize('NFC',str(text)).casefold()
+        text=unicodedata.normalize('NFD',str(text)).casefold().replace('\u093c','')
         # Hindi alternatives such as a written half-r versus an implicit
         # consonant cluster must not consume the correction budget. Preserve
         # all other letters/vowels: different pronouns, negations and verbs
@@ -112,6 +115,7 @@ def analyze_audio(audio,out):
         subprocess.run(['ffmpeg','-y','-v','error','-i',str(audio),'-vn','-ac','1','-ar','22050','-b:a','64k',str(p)],check=True)
         part={'inline_data':{'mime_type':'audio/mpeg','data':base64.b64encode(p.read_bytes()).decode()}}
     prompt=f'''Listen to this actual {dur:.3f}-second song clip (language and genre unknown; identify them from the audio) from beginning to end. Transcribe exactly the audible sung words in their original script (Hindi, Punjabi, English or the actual detected language). This is audio transcription, not lyric recall: do not fill words from a known song, infer missing endings or put sung text into instrumental/outro music. Include the opening and repeated final refrain; do not skip a repeated lyric. Keep original word choices, gender and repetition. If unclear, mark an unclear interval instead of guessing.
+HARD SCRIPT REQUIREMENT: Hindi/hi text must use Devanagari (including vocalizations such as आ), and Punjabi text must use the detected native script. Roman transliteration of Hindi or Punjabi fails validation. Re-listen to action verbs and negations rather than completing familiar song lyrics from memory.
 Return JSON only: {{"segments":[{{"start":0.0,"end":2.2,"text":"exact audible words","uncertain":false}}],"instrumental":[{{"start":30,"end":34}}],"unclear":[],"language":"detected language","genre":"free description","mood":"free description","summary":"what the music/lyrics express","has_vocals":true}}.
 Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundaries in seconds. These are approximate phrase timings; do not fabricate individual-word timestamps or divide time evenly. Every audible vocal phrase must appear once and in order, including the very beginning. Instrumental portions contain no invented lyrics. Times must be within 0..{dur:.3f}. Instrumental-only music is valid: return segments=[] and has_vocals=false, describing genre/mood/summary. Describe unclear vocals in unclear intervals without inventing captions. No translation, commentary, visual prompts or lyrics beyond this clip.'''
     errors=[];evidence={};verification={};independent=pending.get('independent');conflict_evidence=None
@@ -120,7 +124,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
         try:
             extra='\nRECOVERY EVIDENCE (not verified lyrics): '+json.dumps(evidence,ensure_ascii=False) if evidence else ''
             if errors:extra+='\nThe prior attempt failed: '+errors[-1]+'. Correct the actual language/words; never repeat unsupported guesses.'
-            data=pending['data'] if attempt==0 and pending else generate_json(prompt+extra,out=out,tag='audio_lyrics' if attempt==0 else 'audio_lyrics_recovered',audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True)
+            data=pending['data'] if attempt==0 and pending else generate_json(prompt+extra,out=out,tag='audio_lyrics' if attempt==0 else 'audio_lyrics_recovered',audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True,require_full_model=True)
             validate_transcript_script(data)
             if data.get('has_vocals',True) and (data.get('unclear') or any(x.get('uncertain',True) for x in data.get('segments',[]))):
                 raise ValueError('Unclear sung words require correction before semantic scenes are generated')
