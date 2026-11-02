@@ -54,7 +54,24 @@ jobs:
             grep -qx 'FINAL_APPROVAL=NO' "$r"
             grep -qx 'PRESERVE_V4=YES' "$r"
           fi
+      - name: Select only changed chapters from source-bound request
+        id: selection
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo 'selected=true' >> "$GITHUB_OUTPUT"
+          else
+            requested="$(sed -n 's/^CHAPTERS=//p' ops/JW_V68_RESILIENT_PROOF_REQUEST.txt)"
+            test -n "$requested"
+            if [[ ",$requested," == *",$CH,"* ]]; then
+              echo 'selected=true' >> "$GITHUB_OUTPUT"
+            else
+              echo 'selected=false' >> "$GITHUB_OUTPUT"
+              echo "REUSE_PREVIOUS_UNCHANGED_CHAPTER_PROOF_$CH"
+            fi
+          fi
       - name: Install Blender 4.2 and ffmpeg
+        if: steps.selection.outputs.selected == 'true'
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/blender"
@@ -64,12 +81,14 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
       - name: Run actual story geometry preflight for this chapter
+        if: steps.selection.outputs.selected == 'true'
         run: |
           set -euo pipefail
           mkdir -p proof
           JW_MODE=preflight JW_CHAPTER="$CH" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "proof/preflight-$CH.log" 2>&1 || { tail -n 100 "proof/preflight-$CH.log"; exit 1; }
           grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $CH" "proof/preflight-$CH.log"
       - name: Render bounded watermarked DRAFT stills and 24-frame motion
+        if: steps.selection.outputs.selected == 'true'
         run: |
           set -euo pipefail
           for f in $STILLS; do
@@ -96,7 +115,7 @@ jobs:
           test -s "proof/ch-$CH-CONTACT.png"
           echo "DRAFT_CHAPTER_$CH-TECHNICAL_PASS__VISUAL_QA_PENDING"
       - name: Record source provenance without visual approval
-        if: always()
+        if: always() && steps.selection.outputs.selected == 'true'
         run: |
           mkdir -p proof
           python3 - <<'PY'
@@ -109,7 +128,7 @@ jobs:
             hindi_listen_verified=False,V4_preserved=True),indent=2))
           PY
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.selection.outputs.selected == 'true'
         with:
           name: jw-v68-checkpointed-chapter-${{ matrix.ch }}-DRAFT
           path: |
