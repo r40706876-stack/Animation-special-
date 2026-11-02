@@ -92,7 +92,8 @@ if chapter==8:
                        .008,leg_amber,roach)
     antenna_points=held_antenna.data.splines[0].bezier_points
     for frame,grasp in ((1,0.0),(70,0.0),(100,.55),(120,1.0),
-                        (170,1.0),(205,.45),(240,.20)):
+                        (132,1.0),(145,1.0),(158,1.0),(170,1.0),
+                        (205,.45),(240,.20)):
         scene.frame_set(frame);bpy.context.view_layer.update()
         jaw_world=wasp.matrix_world @ Vector((.61,-.075,-.07))
         jaw_local=roach.matrix_world.inverted() @ jaw_world
