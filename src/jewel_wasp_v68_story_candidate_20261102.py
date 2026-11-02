@@ -245,20 +245,38 @@ if chapter==11:
         for attr in ("location","rotation_euler","scale"):
             ov.keyframe_insert(data_path=attr,frame=f)
 if chapter==12:
-    # An explicitly schematic cutaway: after hatching, the jewel-wasp larva
-    # develops within the host. Never render an exterior clam-like shell.
-    # Make ONLY the near-side central abdomen translucent in this DRAFT shot.
-    # Preserve the actual roach geometry, limbs and V6.8 anatomical rig.
-    window=material("DRAFT schematic cutaway translucent flank",
-                    (.16,.075,.042),rough=.91,alpha=.18)
-    abd_obj.data.materials.append(window)
-    cutaway_count=0
-    for polygon in abd_obj.data.polygons:
-        c=polygon.center
-        if -.54<c.x<.17 and c.y>.085 and -.105<c.z<.105:
-            polygon.material_index=len(abd_obj.data.materials)-1
-            cutaway_count+=1
-    assert cutaway_count>=30, "No visible near-side abdomen cutaway"
+    # Actual DRAFT cross-section, NOT another transparent oval pasted on top.
+    # Previous alpha-only cutaway still looked like a white external shell:
+    # the opaque elytron and abdomen were in front of the larva.
+    # Delete a bounded patch of NEAR-SIDE cuticle, preserve the far-side mesh,
+    # and remove only the near-side overlying elytron/veins for this chapter.
+    # This is explicitly a schematic explanatory view, not surgical realism.
+    import bmesh
+    bm=bmesh.new()
+    bm.from_mesh(abd_obj.data)
+    opening=[]
+    for face in bm.faces:
+        c=face.calc_center_median()
+        if -.56<c.x<.18 and c.y>.105 and -.12<c.z<.12:
+            opening.append(face)
+    cutaway_count=len(opening)
+    assert cutaway_count>=30, "No real near-side abdomen window"
+    bmesh.ops.delete(bm,geom=opening,context="FACES")
+    bm.to_mesh(abd_obj.data);bm.free()
+    abd_obj.data.update()
+    for ob in bpy.data.objects:
+        if ob.name=="overlapping dorsal elytron 1" or ob.name.startswith("roach elytron vein 1 "):
+            ob.hide_render=True
+    cavity=material("DRAFT dark internal host cavity",(.021,.010,.006),rough=.99)
+    ell("DRAFT visible internal cavity",(-.21,.105,-.013),
+        (.36,.028,.092),cavity,roach,segments=32,rings=16)
+    curve("DRAFT cutaway edge - upper rim",
+          [(-.55,.16,.012),(-.48,.23,.070),(-.25,.27,.106),
+           (-.01,.25,.082),(.16,.16,.012)],.007,bronze,roach)
+    curve("DRAFT cutaway edge - lower rim",
+          [(-.55,.16,-.015),(-.45,.23,-.075),(-.20,.27,-.112),
+           (.01,.23,-.077),(.16,.16,-.015)],.007,bronze,roach)
+    print("JW_REAL_CUTAWAY_OPEN_FACES",cutaway_count,flush=True)
 
     # A compact, rounded, slightly segmented grub INSIDE the abdomen.
     # No sharp equatorial seam, hard shell, oversized head or detached mass.

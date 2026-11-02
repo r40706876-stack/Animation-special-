@@ -1,4 +1,4 @@
-name: Jewel Wasp V6.8 Larva Candidate DRAFT QA
+name: Jewel Wasp V6.8 Story Action Candidate DRAFT QA
 on:
   workflow_dispatch:
   push:
@@ -30,7 +30,7 @@ jobs:
           set -euo pipefail
           mkdir -p larva-candidate-proof
           python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_candidate_20261102.py
-          for chapter in 12; do
+          for chapter in 3 5 8 10 11 12; do
             echo "PREFLIGHT $chapter"
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "larva-candidate-proof/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "larva-candidate-proof/preflight_$chapter.log"
@@ -38,7 +38,7 @@ jobs:
       - name: Render camera-facing egg and larva stills and actual motion
         run: |
           set -euo pipefail
-          for spec in 12:120 12:180; do
+          for spec in 3:145 8:155 10:195 11:170 12:120 12:180; do
             chapter="${spec%%:*}"; frame="${spec##*:}"
             echo "DRAFT_STILL $chapter $frame"
             JW_MODE=still JW_CHAPTER="$chapter" JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_f${frame}_raw.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/still_${chapter}_${frame}.log" 2>&1 || { tail -n 100 "larva-candidate-proof/still_${chapter}_${frame}.log"; exit 1; }
@@ -46,7 +46,7 @@ jobs:
             rm "larva-candidate-proof/ch${chapter}_f${frame}_raw.png"
             test -s "larva-candidate-proof/ch${chapter}_f${frame}_DRAFT.png"
           done
-          for spec in 12:108; do
+          for spec in 3:118 8:118 10:168 11:152 12:112; do
             chapter="${spec%%:*}"; start="${spec##*:}"
             echo "DRAFT_MOTION $chapter $start"
             JW_MODE=motion JW_CHAPTER="$chapter" JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/larva-candidate-proof/ch${chapter}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/motion_${chapter}.log" 2>&1 || { tail -n 120 "larva-candidate-proof/motion_${chapter}.log"; exit 1; }
@@ -58,9 +58,9 @@ jobs:
           done
           # The actual 4-shot contact sheet is evidence for human visual QA,
           # not an automated visual approval or a replacement for motion review.
-          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'larva-candidate-proof/ch*_f*_DRAFT.png' -vf "scale=270:480,tile=2x1" -frames:v 1 "larva-candidate-proof/DRAFT_EGG_LARVA_CONTACT.png"
+          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'larva-candidate-proof/ch*_f*_DRAFT.png' -vf "scale=270:480,tile=3x2" -frames:v 1 "larva-candidate-proof/DRAFT_EGG_LARVA_CONTACT.png"
           test -s "larva-candidate-proof/DRAFT_EGG_LARVA_CONTACT.png"
-          echo "LARVA_CANDIDATE_DRAFT_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
+          echo "STORY_ACTION_CANDIDATE_DRAFT_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
       - name: Record evidence provenance and unapproved visual status
         if: always()
         run: |
@@ -71,9 +71,9 @@ jobs:
           (p/"QA.json").write_text(json.dumps(dict(
             source_sha=os.environ.get("GITHUB_SHA"),
             story_renderer_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-            chapters=[12],still_frames={"12":[120,180]},
+            chapters=[3,5,8,10,11,12],still_frames={"3":[145],"8":[155],"10":[195],"11":[170],"12":[120,180]},
             candidate_only=True,
-            motion_windows={"12":[108,131]},
+            motion_windows={"3":[118,141],"8":[118,141],"10":[168,191],"11":[152,175],"12":[112,135]},
             draft_only=True,visual_approved=False,final_film=False,
             old_successful_chapters_untouched=True,
             status="Technical evidence only; independent still and animated visual QA required"
@@ -82,7 +82,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: jewel-wasp-v68-larva-candidate-20261102-proof
+          name: jewel-wasp-v68-story-action-candidate-20261102-proof
           path: larva-candidate-proof/
           if-no-files-found: warn
           retention-days: 14
