@@ -25,6 +25,12 @@ class OutputPolicy(unittest.TestCase):
   self.assertIn('story_motion',d['repair_issues'][0]['issue'])
  def test_complete_explicit_evidence_clears_automated_visual_checks(self):
   self.assertTrue(visual_decision(clear_review(3),3)['passed'])
+ def test_global_finish_failure_still_blocks_but_preserves_explicitly_cleared_shots(self):
+  review=clear_review(7);review['reference_quality_met']=False;review['needs_review']=True
+  for i in (0,4):review['shots'][i]['artwork_detail']=False;review['shots'][i]['anatomy_continuity']=False
+  review['issues']=[{'shot':0,'issue':'Shrunken limbs'},{'shot':4,'issue':'Floating feet'}]
+  result=visual_decision(review,7)
+  self.assertFalse(result['passed']);self.assertEqual({i['shot'] for i in result['repair_issues']},{0,4})
  def exercise(self,reviews,technical=None,repair=True):
   from song_animation.run import main
   with tempfile.TemporaryDirectory() as td:

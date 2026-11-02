@@ -41,6 +41,12 @@ def validate_vector(plan):
         if not finite(a.get('width'),4,1080) or not finite(a.get('height'),4,1920):raise ValueError('Invalid asset raster dimensions')
         if 'raster_png' in a:decode_painted(a['raster_png'])
         else:sanitize_svg(a.get('svg'))
+        if 'raster_frames' in a:
+            frames=a['raster_frames'];hold=a.get('frame_hold',3)
+            if not isinstance(frames,list) or not 2<=len(frames)<=12 or type(hold) is not int or not 1<=hold<=24:raise ValueError('Invalid illustrated pose cycle')
+            for encoded in frames:
+                image=decode_painted(encoded)
+                if image.size!=(int(a['width']),int(a['height'])):raise ValueError('Pose frames must share one canvas and ground baseline')
     cursor=0
     for s in scenes:
         if s.get('kind')!='vector' or s.get('start_frame')!=cursor or type(s.get('end_frame')) is not int or not cursor<s['end_frame']<=total:raise ValueError('Invalid vector shot timeline')
@@ -59,6 +65,9 @@ def validate_vector(plan):
             ids.add(nid);prior[nid]=node
             if node.get('asset') and node['asset'] not in assets:raise ValueError('Missing custom asset')
             if not node.get('asset') and not any(x.get('parent')==nid for x in nodes):raise ValueError('Empty group')
+            clip=node.get('clip_box')
+            if clip is not None and (not isinstance(clip,list) or len(clip)!=4 or not all(finite(x,0,1920) for x in clip) or not 0<=clip[0]<clip[2]<=W or not 0<=clip[1]<clip[3]<=H):raise ValueError('Invalid scene clip box')
+            if type(node.get('pose_offset',0)) is not int or not 0<=node.get('pose_offset',0)<=11:raise ValueError('Invalid pose offset')
             if node.get('tint') is not None and (not isinstance(node['tint'],str) or not re.fullmatch(r'#[0-9a-fA-F]{6}',node['tint'])):raise ValueError('Invalid silhouette tint')
             pivot=node.get('pivot',[.5,.5])
             if not isinstance(pivot,list) or len(pivot)!=2 or not all(finite(v,0,1) for v in pivot):raise ValueError('Invalid pivot')
@@ -118,7 +127,7 @@ def basis(v):
     a=math.radians(v['rotation']);c=math.cos(a)*v['scale'];s=math.sin(a)*v['scale']
     return np.array([[c,-s,v['x']],[s,c,v['y']],[0,0,1.]])
 
-def paste(im,asset,M,opacity,pivot,shadow=False,tint=None):
+def paste(im,asset,M,opacity,pivot,shadow=False,tint=None,clip=None):
     layer=(painted(asset['raster_png'],int(asset['width']),int(asset['height'])) if 'raster_png' in asset else raster(asset['svg'],int(asset['width']),int(asset['height'])));w,h=layer.size
     if tint:
         silhouette=Image.new('RGBA',layer.size,tint);silhouette.putalpha(layer.getchannel('A'));layer=silhouette
@@ -126,6 +135,8 @@ def paste(im,asset,M,opacity,pivot,shadow=False,tint=None):
     corners=T@np.array([[0,w,w,0],[0,0,h,h],[1,1,1,1]])
     left=max(0,math.floor(corners[0].min()));right=min(W,math.ceil(corners[0].max()))
     top=max(0,math.floor(corners[1].min()));bottom=min(H,math.ceil(corners[1].max()))
+    if clip:
+        left=max(left,math.ceil(clip[0]));top=max(top,math.ceil(clip[1]));right=min(right,math.floor(clip[2]));bottom=min(bottom,math.floor(clip[3]))
     if left>=right or top>=bottom or opacity<=0:return
     inv=np.linalg.inv(T);offset=inv@np.array([left,top,1])
     coeff=(inv[0,0],inv[0,1],offset[0],inv[1,0],inv[1,1],offset[1])
@@ -148,7 +159,12 @@ def render_vector(plan,index,frame):
             binding=node['attachment'];parent=next(n for n in scene['nodes'] if n['id']==binding['parent'])
             M=image_matrix(plan['assets'][node['asset']],node,binding,plan['assets'][parent['asset']],parent,matrices[parent['id']],M);opacity*=alphas[parent['id']]
         matrices[node['id']]=M;alphas[node['id']]=opacity
-        if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background',tint=node.get('tint'))
+        if node.get('asset'):
+            asset=plan['assets'][node['asset']]
+            if asset.get('raster_frames'):
+                pose=((frame-scene['start_frame'])//asset.get('frame_hold',3)+node.get('pose_offset',0))%len(asset['raster_frames'])
+                asset=dict(asset,raster_png=asset['raster_frames'][pose])
+            paste(im,asset,M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background',tint=node.get('tint'),clip=node.get('clip_box'))
     result=im.convert('RGB')
     if plan.get('finish')=='paper':
         result=Image.fromarray(np.clip(np.asarray(result,dtype=np.int16)+paper_grain(),0,255).astype(np.uint8))

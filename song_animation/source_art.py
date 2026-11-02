@@ -6,7 +6,8 @@ ROOT=Path(__file__).parent/'source_art'
 
 def fingerprint(plan):
     data=copy.deepcopy(plan)
-    for asset in data.get('assets',{}).values():asset.pop('raster_png',None)
+    for asset in data.get('assets',{}).values():
+        asset.pop('raster_png',None);asset.pop('raster_frames',None)
     return hashlib.sha256(json.dumps(data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 
 def scene_fingerprint(scene):
@@ -48,6 +49,17 @@ def apply(plan,source_sha256,root=ROOT):
         if target!=aid:rename[aid]=target
         asset=candidate['assets'].setdefault(target,copy.deepcopy(candidate['assets'].get(aid,{})))
         asset.update(width=item['width'],height=item['height'],raster_png=encoded,raster_art_provider=item['provider']);locked.add(target)
+        if item.get('frames'):
+            frames=[]
+            for frame in item['frames']:
+                frame_path=(folder/frame['file']).resolve()
+                if not frame_path.is_relative_to(folder.resolve()):raise ValueError('Pose file leaves its source folder')
+                frame_raw=frame_path.read_bytes()
+                if hashlib.sha256(frame_raw).hexdigest()!=frame['sha256']:raise ValueError('Source pose bytes changed')
+                frame_encoded=base64.b64encode(frame_raw).decode()
+                if decode_painted(frame_encoded).size!=(item['width'],item['height']):raise ValueError('Source pose dimensions changed')
+                frames.append(frame_encoded)
+            asset.update(raster_frames=frames,frame_hold=item.get('frame_hold',3))
     for patch in patches:
         index=patch['index']
         if type(index) is not int or not 0<=index<len(candidate['scenes']):raise ValueError('Invalid source scene patch')

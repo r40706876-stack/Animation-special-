@@ -17,3 +17,11 @@ The pack now includes all seven source scenes with 14 original image assets. Mee
 A local 30-second 1080x1920 H264/AAC draft was actually encoded, decoded at three moments per scene, and inspected. Source-audio correlation is 0.99934. It is NOT cleared as a final film or as universal upload-to-video acceptance: full advisory visual review and remaining motion/contact quality checks still apply.
 
 The production painter restores all seven repaired scenes without an image-service request, and skips image-model installation when that exact source artwork is fully covered. Changed scenes invalidate only their own patches. Shared artwork in unaffected scenes is aliased so a different scene’s new pose cannot overwrite it. New/uncovered audio retains the normal planning and original-image generation path.
+
+## Targeted wide-shot correction
+
+Composition review from run 41387652352 (gemini-3-flash-preview) cleared all six per-shot checks on scenes1,2,3,5,6 and all story links. Scenes0 and4 failed for shrunken/disconnected walking anatomy and repeated staging. The five cleared scenes are unchanged.
+
+Scenes0/4 now use original complete-person pose sheets, with common head alignment and a common planted-foot canvas baseline. Kabir has eight complete poses; Meera uses six fully isolated poses, excluding two source cells whose sari tips crossed cell boundaries. Each pose retains connected arms, legs and feet, and alternates inside one actor asset. Scene4 has a new closer side view with Meera foreground and Kabir projected through the cloth. Ground contact cues and cloth-bounded silhouettes provide readable spatial placement.
+
+These pose sequences remain DRAFT until the full composition/export review passes. The film-level reference gate is unchanged; repair routing now avoids repainting individually cleared scenes solely because a different shot caused the global finish rejection.

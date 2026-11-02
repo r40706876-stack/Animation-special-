@@ -34,7 +34,14 @@ def visual_decision(review,scene_count):
     reasons.extend(story_reasons);repair.extend(story_repairs)
     if review.get('reference_quality_met') is not True:
         reasons.append('Artwork did not meet the stored finish reference')
-        repair.extend({'shot':i,'issue':'Artwork is below the stored finish reference. Redraw large detailed organic objects with legible bright composition, not placeholder geometric shapes.'} for i in range(scene_count))
+        shots=review.get('shots',[])
+        complete=isinstance(shots,list) and len(shots)==scene_count and {s.get('shot') for s in shots if isinstance(s,dict)}==set(range(scene_count))
+        affected={s['shot'] for s in shots if isinstance(s,dict) and type(s.get('shot')) is int and (s.get('artwork_detail') is not True or s.get('anatomy_continuity') is not True)} if complete else set(range(scene_count))
+        affected.update(i.get('shot') for i in (review.get('issues') if isinstance(review.get('issues'),list) else []) if isinstance(i,dict) and type(i.get('shot')) is int and 0<=i['shot']<scene_count)
+        # A film-level rejection still blocks delivery. Route repair to the
+        # concrete failed shots instead of repainting individually cleared art.
+        if not affected:affected=set(range(scene_count))
+        repair.extend({'shot':i,'issue':'Artwork is below the stored finish reference. Redraw large detailed organic objects with legible bright composition, not placeholder geometric shapes.'} for i in sorted(affected))
     shots=review.get('shots')
     if not isinstance(shots,list) or len(shots)!=scene_count:
         reasons.append('Missing complete per-shot visual evidence')

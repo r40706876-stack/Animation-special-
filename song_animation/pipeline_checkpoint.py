@@ -2,7 +2,7 @@
 import hashlib,json
 from pathlib import Path
 from .vector import validate_vector
-ARTWORK_REVISION='positive-repair-goals-v3'
+ARTWORK_REVISION='grounded-sprite-walk-v4'
 
 def needs_scene_rewrite(recovery,artwork):
     # Re-evaluate corrected deterministic artwork before paying to rewrite

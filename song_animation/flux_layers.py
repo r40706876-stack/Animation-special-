@@ -72,7 +72,7 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
         # The asset dictionary key is canonical; valid plans need no duplicated id.
         a['id']=aid
         if is_structural(a):
-            a.pop('raster_png',None);a.pop('painted_actor',None)
+            a.pop('raster_png',None);a.pop('raster_frames',None);a.pop('frame_hold',None);a.pop('painted_actor',None)
             continue
         if min(a['width'],a['height'])<45:continue
         body=body_rig_asset(a)
@@ -94,7 +94,7 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
         with Image.open(path) as image:
             image.load()
             if image.size!=(int(a['width']),int(a['height'])) or not image.convert('RGBA').getchannel('A').getbbox():raise ValueError('Invalid cached raster cutout')
-        a['raster_png']=base64.b64encode(path.read_bytes()).decode();a['raster_art_provider']=namespace;a.pop('painted_actor',None)
+        a['raster_png']=base64.b64encode(path.read_bytes()).decode();a['raster_art_provider']=namespace;a.pop('raster_frames',None);a.pop('frame_hold',None);a.pop('painted_actor',None)
         report.append({'asset':aid,'file':path.name,'repair_context_sha256':hashlib.sha256(context.encode()).hexdigest() if context else None,'quality_certified':False})
         (out/'flux_assets.json').write_text(json.dumps({'assets':report,'quality_certified':False},indent=2))
     return validate_vector(candidate)
