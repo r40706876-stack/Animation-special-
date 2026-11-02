@@ -29,7 +29,7 @@ class PermanentProduction(unittest.TestCase):
                 self.assertGreater(after,first)
                 self.assertNotEqual(original['assets']['kite']['raster_png'],changed['assets']['kite']['raster_png'])
                 self.assertEqual(original['assets']['lamp']['raster_png'],changed['assets']['lamp']['raster_png'])
-                self.assertIn('Wrong subject pose',calls[-1][0])
+                self.assertNotIn('Wrong subject pose',calls[-1][0]);self.assertIn('ILLUSTRATION GOAL',calls[-1][0])
                 paint_foreground(fixed,td,image_generator=image);self.assertEqual(len(calls),after)
                 fixed['scenes'][0]['visual_correction']['pass']=2
                 paint_foreground(fixed,td,image_generator=image);self.assertGreater(len(calls),after)
@@ -43,7 +43,7 @@ class PermanentProduction(unittest.TestCase):
             s['coverage']={'framing':'overhead close-up','background_view':'A writing surface seen directly from above'}
             s['visual_correction']={'issues':['Wide window is wrong for an overhead desk shot'],'pass':1}
             paint_environments(plan,td,image_generator=image)
-            self.assertIn('directly from above',calls[0]);self.assertIn('Wide window is wrong',calls[0])
+            self.assertIn('directly from above',calls[0]);self.assertNotIn('Wide window is wrong',calls[0]);self.assertIn('coherent empty architectural setting',calls[0])
             self.assertNotIn('REPAIR THE ACTUAL IMAGE',calls[1])
 
     def test_native_scene_can_correct_painted_view_without_changing_story_states(self):

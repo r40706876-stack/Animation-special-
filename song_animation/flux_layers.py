@@ -19,7 +19,20 @@ def repair_context(plan,aid=None,scene=None):
     return json.dumps(notes,sort_keys=True,ensure_ascii=False)
 
 def corrected_prompt(prompt,context):
-    return prompt+('\nREPAIR THE ACTUAL IMAGE: '+context+'\nKeep the shared identity and clothing. Correct the specified pose, duplicated anatomy, framing or staging in the generated image itself; changing only its filename or motion rig is insufficient.' if context else '')
+    # Review prose describes the rejected composition, not the desired subject.
+    # Feeding it verbatim to a text-to-image model paints the reported defect
+    # (e.g. a hand across a face), and even adds people to empty scenery.
+    # Keep that evidence in the repair checkpoint/cache identity, not the image.
+    if not context:return prompt
+    if 'Empty setting with supporting surfaces' in prompt:
+        goal='A coherent empty architectural setting with consistent perspective, clear depth and the requested unobstructed supporting surfaces.'
+    elif 'No people or extra objects.' in prompt:
+        goal='Exactly the requested isolated object, with its complete silhouette and a clean white surrounding area.'
+    elif 'Show ONLY the requested isolated hand' in prompt or 'Show ONLY one isolated sleeved arm' in prompt:
+        goal='A single complete arm segment with anatomically connected wrist and fingers, matching the requested pose and clothing.'
+    else:
+        goal='A single coherent character with connected natural anatomy, consistent identity and clothing, and the exact requested framing and pose.'
+    return prompt+'\nILLUSTRATION GOAL: '+goal
 
 def prompt_for_asset(asset,bible,separate_limbs=False):
     separate_limbs=separate_limbs or body_rig_asset(asset)
@@ -28,7 +41,7 @@ def prompt_for_asset(asset,bible,separate_limbs=False):
     extra=''
     if separate_limbs and asset.get('subject_kind','human')=='human':extra='This is the head and torso of a layered animation rig: hands are hidden behind the body. Do not show detached hands or extra arms.'
     words=(asset['id']+' '+subject).lower().replace('_',' ')
-    human=asset.get('subject_kind')=='human' if asset.get('subject_kind') else bool(re.search(r'\b(body|torso|head|face|arms?|hands?|person|poet|woman|man)\b',words))
+    human=asset.get('subject_kind')=='human' if asset.get('subject_kind') else bool(re.search(r'\b(body|torso|bust|head|face|arms?|hands?|person|poet|woman|man)\b',words))
     if human and re.search(r'\bhands?\b',words) and not separate_limbs:extra='Show ONLY the requested isolated hand with its cuff and the specified held prop. No face, torso or full person.'
     elif human and re.search(r'\barms?\b',words) and not separate_limbs:extra='Show ONLY one isolated sleeved arm and hand in the requested pose. No face, torso or full person.'
     elif human and re.search(r'\b(head|face)\b',words) and not separate_limbs:extra='Show ONLY the requested portrait head and neck. No full body or extra people.'
@@ -47,7 +60,7 @@ def cutout(image,session):
     if (bounds[2]-bounds[0])*(bounds[3]-bounds[1])<image.width*image.height*.015:raise ValueError('Generated foreground subject is too small')
     return result.crop(bounds)
 
-def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
+def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals'):
     # Reject invalid geometry/references before importing or contacting image backends.
     validate_vector(plan)
     from rembg import new_session
@@ -68,7 +81,7 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
         prompt=corrected_prompt(prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body),context)
         seed=seed_for(str(plan.get('bible',{}).get('characters',''))+aid.split('_')[0])
         if context:seed=seed_for(str(seed)+context)
-        key=hashlib.sha256((namespace+prompt+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
+        key=hashlib.sha256((namespace+prompt+context+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
         if not path.exists():
             raw=image_generator(prompt,out/'flux_images',seed)
             if session is None:session=new_session('u2netp',providers=['CPUExecutionProvider'])
@@ -89,11 +102,12 @@ def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
     return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('background_view',coverage.get('environment',scene.get('visual',''))))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Shared film style: '+str(plan.get('bible',{}).get('style',''))[:240]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
 
-def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v1'):
+def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals'):
     out=Path(out);candidate=copy.deepcopy(plan)
     for scene in candidate['scenes']:
-        prompt=corrected_prompt(environment_prompt(plan,scene),repair_context(plan,scene=scene));path=image_generator(prompt,out/'flux_images',seed_for(prompt),768,1344)
-        aid='flux_set_'+hashlib.sha256((namespace+prompt).encode()).hexdigest()[:16]
+        context=repair_context(plan,scene=scene)
+        prompt=corrected_prompt(environment_prompt(plan,scene),context);path=image_generator(prompt,out/'flux_images',seed_for(prompt+context),768,1344)
+        aid='flux_set_'+hashlib.sha256((namespace+prompt+context).encode()).hexdigest()[:16]
         candidate['assets'][aid]={'width':540,'height':960,'description':'Original viewpoint-specific painted setting','raster_png':base64.b64encode(path.read_bytes()).decode()}
         nodes=[n for n in scene['nodes'] if not n.get('painted_set')]
         for n in nodes:
