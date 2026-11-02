@@ -20,6 +20,17 @@ PACKAGE_SCHEMA={'type':'OBJECT','properties':{
  'assets':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'description':{'type':'STRING'},'image_prompt':{'type':'STRING'},'subject_kind':{'type':'STRING','enum':['human','animal','plant','object','effect','environment']},'width':NUMBER,'height':NUMBER,'reusable':{'type':'BOOLEAN'},'svg':{'type':'STRING'}},'required':['id','width','height','svg','subject_kind']}},
  'nodes':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'id':{'type':'STRING'},'asset':{'type':'STRING','nullable':True},'parent':{'type':'STRING','nullable':True},'role':{'type':'STRING','enum':['background','foreground']},'pivot':{'type':'ARRAY','items':NUMBER,'minItems':2,'maxItems':2},'easing':{'type':'STRING'},'keys':{'type':'ARRAY','items':KEY_SCHEMA},'wave':{'type':'OBJECT','properties':{k:NUMBER for k in ('x','y','rotation','cycles','phase')}}},'required':['id','keys']}}},'required':['background','assets','nodes']}
 
+def story_repair_feedback(error,data):
+    if not error:return ''
+    feedback='\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.'
+    match=re.search(r'Shot (\d+) has no story change',error)
+    if match:
+        index=int(match.group(1));scenes=data.get('scenes',[]) if isinstance(data,dict) else []
+        scene=scenes[index] if index<len(scenes) else {}
+        feedback+='\nTARGETED REPAIR FOR SHOT '+str(index)+': '+json.dumps(scene,ensure_ascii=False)
+        feedback+='\nThis exact shot must cause a concrete visible consequence in at least one tracked entity. Do not repeat state_in in state_out or merely rename the same pose. Track the object that actually changes (for example blank paper becoming a written line), add it to story.entities when missing, propagate the full new state_out exactly into the next state_in, and keep every strict story gate unchanged.'
+    return feedback
+
 def storyboard(lyrics,music,out,fps=24):
     duration=lyrics['duration']
     prompt=f'''Direct a visually sophisticated LYRIC-MEANING FILM, not a presenter video. First interpret each sung phrase: its central subject, literal meaning, emotional metaphor and visible cause/consequence. Then design an ORIGINAL connected {duration:.3f}-second vertical illustrated music film for THIS audio analysis and lyrics. There is NO fixed genre, object, character or scene menu. Romantic, devotional, celebratory, folk, rap, comic, motivational, narrative, sad and instrumental music must each get their own suitable world. Never force roses/hearts onto unrelated songs. Use the actual language, genre, mood, musical energy and meaning. Literal words alone are insufficient: construct a visual setup, action, consequence and ending. Avoid inventing claims about real people.
@@ -38,13 +49,13 @@ Style direction: elegant richly illustrated 2D, song-specific symbolic objects a
 AUDIO ANALYSIS: {json.dumps(lyrics,ensure_ascii=False)}
 MUSIC: {json.dumps(music)}'''
     prompt+='\nPERMANENT PRODUCTION STANDARD:\n'+film_direction()
-    error=None
+    error=None;data={}
     candidate_path=Path(out)/'story_candidate.json'
     candidate_key=hashlib.sha256((PROTOCOL+prompt).encode()).hexdigest()
     for attempt in range(3):
         try:
             saved=json.loads(candidate_path.read_text()) if attempt==0 and candidate_path.exists() else {}
-            data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+('\nSTORY VALIDATION FAILED: '+error+'\nReturn the complete corrected connected story.' if error else ''),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True,extra_parts=reference_parts())
+            data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+story_repair_feedback(error,data),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True,extra_parts=reference_parts())
             plan=compile_storyboard(data,lyrics,fps)
             candidate_path.write_text(json.dumps({'key':candidate_key,'data':data},ensure_ascii=False))
             critique=generate_json('Evaluate this proposed short song story BEFORE illustration. Does it form one understandable emotional progression, with a subject/relationship, desire, visible event/choice, consequences that carry across shots and an earned ending? Reject a 20..30 second film confined to repeated desk/portrait crops or one staging, even if its prose claims emotional changes. Require at least three visibly distinct narrative setups; new camera zooms do not qualify. Reject a disconnected sequence of lyric-noun pictures, generic state labels with no real event, forced romance/tragedy, unrelated subplots or unexplained prop/identity resets. Do NOT require literal objects for every noun; emotional faithfulness matters. The plot must fit the provided song meaning/mood and be achievable by articulated 2D actions. Return JSON {"valid":boolean,"issues":["specific repair"],"reason":"why this narrative connects or fails"}.\nAUDIO ANALYSIS: '+json.dumps(lyrics,ensure_ascii=False)+'\nSTORY AND SCENES: '+json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False),out=out,tag=f'story_review_{attempt}',prefer_quality=True,require_full_model=True)

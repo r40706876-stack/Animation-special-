@@ -45,6 +45,14 @@ class ConnectedStory(unittest.TestCase):
   with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',side_effect=[bad,good,{'valid':True,'issues':[]}]) as api:
    result=storyboard({'duration':6,'words':[]},{},td)
    self.assertEqual(api.call_count,3);self.assertIn('STORY VALIDATION FAILED',api.call_args_list[1].args[0]);self.assertIn('story',result)
+ def test_unchanged_shot_repair_targets_the_real_state_change_without_weakening_gate(self):
+  good=narrative();bad=copy.deepcopy(good);bad['scenes'][0]['story']['state_out']=copy.deepcopy(bad['scenes'][0]['story']['state_in'])
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',side_effect=[bad,good,{'valid':True,'issues':[]}]) as api:
+   result=storyboard({'duration':6,'words':[]},{},td)
+   repair=api.call_args_list[1].args[0]
+   self.assertIn('TARGETED REPAIR FOR SHOT 0',repair)
+   self.assertIn('Track the object that actually changes',repair)
+   self.assertEqual(result['scenes'][0]['story']['state_out'],good['scenes'][0]['story']['state_out'])
  def test_individually_pretty_frames_need_cross_shot_story_evidence(self):
   from song_animation.tests.test_quality_gate import clear_review
   review=clear_review(3);review['story_arc']=False
