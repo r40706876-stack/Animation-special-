@@ -1,6 +1,12 @@
 name: Jewel Wasp V6.8 Egg and Larva Targeted DRAFT QA
 on:
   workflow_dispatch:
+    inputs:
+      render_proofs:
+        description: 'Render targeted egg and larva still/motion proofs after preflight review'
+        type: boolean
+        required: false
+        default: false
   push:
     paths:
       - ".github/workflows/jewel_wasp_v68_egg_larva_targeted_draft.yml"
@@ -36,7 +42,8 @@ jobs:
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "targeted-proof/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "targeted-proof/preflight_$chapter.log"
           done
-      - name: Render camera-facing egg and larva stills and actual motion
+      - name: Render camera-facing egg and larva stills and actual motion (explicit opt-in)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.render_proofs == true }}
         run: |
           set -euo pipefail
           for spec in 11:140 11:205 12:120 12:180; do
