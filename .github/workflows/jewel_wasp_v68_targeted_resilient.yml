@@ -45,30 +45,32 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m py_compile src/jewel_wasp_v68_story_draft.py src/jewel_wasp_v68_anatomy_proof.py
-          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
-            r=ops/JW_V68_RESILIENT_PROOF_REQUEST.txt
-            test -s "$r"
-            grep -qx "STORY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_story_draft.py)" "$r"
-            grep -qx "ANATOMY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_anatomy_proof.py)" "$r"
-            grep -qx 'DRAFT_ONLY=YES' "$r"
-            grep -qx 'FINAL_APPROVAL=NO' "$r"
-            grep -qx 'PRESERVE_V4=YES' "$r"
-          fi
+          # Manual dispatch is NOT an escape hatch: enforce the same exact
+          # source-bound DRAFT authorization on every trigger.
+          r=ops/JW_V68_RESILIENT_PROOF_REQUEST.txt
+          test -s "$r"
+          grep -qx "STORY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_story_draft.py)" "$r"
+          grep -qx "ANATOMY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_anatomy_proof.py)" "$r"
+          grep -qx 'DRAFT_ONLY=YES' "$r"
+          grep -qx 'FINAL_APPROVAL=NO' "$r"
+          grep -qx 'PRESERVE_V4=YES' "$r"
+          grep -qx 'REUSE_VERIFIED_CHAPTER_ARTIFACTS=YES' "$r"
+          grep -qx 'RENDER_FULL_FILM=NO' "$r"
+          grep -qx 'VISUAL_APPROVAL_REQUIRED=YES' "$r"
       - name: Select only changed chapters from source-bound request
         id: selection
         run: |
           set -euo pipefail
-          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+          # Both push and manual dispatch select only source-bound chapters.
+          # This prevents a manual QA retry from re-rendering unchanged 10/13.
+          requested="$(sed -n 's/^CHAPTERS=//p' ops/JW_V68_RESILIENT_PROOF_REQUEST.txt)"
+          test -n "$requested"
+          [[ "$requested" =~ ^(3|5|8|10|11|12|13)(,(3|5|8|10|11|12|13))*$ ]]
+          if [[ ",$requested," == *",$CH,"* ]]; then
             echo 'selected=true' >> "$GITHUB_OUTPUT"
           else
-            requested="$(sed -n 's/^CHAPTERS=//p' ops/JW_V68_RESILIENT_PROOF_REQUEST.txt)"
-            test -n "$requested"
-            if [[ ",$requested," == *",$CH,"* ]]; then
-              echo 'selected=true' >> "$GITHUB_OUTPUT"
-            else
-              echo 'selected=false' >> "$GITHUB_OUTPUT"
-              echo "REUSE_PREVIOUS_UNCHANGED_CHAPTER_PROOF_$CH"
-            fi
+            echo 'selected=false' >> "$GITHUB_OUTPUT"
+            echo "REUSE_PREVIOUS_UNCHANGED_CHAPTER_PROOF_$CH"
           fi
       - name: Install Blender 4.2 and ffmpeg
         if: steps.selection.outputs.selected == 'true'
