@@ -7,6 +7,10 @@ from . import flux_layers
 
 def paint(plan,out,audio):
     out=Path(out);key=hashlib.sha256(Path(audio).read_bytes()).hexdigest();state=out/'art_backend_choice.json'
+    from .source_art import apply
+    plan,preserved_assets,preserved_scenes=apply(plan,key)
+    keep_assets={'preserved_assets':preserved_assets} if preserved_assets else {}
+    keep_scenes={'preserved_scenes':preserved_scenes} if preserved_scenes else {}
     selected='flux'
     if state.exists():
         try:
@@ -15,8 +19,8 @@ def paint(plan,out,audio):
         except (OSError,ValueError,AttributeError):pass
     if selected=='flux':
         try:
-            candidate=flux_layers.paint_foreground(plan,out)
-            return flux_layers.paint_environments(candidate,out)
+            candidate=flux_layers.paint_foreground(plan,out,**keep_assets)
+            return flux_layers.paint_environments(candidate,out,**keep_scenes)
         except ProviderUnavailable as error:
             if not any(x.get('model')==SPACE for x in error.attempts):raise
             # A rejected local film is evidence against repeating that fallback.
@@ -32,8 +36,8 @@ def paint(plan,out,audio):
     from .local_image import generate_image
     from .environments import REVISION
     namespace='cpu-original-v1-'+REVISION[:12]
-    candidate=flux_layers.paint_foreground(plan,out,image_generator=generate_image,namespace=namespace)
-    return flux_layers.paint_environments(candidate,out,image_generator=generate_image,namespace=namespace)
+    candidate=flux_layers.paint_foreground(plan,out,image_generator=generate_image,namespace=namespace,**keep_assets)
+    return flux_layers.paint_environments(candidate,out,image_generator=generate_image,namespace=namespace,**keep_scenes)
 
 def reject_local_backend(out):
     """Do not pin later attempts to a backend whose actual film failed review."""

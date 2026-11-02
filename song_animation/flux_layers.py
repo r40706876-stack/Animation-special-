@@ -60,7 +60,7 @@ def cutout(image,session):
     if (bounds[2]-bounds[0])*(bounds[3]-bounds[1])<image.width*image.height*.015:raise ValueError('Generated foreground subject is too small')
     return result.crop(bounds)
 
-def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals'):
+def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals',preserved_assets=()):
     # Reject invalid geometry/references before importing or contacting image backends.
     validate_vector(plan)
     from rembg import new_session
@@ -69,7 +69,7 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
     session=None;report=[]
     for aid in sorted(active):
         a=candidate['assets'].get(aid)
-        if not a or 'svg' not in a:continue
+        if not a or 'svg' not in a or aid in preserved_assets:continue
         # The asset dictionary key is canonical; valid plans need no duplicated id.
         a['id']=aid
         if is_structural(a):
@@ -102,9 +102,10 @@ def environment_prompt(plan,scene):
     coverage=scene.get('coverage',{})
     return (str(coverage.get('framing','wide'))+' viewpoint. '+str(coverage.get('background_view',coverage.get('environment',scene.get('visual',''))))[:170]+'. Background supporting this staging: '+str(coverage.get('staging',scene.get('action','')))[:220]+'. Detailed warm daylight watercolor environment, cohesive palette '+str(plan.get('bible',{}).get('palette',''))[:100]+'. Shared film style: '+str(plan.get('bible',{}).get('style',''))[:240]+'. Match the stated viewpoint: an overhead desk insert shows the writing surface, not a wide balcony window. Empty setting with supporting surfaces, no people, no hero objects, no writing, no watermark.')
 
-def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals'):
+def paint_environments(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals',preserved_scenes=()):
     out=Path(out);candidate=copy.deepcopy(plan)
-    for scene in candidate['scenes']:
+    for scene_index,scene in enumerate(candidate['scenes']):
+        if scene_index in preserved_scenes:continue
         context=repair_context(plan,scene=scene)
         prompt=corrected_prompt(environment_prompt(plan,scene),context);path=image_generator(prompt,out/'flux_images',seed_for(prompt+context),768,1344)
         aid='flux_set_'+hashlib.sha256((namespace+prompt+context).encode()).hexdigest()[:16]

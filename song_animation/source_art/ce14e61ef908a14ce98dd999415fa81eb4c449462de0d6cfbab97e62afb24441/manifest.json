@@ -1,0 +1,207 @@
+{
+  "source_clip_sha256": "ce14e61ef908a14ce98dd999415fa81eb4c449462de0d6cfbab97e62afb24441",
+  "plan_fingerprints": [
+    "75c5c37f5d7c15d3e2a9e4198cab35837e737dce96fb1932be9fbfec54326816",
+    "cd68bf4d8d8acb9ab1d76fc6369807066d04443cac2b89f96698fe88a0814588"
+  ],
+  "quality_status": "unapproved source-bound artwork repair; all film gates required",
+  "assets": {
+    "kabir_reaching_bust": {
+      "file": "kabir_reaching_bust.png",
+      "sha256": "d855786ad0203f7ba69dcc07be2e606f1c64e2ec5a8aa151a2e58cb0f76163e5",
+      "width": 340,
+      "height": 480,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "111a1c66c6cab909d2108959038291d7f92f918680c35d8471334a287e2c3fe6",
+      "quality_certified": false
+    },
+    "kabir_reaching_forearm_hand": {
+      "file": "kabir_reaching_forearm_hand.png",
+      "sha256": "c0de545cd9e0bbf17b9ea754059bd8bd0f2476e23b8936d52e9733407c959a9e",
+      "width": 540,
+      "height": 270,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "6abadf352b1694e6c894f3a300b1761ae75d7149eea68db29e5219715510ae59",
+      "quality_certified": false
+    },
+    "source_curtain_contact_set": {
+      "file": "source_curtain_contact_set.png",
+      "sha256": "0853e4baf03e59cf1276468bf24d2e5960f3687ae23fa7f83aee505fbc69f993",
+      "width": 540,
+      "height": 960,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "f3b34d5b59216c640143018d2d1ad05c33adf0283b38563f4da23f41287c92c8",
+      "quality_certified": false
+    }
+  },
+  "scenes": [
+    {
+      "index": 2,
+      "nodes": [
+        {
+          "id": "flux_environment",
+          "asset": "source_curtain_contact_set",
+          "role": "background",
+          "painted_set": true,
+          "pivot": [
+            0,
+            0
+          ],
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "indent_ripple_node",
+          "keys": [
+            {
+              "t": 0,
+              "x": 245,
+              "y": 570,
+              "rotation": 0,
+              "scale": 0.2,
+              "opacity": 0
+            },
+            {
+              "t": 0.4,
+              "x": 245,
+              "y": 570,
+              "rotation": 0,
+              "scale": 0.3,
+              "opacity": 0
+            },
+            {
+              "t": 0.75,
+              "x": 245,
+              "y": 570,
+              "rotation": -1,
+              "scale": 0.85,
+              "opacity": 0.8
+            },
+            {
+              "t": 1,
+              "x": 245,
+              "y": 570,
+              "rotation": 0,
+              "scale": 1,
+              "opacity": 0.95
+            }
+          ],
+          "asset": "curtain_indentation_ripple",
+          "role": "foreground",
+          "wave": {
+            "cycles": 0.5,
+            "phase": 0.2,
+            "rotation": 0,
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "id": "kabir_bust_node",
+          "keys": [
+            {
+              "t": 0,
+              "x": 500,
+              "y": 650,
+              "rotation": -0.5,
+              "scale": 1.4,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 495,
+              "y": 650,
+              "rotation": 0.5,
+              "scale": 1.4,
+              "opacity": 1
+            }
+          ],
+          "asset": "kabir_reaching_bust",
+          "role": "foreground",
+          "wave": {
+            "cycles": 1,
+            "phase": 0,
+            "rotation": 0.6,
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "id": "kabir_arm_hand_node",
+          "keys": [
+            {
+              "t": 0,
+              "x": 270,
+              "y": 650,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 270,
+              "y": 620,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 270,
+              "y": 596,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "asset": "kabir_reaching_forearm_hand",
+          "role": "foreground",
+          "wave": {
+            "cycles": 0.5,
+            "phase": 0.3,
+            "rotation": 0.5,
+            "x": 0,
+            "y": 1
+          },
+          "attachment": {
+            "parent": "kabir_bust_node",
+            "parent_anchor": [
+              0.26,
+              0.42
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "scene_fingerprints": {
+    "2": [
+      "9fdb217a0086eb76e3178670367b3b500b9440ade4a9c5e0e867db61de8b8625",
+      "b9ffcf5934fe30ed40822f0058d24a092e8d7cfdb43db519de81a67eae740131"
+    ]
+  }
+}

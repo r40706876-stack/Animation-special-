@@ -1,0 +1,364 @@
+{
+  "source_input": "song_animation/inputs/song_1000077365.m4a",
+  "source_input_sha256": "abbaadd51a5a29fac9b7d781654de2a95c537cf3fefea920284f6cc4b70172ee",
+  "source_start_seconds": 6.791666666666667,
+  "source_scene_index": 2,
+  "plan": {
+    "version": 2,
+    "title": "The Embroidered Barrier",
+    "story": {
+      "premise": "In a sun-drenched haveli, two souls are separated by a heavy, ornate silk curtain that serves as both a physical and social barrier.",
+      "emotional_goal": "To feel the presence of the other despite the impossibility of a direct encounter.",
+      "opening": "Meera stands behind a semi-transparent embroidered curtain, watching the silhouette of Kabir on the other side.",
+      "turning_point": "Kabir reaches out to touch the fabric, and Meera mirrors his gesture from the inside.",
+      "payoff": "A gust of wind momentarily lifts the hem of the curtain, offering a fleeting, unblocked glimpse before the barrier settles back into place.",
+      "entities": {
+        "meera": {
+          "description": "A young woman in a teal and gold salwar kameez with a sheer dupatta.",
+          "initial_state": "Standing behind a heavy silk curtain in a shaded interior."
+        },
+        "kabir": {
+          "description": "A young man in a simple white cotton kurta.",
+          "initial_state": "Standing in a bright courtyard on the opposite side of the curtain."
+        },
+        "curtain": {
+          "description": "A large, heavy silk curtain with intricate gold embroidery and floral patterns.",
+          "initial_state": "Hanging still, completely dividing the space."
+        }
+      }
+    },
+    "bible": {
+      "style": "Detailed painterly 2D illustration with a tactile paper finish, featuring soft watercolor textures and elegant linework.",
+      "palette": "Warm ochre, deep teal, dusty rose, and shimmering gold accents.",
+      "characters": "Meera has expressive eyes and traditional jewelry; Kabir has a contemplative expression and soft features.",
+      "locations": "A traditional Indian Haveli with carved sandstone arches, potted bougainvillea, and marble floors.",
+      "motifs": "Shadows on fabric, embroidery patterns, the play of light through sheer cloth.",
+      "arc": "A progression from distant observation to a moment of tactile connection, ending in a realization of the barrier's permanence."
+    },
+    "fps": 24,
+    "total_frames": 79,
+    "lyrics": [],
+    "timing_granularity": "phrase",
+    "timing_verified": false,
+    "scenes": [
+      {
+        "start": 6.8,
+        "label": "The Approach",
+        "visual": "A close-up of the curtain from the outside. Kabir's hand reaches into the frame and gently presses against the silk.",
+        "action": "The fabric indents under the pressure of Kabir's fingers, stretching the gold embroidery.",
+        "meaning": "He makes an effort to reach through the barrier.",
+        "hero_object": "kabir's hand",
+        "before": "The curtain is flat.",
+        "after": "The curtain shows the physical impression of a hand from the outside.",
+        "lyric_ids": [
+          2
+        ],
+        "coverage": {
+          "environment": "Haveli Courtyard",
+          "staging": "Kabir stands close to the curtain, reaching out.",
+          "framing": "Close-up",
+          "visible_event": "The fabric deforms under Kabir's touch.",
+          "background_view": "Warm sunlit courtyard outside the carved sandstone archway of a Rajasthani haveli, framing a heavy embroidered teal silk curtain hanging in the entrance."
+        },
+        "story": {
+          "purpose": "Show the first physical interaction with the barrier from the other side.",
+          "link_from_previous": "Kabir stops walking and engages with the curtain.",
+          "emotional_change": "A sense of anticipation and tactile tension.",
+          "state_in": {
+            "meera": "Leaning against the curtain, hand raised.",
+            "kabir": "Stopping in front of the curtain outside.",
+            "curtain": "Pressed slightly by Meera's proximity."
+          },
+          "state_out": {
+            "meera": "Sensing the pressure from the other side.",
+            "kabir": "Pressing his hand against the curtain.",
+            "curtain": "Indented by Kabir's hand."
+          }
+        },
+        "start_frame": 0,
+        "end_frame": 79,
+        "kind": "vector",
+        "background": "#f5ece1",
+        "nodes": [
+          {
+            "id": "flux_environment",
+            "asset": "source_curtain_contact_set",
+            "role": "background",
+            "painted_set": true,
+            "pivot": [
+              0,
+              0
+            ],
+            "keys": [
+              {
+                "t": 0,
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation": 0,
+                "opacity": 1
+              },
+              {
+                "t": 1,
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation": 0,
+                "opacity": 1
+              }
+            ]
+          },
+          {
+            "id": "indent_ripple_node",
+            "keys": [
+              {
+                "t": 0,
+                "x": 245,
+                "y": 570,
+                "rotation": 0,
+                "scale": 0.2,
+                "opacity": 0
+              },
+              {
+                "t": 0.4,
+                "x": 245,
+                "y": 570,
+                "rotation": 0,
+                "scale": 0.3,
+                "opacity": 0
+              },
+              {
+                "t": 0.75,
+                "x": 245,
+                "y": 570,
+                "rotation": -1,
+                "scale": 0.85,
+                "opacity": 0.8
+              },
+              {
+                "t": 1,
+                "x": 245,
+                "y": 570,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              }
+            ],
+            "asset": "curtain_indentation_ripple",
+            "role": "foreground",
+            "wave": {
+              "cycles": 0.5,
+              "phase": 0.2,
+              "rotation": 0,
+              "x": 1,
+              "y": 1
+            }
+          },
+          {
+            "id": "kabir_bust_node",
+            "keys": [
+              {
+                "t": 0,
+                "x": 500,
+                "y": 650,
+                "rotation": -0.5,
+                "scale": 1.4,
+                "opacity": 1
+              },
+              {
+                "t": 1,
+                "x": 495,
+                "y": 650,
+                "rotation": 0.5,
+                "scale": 1.4,
+                "opacity": 1
+              }
+            ],
+            "asset": "kabir_reaching_bust",
+            "role": "foreground",
+            "wave": {
+              "cycles": 1,
+              "phase": 0,
+              "rotation": 0.6,
+              "x": 1,
+              "y": 2
+            }
+          },
+          {
+            "id": "kabir_arm_hand_node",
+            "keys": [
+              {
+                "t": 0,
+                "x": 270,
+                "y": 650,
+                "scale": 1,
+                "rotation": 0,
+                "opacity": 1
+              },
+              {
+                "t": 0.5,
+                "x": 270,
+                "y": 620,
+                "scale": 1,
+                "rotation": 0,
+                "opacity": 1
+              },
+              {
+                "t": 1,
+                "x": 270,
+                "y": 596,
+                "scale": 1,
+                "rotation": 0,
+                "opacity": 1
+              }
+            ],
+            "asset": "kabir_reaching_forearm_hand",
+            "role": "foreground",
+            "wave": {
+              "cycles": 0.5,
+              "phase": 0.3,
+              "rotation": 0.5,
+              "x": 0,
+              "y": 1
+            },
+            "attachment": {
+              "parent": "kabir_bust_node",
+              "parent_anchor": [
+                0.26,
+                0.42
+              ],
+              "proximal": [
+                0.95,
+                0.68
+              ],
+              "distal": [
+                0.22,
+                0.64
+              ]
+            }
+          }
+        ],
+        "normalizations": [],
+        "visibility_review": {
+          "mean_luminance": 121.14,
+          "check_contrast": false,
+          "advisory_only": true
+        },
+        "visual_correction": {
+          "issues": [
+            "Surreal severed hand covering the man's eye and temple disrupts narrative immersion.",
+            "Story connection from shot 1 to 2 failed: Abrupt shift to a male portrait obscured by a disembodied hand cutout.",
+            "Artwork is below the stored finish reference. Redraw large detailed organic objects with legible bright composition, not placeholder geometric shapes.",
+            "artwork_detail did not pass for shot 2: Unnatural hand superimposed over the face with minimal physical development.",
+            "story_motion did not pass for shot 2: Unnatural hand superimposed over the face with minimal physical development.",
+            "narrative_advance did not pass for shot 2: Unnatural hand superimposed over the face with minimal physical development.",
+            "anatomy_continuity did not pass for shot 2: Unnatural hand superimposed over the face with minimal physical development."
+          ],
+          "reference_sha256": "8dfe122a33cba2b68ca6848b69ca2b1cd00644e02a657895f850b680c6d8206e",
+          "pass": 1,
+          "attempt": "3df7c6fdf0d94716abcf8146d6dd6549",
+          "instruction": "Correct the VISIBLE mistakes in the attached three frames. Preserve lyric timing, character identity and the connected story. Keep this shot state_in consistent with the preceding shot state_out, and deliver the planned consequence for the next shot. Do not fix a shot by inventing an unrelated prop, scene or character. Missing people must be drawn and visible. Walking requires visible legs/feet, a clear change of position and alternating leg poses. Keep body parts attached. Show the described action through distinct start, middle and end poses; camera or particles alone cannot replace it. Keep main action above y=720. Return a complete corrected scene package."
+        }
+      }
+    ],
+    "assets": {
+      "kabir_reaching_bust": {
+        "id": "kabir_reaching_bust",
+        "width": 340,
+        "height": 480,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 480\"><defs><linearGradient id=\"k_skin\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f1c5a1\"/><stop offset=\"100%\" stop-color=\"#c98c62\"/></linearGradient><linearGradient id=\"k_kurta\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#ffffff\"/><stop offset=\"100%\" stop-color=\"#ded7cb\"/></linearGradient></defs><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><path d=\"M180 180c-35-15-70 15-70 75 0 65 30 95 65 105l8 45h35l8-45c35-10 65-40 65-105 0-60-35-90-71-75z\" fill=\"url(#k_skin)\"/><path d=\"M145 155c-45 15-70 65-70 135 0 80 35 140 70 160 8-30 15-80 15-135 0-55-8-105-15-160z\" fill=\"#1e2530\"/><path d=\"M175 145c35-25 75-5 100 25 30 35 35 95 30 150-20-25-45-30-78-30-30 0-48 10-60 18-8-65-8-115 8-163z\" fill=\"#1e2530\"/><path d=\"M190 230c10-5 22-5 30 2\" stroke=\"#311b15\" stroke-width=\"3.5\" fill=\"none\"/><ellipse cx=\"205\" cy=\"244\" rx=\"5.5\" ry=\"6.5\" fill=\"#1a1310\"/><circle cx=\"206\" cy=\"242\" r=\"2\" fill=\"#ffffff\"/><path d=\"M196 270c12 5 22 5 30-2\" stroke=\"#9e4f44\" stroke-width=\"3.5\" fill=\"none\"/><path d=\"M188 296c14 7 32 7 44-1\" stroke=\"#802f2f\" stroke-width=\"4\" fill=\"#c46060\"/><path d=\"M165 330c10 15 28 20 45 15\" stroke=\"#1e2530\" stroke-width=\"5\" fill=\"none\"/><path d=\"M105 390c-35 35-55 85-65 150h260c-10-65-30-115-65-150z\" fill=\"url(#k_kurta)\"/><path d=\"M135 390c25 40 55 60 85 60s60-20 85-60\" stroke=\"#d4af37\" stroke-width=\"3\" fill=\"none\"/></g></svg>",
+        "subject_kind": "human",
+        "description": "Bust of Kabir in a crisp white kurta with dark expressive eyes and soft contemplative expression.",
+        "image_prompt": "Painterly medium close-up illustration of handsome young South Asian man Kabir, contemplative expression, soft features, wearing traditional white cotton kurta, warm sunlight.",
+        "raster_art_provider": "ChatGPT built-in image generation"
+      },
+      "kabir_reaching_forearm_hand": {
+        "id": "kabir_reaching_forearm_hand",
+        "width": 540,
+        "height": 270,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 260\"><defs><linearGradient id=\"hand_skin\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#c98c62\"/><stop offset=\"60%\" stop-color=\"#e4aa82\"/><stop offset=\"100%\" stop-color=\"#f3c49e\"/></linearGradient></defs><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><path d=\"M270 190c-40-10-85-25-130-50l-20-15c-12-8-22 2-15 15 12 18 35 45 65 65 35 22 75 35 100 25z\" fill=\"#ffffff\"/><path d=\"M135 120c-18-12-38-25-52-38-8-8-18-4-15 8 4 15 18 35 32 50z\" fill=\"url(#hand_skin)\"/><path d=\"M98 75c-7-15-14-30-22-38-6-7-14-4-12 6 5 14 14 30 22 42z\" fill=\"url(#hand_skin)\"/><path d=\"M86 82c-7-16-16-32-24-40-6-7-15-3-12 8 6 15 16 30 24 42z\" fill=\"url(#hand_skin)\"/><path d=\"M74 95c-7-13-14-25-21-34-5-6-14-3-11 7 5 12 14 24 20 35z\" fill=\"url(#hand_skin)\"/><path d=\"M68 112c-7-10-14-19-20-25-5-5-13-1-10 7 4 10 12 20 18 28z\" fill=\"url(#hand_skin)\"/><ellipse cx=\"88\" cy=\"118\" rx=\"18\" ry=\"22\" fill=\"#bd784e\" opacity=\"0.4\"/></g></svg>",
+        "subject_kind": "human",
+        "description": "Kabir's right forearm and open hand stretching out to press gently against the silk curtain.",
+        "image_prompt": "Painterly illustration of a young man's right forearm in white kurta cuff, hand reaching forward with open fingers pressing gently, tactile skin tones, warm golden lighting.",
+        "raster_art_provider": "ChatGPT built-in image generation"
+      },
+      "curtain_indentation_ripple": {
+        "id": "curtain_indentation_ripple",
+        "width": 220,
+        "height": 240,
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 240\"><defs><radialGradient id=\"press_indent\" cx=\"45%\" cy=\"50%\" r=\"55%\"><stop offset=\"0%\" stop-color=\"#ffeaa7\" stop-opacity=\"0.9\"/><stop offset=\"35%\" stop-color=\"#e1a34b\" stop-opacity=\"0.6\"/><stop offset=\"75%\" stop-color=\"#09535e\" stop-opacity=\"0.7\"/><stop offset=\"100%\" stop-color=\"#05363e\" stop-opacity=\"0.1\"/></radialGradient></defs><ellipse cx=\"110\" cy=\"120\" rx=\"100\" ry=\"110\" fill=\"url(#press_indent)\"/><g fill=\"none\" stroke=\"#f8d57e\" stroke-width=\"2.4\" opacity=\"0.85\"><ellipse cx=\"110\" cy=\"120\" rx=\"60\" ry=\"68\" stroke-dasharray=\"6 4\"/><ellipse cx=\"110\" cy=\"120\" rx=\"35\" ry=\"40\" stroke-dasharray=\"4 3\"/><path d=\"M60 100c25-15 65-10 95 15M55 135c30-18 75-12 105 18\"/></g></svg>",
+        "subject_kind": "effect",
+        "description": "Illuminated indentation ripple and tension creases in silk fabric caused by hand pressure.",
+        "image_prompt": "Glowing indentation and taut fabric ripples on translucent teal silk fabric from a hand pressing against it, gold light reflections."
+      },
+      "source_curtain_contact_set": {
+        "width": 540,
+        "height": 960,
+        "raster_art_provider": "ChatGPT built-in image generation"
+      }
+    },
+    "planner": "generated_vector",
+    "review_status": "draft",
+    "open_vocabulary": true,
+    "lighting_preference": "bright",
+    "finish": "paper",
+    "protocol": "open-vector-v8-timed-story",
+    "timeline_adjustments": [],
+    "allow_night": false,
+    "story_review": {
+      "valid": true,
+      "issues": [],
+      "reason": "The narrative provides a strong emotional progression that directly mirrors the song's lyrics about the 'parda' (curtain). It uses distinct camera setups—moving from the interior shadow to the exterior courtyard light, and from close-up tactile interactions to wide shots of parallel movement—to visualize the physical and social barrier. The 'Mirror Touch' provides a clear turning point, and the 'Fleeting Glimpse' at the end offers an earned, poetic payoff that fits the contemplative mood of the Ghazal without breaking the established logic of the barrier.",
+      "_provider_model": "gemini-3-flash-preview"
+    },
+    "art_backend": "flux-layers",
+    "selection": {
+      "source_sha256": "abbaadd51a5a29fac9b7d781654de2a95c537cf3fefea920284f6cc4b70172ee",
+      "source_duration": 44.206,
+      "start": 0.0,
+      "duration": 29.988118,
+      "limit": 30,
+      "method": "opening of an already short clip",
+      "short_inputs_padded": false
+    },
+    "visual_issues_remaining": [
+      "Review did not explicitly clear the film",
+      "Unresolved visual issues",
+      "No visually earned connected story/payoff",
+      "Story connection from shot 0 to 1 failed",
+      "Story connection from shot 1 to 2 failed",
+      "Story connection from shot 2 to 3 failed",
+      "Story connection from shot 3 to 4 failed",
+      "Story connection from shot 4 to 5 failed",
+      "Story connection from shot 5 to 6 failed",
+      "Artwork did not meet the stored finish reference",
+      "artwork_detail did not pass for shot 0",
+      "story_motion did not pass for shot 0",
+      "narrative_advance did not pass for shot 0",
+      "anatomy_continuity did not pass for shot 0",
+      "artwork_detail did not pass for shot 1",
+      "story_motion did not pass for shot 1",
+      "narrative_advance did not pass for shot 1",
+      "anatomy_continuity did not pass for shot 1",
+      "artwork_detail did not pass for shot 2",
+      "story_motion did not pass for shot 2",
+      "narrative_advance did not pass for shot 2",
+      "anatomy_continuity did not pass for shot 2",
+      "artwork_detail did not pass for shot 3",
+      "story_motion did not pass for shot 3",
+      "narrative_advance did not pass for shot 3",
+      "artwork_detail did not pass for shot 4",
+      "story_motion did not pass for shot 4",
+      "narrative_advance did not pass for shot 4",
+      "anatomy_continuity did not pass for shot 4",
+      "artwork_detail did not pass for shot 5",
+      "story_motion did not pass for shot 5",
+      "narrative_advance did not pass for shot 5",
+      "anatomy_continuity did not pass for shot 5",
+      "artwork_detail did not pass for shot 6",
+      "story_motion did not pass for shot 6",
+      "narrative_advance did not pass for shot 6",
+      "anatomy_continuity did not pass for shot 6"
+    ]
+  }
+}

@@ -48,12 +48,15 @@ def validate_vector(plan):
         if not re.fullmatch(r'#[0-9a-fA-F]{6}',s.get('background','')):raise ValueError('Invalid background color')
         nodes=s.get('nodes',[])
         if not 2<=len(nodes)<=24:raise ValueError('Need 2..24 scene layers')
-        ids=set();moves=[]
+        ids=set();moves=[];prior={}
         for node in nodes:
             nid=node.get('id')
             if not isinstance(nid,str) or nid in ids:raise ValueError('Duplicate/missing node id')
             if node.get('parent') and node['parent'] not in ids:raise ValueError('Parent must precede child (no cycles)')
-            ids.add(nid)
+            if node.get('attachment') is not None:
+                from .attachments import validate_attachment
+                validate_attachment(node['attachment'],node,prior,assets)
+            ids.add(nid);prior[nid]=node
             if node.get('asset') and node['asset'] not in assets:raise ValueError('Missing custom asset')
             if not node.get('asset') and not any(x.get('parent')==nid for x in nodes):raise ValueError('Empty group')
             pivot=node.get('pivot',[.5,.5])
@@ -137,6 +140,10 @@ def render_vector(plan,index,frame):
     for node in scene['nodes']:
         v=values(node,t);M=basis(v);opacity=v['opacity']
         if node.get('parent'):M=matrices[node['parent']]@M;opacity*=alphas[node['parent']]
+        if node.get('attachment'):
+            from .attachments import image_matrix
+            binding=node['attachment'];parent=next(n for n in scene['nodes'] if n['id']==binding['parent'])
+            M=image_matrix(plan['assets'][node['asset']],node,binding,plan['assets'][parent['asset']],parent,matrices[parent['id']],M);opacity*=alphas[parent['id']]
         matrices[node['id']]=M;alphas[node['id']]=opacity
         if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background')
     result=im.convert('RGB')
@@ -156,6 +163,10 @@ def invisible_foreground_nodes(plan,index=0):
         for node in scene['nodes']:
             v=values(node,t);M=basis(v);alpha=v['opacity']
             if node.get('parent'):M=matrices[node['parent']]@M;alpha*=alphas[node['parent']]
+            if node.get('attachment'):
+                from .attachments import image_matrix
+                binding=node['attachment'];parent=next(n for n in scene['nodes'] if n['id']==binding['parent'])
+                M=image_matrix(plan['assets'][node['asset']],node,binding,plan['assets'][parent['asset']],parent,matrices[parent['id']],M);alpha*=alphas[parent['id']]
             matrices[node['id']]=M;alphas[node['id']]=alpha
             if not node.get('asset') or node.get('role')=='background' or alpha<.2:continue
             active.add(node['id']);a=plan['assets'][node['asset']];w,h=a['width'],a['height'];px,py=node.get('pivot',[.5,.5])
