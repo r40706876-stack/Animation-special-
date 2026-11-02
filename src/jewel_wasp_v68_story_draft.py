@@ -104,7 +104,19 @@ if chapter==8:
         for point,position in zip(antenna_points,control):
             point.co=position
             point.keyframe_insert(data_path="co",frame=frame)
-    print("JW_ANTENNA_GRASP_ANIMATED",flush=True)
+    # Paired articulated mandibles on the existing wasp head visibly close
+    # around the keyed antenna tip; not a disconnected floating line.
+    for side in (-1,1):
+        clamp=root("story grasp mandible hinge %d"%side,(.61,-.075,-.07))
+        clamp.parent=wasp
+        taper("story articulated antenna clamp %d"%side,
+              (0,side*.034,.004),(.095,side*.009,-.022),
+              .018,.004,leg_amber,clamp)
+        for frame,opening in ((1,.22),(90,.22),(110,.10),
+                              (132,0.0),(170,0.0),(205,.16),(240,.22)):
+            clamp.rotation_euler.x=side*opening
+            clamp.keyframe_insert(data_path="rotation_euler",frame=frame)
+    print("JW_ANTENNA_GRASP_ANIMATED_WITH_JAWS",flush=True)
 
 # Stage the sting and oviposition on the correct side of the roach.
 # Keyframe the complete root rig, not a disconnected floating needle.
@@ -142,6 +154,29 @@ scene.frame_set(1)
 for actor in (wasp,roach):
     actor.keyframe_insert(data_path="rotation_euler",frame=1)
     actor.keyframe_insert(data_path="rotation_euler",frame=240)
+# The two stings have different host responses, not duplicated hover shots.
+# Thoracic sting buckles the middle legs; head sting dips the antennae.
+if chapter in (3,5):
+    for f,roll in ((1,0),(100,0),(125,.02),(145,.10 if chapter==3 else -.07),
+                   (175,.07 if chapter==3 else -.11),(205,.01),(240,0)):
+        roach.rotation_euler.x=roll
+        roach.keyframe_insert(data_path="rotation_euler",frame=f)
+    for side in (-1,1):
+        if chapter==3:
+            pivot=bpy.data.objects.get("roach gait pivot %d 1"%side)
+            assert pivot is not None and pivot.parent==roach
+            for f,buckle in ((1,0),(110,0),(145,side*.19),
+                             (175,side*.15),(205,0),(240,0)):
+                pivot.rotation_euler.y=buckle
+                pivot.keyframe_insert(data_path="rotation_euler",frame=f)
+        else:
+            antenna=bpy.data.objects.get("roach filiform antenna %d"%side)
+            assert antenna is not None and antenna.parent==roach
+            for f,droop in ((1,0),(110,0),(145,side*.13),
+                            (175,side*.24),(205,side*.12),(240,0)):
+                antenna.rotation_euler.x=droop
+                antenna.keyframe_insert(data_path="rotation_euler",frame=f)
+    print("JW_DIFFERENT_HOST_STING_REACTIONS",chapter,flush=True)
 # Use selective absence, rather than a toy wasp obstructing the science shots.
 if chapter in (4,6,12):
     for ob in bpy.data.objects:
@@ -274,6 +309,22 @@ if chapter==11:
         ov.scale=(1,1,length)
         for attr in ("location","rotation_euler","scale"):
             ov.keyframe_insert(data_path=attr,frame=f)
+    # Before attachment, show an egg travelling from the ovipositor tip
+    # to the leg; hide the transient copy when the attached egg takes over.
+    transfer=ell("DRAFT egg passing along ovipositor",(0,0,0),
+                 (.001,.001,.001),eggmat,segments=24,rings=12)
+    for f,t,size in ((1,0,.001),(110,0,.001),(120,.20,.70),
+                     (135,.55,1.0),(148,.92,.85),(157,1.0,.18),
+                     (170,1.0,.001),(240,1.0,.001)):
+        scene.frame_set(f);bpy.context.view_layer.update()
+        a=wasp.matrix_world @ Vector((-.80,0,.04))
+        b=egg.matrix_world.translation.copy()
+        transfer.location=a.lerp(b,t)
+        transfer.scale=(.020*size,.052*size,.018*size)
+        transfer.rotation_euler=(b-a).to_track_quat("Y","Z").to_euler()
+        for attr in ("location","scale","rotation_euler"):
+            transfer.keyframe_insert(data_path=attr,frame=f)
+    print("JW_EGG_TRANSFER_TO_ATTACHED_FEMUR_ANIMATED",flush=True)
 if chapter==12:
     # Actual DRAFT cross-section, NOT another transparent oval pasted on top.
     # Previous alpha-only cutaway still looked like a white external shell:
