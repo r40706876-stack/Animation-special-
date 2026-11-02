@@ -26,13 +26,15 @@ jobs:
       max-parallel: 3
       matrix:
         include:
-          - {ch: 3, stills: "145", motion: 118}
-          - {ch: 5, stills: "145", motion: 0}
-          - {ch: 8, stills: "155", motion: 118}
+          # Source-bound, one-second proofs cover actual action contact.
+          # Chapter 5 now requires motion; chapter 13 brackets the soil rim.
+          - {ch: 3, stills: "145", motion: 130}
+          - {ch: 5, stills: "145", motion: 130}
+          - {ch: 8, stills: "145", motion: 132}
           - {ch: 10, stills: "145 195", motion: 168}
-          - {ch: 11, stills: "170 205", motion: 152}
-          - {ch: 12, stills: "120 180", motion: 112}
-          - {ch: 13, stills: "115 145", motion: 110}
+          - {ch: 11, stills: "145 170", motion: 145}
+          - {ch: 12, stills: "120 132", motion: 112}
+          - {ch: 13, stills: "132 145 160", motion: 132}
     env:
       CH: "${{ matrix.ch }}"
       STILLS: "${{ matrix.stills }}"
