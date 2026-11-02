@@ -1,0 +1,121 @@
+name: Jewel Wasp V6.8 Resilient Per-Chapter DRAFT QA
+on:
+  workflow_dispatch:
+    inputs:
+      render_proofs:
+        type: boolean
+        required: false
+        default: false
+  push:
+    paths:
+      - "ops/JW_V68_RESILIENT_PROOF_REQUEST.txt"
+permissions:
+  contents: read
+concurrency:
+  group: jw-v68-resilient-per-chapter
+  cancel-in-progress: false
+jobs:
+  proof:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.render_proofs == true) ||
+      (github.event_name == 'push' && github.event.head_commit.message == 'JW_V68_RESILIENT_PROOF_REQUEST_APPROVED')
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - {ch: 3, stills: "145", motion: 118}
+          - {ch: 5, stills: "145", motion: 0}
+          - {ch: 8, stills: "155", motion: 118}
+          - {ch: 10, stills: "145 195", motion: 168}
+          - {ch: 11, stills: "170", motion: 152}
+          - {ch: 12, stills: "120 180", motion: 112}
+          - {ch: 13, stills: "145 180", motion: 145}
+    env:
+      CH: "${{ matrix.ch }}"
+      STILLS: "${{ matrix.stills }}"
+      MOTION: "${{ matrix.motion }}"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate source hashes and DRAFT-only authorization
+        run: |
+          set -euo pipefail
+          python3 -m py_compile src/jewel_wasp_v68_story_draft.py src/jewel_wasp_v68_anatomy_proof.py
+          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            r=ops/JW_V68_RESILIENT_PROOF_REQUEST.txt
+            test -s "$r"
+            grep -qx "STORY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_story_draft.py)" "$r"
+            grep -qx "ANATOMY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_anatomy_proof.py)" "$r"
+            grep -qx 'DRAFT_ONLY=YES' "$r"
+            grep -qx 'FINAL_APPROVAL=NO' "$r"
+            grep -qx 'PRESERVE_V4=YES' "$r"
+          fi
+      - name: Install Blender 4.2 and ffmpeg
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl -fL --retry 3 --connect-timeout 25 --max-time 650 -o "$RUNNER_TEMP/blender.tar.xz" https://download.blender.org/release/Blender4.2/blender-4.2.0-linux-x64.tar.xz
+          tar -xJf "$RUNNER_TEMP/blender.tar.xz" -C "$RUNNER_TEMP/blender" --strip-components=1
+          echo "$RUNNER_TEMP/blender" >> "$GITHUB_PATH"
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends xvfb libegl1 libgl1 libopengl0 ffmpeg
+      - name: Run actual story geometry preflight for this chapter
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          JW_MODE=preflight JW_CHAPTER="$CH" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "proof/preflight-$CH.log" 2>&1 || { tail -n 100 "proof/preflight-$CH.log"; exit 1; }
+          grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $CH" "proof/preflight-$CH.log"
+      - name: Render bounded watermarked DRAFT stills and 24-frame motion
+        run: |
+          set -euo pipefail
+          for f in $STILLS; do
+            JW_MODE=still JW_CHAPTER="$CH" JW_STILL_FRAME="$f" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/proof/raw-$CH-$f.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "proof/still-$CH-$f.log" 2>&1 || { tail -n 100 "proof/still-$CH-$f.log"; exit 1; }
+            grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $CH still" "proof/still-$CH-$f.log"
+            ffmpeg -y -loglevel error -i "proof/raw-$CH-$f.png" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH $CH':x=12:y=12:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.65" -frames:v 1 "proof/ch-$CH-f-$f-DRAFT.png"
+            rm "proof/raw-$CH-$f.png"
+          done
+          if [[ "$MOTION" != 0 ]]; then
+            JW_MODE=motion JW_CHAPTER="$CH" JW_MOTION_START="$MOTION" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/proof/raw-$CH.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "proof/motion-$CH.log" 2>&1 || { tail -n 100 "proof/motion-$CH.log"; exit 1; }
+            grep -q "JW_V68_STORY_DRAFT_RENDER_DONE $CH motion" "proof/motion-$CH.log"
+            ffmpeg -y -loglevel error -i "proof/raw-$CH.mp4" -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DRAFT CH $CH':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.65" -an -c:v libx264 -preset veryfast -crf 24 "proof/ch-$CH-DRAFT.mp4"
+            rm "proof/raw-$CH.mp4"
+            ffmpeg -v error -xerror -i "proof/ch-$CH-DRAFT.mp4" -f null -
+            test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "proof/ch-$CH-DRAFT.mp4")" = 24
+            ffmpeg -y -loglevel error -i "proof/ch-$CH-DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "proof/ch-$CH-motion-strip.png"
+          fi
+          n="$(find proof -maxdepth 1 -name "ch-$CH-f-*-DRAFT.png" | wc -l)"
+          if [[ "$n" == 1 ]]; then
+            cp "$(find proof -maxdepth 1 -name "ch-$CH-f-*-DRAFT.png" | head -1)" "proof/ch-$CH-CONTACT.png"
+          else
+            ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i "proof/ch-$CH-f-*-DRAFT.png" -vf "scale=270:480,tile=2x1" -frames:v 1 "proof/ch-$CH-CONTACT.png"
+          fi
+          test -s "proof/ch-$CH-CONTACT.png"
+          echo "DRAFT_CHAPTER_$CH_TECHNICAL_PASS__VISUAL_QA_PENDING"
+      - name: Record source provenance without visual approval
+        if: always()
+        run: |
+          mkdir -p proof
+          python3 - <<'PY'
+          import json,os,pathlib,hashlib
+          s=pathlib.Path("src/jewel_wasp_v68_story_draft.py")
+          pathlib.Path("proof/QA.json").write_text(json.dumps(dict(
+            chapter=int(os.environ["CH"]),source_commit=os.environ.get("GITHUB_SHA"),
+            story_sha256=hashlib.sha256(s.read_bytes()).hexdigest(),
+            draft_only=True,visual_approved=False,final_film=False,
+            hindi_listen_verified=False,V4_preserved=True),indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jw-v68-checkpointed-chapter-${{ matrix.ch }}-DRAFT
+          path: |
+            proof/*-DRAFT.png
+            proof/*-DRAFT.mp4
+            proof/*-motion-strip.png
+            proof/*-CONTACT.png
+            proof/*.log
+            proof/QA.json
+          if-no-files-found: warn
+          retention-days: 14
