@@ -59,6 +59,7 @@ def validate_vector(plan):
             ids.add(nid);prior[nid]=node
             if node.get('asset') and node['asset'] not in assets:raise ValueError('Missing custom asset')
             if not node.get('asset') and not any(x.get('parent')==nid for x in nodes):raise ValueError('Empty group')
+            if node.get('tint') is not None and (not isinstance(node['tint'],str) or not re.fullmatch(r'#[0-9a-fA-F]{6}',node['tint'])):raise ValueError('Invalid silhouette tint')
             pivot=node.get('pivot',[.5,.5])
             if not isinstance(pivot,list) or len(pivot)!=2 or not all(finite(v,0,1) for v in pivot):raise ValueError('Invalid pivot')
             keys=node.get('keys',[])
@@ -117,8 +118,10 @@ def basis(v):
     a=math.radians(v['rotation']);c=math.cos(a)*v['scale'];s=math.sin(a)*v['scale']
     return np.array([[c,-s,v['x']],[s,c,v['y']],[0,0,1.]])
 
-def paste(im,asset,M,opacity,pivot,shadow=False):
+def paste(im,asset,M,opacity,pivot,shadow=False,tint=None):
     layer=(painted(asset['raster_png'],int(asset['width']),int(asset['height'])) if 'raster_png' in asset else raster(asset['svg'],int(asset['width']),int(asset['height'])));w,h=layer.size
+    if tint:
+        silhouette=Image.new('RGBA',layer.size,tint);silhouette.putalpha(layer.getchannel('A'));layer=silhouette
     T=M@np.array([[1,0,-pivot[0]*w],[0,1,-pivot[1]*h],[0,0,1.]])
     corners=T@np.array([[0,w,w,0],[0,0,h,h],[1,1,1,1]])
     left=max(0,math.floor(corners[0].min()));right=min(W,math.ceil(corners[0].max()))
@@ -145,7 +148,7 @@ def render_vector(plan,index,frame):
             binding=node['attachment'];parent=next(n for n in scene['nodes'] if n['id']==binding['parent'])
             M=image_matrix(plan['assets'][node['asset']],node,binding,plan['assets'][parent['asset']],parent,matrices[parent['id']],M);opacity*=alphas[parent['id']]
         matrices[node['id']]=M;alphas[node['id']]=opacity
-        if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background')
+        if node.get('asset'):paste(im,plan['assets'][node['asset']],M,opacity,node.get('pivot',[.5,.5]),shadow=plan.get('finish')=='paper' and node.get('role','foreground')!='background',tint=node.get('tint'))
     result=im.convert('RGB')
     if plan.get('finish')=='paper':
         result=Image.fromarray(np.clip(np.asarray(result,dtype=np.int16)+paper_grain(),0,255).astype(np.uint8))

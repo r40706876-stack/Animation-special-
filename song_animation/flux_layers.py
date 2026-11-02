@@ -63,7 +63,6 @@ def cutout(image,session):
 def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cutout-v2-goals',preserved_assets=()):
     # Reject invalid geometry/references before importing or contacting image backends.
     validate_vector(plan)
-    from rembg import new_session
     out=Path(out);folder=out/'flux_assets';folder.mkdir(parents=True,exist_ok=True)
     candidate=copy.deepcopy(plan);active={n.get('asset') for s in candidate['scenes'] for n in s['nodes'] if n.get('role')!='background' and isinstance(n.get('asset'),str) and n.get('asset')}
     session=None;report=[]
@@ -84,7 +83,9 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
         key=hashlib.sha256((namespace+prompt+context+str([a['width'],a['height']])).encode()).hexdigest();path=folder/(key+'.png')
         if not path.exists():
             raw=image_generator(prompt,out/'flux_images',seed)
-            if session is None:session=new_session('u2netp',providers=['CPUExecutionProvider'])
+            if session is None:
+                from rembg import new_session
+                session=new_session('u2netp',providers=['CPUExecutionProvider'])
             with Image.open(raw) as image:subject=cutout(image,session)
             canvas=Image.new('RGBA',(int(a['width']),int(a['height'])))
             subject.thumbnail(canvas.size,Image.Resampling.LANCZOS)

@@ -2,7 +2,7 @@
   "source_clip_sha256": "ce14e61ef908a14ce98dd999415fa81eb4c449462de0d6cfbab97e62afb24441",
   "plan_fingerprints": [
     "75c5c37f5d7c15d3e2a9e4198cab35837e737dce96fb1932be9fbfec54326816",
-    "cd68bf4d8d8acb9ab1d76fc6369807066d04443cac2b89f96698fe88a0814588"
+    "649691a0bf847b9632e602cae88cc01d402a0b6ed915dd888e7a647956031875"
   ],
   "quality_status": "unapproved source-bound artwork repair; all film gates required",
   "assets": {
@@ -32,9 +32,1496 @@
       "provider": "ChatGPT built-in image generation",
       "original_file_sha256": "f3b34d5b59216c640143018d2d1ad05c33adf0283b38563f4da23f41287c92c8",
       "quality_certified": false
+    },
+    "source_meera_torso": {
+      "file": "source_meera_torso.png",
+      "sha256": "bac35a9d7457a87d5c5bb4f3ecc643aef832d51fbe388edcbf16cb0239621a27",
+      "width": 380,
+      "height": 560,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "a4d5c9b0d97ed739f259db07e564dc8202dd733e32f707375b54aeeab2df20a6",
+      "quality_certified": false
+    },
+    "source_meera_arm": {
+      "file": "source_meera_arm.png",
+      "sha256": "5be6962da4ee7791c8fd16fd19dc6be1957cc755b8a13979e5308d9cc7cc9f5b",
+      "width": 540,
+      "height": 270,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "4f65f50f1b7a39c32c34cc05f3a323d509ab81f4f5e8959235ece1d68ecf0a19",
+      "quality_certified": false
+    },
+    "source_meera_set": {
+      "file": "source_meera_set.png",
+      "sha256": "31ae76d14d5e0df56c63e79599495cc08b690b5de94ef18aa859613512edee33",
+      "width": 540,
+      "height": 960,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "01108c8e14c6283e7cf7429dfe1552e46ffd9a28f3479754335c5573239b27c8",
+      "quality_certified": false
+    },
+    "source_meera_reaction": {
+      "file": "source_meera_reaction.png",
+      "sha256": "2b1189fed40b168c9d96f2bd4cf22a4056910d136ed86ba9f14bc7b0534c8660",
+      "width": 380,
+      "height": 560,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "dc01d15fe9bf63fcc72b65610518d292d6852199722cc9e475a44699efc26aa1",
+      "quality_certified": false
+    },
+    "source_meera_walk": {
+      "file": "source_meera_walk.png",
+      "sha256": "58010c7889c4f536a64f21aacb04866f92adf540c8bb2d78e7e788e2937226fb",
+      "width": 180,
+      "height": 400,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "3dfa663cd68a426e0cabbdc3909cd24f648438960d925fdbea98cc160fc024f9",
+      "quality_certified": false
+    },
+    "source_kabir_walk": {
+      "file": "source_kabir_walk.png",
+      "sha256": "d58f8aa1a17fae9930565311427f914135e76c45924ff6044f87d06b79179f4d",
+      "width": 180,
+      "height": 350,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "ec3ef4b221f45a7c273b08503d11631f917f2d27ae286c4a9ff42dbf299d6f88",
+      "quality_certified": false
+    },
+    "source_meera_leg": {
+      "file": "source_meera_leg.png",
+      "sha256": "62ef3d1d5aaa23d8c577f0cac80a042ecd09e25ec296e945feccb02ef941e62a",
+      "width": 65,
+      "height": 200,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "939f9a63eb8b81fc636015ad29c2cf52fb169572651a6ee0aeb479af1456a48a",
+      "quality_certified": false
+    },
+    "source_kabir_leg": {
+      "file": "source_kabir_leg.png",
+      "sha256": "8d7c46795daec10d2af31282b78ca0dc4b6394c21622f58793ecd38802a4ff6b",
+      "width": 65,
+      "height": 200,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "5349031b782e9e200dd13b2c809b700053fc1ebf1da08179605bee427ef39d68",
+      "quality_certified": false
+    },
+    "source_wide_set": {
+      "file": "source_wide_set.png",
+      "sha256": "4d3cd518e9d0af7ca8ac8bba3534471ba3a6560e27f818f9e5aadc93efcdc7ed",
+      "width": 540,
+      "height": 960,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "1bb490ea34b73e4a3bd488524958845b12dade3f121bc14866c678923b45d37c",
+      "quality_certified": false
+    },
+    "source_hem_floor": {
+      "file": "source_hem_floor.png",
+      "sha256": "4a2fefe20d850f1f97e23947775bab021a351c1edc85cd35b9d0bbd6b400bbc6",
+      "width": 540,
+      "height": 960,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "5f72cf94518964ee1aa9b350878cace27dacbb0661ecdbe31b133b40e036d51e",
+      "quality_certified": false
+    },
+    "source_hem_cloth": {
+      "file": "source_hem_cloth.png",
+      "sha256": "2756387c19ba250dabed23c34314e7a4051102f47f195d4a54ed314d5ffbaefb",
+      "width": 420,
+      "height": 780,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "51bce1bd4fa3bc53849da7f765ce9ae00717509988c9c14f08b1dc83927a40ee",
+      "quality_certified": false
     }
   },
   "scenes": [
+    {
+      "index": 0,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_wide_set",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "kabir_root",
+          "asset": null,
+          "keys": [
+            {
+              "t": 0,
+              "x": 445,
+              "y": 550,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 430,
+              "y": 590,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "kabir_far_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": -17.702282018339783,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339784,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": -19.47213595499958,
+              "y": -113.52671151375483,
+              "scale": 1,
+              "rotation": -6.4721359549995805,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": -8.297717981660211,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": -6.527864045000422,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": -17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": -19.472135954999576,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": -6.472135954999576,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": -8.297717981660211,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": -6.527864045000422,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": -17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_near_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339785,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 19.47213595499958,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.47213595499958,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 8.297717981660217,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339784,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 6.5278640450004195,
+              "y": -113.52671151375483,
+              "scale": 1,
+              "rotation": -6.4721359549995805,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 19.47213595499958,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 8.297717981660213,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 6.527864045000424,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": -6.472135954999576,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_body",
+          "asset": "source_kabir_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "wave": {
+            "y": 2,
+            "cycles": 4,
+            "phase": 0.1
+          }
+        },
+        {
+          "id": "kabir_far_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 404.5,
+              "y": 423.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.125,
+              "x": 402.625,
+              "y": 430.3249223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.25,
+              "x": 400.75,
+              "y": 425.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.375,
+              "x": 398.875,
+              "y": 428.6750776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.5,
+              "x": 397.0,
+              "y": 443.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.625,
+              "x": 395.125,
+              "y": 450.3249223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.75,
+              "x": 393.25,
+              "y": 445.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.875,
+              "x": 391.375,
+              "y": 448.6750776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 1.0,
+              "x": 389.5,
+              "y": 463.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "kabir_body",
+            "parent_anchor": [
+              0.26,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          }
+        },
+        {
+          "id": "kabir_near_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 485.5,
+              "y": 415.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 483.625,
+              "y": 418.6750776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 481.75,
+              "y": 433.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 479.875,
+              "y": 440.3249223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 478.0,
+              "y": 435.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 476.125,
+              "y": 438.6750776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 474.25,
+              "y": 453.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 472.375,
+              "y": 460.3249223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 470.5,
+              "y": 455.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "kabir_body",
+            "parent_anchor": [
+              0.74,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          }
+        },
+        {
+          "id": "shadow_root",
+          "asset": null,
+          "keys": [
+            {
+              "t": 0,
+              "x": 265,
+              "y": 565,
+              "scale": 0.82,
+              "rotation": 0,
+              "opacity": 0.17
+            },
+            {
+              "t": 1,
+              "x": 280,
+              "y": 585,
+              "scale": 0.82,
+              "rotation": 0,
+              "opacity": 0.17
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "shadow_far_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": -17.702282018339783,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339784,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": -19.47213595499958,
+              "y": -113.52671151375483,
+              "scale": 1,
+              "rotation": -6.4721359549995805,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": -8.297717981660211,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": -6.527864045000422,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": -17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": -19.472135954999576,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": -6.472135954999576,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": -8.297717981660211,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": -6.527864045000422,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": -17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "shadow_root",
+          "pivot": [
+            0.5,
+            0
+          ],
+          "tint": "#293b40"
+        },
+        {
+          "id": "shadow_near_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339785,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 19.47213595499958,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.47213595499958,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 8.297717981660217,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339784,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 6.5278640450004195,
+              "y": -113.52671151375483,
+              "scale": 1,
+              "rotation": -6.4721359549995805,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 19.47213595499958,
+              "y": -110,
+              "scale": 1,
+              "rotation": 6.472135954999578,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 8.297717981660213,
+              "y": -110,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 6.527864045000424,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": -6.472135954999576,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "shadow_root",
+          "pivot": [
+            0.5,
+            0
+          ],
+          "tint": "#293b40"
+        },
+        {
+          "id": "shadow_body",
+          "asset": "source_kabir_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "shadow_root",
+          "wave": {
+            "y": 2,
+            "cycles": 4,
+            "phase": 0.1
+          },
+          "tint": "#293b40"
+        },
+        {
+          "id": "shadow_far_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 228.1,
+              "y": 449.95587125503863,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.125,
+              "x": 229.975,
+              "y": 453.90715148309965,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.25,
+              "x": 231.85,
+              "y": 447.24412874496136,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.375,
+              "x": 233.725,
+              "y": 448.29284851690034,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.5,
+              "x": 235.6,
+              "y": 459.95587125503863,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.625,
+              "x": 237.475,
+              "y": 463.90715148309965,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.75,
+              "x": 239.35,
+              "y": 457.24412874496136,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.875,
+              "x": 241.225,
+              "y": 458.29284851690034,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 1.0,
+              "x": 243.1,
+              "y": 469.95587125503863,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "shadow_body",
+            "parent_anchor": [
+              0.26,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          },
+          "tint": "#293b40"
+        },
+        {
+          "id": "shadow_near_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 301.9,
+              "y": 442.24412874496136,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 303.775,
+              "y": 443.29284851690034,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 305.65,
+              "y": 454.95587125503863,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 307.525,
+              "y": 458.90715148309965,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 309.4,
+              "y": 452.24412874496136,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 311.275,
+              "y": 453.29284851690034,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 313.15,
+              "y": 464.95587125503863,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 315.025,
+              "y": 468.90715148309965,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 316.9,
+              "y": 462.24412874496136,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "shadow_body",
+            "parent_anchor": [
+              0.74,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          },
+          "tint": "#293b40"
+        },
+        {
+          "id": "meera_root",
+          "asset": null,
+          "keys": [
+            {
+              "t": 0,
+              "x": 100,
+              "y": 570,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 115,
+              "y": 585,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_far_leg",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": -17.702282018339787,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": -6.527864045000423,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": 6.472135954999577,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": -8.297717981660211,
+              "y": -110,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": -19.472135954999573,
+              "y": -110,
+              "scale": 1,
+              "rotation": -6.472135954999574,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": -17.702282018339794,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": -4.702282018339792,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": -6.527864045000423,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": 6.472135954999577,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": -8.297717981660211,
+              "y": -110,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": -19.472135954999573,
+              "y": -110,
+              "scale": 1,
+              "rotation": -6.472135954999574,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": -17.702282018339794,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": -4.702282018339792,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "meera_near_leg",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": 4.702282018339786,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 6.527864045000421,
+              "y": -110,
+              "scale": 1,
+              "rotation": -6.472135954999579,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 8.297717981660213,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": -4.702282018339787,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 19.472135954999576,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": 6.472135954999577,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 6.527864045000426,
+              "y": -110,
+              "scale": 1,
+              "rotation": -6.472135954999574,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 8.297717981660208,
+              "y": -114.85410196624969,
+              "scale": 1,
+              "rotation": -4.702282018339792,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 19.472135954999576,
+              "y": -113.52671151375485,
+              "scale": 1,
+              "rotation": 6.472135954999577,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 17.702282018339787,
+              "y": -110,
+              "scale": 1,
+              "rotation": 4.702282018339789,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "meera_body",
+          "asset": "source_meera_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": -180,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": -180,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "wave": {
+            "y": 2,
+            "cycles": 4,
+            "phase": 0.4
+          }
+        },
+        {
+          "id": "meera_far_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 59.5,
+              "y": 443.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.125,
+              "x": 61.375,
+              "y": 435.5500776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.25,
+              "x": 63.25,
+              "y": 439.0179461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.375,
+              "x": 65.125,
+              "y": 450.9499223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.5,
+              "x": 67.0,
+              "y": 451.2320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.625,
+              "x": 68.875,
+              "y": 443.0500776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.75,
+              "x": 70.75,
+              "y": 446.5179461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.875,
+              "x": 72.625,
+              "y": 458.4499223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 1.0,
+              "x": 74.5,
+              "y": 458.7320538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_body",
+            "parent_anchor": [
+              0.26,
+              0.28
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        },
+        {
+          "id": "meera_near_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 140.5,
+              "y": 435.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 142.375,
+              "y": 447.1999223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 144.25,
+              "y": 447.4820538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 146.125,
+              "y": 439.3000776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 148.0,
+              "y": 442.7679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 149.875,
+              "y": 454.6999223594996,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 151.75,
+              "y": 454.9820538165058,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 153.625,
+              "y": 446.8000776405004,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 155.5,
+              "y": 450.2679461834942,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_body",
+            "parent_anchor": [
+              0.74,
+              0.28
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_meera_set",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "kabir_shadow_on_silk",
+          "asset": "source_kabir_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 485,
+              "y": 515,
+              "scale": 0.95,
+              "rotation": 0,
+              "opacity": 0.08
+            },
+            {
+              "t": 1,
+              "x": 465,
+              "y": 515,
+              "scale": 0.95,
+              "rotation": 0,
+              "opacity": 0.2
+            }
+          ],
+          "role": "foreground",
+          "tint": "#31464b"
+        },
+        {
+          "id": "meera_torso",
+          "asset": "source_meera_torso",
+          "keys": [
+            {
+              "t": 0,
+              "x": 80,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": -0.5,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 90,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": 1,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_reaching_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0,
+              "x": 315,
+              "y": 700,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.55,
+              "x": 330,
+              "y": 655,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 335,
+              "y": 637,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_torso",
+            "parent_anchor": [
+              0.77,
+              0.49
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        }
+      ]
+    },
     {
       "index": 2,
       "nodes": [
@@ -196,12 +1683,1443 @@
           }
         }
       ]
+    },
+    {
+      "index": 3,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_meera_set",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "kabir_hand_through_silk",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0,
+              "x": 440,
+              "y": 620,
+              "scale": 0.3,
+              "rotation": 0,
+              "opacity": 0.38
+            },
+            {
+              "t": 1,
+              "x": 440,
+              "y": 620,
+              "scale": 0.3,
+              "rotation": 0,
+              "opacity": 0.6
+            }
+          ],
+          "role": "foreground",
+          "tint": "#31464b"
+        },
+        {
+          "id": "silk_contact",
+          "asset": "touch_tension_halo",
+          "keys": [
+            {
+              "t": 0,
+              "x": 360,
+              "y": 625,
+              "scale": 0.4,
+              "rotation": 0,
+              "opacity": 0.05
+            },
+            {
+              "t": 0.45,
+              "x": 360,
+              "y": 625,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0.18
+            },
+            {
+              "t": 1,
+              "x": 360,
+              "y": 625,
+              "scale": 0.7,
+              "rotation": 0,
+              "opacity": 0.1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_torso",
+          "asset": "source_meera_torso",
+          "keys": [
+            {
+              "t": 0,
+              "x": 80,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": -0.5,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 90,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": 1,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_reaching_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0,
+              "x": 335,
+              "y": 648,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 340,
+              "y": 637,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 340,
+              "y": 637,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_torso",
+            "parent_anchor": [
+              0.77,
+              0.49
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_wide_set",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "kabir_root",
+          "asset": null,
+          "keys": [
+            {
+              "t": 0,
+              "x": 440,
+              "y": 555,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 425,
+              "y": 605,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "kabir_far_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": -21.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": -13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": -5.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": -12.999999999999998,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": -21.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": -13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": -5.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": -12.999999999999998,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": -21.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_near_leg",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 21.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 13.000000000000002,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 5.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 21.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 13.000000000000002,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 5.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 21.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_body",
+          "asset": "source_kabir_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": -170,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "kabir_root",
+          "wave": {
+            "y": 2,
+            "cycles": 4,
+            "phase": 0.25
+          }
+        },
+        {
+          "id": "kabir_far_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 399.5,
+              "y": 431.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.125,
+              "x": 397.625,
+              "y": 430.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.25,
+              "x": 395.75,
+              "y": 429.79999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.375,
+              "x": 393.875,
+              "y": 443.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.5,
+              "x": 392.0,
+              "y": 456.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.625,
+              "x": 390.125,
+              "y": 455.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.75,
+              "x": 388.25,
+              "y": 454.79999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.875,
+              "x": 386.375,
+              "y": 468.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 1.0,
+              "x": 384.5,
+              "y": 481.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "kabir_body",
+            "parent_anchor": [
+              0.26,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          }
+        },
+        {
+          "id": "kabir_near_arm",
+          "asset": "kabir_reaching_forearm_hand",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 480.5,
+              "y": 417.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 478.625,
+              "y": 430.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 476.75,
+              "y": 444.2,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 474.875,
+              "y": 443.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 473.0,
+              "y": 442.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 471.125,
+              "y": 455.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 469.25,
+              "y": 469.2,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 467.375,
+              "y": 468.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 465.5,
+              "y": 467.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "kabir_body",
+            "parent_anchor": [
+              0.74,
+              0.28
+            ],
+            "proximal": [
+              0.95,
+              0.68
+            ],
+            "distal": [
+              0.22,
+              0.64
+            ]
+          }
+        },
+        {
+          "id": "meera_root",
+          "asset": null,
+          "keys": [
+            {
+              "t": 0,
+              "x": 105,
+              "y": 555,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 120,
+              "y": 605,
+              "scale": 0.9,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_far_leg",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": -5.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": -12.999999999999998,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": -21.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": -13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": -5.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": -12.999999999999998,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": -21.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": -13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": -5.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "meera_near_leg",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 5.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 21.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 13.000000000000002,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 5.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 13.0,
+              "y": -116.0,
+              "scale": 1,
+              "rotation": 0.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 21.0,
+              "y": -110.0,
+              "scale": 1,
+              "rotation": 8.0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 13.000000000000002,
+              "y": -110,
+              "scale": 1,
+              "rotation": 9.797174393178826e-16,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 5.0,
+              "y": -110,
+              "scale": 1,
+              "rotation": -8.0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "meera_body",
+          "asset": "source_meera_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": -180,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": -180,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "parent": "meera_root",
+          "wave": {
+            "y": 2,
+            "cycles": 4,
+            "phase": 0.75
+          }
+        },
+        {
+          "id": "meera_far_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 64.5,
+              "y": 417.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.125,
+              "x": 66.375,
+              "y": 430.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.25,
+              "x": 68.25,
+              "y": 444.2,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.375,
+              "x": 70.125,
+              "y": 443.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.5,
+              "x": 72.0,
+              "y": 442.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.625,
+              "x": 73.875,
+              "y": 455.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.75,
+              "x": 75.75,
+              "y": 469.2,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 0.875,
+              "x": 77.625,
+              "y": 468.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            },
+            {
+              "t": 1.0,
+              "x": 79.5,
+              "y": 467.29999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 0.7
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_body",
+            "parent_anchor": [
+              0.26,
+              0.28
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        },
+        {
+          "id": "meera_near_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0.0,
+              "x": 145.5,
+              "y": 431.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.125,
+              "x": 147.375,
+              "y": 430.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 149.25,
+              "y": 429.79999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.375,
+              "x": 151.125,
+              "y": 443.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 153.0,
+              "y": 456.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.625,
+              "x": 154.875,
+              "y": 455.75,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 156.75,
+              "y": 454.79999999999995,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.875,
+              "x": 158.625,
+              "y": 468.25,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1.0,
+              "x": 160.5,
+              "y": 481.7,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_body",
+            "parent_anchor": [
+              0.74,
+              0.28
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_meera_set",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1.2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "kabir_shadow_on_silk",
+          "asset": "source_kabir_walk",
+          "keys": [
+            {
+              "t": 0,
+              "x": 485,
+              "y": 515,
+              "scale": 0.95,
+              "rotation": 0,
+              "opacity": 0.08
+            },
+            {
+              "t": 1,
+              "x": 465,
+              "y": 515,
+              "scale": 0.95,
+              "rotation": 0,
+              "opacity": 0.2
+            }
+          ],
+          "role": "foreground",
+          "tint": "#31464b"
+        },
+        {
+          "id": "meera_torso",
+          "asset": "source_meera_reaction",
+          "keys": [
+            {
+              "t": 0,
+              "x": 80,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": -0.5,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 75,
+              "y": 650,
+              "scale": 1.4,
+              "rotation": -2,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground"
+        },
+        {
+          "id": "meera_reaching_arm",
+          "asset": "source_meera_arm",
+          "keys": [
+            {
+              "t": 0,
+              "x": 335,
+              "y": 637,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 295,
+              "y": 685,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 260,
+              "y": 710,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "attachment": {
+            "parent": "meera_torso",
+            "parent_anchor": [
+              0.77,
+              0.49
+            ],
+            "proximal": [
+              0.045,
+              0.6
+            ],
+            "distal": [
+              0.82,
+              0.68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "nodes": [
+        {
+          "id": "source_set",
+          "asset": "source_hem_floor",
+          "keys": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 0,
+              "y": 0,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "background",
+          "pivot": [
+            0,
+            0
+          ],
+          "painted_set": true
+        },
+        {
+          "id": "meera_back_foot",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0,
+              "x": 143,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.65,
+              "x": 143,
+              "y": 275,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 143,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "meera_front_foot",
+          "asset": "source_meera_leg",
+          "keys": [
+            {
+              "t": 0,
+              "x": 187,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.65,
+              "x": 205,
+              "y": 275,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 205,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_back_foot",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0,
+              "x": 358,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.65,
+              "x": 358,
+              "y": 275,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 358,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "kabir_front_foot",
+          "asset": "source_kabir_leg",
+          "keys": [
+            {
+              "t": 0,
+              "x": 402,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.65,
+              "x": 384,
+              "y": 275,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 384,
+              "y": 280,
+              "scale": 2,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "wind_lifts_hem_0",
+          "asset": "source_hem_cloth",
+          "keys": [
+            {
+              "t": 0,
+              "x": 125,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 125,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.55,
+              "x": 130,
+              "y": -80,
+              "scale": 0.81,
+              "rotation": 1,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 130,
+              "y": -80,
+              "scale": 0.81,
+              "rotation": 1,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 125,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "id": "wind_lifts_hem_1",
+          "asset": "source_hem_cloth",
+          "keys": [
+            {
+              "t": 0,
+              "x": 415,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.25,
+              "x": 415,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
+              "t": 0.55,
+              "x": 420,
+              "y": -80,
+              "scale": 0.81,
+              "rotation": -1,
+              "opacity": 1
+            },
+            {
+              "t": 0.75,
+              "x": 420,
+              "y": -80,
+              "scale": 0.81,
+              "rotation": -1,
+              "opacity": 1
+            },
+            {
+              "t": 1,
+              "x": 415,
+              "y": -80,
+              "scale": 1,
+              "rotation": 0,
+              "opacity": 1
+            }
+          ],
+          "role": "foreground",
+          "pivot": [
+            0.5,
+            0
+          ]
+        }
+      ]
     }
   ],
   "scene_fingerprints": {
+    "0": [
+      "237360e5e6755f556175a0fc3f69de397b2b50703dae732efef73e47e6a24b36",
+      "baeeb909fb644b510970931e492b0c036c534b71b80950394bdf115754cfa6df"
+    ],
+    "1": [
+      "98e7923580917cb85525fd3aae53769deeaae342b5d9dc1df152ba2b8742b6e1",
+      "30931e8176f272ef5dcc5ee7c165a79c661a4c4123a966a90187ef796ab173d6"
+    ],
     "2": [
       "9fdb217a0086eb76e3178670367b3b500b9440ade4a9c5e0e867db61de8b8625",
       "b9ffcf5934fe30ed40822f0058d24a092e8d7cfdb43db519de81a67eae740131"
+    ],
+    "3": [
+      "165cb08f9aa700548baa5689c839368044f9d419f4f0b59ff8a3daefa565ede9",
+      "333c9d8b4e5f06eaa7b5b616b75f61d722a7967eb0ad38e2ce8611be51285690"
+    ],
+    "4": [
+      "e182476413d07c335704abb19fffafff05829b5e2ea088d6afa6d2bd1f2c2d5d",
+      "a2f8df58eadade94c8b56c7ad3fb0bb2dcbe155d612c2c86c31b4f38b9e4d4a3"
+    ],
+    "5": [
+      "bb9087b9e9a14bf1f1a1436318edb0a327c1a68dd7f835d752dcbdc754f34813",
+      "c1b2cf994d8e2152860428bc65f6ad171ebd2d2cdd4d53ecadfa8241259cdf56"
+    ],
+    "6": [
+      "46486109060bddaca34db7372b63f3ac53cc5c9acfda620f7b2025bb9ac6e515",
+      "6b72d1ee4bf98209f63cb2fa2a4c6bdf22590e85105d95af8aa3d3a2ea9e5560"
     ]
   }
 }

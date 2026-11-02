@@ -127,14 +127,18 @@ jobs:
             song-generated-v7-${{ hashFiles(matrix.audio) }}-
       - name: Check lyrics and connected story before loading the image models
         run: python -m song_animation.resume --audio "$AUDIO_PATH" --out song_draft --width 1080 --artwork "$ARTWORK" --stage plan
+      - name: Classify exact source artwork dependencies
+        id: artwork_access
+        run: python -m song_animation.art_dependencies
       - uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
           key: song-painted-sd-turbo-b261bac6
       - name: Install original cutout image backend
-        if: env.ARTWORK == 'flux-layers'
+        if: env.ARTWORK == 'flux-layers' && steps.artwork_access.outputs.needs_cutouts != 'false'
         run: pip install -r song_animation/requirements-cutouts.txt
       - name: Install CPU painting backend after planning passed
+        if: steps.artwork_access.outputs.needs_cpu != 'false'
         run: |
           pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
           pip install -r song_animation/requirements-painted.txt

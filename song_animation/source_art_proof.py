@@ -11,6 +11,7 @@ def run(out='song_source_proofs'):
         data=json.loads(spec.read_text());folder=spec.parent
         manifest=json.loads((folder/'manifest.json').read_text());plan=data['plan']
         for aid,item in manifest['assets'].items():
+            if aid not in plan['assets']:continue
             p=(folder/item['file']).resolve()
             if not p.is_relative_to(folder.resolve()):raise ValueError('Proof artwork leaves source folder')
             raw=p.read_bytes()

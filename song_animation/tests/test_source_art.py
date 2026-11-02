@@ -27,3 +27,20 @@ class SourceBoundArt(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td,patch.dict(sys.modules,{'rembg':types.SimpleNamespace(new_session=lambda **k:None)}),patch('song_animation.flux_layers.generate_image',side_effect=AssertionError('Provider must not repaint locked source assets')):
             def forbidden(*a,**k):raise AssertionError('Provider must not repaint locked source assets')
             self.assertEqual(paint_foreground(p,td,image_generator=forbidden,preserved_assets=active),p)
+
+    def test_one_changed_scene_keeps_other_scene_art_without_overwriting_shared_repair(self):
+        p=json.loads((Path(__file__).parents[1]/'examples/vector_smoke.json').read_text())
+        p['scenes'][1]['nodes'][-1]['asset']='kite'
+        with tempfile.TemporaryDirectory() as td:
+            source='c'*64;folder=Path(td)/source;folder.mkdir();file=folder/'kite.png';Image.new('RGBA',(80,100),'blue').save(file)
+            item={'file':'kite.png','sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'width':80,'height':100,'provider':'original art'}
+            manifest={'source_clip_sha256':source,'assets':{'kite':item},'scene_fingerprints':{str(i):[scene_fingerprint(p['scenes'][i])] for i in (0,1)},'scenes':[{'index':i,'nodes':p['scenes'][i]['nodes']} for i in (0,1)]}
+            (folder/'manifest.json').write_text(json.dumps(manifest))
+            p['scenes'][1]['label']='new repaired staging'
+            fixed,locked,scenes=apply(p,source,td)
+            alias=next(iter(locked));self.assertNotEqual(alias,'kite');self.assertEqual(scenes,{0})
+            self.assertEqual(fixed['scenes'][0]['nodes'][1]['asset'],alias)
+            self.assertEqual(fixed['scenes'][1]['nodes'][-1]['asset'],'kite')
+            self.assertNotIn('raster_png',fixed['assets']['kite'])
+            resumed,locked2,scenes2=apply(fixed,source,td)
+            self.assertEqual(locked2,locked);self.assertEqual(scenes2,scenes)
