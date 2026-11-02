@@ -1,9 +1,9 @@
-name: Jewel Wasp V6.8 Egg and Larva Targeted DRAFT QA
+name: Jewel Wasp V6.8 Integrated Story Targeted DRAFT QA
 on:
   workflow_dispatch:
     inputs:
       render_proofs:
-        description: 'Render targeted egg and larva still/motion proofs after preflight review'
+        description: 'Render targeted story-action stills and 24-frame motion proofs after preflight'
         type: boolean
         required: false
         default: false
@@ -12,13 +12,14 @@ on:
       - ".github/workflows/jewel_wasp_v68_egg_larva_targeted_draft.yml"
       - "src/jewel_wasp_v68_story_draft.py"
       - "src/jewel_wasp_v68_anatomy_proof.py"
+      - "ops/JW_V68_TARGETED_PROOF_REQUEST.txt"
 permissions:
   contents: read
 concurrency:
-  group: jewel-wasp-v68-egg-larva-targeted-draft
+  group: jewel-wasp-v68-integrated-targeted-draft
   cancel-in-progress: false
 jobs:
-  egg-larva-proof:
+  integrated-story-proof:
     runs-on: ubuntu-latest
     timeout-minutes: 105
     steps:
@@ -37,16 +38,23 @@ jobs:
           set -euo pipefail
           mkdir -p targeted-proof
           python3 -m py_compile src/jewel_wasp_v68_anatomy_proof.py src/jewel_wasp_v68_story_draft.py
-          for chapter in 11 12; do
+          for chapter in 3 5 8 10 11 12 13; do
             echo "PREFLIGHT $chapter"
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "targeted-proof/preflight_$chapter.log"; exit 1; }
             grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "targeted-proof/preflight_$chapter.log"
           done
-      - name: Render camera-facing egg and larva stills and actual motion (explicit opt-in)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.render_proofs == true }}
+      - name: Render selected action stills and 24-frame motion proofs (explicit authorization only)
+        if: ${{ (github.event_name == 'workflow_dispatch' && inputs.render_proofs == true) || (github.event_name == 'push' && github.event.head_commit.message == 'JW_V68_TARGETED_PROOF_REQUEST_APPROVED') }}
         run: |
           set -euo pipefail
-          for spec in 11:140 11:205 12:120 12:180; do
+          # Reject stale or unauthorized requests before spending render minutes.
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            test -s ops/JW_V68_TARGETED_PROOF_REQUEST.txt
+            grep -qx "STORY_BLOB_SHA=$(git hash-object src/jewel_wasp_v68_story_draft.py)" ops/JW_V68_TARGETED_PROOF_REQUEST.txt
+            grep -qx 'DRAFT_ONLY=YES' ops/JW_V68_TARGETED_PROOF_REQUEST.txt
+            grep -qx 'FINAL_APPROVAL=NO' ops/JW_V68_TARGETED_PROOF_REQUEST.txt
+          fi
+          for spec in 3:145 5:145 8:155 10:145 10:195 11:170 12:120 12:180 13:145 13:180; do
             chapter="${spec%%:*}"; frame="${spec##*:}"
             echo "DRAFT_STILL $chapter $frame"
             JW_MODE=still JW_CHAPTER="$chapter" JW_STILL_FRAME="$frame" JW_RES_PERCENT=100 BLENDER_OUTPUT="$PWD/targeted-proof/ch${chapter}_f${frame}_raw.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/still_${chapter}_${frame}.log" 2>&1 || { tail -n 100 "targeted-proof/still_${chapter}_${frame}.log"; exit 1; }
@@ -54,7 +62,7 @@ jobs:
             rm "targeted-proof/ch${chapter}_f${frame}_raw.png"
             test -s "targeted-proof/ch${chapter}_f${frame}_DRAFT.png"
           done
-          for spec in 11:140 12:108; do
+          for spec in 3:118 8:118 10:168 11:152 12:112 13:145; do
             chapter="${spec%%:*}"; start="${spec##*:}"
             echo "DRAFT_MOTION $chapter $start"
             JW_MODE=motion JW_CHAPTER="$chapter" JW_MOTION_START="$start" JW_RES_PERCENT=75 BLENDER_OUTPUT="$PWD/targeted-proof/ch${chapter}_raw.mp4" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_draft.py > "targeted-proof/motion_${chapter}.log" 2>&1 || { tail -n 120 "targeted-proof/motion_${chapter}.log"; exit 1; }
@@ -64,11 +72,11 @@ jobs:
             test "$(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "targeted-proof/ch${chapter}_DRAFT.mp4")" = 24
             ffmpeg -y -loglevel error -i "targeted-proof/ch${chapter}_DRAFT.mp4" -vf "select='eq(n,0)+eq(n,7)+eq(n,15)+eq(n,23)',scale=270:480,tile=4x1" -frames:v 1 "targeted-proof/ch${chapter}_motion_strip.png"
           done
-          # The actual 4-shot contact sheet is evidence for human visual QA,
+          # The actual 10-shot contact sheet is evidence for human visual QA,
           # not an automated visual approval or a replacement for motion review.
-          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'targeted-proof/ch*_f*_DRAFT.png' -vf "scale=270:480,tile=2x2" -frames:v 1 "targeted-proof/DRAFT_EGG_LARVA_CONTACT.png"
-          test -s "targeted-proof/DRAFT_EGG_LARVA_CONTACT.png"
-          echo "TARGETED_DRAFT_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
+          ffmpeg -y -loglevel error -framerate 1 -pattern_type glob -i 'targeted-proof/ch*_f*_DRAFT.png' -vf "scale=270:480,tile=5x2" -frames:v 1 "targeted-proof/DRAFT_STORY_ACTION_CONTACT.png"
+          test -s "targeted-proof/DRAFT_STORY_ACTION_CONTACT.png"
+          echo "INTEGRATED_STORY_PROOF_TECHNICAL_PASS__VISUAL_QA_REQUIRED"
       - name: Record evidence provenance and unapproved visual status
         if: always()
         run: |
@@ -79,8 +87,9 @@ jobs:
           (p/"QA.json").write_text(json.dumps(dict(
             source_sha=os.environ.get("GITHUB_SHA"),
             story_renderer_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-            chapters=[11,12],still_frames={"11":[140,205],"12":[120,180]},
-            motion_windows={"11":[140,163],"12":[108,131]},
+            chapters=[3,5,8,10,11,12,13],
+            still_frames={"3":[145],"5":[145],"8":[155],"10":[145,195],"11":[170],"12":[120,180],"13":[145,180]},
+            motion_windows={"3":[118,141],"8":[118,141],"10":[168,191],"11":[152,175],"12":[112,135],"13":[145,168]},
             draft_only=True,visual_approved=False,final_film=False,
             old_successful_chapters_untouched=True,
             status="Technical evidence only; independent still and animated visual QA required"
@@ -89,7 +98,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: jewel-wasp-v68-egg-larva-targeted-draft-proof
+          name: jewel-wasp-v68-integrated-story-targeted-draft-proof
           path: targeted-proof/
           if-no-files-found: warn
           retention-days: 14
