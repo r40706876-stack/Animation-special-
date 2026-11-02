@@ -20,6 +20,7 @@ def load_analysis_checkpoint(out,key,duration):
 
 def cached_reference(source,selection):
     """Only reuse exact-source analysis when no vocal phrase was cut in half."""
+    if os.getenv('SONG_ACCEPTANCE_COLD_START')=='1':return None
     if selection['start']!=0:return None
     p=Path(__file__).parent/'fixtures'/'lyrics_by_sha'/(selection['source_sha256']+'.json')
     if not p.exists():return None

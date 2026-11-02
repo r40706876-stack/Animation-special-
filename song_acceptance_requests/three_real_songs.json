@@ -1,0 +1,10 @@
+{
+  "audio_paths": [
+    "song_animation/inputs/ritik_new_song_20261030.mp3",
+    "song_animation/inputs/reference.mp3",
+    "song_animation/inputs/song_1000076620.m4a"
+  ],
+  "require_fresh_audio_analysis": true,
+  "allow_preserved_manual_source_art": false,
+  "quality_gates": "unchanged full production composition, decoded export, source audio and technical checks"
+}

@@ -1,21 +1,21 @@
-name: Song quality acceptance - three different inputs
+name: Song quality acceptance - three real inputs
 on:
   push:
-    branches: ['feature/song-animation-*']
-    paths: ['.github/workflows/song_quality_acceptance.yml']
+    branches: ['main']
+    paths: ['song_acceptance_requests/**']
+  workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: song-animation-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   exercise:
-    runs-on: ubuntu-latest
-    timeout-minutes: 50
-    strategy:
-      fail-fast: false
-      max-parallel: 2
-      matrix:
-        audio: [reference.mp3, ritik_new_song_20261030.mp3, DEMO_festival_12s.mp3]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 270
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
       HF_HUB_DISABLE_XET: '1'
       HF_HUB_DOWNLOAD_TIMEOUT: '120'
     steps:
@@ -23,14 +23,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: |
-          sudo apt-get update -qq
+          cache: pip
+          cache-dependency-path: song_animation/requirements.txt
+      - name: Install production render and image backends
+        run: |
+          sudo apt-get -o Acquire::Retries=3 update
           sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-cjk libcairo2
-          pip install -r song_animation/requirements.txt
-      - run: python -m song_animation.run --audio "song_animation/inputs/${{ matrix.audio }}" --out acceptance --width 1080
+          pip install -r song_animation/requirements.txt -r song_animation/requirements-cutouts.txt
+          pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r song_animation/requirements-painted.txt
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub/models--stabilityai--sd-turbo
+          key: song-painted-sd-turbo-b261bac6
+      - name: Verify renderer regressions
+        run: python -m unittest discover -s song_animation/tests -q
+      - name: Three real songs from fresh analysis through full production gates
+        run: python -m song_animation.acceptance_suite --manifest song_acceptance_requests/three_real_songs.json --out song_acceptance
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: quality-acceptance-${{ matrix.audio }}
-          path: acceptance/
+          name: song-real-input-acceptance-${{ github.run_id }}
+          path: song_acceptance/
           retention-days: 7
+          if-no-files-found: warn

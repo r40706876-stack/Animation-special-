@@ -1,5 +1,5 @@
 """Source-bound original-art checkpoints; byte integrity is not visual approval."""
-import base64,copy,hashlib,json
+import base64,copy,hashlib,json,os
 from pathlib import Path
 from .vector import validate_vector,decode_painted
 ROOT=Path(__file__).parent/'source_art'
@@ -14,6 +14,7 @@ def scene_fingerprint(scene):
     return hashlib.sha256(json.dumps(scene,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 
 def apply(plan,source_sha256,root=ROOT):
+    if os.getenv('SONG_ACCEPTANCE_COLD_START')=='1':return plan,set(),set()
     folder=Path(root)/source_sha256;manifest=folder/'manifest.json'
     if not manifest.is_file():return plan,set(),set()
     data=json.loads(manifest.read_text())
