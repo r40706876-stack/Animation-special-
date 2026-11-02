@@ -311,17 +311,17 @@ if chapter==12:
     # No sharp equatorial seam, hard shell, oversized head or detached mass.
     larvamat=material("soft warm ochre internal larva",
                       (.43,.275,.155),rough=.98,noise=4)
-    verts=[];faces=[];nring=57;nsides=24;radial_y=.056
+    verts=[];faces=[];nring=57;nsides=24;radial_y=.070
     for i in range(nring):
         t=i/(nring-1)
         soft=max(.08,math.sin(math.pi*t)**.52)
-        segmentation=1-.065*(.5+.5*math.cos(14*math.pi*t))
+        segmentation=1-.17*(.5+.5*math.cos(14*math.pi*t))
         radius=soft*segmentation
         x=-.21+.42*t
         for j in range(nsides):
             angle=2*math.pi*j/nsides
             verts.append((x,radial_y*radius*math.cos(angle),
-                          .046*radius*math.sin(angle)+.008*math.sin(math.pi*t)))
+                          .056*radius*math.sin(angle)+.008*math.sin(math.pi*t)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;kn=k+(j+1)%nsides
@@ -362,15 +362,16 @@ camera.animation_data_clear();camera_data.animation_data_clear()
 camera_data.type="PERSP"
 camera_data.sensor_fit="VERTICAL";camera_data.sensor_height=24
 camera_data.lens=45
-shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.25,1.9,
-            3.15,2.7,3.6,2.85,1.90,.94,3.2]
+shot_sizes=[4.5,3.65,3.3,2.25,2.1,2.05,1.9,
+            3.15,2.20,3.6,2.65,2.60,.94,3.2]
 offsets=[
     (1,-5.2,2.2),(-2.8,-4.0,1.1),(2.5,-4.0,1.0),
-    (1.5,-3.4,.9),(-1.1,-3.2,1.2),(-1.5,-2.8,.7),
+    (1.5,-3.4,.9),(-1.1,-3.2,1.2),(2.5,-2.2,2.1),
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
-    (1.0,-4.4,2.4),(-1.6,-3.8,2.4),(.35,-3.0,.65),
+    (1.0,-4.4,2.4),(-1.6,-3.8,3.2),(.35,-3.0,.65),
     (-.35,-3.6,1.2),(-2.0,-5.0,2.3)]
-for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
+for f in ((1,60,120,180,240) if chapter==13 else
+          (1,120,170,205,240) if chapter==11 else (1,120,240)):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
     if chapter in (3,5):
@@ -406,6 +407,8 @@ for f in ((1,60,120,180,240) if chapter==13 else (1,120,240)):
     off=Vector(offsets[chapter]).normalized()
     # Portrait vertical field of view: height=distance*sensor_height/lens.
     height=(2.50+.55*max(0,f-180)/60.0 if chapter==13 else
+            {1:2.90,120:2.40,170:1.60,205:1.85,240:2.50}[f]
+            if chapter==11 else
             shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1))
     camera.location=focus+off*(height*camera_data.lens/camera_data.sensor_height)
     camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
