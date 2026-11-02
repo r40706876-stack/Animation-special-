@@ -44,3 +44,18 @@ class SourceBoundArt(unittest.TestCase):
             self.assertNotIn('raster_png',fixed['assets']['kite'])
             resumed,locked2,scenes2=apply(fixed,source,td)
             self.assertEqual(locked2,locked);self.assertEqual(scenes2,scenes)
+
+    def test_song_closeups_use_complete_connected_people_not_detached_arm_overlays(self):
+        source='ce14e61ef908a14ce98dd999415fa81eb4c449462de0d6cfbab97e62afb24441'
+        folder=Path(__file__).parents[1]/'source_art'/source
+        manifest=json.loads((folder/'manifest.json').read_text())
+        expected={1:'source_meera_raise_connected',3:'source_meera_touch_connected',5:'source_meera_lower_connected'}
+        for index,asset in expected.items():
+            nodes=manifest['scenes'][index]['nodes']
+            self.assertIn(asset,{n.get('asset') for n in nodes})
+            self.assertNotIn('source_meera_arm',{n.get('asset') for n in nodes})
+            item=manifest['assets'][asset]
+            raw=(folder/item['file']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(),item['sha256'])
+            self.assertGreater(item['width'],1000)
+            self.assertGreater(item['height'],1500)

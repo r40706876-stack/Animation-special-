@@ -231,6 +231,33 @@
       "height": 24,
       "provider": "Native renderer ground-contact effect",
       "quality_certified": false
+    },
+    "source_meera_raise_connected": {
+      "file": "source_meera_raise_connected.png",
+      "sha256": "d5f628135d4c7890eed9216175b017a1cc3daaec11a67cc1d4b7287d5e4f6c84",
+      "width": 1032,
+      "height": 1523,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "d5f628135d4c7890eed9216175b017a1cc3daaec11a67cc1d4b7287d5e4f6c84",
+      "quality_certified": false
+    },
+    "source_meera_touch_connected": {
+      "file": "source_meera_touch_connected.png",
+      "sha256": "bad760b4eb723859ea1c6a556e04bacd4c028f670717a41bea4caeaaabd462d0",
+      "width": 1032,
+      "height": 1523,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "bad760b4eb723859ea1c6a556e04bacd4c028f670717a41bea4caeaaabd462d0",
+      "quality_certified": false
+    },
+    "source_meera_lower_connected": {
+      "file": "source_meera_lower_connected.png",
+      "sha256": "364e54c919ae787c1ecc108e5d24f3fa9724cbe4c427c0fd18ec7ef1ceb9d7e0",
+      "width": 1024,
+      "height": 1536,
+      "provider": "ChatGPT built-in image generation",
+      "original_file_sha256": "364e54c919ae787c1ecc108e5d24f3fa9724cbe4c427c0fd18ec7ef1ceb9d7e0",
+      "quality_certified": false
     }
   },
   "scenes": [
@@ -460,73 +487,35 @@
           "tint": "#31464b"
         },
         {
-          "id": "meera_torso",
-          "asset": "source_meera_torso",
+          "id": "meera_connected_raise",
+          "asset": "source_meera_raise_connected",
           "keys": [
             {
               "t": 0,
-              "x": 80,
-              "y": 650,
-              "scale": 1.4,
+              "x": 100,
+              "y": 555,
+              "scale": 0.52,
               "rotation": -0.5,
               "opacity": 1
             },
             {
+              "t": 0.55,
+              "x": 108,
+              "y": 548,
+              "scale": 0.52,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
               "t": 1,
-              "x": 90,
-              "y": 650,
-              "scale": 1.4,
-              "rotation": 1,
+              "x": 115,
+              "y": 545,
+              "scale": 0.52,
+              "rotation": 0.5,
               "opacity": 1
             }
           ],
           "role": "foreground"
-        },
-        {
-          "id": "meera_reaching_arm",
-          "asset": "source_meera_arm",
-          "keys": [
-            {
-              "t": 0,
-              "x": 315,
-              "y": 700,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 0.55,
-              "x": 330,
-              "y": 655,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 1,
-              "x": 335,
-              "y": 637,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            }
-          ],
-          "role": "foreground",
-          "attachment": {
-            "parent": "meera_torso",
-            "parent_anchor": [
-              0.77,
-              0.49
-            ],
-            "proximal": [
-              0.045,
-              0.6
-            ],
-            "distal": [
-              0.82,
-              0.68
-            ]
-          }
         }
       ]
     },
@@ -779,73 +768,35 @@
           "role": "foreground"
         },
         {
-          "id": "meera_torso",
-          "asset": "source_meera_torso",
+          "id": "meera_connected_touch",
+          "asset": "source_meera_touch_connected",
           "keys": [
             {
               "t": 0,
-              "x": 80,
-              "y": 650,
-              "scale": 1.4,
+              "x": 90,
+              "y": 560,
+              "scale": 0.53,
               "rotation": -0.5,
               "opacity": 1
             },
             {
+              "t": 0.5,
+              "x": 100,
+              "y": 552,
+              "scale": 0.53,
+              "rotation": 0,
+              "opacity": 1
+            },
+            {
               "t": 1,
-              "x": 90,
-              "y": 650,
-              "scale": 1.4,
-              "rotation": 1,
+              "x": 107,
+              "y": 548,
+              "scale": 0.53,
+              "rotation": 0.5,
               "opacity": 1
             }
           ],
           "role": "foreground"
-        },
-        {
-          "id": "meera_reaching_arm",
-          "asset": "source_meera_arm",
-          "keys": [
-            {
-              "t": 0,
-              "x": 335,
-              "y": 648,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 0.5,
-              "x": 340,
-              "y": 637,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 1,
-              "x": 340,
-              "y": 637,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            }
-          ],
-          "role": "foreground",
-          "attachment": {
-            "parent": "meera_torso",
-            "parent_anchor": [
-              0.77,
-              0.49
-            ],
-            "proximal": [
-              0.045,
-              0.6
-            ],
-            "distal": [
-              0.82,
-              0.68
-            ]
-          }
         }
       ]
     },
@@ -1024,73 +975,35 @@
           "tint": "#31464b"
         },
         {
-          "id": "meera_torso",
-          "asset": "source_meera_reaction",
+          "id": "meera_connected_lower",
+          "asset": "source_meera_lower_connected",
           "keys": [
             {
               "t": 0,
               "x": 80,
-              "y": 650,
-              "scale": 1.4,
+              "y": 565,
+              "scale": 0.52,
               "rotation": -0.5,
+              "opacity": 1
+            },
+            {
+              "t": 0.5,
+              "x": 78,
+              "y": 570,
+              "scale": 0.52,
+              "rotation": -1,
               "opacity": 1
             },
             {
               "t": 1,
               "x": 75,
-              "y": 650,
-              "scale": 1.4,
-              "rotation": -2,
+              "y": 575,
+              "scale": 0.52,
+              "rotation": -1.5,
               "opacity": 1
             }
           ],
           "role": "foreground"
-        },
-        {
-          "id": "meera_reaching_arm",
-          "asset": "source_meera_arm",
-          "keys": [
-            {
-              "t": 0,
-              "x": 335,
-              "y": 637,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 0.5,
-              "x": 295,
-              "y": 685,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            },
-            {
-              "t": 1,
-              "x": 260,
-              "y": 710,
-              "scale": 1,
-              "rotation": 0,
-              "opacity": 1
-            }
-          ],
-          "role": "foreground",
-          "attachment": {
-            "parent": "meera_torso",
-            "parent_anchor": [
-              0.77,
-              0.49
-            ],
-            "proximal": [
-              0.045,
-              0.6
-            ],
-            "distal": [
-              0.82,
-              0.68
-            ]
-          }
         }
       ]
     },
@@ -1379,7 +1292,8 @@
     ],
     "1": [
       "98e7923580917cb85525fd3aae53769deeaae342b5d9dc1df152ba2b8742b6e1",
-      "30931e8176f272ef5dcc5ee7c165a79c661a4c4123a966a90187ef796ab173d6"
+      "30931e8176f272ef5dcc5ee7c165a79c661a4c4123a966a90187ef796ab173d6",
+      "04f149413d629f8b0d5cd27a78910d55041575bf23146e65ea7a2deeb651cdc7"
     ],
     "2": [
       "9fdb217a0086eb76e3178670367b3b500b9440ade4a9c5e0e867db61de8b8625",
@@ -1387,7 +1301,8 @@
     ],
     "3": [
       "165cb08f9aa700548baa5689c839368044f9d419f4f0b59ff8a3daefa565ede9",
-      "333c9d8b4e5f06eaa7b5b616b75f61d722a7967eb0ad38e2ce8611be51285690"
+      "333c9d8b4e5f06eaa7b5b616b75f61d722a7967eb0ad38e2ce8611be51285690",
+      "26a0f6e742e0a99707d4ab11493b68f8d4338f500ec67ca9369573282309007d"
     ],
     "4": [
       "e182476413d07c335704abb19fffafff05829b5e2ea088d6afa6d2bd1f2c2d5d",
