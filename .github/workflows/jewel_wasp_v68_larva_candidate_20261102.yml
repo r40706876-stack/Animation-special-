@@ -39,7 +39,7 @@ jobs:
           for chapter in $(seq 0 13); do
             echo "PREFLIGHT $chapter"
             JW_MODE=preflight JW_CHAPTER="$chapter" BLENDER_OUTPUT="$RUNNER_TEMP/unused.png" xvfb-run -a blender -b -t 2 --python src/jewel_wasp_v68_story_candidate_20261102.py > "larva-candidate-proof/preflight_$chapter.log" 2>&1 || { tail -n 120 "larva-candidate-proof/preflight_$chapter.log"; exit 1; }
-            grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "larva-candidate-proof/preflight_$chapter.log"
+            grep -q "JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS $chapter" "larva-candidate-proof/preflight_$chapter.log" || { echo "::error::Chapter $chapter preflight did not reach PASS"; tail -n 100 "larva-candidate-proof/preflight_$chapter.log"; exit 1; }
           done
       - name: Render camera-facing egg and larva stills and actual motion (explicit opt-in)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.render_proofs == true }}
@@ -75,6 +75,9 @@ jobs:
           import json,os,pathlib,hashlib
           p=pathlib.Path("larva-candidate-proof");p.mkdir(exist_ok=True)
           source=pathlib.Path("src/jewel_wasp_v68_story_candidate_20261102.py")
+          passes=[i for i in range(14) if (p/f"preflight_{i}.log").exists() and
+                  f"JW_V68_STORY_GEOMETRY_PREFLIGHT_PASS {i}" in
+                  (p/f"preflight_{i}.log").read_text(errors="replace")]
           (p/"QA.json").write_text(json.dumps(dict(
             source_sha=os.environ.get("GITHUB_SHA"),
             story_renderer_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
