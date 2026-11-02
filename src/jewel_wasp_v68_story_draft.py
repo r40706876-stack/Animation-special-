@@ -65,7 +65,8 @@ if chapter==13:
     wasp.scale=(.72,.72,.72)
     for f,p in ((1,(1.60,1.10,-1.65)),(50,(1.60,1.10,-1.48)),
                 (90,(1.60,1.10,-1.12)),(120,(1.60,1.10,-.62)),
-                (150,(1.60,1.10,.30)),(180,(1.60,1.10,.72)),
+                (132,(1.60,1.10,-.31)),(145,(1.60,1.10,.04)),
+                (160,(1.60,1.10,.48)),(180,(1.60,1.10,.72)),
                 (205,(1.10,.55,1.16)),(240,(-.35,-.70,1.60))):
         key_loc(wasp,f,p)
 for f,p in ((1,rs),(120,tuple((a+b)/2 for a,b in zip(rs,re))),(240,re)):
@@ -311,17 +312,17 @@ if chapter==12:
     # No sharp equatorial seam, hard shell, oversized head or detached mass.
     larvamat=material("soft warm ochre internal larva",
                       (.43,.275,.155),rough=.98,noise=4)
-    verts=[];faces=[];nring=57;nsides=24;radial_y=.070
+    verts=[];faces=[];nring=57;nsides=24;radial_y=.084
     for i in range(nring):
         t=i/(nring-1)
         soft=max(.08,math.sin(math.pi*t)**.52)
-        segmentation=1-.17*(.5+.5*math.cos(14*math.pi*t))
+        segmentation=1-.24*(.5+.5*math.cos(14*math.pi*t))
         radius=soft*segmentation
         x=-.21+.42*t
         for j in range(nsides):
             angle=2*math.pi*j/nsides
             verts.append((x,radial_y*radius*math.cos(angle),
-                          .056*radius*math.sin(angle)+.008*math.sin(math.pi*t)))
+                          .068*radius*math.sin(angle)+.012*math.sin(math.pi*t)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;kn=k+(j+1)%nsides
@@ -341,11 +342,11 @@ if chapter==12:
     bend=larva.shape_key_add(name="Soft living contraction",from_mix=False)
     for idx,v in enumerate(bend.data):
         t=(idx//nsides)/(nring-1)
-        v.co.y+=.008*math.sin(math.pi*t)*math.sin(2*math.pi*t)
-        v.co.z+=.007*math.sin(math.pi*t)
+        v.co.y+=.016*math.sin(math.pi*t)*math.sin(2*math.pi*t)
+        v.co.z+=.018*math.sin(math.pi*t)
     for f,size,sway,bendval in ((1,.24,0,0),(60,.36,.009,1),
-                                (108,.50,-.009,0),(120,.56,.008,1),
-                                (132,.61,-.008,0),(180,.76,.012,1),
+                                (108,.55,-.012,0),(120,.64,.018,1),
+                                (132,.56,-.016,0),(180,.76,.012,1),
                                 (240,.80,0,0)):
         # Outer flank remains below the cuticle at local Y ~= .27.
         larva.location=(-.19,.262-size*radial_y,.028)
@@ -370,8 +371,17 @@ offsets=[
     (2.0,-3.0,.9),(-2.6,-4.0,1.3),(1.8,-3.5,.85),
     (1.0,-4.4,2.4),(-1.6,-3.8,3.2),(.35,-3.0,.65),
     (-.35,-3.6,1.2),(-2.0,-5.0,2.3)]
-for f in ((1,60,120,180,240) if chapter==13 else
-          (1,120,170,205,240) if chapter==11 else (1,120,240)):
+# Each keyframe is a motivated camera move: wide context -> readable action
+# macro -> wider consequence. The egg/sting/grasp should occupy enough pixels
+# to judge the actual contact, without pretending a macro is a full-body shot.
+camera_frames={
+    3:(1,90,120,145,170,200,240),
+    5:(1,90,120,145,170,200,240),
+    8:(1,100,120,145,170,205,240),
+    11:(1,100,120,145,170,205,240),
+    12:(1,108,120,132,180,240),
+    13:(1,90,120,132,145,160,180,205,240)}
+for f in camera_frames.get(chapter,(1,120,240)):
     scene.frame_set(f)
     focus=(Vector(wasp.location)+Vector(roach.location))*.5
     if chapter in (3,5):
@@ -395,7 +405,8 @@ for f in ((1,60,120,180,240) if chapter==13 else
         focus=Vector(roach.location).lerp(mouth,.52 if f<=120 else .72)
     elif chapter==11:
         # DRAFT QA: egg-only extreme closeup hid the depositing wasp.
-        focus=egg.matrix_world.translation.lerp(Vector(wasp.location),.27)
+        focus=egg.matrix_world.translation.lerp(
+            Vector(wasp.location),.12 if 145<=f<=205 else .27)
     elif chapter==13:
         # Hold on the burrow during the rise; following the wasp at every
         # frame made it appear stationary against a sliding background.
@@ -405,11 +416,28 @@ for f in ((1,60,120,180,240) if chapter==13 else
                mouth.lerp(Vector(wasp.location),(f-180)/60.0*.60))
     focus.z+=(.04 if chapter in (3,5,10,11,12) else .13)
     off=Vector(offsets[chapter]).normalized()
-    # Portrait vertical field of view: height=distance*sensor_height/lens.
-    height=(2.50+.55*max(0,f-180)/60.0 if chapter==13 else
-            {1:2.90,120:2.40,170:1.60,205:1.85,240:2.50}[f]
-            if chapter==11 else
-            shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1))
+    if chapter==11 and 145<=f<=205:
+        off=Vector((.9,-3.5,1.0)).normalized()
+    elif chapter==12:
+        off=Vector((.7,-3.6,1.6)).normalized()
+    # Height is the visible portrait world-space span at the focus distance.
+    # The scientific insert is deliberately close; do not use it as a wide.
+    if chapter in (3,5):
+        height={1:2.6,90:2.1,120:1.45,145:1.20,
+                170:1.25,200:1.9,240:2.5}[f]
+    elif chapter==8:
+        height={1:2.9,100:2.2,120:1.35,145:1.05,
+                170:1.10,205:1.8,240:2.7}[f]
+    elif chapter==11:
+        height={1:2.9,100:2.6,120:2.2,145:1.15,
+                170:.85,205:1.00,240:2.5}[f]
+    elif chapter==12:
+        height={1:1.3,108:1.0,120:.80,132:.85,180:.92,240:1.2}[f]
+    elif chapter==13:
+        height={1:2.7,90:2.5,120:2.4,132:2.2,145:2.0,
+                160:2.1,180:2.3,205:2.8,240:3.2}[f]
+    else:
+        height=shot_sizes[chapter]*(1.08 if f==1 else .96 if f==240 else 1)
     camera.location=focus+off*(height*camera_data.lens/camera_data.sensor_height)
     camera.rotation_euler=(focus-camera.location).to_track_quat("-Z","Y").to_euler()
     camera.keyframe_insert(data_path="location",frame=f)
@@ -463,6 +491,11 @@ if mode=="preflight":
         scene.frame_set(180); high=float(wasp.location.z)
         assert low<-1.2 and mid<-.25 and high>.55 and high-low>1.8, (
             "Finale must rise from underground before visible departure")
+        scene.frame_set(132); before=float(wasp.location.z)
+        scene.frame_set(145); crossing=float(wasp.location.z)
+        scene.frame_set(160); after=float(wasp.location.z)
+        assert before<-.20 and -.12<crossing<.20 and after>.30, (
+            "Emergence proof must show a continuous soil-rim crossing")
         scene.frame_set(frame);bpy.context.view_layer.update()
         target=Vector(wasp.location)
     else:
