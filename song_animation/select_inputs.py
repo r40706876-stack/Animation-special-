@@ -5,6 +5,14 @@ EXTS={'.mp3','.wav','.m4a','.aac','.ogg','.oga','.opus','.mp4','.flac','.aiff','
 
 def select(root,before='',head='',manual=None,event='push'):
     root=Path(root).resolve()
+    reserved=set()
+    acceptance_dir=root/'song_acceptance_requests'
+    if acceptance_dir.is_dir():
+        for manifest in acceptance_dir.glob('*.json'):
+            try:data=json.loads(manifest.read_text())
+            except (OSError,json.JSONDecodeError):continue
+            for path in data.get('audio_paths',[]):
+                if isinstance(path,str):reserved.add(path)
     def checked(path):
         if not isinstance(path,str) or not path.strip():raise ValueError('Provide the repository path of the uploaded song')
         p=(root/path).resolve()
@@ -38,6 +46,10 @@ def select(root,before='',head='',manual=None,event='push'):
             files.append(checked(request.get('audio_path')))
     # Code-only commits run the proof job; real uploads and manual dispatch render songs.
     files=sorted(set(files))
+    # Acceptance inputs are owned by the isolated cold-start suite. Automatic
+    # normal retries must not duplicate them or consume source-specific caches.
+    # A deliberate workflow_dispatch remains an explicit operator override.
+    if event!='workflow_dispatch':files=[p for p in files if p not in reserved]
     if event=='schedule':
         from .completion import completed,last_attempt,retry_ready
         files=[p for p in files if not completed(root,root/p) and retry_ready(root,root/p)]

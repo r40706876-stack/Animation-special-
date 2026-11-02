@@ -4,6 +4,19 @@ from unittest.mock import patch
 from song_animation.select_inputs import select
 
 class UploadSelection(unittest.TestCase):
+    def test_automatic_queue_does_not_duplicate_reserved_acceptance_inputs(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);inputs=root/'song_animation/inputs';inputs.mkdir(parents=True)
+            reserved=inputs/'acceptance.m4a';normal=inputs/'normal.m4a'
+            reserved.write_bytes(b'acceptance');normal.write_bytes(b'normal')
+            manifests=root/'song_acceptance_requests';manifests.mkdir()
+            manifests.joinpath('suite.json').write_text(json.dumps({'audio_paths':['song_animation/inputs/acceptance.m4a']}))
+            (root/'song_animation/queue_config.json').write_text(json.dumps({'baseline_commit':'base'}))
+            diff=subprocess.CompletedProcess([],0,stdout=b'song_animation/inputs/acceptance.m4a\0song_animation/inputs/normal.m4a\0',stderr=b'')
+            with patch('song_animation.select_inputs.subprocess.run',return_value=diff):
+                self.assertEqual(select(root,event='schedule'),['song_animation/inputs/normal.m4a'])
+            self.assertEqual(select(root,manual='song_animation/inputs/acceptance.m4a',event='workflow_dispatch'),['song_animation/inputs/acceptance.m4a'])
+
     def test_active_audio_resumes_first_then_completed_source_restores_fair_queue(self):
         from song_animation.completion import source_hash
         with tempfile.TemporaryDirectory() as td:
