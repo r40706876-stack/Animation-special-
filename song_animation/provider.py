@@ -12,7 +12,7 @@ class ProviderUnavailable(RuntimeError):
         super().__init__('No usable model response; provider quota or service availability blocked this stage')
         self.attempts=attempts
         self.blocked_models=sorted(skipped_models()|{x['model'] for x in attempts if isinstance(x.get('model'),str) and x.get('http_status') in (401,403,404,429)})
-        transient={x['model'] for x in attempts if isinstance(x.get('model'),str) and (x.get('error')=='transport' or x.get('http_status') in (408,500,502,503,504))}-set(self.blocked_models)
+        transient={x['model'] for x in attempts if isinstance(x.get('model'),str) and (x.get('error') in ('transport','opaque_image_provider_failure') or x.get('http_status') in (408,500,502,503,504))}-set(self.blocked_models)
         self.retryable=bool(transient) or any(x.get('error')=='model_discovery_unavailable' for x in attempts)
         delays=[]
         for item in attempts:

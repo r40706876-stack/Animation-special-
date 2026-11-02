@@ -35,7 +35,7 @@ def generate_image(prompt,out,seed,width=768,height=1024):
         attempts=[{'model':SPACE,'http_status':429 if quota else status,'error_status':'image_generation_unavailable'}]
         # An empty queue error provides no evidence of exhausted quota. Treat it
         # as a transient service failure so the existing bounded resume applies.
-        if opaque:attempts=[{'model':SPACE,'http_status':503,'error':'opaque_image_provider_failure'}]
+        if opaque:attempts=[{'model':SPACE,'error':'opaque_image_provider_failure'}]
         (out/'image_provider_hold.json').write_text(json.dumps({'reason':message,'attempts':attempts,'universal_quality_certified':False},indent=2))
         raise ProviderUnavailable(attempts)
     try:

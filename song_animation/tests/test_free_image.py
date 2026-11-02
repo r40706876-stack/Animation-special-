@@ -8,7 +8,7 @@ from song_animation.provider import ProviderUnavailable
 class PublicImage(unittest.TestCase):
     def test_empty_queue_error_is_transient_but_explicit_quota_is_not(self):
         from song_animation.provider import ProviderUnavailable
-        error=ProviderUnavailable([{'model':SPACE,'http_status':503,'error':'opaque_image_provider_failure'}])
+        error=ProviderUnavailable([{'model':SPACE,'error':'opaque_image_provider_failure'}])
         self.assertTrue(error.retryable)
         self.assertFalse(ProviderUnavailable([{'model':SPACE,'http_status':429}]).retryable)
     def test_cached_verified_image_spends_no_gpu_requests(self):
