@@ -38,8 +38,19 @@ jobs:
           key: song-painted-sd-turbo-b261bac6
       - name: Verify renderer regressions
         run: python -m unittest discover -s song_animation/tests -q
+      - uses: actions/cache/restore@v4
+        with:
+          path: song_acceptance/
+          key: song-real-acceptance-v1-${{ hashFiles('song_acceptance_requests/three_real_songs.json') }}-${{ github.run_id }}
+          restore-keys: |
+            song-real-acceptance-v1-${{ hashFiles('song_acceptance_requests/three_real_songs.json') }}-
       - name: Three real songs from fresh analysis through full production gates
         run: python -m song_animation.acceptance_suite --manifest song_acceptance_requests/three_real_songs.json --out song_acceptance
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: song_acceptance/
+          key: song-real-acceptance-v1-${{ hashFiles('song_acceptance_requests/three_real_songs.json') }}-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

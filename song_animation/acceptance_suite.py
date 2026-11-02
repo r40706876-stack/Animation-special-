@@ -47,6 +47,17 @@ def run(root,manifest,out,case_timeout=4800):
     for index,item in enumerate(inputs):
         folder=out/(str(index)+'-'+Path(item['audio_path']).stem);folder.mkdir(exist_ok=True)
         record=dict(item,case=index,out=str(folder.relative_to(out)),cold_start=True)
+        provenance_path=folder/'acceptance_origin.json';origin=load(provenance_path)
+        if origin and (origin.get('source_sha256')!=item['source_sha256'] or origin.get('manual_source_art_allowed') is not False):raise ValueError('Acceptance checkpoint source/provenance changed')
+        if not origin:
+            if any(folder.iterdir()):raise ValueError('Refusing unbound production or manual assets inside a fresh acceptance case')
+            origin={'source_sha256':item['source_sha256'],'manual_source_art_allowed':False,'acceptance_initialized_at':time.time(),'generation_commit':os.getenv('GITHUB_SHA','local')}
+            provenance_path.write_text(json.dumps(origin,indent=2))
+        previous=load(folder/'acceptance_case.json')
+        if previous.get('passed') is True and assess(root/item['audio_path'],folder)['passed']:
+            records.append(dict(previous,reused_verified_output=True));continue
+        if previous.get('retry_not_before',0)>time.time():
+            deferred=True;record['retry_not_before']=previous['retry_not_before']
         if deferred:
             record.update(passed=False,production_status='deferred_provider_cooldown',reasons=['Earlier case reached provider quota/service hold; no additional production launched'])
         else:
@@ -58,8 +69,15 @@ def run(root,manifest,out,case_timeout=4800):
                 os.killpg(process.pid,signal.SIGKILL);process.wait()
                 record.update(returncode=124,timeout=True)
             record.update(assess(root/item['audio_path'],folder));record['elapsed_seconds']=round(time.time()-started,1)
+            if record['returncode']!=0:
+                record['passed']=False
+                record['reasons'].append('Production process did not complete successfully')
             state=load(folder/'status.json')
-            if state.get('status')=='waiting_for_provider':deferred=True
+            if state.get('status')=='waiting_for_provider':
+                deferred=True
+                record['retry_not_before']=time.time()+max(0,float(state.get('retry_after_seconds',0)))
+        record['generation_commit']=origin['generation_commit']
+        (folder/'acceptance_case.json').write_text(json.dumps(record,ensure_ascii=False,indent=2))
         records.append(record)
         report={'passed':len(records)==len(inputs) and all(r.get('passed') is True for r in records),'cases':records,'minimum_cases':3,'input_count':len(inputs),'manual_source_art_allowed':False,'universal_quality_certified':False}
         (out/'acceptance_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
@@ -68,6 +86,9 @@ def run(root,manifest,out,case_timeout=4800):
         lines.extend('| '+r['audio_path']+' | '+('PASS' if r.get('passed') else r.get('production_status','blocked'))+' |' for r in records)
         lines+=['','Pass requires each actual composition/export review and independent MP4/audio verification. Unit tests alone cannot clear this suite.']
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write('\n'.join(lines)+'\n')
+    # All cases may have resumed from verified completed outputs.
+    report={'passed':len(records)==len(inputs) and all(r.get('passed') is True for r in records),'cases':records,'minimum_cases':3,'input_count':len(inputs),'manual_source_art_allowed':False,'universal_quality_certified':False}
+    (out/'acceptance_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     return 0 if report['passed'] else 1
 
 if __name__=='__main__':

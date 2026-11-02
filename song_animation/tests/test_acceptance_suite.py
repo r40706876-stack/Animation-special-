@@ -47,3 +47,28 @@ class RealInputAcceptance(unittest.TestCase):
             self.assertIsNone(cached_reference('unused',{'start':0}))
             plan={'scenes':[]}
             self.assertEqual(apply(plan,'a'*64),(plan,set(),set()))
+
+    def test_resume_keeps_provider_cooldown_without_starting_a_new_job(self):
+        import time
+        from song_animation.acceptance_suite import sha
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);manifest,paths=self.setup_suite(root);out=root/'out';folder=out/'0-0';folder.mkdir(parents=True)
+            (folder/'acceptance_origin.json').write_text(json.dumps({'source_sha256':sha(root/paths[0]),'manual_source_art_allowed':False,'generation_commit':'prior'}))
+            deadline=time.time()+3600
+            (folder/'acceptance_case.json').write_text(json.dumps({'passed':False,'retry_not_before':deadline}))
+            with patch('song_animation.acceptance_suite.subprocess.Popen') as launch:
+                self.assertEqual(run(root,manifest,out),1)
+                launch.assert_not_called()
+            self.assertEqual(json.loads((folder/'acceptance_case.json').read_text())['retry_not_before'],deadline)
+
+    def test_previously_cleared_outputs_are_rechecked_and_not_regenerated(self):
+        from song_animation.acceptance_suite import sha
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);manifest,paths=self.setup_suite(root);out=root/'out'
+            for i,path in enumerate(paths):
+                folder=out/(str(i)+'-'+Path(path).stem);folder.mkdir(parents=True)
+                (folder/'acceptance_origin.json').write_text(json.dumps({'source_sha256':sha(root/path),'manual_source_art_allowed':False,'generation_commit':'prior'}))
+                (folder/'acceptance_case.json').write_text(json.dumps({'passed':True,'source_sha256':sha(root/path)}))
+            with patch('song_animation.acceptance_suite.assess',return_value={'passed':True}) as check,patch('song_animation.acceptance_suite.subprocess.Popen') as launch:
+                self.assertEqual(run(root,manifest,out),0);self.assertEqual(check.call_count,3);launch.assert_not_called()
+            self.assertTrue(json.loads((out/'acceptance_report.json').read_text())['passed'])
