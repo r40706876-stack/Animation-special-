@@ -81,7 +81,7 @@ jobs:
           (p/"QA.json").write_text(json.dumps(dict(
             source_sha=os.environ.get("GITHUB_SHA"),
             story_renderer_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-            preflight_chapters=list(range(14)),
+            preflight_chapters=passes,preflight_complete=len(passes)==14,
             proof_still_frames={"3":[145],"8":[155],"10":[195],"11":[170],"12":[120,180]},
             proofs_rendered=bool(list(p.glob('ch*_DRAFT.mp4'))),
             candidate_only=True,
