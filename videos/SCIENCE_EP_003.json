@@ -1,0 +1,70 @@
+{
+  "title": "समुद्र की रोशनी",
+  "narration": "समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं? इसे बायोल्यूमिनेसेंस कहते हैं। कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है। इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं। कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं। कुछ अपनी चमक से शिकारी को भ्रमित करती हैं। सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते। गहरे समुद्र में रोशनी जीवित रहने का एक साधन है। क्या आपने कभी सोचा था कि प्रकृति में ऐसी प्रक्रिया भी हो सकती है? इसे समझने के लिए वैज्ञानिक जीवों के व्यवहार, शरीर की बनावट और उनके पर्यावरण का अध्ययन करते हैं। हर प्रजाति की अपनी सीमाएँ और अलग अनुकूलन होते हैं। इसलिए चौंकाने वाले दावों से अधिक महत्वपूर्ण है कि हम प्रमाण और वास्तविक वैज्ञानिक प्रक्रिया को समझें।",
+  "scenes": [
+    {
+      "label": "समुद्री रोशनी • 1",
+      "fact": "समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं?",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: समुद्र के अँधेरे में कुछ जीव खुद रोशनी कैसे बनाते हैं?. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "cinematic",
+      "beat": "hook",
+      "motion": "push"
+    },
+    {
+      "label": "समुद्री रोशनी • 2",
+      "fact": "इसे बायोल्यूमिनेसेंस कहते हैं।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: इसे बायोल्यूमिनेसेंस कहते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "mechanism",
+      "beat": "observation",
+      "motion": "zoom"
+    },
+    {
+      "label": "समुद्री रोशनी • 3",
+      "fact": "कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ जीवों में रासायनिक प्रतिक्रिया प्रकाश पैदा करती है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "comparison",
+      "beat": "mechanism",
+      "motion": "panleft"
+    },
+    {
+      "label": "समुद्री रोशनी • 4",
+      "fact": "इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: इसमें अक्सर ल्यूसिफेरिन जैसे अणु शामिल होते हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "mechanism",
+      "beat": "reveal",
+      "motion": "panright"
+    },
+    {
+      "label": "समुद्री रोशनी • 5",
+      "fact": "कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ प्रजातियाँ शिकार को आकर्षित करने के लिए चमकती हैं।. Detailed macro natural history scene, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "cinematic",
+      "beat": "mechanism",
+      "motion": "push"
+    },
+    {
+      "label": "समुद्री रोशनी • 6",
+      "fact": "कुछ अपनी चमक से शिकारी को भ्रमित करती हैं।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: कुछ अपनी चमक से शिकारी को भ्रमित करती हैं।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "mechanism",
+      "beat": "consequence",
+      "motion": "zoom"
+    },
+    {
+      "label": "समुद्री रोशनी • 7",
+      "fact": "सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: सभी चमकने वाले जीव एक ही तरीके से प्रकाश नहीं बनाते।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "comparison",
+      "beat": "misconception",
+      "motion": "panleft"
+    },
+    {
+      "label": "समुद्री रोशनी • 8",
+      "fact": "गहरे समुद्र में रोशनी जीवित रहने का एक साधन है।",
+      "prompt": "Scientifically accurate marine bioluminescence, scene showing: गहरे समुद्र में रोशनी जीवित रहने का एक साधन है।. Detailed educational biological cutaway or side by side scientific infographic, subject clearly identifiable, portrait 9:16, no text, no labels",
+      "visual_type": "mechanism",
+      "beat": "conclusion",
+      "motion": "panright"
+    }
+  ]
+}
