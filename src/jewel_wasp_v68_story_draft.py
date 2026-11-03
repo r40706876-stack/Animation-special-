@@ -71,6 +71,12 @@ if chapter==13:
         key_loc(wasp,f,p)
 for f,p in ((1,rs),(120,tuple((a+b)/2 for a,b in zip(rs,re))),(240,re)):
     key_loc(roach,f,p)
+# Independent pixel QA (run 41531377684) found a dominant turquoise wasp
+# silhouette occluding sting, grasp and egg-transfer action. Scale the whole
+# inherited articulated V6.8 wasp rig, not individual disconnected meshes.
+# Contact geometry below is recomputed from its evaluated world transform.
+if chapter in (3,5,8,11):
+    wasp.scale=(.74,.74,.74)
 wasp.rotation_euler.z=-.10 if chapter<8 else .12
 # Burrow approach must face the actual travel direction, not walk backwards.
 roach.rotation_euler.z=(math.atan2(re[1]-rs[1],re[0]-rs[0])
@@ -111,7 +117,7 @@ if chapter==8:
         clamp.parent=wasp
         taper("story articulated antenna clamp %d"%side,
               (0,side*.034,.004),(.095,side*.009,-.022),
-              .018,.004,leg_amber,clamp)
+              .023,.005,leg_amber,clamp)
         for frame,opening in ((1,.22),(90,.22),(110,.10),
                               (132,0.0),(170,0.0),(205,.16),(240,.22)):
             clamp.rotation_euler.x=side*opening
@@ -371,13 +377,13 @@ if chapter==12:
     for i in range(nring):
         t=i/(nring-1)
         soft=max(.08,math.sin(math.pi*t)**.52)
-        segmentation=1-.29*(.5+.5*math.cos(14*math.pi*t))
+        segmentation=1-.13*(.5+.5*math.cos(14*math.pi*t))
         radius=soft*segmentation
         x=-.21+.42*t
         for j in range(nsides):
             angle=2*math.pi*j/nsides
             verts.append((x,radial_y*radius*math.cos(angle),
-                          .110*radius*math.sin(angle)+.012*math.sin(math.pi*t)))
+                          .135*radius*math.sin(angle)+.012*math.sin(math.pi*t)))
     for i in range(nring-1):
         for j in range(nsides):
             k=i*nsides;kn=k+(j+1)%nsides
@@ -397,8 +403,8 @@ if chapter==12:
     bend=larva.shape_key_add(name="Soft living contraction",from_mix=False)
     for idx,v in enumerate(bend.data):
         t=(idx//nsides)/(nring-1)
-        v.co.y+=.016*math.sin(math.pi*t)*math.sin(2*math.pi*t)
-        v.co.z+=.018*math.sin(math.pi*t)
+        v.co.y+=.025*math.sin(math.pi*t)*math.sin(2*math.pi*t)
+        v.co.z+=.030*math.sin(math.pi*t)
     for f,size,sway,bendval in ((1,.24,0,0),(60,.36,.009,1),
                                 (108,.55,-.012,0),(120,.64,.018,1),
                                 (132,.56,-.016,0),(180,.76,.012,1),
@@ -488,8 +494,8 @@ for f in camera_frames.get(chapter,(1,120,240)):
         height={1:2.9,100:2.2,120:1.35,145:1.05,
                 170:1.10,205:1.8,240:2.7}[f]
     elif chapter==11:
-        height={1:2.9,100:2.6,120:2.2,145:1.15,
-                170:.85,205:1.00,240:2.5}[f]
+        height={1:2.9,100:2.6,120:2.2,145:1.60,
+                170:1.40,205:1.45,240:2.5}[f]
     elif chapter==12:
         height={1:1.3,108:1.0,120:.80,132:.85,180:.92,240:1.2}[f]
     elif chapter==13:
