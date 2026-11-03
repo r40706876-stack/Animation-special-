@@ -18,7 +18,16 @@ def execute(args,delays=(20,40,60),module='song_animation.run'):
         if result.returncode==0:return 0
         try:status=json.loads((out/'status.json').read_text())
         except (OSError,ValueError):return result.returncode
-        if not isinstance(status,dict) or status.get('status')!='waiting_for_provider' or status.get('retryable') is not True or attempt==len(delays):return result.returncode
+        if not isinstance(status,dict) or status.get('status')!='waiting_for_provider' or status.get('retryable') is not True:return result.returncode
+        if attempt==len(delays):
+            try:
+                provider_wait=float(status.get('provider_retry_after_seconds',0))
+                current_wait=float(status.get('retry_after_seconds',0))
+            except (TypeError,ValueError):return result.returncode
+            if provider_wait>current_wait:
+                status['retry_after_seconds']=provider_wait
+                (out/'status.json').write_text(json.dumps(status))
+            return result.returncode
         blocked.update(m for m in status.get('blocked_models',[]) if isinstance(m,str))
         environment=dict(environment,SONG_PROVIDER_SKIP_MODELS=json.dumps(sorted(blocked)))
         wait=delays[attempt]

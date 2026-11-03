@@ -15,11 +15,19 @@ class ProviderUnavailable(RuntimeError):
         transient={x['model'] for x in attempts if isinstance(x.get('model'),str) and (x.get('error') in ('transport','opaque_image_provider_failure') or x.get('http_status') in (408,500,502,503,504))}-set(self.blocked_models)
         self.retryable=bool(transient) or any(x.get('error')=='model_discovery_unavailable' for x in attempts)
         delays=[]
+        provider_delays=[]
         for item in attempts:
+            try:provider_delays.append(float(str(item.get('retry_delay','0s')).removesuffix('s')))
+            except ValueError:pass
             if self.retryable and item.get('model') not in transient:continue
             try:delays.append(float(str(item.get('retry_delay','0s')).removesuffix('s')))
             except ValueError:pass
         self.retry_after_seconds=max(delays,default=0)
+        # A mixed wave can contain a transient model (worth bounded immediate
+        # retries) and a quota-exhausted model with a long server deadline.
+        # Keep that deadline separately so the resume wrapper can retain it
+        # after the transient retry budget is exhausted.
+        self.provider_retry_after_seconds=max(provider_delays,default=0)
 
 def parse_object(raw):
     start=raw.find('{')

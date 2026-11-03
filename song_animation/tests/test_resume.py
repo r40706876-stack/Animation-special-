@@ -24,6 +24,7 @@ class Recovery(unittest.TestCase):
         self.assertTrue(ProviderUnavailable([{'model':'busy','http_status':503},{'model':'retired','http_status':404}]).retryable)
         mixed=ProviderUnavailable([{'model':'exhausted','http_status':429,'retry_delay':'43000s'},{'model':'busy','http_status':503}])
         self.assertTrue(mixed.retryable);self.assertEqual(mixed.blocked_models,['exhausted']);self.assertEqual(mixed.retry_after_seconds,0)
+        self.assertEqual(mixed.provider_retry_after_seconds,43000)
         self.assertFalse(ProviderUnavailable([{'model':'same','http_status':429},{'model':'same','http_status':503}]).retryable)
         self.assertFalse(ProviderUnavailable([{'http_status':401}]).retryable)
 
@@ -55,3 +56,14 @@ class Recovery(unittest.TestCase):
             with patch('song_animation.resume.subprocess.run',side_effect=run) as api,patch('song_animation.resume.time.sleep') as sleep:
                 self.assertEqual(execute(['--out',td]),1)
                 self.assertEqual(api.call_count,4);self.assertEqual(sleep.call_count,3)
+
+    def test_final_mixed_failure_retains_daily_quota_deadline_after_transient_retries(self):
+        with tempfile.TemporaryDirectory() as td:
+            status={'status':'waiting_for_provider','retryable':True,'retry_after_seconds':0,
+                    'provider_retry_after_seconds':43000,'blocked_models':['exhausted']}
+            def run(cmd,**kwargs):Path(td,'status.json').write_text(json.dumps(status));return Mock(returncode=1)
+            with patch('song_animation.resume.subprocess.run',side_effect=run) as api,patch('song_animation.resume.time.sleep') as sleep:
+                self.assertEqual(execute(['--out',td]),1)
+                self.assertEqual(api.call_count,4);self.assertEqual(sleep.call_count,3)
+            saved=json.loads(Path(td,'status.json').read_text())
+            self.assertEqual(saved['retry_after_seconds'],43000)
