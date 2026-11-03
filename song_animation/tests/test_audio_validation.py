@@ -15,7 +15,8 @@ class AudioValidation(unittest.TestCase):
   from unittest.mock import patch
   from song_animation.audio_lyrics import analyze_audio
   data={'language':'Hindi','has_vocals':True,'segments':[{'text':'मेरे दिल में','uncertain':False,'start':0,'end':2}],'unclear':[]}
-  rejected={'valid':False,'reasons':['Different words in audio']}\n  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.independent_audio_text',return_value={'status':'available','words':[]}),patch('song_animation.audio_lyrics.generate_json',side_effect=[data,rejected,data,rejected,data,rejected]) as api,patch('song_animation.recognition.recovery_evidence',return_value={}):
+  rejected={'valid':False,'reasons':['Different words in audio']}
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run'),patch('pathlib.Path.read_bytes',return_value=b'audio'),patch('song_animation.recognition.independent_audio_text',return_value={'status':'available','words':[]}),patch('song_animation.audio_lyrics.generate_json',side_effect=[data,rejected,data,rejected,data,rejected]) as api,patch('song_animation.recognition.recovery_evidence',return_value={}):
    with self.assertRaisesRegex(ValueError,'meaning review'):analyze_audio('unused',td)
    self.assertFalse((Path(td)/'lyrics.json').exists())
    self.assertEqual(api.call_count,6)
