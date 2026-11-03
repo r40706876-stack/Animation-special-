@@ -81,6 +81,23 @@ class BlindAudioConflict(unittest.TestCase):
                     model.assert_called_once();self.assertTrue(model.call_args.kwargs['require_full_model'])
                 asr.assert_called_once();self.assertEqual(result['words'][0]['text'],'walk beside me');self.assertFalse((root/'audio_candidate.json').exists())
 
+    def test_second_blind_disagreement_gets_one_final_strict_recovery_pass(self):
+        from pathlib import Path
+        from song_animation.audio_lyrics import analyze_audio
+        data={'language':'English','has_vocals':True,'segments':[{'text':'walk beside me','start':0,'end':2,'uncertain':False}],'unclear':[],'instrumental':[]}
+        conflicts=[{'start':0,'end':2,'decoder_words':'stay near','proposed':'walk beside me'}]
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);audio=root/'source.wav';audio.write_bytes(b'actual selected source')
+            def convert(cmd,**kwargs):Path(cmd[-1]).write_bytes(b'analysis mp3')
+            with patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run',side_effect=convert),patch('song_animation.lyrics.preflight'),patch('song_animation.recognition.independent_audio_text',return_value={'status':'available','words':[]}),patch('song_animation.audio_lyrics.strong_word_conflicts',return_value=conflicts),patch('song_animation.audio_lyrics.confirm_conflicts_from_audio',side_effect=[ValueError('first blind correction'),ValueError('second blind correction'),{'regions':[{'region':0,'text':'walk beside me','uncertain':False}]}]) as blind:
+                replies=[data,data,data,{'valid':True,'reasons':[],'meaning':'audible words'}]
+                with patch('song_animation.audio_lyrics.generate_json',side_effect=replies) as model:
+                    result=analyze_audio(audio,root)
+            self.assertEqual(blind.call_count,3)
+            self.assertEqual(result['words'][0]['text'],'walk beside me')
+            self.assertEqual([c.kwargs['tag'] for c in model.call_args_list],['audio_lyrics','audio_lyrics_recovered','audio_lyrics_recovered_2','audio_verification_2'])
+            self.assertTrue(model.call_args_list[-1].kwargs['require_full_model'])
+
     def test_changed_audio_cannot_reuse_pending_transcript(self):
         from pathlib import Path
         from song_animation.audio_lyrics import analyze_audio

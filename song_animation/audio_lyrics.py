@@ -6,6 +6,8 @@ from .contract import validate_lyrics
 from .provider import generate_json,ProviderUnavailable
 
 INTERVAL={'type':'OBJECT','properties':{'start':{'type':'NUMBER'},'end':{'type':'NUMBER'}},'required':['start','end']}
+MAX_TRANSCRIPT_ATTEMPTS=3
+
 LYRICS_SCHEMA={'type':'OBJECT','properties':{
     'language':{'type':'STRING'},'genre':{'type':'STRING'},'mood':{'type':'STRING'},'summary':{'type':'STRING'},'has_vocals':{'type':'BOOLEAN'},
     'segments':{'type':'ARRAY','items':{'type':'OBJECT','properties':{
@@ -120,11 +122,11 @@ Return JSON only: {{"segments":[{{"start":0.0,"end":2.2,"text":"exact audible wo
 Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundaries in seconds. These are approximate phrase timings; do not fabricate individual-word timestamps or divide time evenly. Every audible vocal phrase must appear once and in order, including the very beginning. Instrumental portions contain no invented lyrics. Times must be within 0..{dur:.3f}. Instrumental-only music is valid: return segments=[] and has_vocals=false, describing genre/mood/summary. Describe unclear vocals in unclear intervals without inventing captions. No translation, commentary, visual prompts or lyrics beyond this clip.'''
     errors=[];evidence={};verification={};independent=pending.get('independent');conflict_evidence=None
     if not isinstance(independent,dict) or not isinstance(independent.get('words'),list):independent=None
-    for attempt in range(2):
+    for attempt in range(MAX_TRANSCRIPT_ATTEMPTS):
         try:
             extra='\nRECOVERY EVIDENCE (not verified lyrics): '+json.dumps(evidence,ensure_ascii=False) if evidence else ''
             if errors:extra+='\nThe prior attempt failed: '+errors[-1]+'. Correct the actual language/words; never repeat unsupported guesses.'
-            data=pending['data'] if attempt==0 and pending else generate_json(prompt+extra,out=out,tag='audio_lyrics' if attempt==0 else 'audio_lyrics_recovered',audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True,require_full_model=True)
+            data=pending['data'] if attempt==0 and pending else generate_json(prompt+extra,out=out,tag='audio_lyrics' if attempt==0 else 'audio_lyrics_recovered'+(f'_{attempt}' if attempt>1 else ''),audio_part=part,schema=LYRICS_SCHEMA,prefer_quality=True,require_full_model=True)
             validate_transcript_script(data)
             if data.get('has_vocals',True) and (data.get('unclear') or any(x.get('uncertain',True) for x in data.get('segments',[]))):
                 raise ValueError('Unclear sung words require correction before semantic scenes are generated')
@@ -156,7 +158,7 @@ Segment into meaningful phrases of about 2..6 words, using ACTUAL phrase boundar
                 from .recognition import recovery_evidence
                 evidence={'independent_asr':independent} if independent else recovery_evidence(audio,out,dur)
     else:
-        (out/'audio_hold.json').write_text(json.dumps({'status':'needs_lyrics','attempts':2,'reasons':errors},ensure_ascii=False,indent=2))
+        (out/'audio_hold.json').write_text(json.dumps({'status':'needs_lyrics','attempts':MAX_TRANSCRIPT_ATTEMPTS,'reasons':errors},ensure_ascii=False,indent=2))
         raise ValueError('Audio meaning review failed after automatic recovery; invented scenes blocked')
     words=[]
     for segment in data.get('segments',[]):
