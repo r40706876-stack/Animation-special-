@@ -36,7 +36,7 @@ class WordConflicts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             # A bare positive verdict is not blind transcription evidence.
             with self.assertRaisesRegex(ValueError,'meaning review'):
-                self.run_audio([self.data('जाम पी लिया'),{'valid':True},self.data('जाम पी लिया'),{'valid':True}],td)
+                self.run_audio([self.data('जाम पी लिया'),{'valid':True},self.data('जाम पी लिया'),{'valid':True},self.data('जाम पी लिया'),{'valid':True}],td)
             self.assertTrue((Path(td)/'audio_hold.json').exists())
             self.assertFalse((Path(td)/'lyrics.json').exists())
 
