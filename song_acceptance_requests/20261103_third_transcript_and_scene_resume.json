@@ -1,0 +1,7 @@
+{
+  "reason": "Resume the exact source-bound automatic acceptance cache from inspected run 41605297382 after the general bounded third-transcript correction and its successful full regression/render proof. Preserve all completed automatic audio/storyboard/art checkpoints. The prior scene provider HTTP 503 was transient. Keep unchanged full-capability composition, decoded-export review, independent inspect_export, verb, negation, uncertainty and blind-audio gates.",
+  "previous_run": 41605297382,
+  "proof_run": 41626345213,
+  "retry_not_before": 1793697159.2887642,
+  "resume_policy": "source-bound-cache-only; no manual lyrics or artwork; no completed-stage redo"
+}
