@@ -1,0 +1,8 @@
+{
+  "reason": "Resume the exact source-bound automatic acceptance cache after the provider-directed daily quota deadline from inspected manual run 41695722546 has elapsed. Preserve all completed automatic audio, storyboard, vector and art checkpoints. Continue unchanged full-capability composition, decoded-export review, independent inspect_export, verb, negation, uncertainty and blind-audio gates. No manual lyrics or source artwork.",
+  "previous_run": 41695722546,
+  "previous_artifact": 13260468991,
+  "proof_run": 41630453180,
+  "retry_not_before": 1793779201.1724331,
+  "resume_policy": "source-bound-cache-only; no manual lyrics or artwork; no completed-stage redo"
+}
