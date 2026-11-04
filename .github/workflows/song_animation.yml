@@ -204,3 +204,25 @@ jobs:
           SONG_CHECKED_ARTIFACT_URL: ${{ steps.ready-export.outputs.artifact-url }}
         run: python -m song_animation.status_summary --out song_draft
 
+
+  video-result:
+    # Clear final verdict: green tick alone never means a video was made.
+    needs: [inputs, song-draft]
+    if: always()
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Final video verdict
+        env:
+          AUDIO: ${{ needs.inputs.outputs.audio }}
+          DRAFT: ${{ needs.song-draft.result }}
+        run: |
+          if [ "$DRAFT" = "success" ]; then
+            echo "## ✅ Video bani: song-checked artifact download karo" >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$AUDIO" = "[]" ] || [ "$DRAFT" = "skipped" ]; then
+            echo "::warning::Is run me koi nayi/pending audio nahi thi, isliye video NAHI bani (sirf code check hua)."
+            echo "## ⚠️ Video nahi bani: koi nayi audio nahi mili" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::error::Video NAHI bani. song-draft job: $DRAFT. Saved kaam agle run me wahin se aage badhega."
+            echo "## ❌ Video nahi bani (song-draft: $DRAFT)" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi

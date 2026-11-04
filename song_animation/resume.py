@@ -2,7 +2,7 @@
 import argparse,json,os,subprocess,sys,time,uuid
 from pathlib import Path
 
-def execute(args,delays=(20,40,60),module='song_animation.run'):
+def execute(args,delays=(60,180,300,600),module='song_animation.run'):
     parser=argparse.ArgumentParser(add_help=False)
     parser.add_argument('--out',default='song_output')
     known,_=parser.parse_known_args(args)
@@ -34,7 +34,8 @@ def execute(args,delays=(20,40,60),module='song_animation.run'):
         try:server_wait=float(status.get('retry_after_seconds',0))
         except (TypeError,ValueError):return result.returncode
         # Do not turn long server-directed waits into repeated immediate calls.
-        if server_wait>60:return result.returncode
+        # Daily-quota holds (hours) still stop here; short overload hints are waited out.
+        if server_wait>900:return result.returncode
         wait=max(wait,server_wait)
         history.append({'attempt':attempt+1,'wait_seconds':wait,'reason':'transient_provider_failure'})
         (out/'provider_resume.json').write_text(json.dumps(history,indent=2))

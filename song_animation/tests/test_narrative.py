@@ -69,3 +69,18 @@ class ConnectedStory(unittest.TestCase):
    result=storyboard({'duration':6,'words':[]},{},td)
    self.assertEqual(api.call_count,4);self.assertTrue(result['story_review']['valid'])
    self.assertIn('No earned relationship change',api.call_args_list[2].args[0])
+
+class ReviewerOutage(unittest.TestCase):
+ def test_busy_story_reviewer_does_not_stop_a_locally_valid_story(self):
+  from song_animation.provider import ProviderUnavailable
+  good=narrative()
+  busy=ProviderUnavailable([{'model':'m','http_status':503}])
+  with tempfile.TemporaryDirectory() as td,patch('song_animation.generative.generate_json',side_effect=[good,busy]) as api:
+   result=storyboard({'duration':6,'words':[]},{},td)
+   self.assertEqual(api.call_count,2);self.assertEqual(result['story_review']['source'],'local_structural_checks')
+ def test_accepted_review_is_not_paid_twice_on_resume(self):
+  good=narrative()
+  with tempfile.TemporaryDirectory() as td:
+   with patch('song_animation.generative.generate_json',side_effect=[good,{'valid':True,'issues':[]}]):storyboard({'duration':6,'words':[]},{},td)
+   with patch('song_animation.generative.generate_json',side_effect=[good]) as api:
+    self.assertTrue(storyboard({'duration':6,'words':[]},{},td)['story_review']['valid']);self.assertEqual(api.call_count,1)

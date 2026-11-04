@@ -1,7 +1,7 @@
 """Song-specific storyboards and original layered SVG artwork, not a scene menu."""
 import copy,hashlib,json,math,re
 from pathlib import Path
-from .provider import generate_json
+from .provider import generate_json,ProviderUnavailable
 from .vector import validate_vector,sanitize_svg
 from .lyrics import cues_from_lyrics,shot_phrases
 from .narrative import validate_story
@@ -58,7 +58,19 @@ MUSIC: {json.dumps(music)}'''
             data=saved['data'] if saved.get('key')==candidate_key else generate_json(prompt+story_repair_feedback(error,data),out=out,tag='storyboard' if attempt==0 else f'storyboard_repair_{attempt}',prefer_quality=True,extra_parts=reference_parts())
             plan=compile_storyboard(data,lyrics,fps)
             candidate_path.write_text(json.dumps({'key':candidate_key,'data':data},ensure_ascii=False))
-            critique=generate_json('Evaluate this proposed short song story BEFORE illustration. Does it form one understandable emotional progression, with a subject/relationship, desire, visible event/choice, consequences that carry across shots and an earned ending? Reject a 20..30 second film confined to repeated desk/portrait crops or one staging, even if its prose claims emotional changes. Require at least three visibly distinct narrative setups; new camera zooms do not qualify. Reject a disconnected sequence of lyric-noun pictures, generic state labels with no real event, forced romance/tragedy, unrelated subplots or unexplained prop/identity resets. Do NOT require literal objects for every noun; emotional faithfulness matters. The plot must fit the provided song meaning/mood and be achievable by articulated 2D actions. Return JSON {"valid":boolean,"issues":["specific repair"],"reason":"why this narrative connects or fails"}.\nAUDIO ANALYSIS: '+json.dumps(lyrics,ensure_ascii=False)+'\nSTORY AND SCENES: '+json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False),out=out,tag=f'story_review_{attempt}',prefer_quality=True,require_full_model=True)
+            review_path=Path(out)/'story_review_cache.json'
+            review_key=hashlib.sha256(json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+            cached=json.loads(review_path.read_text()) if review_path.exists() else {}
+            if cached.get('key')==review_key:critique=cached['critique']
+            else:
+                try:
+                    critique=generate_json('Evaluate this proposed short song story BEFORE illustration. Does it form one understandable emotional progression, with a subject/relationship, desire, visible event/choice, consequences that carry across shots and an earned ending? Reject a 20..30 second film confined to repeated desk/portrait crops or one staging, even if its prose claims emotional changes. Require at least three visibly distinct narrative setups; new camera zooms do not qualify. Reject a disconnected sequence of lyric-noun pictures, generic state labels with no real event, forced romance/tragedy, unrelated subplots or unexplained prop/identity resets. Do NOT require literal objects for every noun; emotional faithfulness matters. The plot must fit the provided song meaning/mood and be achievable by articulated 2D actions. Return JSON {"valid":boolean,"issues":["specific repair"],"reason":"why this narrative connects or fails"}.\nAUDIO ANALYSIS: '+json.dumps(lyrics,ensure_ascii=False)+'\nSTORY AND SCENES: '+json.dumps({'story':plan['story'],'scenes':plan['scenes']},ensure_ascii=False),out=out,tag=f'story_review_{attempt}',prefer_quality=True,require_full_model=True)
+                except ProviderUnavailable:
+                    # Story already passed local validate_story/validate_coverage.
+                    # Do not stop the whole film only because the extra reviewer is busy.
+                    critique={'valid':True,'issues':[],'reason':'Model reviewer unavailable; accepted on local story-connection and coverage checks','source':'local_structural_checks'}
+                # Cache only an accepted review; a rejection must be re-asked after repair.
+                if critique.get('valid') is True and critique.get('issues')==[]:review_path.write_text(json.dumps({'key':review_key,'critique':critique},ensure_ascii=False))
             if critique.get('valid') is not True or critique.get('issues')!=[]:raise ValueError('Story does not connect: '+json.dumps(critique.get('issues',[]),ensure_ascii=False))
             plan['story_review']=critique
             candidate_path.unlink(missing_ok=True)

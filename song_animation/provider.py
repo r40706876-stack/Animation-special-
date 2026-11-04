@@ -81,7 +81,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             elif model.startswith('gemini-2.5-'):model_config['thinkingConfig']={'thinkingBudget':2048}
         # One transient retry for the preferred available model. Never spin on
         # exhausted quota, auth failures or an actually retired model.
-        for retry in range(2 if model_index==0 else 1):
+        for retry in range(2):
             try:
                 r=requests.post('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',
                     headers={'x-goog-api-key':key},json={'contents':[{'parts':parts}],
@@ -89,7 +89,7 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
             except requests.RequestException:
                 attempts.append({'model':model,'error':'transport','retry':retry})
                 if out:Path(out,tag+'_attempts.json').write_text(json.dumps(attempts,indent=2))
-                if retry==0 and model_index==0:time.sleep(3);continue
+                if retry==0:time.sleep(10);continue
                 break
             item={'model':model,'http_status':r.status_code,'retry':retry}
             if r.status_code!=200:
@@ -121,8 +121,9 @@ def generate_json(prompt,out=None,tag="planner",audio_part=None,schema=None,extr
                     raise ValueError('Provider response incomplete: '+str(candidate['finishReason'])+'. Regenerate a smaller complete package; never repair by closing truncated JSON.')
                 break
             print('Planner unavailable:',model,'HTTP',r.status_code,flush=True)
-            if r.status_code in (408,500,502,503,504) and retry==0 and model_index==0:
-                time.sleep(3);continue
+            if r.status_code in (408,500,502,503,504) and retry==0:
+                # Overload is usually brief; give every model one patient retry.
+                time.sleep(15);continue
             break
         if raw:break
     if not raw:raise ProviderUnavailable(attempts)

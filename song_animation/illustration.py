@@ -33,7 +33,11 @@ SUBJECT: '''+str(asset.get('description',asset['id']))+'\nLOCAL DIMENSIONS: '+st
             image=image.copy();image.thumbnail((280,560));sheet.paste(image,(i*300+(300-image.width)//2,(600-image.height)//2),image if image.mode=='RGBA' else None)
         sheet.save(out/'comparison.jpg',quality=94)
         rendered.save(out/'finished_asset.png')
-        review=generate_json('Judge this isolated asset against the supplied finish reference. Be strict: simple geometric heads/bodies, blank faces and flat icon shapes fail even if coherent. This is asset review only, not film or universal certification. Return JSON {"detail":boolean,"anatomy_or_object_shape":boolean,"subject_and_pose_preserved":boolean,"reference_finish":boolean,"issues":["specific visible defect"]}. Subject: '+str(asset.get('description',asset['id'])),out=out,tag=f'illustration_review_{attempt}',extra_parts=[{'text':'ORIGINAL POSE'},part(original),{'text':'CANDIDATE'},part(rendered),{'text':'FINISH REFERENCE'},part(reference)],prefer_quality=True,require_full_model=True)
+        review_cache=out/(hashlib.sha256(candidate['svg'].encode()).hexdigest()[:16]+'_review.json')
+        if review_cache.exists():review=json.loads(review_cache.read_text())
+        else:
+            review=generate_json('Judge this isolated asset against the supplied finish reference. Be strict: simple geometric heads/bodies, blank faces and flat icon shapes fail even if coherent. This is asset review only, not film or universal certification. Return JSON {"detail":boolean,"anatomy_or_object_shape":boolean,"subject_and_pose_preserved":boolean,"reference_finish":boolean,"issues":["specific visible defect"]}. Subject: '+str(asset.get('description',asset['id'])),out=out,tag=f'illustration_review_{attempt}',extra_parts=[{'text':'ORIGINAL POSE'},part(original),{'text':'CANDIDATE'},part(rendered),{'text':'FINISH REFERENCE'},part(reference)],prefer_quality=True,require_full_model=True)
+            review_cache.write_text(json.dumps(review,ensure_ascii=False))
         passed=all(review.get(k) is True for k in ('detail','anatomy_or_object_shape','subject_and_pose_preserved','reference_finish')) and review.get('issues')==[]
         (out/'asset_review.json').write_text(json.dumps({'passed':passed,'review':review,'film_quality_certified':False,'universal_quality_certified':False},ensure_ascii=False,indent=2))
         if passed:return candidate

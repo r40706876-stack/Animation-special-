@@ -58,6 +58,8 @@ def assess(audio,out):
 def run(root,manifest,out,case_timeout=4800):
     root=Path(root).resolve();out=Path(out).resolve();out.mkdir(parents=True,exist_ok=True)
     inputs=cases(root,manifest);records=[];deferred=False
+    # Free quota protection: launch at most this many new productions per run.
+    budget=int(os.getenv('SONG_ACCEPTANCE_MAX_NEW','1'));launched=0;launched_failed=False
     environment=dict(os.environ,SONG_ACCEPTANCE_COLD_START='1')
     for index,item in enumerate(inputs):
         folder=out/(str(index)+'-'+Path(item['audio_path']).stem);folder.mkdir(exist_ok=True)
@@ -73,10 +75,12 @@ def run(root,manifest,out,case_timeout=4800):
             records.append(dict(previous,**item,case=index,out=str(folder.relative_to(out)),reused_verified_output=True));continue
         if previous.get('retry_not_before',0)>time.time():
             deferred=True;record['retry_not_before']=previous['retry_not_before']
-        if deferred:
+        if not deferred and launched>=budget:
+            record.update(passed=False,production_status='queued_next_run',reasons=['Queued: one song per run to protect the free model quota'])
+        elif deferred:
             record.update(passed=False,production_status='deferred_provider_cooldown',reasons=['Earlier case reached provider quota/service hold; no additional production launched'])
         else:
-            started=time.time()
+            started=time.time();launched+=1
             try:
                 process=subprocess.Popen([sys.executable,'-m','song_animation.resume','--audio',item['audio_path'],'--out',str(folder),'--width','1080','--artwork','flux-layers','--allow-local-recovery'],cwd=root,env=environment,start_new_session=True)
                 record['returncode']=process.wait(timeout=case_timeout)
@@ -84,6 +88,7 @@ def run(root,manifest,out,case_timeout=4800):
                 os.killpg(process.pid,signal.SIGKILL);process.wait()
                 record.update(returncode=124,timeout=True)
             record.update(assess(root/item['audio_path'],folder));record['elapsed_seconds']=round(time.time()-started,1)
+            if record['returncode']!=0 or record.get('passed') is not True:launched_failed=True
             if record['returncode']!=0:
                 record['passed']=False
                 record['reasons'].append('Production process did not complete successfully')
@@ -104,7 +109,12 @@ def run(root,manifest,out,case_timeout=4800):
     # All cases may have resumed from verified completed outputs.
     report={'passed':len(records)==len(inputs) and all(r.get('passed') is True for r in records),'cases':records,'minimum_cases':3,'input_count':len(inputs),'manual_source_art_allowed':False,'universal_quality_certified':False}
     (out/'acceptance_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
-    return 0 if report['passed'] else 1
+    if report['passed']:return 0
+    # Green only when this run actually produced a verified video and the rest
+    # are just queued; any failed or quota-blocked production stays red.
+    made_now=launched>0 and not launched_failed
+    only_queued=all(r.get('passed') is True or r.get('production_status')=='queued_next_run' for r in records)
+    return 0 if made_now and only_queued else 1
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--out',default='song_acceptance');p.add_argument('--adopt-initial-analysis',action='store_true');a=p.parse_args()

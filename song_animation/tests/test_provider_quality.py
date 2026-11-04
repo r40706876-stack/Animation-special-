@@ -16,7 +16,7 @@ class QualityModelDiscovery(unittest.TestCase):
   busy=Mock(status_code=503);good=Mock(status_code=200);good.json.return_value={'candidates':[{'content':{'parts':[{'text':'{"valid":true}'}]}}]}
   with patch.dict(os.environ,{'GEMINI_API_KEY':'test-key','GEMINI_MODEL':''}),patch('requests.get',return_value=listing),patch('requests.post',side_effect=[busy,good]) as api,patch('song_animation.provider.time.sleep') as sleep:
    self.assertTrue(generate_json('continue scene',prefer_quality=True,require_full_model=True)['valid'])
-   self.assertEqual(api.call_count,2);self.assertEqual(api.call_args_list[0].args,api.call_args_list[1].args);sleep.assert_called_once_with(3)
+   self.assertEqual(api.call_count,2);self.assertEqual(api.call_args_list[0].args,api.call_args_list[1].args);sleep.assert_called_once_with(15)
 
  def test_exhausted_quota_does_not_enter_transient_retry(self):
   listing=Mock();listing.json.return_value={'models':[{'name':'models/gemini-3-flash-preview','supportedGenerationMethods':['generateContent']}]}

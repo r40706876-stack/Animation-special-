@@ -18,7 +18,8 @@ class Recovery(unittest.TestCase):
         def post(url,**kwargs):return good if '/gemini-2.5-pro:' in url else Mock(status_code=503)
         with patch.dict(os.environ,{'GEMINI_API_KEY':'test-key','GEMINI_MODEL':''}),patch('requests.get',return_value=listing),patch('requests.post',side_effect=post) as api,patch('song_animation.provider.time.sleep'):
             self.assertTrue(generate_json('story review',prefer_quality=True,require_full_model=True)['valid'])
-            self.assertEqual(api.call_count,5)
+            # Each busy model now gets one patient retry before failover.
+            self.assertEqual(api.call_count,7)
 
     def test_transient_service_is_distinct_from_quota_and_auth(self):
         self.assertTrue(ProviderUnavailable([{'model':'busy','http_status':503},{'model':'retired','http_status':404}]).retryable)
@@ -40,7 +41,7 @@ class Recovery(unittest.TestCase):
                 return Mock(returncode=0)
             with patch('song_animation.resume.subprocess.run',side_effect=run),patch('song_animation.resume.time.sleep') as sleep:
                 self.assertEqual(execute(['--audio','song.m4a','--out',td,'--stage','plan']),0)
-                self.assertEqual(calls[0],calls[1]);sleep.assert_called_once_with(20)
+                self.assertEqual(calls[0],calls[1]);sleep.assert_called_once_with(60)
 
     def test_quality_hold_quota_and_long_wait_are_not_retried(self):
         for status in ({'status':'blocked'},{'status':'waiting_for_provider','retryable':False},{'status':'waiting_for_provider','retryable':True,'retry_after_seconds':3600}):
@@ -55,7 +56,7 @@ class Recovery(unittest.TestCase):
             def run(cmd,**kwargs):Path(td,'status.json').write_text(json.dumps({'status':'waiting_for_provider','retryable':True}));return Mock(returncode=1)
             with patch('song_animation.resume.subprocess.run',side_effect=run) as api,patch('song_animation.resume.time.sleep') as sleep:
                 self.assertEqual(execute(['--out',td]),1)
-                self.assertEqual(api.call_count,4);self.assertEqual(sleep.call_count,3)
+                self.assertEqual(api.call_count,5);self.assertEqual(sleep.call_count,4)
 
     def test_final_mixed_failure_retains_daily_quota_deadline_after_transient_retries(self):
         with tempfile.TemporaryDirectory() as td:
@@ -64,6 +65,6 @@ class Recovery(unittest.TestCase):
             def run(cmd,**kwargs):Path(td,'status.json').write_text(json.dumps(status));return Mock(returncode=1)
             with patch('song_animation.resume.subprocess.run',side_effect=run) as api,patch('song_animation.resume.time.sleep') as sleep:
                 self.assertEqual(execute(['--out',td]),1)
-                self.assertEqual(api.call_count,4);self.assertEqual(sleep.call_count,3)
+                self.assertEqual(api.call_count,5);self.assertEqual(sleep.call_count,4)
             saved=json.loads(Path(td,'status.json').read_text())
             self.assertEqual(saved['retry_after_seconds'],43000)
