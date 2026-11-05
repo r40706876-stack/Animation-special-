@@ -119,3 +119,21 @@ class BareListReply(unittest.TestCase):
             with patch('song_animation.audio_lyrics.generate_json',return_value=parsed) as model:
                 result=confirm_conflicts_from_audio({},td,[{'start':0,'end':3,'text':'a sunflower blooms'}],[{'start':1,'end':2}])
             self.assertEqual(result['regions'],reply);self.assertIn('regions',model.call_args.kwargs['schema']['properties'])
+
+class RealSongTolerance(unittest.TestCase):
+    def run_case(self,proposed,heard):
+        seg={'start':0,'end':6,'text':proposed}
+        reply={'regions':[{'region':0,'text':heard,'uncertain':False}],'_provider_model':'gemini-full'}
+        with tempfile.TemporaryDirectory() as td,patch('song_animation.audio_lyrics.generate_json',return_value=reply):
+            return confirm_conflicts_from_audio({},td,[seg],[{'start':1,'end':2}]),seg
+    def test_edge_word_and_single_middle_word_in_long_phrase(self):
+        result,seg=self.run_case('चूल्हे आगे बैठी माँ वा स्वाद हाथ की रोटी का','एक चूल्हे आगे पोती माँ वा स्वाद हाथ की रोटी का')
+        self.assertEqual(seg['text'],'चूल्हे आगे पोती माँ वा स्वाद हाथ की रोटी का')
+        self.assertEqual(result['word_corrections'],[{'proposed':'बैठी','heard':'पोती'}])
+    def test_trailing_crop_words_are_kept(self):
+        text='एक कोल्हू वाला खेत मेरा मिलगे दस खो गया एक मेरा'
+        _,seg=self.run_case(text,'एक कोल्हू वाला खेत मेरा मिलगे दस खो गया')
+        self.assertEqual(seg['text'],text)
+    def test_negation_or_many_changes_still_reject(self):
+        for heard in ['चूल्हे आगे नहीं बैठी माँ वा स्वाद हाथ की रोटी का','चूल्हे पीछे पोती बहन वा स्वाद हाथ की रोटी का']:
+            with self.subTest(heard=heard),self.assertRaises(ValueError):self.run_case('चूल्हे आगे बैठी माँ वा स्वाद हाथ की रोटी का',heard)

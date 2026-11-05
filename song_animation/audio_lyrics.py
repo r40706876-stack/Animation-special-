@@ -63,8 +63,8 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
     groups=[]
     for s in sorted(selected,key=lambda s:s['start']):
         if groups and s['start']<=groups[-1]['end']+.01:
-            groups[-1]['end']=max(groups[-1]['end'],s['end']);groups[-1]['texts'].append(s['text'])
-        else:groups.append({'start':s['start'],'end':s['end'],'texts':[s['text']]})
+            groups[-1]['end']=max(groups[-1]['end'],s['end']);groups[-1]['texts'].append(s['text']);groups[-1]['segs'].append(s)
+        else:groups.append({'start':s['start'],'end':s['end'],'texts':[s['text']],'segs':[s]})
     if not groups:raise ValueError('Unresolved word disagreement has no audible phrase interval')
     windows=[{'region':i,'start':g['start'],'end':g['end']} for i,g in enumerate(groups)]
     prompt='Listen to the attached audio independently. Transcribe ONLY the actual audible words in each labelled region clip, preserving original script. No proposed words or song identity are supplied: do not recall lyrics or complete cut-off lines from memory. Singing ASR can confuse word boundaries, but do not assume either version is right. Return JSON {"regions":[{"region":0,"text":"exact heard phrase","uncertain":false}]}, exactly one result for each region. Mark uncertainty rather than guessing. Never use Roman transliteration for Hindi: use Devanagari for audible Hindi.\nLANGUAGE/SCRIPT HINT (verify from audio): '+str(language or 'unknown')+'\nSOURCE TIME WINDOWS: '+json.dumps(windows)
@@ -100,15 +100,52 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
         # still fail. Full-audio meaning review remains mandatory afterwards.
         text=re.sub('र्(?=[क-ह])','र',text)
         return ''.join(c for c in text if unicodedata.category(c)[0] in 'LM')
-    seen=set()
+    seen=set();corrections=[]
     for row in rows:
         i=row.get('region') if isinstance(row,dict) else None
         if type(i) is not int or not 0<=i<len(groups) or i in seen or row.get('uncertain') is not False or not isinstance(row.get('text'),str):
             raise ValueError('Strong independent word disagreement remains unresolved: incomplete blind audio evidence')
         seen.add(i);proposed=' '.join(groups[i]['texts'])
         if letters(row['text'])!=letters(proposed):
-            raise ValueError('Strong independent word disagreement: blind audio transcription heard '+row['text']+' but proposed '+proposed+'. Correct the transcript from actual audio before creating scenes.')
+            fixes=reconcile_region(groups[i],row['text'],letters)
+            if fixes is None:
+                raise ValueError('Strong independent word disagreement: blind audio transcription heard '+row['text']+' but proposed '+proposed+'. Correct the transcript from actual audio before creating scenes.')
+            corrections.extend(fixes)
+    # Apply only after every region is accepted, so a rejection never leaves a half-edited transcript.
+    for segment,old_word,new_word in corrections:
+        words=segment['text'].split();words[words.index(old_word)]=new_word;segment['text']=' '.join(words)
+    if corrections:blind=dict(blind,word_corrections=[{'proposed':o,'heard':n} for _,o,n in corrections])
     return blind
+
+NEGATIONS={'नहीं','नही','ना','न','मत','not','no','never','nahi','nahin','na','mat'}
+
+def reconcile_region(group,heard,letters):
+    """Tolerate phrase-boundary drift and a rare single-word mishearing in long phrases.
+
+    Accept (keeping the full-clip transcript) up to two extra/missing words at
+    the very start or end of a region; these come from crop boundaries. In a
+    phrase of at least 8 words, at most one word per 8 may differ in the middle;
+    the blind (independent) hearing then replaces it. Any change involving a
+    negation, or any larger disagreement, still returns None (reject).
+    """
+    import difflib
+    slots=[(seg,w) for seg in group['segs'] for w in seg['text'].split()]
+    prop=[w for _,w in slots];hear=heard.split()
+    key=lambda ws:[letters(w) for w in ws]
+    neg={letters(n) for n in NEGATIONS}
+    ops=difflib.SequenceMatcher(a=key(prop),b=key(hear),autojunk=False).get_opcodes()
+    fixes=[];middle=0
+    for tag,a1,a2,b1,b2 in ops:
+        if tag=='equal':continue
+        pa,hb=prop[a1:a2],hear[b1:b2]
+        if letters(''.join(pa))==letters(''.join(hb)):continue  # spacing only, e.g. हम ने / हमने
+        if any(letters(w) in neg for w in pa+hb):return None
+        edge=(a1==0 and b1==0) or (a2==len(prop) and b2==len(hear))
+        if tag in ('insert','delete') and edge and max(len(pa),len(hb))<=2:continue
+        if tag!='replace' or len(pa)!=1 or len(hb)!=1:return None
+        middle+=1;fixes.append((slots[a1][0],pa[0],hb[0]))
+    if middle and (len(prop)<8 or middle>len(prop)//8):return None
+    return fixes
 
 
 def analyze_audio(audio,out):
