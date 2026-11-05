@@ -1,13 +1,7 @@
 name: Song quality acceptance - three real inputs
 on:
-  push:
-    branches: ['main']
-    paths: ['song_acceptance_requests/**']
+  # Manual only: automatic runs were spending the free Gemini quota needed for real uploads.
   workflow_dispatch:
-  schedule:
-    # Daily recovery after the last provider-reported 13:30 IST quota reset.
-    # Source-bound checkpoints and retry_not_before prevent premature API calls.
-    - cron: '15 8 * * *'
 permissions:
   contents: read
   actions: read
