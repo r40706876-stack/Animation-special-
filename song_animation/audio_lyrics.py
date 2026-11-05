@@ -48,6 +48,8 @@ def strong_word_conflicts(segments,independent):
         else:previous=None
     return conflicts
 
+BLIND_SCHEMA={'type':'OBJECT','properties':{'regions':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'region':{'type':'INTEGER'},'text':{'type':'STRING'},'uncertain':{'type':'BOOLEAN'}},'required':['region','text','uncertain']}}},'required':['regions']}
+
 def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language=None):
     """Blindly re-hear disputed phrases; never prefer ASR or a positive verdict.
 
@@ -76,11 +78,18 @@ def confirm_conflicts_from_audio(part,out,segments,conflicts,audio=None,language
                 focused=Path(td)/f"region_{w['region']}.mp3"
                 subprocess.run(['ffmpeg','-y','-v','error','-ss',str(w['start']),'-i',str(audio),'-t',str(w['end']-w['start']),'-vn','-ac','1','-ar','22050','-b:a','64k',str(focused)],check=True)
                 parts.extend([{'text':f"REGION {w['region']}: this audio contains only the requested interval. Transcribe this clip only."},{'inline_data':{'mime_type':'audio/mpeg','data':base64.b64encode(focused.read_bytes()).decode()}}])
-        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',extra_parts=parts,prefer_quality=True,require_full_model=True)
+        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',extra_parts=parts,prefer_quality=True,require_full_model=True,schema=BLIND_SCHEMA)
     else:
-        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',audio_part=part,prefer_quality=True,require_full_model=True)
+        blind=generate_json(prompt,out=out,tag='audio_conflict_blind',audio_part=part,prefer_quality=True,require_full_model=True,schema=BLIND_SCHEMA)
     model=blind.get('_provider_model','')
     rows=blind.get('regions')
+    if rows is None and out:
+        # Model sometimes answers with a bare [..] list; parse_object then keeps
+        # only its first item. Recover the full list from the saved raw reply.
+        try:
+            raw=json.loads(Path(out,'audio_conflict_blind_response.txt').read_text(encoding='utf-8'))
+            if isinstance(raw,list):rows=raw;blind=dict(blind,regions=raw)
+        except (OSError,ValueError):pass
     if not isinstance(model,str) or not model or 'lite' in model.lower() or not isinstance(rows,list) or len(rows)!=len(groups):
         raise ValueError('Strong independent word disagreement remains unresolved: missing full-model blind audio evidence')
     def letters(text):

@@ -108,3 +108,14 @@ class BlindAudioConflict(unittest.TestCase):
             with patch('song_animation.audio_lyrics.duration',return_value=3),patch('song_animation.audio_lyrics.subprocess.run',side_effect=convert),patch('song_animation.audio_lyrics.generate_json',side_effect=ProviderUnavailable([{'model':'full','http_status':429}])) as model:
                 with self.assertRaises(ProviderUnavailable):analyze_audio(audio,root)
                 self.assertEqual(model.call_args.kwargs['tag'],'audio_lyrics')
+
+class BareListReply(unittest.TestCase):
+    def test_bare_list_reply_is_read_as_regions(self):
+        from pathlib import Path
+        reply=[{'region':0,'text':'a sunflower blooms','uncertain':False}]
+        with tempfile.TemporaryDirectory() as td:
+            Path(td,'audio_conflict_blind_response.txt').write_text(json.dumps(reply),encoding='utf-8')
+            parsed=dict(reply[0],_provider_model='gemini-full')
+            with patch('song_animation.audio_lyrics.generate_json',return_value=parsed) as model:
+                result=confirm_conflicts_from_audio({},td,[{'start':0,'end':3,'text':'a sunflower blooms'}],[{'start':1,'end':2}])
+            self.assertEqual(result['regions'],reply);self.assertIn('regions',model.call_args.kwargs['schema']['properties'])
