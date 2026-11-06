@@ -257,7 +257,10 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             sample.save(folder/f'preflight_{index}.png')
             luminance=float(np.asarray(sample.convert('L')).mean())
             s['visibility_review']={'mean_luminance':round(luminance,2),'check_contrast':luminance<65,'advisory_only':True}
-            if plan.get('lighting_preference','bright')=='bright' and not plan.get('allow_night') and luminance<85:
+            # Dusk/lamp-light lyrics (सूरज छुपता, डिबिया की लौ, दीया, शाम) are honestly dim scenes.
+            dusk=bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|शाम|साँझ|सांझ|संध्या|सूरज\s*(छुप|ढल|डूब)|ढलत|लौ|दीया|दिया|दीपक|डिबिया|लालटेन|ढिबरी|तारे|\bdusk\b|\bnight\b|\bevening\b|\blamp\b|\bsunset\b',json.dumps(shot,ensure_ascii=False),re.I))
+            floor=55 if (dusk or plan.get('allow_night')) else (65 if attempt==2 else 85)
+            if plan.get('lighting_preference','bright')=='bright' and luminance<floor:
                 raise ValueError('Default bright treatment failed: the actual frame is too dark. Use a warm light background and readable shaded foreground; sadness does not require a dark whole frame.')
             # An explicitly night-themed composition still requires readable contrast.
             # Never reject an entire musical genre from a global brightness mean.
