@@ -25,8 +25,25 @@ def validate_story(story,scenes):
         state=dict(outgoing)
     return story
 
+def montage_accepted(review,scene_count):
+    """Memory/collage songs (one remembered image after another) are valid films.
+
+    Accept them without cause-and-effect links only when the reviewer itself
+    confirms the lyrics match the visuals, the shots are visibly varied, and
+    the emotion progresses across EVERY transition.
+    """
+    links=review.get('story_links')
+    return (review.get('lyric_story_connection') is True and review.get('visual_variety') is True
+        and isinstance(links,list) and len(links)==max(0,scene_count-1)
+        and all(isinstance(l,dict) and type(l.get('from')) is int and l.get('to')==l['from']+1 and l.get('emotional_progression') is True for l in links)
+        and len({l['from'] for l in links})==len(links)
+        # A consistent collage, not a cause-and-effect story with one gap:
+        # most transitions (and at least 4 shots) are deliberate memory jumps.
+        and 2*sum(1 for l in links if l.get('causal_connection') is not True or l.get('state_continuity') is not True)>len(links) and len(links)>=3)
+
 def narrative_decision(review,scene_count):
     reasons=[];repairs=[]
+    if montage_accepted(review,scene_count):return reasons,repairs
     if review.get('story_arc') is not True:
         reasons.append('No visually earned connected story/payoff')
     links=review.get('story_links')

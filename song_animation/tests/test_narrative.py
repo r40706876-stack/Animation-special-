@@ -84,3 +84,12 @@ class ReviewerOutage(unittest.TestCase):
    with patch('song_animation.generative.generate_json',side_effect=[good,{'valid':True,'issues':[]}]):storyboard({'duration':6,'words':[]},{},td)
    with patch('song_animation.generative.generate_json',side_effect=[good]) as api:
     self.assertTrue(storyboard({'duration':6,'words':[]},{},td)['story_review']['valid']);self.assertEqual(api.call_count,1)
+
+class MemoryMontage(unittest.TestCase):
+ def links(self,emotion=True):return [{'from':i,'to':i+1,'causal_connection':False,'state_continuity':False,'emotional_progression':emotion} for i in range(3)]
+ def test_memory_collage_with_progressing_emotion_passes(self):
+  self.assertEqual(narrative_decision({'story_arc':False,'lyric_story_connection':True,'visual_variety':True,'story_links':self.links()},4),([],[]))
+ def test_collage_still_fails_when_emotion_or_lyrics_do_not_match(self):
+  for review in [{'story_arc':False,'lyric_story_connection':True,'visual_variety':True,'story_links':self.links(False)},
+                 {'story_arc':False,'lyric_story_connection':False,'visual_variety':True,'story_links':self.links()}]:
+   self.assertTrue(narrative_decision(review,4)[0])

@@ -1,8 +1,11 @@
 name: Song Animation - verified checks and review drafts
 on:
   schedule:
-    # 13:40 IST, just after the Gemini free quota resets (13:30 IST).
+    # 13:40, 15:40, 17:40 IST: GitHub often delays or drops a single scheduled run.
+    # Runs with no pending/new audio finish in about a minute and use no model quota.
     - cron: '10 8 * * *'
+    - cron: '10 10 * * *'
+    - cron: '10 12 * * *'
   workflow_dispatch:
     inputs:
       audio_path:
