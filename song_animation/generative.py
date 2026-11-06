@@ -261,6 +261,21 @@ At most 14 newly drawn assets. Each asset SVG under 14000 characters. Choose cle
             dusk=bool(re.search(r'रात|रैन|चाँद|चांद|अंधेर|अँधेर|शाम|साँझ|सांझ|संध्या|सूरज\s*(छुप|ढल|डूब)|ढलत|लौ|दीया|दिया|दीपक|डिबिया|लालटेन|ढिबरी|तारे|\bdusk\b|\bnight\b|\bevening\b|\blamp\b|\bsunset\b',json.dumps(shot,ensure_ascii=False),re.I))
             floor=55 if (dusk or plan.get('allow_night')) else (65 if attempt==2 else 85)
             if plan.get('lighting_preference','bright')=='bright' and luminance<floor:
+                # Deterministic repair first: a dark plain backdrop is the usual cause.
+                # Warm it toward light paper and re-measure; no extra model call.
+                bg=str(s.get('background',''))
+                if re.fullmatch(r'#[0-9a-fA-F]{6}',bg):
+                    for mix in (.55,.8):
+                        rgb=[int(bg[k:k+2],16) for k in (1,3,5)];warm=(246,232,204)
+                        s['background']='#'+''.join(f'{round(c+(w-c)*mix):02x}' for c,w in zip(rgb,warm))
+                        check['scenes'][0]['background']=s['background']
+                        sample=render_vector(check,0,check['total_frames']//2);luminance=float(np.asarray(sample.convert('L')).mean())
+                        if luminance>=floor:break
+                    if luminance>=floor:
+                        data['background']=s['background'];data['normalizations']=data.get('normalizations',[])+[{'brightened_background':{'from':bg,'to':s['background']}}]
+                        s['normalizations']=data['normalizations'];sample.save(folder/f'preflight_{index}.png')
+                        s['visibility_review']=dict(s['visibility_review'],mean_luminance=round(luminance,2),brightened=True)
+            if plan.get('lighting_preference','bright')=='bright' and luminance<floor:
                 raise ValueError('Default bright treatment failed: the actual frame is too dark. Use a warm light background and readable shaded foreground; sadness does not require a dark whole frame.')
             # An explicitly night-themed composition still requires readable contrast.
             # Never reject an entire musical genre from a global brightness mean.
