@@ -15,6 +15,10 @@ def main():
     if state.get('automatic_repair_pending') is True:text+='\nबची हुई visual गलतियाँ और frames सुरक्षित हैं। अगली automatic कोशिश उन्हीं पर नया repair करेगी; अभी final MP4 तैयार नहीं है।\n'
     if state.get('reasons'):
         text+='\n### वीडियो क्यों रुका\n\n'+''.join('- '+str(r)[:600]+'\n' for r in state['reasons'][:30])
+    image_hold=Path(args.out)/'image_provider_hold.json'
+    if image_hold.is_file():
+        try:text+='\n### चित्र सेवा का जवाब\n\n- '+str(json.loads(image_hold.read_text()).get('reason',''))[:600]+'\n'
+        except ValueError:pass
     hold=Path(args.out)/'audio_hold.json'
     if hold.is_file():
         try:reasons=json.loads(hold.read_text()).get('reasons',[])
