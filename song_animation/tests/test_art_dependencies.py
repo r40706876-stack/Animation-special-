@@ -12,7 +12,7 @@ class ArtworkDependencies(unittest.TestCase):
                 r=required(out);self.assertFalse(r['needs_cpu']);self.assertFalse(r['needs_cutouts'])
     def test_rejected_cpu_is_not_installed_for_matching_source_but_other_source_is(self):
         with tempfile.TemporaryDirectory() as td:
-            out=Path(td);(out/'source_clip.wav').write_bytes(b'source');(out/'art_backend_choice.json').write_text(json.dumps({'source_clip_sha256':hashlib.sha256(b'source').hexdigest(),'visual_quality_rejected':True,'rejection_reasons':['Artwork did not meet the stored finish reference']}))
+            out=Path(td);(out/'source_clip.wav').write_bytes(b'source');(out/'art_backend_choice.json').write_text(json.dumps({'source_clip_sha256':hashlib.sha256(b'source').hexdigest(),'visual_quality_rejected':True,'rejection_reasons':['Artwork did not meet the stored finish reference'],'painter':'cpu-original-v2'}))
             r=required(out);self.assertFalse(r['needs_cpu']);self.assertTrue(r['needs_cutouts'])
             (out/'source_clip.wav').write_bytes(b'other source');self.assertTrue(required(out)['needs_cpu'])
     def test_missing_cache_is_conservative(self):

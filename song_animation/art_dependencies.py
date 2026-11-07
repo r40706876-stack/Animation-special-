@@ -1,4 +1,5 @@
 """Install image backends only when this exact source can actually use them."""
+from .original_art import LOCAL_PAINTER
 import hashlib,json,os
 from pathlib import Path
 from .pipeline_checkpoint import needs_scene_rewrite
@@ -13,7 +14,7 @@ def required(out,artwork='flux-layers'):
     try:
         sha=hashlib.sha256((out/'source_clip.wav').read_bytes()).hexdigest()
         state=json.loads((out/'art_backend_choice.json').read_text()) if (out/'art_backend_choice.json').exists() else {}
-        if state.get('source_clip_sha256')==sha and state.get('visual_quality_rejected') and 'rejection_reasons' in state:
+        if state.get('source_clip_sha256')==sha and state.get('visual_quality_rejected') and state.get('painter')==LOCAL_PAINTER:
             result['needs_cpu']=False
         recovery=json.loads((out/'pipeline_checkpoint.json').read_text())
         if needs_scene_rewrite(recovery,artwork):return result

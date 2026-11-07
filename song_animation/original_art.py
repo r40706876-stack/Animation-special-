@@ -28,17 +28,20 @@ def paint(plan,out,audio):
             # spending another full production run on known-bad artwork.
             try:rejected=json.loads(state.read_text())
             except (OSError,ValueError):rejected={}
-            # Legacy marks (before reasons were recorded) may come from story-only holds; allow one more local try.
-            if rejected.get('source_clip_sha256')==key and rejected.get('visual_quality_rejected') and 'rejection_reasons' in rejected:
+            # Only a rejection of THIS painter version blocks the local fallback.
+            if rejected.get('source_clip_sha256')==key and rejected.get('visual_quality_rejected') and rejected.get('painter')==LOCAL_PAINTER:
                 raise
             print('Public image service unavailable; switching the WHOLE source to original local artwork',flush=True)
             # Never mix incompatible generations within one source on resume.
             state.write_text(json.dumps({'source_clip_sha256':key,'backend':'cpu','reason':'public_image_service_unavailable','quality_certified':False}))
     from .local_image import generate_image
     from .environments import REVISION
-    namespace='cpu-original-v1-'+REVISION[:12]
+    namespace=LOCAL_PAINTER+'-'+REVISION[:12]
     candidate=flux_layers.paint_foreground(plan,out,image_generator=generate_image,namespace=namespace,**keep_assets)
     return flux_layers.paint_environments(candidate,out,image_generator=generate_image,namespace=namespace,**keep_scenes)
+
+# Bump when the local painter changes, so an old painter's rejection does not ban the new one.
+LOCAL_PAINTER='cpu-original-v2'
 
 STORY_ONLY=('No visually earned connected story','Story connection from shot','Missing cross-shot story review','Invalid story transition review','The overall visible story')
 
@@ -54,5 +57,5 @@ def reject_local_backend(out,reasons=None):
     try:data=json.loads(state.read_text())
     except (OSError,ValueError):return
     if data.get('backend')=='cpu':
-        data['visual_quality_rejected']=True;data['rejection_reasons']=[str(r)[:300] for r in (reasons or [])][:20]
+        data['visual_quality_rejected']=True;data['rejection_reasons']=[str(r)[:300] for r in (reasons or [])][:20];data['painter']=LOCAL_PAINTER
         state.write_text(json.dumps(data))
