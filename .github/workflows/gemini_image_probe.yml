@@ -1,0 +1,22 @@
+name: Gemini image probe (one-off check)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - name: Try free image generation with the existing Gemini key
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python tools/gemini_image_probe.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gemini-image-probe
+          path: probe_out/
+          if-no-files-found: ignore
