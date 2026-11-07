@@ -48,6 +48,11 @@ def prompt_for_asset(asset,bible,separate_limbs=False):
     identity=' Character identity and clothing: '+str(bible.get('characters',''))[:550] if human else ' No people or extra objects.'
     return (subject+'. Premium detailed painterly storybook illustration, expressive natural anatomy where appropriate, fine organic contours, rich modeled surfaces and restrained watercolor texture. '+extra+identity+'. Palette: '+str(bible.get('palette',''))[:160]+'. Shared film style: '+str(bible.get('style',''))[:240]+'. '+isolation)
 
+def is_human_asset(asset):
+    if asset.get('subject_kind'):return asset.get('subject_kind')=='human'
+    words=' '.join(str(asset.get(k,'')) for k in ('id','image_prompt','description')).replace('_',' ').lower()
+    return bool(re.search(r'\b(body|torso|bust|head|face|arms?|hands?|fingers?|person|people|poet|woman|man|boy|girl|child|mother|father|narrator|farmer|figure)\b',words))
+
 def is_structural(asset):
     text=(asset['id']+' '+str(asset.get('description',''))).lower()
     return any(word in text for word in ('stroke','ripple','droplet','wind_line','breath_','goblet_fill','outline','petal'))
@@ -75,6 +80,12 @@ def paint_foreground(plan,out,image_generator=generate_image,namespace='flux-cut
             a.pop('raster_png',None);a.pop('raster_frames',None);a.pop('frame_hold',None);a.pop('painted_actor',None)
             continue
         if min(a['width'],a['height'])<45:continue
+        if namespace.startswith('cpu') and is_human_asset(a):
+            # The local CPU painter distorts hands and faces (review 2026-11-07: bark-like
+            # hands, face pasted inside a hand). Keep the clean planned vector figure;
+            # objects and settings are still painted.
+            a.pop('raster_png',None);a.pop('raster_frames',None);a.pop('frame_hold',None);a.pop('painted_actor',None)
+            report.append({'asset':aid,'kept_vector_figure':True,'quality_certified':False});continue
         body=body_rig_asset(a)
         context=repair_context(plan,aid=aid)
         prompt=corrected_prompt(prompt_for_asset(a,plan.get('bible',{}),separate_limbs=body),context)

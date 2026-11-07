@@ -60,3 +60,18 @@ class StoryOnlyHold(unittest.TestCase):
             self.assertNotIn('visual_quality_rejected',json.loads(state.read_text()))
             reject_local_backend(td,['Artwork did not meet the stored finish reference'])
             self.assertTrue(json.loads(state.read_text())['visual_quality_rejected'])
+
+class LocalPainterKeepsVectorPeople(unittest.TestCase):
+    def test_cpu_backend_keeps_vector_figures_and_paints_objects(self):
+        from song_animation import flux_layers
+        svg='<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#a55"/></svg>'
+        plan={'assets':{'mother_hands':{'svg':svg,'width':100,'height':100,'description':'mother hands rolling roti'},
+                        'brass_lota':{'svg':svg,'width':100,'height':100,'description':'brass lota pot','subject_kind':'object'}},
+              'scenes':[{'nodes':[{'id':'a','asset':'mother_hands'},{'id':'b','asset':'brass_lota'}]}]}
+        painted=[]
+        with tempfile.TemporaryDirectory() as td,patch.object(flux_layers,'validate_vector',side_effect=lambda p:p),\
+             patch.object(flux_layers,'prompt_for_asset',side_effect=lambda a,b,separate_limbs=False:painted.append(a['id']) or 'p'),\
+             patch.object(flux_layers,'body_rig_asset',return_value=False),patch.object(flux_layers,'repair_context',return_value=''),\
+             patch.object(flux_layers,'corrected_prompt',side_effect=lambda p,c:p),patch.object(flux_layers,'generate_image',side_effect=RuntimeError('stop')):
+            with self.assertRaises(Exception):flux_layers.paint_foreground(plan,td,image_generator=flux_layers.generate_image,namespace='cpu-original-v1-x')
+        self.assertEqual(painted,['brass_lota'])
