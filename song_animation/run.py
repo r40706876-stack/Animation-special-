@@ -125,7 +125,7 @@ def main():
             if not precheck['passed']:
                 if args.artwork=='flux-layers':
                     from .original_art import reject_local_backend
-                    reject_local_backend(out)
+                    reject_local_backend(out,precheck['reasons'])
                 save_pipeline(out,pipeline_key,plan,1,dict(assessment,issues=precheck['repair_issues']),pending=True,not_before_attempt=execution_id)
                 (out/'status.json').write_text(json.dumps({'status':'blocked','stage':'composition_preflight','automatic_repair_pending':True,'automatic_publish':False,'error':'Rendered scene samples failed visual review before full export','reasons':precheck['reasons']}))
                 raise QualityHold('Scene samples need repair; full export skipped and repair checkpoint saved')
@@ -159,7 +159,7 @@ def main():
         passed=decision['passed'] and technical['passed']
         if not decision['passed'] and args.artwork=='flux-layers':
             from .original_art import reject_local_backend
-            reject_local_backend(out)
+            reject_local_backend(out,decision['reasons'])
         gate={'passed':passed,'visual':decision,'technical':technical,'repair_passes':passes,'human_approval':False,'universal_quality_certified':False}
         (out/'quality_gate.json').write_text(json.dumps(gate,ensure_ascii=False,indent=2))
         status={'status':'checks_passed' if passed else 'blocked','engine':args.engine,'open_vocabulary':args.engine=='generated','duration_limit':30,'automatic_publish':False,'universal_quality_certified':False,'visual_repair_applied':changed,'warnings':lyrics.get('warnings',[]),'quality_gate':gate}

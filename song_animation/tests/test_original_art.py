@@ -50,3 +50,13 @@ class OriginalArt(unittest.TestCase):
         self.assertIn('Arms folded behind the back',rig)
         background=compact_prompt('Overhead close-up viewpoint. A balcony writing room. Background supporting this staging: A hand writes.')
         self.assertIn('supporting surface',background);self.assertNotIn('A hand writes',background)
+
+class StoryOnlyHold(unittest.TestCase):
+    def test_story_only_hold_does_not_ban_local_art_but_artwork_hold_does(self):
+        from song_animation.original_art import reject_local_backend
+        with tempfile.TemporaryDirectory() as td:
+            state=Path(td,'art_backend_choice.json');state.write_text(json.dumps({'source_clip_sha256':'k','backend':'cpu'}))
+            reject_local_backend(td,['No visually earned connected story/payoff','Story connection from shot 0 to 1 failed'])
+            self.assertNotIn('visual_quality_rejected',json.loads(state.read_text()))
+            reject_local_backend(td,['Artwork did not meet the stored finish reference'])
+            self.assertTrue(json.loads(state.read_text())['visual_quality_rejected'])

@@ -28,7 +28,8 @@ def paint(plan,out,audio):
             # spending another full production run on known-bad artwork.
             try:rejected=json.loads(state.read_text())
             except (OSError,ValueError):rejected={}
-            if rejected.get('source_clip_sha256')==key and rejected.get('visual_quality_rejected'):
+            # Legacy marks (before reasons were recorded) may come from story-only holds; allow one more local try.
+            if rejected.get('source_clip_sha256')==key and rejected.get('visual_quality_rejected') and 'rejection_reasons' in rejected:
                 raise
             print('Public image service unavailable; switching the WHOLE source to original local artwork',flush=True)
             # Never mix incompatible generations within one source on resume.
@@ -39,11 +40,19 @@ def paint(plan,out,audio):
     candidate=flux_layers.paint_foreground(plan,out,image_generator=generate_image,namespace=namespace,**keep_assets)
     return flux_layers.paint_environments(candidate,out,image_generator=generate_image,namespace=namespace,**keep_scenes)
 
-def reject_local_backend(out):
-    """Do not pin later attempts to a backend whose actual film failed review."""
+STORY_ONLY=('No visually earned connected story','Story connection from shot','Missing cross-shot story review','Invalid story transition review','The overall visible story')
+
+def reject_local_backend(out,reasons=None):
+    """Do not pin later attempts to a backend whose actual ARTWORK failed review.
+
+    A film held only for story structure says nothing about the local painter,
+    so it must not block the local fallback (that wrongly stalled a song that had
+    already produced passing local art before).
+    """
+    if reasons is not None and reasons and all(str(r).startswith(STORY_ONLY) for r in reasons):return
     state=Path(out)/'art_backend_choice.json'
     try:data=json.loads(state.read_text())
     except (OSError,ValueError):return
     if data.get('backend')=='cpu':
-        data['visual_quality_rejected']=True
+        data['visual_quality_rejected']=True;data['rejection_reasons']=[str(r)[:300] for r in (reasons or [])][:20]
         state.write_text(json.dumps(data))
