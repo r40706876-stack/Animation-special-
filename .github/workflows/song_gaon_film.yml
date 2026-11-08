@@ -1,0 +1,37 @@
+name: Gaon song film (authored)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core
+          pip install 'Pillow>=10,<13' 'numpy>=1.26,<3'
+          python -c "from PIL import features;assert features.check_feature('raqm'),'Hindi shaping (raqm) missing'"
+      - name: Caption check stills
+        run: python -m song_animation.examples.gaon_film --audio song_animation/inputs/song_20261104_gaon.m4a --out gaon_film --stills 1.0,6.0,12.0,20.0,24.0,28.0
+      - name: Render film with Hindi captions
+        run: python -m song_animation.examples.gaon_film --audio song_animation/inputs/song_20261104_gaon.m4a --out gaon_film
+      - run: ffmpeg -v error -xerror -i gaon_film/gaon_film.mp4 -f null -
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gaon-film
+          path: gaon_film/
+          retention-days: 30
+      - name: Publish playable video link
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="gaon-film-${{ github.run_id }}"
+          gh release create "$tag" gaon_film/gaon_film.mp4 gaon_film/still_*.jpg --title "Gaon song film" --notes "Authored film for song_20261104_gaon.m4a (clip 15-45 s). Run ${{ github.run_id }}." --target "${{ github.sha }}"
+          echo "## ✅ Video: https://github.com/${{ github.repository }}/releases/tag/$tag" >> "$GITHUB_STEP_SUMMARY"
