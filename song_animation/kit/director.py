@@ -57,6 +57,8 @@ DEFAULTS=[  # used for lines with no keyword, cycling for variety
 ]
 INDOOR_ONLY={'chulha','niche_lamp','door','charkha','photo','clock','window','trunk','candle','radio','charpai','matka','lantern'}
 SKY_ONLY={'sun','moon','clouds','kite','citylights'}
+ROOM_ONLY={'niche_lamp','door','window','clock','photo'}
+WIDE={'chulha':1.0,'door':1.0,'charkha':1.4,'temple':.7,'train':2.5,'bus':1.2,'house':.6,'hut':.55,'tree':.6,'well':.55,'cart':.8,'tractor':.7,'boat':.9,'charpai':1.1,'trunk':.9,'kolhu':.6,'swing':.7,'niche_lamp':.8,'phone':.45,'letter':.75,'radio':.8}
 
 DEV='\u0900-\u097F'
 WHOLE={'बस','पल','दिल','राम','लाल','हल','साथ','माता','याद'}  # short words that are also parts of other words
@@ -113,7 +115,9 @@ def keyword_compose(text,index,prev_key=None):
 
 def normalize(shot,index):
     """Clamp a composition to safe values: vocabulary, placement bands, scale, count, draw order."""
-    s={'setting':'indoor' if shot.get('setting')=='indoor' else 'outdoor','sky':shot.get('sky') if shot.get('sky') in SKIES else 'golden',
+    names={o.get('name') for o in (shot.get('objects') or []) if isinstance(o,dict)}
+    must_indoor=bool(names & ROOM_ONLY)  # a wall niche or a door never stands in an open field
+    s={'setting':'indoor' if shot.get('setting')=='indoor' or must_indoor else 'outdoor','sky':shot.get('sky') if shot.get('sky') in SKIES else 'golden',
        'ground':shot.get('ground') if shot.get('ground') in GROUNDS else 'field','wall':shot.get('wall') if shot.get('wall') in WALLS else 'mud',
        'light':'night' if shot.get('light')=='night' else 'day','camera':shot.get('camera') if shot.get('camera') in CAMERAS else CAMERAS[index%4],
        'effects':[e for e in (shot.get('effects') or []) if e in EFFECTS][:2],'objects':[]}
@@ -131,10 +135,18 @@ def normalize(shot,index):
         elif pl=='wall':y=min(.68,max(.42,y)) if s['setting']=='indoor' else min(.9,max(floor+.05,y))
         else:y=min(.93,max(floor,y))
         x=min(.88,max(.12,x));sc=min(1.5,max(.35,sc))
+        if pl=='person':sc=max(.9,sc)  # people must read clearly next to big props
         if pl=='hero':y=min(.82,max(.6,y))
         params=o.get('params') if isinstance(o.get('params'),dict) else {}
         params={k:v for k,v in params.items() if k in('open','locked','old','moving','rain','sky','color','scroll','web') and isinstance(v,(bool,str))}
         s['objects'].append({'name':name,'x':x,'y':y,'scale':sc,'pose':o.get('pose') if o.get('pose') in('stand','sit','walk') else 'stand','params':params,'_pl':pl})
+    # people stand beside the main subject, never on top of it
+    big=[o for o in s['objects'] if o['_pl'] in('ground','hero','wall') and o['name'] not in('sugarcane',) and o['scale']>=.5]
+    half=lambda o:.27*o['scale']*WIDE.get(o['name'],1.0)  # approx half width as a frame fraction
+    def clear(x,me):return min([abs(x-o['x'])-half(o) for o in big]+[1])-.05*any(abs(x-q['x'])<.1 for q in s['objects'] if q is not me and q['_pl']=='person')
+    for o in s['objects']:
+        if o['_pl']=='person' and big and clear(o['x'],o)<.06:
+            o['x']=max((.14,.86,.25,.75,.5),key=lambda x:clear(x,o))
     if not [o for o in s['objects'] if o['_pl']!='sky']:  # never an empty frame
         s['objects'].append({'name':'tree' if s['setting']=='outdoor' else 'lantern','x':.5,'y':.8,'scale':1.0,'pose':'stand','params':{},'_pl':'ground'})
     s['objects'].sort(key=lambda o:(o['_pl']!='sky',o['_pl']!='wall',o['y']))

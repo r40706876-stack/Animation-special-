@@ -117,7 +117,7 @@ def main():
     clip,sel=prepare(a.audio,out,limit=30,start=a.start);dur=float(sel['duration'])
     key=hashlib.sha256(Path(clip).read_bytes()).hexdigest()[:16];cache=out/'kit_lyrics.json'
     if a.lyrics:lyr=json.loads(Path(a.lyrics).read_text());checked=True
-    elif cache.exists() and json.loads(cache.read_text()).get('key')==key:saved=json.loads(cache.read_text());lyr,checked=saved['lyrics'],saved['checked']
+    elif cache.exists() and json.loads(cache.read_text()).get('key')==key and json.loads(cache.read_text()).get('checked'):saved=json.loads(cache.read_text());lyr,checked=saved['lyrics'],saved['checked']
     else:
         lyr,checked=lyrics_for(clip,out);cache.write_text(json.dumps({'key':key,'lyrics':lyr,'checked':checked},ensure_ascii=False))
     words=[{'start':float(w['start']),'end':float(w['end']),'text':w['text']} for w in lyr.get('words',[])]
