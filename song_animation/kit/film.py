@@ -83,18 +83,30 @@ def render(plan,clip,out,duration,captions=True,stills=None):
     for s in (1.5,duration*.35,duration*.65,duration-2):r.frame(int(s*FPS),total).save(out/f'still_{s:05.2f}.jpg',quality=85)
     return video
 
-def lyrics_for(clip,out):
-    """Strict checked lyrics when possible; otherwise the model's first hearing without captions."""
+def lyrics_for(clip,out,waits=(60,180,420,600)):
+    """Strict checked lyrics when possible; otherwise the model's first hearing without captions.
+
+    A busy model (HTTP 5xx) is waited out with growing pauses (~21 min in all);
+    a daily-quota block (429 everywhere) stops at once and the daily retry picks it up.
+    """
+    import time
     from ..audio_lyrics import analyze_audio
-    try:return analyze_audio(clip,out),True
-    except Exception as error:
-        print('Checked lyrics unavailable:',str(error)[:300],flush=True)
-        try:
-            cand=json.loads((Path(out)/'audio_candidate.json').read_text()).get('data',{})
-            words=[{'start':float(s['start']),'end':float(s['end']),'text':str(s.get('text','')).strip()} for s in cand.get('segments',[]) if str(s.get('text','')).strip()]
-            if words:return {'words':words,'mood':cand.get('mood',''),'summary':cand.get('summary',''),'language':cand.get('language','')},False
-        except (OSError,ValueError,KeyError,TypeError):pass
-        raise
+    from ..provider import ProviderUnavailable
+    for attempt in range(len(waits)+1):
+        try:return analyze_audio(clip,out),True
+        except ProviderUnavailable as error:
+            codes={a.get('http_status') for a in getattr(error,'attempts',[]) if isinstance(a,dict)}
+            if attempt==len(waits) or (codes and codes<= {429,404}):last=error;break
+            print(f'Model busy {sorted(c for c in codes if c)}; waiting {waits[attempt]} s before retry {attempt+1}',flush=True);time.sleep(waits[attempt])
+        except Exception as error:last=error;break
+    error=last
+    print('Checked lyrics unavailable:',str(error)[:300],flush=True)
+    try:
+        cand=json.loads((Path(out)/'audio_candidate.json').read_text()).get('data',{})
+        words=[{'start':float(s['start']),'end':float(s['end']),'text':str(s.get('text','')).strip()} for s in cand.get('segments',[]) if str(s.get('text','')).strip()]
+        if words:return {'words':words,'mood':cand.get('mood',''),'summary':cand.get('summary',''),'language':cand.get('language','')},False
+    except (OSError,ValueError,KeyError,TypeError):pass
+    raise error
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--audio',required=True);ap.add_argument('--out',default='kit_out')
