@@ -1,0 +1,109 @@
+name: Song Kit Film (automatic)
+# Upload a song to song_animation/inputs/ -> a finished reel is published as a release.
+# Visuals are code-drawn (no image service/quota); Gemini text is used only for lyrics + scene choice.
+on:
+  push:
+    branches: [main]
+    paths: ['song_animation/inputs/**']
+  schedule:
+    - cron: '20 8 * * *'   # 13:50 IST: retry any song that has no film yet (quota resets 13:30 IST)
+  workflow_dispatch:
+    inputs:
+      audio_path:
+        description: 'Song file, e.g. song_animation/inputs/my_song.mp3 (blank = all pending)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: song-kit
+  cancel-in-progress: false
+jobs:
+  film:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Pick songs
+        id: pick
+        env:
+          EVENT: ${{ github.event_name }}
+          WANT: ${{ github.event.inputs.audio_path }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,os,subprocess,json
+          from pathlib import Path
+          ext=('.mp3','.m4a','.wav','.aac','.ogg','.opus','.flac')
+          skip=('DEMO_','reference.')
+          def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
+          tags=set(subprocess.run(['gh','release','list','--limit','300','--json','tagName','-q','.[].tagName'],capture_output=True,text=True).stdout.split())
+          done=lambda p:any(t.startswith('kit-'+sha(p)+'-') for t in tags)
+          want=os.environ.get('WANT','').strip();event=os.environ['EVENT']
+          if want:picks=[want]
+          elif event=='push':
+              b=os.environ.get('BEFORE','');rng=[b,os.environ['AFTER']] if b and set(b)!={'0'} else [os.environ['AFTER']+'~1',os.environ['AFTER']]
+              out=subprocess.run(['git','diff','--name-only','--diff-filter=AM',*rng,'--','song_animation/inputs'],capture_output=True,text=True).stdout.split()
+              picks=[p for p in out if p.lower().endswith(ext) and Path(p).exists()]
+          else:
+              picks=sorted((str(p) for p in Path('song_animation/inputs').iterdir() if p.suffix.lower() in ext and not p.name.startswith(skip) and not done(str(p))),key=lambda p:-Path(p).stat().st_mtime)
+          picks=[p for p in picks if Path(p).exists()][:2]
+          print('Songs to film:',picks)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('songs='+json.dumps(picks)+'\n');f.write('count='+str(len(picks))+'\n')
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.pick.outputs.count != '0'
+        with:
+          python-version: '3.11'
+      - name: Install
+        if: steps.pick.outputs.count != '0'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core
+          pip install -r song_animation/requirements.txt
+          python -c "from PIL import features;assert features.check_feature('raqm'),'Hindi shaping (raqm) missing'"
+      - uses: actions/cache@v4
+        if: steps.pick.outputs.count != '0'
+        with:
+          path: kit_runs
+          key: kit-runs-${{ github.run_id }}
+          restore-keys: kit-runs-
+      - name: Make films
+        if: steps.pick.outputs.count != '0'
+        env:
+          SONGS: ${{ steps.pick.outputs.songs }}
+        run: |
+          set -u
+          ok=0
+          for song in $(python3 -c "import json,os;print(' '.join(json.loads(os.environ['SONGS'])))"); do
+            id=$(sha256sum "$song" | cut -c1-12); out="kit_runs/$id"
+            echo "::group::Film for $song ($id)"
+            if python -m song_animation.kit.film --audio "$song" --out "$out"; then
+              tag="kit-$id-${{ github.run_id }}"
+              gh release create "$tag" "$out/kit_film.mp4" "$out"/still_*.jpg "$out/kit_plan.json" --title "Song film: $(basename "$song")" \
+                --notes "Automatic kit film for $song (run ${{ github.run_id }}). Director: $(python3 -c "import json;print(json.load(open('$out/kit_plan.json'))['source'])")" --target "${{ github.sha }}"
+              echo "## ✅ $(basename "$song"): https://github.com/${{ github.repository }}/releases/tag/$tag" >> "$GITHUB_STEP_SUMMARY"
+              ok=$((ok+1))
+            else
+              echo "## ❌ $(basename "$song"): video nahi bani (log dekho). Kal 1:50 baje apne aap dobara try hoga." >> "$GITHUB_STEP_SUMMARY"
+            fi
+            echo "::endgroup::"
+          done
+          [ "$ok" -gt 0 ]
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.pick.outputs.count != '0'
+        with:
+          name: song-kit-films
+          path: |
+            kit_runs/*/kit_film.mp4
+            kit_runs/*/kit_plan.json
+            kit_runs/*/still_*.jpg
+            kit_runs/*/*_response.txt
+          retention-days: 14

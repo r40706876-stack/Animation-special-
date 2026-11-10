@@ -1,11 +1,7 @@
 name: Song Animation - verified checks and review drafts
 on:
-  schedule:
-    # 13:40, 15:40, 17:40 IST: GitHub often delays or drops a single scheduled run.
-    # Runs with no pending/new audio finish in about a minute and use no model quota.
-    - cron: '10 8 * * *'
-    - cron: '10 10 * * *'
-    - cron: '10 12 * * *'
+  # Automatic runs moved to song_kit.yml (2026-11-11): this strict pipeline kept failing on
+  # image quality and used the Gemini quota the kit needs. Still runnable by hand.
   workflow_dispatch:
     inputs:
       audio_path:
@@ -18,8 +14,6 @@ on:
         type: choice
         default: flux-layers
         options: [flux-layers, painted-layers]
-  push:
-    branches: ['main', 'feature/song-animation-*']
     paths: ['song_animation/**', '.github/workflows/song_animation.yml']
 permissions:
   contents: read
