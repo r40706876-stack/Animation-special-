@@ -43,8 +43,9 @@ jobs:
           ext=('.mp3','.m4a','.wav','.aac','.ogg','.opus','.flac')
           skip=('DEMO_','reference.')
           def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
-          tags=set(subprocess.run(['gh','release','list','--limit','300','--json','tagName','-q','.[].tagName'],capture_output=True,text=True).stdout.split())
-          done=lambda p:any(t.startswith('kit-'+sha(p)+'-') and not t.endswith('-draft') for t in tags)  # drafts (no checked captions) are retried
+          rel=subprocess.run(['gh','api','--paginate','repos/${{ github.repository }}/releases?per_page=100','-q','.[]|[.tag_name,(.body|tostring|contains("Captions checked: True"))]|@tsv'],capture_output=True,text=True).stdout.splitlines()
+          final={l.split('\t')[0] for l in rel if l.endswith('\ttrue')}
+          done=lambda p:any(t.startswith('kit-'+sha(p)+'-') for t in final)  # films without checked captions are retried
           want=os.environ.get('WANT','').strip();event=os.environ['EVENT']
           if want:picks=[want]
           elif event=='push':
@@ -89,7 +90,7 @@ jobs:
               tag="kit-$id-${{ github.run_id }}"
               if [ "$(python3 -c "import json;print(json.load(open('$out/kit_plan.json'))['captions_checked'])")" != "True" ]; then tag="$tag-draft"; fi
               gh release create "$tag" "$out/kit_film.mp4" "$out"/still_*.jpg "$out/kit_plan.json" --title "Song film: $(basename "$song")" \
-                --notes "Automatic kit film for $song (run ${{ github.run_id }}). Director: $(python3 -c "import json;print(json.load(open('$out/kit_plan.json'))['source'])")" --target "${{ github.sha }}"
+                --notes "Automatic kit film for $song (run ${{ github.run_id }}). Captions checked: $(python3 -c "import json;print(json.load(open('$out/kit_plan.json'))['captions_checked'])"). Director: $(python3 -c "import json;print(json.load(open('$out/kit_plan.json'))['source'])")" --target "${{ github.sha }}"
               case "$tag" in *-draft) note=" (draft: bol ki jaanch baaki, kal 1:50 IST par captions ke saath dobara banegi)";; *) note="";; esac
               echo "## ✅ $(basename "$song")$note: https://github.com/${{ github.repository }}/releases/tag/$tag" >> "$GITHUB_STEP_SUMMARY"
               ok=$((ok+1))
