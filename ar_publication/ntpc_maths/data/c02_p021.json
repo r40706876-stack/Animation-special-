@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "21",
+ "model": "gemini-3.5-flash",
+ "questions": [
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "If the ratio of two numbers is 3 : 8, and their HCF is 6, then their LCM is:",
+   "hi": "यदि दो संख्याओं का अनुपात 3 : 8 है और उनका HCF 6 है, तो उनका LCM कितना होगा?",
+   "opts": [
+    "148",
+    "155",
+    "144",
+    "189"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = HCF × (अनुपातों का गुणनफल)<br>LCM = 6 × 3 × 8 = 144.",
+   "trick": "LCM = HCF × a × b",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "The HCF and LCM of two numbers are 27 and 324, respectively. If one number is 81, find the other number.",
+   "hi": "दो संख्याओं का महत्तम समापवर्तक (HCF) और लघुत्तम समापवर्त्य (LCM) क्रमशः 27 और 324 है। यदि एक संख्या 81 है, तो दूसरी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "96",
+    "108",
+    "120",
+    "84"
+   ],
+   "my_ans": "B",
+   "sol": "पहली × दूसरी = HCF × LCM<br>81 × दूसरी = 27 × 324<br>दूसरी = (27 × 324) / 81 = 108.",
+   "trick": "पहली संख्या × दूसरी संख्या = HCF × LCM",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 15, 12 and 14 leaves remainder 5 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए, जिसे 15, 12 और 14 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 5 प्राप्त हो।",
+   "opts": [
+    "9192",
+    "9595",
+    "9988",
+    "9665"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(15, 12, 14) = 420<br>9999 ÷ 420 करने पर शेष = 339<br>संख्या = 9999 - 339 + 5 = 9665.",
+   "trick": "अभीष्ट संख्या = (9999 - शेषफल) + 5",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 6, 10 and 14 leaves remainder 3 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 6, 10 और 14 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 3 प्राप्त हो।",
+   "opts": [
+    "9873",
+    "9716",
+    "9889",
+    "9932"
+   ],
+   "my_ans": "A",
+   "sol": "LCM(6, 10, 14) = 210<br>9999 ÷ 210 करने पर शेष = 129<br>संख्या = 9999 - 129 + 3 = 9873.",
+   "trick": "विकल्प से 3 घटाने पर वह 210 (6,10,14) से कटनी चाहिए",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "If the ratio of two numbers is 4 : 1, and their HCF is 47, then their LCM is:",
+   "hi": "यदि दो संख्याओं का अनुपात 4 : 1 है और उनका महत्तम समापवर्तक (HCF) 47 है, तो उनका लघुत्तम समापवर्त्य (LCM) _____ होगा।",
+   "opts": [
+    "412",
+    "406",
+    "188",
+    "376"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = HCF × a × b<br>LCM = 47 × 4 × 1 = 188.",
+   "trick": "LCM = HCF × (अनुपातों का गुणनफल)",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 11 : 3 : 2, and their LCM is 2706. Their HCF is:",
+   "hi": "तीन संख्याएँ 11 : 3 : 2 के अनुपात में हैं, और उनका लघुत्तम समापवर्त्य (LCM) 2706 है। उनका महत्तम समापवर्तक (HCF) क्या है?",
+   "opts": [
+    "41",
+    "82",
+    "30",
+    "50"
+   ],
+   "my_ans": "A",
+   "sol": "माना HCF = x<br>LCM = LCM(11, 3, 2) × x = 66x<br>66x = 2706 → x = 41.",
+   "trick": "HCF = LCM ÷ (अनुपातों का LCM)",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 14, 15 and 8 leaves remainder 4 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए, जिसे 14, 15 और 8 से भाग देने पर प्रत्येक स्थिति में शेषफल 4 प्राप्त हो?",
+   "opts": [
+    "9244",
+    "9196",
+    "9199",
+    "9686"
+   ],
+   "my_ans": "A",
+   "sol": "LCM(14, 15, 8) = 840<br>9999 ÷ 840 करने पर शेष = 759<br>संख्या = 9999 - 759 + 4 = 9244.",
+   "trick": "(संख्या - 4) 840 (LCM) से पूरी विभाजित होगी",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "The L.C.M. of two numbers is 210 and their H.C.F. is 3. If the first number is divided by 3, the quotient is 7 and the remainder is 0. The second number is:",
+   "hi": "दो संख्याओं का लघुत्तम समापवर्त्य 210 है और उनका महत्तम समापवर्तक 3 है। यदि पहली संख्या को 3 से विभाजित किया जाए, तो भागफल 7 और शेषफल 0 प्राप्त होता है। दूसरी संख्या कितनी है?",
+   "opts": [
+    "35",
+    "60",
+    "30",
+    "25"
+   ],
+   "my_ans": "C",
+   "sol": "पहली संख्या = 3 × 7 = 21<br>पहली × दूसरी = HCF × LCM<br>21 × दूसरी = 3 × 210 → दूसरी = 30.",
+   "trick": "संख्या = भाजक × भागफल + शेष",
+   "ans": "C"
+  }
+ ]
+}

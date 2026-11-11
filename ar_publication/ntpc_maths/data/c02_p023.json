@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "23",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 9 : 7 : 5, and their LCM is 2205. Their HCF is:",
+   "hi": "तीन संख्याएँ 9 : 7 : 5 के अनुपात में हैं, और उनका LCM 2205 है। उनका HCF कितना है?",
+   "opts": [
+    "7",
+    "34",
+    "29",
+    "24"
+   ],
+   "my_ans": "A",
+   "sol": "माना संख्याएँ 9x, 7x, 5x हैं। LCM = 9 × 7 × 5 × x = 315x<br>315x = 2205 → x = 2205 / 315 = 7<br>HCF = x = 7.",
+   "trick": "LCM = (अनुपातों का LCM) × HCF",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "The HCF of two numbers is 8, and their LCM is 240. If the sum of the two numbers is 88, what are the numbers?",
+   "hi": "दो संख्याओं का महत्तम समापवर्तक (HCF) 8 है और उनका लघुत्तम समापवर्त्य (LCM) 240 है। यदि दोनों संख्याओं का योगफल 88 है, तो संख्याएं ज्ञात कीजिए।",
+   "opts": [
+    "40 and 48<br>40 और 48",
+    "24 and 64<br>24 और 64",
+    "32 and 56<br>32 और 56",
+    "16 and 72<br>16 और 72"
+   ],
+   "my_ans": "A",
+   "sol": "विकल्प (A) में 40 + 48 = 88 और HCF = 8 है।<br>LCM = (40 × 48) / 8 = 5 × 48 = 240.<br>अतः विकल्प (A) सही है।",
+   "trick": "विकल्पों से जाँचें: योग 88 और HCF 8 होना चाहिए।",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Two bells are rung at intervals of 1,764 seconds and 2,268 seconds, respectively. They are rung together at the start. After how much time will the two bells ring together again for the first time?",
+   "hi": "दो घंटियाँ क्रमशः 1,764 सेकंड और 2,268 सेकंड के अंतराल पर बजती हैं। शुरुआत में वे एक साथ बजती हैं। कितने समय बाद दोनों घंटियाँ पहली बार फिर से एक साथ बजेंगी?",
+   "opts": [
+    "4 hours 12 minutes 18 seconds<br>4 घंटे 12 मिनट 18 सेकंड",
+    "4 hours 18 minutes 12 seconds<br>4 घंटे 18 मिनट 12 सेकंड",
+    "4 hours 24 minutes 36 seconds<br>4 घंटे 24 मिनट 36 सेकंड",
+    "4 hours 36 minutes 24 seconds<br>4 घंटे 36 मिनट 24 सेकंड"
+   ],
+   "my_ans": "C",
+   "sol": "LCM(1764, 2268) = 15876 सेकंड<br>15876 / 3600 = 4 घंटे, शेष 1476 सेकंड<br>1476 / 60 = 24 मिनट, शेष 36 सेकंड।",
+   "trick": "एक साथ बजने का समय = अंतरालों का LCM",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio of 19 : 7 : 13, and their LCM is 8645. Their HCF is:",
+   "hi": "तीन संख्याएँ 19 : 7 : 13 के अनुपात में हैं, और उनका लघुत्तम समापवर्त्य (LCM), 8645 है। उनका महत्तम समापवर्तक (HCF) कितना है?",
+   "opts": [
+    "25",
+    "5",
+    "30",
+    "15"
+   ],
+   "my_ans": "B",
+   "sol": "LCM = 19 × 7 × 13 × HCF = 1729 × HCF<br>HCF = 8645 / 1729 = 5.",
+   "trick": "अभाज्य अनुपातों के लिए: LCM = (अनुपातों का गुणनफल) × HCF",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Two positive numbers are in the ratio 2:3. If the product of their LCM and HCF is 294, then find the sum of the two numbers.",
+   "hi": "दो धनात्मक संख्याओं का अनुपात 2:3 हैं। यदि उनके LCM और HCF का गुणनफल 294 है, तो दोनों संख्याओं का योगफल ज्ञात कीजिए।",
+   "opts": [
+    "15",
+    "35",
+    "30",
+    "20"
+   ],
+   "my_ans": "B",
+   "sol": "माना संख्याएँ 2x और 3x हैं। गुणनफल = 2x × 3x = 6x²<br>संख्याओं का गुणनफल = LCM × HCF → 6x² = 294 → x² = 49 → x = 7<br>योग = 2x + 3x = 5x = 5 × 7 = 35.",
+   "trick": "संख्याओं का गुणनफल = LCM × HCF",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "The HCF and LCM of two positive integers are 36 and 7,560, respectively. If one of the numbers is 540, what is the other number?",
+   "hi": "दो धनात्मक पूर्णांकों का महत्तम समापवर्तक और लघुत्तम समापवर्त्य क्रमशः 36 और 7,560 हैं। यदि इनमें से एक संख्या 540 है, तो दूसरी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "396",
+    "468",
+    "504",
+    "432"
+   ],
+   "my_ans": "C",
+   "sol": "पहली × दूसरी = HCF × LCM<br>540 × दूसरी = 36 × 7560<br>दूसरी = (36 × 7560) / 540 = 504.",
+   "trick": "पहली संख्या × दूसरी संख्या = HCF × LCM",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "A positive integer N divides 228, leaving a remainder of 18. What is the greatest two-digit value of N?",
+   "hi": "एक धनात्मक पूर्णांक N, संख्या 228 को विभाजित करता है और शेषफल के रूप में 18 प्राप्त होता है। N का सबसे बड़ा दो-अंकीय मान ज्ञात कीजिए।",
+   "opts": [
+    "70",
+    "60",
+    "84",
+    "42"
+   ],
+   "my_ans": "A",
+   "sol": "N, (228 - 18) = 210 को पूर्णतः विभाजित करेगा।<br>210 के गुणनखंडों में सबसे बड़ा दो-अंकीय मान 70 है (चूंकि 105 तीन-अंकीय है)।",
+   "trick": "N, (संख्या - शेषफल) का सबसे बड़ा दो-अंकीय भाजक होगा।",
+   "ans": "A"
+  }
+ ]
+}

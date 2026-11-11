@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "25",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 3 : 7 : 2, and their LCM is 5376. Their HCF is:",
+   "hi": "तीन संख्याएँ 3 : 7 : 2 के अनुपात में हैं, और उनका LCM 5376 है। उनका HCF कितना है?",
+   "opts": [
+    "162",
+    "161",
+    "140",
+    "128"
+   ],
+   "my_ans": "D",
+   "sol": "माना संख्याएँ 3x, 7x और 2x हैं। इनका LCM = 3 × 7 × 2 × x = 42x<br>42x = 5376 → x = 5376 / 42 = 128<br>चूँकि HCF = x, इसलिए HCF = 128.",
+   "trick": "LCM = अनुपातों का गुणनफल × HCF (यदि अनुपात सह-अभाज्य हों)",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 3 : 2 : 11, and their LCM is 3564. Their HCF is:",
+   "hi": "तीन संख्याएँ 3 : 2 : 11 के अनुपात में हैं, और उनका LCM 3564 है। उनका HCF कितना है?",
+   "opts": [
+    "67",
+    "88",
+    "54",
+    "38"
+   ],
+   "my_ans": "C",
+   "sol": "माना संख्याएँ 3x, 2x और 11x हैं। इनका LCM = 3 × 2 × 11 × x = 66x<br>66x = 3564 → x = 3564 / 66 = 54<br>HCF = x = 54.",
+   "trick": "LCM = अनुपातों का गुणनफल × HCF",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Find the smallest number which when divided by 9, 12 and 15 leaves a remainder 3 in each case.",
+   "hi": "वह छोटी से छोटी संख्या ज्ञात कीजिए जिसे 9, 12 और 15 से विभाजित करने पर प्रत्येक स्थिति में शेषफल 3 बचता हो।",
+   "opts": [
+    "363",
+    "723",
+    "183",
+    "123"
+   ],
+   "my_ans": "C",
+   "sol": "9, 12 और 15 का LCM = 180<br>अभीष्ट संख्या = LCM + शेषफल = 180 + 3 = 183.",
+   "trick": "अभीष्ट संख्या = LCM(दी गई संख्याएँ) + शेषफल",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 3 : 2 : 13, and their LCM is 6318. Their HCF is:",
+   "hi": "तीन संख्याएँ 3 : 2 : 13 के अनुपात में हैं, और उनका LCM 6318 है। उनका HCF कितना है?",
+   "opts": [
+    "128",
+    "80",
+    "124",
+    "81"
+   ],
+   "my_ans": "D",
+   "sol": "माना संख्याएँ 3x, 2x और 13x हैं। इनका LCM = 3 × 2 × 13 × x = 78x<br>78x = 6318 → x = 6318 / 78 = 81<br>HCF = x = 81.",
+   "trick": "LCM = अनुपातों का गुणनफल × HCF",
+   "ans": "D"
+  }
+ ]
+}

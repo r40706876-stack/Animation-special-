@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "24",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 12, 13 and 7 leaves remainder 3 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए, जिसे 12, 13 और 7 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 3 प्राप्त हो।",
+   "opts": [
+    "9438",
+    "9618",
+    "9831",
+    "9934"
+   ],
+   "my_ans": "C",
+   "sol": "LCM(12, 13, 7) = 1092<br>9999 ÷ 1092 → शेषफल = 171<br>संख्या = (9999 - 171) + 3 = 9828 + 3 = 9831.",
+   "trick": "संख्या = (LCM का गुणज) + शेषफल",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "Find the greatest number that will divide 186, 321 and 402 so as to leave the same remainder in each case.",
+   "hi": "वह सबसे बड़ी संख्या ज्ञात कीजिए, जिससे 186, 321 और 402 को विभाजित करने पर, प्रत्येक स्थिति में शेषफल समान रहे।",
+   "opts": [
+    "27",
+    "23",
+    "19",
+    "13"
+   ],
+   "my_ans": "A",
+   "sol": "संख्याओं का अंतर: 321-186=135, 402-321=81, 402-186=216<br>HCF(135, 81, 216) = 27.",
+   "trick": "समान शेषफल के लिए, संख्याओं के अंतर का HCF निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 11, 7 and 14 leaves the remainder 2 in each case, is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 11, 7 और 14 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 2 प्राप्त हो।",
+   "opts": [
+    "9435",
+    "9901",
+    "9972",
+    "9858"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(11, 7, 14) = 154<br>9999 ÷ 154 → शेषफल = 143<br>संख्या = (9999 - 143) + 2 = 9856 + 2 = 9858.",
+   "trick": "संख्या = (LCM × k) + शेषफल",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "Three ropes of lengths 54 m, 72 m and 90 m are to be cut into smaller pieces of equal lengths such that no rope is left over. What is the maximum possible length of each smaller piece?",
+   "hi": "54 m, 72 m और 90 m लंबाई की तीन रस्सियों को बराबर लंबाई के छोटे टुकड़ों में इस प्रकार काटा जाना है कि कोई रस्सी शेष न बचे। प्रत्येक छोटे टुकड़े की अधिकतम संभव लंबाई कितनी है?",
+   "opts": [
+    "18 m",
+    "36 m",
+    "12 m",
+    "24 m"
+   ],
+   "my_ans": "A",
+   "sol": "अधिकतम लंबाई = HCF(54, 72, 90)<br>54, 72, 90 सभी 18 से विभाज्य हैं।<br>HCF = 18 m.",
+   "trick": "अधिकतम लंबाई के लिए दी गई संख्याओं का HCF निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 3 : 7 : 2, and their LCM is 8820. Their HCF is:",
+   "hi": "तीन संख्याएँ 3 : 7 : 2 के अनुपात में हैं, और उनका LCM 8820 है। उनका HCF कितना है?",
+   "opts": [
+    "210",
+    "240",
+    "235",
+    "208"
+   ],
+   "my_ans": "A",
+   "sol": "LCM = (अनुपातों का LCM) × HCF<br>8820 = LCM(3, 7, 2) × HCF = 42 × HCF<br>HCF = 8820 ÷ 42 = 210.",
+   "trick": "LCM = (अनुपातों का LCM) × HCF",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 17 : 13 : 8, and their LCM is 7072. Their HCF is:",
+   "hi": "तीन संख्याएँ 17 : 13 : 8 के अनुपात में हैं, और उनका LCM 7072 है। उनका HCF कितना है?",
+   "opts": [
+    "4",
+    "3",
+    "23",
+    "12"
+   ],
+   "my_ans": "A",
+   "sol": "LCM = (अनुपातों का LCM) × HCF<br>7072 = (17 × 13 × 8) × HCF = 1768 × HCF<br>HCF = 7072 ÷ 1768 = 4.",
+   "trick": "LCM = (अनुपातों का LCM) × HCF",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "The LCM of the numbers 3, 7.2 and 0.64 is:",
+   "hi": "संख्याओं 3, 7.2 और 0.64 का LCM कितना है?",
+   "opts": [
+    "72",
+    "96",
+    "144",
+    "153"
+   ],
+   "my_ans": "C",
+   "sol": "संख्याओं को 300, 720, 64 के रूप में लें (दशमलव हटाकर)<br>LCM(300, 720, 64) = 14400<br>दो स्थान बाद दशमलव लगाने पर = 144.",
+   "trick": "दशमलव हटाकर LCM निकालें, फिर दशमलव वापस लगायें।",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "If the ratio of two numbers is 6 : 4, and their HCF is 49, then their LCM is:",
+   "hi": "यदि दो संख्याओं का अनुपात 6 : 4 है और उनका महत्तम समापवर्तक (HCF) 49 है, तो उनका लघुत्तम समापवर्त्य (LCM) कितना होगा?",
+   "opts": [
+    "295",
+    "287",
+    "298",
+    "294"
+   ],
+   "my_ans": "D",
+   "sol": "अनुपात 6:4 = 3:2<br>LCM = (अनुपातों का LCM) × HCF<br>LCM = LCM(3, 2) × 49 = 6 × 49 = 294.",
+   "trick": "LCM = (सरल अनुपात का LCM) × HCF",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 12, 8 and 11 leaves the remainder 3 in each case, is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 12, 8 और 11 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 3 प्राप्त हो।",
+   "opts": [
+    "9821",
+    "9535",
+    "9928",
+    "9771"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(12, 8, 11) = 264<br>9999 ÷ 264 → शेषफल = 231<br>संख्या = (9999 - 231) + 3 = 9768 + 3 = 9771.",
+   "trick": "संख्या = (LCM का गुणज) + शेषफल",
+   "ans": "D"
+  }
+ ]
+}
