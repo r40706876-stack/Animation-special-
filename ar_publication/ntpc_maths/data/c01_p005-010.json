@@ -1,201 +1,598 @@
 {
-  "chapter": {"no": 1, "en": "Number System", "hi": "संख्या पद्धति", "total": 87, "gl": 38, "ug": 49},
-  "source_pages": "5-10",
-  "questions": [
-    {"n": 1, "lvl": "GL",
-     "en": "A person runs a concession stand at a basketball game and sells burgers and soft drinks. Each burger costs ₹15 and each soft drink costs ₹5. At the end, a total of ₹785 is earned by selling a total of 87 burgers and soft drinks combined. How many soft drinks are sold?",
-     "hi": "एक व्यक्ति बास्केटबॉल मैच के दौरान स्टॉल लगाकर बर्गर और सॉफ्ट ड्रिंक बेचता है। एक बर्गर ₹15 का और एक सॉफ्ट ड्रिंक ₹5 की है। कुल 87 बर्गर और सॉफ्ट ड्रिंक बेचकर उसे ₹785 मिलते हैं। कितनी सॉफ्ट ड्रिंक बिकीं?",
-     "opts": ["60", "52", "27", "35"], "ans": "B",
-     "sol": "माना बर्गर = x, ड्रिंक = y. &nbsp;x + y = 87 और 15x + 5y = 785 → 3x + y = 157<br>घटाने पर 2x = 70 → x = 35, इसलिए y = 87 − 35 = 52."},
-    {"n": 2, "lvl": "GL",
-     "en": "Three positive integers A, B and C are such that LCM of A and B is 24, LCM of B and C is 36, and LCM of C and A is 72. If the numbers are as small as possible, the value of A + B + C is:",
-     "hi": "तीन धनात्मक पूर्णांक A, B, C ऐसे हैं कि LCM(A, B) = 24, LCM(B, C) = 36 और LCM(C, A) = 72 है। संख्याएँ यथासंभव छोटी हों, तो A + B + C का मान क्या होगा?",
-     "opts": ["25", "31", "29", "27"], "ans": "C",
-     "sol": "72 = 2³ × 3². LCM(B,C) = 36 में 2³ नहीं → 2³ (= 8) A में होगा। LCM(A,B) = 24 में 3² नहीं → 3² (= 9) C में होगा।<br>सबसे छोटे: A = 8, C = 9; LCM(A,B) = 24 के लिए B = 12. जाँच: LCM(12, 9) = 36 ✓<br>A + B + C = 8 + 12 + 9 = 29."},
-    {"n": 3, "lvl": "GL",
-     "en": "Two automated lab machines start a calibration cycle at the same time. Machine A completes one cycle every 12 minutes. Machine B completes one cycle every 18 minutes. After how many minutes will both machines complete a cycle together again?",
-     "hi": "दो स्वचालित मशीनें एक साथ कैलिब्रेशन चक्र शुरू करती हैं। मशीन A हर 12 मिनट में और मशीन B हर 18 मिनट में एक चक्र पूरा करती है। कितने मिनट बाद दोनों फिर एक साथ चक्र पूरा करेंगी?",
-     "opts": ["30", "48", "36", "24"], "ans": "C",
-     "sol": "एक साथ दोबारा = LCM(12, 18) = 36 मिनट."},
-    {"n": 4, "lvl": "GL",
-     "en": "What value must be assigned to A so that the 8-digit number 493A9132 is divisible by 9?",
-     "hi": "A का कौन-सा मान रखने पर 8 अंकों की संख्या 493A9132, 9 से विभाज्य होगी?",
-     "opts": ["5", "7", "2", "9"], "ans": "A",
-     "sol": "9 से विभाज्यता: अंकों का योग 9 से विभाज्य हो।<br>4+9+3+A+9+1+3+2 = 31 + A → 36 के लिए A = 5."},
-    {"n": 5, "lvl": "GL",
-     "en": "The number 22.121212... in the form p/q, where p and q are integers and q ≠ 0, is:",
-     "hi": "संख्या 22.121212... को p/q के रूप में (p, q पूर्णांक, q ≠ 0) लिखने पर क्या मिलेगा?",
-     "opts": ["730/33", "710/33", "740/33", "720/33"], "ans": "A",
-     "sol": "0.1212... = 12/99 = 4/33<br>22.1212... = 22 + 4/33 = (726 + 4)/33 = 730/33."},
-    {"n": 6, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 816A0408 is divisible by 4?",
-     "hi": "8 अंकों की संख्या 816A0408 को 4 से विभाज्य बनाने के लिए A का अधिकतम मान क्या होगा?",
-     "opts": ["4", "7", "5", "9"], "ans": "D",
-     "sol": "4 से विभाज्यता में केवल अंतिम दो अंक देखते हैं → 08, जो 4 से विभाज्य है।<br>A पर कोई शर्त नहीं → अधिकतम A = 9."},
-    {"n": 7, "lvl": "GL",
-     "en": "Three positive integers A, B, C satisfy: HCF(A, B) = 12, HCF(B, C) = 18, HCF(A, C) = 6 and LCM(A, B, C) = 1080. If A = 12x, B = 36y, C = 18z, where x, y, z are pairwise coprime positive integers, the minimum possible value of A + B + C is:",
-     "hi": "तीन धनात्मक पूर्णांक A, B, C के लिए HCF(A, B) = 12, HCF(B, C) = 18, HCF(A, C) = 6 तथा LCM(A, B, C) = 1080 है। यदि A = 12x, B = 36y, C = 18z (x, y, z युग्मानुसार सहअभाज्य) हों, तो A + B + C का न्यूनतम मान क्या है?",
-     "opts": ["216", "224", "186", "220"], "ans": "C",
-     "sol": "1080 = 2³ × 3³ × 5. किसी संख्या में 2³, किसी में 3³ और किसी में 5 आना ज़रूरी है।<br>सबसे सस्ता: y = 2 → B = 72 (2³ आया); z = 3 → C = 54 (3³ आया); x = 5 → A = 60.<br>जाँच: HCF(60,72)=12 ✓, HCF(72,54)=18 ✓, HCF(60,54)=6 ✓. योग = 60 + 72 + 54 = 186."},
-    {"n": 8, "lvl": "GL",
-     "en": "The number of ordered pairs of positive integers (a, b) such that HCF of a and b is 28 and a + b = 868 is:",
-     "hi": "धनात्मक पूर्णांकों के ऐसे क्रमित युग्मों (a, b) की संख्या बताइए जिनका HCF 28 हो और a + b = 868 हो।",
-     "opts": ["25", "20", "30", "15"], "ans": "C",
-     "sol": "a = 28m, b = 28n (m, n सहअभाज्य) → 28(m + n) = 868 → m + n = 31.<br>31 अभाज्य है, इसलिए m = 1 से 30 तक हर युग्म सहअभाज्य → 30 युग्म."},
-    {"n": 9, "lvl": "GL",
-     "en": "The LCM and HCF of <i>x</i><sup>2.5</sup>/<i>y</i><sup>0.5</sup> × √(<i>xy</i>) and <i>y</i><sup>1.5</sup>/√<i>x</i> × √(<i>xy</i>) are ____ and ____ respectively, where <i>x</i> and <i>y</i> are co-prime integers greater than 1.",
-     "hi": "<i>x</i><sup>2.5</sup>/<i>y</i><sup>0.5</sup> × √(<i>xy</i>) तथा <i>y</i><sup>1.5</sup>/√<i>x</i> × √(<i>xy</i>) का LCM और HCF क्रमशः ____ और ____ हैं, जहाँ <i>x</i> और <i>y</i>, 1 से बड़े सहअभाज्य पूर्णांक हैं।",
-     "opts": ["<i>y</i>(<i>xy</i>)², <i>y</i>", "<i>y</i>(<i>xy</i>)², 1", "<i>x</i>(<i>xy</i>)², <i>x</i>", "<i>x</i>(<i>xy</i>)², 1"], "ans": "D",
-     "sol": "पहली = <i>x</i><sup>2.5</sup><i>y</i><sup>−0.5</sup> × <i>x</i><sup>0.5</sup><i>y</i><sup>0.5</sup> = <i>x</i>³; &nbsp;दूसरी = <i>y</i><sup>1.5</sup><i>x</i><sup>−0.5</sup> × <i>x</i><sup>0.5</sup><i>y</i><sup>0.5</sup> = <i>y</i>²<br><i>x</i>, <i>y</i> सहअभाज्य → HCF = 1, LCM = <i>x</i>³<i>y</i>² = <i>x</i>(<i>xy</i>)²."},
-    {"n": 10, "lvl": "GL",
-     "en": "If the 7-digit number 54468A0 is completely divisible by 4, what is the minimum value of A?",
-     "hi": "यदि 7 अंकों की संख्या 54468A0, 4 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
-     "opts": ["2", "5", "0", "3"], "ans": "C",
-     "sol": "अंतिम दो अंक A0 को 4 से विभाज्य होना चाहिए → 00, 20, 40, 60, 80.<br>न्यूनतम A = 0."},
-    {"n": 11, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 445A0208 is divisible by 3?",
-     "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 445A0208, 3 से विभाज्य हो जाए?",
-     "opts": ["7", "5", "2", "9"], "ans": "A",
-     "sol": "अंकों का योग = 4+4+5+A+0+2+0+8 = 23 + A → 24, 27, 30 के लिए A = 1, 4, 7.<br>अधिकतम A = 7."},
-    {"n": 12, "lvl": "GL",
-     "en": "If the 7-digit number 65770A4 is completely divisible by 4, what is the minimum value of A?",
-     "hi": "यदि 7 अंकों की संख्या 65770A4, 4 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
-     "opts": ["2", "0", "4", "3"], "ans": "B",
-     "sol": "अंतिम दो अंक A4 को 4 से विभाज्य होना चाहिए → 04, 24, 44, 64, 84.<br>न्यूनतम A = 0."},
-    {"n": 13, "lvl": "GL",
-     "en": "Three positive integers a, b, c satisfy: gcd(a, b) = 8, gcd(b, c) = 12, gcd(c, a) = 4 and LCM(a, b, c) = 240. Then the minimum value of a + b + c is:",
-     "hi": "तीन धनात्मक पूर्णांक a, b, c के लिए gcd(a, b) = 8, gcd(b, c) = 12, gcd(c, a) = 4 और LCM(a, b, c) = 240 है। a + b + c का न्यूनतम मान क्या है?",
-     "opts": ["80", "84", "100", "96"], "ans": "C",
-     "sol": "b, 8 और 12 दोनों का गुणज → b = 24 (सबसे छोटा)। 240 = 2⁴ × 3 × 5, तो 16 और 5 भी कहीं आने चाहिए।<br>a = 16, b = 24, c = 60 लें: gcd(16,24)=8 ✓, gcd(24,60)=12 ✓, gcd(60,16)=4 ✓, LCM = 240 ✓<br>योग = 16 + 24 + 60 = 100."},
-    {"n": 14, "lvl": "GL",
-     "en": "Find the number of possible values for a natural number N such that the LCM of 120 and N is 360, and the HCF of 900 and N is 90.",
-     "hi": "प्राकृत संख्या N के कितने मान संभव हैं, यदि LCM(120, N) = 360 और HCF(900, N) = 90 हो?",
-     "opts": ["3", "2", "1", "4"], "ans": "C",
-     "sol": "360 = 2³·3²·5, 900 = 2²·3²·5², 90 = 2·3²·5.<br>HCF = 90 से N में 2 की घात ठीक 1, 3 की घात 2, 5 की घात 1; LCM = 360 से कोई और अभाज्य नहीं।<br>N = 2 × 9 × 5 = 90 → केवल 1 मान."},
-    {"n": 15, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 588A9792 is divisible by 4?",
-     "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 588A9792, 4 से विभाज्य हो जाए?",
-     "opts": ["9", "7", "5", "6"], "ans": "A",
-     "sol": "अंतिम दो अंक 92 → 4 से विभाज्य है, A पर कोई शर्त नहीं।<br>अधिकतम A = 9."},
-    {"n": 16, "lvl": "GL",
-     "en": "The HCF of two numbers is 6 and their LCM is 72. If one of the numbers is 18, find the other number.",
-     "hi": "दो संख्याओं का HCF 6 और LCM 72 है। यदि एक संख्या 18 है, तो दूसरी संख्या ज्ञात कीजिए।",
-     "opts": ["48", "12", "24", "36"], "ans": "C",
-     "sol": "पहली × दूसरी = HCF × LCM → 18 × दूसरी = 6 × 72 = 432<br>दूसरी = 432 ÷ 18 = 24."},
-    {"n": 17, "lvl": "GL",
-     "en": "What is the fraction equal to (0.<span style='text-decoration:overline'>5</span> + 0.1) in simplest form?",
-     "hi": "सरलतम रूप में (0.<span style='text-decoration:overline'>5</span> + 0.1) के बराबर भिन्न क्या है?",
-     "opts": ["71/69", "59/90", "78/89", "51/91"], "ans": "B",
-     "sol": "0.<span style='text-decoration:overline'>5</span> = 5/9, 0.1 = 1/10<br>5/9 + 1/10 = (50 + 9)/90 = 59/90."},
-    {"n": 18, "lvl": "GL",
-     "en": "The HCF of two numbers is 104 and their LCM is 1040. If one of the numbers is 208, what is the sum of the two numbers?",
-     "hi": "दो संख्याओं का HCF 104 और LCM 1040 है। यदि एक संख्या 208 है, तो दोनों संख्याओं का योग क्या है?",
-     "opts": ["724", "728", "732", "736"], "ans": "B",
-     "sol": "दूसरी = (104 × 1040) ÷ 208 = 520<br>योग = 208 + 520 = 728."},
-    {"n": 19, "lvl": "GL",
-     "en": "Convert the recurring decimal 0.2<span style='text-decoration:overline'>6</span> into a vulgar fraction.",
-     "hi": "आवर्ती दशमलव 0.2<span style='text-decoration:overline'>6</span> को साधारण भिन्न में बदलिए।",
-     "opts": ["2/15", "7/15", "4/15", "1/15"], "ans": "C",
-     "sol": "नियम: (पूरी संख्या − बिना बार वाला भाग) / (बार के अंकों जितने 9, फिर बाकी के लिए 0)<br>0.2<span style='text-decoration:overline'>6</span> = (26 − 2)/90 = 24/90 = 4/15."},
-    {"n": 20, "lvl": "GL",
-     "en": "The HCF and LCM of two numbers are 5 and 180 respectively. If one number is 45, what is the other number?",
-     "hi": "दो संख्याओं का HCF और LCM क्रमशः 5 और 180 है। यदि एक संख्या 45 है, तो दूसरी संख्या क्या है?",
-     "opts": ["25", "36", "20", "40"], "ans": "C",
-     "sol": "दूसरी = (5 × 180) ÷ 45 = 900 ÷ 45 = 20."},
-    {"n": 21, "lvl": "GL",
-     "en": "The least common multiple of 64, 128 and A is 4480. The difference between the maximum and minimum possible values of A is:",
-     "hi": "64, 128 और A का LCM 4480 है। A के अधिकतम और न्यूनतम संभावित मानों का अंतर क्या है?",
-     "opts": ["4544", "4454", "5444", "4445"], "ans": "D",
-     "sol": "4480 = 2⁷ × 35 और 128 = 2⁷. इसलिए A में 35 होना ज़रूरी है, 2 की घात 0 से 7 तक कुछ भी।<br>न्यूनतम A = 35, अधिकतम A = 4480 → अंतर = 4480 − 35 = 4445."},
-    {"n": 22, "lvl": "GL",
-     "en": "If the 7-digit number 56339A8 is completely divisible by 6, what is the minimum value of A?",
-     "hi": "यदि 7 अंकों की संख्या 56339A8, 6 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
-     "opts": ["2", "1", "3", "5"], "ans": "A",
-     "sol": "6 से विभाज्य = 2 और 3 दोनों से। अंतिम अंक 8 (सम) ✓<br>अंकों का योग = 5+6+3+3+9+A+8 = 34 + A → 36 के लिए A = 2."},
-    {"n": 23, "lvl": "GL",
-     "en": "Three positive integers a, b and c satisfy: gcd(a, b) = 12, gcd(b, c) = 18, gcd(c, a) = 6. If a + b + c = 6k for some positive integer k, then the minimum possible value of k is:",
-     "hi": "तीन धनात्मक पूर्णांक a, b, c के लिए gcd(a, b) = 12, gcd(b, c) = 18, gcd(c, a) = 6 है। यदि a + b + c = 6k हो, तो k का न्यूनतम मान क्या है?",
-     "opts": ["12", "11", "10", "9"], "ans": "B",
-     "sol": "a, 12 का गुणज; c, 18 का गुणज; b, 12 और 18 दोनों का गुणज → b = 36.<br>a = 12, b = 36, c = 18 लें: gcd(12,36)=12 ✓, gcd(36,18)=18 ✓, gcd(18,12)=6 ✓<br>योग = 66 = 6 × 11 → k = 11."},
-    {"n": 24, "lvl": "GL",
-     "en": "If the 7-digit number 54572A0 is completely divisible by 3, what is the minimum value of A?",
-     "hi": "यदि 7 अंकों की संख्या 54572A0, 3 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
-     "opts": ["1", "4", "5", "3"], "ans": "A",
-     "sol": "अंकों का योग = 5+4+5+7+2+A+0 = 23 + A → 24 के लिए A = 1."},
-    {"n": 25, "lvl": "GL",
-     "en": "Bell A rings every 18 minutes, bell B every 24 minutes and bell C every 30 minutes. They all ring together for the first time at 6:30 AM. Find the time at which the bells ring together for the third time.",
-     "hi": "घंटी A हर 18 मिनट, घंटी B हर 24 मिनट और घंटी C हर 30 मिनट में बजती है। तीनों पहली बार 6:30 AM पर एक साथ बजती हैं। तीसरी बार एक साथ कब बजेंगी?",
-     "opts": ["12:30 PM", "6:30 PM", "9:30 PM", "3:30 PM"], "ans": "B",
-     "sol": "LCM(18, 24, 30) = 360 मिनट = 6 घंटे.<br>पहली 6:30 AM → दूसरी 12:30 PM → तीसरी 6:30 PM."},
-    {"n": 26, "lvl": "GL",
-     "en": "A gardener waters three rows of plants using automatic sprays. Spray A activates every 12 minutes, Spray B every 15 minutes and Spray C every 20 minutes. If they first activate together at 9:45 AM, at what time will they activate together for the sixth time (including the first)?",
-     "hi": "एक माली के तीन स्वचालित स्प्रे हर 12, 15 और 20 मिनट में चलते हैं। तीनों पहली बार 9:45 AM पर एक साथ चलते हैं। छठी बार (पहली बार को मिलाकर) वे कब एक साथ चलेंगे?",
-     "opts": ["2:55 PM", "2:25 PM", "2:45 PM", "1:45 PM"], "ans": "C",
-     "sol": "LCM(12, 15, 20) = 60 मिनट = 1 घंटा.<br>छठी बार = 5 अंतराल बाद = 5 घंटे → 9:45 AM + 5 घंटे = 2:45 PM."},
-    {"n": 27, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 230A7807 is divisible by 3?",
-     "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 230A7807, 3 से विभाज्य हो जाए?",
-     "opts": ["7", "9", "5", "4"], "ans": "B",
-     "sol": "अंकों का योग = 2+3+0+A+7+8+0+7 = 27 + A. 27 पहले से 3 से विभाज्य है, तो A = 0, 3, 6, 9.<br>अधिकतम A = 9."},
-    {"n": 28, "lvl": "GL",
-     "en": "The product of two numbers X and Y is 6760, and the HCF of X and Y is 13. Find the number of possible pairs (X, Y), given that X > Y.",
-     "hi": "दो संख्याओं X और Y का गुणनफल 6760 और HCF 13 है। यदि X > Y हो, तो संभावित युग्मों (X, Y) की संख्या ज्ञात कीजिए।",
-     "opts": ["1", "2", "3", "4"], "ans": "B",
-     "sol": "X = 13a, Y = 13b (a, b सहअभाज्य) → 169ab = 6760 → ab = 40.<br>सहअभाज्य युग्म (a > b): (40, 1), (8, 5) → 2 युग्म."},
-    {"n": 29, "lvl": "GL",
-     "en": "The least common multiple of two numbers is 21 times the first number, and the highest common factor of the two numbers is a two-digit prime number. What is the least possible value of the second number?",
-     "hi": "दो संख्याओं का LCM पहली संख्या का 21 गुना है और उनका HCF दो अंकों की एक अभाज्य संख्या है। दूसरी संख्या का न्यूनतम मान क्या है?",
-     "opts": ["273", "231", "357", "147"], "ans": "B",
-     "sol": "पहली = Hm, दूसरी = Hn → LCM = Hmn = 21 × Hm → n = 21.<br>दूसरी = 21H; सबसे छोटा दो अंकों का अभाज्य H = 11 → दूसरी = 231."},
-    {"n": 30, "lvl": "GL",
-     "en": "Three positive integers P, Q and R are such that HCF of P and Q is 15, HCF of Q and R is 10, and HCF of R and P is 5. If the sum P + Q + R is as small as possible, the value of P × Q × R is:",
-     "hi": "तीन धनात्मक पूर्णांक P, Q, R के लिए HCF(P, Q) = 15, HCF(Q, R) = 10 और HCF(R, P) = 5 है। यदि P + Q + R न्यूनतम हो, तो P × Q × R का मान क्या है?",
-     "opts": ["3000", "1500", "4500", "6000"], "ans": "C",
-     "sol": "Q, 15 और 10 दोनों का गुणज → Q = 30; P = 15, R = 10 सबसे छोटे।<br>जाँच: HCF(15,30)=15 ✓, HCF(30,10)=10 ✓, HCF(10,15)=5 ✓<br>P × Q × R = 15 × 30 × 10 = 4500."},
-    {"n": 31, "lvl": "GL",
-     "en": "Two numbers have an HCF of 12 and an LCM of 840. If one of the numbers is 84, find the other number.",
-     "hi": "दो संख्याओं का HCF 12 और LCM 840 है। यदि एक संख्या 84 है, तो दूसरी संख्या ज्ञात कीजिए।",
-     "opts": ["368", "168", "120", "840"], "ans": "C",
-     "sol": "दूसरी = (12 × 840) ÷ 84 = 120."},
-    {"n": 32, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 718A5104 is divisible by 4?",
-     "hi": "8 अंकों की संख्या 718A5104 के 4 से विभाज्य होने के लिए A का अधिकतम मान ज्ञात कीजिए।",
-     "opts": ["4", "6", "5", "9"], "ans": "D",
-     "sol": "अंतिम दो अंक 04 → 4 से विभाज्य, A पर कोई शर्त नहीं।<br>अधिकतम A = 9."},
-    {"n": 33, "lvl": "GL",
-     "en": "Three friends travel along three consecutive segments: P to Q, Q to R and R to S, at speeds 48 km/h, 72 km/h and 96 km/h respectively. The distances are in the ratio 2 : 3 : 1, and the total distance from P to S is 480 km. Calculate the average speed for the entire journey.",
-     "hi": "तीन मित्र P से Q, Q से R और R से S तक क्रमशः 48 km/h, 72 km/h और 96 km/h की चाल से जाते हैं। दूरियों का अनुपात 2 : 3 : 1 है और कुल दूरी 480 km है। पूरी यात्रा की औसत चाल क्या है?",
-     "opts": ["65 km/h", "64 km/h", "58 km/h", "68 km/h"], "ans": "B",
-     "sol": "दूरियाँ = 160, 240, 80 km. समय = 160/48 + 240/72 + 80/96 = 10/3 + 10/3 + 5/6 = 7.5 घंटे<br>औसत चाल = 480 ÷ 7.5 = 64 km/h."},
-    {"n": 34, "lvl": "GL",
-     "en": "The HCF of two numbers is one-fifth of the first number and one-third of the second number. The HCF is a two-digit prime number. The HCF of three times the first number and five times the second number is a number which is the product of ________.",
-     "hi": "दो संख्याओं का HCF पहली संख्या का 1/5 और दूसरी संख्या का 1/3 है। HCF दो अंकों की अभाज्य संख्या है। पहली संख्या के 3 गुने और दूसरी संख्या के 5 गुने का HCF ________ का गुणनफल है।",
-     "opts": ["three prime numbers<br>तीन अभाज्य संख्याओं", "two prime numbers<br>दो अभाज्य संख्याओं", "five prime numbers<br>पाँच अभाज्य संख्याओं", "four prime numbers<br>चार अभाज्य संख्याओं"], "ans": "A",
-     "sol": "HCF = p (अभाज्य) → पहली = 5p, दूसरी = 3p.<br>3 × 5p = 15p और 5 × 3p = 15p → HCF = 15p = 3 × 5 × p → तीन अभाज्य संख्याओं का गुणनफल."},
-    {"n": 35, "lvl": "GL",
-     "en": "The LCM of two numbers is 1116 and their HCF is 186. If one of the numbers is 372, then the other number is:",
-     "hi": "दो संख्याओं का LCM 1116 और HCF 186 है। यदि एक संख्या 372 है, तो दूसरी संख्या क्या है?",
-     "opts": ["930", "372", "465", "558"], "ans": "D",
-     "sol": "दूसरी = (1116 × 186) ÷ 372 = 1116 ÷ 2 = 558."},
-    {"n": 36, "lvl": "GL",
-     "en": "The sum of two numbers is 56. Their difference is 1/7 of their sum. Their LCM is:",
-     "hi": "दो संख्याओं का योग 56 है। उनका अंतर उनके योग का 1/7 है। उनका LCM क्या है?",
-     "opts": ["84", "63", "96", "72"], "ans": "C",
-     "sol": "अंतर = 56 ÷ 7 = 8 → संख्याएँ = (56 + 8)/2 = 32 और 24.<br>LCM(32, 24) = 96."},
-    {"n": 37, "lvl": "GL",
-     "en": "What is the maximum value of A so that the 8-digit number 713A8845 is divisible by 3?",
-     "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 713A8845, 3 से विभाज्य हो जाए?",
-     "opts": ["6", "8", "7", "9"], "ans": "D",
-     "sol": "अंकों का योग = 7+1+3+A+8+8+4+5 = 36 + A. 36 पहले से 3 से विभाज्य है, तो A = 0, 3, 6, 9.<br>अधिकतम A = 9."},
-    {"n": 38, "lvl": "GL",
-     "en": "The sum of two numbers a and b, where a &lt; b, is 129. The HCF and LCM of a and b are 3 and 1350 respectively. Find the value of 1/a − 1/b.",
-     "hi": "दो संख्याओं a और b (a &lt; b) का योग 129 है। इनका HCF 3 और LCM 1350 है। 1/a − 1/b का मान ज्ञात कीजिए।",
-     "opts": ["−3/4550", "−21/1550", "7/1350", "441/450"], "ans": "C",
-     "sol": "ab = HCF × LCM = 3 × 1350 = 4050.<br>1/a − 1/b = (b − a)/ab. a = 3m, b = 3n → m + n = 43, mn = 450 → m = 18, n = 25 → a = 54, b = 75.<br>(75 − 54)/4050 = 21/4050 = 7/1350."},
-    {"n": 39, "lvl": "UG",
-     "en": "A transaction code 92419 is not divisible by 13. To make it divisible by 13, the least digit should be appended at the end of the number. What is that digit?",
-     "hi": "लेन-देन कोड 92419, 13 से विभाज्य नहीं है। इसे 13 से विभाज्य बनाने के लिए अंत में सबसे छोटा कौन-सा अंक जोड़ना होगा?",
-     "opts": ["6", "5", "2", "4"], "ans": "A",
-     "sol": "अंत में अंक d जोड़ने पर संख्या = 924190 + d.<br>924190 ÷ 13 → शेषफल 7 (13 × 71091 = 924183). शेष 0 करने के लिए d = 13 − 7 = 6.<br>जाँच: 924196 = 13 × 71092 ✓"}
-  ]
+ "chapter": {
+  "no": 1,
+  "en": "Number System",
+  "hi": "संख्या पद्धति",
+  "total": 87,
+  "gl": 38,
+  "ug": 49
+ },
+ "source_pages": "5-10",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "A person runs a concession stand at a basketball game and sells burgers and soft drinks. Each burger costs ₹15 and each soft drink costs ₹5. At the end, a total of ₹785 is earned by selling a total of 87 burgers and soft drinks combined. How many soft drinks are sold?",
+   "hi": "एक व्यक्ति बास्केटबॉल मैच के दौरान स्टॉल लगाकर बर्गर और सॉफ्ट ड्रिंक बेचता है। एक बर्गर ₹15 का और एक सॉफ्ट ड्रिंक ₹5 की है। कुल 87 बर्गर और सॉफ्ट ड्रिंक बेचकर उसे ₹785 मिलते हैं। कितनी सॉफ्ट ड्रिंक बिकीं?",
+   "opts": [
+    "60",
+    "52",
+    "27",
+    "35"
+   ],
+   "ans": "B",
+   "sol": "माना बर्गर = x, ड्रिंक = y. &nbsp;x + y = 87 और 15x + 5y = 785 → 3x + y = 157<br>घटाने पर 2x = 70 → x = 35, इसलिए y = 87 − 35 = 52.",
+   "trick": "समीकरण (15x + 5y = कुल मूल्य) और (x + y = कुल संख्या) बनाकर हल करें।"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Three positive integers A, B and C are such that LCM of A and B is 24, LCM of B and C is 36, and LCM of C and A is 72. If the numbers are as small as possible, the value of A + B + C is:",
+   "hi": "तीन धनात्मक पूर्णांक A, B, C ऐसे हैं कि LCM(A, B) = 24, LCM(B, C) = 36 और LCM(C, A) = 72 है। संख्याएँ यथासंभव छोटी हों, तो A + B + C का मान क्या होगा?",
+   "opts": [
+    "25",
+    "31",
+    "29",
+    "27"
+   ],
+   "ans": "C",
+   "sol": "72 = 2³ × 3². LCM(B,C) = 36 में 2³ नहीं → 2³ (= 8) A में होगा। LCM(A,B) = 24 में 3² नहीं → 3² (= 9) C में होगा।<br>सबसे छोटे: A = 8, C = 9; LCM(A,B) = 24 के लिए B = 12. जाँच: LCM(12, 9) = 36 ✓<br>A + B + C = 8 + 12 + 9 = 29.",
+   "trick": "न्यूनतम योग के लिए LCM की अभाज्य घातों को A, B, C में बांटें।"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Two automated lab machines start a calibration cycle at the same time. Machine A completes one cycle every 12 minutes. Machine B completes one cycle every 18 minutes. After how many minutes will both machines complete a cycle together again?",
+   "hi": "दो स्वचालित मशीनें एक साथ कैलिब्रेशन चक्र शुरू करती हैं। मशीन A हर 12 मिनट में और मशीन B हर 18 मिनट में एक चक्र पूरा करती है। कितने मिनट बाद दोनों फिर एक साथ चक्र पूरा करेंगी?",
+   "opts": [
+    "30",
+    "48",
+    "36",
+    "24"
+   ],
+   "ans": "C",
+   "sol": "एक साथ दोबारा = LCM(12, 18) = 36 मिनट.",
+   "trick": "एक साथ दोबारा मिलने का समय = समयावधियों का LCM।"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "What value must be assigned to A so that the 8-digit number 493A9132 is divisible by 9?",
+   "hi": "A का कौन-सा मान रखने पर 8 अंकों की संख्या 493A9132, 9 से विभाज्य होगी?",
+   "opts": [
+    "5",
+    "7",
+    "2",
+    "9"
+   ],
+   "ans": "A",
+   "sol": "9 से विभाज्यता: अंकों का योग 9 से विभाज्य हो।<br>4+9+3+A+9+1+3+2 = 31 + A → 36 के लिए A = 5.",
+   "trick": "9 से विभाज्यता का नियम: अंकों का योग 9 से विभाज्य होना चाहिए।"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "The number 22.121212... in the form p/q, where p and q are integers and q ≠ 0, is:",
+   "hi": "संख्या 22.121212... को p/q के रूप में (p, q पूर्णांक, q ≠ 0) लिखने पर क्या मिलेगा?",
+   "opts": [
+    "730/33",
+    "710/33",
+    "740/33",
+    "720/33"
+   ],
+   "ans": "A",
+   "sol": "0.1212... = 12/99 = 4/33<br>22.1212... = 22 + 4/33 = (726 + 4)/33 = 730/33.",
+   "trick": "आवर्ती दशमलव 0.x̅ = x/9 लिखकर पूर्णांक भाग के साथ जोड़ें।"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 816A0408 is divisible by 4?",
+   "hi": "8 अंकों की संख्या 816A0408 को 4 से विभाज्य बनाने के लिए A का अधिकतम मान क्या होगा?",
+   "opts": [
+    "4",
+    "7",
+    "5",
+    "9"
+   ],
+   "ans": "D",
+   "sol": "4 से विभाज्यता में केवल अंतिम दो अंक देखते हैं → 08, जो 4 से विभाज्य है।<br>A पर कोई शर्त नहीं → अधिकतम A = 9.",
+   "trick": "यदि अंतिम दो अंक 4 से विभाज्य हैं, तो मध्य अंक A अधिकतम 9 होगा।"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Three positive integers A, B, C satisfy: HCF(A, B) = 12, HCF(B, C) = 18, HCF(A, C) = 6 and LCM(A, B, C) = 1080. If A = 12x, B = 36y, C = 18z, where x, y, z are pairwise coprime positive integers, the minimum possible value of A + B + C is:",
+   "hi": "तीन धनात्मक पूर्णांक A, B, C के लिए HCF(A, B) = 12, HCF(B, C) = 18, HCF(A, C) = 6 तथा LCM(A, B, C) = 1080 है। यदि A = 12x, B = 36y, C = 18z (x, y, z युग्मानुसार सहअभाज्य) हों, तो A + B + C का न्यूनतम मान क्या है?",
+   "opts": [
+    "216",
+    "224",
+    "186",
+    "220"
+   ],
+   "ans": "C",
+   "sol": "1080 = 2³ × 3³ × 5. किसी संख्या में 2³, किसी में 3³ और किसी में 5 आना ज़रूरी है।<br>सबसे सस्ता: y = 2 → B = 72 (2³ आया); z = 3 → C = 54 (3³ आया); x = 5 → A = 60.<br>जाँच: HCF(60,72)=12 ✓, HCF(72,54)=18 ✓, HCF(60,54)=6 ✓. योग = 60 + 72 + 54 = 186.",
+   "trick": "LCM के अभाज्य गुणनखंडों (2³, 3³, 5) को HCF शर्तों के अनुसार न्यूनतम बांटें।"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "The number of ordered pairs of positive integers (a, b) such that HCF of a and b is 28 and a + b = 868 is:",
+   "hi": "धनात्मक पूर्णांकों के ऐसे क्रमित युग्मों (a, b) की संख्या बताइए जिनका HCF 28 हो और a + b = 868 हो।",
+   "opts": [
+    "25",
+    "20",
+    "30",
+    "15"
+   ],
+   "ans": "C",
+   "sol": "a = 28m, b = 28n (m, n सहअभाज्य) → 28(m + n) = 868 → m + n = 31.<br>31 अभाज्य है, इसलिए m = 1 से 30 तक हर युग्म सहअभाज्य → 30 युग्म.",
+   "trick": "a + b = योग/HCF निकालें और सहअभाज्य जोड़ों (m, n) की संख्या गिनें।"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "The LCM and HCF of <i>x</i><sup>2.5</sup>/<i>y</i><sup>0.5</sup> × √(<i>xy</i>) and <i>y</i><sup>1.5</sup>/√<i>x</i> × √(<i>xy</i>) are ____ and ____ respectively, where <i>x</i> and <i>y</i> are co-prime integers greater than 1.",
+   "hi": "<i>x</i><sup>2.5</sup>/<i>y</i><sup>0.5</sup> × √(<i>xy</i>) तथा <i>y</i><sup>1.5</sup>/√<i>x</i> × √(<i>xy</i>) का LCM और HCF क्रमशः ____ और ____ हैं, जहाँ <i>x</i> और <i>y</i>, 1 से बड़े सहअभाज्य पूर्णांक हैं।",
+   "opts": [
+    "<i>y</i>(<i>xy</i>)², <i>y</i>",
+    "<i>y</i>(<i>xy</i>)², 1",
+    "<i>x</i>(<i>xy</i>)², <i>x</i>",
+    "<i>x</i>(<i>xy</i>)², 1"
+   ],
+   "ans": "D",
+   "sol": "पहली = <i>x</i><sup>2.5</sup><i>y</i><sup>−0.5</sup> × <i>x</i><sup>0.5</sup><i>y</i><sup>0.5</sup> = <i>x</i>³; &nbsp;दूसरी = <i>y</i><sup>1.5</sup><i>x</i><sup>−0.5</sup> × <i>x</i><sup>0.5</sup><i>y</i><sup>0.5</sup> = <i>y</i>²<br><i>x</i>, <i>y</i> सहअभाज्य → HCF = 1, LCM = <i>x</i>³<i>y</i>² = <i>x</i>(<i>xy</i>)².",
+   "trick": "घातों को सरल करें; उभयनिष्ठ न्यूनतम घात HCF और अधिकतम घात LCM होती है।"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "If the 7-digit number 54468A0 is completely divisible by 4, what is the minimum value of A?",
+   "hi": "यदि 7 अंकों की संख्या 54468A0, 4 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
+   "opts": [
+    "2",
+    "5",
+    "0",
+    "3"
+   ],
+   "ans": "C",
+   "sol": "अंतिम दो अंक A0 को 4 से विभाज्य होना चाहिए → 00, 20, 40, 60, 80.<br>न्यूनतम A = 0.",
+   "trick": "अंतिम दो अंकों (A0) को 4 से विभाज्य बनाने वाला न्यूनतम A = 0 है।"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 445A0208 is divisible by 3?",
+   "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 445A0208, 3 से विभाज्य हो जाए?",
+   "opts": [
+    "7",
+    "5",
+    "2",
+    "9"
+   ],
+   "ans": "A",
+   "sol": "अंकों का योग = 4+4+5+A+0+2+0+8 = 23 + A → 24, 27, 30 के लिए A = 1, 4, 7.<br>अधिकतम A = 7.",
+   "trick": "अंकों के योग (sum + A) को 3 का गुणज बनाने वाला अधिकतम अंक A चुनें।"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "If the 7-digit number 65770A4 is completely divisible by 4, what is the minimum value of A?",
+   "hi": "यदि 7 अंकों की संख्या 65770A4, 4 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
+   "opts": [
+    "2",
+    "0",
+    "4",
+    "3"
+   ],
+   "ans": "B",
+   "sol": "अंतिम दो अंक A4 को 4 से विभाज्य होना चाहिए → 04, 24, 44, 64, 84.<br>न्यूनतम A = 0.",
+   "trick": "अंतिम दो अंकों (A4) को 4 से विभाज्य बनाने वाला न्यूनतम A = 0 है।"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Three positive integers a, b, c satisfy: gcd(a, b) = 8, gcd(b, c) = 12, gcd(c, a) = 4 and LCM(a, b, c) = 240. Then the minimum value of a + b + c is:",
+   "hi": "तीन धनात्मक पूर्णांक a, b, c के लिए gcd(a, b) = 8, gcd(b, c) = 12, gcd(c, a) = 4 और LCM(a, b, c) = 240 है। a + b + c का न्यूनतम मान क्या है?",
+   "opts": [
+    "80",
+    "84",
+    "100",
+    "96"
+   ],
+   "ans": "C",
+   "sol": "b, 8 और 12 दोनों का गुणज → b = 24 (सबसे छोटा)। 240 = 2⁴ × 3 × 5, तो 16 और 5 भी कहीं आने चाहिए।<br>a = 16, b = 24, c = 60 लें: gcd(16,24)=8 ✓, gcd(24,60)=12 ✓, gcd(60,16)=4 ✓, LCM = 240 ✓<br>योग = 16 + 24 + 60 = 100.",
+   "trick": "b को HCF का LCM लें और 2⁴ तथा 5 को a, c में न्यूनतम रखें।"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Find the number of possible values for a natural number N such that the LCM of 120 and N is 360, and the HCF of 900 and N is 90.",
+   "hi": "प्राकृत संख्या N के कितने मान संभव हैं, यदि LCM(120, N) = 360 और HCF(900, N) = 90 हो?",
+   "opts": [
+    "3",
+    "2",
+    "1",
+    "4"
+   ],
+   "ans": "C",
+   "sol": "360 = 2³·3²·5, 900 = 2²·3²·5², 90 = 2·3²·5.<br>HCF = 90 से N में 2 की घात ठीक 1, 3 की घात 2, 5 की घात 1; LCM = 360 से कोई और अभाज्य नहीं।<br>N = 2 × 9 × 5 = 90 → केवल 1 मान.",
+   "trick": "HCF और LCM के अभाज्य गुणनखंडों से N की घातों का अद्वितीय मान निकालें।"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 588A9792 is divisible by 4?",
+   "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 588A9792, 4 से विभाज्य हो जाए?",
+   "opts": [
+    "9",
+    "7",
+    "5",
+    "6"
+   ],
+   "ans": "A",
+   "sol": "अंतिम दो अंक 92 → 4 से विभाज्य है, A पर कोई शर्त नहीं।<br>अधिकतम A = 9.",
+   "trick": "अंतिम दो अंक 4 से विभाज्य हैं, इसलिए मध्य अंक A अधिकतम 9 होगा।"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "The HCF of two numbers is 6 and their LCM is 72. If one of the numbers is 18, find the other number.",
+   "hi": "दो संख्याओं का HCF 6 और LCM 72 है। यदि एक संख्या 18 है, तो दूसरी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "48",
+    "12",
+    "24",
+    "36"
+   ],
+   "ans": "C",
+   "sol": "पहली × दूसरी = HCF × LCM → 18 × दूसरी = 6 × 72 = 432<br>दूसरी = 432 ÷ 18 = 24.",
+   "trick": "दूसरी संख्या = (HCF × LCM) / पहली संख्या।"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "What is the fraction equal to (0.<span style='text-decoration:overline'>5</span> + 0.1) in simplest form?",
+   "hi": "सरलतम रूप में (0.<span style='text-decoration:overline'>5</span> + 0.1) के बराबर भिन्न क्या है?",
+   "opts": [
+    "71/69",
+    "59/90",
+    "78/89",
+    "51/91"
+   ],
+   "ans": "B",
+   "sol": "0.<span style='text-decoration:overline'>5</span> = 5/9, 0.1 = 1/10<br>5/9 + 1/10 = (50 + 9)/90 = 59/90.",
+   "trick": "बार वाले दशमलव 0.x̅ को x/9 लिखकर साधारण भिन्न की तरह जोड़ें।"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "The HCF of two numbers is 104 and their LCM is 1040. If one of the numbers is 208, what is the sum of the two numbers?",
+   "hi": "दो संख्याओं का HCF 104 और LCM 1040 है। यदि एक संख्या 208 है, तो दोनों संख्याओं का योग क्या है?",
+   "opts": [
+    "724",
+    "728",
+    "732",
+    "736"
+   ],
+   "ans": "B",
+   "sol": "दूसरी = (104 × 1040) ÷ 208 = 520<br>योग = 208 + 520 = 728.",
+   "trick": "दूसरी संख्या = (HCF × LCM) / पहली संख्या, फिर दोनों का योग निकालें।"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Convert the recurring decimal 0.2<span style='text-decoration:overline'>6</span> into a vulgar fraction.",
+   "hi": "आवर्ती दशमलव 0.2<span style='text-decoration:overline'>6</span> को साधारण भिन्न में बदलिए।",
+   "opts": [
+    "2/15",
+    "7/15",
+    "4/15",
+    "1/15"
+   ],
+   "ans": "C",
+   "sol": "नियम: (पूरी संख्या − बिना बार वाला भाग) / (बार के अंकों जितने 9, फिर बाकी के लिए 0)<br>0.2<span style='text-decoration:overline'>6</span> = (26 − 2)/90 = 24/90 = 4/15.",
+   "trick": "आवर्ती भिन्न = (पूरी संख्या − बिना बार का भाग) / (9 बार वाले अंक, 0 बिना बार)।"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "The HCF and LCM of two numbers are 5 and 180 respectively. If one number is 45, what is the other number?",
+   "hi": "दो संख्याओं का HCF और LCM क्रमशः 5 और 180 है। यदि एक संख्या 45 है, तो दूसरी संख्या क्या है?",
+   "opts": [
+    "25",
+    "36",
+    "20",
+    "40"
+   ],
+   "ans": "C",
+   "sol": "दूसरी = (5 × 180) ÷ 45 = 900 ÷ 45 = 20.",
+   "trick": "दूसरी संख्या = (HCF × LCM) / पहली संख्या।"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "The least common multiple of 64, 128 and A is 4480. The difference between the maximum and minimum possible values of A is:",
+   "hi": "64, 128 और A का LCM 4480 है। A के अधिकतम और न्यूनतम संभावित मानों का अंतर क्या है?",
+   "opts": [
+    "4544",
+    "4454",
+    "5444",
+    "4445"
+   ],
+   "ans": "D",
+   "sol": "4480 = 2⁷ × 35 और 128 = 2⁷. इसलिए A में 35 होना ज़रूरी है, 2 की घात 0 से 7 तक कुछ भी।<br>न्यूनतम A = 35, अधिकतम A = 4480 → अंतर = 4480 − 35 = 4445.",
+   "trick": "न्यूनतम A में आवश्यक अभाज्य घटक और अधिकतम A स्वयं LCM होगा।"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "If the 7-digit number 56339A8 is completely divisible by 6, what is the minimum value of A?",
+   "hi": "यदि 7 अंकों की संख्या 56339A8, 6 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
+   "opts": [
+    "2",
+    "1",
+    "3",
+    "5"
+   ],
+   "ans": "A",
+   "sol": "6 से विभाज्य = 2 और 3 दोनों से। अंतिम अंक 8 (सम) ✓<br>अंकों का योग = 5+6+3+3+9+A+8 = 34 + A → 36 के लिए A = 2.",
+   "trick": "6 से विभाज्यता: अंतिम अंक सम हो और अंकों का योग 3 से विभाज्य हो।"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Three positive integers a, b and c satisfy: gcd(a, b) = 12, gcd(b, c) = 18, gcd(c, a) = 6. If a + b + c = 6k for some positive integer k, then the minimum possible value of k is:",
+   "hi": "तीन धनात्मक पूर्णांक a, b, c के लिए gcd(a, b) = 12, gcd(b, c) = 18, gcd(c, a) = 6 है। यदि a + b + c = 6k हो, तो k का न्यूनतम मान क्या है?",
+   "opts": [
+    "12",
+    "11",
+    "10",
+    "9"
+   ],
+   "ans": "B",
+   "sol": "a, 12 का गुणज; c, 18 का गुणज; b, 12 और 18 दोनों का गुणज → b = 36.<br>a = 12, b = 36, c = 18 लें: gcd(12,36)=12 ✓, gcd(36,18)=18 ✓, gcd(18,12)=6 ✓<br>योग = 66 = 6 × 11 → k = 11.",
+   "trick": "HCF शर्तों को संतुष्ट करने वाले न्यूनतम मान a, b, c चुनकर k = योग/6 निकालें।"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "If the 7-digit number 54572A0 is completely divisible by 3, what is the minimum value of A?",
+   "hi": "यदि 7 अंकों की संख्या 54572A0, 3 से पूर्णतः विभाज्य है, तो A का न्यूनतम मान क्या है?",
+   "opts": [
+    "1",
+    "4",
+    "5",
+    "3"
+   ],
+   "ans": "A",
+   "sol": "अंकों का योग = 5+4+5+7+2+A+0 = 23 + A → 24 के लिए A = 1.",
+   "trick": "3 से विभाज्यता का नियम: अंकों के योग को 3 का गुणज बनाने वाला न्यूनतम A चुनें।"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Bell A rings every 18 minutes, bell B every 24 minutes and bell C every 30 minutes. They all ring together for the first time at 6:30 AM. Find the time at which the bells ring together for the third time.",
+   "hi": "घंटी A हर 18 मिनट, घंटी B हर 24 मिनट और घंटी C हर 30 मिनट में बजती है। तीनों पहली बार 6:30 AM पर एक साथ बजती हैं। तीसरी बार एक साथ कब बजेंगी?",
+   "opts": [
+    "12:30 PM",
+    "6:30 PM",
+    "9:30 PM",
+    "3:30 PM"
+   ],
+   "ans": "B",
+   "sol": "LCM(18, 24, 30) = 360 मिनट = 6 घंटे.<br>पहली 6:30 AM → दूसरी 12:30 PM → तीसरी 6:30 PM.",
+   "trick": "एक साथ बजने का समय = LCM; n-वीं बार = (n − 1) × LCM जोड़ें।"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "A gardener waters three rows of plants using automatic sprays. Spray A activates every 12 minutes, Spray B every 15 minutes and Spray C every 20 minutes. If they first activate together at 9:45 AM, at what time will they activate together for the sixth time (including the first)?",
+   "hi": "एक माली के तीन स्वचालित स्प्रे हर 12, 15 और 20 मिनट में चलते हैं। तीनों पहली बार 9:45 AM पर एक साथ चलते हैं। छठी बार (पहली बार को मिलाकर) वे कब एक साथ चलेंगे?",
+   "opts": [
+    "2:55 PM",
+    "2:25 PM",
+    "2:45 PM",
+    "1:45 PM"
+   ],
+   "ans": "C",
+   "sol": "LCM(12, 15, 20) = 60 मिनट = 1 घंटा.<br>छठी बार = 5 अंतराल बाद = 5 घंटे → 9:45 AM + 5 घंटे = 2:45 PM.",
+   "trick": "एक साथ चलने का अंतराल = LCM; 6ठी बार = आरंभिक समय + 5 × LCM।"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 230A7807 is divisible by 3?",
+   "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 230A7807, 3 से विभाज्य हो जाए?",
+   "opts": [
+    "7",
+    "9",
+    "5",
+    "4"
+   ],
+   "ans": "B",
+   "sol": "अंकों का योग = 2+3+0+A+7+8+0+7 = 27 + A. 27 पहले से 3 से विभाज्य है, तो A = 0, 3, 6, 9.<br>अधिकतम A = 9.",
+   "trick": "अंको का योग 3 से विभाज्य बनाने वाला अधिकतम अंक A (0-9) चुनें।"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "The product of two numbers X and Y is 6760, and the HCF of X and Y is 13. Find the number of possible pairs (X, Y), given that X > Y.",
+   "hi": "दो संख्याओं X और Y का गुणनफल 6760 और HCF 13 है। यदि X > Y हो, तो संभावित युग्मों (X, Y) की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "ans": "B",
+   "sol": "X = 13a, Y = 13b (a, b सहअभाज्य) → 169ab = 6760 → ab = 40.<br>सहअभाज्य युग्म (a > b): (40, 1), (8, 5) → 2 युग्म.",
+   "trick": "ab = गुणनफल / HCF² से (a, b) के सहअभाज्य जोड़े निकालें।"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "The least common multiple of two numbers is 21 times the first number, and the highest common factor of the two numbers is a two-digit prime number. What is the least possible value of the second number?",
+   "hi": "दो संख्याओं का LCM पहली संख्या का 21 गुना है और उनका HCF दो अंकों की एक अभाज्य संख्या है। दूसरी संख्या का न्यूनतम मान क्या है?",
+   "opts": [
+    "273",
+    "231",
+    "357",
+    "147"
+   ],
+   "ans": "B",
+   "sol": "पहली = Hm, दूसरी = Hn → LCM = Hmn = 21 × Hm → n = 21.<br>दूसरी = 21H; सबसे छोटा दो अंकों का अभाज्य H = 11 → दूसरी = 231.",
+   "trick": "दूसरी संख्या = 21 × HCF; न्यूनतम मान के लिए सबसे छोटा 2-अंकी अभाज्य 11 लें।"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Three positive integers P, Q and R are such that HCF of P and Q is 15, HCF of Q and R is 10, and HCF of R and P is 5. If the sum P + Q + R is as small as possible, the value of P × Q × R is:",
+   "hi": "तीन धनात्मक पूर्णांक P, Q, R के लिए HCF(P, Q) = 15, HCF(Q, R) = 10 और HCF(R, P) = 5 है। यदि P + Q + R न्यूनतम हो, तो P × Q × R का मान क्या है?",
+   "opts": [
+    "3000",
+    "1500",
+    "4500",
+    "6000"
+   ],
+   "ans": "C",
+   "sol": "Q, 15 और 10 दोनों का गुणज → Q = 30; P = 15, R = 10 सबसे छोटे।<br>जाँच: HCF(15,30)=15 ✓, HCF(30,10)=10 ✓, HCF(10,15)=5 ✓<br>P × Q × R = 15 × 30 × 10 = 4500.",
+   "trick": "न्यूनतम योग के लिए Q = LCM(15, 10) = 30, P = 15, R = 10 लें।"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Two numbers have an HCF of 12 and an LCM of 840. If one of the numbers is 84, find the other number.",
+   "hi": "दो संख्याओं का HCF 12 और LCM 840 है। यदि एक संख्या 84 है, तो दूसरी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "368",
+    "168",
+    "120",
+    "840"
+   ],
+   "ans": "C",
+   "sol": "दूसरी = (12 × 840) ÷ 84 = 120.",
+   "trick": "दूसरी संख्या = (HCF × LCM) / पहली संख्या।"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 718A5104 is divisible by 4?",
+   "hi": "8 अंकों की संख्या 718A5104 के 4 से विभाज्य होने के लिए A का अधिकतम मान ज्ञात कीजिए।",
+   "opts": [
+    "4",
+    "6",
+    "5",
+    "9"
+   ],
+   "ans": "D",
+   "sol": "अंतिम दो अंक 04 → 4 से विभाज्य, A पर कोई शर्त नहीं।<br>अधिकतम A = 9.",
+   "trick": "यदि अंतिम दो अंक 4 से विभाज्य हैं, तो अधिकतम A = 9 होगा।"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Three friends travel along three consecutive segments: P to Q, Q to R and R to S, at speeds 48 km/h, 72 km/h and 96 km/h respectively. The distances are in the ratio 2 : 3 : 1, and the total distance from P to S is 480 km. Calculate the average speed for the entire journey.",
+   "hi": "तीन मित्र P से Q, Q से R और R से S तक क्रमशः 48 km/h, 72 km/h और 96 km/h की चाल से जाते हैं। दूरियों का अनुपात 2 : 3 : 1 है और कुल दूरी 480 km है। पूरी यात्रा की औसत चाल क्या है?",
+   "opts": [
+    "65 km/h",
+    "64 km/h",
+    "58 km/h",
+    "68 km/h"
+   ],
+   "ans": "B",
+   "sol": "दूरियाँ = 160, 240, 80 km. समय = 160/48 + 240/72 + 80/96 = 10/3 + 10/3 + 5/6 = 7.5 घंटे<br>औसत चाल = 480 ÷ 7.5 = 64 km/h.",
+   "trick": "कुल औसत चाल = कुल दूरी / कुल समय (समय = दूरी / चाल)।"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The HCF of two numbers is one-fifth of the first number and one-third of the second number. The HCF is a two-digit prime number. The HCF of three times the first number and five times the second number is a number which is the product of ________.",
+   "hi": "दो संख्याओं का HCF पहली संख्या का 1/5 और दूसरी संख्या का 1/3 है। HCF दो अंकों की अभाज्य संख्या है। पहली संख्या के 3 गुने और दूसरी संख्या के 5 गुने का HCF ________ का गुणनफल है।",
+   "opts": [
+    "three prime numbers<br>तीन अभाज्य संख्याओं",
+    "two prime numbers<br>दो अभाज्य संख्याओं",
+    "five prime numbers<br>पाँच अभाज्य संख्याओं",
+    "four prime numbers<br>चार अभाज्य संख्याओं"
+   ],
+   "ans": "A",
+   "sol": "HCF = p (अभाज्य) → पहली = 5p, दूसरी = 3p.<br>3 × 5p = 15p और 5 × 3p = 15p → HCF = 15p = 3 × 5 × p → तीन अभाज्य संख्याओं का गुणनफल.",
+   "trick": "3a और 5b का HCF = 15 × HCF = 3 × 5 × p (तीन अभाज्य संख्याओं का गुणनफल)।"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "The LCM of two numbers is 1116 and their HCF is 186. If one of the numbers is 372, then the other number is:",
+   "hi": "दो संख्याओं का LCM 1116 और HCF 186 है। यदि एक संख्या 372 है, तो दूसरी संख्या क्या है?",
+   "opts": [
+    "930",
+    "372",
+    "465",
+    "558"
+   ],
+   "ans": "D",
+   "sol": "दूसरी = (1116 × 186) ÷ 372 = 1116 ÷ 2 = 558.",
+   "trick": "दूसरी संख्या = (HCF × LCM) / पहली संख्या।"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "The sum of two numbers is 56. Their difference is 1/7 of their sum. Their LCM is:",
+   "hi": "दो संख्याओं का योग 56 है। उनका अंतर उनके योग का 1/7 है। उनका LCM क्या है?",
+   "opts": [
+    "84",
+    "63",
+    "96",
+    "72"
+   ],
+   "ans": "C",
+   "sol": "अंतर = 56 ÷ 7 = 8 → संख्याएँ = (56 + 8)/2 = 32 और 24.<br>LCM(32, 24) = 96.",
+   "trick": "संख्याएँ = (योग ± अंतर)/2 निकालें, फिर उनका LCM लें।"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "What is the maximum value of A so that the 8-digit number 713A8845 is divisible by 3?",
+   "hi": "A का अधिकतम मान क्या है जिससे 8 अंकों की संख्या 713A8845, 3 से विभाज्य हो जाए?",
+   "opts": [
+    "6",
+    "8",
+    "7",
+    "9"
+   ],
+   "ans": "D",
+   "sol": "अंकों का योग = 7+1+3+A+8+8+4+5 = 36 + A. 36 पहले से 3 से विभाज्य है, तो A = 0, 3, 6, 9.<br>अधिकतम A = 9.",
+   "trick": "अंको के योग को 3 से विभाज्य बनाने वाला अधिकतम अंक A = 9 होगा।"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "The sum of two numbers a and b, where a &lt; b, is 129. The HCF and LCM of a and b are 3 and 1350 respectively. Find the value of 1/a − 1/b.",
+   "hi": "दो संख्याओं a और b (a &lt; b) का योग 129 है। इनका HCF 3 और LCM 1350 है। 1/a − 1/b का मान ज्ञात कीजिए।",
+   "opts": [
+    "−3/4550",
+    "−21/1550",
+    "7/1350",
+    "441/450"
+   ],
+   "ans": "C",
+   "sol": "ab = HCF × LCM = 3 × 1350 = 4050.<br>1/a − 1/b = (b − a)/ab. a = 3m, b = 3n → m + n = 43, mn = 450 → m = 18, n = 25 → a = 54, b = 75.<br>(75 − 54)/4050 = 21/4050 = 7/1350.",
+   "trick": "1/a − 1/b = (b − a) / (HCF × LCM) सूत्र का प्रयोग करें।"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "A transaction code 92419 is not divisible by 13. To make it divisible by 13, the least digit should be appended at the end of the number. What is that digit?",
+   "hi": "लेन-देन कोड 92419, 13 से विभाज्य नहीं है। इसे 13 से विभाज्य बनाने के लिए अंत में सबसे छोटा कौन-सा अंक जोड़ना होगा?",
+   "opts": [
+    "6",
+    "5",
+    "2",
+    "4"
+   ],
+   "ans": "A",
+   "sol": "अंत में अंक d जोड़ने पर संख्या = 924190 + d.<br>924190 ÷ 13 → शेषफल 7 (13 × 71091 = 924183). शेष 0 करने के लिए d = 13 − 7 = 6.<br>जाँच: 924196 = 13 × 71092 ✓",
+   "trick": "संख्या0 ÷ 13 का शेषफल r निकालें; जोड़ने वाला अंतिम अंक = 13 − r।"
+  }
+ ]
 }
