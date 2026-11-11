@@ -40,7 +40,7 @@ CSS = """
 @font-face { font-family: ARSerif; src: url("FONTDIR/FreeSerif.ttf"); }
 @font-face { font-family: ARSerif; font-style: italic; src: url("FONTDIR/FreeSerifItalic.ttf"); }
 * { box-sizing: border-box; }
-body { margin:0; font-family: ARSans, sans-serif; font-size:11pt; line-height:1.6; color:#262a35; }
+body { margin:0; font-family: ARSans, sans-serif; font-size:12pt; line-height:1.55; color:#262a35; }
 i { font-family: ARSerif, serif; }
 .page { page-break-after: always; }
 .grad { background: linear-gradient(115deg,#e91e63 0%,#7c3aed 50%,#0284c7 100%); color:#fff; }
@@ -67,22 +67,27 @@ i { font-family: ARSerif, serif; }
 .chap h1 { font-size:38pt; margin:2mm 0 1mm; } .chap .hi { font-size:22pt; }
 .chap .cnt { margin-top:12mm; display:flex; gap:12px; justify-content:center; }
 .chap .cnt div { background:#ffd23f; color:#3b1d6e; border-radius:14px; padding:8px 18px; font-weight:bold; }
-.lvl { border-radius:14px; padding:9px 16px; margin:0 0 20px; font-weight:bold; display:flex; justify-content:space-between; align-items:center; }
+.lvl { border-radius:14px; padding:9px 16px; margin:0; font-weight:bold; display:flex; justify-content:space-between; align-items:center; }
 .lvl span:last-child { background:#ffd23f; color:#3b1d6e; border-radius:10px; padding:1px 10px; }
 /* question */
-.q { break-inside:avoid; margin-bottom:22px; padding-bottom:20px; border-bottom:2px dotted #e3e5ec; }
+.q { break-inside:avoid; border:2px solid var(--s); border-radius:16px; padding:12px 14px; display:flex; flex-direction:column; gap:9px; }
+.sheet { height:262mm; display:flex; flex-direction:column; gap:5mm; page-break-after:always; }
+.sheet.long { height:auto; }
+.q.fill { flex:1; justify-content:space-around; }
+.sheet .lvl { margin:0; }
+#measure { width:180mm; } #measure .q { margin-bottom:5mm; }
 .qt { display:flex; gap:14px; }
 .n { flex:0 0 40px; height:40px; border-radius:12px; background:var(--c); color:#fff; font-weight:bold; display:flex; align-items:center; justify-content:center; font-size:12.5pt; box-shadow:0 3px 0 var(--d); }
-.tag { display:inline-block; background:var(--s); color:var(--c); font-weight:bold; font-size:8.5pt; border-radius:20px; padding:0 10px; margin-bottom:3px; }
+.tag { display:inline-block; background:var(--s); color:var(--c); font-weight:bold; font-size:9.5pt; border-radius:20px; padding:0 10px; margin-bottom:3px; }
 .en { font-weight:bold; color:#1b1f2b; } .hi2 { color:#5a5f6b; margin-top:3px; }
-.os { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin:12px 0 10px 54px; }
+.os { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin:0 0 0 54px; }
 .o { display:flex; gap:10px; align-items:center; padding:6px 12px; border:2px solid #eceef3; border-radius:12px; background:#fff; }
-.l { width:22px; height:22px; border-radius:50%; color:#fff; font-weight:bold; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex:0 0 22px; }
-.ans { margin:0 0 10px 54px; font-weight:bold; color:#1b1f2b; }
+.l { width:24px; height:24px; border-radius:50%; color:#fff; font-weight:bold; font-size:10.5pt; display:flex; align-items:center; justify-content:center; flex:0 0 24px; }
+.ans { margin:0 0 0 54px; font-weight:bold; color:#1b1f2b; }
 .ans span { display:inline-block; background:var(--s); color:var(--c); border:2px solid var(--c); border-radius:10px; padding:1px 12px; }
 .s { margin-left:54px; padding:12px 16px; background:var(--s); border-left:5px solid var(--c); border-radius:12px; }
-.s .tl { font-size:9pt; letter-spacing:2px; font-weight:bold; color:var(--c); margin-bottom:3px; }
-.tr { margin:10px 0 0 54px; padding:6px 12px; background:#fff7cc; border-radius:10px; font-size:10.5pt; display:inline-block; }
+.s .tl { font-size:10pt; letter-spacing:2px; font-weight:bold; color:var(--c); margin-bottom:3px; }
+.tr { margin:0 0 0 54px; padding:6px 12px; background:#fff7cc; border-radius:10px; font-size:11.5pt; display:inline-block; }
 .tr b { color:#c2410c; }
 """
 
@@ -95,7 +100,7 @@ def strip_tags(s):
 
 def q_html(q, k):
     c, s = QCOL[k % 4]
-    long_opt = any(len(strip_tags(o)) > 34 for o in q["opts"])
+    long_opt = any(len(strip_tags(o)) > 55 for o in q["opts"])
     opts = "".join(f'<div class="o"><span class="l" style="background:{OPTC[i]}">{LETTERS[i]}</span><span>{o}</span></div>'
                    for i, o in enumerate(q["opts"]))
     a = q["ans"]
@@ -133,14 +138,42 @@ def chapter_pages(d):
     cnt = f"<div>{c['total']} PYQs</div>" + (f"<div>GL · {c['gl']}</div>" if c["gl"] else "") + (f"<div>UG · {c['ug']}</div>" if c["ug"] else "")
     out = f"""<div class="page"><div class="chap"><div class="card grad"><div class="tno">TOPIC {c['no']:02d} / {len(TOPICS)}</div><div class="ico">{ic}</div>
 <h1>{c['en']}</h1><div class="hi">{c['hi']}</div><div class="cnt">{cnt}</div></div></div></div>"""
-    lvl = None
+    items, lvl = [], None  # ("lvl", html) ya ("q", html)
     for k, q in enumerate(d["questions"]):
         if q["lvl"] != lvl:
             lvl = q["lvl"]
             name = "Graduate Level · स्नातक स्तर" if lvl == "GL" else "Under Graduate Level · स्नातक-पूर्व स्तर"
-            out += f'<div class="lvl grad"><span>{ic} {c["en"]} · {lvl} · {name}</span><span>{c["gl"] if lvl == "GL" else c["ug"]} Qs</span></div>'
-        out += q_html(q, k)
-    return out
+            items.append(("lvl", f'<div class="lvl grad"><span>{ic} {c["en"]} · {lvl} · {name}</span><span>{c["gl"] if lvl == "GL" else c["ug"]} Qs</span></div>'))
+        items.append(("q", q_html(q, k)))
+    return out, items
+
+
+PAGE_MM, GAP_MM, PX_MM = 262, 5, 96 / 25.4
+MIN_ZOOM = 0.92  # isse chhota nahi (12pt x 0.92 = purane 11pt jitna)
+
+
+def pack(items, h):
+    """Har page par 2 sawaal; dono na samayein to 1. h = har item ki naap (mm)."""
+    pages, i = [], 0
+    while i < len(items):
+        top = []
+        while i < len(items) and items[i][0] == "lvl":
+            top.append(items[i][1]); i += 1
+        used = sum(h[x] for x in top) + GAP_MM * len(top)
+        qs, zoom = [], 1.0
+        while i < len(items) and items[i][0] == "q" and len(qs) < 2:
+            need = h[items[i][1]] + (GAP_MM if qs else 0)
+            if qs and used + need > PAGE_MM:
+                if (used + need) * MIN_ZOOM <= PAGE_MM:  # thoda chhota karke dono sawaal ek page par
+                    zoom = max(MIN_ZOOM, PAGE_MM / (used + need) - 0.005)
+                else:
+                    break
+            qs.append(items[i][1]); used += need; i += 1
+        cls = "sheet" if used * zoom <= PAGE_MM else "sheet long"
+        cards = [x.replace('class="q"', 'class="q fill"', 1) for x in qs] if len(qs) == 2 else qs
+        st = f' style="zoom:{zoom:.3f};height:{PAGE_MM / zoom:.1f}mm"' if zoom < 1 else ""
+        pages.append(f'<div class="{cls}"{st}>{"".join(top)}{"".join(cards)}</div>')
+    return "".join(pages)
 
 
 def main():
@@ -154,14 +187,16 @@ def main():
         c = chapters.setdefault(d["chapter"]["no"], {"chapter": d["chapter"], "questions": {}})
         for q in d["questions"]:
             c["questions"][q["n"]] = q
+    parts = []
     for no in sorted(chapters):
         c = chapters[no]
-        body += chapter_pages({"chapter": c["chapter"], "questions": [c["questions"][n] for n in sorted(c["questions"])]})
+        parts.append(chapter_pages({"chapter": c["chapter"], "questions": [c["questions"][n] for n in sorted(c["questions"])]}))
     css = CSS.replace("FONTDIR", "file://" + FONT_DIR)
-    doc = f'<!doctype html><html lang="hi"><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
+    wrap = lambda b: f'<!doctype html><html lang="hi"><head><meta charset="utf-8"><style>{css}</style></head><body>{b}</body></html>'
     os.makedirs(OUT, exist_ok=True)
     html_path = os.path.join(OUT, "book.html")
-    open(html_path, "w", encoding="utf-8").write(doc)
+    allitems = [x for _, its in parts for x in its]
+    open(html_path, "w", encoding="utf-8").write(wrap('<div id="measure">' + "".join(x[1] for x in allitems) + "</div>"))
     pdf_path = os.path.join(OUT, "RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf")
     head = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#7c3aed;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
     foot = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#777;font-family:sans-serif"><span>© {BRAND}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
@@ -171,6 +206,14 @@ def main():
         except Exception:  # runner par pehle se laga Google Chrome
             b = p.chromium.launch(channel="chrome")
         pg = b.new_page()
+        pg.emulate_media(media="print")
+        pg.goto("file://" + html_path)
+        pg.wait_for_timeout(300)
+        hs = pg.evaluate("Array.from(document.querySelectorAll('#measure > div')).map(e => e.getBoundingClientRect().height)")
+        h = {x[1]: px / PX_MM for x, px in zip(allitems, hs)}
+        for cp, its in parts:
+            body += cp + pack(its, h)
+        open(html_path, "w", encoding="utf-8").write(wrap(body))
         pg.goto("file://" + html_path)
         pg.pdf(path=pdf_path, format="A4", print_background=True, display_header_footer=True,
                header_template=head, footer_template=foot,
