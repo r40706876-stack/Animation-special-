@@ -8,28 +8,16 @@ import glob, html, json, os, re, sys
 from playwright.sync_api import sync_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "out")
+BOOK_DIR = os.path.abspath(os.environ.get("BOOK_DIR", HERE))
+CFG = json.load(open(os.path.join(BOOK_DIR, "book.json"), encoding="utf-8"))
+SUBJ_EN, SUBJ_HI = CFG["subject_en"], CFG["subject_hi"]
+OUT = os.path.join(BOOK_DIR, "out")
 FONT_DIR = os.path.join(HERE, "fonts")
 BRAND = "AR Publication"
 WHATSAPP = "8989971379"
-TITLE = "RRB NTPC 2025-26 · Maths PYQ (GL + UG) · हल सहित"
+TITLE = f"RRB NTPC 2025-26 · {SUBJ_EN} PYQ (GL + UG) · हल सहित"
 
-TOPICS = [
-    ("Number System", "संख्या पद्धति", 87, "🔢"), ("LCM & HCF", "लघुत्तम एवं महत्तम समापवर्तक", 50, "➗"),
-    ("Simplification", "सरलीकरण", 130, "🧮"), ("Algebra", "बीजगणित", 112, "🔣"),
-    ("Quadratic Equations", "द्विघात समीकरण", 7, "📐"), ("Percentage", "प्रतिशत", 100, "💯"),
-    ("Profit & Loss", "लाभ एवं हानि", 102, "💰"), ("Discount", "बट्टा / छूट", 101, "🏷️"),
-    ("Simple Interest", "साधारण ब्याज", 59, "🏦"), ("Compound Interest", "चक्रवृद्धि ब्याज", 52, "📈"),
-    ("Ratio & Proportion", "अनुपात एवं समानुपात", 140, "⚖️"), ("Partnership", "साझेदारी", 32, "🤝"),
-    ("Mixture & Alligation", "मिश्रण", 3, "🧪"), ("Average", "औसत", 93, "📊"),
-    ("Problems on Age", "आयु संबंधी प्रश्न", 43, "🎂"), ("Time & Work", "समय एवं कार्य", 88, "🛠️"),
-    ("Pipe & Cistern", "पाइप एवं टंकी", 31, "🚰"), ("Time, Speed & Distance", "समय, चाल एवं दूरी", 89, "🚆"),
-    ("Boat & Stream", "नाव एवं धारा", 12, "⛵"), ("Race", "दौड़", 7, "🏃"),
-    ("Mensuration", "क्षेत्रमिति", 89, "📏"), ("Geometry", "ज्यामिति", 103, "📐"),
-    ("Trigonometry", "त्रिकोणमिति", 35, "📐"), ("Height & Distance", "ऊँचाई एवं दूरी", 16, "🗼"),
-    ("Statistics", "सांख्यिकी", 73, "📉"), ("Venn Diagram", "वेन आरेख", 5, "⭕"),
-    ("Statement Based Questions", "कथन आधारित प्रश्न", 20, "📝"),
-]
+TOPICS = [(c[1], c[2], c[4], c[7] if len(c) > 7 else "📘") for c in CFG["chapters"]]
 
 QCOL = [("#e91e63", "#fde4ee"), ("#7c3aed", "#efe7ff"), ("#0284c7", "#e0f2fe"), ("#f97316", "#ffedd5")]
 OPTC = ["#e91e63", "#7c3aed", "#0284c7", "#f97316"]
@@ -44,6 +32,7 @@ CSS = """
 body { margin:0; font-family: ARSans, sans-serif; font-size:13pt; line-height:1.42; color:#262a35; }
 i { font-family: ARSerif, serif; }
 .wm { position:fixed; top:46%; left:-10%; width:120%; text-align:center; transform:rotate(-38deg); font-size:68pt; font-weight:bold; letter-spacing:10px; white-space:nowrap; color:rgba(124,58,237,0.075); z-index:9999; pointer-events:none; }
+.fig { margin-top:6px; } .fig img { max-width:100%; max-height:62mm; border:1px solid #e3e5ec; border-radius:8px; }
 .wabar { height:9mm; flex:0 0 9mm; display:flex; align-items:center; justify-content:center; }
 .wabar span { background:#16a34a; color:#fff; border-radius:20px; padding:3px 16px; font-size:11.5pt; }
 .wa { display:inline-block; background:#16a34a; color:#fff; font-weight:bold; border-radius:20px; padding:4px 14px; }
@@ -115,6 +104,8 @@ def q_html(q, k):
     q = dict(q, en=clean(q["en"]), hi=clean(q["hi"]), sol=clean(q["sol"]), opts=[clean(o) for o in q["opts"]],
              trick=clean(q["trick"]) if q.get("trick") else "")
     c, s = QCOL[k % 4]
+    fig = (f'<div class="fig"><img src="file://{os.path.join(BOOK_DIR, q["img"])}"></div>'
+           if q.get("img") and os.path.exists(os.path.join(BOOK_DIR, q["img"])) else "")
     long_opt = any(len(strip_tags(o)) > 55 for o in q["opts"])
     opts = "".join(f'<div class="o"><span class="l" style="background:{OPTC[i]}">{LETTERS[i]}</span><span>{o}</span></div>'
                    for i, o in enumerate(q["opts"]))
@@ -122,7 +113,7 @@ def q_html(q, k):
     ans_txt = strip_tags(q["opts"][LETTERS.index(a)].split("<br>")[0]) if a in LETTERS else ""
     trick = f'<div class="tr"><b>⚡ याद रखो —</b> {q["trick"]}</div>' if q.get("trick") else ""
     return f"""<div class="q" style="--c:{c};--s:{s};--d:{DARK[c]}"><div class="qt"><div class="n">{q['n']}</div><div>
-<span class="tag">RRB NTPC 2025-26 · {q['lvl']}</span><div class="en">{q['en']}</div><div class="hi2">{q['hi']}</div></div></div>
+<span class="tag">RRB NTPC 2025-26 · {q['lvl']}</span><div class="en">{q['en']}</div><div class="hi2">{q['hi']}</div>{fig}</div></div>
 <div class="os"{' style="grid-template-columns:1fr"' if long_opt else ''}>{opts}</div>
 <div class="ans">उत्तर: <span>विकल्प ({a}) {html.escape(ans_txt)}</span></div>
 <div class="s"><div class="tl">💡 हल · SOLUTION</div>{q['sol']}</div>{trick}</div>"""
@@ -131,8 +122,8 @@ def q_html(q, k):
 def front_pages():
     total = sum(t[2] for t in TOPICS)
     cover = f"""<div class="page"><div class="cover grad"><div class="brand">{BRAND.upper()}</div>
-<h1>RRB NTPC<br>Maths PYQ</h1><div class="sub">2025-26 · CBT-1 · Graduate + Under Graduate</div>
-<div class="hi">गणित · विषयवार पूर्व वर्ष प्रश्न · हर प्रश्न का आसान हल</div>
+<h1>RRB NTPC<br>{SUBJ_EN} PYQ</h1><div class="sub">2025-26 · CBT-1 · Graduate + Under Graduate</div>
+<div class="hi">{SUBJ_HI} · विषयवार पूर्व वर्ष प्रश्न · हर प्रश्न का आसान हल</div>
 <div class="chips"><span class="chip">English + हिन्दी</span><span class="chip">{len(TOPICS)} Topics</span><span class="chip">💡 Step हल</span><span class="chip">⚡ याद रखो ट्रिक</span></div>
 <div class="big">{total:,} प्रश्न</div><div style="margin-top:8mm"><span class="wa" style="font-size:14pt">📞 WhatsApp: {WHATSAPP}</span></div></div></div>"""
     items = "".join(
@@ -141,7 +132,7 @@ def front_pages():
         for i, (en, hi, c, ic) in enumerate(TOPICS))
     index = f"""<div class="page"><div class="sec">Index · विषय-सूची</div><div class="bar grad"></div><div class="idx">{items}</div></div>"""
     about = f"""<div class="page"><div class="sec">पुस्तक परिचय · About</div><div class="bar grad"></div>
-<div class="box" style="--c:#e91e63;--s:#fde4ee"><h3>📘 पुस्तक में क्या है</h3>RRB NTPC 2025-26 CBT-1 में पूछे गए {total:,} गणित प्रश्न — स्नातक (GL) और स्नातक-पूर्व (UG) दोनों स्तर, {len(TOPICS)} टॉपिक में टॉपिकवार।</div>
+<div class="box" style="--c:#e91e63;--s:#fde4ee"><h3>📘 पुस्तक में क्या है</h3>RRB NTPC 2025-26 CBT-1 में पूछे गए {total:,} {SUBJ_HI} प्रश्न — स्नातक (GL) और स्नातक-पूर्व (UG) दोनों स्तर, {len(TOPICS)} टॉपिक में टॉपिकवार।</div>
 <div class="box" style="--c:#7c3aed;--s:#efe7ff"><h3>🧭 उपयोग कैसे करें</h3>• हर प्रश्न: ऊपर English, नीचे हिन्दी<br>• पहले खुद हल करें, फिर नीचे "उत्तर" और "💡 हल" से मिलाएँ<br>• "⚡ याद रखो" वाली लाइन परीक्षा से पहले दोहराएँ<br>• GL / UG टैग परीक्षा का स्तर बताता है</div>
 <div class="box" style="--c:#0284c7;--s:#e0f2fe"><h3>✍️ {BRAND}</h3>प्रतियोगी परीक्षाओं के लिए नोट्स, PYQ और प्रैक्टिस सामग्री।<br>किसी भी सवाल या नई किताब के लिए संपर्क करें: <span class="wa">📞 WhatsApp: {WHATSAPP}</span></div></div>"""
     return cover + index + about
@@ -198,7 +189,7 @@ def pack(items, h):
 
 
 def main():
-    files = sorted(glob.glob(os.path.join(HERE, "data", "*.json")))
+    files = sorted(glob.glob(os.path.join(BOOK_DIR, "data", "*.json")))
     if not files:
         sys.exit("data/*.json nahi mila")
     body = front_pages()
@@ -218,7 +209,7 @@ def main():
     html_path = os.path.join(OUT, "book.html")
     allitems = [x for _, its in parts for x in its]
     open(html_path, "w", encoding="utf-8").write(wrap('<div id="measure">' + "".join(f'<div class="mi" data-i="{j}">{x[1]}</div>' for j, x in enumerate(allitems)) + "</div>"))
-    pdf_path = os.path.join(OUT, "RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf")
+    pdf_path = os.path.join(OUT, CFG["pdf_name"])
     head = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#7c3aed;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
     foot = (f'<div style="font-size:9px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;align-items:center;color:#555;font-family:sans-serif;-webkit-print-color-adjust:exact">'
             f'<b style="color:#7c3aed">© {BRAND}</b>'
@@ -232,6 +223,7 @@ def main():
         pg.emulate_media(media="print")
         pg.goto("file://" + html_path)
         pg.evaluate("document.fonts.ready.then(() => 1)")  # font load hone ke baad hi naapo
+        pg.evaluate("Promise.all(Array.from(document.images).map(i => i.complete ? 1 : new Promise(r => { i.onload = i.onerror = r; })))")
         pg.wait_for_timeout(500)
         hs = pg.evaluate("Array.from(document.querySelectorAll('.mi')).map(e => [+e.dataset.i, e.firstElementChild ? e.firstElementChild.getBoundingClientRect().height : 0])")
         if len(hs) != len(allitems):

@@ -10,9 +10,12 @@ import requests
 import pypdfium2 as pdfium
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BOOK = os.path.join(HERE, "source", "book.pdf")
-DATA = os.path.join(HERE, "data")
-REVIEW = os.path.join(HERE, "review.txt")
+BOOK_DIR = os.path.abspath(os.environ.get("BOOK_DIR", HERE))  # kaun si book: ntpc_maths / ntpc_reasoning ...
+CFG = json.load(open(os.path.join(BOOK_DIR, "book.json"), encoding="utf-8"))
+BOOK = os.path.join(BOOK_DIR, "source", "book.pdf")
+DATA = os.path.join(BOOK_DIR, "data")
+FIGS = os.path.join(BOOK_DIR, "figs")
+REVIEW = os.path.join(BOOK_DIR, "review.txt")
 # Kai keys (alag Google projects = alag free quota). Comma/space se alag.
 KEYS = [k for k in re.split(r"[,\s]+", os.environ.get("GEMINI_API_KEYS", "") + "," + os.environ.get("GEMINI_API_KEY", "")) if k]
 KEYS = list(dict.fromkeys(KEYS))
@@ -22,24 +25,10 @@ MODELS = [m for m in os.environ.get("GEMINI_MODELS",
 BATCH = int(os.environ.get("PAGES_PER_CALL", "3"))  # ek request mein itne page -> 3 guna kam requests
 DEAD = set()  # (key, model) jinki aaj ki limit khatam
 
-# (no, en, hi, start_page, total, gl, ug) - book ke index se
-CHAPTERS = [
-    (1, "Number System", "संख्या पद्धति", 4, 87, 38, 49), (2, "LCM & HCF", "लघुत्तम एवं महत्तम समापवर्तक", 18, 50, 0, 50),
-    (3, "Simplification", "सरलीकरण", 26, 130, 38, 92), (4, "Algebra", "बीजगणित", 47, 112, 75, 37),
-    (5, "Quadratic Equations", "द्विघात समीकरण", 66, 7, 7, 0), (6, "Percentage", "प्रतिशत", 69, 100, 43, 57),
-    (7, "Profit & Loss", "लाभ एवं हानि", 87, 102, 49, 53), (8, "Discount", "बट्टा / छूट", 105, 101, 23, 78),
-    (9, "Simple Interest", "साधारण ब्याज", 126, 59, 24, 35), (10, "Compound Interest", "चक्रवृद्धि ब्याज", 136, 52, 23, 29),
-    (11, "Ratio & Proportion", "अनुपात एवं समानुपात", 147, 140, 59, 81), (12, "Partnership", "साझेदारी", 169, 32, 15, 17),
-    (13, "Mixture & Alligation", "मिश्रण", 176, 3, 0, 3), (14, "Average", "औसत", 178, 93, 53, 40),
-    (15, "Problems on Age", "आयु संबंधी प्रश्न", 194, 43, 8, 35), (16, "Time & Work", "समय एवं कार्य", 203, 88, 49, 39),
-    (17, "Pipe & Cistern", "पाइप एवं टंकी", 219, 31, 0, 31), (18, "Time, Speed & Distance", "समय, चाल एवं दूरी", 226, 89, 24, 65),
-    (19, "Boat & Stream", "नाव एवं धारा", 243, 12, 12, 0), (20, "Race", "दौड़", 247, 7, 7, 0),
-    (21, "Mensuration", "क्षेत्रमिति", 250, 89, 47, 42), (22, "Geometry", "ज्यामिति", 267, 103, 50, 53),
-    (23, "Trigonometry", "त्रिकोणमिति", 288, 35, 23, 12), (24, "Height & Distance", "ऊँचाई एवं दूरी", 296, 16, 0, 16),
-    (25, "Statistics", "सांख्यिकी", 301, 73, 47, 26), (26, "Venn Diagram", "वेन आरेख", 319, 5, 0, 5),
-    (27, "Statement Based Questions", "कथन आधारित प्रश्न", 325, 20, 0, 20),
-]
-LAST_PAGE = 330
+# (no, en, hi, start_page, total, gl, ug) - book.json se
+CHAPTERS = [tuple(c[:7]) for c in CFG["chapters"]]
+LAST_PAGE = CFG["last_page"]
+SUBJECT = CFG.get("subject_en", "Maths")
 
 
 _PDF = None
@@ -87,7 +76,7 @@ EXAMPLE = {"n": 16, "lvl": "GL",
            "sol": "पहली × दूसरी = HCF × LCM → 18 × दूसरी = 6 × 72 = 432<br>दूसरी = 432 ÷ 18 = 24.",
            "trick": "दो संख्याओं का गुणनफल = HCF × LCM"}
 
-PROMPT = """You are preparing an exam-prep book page. The image is one page of an RRB NTPC Maths PYQ book.
+PROMPT = """You are preparing an exam-prep book page. The image is one page of an RRB NTPC {subject} PYQ book.
 The pdftotext output below may have broken Hindi spacing and missing formulas (fractions, recurring bars, roots, images) - ALWAYS trust the IMAGE.
 
 For EVERY question on this page return a JSON list. Each item:
@@ -96,6 +85,7 @@ For EVERY question on this page return a JSON list. Each item:
 - "opts": exactly 4 option strings in order A,B,C,D (if an option has Hindi too, write "English<br>हिन्दी")
 - "my_ans": your own answer letter
 - "sol": a SHORT solution in simple Hindi (Devanagari), 1-3 lines joined with <br>, show only key steps and numbers, easy for a weak student. Do NOT write the final "उत्तर" line.
+- "fig": ONLY if the question/options contain a diagram, figure or table that cannot be written as plain text: {{"page": <page number>, "box": [ymin, xmin, ymax, xmax]}} with coordinates 0-1000 on THAT page image, tightly around the figure only. Otherwise omit "fig".
 - "trick": ONE short Hindi line (max ~15 words) - a memory rule / shortcut / formula behind this question that the student should remember for the exam.
 Math formatting: use plain text/HTML only: x², 2³, √, ÷, ×, fractions as a/b, <sup>..</sup>, recurring as 0.<span style='text-decoration:overline'>5</span>, variables in <i>x</i>. No LaTeX, no markdown, no double quotes inside strings (use single quotes).
 Never write any coaching / channel / telegram name. Skip anything that is not a question (headers, answer-key tables).
@@ -139,10 +129,29 @@ def call(body):
     raise RuntimeError(last)
 
 
+def save_fig(q, pages, ch):
+    f = q.pop("fig", None)
+    try:
+        pg = int(f["page"]) if isinstance(f, dict) and f.get("page") else pages[0]
+        y0, x0, y1, x1 = [max(0, min(1000, float(v))) for v in f["box"]]
+        if pg not in pages or y1 - y0 < 15 or x1 - x0 < 15:
+            return
+        im = pdf()[pg - 1].render(scale=200 / 72).to_pil()
+        W, H = im.size
+        pad = 8
+        crop = im.crop((max(0, x0 * W / 1000 - pad), max(0, y0 * H / 1000 - pad), min(W, x1 * W / 1000 + pad), min(H, y1 * H / 1000 + pad)))
+        os.makedirs(FIGS, exist_ok=True)
+        name = f"c{ch[0]:02d}_q{q['n']:03d}.png"
+        crop.save(os.path.join(FIGS, name))
+        q["img"] = "figs/" + name
+    except Exception as e:
+        print("fig crop fail", q.get("n"), e)
+
+
 def ask_gemini(pages, text, keys):
     parts = [{"inline_data": {"mime_type": "image/png", "data": page_png_b64(p)}} for p in pages]
     note = f"There are {len(pages)} consecutive page images (pages {pages}). Cover EVERY question on ALL of them.\n" if len(pages) > 1 else ""
-    parts.append({"text": note + PROMPT.format(keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)})
+    parts.append({"text": note + PROMPT.format(subject=SUBJECT, keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)})
     return call({"contents": [{"parts": parts}],
                  "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})
 
@@ -181,7 +190,7 @@ def add_tricks():
 def main():
     if not KEYS:
         sys.exit("GEMINI_API_KEY secret nahi mila")
-    a, b = int(sys.argv[1]), int(sys.argv[2])
+    a, b = int(sys.argv[1]), min(int(sys.argv[2]), LAST_PAGE)
     os.makedirs(DATA, exist_ok=True)
     done_pages = set()
     for f in glob.glob(os.path.join(DATA, "c*_p*.json")):
@@ -230,6 +239,9 @@ def main():
         if missing:
             review.append(f"pages {pages} chapter {ch[0]}: ye sawaal chhoot gaye {sorted(missing)}")
         for q in qs:
+            save_fig(q, pages, ch)
+            if q.get("img"):
+                review.append(f"pages {pages} chapter {ch[0]} Q.{q['n']}: chitra (figure) wala sawaal - image ek baar dekh lena ({q['img']})")
             q["ans"] = key.get(q["n"], q.get("my_ans", "?"))
             if q.get("my_ans") != q["ans"]:
                 review.append(f"pages {pages} chapter {ch[0]} Q.{q['n']}: Gemini={q.get('my_ans')} key={q['ans']} - hal check karo")
