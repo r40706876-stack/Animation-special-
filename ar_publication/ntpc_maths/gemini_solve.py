@@ -78,7 +78,8 @@ EXAMPLE = {"n": 16, "lvl": "GL",
            "en": "The HCF of two numbers is 6 and their LCM is 72. If one of the numbers is 18, find the other number.",
            "hi": "दो संख्याओं का HCF 6 और LCM 72 है। यदि एक संख्या 18 है, तो दूसरी संख्या ज्ञात कीजिए।",
            "opts": ["48", "12", "24", "36"], "my_ans": "C",
-           "sol": "पहली × दूसरी = HCF × LCM → 18 × दूसरी = 6 × 72 = 432<br>दूसरी = 432 ÷ 18 = 24."}
+           "sol": "पहली × दूसरी = HCF × LCM → 18 × दूसरी = 6 × 72 = 432<br>दूसरी = 432 ÷ 18 = 24.",
+           "trick": "दो संख्याओं का गुणनफल = HCF × LCM"}
 
 PROMPT = """You are preparing an exam-prep book page. The image is one page of an RRB NTPC Maths PYQ book.
 The pdftotext output below may have broken Hindi spacing and missing formulas (fractions, recurring bars, roots, images) - ALWAYS trust the IMAGE.
@@ -89,6 +90,7 @@ For EVERY question on this page return a JSON list. Each item:
 - "opts": exactly 4 option strings in order A,B,C,D (if an option has Hindi too, write "English<br>हिन्दी")
 - "my_ans": your own answer letter
 - "sol": a SHORT solution in simple Hindi (Devanagari), 1-3 lines joined with <br>, show only key steps and numbers, easy for a weak student. Do NOT write the final "उत्तर" line.
+- "trick": ONE short Hindi line (max ~15 words) - a memory rule / shortcut / formula behind this question that the student should remember for the exam.
 Math formatting: use plain text/HTML only: x², 2³, √, ÷, ×, fractions as a/b, <sup>..</sup>, recurring as 0.<span style='text-decoration:overline'>5</span>, variables in <i>x</i>. No LaTeX, no markdown, no double quotes inside strings (use single quotes).
 Never write any coaching / channel / telegram name. Skip anything that is not a question (headers, answer-key tables).
 Official answers from the book key (use them; your solution must reach this answer): {keys}
@@ -127,6 +129,43 @@ def ask_gemini(p, text, keys):
     raise RuntimeError(last)
 
 
+TRICK_PROMPT = """For each exam question below write ONE short Hindi line (max ~15 words): the memory rule / shortcut / formula
+behind it that a student should remember for the exam. Plain text/HTML only (x², √, a/b), no LaTeX, no double quotes, no coaching names.
+Return ONLY a JSON object mapping question number (string) to the Hindi line.
+Questions:
+{qs}"""
+
+
+def add_tricks():
+    """Jin files mein 'trick' nahi hai unme sirf trick line jodna (image nahi, bahut kam quota)."""
+    for f in sorted(glob.glob(os.path.join(DATA, "c*_p*.json"))):
+        d = json.load(open(f, encoding="utf-8"))
+        need = [q for q in d["questions"] if not q.get("trick")]
+        if not need:
+            continue
+        qs = "\n".join(f"{q['n']}. {re.sub('<[^>]+>', ' ', q['en'])} | solution: {re.sub('<[^>]+>', ' ', q['sol'])}" for q in need)
+        body = {"contents": [{"parts": [{"text": TRICK_PROMPT.format(qs=qs)}]}],
+                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.3}}
+        got = None
+        for m in MODELS:
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
+                              params={"key": KEY}, json=body, timeout=300)
+            if r.status_code == 200:
+                try:
+                    got = json.loads("".join(x.get("text", "") for x in r.json()["candidates"][0]["content"]["parts"]))
+                    break
+                except Exception:
+                    continue
+        if not isinstance(got, dict):
+            print(f"{os.path.basename(f)}: trick nahi bani (limit?) - agli baar"); return
+        for q in need:
+            if got.get(str(q["n"])):
+                q["trick"] = got[str(q["n"])]
+        json.dump(d, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"{os.path.basename(f)}: {len(need)} trick jodi")
+        time.sleep(6)
+
+
 def main():
     if not KEY:
         sys.exit("GEMINI_API_KEY secret nahi mila")
@@ -142,7 +181,7 @@ def main():
         if p in done_pages:
             print(f"page {p}: pehle se bana hai, skip"); continue
         text = page_text(p)
-        qnums = [int(x) for x in re.findall(r"Q\.(\d+)", text)]
+        qnums = [int(x) for x in re.findall(r"Q\.(\d+)\s+(?:GL|UG)", text.split("Answer Key")[0])]
         if not qnums:
             print(f"page {p}: koi sawaal nahi, skip"); continue
         ch = chapter_of(p)
@@ -169,6 +208,7 @@ def main():
         json.dump(d, open(os.path.join(DATA, f"c{ch[0]:02d}_p{p:03d}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(f"page {p}: {len(qs)} sawaal ({model})")
         time.sleep(6)  # free tier per-minute limit
+    add_tricks()
     if review:
         open(REVIEW, "a", encoding="utf-8").write("\n".join(review) + "\n")
         print("REVIEW:\n" + "\n".join(review))
