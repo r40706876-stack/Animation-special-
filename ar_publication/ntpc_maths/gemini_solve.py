@@ -13,8 +13,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "source", "book.pdf")
 DATA = os.path.join(HERE, "data")
 REVIEW = os.path.join(HERE, "review.txt")
-KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-MODELS = [m for m in os.environ.get("GEMINI_MODELS", "gemini-3.5-flash,gemini-2.5-flash,gemini-3-flash-preview").split(",") if m]
+# Kai keys (alag Google projects = alag free quota). Comma/space se alag.
+KEYS = [k for k in re.split(r"[,\s]+", os.environ.get("GEMINI_API_KEYS", "") + "," + os.environ.get("GEMINI_API_KEY", "")) if k]
+KEYS = list(dict.fromkeys(KEYS))
+KEY = KEYS[0] if KEYS else ""
+MODELS = [m for m in os.environ.get("GEMINI_MODELS",
+          "gemini-3.5-flash,gemini-3-flash-preview,gemini-2.5-flash,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-2.5-flash-lite").split(",") if m]
+BATCH = int(os.environ.get("PAGES_PER_CALL", "3"))  # ek request mein itne page -> 3 guna kam requests
+DEAD = set()  # (key, model) jinki aaj ki limit khatam
 
 # (no, en, hi, start_page, total, gl, ug) - book ke index se
 CHAPTERS = [
@@ -102,31 +108,43 @@ pdftotext of this page:
 >>>"""
 
 
-def ask_gemini(p, text, keys):
-    body = {
-        "contents": [{"parts": [
-            {"inline_data": {"mime_type": "image/png", "data": page_png_b64(p)}},
-            {"text": PROMPT.format(keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2},
-    }
-    last = ""
-    for m in MODELS:
-        for attempt in range(2):
-            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
-                              params={"key": KEY}, json=body, timeout=300)
-            if r.status_code == 200:
+def call(body):
+    """Har key x har model try karo. Return (json, model). Sab ki limit khatam -> RuntimeError('HTTP 429 ...')."""
+    last, any_alive = "", False
+    for k in KEYS:
+        for m in MODELS:
+            if (k, m) in DEAD:
+                continue
+            any_alive = True
+            for attempt in range(2):
                 try:
-                    out = r.json()["candidates"][0]["content"]["parts"]
-                    raw = "".join(x.get("text", "") for x in out)
-                    return json.loads(raw), m
-                except Exception as e:  # bad JSON - ek baar aur
-                    last = f"{m}: parse error {e}"
-                    continue
-            last = f"{m}: HTTP {r.status_code} {r.text[:200]}"
-            if r.status_code in (429, 404, 403):
-                break  # is model ki limit/available nahi - agla model
-            time.sleep(10)
+                    r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
+                                      params={"key": k}, json=body, timeout=300)
+                except requests.RequestException as e:
+                    last = f"{m}: network {e}"; time.sleep(10); continue
+                if r.status_code == 200:
+                    try:
+                        out = r.json()["candidates"][0]["content"]["parts"]
+                        return json.loads("".join(x.get("text", "") for x in out)), m
+                    except Exception as e:  # bad JSON - ek baar aur
+                        last = f"{m}: parse error {e}"; continue
+                last = f"{m}: HTTP {r.status_code} {r.text[:160]}"
+                if r.status_code == 429 and "PerMinute" in r.text and attempt == 0:
+                    time.sleep(40); continue  # sirf minute wali limit - thoda ruko
+                if r.status_code in (429, 404, 403, 400):
+                    DEAD.add((k, m)); break  # is key+model ka aaj ka quota / model nahi - agla
+                time.sleep(10)
+    if not any_alive or all((k, m) in DEAD for k in KEYS for m in MODELS):
+        raise RuntimeError("HTTP 429 sab keys/models ki aaj ki limit khatam. " + last)
     raise RuntimeError(last)
+
+
+def ask_gemini(pages, text, keys):
+    parts = [{"inline_data": {"mime_type": "image/png", "data": page_png_b64(p)}} for p in pages]
+    note = f"There are {len(pages)} consecutive page images (pages {pages}). Cover EVERY question on ALL of them.\n" if len(pages) > 1 else ""
+    parts.append({"text": note + PROMPT.format(keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)})
+    return call({"contents": [{"parts": parts}],
+                 "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})
 
 
 TRICK_PROMPT = """For each exam question below write ONE short Hindi line (max ~15 words): the memory rule / shortcut / formula
@@ -146,16 +164,10 @@ def add_tricks():
         qs = "\n".join(f"{q['n']}. {re.sub('<[^>]+>', ' ', q['en'])} | solution: {re.sub('<[^>]+>', ' ', q['sol'])}" for q in need)
         body = {"contents": [{"parts": [{"text": TRICK_PROMPT.format(qs=qs)}]}],
                 "generationConfig": {"responseMimeType": "application/json", "temperature": 0.3}}
-        got = None
-        for m in MODELS:
-            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
-                              params={"key": KEY}, json=body, timeout=300)
-            if r.status_code == 200:
-                try:
-                    got = json.loads("".join(x.get("text", "") for x in r.json()["candidates"][0]["content"]["parts"]))
-                    break
-                except Exception:
-                    continue
+        try:
+            got, _ = call(body)
+        except RuntimeError:
+            got = None
         if not isinstance(got, dict):
             print(f"{os.path.basename(f)}: trick nahi bani (limit?) - agli baar"); return
         for q in need:
@@ -167,7 +179,7 @@ def add_tricks():
 
 
 def main():
-    if not KEY:
+    if not KEYS:
         sys.exit("GEMINI_API_KEY secret nahi mila")
     a, b = int(sys.argv[1]), int(sys.argv[2])
     os.makedirs(DATA, exist_ok=True)
@@ -176,42 +188,59 @@ def main():
         m = re.search(r"_p(\d+)(?:-(\d+))?\.json$", f)
         s, e = int(m.group(1)), int(m.group(2) or m.group(1))
         done_pages.update(range(s, e + 1))
-    keys_cache, review = {}, []
+    keys_cache, review, todo = {}, [], []
     for p in range(a, b + 1):
         if p in done_pages:
-            print(f"page {p}: pehle se bana hai, skip"); continue
+            continue
         text = page_text(p)
         qnums = [int(x) for x in re.findall(r"Q\.(\d+)\s+(?:GL|UG)", text.split("Answer Key")[0])]
-        if not qnums:
-            print(f"page {p}: koi sawaal nahi, skip"); continue
-        ch = chapter_of(p)
+        if qnums:
+            todo.append((p, chapter_of(p), text, qnums))
+    print(f"baaki pages: {len(todo)} ({len(KEYS)} key, {BATCH} page/request)")
+    batches = []  # ek hi chapter ke lagaatar pages, max BATCH
+    for item in todo:
+        if batches and len(batches[-1]) < BATCH and batches[-1][-1][1] == item[1] and item[0] - batches[-1][-1][0] <= 2:
+            batches[-1].append(item)
+        else:
+            batches.append([item])
+    for bt in batches:
+        pages = [x[0] for x in bt]
+        ch = bt[0][1]
         if ch[0] not in keys_cache:
             keys_cache[ch[0]] = answer_key(ch)
         key = keys_cache[ch[0]]
+        qnums = [n for x in bt for n in x[3]]
         keys = {n: key.get(n, "?") for n in qnums}
+        text = "\n".join(f"----- page {x[0]} -----\n{x[2]}" for x in bt)
         try:
-            qs, model = ask_gemini(p, text, keys)
+            qs, model = ask_gemini(pages, text, keys)
         except RuntimeError as e:
             if "HTTP 429" in str(e):
-                print(f"page {p}: Gemini ki aaj ki limit khatam -> {e}\nKal raat wala run yahin se aage banayega.")
+                print(f"pages {pages}: {e}\nAgla run (2 ghante baad) yahin se aage banayega.")
                 break
-            print(f"page {p}: Gemini fail -> {e} (ye page agle run mein dobara)")
-            review.append(f"page {p}: Gemini se nahi bana, agle run mein dobara try hoga")
+            print(f"pages {pages}: Gemini fail -> {e} (agle run mein dobara)")
             continue
+        if isinstance(qs, dict):
+            qs = qs.get("questions", [])
+        qs = [q for q in qs if isinstance(q, dict) and q.get("n") in qnums]
+        qs = list({q["n"]: q for q in qs}.values())
+        missing = set(qnums) - {q["n"] for q in qs}
+        if len(missing) > len(qnums) // 2:  # aadhe se zyada chhoote -> save mat karo, dobara banega
+            print(f"pages {pages}: bahut sawaal chhoote {sorted(missing)}, agle run mein dobara"); continue
+        if missing:
+            review.append(f"pages {pages} chapter {ch[0]}: ye sawaal chhoot gaye {sorted(missing)}")
         for q in qs:
             q["ans"] = key.get(q["n"], q.get("my_ans", "?"))
             if q.get("my_ans") != q["ans"]:
-                review.append(f"page {p} chapter {ch[0]} Q.{q['n']}: Gemini={q.get('my_ans')} key={q['ans']} - hal check karo")
+                review.append(f"pages {pages} chapter {ch[0]} Q.{q['n']}: Gemini={q.get('my_ans')} key={q['ans']} - hal check karo")
             if len(q.get("opts", [])) != 4:
-                review.append(f"page {p} chapter {ch[0]} Q.{q['n']}: options 4 nahi aaye")
-        missing = set(qnums) - {q["n"] for q in qs}
-        if missing:
-            review.append(f"page {p}: ye sawaal chhoot gaye {sorted(missing)}")
+                review.append(f"pages {pages} chapter {ch[0]} Q.{q['n']}: options 4 nahi aaye")
+        rng = f"p{pages[0]:03d}" + (f"-{pages[-1]:03d}" if len(pages) > 1 else "")
         d = {"chapter": {"no": ch[0], "en": ch[1], "hi": ch[2], "total": ch[4], "gl": ch[5], "ug": ch[6]},
-             "source_pages": str(p), "model": model, "questions": sorted(qs, key=lambda q: q["n"])}
-        json.dump(d, open(os.path.join(DATA, f"c{ch[0]:02d}_p{p:03d}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-        print(f"page {p}: {len(qs)} sawaal ({model})")
-        time.sleep(6)  # free tier per-minute limit
+             "source_pages": f"{pages[0]}-{pages[-1]}", "model": model, "questions": sorted(qs, key=lambda q: q["n"])}
+        json.dump(d, open(os.path.join(DATA, f"c{ch[0]:02d}_{rng}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"pages {pages}: {len(qs)} sawaal ({model})")
+        time.sleep(5)
     add_tricks()
     if review:
         open(REVIEW, "a", encoding="utf-8").write("\n".join(review) + "\n")

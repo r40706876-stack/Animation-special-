@@ -26,6 +26,8 @@ jobs:
     env:
       # GEMINI_API_KEY_PDF ho to wo, warna repo ki purani GEMINI_API_KEY
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_PDF || secrets.GEMINI_API_KEY }}
+      # Extra keys (alag Google projects/accounts) = utna guna zyada free quota. Jo secret na ho wo khaali rehta hai.
+      GEMINI_API_KEYS: "${{ secrets.GEMINI_API_KEY_PDF }},${{ secrets.GEMINI_KEY_2 }},${{ secrets.GEMINI_KEY_3 }},${{ secrets.GEMINI_KEY_4 }},${{ secrets.GEMINI_KEY_5 }},${{ secrets.GEMINI_API_KEY }}"
     steps:
       - uses: actions/checkout@v4
         with:
