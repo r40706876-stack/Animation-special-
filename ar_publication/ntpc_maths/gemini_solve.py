@@ -5,8 +5,9 @@ Env:   GEMINI_API_KEY  (alag Google project wali key - katha reels ka quota na k
 Output: data/cNN_pPPP.json (ek page = ek file). Jo page pehle se bana hai use skip karta hai.
 Answer hamesha book ki answer key se lagta hai; Gemini ka jawab alag aaye to review.txt mein likh deta hai.
 """
-import base64, glob, json, os, re, subprocess, sys, time
+import base64, glob, json, os, re, sys, time
 import requests
+import pypdfium2 as pdfium
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "source", "book.pdf")
@@ -35,9 +36,18 @@ CHAPTERS = [
 LAST_PAGE = 330
 
 
-def page_text(p):
-    return subprocess.run(["pdftotext", "-f", str(p), "-l", str(p), "-layout", BOOK, "-"],
-                          capture_output=True, text=True).stdout
+_PDF = None
+
+
+def pdf():
+    global _PDF
+    if _PDF is None:
+        _PDF = pdfium.PdfDocument(BOOK)
+    return _PDF
+
+
+def page_text(p):  # apt/poppler ki zaroorat nahi
+    return pdf()[p - 1].get_textpage().get_text_range() + "\n"
 
 
 def chapter_of(p):
@@ -59,9 +69,9 @@ def answer_key(ch):
 
 
 def page_png_b64(p):
-    out = os.path.join("/tmp", f"pg{p}")
-    subprocess.run(["pdftoppm", "-f", str(p), "-l", str(p), "-r", "110", "-png", "-singlefile", BOOK, out], check=True)
-    return base64.b64encode(open(out + ".png", "rb").read()).decode()
+    out = os.path.join("/tmp", f"pg{p}.png")
+    pdf()[p - 1].render(scale=110 / 72).to_pil().save(out)
+    return base64.b64encode(open(out, "rb").read()).decode()
 
 
 EXAMPLE = {"n": 16, "lvl": "GL",

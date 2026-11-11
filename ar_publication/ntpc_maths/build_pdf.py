@@ -29,11 +29,16 @@ TOPICS = [
     ("Statement Based Questions", "कथन आधारित प्रश्न", 20),
 ]
 
+FONT_DIR = os.path.join(HERE, "fonts")
 CSS = """
+@font-face { font-family: "ARSans"; src: url("FONTDIR/FreeSans.ttf"); }
+@font-face { font-family: "ARSans"; font-weight: bold; src: url("FONTDIR/FreeSansBold.ttf"); }
+@font-face { font-family: "ARSerif"; src: url("FONTDIR/FreeSerif.ttf"); }
+@font-face { font-family: "ARSerif"; font-style: italic; src: url("FONTDIR/FreeSerifItalic.ttf"); }
 @page { size: A4; margin: 14mm 12mm 16mm; }
 * { box-sizing: border-box; }
-body { font-family: "Noto Sans", "Noto Sans Devanagari", "FreeSans", sans-serif; color:#1b1f2a; font-size:11.2pt; line-height:1.42; margin:0; }
-i { font-family: "Noto Serif", "FreeSerif", serif; }
+body { font-family: "Noto Sans", "Noto Sans Devanagari", "ARSans", sans-serif; color:#1b1f2a; font-size:11.2pt; line-height:1.42; margin:0; }
+i { font-family: "ARSerif", serif; }
 .page { page-break-after: always; }
 .cover { height: 265mm; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
   background: linear-gradient(160deg,#0f2d6b 0%,#1f4fb5 60%,#2e6be6 100%); color:#fff; border-radius:14px; padding:20mm; }
@@ -140,7 +145,7 @@ def main():
     for no in sorted(chapters):
         c = chapters[no]
         body += chapter_pages({"chapter": c["chapter"], "questions": [c["questions"][n] for n in sorted(c["questions"])]})
-    doc = f'<!doctype html><html lang="hi"><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}</body></html>'
+    doc = f'<!doctype html><html lang="hi"><head><meta charset="utf-8"><style>{CSS.replace("FONTDIR", "file://" + FONT_DIR)}</style></head><body>{body}</body></html>'
     os.makedirs(OUT, exist_ok=True)
     html_path = os.path.join(OUT, "book.html")
     open(html_path, "w", encoding="utf-8").write(doc)
@@ -148,7 +153,10 @@ def main():
     head = f'<div style="font-size:8px;width:100%;padding:0 12mm;display:flex;justify-content:space-between;color:#0f2d6b;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
     foot = f'<div style="font-size:8px;width:100%;padding:0 12mm;display:flex;justify-content:space-between;color:#555;font-family:sans-serif"><span>© {BRAND}</span><span>Page <span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
     with sync_playwright() as p:
-        b = p.chromium.launch()
+        try:
+            b = p.chromium.launch()
+        except Exception:  # runner par pehle se laga Google Chrome
+            b = p.chromium.launch(channel="chrome")
         pg = b.new_page()
         pg.goto("file://" + html_path)
         pg.pdf(path=pdf_path, format="A4", print_background=True, display_header_footer=True,

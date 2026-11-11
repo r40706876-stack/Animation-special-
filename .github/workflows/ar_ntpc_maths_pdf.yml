@@ -35,12 +35,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Tools + Hindi font
+      # apt (ubuntu server) ki zaroorat nahi: PDF padhna pip se, Hindi font repo mein, Chrome runner par pehle se
+      - name: Tools
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y poppler-utils fonts-noto-core
-          pip install requests playwright
-          python -m playwright install --with-deps chromium
+          pip install requests playwright pypdfium2 pillow
+          python -m playwright install chromium || echo "runner ka Google Chrome use hoga"
 
       - name: Gemini se sawaal + hal
         working-directory: ar_publication/ntpc_maths
