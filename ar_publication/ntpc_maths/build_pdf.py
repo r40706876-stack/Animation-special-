@@ -131,13 +131,15 @@ def main():
     if not files:
         sys.exit("data/*.json nahi mila")
     body = front_pages()
-    seen = set()
+    chapters = {}  # ek chapter kai files mein ho sakta hai -> jod kar ek saath
     for f in files:
         d = json.load(open(f, encoding="utf-8"))
-        if d["chapter"]["no"] in seen:  # same chapter split in many files: no new title page
-            d = dict(d); body += "".join(q_html(q) for q in d["questions"]); continue
-        seen.add(d["chapter"]["no"])
-        body += chapter_pages(d)
+        c = chapters.setdefault(d["chapter"]["no"], {"chapter": d["chapter"], "questions": {}})
+        for q in d["questions"]:
+            c["questions"][q["n"]] = q
+    for no in sorted(chapters):
+        c = chapters[no]
+        body += chapter_pages({"chapter": c["chapter"], "questions": [c["questions"][n] for n in sorted(c["questions"])]})
     doc = f'<!doctype html><html lang="hi"><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}</body></html>'
     os.makedirs(OUT, exist_ok=True)
     html_path = os.path.join(OUT, "book.html")

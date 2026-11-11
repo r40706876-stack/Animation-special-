@@ -1,0 +1,65 @@
+name: AR Publication - NTPC Maths PDF (Gemini)
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_page:
+        description: "Book ka pehla page"
+        default: "11"
+      end_page:
+        description: "Book ka aakhri page"
+        default: "20"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ar-ntpc-maths
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      # Alag Google project wali key (katha reels ka GEMINI_API_KEY quota na kate)
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_PDF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ar_publication
+            .github
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Tools + Hindi font
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y poppler-utils fonts-noto-core
+          pip install requests playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Gemini se sawaal + hal
+        working-directory: ar_publication/ntpc_maths
+        run: python gemini_solve.py "${{ inputs.start_page }}" "${{ inputs.end_page }}"
+
+      - name: PDF banao
+        run: python ar_publication/ntpc_maths/build_pdf.py
+
+      - name: Data save (repo mein)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ar_publication/ntpc_maths/data ar_publication/ntpc_maths/review.txt 2>/dev/null || true
+          git commit -m "NTPC maths: pages ${{ inputs.start_page }}-${{ inputs.end_page }} (Gemini)" || echo "kuch naya nahi"
+          git pull --rebase origin main && git push
+
+      - name: PDF download ke liye
+        uses: actions/upload-artifact@v4
+        with:
+          name: AR_Publication_NTPC_Maths_PDF
+          path: ar_publication/ntpc_maths/out/RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf
+          retention-days: 7
