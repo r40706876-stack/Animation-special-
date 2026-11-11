@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      # Alag Google project wali key (katha reels ka GEMINI_API_KEY quota na kate)
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_PDF }}
+      # GEMINI_API_KEY_PDF ho to wo, warna repo ki purani GEMINI_API_KEY
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_PDF || secrets.GEMINI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
