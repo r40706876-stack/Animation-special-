@@ -10,7 +10,7 @@ on:
         description: "Book ka aakhri page"
         default: "330"
   schedule:
-    - cron: "17 20 * * *"   # roz raat ~1:47 AM IST: jo page baaki hain wahi banenge (sab bane hon to kuch nahi karega)
+    - cron: "17 */2 * * *"   # har 2 ghante: jo page baaki hain wahi banenge (Gemini limit bhari ho to turant ruk jaata hai; sab bane hon to kuch nahi)
 
 permissions:
   contents: write
