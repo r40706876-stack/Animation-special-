@@ -44,6 +44,8 @@ CSS = """
 body { margin:0; font-family: ARSans, sans-serif; font-size:13pt; line-height:1.42; color:#262a35; }
 i { font-family: ARSerif, serif; }
 .wm { position:fixed; top:46%; left:-10%; width:120%; text-align:center; transform:rotate(-38deg); font-size:68pt; font-weight:bold; letter-spacing:10px; white-space:nowrap; color:rgba(124,58,237,0.075); z-index:9999; pointer-events:none; }
+.wabar { height:9mm; flex:0 0 9mm; display:flex; align-items:center; justify-content:center; }
+.wabar span { background:#16a34a; color:#fff; border-radius:20px; padding:3px 16px; font-size:11.5pt; }
 .wa { display:inline-block; background:#16a34a; color:#fff; font-weight:bold; border-radius:20px; padding:4px 14px; }
 .page { page-break-after: always; }
 .grad { background: linear-gradient(115deg,#e91e63 0%,#7c3aed 50%,#0284c7 100%); color:#fff; }
@@ -152,7 +154,11 @@ def chapter_pages(d):
 
 
 PAGE_MM, GAP_MM, PX_MM = 262, 4, 96 / 25.4
+WA_MM = 9  # do sawaal ke beech WhatsApp patti ki jagah
 MIN_ZOOM = 0.93  # isse chhota nahi (13pt x 0.93 = ~12pt)
+
+
+WA_BAR = f'<div class="wabar"><span>📞 किसी भी सवाल या नई किताब के लिए WhatsApp करें: <b>{WHATSAPP}</b></span></div>'
 
 
 def pack(items, h):
@@ -165,7 +171,7 @@ def pack(items, h):
         used = sum(h[x] for x in top) + GAP_MM * len(top)
         qs, zoom = [], 1.0
         while i < len(items) and items[i][0] == "q" and len(qs) < 2:
-            need = h[items[i][1]] + (GAP_MM if qs else 0)
+            need = h[items[i][1]] + ((GAP_MM * 2 + WA_MM) if qs else 0)
             if qs and used + need > PAGE_MM:
                 if (used + need) * MIN_ZOOM <= PAGE_MM:  # thoda chhota karke dono sawaal ek page par
                     zoom = max(MIN_ZOOM, PAGE_MM / (used + need) - 0.005)
@@ -174,6 +180,8 @@ def pack(items, h):
             qs.append(items[i][1]); used += need; i += 1
         cls = "sheet" if used * zoom <= PAGE_MM else "sheet long"
         cards = [x.replace('class="q"', 'class="q fill"', 1) for x in qs] if len(qs) == 2 else qs
+        if len(cards) == 2:
+            cards.insert(1, WA_BAR)
         st = f' style="zoom:{zoom:.3f};height:{PAGE_MM / zoom:.1f}mm"' if zoom < 1 else ""
         pages.append(f'<div class="{cls}"{st}>{"".join(top)}{"".join(cards)}</div>')
     return "".join(pages)
@@ -203,7 +211,7 @@ def main():
     pdf_path = os.path.join(OUT, "RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf")
     head = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#7c3aed;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
     foot = (f'<div style="font-size:9px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;align-items:center;color:#555;font-family:sans-serif;-webkit-print-color-adjust:exact">'
-            f'<b style="color:#7c3aed">© {BRAND}</b><span style="background:#16a34a;color:#fff;font-weight:bold;font-size:10px;border-radius:10px;padding:2px 10px">WhatsApp: {WHATSAPP}</span>'
+            f'<b style="color:#7c3aed">© {BRAND}</b>'
             f'<span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>')
     with sync_playwright() as p:
         try:
