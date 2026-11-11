@@ -99,11 +99,21 @@ i { font-family: ARSerif, serif; }
 DARK = {"#e91e63": "#a3134a", "#7c3aed": "#5523b0", "#0284c7": "#015e8c", "#f97316": "#b8520c"}
 
 
+SAFE_TAG = re.compile(r"<(?!/?(?:br|sup|sub|i|b|u|span|small)\b)", re.I)
+
+
+def clean(s):
+    """Gemini text mein 'a < b' jaisa '<' HTML tod deta hai -> &lt;"""
+    return SAFE_TAG.sub("&lt;", str(s))
+
+
 def strip_tags(s):
     return re.sub(r"<[^>]+>", "", s)
 
 
 def q_html(q, k):
+    q = dict(q, en=clean(q["en"]), hi=clean(q["hi"]), sol=clean(q["sol"]), opts=[clean(o) for o in q["opts"]],
+             trick=clean(q["trick"]) if q.get("trick") else "")
     c, s = QCOL[k % 4]
     long_opt = any(len(strip_tags(o)) > 55 for o in q["opts"])
     opts = "".join(f'<div class="o"><span class="l" style="background:{OPTC[i]}">{LETTERS[i]}</span><span>{o}</span></div>'
@@ -155,7 +165,7 @@ def chapter_pages(d):
 
 PAGE_MM, GAP_MM, PX_MM = 262, 4, 96 / 25.4
 WA_MM = 9  # do sawaal ke beech WhatsApp patti ki jagah
-MIN_ZOOM = 0.93  # isse chhota nahi (13pt x 0.93 = ~12pt)
+MIN_ZOOM = 0.88  # isse chhota nahi (13pt x 0.88 = ~11.5pt), sirf jahan 2 lambe sawaal saath hon
 
 
 WA_BAR = f'<div class="wabar"><span>📞 किसी भी सवाल या नई किताब के लिए WhatsApp करें: <b>{WHATSAPP}</b></span></div>'
@@ -207,7 +217,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     html_path = os.path.join(OUT, "book.html")
     allitems = [x for _, its in parts for x in its]
-    open(html_path, "w", encoding="utf-8").write(wrap('<div id="measure">' + "".join(x[1] for x in allitems) + "</div>"))
+    open(html_path, "w", encoding="utf-8").write(wrap('<div id="measure">' + "".join(f'<div class="mi" data-i="{j}">{x[1]}</div>' for j, x in enumerate(allitems)) + "</div>"))
     pdf_path = os.path.join(OUT, "RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf")
     head = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#7c3aed;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
     foot = (f'<div style="font-size:9px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;align-items:center;color:#555;font-family:sans-serif;-webkit-print-color-adjust:exact">'
@@ -221,9 +231,12 @@ def main():
         pg = b.new_page()
         pg.emulate_media(media="print")
         pg.goto("file://" + html_path)
-        pg.wait_for_timeout(300)
-        hs = pg.evaluate("Array.from(document.querySelectorAll('#measure > div')).map(e => e.getBoundingClientRect().height)")
-        h = {x[1]: px / PX_MM for x, px in zip(allitems, hs)}
+        pg.evaluate("document.fonts.ready.then(() => 1)")  # font load hone ke baad hi naapo
+        pg.wait_for_timeout(500)
+        hs = pg.evaluate("Array.from(document.querySelectorAll('.mi')).map(e => [+e.dataset.i, e.firstElementChild ? e.firstElementChild.getBoundingClientRect().height : 0])")
+        if len(hs) != len(allitems):
+            sys.exit(f"naap mein gadbad: {len(hs)} != {len(allitems)}")
+        h = {allitems[j][1]: px / PX_MM for j, px in hs}
         for cp, its in parts:
             body += cp + pack(its, h)
         open(html_path, "w", encoding="utf-8").write(wrap(f'<div class="wm">AR PUBLICATION</div>{body}'))
