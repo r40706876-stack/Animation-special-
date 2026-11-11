@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Data Sufficiency",
+  "hi": "आँकड़ों की पर्याप्तता",
+  "total": 22,
+  "gl": 22,
+  "ug": 0
+ },
+ "source_pages": "418-419",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Five people – Nisha, Ojas, Pallav, Ritu, and Suman – are standing in a straight line facing east. Who is standing second from the left end? (I) Pallav is standing immediately to the left of Ritu, and Ritu is not standing at either ends. (II) Nisha is standing at the extreme left end, and Ojas is standing immediately to the right of Suman.",
+   "hi": "पाँच व्यक्ति - निशा, ओजस, पल्लव, ऋतु और सुमन - पूर्व दिशा की ओर अभिमुख होकर एक सीधी पंक्ति में खड़े हैं। बाएं छोर से दूसरे स्थान पर कौन खड़ा है? (I) पल्लव, ऋतु के ठीक बाएं पड़ोस में खड़ा है, और ऋतु किसी भी छोर पर नहीं खड़ी है। (II) निशा बाएं छोर पर खड़ी है, और ओजस, सुमन के ठीक दाएं पड़ोस में खड़ा है।",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)।",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों कथनों को मिलाने पर: निशा (1), सुमन (2), ओजस (3), पल्लव (4), ऋतु (5) या निशा (1), पल्लव (2), ऋतु (3), सुमन (4), ओजस (5) की स्थिति संभव है।<br>चूंकि पल्लव-ऋतु साथ हैं और ऋतु छोर पर नहीं है, तो क्रम: निशा, पल्लव, ऋतु, सुमन, ओजस होगा। अतः दोनों कथन आवश्यक हैं।",
+   "trick": "बैठने की व्यवस्था में सभी व्यक्तियों की स्थिति ज्ञात करने के लिए सभी सुरागों का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Five cousins – Kriti, Leena, Mona, Pooja, and Reema – are of different ages. Who is the youngest? (I) Leena is older than Kriti but younger than Mona. (II) Pooja is older than Kriti but younger than Leena.",
+   "hi": "पाँच बहनें - कृति, लीना, मोना, पूजा और रीमा - की आयु अलग-अलग है। सबसे छोटी कौन है? (I) लीना, कृति से बड़ी है लेकिन मोना से छोटी है। (II) पूजा, कृति से बड़ी है लेकिन लीना से छोटी है।",
+   "opts": [
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)।",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "A",
+   "sol": "कथन I: मोना > लीना > कृति। कथन II: लीना > पूजा > कृति।<br>दोनों से: मोना > लीना > पूजा > कृति। रीमा की आयु के बारे में कोई जानकारी नहीं है, इसलिए सबसे छोटी निश्चित नहीं है।",
+   "trick": "यदि किसी व्यक्ति के बारे में जानकारी न हो, तो तुलना अधूरी रहती है।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the shortest? (I) N is taller than L. (II) V is taller than N. M is only shorter than one tree.",
+   "hi": "5 वृक्षों L, M, N, T और V में से प्रत्येक की लम्बाई भिन्न है, कौन-सा वृक्ष सबसे छोटा है? (I) N, L से लंबा है। (II) V, N से लंबा है। M केवल एक वृक्ष से छोटा है।",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों एक साथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>कथन I और II दोनों एक साथ (और अकेले कथन 1 या अकेले कथन 2 नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है"
+   ],
+   "my_ans": "B",
+   "sol": "कथन II से: _ > M > _ > _ > _. M दूसरा सबसे लंबा है।<br>अन्य वृक्षों (L, N, T, V) की स्थिति स्पष्ट नहीं है, इसलिए सबसे छोटा वृक्ष ज्ञात नहीं किया जा सकता।",
+   "trick": "सभी तत्वों का क्रम पता होने पर ही सबसे छोटा या बड़ा ज्ञात किया जा सकता है।",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Harsh, Ketan, Mayank, Rohit, and Sidharth, each have different height. Who is the shortest? (I) Mayank is taller than Harsh but shorter than Ketan. (II) Rohit is taller than Harsh but shorter than Mayank.",
+   "hi": "हर्ष, केतन, मयंक, रोहित और सिद्धार्थ, में से प्रत्येक की लंबाई अलग-अलग है। इनमें से सबसे छोटा कौन है? (I) मयंक, हर्ष से लंबा है लेकिन केतन से छोटा है। (II) रोहित, हर्ष से लंबा है लेकिन मयंक से छोटा है।",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है"
+   ],
+   "my_ans": "B",
+   "sol": "कथन I: केतन > मयंक > हर्ष। कथन II: मयंक > रोहित > हर्ष।<br>दोनों से: केतन/मयंक > रोहित > हर्ष। सिद्धार्थ के बारे में कोई जानकारी नहीं है, इसलिए सबसे छोटा निश्चित नहीं है।",
+   "trick": "यदि समूह के सभी सदस्यों की तुलना न दी गई हो, तो उत्तर नहीं दिया जा सकता।",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Coding-Decoding",
+  "hi": "कोडिंग-डिकोडिंग",
+  "total": 128,
+  "gl": 64,
+  "ug": 64
+ },
+ "source_pages": "100-102",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘CARD’ is coded as ‘6135’ and ‘DRAW’ is coded as ‘1765’. What is the code for ‘W’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘CARD’ को ‘6135’ के रूप में कूटबद्ध किया जाता है और ‘DRAW’ को ‘1765’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘W’ के लिए कूट क्या है?",
+   "opts": [
+    "7",
+    "6",
+    "5",
+    "1"
+   ],
+   "my_ans": "A",
+   "sol": "CARD=6135, DRAW=1765. कॉमन अक्षर 'R' और 'D' हैं, जिनके कोड 6 और 5 हैं। DRAW में बचे अक्षर 'A' और 'W' के लिए कोड 1 और 7 हैं। CARD में 'A' का कोड 1 है, इसलिए 'W' का कोड 7 होगा।",
+   "trick": "कॉमन अक्षरों और उनके कोड की तुलना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "FKEP is related to EIBL in a certain way based on the English alphabetical order. In the same way, JMHT is related to IKEP. To which of the following is PQNW related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तर्क के अनुसार, FKEP का संबंध EIBL से है। इसी प्रकार, JMHT का संबंध IKEP से है। समान तर्क का अनुसरण करते हुए PQNW का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "OQKT",
+    "OPJS",
+    "OOLS",
+    "OOKS"
+   ],
+   "my_ans": "D",
+   "sol": "F(-1)K(-2)E(-3)P(-4) = EIBL. JMHT: J(-1)M(-2)H(-3)T(-4) = IKEP. PQNW: P(-1)=O, Q(-2)=O, N(-3)=K, W(-4)=S. उत्तर OOKS है।",
+   "trick": "अक्षरों में -1, -2, -3, -4 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘LITE’ is coded as ‘1527’ and ‘EDIT’ is coded as ‘5124’. What is the code for ‘D’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘LITE’ को ‘1527’ के रूप में और ‘EDIT’ को ‘5124’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘D’ के लिए कूट क्या है?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "5"
+   ],
+   "my_ans": "C",
+   "sol": "LITE=1527, EDIT=5124. दोनों में कॉमन अक्षर 'E', 'I', 'T' हैं, जिनके कोड 1, 2, 5 हैं। EDIT में बचा अक्षर 'D' है और कोड '4' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘CARD’ is coded as ‘4628’ and ‘NEAT’ is coded as ‘3574’. What is the code for ‘A’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘CARD’ को ‘4628’ के रूप में कूटबद्ध किया जाता है और ‘NEAT’ को ‘3574’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘A’ के लिए कूट क्या है?",
+   "opts": [
+    "7",
+    "4",
+    "6",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "CARD=4628, NEAT=3574. दोनों में कॉमन अक्षर 'A' है और कॉमन कोड '4' है।",
+   "trick": "कॉमन अक्षर का कोड ही उत्तर है।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MODE’ is coded as ‘3519’ and ‘DIGS’ is coded as ‘6894’. What is the code for ‘D’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MODE’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘DIGS’ को ‘6894’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘D’ के लिए कूट क्या है?",
+   "opts": [
+    "6",
+    "4",
+    "1",
+    "9"
+   ],
+   "my_ans": "D",
+   "sol": "MODE=3519, DIGS=6894. दोनों में कॉमन अक्षर 'D' है और कॉमन कोड '9' है।",
+   "trick": "कॉमन अक्षर का कोड ही उत्तर है।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘food is delicious’ is coded as ‘ga dc vr’ and ‘harry loves food’ is coded as ‘dc hu bw’. How is ‘food’ coded in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘food is delicious’ को ‘ga dc vr’ के रूप में और ‘harry loves food’ को ‘dc hu bw’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘food’ को कैसे कूटबद्ध किया गया है?",
+   "opts": [
+    "ga",
+    "vr",
+    "bw",
+    "dc"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'food' है और कॉमन कोड 'dc' है।",
+   "trick": "कॉमन शब्द का कोड ही उत्तर है।",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "DIME is related to HNIZ in a certain way based on the English alphabetical order. In the same way, LSEU is related to PXAP. To which of the following is TCWK related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से DIME का संबंध HNIZ से है। उसी प्रकार, LSEU का संबंध PXAP से है। समान तर्क का अनुसरण करते हुए, TCWK का संबंध निम्न में से किससे है?",
+   "opts": [
+    "WIRG",
+    "VHSD",
+    "XHSF",
+    "YGTE"
+   ],
+   "my_ans": "C",
+   "sol": "D(+4)I(+5)M(+6)E(+21=Z). L(+4)S(+5)E(+6)U(+21=P). T(+4)=X, C(+5)=H, W(+6)=C, K(+21)=F. उत्तर XHSF है।",
+   "trick": "अक्षरों में +4, +5, +6, +21 का पैटर्न है।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "GKOS is related to INQV in a certain way based on the English alphabetical order. In the same way, HLPT is related to JORW. To which of the following is AEIM related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से GKOS का संबंध INQV से है। उसी प्रकार, HLPT का संबंध JORW से है। उसी तर्क का अनुसरण करते हुए, AEIM का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "DHLQ",
+    "DGKP",
+    "CHKP",
+    "CGLQ"
+   ],
+   "my_ans": "C",
+   "sol": "G(+2)K(+3)O(+2)S(+3) = INQV. H(+2)L(+3)P(+2)T(+3) = JORW. A(+2)=C, E(+3)=H, I(+2)=K, M(+3)=P. उत्तर CHKP है।",
+   "trick": "अक्षरों में +2, +3, +2, +3 का पैटर्न है।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "GJHA is related to JNLD in a certain way based on the English alphabetical order. In the same way, KMEL is related to NQIO. To which of the following is NROT related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से GJHA का संबंध JNLD से है। उसी प्रकार, KMEL का संबंध NQIO से है। उसी तर्क का अनुसरण करते हुए, NROT का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QWTT",
+    "QVSW",
+    "QWZT",
+    "SWVQ"
+   ],
+   "my_ans": "B",
+   "sol": "G(+3)J(+4)H(+4)A(+3) = JNLD. K(+3)M(+4)E(+4)L(+3) = NQIO. N(+3)=Q, R(+4)=V, O(+4)=S, T(+3)=W. उत्तर QVSW है।",
+   "trick": "अक्षरों में +3, +4, +4, +3 का पैटर्न है।",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘HOUR’ is coded as ‘3867’ and ‘HURT’ is coded as ‘5836’. What is the code for ‘T’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'HOUR' को '3867' के रूप में कूटबद्ध किया जाता है तथा 'HURT' को '5836' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'T' का कूट क्या है?",
+   "opts": [
+    "8",
+    "3",
+    "5",
+    "6"
+   ],
+   "my_ans": "C",
+   "sol": "HOUR=3867, HURT=5836. कॉमन अक्षर H, U, R हैं, जिनके कोड 8, 3, 6 हैं। HURT में बचा अक्षर 'T' है और कोड '5' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘ALIT’ is coded as ‘2159’ and ‘HILT’ is coded as ‘6912’. What is the code for ‘H’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘ALIT’ को ‘2159’ के रूप में और ‘HILT’ को ‘6912’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘H’ के लिए कूट क्या है?",
+   "opts": [
+    "1",
+    "9",
+    "6",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "ALIT=2159, HILT=6912. कॉमन अक्षर I, L, T हैं, जिनके कोड 1, 2, 9 हैं। HILT में बचा अक्षर 'H' है और कोड '6' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘COOK’ is coded as ‘8245’ and ‘HOOK’ is coded as ‘5429’. What is the code for ‘H’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘COOK’ को ‘8245’ के रूप में कूटबद्ध किया जाता है और ‘HOOK’ को ‘5429’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘H’ के लिए कूट क्या है?",
+   "opts": [
+    "9",
+    "8",
+    "5",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "COOK=8245, HOOK=5429. कॉमन अक्षर O, O, K हैं, जिनके कोड 2, 4, 5 हैं। HOOK में बचा अक्षर 'H' है और कोड '9' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘ALIT’ is coded as ‘2159’ and ‘HILT’ is coded as ‘6912’. What is the code for ‘H’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘ALIT’ को ‘2159’ के रूप में और ‘HILT’ को ‘6912’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘H’ के लिए कूट क्या है?",
+   "opts": [
+    "6",
+    "9",
+    "1",
+    "2"
+   ],
+   "my_ans": "A",
+   "sol": "ALIT=2159, HILT=6912. कॉमन अक्षर I, L, T हैं, जिनके कोड 1, 2, 9 हैं। HILT में बचा अक्षर 'H' है और कोड '6' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘CAST’ is coded as ‘3519’ and ‘SIDE’ is coded as ‘8645’. What is the code for ‘S’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘CAST’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘SIDE’ को ‘8645’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "1",
+    "8",
+    "6",
+    "5"
+   ],
+   "my_ans": "D",
+   "sol": "CAST=3519, SIDE=8645. दोनों में कॉमन अक्षर 'S' है और कॉमन कोड '5' है।",
+   "trick": "कॉमन अक्षर का कोड ही उत्तर है।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘LIME’ is coded as ‘4839’ and ‘TIME’ is coded as ‘9324’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘LIME’ को ‘4839’ के रूप में और ‘TIME’ को ‘9324’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘T’ के लिए कूट क्या है?",
+   "opts": [
+    "3",
+    "2",
+    "9",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "LIME=4839, TIME=9324. कॉमन अक्षर I, M, E हैं, जिनके कोड 3, 4, 9 हैं। TIME में बचा अक्षर 'T' है और कोड '2' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? TRZ 2, RPX 5, PNV 8, NLT 11, ?",
+   "hi": "निम्नलिखित श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर दिए गए अक्षर-संख्या समूहों में से कौन-सा समूह रखने से यह तार्किक रूप से पूर्ण हो जाएगी? TRZ 2, RPX 5, PNV 8, NLT 11, ?",
+   "opts": [
+    "LJR 14",
+    "AFU 14",
+    "KDY 15",
+    "MCA 15"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: T(-2)=R, R(-2)=P, P(-2)=N, N(-2)=L. R(-2)=P, P(-2)=N, N(-2)=L, L(-2)=J. Z(-2)=X, X(-2)=V, V(-2)=T, T(-2)=R. संख्या: 2(+3)=5, 5(+3)=8, 8(+3)=11, 11(+3)=14. उत्तर LJR 14 है।",
+   "trick": "अक्षरों में -2 और संख्याओं में +3 का पैटर्न है।",
+   "ans": "A"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘NEAR’ is coded as ‘3519’ and ‘GROW’ is coded as ‘8645’. What is the code for ‘R’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘NEAR’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘GROW’ को ‘8645’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘R’ के लिए कूट क्या है?",
+   "opts": [
+    "9",
+    "5",
+    "8",
+    "6"
+   ],
+   "my_ans": "B",
+   "sol": "NEAR=3519, GROW=8645. दोनों में कॉमन अक्षर 'R' है और कॉमन कोड '5' है।",
+   "trick": "कॉमन अक्षर का कोड ही उत्तर है।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "HM 14 is related to EJ 16 in a certain way. In the same way, RW 22 is related to OT 24. To which of the following is SX 27 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से HM 14 का संबंध EJ 16 से है। उसी प्रकार, RW 22 का संबंध OT 24 से है। उसी तर्क का अनुसरण करते हुए, SX 27 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QU 28",
+    "PU 29",
+    "QV 29",
+    "PV 29"
+   ],
+   "my_ans": "B",
+   "sol": "H(-3)=E, M(-3)=J, 14(+2)=16. R(-3)=O, W(-3)=T, 22(+2)=24. S(-3)=P, X(-3)=U, 27(+2)=29. उत्तर PU 29 है।",
+   "trick": "अक्षरों में -3 और संख्या में +2 का पैटर्न है।",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? QBL 8 EPZ 16 SDN 24 GRB 32 ?",
+   "hi": "दिए गए अक्षर-संख्या समूहों में से कौन-सा निम्नलिखित श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न चिह्न (?) को प्रतिस्थापित करेगा? QBL 8 EPZ 16 SDN 24 GRB 32 ?",
+   "opts": [
+    "KDU 42",
+    "MSY 42",
+    "CNE 41",
+    "UFP 40"
+   ],
+   "my_ans": "D",
+   "sol": "Q(-12)=E, E(+14)=S, S(-12)=G, G(+14)=U. B(+14)=P, P(-12)=D, D(+14)=R, R(-12)=F. L(+14)=Z, Z(-12)=N, N(+14)=B, B(-12)=P. संख्या: 8(+8)=16, 16(+8)=24, 24(+8)=32, 32(+8)=40. उत्तर UFP 40 है।",
+   "trick": "अक्षरों में -12, +14 का पैटर्न और संख्या में +8 का पैटर्न है।",
+   "ans": "D"
+  }
+ ]
+}

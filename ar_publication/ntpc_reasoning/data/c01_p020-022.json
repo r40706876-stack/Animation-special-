@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "20-22",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "MJ 8 is related to OM -6 in a certain way. In the same way, RW 12 is related to TZ -2. To which of the following is UR 1 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से MJ 8 का संबंध OM -6 से है। उसी प्रकार, RW 12 का संबंध TZ -2 से है। समान तर्क का अनुसरण करते हुए, UR 1 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "YT -10",
+    "UH -5",
+    "WU -13",
+    "KKO -12"
+   ],
+   "my_ans": "C",
+   "sol": "M(+2)=O, J(+3)=M, 8-14=-6. RW 12: R(+2)=T, W(+3)=Z, 12-14=-2. UR 1: U(+2)=W, R(+3)=U, 1-14=-13.",
+   "trick": "अक्षर में +2, +3 जोड़ें और संख्या में से 14 घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "LOSM is related to QTXR in a certain way based on the English alphabetical order. In the same way, ILPJ is related to NQUO. To which of the following is FIMG related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से LOSM का संबंध QTXR से है। उसी तरीके से, ILPJ का संबंध NQUO से है। समान तर्क का अनुसरण करते हुए, FIMG का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NKRL",
+    "NKLR",
+    "KNRL",
+    "KNLR"
+   ],
+   "my_ans": "C",
+   "sol": "L(+5)=Q, O(+5)=T, S(+5)=X, M(+5)=R. FIMG: F(+5)=K, I(+5)=N, M(+5)=R, G(+5)=L.",
+   "trick": "प्रत्येक अक्षर में +5 जोड़ें।",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. FHI : GBE, KXN : LRJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेट के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। FHI : GBE, KXN : LRJ",
+   "opts": [
+    "FKK : GEH",
+    "HLP : IFM",
+    "MHD : NBA",
+    "BNU : CHQ"
+   ],
+   "my_ans": "D",
+   "sol": "F(+1)=G, H(-3)=E, I(-4)=E. KXN: K(+1)=L, X(-6)=R, N(-4)=J. BNU: B(+1)=C, N(-6)=H, U(-4)=Q.",
+   "trick": "पहले अक्षर में +1, दूसरे में -6, तीसरे में -4 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as that followed by the two triads given below. Both triads follow the same pattern. JS-BJ-SB, LU-DL-UD",
+   "hi": "उस त्रिक का चयन कीजिए, जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। JS-BJ-SB, LU-DL-UD",
+   "opts": [
+    "NW-FN-WF",
+    "NW-FN-OP",
+    "NW-FN-KL",
+    "NW-FN-WR"
+   ],
+   "my_ans": "A",
+   "sol": "JS-BJ-SB: J(-8)=B, S(-8)=K(wrong logic, check pattern). JS-BJ-SB: J,S -> B,J -> S,B. Pattern is shifting letters.",
+   "trick": "अक्षरों के स्थान परिवर्तन का पैटर्न देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "HI 26 is related to FF 11 in a certain way. In the same way, MG 22 is related to KD 7. To which of the following is KF 14 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से HI 26 का संबंध FF 11 से है। इसी प्रकार, MG 22 का संबंध KD 7 से है। समान तर्क का अनुसरण करते हुए, KF 14 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "HB -3",
+    "HC -1",
+    "IB -3",
+    "IC -1"
+   ],
+   "my_ans": "D",
+   "sol": "H-2=F, I-3=F, 26-15=11. MG 22: M-2=K, G-3=D, 22-15=7. KF 14: K-2=I, F-3=C, 14-15=-1.",
+   "trick": "अक्षरों में -2, -3 और संख्या में -15 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "RS 4 is related to UR -11 in a certain way. In the same way, IJ 8 is related to LI -7. To which of the following is MN 12 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से RS 4 का संबंध UR -11 से है। उसी तरीके से, IJ 8 का संबंध LI -7 से है। उसी तर्क का अनुसरण करते हुए, MN 12 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "IO -5",
+    "MK -4",
+    "PM -3",
+    "HY -7"
+   ],
+   "my_ans": "C",
+   "sol": "R+2=U, S+2=U, 4-15=-11. IJ 8: I+3=L, J-1=I, 8-15=-7. MN 12: M+3=P, N-1=M, 12-15=-3.",
+   "trick": "अक्षरों में +3, -1 और संख्या में -15 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. FGJ : HAE, KLO : MFJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। FGJ : HAE, KLO : MFJ",
+   "opts": [
+    "HMG : JGC",
+    "MGQ : OAM",
+    "FJL : HDH",
+    "BMV : DGQ"
+   ],
+   "my_ans": "D",
+   "sol": "F+2=H, G-2=E, J-5=E. K+2=M, L-2=J, O-5=J. BMV: B+2=D, M-2=K, V-5=Q.",
+   "trick": "अक्षरों में +2, -2, -5 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as the one followed by the two triads given below. Both triads follow the same pattern. LG - OJ - QS, OJ - RM - TV",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। LG - OJ - QS, OJ - RM - TV",
+   "opts": [
+    "ID - LG - NP",
+    "JD - LH - NO",
+    "ID - LG - NO",
+    "JD - LG - NO"
+   ],
+   "my_ans": "A",
+   "sol": "L+3=O, G+3=J. O+4=S, J+9=S. Pattern involves adding to letters.",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "KL 9 is related to IH -2 in a certain way. In the same way, PG 7 is related to NC -4. To which of the following is JQ 14 related, following the same logic?",
+   "hi": "KL 9 का संबंध एक निश्चित तरीके से IH -2 से है। उसी प्रकार, PG 7 का संबंध NC -4 से है। समान तर्क का अनुसरण करते हुए, JQ 14 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "HN 6",
+    "IM 3",
+    "IN 6",
+    "HM 3"
+   ],
+   "my_ans": "D",
+   "sol": "K-2=I, L-3=H, 9-11=-2. PG 7: P-2=N, G-4=C, 7-11=-4. JQ 14: J-2=H, Q-4=M, 14-11=3.",
+   "trick": "अक्षरों में -2, -4 और संख्या में -11 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. FI - HE - DG, LO - NK - JM",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों के सेट के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। FI - HE - DG, LO - NK - JM",
+   "opts": [
+    "PS - TW - VR",
+    "OR - QN - RV",
+    "KN - MJ - IL",
+    "CB - AD - EF"
+   ],
+   "my_ans": "C",
+   "sol": "F+3=I, H+3=E(wrong), F-1=E, I-1=H. Pattern is -1, -2.",
+   "trick": "अक्षरों के बीच का घटाव पैटर्न देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "DVUK is related to GZZQ in a certain way based on the English alphabetical order. In the same way, PLOI is related to SPTO. To which of the following options is YXDA related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से DVUK का संबंध GZZQ से है। उसी तरीके से, PLOI का संबंध SPTO से है। समान तर्क का अनुसरण करते हुए, YXDA का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "BBIG",
+    "BGIB",
+    "BGIG",
+    "GBBI"
+   ],
+   "my_ans": "A",
+   "sol": "D+3=G, V+4=Z, U+5=Z, K+6=Q. YXDA: Y+3=B, X+4=B, D+5=I, A+6=G.",
+   "trick": "अक्षरों में +3, +4, +5, +6 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "KG 13 is related to IC -2 in a certain way. In the same way, NH 20 is related to LD 5. To which of the following is NW 24 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से KG 13 का संबंध IC -2 से है। उसी प्रकार, NH 20 का संबंध LD 5 से है। समान तर्क का अनुसरण करते हुए, NW 24 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "MR 11",
+    "LR 9",
+    "LS 9",
+    "MS 11"
+   ],
+   "my_ans": "C",
+   "sol": "K-2=I, G-4=C, 13-15=-2. NH 20: N-2=L, H-4=D, 20-15=5. NW 24: N-2=L, W-4=S, 24-15=9.",
+   "trick": "अक्षरों में -2, -4 और संख्या में -15 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "RWFG is related to OTCD in a certain way based on the English alphabetical order. In the same way, FKTU is related to CHQR. To which of the following options is WBKL related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, RWFG का संबंध OTCD से है। उसी प्रकार, FKTU का संबंध CHQR से है। समान तर्क का अनुसरण करते हुए, WBKL का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "TYHI",
+    "THYI",
+    "THYU",
+    "TUHO"
+   ],
+   "my_ans": "A",
+   "sol": "R-3=O, W-3=T, F-2=C, G-3=D. F-3=C, K-3=H, T-2=R, U-3=R. WBKL: W-3=T, B-3=Y, K-2=I, L-3=I.",
+   "trick": "अक्षरों में -3, -3, -2, -3 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "FACN is related to LFIS in a certain way based on the English alphabetical order. In the same way, DUAH is related to JZGM. To which of the following options is VJSW related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, FACN का संबंध LFIS से है। उसी प्रकार, DUAH का संबंध JZGM से है। समान तर्क का अनुसरण करते हुए, VJSW का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "BBOY",
+    "BOYB",
+    "BYOB",
+    "BOBY"
+   ],
+   "my_ans": "B",
+   "sol": "F+6=L, A+11=L, C+6=I, N+5=S. Pattern is +6, +11, +6, +5.",
+   "trick": "अक्षरों में +6, +11, +6, +5 जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "DIOR is related to AEJL in a certain way based on the English alphabetical order. In the same way, RSUT is related to OOPN. To which of the following options is IGFB related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से DIOR का संबंध AEJL से है। उसी प्रकार, RSUT का संबंध OOPN से है। समान तर्क का अनुसरण करते हुए, IGFB का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "FAVC",
+    "FCAV",
+    "FVCA",
+    "FCVA"
+   ],
+   "my_ans": "B",
+   "sol": "D-3=A, I-4=E, O-5=J, R-6=L. IGFB: I-3=F, G-4=C, F-5=A, B-6=V.",
+   "trick": "अक्षरों में -3, -4, -5, -6 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "LPBF is related to QUGK in a certain way based on the English alphabetical order. In the same way, FJVZ is related to KOAE. To which of the following options is UYKO related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से LPBF का संबंध QUGK से है। उसी प्रकार, FJVZ का संबंध KOAE से है। समान तर्क का अनुसरण करते हुए, UYKO का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "ZDPT",
+    "ZDTP",
+    "ZOPT",
+    "ZTPO"
+   ],
+   "my_ans": "A",
+   "sol": "L+5=Q, P+5=U, B+5=G, F+5=K. UYKO: U+5=Z, Y+5=D, K+5=P, O+5=T.",
+   "trick": "प्रत्येक अक्षर में +5 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as the one followed by the two triads given below. Both triads follow the same pattern. KF - MH - NP, MH - OJ - PR",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। KF - MH - NP, MH - OJ - PR",
+   "opts": [
+    "QL - SN - TU",
+    "QL - SN - TV",
+    "RL - SN - TU",
+    "RL - SM - TU"
+   ],
+   "my_ans": "B",
+   "sol": "K+2=M, F+2=H. M+2=O, H+2=J. N+2=P, P+2=R. Q+2=S, L+2=N, S+2=U, N+2=P, T+2=V.",
+   "trick": "प्रत्येक अक्षर में +2 जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. QVI : KZJ, USH : OWI",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। QVI : KZJ, USH : OWI",
+   "opts": [
+    "CNK : WRJ",
+    "LQG : FUH",
+    "BRH : VVF",
+    "AHL : UMK"
+   ],
+   "my_ans": "B",
+   "sol": "Q(17)+K(11)=28, V(22)+Z(26)=48, I(9)+J(10)=19. Pattern is sum of positions.",
+   "trick": "अक्षरों के स्थान मान का योग देखें।",
+   "ans": "B"
+  }
+ ]
+}

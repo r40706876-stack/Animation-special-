@@ -1,0 +1,207 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Seating Arrangement",
+  "hi": "बैठक व्यवस्था",
+  "total": 165,
+  "gl": 82,
+  "ug": 83
+ },
+ "source_pages": "291-293",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G are sitting around a circular table facing the centre . Only one person sits between G and C when counted from the left of C. E sits third to the right of A. F sits third to the left of D. E sits to the immediate right of F. B is not an immediate neighbour of F. Who sits third to the right of G?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। C के बाएँ से गिनने पर G और C के बीच केवल एक व्यक्ति बैठा है। E, A के दाएँ से तीसरे स्थान पर बैठा है। F, D के बाएँ से तीसरे स्थान पर बैठा है। E, F के ठीक दाएँ पड़ोस में बैठा है। B, F का निकटतम पड़ोसी नहीं है। G के दाएँ से तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "D",
+    "B",
+    "F",
+    "E"
+   ],
+   "my_ans": "C",
+   "sol": "बैठने का क्रम (घड़ी की दिशा में): G, A, D, B, F, E, C. G के दाएँ तीसरा F है।",
+   "trick": "वृत्ताकार व्यवस्था में दाएँ/बाएँ का ध्यान रखें, एक व्यक्ति को स्थिर मानकर शुरू करें।",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G sit around a circular table, facing the centre. D sits to the immediate left of G. F sits to the immediate left of C. C sits second to the left of E. A sits third to the left of G. Who sits third to the right of G?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। D, G के ठीक बाएँ पड़ोस में बैठा है। F, C के ठीक बाएँ पड़ोस में बैठा है। C, E के बाएँ से दूसरे स्थान पर बैठा है। A, G के बाएँ से तीसरे स्थान पर बैठा है। G के दाएँ से तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "A",
+    "C",
+    "E",
+    "F"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: G, D, E, B, C, F, A. G के दाएँ तीसरा C है।",
+   "trick": "केंद्र की ओर मुख होने पर दाएँ का अर्थ घड़ी की विपरीत दिशा है।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G sit around a circular table, facing the centre. Only two people sit between G and F when counted from the right of G. Only three people sit between D and E when counted from the right of E. F sits to the immediate right of E. A sits to the immediate right of B. How many people sit between B and G when counted from the left of G?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। G के दाएँ से गिनती करने पर G और F के बीच केवल दो व्यक्ति बैठे हैं। E के दाएँ से गिनती करने पर D और E के बीच केवल तीन व्यक्ति बैठे हैं। F, E के ठीक दाएँ पड़ोस में बैठा है। A, B के ठीक दाएँ पड़ोस में बैठा है। G के बाएँ से गिनती करने पर B और G के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "2",
+    "4",
+    "1",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: G, A, B, D, E, F, C. G के बाएँ से B और G के बीच 2 व्यक्ति हैं।",
+   "trick": "दाएँ/बाएँ की गिनती में स्वयं को छोड़कर बीच के व्यक्तियों को गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G sit around a circular table, facing the centre. Only two people sit between F and B when counted from the left of B. G sits third to the left of E. A sits to the immediate right of E. A sits second to the left of F. D is an immediate neighbour of G. How many people sit between A and G when counted from the right of G?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। B के बाएँ से गिनती करने पर F और B के बीच केवल दो व्यक्ति बैठे हैं। G, E के बाएँ से तीसरे स्थान पर बैठा है। A, E के ठीक दाएं पड़ोस में बैठा है। A, F के बाएँ से दूसरे स्थान पर बैठा है। D, G का निकटतम पड़ोसी है। G के दाएं से गिनती करने पर A और G के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "4",
+    "1",
+    "2",
+    "3"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: E, A, F, G, D, B, C. G के दाएँ से A तक 3 व्यक्ति हैं।",
+   "trick": "दी गई शर्तों को एक-एक करके बैठाते हुए क्रम पूरा करें।",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G sit around a circular table, facing the centre. F sits third to the left of C. G sits second to the left of B. C is an immediate neighbour of both A and G. D sits to the immediate right of G. How many people sit between B and C when counted from the right of C?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। F, C के बाएँ से तीसरे स्थान पर बैठा है। G, B के बाएँ से दूसरे स्थान पर बैठा है। A और G दोनों का निकटतम पड़ोसी C है। D, G के ठीक दाएँ पड़ोस में बैठा है। C के दाएँ से गिनती करने पर B और C के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "1",
+    "4",
+    "2",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: C, A, B, F, G, D, E. C के दाएँ से B तक 2 व्यक्ति हैं।",
+   "trick": "पड़ोसी होने की शर्त को सबसे पहले बैठाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G are sitting around a circular table facing the centre . Only two people sit between F and B when counted from the right of F. Only two people sit between B and A when counted from the left of A. Only three people sit between F and C when counted from the right of F. E sits to the immediate left of D. How many people sit between A and E when counted from the right of A?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। F के दाएँ से गिनती करने पर F और B के बीच केवल दो व्यक्ति बैठे हैं। A के बाएँ से गिनती करने पर B और A के बीच केवल दो व्यक्ति बैठे हैं। F के दाएँ से गिनती करने पर F और C के बीच केवल तीन व्यक्ति बैठे हैं। E, D के ठीक बाएँ पड़ोस में बैठा है। A के दाएँ से गिनती करने पर A और E के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: F, G, B, C, A, D, E. A के दाएँ से E तक 1 व्यक्ति है।",
+   "trick": "दाएँ/बाएँ की दिशा का सही निर्धारण ही उत्तर की कुंजी है।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "D, E, F, G, S, T and U are sitting around a circular table facing the centre . T sits to the immediate left of S. U sits to the immediate left of D. D sits second to the left of G. E sits third to the left of S. Who sits fourth to the right of F?",
+   "hi": "D, E, F, G, S, T और U एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। T, S के ठीक बाएँ पड़ोस में बैठा है। U, D के ठीक बाएँ पड़ोस में बैठा है। D, G के बाएँ से दूसरे स्थान पर बैठा है। E, S के बाएँ से तीसरे स्थान पर बैठा है। F के दाएँ से चौथे स्थान पर कौन बैठा है?",
+   "opts": [
+    "S",
+    "T",
+    "G",
+    "D"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: G, U, D, F, S, T, E. F के दाएँ चौथा G है।",
+   "trick": "बैठने का क्रम बनाने के लिए एक निश्चित बिंदु से शुरू करें।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "D, E, F, G, S, T and U are sitting around a circular table facing the centre. U sits to the immediate right of G. Only three people sit between U and E when counted from the left of U. Only three people sit between G and T when counted from the left of G. D sits to the immediate right of S. How many people sit between F and S when counted from the left of S?",
+   "hi": "D, E, F, G, S, T और U एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। U, G के ठीक दाएँ पड़ोस में बैठा है। U के बाएँ से गिनती करने पर U और E के बीच केवल तीन व्यक्ति बैठे हैं। G के बाएँ से गिनती करने पर G और T के बीच केवल तीन व्यक्ति बैठे हैं। D, S के ठीक दाएँ पड़ोस में बैठा है। S के बाएँ से गिनती करने पर F और S के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: G, U, T, F, S, D, E. S के बाएँ से F तक 2 व्यक्ति हैं।",
+   "trick": "गिनती की दिशा (बाएँ/दाएँ) का विशेष ध्यान रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G sit around a circular table, facing the centre.Only one person sits between D and B when counted from the left of B. F sits third to the right of E. C sits third to the left of G. F sits to the immediate right of C. A is not an immediate neighbour of C.How many people sit between A and C when counted from the left of A?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। B के बाएँ से गिनती करने पर D और B के बीच केवल एक व्यक्ति बैठा है। F, E के दाएँ से तीसरे स्थान पर बैठा है। C, G के बाएँ से तीसरे स्थान पर बैठा है। F, C के ठीक दाएँ पड़ोस में बैठा है। A, C का निकटतम पड़ोसी नहीं है। A के बाएँ से गिनती करने पर A और C के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "3",
+    "1",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: G, B, E, D, C, F, A. A के बाएँ से C तक 1 व्यक्ति है।",
+   "trick": "नकारात्मक शर्तों (जैसे 'पड़ोसी नहीं है') का उपयोग स्थान तय करने में करें।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G are sitting around a circular table facing the centre , but not necessarily in the same order. Only two people sit between B and D when counted from the right of B. Only three people sit between E and C when counted from the right of C. D sits to the immediate right of C. F sits to the immediate right of A. Match each of the persons in Column I to their neighbour to the immediate left in Column II and select the correct answer from the given options.",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं, लेकिन जरूरी नहीं कि वे इसी क्रम में हों। B के दाईं ओर से गिनने पर, B और D के बीच केवल दो व्यक्ति बैठे हैं। C के दाईं ओर से गिनने पर, E और C के बीच केवल तीन व्यक्ति बैठे हैं। D, C के ठीक दाईं ओर पड़ोस में बैठा है। F, A के ठीक दाईं ओर पड़ोस में बैठा है। स्तंभ I में दिए गए प्रत्येक व्यक्ति को स्तंभ II में उसके ठीक बाईं ओर पड़ोस में बैठे व्यक्ति से सुमेलित कीजिए तथा दिए गए विकल्पों में से सही उत्तर का चयन कीजिए।",
+   "opts": [
+    "i -X, ii-W, iii-Z, iv-Y",
+    "i -Z, ii-Y, iii-X, iv-W",
+    "i -W, ii-Y, iii-Z, iv-X",
+    "i -Y, ii-W, iii-Z, iv-X"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: C, D, B, G, E, A, F. बाएँ पड़ोसी: G-B, E-G, A-E, C-F. मिलान: i-Z, ii-Y, iii-X, iv-W.",
+   "trick": "तालिका वाले प्रश्नों में पहले पूरा क्रम बनाएं, फिर मिलान करें।",
+   "img": "figs/c16_q010.png",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A, B, C, D, E, F and G are sitting around a circular table facing the centre . D sits to the immediate right of A. Only three people sit between D and G when counted from the left of D. Only three people sit between A and F when counted from the right of F. E sits to the immediate right of B. How many people sit between D and E when counted from the right of D?",
+   "hi": "A, B, C, D, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। D, A के ठीक दाएँ पड़ोस में बैठा है। D के बाएँ से गिनती करने पर D और G के बीच केवल तीन व्यक्ति बैठे हैं। F के दाएँ से गिनती करने पर A और F के बीच केवल तीन व्यक्ति बैठे हैं। E, B के ठीक दाएँ पड़ोस में बैठा है। D के दाएँ से गिनती करने पर D और E के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "4",
+    "2",
+    "1",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: A, D, B, E, G, F, C. D के दाएँ से E तक 4 व्यक्ति हैं।",
+   "trick": "दाएँ से गिनती का अर्थ है घड़ी की विपरीत दिशा में चलना।",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Seven people F, G, H, I, U, V, and W are sitting around a circular table facing the centre of the table. U sits second to the right of H. Only one person sits between U and W. Only one person sits between H and F. Only two people sit between V and W. Only one person sits between G and F. Who sits fourth to the right of I?",
+   "hi": "सात व्यक्ति F, G, H, I, U, V और W एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। U, H के दाएँ दूसरे स्थान पर बैठा है। U और W के बीच केवल एक व्यक्ति बैठा है। H और F के बीच केवल एक व्यक्ति बैठा है। V और W के बीच केवल दो व्यक्ति बैठे हैं। G और F के बीच केवल एक व्यक्ति बैठा है। I के दाएँ से चौथे स्थान पर कौन बैठा है?",
+   "opts": [
+    "U",
+    "G",
+    "V",
+    "W"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: H, F, U, G, W, I, V. I के दाएँ चौथा G है।",
+   "trick": "दी गई शर्तों को एक-एक करके बैठाएं, जो निश्चित हो उसे पहले रखें।",
+   "ans": "B"
+  }
+ ]
+}

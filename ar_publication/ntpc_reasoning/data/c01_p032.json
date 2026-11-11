@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "32-32",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "BFGJ is related to GKLO in a certain way based on the English alphabetical order. In the same way, HKMN is related to MPRS. To which of the following is ORTU related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से BFGJ का संबंध GKLO से है। उसी प्रकार, HKMN का संबंध MPRS से है। समान तर्क का अनुसरण करते हुए, ORTU का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QEIY",
+    "SVXY",
+    "UXZA",
+    "TWYZ"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: B(+5)=G, F(+5)=K, G(+5)=L, J(+5)=O. इसी प्रकार, O(+5)=T, R(+5)=W, T(+5)=Y, U(+5)=Z.",
+   "trick": "प्रत्येक अक्षर में +5 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "FR 6 is related to JL 17 in a certain way. In the same way, EU 12 is related to IO 23. To which of the following is SL 3 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से FR 6 का संबंध JL 17 से है। उसी प्रकार, EU 12 का संबंध IO 23 से है। समान तर्क का अनुसरण करते हुए, SL 3 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "YT 9",
+    "OK 17",
+    "WF 14",
+    "AK 11"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: F(+4)=J, R(-6)=L, 6(+11)=17. इसी प्रकार, S(+4)=W, L(-6)=F, 3(+11)=14.",
+   "trick": "अक्षरों में +4, -6 और संख्या में +11 का पैटर्न है।",
+   "ans": "C"
+  }
+ ]
+}

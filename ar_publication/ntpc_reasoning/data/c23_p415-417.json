@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Data Sufficiency",
+  "hi": "आँकड़ों की पर्याप्तता",
+  "total": 22,
+  "gl": 22,
+  "ug": 0
+ },
+ "source_pages": "415-417",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the shortest?",
+   "hi": "5 वृक्षों L, M, N, T और V में से प्रत्येक की ऊँचाई भिन्न है, सबसे छोटा वृक्ष कौन-सा है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>कथन I और II दोनों एक साथ (और अकेले कथन I या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं",
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों एक साथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं"
+   ],
+   "my_ans": "B",
+   "sol": "I: N < 3 trees (N is 4th or 5th). II: T > N > M. Combining: T > N > M and N is 4th/5th. If N is 4th, M is 5th (shortest). If N is 5th, impossible. Thus, M is shortest.",
+   "trick": "दोनों कथनों को मिलाकर क्रम व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Five boxes – Box-A, Box-B, Box-C, Box-D, and Box-E – have different weights. Which box is the second heaviest?",
+   "hi": "पाँच बॉक्स – बॉक्स-A, बॉक्स-B, बॉक्स-C, बॉक्स-D और बॉक्स-E – का वजन अलग-अलग है। इनमें से दूसरा सबसे भारी बॉक्स कौन-सा है?",
+   "opts": [
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)।",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "B",
+   "sol": "I: D > C > A/B. II: D > E > C. Combining: D > E > C > A/B. The second heaviest is E.",
+   "trick": "सभी बॉक्स का तुलनात्मक क्रम (D > E > C > A/B) बनाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Kunal, Mohit, Rohan, Sandeep, and Tarun - each have different age. Who is the oldest?",
+   "hi": "कुणाल, मोहित, रोहन, संदीप और तरुण में से प्रत्येक की आयु अलग-अलग है। इनमें से सबसे बड़ा कौन है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है"
+   ],
+   "my_ans": "C",
+   "sol": "I: S > M > K. II: S > T > M. Combining: S > T > M > K. Rohan's age is unknown, so we cannot determine who is the oldest.",
+   "trick": "यदि किसी व्यक्ति का स्थान स्पष्ट न हो, तो उत्तर नहीं दिया जा सकता।",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the shortest?",
+   "hi": "5 वृक्षों - L, M, N, T और V में से प्रत्येक की ऊँचाई अलग-अलग है, कौन-सा वृक्ष सबसे छोटा है?",
+   "opts": [
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से (अकेले कथन I या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं।",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "D",
+   "sol": "I: L is taller than only 2 trees (L is 3rd). M > L > T. So order is _ > _ > M > L > T. T is the shortest.",
+   "trick": "कथन I से ही स्पष्ट है कि T सबसे छोटा है।",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Arjun, Kunal, Mohit, Prateek, and Saurav, each have different height. Who is the tallest?",
+   "hi": "अर्जुन, कुणाल, मोहित, प्रतीक और सौरव में से प्रत्येक की लंबाई अलग-अलग है। सबसे लंबा कौन है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं"
+   ],
+   "my_ans": "C",
+   "sol": "I: P > M > A/K. II: P > S > M. Combining: P > S > M > A/K. Prateek is the tallest.",
+   "trick": "दोनों कथनों को जोड़कर सबसे ऊंचे व्यक्ति की पहचान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Five friends – Gaurav, Himanshu, Ishan, Lokesh, and Mukul – are of different ages. Who is the third oldest?",
+   "hi": "पाँच मित्र - गौरव, हिमांशु, ईशान, लोकेश और मुकुल - की आयु अलग-अलग है। तीसरा सबसे बड़ा कौन है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)हीं।"
+   ],
+   "my_ans": "C",
+   "sol": "I: L > I > G. II: L > M > I. Combining: L > M > I > G. Himanshu's position is unknown, so we cannot identify the 3rd oldest.",
+   "trick": "यदि एक व्यक्ति का स्थान अज्ञात हो, तो निश्चित उत्तर नहीं मिल सकता।",
+   "ans": "C"
+  }
+ ]
+}

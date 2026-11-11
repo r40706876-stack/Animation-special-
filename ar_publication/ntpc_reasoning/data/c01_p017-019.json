@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "17-19",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Select the triad which follows the same pattern as that followed by the two triads given below. Both triads follow the same pattern. TO-UP-VY QL-RM-SV",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। TO-UP-VY QL-RM-SV",
+   "opts": [
+    "NI-OJ-PS",
+    "NI-OJ-PR",
+    "MI-OK-PR",
+    "MI-OJ-PR"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: पहला अक्षर +1, दूसरा +1, तीसरा +2 (जैसे T+1=U, U+1=V, Y+2=A). विकल्प A में: N+1=O, I+1=J, O+1=P, J+1=K (यहाँ पैटर्न अलग है, लेकिन अक्षरों का अंतर समान है).",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as the one followed by the two triads given below. Both triads follow the same pattern. PK - QL - RT RM - SN - TV",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। PK - QL - RT RM - SN - TV",
+   "opts": [
+    "KG - MI - NO",
+    "LG - MH - NP",
+    "KG - MH - NO",
+    "LG - MH - NO"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: पहले अक्षर में +1, दूसरे में +1, तीसरे में +2. LG-MH-NP में: L+1=M, G+1=H, M+1=N, H+2=J (पैटर्न का पालन).",
+   "trick": "अक्षरों के बीच का अंतर +1, +1, +2 है।",
+   "ans": "B"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "QX 18 is related to SS 4 in a certain way. In the same way, EL 10 is related to GG -4. To which of the following is IJ 5 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से QX 18 का संबंध SS 4 से है। उसी प्रकार, EL 10 का संबंध GG -4 से है। उसी तर्क का अनुसरण करते हुए, IJ 5 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "KL -11",
+    "HF -8",
+    "KE -9",
+    "TR -5"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: Q(17)X(24) → S(19)S(19) (+2, -5). संख्या: 18-14=4. IJ(9,10) में +2, -5 करने पर K(11)E(5) मिलता है। संख्या: 5-14=-9.",
+   "trick": "अक्षरों में +2, -5 और संख्या में -14 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "LEMO is related to RJST in a certain way based on the English alphabetical order. In the same way, JYKI is related to PDQN. To which of the following options is BNCX related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से LEMO का संबंध RJST से है। उसी तरीके से JYKI का संबंध PDQN से है। उसी तर्क का अनुसरण करते हुए, BNCX का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "SHIK",
+    "HSIC",
+    "KISH",
+    "CISH"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों को विपरीत क्रम में लिखकर +4 किया गया है। BNCX का उल्टा XCNB है, +4 करने पर HSIC मिलता है।",
+   "trick": "अक्षरों को उल्टा करके +4 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "KH 13 is related to ID 2 in a certain way. In the same way, LO 9 is related to JK -2. To which of the following is LJ 7 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से KH 13 का संबंध ID 2 से है। उसी प्रकार, LO 9 का संबंध JK -2 से है। समान तर्क का अनुसरण करते हुए, LJ 7 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "JG -6",
+    "JF -4",
+    "KG -6",
+    "KF -4"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: K-2=I, H-4=D. संख्या: 13-11=2. LJ(12,10) में -2, -4 करने पर JF(10,6) मिलता है। संख्या: 7-11=-4.",
+   "trick": "अक्षरों में -2, -4 और संख्या में -11 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "ORVS is related to QTXU in a certain way based on the English alphabetical order. In the same way, PSWT is related to RUYV. To which of the following is HKOL related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित एक निश्चित तरीके से ORVS का संबंध QTXU से है। उसी प्रकार, PSWT का संबंध RUYV से है। समान तर्क का अनुसरण करते हुए, HKOL का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "JNPW",
+    "JLPN",
+    "JMQN",
+    "JMPN"
+   ],
+   "my_ans": "C",
+   "sol": "प्रत्येक अक्षर में +2 किया गया है। HKOL में +2 करने पर JMQN प्राप्त होता है।",
+   "trick": "सभी अक्षरों में +2 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "JS 12 is related to MO -3 in a certain way. In the same way, LW 9 is related to OS -6. To which of the following is BT 6 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से JS 12 का संबंध MO -3 से है। उसी प्रकार, LW 9 का संबंध OS -6 से है। समान तर्क का अनुसरण करते हुए, BT 6 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "TR 10",
+    "YT 8",
+    "EP -9",
+    "PT -11"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: J+3=M, S-4=O. संख्या: 12-15=-3. BT(2,20) में +3, -4 करने पर EP(5,16) मिलता है। संख्या: 6-15=-9.",
+   "trick": "अक्षरों में +3, -4 और संख्या में -15 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. NPS : KMP DOQ : ALN",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। NPS : KMP DOQ : ALN",
+   "opts": [
+    "SEL : OAI",
+    "DHG : BEC",
+    "HDP : EAM",
+    "EHL : CFI"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षरों में -3, -3, -3 का पैटर्न है। HDP में -3 करने पर EAM मिलता है।",
+   "trick": "सभी अक्षरों में -3 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "AEHB is related to FJMG in a certain way based on the English alphabetical order. In the same way, DHKE is related to IMPJ. To which of the following is GKNH related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, AEHB का संबंध FJMG से एक निश्चित तरीके से है। उसी प्रकार, DHKE का संबंध IMPJ से है। समान तर्क का अनुसरण करते हुए, GKNH का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "LPMS",
+    "PLSM",
+    "PLMS",
+    "LPSM"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षरों में +5, +5, +5, +5 का पैटर्न है। GKNH में +5 करने पर LPSM मिलता है।",
+   "trick": "सभी अक्षरों में +5 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "Select the triad which follows the same pattern as that followed by the two triads given below. Both triads follow the same pattern. JM - NQ – RU BE - FI - JM",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। JM - NQ - RU BE - FI - JM",
+   "opts": [
+    "MP - QT - UX",
+    "NE - QK - XQ",
+    "HI - MP - SU",
+    "EB - IG - NL"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षरों में +4, +4 का अंतर है। MP-QT-UX में भी +4 का अंतर है।",
+   "trick": "अक्षरों के बीच +4 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "Select the pair that follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. CFG : GJK ; KMP : OQT",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। नीचे दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। CFG : GJK ; KMP : OQT",
+   "opts": [
+    "DJL : AGI",
+    "GNP : KRT",
+    "ACH : BDI",
+    "LMI : NOK"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में +4, +4, +4 का पैटर्न है। GNP में +4 करने पर KRT मिलता है।",
+   "trick": "सभी अक्षरों में +4 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. DIP : GLS , BST : EVW",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DIP : GLS , BST : EVW",
+   "opts": [
+    "CIG : FKJ",
+    "HKD : KNG",
+    "TEL : VHP",
+    "EHL : IFP"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में +3, +3, +3 का पैटर्न है। HKD में +3 करने पर KNG मिलता है।",
+   "trick": "सभी अक्षरों में +3 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "FR 6 is related to KN -6 in a certain way. In the same way, LU 9 is related to QQ -3. To which of the following is LS 14 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से FR 6 का संबंध KN -6 से है। उसी प्रकार, LU 9 का संबंध QQ -3 से है। समान तर्क का अनुसरण करते हुए, LS 14 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QO 2",
+    "PR 0",
+    "GT 6",
+    "YT 8"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: F+5=K, R-4=N. संख्या: 6-12=-6. LS(12,19) में +5, -4 करने पर QO(17,15) मिलता है। संख्या: 14-12=2.",
+   "trick": "अक्षरों में +5, -4 और संख्या में -12 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. QMO-KGI RNP-LHJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। QMO-KGI RNP-LHJ",
+   "opts": [
+    "KFG-DZB",
+    "KFG-EAC",
+    "KGI-DAB",
+    "KGI-EAC"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षरों में -6, -6, -6 का पैटर्न है। KGI में -6 करने पर EAC मिलता है।",
+   "trick": "सभी अक्षरों में -6 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "GECD is related to CAYZ in a certain way based on the English alphabetical order. In the same way, AYWX is related to WUST. To which of the following is USQR related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, GECD का संबंध CAYZ से है। उसी प्रकार, AYWX का संबंध WUST से है। समान तर्क का अनुसरण करते हुए, USQR का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QOLN",
+    "QPLR",
+    "QNLN",
+    "QOMN"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षरों में -4, -4, -4, -4 का पैटर्न है। USQR में -4 करने पर QOMN मिलता है।",
+   "trick": "सभी अक्षरों में -4 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "BGLQ is related to CHMR in a certain way based on the English alphabetical order. In the same way, VAFX is related to WBGY. To which of the following is PUZE related, in the same way?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से BGLQ का संबंध CHMR से है। इसी प्रकार, VAFX का संबंध WBGY से है। इसी प्रकार, PUZE का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "QVAF",
+    "QVLP",
+    "QVRT",
+    "QVJK"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षरों में +1, +1, +1, +1 का पैटर्न है। PUZE में +1 करने पर QVAF मिलता है।",
+   "trick": "सभी अक्षरों में +1 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "JDHK is related to OIMP in a certain way based on the English alphabetical order. In the same way, MGKN is related to RLPS. To which of the following is PJNQ related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, JDHK का संबंध OIMP से है। उसी प्रकार, MGKN का संबंध RLPS से है। समान तर्क का अनुसरण करते हुए, PJNQ का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "OUSV",
+    "UOVS",
+    "UOSV",
+    "OUVS"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षरों में +5, +5, +5, +5 का पैटर्न है। PJNQ में +5 करने पर UOSV मिलता है।",
+   "trick": "सभी अक्षरों में +5 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "KEGJ is related to RLNQ in a certain way based on the English alphabetical order. In the same way, NHJM is related to UOQT. To which of the following is QKMP related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, KEGJ का संबंध RLNQ से है। उसी प्रकार, NHJM का संबंध UOQT से है। समान तर्क का अनुसरण करते हुए, QKMP का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "RXTW",
+    "RXWT",
+    "XRTW",
+    "XRWT"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षरों में +7, +7, +7, +7 का पैटर्न है। QKMP में +7 करने पर XRTW मिलता है।",
+   "trick": "सभी अक्षरों में +7 करें।",
+   "ans": "C"
+  }
+ ]
+}

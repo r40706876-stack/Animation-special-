@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Odd One Out (Classification)",
+  "hi": "विषम को चुनें (वर्गीकरण)",
+  "total": 145,
+  "gl": 48,
+  "ug": 97
+ },
+ "source_pages": "66-68",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "LN-MO",
+    "HJ-IK",
+    "DF-EG",
+    "KM-NP"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में पहले अक्षर से दूसरे अक्षर का अंतर +1 है और दूसरे से तीसरे का +1 है (जैसे L+1=M, M+1=N, N+1=O), जबकि KM-NP में K+2=M, M+1=N, N+2=P है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "TU-WX",
+    "CE-GI",
+    "EG-IK",
+    "JL-NP"
+   ],
+   "my_ans": "A",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +2, +2, +2 है (जैसे C+2=E, E+2=G, G+2=I), जबकि TU-WX में T+1=U, U+1=W, W+1=X है।",
+   "trick": "अक्षरों के बीच का अंतर +2 का पैटर्न है।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "LK-IK",
+    "ZY-XW",
+    "RQ-PO",
+    "YX-WV"
+   ],
+   "my_ans": "A",
+   "sol": "बाकी सभी में अक्षरों का क्रम पीछे की ओर है (-1, -1, -1), जबकि LK-IK में L-1=K, K-2=I, I+2=K है।",
+   "trick": "अक्षरों के मानों का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेज़ी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूहों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "YCX",
+    "NRM",
+    "GKF",
+    "TYS"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में पहले और तीसरे अक्षर के बीच का अंतर +1 है (जैसे Y+1=Z, N+1=O, G+1=H), जबकि TYS में T+1=U, U-2=S है।",
+   "trick": "पहले और तीसरे अक्षर का संबंध देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "SUR",
+    "QSO",
+    "NPL",
+    "DFB"
+   ],
+   "my_ans": "A",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर -2, -2 है (जैसे Q-2=O, O-2=M), जबकि SUR में S-1=U, U-3=R है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस समूह से संबंधित नहीं है?",
+   "opts": [
+    "GH-JK",
+    "ST-VW",
+    "MN-PQ",
+    "DE-FG"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +1, +1, +1 है (जैसे G+1=H, H+1=I, I+1=J), जबकि DE-FG में D+1=E, E-1=F, F+1=G है।",
+   "trick": "अक्षरों के बीच का अंतर +1 है।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "AE-DH",
+    "WA-ZD",
+    "YC-BE",
+    "CG-FJ"
+   ],
+   "my_ans": "C",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +4, -1, +4 है, जबकि YC-BE में Y+4=C, C-2=B, B+3=E है।",
+   "trick": "अक्षरों के बीच का अंतर चेक करें।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "KL - NO",
+    "TU - WX",
+    "AB - DE",
+    "XY - YZ"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +1, +1, +1 है, जबकि XY-YZ में X+1=Y, Y+1=Z है लेकिन Y-Z का अंतर अलग है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "KFN",
+    "MKP",
+    "ECH",
+    "WUZ"
+   ],
+   "my_ans": "A",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +2, +1 है (जैसे E+2=G, G+1=H), जबकि KFN में K+5=P, P-2=N है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "HF-GE",
+    "IG-HF",
+    "SQ-RP",
+    "AY-YZ"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर -1, -1, -1 है, जबकि AY-YZ में A+24=Y, Y+1=Z है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस समूह से संबंधित नहीं है?",
+   "opts": [
+    "HJ-KM",
+    "MO-PR",
+    "GI-JM",
+    "CE-FH"
+   ],
+   "my_ans": "C",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +2, +1, +2 है, जबकि GI-JM में G+2=I, I+4=M है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "TPW",
+    "RNU",
+    "HDK",
+    "EAG"
+   ],
+   "my_ans": "D",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +3, +1 है, जबकि EAG में E+4=I, I-2=G है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "RU-SV",
+    "OR-OU",
+    "DG-EH",
+    "ZC-AD"
+   ],
+   "my_ans": "B",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +1, +1, +1 है, जबकि OR-OU में O+3=R, R+3=U है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेज़ी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूहों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "TXA",
+    "DHL",
+    "WAD",
+    "GKN"
+   ],
+   "my_ans": "B",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +7, +7 है, जबकि DHL में D+4=H, H+4=L है।",
+   "trick": "अक्षरों के बीच का अंतर +7 है।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "SU - VX",
+    "LM - NP",
+    "IK - LN",
+    "BD - EG"
+   ],
+   "my_ans": "B",
+   "sol": "बाकी सभी में अक्षरों के बीच का अंतर +2, +1, +2 है, जबकि LM-NP में L+1=M, M+1=N, N+2=P है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "B"
+  }
+ ]
+}

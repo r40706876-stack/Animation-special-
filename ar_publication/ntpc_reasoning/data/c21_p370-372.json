@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "370-372",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the Statements : Some canals are rivers. Some rivers are oceans. Some oceans are ponds. Conclusions: (I) All ponds are rivers. (II) All oceans are canals.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ नहरें, नदियाँ हैं। कुछ नदियाँ, महासागर हैं। कुछ महासागर, तालाब हैं। निष्कर्ष: (I) सभी तालाब, नदियाँ हैं। (II) सभी महासागर, नहरें हैं।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "कथन के अनुसार नहर, नदी, महासागर और तालाब के बीच केवल 'कुछ' का संबंध है। 'सभी' का संबंध कहीं नहीं दिया गया है, इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "कथन में 'कुछ' हो तो निष्कर्ष में 'सभी' का दावा हमेशा गलत होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: No elephant is a horse. No horse is a donkey. No horse is a turtle. Conclusions: (I) No elephant is a donkey. (II) Some turtles are donkeys.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कोई भी हाथी, घोड़ा नहीं है। कोई भी घोड़ा, गधा नहीं है। कोई भी घोड़ा, कछुआ नहीं है। निष्कर्ष: (I) कोई भी हाथी, गधा नहीं है। (II) कुछ कछुए, गधे हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "हाथी और गधे के बीच कोई सीधा संबंध नहीं दिया गया है, इसलिए (I) गलत है। कछुए और गधे के बीच भी कोई संबंध नहीं है, इसलिए (II) भी गलत है।",
+   "trick": "दो अलग-अलग नकारात्मक कथनों के बीच सीधा संबंध नहीं निकाला जा सकता।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: Some lakes are oceans. All planets are oceans. All lakes are roads. Conclusion (I): Some oceans are roads. Conclusion (II): Some planets are lakes.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ झील, महासागर हैं। सभी ग्रह, महासागर हैं। सभी झील, सड़क हैं। निष्कर्ष (I): कुछ महासागर, सड़क हैं। निष्कर्ष (II): कुछ ग्रह, झील हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "C",
+   "sol": "चूंकि सभी झीलें सड़कें हैं और कुछ झीलें महासागर हैं, इसलिए कुछ महासागर सड़कें हैं (I सही)। ग्रह और झील के बीच कोई सीधा संबंध नहीं है, इसलिए (II) गलत है।",
+   "trick": "वेन आरेख बनाकर देखें कि कौन सा हिस्सा आपस में ओवरलैप हो रहा है।",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: No biscuit is a wafer. No wafer is a candy. No candy is a juice. Conclusions: (I) No biscuit is a candy. (II) No wafer is a juice.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कोई भी बिस्कुट, वेफर नहीं है। कोई भी वेफर, कैंडी नहीं है। कोई भी कैंडी, जूस नहीं है। निष्कर्ष: (I) कोई भी बिस्कुट, कैंडी नहीं है। (II) कोई भी वेफर, जूस नहीं है।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "A",
+   "sol": "बिस्कुट और कैंडी के बीच कोई सीधा संबंध नहीं है, और वेफर और जूस के बीच भी कोई सीधा संबंध नहीं है। अतः दोनों निष्कर्ष गलत हैं।",
+   "trick": "नकारात्मक कथनों में 'कोई नहीं' का संबंध केवल सीधे जुड़े हुए तत्वों के बीच ही होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All coppers are irons. All irons are silvers. All silvers are golds. Conclusions: (I) Some golds are irons. (II) All silvers are coppers.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी कॉपर, आयरन हैं। सभी आयरन, सिल्वर हैं। सभी सिल्वर, गोल्ड हैं। निष्कर्ष: (I) कुछ गोल्ड, आयरन हैं। (II) सभी सिल्वर, कॉपर हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "D",
+   "sol": "सभी आयरन गोल्ड के अंदर हैं, इसलिए कुछ गोल्ड आयरन हैं (I सही)। सभी सिल्वर कॉपर नहीं हैं, केवल कुछ सिल्वर कॉपर हैं (II गलत)।",
+   "trick": "अंदर से बाहर जाने पर 'सभी' और 'कुछ' दोनों सही होते हैं, बाहर से अंदर आने पर केवल 'कुछ' सही होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All gorillas are monkeys. Some monkeys are baboons. All baboons are chimpanzees. Conclusions: (I) All chimpanzees are monkeys. (II) Some chimpanzees are gorillas.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी गोरिल्ला, बंदर हैं। कुछ बंदर, बबून हैं। सभी बबून, चिपांजी हैं। निष्कर्ष: (I) सभी चिपांजी, बंदर हैं। (II) कुछ चिपांजी, गोरिल्ला हैं।",
+   "opts": [
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "सभी चिपांजी बंदर नहीं हैं, केवल कुछ हैं (I गलत)। चिपांजी और गोरिल्ला के बीच कोई सीधा संबंध नहीं है (II गलत)।",
+   "trick": "कथन में 'कुछ' का संबंध हो तो निष्कर्ष में 'सभी' का दावा गलत होता है।",
+   "ans": "B"
+  }
+ ]
+}

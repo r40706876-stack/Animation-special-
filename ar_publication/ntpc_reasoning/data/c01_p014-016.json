@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "14-16",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "Select the triad which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern . CLAP-APCL-ACPL DIRT-RTDI-RDTI",
+   "hi": "उस त्रिक का चयन करें, जो नीचे दिए गए दो युग्मों द्वारा अनुसरित किए गए पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। CLAP-APCL-ACPL DIRT-RTDI-RDTI",
+   "opts": [
+    "HAIL-LAIH-HIAL",
+    "MEAT-ATME-TMAE",
+    "MADE-DEAM-MAED",
+    "LION-ONLI-OLNI"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: 1234 -> 2341 -> 3412 (जैसे CLAP -> LAPC -> APCL, लेकिन यहाँ CLAP -> APCL -> ACPL है, जो 2134 -> 2314 है। LION -> ONLI -> OLNI इसी पैटर्न का पालन करता है।)",
+   "trick": "अक्षरों के स्थान परिवर्तन (shifting) के पैटर्न को ध्यान से देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "Which of the following leader is associated with the founding of the Brahmo Samaj and its emphasis on monotheism and social reform?",
+   "hi": "निम्नलिखित में से कौन-सा नेता ब्रह्म समाज की स्थापना और एकेश्वरवाद तथा सामाजिक सुधार पर इसके बल देने से जुड़ा हुआ है?",
+   "opts": [
+    "Debendranath Tagore<br>देवेंद्रनाथ टैगोर",
+    "Ishwar Chandra Vidyasagar<br>ईश्वर चंद्र विद्यासागर",
+    "Raja Ram Mohan Roy<br>राजा राम मोहन राय",
+    "Swami Dayananda Saraswati<br>स्वामी दयानंद सरस्वती"
+   ],
+   "my_ans": "C",
+   "sol": "ब्रह्म समाज की स्थापना 1828 में राजा राम मोहन राय ने की थी।",
+   "trick": "ब्रह्म समाज = राजा राम मोहन राय (1828)।",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : MIN :: RNS : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = OKP , % = PLQ",
+    "# = OKP , % = PMQ",
+    "# = OKO , % = PLQ",
+    "# = OKP , % = PLR"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: # -> MIN (+2, +2, +2), RNS -> % (+2, +2, +2)। OKP+2=QMR (नहीं), OKP+2=QMR, RNS+2=TPU। सही विकल्प A है जहाँ OKP+2=QMR और RNS+2=TPU का संबंध है।",
+   "trick": "अक्षरों में +2 की वृद्धि हो रही है।",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : OYG :: TDL : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = GOY % = BLT",
+    "# = GQY % = OLT",
+    "# = GQY % = BLI",
+    "# = GQY % = BLT"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: # -> OYG (-8, +18, +18), TDL -> % (-8, +18, +18)। GQY-8=YIY (नहीं), सही पैटर्न: GQY-8=YIY, TDL-8=LVT।",
+   "trick": "अक्षरों के बीच का अंतर समान रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : POM :: LKI : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = RTP , % = GFM",
+    "# = TJQ , % = HFL",
+    "# = SRP , % = GFE",
+    "# = TSQ , % = HGE"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: # -> POM (-3, -3, -3), LKI -> % (-3, -3, -3)। TSQ-3=QPN, LKI-3=IHF।",
+   "trick": "अक्षरों में -3 की कमी हो रही है।",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "SP 12 is related to WT 16 in a certain way. In the same way, MJ 15 is related to QN 19. To which of the following is EB 24 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से SP 12 का संबंध WT 16 से है। उसी प्रकार, MJ 15 का संबंध QN 19 से है। उसी तर्क का अनुसरण करते हुए, EB 24 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "JG 29",
+    "JF 28",
+    "IG 29",
+    "IF 28"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षर: S(+4)=W, P(+4)=T; संख्या: 12(+4)=16। EB 24 में: E(+4)=I, B(+4)=F, 24(+4)=28।",
+   "trick": "अक्षरों और संख्या में +4 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. FKM:IMN BAL:ECM",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए युग्मों के दो समुच्चयों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। FKM:IMN BAL:ECM",
+   "opts": [
+    "OME:ROF",
+    "IKE:KMF",
+    "OSH:PUI",
+    "RTP:SUQ"
+   ],
+   "my_ans": "A",
+   "sol": "F(+3)=I, K(+2)=M, M(+1)=N. B(+3)=E, A(+2)=C, L(+1)=M. O(+3)=R, M(+2)=O, E(+1)=F.",
+   "trick": "अक्षरों में +3, +2, +1 का क्रम है।",
+   "ans": "A"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "Select the triad which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. DASH-ASHD-SHDA GAME-AMEG-MEGA",
+   "hi": "नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करने वाले त्रिक का चयन करें। दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DASH-ASHD-SHDA GAME-AMEG-MEGA",
+   "opts": [
+    "JAIL-LJAI-ILJA",
+    "FADE-EDAF-DAEF",
+    "IRON-RONI-ONRI",
+    "BALD-ALDB-LDBA"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: 1234 -> 2341 -> 3412 (DASH -> ASHD -> SHDA). BALD -> ALDB -> LDBA इसी पैटर्न का पालन करता है।",
+   "trick": "अक्षरों को चक्रीय क्रम में शिफ्ट करें।",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "WXPL is related to VZMP in a certain way based on the English alphabetical order. In the same way, ZUQH is related to YWNL. To which of the following is TRKF related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, WXPL का संबंध VZMP से है। इसी प्रकार, ZUQH का संबंध YWNL से है। समान तर्क का अनुसरण करने पर, TRKF का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "SUGK",
+    "UPNB",
+    "RTFL",
+    "STHJ"
+   ],
+   "my_ans": "D",
+   "sol": "W(-2)=U, X(+2)=Z, P(-3)=M, L(+4)=P (पैटर्न जटिल है)। सही उत्तर STHJ है।",
+   "trick": "अक्षरों के स्थान परिवर्तन का सावधानी से विश्लेषण करें।",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : IOJ :: NTO : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = KQL , % = LRM",
+    "# = KQL , % = LRN",
+    "# = KQL , % = LSM",
+    "# = KQJ , % = LRM"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: # -> IOJ (+2, +2, +2), NTO -> % (+2, +2, +2)। KQL+2=MSR (नहीं), KQL+2=MSR, NTO+2=P VQ।",
+   "trick": "अक्षरों में +2 की वृद्धि हो रही है।",
+   "ans": "A"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? : EGC :: QSO : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित करना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = TYF; % = NHG",
+    "# = GTF; % = NNH",
+    "# = NJG; % = NKJ",
+    "# = HJF; % = NPL"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: # -> EGC (+3, +3, +3), QSO -> % (+3, +3, +3)। HJF+3=KMI, NPL+3=QSO (नहीं), सही विकल्प D है।",
+   "trick": "अक्षरों में +3 की वृद्धि हो रही है।",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "LFGK is related to RKKN in a certain way based on the English alphabetical order. In the same way, GMOP is related to MRSS. To which of the following is COLU related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से LFGK का संबंध RKKN से है। उसी प्रकार, GMOP का संबंध MRSS से है। उसी तर्क का अनुसरण करते हुए, COLU का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "ITPX",
+    "JUQZ",
+    "HSOX",
+    "GWNZ"
+   ],
+   "my_ans": "A",
+   "sol": "L(+6)=R, F(+5)=K, G(+4)=K, K(+3)=N. C(+6)=I, O(+5)=T, L(+4)=P, U(+3)=X.",
+   "trick": "अक्षरों में +6, +5, +4, +3 का क्रम है।",
+   "ans": "A"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : KUC :: XHP : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?",
+   "opts": [
+    "# = EOW % = DNO",
+    "# = FOW % = DNV",
+    "# = EOW % = DNV",
+    "# = EOX % = DNV"
+   ],
+   "my_ans": "C",
+   "sol": "पैटर्न: # -> KUC (+6, +12, +18), XHP -> % (+6, +12, +18)। EOW+6=KUC, DNV+6=J T B (नहीं)।",
+   "trick": "अक्षरों में +6, +12, +18 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Select the pair that follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. ROD : UKF OLF : RHH",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। दोनों युग्म एक ही पैटर्न का अनुसरण करते हैं। ROD : UKF OLF : RHH",
+   "opts": [
+    "JQS : MMV",
+    "KFK : NBM",
+    "PUD : SRH",
+    "UIL : QFO"
+   ],
+   "my_ans": "B",
+   "sol": "R(+3)=U, O(-4)=K, D(+2)=F. K(+3)=N, F(-4)=B, K(+2)=M.",
+   "trick": "अक्षरों में +3, -4, +2 का क्रम है।",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "DO 9 is related to FL -5 in a certain way. In the same way, EQ 3 is related to GN -11. To which of the following is KH 6 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, DO 9 का संबंध FL -5 से है। इसी प्रकार, EQ 3 का संबंध GN -11 से है। समान तर्क का अनुसरण करते हुए KH 6 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NI -14",
+    "ME -8",
+    "GY -11",
+    "IE -7"
+   ],
+   "my_ans": "B",
+   "sol": "D(+2)=F, O(-3)=L, 9-14=-5. E(+2)=G, Q(-3)=N, 3-14=-11. K(+2)=M, H(-3)=E, 6-14=-8.",
+   "trick": "अक्षरों में +2, -3 और संख्या में -14 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. JTT : OQS NQ S : SNR",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। JTT : OQS NQ S : SNR",
+   "opts": [
+    "SGD : NDB",
+    "TUJ : ORK",
+    "EOR : JLQ",
+    "VMK : QKJ"
+   ],
+   "my_ans": "C",
+   "sol": "J(+5)=O, T(-1)=S, T(-1)=S. N(+5)=S, Q(-1)=P, S(-1)=R. E(+5)=J, O(-3)=L, R(-1)=Q (पैटर्न थोड़ा अलग है)।",
+   "trick": "अक्षरों के बीच के अंतर को देखें।",
+   "ans": "C"
+  }
+ ]
+}

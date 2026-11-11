@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Puzzle & Scheduling",
+  "hi": "पहेली एवं समय-निर्धारण",
+  "total": 85,
+  "gl": 14,
+  "ug": 71
+ },
+ "source_pages": "354-355",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "Seven boxes C, D, E, F, G, H and P are kept one over the other but not necessarily in the same order. C is kept second from the bottom. Only three boxes are kept between C and G. F is kept at one of the positions below C. Only H is kept between G and P. E is kept at one of the positions above G. How many boxes are kept between D and E?",
+   "hi": "सात बक्से C, D, E, F, G, H और P एक के ऊपर एक रखे हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे हों। C को सबसे नीचे से दूसरे स्थान पर रखा जाता है। C और G के बीच केवल तीन बक्से रखे जाते हैं। F को C के नीचे किसी एक स्थान पर रखा जाता है। G और P के बीच केवल H को रखा जाता है। E को G के ऊपर किसी एक स्थान पर रखा जाता है। D और E के बीच कितने बक्से रखे गए हैं?",
+   "opts": [
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम (नीचे से): F, C, H, G, P, D, E (या E, D)। C दूसरे पर है, G छठे पर। F नीचे है। H, G और P के बीच है। E, G के ऊपर है। D और E के बीच 3 बक्से हैं।",
+   "trick": "बक्सों को क्रमबद्ध करने के लिए सबसे निश्चित जानकारी (जैसे 'दूसरे स्थान पर') से शुरुआत करें।",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Seven boxes M, N, O, P, X, Y and Z are kept one over the other but not necessarily in the same order. Only N is kept above P. Only two boxes are kept between P and X. Only O is kept below Y. Z is not kept immediately above X. Which box is kept second above M?",
+   "hi": "सात डिब्बे M, N, O, P, X, Y और Z एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। P के ऊपर केवल N रखा गया है। P और X के बीच केवल दो डिब्बे रखे गए हैं। Y के नीचे केवल O रखा गया है। Z, X के ठीक ऊपर नहीं रखा गया है। M के ऊपर दूसरा डिब्बा कौन-सा है?",
+   "opts": [
+    "X",
+    "Z",
+    "O",
+    "P"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम (ऊपर से): N, P, Z, X, M, Y, O। P के ऊपर केवल N है। P और X के बीच 2 हैं। Y के नीचे केवल O है। M के ऊपर दूसरा डिब्बा P है।",
+   "trick": "दी गई शर्तों को एक-एक करके व्यवस्थित करें, 'केवल' शब्द पर विशेष ध्यान दें।",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "Seven boxes A, B, C, D, E, F and G are kept one over the other but not necessarily in the same order. Only two boxes are kept below A. Only one box is kept above E. Only one box is kept between E and B. C is kept immediately above G. D is kept at some place below F. How many boxes are kept between A and D?",
+   "hi": "सात डिब्बे A, B, C, D, E, F और G एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि वे इसी क्रम में हों। A के नीचे केवल दो डिब्बे रखे गए हैं। E के ऊपर केवल एक डिब्बा रखा गया है। E और B के बीच केवल एक डिब्बा रखा गया है। G के ठीक ऊपर C को रखा गया है। D को F के नीचे किसी स्थान पर रखा गया है। A और D के बीच कितने डिब्बे रखे गए हैं?",
+   "opts": [
+    "3",
+    "4",
+    "1",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (ऊपर से): F, E, D, B, A, C, G। A तीसरे स्थान पर (नीचे से) है। E दूसरे पर है। C, G के ऊपर है। A और D के बीच 1 डिब्बा है।",
+   "trick": "ऊपर से नीचे का क्रम बनाकर शर्तों को बैठाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Seven boxes A, B, C, D, E, F and G are kept one over the other but not necessarily in the same order. Only three boxes are kept above C. Only one box is kept between D and C. Only three boxes are kept between D and E. E is kept at some place above C. G is kept immediately below E. F is kept at one of the places above B. A is not kept immediately above or below D. Which box is kept immediately above F?",
+   "hi": "सात डिब्बे A, B, C, D, E, F और G एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। C के ऊपर केवल तीन डिब्बे रखे गए हैं। D और C के बीच केवल एक डिब्बा रखा गया है। D और E के बीच केवल तीन डिब्बे रखे गए हैं। E को C के ऊपर किसी स्थान पर रखा गया है। G को E के ठीक नीचे रखा गया है। F को B के ऊपर किसी स्थान पर रखा गया है। A को D के ठीक ऊपर या नीचे नहीं रखा गया है। F के ठीक ऊपर कौन-सा डिब्बा रखा गया है?",
+   "opts": [
+    "G",
+    "D",
+    "C",
+    "A"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (ऊपर से): E, G, A, C, F, B, D। C चौथे स्थान पर है। D और C के बीच 1 है। E, C के ऊपर है। F के ठीक ऊपर C है।",
+   "trick": "दी गई स्थितियों को एक तालिका में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Seven boxes A, B, C, D, E, F and G are kept one over the other but not necessarily in the same order. Only one box is kept above C. A is not the topmost box. Only two boxes are kept below D. G is kept below D but above F. E is kept below A. How many boxes are kept between A and E?",
+   "hi": "सात बक्से A, B, C, D, E, F और G एक के ऊपर एक रखे हैं, लेकिन जरूरी नहीं कि इसी क्रम में हों। C के ऊपर केवल एक बक्सा रखा है। A सबसे ऊपर नहीं रखा है। D के नीचे केवल दो बक्से रखे हैं। G, D के नीचे लेकिन F के ऊपर रखा है। E, A के नीचे रखा है। A और E के बीच कितने बक्से रखे हैं?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): B, C, A, E, D, G, F। C दूसरे पर है। D पांचवें पर है। A और E के बीच कोई बक्सा नहीं है।",
+   "trick": "सबसे ऊपर और नीचे की स्थिति को पहले निर्धारित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Seven boxes B, C, D, E, Q, R and S are kept one over the other but not necessarily in the same order. No box is kept below C. Only two boxes are kept between E and C. Only Q is kept above D. S is kept at some place below B but at some place above R. Which box is kept immediately above S?",
+   "hi": "सात डिब्बे B, C, D, E, Q, R और S एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि वे इसी क्रम में रखे गए हों। C के नीचे कोई डिब्बा नहीं रखा गया है। E और C के बीच केवल दो डिब्बे रखे गए हैं। D के ऊपर केवल Q रखा गया है। S, B के नीचे किसी स्थान पर रखा गया है और R के ऊपर किसी स्थान पर रखा गया है। S के ठीक ऊपर कौन-सा डिब्बा रखा गया है?",
+   "opts": [
+    "D",
+    "E",
+    "R",
+    "B"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (ऊपर से): Q, D, B, S, R, E, C। C सबसे नीचे है। E और C के बीच 2 हैं। S के ठीक ऊपर B है।",
+   "trick": "शर्त 'C के नीचे कोई नहीं' का अर्थ है C सबसे नीचे है।",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Six boxes D, E, F, G, H and A are kept one over the other but not necessarily in the same order. Only three boxes are kept below A. Only two boxes are kept between A and E. No box is kept above G. H is kept at some place below F and at some place above D. How many boxes are kept between H and D?",
+   "hi": "छह डिब्बे D, E, F, G, H और A एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। A के नीचे केवल तीन डिब्बे रखे गए हैं। A और E के बीच केवल दो डिब्बे रखे गए हैं। G के ऊपर कोई डिब्बा नहीं रखा गया है। H को F के नीचे किसी स्थान पर और D के ऊपर किसी स्थान पर रखा गया है। H और D के बीच कितने डिब्बे रखे गए हैं?",
+   "opts": [
+    "Two<br>दो",
+    "Zero<br>एक भी नहीं",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (ऊपर से): G, E, F, H, D, A। G सबसे ऊपर है। A चौथे पर है। H और D के बीच कोई नहीं है।",
+   "trick": "G सबसे ऊपर है, यह जानकारी पूरे क्रम को हल करने में मदद करती है।",
+   "ans": "B"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Seven boxes F, A, C, T, O, R and S are kept one over the other but not necessarily in the same order. Only two boxes are kept below A. Only three boxes are kept between T and A. Only one box is kept between S and R. R is kept immediately above A. Only four boxes are kept between S and F. O is kept at someplace above C. How many boxes are kept below O?",
+   "hi": "सात डिब्बे F, A, C, T, O, R और S एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि उनका क्रम यही हो। A के नीचे केवल दो डिब्बे रखे गए हैं। T और A के बीच केवल तीन डिब्बे रखे गए हैं। S और R के बीच केवल एक डिब्बा रखा गया है। R को A के ठीक ऊपर रखा गया है। S और F के बीच केवल चार डिब्बे रखे गए हैं। O को C के ऊपर किसी स्थान पर रखा गया है। O के नीचे कितने डिब्बे रखे गए हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): T, S, O, C, R, A, F। A तीसरे स्थान पर (नीचे से) है। O के नीचे 4 डिब्बे हैं।",
+   "trick": "दी गई शर्तों को एक-एक करके क्रम में रखें।",
+   "ans": "A"
+  }
+ ]
+}

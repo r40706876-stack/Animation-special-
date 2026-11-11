@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "361-363",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All rats are moles. No mole is a frog. No mole is a donkey. Conclusions: No rat is a frog. (II) Some donkeys are frogs.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी चूहे, छछूंदर हैं। कोई भी छछूंदर, मेंढक नहीं है। कोई भी छछूंदर, गधा नहीं है। निष्कर्ष: (I) कोई भी चूहा, मेंढक नहीं है। (II) कुछ गधे, मेंढक हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "चूहे, छछूंदर के अंदर हैं और छछूंदर का मेंढक से कोई संबंध नहीं है, इसलिए चूहे का भी मेंढक से कोई संबंध नहीं होगा। निष्कर्ष (I) सही है। निष्कर्ष (II) गलत है क्योंकि गधे और मेंढक के बीच कोई सीधा संबंध नहीं दिया गया है।",
+   "trick": "यदि A, B के अंदर है और B का C से कोई संबंध नहीं, तो A का भी C से नहीं।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All oranges are apples. No apple is a banana. No banana is a kiwi. Conclusions: (I) No orange is a banana. (II) No apple is a kiwi.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा / से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता / करते है / हैं। कथन: सभी संतरे, सेब हैं। कोई भी सेब, केला नहीं है। कोई भी केला, कीवी नहीं है। निष्कर्ष: (I) कोई भी संतरा, केला नहीं है। (II) कोई भी सेब, कीवी नहीं है।",
+   "opts": [
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "C",
+   "sol": "संतरे, सेब के अंदर हैं और सेब का केला से कोई संबंध नहीं है, इसलिए संतरा भी केला नहीं होगा। निष्कर्ष (I) सही है। सेब और कीवी के बीच कोई सीधा संबंध नहीं है, इसलिए निष्कर्ष (II) गलत है।",
+   "trick": "अंदर वाले का संबंध बाहर वाले के दुश्मन से भी नहीं होता।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: Some beds are pillows. All pillows are towels. All towels are cushions. Conclusions: (I) All cushions are pillows. (II) Some towels are beds.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ बिस्तर, तकिए हैं। सभी तकिए, तौलिए हैं। सभी तौलिए, कुशन हैं। निष्कर्ष: (I) सभी कुशन, तकिए हैं। (II) कुछ तौलिए, बिस्तर हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "D",
+   "sol": "सभी तकिए तौलिए हैं और सभी तौलिए कुशन हैं, लेकिन सभी कुशन तकिए नहीं हो सकते। निष्कर्ष (I) गलत है। कुछ बिस्तर तकिए हैं और सभी तकिए तौलिए हैं, इसलिए कुछ तौलिए बिस्तर होंगे। निष्कर्ष (II) सही है।",
+   "trick": "बाहर से अंदर की ओर 'सभी' वाला निष्कर्ष हमेशा गलत होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All tigers are wolves. All jackals are wolves. All animals are wolves. Conclusions: (I) Some animals are tigers. (II) Some jackals are animals.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी बाघ, भेड़िया हैं। सभी सियार, भेड़िया हैं। सभी जानवर, भेड़िया हैं। निष्कर्ष: (I) कुछ जानवर, बाघ हैं। (II) कुछ सियार, जानवर हैं।",
+   "opts": [
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "बाघ, सियार और जानवर सभी अलग-अलग भेड़िया के अंदर हैं, इनके बीच कोई सीधा संबंध नहीं दिया गया है। इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "जब सभी अलग-अलग समूह एक ही बड़े समूह के अंदर हों, तो उनके बीच संबंध नहीं होता।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All gardens are forests. All forests are meadows. No garden is a park. Conclusions: (I) No forest is a park. (II) No meadow is a park.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा / से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करता / करते है / हैं। कथन: सभी उद्यान, वन हैं। सभी वन, चारागाह हैं। कोई भी उद्यान, पार्क नहीं है। निष्कर्ष: (I) कोई भी वन, पार्क नहीं है। (II) कोई भी चारागाह, पार्क नहीं है।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "उद्यान का पार्क से संबंध नहीं है, लेकिन वन और चारागाह का पार्क से संबंध हो भी सकता है और नहीं भी। इसलिए दोनों निष्कर्ष अनिश्चित हैं।",
+   "trick": "छोटे समूह का संबंध न होने से बड़े समूह का संबंध पार्क से नहीं कहा जा सकता।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All lions are monkeys. Some monkeys are cats. All pigs are cats. Conclusions: (I) Some pigs are lions. (II) Some pigs are monkeys.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी शेर, बंदर हैं। कुछ बंदर, बिल्ली हैं। सभी सूअर, बिल्ली हैं। निष्कर्ष: (I) कुछ सूअर, शेर हैं। (II) कुछ सूअर, बंदर हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "A",
+   "sol": "शेर और सूअर के बीच कोई सीधा संबंध नहीं है, और बंदर और सूअर के बीच भी कोई सीधा संबंध नहीं है। इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "जब दो समूहों के बीच कोई सीधा संबंध न दिया हो, तो निष्कर्ष गलत होता है।",
+   "ans": "A"
+  }
+ ]
+}

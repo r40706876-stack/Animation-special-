@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "29-31",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "NQTM is related to ILOH in a certain way based on the English alphabetical order. In the same way, UOLG is related to PJGB. To which of the following is HRPW related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से NQTM का संबंध ILOH से है। उसी प्रकार, UOLG का संबंध PJGB से है। उसी तर्क का अनुसरण करते हुए, HRPW का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NTGY",
+    "CMKR",
+    "LFTS",
+    "PDRT"
+   ],
+   "my_ans": "B",
+   "sol": "NQTM (-5, -5, -5, -5) = ILOH. UOLG (-5, -5, -5, -5) = PJGB. HRPW (-5, -5, -5, -5) = CMKR.",
+   "trick": "प्रत्येक अक्षर में -5 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "In the following triad, each group of letters is related to the subsequent one following a certain logic. Select, from the given options, the one which follows the same logic. SAID - AISD - DIAS; MODE - ODME - EDOM",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क के अनुसार अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन कीजिए जो समान तर्क का अनुसरण करता है। SAID - AISD - DIAS; MODE - ODME - EDOM",
+   "opts": [
+    "HOGS - OHGS - SOGH",
+    "MIND - MNID - DNIM",
+    "UGLY - GLUY - GLYU",
+    "TONG - ONTG - GNOT"
+   ],
+   "my_ans": "D",
+   "sol": "SAID (1234) -> AISD (2134) -> DIAS (4321). MODE (1234) -> ODME (2134) -> EDOM (4321). TONG (1234) -> ONTG (2134) -> GNOT (4321).",
+   "trick": "अक्षरों का स्थान परिवर्तन: 1234 -> 2134 -> 4321",
+   "ans": "D"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "QQ 5 is related to VR -6 in a certain way. In the same way, LV 12 is related to QW 1. To which of the following is ES 16 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से QQ 5 का संबंध VR -6 से है। उसी प्रकार, LV 12 का संबंध QW 1 से है। समान तर्क का अनुसरण करते हुए, ES 16 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "JT 5",
+    "YT 4",
+    "RW 1",
+    "UG 3"
+   ],
+   "my_ans": "A",
+   "sol": "QQ(17,17) 5 -> VR(22,18) -6. (Q+5, Q+1) and (5-11=-6). LV(12,22) 12 -> QW(17,23) 1. (L+5, V+1) and (12-11=1). ES(5,19) 16 -> JT(10,20) 5. (E+5, S+1) and (16-11=5).",
+   "trick": "अक्षरों में +5, +1 और संख्या में -11 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "LHLP is related to TPTX in a certain way based on the English alphabetical order. In the same way, DZDH is related to LHLP. To which of the following is JFJN related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, LHLP का संबंध TPTX से है। उसी प्रकार, DZDH का संबंध LHLP से है। समान तर्क का अनुसरण करते हुए, JFJN का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "RNQV",
+    "RNRV",
+    "ROQW",
+    "RMQV"
+   ],
+   "my_ans": "B",
+   "sol": "LHLP (+8, +8, +8, +8) = TPTX. DZDH (+8, +8, +8, +8) = LHLP. JFJN (+8, +8, +8, +8) = RNRV.",
+   "trick": "प्रत्येक अक्षर में +8 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "ZACY is related to VWYU in a certain way based on the English alphabetical order. In the same way, QRTP is related to MNPL. To which of the following is CDFB related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित एक निश्चित तरीके से ZACY का संबंध VWYU से है। उसी प्रकार, QRTP का संबंध MNPL से है। उसी तर्क का अनुसरण करते हुए CDFB का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "YZAX",
+    "YAAI",
+    "YZBX",
+    "YYAX"
+   ],
+   "my_ans": "C",
+   "sol": "ZACY (-3, -3, -3, -4) = VWYU. QRTP (-4, -4, -4, -4) = MNPL. (Wait, logic is -3,-3,-3,-4). CDFB (-3, -3, -3, -4) = YZBX.",
+   "trick": "अक्षरों में -3, -3, -3, -4 का पैटर्न है।",
+   "ans": "C"
+  },
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. GFK : JAE LGP : OBJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। GFK : JAE LGP : OBJ",
+   "opts": [
+    "JKH : MGB",
+    "FNP : IIK",
+    "GIM : JDH",
+    "CLW : FGQ"
+   ],
+   "my_ans": "D",
+   "sol": "GFK (+3, -6, -6) = JAE. LGP (+3, -6, -6) = OBJ. CLW (+3, -6, -6) = FGQ.",
+   "trick": "अक्षरों में +3, -6, -6 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "WSPO is related to SPNN in a certain way based on the English alphabetical order. In the same way, TQNL is related to PNLK . To which of the following is MKHI related , following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से, WSPO का संबंध SPNN से है। उसी प्रकार, TQNL का संबंध PNLK से है। समान तर्क का अनुसरण करते हुए, MKHI का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "TYWD",
+    "IGEF",
+    "IGDE",
+    "IHFH"
+   ],
+   "my_ans": "D",
+   "sol": "WSPO (-4, -3, -1, -1) = SPNN. TQNL (-4, -3, -1, -1) = PNLK. MKHI (-4, -3, -1, -1) = IHFH.",
+   "trick": "अक्षरों में -4, -3, -1, -1 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "Select the triad which follows the same pattern as that followed by the two triads given below. Both triads follow the same pattern. HM - JR – LW UL - WQ - YV",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। HM - JR - LW UL - WQ - YV",
+   "opts": [
+    "CF- GK - HP",
+    "CF - EK - GP",
+    "GP - JK - CE",
+    "GP - EK - SV"
+   ],
+   "my_ans": "B",
+   "sol": "HM(+4)JR(+4)LW. UL(+5)WQ(+5)YV. CF(+2)EK(+2)GP. (Pattern: +4, +4 and +5, +5).",
+   "trick": "अक्षरों के बीच समान अंतर (जैसे +4, +4 या +5, +5) का पैटर्न है।",
+   "ans": "B"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "BGKM is related to HKMN in a certain way based on the English alphabetical order. In the same way, FHNP is related to LLPQ .To which of the following is NRTX related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से BGKM का संबंध HKMN से है। उसी प्रकार, FHNP का संबंध LLPQ से है। समान तर्क का अनुसरण करते हुए, NRTX का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "TVVY",
+    "SWYC",
+    "GFLN",
+    "TXZD"
+   ],
+   "my_ans": "A",
+   "sol": "BGKM (+6, +4, +2, +3) = HKMN. FHNP (+6, +4, +2, +1) - wait, logic is complex. Let's check: NRTX (+6, +4, +2, +1) = TVVY.",
+   "trick": "अक्षरों में +6, +4, +2, +1 का पैटर्न है।",
+   "ans": "A"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "Select the pair that follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. UQL : QMH CAT : YWP",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करते हैं। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। UQL : QMH CAT : YWP",
+   "opts": [
+    "LJH : NLJ",
+    "UTW : RQT",
+    "NOP : OPQ",
+    "ZBM : VXI"
+   ],
+   "my_ans": "D",
+   "sol": "UQL (-4, -4, -4) = QMH. CAT (-4, -4, -4) = YWP. ZBM (-4, -4, -4) = VXI.",
+   "trick": "प्रत्येक अक्षर में -4 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "WT 16 is related to XW -1 in a certain way. In the same way, DE 9 is related to EH -8. To which of the following is NK 19 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से WT 16 का संबंध XW -1 से है। उसी प्रकार, DE 9 का संबंध EH -8 से है। समान तर्क का अनुसरण करते हुए, NK 19 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NJ 7",
+    "TY 5",
+    "ON 2",
+    "UY 1"
+   ],
+   "my_ans": "C",
+   "sol": "WT(23,20) 16 -> XW(24,23) -1. (W+1, T+3) and (16-17=-1). DE(4,5) 9 -> EH(5,8) -8. (D+1, E+3) and (9-17=-8). NK(14,11) 19 -> ON(15,14) 2. (N+1, K+3) and (19-17=2).",
+   "trick": "अक्षरों में +1, +3 और संख्या में -17 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "In the following triad, each group of letters is related to the subsequent one following a certain logic. Select, from the given options, the one which follows the same logic. DENY - DYNE – YNED HUGE - HEGU – EGUH",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क के अनुसार अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन कीजिए जो समान तर्क का अनुसरण करता है। DENY - DYNE - YNED HUGE - HEGU - EGUH",
+   "opts": [
+    "LOST - LTSO - TSOL",
+    "GROW - GRWO - ROWG",
+    "TURN - TRUN - NRUT",
+    "CLOT - LCOT - TLOC"
+   ],
+   "my_ans": "A",
+   "sol": "DENY (1234) -> DYNE (1324) -> YNED (4321). HUGE (1234) -> HEGU (1324) -> EGUH (4321). LOST (1234) -> LTSO (1324) -> TSOL (4321).",
+   "trick": "अक्षरों का स्थान परिवर्तन: 1234 -> 1324 -> 4321",
+   "ans": "A"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "JK 9 is related to MJ -7 in a certain way. In the same way, PQ 4 is related to SP -12. To which of the following is QR 13 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से JK 9 का संबंध MJ -7 से है। उसी प्रकार, PQ 4 का संबंध SP -12 से है। समान तर्क का अनुसरण करते हुए, QR 13 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "YT -1",
+    "TM -6",
+    "GH-4",
+    "TQ -3"
+   ],
+   "my_ans": "D",
+   "sol": "JK(10,11) 9 -> MJ(13,10) -7. (J+3, K-1) and (9-16=-7). PQ(16,17) 4 -> SP(19,16) -12. (P+3, Q-1) and (4-16=-12). QR(17,18) 13 -> TQ(20,17) -3. (Q+3, R-1) and (13-16=-3).",
+   "trick": "अक्षरों में +3, -1 और संख्या में -16 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "In the following triad, each group of letters is related to the subsequent one following a certain logic. Select, from the given options, the one which follows the same logic. WORD - RWOD - DROW JAMS - MJAS - SMAJ",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क के अनुसार अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन कीजिए जो समान तर्क का अनुसरण करता है। WORD - RWOD - DROW JAMS - MJAS - SMAJ",
+   "opts": [
+    "AGES - AEGS - SEGA",
+    "YEAR - AYER - RAEY",
+    "VAST - SVAT - ASTV",
+    "POLE - OPLE - EOLP"
+   ],
+   "my_ans": "B",
+   "sol": "WORD (1234) -> RWOD (2134) -> DROW (4321). JAMS (1234) -> MJAS (2134) -> SMAJ (4321). YEAR (1234) -> AYER (2134) -> RAEY (4321).",
+   "trick": "अक्षरों का स्थान परिवर्तन: 1234 -> 2134 -> 4321",
+   "ans": "B"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "KR 19 is related to NM 6 in a certain way. In the same way, MV 11 is related to PQ -2. To which of the following is CS 7 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से KR 19 का संबंध NM 6 से है। उसी प्रकार, MV 11 का संबंध PQ -2 से है। समान तर्क के आधार पर, CS 7 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "KL 7",
+    "HJ -9",
+    "GH 7",
+    "FN -6"
+   ],
+   "my_ans": "D",
+   "sol": "KR(11,18) 19 -> NM(14,13) 6. (K+3, R-5) and (19-13=6). MV(13,22) 11 -> PQ(16,17) -2. (M+3, V-5) and (11-13=-2). CS(3,19) 7 -> FN(6,14) -6. (C+3, S-5) and (7-13=-6).",
+   "trick": "अक्षरों में +3, -5 और संख्या में -13 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "IP 18 is related to KL 4 in a certain way. In the same way, KL 16 is related to MH 2. To which of the following is AT 9 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से IP 18 का संबंध KL 4 से है। उसी प्रकार, KL 16 का संबंध MH 2 से है। समान तर्क का अनुसरण करते हुए, AT 9 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "CP -5",
+    "TR -1",
+    "JO -6",
+    "BK -9"
+   ],
+   "my_ans": "A",
+   "sol": "IP(9,16) 18 -> KL(11,12) 4. (I+2, P-4) and (18-14=4). KL(11,12) 16 -> MH(13,8) 2. (K+2, L-4) and (16-14=2). AT(1,20) 9 -> CP(3,16) -5. (A+2, T-4) and (9-14=-5).",
+   "trick": "अक्षरों में +2, -4 और संख्या में -14 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as that followed by the two sets of triads given below. Both triads follow the same pattern. BATH –HBAT –THBA TOYS –STOY -YSTO",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। BATH –HBAT –THBA TOYS –STOY -YSTO",
+   "opts": [
+    "TOMB -OMTB -MTOB",
+    "ABLE-EABL-LEAB",
+    "LOVE- OVEL -VELO",
+    "CART - ACTR - CTAR"
+   ],
+   "my_ans": "B",
+   "sol": "BATH (1234) -> HBAT (2134) -> THBA (4321). TOYS (1234) -> STOY (2134) -> YSTO (4321). ABLE (1234) -> EABL (2134) -> LEAB (4321).",
+   "trick": "अक्षरों का स्थान परिवर्तन: 1234 -> 2134 -> 4321",
+   "ans": "B"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "BEGH is related to HKMN in a certain way based on the English alphabetical order. In the same way, FIKM is related to LOQS. To which of the following is LNPS related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से BEGH का संबंध HKMN से है। उसी प्रकार, FIKM का संबंध LOQS से है। समान तर्क का अनुसरण करते हुए, LNPS का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "MOQT",
+    "RTVY",
+    "QSUX",
+    "KMOR"
+   ],
+   "my_ans": "B",
+   "sol": "BEGH (+6, +6, +6, +6) = HKMN. FIKM (+6, +6, +6, +6) = LOQS. LNPS (+6, +6, +6, +6) = RTVY.",
+   "trick": "प्रत्येक अक्षर में +6 का अंतर है।",
+   "ans": "B"
+  }
+ ]
+}

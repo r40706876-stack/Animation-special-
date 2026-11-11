@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Digit Manipulation",
+  "hi": "अंक परिवर्तन",
+  "total": 58,
+  "gl": 18,
+  "ug": 40
+ },
+ "source_pages": "209-211",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 5267341, which of the following digits will be second from the left end in the new number thus formed?",
+   "hi": "यदि संख्या 5267341 के प्रत्येक विषम अंक में 1 जोड़ा जाए तथा प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी नई संख्या में बाएं छोर से दूसरा अंक निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "0",
+    "2",
+    "4",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "5(odd)+1=6, 2(even)-2=0, 6-2=4, 7+1=8, 3+1=4, 4-2=2, 1+1=2. New number: 6048422. Second digit is 0.",
+   "trick": "विषम में +1 और सम में -2 करें, फिर बाएं से दूसरा अंक देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "If 3 is added to each even digit and 2 is subtracted from each odd digit in the number 5723946, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 5723946 के प्रत्येक सम अंक में 3 जोड़ा दिया जाए और प्रत्येक विषम अंक से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार दिखाई देंगे?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "C",
+   "sol": "5-2=3, 7-2=5, 2+3=5, 3-2=1, 9-2=7, 4+3=7, 6+3=9. New number: 3551779. Digits 5 and 7 appear twice.",
+   "trick": "अंकों को बदलकर नई संख्या लिखें और पुनरावृत्ति (repetition) की जाँच करें।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "If (5, 5) are the coordinates of the geometric centre of a triangle whose vertices are (9, 5), (4 ,p) and (q ,4), then find the values for p and q, respectively.",
+   "hi": "यदि (5, 5) एक त्रिभुज के ज्यामितीय केंद्र के निर्देशांक हैं जिसके शीर्ष (9, 5), (4, p) और (q, 4) हैं, तो क्रमशः p और q के मान ज्ञात कीजिए।",
+   "opts": [
+    "2 , 6",
+    "3 , 4",
+    "4 , 3",
+    "6 , 2"
+   ],
+   "my_ans": "D",
+   "sol": "केंद्रक (x,y) = ((x1+x2+x3)/3, (y1+y2+y3)/3).<br>5 = (9+4+q)/3 => 15 = 13+q => q=2.<br>5 = (5+p+4)/3 => 15 = 9+p => p=6.",
+   "trick": "केंद्रक का सूत्र: x = (x1+x2+x3)/3 और y = (y1+y2+y3)/3 का प्रयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 8134576, which of the following digits will be second from the left in the new number thus formed?",
+   "hi": "यदि संख्या 8134576 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में बाईं ओर से दूसरा अंक निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "2",
+    "8",
+    "4",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "8-2=6, 1+1=2, 3+1=4, 4-2=2, 5+1=6, 7+1=8, 6-2=4. New number: 6242684. Second digit is 2.",
+   "trick": "दी गई प्रक्रिया का पालन करें और नई संख्या का दूसरा अंक देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 8634157, which of the following digits will be second from the left?",
+   "hi": "यदि संख्या 8634157 के प्रत्येक विषम अंक में 1 जोड़ा जाए तथा प्रत्येक सम अंक में से 2 घटाया जाए, तो बाईं ओर से दूसरा अंक निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "4",
+    "2",
+    "1",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "8-2=6, 6-2=4, 3+1=4, 4-2=2, 1+1=2, 5+1=6, 7+1=8. New number: 6442268. Second digit is 4.",
+   "trick": "अंकों को बदलकर नई संख्या का दूसरा अंक पहचानें।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "If 2 is subtracted from each of the digits in the number 3975684 and the resultant digits are then re-arranged in ascending order from left to right, which digit will be fifth from the left end in the new number thus formed?",
+   "hi": "यदि संख्या 3975684 के प्रत्येक अंक में से 2 घटाया जाए तथा परिणामी अंकों को बाएं से दाएं आरोही क्रम में पुनर्व्यवस्थित किया जाए, तो इस प्रकार बनी नई संख्या में बाएं छोर से पांचवां अंक कौन-सा होगा?",
+   "opts": [
+    "3",
+    "5",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "3-2=1, 9-2=7, 7-2=5, 5-2=3, 6-2=4, 8-2=6, 4-2=2. Digits: 1, 7, 5, 3, 4, 6, 2. Ascending: 1, 2, 3, 4, 5, 6, 7. Fifth is 5.",
+   "trick": "पहले 2 घटाएं, फिर अंकों को बढ़ते क्रम में सजाकर पांचवां अंक देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is added to each even digit in the number 6134527, what will be the sum of the last and first digits of the new number thus formed?",
+   "hi": "यदि संख्या 6134527 के प्रत्येक विषम अंक में 1 जोड़ा जाए और प्रत्येक सम अंक में 2 जोड़ा जाए, तो इस प्रकार बनी नई संख्या के अंतिम और पहले अंकों का योग कितना होगा?",
+   "opts": [
+    "16",
+    "12",
+    "14",
+    "18"
+   ],
+   "my_ans": "A",
+   "sol": "6+2=8, 1+1=2, 3+1=4, 4+2=6, 5+1=6, 2+2=4, 7+1=8. New: 8246648. First=8, Last=8. Sum=16.",
+   "trick": "नियम के अनुसार पहले और अंतिम अंक को बदलकर उनका योग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 8371456, what will be the sum of the digits that are second from the left and second from the right in the new number thus formed?",
+   "hi": "यदि संख्या 8371456 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में बाईं ओर से दूसरे अंक और दाईं ओर से दूसरे अंक का योग कितना होगा?",
+   "opts": [
+    "11",
+    "9",
+    "10",
+    "8"
+   ],
+   "my_ans": "C",
+   "sol": "8-2=6, 3+1=4, 7+1=8, 1+1=2, 4-2=2, 5+1=6, 6-2=4. New: 6482264. 2nd from left=4, 2nd from right=6. Sum=10.",
+   "trick": "नई संख्या बनाकर वांछित स्थानों के अंकों का योग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 8674153, what will be the difference between the highest and lowest digits in the number thus formed?",
+   "hi": "यदि संख्या 8674153 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक में से 2 घटा दिया जाए, तो इस प्रकार बनी संख्या में सबसे बड़े और सबसे छोटे अंकों का अंतर कितना होगा?",
+   "opts": [
+    "5",
+    "4",
+    "7",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "8-2=6, 6-2=4, 7+1=8, 4-2=2, 1+1=2, 5+1=6, 3+1=4. New: 6482264. Max=8, Min=2. Diff=6.",
+   "trick": "नई संख्या के सबसे बड़े और सबसे छोटे अंक का अंतर निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 5714623, what will be the sum of the digits that are second from the left and second from the right?",
+   "hi": "यदि संख्या 5714623 के प्रत्येक विषम अंक में 1 जोड़ा जाए और प्रत्येक सम अंक में से 2 घटाया जाए, तो बाईं ओर से दूसरे और दाईं ओर से दूसरे अंकों का योग क्या होगा?",
+   "opts": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "my_ans": "C",
+   "sol": "5+1=6, 7+1=8, 1+1=2, 4-2=2, 6-2=4, 2-2=0, 3+1=4. New: 6822404. 2nd from left=8, 2nd from right=0. Sum=8.",
+   "trick": "नई संख्या के निर्दिष्ट स्थानों के अंकों का योग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 1 is subtracted from each even digit in the number 48572613, what will be the product of the greatest and smallest digit in the new number thus formed?",
+   "hi": "यदि संख्या 48572613 के प्रत्येक विषम अंक में 1 जोड़ा जाता है और प्रत्येक सम अंक में से 1 घटाया जाता है, तो इस प्रकार बनी नई संख्या में सबसे बड़े और सबसे छोटे अंक का गुणनफल कितना होगा?",
+   "opts": [
+    "0",
+    "9",
+    "18",
+    "8"
+   ],
+   "my_ans": "D",
+   "sol": "4-1=3, 8-1=7, 5+1=6, 7+1=8, 2-1=1, 6-1=5, 1+1=2, 3+1=4. New: 37681524. Max=8, Min=1. Product=8.",
+   "trick": "नई संख्या के सबसे बड़े और सबसे छोटे अंक का गुणा करें।",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 1 is subtracted from each even digit in the number 53764821, what will be the product of the greatest and smallest digit in the new number thus formed?",
+   "hi": "यदि संख्या 53764821 के प्रत्येक विषम अंक में 1 जोड़ा जाता है और प्रत्येक सम अंक में से 1 घटाया जाता है, तो इस प्रकार बनी नई संख्या में सबसे बड़े और सबसे छोटे अंक का गुणनफल कितना होगा?",
+   "opts": [
+    "0",
+    "16",
+    "18",
+    "8"
+   ],
+   "my_ans": "D",
+   "sol": "5+1=6, 3+1=4, 7+1=8, 6-1=5, 4-1=3, 8-1=7, 2-1=1, 1+1=2. New: 64853712. Max=8, Min=1. Product=8.",
+   "trick": "नई संख्या के सबसे बड़े और सबसे छोटे अंक का गुणा करें।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 4528173, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 4528173 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार दिखाई देंगे?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "4-2=2, 5+1=6, 2-2=0, 8-2=6, 1+1=2, 7+1=8, 3+1=4. New: 2606284. Digits 2 and 6 appear twice.",
+   "trick": "नई संख्या में अंकों की पुनरावृत्ति (repetition) की गणना करें।",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 6587134, which of the following digits will be second from the left end in the new number thus formed?",
+   "hi": "यदि संख्या 6587134 में, प्रत्येक विषम अंक में 1 जोड़ा जाए और प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार प्राप्त होने वाली नई संख्या में निम्नलिखित में से कौन-सा अंक बाएं छोर से दूसरे स्थान पर होगा?",
+   "opts": [
+    "8",
+    "4",
+    "5",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "6-2=4, 5+1=6, 8-2=6, 7+1=8, 1+1=2, 3+1=4, 4-2=2. New: 4668242. Second digit is 6.",
+   "trick": "अंकों को बदलकर नई संख्या का दूसरा अंक देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 8263451, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 8263451 में प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक में से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "8-2=6, 2-2=0, 6-2=4, 3+1=4, 4-2=2, 5+1=6, 1+1=2. New: 6044262. Digits 6, 4, 2 appear twice.",
+   "trick": "नई संख्या में पुनरावृत्ति वाले अंकों की संख्या गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 7843156, which of the following digits will be fourth from the left in the new number thus formed?",
+   "hi": "यदि संख्या 7843156 के प्रत्येक विषम अंक में 1 जोड़ा जाए तथा प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी नई संख्या में बाईं ओर से चौथा अंक निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "4",
+    "7",
+    "5",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "7+1=8, 8-2=6, 4-2=2, 3+1=4, 1+1=2, 5+1=6, 6-2=4. New: 8624264. Fourth digit is 4.",
+   "trick": "नई संख्या का चौथा अंक पहचानें।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 1 is subtracted from each even digit in the number 21673458, what will be the product of the greatest and smallest digit in the new number thus formed?",
+   "hi": "यदि संख्या 21673458 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक में से 1 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में सबसे बड़े और सबसे छोटे अंक का गुणनफल क्या होगा?",
+   "opts": [
+    "16",
+    "0",
+    "8",
+    "9"
+   ],
+   "my_ans": "C",
+   "sol": "2-1=1, 1+1=2, 6-1=5, 7+1=8, 3+1=4, 4-1=3, 5+1=6, 8-1=7. New: 12584367. Max=8, Min=1. Product=8.",
+   "trick": "नई संख्या के सबसे बड़े और सबसे छोटे अंक का गुणा करें।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 4813576, what will be the difference between the highest and the lowest digits in the number thus formed?",
+   "hi": "यदि संख्या 4813576 के प्रत्येक विषम अंक में 1 जोड़ा जाए तथा प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी संख्या में सबसे बड़े और सबसे छोटे अंकों के बीच अंतर कितना होगा?",
+   "opts": [
+    "5",
+    "8",
+    "7",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "4-2=2, 8-2=6, 1+1=2, 3+1=4, 5+1=6, 7+1=8, 6-2=4. New: 2624684. Max=8, Min=2. Diff=6.",
+   "trick": "नई संख्या के सबसे बड़े और सबसे छोटे अंक का अंतर निकालें।",
+   "ans": "D"
+  }
+ ]
+}

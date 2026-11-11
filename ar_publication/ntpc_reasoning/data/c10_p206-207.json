@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Dictionary Order",
+  "hi": "शब्दकोश क्रम",
+  "total": 41,
+  "gl": 0,
+  "ug": 41
+ },
+ "source_pages": "206-207",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "Select the option that represents the correct order of the given words as they would appear in an English dictionary. 1. Bright 2. Bring 3. Bread 4. Break 5. Brain",
+   "hi": "उस विकल्प का चयन कीजिए जो दिए गए शब्दों के उस सही क्रम को निरूपित करता है, जिस प्रकार वे अंग्रेजी शब्दकोश में दिखाई देंगे। 1. Bright 2. Bring 3. Bread 4. Break 5. Brain",
+   "opts": [
+    "5, 3, 1, 2, 4",
+    "2, 5, 1, 4, 3",
+    "1, 5, 4, 2, 3",
+    "5, 3, 4, 1, 2"
+   ],
+   "my_ans": "D",
+   "sol": "शब्दकोश क्रम: 5. Brain, 3. Bread, 4. Break, 1. Bright, 2. Bring.",
+   "trick": "शब्दों के अक्षरों की तुलना वर्णमाला क्रम (A-Z) के अनुसार करें।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "The position(s) of how many letters will remain unchanged if each letter in the word DEPARTS is arranged in the English alphabetical order?",
+   "hi": "यदि DEPARTS शब्द के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाए तो कितने अक्षरों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "2",
+    "0",
+    "3",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "DEPARTS (मूल) -> ADEPRST (वर्णमाला क्रम). केवल 'R' अपने स्थान पर है।",
+   "trick": "शब्द के अक्षरों को वर्णमाला क्रम में लिखकर मूल शब्द से मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Each letter in the word KNIFERS is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is third from the left and the one which is third from the right in the new letter cluster thus formed?",
+   "hi": "शब्द KNIFERS के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से तीसरे अक्षर और दाईं ओर से तीसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "3",
+    "5",
+    "7",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "KNIFERS -> EFIKNRS. बाएँ से तीसरा 'I', दाएँ से तीसरा 'N'. I और N के बीच (J, K, L, M) 4 अक्षर हैं।",
+   "trick": "वर्णमाला क्रम में व्यवस्थित कर वांछित अक्षरों के बीच की संख्या गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Each vowel in the word WONDERLANDS is changed to the letter immediately following it in the English alphabetical order AND each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will appear exactly twice in the group of letters thus formed?",
+   "hi": "शब्द WONDERLANDS के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षर-समूह में निम्नलिखित में से कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "R",
+    "M",
+    "Q",
+    "F"
+   ],
+   "my_ans": "B",
+   "sol": "WONDERLANDS -> VPMCDQKMCMR. यहाँ M दो बार आता है।",
+   "trick": "स्वर (Vowel) +1, व्यंजन (Consonant) -1 करके नया शब्द लिखें।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "Each vowel in the word CURRENT is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be fourth from the left in the new group of letters thus formed?",
+   "hi": "शब्द CURRENT के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से चौथा अक्षर निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "R",
+    "Q",
+    "S",
+    "P"
+   ],
+   "my_ans": "B",
+   "sol": "CURRENT -> BVSQDSM. चौथा अक्षर Q है।",
+   "trick": "स्वर (Vowel) +1, व्यंजन (Consonant) -1 करके नया शब्द लिखें।",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "Each vowel in the word CONTACT is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be first from the right in the new group of letters thus formed?",
+   "hi": "शब्द CONTACT के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले आने वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के नए समूह में दाएं से पहला अक्षर निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "R",
+    "U",
+    "T",
+    "S"
+   ],
+   "my_ans": "D",
+   "sol": "CONTACT -> BPNZBS. दाएँ से पहला अक्षर S है।",
+   "trick": "स्वर (Vowel) +1, व्यंजन (Consonant) -1 करके नया शब्द लिखें।",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "Each vowel in the word ANTIQUE is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be second from the left in the new group of letters thus formed?",
+   "hi": "शब्द ANTIQUE के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के नए समूह में निम्नलिखित में से कौन-सा अक्षर बाईं ओर से दूसरे स्थान पर होगा?",
+   "opts": [
+    "S",
+    "J",
+    "P",
+    "M"
+   ],
+   "my_ans": "D",
+   "sol": "ANTIQUE -> ZOUJRVF. बाईं ओर से दूसरा अक्षर M है।",
+   "trick": "स्वर (Vowel) +1, व्यंजन (Consonant) -1 करके नया शब्द लिखें।",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "Each letter in the word HARMFUL is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is fourth from the left and the one which is second from the right in the new letter cluster thus formed?",
+   "hi": "शब्द HARMFUL के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से चौथे अक्षर और दाईं ओर से दूसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "6",
+    "5",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "HARMFUL -> AFHLMRU. बाएँ से चौथा L, दाएँ से दूसरा R. L और R के बीच (M, N, O, P, Q) 5 अक्षर हैं।",
+   "trick": "वर्णमाला क्रम में व्यवस्थित कर वांछित अक्षरों के बीच की संख्या गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "Each letter in the word PREDIAL is changed to the letter immediately following it in the English alphabetical order and then all the letters thus obtained are arranged in the English alphabetical order. Which of the following letters will be fourth from the right in the new group of letters thus formed?",
+   "hi": "शब्द PREDIAL के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है, और फिर इस प्रकार प्राप्त सभी अक्षरों को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने अक्षरों के नए समूह में, निम्नलिखित में से कौन-सा अक्षर दाईं ओर से चौथे स्थान पर होगा?",
+   "opts": [
+    "E",
+    "M",
+    "F",
+    "J"
+   ],
+   "my_ans": "D",
+   "sol": "PREDIAL -> QSF E JBM. वर्णमाला क्रम: B E F J M Q S. दाएँ से चौथा J है।",
+   "trick": "पहले +1 करें, फिर वर्णमाला क्रम में व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "Each letter in the word COMPLEX is changed to the letter immediately preceding it in the English alphabetical order and then all the letters thus formed are arranged in alphabetical order. Which of the following letters will be fourth from the right in the new group of letters thus formed?",
+   "hi": "शब्द COMPLEX के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है और इस तरह बने सभी अक्षरों को वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में दाईं ओर से चौथा अक्षर निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "K",
+    "L",
+    "N",
+    "D"
+   ],
+   "my_ans": "B",
+   "sol": "COMPLEX -> BNLOKDW. वर्णमाला क्रम: B D K L N O W. दाएँ से चौथा L है।",
+   "trick": "पहले -1 करें, फिर वर्णमाला क्रम में व्यवस्थित करें।",
+   "ans": "B"
+  }
+ ]
+}

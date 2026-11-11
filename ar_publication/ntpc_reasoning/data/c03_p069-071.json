@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Odd One Out (Classification)",
+  "hi": "विषम को चुनें (वर्गीकरण)",
+  "total": 145,
+  "gl": 48,
+  "ug": 97
+ },
+ "source_pages": "69-71",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "SOQ",
+    "QMO",
+    "MIL",
+    "OKM"
+   ],
+   "my_ans": "C",
+   "sol": "SOQ: 19-15-17 (+2, -4), QMO: 17-13-15 (+2, -4), OKM: 15-11-13 (+2, -4). MIL: 13-9-12 (+3, -4).",
+   "trick": "अक्षरों के बीच का अंतर देखें, MIL में पैटर्न अलग है।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "वर्णानुक्रम पर आधारित, निम्नलिखित चार में से तीन किसी निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा एक, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "XUR",
+    "EVY",
+    "LIF",
+    "OLI"
+   ],
+   "my_ans": "B",
+   "sol": "XUR: 24-21-18 (-3, -3), LIF: 12-9-6 (-3, -3), OLI: 15-12-9 (-3, -3). EVY: 5-22-25 (+17, +3).",
+   "trick": "अक्षरों के बीच -3 का अंतर है, EVY में नहीं है।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से समान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "BD–FH",
+    "JL–MO",
+    "MO–PR",
+    "GI–JL"
+   ],
+   "my_ans": "A",
+   "sol": "JL-MO: 10-12 to 13-15 (+2, +2), MO-PR: 13-15 to 16-18 (+3, +3), GI-JL: 7-9 to 10-12 (+3, +3). BD-FH: 2-4 to 6-8 (+4, +4).",
+   "trick": "अक्षरों के बीच का अंतर देखें, BD-FH में +4 है।",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से समान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "QR−SW",
+    "EF−HI",
+    "BC−EF",
+    "TU−WX"
+   ],
+   "my_ans": "A",
+   "sol": "EF-HI: 5-6 to 8-9 (+3, +3), BC-EF: 2-3 to 5-6 (+3, +3), TU-WX: 20-21 to 23-24 (+3, +3). QR-SW: 17-18 to 19-23 (+2, +5).",
+   "trick": "अक्षरों के बीच का अंतर +3 है, QR-SW में नहीं है।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which one does not belong to that group?",
+   "hi": "वर्णानुक्रम पर आधारित, निम्नलिखित चार में से तीन किसी निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "UWR",
+    "SUP",
+    "KMG",
+    "EGB"
+   ],
+   "my_ans": "C",
+   "sol": "UWR: 21-23-18 (+2, -5), SUP: 19-21-16 (+2, -5), EGB: 5-7-2 (+2, -5). KMG: 11-13-7 (+2, -6).",
+   "trick": "अक्षरों के बीच का अंतर +2, -5 है, KMG में -6 है।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "DJF",
+    "JPL",
+    "HNJ",
+    "FLG"
+   ],
+   "my_ans": "D",
+   "sol": "DJF: 4-10-6 (+6, -4), JPL: 10-16-12 (+6, -4), HNJ: 8-14-10 (+6, -4). FLG: 6-12-7 (+6, -5).",
+   "trick": "अक्षरों के बीच का अंतर +6, -4 है, FLG में -5 है।",
+   "ans": "D"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "GI-JL",
+    "RT-VX",
+    "AC-DF",
+    "UW-XZ"
+   ],
+   "my_ans": "B",
+   "sol": "GI-JL: 7-9 to 10-12 (+3, +3), AC-DF: 1-3 to 4-6 (+3, +3), UW-XZ: 21-23 to 24-26 (+3, +3). RT-VX: 18-20 to 22-24 (+4, +4).",
+   "trick": "अक्षरों के बीच का अंतर +3 है, RT-VX में +4 है।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "JNT",
+    "DHM",
+    "WAF",
+    "LPU"
+   ],
+   "my_ans": "A",
+   "sol": "DHM: 4-8-13 (+4, +5), WAF: 23-1-6 (+4, +5), LPU: 12-16-21 (+4, +5). JNT: 10-14-20 (+4, +6).",
+   "trick": "अक्षरों के बीच का अंतर +4, +5 है, JNT में +6 है।",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "NP-QS",
+    "LN-OQ",
+    "BD-EH",
+    "JL-MO"
+   ],
+   "my_ans": "C",
+   "sol": "NP-QS: 14-16 to 17-19 (+2, +2), LN-OQ: 12-14 to 15-17 (+2, +2), JL-MO: 10-12 to 13-15 (+2, +2). BD-EH: 2-4 to 5-8 (+3, +3).",
+   "trick": "अक्षरों के बीच का अंतर +2 है, BD-EH में +3 है।",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "GKP",
+    "SWB",
+    "BFJ",
+    "KOT"
+   ],
+   "my_ans": "C",
+   "sol": "GKP: 7-11-16 (+4, +5), SWB: 19-23-2 (+4, +5), KOT: 11-15-20 (+4, +5). BFJ: 2-6-10 (+4, +4).",
+   "trick": "अक्षरों के बीच का अंतर +4, +5 है, BFJ में +4, +4 है।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "NQ−SV",
+    "JM−OR",
+    "PS−UX",
+    "LO−PV"
+   ],
+   "my_ans": "D",
+   "sol": "NQ-SV: 14-17 to 19-22 (+3, +3), JM-OR: 10-13 to 15-18 (+3, +3), PS-UX: 16-19 to 21-24 (+3, +3). LO-PV: 12-15 to 16-22 (+3, +6).",
+   "trick": "अक्षरों के बीच का अंतर +3 है, LO-PV में +6 है।",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित निम्नलिखित चार अक्षर-समूहों में से तीन अक्षर-समूह किसी निश्चित तरीके से समान हैं और इसलिए एक ग्रुप बनाते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "MRN",
+    "OTP",
+    "KPL",
+    "INK"
+   ],
+   "my_ans": "D",
+   "sol": "MRN: 13-18-14 (+5, -4), OTP: 15-20-16 (+5, -4), KPL: 11-16-12 (+5, -4). INK: 9-14-11 (+5, -3).",
+   "trick": "अक्षरों के बीच का अंतर +5, -4 है, INK में -3 है।",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम पर आधारित, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एक समान हैं तथा इस प्रकार एक ग्रुप का निर्माण करते हैं। निम्नलिखित में से कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "AD-BE",
+    "LO-PS",
+    "RU-SV",
+    "EH-FI"
+   ],
+   "my_ans": "B",
+   "sol": "AD-BE: 1-4 to 2-5 (+3, +3), RU-SV: 18-21 to 19-22 (+3, +3), EH-FI: 5-8 to 6-9 (+3, +3). LO-PS: 12-15 to 16-19 (+4, +4).",
+   "trick": "अक्षरों के बीच का अंतर +3 है, LO-PS में +4 है।",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four letter cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "KM-OQ",
+    "NP-RT",
+    "CE-HJ",
+    "IK-MO"
+   ],
+   "my_ans": "C",
+   "sol": "KM-OQ: 11-13 to 15-17 (+2, +2), NP-RT: 14-16 to 18-20 (+2, +2), IK-MO: 9-11 to 13-15 (+2, +2). CE-HJ: 3-5 to 8-10 (+5, +5).",
+   "trick": "अक्षरों के बीच का अंतर +2 है, CE-HJ में +5 है।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "ILN",
+    "HKN",
+    "JMP",
+    "QTW"
+   ],
+   "my_ans": "A",
+   "sol": "HKN: 8-11-14 (+3, +3), JMP: 10-13-16 (+3, +3), QTW: 17-20-23 (+3, +3). ILN: 9-12-14 (+3, +2).",
+   "trick": "अक्षरों के बीच का अंतर +3 है, ILN में +2 है।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "382-384",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All caps are helmets. All helmets are hats. No hat is a crown. Conclusions: (I) No cap is a crown (II) Some hats are caps.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी कैप, हेलमेट हैं। सभी हेलमेट, टोपी हैं। कोई भी टोपी, मुकुट नहीं है। निष्कर्ष: (I) कोई भी कैप, मुकुट नहीं है। (II) कुछ टोपी, कैप हैं।",
+   "opts": [
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "सभी कैप हेलमेट हैं और सभी हेलमेट टोपी हैं, अतः सभी कैप टोपी हैं। चूंकि कोई टोपी मुकुट नहीं है, इसलिए कोई कैप भी मुकुट नहीं होगा (I सही)। सभी हेलमेट टोपी हैं, तो कुछ टोपी हेलमेट हैं, और सभी कैप हेलमेट हैं, तो कुछ टोपी कैप भी हैं (II सही)।",
+   "trick": "सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: Some phones are irons. Some irons are vaults. Conclusions : No iron is a phone. : Some phones are vaults.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय करें, कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते है? कथन: कुछ फ़ोन, आयरन हैं। कुछ आयरन, तिजोरियाँ हैं। निष्कर्ष (I): कोई भी आयरन, फ़ोन नहीं है। निष्कर्ष (II): कुछ फ़ोन, तिजोरियाँ हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "कथन 'कुछ फ़ोन आयरन हैं' से निष्कर्ष (I) 'कोई आयरन फ़ोन नहीं है' गलत हो जाता है। फ़ोन और तिजोरी के बीच कोई सीधा संबंध नहीं दिया गया है, इसलिए निष्कर्ष (II) भी अनिश्चित है।",
+   "trick": "सकारात्मक कथनों से नकारात्मक निष्कर्ष सामान्यतः गलत होते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusions logically follow/s from the given statements. Statements: All cakes are biscuits. All pizzas are biscuits. Conclusion (I ) : Some cakes are pizzas Conclusion (II ) : Some biscuits are pizzas",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। आपको दिए गए कथनों को सत्य मानना होगा, भले ही ये सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होते हों। आपको तय करना होगा कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष, दिए गए कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी केक, बिस्कुट हैं। सभी पिज्जा, बिस्कुट हैं। निष्कर्ष (I) : कुछ केक, पिज्जा हैं। निष्कर्ष (II) : कुछ बिस्कुट, पिज्जा हैं।",
+   "opts": [
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "केक और पिज्जा के बीच कोई संबंध नहीं दिया गया है, इसलिए (I) गलत है। सभी पिज्जा बिस्कुट हैं, तो कुछ बिस्कुट निश्चित रूप से पिज्जा होंगे, इसलिए (II) सही है।",
+   "trick": "दो अलग समूहों के बीच कोई संबंध न हो तो उनके बीच 'कुछ' का संबंध भी अनिश्चित होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All ribbons are goats. Some crows are ribbons. Conclusion (I): Some crows are goats. Conclusion (II): All goats are crows.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते है? कथन: सभी रिबन, बकरियाँ हैं। कुछ कौवे, रिबन हैं। निष्कर्ष (I): कुछ कौवे, बकरियाँ हैं। निष्कर्ष (II): सभी बकरियाँ, कौवे हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "D",
+   "sol": "सभी रिबन बकरियाँ हैं और कुछ कौवे रिबन हैं, तो कुछ कौवे बकरियाँ भी होंगे (I सही)। सभी बकरियाँ कौवे हैं, यह कथन से सिद्ध नहीं होता (II गलत)।",
+   "trick": "यदि कुछ A, B हैं और सभी B, C हैं, तो कुछ A, C होंगे।",
+   "ans": "D"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statement: No Race Cars are Tractors. Some Tractors are Trains. Conclusion : I: No Race Cars are Trains. II: Some Race Cars are Trains.",
+   "hi": "दिए गए कथनों और निष्कर्षों का ध्यानपूर्वक अध्ययन कीजिए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कोई भी रेस कार, ट्रैक्टर नहीं है। कुछ ट्रैक्टर, ट्रेन हैं। निष्कर्ष 1: कोई भी रेस कार, ट्रेन नहीं है। निष्कर्ष 2: कुछ रेस कार, ट्रेन हैं।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "रेस कार और ट्रेन के बीच कोई निश्चित संबंध नहीं है, इसलिए दोनों निष्कर्ष अनिश्चित हैं।",
+   "trick": "जब दो समूहों के बीच कोई संबंध न दिया हो, तो उनके बीच 'कोई नहीं' या 'कुछ' दोनों निष्कर्ष गलत होते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All hats are carpets. No carpet is a locket. Conclusions: (I) No hat is a locket. (II) Some lockets are carpets.",
+   "hi": "नीचे दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, निर्णय कीजिए, कि दिए गए निष्कर्षों में से कौन-सा, कथनों का तार्किक रूप से अनुसरण करता है। कथन: सभी हेट, कार्पेट हैं। कोई कार्पेट, लॉकेट नहीं है। निष्कर्ष: (I) कोई हेट, लॉकेट नहीं है। (II) कुछ लॉकेट, कार्पेट हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "सभी हेट कार्पेट हैं और कोई कार्पेट लॉकेट नहीं है, तो कोई हेट भी लॉकेट नहीं होगा (I सही)। कोई कार्पेट लॉकेट नहीं है, तो कुछ लॉकेट कार्पेट होने की संभावना ही नहीं है (II गलत)।",
+   "trick": "यदि सभी A, B हैं और कोई B, C नहीं है, तो कोई A, C नहीं होगा।",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusions logically follow/s from the given statements. Statements: All routers are dongles. All routers are phones. Conclusion (I) : Some dongles are phones Conclusion (II) : All phones are routers",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह तय करना है कि दिए गए कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी राउटर, डोंगडल हैं। सभी राउटर, फोन हैं। निष्कर्ष (I): कुछ डोंगडल, फोन हैं। निष्कर्ष (II): सभी फोन, राउटर हैं।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं"
+   ],
+   "my_ans": "A",
+   "sol": "सभी राउटर डोंगडल हैं और सभी राउटर फोन हैं, तो कुछ डोंगडल फोन होंगे (I सही)। सभी फोन राउटर हैं, यह कथन से सिद्ध नहीं होता (II गलत)।",
+   "trick": "यदि सभी A, B हैं और सभी A, C हैं, तो कुछ B, C होंगे।",
+   "ans": "A"
+  }
+ ]
+}

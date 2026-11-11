@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Letter & Number Series",
+  "hi": "अक्षर एवं संख्या श्रृंखला",
+  "total": 89,
+  "gl": 34,
+  "ug": 55
+ },
+ "source_pages": "174-176",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "What should come in place of '?' in the given series based on the English alphabetical order? COV ERX GUZ IXB ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? COV ERX GUZ IXB ?",
+   "opts": [
+    "LBE",
+    "MAD",
+    "LAC",
+    "KAD"
+   ],
+   "my_ans": "D",
+   "sol": "प्रत्येक अक्षर में +2, +2, +2 का पैटर्न है। COV→ERX→GUZ→IXB→KAD.",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? TUW XYA BCE FGI ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? TUW XYA BCE FGI ?",
+   "opts": [
+    "JLM",
+    "JKM",
+    "KJL",
+    "JMK"
+   ],
+   "my_ans": "B",
+   "sol": "पहले अक्षर में +4, दूसरे में +4, तीसरे में +4 का पैटर्न है। TUW→XYA→BCE→FGI→JKM.",
+   "trick": "प्रत्येक स्थान के अक्षरों में +4 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? HKS GMP FOM EQJ ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? HKS GMP FOM EQJ ?",
+   "opts": [
+    "DSG",
+    "VTF",
+    "PVE",
+    "MTC"
+   ],
+   "my_ans": "A",
+   "sol": "पहले अक्षर में -1, दूसरे में -1, तीसरे में -1 का पैटर्न है। HKS→GMP→FOM→EQJ→DSG.",
+   "trick": "प्रत्येक अक्षर में -1 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "What should come in place of '?' in the given series based on the English alphabetical order? MAI PEN SIS VMX ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? MAI PEN SIS VMX ?",
+   "opts": [
+    "APD",
+    "ZRD",
+    "ZRC",
+    "YQC"
+   ],
+   "my_ans": "D",
+   "sol": "पहले अक्षर में +3, दूसरे में +4, तीसरे में +5 का पैटर्न है। MAI→PEN→SIS→VMX→YQC.",
+   "trick": "अक्षरों के बीच बढ़ता हुआ अंतर (+3, +4, +5) है।",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "What should come in place of '?' in the given series based on the English alphabetical order? URW GDI SPU EBG ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? URW GDI SPU EBG ?",
+   "opts": [
+    "LIN",
+    "PLR",
+    "QNS",
+    "NJP"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षरों में +15, +15, +15 का चक्र है। URW→GDI→SPU→EBG→QNS.",
+   "trick": "अक्षरों को 15 स्थान आगे बढ़ाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? TAV, SZU, RYT, QXS, ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? TAV SZU RYT QXS ?",
+   "opts": [
+    "NOT",
+    "OXS",
+    "PWR",
+    "NWT"
+   ],
+   "my_ans": "C",
+   "sol": "प्रत्येक अक्षर में -1, -1, -1 का पैटर्न है। TAV→SZU→RYT→QXS→PWR.",
+   "trick": "सभी अक्षरों में -1 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? PCO , QGL , RKI , SOF ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? PCO QGL RKI SOF ?",
+   "opts": [
+    "SKM",
+    "SDF",
+    "CAP",
+    "TSC"
+   ],
+   "my_ans": "D",
+   "sol": "पहले अक्षर में +1, दूसरे में -2, तीसरे में -3 का पैटर्न है। PCO→QGL→RKI→SOF→TSC.",
+   "trick": "अक्षरों के पैटर्न (+1, -2, -3) को देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "What should come in place of '?' in the given series based on the English alphabetical order? KFS , GBO , CXK , YTG ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? KFS GBO CXK YTG ?",
+   "opts": [
+    "VSF",
+    "VWD",
+    "WDG",
+    "UPC"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षरों में -4, -4, -4 का पैटर्न है। KFS→GBO→CXK→YTG→UPC.",
+   "trick": "प्रत्येक अक्षर में -4 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? GTXI BXUK WBRM RFOO ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? GTXI BXUK WBRM RFOO ?",
+   "opts": [
+    "NKKQ",
+    "MJLQ",
+    "NJKR",
+    "MKLR"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में -9, +16, -8, +4 का पैटर्न है। GTXI→BXUK→WBRM→RFOO→MJLQ.",
+   "trick": "अक्षरों के बीच का अंतर ध्यान से देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? UWS OQM IKG CEA ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? UWS OQM IKG CEA ?",
+   "opts": [
+    "WZT",
+    "WXZ",
+    "WXT",
+    "WYU"
+   ],
+   "my_ans": "D",
+   "sol": "प्रत्येक अक्षर में -6, -6, -6 का पैटर्न है। UWS→OQM→IKG→CEA→WYU.",
+   "trick": "अक्षरों में -6 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "What should come in place of '?' in the given series based on the English alphabetical order? GJE, ZCX, SVQ, LOJ , ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? GJE ZCX SVQ LOJ ?",
+   "opts": [
+    "EHC",
+    "BFU",
+    "LNJ",
+    "PRN"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षरों में -7, -7, -7 का पैटर्न है। GJE→ZCX→SVQ→LOJ→EHC.",
+   "trick": "अक्षरों में -7 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Which of the following options should come in place of the ‘?’ in the given series based on the English alphabetical order? G 5, M 12, S 19, Y 26 , ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में ‘?’ के स्थान पर निम्नलिखित में से कौन-सा विकल्प आना चाहिए? G 5, M 12, S 19, Y 26, ?",
+   "opts": [
+    "A 33",
+    "J 33",
+    "E 33",
+    "D 33"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर में +6 और संख्या में +7 का पैटर्न है। G+6=M, 5+7=12; Y+6=E, 26+7=33.",
+   "trick": "अक्षर में +6 और संख्या में +7 जोड़ें।",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Which of the following options should come in place of the ‘?’ in the given series based on the English alphabetical order? R 45, A 40, J 35, S 30 , ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित दी गई श्रृंखला में ‘?’ के स्थान पर निम्नलिखित में से कौन-सा विकल्प आना चाहिए? R 45, A 40, J 35, S 30, ?",
+   "opts": [
+    "B 25",
+    "V 25",
+    "T 25",
+    "X 25"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर में +9 और संख्या में -5 का पैटर्न है। R+9=A, 45-5=40; S+9=B, 30-5=25.",
+   "trick": "अक्षर में +9 और संख्या में -5 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? PRY WYF DFM KMT ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? PRY WYF DFM KMT ?",
+   "opts": [
+    "ERT",
+    "RTA",
+    "RAT",
+    "RTY"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में +7, +7, +7 का पैटर्न है। PRY→WYF→DFM→KMT→RTA.",
+   "trick": "अक्षरों में +7 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? ACE, HJL, OQS, VXZ , ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? ACE HJL OQS VXZ ?",
+   "opts": [
+    "CEG",
+    "CFF",
+    "CDG",
+    "CDF"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षरों में +7, +7, +7 का पैटर्न है। ACE→HJL→OQS→VXZ→CEG.",
+   "trick": "अक्षरों में +7 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "What should come in place of ? in the given series based on the English alphabetical order? NJI , HDC , BXW , VRQ ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में ? के स्थान पर क्या आना चाहिए? NJI HDC BXW VRQ ?",
+   "opts": [
+    "PMJ",
+    "PQS",
+    "PLK",
+    "PKJ"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षरों में -6, -6, -6 का पैटर्न है। NJI→HDC→BXW→VRQ→PLK.",
+   "trick": "अक्षरों में -6 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "What should come in place of the question mark (?) in the given series based on the English alphabetical order? BIRD FMVH JQZL NUDP ?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? BIRD FMVH JQZL NUDP ?",
+   "opts": [
+    "SZGS",
+    "RYHT",
+    "RZHS",
+    "SYGT"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में +4, +8, +12, +16 का पैटर्न है। BIRD→FMVH→JQZL→NUDP→RYHT.",
+   "trick": "अक्षरों के बीच बढ़ता अंतर (+4, +8, +12, +16) है।",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "What should come in place of ? in the given series based on the English alphabetical order? LNK NPM PRO RTQ ?",
+   "hi": "अंग्रेज़ी वर्णमाला क्रम पर आधारित दी गई श्रृंखला में, '?' के स्थान पर क्या आना चाहिए? LNK NPM PRO RTQ ?",
+   "opts": [
+    "TUW",
+    "TVS",
+    "TUR",
+    "TWR"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षरों में +2, +2, +2 का पैटर्न है। LNK→NPM→PRO→RTQ→TVS.",
+   "trick": "प्रत्येक अक्षर में +2 करें।",
+   "ans": "B"
+  }
+ ]
+}

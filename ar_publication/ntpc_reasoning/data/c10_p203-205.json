@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Dictionary Order",
+  "hi": "शब्दकोश क्रम",
+  "total": 41,
+  "gl": 0,
+  "ug": 41
+ },
+ "source_pages": "203-205",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "Each letter in the word MONKEYS is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is second from the left and the one which is fourth from the right in the new letter cluster thus formed?",
+   "hi": "शब्द MONKEYS के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से दूसरे अक्षर और दाईं ओर से चौथे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "5",
+    "1",
+    "4",
+    "2"
+   ],
+   "my_ans": "D",
+   "sol": "MONKEYS को वर्णमाला क्रम में व्यवस्थित करने पर: E, K, M, N, O, S, Y.<br>बाईं ओर से दूसरा अक्षर K है। दाईं ओर से चौथा अक्षर N है।<br>K और N के बीच L, M दो अक्षर हैं।",
+   "trick": "शब्द को वर्णमाला क्रम में लिखें और स्थान गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "Each vowel in the word 'SCRAMBLE' is changed to the second letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately following it in the English alphabetical order. Which letter will appear exactly twice in the group of the letters thus formed?",
+   "hi": "शब्द 'SCRAMBLE' में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले दूसरे अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के समूह में कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "M",
+    "C",
+    "S",
+    "N"
+   ],
+   "my_ans": "B",
+   "sol": "S+1=T, C+1=D, R+1=S, A+2=C, M+1=N, B+1=C, L+1=M, E+2=G.<br>नया समूह: T, D, S, C, N, C, M, G. यहाँ C दो बार आया है।",
+   "trick": "स्वर में +2 और व्यंजन में +1 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Each vowel in the word BACKLOG is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द BACKLOG के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में निम्नलिखित में से कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "K",
+    "P",
+    "J",
+    "B"
+   ],
+   "my_ans": "D",
+   "sol": "B-1=A, A+1=B, C-1=B, K-1=J, L-1=K, O+1=P, G-1=F.<br>नया समूह: A, B, B, J, K, P, F. यहाँ B दो बार आया है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "Each vowel in the word WORTHLESSLY is changed to the second letter following it in the English alphabetical order AND each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the group of letters thus formed?",
+   "hi": "शब्द WORTHLESSLY के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके बाद वाले दूसरे अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षर-समूह में कितने अक्षर ठीक दो बार आएंगे?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "Four<br>चार"
+   ],
+   "my_ans": "D",
+   "sol": "W-1=V, O+2=Q, R-1=Q, T-1=S, H-1=G, L-1=K, E+2=G, S-1=R, S-1=R, L-1=K, Y-1=X.<br>समूह: V, Q, Q, S, G, K, G, R, R, K, X. यहाँ Q, G, K, R दो-दो बार हैं (कुल 4)।",
+   "trick": "स्वर में +2 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "Select the option that represents the correct order of the given words as they would appear in an English dictionary. 1. Mistake 2. Mild 3. Mist 4. Migrate 5. Milk",
+   "hi": "उस विकल्प का चयन करें जो दिए गए शब्दों के उस सही क्रम को दर्शाता है, जिस क्रम में वे अंग्रेजी शब्दकोश में आते हैं। 1. Mistake 2. Mild 3. Mist 4. Migrate 5. Milk",
+   "opts": [
+    "5, 3, 1, 2, 4",
+    "4, 2, 1, 5, 3",
+    "2, 3, 5, 4, 1",
+    "4, 2, 5, 3, 1"
+   ],
+   "my_ans": "D",
+   "sol": "शब्दकोश क्रम: Migrate (4), Mild (2), Milk (5), Mist (3), Mistake (1).",
+   "trick": "वर्णमाला के अनुसार अक्षरों की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "Each vowel in the word WRENCHINGLY is changed to the letter immediately following it in the English alphabetical order AND each consonant is changed to the second letter preceding it in the English alphabetical order. How many letters will appear exactly twice in the group of letters thus formed?",
+   "hi": "शब्द WRENCHINGLY के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके पहले आने वाले दूसरे अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के समूह में कितने अक्षर ठीक दो बार आएंगे?",
+   "opts": [
+    "Four<br>चार",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "W-2=U, R-2=P, E+1=F, N-2=L, C-2=A, H-2=F, I+1=J, N-2=L, G-2=E, L-2=J, Y-2=W.<br>समूह: U, P, F, L, A, F, J, L, E, J, W. यहाँ F, L, J दो-दो बार हैं (कुल 3)।",
+   "trick": "स्वर में +1 और व्यंजन में -2 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "Each vowel in the word READING is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will appear exactly twice in the group of letters thus formed?",
+   "hi": "READING शब्द में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षर-समूह में नीचे दिए गए अक्षरों में से कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "F",
+    "M",
+    "C",
+    "Q"
+   ],
+   "my_ans": "A",
+   "sol": "R-1=Q, E+1=F, A+1=B, D-1=C, I+1=J, N-1=M, G-1=F.<br>समूह: Q, F, B, C, J, M, F. यहाँ F दो बार आया है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "UG",
+   "en": "Each letter in the word JUMBLED is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is fourth from the left and the one which is first from the right in the new letter cluster thus formed?",
+   "hi": "शब्द JUMBLED का प्रत्येक अक्षर अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाएं से चौथे अक्षर और दाएं से पहले अक्षर के बीच अंग्रेजी अक्षरमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "11",
+    "10",
+    "9",
+    "13"
+   ],
+   "my_ans": "B",
+   "sol": "JUMBLED को वर्णमाला क्रम में: B, D, E, J, L, M, U.<br>बाएं से चौथा अक्षर J है। दाएं से पहला अक्षर U है।<br>J(10) और U(21) के बीच: 21 - 10 - 1 = 10 अक्षर।",
+   "trick": "वर्णमाला क्रम में लिखकर स्थान का अंतर निकालें (n2 - n1 - 1)।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "The position(s) of how many letters will remain unchanged if each letter in the word SERVANT is arranged in the alphabetical order?",
+   "hi": "यदि SERVANT शब्द के प्रत्येक अक्षर को वर्णमाला क्रम में व्यवस्थित किया जाए तो कितने अक्षरों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "2",
+    "1",
+    "3",
+    "0"
+   ],
+   "my_ans": "B",
+   "sol": "SERVANT (मूल): S, E, R, V, A, N, T<br>वर्णमाला क्रम: A, E, N, R, S, T, V<br>केवल E का स्थान अपरिवर्तित है।",
+   "trick": "दोनों को लिखकर मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Each vowel in the word LIMEADE is changed to the letter immediately following it in the English alphabetical order, and each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द 'LIMEADE' के प्रत्येक स्वर को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है, और प्रत्येक व्यंजन को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में, कितने अक्षर ठीक दो बार दिखाई देंगे?",
+   "opts": [
+    "Zero<br>शून्य",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "B",
+   "sol": "L-1=K, I+1=J, M-1=L, E+1=F, A+1=B, D-1=C, E+1=F.<br>समूह: K, J, L, F, B, C, F. यहाँ F दो बार आया है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "Each letter in the word LANGUID is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is third from the left and the one which is third from the right in the new letter cluster thus formed?",
+   "hi": "शब्द LANGUID के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से तीसरे अक्षर और दाईं ओर से तीसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "2",
+    "5",
+    "6",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "LANGUID को वर्णमाला क्रम में: A, D, G, I, L, N, U.<br>बाएं से तीसरा अक्षर G है। दाएं से तीसरा अक्षर L है।<br>G(7) और L(12) के बीच: 12 - 7 - 1 = 4 अक्षर।",
+   "trick": "वर्णमाला क्रम में लिखकर स्थान का अंतर निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "Each letter in the word INJURED is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is third from the left and the one which is second from the right in the new letter cluster thus formed?",
+   "hi": "शब्द INJURED के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से तीसरे अक्षर और दाईं ओर से दूसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "11",
+    "9",
+    "8",
+    "7"
+   ],
+   "my_ans": "C",
+   "sol": "INJURED को वर्णमाला क्रम में: D, E, I, J, N, R, U.<br>बाएं से तीसरा अक्षर I है। दाएं से दूसरा अक्षर R है।<br>I(9) और R(18) के बीच: 18 - 9 - 1 = 8 अक्षर।",
+   "trick": "वर्णमाला क्रम में लिखकर स्थान का अंतर निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Each vowel in the word REFERTILIZES is changed to the second letter immediately following it in the English alphabetical order, and each consonant is changed to the second letter immediately preceding it in the English alphabetical order. Which of the following letters will appear exactly twice in the group of letters thus formed?",
+   "hi": "शब्द REFERTILIZES के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके बाद आने वाले ठीक दूसरे अक्षर से बदल दिया जाता और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके पहले आने वाले ठीक दूसरे अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के समूह में निम्नलिखित में से कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "G",
+    "X",
+    "R",
+    "K"
+   ],
+   "my_ans": "D",
+   "sol": "R-2=P, E+2=G, F-2=D, E+2=G, R-2=P, T-2=R, I+2=K, L-2=J, I+2=K, Z-2=X, E+2=G, S-2=Q.<br>समूह: P, G, D, G, P, R, K, J, K, X, G, Q. यहाँ G, P, K दो-दो बार हैं। विकल्प में K है।",
+   "trick": "स्वर में +2 और व्यंजन में -2 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "The position(s) of how many letters will remain unchanged if each of the letters in the word ORANGEY is arranged in the English alphabetical order?",
+   "hi": "यदि शब्द ORANGEY के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाए, तो कितने अक्षरों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "ORANGEY (मूल): O, R, A, N, G, E, Y<br>वर्णमाला क्रम: A, E, G, N, O, R, Y<br>यहाँ N और Y का स्थान अपरिवर्तित है।",
+   "trick": "दोनों को लिखकर मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Each vowel in the word PERBLAD is changed to the letter immediately following it in the English alphabetical order, and each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द PERBLAD के प्रत्येक स्वर को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है और प्रत्येक व्यंजन को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में कितने अक्षर ठीक दो बार दिखाई देंगे?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "Zero<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "P-1=O, E+1=F, R-1=Q, B-1=A, L-1=K, A+1=B, D-1=C.<br>समूह: O, F, Q, A, K, B, C. कोई भी अक्षर दो बार नहीं है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Each letter in the word LANGUID is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is second from the left and the one which is fourth from the right in the new letter cluster thus formed?",
+   "hi": "शब्द LANGUID के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर समूह में बाईं ओर से दूसरे अक्षर और दाईं ओर से चौथे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "4",
+    "3",
+    "5",
+    "7"
+   ],
+   "my_ans": "A",
+   "sol": "LANGUID को वर्णमाला क्रम में: A, D, G, I, L, N, U.<br>बाएं से दूसरा अक्षर D है। दाएं से चौथा अक्षर I है।<br>D(4) और I(9) के बीच: 9 - 4 - 1 = 4 अक्षर।",
+   "trick": "वर्णमाला क्रम में लिखकर स्थान का अंतर निकालें।",
+   "ans": "A"
+  }
+ ]
+}

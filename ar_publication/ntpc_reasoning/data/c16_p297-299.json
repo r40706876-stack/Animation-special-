@@ -1,0 +1,222 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Seating Arrangement",
+  "hi": "बैठक व्यवस्था",
+  "total": 165,
+  "gl": 82,
+  "ug": 83
+ },
+ "source_pages": "297-299",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "X, Y, Z, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor is numbered 6. S lives on floor number 5. X lives on a floor above S. Only U lives below Y. Z lives on an even numbered floor. How many people live below Z?",
+   "hi": "X, Y, Z, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। S क्रमांक 5 वाले तल पर रहता है। X, S के ऊपर किसी तल पर रहता है। Y के नीचे केवल U रहता है। Z किसी सम क्रमांक वाले तल पर रहता है। Z के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "तल 6: X, 5: S, 4: Z, 3: T, 2: Y, 1: U. Z तल 4 पर है, उसके नीचे 3 व्यक्ति (T, Y, U) हैं।",
+   "trick": "दी गई शर्तों को क्रमवार (6 से 1) व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Seven boxes, A, B, C, D, E, F and G, are kept one over the other but not necessarily in the same order. Only two boxes are kept between B and G. Only D is kept above E. No box is kept below G. A is kept at some place below F but at some place above C. How many boxes are kept above C?",
+   "hi": "सात बॉक्स, A, B, C, D, E, F और G को एक के ऊपर एक करके रखा गया है, लेकिन जरूरी नहीं कि वे इसी क्रम में रखे हों। B और G के बीच केवल दो बॉक्स रखे जाते हैं। केवल D को E के ऊपर रखा जाता है। G के नीचे कोई बॉक्स नहीं रखा जाता है। A को F के नीचे किसी स्थान पर लेकिन C के ऊपर किसी स्थान पर रखा जाता है। C के ऊपर कितने बॉक्स रखे गए हैं?",
+   "opts": [
+    "3",
+    "2",
+    "5",
+    "4"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (ऊपर से): F, A, C, B, D, E, G. C के ऊपर 5 बॉक्स (F, A, B, D, E) हैं।",
+   "trick": "G सबसे नीचे है, फिर B और G के बीच 2 बॉक्स हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "M, N, O, P, Q, R and S are sitting around a circular table facing the centre of the table. M sits fourth to the right of S. Only two people sit between P and Q when counted from the left of P. R sits third to the left of O. N is an immediate neighbour of O and Q. How many people between M and N when counted from the left of N?",
+   "hi": "M, N, O, P, Q, R और S एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। M, S के दाएँ चौथे स्थान पर बैठा है। P के बाएँ से गिनने पर, P और Q के बीच केवल दो व्यक्ति बैठे हैं। R, O के बाएँ तीसरे स्थान पर बैठा है। O और Q का निकटतम पड़ोसी N है। N के बाएँ से गिनने पर, M और N के बीच कितने व्यक्ति हैं?",
+   "opts": [
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक",
+    "Four<br>चार"
+   ],
+   "my_ans": "D",
+   "sol": "बैठने का क्रम: S, R, P, O, N, Q, M. N के बाएँ से M तक 4 व्यक्ति हैं।",
+   "trick": "केंद्र की ओर मुख होने पर बाएँ/दाएँ का ध्यान रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "X, Y, Z, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is number 2 and so on till the topmost floor is numbered 6. Only two people live between T and Y. Only S lives above U. Z lives on an even numbered floor. T lives on the lowermost floor. How many people live between X and T?",
+   "hi": "X, Y, Z, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। T और Y के बीच केवल दो व्यक्ति रहते हैं। U के ऊपर केवल S रहता है। Z किसी सम क्रमांक वाले तल पर रहता है। T सबसे निचले तल पर रहता है। X और T के बीच कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "तल 6: S, 5: U, 4: Z, 3: X, 2: Y, 1: T. X और T के बीच 1 व्यक्ति (Y) है।",
+   "trick": "T=1, Y=4, S=6, U=5, Z=2, X=3.",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Seven people F, G, H, I, U, V, and W are sitting around a circular table facing the centre of the table. G sits third to the right of U. Only three people sit between F and H when counted from the right of H. G sits to the immediate right of H. V sits to the immediate right of W. Who sits second to the right of I?",
+   "hi": "सात व्यक्ति F, G, H, I, U, V और W एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। G, U के दाएँ तीसरे स्थान पर बैठा है। H के दाएँ से गिनने पर, F और H के बीच केवल तीन व्यक्ति बैठे हैं। G, H के ठीक दाएँ पड़ोस में बैठा है। V, W के ठीक दाएँ पड़ोस में बैठा है। I के दाएँ से दूसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "W",
+    "U",
+    "F",
+    "G"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: U, W, V, I, H, G, F. I के दाएँ दूसरा G है।",
+   "trick": "केंद्र की ओर मुख होने पर दाएँ (Right) का अर्थ घड़ी की विपरीत दिशा है।",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Seven people F, G, H, I, V, W, and X are sitting around a circular table facing the centre of the table. H sits third to the left of F. I sits second to the left of V. Only F sits between G and I. W is not an immediate neighbour of H. How many people sit between X and I when counted from the right of X?",
+   "hi": "सात व्यक्ति F, G, H, I, V, W और X एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। H, F के बाएँ, तीसरे स्थान पर बैठा है। I, V के बाएँ, दूसरे स्थान पर बैठा है। G और I के बीच केवल F बैठा है। W, H का निकटतम पड़ोसी नहीं है। X के दाएँ से गिनने पर, X और I के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Zero<br>एक भी नहीं",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: F, G, I, H, V, X, W. X के दाएँ से I तक 2 व्यक्ति (W, F) हैं।",
+   "trick": "दी गई शर्तों को एक वृत्त में बिठाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Seven people F, G, H, I, V, W, and X are sitting around a circular table facing the centre of the table. G sits third to the left of H. V sits third to the left of I. F sits to the immediate right of I. F sits second to the left of G. X is not an immediate neighbour of V. Who sits fourth to the right of W?",
+   "hi": "सात व्यक्ति F, G, H, I, V, W और X एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। G, H के बाएँ से तीसरे स्थान पर बैठा है। V, I के बाएँ से तीसरे स्थान पर बैठा है। F, I के ठीक दाएँ पड़ोस में बैठा है। F, G के बाएँ से दूसरे स्थान पर बैठा है। X, V का निकटतम पड़ोसी नहीं है। W के दाएँ से चौथे स्थान पर कौन बैठा है?",
+   "opts": [
+    "V",
+    "X",
+    "G",
+    "F"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: H, F, I, G, W, V, X. W के दाएँ चौथा X है।",
+   "trick": "दाएँ से चौथा मतलब बाएँ से तीसरा।",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "P, Q, R, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor is numbered 6. T lives on an even numbered floor but not 6. The sum of the floors on which Q and T live is 7. P lives immediately above U. The sum of the floors on which T and R live is 3. How many people live below T?",
+   "hi": "P, Q, R, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। T किसी सम क्रमांक वाले तल पर रहता है, लेकिन क्रमांक 6 वाले तल पर नहीं। Q और T जिन तलों पर रहते हैं, उनके क्रमांकों का योग 7 है। P, U के ठीक ऊपर रहता है। T और R जिन तलों पर रहते हैं, उनके क्रमांकों का योग 3 है। T के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "4",
+    "2",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "T=2, R=1, Q=5. P, U के ऊपर है (P=4, U=3). S=6. T(2) के नीचे केवल 1 व्यक्ति (R) है।",
+   "trick": "दी गई समीकरणों (T+R=3, Q+T=7) को हल करें।",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Seven boxes M, A, R, K, E, T and S are kept one over the other but not necessarily in the same order. Only S is kept between E and T. Only K is kept below R. Only A is kept above E. How many boxes are kept between M and K?",
+   "hi": "सात डिब्बे M, A, R, K, E, T और S एक के ऊपर एक रखे हैं, लेकिन ज़रूरी नहीं कि इसी क्रम में रखे हों। E और T के बीच केवल S रखा है। R के नीचे केवल K रखा है। E के ऊपर केवल A रखा है। M और K के बीच कितने डिब्बे रखे हैं?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Zero<br>एक भी नहीं",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (ऊपर से): A, E, S, T, R, K, M. M और K के बीच 1 डिब्बा (कोई नहीं, M और K के बीच 0 है, लेकिन विकल्प 1 है, पुन: जाँचें: A, E, S, T, R, K, M. M और K के बीच 0 है, शायद क्रम अलग है। सही क्रम: A, E, S, T, M, R, K. M और K के बीच 1 डिब्बा (R) है।",
+   "trick": "दी गई शर्तों के अनुसार क्रम व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Seven people B, C, D, O, P, Q and R are sitting around a circular table facing the center of the table. P sits third to the left of Q. Only one person sits between Q and B when counted from the right of Q. Only two people sit between O and C when counted from the left of O. D is an immediate neighbor of O. Who sits third to the right of R?",
+   "hi": "सात व्यक्ति B, C, D, O, P, Q और R एक गोल मेज के परित: मेज के केंद्र की ओर अभिमुख होकर बैठे हैं। Q के बाईं ओर से तीसरे स्थान पर P बैठा है। Q के दाईं ओर से गणना करने पर, Q और B के बीच केवल एक व्यक्ति बैठा है। O के बाईं ओर से गणना करने पर, O और C के बीच केवल दो व्यक्ति बैठे हैं। D, O का निकटतम पड़ोसी है। R के दाईं ओर तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "P",
+    "O",
+    "D",
+    "C"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: Q, D, O, B, P, R, C. R के दाएँ तीसरा P है।",
+   "trick": "केंद्र की ओर मुख होने पर दाएँ (Right) का अर्थ घड़ी की विपरीत दिशा है।",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Seven people, K, L, M, N, P, Q and R, are sitting around a circular table facing the centre of the table but not necessarily in the same order. Only two people sit between R and N when counted from the left of N. L sits third to the left of Q. P sits to the immediate right of Q. P sits second to the left of R. M is not an immediate neighbour of L. Who sits third to the right of K?",
+   "hi": "सात व्यक्ति, K, L, M, N, P, Q और R, एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं, लेकिन जरूरी नहीं कि वे इसी क्रम में हों। N के बाएँ से गिनती करने पर R और N के बीच केवल दो व्यक्ति बैठे हैं। L, Q के बाएँ से तीसरे स्थान पर बैठा है। P, Q के ठीक दाएँ पड़ोस में बैठा है। P, R के बाएँ से दूसरे स्थान पर बैठा है। M, L का निकटतम पड़ोसी नहीं है। K के दाएँ से तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "Q",
+    "M",
+    "P",
+    "R"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: Q, P, N, L, K, R, M. K के दाएँ तीसरा P है।",
+   "trick": "दी गई शर्तों को एक वृत्त में बिठाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "X, Y, Z, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2, and so on till the topmost floor is numbered 6. X lives on an even numbered floor but not on floor number 4. Only two people live between X and T. S lives on an odd numbered floor but not on the lowermost floor. Only two people live between S and Y. Z lives immediately below S. How many people live between U and Z?",
+   "hi": "X, Y, Z, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। X किसी सम क्रमांक वाले तल पर रहता है, लेकिन क्रमांक 4 वाले तल पर नहीं। X और T के बीच केवल दो व्यक्ति रहते हैं। S किसी विषम क्रमांक वाले तल पर रहता है, लेकिन सबसे निचले तल पर नहीं। S और Y के बीच केवल दो व्यक्ति रहते हैं। Z, S के ठीक नीचे रहता है। U और Z के बीच कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "तल 6: X, 5: S, 4: Z, 3: T, 2: Y, 1: U. U(1) और Z(4) के बीच 2 व्यक्ति (Y, T) हैं।",
+   "trick": "X=6, S=5, Z=4, T=3, Y=2, U=1.",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "P, Q, R, S, T, U and V sit around a circular table facing the centre . Only two people sit between P and U when counted from the right of P. Only two people sit between U and V. Only three people sit between P and T. S sits to the immediate left of R. How many people sit between P and Q when counted from the right of Q?",
+   "hi": "P, Q, R, S, T, U और V एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। P के दाएँ से गिनती करने पर P और U के बीच केवल दो व्यक्ति बैठे हैं। U और V के बीच केवल दो व्यक्ति बैठे हैं। P और T के बीच केवल तीन व्यक्ति बैठे हैं। S, R के ठीक बाएँ पड़ोस में बैठा है। Q के दाएँ से गिनती करने पर P और Q के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: P, S, R, U, Q, T, V. Q के दाएँ से P तक 1 व्यक्ति (V) है।",
+   "trick": "केंद्र की ओर मुख होने पर दाएँ (Right) का अर्थ घड़ी की विपरीत दिशा है।",
+   "ans": "D"
+  }
+ ]
+}

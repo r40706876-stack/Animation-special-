@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Direction Sense",
+  "hi": "दिशा ज्ञान",
+  "total": 53,
+  "gl": 24,
+  "ug": 29
+ },
+ "source_pages": "272-274",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Mr. Yorly starts from Point A and drives 16 km towards South. He then takes a right turn, drives 14 km, turns right and drives 44 km. He then takes a right turn and drives 2 km, turns right drives 15 km. He then takes a left turn drives 21 km. He takes a final right turn, drives 13 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?(All turns are 90 degrees turns only unless specified.)",
+   "hi": "मि. योरली बिंदु A से ड्राइव करना प्रारंभ करता है और दक्षिण की ओर 16 km ड्राइव करता है। फिर वह दाएँ मुड़ता है और 14 km ड्राइव करता है, फिर दाएँ मुड़ता है और 44 km ड्राइव करता है। फिर वह दाएँ मुड़ता है और 2 km ड्राइव करता है, फिर दाएँ मुड़ता है और 15 km ड्राइव करता है। फिर वह बाएँ मुड़ता है और 21 km ड्राइव करता है। अंत में वह दाएँ मुड़ता है और 13 km ड्राइव करता है तथा बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए?(जब तक निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "10 km to the East<br>10 km, पूर्व की ओर",
+    "16 km to the North<br>16 km, उत्तर की ओर",
+    "9 km to the West<br>9 km, पश्चिम की ओर",
+    "11 km to the South<br>11 km, दक्षिण की ओर"
+   ],
+   "my_ans": "C",
+   "sol": "अंतिम स्थिति A से 9 km पश्चिम में है।<br>अतः वापस जाने के लिए 9 km पूर्व की ओर चलना होगा।",
+   "trick": "दिशाओं का योग करें: उत्तर-दक्षिण और पूर्व-पश्चिम को अलग-अलग घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "Shishir starts from Point Y and drives 75 km towards East. He then takes a left turn, drives 35 km, turns left and drives 38 km. He then takes a left turn and drives 41 km. He takes a right turn, drives 37 km. He then turns left, drives 26 km to stop at Point Z. How far (shortest distance) and towards which direction should he drive in order to reach Point Y again? (All turns are 90° turns only unless specified.)",
+   "hi": "शिशिर बिंदु Y से ड्राइव करना शुरू करता है और पूर्व दिशा में 75 km ड्राइव करता है। फिर वह बाएँ मुड़ता है, 35 km ड्राइव करता है, फिर बाएँ मुड़ता है और 38 km ड्राइव करता है। इसके बाद वह फिर बाएँ मुड़ता है और 41 km ड्राइव करता है। वह दाएँ मुड़ता है और 37 km ड्राइव करता है। फिर वह बाएँ मुड़ता है और 26 km ड्राइव करके बिंदु Z पर रुक जाता है। बिंदु Y पर पुनः पहुँचने के लिए उसे कितनी दूरी (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90° के मोड़ हैं।)",
+   "opts": [
+    "29 km towards south<br>29 km; दक्षिण की ओर",
+    "32 km towards north<br>32 km; उत्तर की ओर",
+    "35 km towards north<br>35 km; उत्तर की ओर",
+    "33 km towards west<br>33 km; पश्चिम की ओर"
+   ],
+   "my_ans": "B",
+   "sol": "अंतिम स्थिति Y से 32 km दक्षिण में है।<br>अतः Y पर पहुँचने के लिए 32 km उत्तर की ओर चलना होगा।",
+   "trick": "अंतिम बिंदु से प्रारंभिक बिंदु की दिशा हमेशा विपरीत होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "Shreya starts from Point A and drives 22 km towards the north. He then takes a right turn, drives 24 km, turns right and drives 28 km. He then takes a right turn and drives 30 km. He takes a final right turn, drives 6 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "श्रेय बिंदु A से चलना शुरू करता है और उत्तर दिशा में 22 km चलता है। फिर वह दाएं मुड़ता है, 24 km चलता है, फिर दाएं मुड़कर 28 km चलता है। इसके बाद वह दाएं मुड़कर 30 km चलता है। अंत में वह दाएं मुड़कर 6 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "6 km to the east<br>पूर्व दिशा में 6 km",
+    "5 km to the east<br>पूर्व दिशा में 5 km",
+    "3 km to the east<br>पूर्व दिशा में 3 km",
+    "7 km to the west<br>पश्चिम दिशा में 7 km"
+   ],
+   "my_ans": "A",
+   "sol": "अंतिम स्थिति A से 6 km पश्चिम में है।<br>अतः A पर पहुँचने के लिए 6 km पूर्व की ओर चलना होगा।",
+   "trick": "दाएं-बाएं मुड़ने पर दिशाओं का क्रम याद रखें (उत्तर→पूर्व→दक्षिण→पश्चिम→उत्तर)।",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Mr. Vasu starts from Point A and drives 25 km towards the West. He then takes a left turn, drives 15 km, turns left and drives 51 km. He then takes a left turn, drives 28 km, turns left and drives 14 km. He then takes a left turn and drives 6 km. He takes a final right turn, drives 12 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "मिस्टर वासु बिंदु A से शुरू करते हैं और पश्चिम दिशा की ओर 25 km ड्राइव करते हैं। फिर वह बाएँ मुड़ते हैं, 15 km ड्राइव करते हैं, बाएँ मुड़ते हैं और 51 km ड्राइव करते हैं। फिर वह बाएँ मुड़ते हैं, 28 km ड्राइव करते हैं, बाएँ मुड़ते हैं और 14 km ड्राइव करते हैं। फिर वह बाएँ मुड़ते हैं और 6 km ड्राइव करते हैं। वह अंत में दाएँ मुड़ते हैं, 12 km ड्राइव करते हैं और बिंदु P पर रुकते हैं। बिंदु A पर वापस पहुँचने के लिए उन्हें कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए? (जब तक निर्दिष्ट न हो जाए, सभी मोड़ केवल 90 डिग्री के मोड़ हैं।)",
+   "opts": [
+    "9 km to the West<br>9 km, पश्चिम दिशा की ओर",
+    "8 km to the North<br>8 km, उत्तर दिशा की ओर",
+    "10 km to the East<br>10 km, पूर्व दिशा की ओर",
+    "7 km to the South<br>7 km, दक्षिण दिशा की ओर"
+   ],
+   "my_ans": "D",
+   "sol": "अंतिम स्थिति A से 7 km उत्तर में है।<br>अतः A पर पहुँचने के लिए 7 km दक्षिण की ओर चलना होगा।",
+   "trick": "विस्थापन (displacement) निकालने के लिए क्षैतिज और ऊर्ध्वाधर दूरियों का अंतर लें।",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "Amit starts from Point Y and drives 14 km towards South. He then turns left and drives 35 km, takes a left and drives 68 km. He then takes a left turn and drives 41 km. He takes a left turn, drives 54 km, turns right and drives 53 km to stop at Point Z. How far (shortest distance) and towards which direction should he drive in order to reach Point Y again? (All turns are 90° turns only unless specified.)",
+   "hi": "अमित बिंदु Y से ड्राइव करना शुरू करता है और दक्षिण दिशा की ओर 14 km ड्राइव करता है। फिर वह बाईं ओर मुड़कर 35 km ड्राइव करता है, फिर बाईं ओर मुड़कर 68 km ड्राइव करता है। इसके बाद वह बाईं ओर मुड़कर 41 km ड्राइव करता है। फिर बाईं ओर मुड़कर 54 km ड्राइव करता है, और फिर दाईं ओर मुड़कर 53 km ड्राइव करके बिंदु Z पर रुक जाता है। बिंदु Y पर पुनः पहुँचने के लिए उसे कितनी दूरी (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90° के मोड़ हैं।)",
+   "opts": [
+    "61 km towards west<br>61 km; पश्चिम की ओर",
+    "56 km towards west<br>56 km; पश्चिम की ओर",
+    "59 km towards east<br>59 km; पूर्व की ओर",
+    "57 km towards east<br>57 km; पूर्व की ओर"
+   ],
+   "my_ans": "C",
+   "sol": "अंतिम स्थिति Y से 59 km पश्चिम में है।<br>अतः Y पर पहुँचने के लिए 59 km पूर्व की ओर चलना होगा।",
+   "trick": "दिशाओं के अनुसार दूरियों को जोड़ें और घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Rishi starts from Point A and drives 23 km towards the north. He then takes a left turn, drives 8 km, turns left and drives 28 km. He then takes a left turn and drives 17 km. He takes a final left turn, drives 5 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "ऋषि बिंदु A से ड्राइव करना शुरू करता है और उत्तर दिशा की ओर 23 km ड्राइव करता है। फिर वह बाएँ मुड़ता है, 8 km ड्राइव करता है, फिर बाएँ मुड़कर 28 km ड्राइव करता है। इसके बाद वह फिर बाएँ मुड़ता है और 17 km ड्राइव करता है। अंत में वह बाएँ मुड़ता है, 5 km ड्राइव करता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "8 km to the east<br>8 km, पूर्व के ओर",
+    "9 km to the east<br>9 km, पूर्व की ओर",
+    "9 km to the west<br>9 km, पश्चिम की ओर",
+    "8 km to the west<br>8 km, पश्चिम की ओर"
+   ],
+   "my_ans": "C",
+   "sol": "अंतिम स्थिति A से 9 km पूर्व में है।<br>अतः A पर पहुँचने के लिए 9 km पश्चिम की ओर चलना होगा।",
+   "trick": "प्रारंभिक और अंतिम बिंदु के बीच का अंतर ही न्यूनतम दूरी है।",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Kiran starts from Point A and drives 23 km towards the north. She then takes a right turn, drives 9 km, turns right and drives 31 km. She then takes a right turn and drives 17 km. She takes a final right turn, drives 8 km and stops at Point P. How far (shortest distance) and towards which direction should she drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "किरण बिंदु A से ड्राइव करना प्रारंभ करती है और उत्तर की ओर 23 km ड्राइव करती है। फिर वह दाएँ मुड़ती है और 9 km ड्राइव करती है, फिर दाएँ मुड़ती है और 31 km ड्राइव करती है। उसके बाद वह दाएँ मुड़ती है और 17 km ड्राइव करती है। अंत में वह दाएँ मुड़ती है और 8 km ड्राइव करती है तथा बिंदु P पर रुक जाती है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (न्यूनतम दूरी) तक और किस दिशा में km ड्राइव करना चाहिए? (जब तक निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "8 km to the east<br>8 km, पूर्व की ओर",
+    "8 km to the west<br>8 km, पश्चिम की ओर",
+    "9 km to the east<br>9 km, पूर्व की ओर",
+    "9 km to the west<br>9 km, पश्चिम की ओर"
+   ],
+   "my_ans": "A",
+   "sol": "अंतिम स्थिति A से 8 km पश्चिम में है।<br>अतः A पर पहुँचने के लिए 8 km पूर्व की ओर चलना होगा।",
+   "trick": "उत्तर-दक्षिण और पूर्व-पश्चिम के नेट विस्थापन की गणना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "Neha starts from Point A and drives 11 km towards the east. She then takes a right turn, drives 8 km, turns right and drives 14 km. She then takes a right turn and drives 12 km. She takes a final right turn, drives 3 km and stops at Point P. How far (shortest distance) and towards which direction should she drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "नेहा बिंदु A से चलना शुरू करती है और पूर्व दिशा में 11 km चलती है। फिर वह दाएं मुड़ती है, 8 km चलती है, फिर दाएं मुड़कर 14 km चलती है। इसके बाद वह फिर दाएं मुड़ती है और 12 km चलती है। अंत में वह दाएं मुड़कर 3 km चलती है और बिंदु P पर रुक जाती है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "2 km to the north<br>उत्तर की ओर 2 km",
+    "4 km to the south<br>दक्षिण की ओर 4 km",
+    "1 km to the north<br>उत्तर की ओर 1 km",
+    "3 km to the south<br>दक्षिण की ओर 3 km"
+   ],
+   "my_ans": "B",
+   "sol": "अंतिम स्थिति A से 4 km उत्तर में है।<br>अतः A पर पहुँचने के लिए 4 km दक्षिण की ओर चलना होगा।",
+   "trick": "दिशाओं के चार्ट का उपयोग करके नेट विस्थापन निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Moksh starts from Point A and drives 21 km towards the south. He then takes a left turn, drives 14 km, turns left and drives 29 km. He then takes a left turn and drives 21 km. He takes a final left turn, drives 8 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "मोक्ष बिंदु A से शुरू करता है और दक्षिण दिशा में 21 km ड्राइव करता है। फिर वह बाएँ मुड़कर 14 km ड्राइव करता है, फिर बाएँ मुड़ता है और 29 km ड्राइव करता है। इसके बाद वह फिर बाएँ मुड़ता है और 21 km ड्राइव करता है। अंत में वह बाएँ मुड़कर 8 km ड्राइव करता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुंचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "8 km to the east<br>8 km, पूर्व की ओर",
+    "7 km to the east<br>7 km, पूर्व की ओर",
+    "7 km to the west<br>7 km, पश्चिम की ओर",
+    "8 km to the west<br>8 km, पश्चिम की ओर"
+   ],
+   "my_ans": "B",
+   "sol": "अंतिम स्थिति A से 7 km पश्चिम में है।<br>अतः A पर पहुँचने के लिए 7 km पूर्व की ओर चलना होगा।",
+   "trick": "विपरीत दिशाओं की दूरियों को घटाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Anamika starts from Point A and drives 2 km towards the north. She then takes a right turn, drives 5 km, turns right and drives 7 km. She then takes a right turn and drives 8 km. She takes a final right turn, drives 5 km and stops at Point P. How far (shortest distance) and towards which direction should she drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "अनामिका बिंदु A से चलना शुरू करती है और उत्तर दिशा में 2 km चलती है। फिर वह दाएं मुड़ती है, 5 km चलती है, फिर दाएं मुड़कर 7 km चलती है। इसके बाद वह दाएं मुड़कर 8 km चलती है। अंत में वह दाएं मुड़कर 5 km चलती है और बिंदु P पर रुक जाती है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "1 km to the east<br>1 km पूर्व की ओर",
+    "4 km to the east<br>4 km पूर्व की ओर",
+    "3 km to the east<br>3 km पूर्व की ओर",
+    "2 km to the west<br>2 km पश्चिम की ओर"
+   ],
+   "my_ans": "C",
+   "sol": "अंतिम स्थिति A से 3 km पश्चिम में है।<br>अतः A पर पहुँचने के लिए 3 km पूर्व की ओर चलना होगा।",
+   "trick": "नेट विस्थापन = (कुल उत्तर - कुल दक्षिण) और (कुल पूर्व - कुल पश्चिम)।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Abhinav starts from Point A and drives 16 km towards the west. He then takes a right turn, drives 8 km, turns right and drives 19 km. He then takes a right turn and drives 14 km. He takes a final right turn, drives 3 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90-degree turns only unless specified.)",
+   "hi": "अभिनव बिंदु A से ड्राइव करना शुरू करता है और पश्चिम दिशा की ओर 16 km ड्राइव करता है। फिर वह दाएँ मुड़ता है और 8 km ड्राइव करता है, फिर दाएँ मुड़कर 19 km ड्राइव करता है। इसके बाद वह फिर दाएँ मुड़ता है और 14 km ड्राइव करता है। अंत में वह दाएँ मुड़कर 3 km ड्राइव करता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करनी चाहिए? (जब तक अन्यथा निर्दिष्ट न हो, सभी मोड़ केवल 90 डिग्री के हैं।)",
+   "opts": [
+    "5 km to the south<br>5 km, दक्षिण की ओर",
+    "6 km to the north<br>6 km, उत्तर की ओर",
+    "6 km to the south<br>6 km, दक्षिण की ओर",
+    "5 km to the north<br>5 km, उत्तर की ओर"
+   ],
+   "my_ans": "B",
+   "sol": "अंतिम स्थिति A से 6 km दक्षिण में है।<br>अतः A पर पहुँचने के लिए 6 km उत्तर की ओर चलना होगा।",
+   "trick": "दाएं मुड़ने पर दिशा: पश्चिम→उत्तर→पूर्व→दक्षिण→पश्चिम।",
+   "ans": "B"
+  }
+ ]
+}

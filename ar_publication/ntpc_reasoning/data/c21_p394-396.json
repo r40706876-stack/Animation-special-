@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "394-396",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All cars are bars. No car is a sun. Conclusions: (I) Some suns are bars. (II) All bars are suns.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी कार, बार हैं। कोई भी कार, सूर्य नहीं है। निष्कर्ष: (I) कुछ सूर्य, बार हैं। (II) सभी बार, सूर्य हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "सभी कार बार हैं और कोई कार सूर्य नहीं है। बार और सूर्य के बीच कोई निश्चित संबंध नहीं है, इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "नकारात्मक कथन होने पर सकारात्मक निष्कर्ष गलत होते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All drawings are mountains. All mountains are planes. Conclusions: (I) Some planes are mountains. (II) All drawings are planes.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी ड्राइंग, पर्वत हैं। सभी पर्वत, विमान हैं। निष्कर्ष: (I) कुछ विमान, पर्वत हैं। (II) सभी ड्राइंग, विमान हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "C",
+   "sol": "सभी ड्राइंग पर्वत हैं और सभी पर्वत विमान हैं। अतः सभी ड्राइंग विमान हैं (II सही) और कुछ विमान पर्वत हैं (I सही)।",
+   "trick": "अंदर से बाहर जाने पर 'सभी' और 'कुछ' दोनों सही होते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All clouds are water. Some water is vapor. Conclusions: Some clouds are vapor. (II) Some vapor is water.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी बादल, जल हैं। कुछ जल, वाष्प है। निष्कर्ष: (I) कुछ बादल, वाष्प हैं। (II) कुछ वाष्प, जल है।",
+   "opts": [
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "बादल और वाष्प के बीच कोई सीधा संबंध नहीं है (I गलत)। कुछ जल वाष्प है, तो कुछ वाष्प भी जल है (II सही)।",
+   "trick": "सीधा संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: Some foods are rains. All tables are rains. Conclusions: (I) Some foods are tables. (II) All rains are tables.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: कुछ भोजन, बारिश हैं। सभी टेबल, बारिश हैं। निष्कर्ष: (I) कुछ भोजन, टेबल हैं। (II) सभी बारिश, टेबल हैं।",
+   "opts": [
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "भोजन और टेबल के बीच कोई निश्चित संबंध नहीं है (I गलत)। बारिश का केवल कुछ हिस्सा टेबल है, इसलिए सभी बारिश टेबल नहीं हो सकती (II गलत)।",
+   "trick": "निश्चित संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All vehicles are machines. Some machines are tools. Conclusions: (I) Some vehicles are tools. (II) All tools are machines.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होते हो, निर्णय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी वाहन, मशीनें हैं। कुछ मशीनें, औजार हैं। निष्कर्ष: (I) कुछ वाहन, औजार हैं। (II) सभी औजार, मशीनें हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "वाहन और औजार के बीच कोई सीधा संबंध नहीं है (I गलत)। कुछ मशीनें औजार हैं, इसका मतलब यह नहीं कि सभी औजार मशीनें हैं (II गलत)।",
+   "trick": "कुछ से सभी का निष्कर्ष नहीं निकलता।",
+   "ans": "B"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All tigers are chairs. All chairs are monks. Conclusions: (I) Some monks are chairs. (II) All tigers are monks.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी बाघ, कुर्सी हैं। सभी कुर्सी, भिक्षु हैं। निष्कर्ष: (I) कुछ भिक्षु, कुर्सी हैं। (II) सभी बाघ, भिक्षु हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं"
+   ],
+   "my_ans": "D",
+   "sol": "सभी कुर्सी भिक्षु हैं, तो कुछ भिक्षु कुर्सी होंगे (I सही)। सभी बाघ कुर्सी हैं और सभी कुर्सी भिक्षु हैं, तो सभी बाघ भिक्षु होंगे (II सही)।",
+   "trick": "बाहर से अंदर आने पर 'कुछ' सही होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusions logically follow/s from the given statements. Statements: All gloves are bandages. No glove is a sling. Conclusion (I): Some slings are bandages (II): All bandages are slings",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी दस्ताने, बेंडेज हैं। कोई भी दस्ताना, स्लिंग नहीं है। निष्कर्ष (I): कुछ स्लिंग, बेंडेज हैं। निष्कर्ष (II): सभी बेंडेज, स्लिंग हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है"
+   ],
+   "my_ans": "D",
+   "sol": "दस्ताने और स्लिंग में कोई संबंध नहीं है, लेकिन बेंडेज और स्लिंग के बीच कोई निश्चित संबंध नहीं है। अतः दोनों निष्कर्ष गलत हैं।",
+   "trick": "निश्चित संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusions logically follow/s from the given statements. Statements: Some hairs are wires. All ropes are wires. Conclusion (I) Some hairs are ropes. (II) All wires are ropes.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह तय करना है कि दिए गए कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ बाल, तार हैं। सभी रस्सियाँ, तार हैं। निष्कर्ष (I): कुछ बाल, रस्सियाँ हैं। निष्कर्ष (II): सभी तार, रस्सियाँ हैं।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "बाल और रस्सियों के बीच कोई सीधा संबंध नहीं है (I गलत)। सभी रस्सियाँ तार हैं, लेकिन सभी तार रस्सियाँ नहीं हैं (II गलत)।",
+   "trick": "सीधा संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All apples are fruits. Some fruits are sweet. Conclusions (I) Some apples are sweet. (II) All fruits are apples.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी सेब, फल हैं। कुछ फल, मीठे हैं। निष्कर्ष (I) कुछ सेब, मीठे हैं। (II) सभी फल, सेब हैं।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "C",
+   "sol": "सेब और मीठे के बीच कोई निश्चित संबंध नहीं है (I गलत)। सभी सेब फल हैं, लेकिन सभी फल सेब नहीं हैं (II गलत)।",
+   "trick": "निश्चित संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusions logically follow/s from the given statements. Statements: All fans are motors. All motors are scooters. Conclusion (I): Some scooters are motors. Conclusion (II): All fans are scooters.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह तय करना है कि दिए गए कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी पंखे, मोटर हैं। सभी मोटर, स्कूटर हैं। निष्कर्ष (I): कुछ स्कूटर, मोटर हैं। निष्कर्ष (II): सभी पंखे, स्कूटर हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "सभी मोटर स्कूटर हैं, तो कुछ स्कूटर मोटर होंगे (I सही)। सभी पंखे मोटर हैं और सभी मोटर स्कूटर हैं, तो सभी पंखे स्कूटर होंगे (II सही)।",
+   "trick": "अंदर से बाहर जाने पर 'सभी' और 'कुछ' दोनों सही होते हैं।",
+   "ans": "A"
+  }
+ ]
+}

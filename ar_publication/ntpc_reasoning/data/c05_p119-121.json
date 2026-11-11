@@ -1,0 +1,238 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Series",
+  "hi": "श्रृंखला",
+  "total": 88,
+  "gl": 88,
+  "ug": 0
+ },
+ "source_pages": "119-121",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Refer to the following letter, number, symbol series and answer the question. (Left ) 5 C £ T R 6 B $ D © 9 6 * 9 # Z 7 2 R $ O K (Right) If all the symbols are dropped from the series, which of the following will be fourth from the left?",
+   "hi": "निम्नलिखित अक्षर, संख्या, प्रतीक श्रृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए।(बाएं) 5 C £ T R 6 B $ D © 9 6 * 9 # Z 7 2 R $ O K (दाएं)यदि श्रृंखला से सभी प्रतीक हटा दिए जाएं, तो निम्नलिखित में से कौन-सा बाएं से चौथे स्थान पर होगा?",
+   "opts": [
+    "6",
+    "R",
+    "B",
+    "D"
+   ],
+   "my_ans": "B",
+   "sol": "प्रतीक हटाने पर श्रृंखला: 5 C T R 6 B D 9 6 9 Z 7 2 R O K<br>बाएं से चौथा अक्षर 'R' है।",
+   "trick": "प्रतीकों को हटाकर नई श्रृंखला लिखें और बाएं से गणना करें।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Refer to the following letter, number, symbol series and answer the question. (All numbers are single-digit numbers only) (Counting to be done from left to right only) (Left) Z Q Y 7 * 9 E D V Z R X 4 * N G T B 3 X A T 4 H (Right) How many such symbols are there, each of which is immediately preceded by a number and also immediately followed by a letter?",
+   "hi": "निम्नलिखित अक्षर, संख्या और प्रतीक श्रृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। (सभी संख्याएं केवल एकल अंकीय संख्याएं हैं) (गणना केवल बाएं से दाएं की जानी है) (बाएं) Z Q Y 7 * 9 E D V Z R X 4 * N G T B 3 X A T 4 H (दाएं) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक के ठीक पहले एक संख्या और ठीक बाद में एक अक्षर भी है?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "श्रृंखला: Z Q Y 7 * 9 E D V Z R X 4 * N G T B 3 X A T 4 H<br>शर्त (संख्या-प्रतीक-अक्षर): 7*9 (नहीं), 4*N (हाँ). केवल एक है।",
+   "trick": "संख्या-प्रतीक-अक्षर का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Refer to the following letter and symbol series and answer the question. Counting to be done from left to right only. (Left) O ? Q ! R + S – T $ U * V / A P < W = X : (Right) How many such letters are there, each of which is immediately preceded by another letter and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर और प्रतीक श्रृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की जानी चाहिए। (बाएं) O ? Q ! R + S – T $ U * V / A P < W = X : (दाएं) ऐसे कितने अक्षर हैं, जिनमें से प्रत्येक के ठीक पहले एक और अक्षर है तथा ठीक बाद एक प्रतीक है?",
+   "opts": [
+    "THREE<br>तीन",
+    "FOUR<br>चार",
+    "TWO<br>दो",
+    "ONE<br>एक"
+   ],
+   "my_ans": "D",
+   "sol": "श्रृंखला: O ? Q ! R + S – T $ U * V / A P < W = X :<br>शर्त (अक्षर-अक्षर-प्रतीक): AP< (हाँ). केवल एक है।",
+   "trick": "अक्षर-अक्षर-प्रतीक का समूह ढूंढें।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question. Counting to be done from left to right only. (All numbers are single-digit numbers only .)( Left) # $ Ω 2 1 @ 4 & ~ % 8 6 9 + 5 ? £ 3 7 * = (Right) How many such symbols are there, each of which is immediately preceded by an odd number but not immediately followed by an even number?",
+   "hi": "निम्नलिखित संख्या और प्रतीक श्रृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं ही की जानी है। (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) # $ Ω 2 1 @ 4 & ~ % 8 6 9 + 5 ? £ 3 7 * = (दाएं)ऐसे कितने प्रतीक हैं, जिनके ठीक पहले एक विषम संख्या है लेकिन ठीक बाद में कोई सम संख्या नहीं है?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "शर्त: विषम-प्रतीक-(विषम या प्रतीक).<br>श्रृंखला में: 9+5 (विषम-प्रतीक-विषम), 5?£ (विषम-प्रतीक-प्रतीक), 37* (नहीं). कुल तीन: 9+, 5?, ?£.",
+   "trick": "विषम-प्रतीक-असम(विषम/प्रतीक) का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only. (Left) K { J % I + H = G * F / D : - ! B C ? A # (Right) How many such symbols are there, each of which is immediately preceded by a letter and also immediately followed by another letter?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की जानी चाहिए।(बाएं) K { J % I + H = G * F / D : - ! B C ? A # (दाएं)ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक के ठीक पहले एक अक्षर है और ठीक बाद एक दूसरा अक्षर है?",
+   "opts": [
+    "TWO<br>दो",
+    "SEVEN<br>सात",
+    "FOUR<br>चार",
+    "THREE<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "शर्त (अक्षर-प्रतीक-अक्षर): K{J, I+H, G*F, F/D, B C?A (नहीं), C?A (हाँ). कुल 7: { , %, +, =, *, /, ?.",
+   "trick": "अक्षर-प्रतीक-अक्षर के समूह गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? OQR 42, TVW 35, YAB 28, DFG 21 , ?",
+   "hi": "नीचे दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए निम्नलिखित में से कौन-सा अक्षर-संख्या समूह प्रश्नवाचक चिह्न (?) को प्रतिस्थापित करेगा? OQR 42, TVW 35, YAB 28, DFG 21, ?",
+   "opts": [
+    "IJK 13",
+    "IQZ 13",
+    "ILK 14",
+    "IKL 14"
+   ],
+   "my_ans": "D",
+   "sol": "संख्या: 42-7=35, 35-7=28, 28-7=21, 21-7=14.<br>अक्षर: O(+5)T(+5)Y(+5)D(+5)I; Q(+5)V(+5)A(+5)F(+5)K; R(+5)W(+5)B(+5)G(+5)L. उत्तर: IKL 14.",
+   "trick": "संख्या में -7 और अक्षरों में +5 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 21, 23, 26, 31, 38, ?",
+   "hi": "दी गई श्रृंखला में ‘?’ के स्थान पर क्या आना चाहिए? 21, 23, 26, 31, 38, ?",
+   "opts": [
+    "51",
+    "53",
+    "49",
+    "47"
+   ],
+   "my_ans": "C",
+   "sol": "अंतर: 23-21=2, 26-23=3, 31-26=5, 38-31=7 (अभाज्य संख्याएं).<br>अगला अंतर 11 होगा: 38+11=49.",
+   "trick": "अभाज्य संख्याओं (2, 3, 5, 7, 11) का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 35, 37, 40, 45, 52, ?",
+   "hi": "दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? 35, 37, 40, 45, 52, ?",
+   "opts": [
+    "65",
+    "66",
+    "62",
+    "63"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर: 37-35=2, 40-37=3, 45-40=5, 52-45=7 (अभाज्य संख्याएं).<br>अगला अंतर 11 होगा: 52+11=63.",
+   "trick": "अभाज्य संख्याओं (2, 3, 5, 7, 11) का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only. (Left ) H F G J D J V D K P = % S O C B = % B + # (Right) How many such letters are there, each of which is immediately preceded by a symbol and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। गणना केवल बाएं से दाएं की जानी है।(बाएं) H F G J D J V D K P = % S O C B = % B + # (दाएं)ऐसे कितने अक्षर हैं, जिनमें से प्रत्येक के ठीक पहले एक प्रतीक और ठीक बाद में भी एक प्रतीक है?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "शर्त (प्रतीक-अक्षर-प्रतीक): =%S (नहीं), =%B (नहीं), =B+ (हाँ). केवल एक है।",
+   "trick": "प्रतीक-अक्षर-प्रतीक का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? HAK 8, GYH 11, FWE 14, EUB 17 , ?",
+   "hi": "निम्नलिखित में से कौन-सा अक्षर-संख्या समूह, दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न-चिह्न \"?\" को प्रतिस्थापित करेगा? HAK 8, GYH 11, FWE 14, EUB 17, ?",
+   "opts": [
+    "CSZ 20",
+    "DTA 21",
+    "DSY 20",
+    "DSX 20"
+   ],
+   "my_ans": "C",
+   "sol": "संख्या: 8+3=11, 11+3=14, 14+3=17, 17+3=20.<br>अक्षर: H(-1)G(-1)F(-1)E(-1)D; A(-2)Y(-2)W(-2)U(-2)S; K(-3)H(-3)E(-3)B(-3)Y. उत्तर: DSY 20.",
+   "trick": "संख्या में +3 और अक्षरों में -1, -2, -3 का पैटर्न है।",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Refer to the following letter, number and symbol series and answer the question that follows. Counting to be done from left to right only. All numbers are single-digit numbers. (Left) G 6 E * @ # 3 D 2 % 7 4 Y & 5 + C R K S T (Right) How many such numbers are there each of which is immediately preceded by a symbol and also immediately followed by a letter?",
+   "hi": "निम्नलिखित अक्षर, संख्या और प्रतीक श्रृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की जानी चाहिए। सभी संख्याएं एक अंक वाली संख्याएं हैं।(बाएं) G 6 E * @ # 3 D 2 % 7 4 Y & 5 + C R K S T (दाएं)ऐसी कितनी संख्याएं हैं जिनमें से प्रत्येक के ठीक पहले एक प्रतीक है और ठीक बाद एक अक्षर है?",
+   "opts": [
+    "3",
+    "1",
+    "2",
+    "0"
+   ],
+   "my_ans": "B",
+   "sol": "शर्त (प्रतीक-संख्या-अक्षर): #3D (हाँ), %74 (नहीं), &5+ (नहीं). केवल एक है।",
+   "trick": "प्रतीक-संख्या-अक्षर का समूह ढूंढें।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements . Statements: All chairs are tables. All tables are boards. Some tables are desks. Conclusions: Some boards are desks. (II) Some chairs are desks.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन:सभी चेयर, टेबल हैं। सभी टेबल, बोर्ड हैं। कुछ टेबल, डेस्क हैं।निष्कर्ष:(I) कुछ बोर्ड, डेस्क हैं।(II) कुछ चेयर, डेस्क हैं।",
+   "opts": [
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।",
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।",
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।"
+   ],
+   "my_ans": "A",
+   "sol": "वेन आरेख: सभी चेयर टेबल हैं, सभी टेबल बोर्ड हैं। कुछ टेबल डेस्क हैं, तो कुछ बोर्ड भी डेस्क होंगे। चेयर और डेस्क का सीधा संबंध नहीं है। केवल I सही है।",
+   "trick": "वेन आरेख बनाकर देखें कि कौन सा निष्कर्ष निश्चित रूप से सत्य है।",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 32 52 68 80 88 ?",
+   "hi": "दी गई श्रृंखला में ‘?’ के स्थान पर क्या आना चाहिए ? 32 52 68 80 88 ?",
+   "opts": [
+    "96",
+    "90",
+    "94",
+    "92"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर: 52-32=20, 68-52=16, 80-68=12, 88-80=8.<br>अगला अंतर 4 होगा: 88+4=92.",
+   "trick": "अंतर में -4 का पैटर्न है (20, 16, 12, 8, 4)।",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only. (Left) L U & P % F A & D $ # K Q * M Ω Y @ E T * £ R (Right) How many such symbols are there, each of which is immediately preceded by a letter and also immediately followed by another symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की जानी चाहिए। (बाएं) L U & P % F A & D $ # K Q * M Ω Y @ E T * £ R (दाएं) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक के ठीक पहले एक अक्षर है तथा ठीक बाद एक और प्रतीक है?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "C",
+   "sol": "शर्त (अक्षर-प्रतीक-प्रतीक): U&P (नहीं), P%F (नहीं), A&D (नहीं), K Q* (नहीं), MΩY (नहीं), E T* (नहीं), T*£ (हाँ), *£R (नहीं). श्रृंखला में: P% (नहीं), D$# (हाँ), Q*M (नहीं), T*£ (हाँ). कुल दो: D$# और T*£.",
+   "trick": "अक्षर-प्रतीक-प्रतीक का समूह ढूंढें।",
+   "ans": "C"
+  }
+ ]
+}

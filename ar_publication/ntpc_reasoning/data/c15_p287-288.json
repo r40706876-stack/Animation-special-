@@ -1,0 +1,238 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "Order & Ranking",
+  "hi": "क्रम एवं रैंकिंग",
+  "total": 39,
+  "gl": 27,
+  "ug": 12
+ },
+ "source_pages": "287-288",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 187, 167, 173, 257, 199 (Right). What will be the resultant if the second digit of the second highest number is added to the third digit of the second lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई तीन अंकों वाली पाँच संख्याओं पर आधारित है। (बाएं) 187, 167, 173, 257, 199 (दाएं)। यदि दूसरी सबसे बड़ी संख्या के दूसरे अंक को दूसरी सबसे छोटी संख्या के तीसरे अंक में जोड़ा जाए, तो क्या परिणाम प्राप्त होगा?",
+   "opts": [
+    "8",
+    "14",
+    "12",
+    "11"
+   ],
+   "my_ans": "C",
+   "sol": "संख्याएं: 167, 173, 187, 199, 257। दूसरी सबसे बड़ी संख्या 199 है (दूसरा अंक 9), दूसरी सबसे छोटी संख्या 173 है (तीसरा अंक 3)।<br>परिणाम = 9 + 3 = 12.",
+   "trick": "संख्याओं को क्रम में लिखें और फिर वांछित अंक निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Each of the digits in the number 9237561 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 9237561 के प्रत्येक अंक को बाएं से दाएं आरोही क्रम में व्यवस्थित किए जाने पर मूल संख्या में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "Four<br>चार",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "मूल: 9 2 3 7 5 6 1<br>आरोही: 1 2 3 5 6 7 9<br>अपरिवर्तित अंक: 2 और 3 (अपनी जगह पर हैं)।",
+   "trick": "अंकों को लिखकर नीचे उनका आरोही क्रम लिखें और मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Pqr ranked 71st from the bottom and 39th from the top in his class. How many students are there in his class?",
+   "hi": "Pqr अपनी कक्षा में नीचे से 71वें स्थान पर है और शीर्ष से 39वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "107",
+    "109",
+    "108",
+    "113"
+   ],
+   "my_ans": "B",
+   "sol": "कुल = (ऊपर से रैंक + नीचे से रैंक) - 1<br>कुल = (39 + 71) - 1 = 110 - 1 = 109.",
+   "trick": "कुल = (L + R) - 1",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "Ayush ranked 44th from the top and 25th from the bottom in his class. How many students are there in his class?",
+   "hi": "आयुष अपनी कक्षा में ऊपर से 44वें स्थान पर है और नीचे से 25वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "68",
+    "66",
+    "69",
+    "67"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (44 + 25) - 1 = 69 - 1 = 68.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Tus ranked 56th from the bottom and 51st from the top in his class. How many students are there in his class?",
+   "hi": "Tus अपनी कक्षा में नीचे से 56वें स्थान पर है और ऊपर से 51वें स्थान पर है। उसकी कक्षा में कितने विद्यार्थी हैं?",
+   "opts": [
+    "107",
+    "105",
+    "108",
+    "106"
+   ],
+   "my_ans": "D",
+   "sol": "कुल = (51 + 56) - 1 = 107 - 1 = 106.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Tuv ranked 27th from the top and 64th from the bottom in his class. How many students are there in his class?",
+   "hi": "Tuv अपनी कक्षा में ऊपर से 27वें स्थान पर और नीचे से 64वें स्थान पर है। उसकी कक्षा में कितने विद्यार्थी हैं?",
+   "opts": [
+    "90",
+    "92",
+    "89",
+    "91"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (27 + 64) - 1 = 91 - 1 = 90.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "Rakesh ranked 39th from the top and 46th from the bottom in his class. How many students are there in his class?",
+   "hi": "राकेश अपनी कक्षा में ऊपर से 39वें स्थान पर है और नीचे से 46वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "85",
+    "83",
+    "86",
+    "84"
+   ],
+   "my_ans": "D",
+   "sol": "कुल = (39 + 46) - 1 = 85 - 1 = 84.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Sima ranked 12th from the top and 13th from the bottom in her class. How many students are there in her class?",
+   "hi": "सीमा अपनी कक्षा में ऊपर से 12वें और नीचे से 13वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "20",
+    "24",
+    "22",
+    "23"
+   ],
+   "my_ans": "B",
+   "sol": "कुल = (12 + 13) - 1 = 25 - 1 = 24.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Vimal ranked 28th from the top and 65th from the bottom in his class. How many students are there in his class?",
+   "hi": "विमल अपनी कक्षा में ऊपर से 28वें और नीचे से 65वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "92",
+    "91",
+    "90",
+    "93"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (28 + 65) - 1 = 93 - 1 = 92.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "John ranked 16th from the bottom and 29th from the top in his class. How many students are there in his class?",
+   "hi": "जॉन अपनी कक्षा में नीचे से 16वें स्थान पर है और ऊपर से 29वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "44",
+    "43",
+    "41",
+    "42"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (29 + 16) - 1 = 45 - 1 = 44.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "Jay ranked 12th from the bottom and 9th from the top in his class. How many students are there in his class?",
+   "hi": "जय अपनी कक्षा में नीचे से 12वें स्थान पर है और ऊपर से 9वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "20",
+    "18",
+    "19",
+    "17"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (9 + 12) - 1 = 21 - 1 = 20.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "Anil ranked 27th from the top and 19th from the bottom in his class. How many students are there in his class?",
+   "hi": "अनिल अपनी कक्षा में ऊपर से 27वें और नीचे से 19वें स्थान पर है। उसकी कक्षा में कुल कितने विद्यार्थी हैं?",
+   "opts": [
+    "43",
+    "46",
+    "45",
+    "44"
+   ],
+   "my_ans": "C",
+   "sol": "कुल = (27 + 19) - 1 = 46 - 1 = 45.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "Raman ranked 25th from the top and 67th from the bottom in his class. How many students are there in his class?",
+   "hi": "रमन अपनी कक्षा में सबसे ऊपर से 25वें और सबसे नीचे से 67वें स्थान पर है। उसकी कक्षा में कितने विद्यार्थी हैं?",
+   "opts": [
+    "91",
+    "90",
+    "92",
+    "93"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (25 + 67) - 1 = 92 - 1 = 91.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "Uvx ranked 14th from the top and 79th from the bottom in his class. How many students are there in his class?",
+   "hi": "Uvx अपनी कक्षा में ऊपर से 14वें स्थान पर है और नीचे से 79वें स्थान पर है। उसकी कक्षा में कितने विद्यार्थी हैं?",
+   "opts": [
+    "92",
+    "91",
+    "90",
+    "93"
+   ],
+   "my_ans": "A",
+   "sol": "कुल = (14 + 79) - 1 = 93 - 1 = 92.",
+   "trick": "कुल = (ऊपर + नीचे) - 1",
+   "ans": "A"
+  }
+ ]
+}

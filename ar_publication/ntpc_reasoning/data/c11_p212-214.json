@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Digit Manipulation",
+  "hi": "अंक परिवर्तन",
+  "total": 58,
+  "gl": 18,
+  "ug": 40
+ },
+ "source_pages": "212-214",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "If 2 is added to each odd digit and 1 is subtracted from each even digit in the number 1528634, then what will be the sum of the digits that are second from the left and second from the right in the new number thus formed?",
+   "hi": "यदि संख्या 1528634 में प्रत्येक विषम अंक में 2 जोड़ा जाए और प्रत्येक सम अंक में से 1 घटाया जाए, तो इस प्रकार बनी नई संख्या में बाएँ से दूसरे और दाएँ से दूसरे अंक का योग कितना होगा?",
+   "opts": [
+    "12",
+    "13",
+    "14",
+    "10"
+   ],
+   "my_ans": "A",
+   "sol": "1528634 -> (1+2)(5+2)(2-1)(8-1)(6-1)(3+2)(4-1) = 3717553.<br>बाएँ से दूसरा अंक 7, दाएँ से दूसरा अंक 5. योग = 7+5 = 12.",
+   "trick": "विषम में +2 और सम में -1 करें, फिर नई संख्या के स्थान देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 4317856, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 4317856 के प्रत्येक विषम अंक में 1 जोड़ दिया जाए और प्रत्येक सम अंक में से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "4317856 -> (4-2)(3+1)(1+1)(7+1)(8-2)(5+1)(6-2) = 2428664.<br>अंक 2, 4, 6 दो-दो बार आए हैं। अतः 3 अंक एक से अधिक बार हैं।",
+   "trick": "बदलाव के बाद नई संख्या लिखकर समान अंकों की गिनती करें।",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 8945317 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 8945317 के प्रत्येक अंक को बाएँ से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों का स्थान अपरिवर्तित रहेगा?",
+   "opts": [
+    "THREE<br>तीन",
+    "ONE<br>एक",
+    "TWO<br>दो",
+    "NONE<br>एक का भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 8 9 4 5 3 1 7<br>आरोही: 1 3 4 5 7 8 9<br>अंक 4 और 5 का स्थान समान है।",
+   "trick": "संख्याओं को क्रम में लिखकर ऊपर-नीचे मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "If 1 is added to each odd digit and 1 is subtracted from each even digit in the number 47321568, which of the following digits will be first from the left in the new number thus formed?",
+   "hi": "यदि संख्या 47321568 के प्रत्येक विषम अंक में 1 जोड़ा जाए और प्रत्येक सम अंक में से 1 घटाया जाए, तो निम्नलिखित में से कौन-सा अंक इस प्रकार बनी नई संख्या में बाईं ओर से पहला होगा?",
+   "opts": [
+    "7",
+    "5",
+    "3",
+    "8"
+   ],
+   "my_ans": "C",
+   "sol": "47321568 -> (4-1)(7+1)(3+1)(2-1)(1+1)(5+1)(6-1)(8-1) = 38412657.<br>बाएँ से पहला अंक 3 है।",
+   "trick": "केवल पहले अंक का बदलाव निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 5421389 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 5421389 के प्रत्येक अंक को बाएँ से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों का स्थान अपरिवर्तित रहेगा?",
+   "opts": [
+    "THREE<br>तीन",
+    "NONE<br>एक का भी नहीं",
+    "ONE<br>एक",
+    "TWO<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "मूल: 5 4 2 1 3 8 9<br>आरोही: 1 2 3 4 5 8 9<br>अंक 8 और 9 का स्थान समान है।",
+   "trick": "आरोही क्रम में व्यवस्थित कर मूल संख्या से तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "If 3 is added to each odd digit and 2 is subtracted from each even digit in the number 8254316, then what will be the sum of the first digit from the left and the second digit from the right in the new number thus formed?",
+   "hi": "यदि संख्या 8254316 में प्रत्येक विषम अंक में 3 जोड़ा जाए और प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी नई संख्या में बाएँ से पहले अंक और दाएँ से दूसरे अंक का योगफल कितना होगा?",
+   "opts": [
+    "0",
+    "6",
+    "4",
+    "10"
+   ],
+   "my_ans": "D",
+   "sol": "8254316 -> (8-2)(2-2)(5+3)(4-2)(3+3)(1+3)(6-2) = 6082644.<br>बाएँ से पहला 6, दाएँ से दूसरा 4. योग = 6+4 = 10.",
+   "trick": "नियम लगाकर नई संख्या के वांछित स्थान के अंक जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 4738165 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 4738165 के प्रत्येक अंक को बाएँ से दाएं आरोही क्रम में व्यवस्थित किया जाता है। मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "मूल: 4 7 3 8 1 6 5<br>आरोही: 1 3 4 5 6 7 8<br>कोई भी अंक अपने स्थान पर नहीं है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 73912685 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 73912685 के प्रत्येक अंक को बाएँ से दाएँ आरोही क्रम में व्यवस्थित किया गया है। मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "मूल: 7 3 9 1 2 6 8 5<br>आरोही: 1 2 3 5 6 7 8 9<br>केवल 6 का स्थान अपरिवर्तित है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "If 2 is added to each odd digit and 1 is subtracted from each even digit in the number 7281654, which of the following digits will be third from the left in the new number thus formed?",
+   "hi": "यदि संख्या 7281654 के प्रत्येक विषम अंक में 2 जोड़ दिया जाए और प्रत्येक सम अंक से 1 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में बाईं ओर से तीसरा अंक निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "7",
+    "3",
+    "1",
+    "9"
+   ],
+   "my_ans": "A",
+   "sol": "7281654 -> (7+2)(2-1)(8-1)(1+2)(6-1)(5+2)(4-1) = 9173573.<br>बाएँ से तीसरा अंक 7 है।",
+   "trick": "नियम लगाकर नई संख्या का तीसरा अंक देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 8254316 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 8254316 के प्रत्येक अंक को बाएँ से दाएँ आरोही क्रम में व्यवस्थित किया जाता है। मूल संख्या की तुलना में कितने अंकों का स्थान अपरिवर्तित रहेगा?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 8 2 5 4 3 1 6<br>आरोही: 1 2 3 4 5 6 8<br>अंक 2 और 4 का स्थान अपरिवर्तित है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 51748623, then how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 51748623 के प्रत्येक विषम अंक में 1 जोड़ा जाए और प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "51748623 -> (5+1)(1+1)(7+1)(4-2)(8-2)(6-2)(2-2)(3+1) = 62826404.<br>अंक 6, 2, 4 दो-दो बार आए हैं। अतः 3 अंक।",
+   "trick": "बदलाव के बाद नई संख्या लिखकर समान अंकों की गिनती करें।",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "If 3 is added to each odd digit and 2 is subtracted from each even digit in the number 8254316, then how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 8254316 में प्रत्येक विषम अंक में 3 जोड़ा जाए और प्रत्येक सम अंक में से 2 घटाया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "8254316 -> (8-2)(2-2)(5+3)(4-2)(3+3)(1+3)(6-2) = 6082644.<br>अंक 6 और 4 दो-दो बार आए हैं। अतः 2 अंक।",
+   "trick": "बदलाव के बाद नई संख्या लिखकर समान अंकों की गिनती करें।",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "If 1 is added to each odd digit and 2 is subtracted from each even digit in the number 5431786, what will be difference between the highest and lowest digits in the number thus formed?",
+   "hi": "यदि संख्या 5431786 के प्रत्येक विषम अंक में 1 जोड़ा जाता है और प्रत्येक सम अंक में से 2 घटाया जाता है, तो इस प्रकार बनी संख्या में सबसे बड़े और सबसे छोटे अंकों के बीच का अंतर कितना होगा?",
+   "opts": [
+    "8",
+    "5",
+    "2",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "5431786 -> (5+1)(4-2)(3+1)(1+1)(7+1)(8-2)(6-2) = 6242864.<br>सबसे बड़ा 8, सबसे छोटा 2. अंतर = 8-2 = 6.",
+   "trick": "नई संख्या बनाकर अधिकतम और न्यूनतम का अंतर निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "If 2 is added to each odd digit and 1 is subtracted from each even digit in the number 5718624, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 5718624 के प्रत्येक विषम अंक में 2 जोड़ दिया जाए और प्रत्येक सम अंक में से 1 घटा दिया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "5718624 -> (5+2)(7+2)(1+2)(8-1)(6-1)(2-1)(4-1) = 7937513.<br>अंक 7 और 3 दो-दो बार आए हैं। अतः 2 अंक।",
+   "trick": "बदलाव के बाद नई संख्या लिखकर समान अंकों की गिनती करें।",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 9342156 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 9342156 के प्रत्येक अंक को बाएँ से दाएँ आरोही क्रम में व्यवस्थित किया गया है। मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "None<br>एक भी नहीं",
+    "One<br>एक"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 9 3 4 2 1 5 6<br>आरोही: 1 2 3 4 5 6 9<br>कोई भी अंक अपने स्थान पर नहीं है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 3184657 is arranged in ascending order from left to right. The position(s) of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 3184657 के प्रत्येक अंक को बाएँ से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों का स्थान अपरिवर्तित रहेगा?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "None<br>एक का भी नहीं",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "मूल: 3 1 8 4 6 5 7<br>आरोही: 1 3 4 5 6 7 8<br>केवल 6 का स्थान अपरिवर्तित है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 3147856 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 3147856 में प्रत्येक अंक को बाएँ से दाएं आरोही क्रम में व्यवस्थित करने पर प्राप्त नई संख्या में, मूल संख्या की तुलना में कितने अंकों का स्थान अपरिवर्तित रहेगा?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "B",
+   "sol": "मूल: 3 1 4 7 8 5 6<br>आरोही: 1 3 4 5 6 7 8<br>केवल 4 का स्थान अपरिवर्तित है।",
+   "trick": "आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "If 2 is added to each odd digit and 1 is subtracted from each even digit in the number 163742, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 163742 के प्रत्येक विषम अंक में 2 जोड़ दिया जाए और प्रत्येक सम अंक से 1 घटाया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "One<br>एक",
+    "None<br>एक भी नहीं",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "C",
+   "sol": "163742 -> (1+2)(6-1)(3+2)(7+2)(4-1)(2-1) = 355931.<br>अंक 3 और 5 दो-दो बार आए हैं। अतः 2 अंक।",
+   "trick": "बदलाव के बाद नई संख्या लिखकर समान अंकों की गिनती करें।",
+   "ans": "C"
+  }
+ ]
+}

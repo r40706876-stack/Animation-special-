@@ -1,0 +1,65 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Venn Diagram",
+  "hi": "वेन आरेख",
+  "total": 5,
+  "gl": 0,
+  "ug": 5
+ },
+ "source_pages": "403-405",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. The numbers in different sections indicate the number of persons working in an organization. How many such employees are there who also speak German?",
+   "hi": "दिए गए आरेख का ध्यानपूर्वक अध्ययन कीजिए और प्रश्न का उत्तर दीजिए। विभिन्न सेक्शनों की संख्याएँ किसी संगठन में कार्य करने वाले व्यक्तियों की संख्या को इंगित करती हैं। ऐसे कितने कर्मचारी हैं जो जर्मन भी बोलते हैं?",
+   "opts": [
+    "43",
+    "41",
+    "45",
+    "28"
+   ],
+   "my_ans": "C",
+   "sol": "कर्मचारी और जर्मन भाषी के उभयनिष्ठ (common) भाग में 28 और 17 हैं।<br>कुल = 28 + 17 = 45.",
+   "trick": "दोनों वृत्तों के उभयनिष्ठ भाग की संख्याओं को जोड़ें।",
+   "img": "figs/c22_q001.png",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. How many such Teachers are there who are also Dentists but not Surgeons?",
+   "hi": "दिए गए चित्र का ध्यानपूर्वक अध्ययन करें और प्रश्न का उत्तर दें। ऐसे कितने शिक्षक हैं जो दंत चिकित्सक तो हैं लेकिन सर्जन नहीं हैं?",
+   "opts": [
+    "29",
+    "5",
+    "16",
+    "14"
+   ],
+   "my_ans": "A",
+   "sol": "शिक्षक और दंत चिकित्सक के उभयनिष्ठ भाग में 29 और 23 हैं, लेकिन सर्जन वाले भाग को हटाना है।<br>केवल शिक्षक और दंत चिकित्सक = 29.",
+   "trick": "जो भाग सर्जन (Surgeons) के वृत्त में आता है, उसे छोड़ दें।",
+   "img": "figs/c22_q002.png",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. How many such Animals are there which are also Toys but are not Dolls?",
+   "hi": "दिए गए आरेख का ध्यानपूर्वक अध्ययन कीजिए और प्रश्न का उत्तर दीजिए। ऐसे कितने जन्तु हैं, जो खिलौने भी हैं लेकिन गुड़िया नहीं हैं?",
+   "opts": [
+    "9",
+    "5",
+    "31",
+    "16"
+   ],
+   "my_ans": "A",
+   "sol": "जन्तु और खिलौने के उभयनिष्ठ भाग में 9 और 23 हैं, लेकिन गुड़िया (Dolls) वाले भाग को हटाना है।<br>केवल जन्तु और खिलौने = 9.",
+   "trick": "गुड़िया (Dolls) के वृत्त में आने वाली संख्याओं को न गिनें।",
+   "img": "figs/c22_q003.png",
+   "ans": "A"
+  }
+ ]
+}

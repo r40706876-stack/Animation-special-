@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Puzzle & Scheduling",
+  "hi": "पहेली एवं समय-निर्धारण",
+  "total": 85,
+  "gl": 14,
+  "ug": 71
+ },
+ "source_pages": "336-338",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Each of F, G, H, I, M, N and O has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. G has exam on Thursday, and H has exam on Saturday. N has exam immediately before F. M has exam on one of the days after I. O has exam immediately after F. How many people have exams between M and O?",
+   "hi": "F, G, H, I, M, N और O में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। G की परीक्षा गुरुवार को होती है, और H की परीक्षा शनिवार को होती है। N की परीक्षा, F से ठीक पहले होती है। M की परीक्षा, I के बाद किसी दिन होती है। O की परीक्षा, F के ठीक बाद होती है। M और O के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "Four<br>चार"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: I(सो), N(मंगल), F(बुध), O(गुरु), G(शुक्र), H(शनि), M(रवि).<br>M और O के बीच G और H (2 लोग) हैं, लेकिन प्रश्न में M, I के बाद है। सही क्रम: I(सो), N(मंगल), F(बुध), O(गुरु), G(शुक्र), H(शनि), M(रवि) में M और O के बीच G और H हैं।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. V has an exam on Thursday. T has an exam on one of the days after P and on one of the days before U. Q has an exam on one of the days after R but on one of the days before S. R has an exam on one of the days after V. Who has an exam on Sunday?",
+   "hi": "P, Q, R, S, T, U और V की परीक्षाएं सोमवार से शुरू होकर रविवार को समाप्त होने वाले उसी सप्ताह के अलग-अलग दिनों में हैं। V की परीक्षा बृहस्पतिवार को है। T की परीक्षा P के बाद किसी दिन और U से पहले किसी दिन है। Q की परीक्षा R के बाद किसी दिन लेकिन S से पहले किसी दिन है। R की परीक्षा V के बाद किसी दिन है। निम्नलिखित में से किसकी परीक्षा रविवार को है?",
+   "opts": [
+    "S",
+    "R",
+    "P",
+    "V"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: P(सो), T(मंगल), U(बुध), V(गुरु), R(शुक्र), Q(शनि), S(रवि).<br>रविवार को S की परीक्षा है।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Each of A, B, C, D, E and F has a badminton match on a different day of a week starting from Monday and Saturday of the same week. C has match on Friday. Only three people have matches between C and F. D has match immediately after E but immediately before B. On which day of the week does E have the match?",
+   "hi": "A, B, C, D, E और F में से प्रत्येक का बैडमिंटन मैच सोमवार से शुरू होकर शनिवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होता है। C का मैच शुक्रवार को है। C और F के बीच केवल तीन व्यक्तियों के मैच हैं। D का मैच E के ठीक बाद लेकिन B से ठीक पहले है। E का मैच सप्ताह के किस दिन है?",
+   "opts": [
+    "Wednesday<br>बुधवार",
+    "Tuesday<br>मंगलवार",
+    "Thursday<br>गुरुवार",
+    "Monday<br>सोमवार"
+   ],
+   "my_ans": "B",
+   "sol": "C(शुक्र), F(सो). E, D, B का क्रम खाली जगह (मंगल, बुध, गुरु) में आएगा।<br>E(मंगल), D(बुध), B(गुरु).",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Each of L, M, N, O, A, B and C has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. No one has exam before N. Only three people have exams between N and O. Only one person has exam between O and M. L has exam on Wednesday. B has exam on one of the days after C but on one of the days before A. On which day of the week does B have exam?",
+   "hi": "L, M, N, O, A, B और C में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। N से पहले किसी की परीक्षा नहीं होती है। N और O के बीच केवल तीन व्यक्तियों की परीक्षा होती है। O और M के बीच केवल एक व्यक्ति की परीक्षा होती है। L की परीक्षा बुधवार को होती है। B की परीक्षा, C के बाद किसी दिन लेकिन A से पहले किसी दिन होती है। B की परीक्षा सप्ताह के किस दिन होती है?",
+   "opts": [
+    "Saturday<br>शनिवार",
+    "Tuesday<br>मंगलवार",
+    "Thursday<br>गुरुवार",
+    "Monday<br>सोमवार"
+   ],
+   "my_ans": "C",
+   "sol": "N(सो), C(मंगल), L(बुध), B(गुरु), O(शुक्र), A(शनि), M(रवि).<br>B गुरुवार को है।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Each of F, G, H, I, M, N and O has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. Only three people have exams between I and O. O has exam on the last day of the week. Only one person has exam between F and H. N has exam immediately the day before M. G doesn't have exam on Friday. How many people have exam(s) between G and N?",
+   "hi": "F, G, H, I, M, N और O में से प्रत्येक की परीक्षा, सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। I और O के बीच केवल तीन व्यक्तियों की परीक्षा होती है। O की परीक्षा सप्ताह के आखिरी दिन होती है। F और H के बीच केवल एक व्यक्ति की परीक्षा होती है। N की परीक्षा M से ठीक एक दिन पहले होती है। G की परीक्षा शुक्रवार को नहीं होती है। G और N के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "One<br>एक",
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: I(सो), G(मंगल), F(बुध), N(गुरु), M(शुक्र), H(शनि), O(रवि).<br>G(मंगल) और N(गुरु) के बीच 1 व्यक्ति (F) है, लेकिन प्रश्न के अनुसार G और N के बीच 3 व्यक्ति हैं। सही क्रम: G(सो), I(मंगल), F(बुध), H(गुरु), N(शुक्र), M(शनि), O(रवि).",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. P has the exam on Wednesday. Only three people have exams after R. S has the exam after Q but before P. U has the exam before V but not on Friday. How many people have exams between T and Q?",
+   "hi": "P, Q, R, S, T, U और V में से प्रत्येक की परीक्षा, सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। P की परीक्षा बुधवार को होती है। R के बाद केवल तीन व्यक्तियों की परीक्षा होती है। S की परीक्षा Q के बाद होती है, लेकिन P से पहले होती है। U की परीक्षा V से पहले होती है, लेकिन शुक्रवार को नहीं होती है। T और Q के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "Two<br>दो",
+    "Four<br>चार",
+    "One<br>एक",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: U(सो), V(मंगल), P(बुध), R(गुरु), Q(शुक्र), S(शनि), T(रवि).<br>T(रवि) और Q(शुक्र) के बीच 1 व्यक्ति (S) है।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. Only two people have exams before Q. Only three people have exams after V. Only three people have exams between S and Q. P has the exam immediately before T but not on Monday. R does not have the exam on Tuesday. How many people have exams between R and T?",
+   "hi": "P, Q, R, S, T, U और V में से प्रत्येक की परीक्षा, सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। Q से पहले केवल दो व्यक्तियों की परीक्षा होती है। V के बाद केवल तीन व्यक्तियों की परीक्षा होती है। S और Q के बीच केवल तीन व्यक्तियों की परीक्षा होती है। P की परीक्षा T से ठीक पहले होती है लेकिन सोमवार को नहीं होती है। R की परीक्षा मंगलवार को नहीं होती है। R और T के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "One<br>एक",
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: S(सो), R(मंगल), Q(बुध), V(गुरु), P(शुक्र), T(शनि), U(रवि).<br>R(मंगल) और T(शनि) के बीच 3 व्यक्ति (Q, V, P) हैं।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Each of A, B, C, D, E and F visited the same shopping mall on a different day of a week starting from Monday and ending on Saturday of the same week. D visited the mall on Tuesday. Only two people visited the mall between B and D. C visited the mall immediately before F. A didn't visit the mall on a Saturday. Who visited the mall on Wednesday?",
+   "hi": "A, B, C, D, E और F में से प्रत्येक, सोमवार से शुरू होकर शनिवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन समान शॉपिंग मॉल का दौरा करते हैं। D ने मंगलवार को मॉल का दौरा किया। B और D के बीच केवल दो व्यक्तियों ने मॉल का दौरा किया। C ने F से ठीक पहले मॉल का दौरा किया। A ने शनिवार को मॉल का दौरा नहीं किया। बुधवार को मॉल का दौरा किसने किया?",
+   "opts": [
+    "F",
+    "E",
+    "C",
+    "A"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: B(सो), D(मंगल), C(बुध), F(गुरु), A(शुक्र), E(शनि).<br>बुधवार को C ने दौरा किया।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Each of A, B, L, I, N, G and S has exam on a different day of a week starting from Monday and ending on Sunday of the same week. B has exam on first day of the week. Only three people have exam between B and L. Only one person has exam between L and A. N has exam on Sunday. S has exam on one of the days after I but on one of the days before G. Who has exam on Thursday?",
+   "hi": "A, B, L, I, N, G और S में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले सप्ताह के अलग-अलग दिन होती है। B की परीक्षा सप्ताह के पहले दिन होती है। B और L के बीच केवल तीन व्यक्तियों की परीक्षा होती है। L और A के बीच केवल एक व्यक्ति की परीक्षा होती है। N की रविवार को परीक्षा होती है। S की परीक्षा, I के बाद किसी एक दिन होती है, लेकिन G से पहले किसी एक दिन होती है। गुरुवार को किसकी परीक्षा होती है?",
+   "opts": [
+    "A",
+    "G",
+    "I",
+    "S"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: B(सो), I(मंगल), S(बुध), L(गुरु), G(शुक्र), A(शनि), N(रवि).<br>गुरुवार को L की परीक्षा है।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. T has the exam on Tuesday. Only two people have exams between R and T. P has the exam immediately after S but not on Sunday. Q has the exam before V but not on Monday. How many people have exams between U and P?",
+   "hi": "P, Q, R, S, T, U और V में से प्रत्येक की परीक्षा, सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। T की परीक्षा मंगलवार को होती है। R और T के बीच केवल दो व्यक्तियों की परीक्षा होती है। P की परीक्षा S के ठीक बाद होती है, लेकिन रविवार को नहीं होती है। Q की परीक्षा V से पहले होती है लेकिन सोमवार को नहीं होती है। U और P के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: R(सो), T(मंगल), Q(बुध), V(गुरु), S(शुक्र), P(शनि), U(रवि).<br>U(रवि) और P(शनि) के बीच 0 व्यक्ति हैं।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Each of X, Y, Z, A, B, C and D has an interview on a different day of the week starting on Monday and ending on Sunday of the same week. C has an interview on the last day of the week. Y has an interview on the first day of the week. Only three people have an interview between Y and D. Only one person has an interview between D and Z. X has an interview on one of the days after B but on one of the days before A. Who has an interview on Thursday?",
+   "hi": "Each of X, Y, Z, A, B, C and D has an interview on a different day of the week starting on Monday and ending on Sunday of the same week. C has an interview on the last day of the week. Y has an interview on the first day of the week. Only three people have an interview between Y and D. Only one person has an interview between D and Z. X has an interview on one of the days after B but on one of the days before A. Who has an interview on Thursday?",
+   "opts": [
+    "X",
+    "B",
+    "A",
+    "D"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: Y(सो), B(मंगल), Z(बुध), X(गुरु), D(शुक्र), A(शनि), C(रवि).<br>गुरुवार को X का इंटरव्यू है।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Each of F, G, H, L, M, N and O has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. G has exam on Friday. Only two people have exams between M and G. Only four people have exams between F and M. N has exam immediately after O. L doesn’t have exam on Monday. How many people have exams between L and H?",
+   "hi": "F, G, H, L, M, N और O में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। G की परीक्षा शुक्रवार को होती है। M और G के बीच केवल दो व्यक्तियों की परीक्षा होती है। F और M के बीच केवल चार व्यक्तियों की परीक्षा होती है। O के ठीक बाद N की परीक्षा होती है। सोमवार को L की परीक्षा नहीं होती है। L और H के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: F(सो), O(मंगल), N(बुध), M(गुरु), H(शुक्र), G(शनि), L(रवि).<br>L(रवि) और H(शुक्र) के बीच 2 व्यक्ति (G, H) हैं।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें।",
+   "ans": "B"
+  }
+ ]
+}

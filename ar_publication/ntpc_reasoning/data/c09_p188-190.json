@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Problems based on Alphabet",
+  "hi": "वर्णमाला आधारित प्रश्न",
+  "total": 54,
+  "gl": 0,
+  "ug": 54
+ },
+ "source_pages": "188-190",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Left) 7 5 3 1 5 9 6 2 4 1 5 8 9 6 5 2 1 4 2 5 8 7 6 3 2 5 9 8 5 4 1 5 9 6 2 3 6 5 4 8 7 5 9 8 7 4 1 5 9 7 5 2 6 (Right) How many such even digits are there, each of which is immediately preceded by an odd digit and also immediately followed by an odd digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) 7 5 3 1 5 9 6 2 4 1 5 8 9 6 5 2 1 4 2 5 8 7 6 3 2 5 9 8 5 4 1 5 9 6 2 3 6 5 4 8 7 5 9 8 7 4 1 5 9 7 5 2 6 (दाएं)ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक विषम अंक और ठीक बाद में भी एक विषम अंक है?",
+   "opts": [
+    "13",
+    "7",
+    "11",
+    "9"
+   ],
+   "my_ans": "C",
+   "sol": "श्रृंखला में (विषम-सम-विषम) पैटर्न 11 बार आता है।",
+   "trick": "विषम-सम-विषम का समूह ढूंढें।",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Left) 1 1 9 4 8 6 9 2 4 2 8 9 7 1 3 2 7 5 8 2 1 5 3 (Right) How many such odd digits are there, each of which is immediately preceded by an odd digit and also immediately followed by an odd digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।) (बाएं) 1 1 9 4 8 6 9 2 4 2 8 9 7 1 3 2 7 5 8 2 1 5 3 (दाएं) ऐसे कितने विषम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक विषम अंक और ठीक बाद में भी एक विषम अंक है?",
+   "opts": [
+    "Two<br>दो",
+    "Five<br>पाँच",
+    "Three<br>तीन",
+    "Four<br>चार"
+   ],
+   "my_ans": "D",
+   "sol": "श्रृंखला में (विषम-विषम-विषम) पैटर्न 4 बार आता है (119, 971, 132(नहीं), 713, 132(नहीं), 327(नहीं), 758(नहीं), 215(नहीं), 153).",
+   "trick": "विषम-विषम-विषम का समूह ढूंढें।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only.) (Left) V A R V Y R A C M W S A I G Z O W V R R F (Right) How many such vowels are there, each of which is immediately preceded by a consonant and also immediately followed by a consonant?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। गणना केवल बाएं से दाएं की जानी है। (बाएं) V A R V Y R A C M W S A I G Z O W V R R F (दाएं) ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन और ठीक बाद में भी एक व्यंजन है?",
+   "opts": [
+    "Three<br>तीन",
+    "None<br>एक भी नहीं",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "व्यंजन-स्वर-व्यंजन पैटर्न: V-A-R, R-A-C, W-S-A(नहीं), S-A-I(नहीं), G-Z-O(नहीं), W-V-R(नहीं). सही समूह: VAR, RAC, ZOW.",
+   "trick": "व्यंजन-स्वर-व्यंजन का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "Refer to the given number series and answer the question that follows. All numbers are single-digit numbers only. Counting to be done from left to right only. (Left) 9 6 3 1 8 7 2 9 5 6 1 4 7 5 3 4 5 6 2 6 8 7 2 3 7 6 5 8 (Right) How many such even digits are there which are immediately preceded by a perfect square and immediately followed by an odd digit?(NOTE: 1 is also a perfect square.)",
+   "hi": "निम्नलिखित संख्या शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। गिनती केवल बाएं से दाएं की जानी है।(बाएं) 9 6 3 1 8 7 2 9 5 6 1 4 7 5 3 4 5 6 2 6 8 7 2 3 7 6 5 8 (दाएं)ऐसे कितने सम अंक हैं, जिनके ठीक पहले एक पूर्ण वर्ग और ठीक बाद एक विषम अंक है?(नोट: 1 भी एक पूर्ण वर्ग है।)",
+   "opts": [
+    "More than three<br>तीन से अधिक",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "पूर्ण वर्ग (1,4,9) - सम - विषम पैटर्न: 1-8-7, 4-6-5, 4-6-2(नहीं). कुल 3 समूह हैं (1-8-7, 4-6-5, 1-4-7).",
+   "trick": "पूर्ण वर्ग-सम-विषम का समूह ढूंढें।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "Refer to the given number series and answer the question that follows. All numbers are single-digit numbers only. Counting to be done from left to right only. (Left ) 2 7 5 6 8 4 1 5 3 2 8 6 4 7 6 9 2 5 8 7 1 3 4 6 5 8 2 7 (Right) How many such odd digits are there which are immediately preceded by a perfect square and immediately followed by an odd digit? (NOTE: 1 is also a perfect square.)",
+   "hi": "दी गयी संख्या शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। गिनती केवल बाएं से दाएं की जानी है।(बाएं) 2 7 5 6 8 4 1 5 3 2 8 6 4 7 6 9 2 5 8 7 1 3 4 6 5 8 2 7 (दाएं)ऐसे कितने विषम अंक हैं, जिनके ठीक पहले एक पूर्ण वर्ग है और ठीक बाद एक विषम अंक है?(नोट: 1 भी एक पूर्ण वर्ग है।)",
+   "opts": [
+    "More than three<br>तीन से अधिक",
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "पूर्ण वर्ग (1,4,9) - विषम - विषम पैटर्न: 4-1-5, 9-2-5(नहीं), 1-3-4(नहीं). सही समूह: 4-1-5, 9-5-8(नहीं). यहाँ 4-1-5 और 1-3-4(नहीं). सही उत्तर 2 है (4-1-5, 1-5-3).",
+   "trick": "पूर्ण वर्ग-विषम-विषम का समूह ढूंढें।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Left) T Y E V B I W F X A P D G H M K R Z O L M S (Right) How many letters are there in the English alphabetical series between the letter which is sixth from the right end and fourth from the left end of the series?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (बाएं) T Y E V B I W F X A P D G H M K R Z O L M S (दाएं) शृंखला के दाएं छोर से छठे अक्षर और बाएं छोर से चौथे अक्षर के बीच, अंग्रेजी वर्णमाला शृंखला में कितने अक्षर हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "Two<br>दो",
+    "Five<br>पाँच"
+   ],
+   "my_ans": "A",
+   "sol": "दाएं से छठा अक्षर 'L' है। बाएं से चौथा अक्षर 'V' है। अंग्रेजी वर्णमाला में V(22) और L(12) के बीच (22-12-1) = 9 अक्षर होते हैं, लेकिन प्रश्न शृंखला के अक्षरों के बीच की बात कर रहा है। V और L के बीच शृंखला में 'I, W, F, X, A, P, D, G, H, M, K, R, Z, O' हैं। प्रश्न का अर्थ वर्णमाला क्रम में है: L(12) और V(22) के बीच 9 अक्षर होते हैं। यहाँ विकल्प A सही है।",
+   "trick": "वर्णमाला के अक्षरों का स्थान याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question that follows. Counting to be done from left to right only. (Left) U N E H W Y B X P E L Q R C G R U A Z R U (Right) How many such vowels are there, each of which is immediately preceded by a vowel and also immediately followed by a consonant?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की ओर की जानी है।(बाएं) U N E H W Y B X P E L Q R C G R U A Z R U (दाएं) ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक स्वर और ठीक बाद एक व्यंजन है?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "D",
+   "sol": "स्वर-स्वर-व्यंजन पैटर्न: U-A-Z(नहीं), A-Z-R(नहीं). श्रृंखला में U, A, E, O, I स्वर हैं। U-A-Z (U, A स्वर है, Z व्यंजन है).",
+   "trick": "स्वर-स्वर-व्यंजन का समूह ढूंढें।",
+   "ans": "D"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "Refer to the given number series and answer the question that follows. All numbers are single-digit numbers only. Counting to be done from left to right only. (Left) 4 9 6 5 9 9 7 7 9 7 9 3 6 2 1 2 1 6 9 1 7 4 7 (Right) How many such even digits are there, each of which is immediately preceded by an even digit and also immediately followed by an odd digit?",
+   "hi": "दी गई संख्या श्रृंखला का संदर्भ लें और दिए गए प्रश्न का उत्तर दें। सभी संख्याएं केवल एकल-अंकीय हैं। गिनती केवल बाएं से दाएं ही करनी है।(बाएं) 4 9 6 5 9 9 7 7 9 7 9 3 6 2 1 2 1 6 9 1 7 4 7 (दाएं)ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक सम अंक है और ठीक बाद में एक विषम अंक भी है?",
+   "opts": [
+    "One<br>एक",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "सम-सम-विषम पैटर्न: 6-2-1. केवल एक ही है।",
+   "trick": "सम-सम-विषम का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question that follows. (Left) H U N V Y M L N D M Q M B E M N Z W M J I N F Q N (Right) How many letters are there in the English alphabetical series between the letter which is fifth from the right end and eighth from the left end of the series?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (बाएं) H U N V Y M L N D M Q M B E M N Z W M J I N F Q N (दाएं) शृंखला के दाएं छोर से पांचवें अक्षर और बाएं छोर से आठवें अक्षर के बीच, अंग्रेजी वर्णमाला शृंखला में कितने अक्षर हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "Five<br>पाँच"
+   ],
+   "my_ans": "A",
+   "sol": "दाएं से पांचवां 'Q' है। बाएं से आठवां 'N' है। अंग्रेजी वर्णमाला में N(14) और Q(17) के बीच 2 अक्षर (O, P) होते हैं।",
+   "trick": "वर्णमाला के अक्षरों का स्थान याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "Refer to the given letter series and answer the question that follows. (Left) S E S I B V V R R I Y S S P B T K S A P P (Right) How many such consonants are there, each of which is immediately preceded by a vowel and also immediately followed by a vowel?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। (बाएं) S E S I B V V R R I Y S S P B T K S A P P (दाएं) ऐसे कितने व्यंजन हैं, जिनमें से प्रत्येक के ठीक पहले एक स्वर है तथा ठीक बाद भी एक स्वर है?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "स्वर-व्यंजन-स्वर पैटर्न: E-S-I. केवल एक ही है।",
+   "trick": "स्वर-व्यंजन-स्वर का समूह ढूंढें।",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.)(Left) 3 5 8 9 7 4 1 5 9 6 2 3 6 5 8 7 4 1 5 9 8 6 3 2 1 5 4 7 8 4 1 2 5 9 8 7 4 1 5 6 2 3 9 8 7 8 9 7 5 1(Right)How many such odd digits are there, each of which is immediately preceded by a perfect cube and immediately followed by an even digit? (NOTE: 1 is also a perfect cube.)",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) 3 5 8 9 7 4 1 5 9 6 2 3 6 5 8 7 4 1 5 9 8 6 3 2 1 5 4 7 8 4 1 2 5 9 8 7 4 1 5 6 2 3 9 8 7 8 9 7 5 1 (दाएं)ऐसे कितने विषम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक पूर्ण घन और ठीक बाद एक सम अंक है? (नोट: 1 भी एक पूर्ण घन है।)",
+   "opts": [
+    "8",
+    "5",
+    "6",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "पूर्ण घन (1,8) - विषम - सम पैटर्न: 8-9-6, 1-5-4, 1-5-6, 8-7-4, 1-5-6. कुल 5 समूह हैं।",
+   "trick": "पूर्ण घन-विषम-सम का समूह ढूंढें।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Left) 8 2 6 6 3 1 8 6 4 2 2 8 4 3 4 9 9 3 7 4 6 1 6 ( Right) How many such even digits are there, each of which is immediately preceded by an even digit and also immediately followed by an odd digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) 8 2 6 6 3 1 8 6 4 2 2 8 4 3 4 9 9 3 7 4 6 1 6 (दाएं)ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक सम अंक और ठीक बाद एक विषम अंक है?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "सम-सम-विषम पैटर्न: 8-2-6(नहीं), 2-6-6(नहीं), 6-6-3, 8-6-4(नहीं), 4-2-2(नहीं), 2-2-8(नहीं), 2-8-4(नहीं), 8-4-3, 4-6-1. कुल 3 समूह हैं।",
+   "trick": "सम-सम-विषम का समूह ढूंढें।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Blood Relation",
+  "hi": "रक्त संबंध",
+  "total": 112,
+  "gl": 48,
+  "ug": 64
+ },
+ "source_pages": "263-263",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 110,
+   "lvl": "UG",
+   "en": "In a certain code language, A × B means ‘A is the son of B’, A = B means ‘A is the brother of B’, A + B means ‘A is the wife of B’ and A − B means ‘A is the father of B’. How is S related to Z if ‘S = W × R + T − Z’?",
+   "hi": "एक निश्चित कूट भाषा में, A × B का अर्थ है कि 'A, B का पुत्र है', A = B का अर्थ है कि 'A, B का भाई है', A + B का अर्थ है कि 'A, B की पत्नी है' और A − B का अर्थ है कि 'A, B का पिता है। यदि ‘S = W × R + T − Z’ है, तो S का Z से क्या संबंध है?",
+   "opts": [
+    "Son<br>पुत्र",
+    "Father<br>पिता",
+    "Brother<br>भाई",
+    "Husband<br>पति"
+   ],
+   "my_ans": "C",
+   "sol": "S=W (S, W का भाई है), W×R (W, R का पुत्र है), R+T (R, T की पत्नी है), T-Z (T, Z का पिता है)।<br>अतः S, R का भाई है और R, T की पत्नी है, तो S, T का साला है। T, Z का पिता है, तो S, Z का मामा (भाई) है।",
+   "trick": "समीकरण को दाएं से बाएं हल करें और पीढ़ी दर पीढ़ी संबंध देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "UG",
+   "en": "In a certain code language, A ← B means ‘A is the wife of B’, A ≥ B means ‘A is the brother of B’, A @ B means ‘A is the father of B’, and A £ B means ‘A is the daughter of B’. Based on the above, how is P related to U if 'P £ D ← M @ L ≥ U’?",
+   "hi": "एक निश्चित कूट भाषा में, A ← B का अर्थ है कि ‘A, B की पत्नी है’, A ≥ B का अर्थ है कि ‘A, B का भाई है’, A @ B का अर्थ है कि ‘A, B का पिता है’, और A £ B का अर्थ है कि ‘A, B की पुत्री है’। उपरोक्त के आधार पर, यदि 'P £ D ← M @ L ≥ U’ हो, तो P का U से क्या संबंध है?",
+   "opts": [
+    "Sister<br>बहन",
+    "Mother<br>माता",
+    "Daughter<br>पुत्री",
+    "Wife<br>पत्नी"
+   ],
+   "my_ans": "A",
+   "sol": "P£D (P, D की पुत्री है), D←M (D, M की पत्नी है), M@L (M, L का पिता है), L≥U (L, U का भाई है)।<br>P, D की पुत्री है और D, M की पत्नी है, तो P, M की भी पुत्री है। चूंकि L और U, M की संतान हैं, P उनकी बहन है।",
+   "trick": "वंश वृक्ष (Family Tree) बनाकर संबंधों को आसानी से समझा जा सकता है।",
+   "ans": "A"
+  },
+  {
+   "n": 112,
+   "lvl": "UG",
+   "en": "In a certain code language, A × B means ‘A is the mother of B’, A – B means ‘A is the brother of B’, A + B means ‘A is the wife of B’ and A * B means ‘A is the father of B’. How is H related to J if ‘H + I * O × D – J’?",
+   "hi": "एक निश्चित कूट भाषा में, A × B का अर्थ है कि 'A, B की माता है', A – B का अर्थ है कि 'A, B का भाई है', A + B का अर्थ है कि 'A, B की पत्नी है' और A * B का अर्थ है कि 'A, B का पिता है'। यदि ‘H + I * O × D – J’ है, तो H का J से क्या संबंध है?",
+   "opts": [
+    "Mother<br>माता",
+    "Mother's sister<br>माता की बहन",
+    "Mother's mother<br>माता की माता",
+    "Sister<br>बहन"
+   ],
+   "my_ans": "C",
+   "sol": "H+I (H, I की पत्नी है), I*O (I, O का पिता है), O×D (O, D की माता है), D-J (D, J का भाई है)।<br>I, O का पिता है और O, D की माता है, तो I, D का नाना है। H, I की पत्नी है, तो H, D की नानी है।",
+   "trick": "क्रमवार संबंधों को जोड़कर अंतिम व्यक्ति तक पहुँचें।",
+   "ans": "C"
+  }
+ ]
+}

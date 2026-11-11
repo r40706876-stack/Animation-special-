@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Number Pattern",
+  "hi": "संख्या पैटर्न",
+  "total": 12,
+  "gl": 12,
+  "ug": 0
+ },
+ "source_pages": "182-183",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Below are given two sets of numbers. In each set of numbers, a certain mathematical operation on the first number results in the second number. Similarly, a certain mathematical operation on the second number results in the third number, and so on. Which of the given options follows the same set of operations as in the question? 14 – 196 – 186 – 166; 18 – 324 – 314 – 294",
+   "hi": "नीचे संख्याओं के दो समुच्चय दिए गए हैं। संख्याओं के प्रत्येक समुच्चय में, पहली संख्या पर कुछ गणितीय संक्रियाएँ करके दूसरी संख्या प्राप्त की गई है। इसी प्रकार, दूसरी संख्या पर कुछ गणितीय संक्रियाएँ करके तीसरी संख्या प्राप्त की गई है और इसी प्रकार आगे भी संख्याएँ प्राप्त की गई हैं। दिए गए विकल्पों में से कौन-सा विकल्प प्रश्न में वर्णित संक्रियाओं के समान संक्रियाओं का अनुसरण करता है? 14 – 196 – 186 – 166; 18 – 324 – 314 – 294",
+   "opts": [
+    "16 – 256 – 266 – 246",
+    "11 – 121 – 111 – 91",
+    "18 – 320 – 330 – 350",
+    "21 – 441 – 431 – 451"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (x) - (x²) - (x²-10) - (x²-30)<br>14²=196, 196-10=186, 186-20=166<br>11²=121, 121-10=111, 111-20=91",
+   "trick": "वर्ग करें, फिर 10 घटाएं, फिर 20 घटाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Below are given two sets of numbers. In each set of numbers, a certain mathematical operation on the first number results in the second number. Similarly, a certain mathematical operation on the second number results in the third number, and so on. Which of the given options follows the same set of operations as in the question? 8 – 16 – 26 – 13; 5 – 10 – 20 – 10",
+   "hi": "नीचे संख्याओं के दो समुच्चय दिए गए हैं। संख्याओं के प्रत्येक समुच्चय में, पहली संख्या पर कुछ गणितीय संक्रियाएँ करके दूसरी संख्या प्राप्त की गई है। इसी प्रकार, दूसरी संख्या पर कुछ गणितीय संक्रियाएँ करके तीसरी संख्या प्राप्त की गई है और इसी प्रकार आगे भी संख्याएँ प्राप्त की गई हैं। दिए गए विकल्पों में से कौन-सा विकल्प प्रश्न में वर्णित संक्रियाओं के समान संक्रियाओं का अनुसरण करता है? 8 – 16 – 26 – 13; 5 – 10 – 20 – 10",
+   "opts": [
+    "24 – 48 – 68 – 34",
+    "12 – 24 – 34 – 17",
+    "34 – 68 – 78 – 156",
+    "36 – 72 – 144 – 72"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (x) - (2x) - (2x+10) - (2x+10)/2<br>12 - 24 - 34 - 17 (34/2=17)",
+   "trick": "दुगुना करें, 10 जोड़ें, फिर आधा करें।",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Below are given two sets of numbers. In each set of numbers, a certain mathematical operation on the first number results in the second number. Similarly, a certain mathematical operation on the second number results in the third number and so on. Which of the given options follows the same set of operations as in the question? 3 – 30 – 150 – 151; 9 – 90 – 450 – 451",
+   "hi": "नीचे संख्याओं के दो समुच्चय दिए गए हैं। संख्याओं के प्रत्येक समुच्चय में, पहली संख्या पर कुछ गणितीय संक्रियाएँ करके दूसरी संख्या प्राप्त की गई है। इसी प्रकार, दूसरी संख्या पर कुछ गणितीय संक्रियाएँ करके तीसरी संख्या प्राप्त की गई है और इसी प्रकार आगे भी संख्याएँ प्राप्त की गई हैं। दिए गए विकल्पों में से कौन-सा विकल्प प्रश्न में वर्णित संक्रियाओं के समान संक्रियाओं का अनुसरण करता है? 3 – 30 – 150 – 151; 9 – 90 – 450 – 451",
+   "opts": [
+    "8 – 80 – 400 – 40",
+    "12 – 120 – 600 – 601",
+    "15 – 150 – 750 – 749",
+    "6 – 60 – 30 – 150"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (x) - (x×10) - (x×50) - (x×50+1)<br>12 - 120 - 600 - 601",
+   "trick": "10 से गुणा, फिर 50 से गुणा, फिर 1 जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Below are given two sets of numbers. In each set of numbers, a certain mathematical operation on the first number results in the second number. Similarly, certain mathematical operation on the second number results in the third number and so on. Which of the given options follows the same set of operations as in question? 15 - 75 - 80 - 160; 16 - 80 - 85 – 170",
+   "hi": "नीचे संख्याओं के दो समूह दिए गए हैं। प्रत्येक समूह में, पहली संख्या पर एक निश्चित गणितीय संक्रिया करने से दूसरी संख्या प्राप्त होती है। इसी प्रकार, दूसरी संख्या पर एक निश्चित गणितीय संक्रिया करने से तीसरी संख्या प्राप्त होती है, और इसी प्रकार आगे भी संख्याएँ प्राप्त होती है। दिए गए विकल्पों में से कौन-सा विकल्प प्रश्न में दी गई संक्रियाओं के समान समूह का अनुसरण करता है? 15 - 75 - 80 - 160; 16 - 80 - 85 – 170",
+   "opts": [
+    "18-80-85-170",
+    "13-75-80-160",
+    "17-85-90-180",
+    "20-100-105-220"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: (x) - (x×5) - (x×5+5) - (x×5+5)×2<br>17 - 85 - 90 - 180",
+   "trick": "5 से गुणा, 5 जोड़ें, फिर 2 से गुणा।",
+   "ans": "C"
+  }
+ ]
+}

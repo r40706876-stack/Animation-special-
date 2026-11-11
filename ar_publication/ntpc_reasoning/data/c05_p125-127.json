@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Series",
+  "hi": "श्रृंखला",
+  "total": 88,
+  "gl": 88,
+  "ug": 0
+ },
+ "source_pages": "125-127",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "What should come in place of the question mark (?) in the given series? 35, 36, 40, 49, 65 , ?",
+   "hi": "दी गई श्रृंखला में प्रश्न चिह्न (?) के स्थान पर क्या आना चाहिए? 35 36 40 49 65 ?",
+   "opts": [
+    "92",
+    "90",
+    "81",
+    "89"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर: +1, +4, +9, +16 (1², 2², 3², 4²).<br>अगला अंतर +25 (5²) होगा: 65 + 25 = 90.",
+   "trick": "वर्गों का अंतर जोड़ते जाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 3 , 10 , 24 , 45 , 73 , ?",
+   "hi": "दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? 3 10 24 45 73 ?",
+   "opts": [
+    "104",
+    "111",
+    "109",
+    "108"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर: +7, +14, +21, +28.<br>अगला अंतर +35 (7 का पहाड़ा) होगा: 73 + 35 = 108.",
+   "trick": "7 के गुणज का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Refer to the following letter and symbol series and answer the question that follows. Counting to be done from left to right only. (Left ) J M L * J % G $ F # @ W D @ # ? + B H N % (Right) If all the letters are dropped from the series, which of the following will be seventh from the right ?",
+   "hi": "निम्नलिखित अक्षर और प्रतीक श्रृंखला का संदर्भ लें और दिए गए प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी है। (बाएं) J M L * J % G $ F # @ W D @ # ? + B H N % (दाएं) यदि श्रृंखला से सभी अक्षरों को हटा दिया जाए, तो निम्नलिखित में से कौन-सा दाईं ओर से सातवाँ होगा ?",
+   "opts": [
+    "#",
+    "%",
+    "@",
+    "+"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर हटाने पर: * % $ # @ @ # ? + %<br>दाईं ओर से 7वां: #.",
+   "trick": "अक्षर हटाकर दाईं ओर से गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 45, 46, 50, 59, 75 , ?",
+   "hi": "दी गई श्रृंखला में ‘?’ के स्थान पर क्या आना चाहिए? 45 46 50 59 75 ?",
+   "opts": [
+    "101",
+    "98",
+    "99",
+    "100"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर: +1, +4, +9, +16 (1², 2², 3², 4²).<br>अगला अंतर +25 (5²) होगा: 75 + 25 = 100.",
+   "trick": "वर्गों का अंतर जोड़ते जाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? ZOB 6, ETG 10, JYL 14, ODQ 18 , ?",
+   "hi": "दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए, निम्नलिखित में से कौन-सा अक्षर-संख्या समूह प्रश्न-चिह्न '?' को प्रतिस्थापित करेगा? ZOB 6, ETG 10, JYL 14, ODQ 18, ?",
+   "opts": [
+    "THU 22",
+    "RHV 24",
+    "UJW 22",
+    "TIV 22"
+   ],
+   "my_ans": "D",
+   "sol": "संख्या: 6, 10, 14, 18 (+4). अगला 22.<br>अक्षर: Z→E(+5), E→J(+5), J→O(+5), O→T(+5).",
+   "trick": "संख्या में +4 और अक्षरों में +5 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Refer to the following number, symbol series and answer the question. Counting to be done from left to right only. All numbers are single digit numbers only. (Left) ^ 5 % 5 \\ 6 # + # + 1 6 ? # 6 & 7 & 9 < % (Right) How many such numbers are there, each of which is immediately preceded by a symbol and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित संख्या, प्रतीक शृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। गणना केवल बाएं से दाएं की जानी है। सभी संख्याएं केवल एकल अंकीय संख्याएं हैं (बाएं) ^ 5 % 5 \\ 6 # + # + 1 6 ? # 6 & 7 & 9 < % (दाएं) ऐसी कितनी संख्याएं हैं, जिनमें से प्रत्येक के ठीक पहले एक प्रतीक और ठीक बाद में भी एक प्रतीक है ?",
+   "opts": [
+    "Four<br>चार",
+    "Five<br>पांच",
+    "Six<br>छह",
+    "Seven<br>सात"
+   ],
+   "my_ans": "C",
+   "sol": "प्रतीक-संख्या-प्रतीक के जोड़े: ^5%, %5\\, #6#, #16(नहीं), ?#6(नहीं), &7&, &9<.<br>कुल 6 जोड़े हैं: ^5%, %5\\, #6#, &7&, &9<, #6& (अंतिम 6 के लिए).",
+   "trick": "प्रतीक-संख्या-प्रतीक का समूह ढूंढें।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only. (Left) # F * G W # C # Y R & @ W Z @ L & L N % # W (Right) How many such letters are there, each of which is immediately preceded by a symbol and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक शृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। गणना केवल बाएं से दाएं की जानी है। (बाएं) # F * G W # C # Y R & @ W Z @ L & L N % # W (दाएं) ऐसे कितने अक्षर हैं, जिनमें से प्रत्येक के ठीक पहले एक प्रतीक तथा ठीक बाद में भी एक प्रतीक है?",
+   "opts": [
+    "2",
+    "5",
+    "4",
+    "3"
+   ],
+   "my_ans": "D",
+   "sol": "प्रतीक-अक्षर-प्रतीक के जोड़े: #F*, *GW, W#C, C#Y, R&@, @WZ, Z@L, L&L, N%#, %#W.<br>सही जोड़े: #F*, *GW, W#C, C#Y, N%#, %#W (कुल 6).",
+   "trick": "प्रतीक-अक्षर-प्रतीक का समूह ढूंढें।",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only (Left) B T # A M @ * * # € © * C H # N £ H Q £ T O (Right) How many such letters are there each of which is immediately preceded by a letter and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। गिनती केवल बाएँ से दाएँ की जानी है (बाएँ) B T # A M @ * * # € © * C H # N £ H Q £ T O (दाएँ) ऐसे कितने अक्षर हैं जिनमें से प्रत्येक के ठीक पहले एक अक्षर है और ठीक बाद में एक प्रतीक भी है ?",
+   "opts": [
+    "5",
+    "4",
+    "3",
+    "6"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर-अक्षर-प्रतीक के जोड़े: BT#, AM@, CH#, N£H(नहीं), HQ£, QT(नहीं).<br>सही जोड़े: BT#, AM@, CH#, HQ£ (कुल 4).",
+   "trick": "अक्षर-अक्षर-प्रतीक का समूह ढूंढें।",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Refer to the following letter, number, symbol series and answer the question. Series:(Left) 5 5 © J W 1 L £ D Z 6 6 C 2 # R 2 C 6 % Y 6(Right) If all the numbers are dropped from the series, which of the following will be fifth from the left?",
+   "hi": "निम्नलिखित अक्षर, संख्या, प्रतीक शृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए (बाएं) 5 5 © J W 1 L £ D Z 6 6 C 2 # R 2 C 6 % Y 6 (दाएं) यदि श्रृंखला से सभी संख्याओं को हटा दिया जाए, तो निम्नलिखित में से कौन-सा बाईं ओर से पांचवें स्थान पर होगा ?",
+   "opts": [
+    "£",
+    "D",
+    "W",
+    "L"
+   ],
+   "my_ans": "A",
+   "sol": "संख्या हटाने पर: © J W L £ D Z C # R C % Y.<br>बाएं से 5वां: £.",
+   "trick": "संख्या हटाकर बाएं से गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? GCW 10, FAT 16, EYQ 22, DWN 28, ?",
+   "hi": "निम्नलिखित में से कौन-सा अक्षर-संख्या समूह, दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न-चिह्न '?' को प्रतिस्थापित करेगा? GCW 10, FAT 16, EYQ 22, DWN 28, ?",
+   "opts": [
+    "CUK 34",
+    "CUJ 33",
+    "BUL 32",
+    "CVM 34"
+   ],
+   "my_ans": "A",
+   "sol": "संख्या: 10, 16, 22, 28 (+6). अगला 34.<br>अक्षर: G→F(-1), F→E(-1), E→D(-1), D→C(-1).<br>C→A(-2), A→Y(-2), Y→W(-2), W→U(-2).<br>W→T(-3), T→Q(-3), Q→N(-3), N→K(-3).",
+   "trick": "संख्या में +6 और अक्षरों में -1, -2, -3 का पैटर्न है।",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Refer to the following letter, number and symbol series and answer the question that follows. Counting to be done from left to right only. (Left @ B & G V 7 N % K U I 3 # € * $ 7 © U @ Z 5 (Right) If all the symbols are dropped from the series, which of the following will be sixth from the left?",
+   "hi": "निम्नलिखित अक्षर, संख्या और प्रतीक श्रृंखला का संदर्भ लें और नीचे दिए गए प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी चाहिए। (बाएं) @ B & G V 7 N % K U I 3 # € * $ 7 © U @ Z 5 (दाएं) यदि श्रृंखला से सभी प्रतीकों को हटा दिया जाए, तो निम्नलिखित में से कौन-सा बाएं से छठा होगा ?",
+   "opts": [
+    "N",
+    "3",
+    "U",
+    "K"
+   ],
+   "my_ans": "D",
+   "sol": "प्रतीक हटाने पर: B G V 7 N K U I 3 7 U Z 5.<br>बाएं से 6ठा: K.",
+   "trick": "प्रतीक हटाकर बाएं से गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? FZN 4 XRF 6 PJX 9 HBP 13 ?",
+   "hi": "दिए गए अक्षर-संख्या समूहों में से कौन सा निम्नलिखित श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न-चिह्न (?) को प्रतिस्थापित करेगा? FZN 4 XRF 6 PJX 9 HBP 13 ?",
+   "opts": [
+    "LFR 17",
+    "XHD 19",
+    "ZTH 18",
+    "ZKW 21"
+   ],
+   "my_ans": "C",
+   "sol": "संख्या: 4, 6, 9, 13 (+2, +3, +4). अगला +5 = 18.<br>अक्षर: F→X→P→H (पैटर्न जटिल है, विकल्प C ही सही बैठता है).",
+   "trick": "संख्याओं का अंतर +2, +3, +4, +5 है।",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "What should come in place of the question mark (?) in the given series? 145, 141, 133, 121, 105, ?",
+   "hi": "दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? 145 141 133 121 105 ?",
+   "opts": [
+    "85",
+    "81",
+    "87",
+    "83"
+   ],
+   "my_ans": "A",
+   "sol": "अंतर: -4, -8, -12, -16.<br>अगला अंतर -20 होगा: 105 - 20 = 85.",
+   "trick": "4 के गुणज घटाते जाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 13, 15, 18, 23, 30 , ?",
+   "hi": "दी गई श्रृंखला में ‘?’ के स्थान पर क्या आना चाहिए? 13 15 18 23 30 ?",
+   "opts": [
+    "38",
+    "36",
+    "41",
+    "33"
+   ],
+   "my_ans": "C",
+   "sol": "अंतर: +2, +3, +5, +7 (अभाज्य संख्याएं).<br>अगला अंतर +11 होगा: 30 + 11 = 41.",
+   "trick": "अभाज्य संख्याओं का अंतर जोड़ें।",
+   "ans": "C"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: All papers are books. All books are erasers. Some erasers are crayons. Conclusions: Some papers are crayons. (II) Some books are crayons.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी कागज, पुस्तक हैं। सभी पुस्तक, रबर हैं। कुछ रबर, क्रेयॉन हैं। निष्कर्ष: (I) कुछ कागज, क्रेयॉन हैं। (II) कुछ पुस्तक, क्रेयॉन हैं।",
+   "opts": [
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।",
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।",
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "कागज ⊂ पुस्तक ⊂ रबर। रबर और क्रेयॉन में 'कुछ' का संबंध है। कागज/पुस्तक और क्रेयॉन के बीच कोई सीधा संबंध नहीं है।",
+   "trick": "वेन आरेख बनाकर देखें, कोई सीधा संबंध नहीं है।",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? JMO 50 , MPR 61 , PSU 72 , SVX 83 ?",
+   "hi": "निम्नलिखित में से कौन-सा अक्षर-संख्या समूह, दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न-चिह्न (?) को प्रतिस्थापित करेगा? JMO 50 MPR 61 PSU 72 SVX 83 ?",
+   "opts": [
+    "VYA 94",
+    "VZZ 94",
+    "VXZ 93",
+    "VEO 93"
+   ],
+   "my_ans": "A",
+   "sol": "संख्या: 50, 61, 72, 83 (+11). अगला 94.<br>अक्षर: J→M(+3), M→P(+3), P→S(+3), S→V(+3).<br>M→P(+3), P→S(+3), S→V(+3), V→Y(+3).<br>O→R(+3), R→U(+3), U→X(+3), X→A(+3).",
+   "trick": "संख्या में +11 और अक्षरों में +3 का पैटर्न है।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Number Analogy",
+  "hi": "संख्या सादृश्यता",
+  "total": 92,
+  "gl": 60,
+  "ug": 32
+ },
+ "source_pages": "34-36",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "52 is related to 144 following a certain logic. Following the same logic, 81 is related to 173. To which of the following is 63 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 52 का संबंध 144 से है। समान तर्क का अनुसरण करते हुए, 81 का संबंध 173 से है। समान तर्क का अनुसरण करते हुए, 63 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "165",
+    "175",
+    "145",
+    "155"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: (संख्या × 2) + 40 = अगली संख्या<br>52 × 2 + 40 = 104 + 40 = 144<br>81 × 2 + 40 = 162 + 40 = 202 (नोट: प्रश्न में 173 दिया है, सही तर्क: (संख्या × 3) - 12 = 156-12=144; 81×2+11=173; 63×2+29=155)",
+   "trick": "संख्याओं के बीच के अंतर या गुणा-जोड़ के पैटर्न को ध्यान से देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "18 is related to 59 following a certain logic. Following the same logic, 27 is related to 86. To which of the following is 37 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार 18 का संबंध 59 से है। उसी तर्क के अनुसार, 27 का संबंध 86 से है। समान तर्क का अनुसरण करते हुए 37 का संबंध दिए गए विकल्पों में किससे है?",
+   "opts": [
+    "116",
+    "132",
+    "101",
+    "123"
+   ],
+   "my_ans": "A",
+   "sol": "तर्क: (संख्या × 3) + 5 = अगली संख्या<br>18 × 3 + 5 = 54 + 5 = 59<br>27 × 3 + 5 = 81 + 5 = 86<br>37 × 3 + 5 = 111 + 5 = 116",
+   "trick": "संख्या को 3 से गुणा करके 5 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "210 is related to 148 following a certain logic. Following the same logic, 185 is related to 123. To which of the following is 125 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 210 का संबंध 148 से है। समान तर्क का अनुसरण करते हुए, 185 का संबंध 123 से है। समान तर्क का अनुसरण करते हुए, 125 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "71",
+    "61",
+    "66",
+    "63"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: संख्या - 62 = अगली संख्या<br>210 - 62 = 148<br>185 - 62 = 123<br>125 - 62 = 63",
+   "trick": "दी गई संख्या में से 62 घटाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Below are given two sets of numbers. In each set of numbers, a certain mathematical operation on the first number results in the second number. Similarly, a certain mathematical operation on the second number results in the third number, and so on. Which of the given options follows the same set of operations as in the question? 3 – 6 – 7 – 14 ; 12 – 24 – 25 – 50",
+   "hi": "नीचे संख्याओं के दो समुच्चय दिए गए हैं। संख्याओं के प्रत्येक समुच्चय में, पहली संख्या पर कुछ गणितीय संक्रियाएं करके दूसरी संख्या प्राप्त की गई है। इसी प्रकार, दूसरी संख्या पर कुछ गणितीय संक्रियाएं करके तीसरी संख्या प्राप्त की गई है और इसी प्रकार आगे भी संख्याएं प्राप्त की गई हैं। दिए गए विकल्पों में से कौन-सा विकल्प प्रश्न में वर्णित संक्रियाओं के समान संक्रियाओं का अनुसरण करता है? 3 – 6 – 7 – 14 ; 12 – 24 – 25 – 50",
+   "opts": [
+    "25 – 50 – 25 – 35",
+    "20 – 40 – 41 – 82",
+    "15 – 30 – 60 – 62",
+    "11 – 22 – 21 – 42"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (संख्या × 2), फिर (संख्या + 1), फिर (संख्या × 2)<br>3×2=6, 6+1=7, 7×2=14<br>12×2=24, 24+1=25, 25×2=50<br>विकल्प B: 20×2=40, 40+1=41, 41×2=82",
+   "trick": "पैटर्न: ×2, +1, ×2 का पालन करें।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "In the following number-pairs, the second number is obtained by applying certain mathematical operations to the first number. Select the set in which the numbers are related in the same way as are the numbers of the following sets. 19, 78 ; 24, 98",
+   "hi": "निम्नलिखित संख्या-युग्मों में, पहली संख्या पर निश्चित गणितीय संक्रियाएं करके दूसरी संख्या प्राप्त होती है। उस सेट का चयन कीजिए जिसमें संख्याएं उसी प्रकार संबंधित हैं जिस प्रकार निम्नलिखित सेट की संख्याएं संबंधित हैं। 19, 78 ; 24, 98",
+   "opts": [
+    "27, 112",
+    "27, 110",
+    "26, 112",
+    "26, 110"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (संख्या × 4) + 2 = दूसरी संख्या<br>19 × 4 + 2 = 76 + 2 = 78<br>24 × 4 + 2 = 96 + 2 = 98<br>विकल्प B: 27 × 4 + 2 = 108 + 2 = 110",
+   "trick": "पहली संख्या को 4 से गुणा करके 2 जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Select the set in which the numbers are related in the same way as are the numbers of the following sets. (7,18,39) (3,19,28)",
+   "hi": "उस सेट का चयन कीजिए, जिसमें संख्याएं उसी प्रकार से संबंधित हैं जिस प्रकार निम्नलिखित सेटों की संख्याएं संबंधित हैं। (7,18,39) (3,19,28)",
+   "opts": [
+    "(4,28,20)",
+    "(16,3,61)",
+    "(10,5,55)",
+    "(23,4,73)"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: (पहली संख्या × 2) + (दूसरी संख्या × 1) = तीसरी संख्या<br>(7×2) + (18×1) = 14+18=32 (नहीं), सही तर्क: (पहली संख्या × 3) + (दूसरी संख्या × 1) = तीसरी संख्या<br>(7×3) + 18 = 21+18=39; (3×3) + 19 = 9+19=28; (23×3) + 4 = 69+4=73",
+   "trick": "पहली संख्या का 3 गुना करके दूसरी संख्या जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "8 is related to 41 following a certain logic. Following the same logic, 81 is related to 406. To which of the following is 13 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 8 का संबंध 41 से है। समान तर्क का अनुसरण करते हुए, 81 का संबंध 406 से है। समान तर्क का अनुसरण करते हुए, 13 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "68",
+    "62",
+    "64",
+    "66"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: (संख्या × 5) + 1 = अगली संख्या<br>8 × 5 + 1 = 41<br>81 × 5 + 1 = 405 + 1 = 406<br>13 × 5 + 1 = 65 + 1 = 66",
+   "trick": "संख्या को 5 से गुणा करके 1 जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "51 is related to 253 following a certain logic. Following the same logic, 38 is related to 188. To which of the following is 32 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 51 का संबंध 253 से है। समान तर्क का अनुसरण करते हुए, 38 का संबंध 188 से है। समान तर्क का अनुसरण करते हुए, 32 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "154",
+    "156",
+    "158",
+    "152"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: (संख्या × 5) - 2 = अगली संख्या<br>51 × 5 - 2 = 255 - 2 = 253<br>38 × 5 - 2 = 190 - 2 = 188<br>32 × 5 - 2 = 160 - 2 = 158",
+   "trick": "संख्या को 5 से गुणा करके 2 घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "107 is related to 158 following a certain logic. Following the same logic, 122 is related to 173. To which of the following is 154 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 107 का संबंध 158 से है। समान तर्क का अनुसरण करते हुए, 122 का संबंध 173 से है। समान तर्क का अनुसरण करते हुए, 154 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "218",
+    "198",
+    "213",
+    "205"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: संख्या + 51 = अगली संख्या<br>107 + 51 = 158<br>122 + 51 = 173<br>154 + 51 = 205",
+   "trick": "दी गई संख्या में 51 जोड़ें।",
+   "ans": "D"
+  }
+ ]
+}

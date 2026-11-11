@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "11-13",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : RWU :: KPN : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : RWU :: KPN : %",
+   "opts": [
+    "# = TXY , % = JLM",
+    "# = SXV , % = JOM",
+    "# = TYX , % = KLI",
+    "# = SYW , % = KFI"
+   ],
+   "my_ans": "B",
+   "sol": "# : RWU :: KPN : %<br>विकल्प B से: SXV : RWU → S-1=R, X-1=W, V-1=U<br>KPN : JOM → K-1=J, P-1=O, N-1=M.",
+   "trick": "प्रत्येक अक्षर में -1 का संबंध है।",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : ZJR :: PZH : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : ZJR :: PZH : %",
+   "opts": [
+    "# = UDL % = VFN",
+    "# = TDL % = VCN",
+    "# = TDM % = VFN",
+    "# = TDL % = VFN"
+   ],
+   "my_ans": "D",
+   "sol": "# : ZJR :: PZH : %<br>विकल्प D से: TDL : ZJR → T+6=Z, D+6=J, L+6=R<br>PZH : VFN → P+6=V, Z+6=F, H+6=N.",
+   "trick": "प्रत्येक अक्षर में +6 का संबंध है।",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "VASE is related to ZEOA in a certain way based on the English alphabetical order. In the same way, DIKW is related to HMGS. To which of the following is LQCO related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से VASE का संबंध ZEOA से है। उसी प्रकार, DIKW का संबंध HMGS से है। समान तर्क का अनुसरण करते हुए, LQCO का संबंध निम्न में से किससे है?",
+   "opts": [
+    "QUXL",
+    "PUYK",
+    "QVZL",
+    "OTXJ"
+   ],
+   "my_ans": "B",
+   "sol": "VASE → ZEOA: V+4=Z, A+4=E, S-4=O, E-4=A<br>DIKW → HMGS: D+4=H, I+4=M, K-4=G, W-4=S<br>LQCO: L+4=P, Q+4=U, C-4=Y, O-4=K → PUYK.",
+   "trick": "पहले दो अक्षरों में +4, अंतिम दो में -4।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : MWE :: KUC : %",
+   "hi": "निम्नलिखित में से किस अक्षर - समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : MWE :: KUC : %",
+   "opts": [
+    "# = BLT % = VFN",
+    "# = KLT % = VFN",
+    "# = BLT % = VCN",
+    "# = BLT % = VFM"
+   ],
+   "my_ans": "A",
+   "sol": "# : MWE :: KUC : %<br>विकल्प A से: BLT : MWE → B+11=M, L+11=W, T+11=E<br>KUC : VFN → K+11=V, U+11=F, C+11=N.",
+   "trick": "प्रत्येक अक्षर में +11 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : IGC :: TRN : %",
+   "hi": "निम्नलिखित में से किस अक्षर - समूह द्वारा # और % को प्रतिस्थापित करना चाहिए ताकि :: के बाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : IGC :: TRN : %",
+   "opts": [
+    "# = LJK; % = QNJ",
+    "# = JKF; % = QJH",
+    "# = LJF; % = QOK",
+    "# = LGY; % = QJH"
+   ],
+   "my_ans": "C",
+   "sol": "# : IGC :: TRN : %<br>विकल्प C से: LJF : IGC → L-3=I, J-3=G, F-3=C<br>TRN : QOK → T-3=Q, R-3=O, N-3=K.",
+   "trick": "प्रत्येक अक्षर में -3 का संबंध है।",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : LKP :: TSX : %",
+   "hi": "निम्नलिखित में से किस अक्षर - समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : LKP :: TSX : %",
+   "opts": [
+    "# = QNU % = OIB",
+    "# = QIV % = OLL",
+    "# = QPU % = ONS",
+    "# = ISU % = ONM"
+   ],
+   "my_ans": "C",
+   "sol": "# : LKP :: TSX : %<br>विकल्प C से: QPU : LKP → Q-5=L, P-5=K, U-5=P<br>TSX : ONS → T-5=O, S-5=N, X-5=S.",
+   "trick": "प्रत्येक अक्षर में -5 का संबंध है।",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. DRU : BWS ZBQ : XGO",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्म-समुच्चयों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DRU : BWS ZBQ : XGO",
+   "opts": [
+    "VLM : TQK",
+    "BCG : WGB",
+    "CLU : AOS",
+    "HKD : DNZ"
+   ],
+   "my_ans": "A",
+   "sol": "DRU : BWS → D-2=B, R+5=W, U-2=S<br>ZBQ : XGO → Z-2=X, B+5=G, Q-2=O<br>विकल्प A: VLM : TQK → V-2=T, L+5=Q, M-2=K.",
+   "trick": "पैटर्न: -2, +5, -2.",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : JOP :: YDE : %",
+   "hi": "निम्नलिखित में से किस अक्षर - समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : JOP :: YDE : %",
+   "opts": [
+    "# = OTT % = TTZ",
+    "# = TOU % = TZY",
+    "# = OTL % = TPZ",
+    "# = OTU % = TYZ"
+   ],
+   "my_ans": "D",
+   "sol": "# : JOP :: YDE : %<br>विकल्प D से: OTU : JOP → O-5=J, T-5=O, U-5=P<br>YDE : TYZ → Y-5=T, D-5=Y, E-5=Z.",
+   "trick": "प्रत्येक अक्षर में -5 का संबंध है।",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "9 : 81 :: 2.5 : x and 3 : 6 :: 5 : y. What is the ratio of x to y ?",
+   "hi": "9 : 81 :: 2.5 : x और 3 : 6 :: 5 : y है। x और y का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "13 : 14",
+    "5 : 3",
+    "10 : 2",
+    "9 : 4"
+   ],
+   "my_ans": "D",
+   "sol": "9/81 = 2.5/x → x = 22.5<br>3/6 = 5/y → y = 10<br>x : y = 22.5 : 10 = 9 : 4.",
+   "trick": "समानुपात नियम: a/b = c/d.",
+   "ans": "D"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of : : is the same as that on the right side of : : ? # : NXF : : KUC : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : NXF :: KUC : %",
+   "opts": [
+    "# = FIX % = SCK",
+    "# = FPX % = SCO",
+    "# = EPX % = SCK",
+    "# = FPX % = SCK"
+   ],
+   "my_ans": "D",
+   "sol": "# : NXF :: KUC : %<br>विकल्प D से: FPX : NXF → F+8=N, P+8=X, X+8=F<br>KUC : SCK → K+8=S, U+8=C, C+8=K.",
+   "trick": "प्रत्येक अक्षर में +8 का संबंध है।",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Select the INCORRECT statement about the polices of Jalaluddin Khalji.",
+   "hi": "जलालुद्दीन खिलजी की नीतियों के संबंध में गलत कथन का चयन करें।",
+   "opts": [
+    "He tried to win the goodwill of the nobility by a policy of tolerance.<br>उन्होंने सहिष्णुता की नीति के द्वारा कुलीन वर्ग की सद्भावना जीतने की कोशिश की।",
+    "He put forward the view that the state should never be based on the willing support of the governed.<br>उन्होंने यह विचार सामने रखा कि राज्य को कभी भी शासितों के स्वैच्छिक समर्थन पर आधारित नहीं होना चाहिए।",
+    "He not only forgave those who revolted against him but at times even rewarded them to win their support.<br>उन्होंने न केवल अपने खिलाफ विद्रोह करने वालों को माफ कर दिया, बल्कि कभी-कभी उनका सपोर्ट प्राप्त करने के लिए उन्हें पुरस्कृत भी किया।",
+    "He avoided harsh punishments, even to those who revolted against him.<br>उन्होंने अपने खिलाफ विद्रोह करने वालों को भी कठोर दंड देने से स्वयं को वर्जित रखा।"
+   ],
+   "my_ans": "B",
+   "sol": "जलालुद्दीन खिलजी का मानना था कि राज्य शासितों के स्वैच्छिक समर्थन पर आधारित होना चाहिए। अतः कथन B गलत है।",
+   "trick": "जलालुद्दीन खिलजी अपनी उदारता और सहिष्णुता के लिए जाना जाता था।",
+   "ans": "B"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : XHP :: UEM : %",
+   "hi": "निम्नलिखित में से किस अक्षर - समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर - समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : XHP :: UEM : %",
+   "opts": [
+    "# = NXF % = EKW",
+    "# = NXF % = EOO",
+    "# = NXF % = EOW",
+    "# = NOF % = EOW"
+   ],
+   "my_ans": "C",
+   "sol": "# : XHP :: UEM : %<br>विकल्प C से: NXF : XHP → N+10=X, X+10=H, F+10=P<br>UEM : EOW → U+10=E, E+10=O, M+10=W.",
+   "trick": "प्रत्येक अक्षर में +10 का संबंध है।",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "SGYU is related to UJAX in a certain way based on the English alphabetical order. In the same way, ASGG is related to CVIJ. To which of the following options is GBMP related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, SGYU का संबंध किसी निश्चित तरीके से UJAX से है। इसी प्रकार, ASGG का संबंध CVIJ से है। इसी तर्क के आधार पर, GBMP का संबंध, निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "SOMI",
+    "EIKO",
+    "IEOS",
+    "SOMK"
+   ],
+   "my_ans": "C",
+   "sol": "SGYU → UJAX: S+2=U, G+3=J, Y+2=A, U+3=X<br>ASGG → CVIJ: A+2=C, S+3=V, G+2=I, G+3=J<br>GBMP: G+2=I, B+3=E, M+2=O, P+3=S → IEOS.",
+   "trick": "पैटर्न: +2, +3, +2, +3.",
+   "ans": "C"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. OCI : SGM QEK : UIO",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए युग्मों के दो समुच्चयों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। OCI : SGM QEK : UIO",
+   "opts": [
+    "LBR : PQL",
+    "KGT : NJK",
+    "HIR : NDH",
+    "THN : XLR"
+   ],
+   "my_ans": "D",
+   "sol": "OCI : SGM → O+4=S, C+4=G, I+4=M<br>QEK : UIO → Q+4=U, E+4=I, K+4=O<br>विकल्प D: THN : XLR → T+4=X, H+4=L, N+4=R.",
+   "trick": "प्रत्येक अक्षर में +4 का संबंध है।",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Select the triads which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. AGED-DAGE-EDA GFAIL-LFAI-ILFA",
+   "hi": "उस त्रिक का चयन करें जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। AGED-DAGE-EDA GFAIL-LFAI-ILFA",
+   "opts": [
+    "FARM-MFAR-FMRA",
+    "KING-GKIN-NGKI",
+    "GIFT-TIGF-FITG",
+    "DEAL-LAED-ALDE"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: अंतिम अक्षर को शब्द के प्रारंभ में लाना (Cyclic shift)।<br>KING → GKIN → NGKI.",
+   "trick": "अक्षरों का चक्रीय स्थानांतरण (Cyclic shift)।",
+   "ans": "B"
+  }
+ ]
+}

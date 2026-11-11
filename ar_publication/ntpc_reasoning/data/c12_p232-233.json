@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Mathematical Operations",
+  "hi": "गणितीय संक्रियाएँ",
+  "total": 78,
+  "gl": 22,
+  "ug": 56
+ },
+ "source_pages": "232-233",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "What will come in place of ‘?’ in the following equation, if ‘ +’ and ‘ -‘ are interchanged and ‘x’ and ‘÷’ are interchanged? 12 ÷ 4 + 9 x 3 - 8 = ?",
+   "hi": "यदि ‘+’ और ‘-’ को परस्पर बदल दिया जाए तथा ‘x’ और ‘÷’ को परस्पर बदल दिया जाए, तो निम्नलिखित समीकरण में ‘?’ के स्थान पर क्या आएगा? 12 ÷ 4 + 9 x 3 - 8 = ?",
+   "opts": [
+    "53",
+    "39",
+    "44",
+    "35"
+   ],
+   "my_ans": "A",
+   "sol": "चिह्न बदलने पर: 12 × 4 - 9 ÷ 3 + 8<br>12 × 4 - 3 + 8 = 48 - 3 + 8 = 53",
+   "trick": "BODMAS नियम का पालन करें।",
+   "ans": "A"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "What will come in place of ‘?’ in the following equation, if ‘ +’ and ‘ -‘ are interchanged and ‘x’ and ‘÷’ are interchanged? 14 x 2 - 12 ÷ 4 + 8 = ?",
+   "hi": "यदि ‘+’ और ‘-’ को आपस में बदल दिया जाए, तथा ‘x’ और ‘÷’ को आपस में बदल दिया जाए, तो निम्नलिखित समीकरण में ‘?’ के स्थान पर क्या आएगा? 14 x 2 - 12 ÷ 4 + 8 = ?",
+   "opts": [
+    "22",
+    "16",
+    "47",
+    "18"
+   ],
+   "my_ans": "C",
+   "sol": "चिह्न बदलने पर: 14 ÷ 2 + 12 × 4 - 8<br>7 + 48 - 8 = 47",
+   "trick": "BODMAS नियम का पालन करें।",
+   "ans": "C"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "What will come in place of the question mark (?) in the following equation, if ‘+’ and ‘−’ are interchanged and ‘×’ and ‘÷’ are interchanged? 558 × 31 − 18 ÷ 17 + 321 = ?",
+   "hi": "यदि ‘+’ और ‘−’ को परस्पर बदल दिया जाए तथा ‘×’ और ‘÷’ को परस्पर बदल दिया जाए, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 558 × 31 − 18 ÷ 17 + 321 = ?",
+   "opts": [
+    "24",
+    "16",
+    "3",
+    "33"
+   ],
+   "my_ans": "C",
+   "sol": "चिह्न बदलने पर: 558 ÷ 31 + 18 × 17 - 321<br>18 + 306 - 321 = 324 - 321 = 3",
+   "trick": "BODMAS नियम का पालन करें।",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "What will come in place of the question mark (?) in the following equation if ‘+’ and ‘−’ are interchanged and ‘×’ and ‘÷’ are interchanged? 12 − 50 ÷ 2 × 2 + 15 = ?",
+   "hi": "यदि ‘+’ और ‘-’ को परस्पर बदल दिया जाए तथा ‘x’ और ‘÷’ को परस्पर बदल दिया जाए, तो निम्नलिखित समीकरण में ‘?’ के स्थान पर क्या आएगा? 12 − 50 ÷ 2 × 2 + 15 = ?",
+   "opts": [
+    "48",
+    "49",
+    "45",
+    "47"
+   ],
+   "my_ans": "D",
+   "sol": "चिह्न बदलने पर: 12 + 50 × 2 ÷ 2 - 15<br>12 + 50 - 15 = 47",
+   "trick": "BODMAS नियम का पालन करें।",
+   "ans": "D"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "If ‘A’ stands for ‘+’, ‘B’ stands for ‘−’, ‘C’ stands for ‘×’ and ‘D’ stands for ‘÷’, then what will come in place of the question mark (?) in the following equation? 40 D 5 A 8 C 2 B 12 = ?",
+   "hi": "यदि ‘A’ का अर्थ ‘+’ है, ‘B’ का अर्थ ‘−’ है, ‘C’ का अर्थ ‘×’ और ‘D’ का अर्थ ‘÷’ है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न ‘?’ के स्थान पर क्या आएगा? 40 D 5 A 8 C 2 B 12 = ?",
+   "opts": [
+    "14",
+    "16",
+    "12",
+    "10"
+   ],
+   "my_ans": "C",
+   "sol": "40 ÷ 5 + 8 × 2 - 12<br>8 + 16 - 12 = 12",
+   "trick": "दिए गए मानों को समीकरण में रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "If ‘+’ means ‘−’, ‘−’ means ‘×’, ‘×’ means ‘÷’, ‘÷’ means ‘+’, then what will come in place of the question mark (?) in the following equation? 21 − 4 ÷ 10 + 36 × 4 = ?",
+   "hi": "यदि ‘+’ का अर्थ ‘−’ है, ‘−’ का अर्थ ‘×’ है, ‘×’ का अर्थ ‘÷’ है और ‘÷’ का अर्थ ‘+’ है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 21 − 4 ÷ 10 + 36 × 4 = ?",
+   "opts": [
+    "89",
+    "84",
+    "85",
+    "90"
+   ],
+   "my_ans": "C",
+   "sol": "21 × 4 + 10 - 36 ÷ 4<br>84 + 10 - 9 = 85",
+   "trick": "चिह्नों को बदलकर BODMAS का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "If + means -, - means ×, × means ÷, and ÷ means +, then what will come in place of the question mark (?) in the following equation? 62 - 9 ÷ 94 + 480 × 15 = ?",
+   "hi": "यदि + का अर्थ - है, - का अर्थ × है, × का अर्थ ÷ है और ÷ का अर्थ + है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 62 - 9 ÷ 94 + 480 × 15 = ?",
+   "opts": [
+    "620",
+    "629",
+    "606",
+    "611"
+   ],
+   "my_ans": "A",
+   "sol": "62 × 9 + 94 - 480 ÷ 15<br>558 + 94 - 32 = 620",
+   "trick": "चिह्नों को बदलकर BODMAS का प्रयोग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "If ‘A’ stands for ‘÷’, ‘B’ stands for ‘×’, ‘C’ stands for ‘+’ and ‘D’ stands for ‘−’, then the resultant of which of the following will be 486?",
+   "hi": "यदि ‘A’ का अर्थ ‘÷’ है, ‘B’ का अर्थ ‘×’ है, ‘C’ का अर्थ ‘+’ है और ‘D’ का अर्थ ‘−’ है, तो निम्नलिखित में से किसका परिणाम 486 होगा?",
+   "opts": [
+    "404 B 4 D 15 C 50 A 8",
+    "404 D 4 D 15 C 50 A 8",
+    "404 A 4 C 15 D 50 B 8",
+    "404 A 4 D 15 C 50 B 8"
+   ],
+   "my_ans": "D",
+   "sol": "विकल्प D: 404 ÷ 4 - 15 + 50 × 8<br>101 - 15 + 400 = 486",
+   "trick": "विकल्पों को बारी-बारी से हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "If ‘P’ stands for ‘÷’, ‘Q’ stands for ‘×’, ‘R’ stands for ‘+’ and ‘S’ stands for ‘−’, then what will come in place of the question mark (?) in the following equation? 40 R 16 P 4 S 3 Q 5 = ?",
+   "hi": "यदि ‘P’ का अर्थ ‘÷’ है, ‘Q’ का अर्थ ‘×’ है, ‘R’ का अर्थ ‘+’ है और ‘S’ का अर्थ ‘−’ है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 40 R 16 P 4 S 3 Q 5 = ?",
+   "opts": [
+    "25",
+    "30",
+    "29",
+    "32"
+   ],
+   "my_ans": "C",
+   "sol": "40 + 16 ÷ 4 - 3 × 5<br>40 + 4 - 15 = 29",
+   "trick": "दिए गए मानों को समीकरण में रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "If ‘A’ stands for ‘+’, ‘B’ stands for ‘–’, ‘C’ stands for ‘×’ and ‘D’ stands for ‘÷’, then what will come in place of the question mark (?) in the following equation? 126 B 13 A 42 D 7 C 15 = ?",
+   "hi": "यदि ‘A’ का अर्थ ‘+’ है, ‘B’ का अर्थ ‘–’ है, ‘C’ का अर्थ ‘×’ है और ‘D’ का अर्थ ‘÷’ है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 126 B 13 A 42 D 7 C 15 = ?",
+   "opts": [
+    "203",
+    "330",
+    "620",
+    "480"
+   ],
+   "my_ans": "A",
+   "sol": "126 - 13 + 42 ÷ 7 × 15<br>126 - 13 + 6 × 15 = 126 - 13 + 90 = 203",
+   "trick": "BODMAS नियम का पालन करें।",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "If ‘A’ stands for ‘÷’, ‘B’ stands for ‘x’, ‘C’ stands for ‘+’ and ‘D’ stands for ‘-’, what will be come in place of the question mark ‘?’ in the following equation? 2 B 32 A 1 D 1 C 45 =?",
+   "hi": "यदि ‘A’ का अर्थ ‘÷’ है, ‘B’ का अर्थ ‘x’ है, ‘C’ का अर्थ ‘+’ और ‘D’ का अर्थ ‘-’ है, तो निम्नलिखित समीकरण में प्रश्न-चिह्न ‘?’ के स्थान पर क्या आएगा? 2 B 32 A 1 D 1 C 45 = ?",
+   "opts": [
+    "109",
+    "110",
+    "106",
+    "108"
+   ],
+   "my_ans": "D",
+   "sol": "2 × 32 ÷ 1 - 1 + 45<br>64 - 1 + 45 = 108",
+   "trick": "दिए गए मानों को समीकरण में रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "What will come in place of the question mark (?) in the following equation if ‘+’ and ‘÷’ are interchanged and ‘−’ and ‘×’ are interchanged? 603 + 9 × 18 − 6 ÷ 56 = ?",
+   "hi": "यदि ‘+’ और ‘÷’ को परस्पर बदल दिया जाए तथा ‘−’ और ‘×’ को परस्पर बदल दिया जाए, तो निम्नलिखित समीकरण में प्रश्न-चिह्न (?) के स्थान पर क्या आएगा? 603 + 9 × 18 − 6 ÷ 56 = ?",
+   "opts": [
+    "20",
+    "15",
+    "16",
+    "11"
+   ],
+   "my_ans": "B",
+   "sol": "603 ÷ 9 - 18 × 6 + 56<br>67 - 108 + 56 = 15",
+   "trick": "चिह्नों को बदलकर BODMAS का प्रयोग करें।",
+   "ans": "B"
+  }
+ ]
+}

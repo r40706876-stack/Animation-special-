@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "8-10",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "WELD is related to YHPI in a certain way based on the English alphabetical order. In the same way, AKTN is related to CNXS. To which of the following is EQBX related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से WELD का संबंध YHPI से है। उसी प्रकार, AKTN का संबंध CNXS से है। समान तर्क का अनुसरण करते हुए, EQBX का संबंध निम्न में से किससे है?",
+   "opts": [
+    "HSED",
+    "GUED",
+    "FUDB",
+    "GTFC"
+   ],
+   "my_ans": "D",
+   "sol": "WELD -> YHPI: W+2=Y, E+3=H, L+4=P, D+5=I<br>EQBX -> E+2=G, Q+3=T, B+4=F, X+5=C = GTFC",
+   "trick": "वर्णों के बीच +2, +3, +4, +5 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. AOE: BQH OST: PUW",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए युग्मों के दो समुच्चयों द्वारा अनुसरण किए गए पैटर्न के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। AOE:BQH OST:PUW",
+   "opts": [
+    "SHF: TJI<br>SHF:TJI",
+    "ADP: BGQ<br>ADP:BGQ",
+    "DAF: FCH<br>DAF:FCH",
+    "LAJ: MDN<br>LAJ:MDN"
+   ],
+   "my_ans": "A",
+   "sol": "AOE -> BQH: A+1=B, O+2=Q, E+3=H<br>SHF -> TJI: S+1=T, H+2=J, F+3=I",
+   "trick": "वर्णों के बीच +1, +2, +3 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : NMH :: VUP : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : NMH :: VUP : %",
+   "opts": [
+    "# = SRM % = QPK",
+    "# = SRO % = ZPK",
+    "# = IBM % = QKL",
+    "# = SVC % = OIK"
+   ],
+   "my_ans": "A",
+   "sol": "SRM -> NMH: S-5=N, R-5=M, M-5=H<br>VUP -> QPK: V-5=Q, U-5=P, P-5=K",
+   "trick": "दोनों समूहों में -5 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : KQM :: OUQ : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : KQM :: OUQ : %",
+   "opts": [
+    "# = LRN , % = NTO",
+    "# = LRM , % = NTP",
+    "# = LRN , % = NTP",
+    "# = LRN , % = NSP"
+   ],
+   "my_ans": "C",
+   "sol": "LRN -> KQM: L-1=K, R-1=Q, N-1=M<br>OUQ -> NTP: O-1=N, U-1=T, Q-1=P",
+   "trick": "दोनों समूहों में -1 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Which of the following leaders did the soldiers choose to lead them after rebelling against the British in 1857?",
+   "hi": "1857 में अंग्रेजों के खिलाफ विद्रोह करने के बाद सैनिकों ने निम्नलिखित में से किस लीडर को उनका नेतृत्व करने के लिए चुना?",
+   "opts": [
+    "Nana Sahib<br>नाना साहेब",
+    "Rani Lakshmibai<br>रानी लक्ष्मीबाई",
+    "Bahadur Shah Zafar<br>बहादुर शाह जफर",
+    "Mangal Pandey<br>मंगल पांडे"
+   ],
+   "my_ans": "C",
+   "sol": "1857 के विद्रोह के दौरान दिल्ली में सैनिकों ने मुगल सम्राट बहादुर शाह जफर को अपना नेता चुना।",
+   "trick": "1857 विद्रोह के औपचारिक नेता बहादुर शाह जफर थे।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "MUNI is related to OSPG in a certain way based on the English alphabetical order. In the same way, SDIK is related to UBKI. To which of the following is BZMP related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से MUNI का संबंध OSPG से है। उसी प्रकार, SDIK का संबंध UBKI से है। उसी तर्क का अनुसरण करते हुए, BZMP का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "CWNM",
+    "DXNQ",
+    "DXON",
+    "EYPO"
+   ],
+   "my_ans": "C",
+   "sol": "MUNI -> OSPG: M+2=O, U-2=S, N+2=P, I-2=G<br>BZMP -> B+2=D, Z-2=X, M+2=O, P-2=N = DXON",
+   "trick": "एकांतर क्रम में +2 और -2 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. RUB : WSG, BQL : GOQ",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्म-समुच्चयों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। RUB : WSG, BQL : GOQ",
+   "opts": [
+    "BCG : GYL",
+    "LMV : QKA",
+    "KDH : NZK",
+    "MHV : OCX"
+   ],
+   "my_ans": "B",
+   "sol": "RUB -> WSG: R+5=W, U-2=S, B+5=G<br>LMV -> QKA: L+5=Q, M-2=K, V+5=A",
+   "trick": "पैटर्न +5, -2, +5 का पालन करता है।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : NQW :: LOU : %",
+   "hi": "निम्नलिखित में से किन अक्षर-समूहों द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : NQW :: LOU : %",
+   "opts": [
+    "# = HKQ, % = RUA",
+    "# = HKQ, % = RUO",
+    "# = HKQ, % = RUL",
+    "# = KKQ, % = RUA"
+   ],
+   "my_ans": "A",
+   "sol": "HKQ -> NQW: H+6=N, K+6=Q, Q+6=W<br>LOU -> RUA: L+6=R, O+6=U, U+6=A",
+   "trick": "सभी वर्णों में +6 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of # : LOU :: WZF : %",
+   "hi": "निम्नलिखित में से किन अक्षर-समूहों द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : LOU :: WZF : %",
+   "opts": [
+    "# = FHN, % = DGM",
+    "# = EHN, % = DGO",
+    "# = EHN, % = DGM",
+    "# = EHN, % = DGI"
+   ],
+   "my_ans": "C",
+   "sol": "EHN -> LOU: E+7=L, H+7=O, N+7=U<br>WZF -> DGM: W+7=D, Z+7=G, F+7=M",
+   "trick": "सभी वर्णों में +7 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : OIM :: ICG : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : OIM :: ICG : %",
+   "opts": [
+    "# = MKO, % = GMK",
+    "# = LPO, % = GJH",
+    "# = QKO, % = GAE",
+    "# = MKO, % = GMJ"
+   ],
+   "my_ans": "C",
+   "sol": "QKO -> OIM: Q-2=O, K-2=I, O-2=M<br>ICG -> GAE: I-2=G, C-2=A, G-2=E",
+   "trick": "सभी वर्णों में -2 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two set of pairs given below. Both pairs follow the same pattern. UND : SSB QXZ : OCX",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्म-समुच्चयों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। UND : SSB QXZ : OCX",
+   "opts": [
+    "MHV : KMT",
+    "WRK : SWG",
+    "TBE : QFB",
+    "ZQV : VTR"
+   ],
+   "my_ans": "A",
+   "sol": "UND -> SSB: U-2=S, N+5=S, D-2=B<br>MHV -> KMT: M-2=K, H+5=M, V-2=T",
+   "trick": "पैटर्न -2, +5, -2 का पालन करता है।",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of : : is the same as that on the right side of : : ? # : ZVT :: JFD : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : ZVT :: JFD : %",
+   "opts": [
+    "# = XSR , % = LJG",
+    "# = WTR , % = LKH",
+    "# = XUR , % = MJL",
+    "# = WSQ , % = MIG"
+   ],
+   "my_ans": "D",
+   "sol": "WSQ -> ZVT: W+3=Z, S+3=V, Q+3=T<br>JFD -> MIG: J+3=M, F+3=I, D+3=G",
+   "trick": "सभी वर्णों में +3 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "RAFI is related to TELQ in a certain way based on the English alphabetical order. In the same way, NEGL is related to PIMT. To which of the following is JRTB related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तर्क का अनुसरण करते हुए RAFI का संबंध TELQ से है। इसी प्रकार, NEGL का संबंध PIMT से है। समान तर्क का अनुसरण करते हुए, JRTB का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "ZLKT",
+    "KTWE",
+    "LVZI",
+    "LVZJ"
+   ],
+   "my_ans": "D",
+   "sol": "RAFI -> TELQ: R+2, A+4, F+6, I+8<br>JRTB -> J+2=L, R+4=V, T+6=Z, B+8=J = LVZJ",
+   "trick": "वर्णों में +2, +4, +6, +8 का बढ़ता अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of : : is the same as that on the right side of : : ? # : BYU : : GDZ : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : BYU :: GDZ : %",
+   "opts": [
+    "# = JGB , % = XUQ",
+    "# = JIE , % = YVR",
+    "# = JGC , % = YUS",
+    "# = JGC , % = YVR"
+   ],
+   "my_ans": "D",
+   "sol": "JGC -> BYU: J-8=B, G-8=Y, C-8=U<br>GDZ -> YVR: G-8=Y, D-8=V, Z-8=R",
+   "trick": "सभी वर्णों में -8 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ? # : NRL :: GKE : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो? # : NRL :: GKE : %",
+   "opts": [
+    "# = MKN % = EMK",
+    "# = IUN % = EMJ",
+    "# = LTN % = EMK",
+    "# = PTN % = EIC"
+   ],
+   "my_ans": "D",
+   "sol": "PTN -> NRL: P-2=N, T-2=R, N-2=L<br>GKE -> EIC: G-2=E, K-2=I, E-2=C",
+   "trick": "सभी वर्णों में -2 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Select the triad which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. BALD-BADL-ABLD, EPIC-EPCI-PEIC",
+   "hi": "उस त्रिक का चयन करें, जो नीचे दिए गए दो युग्मों द्वारा अनुसरित किए गए पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। BALD-BADL-ABLD, EPIC-EPCI-PEIC",
+   "opts": [
+    "FIRE-IREF-FRIE",
+    "PART-RTPA-APTR",
+    "COME-COEM-OEMC",
+    "HIKE-HIEK-IHKE"
+   ],
+   "my_ans": "D",
+   "sol": "BALD -> BADL (3,4 स्थान बदले) -> ABLD (1,2 स्थान बदले)<br>HIKE -> HIEK -> IHKE",
+   "trick": "अक्षरों के स्थान परिवर्तन के पैटर्न को पहचानें।",
+   "ans": "D"
+  }
+ ]
+}

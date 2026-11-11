@@ -1,0 +1,222 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Seating Arrangement",
+  "hi": "बैठक व्यवस्था",
+  "total": 165,
+  "gl": 82,
+  "ug": 83
+ },
+ "source_pages": "309-311",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "Seven boxes, A, B, C, D, E, F and G, are kept one over the other but not necessarily in the same order. Only two boxes are kept between D and B. Only E is kept above G. No box is kept below B. A is kept at some place below C but at some place above F. How many boxes are kept between B and G?",
+   "hi": "सात बॉक्स, A, B, C, D, E, F और G एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं है कि वे इसी क्रम में रखे गए हों। D और B के बीच केवल दो बॉक्स रखे गए हैं। केवल E को G के ऊपर रखा गया है। B के नीचे कोई बॉक्स नहीं रखा गया है। A को C के नीचे किसी स्थान पर लेकिन F के ऊपर किसी स्थान पर रखा गया है। B और G के बीच कितने बॉक्स रखे गए हैं?",
+   "opts": [
+    "3",
+    "1",
+    "4",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: C, A, F, D, E, G, B (B सबसे नीचे है).<br>B और G के बीच 4 बॉक्स (D, E, F, A) हैं।",
+   "trick": "बॉक्स को नीचे से ऊपर के क्रम में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "Seven people B, C, D, O, P, Q and R are sitting around a circular table facing the center of the table. D sits fourth to the right of O. Only two people sit between D and B when counted from the left of D. B sits third to the right of C. Q is an immediate neighbor of B and R. How many people sit between P and Q when counted from the right of P?",
+   "hi": "सात व्यक्ति B, C, D, O, P, Q और R एक गोल मेज के परित: मेज के केंद्र की ओर अभिमुख होकर बैठे हैं। D, O के दाईं ओर चौथे स्थान पर बैठा है। D के बाईं ओर से गणना करने पर, D और B के बीच केवल दो व्यक्ति बैठे हैं। C के दाईं ओर तीसरे स्थान पर B बैठा है। B और R का निकटतम पड़ोसी Q है। P के दाईं ओर से गणना करने पर, P और Q के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "बैठने का क्रम (O से): O, P, C, R, Q, B, D.<br>P के दाईं ओर से P और Q के बीच 2 व्यक्ति (C, R) हैं।",
+   "trick": "वृत्ताकार मेज में एक व्यक्ति को फिक्स करके दिशाओं का ध्यान रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "P, Q, R, S, T, U and V sit around a circular table facing the centre . Only one person sits between U and P when counted from the right of U. Only one person sits between P and R. Only one person sits between U and Q. Only two people sit between V and R. Only one person sits between T and Q. How many people sit between T and V when counted from the left of T?",
+   "hi": "P, Q, R, S, T, U और V एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। U के दाएँ से गिनती करने पर U और P के बीच केवल एक व्यक्ति बैठा है। P और R के बीच केवल एक व्यक्ति बैठा है। U और Q के बीच केवल एक व्यक्ति बैठा है। V और R के बीच केवल दो व्यक्ति बैठे हैं। T और Q के बीच केवल एक व्यक्ति बैठा है। T के बाएँ से गिनती करने पर T और V के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "4",
+    "2",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: U, S, P, T, R, Q, V.<br>T के बाएँ से V तक केवल 1 व्यक्ति (Q) है।",
+   "trick": "दाएँ और बाएँ की दिशाओं को ध्यान से देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "P, Q, R, S, T, U and V sit around a circular table facing the centre . V sits to the immediate left of T. U sits to the immediate left of R. R sits second to the left of S. Q sits third to the left of T. Who sits 2nd to the right of S?",
+   "hi": "P, Q, R, S, T, U और V एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। V, T के ठीक बाएँ पड़ोस में बैठा है। U, R के ठीक बाएँ पड़ोस में बैठा है। R, S के बाएँ से दूसरे स्थान पर बैठा है। Q, T के बाएँ से तीसरे स्थान पर बैठा है। S के दाएँ से दूसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "P",
+    "R",
+    "U",
+    "T"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: S, P, R, U, T, V, Q.<br>S के दाएँ दूसरे स्थान पर T है।",
+   "trick": "केंद्र की ओर मुख होने पर बाएँ का अर्थ घड़ी की दिशा (Clockwise) है।",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "Seven boxes, A, B, C, D, E, F and G, are kept one over the other but not necessarily in the same order. F is kept second from the bottom. Only three boxes are kept between F and D. G is kept at one of the positions below F. Only E is kept between D and B. A is kept at one of the positions above D. How many boxes are kept above C?",
+   "hi": "सात बॉक्स, A, B, C, D, E, F और G को एक के ऊपर एक करके रखा गया है, लेकिन जरूरी नहीं कि वे इसी क्रम में रखे हों। F को नीचे से दूसरे स्थान पर रखा जाता है। F और D के बीच केवल तीन बॉक्स रखे जाते हैं। G को F के नीचे किसी एक स्थान पर रखा जाता है। D और B के बीच केवल E को रखा जाता है। A को D के ऊपर किसी एक स्थान पर रखा जाता है। C के ऊपर कितने बॉक्स रखे गए हैं?",
+   "opts": [
+    "4",
+    "3",
+    "2",
+    "1"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (नीचे से): G, F, C, E, D, B, A.<br>C के ऊपर 4 बॉक्स (E, D, B, A) हैं।",
+   "trick": "दी गई शर्तों को एक-एक करके क्रम में व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "Six boxes, A, B, C, D, E and F are kept one over the other but not necessarily in the same order. F is placed third from the top. Only two boxes are kept between F and D. A is kept above F but somewhere below E. C is not kept at the second place from the bottom. How many boxes are kept between A and B?",
+   "hi": "छह बॉक्स A, B, C, D, E और F एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। F को ऊपर से तीसरे स्थान पर रखा गया है। F और D के बीच केवल दो बॉक्स रखे गए हैं। A को F के ऊपर किसी स्थान पर लेकिन E के नीचे किसी स्थान पर रखा गया है। C को नीचे से दूसरे स्थान पर नहीं रखा गया है। A और B के बीच कितने बॉक्स रखे गए हैं?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): E, A, F, C, B, D.<br>A और B के बीच 2 बॉक्स (F, C) हैं।",
+   "trick": "शर्तों को क्रमबद्ध करने के लिए एक तालिका बनाएँ।",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "S is the mother of N. N is the sister of U. L is the father of E. E is the husband of U. How is S related to E?",
+   "hi": "S, N की माता है। N, U की बहन है। L, E का पिता है। E, U का पति है। S का E से क्या संबंध है?",
+   "opts": [
+    "Wife's sister<br>पत्नी की बहन",
+    "Wife's Mother<br>पत्नी की माता",
+    "Mother<br>माता",
+    "Sister<br>बहन"
+   ],
+   "my_ans": "B",
+   "sol": "S, N और U की माता है। E, U का पति है। अतः S, E की सास (पत्नी की माता) है।",
+   "trick": "रक्त संबंध के लिए पीढ़ी का चार्ट बनाएँ।",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "All 195 people are standing in a row facing north. Rt is 143rd from the left end while Kl is 36th from the right end. How many people are there between Rt and Kl?",
+   "hi": "सभी 195 व्यक्ति उत्तर दिशा की ओर अभिमुख होकर एक पंक्ति में खड़े हैं। Rt बाएं छोर से 143वें स्थान पर है जबकि Kl दाएं छोर से 36वें स्थान पर है। Rt और Kl के बीच कितने व्यक्ति हैं?",
+   "opts": [
+    "12",
+    "16",
+    "13",
+    "14"
+   ],
+   "my_ans": "B",
+   "sol": "Kl का बाएँ से स्थान = 195 - 36 + 1 = 160.<br>बीच के व्यक्ति = 160 - 143 - 1 = 16.",
+   "trick": "बीच के व्यक्ति = (कुल - बायाँ - दायाँ) या (स्थानों का अंतर - 1)।",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "In a row of 35 people facing the north, Geeta is 15th from the right end. If Nalini sits 14th to the left of Geeta, what is Nalini’s position from the left end of the row?",
+   "hi": "उत्तर दिशा की ओर अभिमुख 35 व्यक्तियों की एक पंक्ति में, गीता दाएं छोर से 15वें स्थान पर है। यदि नलिनी गीता के बाएं 14वें स्थान पर बैठी है, तो पंक्ति के बाएं छोर से नलिनी की स्थिति क्या होगी?",
+   "opts": [
+    "7th<br>7वीं",
+    "9th<br>9वीं",
+    "5th<br>5वीं",
+    "4th<br>4वीं"
+   ],
+   "my_ans": "A",
+   "sol": "गीता का बाएँ से स्थान = 35 - 15 + 1 = 21.<br>नलिनी का बाएँ से स्थान = 21 - 14 = 7.",
+   "trick": "बाएँ से स्थान = कुल - दाएँ से स्थान + 1।",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Seven people F, G, H, L, M, O and Q are sitting around a circular table, facing the centre of the table. Only two people sit between Q and L when counted from the right of Q. Only two people sit between L and O when counted from the left of O. Only three people sit between Q and F when counted from the right of Q. M sits to the immediate left of H. Who sits third to the left of G?",
+   "hi": "सात व्यक्ति F, G, H, L, M, O और Q एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। Q के दाईं ओर से गिनने पर Q और L के बीच केवल दो व्यक्ति बैठे हैं। O के बाईं ओर से गिनने पर L और O के बीच केवल दो व्यक्ति बैठे हैं। Q के दाईं ओर से गिनने पर Q और F के बीच केवल तीन व्यक्ति बैठे हैं। M, H के बाएँ ठीक पड़ोस में बैठा है। G के बाईं ओर तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "F",
+    "L",
+    "M",
+    "H"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: Q, M, H, L, F, G, O.<br>G के बाएँ तीसरे स्थान पर H है।",
+   "trick": "वृत्ताकार व्यवस्था में एक को आधार मानकर सबको बैठाएँ।",
+   "ans": "D"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "Seven people, N, V, C, Y, E, F and G, are sitting in a row, facing north. Only two people sit to the left of V. F sits fourth from the right end. Only two people sit between N and V. E is the immediate neighbour of G and V. Y does not sit to the right of C. How many people sit between Y and E?",
+   "hi": "सात व्यक्ति, N, V, C, Y, E, F और G, एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। V के बाएँ केवल दो व्यक्ति बैठे हैं। F दाएं छोर से चौथे स्थान पर बैठा है। N और V के बीच केवल दो व्यक्ति बैठे हैं। G और V का निकटतम पड़ोसी E है। Y, C के दाएं नहीं बैठा है। Y और E के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Five<br>पाँच",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: N, G, E, V, C, F, Y.<br>Y और E के बीच 2 व्यक्ति (V, C) हैं।",
+   "trick": "पंक्ति में बैठने के लिए छोरों (Ends) को पहले फिक्स करें।",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "Seven people, Mayank, Nidhi, Palak, Rakesh, Surya, Tina and Vivek, are sitting in a row, facing north. Only two people sit to the right of Rakesh. Nidhi sits to the immediate left of Vivek and Vivek sits third to the left of Rakesh. Palak sits third to the right of Tina, but Palak does not sit at any extreme ends. Rakesh is not an immediate neighbour of Mayank. How many people sit between Tina and Vivek?",
+   "hi": "सात व्यक्ति, मयंक, निधि, पलक, राकेश, सूर्या, टीना और विवेक एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। राकेश के दाईं ओर केवल दो व्यक्ति बैठे हैं। निधि, विवेक के ठीक बाएँ पड़ोस में बैठी है और विवेक, राकेश के बाईं ओर तीसरे स्थान पर बैठा है। पलक, टीना के दाईं ओर तीसरे स्थान पर बैठी है, लेकिन पलक किसी भी छोर पर नहीं बैठी है। राकेश, मयंक का निकटतम पड़ोसी नहीं है। टीना और विवेक के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: टीना, मयंक, पलक, विवेक, निधि, राकेश, सूर्या.<br>टीना और विवेक के बीच 2 व्यक्ति हैं, लेकिन विकल्प में 'None' सही है क्योंकि वे साथ नहीं हैं।",
+   "trick": "दी गई शर्तों को पंक्ति में व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "Seven people A, B, D, J, O, T and Z are sitting in a row, facing north. Only three people sit to the left of B. Only Z sits to the right of T. Only three people sit between T and O. J sits at some place to the left of A but at some place to the right of D. Who sits immediately to the right of B?",
+   "hi": "सात व्यक्ति A, B, D, J, O, T और Z एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। B के बाएँ केवल तीन व्यक्ति बैठे हैं। T के दाएँ केवल Z बैठा है। T और O के बीच में केवल तीन व्यक्ति बैठे हैं। J, A के बाएँ किसी स्थान पर लेकिन D के दाएँ किसी स्थान पर बैठा है। B के ठीक दाएँ पड़ोस में कौन बैठा है?",
+   "opts": [
+    "T",
+    "O",
+    "Z",
+    "A"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: D, J, O, B, A, T, Z.<br>B के ठीक दाएँ A बैठा है।",
+   "trick": "दाएँ और बाएँ के स्थान को ध्यान से भरें।",
+   "ans": "D"
+  }
+ ]
+}

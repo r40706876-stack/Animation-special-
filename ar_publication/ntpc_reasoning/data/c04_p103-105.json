@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Coding-Decoding",
+  "hi": "कोडिंग-डिकोडिंग",
+  "total": 128,
+  "gl": 64,
+  "ug": 64
+ },
+ "source_pages": "103-105",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘window is open’ is coded as ‘fq ul pt’ and ‘clean the window’ is coded as ‘zd fq wp’. How is ‘window’ coded in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘window is open’ को ‘fq ul pt’ के रूप में और ‘clean the window’ को ‘zd fq wp’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘window’ को कैसे कूटबद्ध किया गया है?",
+   "opts": [
+    "fq",
+    "pt",
+    "ul",
+    "wp"
+   ],
+   "my_ans": "A",
+   "sol": "दोनों वाक्यों में 'window' शब्द कॉमन है और दोनों कोड में 'fq' कॉमन है।",
+   "trick": "कॉमन शब्द ढूँढें और उसका कॉमन कोड देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MATE’ is coded as ‘9827’ and ‘TIME’ is coded as ‘9218’. What is the code for ‘I’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MATE’ को ‘9827’ के रूप में और ‘TIME’ को ‘9218’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘I’ के लिए कूट क्या है?",
+   "opts": [
+    "1",
+    "2",
+    "9",
+    "8"
+   ],
+   "my_ans": "A",
+   "sol": "MATE = 9827, TIME = 9218. दोनों में 'TE' कॉमन है, कोड में '92' कॉमन है। 'I' का कोड '1' या '8' हो सकता है, लेकिन 'MATE' में 'M' का कोड '9' या '8' है। तुलना करने पर I = 1.",
+   "trick": "समान अक्षरों और अंकों की तुलना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "In a certain code language, 'VAJR' is coded as '102' and 'DOTG' is coded as '92'. What is the code for 'ZELW' in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'VAJR' को '102' के रूप में और 'DOTG' को '92' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'ZELW' का कूट क्या होगा?",
+   "opts": [
+    "121",
+    "138",
+    "124",
+    "132"
+   ],
+   "my_ans": "D",
+   "sol": "VAJR: 22+1+10+18 = 51. 51 × 2 = 102. DOTG: 4+15+20+7 = 46. 46 × 2 = 92. ZELW: 26+5+12+23 = 66. 66 × 2 = 132.",
+   "trick": "अक्षरों के स्थान मान का योग × 2",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘TIME’ is coded as ‘3519’ and ‘EARS’ is coded as ‘6894’. What is the code for ‘E’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘TIME’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘EARS’ को ‘6894’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘E’ के लिए कूट क्या है?",
+   "opts": [
+    "8",
+    "9",
+    "4",
+    "6"
+   ],
+   "my_ans": "B",
+   "sol": "TIME = 3519, EARS = 6894. दोनों में 'E' कॉमन है और कोड में '9' कॉमन है।",
+   "trick": "कॉमन अक्षर का कॉमन अंक देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘SEMI’ is coded as ‘3615’ and ‘TIME’ is coded as ‘1523’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘SEMI’ को ‘3615’ के रूप में और ‘TIME’ को ‘1523’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘T’ के लिए कूट क्या है?",
+   "opts": [
+    "3",
+    "1",
+    "2",
+    "5"
+   ],
+   "my_ans": "C",
+   "sol": "SEMI = 3615, TIME = 1523. दोनों में 'IME' कॉमन है और कोड में '153' कॉमन है। 'T' का कोड '2' बचा।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘WEAR’ is coded as ‘8246’ and ‘CAST’ is coded as ‘3851’. What is the code for 'A’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘WEAR’ को ‘8246’ के रूप में कूटबद्ध किया जाता है और ‘CAST’ को ‘3851’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'A’ के लिए कूट क्या है?",
+   "opts": [
+    "8",
+    "1",
+    "3",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "WEAR = 8246, CAST = 3851. दोनों में 'A' कॉमन है और कोड में '8' कॉमन है।",
+   "trick": "कॉमन अक्षर का कॉमन अंक देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘WAND’ is coded as ‘1846’ and ‘GNAW’ is coded as ‘4165’. What is the code for ‘G’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘WAND’ को ‘1846’ के रूप में कूटबद्ध किया जाता है और ‘GNAW’ को ‘4165’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘G’ के लिए कूट क्या है?",
+   "opts": [
+    "6",
+    "5",
+    "4",
+    "1"
+   ],
+   "my_ans": "B",
+   "sol": "WAND = 1846, GNAW = 4165. 'W', 'A', 'N' कॉमन हैं (कोड 1, 4, 6)। 'G' के लिए बचा हुआ अंक '5' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘TOUR’ is coded as ‘3894’ and ‘AUTO’ is coded as ‘5489’. What is the code for ‘A’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'TOUR' को '3894' के रूप में कूटबद्ध किया जाता है तथा 'AUTO' को '5489' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'A' का कूट क्या है?",
+   "opts": [
+    "9",
+    "5",
+    "4",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "TOUR = 3894, AUTO = 5489. 'T', 'O', 'U' कॉमन हैं (कोड 3, 8, 9)। 'A' के लिए बचा हुआ अंक '5' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘please drink water’ is coded as ‘gf sx zr ’ and ‘water is flowing’ is coded as ‘po vb sx ’. How is ‘water’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘please drink water’ को ‘gf sx zr’ के रूप में और ‘water is flowing’ को ‘po vb sx’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘water’ को कैसे कूटबद्ध किया गया है?",
+   "opts": [
+    "zr",
+    "gf",
+    "po",
+    "sx"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों वाक्यों में 'water' शब्द कॉमन है और कोड में 'sx' कॉमन है।",
+   "trick": "कॉमन शब्द का कॉमन कोड देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "COLD is related to GQHB in a certain way based on the English alphabetical order. In the same way, KSDZ is related to OUZX. To which of the following is SWVV related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से COLD का संबंध GQHB से है। उसी प्रकार, KSDZ का संबंध OUZX से है। समान तर्क का अनुसरण करते हुए, SWVV का संबंध निम्न में से किससे है?",
+   "opts": [
+    "VXQS",
+    "WYRT",
+    "XZSU",
+    "UYSS"
+   ],
+   "my_ans": "B",
+   "sol": "C+4=G, O+2=Q, L-4=H, D-2=B. K+4=O, S+2=U, D-4=Z, Z-2=X. S+4=W, W+2=Y, V-4=R, V-2=T.",
+   "trick": "+4, +2, -4, -2 का पैटर्न।",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘ROAD’ is coded as ‘8657’ and ‘DEAR’ is coded as ‘4567’. What is the code for ‘E’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'ROAD' को '8657' के रूप में कूटबद्ध किया जाता है तथा 'DEAR' को '4567' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'E' का कूट क्या है?",
+   "opts": [
+    "7",
+    "5",
+    "4",
+    "6"
+   ],
+   "my_ans": "C",
+   "sol": "ROAD = 8657, DEAR = 4567. 'R', 'A', 'D' कॉमन हैं (कोड 5, 6, 7)। 'E' के लिए बचा हुआ अंक '4' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "GOAT is related to IQCV in a certain way based on the English alphabetical order. In the same way, OWIB is related to QYKD. To which of the following options is UCOH related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, GOAT का संबंध किसी निश्चित तरीके से IQCV से है। इसी प्रकार, OWIB का संबंध QYKD से है। इसी तर्क के आधार पर, UCOH का संबंध, निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "WEQJ",
+    "QJYU",
+    "WJQE",
+    "WERT"
+   ],
+   "my_ans": "A",
+   "sol": "G+2=I, O+2=Q, A+2=C, T+2=V. O+2=Q, W+2=Y, I+2=K, B+2=D. U+2=W, C+2=E, O+2=Q, H+2=J.",
+   "trick": "सभी अक्षरों में +2 का पैटर्न।",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘ROAD’ is coded as ‘9416’ and ‘DORM’ is coded as ‘3691’. What is the code for ‘M’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'ROAD' को '9416' के रूप में कूटबद्ध किया जाता है तथा 'DORM' को '3691' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'M' का कूट क्या है?",
+   "opts": [
+    "3",
+    "6",
+    "9",
+    "1"
+   ],
+   "my_ans": "A",
+   "sol": "ROAD = 9416, DORM = 3691. 'R', 'O', 'D' कॉमन हैं (कोड 1, 6, 9)। 'M' के लिए बचा हुआ अंक '3' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘TOUR’ is coded as ‘4791’ and ‘FORT’ is coded as ‘1279’. What is the code for ‘F’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'TOUR' को '4791' के रूप में कूटबद्ध किया जाता है तथा 'FORT' को '1279' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'F' का कूट क्या है?",
+   "opts": [
+    "9",
+    "2",
+    "1",
+    "7"
+   ],
+   "my_ans": "B",
+   "sol": "TOUR = 4791, FORT = 1279. 'T', 'O', 'R' कॉमन हैं (कोड 1, 7, 9)। 'F' के लिए बचा हुआ अंक '2' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "FIBA is related to EJAB in a certain way based on the English alphabetical order. In the same way, ZELU is related to YFKV. To which of the following is COIS related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर, FIBA का संबंध EJAB से है। उसी प्रकार, ZELU का संबंध YFKV से है। उसी तर्क का अनुसरण करते हुए, COIS का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "BQJV",
+    "BPHT",
+    "BQGS",
+    "BOMS"
+   ],
+   "my_ans": "B",
+   "sol": "F-1=E, I+1=J, B+0=B, A+0=A. Z-1=Y, E+1=F, L-1=K, U+1=V. C-1=B, O+1=P, I-1=H, S+1=T.",
+   "trick": "-1, +1, -1, +1 का पैटर्न।",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘LITE’ is coded as ‘8196’ and ‘FELT’ is coded as ‘6481’. What is the code for ‘F’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘LITE’ को ‘8196’ के रूप में और ‘FELT’ को ‘6481’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘F’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "1",
+    "6",
+    "8"
+   ],
+   "my_ans": "A",
+   "sol": "LITE = 8196, FELT = 6481. 'L', 'T', 'E' कॉमन हैं (कोड 1, 6, 8)। 'F' के लिए बचा हुआ अंक '4' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MILE’ is coded as ‘9574’ and ‘TIME’ is coded as ‘5429’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MILE’ को ‘9574’ के रूप में कूटबद्ध किया जाता है और ‘TIME’ को ‘5429’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘T’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "2",
+    "9",
+    "5"
+   ],
+   "my_ans": "B",
+   "sol": "MILE = 9574, TIME = 5429. 'I', 'M', 'E' कॉमन हैं (कोड 4, 5, 9)। 'T' के लिए बचा हुआ अंक '2' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘LITE’ is coded as ‘3492’ and ‘TIME’ is coded as ‘3954’. What is the code for ‘M’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘LITE’ को ‘3492’ के रूप में और ‘TIME’ को ‘3954’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘M’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "9",
+    "5",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "LITE = 3492, TIME = 3954. 'T', 'I', 'E' कॉमन हैं (कोड 3, 4, 9)। 'M' के लिए बचा हुआ अंक '5' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘TOUR’ is coded as ‘2374’ and ‘RIOT’ is coded as ‘7634’. What is the code for ‘I’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'TOUR' को '2374' के रूप में कूटबद्ध किया जाता है तथा 'RIOT' को '7634' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'I' का कूट क्या है?",
+   "opts": [
+    "7",
+    "6",
+    "4",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "TOUR = 2374, RIOT = 7634. 'T', 'O', 'R' कॉमन हैं (कोड 3, 4, 7)। 'I' के लिए बचा हुआ अंक '6' है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  }
+ ]
+}

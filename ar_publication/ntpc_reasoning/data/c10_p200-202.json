@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Dictionary Order",
+  "hi": "शब्दकोश क्रम",
+  "total": 41,
+  "gl": 0,
+  "ug": 41
+ },
+ "source_pages": "200-202",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "Each vowel in the word MELODIA is changed to the letter immediately following it in the English alphabetical order, and each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द MELODIA के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में, कितने अक्षर ठीक दो बार दिखाई देंगे?",
+   "opts": [
+    "Two<br>दो",
+    "Zero<br>शून्य",
+    "One<br>एक",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "M-1=L, E+1=F, L-1=K, O+1=P, D-1=C, I+1=J, A+1=B. नया समूह: L, F, K, P, C, J, B. कोई भी अक्षर दोहराया नहीं गया है।",
+   "trick": "स्वर (Vowel) में +1 और व्यंजन (Consonant) में -1 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "Select the option that represents the correct order of the given words as they would appear in an English dictionary. 1. Roast 2. Router 3. Road 4. Robust 5. Rope",
+   "hi": "उस विकल्प का चयन कीजिए जो दिए गए शब्दों के उस सही क्रम को निरूपित करता है, जिस प्रकार वे अंग्रेजी शब्दकोश में दिखाई देंगे। 1. Roast 2. Router 3. Road 4. Robust 5. Rope",
+   "opts": [
+    "1, 4, 3, 5, 2",
+    "1, 4, 3, 2, 5",
+    "3, 1, 5, 4, 2",
+    "3, 1, 4, 5, 2"
+   ],
+   "my_ans": "D",
+   "sol": "शब्दकोश क्रम: Road (3), Roast (1), Robust (4), Rope (5), Router (2)।",
+   "trick": "शब्दों के अक्षरों को वर्णमाला क्रम (A-Z) में देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "Each vowel in the word CORRECT is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be fourth from the right in the new group of letters thus formed?",
+   "hi": "शब्द CORRECT में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले अक्षर से बदल दिया जाता है, और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले आने वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के नए समूह में, निम्नलिखित में से कौन-सा अक्षर दाएं छोर से चौथा होगा?",
+   "opts": [
+    "R",
+    "S",
+    "P",
+    "Q"
+   ],
+   "my_ans": "D",
+   "sol": "C-1=B, O+1=P, R-1=Q, R-1=Q, E+1=F, C-1=B, T-1=S. नया समूह: B, P, Q, Q, F, B, S. दाएं से चौथा अक्षर Q है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "Each letter in the word HARMFUL is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is second from the left and the one which is first from the right in the new letter cluster thus formed?",
+   "hi": "शब्द HARMFUL के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से दूसरे अक्षर और दाईं ओर से पहले अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "17",
+    "13",
+    "14",
+    "15"
+   ],
+   "my_ans": "C",
+   "sol": "HARMFUL को वर्णमाला क्रम में व्यवस्थित करने पर: A, F, H, L, M, R, U. बाईं से दूसरा अक्षर F है, दाईं से पहला U है। F(6) और U(21) के बीच: 21-6-1 = 14 अक्षर।",
+   "trick": "अक्षरों के स्थान मान (Position) का अंतर - 1 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "The position(s) of how many letters will remain unchanged if each letter in the word COMBINE is arranged in the English alphabetical order?",
+   "hi": "यदि शब्द 'COMBINE' के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाए, तो कितने अक्षरों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "2",
+    "0",
+    "3",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "COMBINE को वर्णमाला क्रम में व्यवस्थित करने पर: B, C, E, I, M, N, O. मूल शब्द: C, O, M, B, I, N, E. केवल 'I' का स्थान (5वां) समान है।",
+   "trick": "अक्षरों को A-Z क्रम में लिखकर मूल शब्द से मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "Each vowel in the word TRAJECTORIES is changed to the second letter immediately following it in the English alphabetical order, and each consonant is changed to the second letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द TRAJECTORIES में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले दूसरे अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले आने वाले दूसरे अक्षर से बदल दिया जाता है। इस प्रकार बने नए अक्षर समूह में कितने अक्षर ठीक दो बार आएंगे?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "T-2=R, R-2=P, A+2=C, J-2=H, E+2=G, C-2=A, T-2=R, O+2=Q, R-2=P, I+2=K, E+2=G, S-2=Q. नया समूह: R, P, C, H, G, A, R, Q, P, K, G, Q. R, P, G, Q दो बार हैं।",
+   "trick": "स्वर में +2 और व्यंजन में -2 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "Each vowel in the word CONTAIN is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be third from the left in the new group of letters thus formed?",
+   "hi": "शब्द CONTAIN में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने नए अक्षरों के समूह में बाएं छोर से तीसरा अक्षर निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "O",
+    "L",
+    "M",
+    "N"
+   ],
+   "my_ans": "C",
+   "sol": "C-1=B, O+1=P, N-1=M, T-1=S, A+1=B, I+1=J, N-1=M. नया समूह: B, P, M, S, B, J, M. बाएं से तीसरा अक्षर M है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "Each letter in the word GUILDER is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is fourth from the left and the one which is second from the right in the new letter cluster thus formed?",
+   "hi": "शब्द GUILDER के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में, बाएं से चौथे अक्षर और दाएं से दूसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "11",
+    "8",
+    "9",
+    "7"
+   ],
+   "my_ans": "B",
+   "sol": "GUILDER को व्यवस्थित करने पर: D, E, G, I, L, R, U. बाएं से चौथा अक्षर I(9) है, दाएं से दूसरा R(18) है। बीच के अक्षर: 18-9-1 = 8.",
+   "trick": "अक्षरों के स्थान मान का अंतर - 1 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "Each letter in the word CENTURY is changed to the letter immediately following it in the English alphabetical order and then all the letters thus formed are arranged in alphabetical order. Which of the following letters will be fifth from the left in the new group of letters thus formed?",
+   "hi": "शब्द CENTURY के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और इस तरह बने सभी अक्षरों को वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से पाँचवाँ अक्षर निम्नलिखित में से कौन-सा होगा?",
+   "opts": [
+    "V",
+    "Z",
+    "U",
+    "O"
+   ],
+   "my_ans": "C",
+   "sol": "C+1=D, E+1=F, N+1=O, T+1=U, U+1=V, R+1=S, Y+1=Z. वर्णमाला क्रम: D, F, O, S, U, V, Z. पांचवां अक्षर U है।",
+   "trick": "सभी अक्षरों में +1 करें और फिर वर्णमाला क्रम में लगाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "Each vowel in the word CURRENT is changed to the letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters will be third from the right in the new group of letters thus formed?",
+   "hi": "शब्द CURRENT के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया जाता है। इस प्रकार बने नए अक्षर-समूह में दाईं ओर से तीसरा अक्षर निम्नलिखित में से क्या होगा?",
+   "opts": [
+    "E",
+    "H",
+    "G",
+    "F"
+   ],
+   "my_ans": "D",
+   "sol": "C-1=B, U+1=V, R-1=Q, R-1=Q, E+1=F, N-1=M, T-1=S. नया समूह: B, V, Q, Q, F, M, S. दाएं से तीसरा अक्षर F है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "Each vowel in the word RADULAE is changed to the letter immediately following it in the English alphabetical order, and each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द RADULAE के प्रत्येक स्वर को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है और प्रत्येक व्यंजन को अंग्रेज़ी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में, कितने अक्षर ठीक दो बार दिखाई देंगे?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "Zero<br>एक भी नहीं",
+    "One<br>एक"
+   ],
+   "my_ans": "D",
+   "sol": "R-1=Q, A+1=B, D-1=C, U+1=V, L-1=K, A+1=B, E+1=F. नया समूह: Q, B, C, V, K, B, F. केवल 'B' दो बार है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "Each letter in the word PROVIDE is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is third from the left and the one which is fourth from the right in the new letter cluster thus formed?",
+   "hi": "शब्द PROVIDE के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से तीसरे अक्षर और दाईं ओर से चौथे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "5",
+    "6",
+    "8",
+    "9"
+   ],
+   "my_ans": "A",
+   "sol": "PROVIDE को व्यवस्थित करने पर: D, E, I, O, P, R, V. बाएं से तीसरा I(9) है, दाएं से चौथा O(15) है। बीच के अक्षर: 15-9-1 = 5.",
+   "trick": "अक्षरों के स्थान मान का अंतर - 1 करें।",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "Each letter in the word NERVOUS is arranged in the English alphabetical order. How many letters are there in the English alphabetical order between the letter which is fourth from the left and the one which is third from the right in the new letter cluster thus formed?",
+   "hi": "शब्द NERVOUS के प्रत्येक अक्षर को अंग्रेजी वर्णमाला क्रम में व्यवस्थित किया जाता है। इस प्रकार बने नए अक्षर-समूह में बाईं ओर से चौथे अक्षर और दाईं ओर से तीसरे अक्षर के बीच अंग्रेजी वर्णमाला क्रम में कितने अक्षर हैं?",
+   "opts": [
+    "4",
+    "1",
+    "0",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "NERVOUS को व्यवस्थित करने पर: E, N, O, R, S, U, V. बाएं से चौथा R(18) है, दाएं से तीसरा S(19) है। बीच में 0 अक्षर हैं।",
+   "trick": "अक्षरों के स्थान मान का अंतर - 1 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "Each vowel in the word NOTFERN is changed to the letter immediately following it in the English alphabetical order, and each consonant is changed to the letter immediately preceding it in the English alphabetical order. How many letters will appear exactly twice in the new group of letters thus formed?",
+   "hi": "शब्द NOTFERN के प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद वाले अक्षर से बदल दिया गया है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले वाले अक्षर से बदल दिया गया है। इस प्रकार बने अक्षरों के नए समूह में कितने अक्षर ठीक दो बार दिखाई देंगे?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Zero<br>शून्य"
+   ],
+   "my_ans": "B",
+   "sol": "N-1=M, O+1=P, T-1=S, F-1=E, E+1=F, R-1=Q, N-1=M. नया समूह: M, P, S, E, F, Q, M. केवल 'M' दो बार है।",
+   "trick": "स्वर में +1 और व्यंजन में -1 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "Each vowel in the word 'VOLUNTARY' is changed to the second letter immediately following it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which letter will appear exactly twice in the group of letters thus formed?",
+   "hi": "शब्द 'VOLUNTARY' में प्रत्येक स्वर को अंग्रेजी वर्णमाला क्रम में उसके ठीक बाद आने वाले दूसरे अक्षर से बदल दिया जाता है और प्रत्येक व्यंजन को अंग्रेजी वर्णमाला क्रम में उसके ठीक पहले आने वाले अक्षर से बदल दिया जाता है। इस प्रकार बने अक्षरों के समूह में कौन-सा अक्षर ठीक दो बार आएगा?",
+   "opts": [
+    "M",
+    "W",
+    "Q",
+    "K"
+   ],
+   "my_ans": "C",
+   "sol": "V-1=U, O+2=Q, L-1=K, U+2=W, N-1=M, T-1=S, A+2=C, R-1=Q, Y-1=X. नया समूह: U, Q, K, W, M, S, C, Q, X. 'Q' दो बार है।",
+   "trick": "स्वर में +2 और व्यंजन में -1 करें।",
+   "ans": "C"
+  }
+ ]
+}

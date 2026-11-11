@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Problems based on Alphabet",
+  "hi": "वर्णमाला आधारित प्रश्न",
+  "total": 54,
+  "gl": 0,
+  "ug": 54
+ },
+ "source_pages": "197-198",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only.) (Left) K D A Z Z X L E L A R A E P E Y U Z F U Q P (Right) How many such vowels are there, each of which is immediately preceded by a consonant and also immediately followed by a consonant?",
+   "hi": "नीचे दी गई अक्षर शृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की जानी है।)(बाएं) K D A Z Z X L E L A R A E P E Y U Z F U Q P (दाएं)ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन है और ठीक बाद भी एक व्यंजन है?",
+   "opts": [
+    "5",
+    "7",
+    "8",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "श्रृंखला: K D A Z Z X L E L A R A E P E Y U Z F U Q P<br>व्यंजन-स्वर-व्यंजन के जोड़े: D-A-Z, X-L-E (नहीं), L-A-R, R-A-E (नहीं), P-E-Y, Z-F-U (नहीं), U-Q-P (नहीं). सही जोड़े: D-A-Z, L-A-R, P-E-Y, Z-F-U (नहीं), F-U-Q, U-Q-P (नहीं). कुल 6 जोड़े हैं: D-A-Z, L-A-R, P-E-Y, F-U-Q, U-Q-P (नहीं), Z-F-U (नहीं). सही उत्तर 6 है।",
+   "trick": "स्वर (A, E, I, O, U) को ढूँढें और उनके अगल-बगल व्यंजन चेक करें।",
+   "ans": "D"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only) (Left) Y O W G U R C X Z H M E S I K A Q D F T B (Right) How many such consonants are there, each of which is immediately preceded by a consonant and also immediately followed by a vowel?",
+   "hi": "निम्नलिखित अक्षर-श्रृंखला को देखें और प्रश्न का उत्तर दें। (गणना केवल बाएं से दाएं की जानी है)(बाएं) Y O W G U R C X Z H M E S I K A Q D F T B (दाएं)ऐसे कितने व्यंजन हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन आता है और ठीक बाद एक स्वर आता है?",
+   "opts": [
+    "2",
+    "4",
+    "3",
+    "1"
+   ],
+   "my_ans": "A",
+   "sol": "श्रृंखला: Y O W G U R C X Z H M E S I K A Q D F T B<br>व्यंजन-व्यंजन-स्वर के जोड़े: G-U-R (नहीं), C-X-Z (नहीं), H-M-E, K-A-Q (नहीं), D-F-T (नहीं), F-T-B (नहीं). सही जोड़े: H-M-E, Q-D-F (नहीं). यहाँ H-M-E और Q-D-F (नहीं), G-U-R (नहीं). सही उत्तर 2 है।",
+   "trick": "व्यंजन-व्यंजन-स्वर (C-C-V) का पैटर्न ढूँढें।",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question that follows. Counting to be done from left to right only. (Left) U L Y M R D E L C D A E H R O H F X L D W H (Right) How many such vowels are there, each of which is immediately preceded by a consonant and also immediately followed by a consonant?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की ओर की जानी है। (बाएं) U L Y M R D E L C D A E H R O H F X L D W H (दाएं) ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन और ठीक बाद में भी एक व्यंजन है?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Four<br>चार"
+   ],
+   "my_ans": "A",
+   "sol": "श्रृंखला: U L Y M R D E L C D A E H R O H F X L D W H<br>व्यंजन-स्वर-व्यंजन: D-E-L, D-A-E (नहीं), H-O-H. कुल 2 जोड़े हैं।",
+   "trick": "स्वर के दोनों तरफ व्यंजन (C-V-C) देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (All numbers are single digit numbers only. Counting has to be done from left to right). (Left) 2 9 3 3 8 4 7 2 4 2 8 9 9 7 4 9 9 4 6 7 7 (Right)How many such odd digits are there each of which is immediately preceded by an odd digit and also immediately followed by a perfect square? (NOTE: 1 is also a perfect square)",
+   "hi": "निम्नलिखित श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। गिनती बाएं से दाएं की जानी है। (बाएं) 2 9 3 3 8 4 7 2 4 2 8 9 9 7 4 9 9 4 6 7 7 (दाएं) ऐसे कितने विषम अंक हैं जिनके ठीक पहले एक विषम अंक है और ठीक बाद में एक पूर्ण वर्ग है?(नोट: 1 भी एक पूर्ण वर्ग है)",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "A",
+   "sol": "श्रृंखला: 2 9 3 3 8 4 7 2 4 2 8 9 9 7 4 9 9 4 6 7 7<br>विषम-विषम-पूर्ण वर्ग (1, 4, 9): 9-3-3(नहीं), 3-3-8(नहीं), 9-9-7(नहीं), 9-9-4. यहाँ 9-9-4 और 7-7-? (नहीं). सही जोड़े: 9-9-4 और 9-7-4. कुल 2 हैं।",
+   "trick": "विषम-विषम-पूर्ण वर्ग (O-O-S) का पैटर्न ढूँढें।",
+   "ans": "A"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Left) 9 3 1 2 6 8 4 5 3 9 7 2 4 5 1 8 2 3 5 9 8 5 7 3 5 6 (Right) How many such odd digits are there, each of which is immediately preceded by an even digit and also immediately followed by an odd digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) 9 3 1 2 6 8 4 5 3 9 7 2 4 5 1 8 2 3 5 9 8 5 7 3 5 6 (दाएं)ऐसे कितने विषम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक सम अंक और ठीक बाद एक विषम अंक है?",
+   "opts": [
+    "More than two<br>दो से अधिक",
+    "Two<br>दो",
+    "One<br>एक",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "श्रृंखला: 9 3 1 2 6 8 4 5 3 9 7 2 4 5 1 8 2 3 5 9 8 5 7 3 5 6<br>सम-विषम-विषम: 2-6(नहीं), 8-4(नहीं), 4-5-3, 2-4(नहीं), 8-2(नहीं), 2-3-5, 8-5-7. कुल 3 जोड़े हैं (4-5-3, 2-3-5, 8-5-7).",
+   "trick": "सम-विषम-विषम (E-O-O) का पैटर्न ढूँढें।",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Left) 9 7 6 4 3 5 7 6 4 6 7 6 9 8 7 7 6 6 7 6 5 7 6 8 7 5 6 (Right) How many such even digits are there, each of which is immediately preceded by a perfect square and immediately followed by an even digit? (NOTE: 1 is also a perfect square)",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की जानी है।) (सभी संख्याएं केवल एकल-अंकीय हैं।)(बाएं) 9 7 6 4 3 5 7 6 4 6 7 6 9 8 7 7 6 6 7 6 5 7 6 8 7 5 6 (दाएं)ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक पूर्ण वर्ग है और ठीक बाद एक सम अंक है? (नोट: 1 भी एक पूर्ण वर्ग है)",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "श्रृंखला: 9 7 6 4 3 5 7 6 4 6 7 6 9 8 7 7 6 6 7 6 5 7 6 8 7 5 6<br>पूर्ण वर्ग (1, 4, 9)-सम-सम: 4-3(नहीं), 9-7(नहीं), 4-6-?, 9-8-?, 4-6-?, 1-8-?, 9-8-7(नहीं). कोई भी पूर्ण वर्ग-सम-सम का पैटर्न नहीं है।",
+   "trick": "पूर्ण वर्ग-सम-सम (S-E-E) का पैटर्न ढूँढें।",
+   "ans": "C"
+  }
+ ]
+}

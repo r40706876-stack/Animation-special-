@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Series",
+  "hi": "श्रृंखला",
+  "total": 88,
+  "gl": 88,
+  "ug": 0
+ },
+ "source_pages": "131-133",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "Refer to the following letter and symbol series and answer the question that follows. Counting to be done from left to right only. (Left) T O @ $ J $ S € M L I * N G © Y & T P £ Y T (Right) How many such symbols are there each of which is immediately preceded by a letter and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर और प्रतीक श्रृंखला का संदर्भ लें और नीचे दिए गए प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी चाहिए। (बाएं) T O @ $ J $ S € M L I * N G © Y & T P £ Y T (दाएं) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक के ठीक पहले एक अक्षर है और ठीक बाद एक प्रतीक है?",
+   "opts": [
+    "4",
+    "1",
+    "3",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "श्रृंखला में 'अक्षर-प्रतीक-प्रतीक' का पैटर्न देखें: 'I * N' (नहीं), 'G © Y' (नहीं), 'Y & T' (नहीं), 'T P £' (नहीं), 'P £ Y' (नहीं)। केवल '$' (J $ S में नहीं, T O @ $ J में '$' के पहले अक्षर 'O' और बाद में '$' है)। सही पैटर्न: 'O $ $'.",
+   "trick": "श्रृंखला में दी गई शर्तों (अक्षर-प्रतीक-प्रतीक) को ध्यान से खोजें।",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 34, 38, 46, 58, 74 , ?",
+   "hi": "दी गई श्रृंखला में ‘?’ के स्थान पर क्या आना चाहिए? 34, 38, 46, 58, 74, ?",
+   "opts": [
+    "98",
+    "96",
+    "94",
+    "92"
+   ],
+   "my_ans": "C",
+   "sol": "अंतर: 38-34=4, 46-38=8, 58-46=12, 74-58=16. अगला अंतर 20 होगा। 74+20=94.",
+   "trick": "संख्याओं के बीच का अंतर 4 के गुणज (4, 8, 12, 16, 20) में बढ़ रहा है।",
+   "ans": "C"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question that follows. All numbers are single-digit numbers only. (Left) 7 8 @ 1 # 4 $ 5 % + ? 8 & 6 % 4 8 9 % (Right) If all the symbols are dropped from the series, which of the following will be seventh from the right?",
+   "hi": "निम्नलिखित संख्या और प्रतीक श्रृंखला का संदर्भ लें और दिए गए प्रश्न का उत्तर दें। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। (बाएं) 7 8 @ 1 # 4 $ 5 % + ? 8 & 6 % 4 8 9 % (दाएं) यदि श्रृंखला से सभी प्रतीकों को हटा दिया जाए, तो निम्नलिखित में से कौन-सा दाईं ओर से सातवां होगा?",
+   "opts": [
+    "6",
+    "8",
+    "4",
+    "9"
+   ],
+   "my_ans": "C",
+   "sol": "प्रतीक हटाने पर: 7 8 1 4 5 8 6 4 8 9. दाईं ओर से सातवां अंक: 9(1), 8(2), 4(3), 6(4), 8(5), 5(6), 4(7).",
+   "trick": "प्रतीकों को हटाकर बची हुई संख्याओं को लिखें और दाईं ओर से गिनें।",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question. Counting to be done from left to right only. (All numbers are single-digit numbers only.) (Left) 6 2 @ # & * % ~ 7 = Ω 1 8 ? £ $ 4 3 5 + 9 (Right) How many such symbols are there, each of which is immediately preceded by a number and also immediately followed by another number?",
+   "hi": "निम्नलिखित संख्या और प्रतीक श्रृंखला का संदर्भ लीजिए और प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं ही की जानी है। (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।)(बाएं) 6 2 @ # & * % ~ 7 = Ω 1 8 ? £ $ 4 3 5 + 9 (दाएं) ऐसे कितने प्रतीक हैं, जिनके ठीक पहले एक संख्या और ठीक बाद में भी एक संख्या है?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "पैटर्न 'संख्या-प्रतीक-संख्या' खोजें: '8 ? £' (नहीं), '5 + 9' (यहाँ '+' प्रतीक है, जिसके पहले 5 और बाद में 9 है)। केवल एक है।",
+   "trick": "श्रृंखला में 'संख्या-प्रतीक-संख्या' के समूह को ध्यान से देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only (Left) % V € L X @ £ & Y M P # N % € Z % P * © M $ (Right) How many such letters are there each of which is immediately preceded by a symbol and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी है। (बाएं) % V € L X @ £ & Y M P # N % € Z % P * © M $ (दाएं) ऐसे कितने अक्षर हैं जिनमें से प्रत्येक के ठीक पहले एक प्रतीक है और ठीक बाद में भी एक प्रतीक है?",
+   "opts": [
+    "5",
+    "6",
+    "4",
+    "7"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न 'प्रतीक-अक्षर-प्रतीक' खोजें: %V€, €LX, @£& (नहीं), #N%, %€Z (नहीं), %P*, ©M$. कुल 5 हैं।",
+   "trick": "श्रृंखला में 'प्रतीक-अक्षर-प्रतीक' के समूहों को गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? JIM 36, NMQ 24, RQU 12, VUY 0 , ?",
+   "hi": "नीचे दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए निम्नलिखित में से कौन-सा अक्षर-संख्या समूह प्रश्नवाचक चिह्न (?) को प्रतिस्थापित करेगा? JIM 36, NMQ 24, RQU 12, VUY 0, ?",
+   "opts": [
+    "ZZB -12",
+    "ZYC -12",
+    "ZHQ -13",
+    "ZXB -13"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: J(+4)=N(+4)=R(+4)=V(+4)=Z. I(+4)=M(+4)=Q(+4)=U(+4)=Y. M(+4)=Q(+4)=U(+4)=Y(+4)=C. संख्या: 36-12=24-12=12-12=0-12=-12.",
+   "trick": "अक्षरों में +4 की वृद्धि और संख्याओं में -12 की कमी हो रही है।",
+   "ans": "B"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question that follows. Counting to be done from left to right only. All numbers are single-digit numbers only. (Left) % 1 7 3 < $ 3 7 4 ^ < & # 5 < 3 ^ % > \\ & (Right) How many such symbols are there, each of which is immediately preceded by a number and also immediately followed by a number?",
+   "hi": "निम्नलिखित संख्या और प्रतीक श्रृंखला का संदर्भ लें और दिए गए प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी है। सभी संख्याएं केवल एक-अंकीय संख्याएं हैं। (बाएं) % 1 7 3 < $ 3 7 4 ^ < & # 5 < 3 ^ % > \\ & (दाएं) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक से ठीक पहले एक संख्या है और ठीक बाद भी एक संख्या है?",
+   "opts": [
+    "One<br>एक",
+    "None<br>एक भी नहीं",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न 'संख्या-प्रतीक-संख्या' खोजें: '3 < 3' (एक प्रतीक '<' है जिसके पहले 3 और बाद में 3 है)।",
+   "trick": "श्रृंखला में 'संख्या-प्रतीक-संख्या' के समूह को ध्यान से देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? VPG 7, ZTK 11, DXO 15, HBS 19, ?",
+   "hi": "निम्नलिखित में से कौन-सा अक्षर-संख्या समूह, दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न-चिह्न (?) को प्रतिस्थापित करेगा? VPG 7, ZTK 11, DXO 15, HBS 19, ?",
+   "opts": [
+    "MGX 23",
+    "LFW 23",
+    "LGY 24",
+    "LEU 23"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: V(+4)=Z(+4)=D(+4)=H(+4)=L. P(+4)=T(+4)=X(+4)=B(+4)=F. G(+4)=K(+4)=O(+4)=S(+4)=W. संख्या: 7+4=11+4=15+4=19+4=23.",
+   "trick": "अक्षरों में +4 और संख्याओं में +4 की वृद्धि हो रही है।",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question that follows. Counting to be done from left to right only. All numbers are single-digit numbers only. @ / 3 & 5 3 9 1 ? % 7 $ \\ % 7 $ 6 9 4 ? + How many such symbols are there, each of which is immediately preceded by another symbol and also immediately followed by a number?",
+   "hi": "निम्नलिखित अक्षर, संख्या, प्रतीक श्रृंखला का संदर्भ लें और दिए गए प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी है। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। (@ / 3 & 5 3 9 1 ? % 7 $ \\ % 7 $ 6 9 4 ? +) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक के ठीक पहले एक अन्य प्रतीक है और ठीक बाद में एक संख्या है?",
+   "opts": [
+    "One<br>एक",
+    "None<br>एक भी नहीं",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न 'प्रतीक-प्रतीक-संख्या' खोजें: '& 5' (नहीं), '? % 7' (प्रतीक-प्रतीक-संख्या), '$ \\ %' (नहीं), '\\ % 7' (प्रतीक-प्रतीक-संख्या), '? +' (नहीं)। एक और है: '@ / 3'.",
+   "trick": "श्रृंखला में 'प्रतीक-प्रतीक-संख्या' के समूहों को ध्यान से गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? MPW 30, HKR 25, CFM 20, XAH 15 , ?",
+   "hi": "दिए गए अक्षर-संख्या समूहों में से कौन-सा निम्नलिखित श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न चिह्न (?) को प्रतिस्थापित करेगा? MPW 30, HKR 25, CFM 20, XAH 15, ?",
+   "opts": [
+    "SVC 10",
+    "ZKE 12",
+    "BYM 13",
+    "DLV 12"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: M(-5)=H(-5)=C(-5)=X(-5)=S. P(-5)=K(-5)=F(-5)=A(-5)=V. W(-5)=R(-5)=M(-5)=H(-5)=C. संख्या: 30-5=25-5=20-5=15-5=10.",
+   "trick": "अक्षरों और संख्याओं में -5 की कमी हो रही है।",
+   "ans": "A"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "What should come in place of ‘?’ in the given series? 95, 70, 54, 45, 41 , ?",
+   "hi": "दी गई श्रृंखला में '?' के स्थान पर क्या आना चाहिए? 95, 70, 54, 45, 41, ?",
+   "opts": [
+    "42",
+    "38",
+    "40",
+    "44"
+   ],
+   "my_ans": "C",
+   "sol": "अंतर: 95-70=25 (5²), 70-54=16 (4²), 54-45=9 (3²), 45-41=4 (2²). अगला अंतर 1²=1 होगा। 41-1=40.",
+   "trick": "संख्याओं के बीच का अंतर घटते हुए वर्गों (5², 4², 3², 2², 1²) में है।",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only. (Left) : O N & # K € S * P # £ * G I & * @ I A * @ © (Right) How many such letters are there each of which is immediately preceded by a letter and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। गिनती केवल बाएं से दाएं की जानी है। (बाएं) O N & # K € S * P # £ * G I & * @ I A * @ © (दाएं) ऐसे कितने अक्षर हैं जिनमें से प्रत्येक के ठीक पहले एक अक्षर है और ठीक बाद में एक प्रतीक भी है?",
+   "opts": [
+    "5",
+    "3",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न 'अक्षर-अक्षर-प्रतीक' खोजें: 'ON&', 'GI&', 'IA*'. कुल 3 हैं।",
+   "trick": "श्रृंखला में 'अक्षर-अक्षर-प्रतीक' के समूहों को ध्यान से गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "Refer to the following number and symbol series and answer the question that follows. All numbers are single-digit numbers only. (Left) $ 8 6 2 @ $ # 1 5 # % * 9 7 5 @ 3 # 1 * 4 $ (Right) If all the symbols are dropped from the series, which of the following will be sixth from the right?",
+   "hi": "निम्नलिखित संख्या और प्रतीक श्रृंखला का संदर्भ लें और नीचे दिए गए प्रश्न का उत्तर दें। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। (बाएं) $ 8 6 2 @ $ # 1 5 # % * 9 7 5 @ 3 # 1 * 4 $ (दाएं) यदि श्रृंखला से सभी प्रतीकों को हटा दिया जाए तो निम्नलिखित में से कौन-सा, दाईं ओर से छठा होगा?",
+   "opts": [
+    "5",
+    "9",
+    "7",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "प्रतीक हटाने पर: 8 6 2 1 5 9 7 5 3 1 4. दाईं ओर से छठा: 4(1), 1(2), 3(3), 5(4), 7(5), 9(6).",
+   "trick": "प्रतीकों को हटाकर बची हुई संख्याओं को लिखें और दाईं ओर से गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "Refer to the given letter and symbol series and answer the question that follows. Counting to be done from left to right only. (Left) C S L Q P Q L C E * / M H W J A N W $ J Z (Right) How many such symbols are there, each of which is immediately preceded by a letter and also immediately followed by a letter?",
+   "hi": "दी गई अक्षर और प्रतीक श्रृंखला का संदर्भ लीजिए और उसके आधार पर पूछे गए प्रश्न का उत्तर दीजिए। गणना केवल बाएं से दाएं की जानी है। (बाएं) C S L Q P Q L C E * / M H W J A N W $ J Z (दाएं) ऐसे कितने प्रतीक हैं, जिनमें से प्रत्येक से ठीक पहले एक अक्षर है और ठीक बाद भी एक अक्षर है?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न 'अक्षर-प्रतीक-अक्षर' खोजें: 'E * /' (नहीं), 'W $ J' (अक्षर-प्रतीक-अक्षर)। केवल एक है।",
+   "trick": "श्रृंखला में 'अक्षर-प्रतीक-अक्षर' के समूहों को ध्यान से देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "What should come in place of the question mark (?) in the given series? 20 , 22 , 25 , 30 , 37 , ?",
+   "hi": "दी गई श्रृंखला में प्रश्न-चिह्न (?) के स्थान पर क्या आना चाहिए? 20 22 25 30 37 ?",
+   "opts": [
+    "51",
+    "49",
+    "55",
+    "48"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर: 22-20=2, 25-22=3, 30-25=5, 37-30=7. ये अभाज्य संख्याएं हैं। अगला अंतर 11 होगा। 37+11=48.",
+   "trick": "संख्याओं के बीच का अंतर क्रमिक अभाज्य संख्याओं (2, 3, 5, 7, 11) में बढ़ रहा है।",
+   "ans": "D"
+  }
+ ]
+}

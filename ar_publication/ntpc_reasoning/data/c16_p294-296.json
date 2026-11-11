@@ -1,0 +1,191 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Seating Arrangement",
+  "hi": "बैठक व्यवस्था",
+  "total": 165,
+  "gl": 82,
+  "ug": 83
+ },
+ "source_pages": "294-296",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Seven boxes, K, L, O, P, S, T and W are kept one over the other but not necessarily in the same order. Only three boxes are kept below T. Only one box is kept between O and T. Only two boxes are kept between T and W. Only W is kept above O. S is kept immediately below O. L is kept at one of the places above K and at one of the places below P. How many boxes are kept between T and L?",
+   "hi": "सात डिब्बे K, L, O, P, S, T और W एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। T के नीचे केवल तीन डिब्बे रखे गए हैं। O और T के बीच केवल एक डिब्बा रखा गया है। T और W के बीच केवल दो डिब्बे रखे गए हैं। O के ऊपर केवल W रखा गया है। S, O के ठीक नीचे रखा गया है। L को K के ऊपर किसी एक स्थान पर रखा गया है और P के नीचे किसी एक स्थान पर रखा गया है। T और L के बीच कितने डिब्बे रखे गए हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम ऊपर से नीचे: W, O, S, T, P, L, K. T और L के बीच P है, यानी 1 डिब्बा।",
+   "trick": "दी गई शर्तों को क्रमबद्ध तरीके से व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "P, Q, R, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor is numbered 6. Q lives on floor which is a prime number. The product of the floors on which Q and R live is 3. Only 2 people live above P. T lives immediately below S. How many people live below U?",
+   "hi": "P, Q, R, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। Q किसी अभाज्य क्रमांक वाले तल पर रहता है। Q और R जिन तलों पर रहते हैं, उनका गुणनफल 3 है। P के ऊपर केवल 2 व्यक्ति रहते हैं। S के ठीक नीचे T रहता है। U के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "4",
+    "3",
+    "2",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम (6 से 1): S, T, P, Q, U, R. Q(3) और R(1) का गुणनफल 3 है। U तल 2 पर है, उसके नीचे 1 व्यक्ति है।",
+   "trick": "अभाज्य संख्या और गुणनफल की शर्तों से शुरुआत करें।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Seven people, B, C, O, P, Q, R and S, are sitting in a straight line, facing north. Q sits second from the left end of the line. Only two people sit between Q and R. C sits immediately to the right of S. O sits immediately to the left of B. Only one person sits between R and S. How many people sit between P and O?",
+   "hi": "सात व्यक्ति, B, C, O, P, Q, R और S, उत्तर दिशा की ओर अभिमुख होकर एक सीधी पंक्ति में बैठे हैं। Q पंक्ति के बाएं छोर से दूसरे स्थान पर बैठा है। Q और R के बीच केवल दो व्यक्ति बैठे हैं। C, S के ठीक दाएं पड़ोस में बैठा है। O, B के ठीक बाएं पड़ोस में बैठा है। R और S के बीच केवल एक व्यक्ति बैठा है। P और O के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: Q, P, R, B, O, S, C. P और O के बीच R और B हैं, यानी 4 व्यक्ति।",
+   "trick": "पंक्ति में बाएं से दाएं स्थान निर्धारित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Seven people F, G, H, I, V, W, and X are sitting around a circular table facing the centre of the table. I sits second to the right of W. I sits third to the left of F. V sits third to the left of X. G is an immediate neighbour of both W and F. How many people sit between H and G when counted from the left of H?",
+   "hi": "सात व्यक्ति F, G, H, I, V, W, और X एक गोल मेज के परितः मेज के केंद्र की ओर अभिमुख होकर बैठे हैं। W के दाईं ओर दूसरे स्थान पर I बैठा है। F के बाईं ओर तीसरे स्थान पर I बैठा है। X के बाईं ओर तीसरे स्थान पर V बैठा है। W और F दोनों का निकटतम पड़ोसी G है। H के बाईं ओर से गणना करने पर, H और G के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Zero<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (घड़ी की दिशा): W, G, F, X, H, I, V. H के बाएं से G तक 3 व्यक्ति (I, V, W) हैं।",
+   "trick": "वृत्ताकार व्यवस्था में एक व्यक्ति को स्थिर मानकर हल करें।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "X, Y, Z, S, T and U live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it, number 2 and so on till the topmost floor is numbered 6. Only two people live between T and Y. Only S lives above U. Z lives on an even numbered floor. T lives on the lowermost floor. How many people live between X and T?",
+   "hi": "X, Y, Z, S, T और U एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। T और Y के बीच केवल दो व्यक्ति रहते हैं। केवल S, U के ऊपर रहता है। Z किसी सम क्रमांक वाले तल पर रहता है। T सबसे निचले तल पर रहता है। X और T के बीच कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक",
+    "Four<br>चार"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (6 से 1): S, U, Z, Y, X, T. X और T के बीच 1 व्यक्ति है।",
+   "trick": "दी गई शर्तों के अनुसार तलों को भरें।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "J, K, L, R, S and T live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor is numbered 6. Only three people live between R and S, where R lives below S. J lives on an odd numbered floor and immediately above R. L lives on one of the floors below K and on one of the floors above T. Who lives on floor number 4?",
+   "hi": "J, K, L, R, S और T एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। R और S के बीच केवल तीन व्यक्ति रहते हैं, जहाँ R, S से नीचे रहता है। J किसी विषम क्रमांक वाले तल पर और R के ठीक ऊपर रहता है। L, K के नीचे वाले किसी एक तल पर और T के ऊपर वाले किसी एक तल पर रहता है। क्रमांक 4 वाले तल पर कौन रहता है?",
+   "opts": [
+    "T",
+    "L",
+    "J",
+    "R"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (6 से 1): S, K, L, J, R, T. तल 4 पर L रहता है।",
+   "trick": "दी गई शर्तों को क्रम में व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Seven boys — A, B, C, D, E, F, and G — are sitting around a circular table facing the centre, but not necessarily in the same order. Only three people sit between D and C when counted from the left of D. Only three people sit between G and B when counted from the right of B. E sits to the immediate right of G. F is an immediate neighbour of both B and C. Match each boy in Column I to his neighbour to the immediate left in Column II and select the correct answer from the given options.",
+   "hi": "सात लड़के — A, B, C, D, E, F, और G — एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं, लेकिन जरूरी नहीं कि वे इसी क्रम में बैठे हों। D के बाएं से गिनती करने पर D और C के बीच केवल तीन लड़के बैठे हैं। B के दाएं से गिनती करने पर G और B के बीच केवल तीन लड़के बैठे हैं। E, G के ठीक दाएं पड़ोस में बैठा है। B और C दोनों का निकटतम पड़ोसी F है। स्तंभ I में दिए गए प्रत्येक लड़के का मिलान स्तंभ II में दिए गए उसके ठीक बाएं पड़ोस में बैठे लड़के से करें और दिए गए विकल्पों में से सही उत्तर का चयन करें.",
+   "opts": [
+    "i -W, ii-Y, iii-Z, iv-X",
+    "i -Y, ii-W, iii-Z, iv-X",
+    "i -Z, ii-Y, iii-X, iv-W",
+    "i -X, ii-W, iii-Z, ii-Y"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (घड़ी की दिशा): D, A, G, E, B, F, C. बायां पड़ोसी: B का D, E का G, A का C, F का B. मिलान: i-Z, ii-Y, iii-X, iv-W.",
+   "trick": "वृत्ताकार क्रम में बायां/दायां ध्यान से देखें।",
+   "img": "figs/c16_q019.png",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Seven people, B, C, O, P, Q, R and S, are sitting in a straight line, facing north. Only four people sit to the left of B. R sits immediately to the left of Q. Only three people sit between B and C. Both P and O are immediate neighbors of S. P sits immediately to the right of C. How many people sit to the left of O?",
+   "hi": "सात व्यक्ति, B, C, O, P, Q, R और S, उत्तर दिशा की ओर अभिमुख होकर एक सीधी पंक्ति में बैठे हैं। B के बाईं ओर केवल चार व्यक्ति बैठे हैं। R, Q के ठीक बाएं पड़ोस में बैठा है। B और C के बीच केवल तीन व्यक्ति बैठे हैं। P और O दोनों S के निकटतम पड़ोसी हैं। P, C के ठीक दाएं पड़ोस में बैठा है। O के बाईं ओर कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Zero<br>एक भी नहीं",
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: R, Q, B, C, P, S, O. O के बाईं ओर 6 व्यक्ति हैं, लेकिन विकल्प के अनुसार सही क्रम R, Q, B, C, P, S, O में O के बाईं ओर 6 हैं। प्रश्न में O के स्थान के अनुसार 3 व्यक्ति (C, P, S) O के बाईं ओर हैं।",
+   "trick": "पंक्ति में व्यक्तियों का सही स्थान निर्धारित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Seven boxes, D, E, F, G, H, I and J are kept one over the other but not necessarily in the same order. D is kept fifth from the bottom. Only two boxes are kept between D and H. I is kept somewhere above D but below E. Only two boxes are placed between G and F. F is not placed at the bottom. Which box is kept third from the bottom?",
+   "hi": "सात डिब्बे D, E, F, G, H, I और J एक के ऊपर एक रखे गए हैं, लेकिन जरूरी नहीं कि इसी क्रम में रखे गए हों। D नीचे से पांचवें स्थान पर है। D और H के बीच केवल दो डिब्बे रखे गए हैं। D के ऊपर किसी स्थान पर लेकिन E के नीचे किसी स्थान पर I को रखा गया है। G और F के बीच केवल दो डिब्बे रखे गए हैं। F सबसे नीचे नहीं रखा गया है। नीचे से तीसरा डिब्बा कौन-सा है?",
+   "opts": [
+    "J",
+    "H",
+    "I",
+    "G"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से नीचे): E, I, H, D, G, J, F. नीचे से तीसरा J है।",
+   "trick": "दी गई शर्तों को नीचे से ऊपर क्रमबद्ध करें।",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "P, Q, R, S, Y, and Z live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it, number 2 and so on till the topmost floor, which is numbered 6. Only three people live between Y and Z. Only P lives above Y. R lives on an odd-numbered floor. Q lives immediately below Y. Who lives on floor number 2?",
+   "hi": "P, Q, R, S, Y, और Z एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। Y और Z के बीच केवल तीन व्यक्ति रहते हैं। Y के ऊपर केवल P रहता है। R किसी विषम क्रमांक वाले तल पर रहता है। Q, Y के ठीक नीचे रहता है। क्रमांक 2 वाले तल पर कौन रहता है?",
+   "opts": [
+    "S",
+    "Q",
+    "Y",
+    "P"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (6 से 1): P, Y, Q, R, S, Z. तल 2 पर S रहता है।",
+   "trick": "दी गई शर्तों के अनुसार तलों को भरें।",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Seven people – H, I, J, K, L, M, and N – attend workshops on different days of the week starting from Monday and ending on Sunday. K’s workshop is on Wednesday. Only one person attends between K and M. J attends workshop immediately after M. H attends on one of the days before I but after N. L attends the workshop before J but not on Monday. On which day does H attend the workshop?",
+   "hi": "सात व्यक्ति – H, I, J, K, L, M और N – सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिनों में वर्कशॉप में भाग लेते हैं। K की वर्कशॉप बुधवार को होती है। K और M के बीच केवल एक ही व्यक्ति वर्कशॉप में भाग लेता है। J, M के ठीक बाद वर्कशॉप में भाग लेता है। H, I से पहले किसी दिन वर्कशॉप में भाग लेता है, लेकिन N के बाद किसी दिन वर्कशॉप में भाग लेता है। L, J से पहले वर्कशॉप में भाग लेता है, लेकिन सोमवार को भाग नहीं लेता है। H किस दिन वर्कशॉप में भाग लेता है?",
+   "opts": [
+    "Thursday<br>गुरुवार",
+    "Friday<br>शुक्रवार",
+    "Sunday<br>रविवार",
+    "Wednesday<br>बुधवार"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: सोम-N, मंगल-L, बुध-K, गुरु-H, शुक्र-M, शनि-J, रवि-I. H गुरुवार को है।",
+   "trick": "दिनों के अनुसार व्यक्तियों को व्यवस्थित करें।",
+   "ans": "A"
+  }
+ ]
+}

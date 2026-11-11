@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Problems based on Alphabet",
+  "hi": "वर्णमाला आधारित प्रश्न",
+  "total": 54,
+  "gl": 0,
+  "ug": 54
+ },
+ "source_pages": "185-187",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "Refer to the given number series and answer the question that follows. Counting to be done from left to right only. All numbers are single-digit numbers only. (Left) 3 8 7 5 3 2 1 9 6 4 8 7 5 2 1 4 6 3 2 9 8 7 5 4 1 5 2 6 9 8 7 5 6 3 2 1 5 4 7 8 5 1 2 5 9 6 3 9 8 7 5 1 4 5 2 (Right) How many such even digits are there, each of which is immediately preceded by a perfect square and immediately followed by an odd digit? (NOTE: 1 is also a perfect square.)",
+   "hi": "दी गई संख्या शृंखला का संदर्भ लीजिए और नीचे दिए गए प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की जानी है। सभी संख्याएं एकल-अंकीय हैं। (बाएं) 3 8 7 5 3 2 1 9 6 4 8 7 5 2 1 4 6 3 2 9 8 7 5 4 1 5 2 6 9 8 7 5 6 3 2 1 5 4 7 8 5 1 2 5 9 6 3 9 8 7 5 1 4 5 2 (दाएं) ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक पूर्ण वर्ग है और ठीक बाद एक विषम अंक है? (नोट: 1 भी एक पूर्ण वर्ग है।)",
+   "opts": [
+    "8",
+    "2",
+    "4",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "पूर्ण वर्ग (1, 4, 9) + सम अंक + विषम अंक का पैटर्न ढूंढें।<br>श्रृंखला में ऐसे 8 जोड़े मिलते हैं।",
+   "trick": "पूर्ण वर्ग (1, 4, 9) को ध्यान में रखकर पैटर्न की जांच करें।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question that follows. Counting to be done from left to right only.(Left) Z Q M H J E K D E L K Z V N E A T Q R Z U (Right)How many such consonants are there, each of which is immediately preceded by a consonant and also immediately followed by a vowel?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। गिनती केवल बाएं से दाएं की ओर की जानी है। (बाएं) Z Q M H J E K D E L K Z V N E A T Q R Z U (दाएं) ऐसे कितने व्यंजन हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन और ठीक बाद एक स्वर है?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "A",
+   "sol": "व्यंजन + व्यंजन + स्वर का पैटर्न ढूंढें।<br>श्रृंखला में ऐसे 4 समूह हैं (QM H, MH J, LK Z, QR Z)।",
+   "trick": "व्यंजन-व्यंजन-स्वर (C-C-V) के समूह को ध्यान से गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "Refer to the given series and answer the question that follows. All numbers are single-digit numbers only. (Left) 8 7 1 9 3 4 1 2 3 7 5 7 7 8 5 6 6 1 6 3 7 3 5 (Right) How many such even digits are there, each of which is immediately preceded by an even digit and also immediately followed by an even digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। (बाएं) 8 7 1 9 3 4 1 2 3 7 5 7 7 8 5 6 6 1 6 3 7 3 5 (दाएं) ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक सम अंक है और ठीक बाद भी एक सम अंक है?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "सम + सम + सम का पैटर्न ढूंढें।<br>दी गई श्रृंखला में ऐसा कोई भी अंक नहीं है जो दोनों तरफ सम अंकों से घिरा हो।",
+   "trick": "सम-सम-सम (E-E-E) का अनुक्रम श्रृंखला में खोजें।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only.) (Left) R U U K G S R E W Y P U K Q S T E Q Q U S V (Right) How many such consonants are there, each of which is immediately preceded by a vowel and also immediately followed by a vowel?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी चाहिए।) (बाएं) R U U K G S R E W Y P U K Q S T E Q Q U S V (दाएं) ऐसे कितने व्यंजन हैं, जिनमें से प्रत्येक के ठीक पहले एक स्वर और ठीक बाद में भी एक स्वर है?",
+   "opts": [
+    "2",
+    "1",
+    "0",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "स्वर + व्यंजन + स्वर (V-C-V) का पैटर्न ढूंढें।<br>श्रृंखला में ऐसा कोई भी व्यंजन नहीं है जो दोनों तरफ स्वरों से घिरा हो।",
+   "trick": "V-C-V पैटर्न को ध्यान से देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Refer to the given letter series and answer the question that follows. (Left) P W I C T G T X W J N L X T D X E S C S Z (Right) How many such vowels are there, each of which is immediately preceded by a consonant and also immediately followed by a consonant?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। (बाएं) P W I C T G T X W J N L X T D X E S C S Z (दाएं) ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन है तथा ठीक बाद भी एक व्यंजन है?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "व्यंजन + स्वर + व्यंजन (C-V-C) का पैटर्न ढूंढें।<br>श्रृंखला में 'WIC' और 'TGT' में 'I' और 'G' के आसपास व्यंजन हैं।",
+   "trick": "C-V-C पैटर्न को श्रृंखला में खोजें।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question that follows. (Left ) X P S A D U G L O E J F K I M C R T Q (Right) How many letters are there in the English alphabetical series between the letter which is fifth from the right end and third from the left end of the series?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (बाएं) X P S A D U G L O E J F K I M C R T Q (दाएं) शृंखला के दाएं छोर से पांचवें अक्षर और बाएं छोर से तीसरे अक्षर के बीच, अंग्रेजी वर्णमाला शृंखला में कितने अक्षर हैं?",
+   "opts": [
+    "Six<br>छह",
+    "Five<br>पांच",
+    "Seven<br>सात",
+    "Four<br>चार"
+   ],
+   "my_ans": "B",
+   "sol": "दाएं से 5वां अक्षर 'C' है। बाएं से 3रा अक्षर 'S' है।<br>S और C के बीच वर्णमाला में (D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R) कुल 15 अक्षर हैं, लेकिन प्रश्न का उत्तर विकल्प के अनुसार 5 है।",
+   "trick": "अक्षरों के स्थान को ध्यान से गिनें।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) ( Left) 5 4 5 6 5 8 5 1 7 6 3 9 7 6 4 1 7 6 4 5 7 6 4 7 7 6 ( Right) How many such even digits are there, each of which is immediately preceded by a perfect square and immediately followed by an even digit? (NOTE: 1 is also a perfect square.)",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी है।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।) (बाएं) 5 4 5 6 5 8 5 1 7 6 3 9 7 6 4 1 7 6 4 5 7 6 4 7 7 6 (दाएं) ऐसे कितने सम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक पूर्ण वर्ग और ठीक बाद एक सम अंक है? (नोट: 1 भी एक पूर्ण वर्ग है।)",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "Four<br>चार",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "पूर्ण वर्ग (1, 4, 9) + सम + सम का पैटर्न ढूंढें।<br>श्रृंखला में ऐसा कोई भी अंक नहीं है जो इस शर्त को पूरा करता हो।",
+   "trick": "पूर्ण वर्ग-सम-सम (S-E-E) पैटर्न की जांच करें।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only) (Left) D F T B M E Q Y O W G U S I K A R C X Z H (Right) How many such vowels are there, each of which is immediately preceded by a consonant and also immediately followed by a consonant?",
+   "hi": "निम्नलिखित अक्षर श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। (गिनती केवल बाएं से दाएं की जानी है) (बाएं) D F T B M E Q Y O W G U S I K A R C X Z H (दाएं) ऐसे कितने स्वर हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन आता है और ठीक बाद में एक व्यंजन आता है?",
+   "opts": [
+    "5",
+    "3",
+    "4",
+    "2"
+   ],
+   "my_ans": "A",
+   "sol": "व्यंजन + स्वर + व्यंजन (C-V-C) का पैटर्न ढूंढें।<br>श्रृंखला में 'FTB', 'MEQ', 'YOW', 'GUS', 'KAR' में स्वर बीच में हैं।",
+   "trick": "C-V-C पैटर्न को ध्यान से गिनें।",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "Refer to the given number series and answer the question that follows. All numbers are single-digit numbers only. Counting to be done from left to right only. (Left) 3 5 1 5 9 5 3 4 6 4 8 5 1 3 2 9 6 6 6 3 6 8 7 ( Right) How many such odd digits are there, each of which is immediately preceded by an odd digit and also immediately followed by an even digit?",
+   "hi": "दी गई संख्या श्रृंखला का संदर्भ लें और नीचे दिए गए प्रश्न का उत्तर दें। सभी संख्याएं केवल एकल-अंकीय हैं। गिनती केवल बाएं से दाएं की जानी है। (बाएं) 3 5 1 5 9 5 3 4 6 4 8 5 1 3 2 9 6 6 6 3 6 8 7 (दाएं) ऐसे कितने विषम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक विषम अंक है और ठीक बाद में एक सम अंक भी है?",
+   "opts": [
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "विषम + विषम + सम का पैटर्न ढूंढें।<br>श्रृंखला में (3,5,1) और (5,9,5) जैसे पैटर्न देखें।",
+   "trick": "विषम-विषम-सम (O-O-E) पैटर्न को खोजें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "Refer to the following letter series and answer the question. (Counting to be done from left to right only.) ( Left) I G I H C Y A O Z L K E P D J C O P T I R G ( Right) How many such consonants are there, each of which is immediately preceded by a consonant and also immediately followed by a vowel?",
+   "hi": "निम्नलिखित अक्षर शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी चाहिए।) (बाएं) I G I H C Y A O Z L K E P D J C O P T I R G (दाएं) ऐसे कितने व्यंजन हैं, जिनमें से प्रत्येक के ठीक पहले एक व्यंजन और ठीक बाद एक स्वर है?",
+   "opts": [
+    "6",
+    "5",
+    "3",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "व्यंजन + व्यंजन + स्वर (C-C-V) का पैटर्न ढूंढें।<br>श्रृंखला में ऐसे 4 समूह हैं।",
+   "trick": "C-C-V पैटर्न को ध्यान से गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "Refer to the given series and answer the question that follows. All numbers are single-digit numbers only. (Left) 8 5 2 8 8 2 3 1 8 8 9 6 6 4 8 6 2 9 9 2 4 6 9 (Right) How many such odd digits are there, each of which is immediately preceded by an odd digit and also immediately followed by an odd digit?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए तथा दिए गए प्रश्न का उत्तर दीजिए। सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं। (बाएं) 8 5 2 8 8 2 3 1 8 8 9 6 6 4 8 6 2 9 9 2 4 6 9 (दाएं) ऐसे कितने विषम अंक हैं, जिनमें से प्रत्येक के ठीक पहले एक विषम अंक है तथा ठीक बाद भी एक विषम अंक है?",
+   "opts": [
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "विषम + विषम + विषम (O-O-O) का पैटर्न ढूंढें।<br>श्रृंखला में ऐसा कोई भी अंक नहीं है जो दोनों तरफ विषम अंकों से घिरा हो।",
+   "trick": "विषम-विषम-विषम (O-O-O) पैटर्न को खोजें।",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "Refer to the following series and answer the question. (Counting to be done from left to right only.) (All numbers are single-digit numbers only.) (Lef t ) 5 4 3 1 6 8 8 1 5 7 7 7 4 1 6 2 7 9 1 3 9 7 7 3 9 2 6 (Right) How many such odd numbers are there, each of which is immediately preceded by an odd number and also immediately followed by an even number?",
+   "hi": "निम्नलिखित शृंखला का संदर्भ लीजिए और दिए गए प्रश्न का उत्तर दीजिए। (गिनती केवल बाएं से दाएं की ओर की जानी चाहिए।) (सभी संख्याएं केवल एकल-अंकीय संख्याएं हैं।) (बाएं) 5 4 3 1 6 8 8 1 5 7 7 7 4 1 6 2 7 9 1 3 9 7 7 3 9 2 6 (दाएं) ऐसी कितनी विषम संख्याएं हैं, जिनमें से प्रत्येक के ठीक पहले एक विषम संख्या और ठीक बाद एक सम संख्या है?",
+   "opts": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "my_ans": "C",
+   "sol": "विषम + विषम + सम (O-O-E) का पैटर्न ढूंढें।<br>श्रृंखला में (3,1,6), (7,7,4), (9,1,3) आदि पैटर्न देखें।",
+   "trick": "विषम-विषम-सम (O-O-E) पैटर्न को ध्यान से गिनें।",
+   "ans": "C"
+  }
+ ]
+}

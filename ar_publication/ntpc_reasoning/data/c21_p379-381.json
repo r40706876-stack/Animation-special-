@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "379-381",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All kites are rabbits. No kite is an eagle. All eagles are pigs. Conclusions: (I) No pig is a rabbit. (II) Some pigs are kites.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी पतंग, खरगोश हैं। कोई भी पतंग, चील नहीं है। सभी चील, सुअर हैं। निष्कर्ष: (I) कोई भी सुअर, खरगोश नहीं है। (II) कुछ सुअर, पतंग हैं।",
+   "opts": [
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "पतंग खरगोश हैं और चील सुअर हैं। चील और पतंग में कोई संबंध नहीं है, लेकिन सुअर और खरगोश के बीच कोई सीधा संबंध नहीं दिया गया है। अतः दोनों निष्कर्ष गलत हैं।",
+   "trick": "कथन में न दिए गए संबंधों को 'संभव' माना जाता है, 'निश्चित' नहीं।",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statement. Statements: All tea is a snack. All tea is brunch. All brunches are dinner. Conclusions: (I) All tea is dinner. (II) Some brunches are snacks.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी चाय, स्नैक है। सभी चाय, ब्रंच है। सभी ब्रंच, डिनर हैं। निष्कर्ष: (I) सभी चाय, डिनर है। (II) कुछ ब्रंच, स्नैक हैं।",
+   "opts": [
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "चाय, ब्रंच के अंदर है और ब्रंच, डिनर के अंदर है, इसलिए चाय डिनर है (I सही)। चाय, स्नैक और ब्रंच दोनों है, इसलिए कुछ ब्रंच स्नैक हैं (II सही)।",
+   "trick": "वेन आरेख बनाकर देखें कि क्या निष्कर्ष का घेरा कथन के घेरे के अंदर है।",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "PQRS is a cyclic trapezium with PS parallel to QR. If ∠P = 85°, then the other three angles are:",
+   "hi": "चक्रीय समलंब PQRS में PS, QR के समांतर है। यदि ∠P = 85° है, तो अन्य तीन कोण ज्ञात कीजिए।",
+   "opts": [
+    "∠Q = 95°, ∠R = 85°, ∠S = 95°",
+    "∠Q = 85°, ∠R = 95°, ∠S = 95°",
+    "∠Q = 85°, ∠R = 85°, ∠S = 95°",
+    "∠Q = 95°, ∠R = 95°, ∠S = 85°"
+   ],
+   "my_ans": "D",
+   "sol": "चक्रीय समलंब में, असमांतर भुजाओं के कोणों का योग 180° होता है। ∠P + ∠Q = 180° → 85° + ∠Q = 180° → ∠Q = 95°। चक्रीय चतुर्भुज के सम्मुख कोणों का योग 180° होता है, अतः ∠R = 180° - 85° = 95° और ∠S = 180° - 95° = 85°।",
+   "trick": "चक्रीय समलंब हमेशा समद्विबाहु होता है, सम्मुख कोणों का योग 180° होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: All spoons are forks. All forks are cups. Some spoons are plates. Conclusions: (I) Some forks are plates. (II) Some cups are plates.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी चम्मच, फॉर्क हैं। सभी फॉर्क, कप हैं। कुछ चम्मच, प्लेट हैं। निष्कर्ष: (I) कुछ फॉर्क, प्लेट हैं। (II) कुछ कप, प्लेट हैं।",
+   "opts": [
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।",
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।",
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "चम्मच, फॉर्क और कप के अंदर हैं। यदि कुछ चम्मच प्लेट हैं, तो वे फॉर्क और कप का भी हिस्सा होंगे। अतः दोनों निष्कर्ष सही हैं।",
+   "trick": "यदि 'कुछ A, B हैं' और 'सभी B, C हैं', तो 'कुछ A, C हैं' हमेशा सही होगा।",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All cats are dogs. Some cats are tigers. No tiger is a lion. Conclusions: (I) Some dogs are tigers. (II) No cat is a lion.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी बिल्लियाँ, कुत्ते हैं। कुछ बिल्लियाँ, बाघ हैं। कोई भी बाघ, शेर नहीं है। निष्कर्ष: (I) कुछ कुत्ते, बाघ हैं। (II) कोई भी बिल्ली, शेर नहीं है।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "कुछ बिल्लियाँ बाघ हैं और सभी बिल्लियाँ कुत्ते हैं, इसलिए कुछ कुत्ते बाघ हैं (I सही)। बिल्ली और शेर के बीच कोई सीधा संबंध नहीं है, इसलिए (II) गलत है।",
+   "trick": "निष्कर्ष II में 'कोई बिल्ली शेर नहीं है' निश्चित नहीं है क्योंकि बिल्ली और शेर में संबंध संभव है।",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All streams are canals. Some canals are rivers. Some rivers are seas. Conclusions: (I) Some seas are streams. (II) Some rivers are streams.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी धारा, नहर हैं। कुछ नहर, नदी हैं। कुछ नदी, सागर हैं। निष्कर्ष: (I) कुछ सागर, धारा हैं। (II) कुछ नदी, धारा हैं।",
+   "opts": [
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "धारा और नदी/सागर के बीच कोई सीधा संबंध नहीं दिया गया है। इसलिए दोनों निष्कर्ष तार्किक रूप से अनुसरण नहीं करते हैं।",
+   "trick": "जब कथनों में सीधा संबंध न हो, तो निष्कर्ष को 'संभव' माना जाता है, 'निश्चित' नहीं।",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All cars are planes. Some planes are trains. Some trains are ships. Conclusions: (I) Some cars are trains. (II) Some planes are ships.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी कार, विमान हैं। कुछ विमान, ट्रेन हैं। कुछ ट्रेन, जहाज हैं। निष्कर्ष: (I) कुछ कार, ट्रेन हैं। (II) कुछ विमान, जहाज हैं।",
+   "opts": [
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "कार और ट्रेन, तथा विमान और जहाज के बीच कोई सीधा संबंध नहीं दिया गया है। अतः दोनों निष्कर्ष गलत हैं।",
+   "trick": "कथन में दिए गए समूहों के बीच सीधा संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: Some leaves are roots. All roots are flowers. Some flowers are stems. Conclusions: (I) All stems are roots. (II) All flowers are leaves.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ पत्तियाँ, जड़ें हैं। सभी जड़ें, फूल हैं। कुछ फूल, तने हैं। निष्कर्ष: (I) सभी तने, जड़ें हैं। (II) सभी फूल, पत्तियाँ हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "A",
+   "sol": "कथन में 'कुछ' का संबंध दिया है, इसलिए 'सभी' वाले निष्कर्ष गलत हैं।",
+   "trick": "यदि कथन में 'कुछ' दिया हो, तो 'सभी' वाला निष्कर्ष कभी सही नहीं होता।",
+   "ans": "A"
+  }
+ ]
+}

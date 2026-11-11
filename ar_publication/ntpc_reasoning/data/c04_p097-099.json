@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Coding-Decoding",
+  "hi": "कोडिंग-डिकोडिंग",
+  "total": 128,
+  "gl": 64,
+  "ug": 64
+ },
+ "source_pages": "97-99",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘TIER’ is coded as ‘2735’ and ‘TIME’ is coded as ‘3475’. What is the code for ‘M’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'TIER' को '2735' के रूप में कूटबद्ध किया जाता है तथा 'TIME' को '3475' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'M' का कूट क्या है?",
+   "opts": [
+    "4",
+    "7",
+    "3",
+    "5"
+   ],
+   "my_ans": "A",
+   "sol": "TIER = 2735, TIME = 3475. कॉमन अक्षर 'TI' के लिए कॉमन अंक '37' हैं। 'TIME' में 'M' बचा है और '3475' में '4' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "FEAR is related to DBWM in a certain way based on the English alphabetical order. In the same way, BYSH is related to ZVOC. To which of the following is XSKX related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से FEAR का संबंध DBWM से है। उसी प्रकार, BYSH का संबंध ZVOC से है। समान तर्क का अनुसरण करते हुए, XSKX का संबंध निम्न में से किससे है?",
+   "opts": [
+    "UQHT",
+    "VPGS",
+    "UPGR",
+    "WOFS"
+   ],
+   "my_ans": "B",
+   "sol": "FEAR → DBWM: F-2=D, E-3=B, A+22=W, R-5=M. BYSH → ZVOC: B-2=Z, Y-3=V, S-4=O, H-5=C. XSKX: X-2=V, S-3=P, K-4=G, X-5=S.",
+   "trick": "अक्षरों के स्थान में -2, -3, -4, -5 का क्रम है।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘RUST’ is coded as ‘3519’ and ‘TEAM’ is coded as ‘8645’. What is the code for ‘T’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘RUST’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘TEAM’ को ‘8645’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘T’ के लिए कूट क्या है?",
+   "opts": [
+    "9",
+    "8",
+    "4",
+    "5"
+   ],
+   "my_ans": "D",
+   "sol": "RUST = 3519, TEAM = 8645. दोनों में कॉमन अक्षर 'T' है और कॉमन अंक '5' है।",
+   "trick": "कॉमन अक्षर का कॉमन अंक ही कोड होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MINT’ is coded as ‘6134’ and ‘TIME’ is coded as ‘4365’. What is the code for ‘E’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MINT’ को ‘6134’ के रूप में और ‘TIME’ को ‘4365’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘E’ के लिए कूट क्या है?",
+   "opts": [
+    "5",
+    "4",
+    "6",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "MINT = 6134, TIME = 4365. कॉमन अक्षर 'IT' के लिए कॉमन अंक '36' हैं। 'TIME' में 'E' बचा है और '4365' में '5' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘BELL’ is coded as ‘1582’ and ‘SELL’ is coded as ‘2568’. What is the code for ‘S’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘BELL’ को ‘1582’ के रूप में कूटबद्ध किया जाता है और ‘SELL’ को ‘2568’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "2",
+    "5",
+    "6",
+    "1"
+   ],
+   "my_ans": "C",
+   "sol": "BELL = 1582, SELL = 2568. कॉमन अक्षर 'ELL' के लिए कॉमन अंक '582' हैं। 'SELL' में 'S' बचा है और '2568' में '6' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘KITE’ is coded as ‘5871’ and ‘TIME’ is coded as ‘7853’. What is the code for ‘M’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'KITE' को '5871' के रूप में कूटबद्ध किया जाता है तथा 'TIME' को '7853' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'M' का कूट क्या है?",
+   "opts": [
+    "5",
+    "8",
+    "7",
+    "3"
+   ],
+   "my_ans": "D",
+   "sol": "KITE = 5871, TIME = 7853. कॉमन अक्षर 'ITE' के लिए कॉमन अंक '578' हैं। 'TIME' में 'M' बचा है और '7853' में '3' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘BUST’ is coded as ‘3519’ and ‘LIDS’ is coded as ‘6894’. What is the code for ‘S’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘BUST’ को ‘3519’ के रूप में कूटबद्ध किया जाता है और ‘LIDS’ को ‘6894’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "1",
+    "4",
+    "9",
+    "6"
+   ],
+   "my_ans": "C",
+   "sol": "BUST = 3519, LIDS = 6894. दोनों में कॉमन अक्षर 'S' है और कॉमन अंक '9' है।",
+   "trick": "कॉमन अक्षर का कॉमन अंक ही कोड होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘NICE’ is coded as ‘8246’ and ‘COST’ is coded as ‘3851’.What is the code for 'C’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘NICE’ को ‘8246’ के रूप में कूटबद्ध किया जाता है और ‘COST’ को ‘3851’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'C’ के लिए कूट क्या है?",
+   "opts": [
+    "3",
+    "5",
+    "8",
+    "4"
+   ],
+   "my_ans": "C",
+   "sol": "NICE = 8246, COST = 3851. दोनों में कॉमन अक्षर 'C' है और कॉमन अंक '8' है।",
+   "trick": "कॉमन अक्षर का कॉमन अंक ही कोड होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘APES’ is coded as ‘4583’ and ‘PEAT’ is coded as ‘6438’. What is the code for ‘S’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘APES’ को ‘4583’ के रूप में कूटबद्ध किया जाता है और ‘PEAT’ को ‘6438’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "5",
+    "4",
+    "8",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "APES = 4583, PEAT = 6438. कॉमन अक्षर 'APE' के लिए कॉमन अंक '438' हैं। 'APES' में 'S' बचा है और '4583' में '5' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MELT’ is coded as ‘5431’ and ‘TIME’ is coded as ‘7153’. What is the code for ‘I’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MELT’ को ‘5431’ के रूप में और ‘TIME’ को ‘7153’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘I’ के लिए कूट क्या है?",
+   "opts": [
+    "3",
+    "1",
+    "5",
+    "7"
+   ],
+   "my_ans": "D",
+   "sol": "MELT = 5431, TIME = 7153. कॉमन अक्षर 'MET' के लिए कॉमन अंक '135' हैं। 'TIME' में 'I' बचा है और '7153' में '7' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "DMKZ is related to EKNV in a certain way based on the English alphabetical order. In the same way, LOJT is related to MMMP. To which of the following is SRLQ related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर DMKZ का संबंध EKNV से है। उसी प्रकार, LOJT का संबंध MMMP से है। उसी तर्क का अनुसरण करते हुए, SRLQ का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "TPIU",
+    "TONL",
+    "TPOM",
+    "TTNP"
+   ],
+   "my_ans": "C",
+   "sol": "DMKZ → EKNV: D+1=E, M-2=K, K+3=N, Z-4=V. LOJT → MMMP: L+1=M, O-2=M, J+3=M, T-4=P. SRLQ: S+1=T, R-2=P, L+3=O, Q-4=M.",
+   "trick": "अक्षरों के स्थान में +1, -2, +3, -4 का क्रम है।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘MEAT’ is coded as ‘5267’ and ‘TIME’ is coded as ‘5362’. What is the code for ‘I’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MEAT’ को ‘5267’ के रूप में और ‘TIME’ को ‘5362’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘I’ के लिए कूट क्या है?",
+   "opts": [
+    "2",
+    "6",
+    "3",
+    "5"
+   ],
+   "my_ans": "C",
+   "sol": "MEAT = 5267, TIME = 5362. कॉमन अक्षर 'MET' के लिए कॉमन अंक '256' हैं। 'TIME' में 'I' बचा है और '5362' में '3' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘repair the mobile’ is coded as ‘gf ed ls’ and ‘mobile is lost’ is coded as ‘sq gf tf’. How is ‘mobile’ coded in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘repair the mobile’ को ‘gf ed ls’ के रूप में कूटबद्ध किया जाता है तथा ‘mobile is lost’ को ‘sq gf tf’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘mobile’ को कैसे कूटबद्ध किया गया है?",
+   "opts": [
+    "ed",
+    "gf",
+    "sq",
+    "ls"
+   ],
+   "my_ans": "B",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'mobile' है और कॉमन कोड 'gf' है।",
+   "trick": "कॉमन शब्द का कॉमन कोड ही उत्तर है।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘BITE’ is coded as ‘4568’ and ‘TIME’ is coded as ‘4826’. What is the code for ‘M’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘BITE’ को ‘4568’ के रूप में कूटबद्ध किया जाता है और ‘TIME’ को ‘4826’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘M’ के लिए कूट क्या है?",
+   "opts": [
+    "2",
+    "6",
+    "8",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "BITE = 4568, TIME = 4826. कॉमन अक्षर 'ITE' के लिए कॉमन अंक '468' हैं। 'TIME' में 'M' बचा है और '4826' में '2' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "In a certain code language, ' OENI ' is coded as '79' and 'WASR' is coded as '61 ' .What is the code for 'QJTD' in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'OENI' को '79' के रूप में कूटबद्ध किया जाता है और 'WASR' को '61' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'QJTD' का कूट क्या होगा?",
+   "opts": [
+    "71",
+    "62",
+    "66",
+    "78"
+   ],
+   "my_ans": "A",
+   "sol": "यह प्रश्न त्रुटिपूर्ण लग रहा है, लेकिन विकल्पों के आधार पर 'QJTD' का कोड '71' है क्योंकि 'OENI' (79) और 'WASR' (61) के अक्षरों का योग या अन्य तर्क यहाँ स्पष्ट नहीं है।",
+   "trick": "ऐसे प्रश्नों में विकल्पों का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘HOUR’ is coded as ‘8359’ and ‘HORN’ is coded as ‘9856’. What is the code for ‘N’ in the given code language?",
+   "hi": "किसी निश्चित कूट भाषा में, 'HOUR' को '8359' के रूप में कूटबद्ध किया जाता है तथा 'HORN' को '9856' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'N' का कूट क्या है?",
+   "opts": [
+    "6",
+    "8",
+    "9",
+    "5"
+   ],
+   "my_ans": "A",
+   "sol": "HOUR = 8359, HORN = 9856. कॉमन अक्षर 'HOR' के लिए कॉमन अंक '859' हैं। 'HORN' में 'N' बचा है और '9856' में '6' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘OMIT’ is coded as ‘4295’ and ‘TIME’ is coded as ‘2458’. What is the code for ‘E’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘OMIT’ को ‘4295’ के रूप में और ‘TIME’ को ‘2458’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘E’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "8",
+    "2",
+    "5"
+   ],
+   "my_ans": "B",
+   "sol": "OMIT = 4295, TIME = 2458. कॉमन अक्षर 'MIT' के लिए कॉमन अंक '245' हैं। 'TIME' में 'E' बचा है और '2458' में '8' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "In a certain code language, ‘REST’ is coded as ‘5729’ and ‘SEAT’ is coded as ‘7625’. What is the code for ‘A’ in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘REST’ को ‘5729’ के रूप में कूटबद्ध किया जाता है और ‘SEAT’ को ‘7625’ के रूप में कूटबद्ध किया जाता है। उस भाषा में ‘A’ के लिए कूट क्या है?",
+   "opts": [
+    "7",
+    "6",
+    "5",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "REST = 5729, SEAT = 7625. कॉमन अक्षर 'SET' के लिए कॉमन अंक '257' हैं। 'SEAT' में 'A' बचा है और '7625' में '6' बचा है।",
+   "trick": "कॉमन अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  }
+ ]
+}

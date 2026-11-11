@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "Order & Ranking",
+  "hi": "क्रम एवं रैंकिंग",
+  "total": 39,
+  "gl": 27,
+  "ug": 12
+ },
+ "source_pages": "281-283",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Each of T, U, V, W, X, Y and Z has an engagement on a different day of a week starting from Monday and ending on Sunday of the same week. V has engagement on the third day of the week. Only one person has engagement after Y. Only three people have engagement between V and X. Only one person has engagement between W and Z. T has engagement immediately after Z. How many people have engagement between U and T?",
+   "hi": "T, U, V, W, X, Y और Z में से प्रत्येक की सगाई सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन है। V की सगाई सप्ताह के तीसरे दिन है। Y के बाद केवल एक व्यक्ति की सगाई है। V और X के बीच केवल तीन व्यक्तियों की सगाई है। W और Z के बीच केवल एक व्यक्ति की सगाई है। T की सगाई Z के ठीक बाद है। U और T के बीच कितने व्यक्तियों की सगाई है?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "Four<br>चार"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: Mon:W, Tue:Z, Wed:V, Thu:T, Fri:X, Sat:Y, Sun:U. <br>U और T के बीच (Fri, Sat, Sun) तीन व्यक्ति हैं।",
+   "trick": "दिनों को क्रम में व्यवस्थित करें और दी गई शर्तों को लागू करें।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Each of the digits in the number 52697148 is arranged in descending order from left to right. What will be the product of the digits which are third from the left and second from the right in the number thus formed?",
+   "hi": "यदि संख्या 52697148 में प्रत्येक अंक को बाएं से दाएं अवरोही क्रम में व्यवस्थित किया जाए, तो इस प्रकार बनी संख्या में बाईं ओर से तीसरे और दाईं ओर से दूसरे अंक का गुणनफल क्या होगा?",
+   "opts": [
+    "28",
+    "16",
+    "14",
+    "12"
+   ],
+   "my_ans": "C",
+   "sol": "अवरोही क्रम: 98765421.<br>बाएं से तीसरा अंक 7 है, दाएं से दूसरा अंक 2 है।<br>गुणनफल: 7 × 2 = 14.",
+   "trick": "अंकों को बड़े से छोटे क्रम में लिखें।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left ) 564, 487, 769, 478, 546 (Right). What will be the resultant if the second digit of the second highest number is added to the third digit of the lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई तीन अंकों वाली पाँच संख्याओं पर आधारित है। (बाएं) 564 487 769 478 546 (दाएं)। यदि दूसरी सबसे बड़ी संख्या के दूसरे अंक को सबसे छोटी संख्या के तीसरे अंक में जोड़ा जाए तो परिणाम कितना होगा?",
+   "opts": [
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "my_ans": "D",
+   "sol": "संख्याएं: 478, 487, 546, 564, 769.<br>दूसरी सबसे बड़ी संख्या 564 है (दूसरा अंक 6), सबसे छोटी संख्या 478 है (तीसरा अंक 8).<br>6 + 8 = 14.",
+   "trick": "संख्याओं को पहले क्रमबद्ध करें।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Each of the digits in the number 386152479 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 386152479 में प्रत्येक अंक को बाएं से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 3 8 6 1 5 2 4 7 9<br>आरोही: 1 2 3 4 5 6 7 8 9<br>अपरिवर्तित: 5 और 9 (दो अंक).",
+   "trick": "संख्याओं को आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 458 652 748 351 591 (Right). What will be the resultant if third digit of the highest number is multiplied with the third digit of lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई पाँच तीन-अंकीय संख्याओं पर आधारित है। (बाएं) 458 652 748 351 591 (दाएं)। यदि सबसे बड़ी संख्या के तीसरे अंक को सबसे छोटी संख्या के तीसरे अंक से गुणा किया जाए, तो क्या परिणाम प्राप्त होगा?",
+   "opts": [
+    "6",
+    "8",
+    "5",
+    "7"
+   ],
+   "my_ans": "B",
+   "sol": "सबसे बड़ी संख्या 748 (तीसरा अंक 8), सबसे छोटी संख्या 351 (तीसरा अंक 1).<br>8 × 1 = 8.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Each of the digits in the number 7834126 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 7834126 में प्रत्येक अंक को बाएं से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "None<br>एक भी नहीं",
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 7 8 3 4 1 2 6<br>आरोही: 1 2 3 4 6 7 8<br>अपरिवर्तित: 3 और 4 (दो अंक).",
+   "trick": "संख्याओं को आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. 412, 368, 457, 283, 396. What will be the resultant if third digit of the highest number is added to the second digit of lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई पाँच तीन-अंकीय संख्याओं पर आधारित है। 412 368 457 283 396। यदि सबसे बड़ी संख्या के तीसरे अंक को सबसे छोटी संख्या के दूसरे अंक में जोड़ दिया जाए, तो परिणाम क्या होगा?",
+   "opts": [
+    "13",
+    "9",
+    "11",
+    "15"
+   ],
+   "my_ans": "D",
+   "sol": "सबसे बड़ी संख्या 457 (तीसरा अंक 7), सबसे छोटी संख्या 283 (दूसरा अंक 8).<br>7 + 8 = 15.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 235 879 584 635 159 (Right). What will be the resultant if third digit of the highest number is added to the second digit of lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई पाँच तीन-अंकीय संख्याओं पर आधारित है। (बाएं) 235 879 584 635 159 (दाएं)। यदि सबसे बड़ी संख्या के तीसरे अंक को सबसे छोटी संख्या के दूसरे अंक में जोड़ दिया जाए, तो परिणाम क्या होगा?",
+   "opts": [
+    "18",
+    "16",
+    "14",
+    "17"
+   ],
+   "my_ans": "C",
+   "sol": "सबसे बड़ी संख्या 879 (तीसरा अंक 9), सबसे छोटी संख्या 159 (दूसरा अंक 5).<br>9 + 5 = 14.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Each of the digits in the number 15762349 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "यदि संख्या 15762349 में प्रत्येक अंक को बाएं से दाएं आरोही क्रम में व्यवस्थित किया जाए, तो मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "मूल: 1 5 7 6 2 3 4 9<br>आरोही: 1 2 3 4 5 6 7 9<br>अपरिवर्तित: 1 और 9 (दो अंक).",
+   "trick": "संख्याओं को आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 917, 946, 857, 971, 587 (Right). What will be the resultant if the second digit of the highest number is added to the third digit of the lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई पाँच, तीन-अंकीय संख्याओं पर आधारित है। (बाएं) 917 946 857 971 587 (दाएं)। यदि सबसे बड़ी संख्या के दूसरे अंक को सबसे छोटी संख्या के तीसरे अंक में जोड़ दिया जाए तो परिणाम क्या प्राप्त होगा?",
+   "opts": [
+    "19",
+    "14",
+    "18",
+    "17"
+   ],
+   "my_ans": "B",
+   "sol": "सबसे बड़ी संख्या 971 (दूसरा अंक 7), सबसे छोटी संख्या 587 (तीसरा अंक 7).<br>7 + 7 = 14.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 419, 975, 573, 389, 937 (Right). What will be the resultant if the second digit of the highest number is added to the third digit of the lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई तीन अंकों वाली पाँच संख्याओं पर आधारित है। (बाएं) 419 975 573 389 937 (दाएं)। सबसे बड़ी संख्या के दूसरे अंक को सबसे छोटी संख्या के तीसरे अंक में जोड़ने पर परिणाम कितना प्राप्त होगा?",
+   "opts": [
+    "18",
+    "17",
+    "16",
+    "19"
+   ],
+   "my_ans": "C",
+   "sol": "सबसे बड़ी संख्या 975 (दूसरा अंक 7), सबसे छोटी संख्या 389 (तीसरा अंक 9).<br>7 + 9 = 16.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "This question is based on the five, three-digit numbers given below. (Left) 442, 405, 297, 384, 316 (Right). What will be the resultant if third digit of the highest number is added to the second digit of lowest number?",
+   "hi": "यह प्रश्न नीचे दी गई पाँच तीन-अंकीय संख्याओं पर आधारित है। (बाएं) 442 405 297 384 316 (दाएं)। यदि सबसे बड़ी संख्या के तीसरे अंक को सबसे छोटी संख्या के दूसरे अंक में जोड़ा जाए, तो परिणाम क्या होगा?",
+   "opts": [
+    "10",
+    "11",
+    "12",
+    "9"
+   ],
+   "my_ans": "B",
+   "sol": "सबसे बड़ी संख्या 442 (तीसरा अंक 2), सबसे छोटी संख्या 297 (दूसरा अंक 9).<br>2 + 9 = 11.",
+   "trick": "सबसे बड़ी और छोटी संख्या पहचानें।",
+   "ans": "B"
+  }
+ ]
+}

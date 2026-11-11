@@ -1,0 +1,222 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Coding-Decoding",
+  "hi": "कोडिंग-डिकोडिंग",
+  "total": 128,
+  "gl": 64,
+  "ug": 64
+ },
+ "source_pages": "115-116",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘PINS’ is coded as ‘3247’ and ‘HIPS’ is coded as ‘4627’. What is the code for ‘H’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘PINS’ को ‘3247’ के रूप में कूटबद्ध किया जाता है और ‘HIPS’ को ‘4627’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘H’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "2",
+    "7",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "PINS=3247, HIPS=4627. कॉमन अक्षर IPS हैं, जिनका कोड 2, 4, 7 है। HIPS में बचा हुआ कोड 6 है, जो H का है।",
+   "trick": "समान अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "D"
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "In a certain code language, \"WIAO\" is coded as \"40\" and \"TNCR\" is coded as \"47\". What is the code for \"FXAJ\" in that given language?",
+   "hi": "एक निश्चित कूट भाषा में, \"WIAO\" को \"40\" के रूप में कूटबद्ध किया जाता है और \"TNCR\" को \"47\" के रूप में कूटबद्ध किया जाता है। उसी दी गई भाषा में \"FXAJ\" के लिए कूट क्या है?",
+   "opts": [
+    "30",
+    "39",
+    "41",
+    "33"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षरों के विपरीत (opposite) वर्णों के मान का योग: W(4)+I(18)+A(26)+O(12) = 60 (नहीं), यहाँ विपरीत मान का योग: W(23)+I(9)+A(1)+O(15) = 48-8=40. TNCR: T(20)+N(14)+C(3)+R(18) = 55-8=47. FXAJ: F(6)+X(24)+A(1)+J(10) = 41-8=33.",
+   "trick": "अक्षरों के स्थानीय मानों का योग करके 8 घटाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "In a certain code language, \"SFOR\" is coded as \"116\" and \"WILA\" is coded as \"90\". What is the code for \"GMVC\" in that given language?",
+   "hi": "एक निश्चित कूट भाषा में, \"SFOR\" को \"116\" के रूप में कूटबद्ध किया जाता है और \"WILA\" को \"90\" के रूप में कूटबद्ध किया जाता है। उसी दी गई भाषा में \"GMVC\" के लिए कूट क्या है?",
+   "opts": [
+    "120",
+    "90",
+    "95",
+    "110"
+   ],
+   "my_ans": "B",
+   "sol": "S(19)+F(6)+O(15)+R(18) = 58. 58 × 2 = 116. WILA: W(23)+I(9)+L(12)+A(1) = 45. 45 × 2 = 90. GMVC: G(7)+M(13)+V(22)+C(3) = 45. 45 × 2 = 90.",
+   "trick": "अक्षरों के स्थानीय मानों का योग करके 2 से गुणा करें।",
+   "ans": "B"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘DOLE’ is coded as ‘7348’ and ‘LEMO’ is coded as ‘2738’. What is the code for ‘M’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘DOLE’ को ‘7348’ के रूप में कूटबद्ध किया जाता है और ‘LEMO’ को ‘2738’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘M’ का कूट क्या होगा?",
+   "opts": [
+    "3",
+    "7",
+    "2",
+    "8"
+   ],
+   "sol": "DOLE = 7348, LEMO = 2738. कॉमन अक्षर L, O, E हैं जिनका कोड 7, 3, 8 है। LEMO में बचा हुआ अक्षर M है, जिसका कोड 2 है।",
+   "my_ans": "C",
+   "trick": "समान अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "In a certain code language, \"EUOA\" is coded as \"53\" and \"YFMP\" is coded as \"71\". What is the code for \"RIZB\" in that given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘EUOA’ को ‘53’ के रूप में कूटबद्ध किया जाता है और ‘YFMP’ को ‘71’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘RIZB’ के लिए कूट क्या है?",
+   "opts": [
+    "58",
+    "56",
+    "66",
+    "60"
+   ],
+   "my_ans": "C",
+   "sol": "EUOA: E(5)+U(21)+O(15)+A(1) = 42 + 11 = 53. YFMP: Y(25)+F(6)+M(13)+P(16) = 60 + 11 = 71. RIZB: R(18)+I(9)+Z(26)+B(2) = 55 + 11 = 66.",
+   "trick": "अक्षरों के स्थानीय मानों का योग करके 11 जोड़ें।",
+   "ans": "C"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘unit flash zebra’ is coded as ' mi de cz' and ‘zebra dance king’ is coded as ‘de uv id’. How is ‘zebra’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘unit flash zebra’ को ‘mi de cz’ के रूप में और ‘zebra dance king’ को ‘de uv id’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘zebra’ को किस प्रकार कूटबद्ध किया गया है?",
+   "opts": [
+    "mi",
+    "cz",
+    "de",
+    "uv"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'zebra' है और कॉमन कोड 'de' है। अतः zebra = de.",
+   "trick": "कॉमन शब्द और कॉमन कोड का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "In a certain code language, 'NHJCR' is coded as '77' and 'QETLO’ is coded as ‘61'. What is the code for 'PHASJ' in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'NHJCR' को '77' के रूप में कूटबद्ध किया जाता है और 'QETLO' को '61' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'PHASJ' का कूट क्या होगा?",
+   "opts": [
+    "52",
+    "55",
+    "70",
+    "76"
+   ],
+   "my_ans": "D",
+   "sol": "NHJCR: N(14)+H(8)+J(10)+C(3)+R(18) = 53 + 24 = 77. QETLO: Q(17)+E(5)+T(20)+L(12)+O(15) = 69 - 8 = 61. PHASJ: P(16)+H(8)+A(1)+S(19)+J(10) = 54 + 22 = 76.",
+   "trick": "अक्षरों के स्थानीय मानों का योग करके पैटर्न (जोड़/घटाव) देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "In a certain code language, \"ZCKU\" is coded as \"94\" and \"SAPI\" is coded as \"126\". What is the code for \"GXRB\" in that given language?",
+   "hi": "एक निश्चित कूट भाषा में, \"ZCKU\" को \"94\" के रूप में कूटबद्ध किया जाता है और \"SAPI\" को \"126\" के रूप में कूटबद्ध किया जाता है। उसी दी गई भाषा में \"GXRB\" के लिए कूट क्या है?",
+   "opts": [
+    "127",
+    "119",
+    "120",
+    "114"
+   ],
+   "my_ans": "D",
+   "sol": "ZCKU: Z(26)+C(3)+K(11)+U(21) = 61 + 33 = 94. SAPI: S(19)+A(1)+P(16)+I(9) = 45 + 81 = 126. GXRB: G(7)+X(24)+R(18)+B(2) = 51 + 63 = 114.",
+   "trick": "अक्षरों के स्थानीय मानों का योग और एक निश्चित संख्या जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘bat view month’ is coded as 'nd wz nh' and ‘oven month gum’ is coded as ‘on ju wz’. How is ‘month’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘bat view month’ को ‘nd wz nh’ के रूप में और ‘oven month gum’ को ‘on ju wz’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘month’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "on",
+    "nd",
+    "wz",
+    "nh"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'month' है और कॉमन कोड 'wz' है। अतः month = wz.",
+   "trick": "कॉमन शब्द और कॉमन कोड का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘tale jaw bow’ is coded as 'vl ud np' and ‘law bow fresh’ is coded as ‘pq re ud’. How is ‘bow’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘tale jaw bow’ को 'vl ud np' के रूप में कूटबद्ध किया जाता है और ‘law bow fresh’ को ‘pq re ud’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘bow’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "vl",
+    "pq",
+    "ud",
+    "np"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'bow' है और कॉमन कोड 'ud' है। अतः bow = ud.",
+   "trick": "कॉमन शब्द और कॉमन कोड का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘COAL’ is coded as ‘7649’ and ‘ALSO’ is coded as ‘5967’. What is the code for ‘S’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘COAL’ को ‘7649’ के रूप में कूटबद्ध किया जाता है और ‘ALSO’ को ‘5967’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "7",
+    "5",
+    "6",
+    "9"
+   ],
+   "my_ans": "B",
+   "sol": "COAL=7649, ALSO=5967. कॉमन अक्षर A, L, O हैं जिनका कोड 6, 7, 9 है। ALSO में बचा हुआ अक्षर S है, जिसका कोड 5 है।",
+   "trick": "समान अक्षरों को हटाकर शेष का मिलान करें।",
+   "ans": "B"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘eagle gum novel’ is coded as 'fq ko hz' and ‘novel fresh zebra’ is coded as ‘ko ef ni’. How is ‘novel’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, 'eagle gum novel' को 'fq ko hz' के रूप में और 'novel fresh zebra' को 'ko ef ni' के रूप में कूटबद्ध किया जाता है। दी गई भाषा में 'novel' को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "hz",
+    "ef",
+    "ko",
+    "fq"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'novel' है और कॉमन कोड 'ko' है। अतः novel = ko.",
+   "trick": "कॉमन शब्द और कॉमन कोड का मिलान करें।",
+   "ans": "C"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘steak tooth badge’ is coded as ‘qj hc sv’ and ‘badge poet lemon’ is coded as ‘tz qj wv’. How is ‘badge’ coded in that language? (All codes are two-letter codes.)",
+   "hi": "किसी निश्चित कूट भाषा में, ‘steak tooth badge’ को ‘qj hc sv’ के रूप में कूट किया जाता है और ‘badge poet lemon’ को ‘tz qj wv’ के रूप में कूट किया जाता है। तो उस भाषा में ‘badge’ को कैसे कूट किया जाएगा? (सभी कूट दो अक्षरों के हैं।)",
+   "opts": [
+    "tz",
+    "qj",
+    "sv",
+    "hc"
+   ],
+   "my_ans": "B",
+   "sol": "दोनों वाक्यों में कॉमन शब्द 'badge' है और कॉमन कोड 'qj' है। अतः badge = qj.",
+   "trick": "कॉमन शब्द और कॉमन कोड का मिलान करें।",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Direction Sense",
+  "hi": "दिशा ज्ञान",
+  "total": 53,
+  "gl": 24,
+  "ug": 29
+ },
+ "source_pages": "269-271",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Sharad starts from Point A and drives 47 km towards the South. He then takes a right turn, drives 49 km, turns right and drives 51 km. He then takes a right turn and drives 53 km. He takes a final right turn, drives 4 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "शरद बिंदु A से चलना शुरू करता है और दक्षिण दिशा में 47 km चलता है। फिर वह दाएँ मुड़ता है, और 49 km चलता है, फिर दाएँ मुड़ता है और 51 km चलता है। इसके बाद वह दाएँ मुड़ता है और 53 km चलता है। अंत में वह फिर दाएँ मुड़ता है और 4 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर पुनः पहुँचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "2 km to the west<br>पश्चिम की ओर 2 km",
+    "4 km to the west<br>पश्चिम की ओर 4 km",
+    "3 km to the west<br>पश्चिम की ओर 3 km",
+    "1 km to the west<br>पश्चिम की ओर 1 km"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षिण: 47-51 = -4 (उत्तर), पूर्व: 49-53 = -4 (पश्चिम), फिर 4 (पश्चिम).<br>कुल: 4 km पश्चिम।",
+   "trick": "विपरीत दिशाओं (उत्तर-दक्षिण, पूर्व-पश्चिम) को घटाकर परिणामी दिशा ज्ञात करें।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Yeti starts from Point A and drives 48 km towards North. He then takes a right turn, drives 50 km, turns right and drives 54 km. He then takes a right turn and drives 55 km. He takes a final right turn, drives 6 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "येती बिंदु A से चलना शुरू करता है और उत्तर की ओर में 48 km चलता है। फिर वह दाएँ मुड़ता है, और 50 km चलता है, फिर वह दाएँ मुड़ता है और 54 km चलता है। इसके बाद वह फिर दाएँ मुड़ता है और 55 km चलता है। अंत में वह दाएँ मुड़ता है और 6 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर पुनः पहुँचने के लिए उसे कितनी दूरी (न्यूनतम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "7 km to the west<br>7 km पश्चिम की ओर",
+    "5 km to the east<br>5 km पूर्व की ओर",
+    "4 km to the east<br>4 km पूर्व की ओर",
+    "6 km to the west<br>6 km पश्चिम की ओर"
+   ],
+   "my_ans": "B",
+   "sol": "उत्तर: 48-54 = -6 (दक्षिण), फिर 6 (दक्षिण) = 0.<br>पूर्व: 50-55 = -5 (पश्चिम). A पर जाने के लिए 5 km पूर्व।",
+   "trick": "विपरीत दिशाओं को घटाकर नेट विस्थापन निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Lagan starts from Point A and drives 22 km towards South. He then takes a right turn, drives 13 km, turns right and drives 27 km. He then takes a right turn and drives 21 km. He takes a final right turn, drives 5 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "लगन बिंदु A से चलना शुरू करता है और दक्षिण दिशा में 22 km चलता है। फिर वह दाएं मुड़ता है, 13 km चलता है, फिर दाएं मुड़कर 27 km चलता है। इसके बाद वह फिर दाएं मुड़ता है और 21 km चलता है। अंत में वह दाएं मुड़ता है, 5 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "8 km to the west<br>पश्चिम में 8 km",
+    "7 km to the west<br>पश्चिम में 7 km",
+    "8 km to the east<br>पूर्व में 8 km",
+    "7 km to the east<br>पूर्व में 7 km"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षिण: 22-27 = -5 (उत्तर), फिर 5 (उत्तर) = 0.<br>पश्चिम: 13-21 = -8 (पश्चिम). A पर जाने के लिए 8 km पूर्व।",
+   "trick": "दिशाओं का योग करें और विपरीत दिशाओं को घटाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Golu starts from Point A and drives 53 km towards West. He then takes a left turn, drives 50 km, turns left and drives 54 km. He then takes a left turn and drives 60 km. He takes a final left turn, drives 1 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "गोलू बिंदु A से ड्राइव करना शुरू करते हुए पश्चिम की ओर 53 km ड्राइव करता है। फिर वह बाएँ मुड़ता है और 50 km ड्राइव करता है, फिर बाएँ मुड़ता है और 54 km ड्राइव करता है। वह पुनः बाएँ मुड़ता है और 60 km ड्राइव करता है। वह अंतिम बार बाएँ मुड़ता है, 1 km ड्राइव करता है और बिंदु P पर रुक जाता है। बिंदु A पर फिर से पहुँचने के लिए, उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए?",
+   "opts": [
+    "10 km to the South<br>10 km, दक्षिण की ओर",
+    "12 km to the North<br>12 km, उत्तर की ओर",
+    "11 km to the North<br>11 km, उत्तर की ओर",
+    "8 km to the South<br>8 km, दक्षिण की ओर"
+   ],
+   "my_ans": "A",
+   "sol": "पश्चिम: 53-54 = -1 (पूर्व), फिर 1 (पूर्व) = 0.<br>दक्षिण: 50-60 = -10 (उत्तर), फिर 1 (उत्तर) = -9 (दक्षिण). A पर जाने के लिए 10 km दक्षिण।",
+   "trick": "बाएँ/दाएँ मुड़ने पर दिशा बदलती है, ध्यान से गणना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Vihaana walks 11 km North, then turns left and walks 7 km. She then turns left again and walks 11 km. She turns right and walks 2 km to reach point R. How far and in which direction is point R from the starting point?",
+   "hi": "विहाना 11 km उत्तर की ओर चलती है, फिर बाएँ मुड़कर 7 km चलती है। इसके बाद वह पुनः बाएँ मुड़कर 11 km चलती है। फिर वह दाएं मुड़कर 2 km चलती है और बिंदु R पर पहुँचती है। बिंदु R आरंभिक बिंदु से कितनी दूर और किस दिशा में है?",
+   "opts": [
+    "9 km, West<br>9 km, पश्चिम",
+    "8 km, East<br>8 km, पूर्व",
+    "11 km, East<br>11 km, पूर्व",
+    "10 km, West<br>10 km, पश्चिम"
+   ],
+   "my_ans": "A",
+   "sol": "उत्तर: 11-11 = 0.<br>पश्चिम: 7+2 = 9 km पश्चिम।",
+   "trick": "समान दिशाओं को जोड़ें, विपरीत को घटाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Vishu starts from Point A and drives 31 km towards East. He then takes a left turn, drives 19 km, turns left and drives 34 km. He then takes a left turn and drives 32 km. He takes a final left turn, drives 3 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "विशु बिंदु A से चलना शुरू करता है और पूर्व दिशा में 31 km चलता है। फिर वह बाएँ मुड़ता है, 19 km चलता है, फिर बाएँ मुड़कर 34 km चलता है। इसके बाद वह फिर बाएँ मुड़ता है और 32 km चलता है। अंत में वह बाएँ मुड़ता है, 3 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "12 km to the South<br>दक्षिण की ओर 12 km",
+    "13 km to the North<br>उत्तर की ओर 13 km",
+    "12 km to the North<br>उत्तर की ओर 12 km",
+    "13 km to the South<br>दक्षिण की ओर 13 km"
+   ],
+   "my_ans": "B",
+   "sol": "पूर्व: 31-34 = -3 (पश्चिम), फिर 32 (पूर्व) = 29 (पूर्व).<br>उत्तर: 19-3 = 16 (दक्षिण). A पर जाने के लिए 13 km उत्तर।",
+   "trick": "दिशाओं का नेट विस्थापन निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Dinesh starts from Point A and drives 46 km towards West. He then takes a left turn, drives 25 km, turns left and drives 35 km. He then takes a left turn and drives 67 km. He takes a final right turn, drives 11 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "दिनेश बिंदु A से पश्चिम दिशा में 46 km की दूरी तय करता है। फिर वह बाएँ मुड़कर 25 km चलता है, फिर बाएँ मुड़कर 35 km चलता है। इसके बाद वह फिर बाएँ मुड़कर 67 km चलता है। अंत में वह दाएं मुड़कर 11 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "40 km to the North<br>उत्तर की ओर 40 km",
+    "40 km to the South<br>दक्षिण की ओर 40 km",
+    "42 km to the South<br>दक्षिण की ओर 42 km",
+    "42 km to the North<br>उत्तर की ओर 42 km"
+   ],
+   "my_ans": "C",
+   "sol": "पश्चिम: 46-35 = 11 (पश्चिम).<br>दक्षिण: 25-67 = -42 (उत्तर), फिर 11 (उत्तर) = -31 (दक्षिण).",
+   "trick": "दिशाओं का सही योग-घटाव करें।",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Manan starts from Point A and drives 42 km towards South. He then takes a left turn, drives 40 km, turns left and drives 54 km. He then takes a left turn and drives 48 km. He takes a final left turn, drives 12 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "मनन बिंदु A से ड्राइव करना शुरू करते हुए दक्षिण दिशा में 42 km ड्राइव करता है। फिर वह बाएँ मुड़ता है और 40 km ड्राइव करता है, फिर बाएँ मुड़ता है और 54 km ड्राइव करता है। इसके बाद वह पुनः बाएँ मुड़ता है और 48 km ड्राइव करता है। अंत में वह बाएँ मुड़ता है, 12 km ड्राइव करता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए?",
+   "opts": [
+    "8 km to the east<br>8 km, पूर्व की ओर",
+    "5 km to the west<br>5 km, पश्चिम की ओर",
+    "7 km to the east<br>7 km, पूर्व की ओर",
+    "6 km to the west<br>6 km, पश्चिम की ओर"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षिण: 42-54 = -12 (उत्तर), फिर 12 (उत्तर) = 0.<br>पूर्व: 40-48 = -8 (पश्चिम). A पर जाने के लिए 8 km पूर्व।",
+   "trick": "विपरीत दिशाओं को घटाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Chetan starts from Point A and drives 25 km towards south. He then takes a left turn, drives 22 km, turns left and drives 10 km. He then takes a left turn and drives 10 km. He takes a final right turn, drives 15 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "चेतन बिंदु A से शुरू करके दक्षिण दिशा में 25 km ड्राइव करता है। फिर वह बाएँ मुड़ता है, 22 km ड्राइव करता है, फिर बाएँ मुड़ता है और 10 km ड्राइव करता है। इसके बाद वह फिर बाएँ मुड़ता है और 10 km ड्राइव करता है। अंत में वह दाएं मुड़ता है, 15 km ड्राइव करके बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुंचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में ड्राइव करना चाहिए?",
+   "opts": [
+    "12 km towards west<br>12 km, पश्चिम की ओर",
+    "10 km towards east<br>10 km, पूर्व की ओर",
+    "22 km towards north<br>22 km, उत्तर की ओर",
+    "25 km towards south<br>25 km, दक्षिण की ओर"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षिण: 25-10 = 15 (दक्षिण), फिर 15 (दक्षिण) = 30 (दक्षिण).<br>पूर्व: 22-10 = 12 (पूर्व). A पर जाने के लिए 12 km पश्चिम।",
+   "trick": "दिशाओं का नेट विस्थापन निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Fardin starts from Point A and drives 42 km towards the West. He then takes a left turn, drives 40 km, turns left and drives 49 km. He then takes a left turn and drives 46 km. He takes a final left turn, drives 7 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "फरदीन बिंदु A से चलना शुरू करता है और पश्चिम की ओर में 42 km चलता है। फिर वह बाएँ मुड़ता है, और 40 km चलता है, फिर वह बाएँ मुड़ता है और 49 km चलता है। इसके बाद वह फिर बाएँ मुड़ता है और 46 km चलता है। अंत में वह फिर बाएँ मुड़ता है, 7 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर पुनः पहुँचने के लिए उसे कितनी दूर (न्यूनतम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "8 km to the South<br>दक्षिण की ओर 8 km",
+    "6 km to the South<br>दक्षिण की ओर 6 km",
+    "7 km to the South<br>दक्षिण की ओर 7 km",
+    "5 km to the South<br>दक्षिण की ओर 5 km"
+   ],
+   "my_ans": "B",
+   "sol": "पश्चिम: 42-49 = -7 (पूर्व), फिर 46 (पश्चिम) = 39 (पश्चिम).<br>दक्षिण: 40-7 = 33 (दक्षिण).",
+   "trick": "दिशाओं का नेट विस्थापन निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Pawan starts from Point A and drives 25 km towards North. He then takes a right turn, drives 15 km, turns right and drives 32 km. He then takes a right turn and drives 26 km. He takes a final right turn, drives 7 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "पवन बिंदु A से चलना शुरू करता है और उत्तर दिशा में 25 km चलता है। फिर वह दाएं मुड़ता है, 15 km चलता है, फिर दाएं मुड़कर 32 km चलता है। इसके बाद वह दाएं मुड़कर 26 km चलता है। अंत में वह दाएं मुड़कर 7 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "10 km to the west<br>10 km पश्चिम की ओर",
+    "11 km to the east<br>11 km पूर्व की ओर",
+    "10 km to the east<br>10 km पूर्व की ओर",
+    "11 km to the west<br>11 km पश्चिम की ओर"
+   ],
+   "my_ans": "B",
+   "sol": "उत्तर: 25-32 = -7 (दक्षिण).<br>पूर्व: 15-26 = -11 (पश्चिम), फिर 7 (पूर्व) = -4 (पश्चिम).",
+   "trick": "दिशाओं का नेट विस्थापन निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Manoj starts from Point A and drives 25 km towards South. He then takes a left turn, drives 17 km, turns left and drives 28 km. He then takes a left turn and drives 20 km. He takes a final left turn, drives 3 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again?",
+   "hi": "मनोज बिंदु A से चलना शुरू करता है और दक्षिण दिशा में 25 km चलता है। फिर वह बाएँ मुड़ता है, 17 km चलता है, फिर बाएँ मुड़ता है और 28 km चलता है। इसके बाद वह फिर बाएँ मुड़ता है और 20 km चलता है। अंत में वह बाएँ मुड़ता है, 3 km चलता है और बिंदु P पर रुक जाता है। बिंदु A पर वापस पहुँचने के लिए उसे कितनी दूरी (सबसे कम दूरी) और किस दिशा में चलना चाहिए?",
+   "opts": [
+    "3 km to the east<br>3 km पूर्व की ओर",
+    "2 km to the west<br>2 km पश्चिम की ओर",
+    "2 km to the east<br>2 km पूर्व की ओर",
+    "3 km to the west<br>3 km पश्चिम की ओर"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षिण: 25-28 = -3 (उत्तर).<br>पूर्व: 17-20 = -3 (पश्चिम), फिर 3 (पूर्व) = 0.",
+   "trick": "दिशाओं का नेट विस्थापन निकालें।",
+   "ans": "A"
+  }
+ ]
+}

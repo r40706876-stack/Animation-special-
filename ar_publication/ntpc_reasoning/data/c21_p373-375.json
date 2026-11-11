@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "373-375",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: All malls are halls. All halls are walls. No mall is a fall. Conclusions: (I) No hall is a fall. (II) No wall is a fall.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी मॉल, हॉल हैं। सभी हॉल, वॉल हैं। कोई भी मॉल, फॉल नहीं है। निष्कर्ष: (I) कोई भी हॉल, फॉल नहीं है। (II) कोई भी वॉल, फॉल नहीं है।",
+   "opts": [
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।",
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।",
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "मॉल, हॉल के अंदर हैं और हॉल, वॉल के अंदर हैं। मॉल का फॉल से संबंध नहीं है, लेकिन हॉल या वॉल का फॉल से संबंध हो भी सकता है और नहीं भी। इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "नकारात्मक संबंध केवल मॉल के साथ दिया है, हॉल या वॉल के साथ नहीं।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All hands are legs. Some hands are faces. Some faces are arms. Conclusions: (I) Some legs are faces. (II) Some hands are arms.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी हाथ, पैर हैं। कुछ हाथ, चेहरे हैं। कुछ चेहरे, आर्म हैं। निष्कर्ष: (I) कुछ पैर, चेहरे हैं। (II) कुछ हाथ, आर्म हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "चूंकि सभी हाथ पैर हैं और कुछ हाथ चेहरे हैं, इसलिए कुछ पैर निश्चित रूप से चेहरे हैं (निष्कर्ष I सही)। हाथ और आर्म के बीच कोई सीधा संबंध नहीं है (निष्कर्ष II गलत)।",
+   "trick": "वेन आरेख बनाएं: पैर के अंदर हाथ, हाथ और चेहरे का प्रतिच्छेदन।",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All chairs are tables. Some tables are boards. No chair is a desk. Conclusions: Some boards are tables. (II) No table is a desk.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी चेयर, टेबल हैं। कुछ टेबल, बोर्ड हैं। कोई भी चेयर, डेस्क नहीं है। निष्कर्ष: (I) कुछ बोर्ड, टेबल हैं। (II) कोई भी टेबल, डेस्क नहीं है।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "कथन 'कुछ टेबल बोर्ड हैं' का अर्थ है 'कुछ बोर्ड टेबल हैं' (निष्कर्ष I सही)। टेबल का डेस्क से कोई निश्चित संबंध नहीं है, इसलिए निष्कर्ष II गलत है।",
+   "trick": "कुछ A, B हैं का अर्थ हमेशा कुछ B, A हैं होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: Some cows are goats. Some goats are dogs. All dogs are tigers. Conclusions: All dogs are cows. (II) Some tigers are goats.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। आपको दिए गए कथनों को सत्य मानना है, भले ही वे सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हों। आपको यह निर्धारित करना है कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ गायें, बकरियां हैं। कुछ बकरियां, कुत्ते हैं। सभी कुत्ते, बाघ हैं। निष्कर्ष: (I) सभी कुत्ते, गायें हैं। (II) कुछ बाघ, बकरियां हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>दोनों निष्कर्ष (I) और (II) अनुसरण करते हैं"
+   ],
+   "my_ans": "B",
+   "sol": "कुत्ते और गाय के बीच कोई सीधा संबंध नहीं है (I गलत)। चूंकि सभी कुत्ते बाघ हैं और कुछ कुत्ते बकरियां हैं, इसलिए कुछ बाघ बकरियां हैं (II सही)।",
+   "trick": "निष्कर्ष II में बाघ और बकरियां एक ही समूह (कुत्ते) से जुड़े हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All sand is stone. All sand is cement. Some cements are mud. Conclusions: (I) Some muds are sand. (II) Some cements are stone.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी रेत, पत्थर है। सभी रेत, सीमेंट है। कुछ सीमेंट, कीचड़ है। निष्कर्ष: (I) कुछ कीचड़, रेत हैं। (II) कुछ सीमेंट, पत्थर हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "कीचड़ और रेत का कोई सीधा संबंध नहीं है (I गलत)। चूंकि सभी रेत पत्थर हैं और सभी रेत सीमेंट हैं, इसलिए कुछ सीमेंट पत्थर हैं (II सही)।",
+   "trick": "रेत, पत्थर और सीमेंट के अंदर है, इसलिए सीमेंट और पत्थर का कुछ हिस्सा साझा है।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: All carrots are peas. All peas are onions. No pea is a tomato. Conclusions: (I) No onion is a tomato. (II) No carrot is a tomato.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी गाजर, मटर हैं। सभी मटर, प्याज हैं। कोई भी मटर, टमाटर नहीं है। निष्कर्ष: (I) कोई भी प्याज, टमाटर नहीं है। (II) कोई भी गाजर, टमाटर नहीं है।",
+   "opts": [
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।",
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।",
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "मटर का टमाटर से कोई संबंध नहीं है। गाजर मटर के अंदर है, इसलिए गाजर का टमाटर से कोई संबंध नहीं है (II सही)। प्याज का पूरा हिस्सा टमाटर से अलग नहीं है, इसलिए I गलत है।",
+   "trick": "मटर के अंदर गाजर है, इसलिए मटर का जो हिस्सा टमाटर नहीं है, गाजर भी नहीं है।",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All flats are villas. All villas are apartments. Some apartments are buildings. Conclusions: (I) All flats are apartments. (II) Some villas are buildings.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी फ्लैट, विला हैं। सभी विला, अपार्टमेंट हैं। कुछ अपार्टमेंट, बिल्डिंग हैं। निष्कर्ष: (I) सभी फ्लैट, अपार्टमेंट हैं। (II) कुछ विला, बिल्डिंग हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "फ्लैट विला के अंदर हैं और विला अपार्टमेंट के अंदर हैं, इसलिए सभी फ्लैट अपार्टमेंट हैं (I सही)। विला और बिल्डिंग के बीच कोई सीधा संबंध नहीं है (II गलत)।",
+   "trick": "सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं।",
+   "ans": "D"
+  }
+ ]
+}

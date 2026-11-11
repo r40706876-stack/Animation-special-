@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Letter & Number Series",
+  "hi": "अक्षर एवं संख्या श्रृंखला",
+  "total": 89,
+  "gl": 34,
+  "ug": 55
+ },
+ "source_pages": "162-164",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? ERW 7, CPU 15, ANS 23, YLQ 31 , ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह , दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न - चिह्न \"?\" को प्रतिस्थापित करेगा ? ERW 7, CPU 15, ANS 23, YLQ 31, ?",
+   "opts": [
+    "XJN 40",
+    "WIM 38",
+    "VIN 39",
+    "WJO 39"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षर: E(-2)→C(-4)→Y(-4)→W, R(-9)→I(-8)→L(-3)→J, W(-4)→U(-2)→Q(-2)→O. संख्या: 7(+8)→15(+8)→23(+8)→31(+8)→39.",
+   "trick": "अक्षर और संख्या के पैटर्न को अलग-अलग देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? ADF 16, DGI 27, GJL 38, JMO 49, ?",
+   "hi": "नीचे दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए निम्नलिखित में से कौन - सा अक्षर - संख्या समूह प्रश्नवाचक चिह्न (?) को प्रतिस्थापित करेगा ? ADF 16 DGI 27 GJL 38 JMO 49 ?",
+   "opts": [
+    "MOQ 59",
+    "MNP 59",
+    "MQQ 60",
+    "MPR 60"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षर: A(+3)→D(+3)→G(+3)→J(+3)→M, D(+3)→G(+3)→J(+3)→M(+3)→P, F(+3)→I(+3)→L(+3)→O(+3)→R. संख्या: 16(+11)→27(+11)→38(+11)→49(+11)→60.",
+   "trick": "अक्षर में +3 और संख्या में +11 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? MRA 17, QVE 20, UZI 23, YDM 26, ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह , दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न - चिह्न \"?\" के स्थान पर आयेगा ? MRA 17, QVE 20, UZI 23, YDM 26, ?",
+   "opts": [
+    "DIR 30",
+    "CIS 29",
+    "CHQ 29",
+    "CGO 28"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: M(+4)→Q(+4)→U(+4)→Y(+4)→C, R(+4)→V(+4)→Z(+4)→D(+4)→H, A(+4)→E(+4)→I(+4)→M(+4)→Q. संख्या: 17(+3)→20(+3)→23(+3)→26(+3)→29.",
+   "trick": "अक्षर में +4 और संख्या में +3 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? LEV 16, IBS 20, FYP 24, CVM 28, ?",
+   "hi": "दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए , निम्नलिखित में से कौन - सा अक्षर - संख्या समूह प्रश्न - चिह्न \"?\" को प्रतिस्थापित करेगा ? LEV 16, IBS 20, FYP 24, CVM 28, ?",
+   "opts": [
+    "ZRH 35",
+    "ZTL 32",
+    "ZSJ 32",
+    "ATK 33"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: L(-3)→I(-3)→F(-3)→C(-3)→Z, E(-3)→B(-3)→Y(-3)→V(-3)→S, V(-3)→S(-3)→P(-3)→M(-3)→J. संख्या: 16(+4)→20(+4)→24(+4)→28(+4)→32.",
+   "trick": "अक्षर में -3 और संख्या में +4 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? DCE 19, FEG 14, HGI 9, JIK 4, ?",
+   "hi": "दी गई शृंखला को तार्किक रूप से पूर्ण बनाने के लिए , प्रश्न - चिह्न (?) को निम्नलिखित में से किस अक्षर - संख्या समूह द्वारा प्रतिस्थापित किया जाना चाहिए ? DCE 19 FEG 14 HGI 9 JIK 4 ?",
+   "opts": [
+    "LKM -1",
+    "LJL -2",
+    "LLL -1",
+    "LPU -2"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: D(+2)→F(+2)→H(+2)→J(+2)→L, C(+2)→E(+2)→G(+2)→I(+2)→K, E(+2)→G(+2)→I(+2)→K(+2)→M. संख्या: 19(-5)→14(-5)→9(-5)→4(-5)→-1.",
+   "trick": "अक्षर में +2 और संख्या में -5 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? NON 40, LML 30, JKJ 20, HIH 10 , ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह दी गई शृंखला में प्रश्न चिह्न (?) को प्रतिस्थापित करके इसे तार्किक रूप से पूर्ण बना देगा ? NON 40 LML 30 JKJ 20 HIH 10 ?",
+   "opts": [
+    "FNW 7",
+    "FGF 0",
+    "FFE 5",
+    "FHE 0"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: N(-2)→L(-2)→J(-2)→H(-2)→F, O(-2)→M(-2)→K(-2)→I(-2)→G, N(-2)→L(-2)→J(-2)→H(-2)→F. संख्या: 40(-10)→30(-10)→20(-10)→10(-10)→0.",
+   "trick": "अक्षर में -2 और संख्या में -10 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? HGH 85, FEF 74, DCD 63, BAB 52, ?",
+   "hi": "नीचे दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए निम्नलिखित में से कौन - सा अक्षर - संख्या समूह प्रश्नवाचक चिह्न (?) को प्रतिस्थापित करेगा ? HGH 85 FEF 74 DCD 63 BAB 52 ?",
+   "opts": [
+    "ZZY 41",
+    "ZYZ 41",
+    "ZHQ 40",
+    "ZXY 40"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: H(-2)→F(-2)→D(-2)→B(-2)→Z, G(-2)→E(-2)→C(-2)→A(-2)→Y, H(-2)→F(-2)→D(-2)→B(-2)→Z. संख्या: 85(-11)→74(-11)→63(-11)→52(-11)→41.",
+   "trick": "अक्षर में -2 और संख्या में -11 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? DAZ 75, XUT 87, RON 99, LIH 111, ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह दी गई शृंखला में प्रश्न चिह्न (?) को प्रतिस्थापित करके इसे तार्किक रूप से पूर्ण बना देगा ? DAZ 75 XUT 87 RON 99 LIH 111 ?",
+   "opts": [
+    "FCB 123",
+    "FBA 122",
+    "FOY 122",
+    "FDA 123"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: D(-6)→X(-6)→R(-6)→L(-6)→F, A(-6)→U(-6)→O(-6)→I(-6)→C, Z(-6)→T(-6)→N(-6)→H(-6)→B. संख्या: 75(+12)→87(+12)→99(+12)→111(+12)→123.",
+   "trick": "अक्षर में -6 और संख्या में +12 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? YQM 2 SKG 6 MEA 12 GYU 20 ?",
+   "hi": "निम्नलिखित श्रृंखला में प्रश्न - चिह्न (?) के स्थान पर दिए गए अक्षर - संख्या समूहों में से कौन सा अक्षर - समूह रखने पर यह तार्किक रूप से पूर्ण हो जाएगी ? YQM 2 SKG 6 MEA 12 GYU 20 ?",
+   "opts": [
+    "LWY 30",
+    "BTP 32",
+    "DZP 30",
+    "ASO 30"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षर: Y(-6)→S(-6)→M(-6)→G(-6)→A, Q(-6)→K(-6)→E(-6)→Y(-6)→S, M(-6)→G(-6)→A(-6)→U(-6)→O. संख्या: 2(+4)→6(+6)→12(+8)→20(+10)→30.",
+   "trick": "अक्षर में -6 और संख्या में +4, +6, +8, +10 का अंतर है।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? XVW 26, TRS 22, PNO 18, LJK 14 , ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह दी गई शृंखला में प्रश्न चिह्न (?) को प्रतिस्थापित करके इसे तार्किक रूप से पूर्ण बना देगा ? XVW 26 TRS 22 PNO 18 LJK 14 ?",
+   "opts": [
+    "HFG 10",
+    "HKO 9",
+    "HEF 9",
+    "HGF 10"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: X(-4)→T(-4)→P(-4)→L(-4)→H, V(-4)→R(-4)→N(-4)→J(-4)→F, W(-4)→S(-4)→O(-4)→K(-4)→G. संख्या: 26(-4)→22(-4)→18(-4)→14(-4)→10.",
+   "trick": "अक्षर और संख्या दोनों में -4 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? DHG 42, CGF 38, BFE 34, AED 30, ?",
+   "hi": "निम्नलिखित में से कौन - सा अक्षर - संख्या समूह दी गई शृंखला में प्रश्न चिह्न (?) को प्रतिस्थापित करके इसे तार्किक रूप से पूर्ण बना देगा ? DHG 42 CGF 38 BFE 34 AED 30 ?",
+   "opts": [
+    "ZDI 25",
+    "ZDC 26",
+    "ZEB 26",
+    "ZCB 25"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: D(-1)→C(-1)→B(-1)→A(-1)→Z, H(-1)→G(-1)→F(-1)→E(-1)→D, G(-1)→F(-1)→E(-1)→D(-1)→C. संख्या: 42(-4)→38(-4)→34(-4)→30(-4)→26.",
+   "trick": "अक्षर में -1 और संख्या में -4 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? TWU 89, YBZ 81, DGE 73, ILJ 65, ?",
+   "hi": "दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए, निम्नलिखित में से कौन-सा अक्षर-संख्या समूह प्रश्न-चिह्न (?) को प्रतिस्थापित करेगा ? TWU 89 YBZ 81 DGE 73 ILJ 65 ?",
+   "opts": [
+    "NQU 56",
+    "NRN 57",
+    "NQO 57",
+    "NPN 56"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: T(+5)→Y(+5)→D(+5)→I(+5)→N, W(+5)→B(+5)→G(+5)→L(+5)→Q, U(+5)→Z(+5)→E(+5)→J(+5)→O. संख्या: 89(-8)→81(-8)→73(-8)→65(-8)→57.",
+   "trick": "अक्षर में +5 और संख्या में -8 का अंतर है।",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of : : is the same as that on the right side of : : ? # : ONQ : : LKN : %",
+   "hi": "निम्नलिखित में से किस अक्षर समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध , :: के दाईं ओर के अक्षर समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो ? # : ONQ :: LKN : %",
+   "opts": [
+    "# = QPS , % = JIL",
+    "# = RUS , % = KON",
+    "# = RQU , % = KPM",
+    "# = QUV , % = JLP"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: # → ONQ (+2, +2, +2) और LKN → % (-2, -2, -2). QPS(+2)=ONQ (उल्टा), LKN(-2)=JIL.",
+   "trick": "पैटर्न को ध्यान से देखें: +2 और -2 का संबंध।",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark “?” in the given series to make it logically complete? YIV 11, VGU 15, SET 19, PCS 23, ?",
+   "hi": "दी गई श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए , निम्नलिखित में से कौन - सा अक्षर - संख्या समूह प्रश्न - चिह्न \"?\" को प्रतिस्थापित करेगा ? YIV 11, VGU 15, SET 19, PCS 23, ?",
+   "opts": [
+    "MZP 27",
+    "MAR 27",
+    "MYN 25",
+    "NAQ 29"
+   ],
+   "my_ans": "B",
+   "sol": "अक्षर: Y(-3)→V(-3)→S(-3)→P(-3)→M, I(-2)→G(-2)→E(-2)→C(-2)→A, V(-1)→U(-1)→T(-1)→S(-1)→R. संख्या: 11(+4)→15(+4)→19(+4)→23(+4)→27.",
+   "trick": "अक्षर में -3, -2, -1 और संख्या में +4 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? NVA 7, KSX 14, HPU 21, EMR 28, ?",
+   "hi": "दिए गए अक्षर - संख्या समूहों में से कौन - सा निम्नलिखित श्रृंखला को तार्किक रूप से पूर्ण बनाने के लिए प्रश्न - चिह्न (?) को प्रतिस्थापित करेगा ? NVA 7 KSX 14 HPU 21 EMR 28 ?",
+   "opts": [
+    "BJO 35",
+    "WPF 37",
+    "NDP 35",
+    "LST 40"
+   ],
+   "my_ans": "A",
+   "sol": "अक्षर: N(-3)→K(-3)→H(-3)→E(-3)→B, V(-3)→S(-3)→P(-3)→M(-3)→J, A(-3)→X(-3)→U(-3)→R(-3)→O. संख्या: 7(+7)→14(+7)→21(+7)→28(+7)→35.",
+   "trick": "अक्षर में -3 और संख्या में +7 का अंतर है।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Which of the following letter-number clusters will replace the question mark (?) in the given series to make it logically complete? WTW 84, XUX 93, YVY 102, ZWZ 111 , ?",
+   "hi": "दी गई शृंखला को तार्किक रूप से पूर्ण बनाने के लिए , प्रश्न - चिह्न (?) को निम्नलिखित में से किस अक्षर - संख्या समूह द्वारा प्रतिस्थापित किया जाना चाहिए ? WTW 84 XUX 93 YVY 102 ZWZ 111 ?",
+   "opts": [
+    "AWZ 119",
+    "AJT 119",
+    "AXA 120",
+    "AYZ 120"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: W(+1)→X(+1)→Y(+1)→Z(+1)→A, T(+1)→U(+1)→V(+1)→W(+1)→X, W(+1)→X(+1)→Y(+1)→Z(+1)→A. संख्या: 84(+9)→93(+9)→102(+9)→111(+9)→120.",
+   "trick": "अक्षर में +1 और संख्या में +9 का अंतर है।",
+   "ans": "C"
+  }
+ ]
+}

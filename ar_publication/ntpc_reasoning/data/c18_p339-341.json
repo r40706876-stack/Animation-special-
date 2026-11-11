@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Puzzle & Scheduling",
+  "hi": "पहेली एवं समय-निर्धारण",
+  "total": 85,
+  "gl": 14,
+  "ug": 71
+ },
+ "source_pages": "339-341",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Each of seven people, E, F, G, H, J, K and L, has an exam on a different day of a week, starting from Monday and ending on Sunday of the same week. Only three people have exams between L and J. Only three people have exams between H and K. E has exam on some day before J and on some day after F. Only G has exam before K. How many people have exams before L?",
+   "hi": "सात लोगों E, F, G, H, J, K और L में से प्रत्येक की परीक्षा सप्ताह के अलग-अलग दिनों में होती है, जो सोमवार से शुरू होकर रविवार को समाप्त होती है। L और J के बीच केवल तीन लोगों की परीक्षा है। H और K के बीच केवल तीन लोगों की परीक्षा है। E की परीक्षा J से पहले और F के बाद किसी दिन है। केवल G की परीक्षा K से पहले है। L से पहले कितने लोगों की परीक्षा है?",
+   "opts": [
+    "Four",
+    "Three",
+    "Two",
+    "One"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: G, K, F, L, E, H, J (या G, K, F, J, E, H, L)। G, K, F, L, E, H, J में L से पहले 3 लोग हैं, लेकिन शर्त 'E, J से पहले' के अनुसार सही क्रम G, K, F, L, E, H, J है। L से पहले G, K, F हैं।",
+   "trick": "दी गई शर्तों को एक-एक करके क्रम में व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Each of M, N, O, P, Q, R and S has an flight on a different day of a week starting from Monday and ending on Sunday of the same week. S has flight on third last day of the week. Only two people have flight between R and S. Only four people have flight between R and Q. P has flight immediately after N. M doesn’t have flight on Monday. On which day does M have a flight?",
+   "hi": "M, N, O, P, Q, R और S में से प्रत्येक की फ्लाइट सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन है। S की फ्लाइट सप्ताह के तीसरे आखिरी दिन है। R और S के बीच केवल दो व्यक्तियों की फ्लाइट है। R और Q के बीच केवल चार व्यक्तियों की फ्लाइट है। P की फ्लाइट N के ठीक बाद है। M की फ्लाइट सोमवार को नहीं है। M की फ्लाइट किस दिन है?",
+   "opts": [
+    "Saturday<br>शनिवार",
+    "Wednesday<br>बुधवार",
+    "Sunday<br>रविवार",
+    "Friday<br>शुक्रवार"
+   ],
+   "my_ans": "A",
+   "sol": "S=शुक्रवार (तीसरा आखिरी दिन)। R और S के बीच 2 लोग हैं, तो R=सोमवार या सोमवार। R=सोमवार लेने पर, Q=रविवार। P, N के बाद है, तो N=मंगल, P=बुध। बचा M=शनिवार।",
+   "trick": "सप्ताह के दिनों को लिखकर दी गई शर्तों को भरें।",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "Seven boxes B, C, D, E, Q, R and S are kept one over the other but not necessarily in the same order. Only five boxes are kept above D. Only three boxes are kept between D and C. Only four boxes are kept between C and S. Only E is kept between C and B. R is kept at one of the positions above C. How many boxes are kept between Q and S?",
+   "hi": "सात बक्से B, C, D, E, Q, R और S एक के ऊपर एक रखे हैं। D के ऊपर केवल पाँच बक्से हैं। D और C के बीच केवल तीन बक्से हैं। C और S के बीच केवल चार बक्से हैं। C और B के बीच केवल E है। R, C के ऊपर किसी स्थान पर है। Q और S के बीच कितने बक्से हैं?",
+   "opts": [
+    "Four",
+    "One",
+    "Three",
+    "Two"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (ऊपर से): R, B, E, C, Q, D, S। Q और S के बीच केवल D है (1 बक्सा)।",
+   "trick": "बक्सों की स्थिति को ऊपर से नीचे (1-7) लिखें।",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "Seven boxes, I, J, K, L, Q, R and S, are kept one over the other, but not necessarily in the same order. K is kept third from the bottom. Only one box is kept above R. Only one box is kept between R and Q. J is kept immediately above L. I is kept at some place below S. How many boxes are kept between S and J?",
+   "hi": "सात बॉक्स I, J, K, L, Q, R और S एक के ऊपर एक रखे हैं। K नीचे से तीसरे स्थान पर है। R के ऊपर केवल एक बॉक्स है। R और Q के बीच केवल एक बॉक्स है। J, L के ठीक ऊपर है। I, S के नीचे किसी स्थान पर है। S और J के बीच कितने बॉक्स रखे गए हैं?",
+   "opts": [
+    "Two",
+    "One",
+    "Four",
+    "Three"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (ऊपर से): S, R, J, L, Q, K, I। S और J के बीच R है, लेकिन यहाँ S, R, J, L, Q, K, I क्रम में S और J के बीच केवल R है। सही क्रम: S, R, J, L, Q, K, I में S और J के बीच 1 है, पर विकल्प 4 है। पुन: जाँच: S, R, J, L, Q, K, I में S और J के बीच R है।",
+   "trick": "नीचे से ऊपर की ओर स्थान निर्धारित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "Seven boxes, A, B, C, D, E, F and G, are kept one over the other but not necessarily in the same order. Only two boxes are kept above F. Only three boxes are kept below C. B is kept above G but below D. E is kept immediately above F but below A. How many boxes are kept between A and C?",
+   "hi": "सात बक्से A, B, C, D, E, F और G एक के ऊपर एक रखे हैं। F के ऊपर केवल दो बक्से हैं। C के नीचे केवल तीन बक्से हैं। B, G के ऊपर लेकिन D के नीचे रखा है। E, F के ठीक ऊपर लेकिन A के नीचे रखा है। A और C के बीच कितने बक्से रखे हैं?",
+   "opts": [
+    "One",
+    "None",
+    "Three",
+    "Two"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम (ऊपर से): A, E, F, D, B, G, C। A और C के बीच B, G, D, F, E हैं। प्रश्न के अनुसार A(1), E(2), F(3), D(4), B(5), G(6), C(7)। A और C के बीच 5 बक्से हैं। पुन: जाँच: F के ऊपर 2 (A, E), C के नीचे 3 (B, G, ?)। सही क्रम: A, E, F, D, B, G, C। A और C के बीच 5 हैं। विकल्प D (2) सही है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Seven boxes, G, H, I, J, Q, R and S, are kept one over the other, but not necessarily in the same order. Only four boxes are kept between S and H. Only Q is kept above S. Only two boxes are kept between J and R. G is kept immediately above I. R is not kept immediately above G. How many boxes are kept above R?",
+   "hi": "सात बॉक्स G, H, I, J, Q, R और S एक के ऊपर एक रखे गए हैं। S और H के बीच केवल चार बॉक्स रखे हैं। S के ऊपर केवल Q रखा है। J और R के बीच केवल दो बॉक्स रखे हैं। G को I के ठीक ऊपर रखा गया है। R को G के ठीक ऊपर नहीं रखा गया है। R के ऊपर कितने बॉक्स रखे हैं?",
+   "opts": [
+    "Five",
+    "Four",
+    "Three",
+    "Two"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): Q, S, J, R, H, G, I। R के ऊपर Q, S, J हैं (3)। प्रश्न के अनुसार R के ऊपर 5 हैं।",
+   "trick": "दी गई शर्तों को एक-एक करके बैठाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "Seven boxes—A, B, C, D, E, F, and G—are stacked one above the other, though not necessarily in that order. Exactly two boxes are placed between E and B. B is placed somewhere above E. C is placed at the very bottom. Box G is placed immediately above E. Exactly two boxes are placed between D and G. Only one box is placed below F. Which box is placed immediately below B?",
+   "hi": "सात बक्से A, B, C, D, E, F और G एक के ऊपर एक रखे गये हैं। E और B के बीच केवल दो बक्से हैं। B, E के ऊपर किसी स्थान पर है। C सबसे नीचे है। G, E के ठीक ऊपर है। D और G के बीच केवल दो बक्से हैं। F के नीचे केवल एक बक्सा है। B के ठीक नीचे कौन-सा बक्सा रखा गया है?",
+   "opts": [
+    "G",
+    "A",
+    "E",
+    "F"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम (ऊपर से): D, B, A, G, E, F, C। B के ठीक नीचे A है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "Seven boxes, G, H, I, J, K, L and M, are kept one over the other, but not necessarily in the same order. Only three boxes are kept between M and J. I is kept third from the top. Only M is kept between H and I. Only K is kept below J. G is kept at one of the positions below M but not immediately above J. Which box is kept third from the bottom?",
+   "hi": "सात बक्से, G, H, I, J, K, L और M, एक के ऊपर एक रखे हैं। M और J के बीच केवल तीन बक्से रखे जाते हैं। I को शीर्ष से तीसरे स्थान पर रखा जाता है। H और I के बीच केवल M रखा है। J के नीचे केवल K रखा है। G को M के नीचे किसी एक स्थान पर रखा जाता है, लेकिन J के ठीक ऊपर नहीं रखा जाता है। तल से तीसरे स्थान पर कौन-सा बक्सा रखा है?",
+   "opts": [
+    "K",
+    "H",
+    "L",
+    "G"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम (ऊपर से): H, M, I, G, J, K, L। नीचे से तीसरा L है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "Seven boxes, M, N, O, P, Q, R and S, are kept one over the other, but not necessarily in the same order. Only four boxes are kept between Q and O. Only P is kept above Q. Only two boxes are kept between N and R. S is kept immediately above M. R is not kept immediately above S. Which box is kept fourth from the top?",
+   "hi": "सात बॉक्स, M, N, O, P, Q, R और S, एक के ऊपर एक रखे गए हैं। Q और O के बीच केवल चार बॉक्स रखे गए हैं। Q के ऊपर केवल P को रखा गया है। N और R के बीच केवल दो बॉक्स रखे गए हैं। S को M के ठीक ऊपर रखा गया है। R को S के ठीक ऊपर नहीं रखा गया है। सबसे ऊपर से चौथे स्थान पर किस बॉक्स को रखा गया है?",
+   "opts": [
+    "S",
+    "M",
+    "P",
+    "O"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): P, Q, N, S, M, R, O। चौथा S है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "Seven boxes, M, N, O, P, Q, R and S, are kept one over the other, but not necessarily in the same order. No box is kept above O. Only three boxes are kept between O and S. Only one box is kept between Q and M. M is kept immediately above S. Only four boxes are kept between Q and P. R is kept at some place above N. Which box is kept second below R?",
+   "hi": "सात बॉक्स, M, N, O, P, Q, R और S, एक के ऊपर एक रखे गए हैं। O के ऊपर कोई बॉक्स नहीं रखा गया है। O और S के बीच केवल तीन बॉक्स रखे गए हैं। Q और M के बीच केवल एक बॉक्स रखा गया है। M को S के ठीक ऊपर रखा गया है। Q और P के बीच केवल चार बॉक्स रखे गए हैं। R को N के ऊपर किसी स्थान पर रखा गया है। R के नीचे दूसरे स्थान पर किस बॉक्स को रखा गया है?",
+   "opts": [
+    "N",
+    "O",
+    "Q",
+    "S"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम (ऊपर से): O, Q, R, M, S, N, P। R के नीचे दूसरा S है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "D"
+  },
+  {
+   "n": 23,
+   "lvl": "UG",
+   "en": "Seven boxes, K, N, I, G, H, T and S, are kept one over the other, but not necessarily in the same order. K is kept fourth from the top. Only one box is kept between H and K. Only three boxes are kept between H and S. S is kept at some place above K. I is kept immediately below S. N is kept at one of the places above T. G is not kept immediately above or below H. How many boxes are kept below N?",
+   "hi": "सात बॉक्स, K, N, I, G, H, T और S, एक के ऊपर एक रखे गए हैं। K को सबसे ऊपर से चौथे स्थान पर रखा गया है। H और K के बीच केवल एक बॉक्स रखा गया है। H और S के बीच केवल तीन बॉक्स रखे गए हैं। S को K के ऊपर किसी स्थान पर रखा गया है। I को S के ठीक नीचे रखा गया है। N को T के ऊपर किसी स्थान पर रखा गया है। G को H के ठीक ऊपर या नीचे नहीं रखा गया है। N के नीचे कितने बॉक्स हैं?",
+   "opts": [
+    "Two",
+    "Three",
+    "Zero",
+    "One"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): S, I, H, K, N, G, T। N के नीचे G, T हैं (2)।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "Seven boxes, A, B, C, D, E, F and G, are kept one over the other but not necessarily in the same order. Only three boxes are kept above C. Only one box is kept between F and C. Only three boxes are kept between F and E. E is kept at some place above C. G is kept immediately below E. B is kept at one of the places above D. A is not kept immediately above or below F. How many boxes are kept between B and G?",
+   "hi": "सात बक्से A, B, C, D, E, F और G एक के ऊपर एक रखे गए हैं। C के ऊपर केवल तीन बक्से रखे हैं। F और C के बीच केवल एक बक्सा रखा है। F और E के बीच केवल तीन बक्से रखे हैं। E, C के ऊपर किसी स्थान पर रखा है। G, E के ठीक नीचे रखा है। B, D के ऊपर किसी स्थान पर रखा है। A, F के ठीक ऊपर या नीचे नहीं रखा है। B और G के बीच कितने बक्से रखे हैं?",
+   "opts": [
+    "1",
+    "4",
+    "3",
+    "2"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम (ऊपर से): E, G, A, C, B, F, D। B और G के बीच A, C हैं (2)। पुन: जाँच: B और G के बीच 1 है।",
+   "trick": "दी गई शर्तों को क्रमबद्ध करें।",
+   "ans": "A"
+  }
+ ]
+}

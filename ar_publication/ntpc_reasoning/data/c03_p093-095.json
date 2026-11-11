@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Odd One Out (Classification)",
+  "hi": "विषम को चुनें (वर्गीकरण)",
+  "total": 145,
+  "gl": 48,
+  "ug": 97
+ },
+ "source_pages": "93-95",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूहों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "BCDF",
+    "UVWX",
+    "HIJL",
+    "OPQS"
+   ],
+   "my_ans": "B",
+   "sol": "BCDF (2,3,4,6), HIJL (8,9,10,12), OPQS (15,16,17,19) में +1, +1, +2 का अंतर है। UVWX (21,22,23,24) में +1, +1, +1 का अंतर है।",
+   "trick": "अक्षरों के बीच के अंतर (gap) की जाँच करें।",
+   "ans": "B"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "RL-IQ",
+    "VP – MU",
+    "CW-TB",
+    "OI – EN"
+   ],
+   "my_ans": "D",
+   "sol": "RL-IQ (18-12, 9-17), VP-MU (22-16, 13-21), CW-TB (3-23, 20-2) में विपरीत अक्षरों का योग 27 है। OI-EN में योग 27 नहीं है।",
+   "trick": "विपरीत अक्षरों (Opposite letters) का योग 27 होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "HL-ZS",
+    "WA-OH",
+    "GK – YP",
+    "QU – IB"
+   ],
+   "my_ans": "C",
+   "sol": "HL-ZS (8+12=20, 26+19=45), WA-OH (23+1=24, 15+8=23), QU-IB (17+21=38, 9+2=11)। GK-YP में पैटर्न अलग है।",
+   "trick": "अक्षरों के स्थान मान (position value) का योग देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "LX – HT",
+    "NV – JR",
+    "QE – MA",
+    "BK – XF"
+   ],
+   "my_ans": "D",
+   "sol": "LX-HT (12-24, 8-20), NV-JR (14-22, 10-18), QE-MA (17-5, 13-1) में अंतर समान है। BK-XF में यह पैटर्न नहीं है।",
+   "trick": "अक्षरों के बीच के अंतर (difference) की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "PI-KM",
+    "NG-IL",
+    "KD-FI",
+    "IB-DG"
+   ],
+   "my_ans": "A",
+   "sol": "NG-IL (14-7, 9-12), KD-FI (11-4, 6-9), IB-DG (9-2, 4-7) में -7, +3 का अंतर है। PI-KM में यह नहीं है।",
+   "trick": "अक्षरों के स्थान मान का अंतर निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूहों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "PRU",
+    "CEH",
+    "JLO",
+    "UWX"
+   ],
+   "my_ans": "D",
+   "sol": "PRU (16+2=18, 18+3=21), CEH (3+2=5, 5+3=8), JLO (10+2=12, 12+3=15)। UWX (21+2=23, 23+1=24) अलग है।",
+   "trick": "अक्षरों के बीच +2, +3 का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "XU-SY",
+    "UR-PW",
+    "RO-MT",
+    "OL-JQ"
+   ],
+   "my_ans": "A",
+   "sol": "UR-PW (21-18, 16-23), RO-MT (18-15, 13-20), OL-JQ (15-12, 10-17) में -3, +7 का अंतर है। XU-SY में अलग है।",
+   "trick": "अक्षरों के स्थान मान का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which letter-cluster pair DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "LG – SC",
+    "RD – YA",
+    "HP – OM",
+    "QM – XJ"
+   ],
+   "my_ans": "A",
+   "sol": "RD-YA (18-4, 25-1), HP-OM (8-16, 15-13), QM-XJ (17-13, 24-10) में विपरीत या योग का पैटर्न है। LG-SC अलग है।",
+   "trick": "अक्षरों के विपरीत (opposite) या योग का संबंध देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-clusters are alike in a certain way and thus form a group. Which is the one that DOES NOT belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, निम्नलिखित चार अक्षर-समूहों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार वे एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "OKM",
+    "RNS",
+    "UQV",
+    "LHM"
+   ],
+   "my_ans": "A",
+   "sol": "RNS (18,14,19), UQV (21,17,22), LHM (12,8,13) में -4, +5 का अंतर है। OKM (15,11,13) में अलग है।",
+   "trick": "अक्षरों के बीच के अंतर (gap) की जाँच करें।",
+   "ans": "A"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-cluster pairs are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, निम्नलिखित चार अक्षर-समूह युग्मों में से तीन एक निश्चित तरीके से समान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह युग्म, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "DP – ZL",
+    "YH – UD",
+    "RM – IN",
+    "KS – GO"
+   ],
+   "my_ans": "C",
+   "sol": "DP-ZL (4+16=20, 26+12=38), YH-UD (25+8=33, 21+4=25), KS-GO (11+19=30, 7+15=22) में योग का पैटर्न है। RM-IN अलग है।",
+   "trick": "अक्षरों के स्थान मान का योग देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "Based on the English alphabetical order, three of the following four letter-clusters are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+   "hi": "अंग्रेजी वर्णानुक्रम के आधार पर, निम्नलिखित चार अक्षर-समूहों में से तीन किसी निश्चित तरीके से एकसमान हैं और इस प्रकार एक ग्रुप बनाते हैं। कौन-सा अक्षर-समूह, उस ग्रुप से संबंधित नहीं है?",
+   "opts": [
+    "TNH",
+    "WOK",
+    "RLF",
+    "YSM"
+   ],
+   "my_ans": "B",
+   "sol": "TNH (20,14,8), RLF (18,12,6), YSM (25,19,13) में -6, -6 का अंतर है। WOK (23,15,11) में अलग है।",
+   "trick": "अक्षरों के बीच समान अंतर (-6) की जाँच करें।",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,255 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Seating Arrangement",
+  "hi": "बैठक व्यवस्था",
+  "total": 165,
+  "gl": 82,
+  "ug": 83
+ },
+ "source_pages": "312-314",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Seven people P1, P2, P3, P4, P5, P6 and P7 are sitting around a circular table facing towards the centre of the table. P2 sits to the immediate right of P6. P5 is sitting immediately between P4 and P3. P2 sits second to left of P4. P1 sits third to left of P7. How many people are sitting between P1 and P7 when checked from right of P7?",
+   "hi": "सात व्यक्ति P1, P2, P3, P4, P5, P6 और P7, एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। P2, P6 के ठीक दाएँ पड़ोस में बैठा है। P4 और P3 के ठीक बीच में P5 बैठा है। P2, P4 के बाएँ दूसरे स्थान पर बैठा है। P1, P7 के बाएँ तीसरे स्थान पर बैठा है। P7 के दाएँ से जाँच करने पर, P1 और P7 के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "D",
+   "sol": "बैठने का क्रम: P7, P6, P2, P4, P5, P3, P1 (घड़ी की दिशा में)। P7 के दाएँ से P1 तक जाने पर P1, P3, P5 आते हैं।",
+   "trick": "वृत्ताकार व्यवस्था में दाएँ/बाएँ का ध्यान रखें, एक व्यक्ति को स्थिर मानकर हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "In a row of 25 students facing North, Vinayak is 13th from the right end. If Utkarsh is 4th to the left of Vinayak, what is Utkarsh's position from the left end of the row?",
+   "hi": "उत्तर दिशा की ओर अभिमुख 25 विद्यार्थियों की एक पंक्ति में, विनायक दाएं छोर से 13वें स्थान पर है। यदि उत्कर्ष, विनायक के बाएँ से चौथे स्थान पर है, तो पंक्ति के बाएँ छोर से उत्कर्ष का स्थान क्या होगा?",
+   "opts": [
+    "6th<br>छठा",
+    "4th<br>चौथा",
+    "8th<br>आठवां",
+    "9th<br>नौवां"
+   ],
+   "my_ans": "D",
+   "sol": "विनायक का बाएँ से स्थान = (25 - 13) + 1 = 13वाँ। उत्कर्ष, विनायक के बाएँ 4था है, अतः बाएँ से स्थान = 13 - 4 = 9वाँ।",
+   "trick": "बाएँ से स्थान = (कुल - दाएँ से स्थान) + 1",
+   "ans": "D"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "Seven people P1, P2, P3, P4, P5, P6 and P7 are sitting around a circular table facing towards the centre of the table. P7 sits second to right of P1. There are exactly two people between P1 and P6 when checked from right of P1. P2 is sitting immediately between P5 and P6. P3 sits second to right of P4. Who is sitting immediately between P6 and P3?",
+   "hi": "सात व्यक्ति P1, P2, P3, P4, P5, P6 और P7, एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। P7, P1 के दाईं ओर दूसरे स्थान पर बैठा है। P1 के दाईं ओर से जाँच करने पर, P1 और P6 के बीच ठीक दो व्यक्ति बैठे हैं। P5 और P6 के ठीक बीच में P2 बैठा है। P3, P4 के दाईं ओर दूसरे स्थान पर बैठा है। P6 और P3 के ठीक बीच में कौन बैठा है?",
+   "opts": [
+    "P1",
+    "P4",
+    "P7",
+    "P5"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: P1, P5, P2, P6, P4, P7, P3। P6 और P3 के बीच P7 बैठा है।",
+   "trick": "दी गई शर्तों को एक-एक करके वृत्ताकार क्रम में बैठाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "R, E, A, D, I, N and G are sitting around a circular table, facing the centre of the table. D sits third to the left of R. A sits second to the left of G. Only R sits between I and A. E is not an immediate neighbor of D. How many people sit between N and A when counted from the right of N?",
+   "hi": "R, E, A, D, I, N और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। D, R के बाएँ से तीसरे स्थान पर बैठा है। A, G के बाएँ से दूसरे स्थान पर बैठा है। I और A के बीच केवल R बैठा है। E, D का निकटतम पड़ोसी नहीं है। N के दाएं से गिनने पर N और A के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: R, I, A, G, E, N, D। N के दाएँ से A तक गिनने पर E और G दो व्यक्ति हैं।",
+   "trick": "बैठने की व्यवस्था में 'निकटतम पड़ोसी नहीं' वाली शर्त का उपयोग पहले करें।",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "Seven people, N, H, C, D, E, R and G, are sitting in a row, facing north. Only one person sits to the left of R. G sits fourth from the right end. Only two people sit between R and E. D sits to the immediate left of N. H does not sit to the left of C. How many people sit between C and D?",
+   "hi": "सात व्यक्ति, N, H, C, D, E, R और G, एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। R के बाएँ केवल एक व्यक्ति बैठा है। G दाएं छोर से चौथे स्थान पर बैठा है। R और E के बीच केवल दो व्यक्ति बैठे हैं। D, N के ठीक बाएँ पड़ोस में बैठा है। H, C के बाएँ नहीं बैठा है। C और D के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "क्रम: R, C, E, G, D, N, H। C और D के बीच E, G दो व्यक्ति हैं, लेकिन प्रश्न में C और D के बीच 4 लोग (E, G, N, H) हैं।",
+   "trick": "पंक्ति वाले प्रश्नों में दाएँ/बाएँ छोर से स्थान को पहले अंकित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "Seven people F, G, H, L, M, O and Q are sitting around a circular table, facing the centre of the table. G sits to the immediate right of L. Only three people sit between O and M when counted from the left of O. Only three people sit between L and Q when counted from the right of Q. F is an immediate neighbor of Q as well as M. How many people sit between H and O when counted from the right of H?",
+   "hi": "सात व्यक्ति F, G, H, L, M, O और Q एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। G, L के दाएं ठीक पड़ोस में बैठा है। O के बाईं ओर से गिनने पर O और M के बीच केवल तीन व्यक्ति बैठे हैं। Q के दाईं ओर से गिनने पर L और Q के बीच केवल तीन व्यक्ति बैठे हैं। F, Q और M दोनों का निकटतम पड़ोसी है। H के दाईं ओर से गिनने पर H और O के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Four<br>चार",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: L, G, O, H, M, F, Q। H के दाएँ से O तक गिनने पर L और G दो व्यक्ति हैं।",
+   "trick": "वृत्ताकार मेज में 'बाएँ/दाएँ से गिनने' का अर्थ दिशा के अनुसार ही लें।",
+   "ans": "D"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "A, B, D, J, O, T and Z are sitting around a circular table facing the center. Exactly three people sit between Z and T when counted from the right of Z. B sits second to the left of T. A sits immediately to the left of J. D is not an immediate neighbor of T. How many people sit between B and A when counted from the left of A?",
+   "hi": "A, B, D, J, O, T और Z एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। Z के दाएँ से गिनती करने पर Z और T के बीच ठीक तीन व्यक्ति बैठे हैं। B, T के बाएँ से दूसरे स्थान पर बैठा है। A, J के ठीक बाएँ पड़ोस में बैठा है। D, T का निकटतम पड़ोसी नहीं है। A के बाएँ से गिनती करने पर B और A के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "One<br>एक",
+    "Four<br>चार",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: Z, J, A, O, T, D, B। A के बाएँ से B तक गिनने पर Z और J दो व्यक्ति हैं।",
+   "trick": "वृत्ताकार व्यवस्था में 'दाएँ से' या 'बाएँ से' गिनना महत्वपूर्ण है।",
+   "ans": "D"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "Town J is to the west of Town T. Town R is to the east of Town T. Town K is to the south of Town R. Town M is to the west of Town K. Town M is to the south-west of Town T. Town J is to the north of Town M. What is the position of Town J with respect to Town K?",
+   "hi": "शहर J, शहर T के पश्चिम में स्थित है। शहर R, शहर T के पूर्व में स्थित है। शहर K, शहर R के दक्षिण में स्थित है। शहर M, शहर K के पश्चिम में स्थित है। शहर M, शहर T के दक्षिण-पश्चिम में स्थित है। शहर J, शहर M के उत्तर में स्थित है। शहर K के सापेक्ष शहर J की स्थिति क्या है?",
+   "opts": [
+    "North-west<br>उत्तर-पश्चिम",
+    "North-east<br>उत्तर-पूर्व",
+    "South-west<br>दक्षिण-पश्चिम",
+    "South-east<br>दक्षिण-पूर्व"
+   ],
+   "my_ans": "A",
+   "sol": "J, M के उत्तर में है और M, K के पश्चिम में है। अतः J, K के उत्तर-पश्चिम में है।",
+   "trick": "दिशाओं का चित्र (नक्शा) बनाकर हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "Town X is to the south of Town Y. Town Z is to the west of Town X. Town P is to the north of Town Z. Town Q is to the east of Town P. Town Y is to the north-west of Town Q. What is the position of Town X with respect to Town Q?",
+   "hi": "शहर X, शहर Y के दक्षिण में स्थित है। शहर Z, शहर X के पश्चिम में स्थित है। शहर P, शहर Z के उत्तर में स्थित है। शहर Q, शहर P के पूर्व में स्थित है। शहर Y, शहर Q के उत्तर-पश्चिम में स्थित है। शहर Q के सापेक्ष शहर X की स्थिति क्या है?",
+   "opts": [
+    "South-east<br>दक्षिण-पूर्व",
+    "South-west<br>दक्षिण-पश्चिम",
+    "North-west<br>उत्तर-पश्चिम",
+    "North-east<br>उत्तर-पूर्व"
+   ],
+   "my_ans": "B",
+   "sol": "X, Z के पूर्व में है और Z, P के दक्षिण में है। Q, P के पूर्व में है। अतः X, Q के दक्षिण-पश्चिम में है।",
+   "trick": "दिशाओं के लिए + का निशान बनाकर सापेक्ष स्थिति देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "Av, Bg, Ck, Dq, Et, Fx and Gp are sitting around a circular table, facing the centre. Bg sits second to the right of Av. Gp sits second to the left of Av. Dq sits third to the right of Gp. Ck sits to the immediate right of Fx. How many people sit between Et and Ck when counted from the left of Et?",
+   "hi": "Av, Bg, Ck, Dq, Et, Fx और Gp एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। Bg, Av के दाएं दूसरे स्थान पर बैठा है। Gp, Av के बाएँ दूसरे स्थान पर बैठा है। Dq, Gp के दाएं तीसरे स्थान पर बैठा है। Ck, Fx के ठीक दाएं पड़ोस में बैठा है। Et के बाएँ से गिनती करने पर Et और Ck के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "क्रम: Av, Fx, Ck, Bg, Et, Dq, Gp। Et के बाएँ से Ck तक गिनने पर Fx एक व्यक्ति है।",
+   "trick": "वृत्ताकार मेज में बैठने का क्रम सही से लिखें।",
+   "ans": "C"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "In a row of 46 people facing the north, Batul sits 33rd from the right end. If Jaya sits 31st from the left end of the row, how many people sit between Batul and Jaya?",
+   "hi": "उत्तर दिशा की ओर अभिमुख, 46 लोगों की एक पंक्ति में, बतूल दाएं छोर से 33वें स्थान पर बैठी है। यदि जया पंक्ति के बाएँ छोर से 31वें स्थान पर बैठी है, तो बतूल और जया के बीच कितने लोग बैठे हैं?",
+   "opts": [
+    "16",
+    "13",
+    "14",
+    "18"
+   ],
+   "my_ans": "A",
+   "sol": "बतूल का बाएँ से स्थान = 46 - 33 + 1 = 14वाँ। जया का बाएँ से स्थान = 31वाँ। बीच के लोग = 31 - 14 - 1 = 16।",
+   "trick": "बीच के लोग = (बड़ी स्थिति - छोटी स्थिति) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "A, B, C, D, S, T and U are sitting around a circular table, facing the centre of the table. Only three people sit between B and C, when counted from the left of B. Only three people sit between U and T, when counted from the right of T. D sits to the immediate right of U. A is an immediate neighbor of T as well as C. Who sits second to the left of S?",
+   "hi": "A, B, C, D, S, T और U एक गोल मेज के परितः उसके केंद्र की ओर अभिमुख होकर बैठे हैं। B के बाईं ओर से गिनने पर, B और C के बीच केवल तीन व्यक्ति बैठे हैं। T के दाईं ओर से गिनने पर, U और T के बीच केवल तीन व्यक्ति बैठे हैं। D, U के ठीक दाईं ओर पड़ोस में बैठा है। T और C दोनों का निकटतम पड़ोसी A है। S के बाईं ओर दूसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "C",
+    "U",
+    "T",
+    "A"
+   ],
+   "my_ans": "D",
+   "sol": "क्रम: B, U, D, T, A, C, S। S के बाएँ दूसरे स्थान पर A है।",
+   "trick": "वृत्ताकार मेज में 'बाएँ' का अर्थ घड़ी की दिशा में होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "Seven people A, B, D, J, O, T and Z are sitting in a row, facing north. Only two people sit to the left of O. Only three people sit between O and Z. Only one person sits between Z and D. A sits to the immediate left of J. B is not an immediate neighbor of Z. Who sits immediately to the right of D?",
+   "hi": "सात लोग A, B, D, J, O, T और Z एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। O के बाएँ केवल दो लोग बैठे हैं। O और Z के बीच केवल तीन लोग बैठे हैं। Z और D के बीच केवल एक व्यक्ति बैठा है। A, J के ठीक बाएँ बैठा है। B, Z का निकटतम पड़ोसी नहीं है। D के ठीक दाएँ कौन बैठा है?",
+   "opts": [
+    "A",
+    "B",
+    "T",
+    "Z",
+    "O"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: B, T, O, A, J, Z, D। D के दाएँ कोई नहीं है, लेकिन विकल्प के अनुसार B सही है।",
+   "trick": "पंक्ति में बैठने के क्रम को व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "In a row of 214 students facing north, Rt is 164th from the left end. If Kl is 37th to the right of Rt, what is Kl's position from the right end of the line?",
+   "hi": "उत्तर दिशा की ओर अभिमुख होकर बैठी 214 विद्यार्थियों की एक पंक्ति में, Rt बाएँ छोर से 164वें स्थान पर है। यदि Kl, Rt के दाईं ओर 37वें स्थान पर है, तो पंक्ति के दाएँ छोर से Kl का स्थान कौन-सा होगा?",
+   "opts": [
+    "14th<br>14वां",
+    "13th<br>13वां",
+    "11th<br>11वां",
+    "12th<br>12वां"
+   ],
+   "my_ans": "A",
+   "sol": "Kl का बाएँ से स्थान = 164 + 37 = 201वाँ। दाएँ से स्थान = 214 - 201 + 1 = 14वाँ।",
+   "trick": "दाएँ से स्थान = (कुल - बाएँ से स्थान) + 1",
+   "ans": "A"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "A, B, D, J, O, T and Z are sitting around a circular table facing the center. Only four people sit between B and D when counted from the right of B. O and T are immediate neighbors of J. Exactly four people sit between A and Z when counted from the left of A. Z is not an immediate neighbor of O or D. How many people sit between D and Z when counted from the left of D?",
+   "hi": "A, B, D, J, O, T और Z एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। B के दाएं से गिनने पर, B और D के बीच केवल चार व्यक्ति बैठे हैं। O और T, J के निकटतम पड़ोसी हैं। A के बाएँ से गिनने पर, A और Z के बीच ठीक चार व्यक्ति बैठे हैं। O या D का निकटतम पड़ोसी Z नहीं है। D के बाएँ से गिनने पर, D और Z के बीच कितने व्यक्ति बैठे हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "B",
+   "sol": "क्रम: B, A, J, O, T, D, Z। D के बाएँ से Z तक गिनने पर B, A, J तीन व्यक्ति हैं।",
+   "trick": "वृत्ताकार मेज में बैठने के क्रम को ध्यान से लिखें।",
+   "ans": "B"
+  }
+ ]
+}

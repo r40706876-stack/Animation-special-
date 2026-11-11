@@ -1,0 +1,30 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Series",
+  "hi": "श्रृंखला",
+  "total": 88,
+  "gl": 88,
+  "ug": 0
+ },
+ "source_pages": "137-137",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "Refer to the following letter, symbol series and answer the question. Counting to be done from left to right only (Left) € A © D R & I % B B V @ A J $ £ * S B £ N L (Right) How many such symbols are there each of which is immediately preceded by a letter and also immediately followed by a symbol?",
+   "hi": "निम्नलिखित अक्षर, प्रतीक श्रृंखला का संदर्भ लें और प्रश्न का उत्तर दें। गिनती केवल बाएँ से दाएँ की जानी है (बाएँ) € A © D R & I % B B V @ A J $ £ * S B £ N L (दाएँ) ऐसे कितने प्रतीक हैं जिनमें से प्रत्येक के ठीक पहले एक अक्षर है और ठीक बाद में एक प्रतीक भी है?",
+   "opts": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "श्रृंखला: € A © D R & I % B B V @ A J $ £ * S B £ N L<br>हमें (अक्षर - प्रतीक - प्रतीक) का समूह ढूँढना है।<br>यहाँ केवल 'J $ £' है जहाँ J अक्षर है, $ प्रतीक है और £ भी प्रतीक है। अतः उत्तर 1 है।",
+   "trick": "प्रश्न की शर्त (अक्षर-प्रतीक-प्रतीक) को ध्यान से श्रृंखला में खोजें।",
+   "ans": "B"
+  }
+ ]
+}

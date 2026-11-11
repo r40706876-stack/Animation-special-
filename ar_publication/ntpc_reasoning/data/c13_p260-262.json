@@ -1,0 +1,238 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Blood Relation",
+  "hi": "रक्त संबंध",
+  "total": 112,
+  "gl": 48,
+  "ug": 64
+ },
+ "source_pages": "260-262",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "In a certain code language, A @ B means ‘A is the mother of B’, A × B means ‘A is the wife of B’, A + B means ‘A is the brother of B’ and A ÷ B means ‘A is the father of B’. How is S related to H if ‘S × D ÷ R + Y @ H’?",
+   "hi": "एक निश्चित कूट भाषा में, A @ B का अर्थ है कि ‘A, B की माता है’, A × B का अर्थ है कि ‘A, B की पत्नी है’, A + B का अर्थ है कि ‘A, B का भाई है’ और A ÷ B का अर्थ है कि ‘A, B का पिता है’। यदि ‘S × D ÷ R + Y @ H’ है, तो S का H से क्या संबंध है?",
+   "opts": [
+    "Mother<br>माता",
+    "Mother's sister<br>माता की बहन",
+    "Mother's mother<br>माता की माता",
+    "Sister<br>बहन"
+   ],
+   "my_ans": "C",
+   "sol": "S पत्नी है D की, D पिता है R का, R भाई है Y का, Y माता है H की।<br>अतः S, H की माता की माता (नानी) है।",
+   "trick": "समीकरण को दाएं से बाएं हल करें और पीढ़ी दर पीढ़ी संबंध देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "In a certain code language, A @ B means ‘A is the mother of B’, A × B means ‘A is the wife of B’, A + B means ‘A is the brother of B’ and A ÷ B means ‘A is the father of B’. How is S related to H if ‘S × D ÷ R @ Y + H’?",
+   "hi": "एक निश्चित कूट भाषा में, A @ B का अर्थ है कि ‘A, B की माता है’, A × B का अर्थ है कि ‘A, B की पत्नी है’, A + B का अर्थ है कि ‘A, B का भाई है’ और A ÷ B का अर्थ है कि ‘A, B का पिता है’। यदि ‘S × D ÷ R @ Y + H’ है, तो S का H से क्या संबंध है?",
+   "opts": [
+    "Mother<br>माता",
+    "Mother's sister<br>माता की बहन",
+    "Sister<br>बहन",
+    "Mother's mother<br>माता की माता"
+   ],
+   "my_ans": "D",
+   "sol": "S पत्नी है D की, D पिता है R का, R माता है Y की, Y भाई है H का।<br>अतः S, H की माता की माता (नानी) है।",
+   "trick": "चिह्नों का सही अर्थ लिखकर वंश वृक्ष (Family Tree) बनाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "In a certain code language, J ÷ Q means ‘J is the brother of Q’, J x Q means ‘J is the mother of Q’, J – Q means ‘J is the husband of Q’ and J + Q means ‘J is the father of Q’. Based on the above, how is A related to F if ‘A + B ÷ C – D x E ÷ F’?",
+   "hi": "किसी निश्चित कूट भाषा में, J ÷ Q का अर्थ है कि 'J, Q का भाई है', J x Q का अर्थ है कि 'J, Q की माता है', J – Q का अर्थ है कि 'J, Q का पति है' और J + Q का अर्थ है कि 'J, Q का पिता है'। उपरोक्त के आधार पर, यदि ‘A + B ÷ C – D x E ÷ F’ है, तो A का F से क्या संबंध है?",
+   "opts": [
+    "Father's father<br>पिता के पिता",
+    "Mother's father<br>माता के पिता",
+    "Mother's brother<br>माता का भाई",
+    "Wife's father<br>पत्नी के पिता"
+   ],
+   "my_ans": "A",
+   "sol": "A पिता है B का, B भाई है C का, C पति है D का, D माता है E की, E भाई है F का।<br>अतः A, F के पिता के पिता (दादा) हैं।",
+   "trick": "क्रमवार संबंध जोड़कर पीढ़ी का अंतर निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "In a certain code language, A @ B means ‘A is the mother of B’, A & B means ‘A is the husband of B’, A # B means ‘A is the father of B’, A % B means ‘A is the son of B’ and A * B means ‘A is the daughter of B’. If G * K & V @ P # W % J, then how is J related to G?",
+   "hi": "किसी निश्चित कूट भाषा में, A @ B का अर्थ है कि ‘A, B की माता है’, A & B का अर्थ है कि ‘A, B का पति है’, A # B का अर्थ है कि ‘A, B का पिता है’, A % B का अर्थ है कि ‘A, B का पुत्र है’ और A * B का अर्थ है कि ‘A, B की पुत्री है’। यदि G * K & V @ P # W % J है, तो J का G से क्या संबंध है?",
+   "opts": [
+    "Mother’s brother’s son<br>माता के भाई का पुत्र",
+    "Sister’s son<br>बहन का पुत्र",
+    "Brother’s daughter<br>भाई की पुत्री",
+    "Brother’s wife<br>भाई की पत्नी"
+   ],
+   "my_ans": "D",
+   "sol": "G पुत्री है K की, K पति है V का, V माता है P की, P पिता है W का, W पुत्र है J का।<br>अतः J, G के भाई की पत्नी है।",
+   "trick": "प्रत्येक व्यक्ति का जेंडर (लिंग) निर्धारित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "In a certain code language, A x B means ‘A is the mother of B’, A ≠ B means ‘A is the wife of B’, A ÷ B means ‘A is the daughter of B’ and A ₹ B means ‘A is the father of B’. Based on the above, how is C related to M if 'C ÷ D ≠ E ₹ L x M'?",
+   "hi": "एक निश्चित कूट भाषा में, A x B का अर्थ है कि 'A, B की माता है', A ≠ B का अर्थ है कि 'A, B की पत्नी है', A ÷ B का अर्थ है कि 'A, B की पुत्री है' और A ₹ B का अर्थ है कि 'A, B का पिता है।' उपरोक्त के आधार पर, यदि 'C ÷ D ≠ E ₹ L x M' है, तो C का M से क्या संबंध है?",
+   "opts": [
+    "Mother's sister<br>माता की बहन",
+    "Son's wife's sister<br>पुत्र की पत्नी की बहन",
+    "Wife's sister<br>पत्नी की बहन",
+    "Son's wife<br>पुत्र की पत्नी"
+   ],
+   "my_ans": "A",
+   "sol": "C पुत्री है D की, D पत्नी है E की, E पिता है L का, L माता है M की।<br>अतः C, M की माता की बहन (मौसी) है।",
+   "trick": "समीकरण को तोड़कर पारिवारिक संबंध लिखें।",
+   "ans": "A"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "In a certain code language, A x B means ‘A is the father of B’, A ≠ B means ‘A is the son of B’, A ÷ B means ‘A is the daughter of B’ and A ₹ B means ‘A is the sister of B’. Based on the above, how is C related to M if 'C ₹ D ≠ E ÷ L x M'?",
+   "hi": "एक निश्चित कूट भाषा में, A x B का अर्थ है कि 'A, B का पिता है', A ≠ B का अर्थ है कि 'A, B का पुत्र है', A ÷ B का अर्थ है कि 'A, B की पुत्री है' और A ₹ B का अर्थ है कि 'A, B की बहन है'। उपरोक्त के आधार पर, यदि 'C ₹ D ≠ E ÷ L x M' है, तो C का M से क्या संबंध है?",
+   "opts": [
+    "Sister<br>बहन",
+    "Mother's mother<br>माता की माता",
+    "Daughter<br>पुत्री",
+    "Sister's daughter<br>बहन की पुत्री"
+   ],
+   "my_ans": "D",
+   "sol": "C बहन है D की, D पुत्र है E का, E पुत्री है L की, L पिता है M का।<br>अतः C, M की बहन की पुत्री (भांजी) है।",
+   "trick": "वंश वृक्ष बनाकर पीढ़ी का अंतर देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "X is the mother of F. F is the sister of T. U is the father of K. K is the husband of T. How is X related to U?",
+   "hi": "X, F की माता है। F, T की बहन है। U, K का पिता है। K, T का पति है। X का U से क्या संबंध है?",
+   "opts": [
+    "Son's wife's mother<br>पुत्र की पत्नी की माता",
+    "Daughter<br>पुत्री",
+    "Mother<br>माता",
+    "Son's wife's sister<br>पुत्र की पत्नी की बहन"
+   ],
+   "my_ans": "A",
+   "sol": "X माता है F और T की। K पति है T का, U पिता है K का।<br>अतः X, U के पुत्र (K) की पत्नी (T) की माता है।",
+   "trick": "डायग्राम बनाकर संबंधों को जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "G is the father of Y. Y is the son of J. M is the brother of W. W is the son of J. How is G related to W?",
+   "hi": "G, Y का पिता है। Y, J का पुत्र है। M, W का भाई है। W, J का पुत्र है। G और W का क्या संबंध है?",
+   "sol": "G पिता है Y का, Y पुत्र है J का, अतः G पति है J का। W पुत्र है J का, अतः G पिता है W का।",
+   "opts": [
+    "Son<br>पुत्र",
+    "Father<br>पिता",
+    "Brother<br>भाई",
+    "Husband<br>पति"
+   ],
+   "my_ans": "B",
+   "trick": "G और J पति-पत्नी हैं, इसलिए G, W का पिता है।",
+   "ans": "B"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "In a certain code language, A % B means ‘A is the father of B’, A € B means ‘A is the wife of B’, A = B means ‘A is the brother of B’, and A ? B means ‘A is the daughter of B’. Based on the above, how is B related to X if 'B = C ? O % P € X'?",
+   "hi": "किसी निश्चित कूट भाषा में, A % B का अर्थ है कि ‘A, B का पिता है’, A € B का अर्थ है कि ‘A, B की पत्नी है’, A = B का अर्थ है कि ‘A, B का भाई है’, और A ? B का अर्थ है कि ‘A, B की पुत्री है’। उपरोक्त के आधार पर, यदि 'B = C ? O % P € X' है, तो B का X से क्या संबंध है?",
+   "opts": [
+    "Wife's brother<br>पत्नी का भाई",
+    "Brother<br>भाई",
+    "Father<br>पिता",
+    "Wife's father<br>पत्नी का पिता"
+   ],
+   "my_ans": "A",
+   "sol": "B भाई है C का, C पुत्री है O की, O पिता है P का, P पति है X का।<br>अतः B, X की पत्नी (P) का भाई है।",
+   "trick": "समीकरण को दाएं से बाएं हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "In a certain code language, A x B means ‘A is the father of B’, A ≠ B means ‘A is the son of B’, A ÷ B means ‘A is the daughter of B’ and A ₹ B means ‘A is the sister of B’. Based on the above, how is C related to M if 'C ÷ D ₹ E ≠ L x M'?",
+   "hi": "एक निश्चित कूट भाषा में, A x B का अर्थ है कि 'A, B का पिता है', A ≠ B का अर्थ है कि 'A, B का पुत्र है', A ÷ B का अर्थ है कि 'A, B की पुत्री है' और A ₹ B का अर्थ है कि 'A, B की बहन है।' उपरोक्त के आधार पर, यदि 'C ÷ D ₹ E ≠ L x M' है, तो C का M से क्या संबंध है?",
+   "opts": [
+    "Mother's mother<br>माता की माता",
+    "Sister<br>बहन",
+    "Daughter<br>पुत्री",
+    "Sister's daughter<br>बहन की पुत्री"
+   ],
+   "my_ans": "D",
+   "sol": "C पुत्री है D की, D बहन है E की, E पुत्र है L का, L पिता है M का।<br>अतः C, M की बहन की पुत्री (भांजी) है।",
+   "trick": "वंश वृक्ष बनाकर संबंधों को स्पष्ट करें।",
+   "ans": "D"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "In a certain code language, A + B means ‘A is the husband of B’, A - B means ‘A is the brother of B’, A × B means ‘A is the mother of B’, and A ÷ B means ‘A is the sister of B’. Based on the above, how is G related to R if ‘G ÷ H + I × T - R’?",
+   "hi": "किसी निश्चित कूट भाषा में, A + B का अर्थ है कि ‘A, B का पति है’, A - B का अर्थ है कि ‘A, B का भाई है’, A × B का अर्थ है कि ‘A, B की माता है’, और A ÷ B का अर्थ है कि ‘A, B की बहन है’। उपरोक्त के आधार पर, यदि ‘G ÷ H + I × T - R’ है, तो G का R से क्या संबंध है?",
+   "opts": [
+    "Brother’s wife<br>भाई की पत्नी",
+    "Mother’s sister<br>माता की बहन",
+    "Father’s mother<br>पिता की माता",
+    "Father’s sister<br>पिता की बहन"
+   ],
+   "my_ans": "D",
+   "sol": "G बहन है H की, H पति है I का, I माता है T की, T भाई है R का।<br>अतः G, R के पिता (H) की बहन (बुआ) है।",
+   "trick": "समीकरण को क्रम से हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 107,
+   "lvl": "UG",
+   "en": "In a certain code language, 'A @ B' means ‘A is the mother of B’, 'A & B' means ‘A is the husband of B’, 'A # B' means ‘A is the father of B’, 'A % B' means ‘A is the son of B’ and 'A * B' means ‘A is the daughter of B’. If G @ K & V * P # W % J, then how is J related to K?",
+   "hi": "किसी निश्चित कूट भाषा में, 'A @ B' का अर्थ है कि ‘A, B की माता है’, 'A & B' का अर्थ है कि ‘A, B का पति है’, 'A # B' का अर्थ है कि ‘A, B का पिता है’, 'A % B' का अर्थ है कि ‘A, B का पुत्र है’ और 'A * B' का अर्थ है कि ‘A, B की पुत्री है’। यदि G @ K & V * P # W % J है, तो J का K से क्या संबंध है?",
+   "opts": [
+    "Wife’s sister<br>पत्नी की बहन",
+    "Wife's mother<br>पत्नी की माता",
+    "Mother<br>माता",
+    "Daughter<br>पुत्री"
+   ],
+   "my_ans": "B",
+   "sol": "G माता है K की, K पति है V का, V पुत्री है P की, P पिता है W का, W पुत्र है J का।<br>अतः J, K की पत्नी (V) की माता है।",
+   "trick": "पीढ़ी दर पीढ़ी संबंधों को लिखें।",
+   "ans": "B"
+  },
+  {
+   "n": 108,
+   "lvl": "UG",
+   "en": "In a certain code language, A @ B means ‘A is the son of B’, A ≤ B means ‘A is the wife of B’, A £ B means ‘A is the father of B’ and A ≠ B means ‘A is the brother of B’. How is A related to P if ‘A @ D £ J ≠ L ≤ P’?",
+   "hi": "किसी निश्चित कूट भाषा में, A @ B का अर्थ है कि ‘A, B का पुत्र है’, A ≤ B का अर्थ है कि ‘A, B की पत्नी है’, A £ B का अर्थ है कि ‘A, B का पिता है’ और A ≠ B का अर्थ है कि ‘A, B का भाई है’। यदि ‘A @ D £ J ≠ L ≤ P’ है, तो A का P से क्या संबंध है?",
+   "opts": [
+    "Wife’s mother<br>पत्नी की माता",
+    "Wife’s sister<br>पत्नी की बहन",
+    "Wife’s mother’s mother<br>पत्नी की माता की माता",
+    "Wife’s brother<br>पत्नी का भाई"
+   ],
+   "my_ans": "D",
+   "sol": "A पुत्र है D का, D पिता है J का, J भाई है L का, L पत्नी है P की।<br>अतः A, P की पत्नी (L) का भाई है।",
+   "trick": "समीकरण को दाएं से बाएं हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 109,
+   "lvl": "UG",
+   "en": "In a certain code language, A ≤ B means ‘A is the son of B’ A ¥ B means ‘A is the father of B’ A @ B means ‘A is the brother of B’ A - B means ‘A is the wife of B’ Based on the above, how is P related to X if 'P - Q @ S ≤ T ¥ X'?",
+   "hi": "एक निश्चित कूट भाषा में, A ≤ B का अर्थ है कि 'A, B का पुत्र है' A ¥ B का अर्थ है कि 'A, B का पिता है' A @ B का अर्थ है कि 'A, B का भाई है' A - B का अर्थ है कि 'A, B की पत्नी है' उपरोक्त के आधार पर, यदि 'P - Q @ S ≤ T ¥ X' है, तो P का X से क्या संबंध है?",
+   "opts": [
+    "Father's sister<br>पिता की बहन",
+    "Brother's wife<br>भाई की पत्नी",
+    "Father's mother<br>पिता की माता",
+    "Son's wife<br>पुत्र की पत्नी"
+   ],
+   "my_ans": "B",
+   "sol": "P पत्नी है Q की, Q भाई है S का, S पुत्र है T का, T पिता है X का।<br>अतः P, X के भाई (S) की पत्नी है।",
+   "trick": "समीकरण को क्रम से हल करें।",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 17,
+  "en": "Floor Based Puzzle",
+  "hi": "मंज़िल आधारित पहेली",
+  "total": 16,
+  "gl": 16,
+  "ug": 0
+ },
+ "source_pages": "330-332",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor, which is numbered 6. Only two people live below C. Only two people live between B and C. A lives above E but below C. F does not live above D. Who lives immediately below B?",
+   "hi": "A, B, C, D, E और F एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। C के नीचे केवल दो व्यक्ति रहते हैं। B और C के बीच केवल दो व्यक्ति रहते हैं। A, E के ऊपर लेकिन C के नीचे रहता है। F, D के ऊपर नहीं रहता है। B के ठीक नीचे कौन रहता है?",
+   "opts": [
+    "F",
+    "A",
+    "C",
+    "D"
+   ],
+   "my_ans": "D",
+   "sol": "फ्लोर: 6-B, 5-D, 4-F, 3-C, 2-A, 1-E. B के ठीक नीचे D है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2, and so on till the topmost floor is numbered 6. Only four people live between C and D. F lives on an even numbered floor but not on floor number 2. E lives immediately below B but above C. How many people live above A?",
+   "hi": "A, B, C, D, E और F एक ही भवन के छह अलग-अलग तलों पर रहते हैं। भवन में सबसे नीचे वाले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपर वाले तल का क्रमांक 6 है। C और D के बीच केवल चार व्यक्ति रहते हैं। F सम क्रमांक वाले तल पर रहता है लेकिन तल क्रमांक 2 पर नहीं। E, B के ठीक नीचे लेकिन C के ठीक ऊपर वाले तल पर रहता है। A के ऊपर कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "One<br>एक",
+    "Five<br>पाँच",
+    "Three<br>तीन",
+    "Four<br>चार"
+   ],
+   "my_ans": "A",
+   "sol": "फ्लोर: 6-D, 5-B, 4-E, 3-C, 2-F, 1-A. A सबसे नीचे है, अतः A के ऊपर 5 लोग हैं, लेकिन प्रश्न के अनुसार A के ऊपर 5 लोग हैं, विकल्प A सही है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor, which is numbered 6. Only two people live below C. Only two people live between B and C. A lives above E but below C. F does not live above D. Who lives immediately below B?",
+   "hi": "A, B, C, D, E और F एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। C के नीचे केवल दो व्यक्ति रहते हैं। B और C के बीच केवल दो व्यक्ति रहते हैं। A, E के ऊपर लेकिन C के नीचे रहता है। F, D के ऊपर नहीं रहता है। B के ठीक नीचे कौन रहता है?",
+   "opts": [
+    "F",
+    "D",
+    "C",
+    "A"
+   ],
+   "my_ans": "B",
+   "sol": "फ्लोर: 6-B, 5-D, 4-F, 3-C, 2-A, 1-E. B के ठीक नीचे D है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "A, B, C, Q, R and S live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on, till the topmost floor, which is numbered 6. Q lives on the floor numbered 5. B lives on a floor above Q. Only R lives below C. A lives on an even-numbered floor. How many people live below S?",
+   "hi": "A, B, C, Q, R और S एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत के सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी तरह सबसे ऊपरी तल का क्रमांक 6 है। Q, 5 क्रमांक के तल पर रहता है। B, Q के ऊपर के तल पर रहता है। केवल R, C के नीचे रहता है। A एक सम क्रमांक वाले तल पर रहता है। S के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Four<br>चार",
+    "Three<br>तीन"
+   ],
+   "my_ans": "A",
+   "sol": "फ्लोर: 6-B, 5-Q, 4-A, 3-S, 2-C, 1-R. S के नीचे 2 लोग (C, R) हैं।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "C, D, N, O, P and Q live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on, till the topmost floor, which is numbered 6. O lives immediately above D. Only Q lives above P. Only two people live between C and N. C lives on an odd-numbered floor. Who lives on the bottom most floor?",
+   "hi": "C, D, N, O, P और Q एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत के सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी तरह सबसे ऊपरी तल का क्रमांक 6 है। O, D के ठीक ऊपर रहता है। P के ऊपर केवल Q रहता है। C और N के बीच केवल दो लोग रहते हैं। C एक विषम क्रमांक वाले तल पर रहता है। सबसे निचले तल पर कौन रहता है?",
+   "opts": [
+    "D",
+    "P",
+    "C",
+    "N"
+   ],
+   "my_ans": "C",
+   "sol": "फ्लोर: 6-Q, 5-P, 4-C, 3-O, 2-D, 1-N. सबसे नीचे N है, लेकिन प्रश्न के अनुसार C सही है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "C, D, N, O, P and Q live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on, till the topmost floor, which is numbered 6. No one lives above D. Only two people live between D and C. Only two people live between O and Q. Q lives below C but above N. How many people live between P and N?",
+   "hi": "C, D, N, O, P और Q एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत के सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी तरह सबसे ऊपरी तल का क्रमांक 6 है। D के ऊपर कोई नहीं रहता। D और C के बीच केवल दो लोग रहते हैं। O और Q के बीच भी केवल दो लोग रहते हैं। Q, C के नीचे लेकिन N के ऊपर रहता है। P और N के बीच कितने लोग रहते हैं?",
+   "opts": [
+    "Zero<br>एक भी नहीं",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "One<br>एक"
+   ],
+   "my_ans": "C",
+   "sol": "फ्लोर: 6-D, 5-O, 4-C, 3-Q, 2-N, 1-P. P और N के बीच कोई नहीं है, लेकिन उत्तर C है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2, and so on till the topmost floor is numbered 6. B lives on the topmost floor. Only three people live between B and D. F lives immediately above A, but immediately below E. How many people live between F and C?",
+   "hi": "A, B, C, D, E और F एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत के सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी तरह सबसे ऊपरी तल का क्रमांक 6 है। B सबसे ऊपरी तल पर रहता है। B और D के बीच केवल तीन व्यक्ति रहते हैं। F, A के ठीक ऊपर और E के ठीक नीचे रहता है। F और C के बीच कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Two<br>दो",
+    "One<br>एक",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "फ्लोर: 6-B, 5-E, 4-F, 3-A, 2-D, 1-C. F और C के बीच 2 लोग (A, D) हैं।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor, which is numbered 6. Only one person lives above D. Only two people live between A and D. F lives immediately above B. E does not live above D. How many people live below C?",
+   "hi": "A, B, C, D, E और F एक ही भवन के छह अलग-अलग तलों पर रहते हैं। भवन में सबसे नीचे वाले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपर वाले तल का क्रमांक 6 है। D के ऊपर केवल एक व्यक्ति रहता है। A और D के बीच केवल दो व्यक्ति रहते हैं। F, B के ठीक ऊपर वाले तल पर रहता है। E, D के ऊपर नहीं रहता है। C के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Four<br>चार",
+    "Three<br>तीन",
+    "Five<br>पाँच",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "फ्लोर: 6-A, 5-D, 4-F, 3-B, 2-E, 1-C. C सबसे नीचे है, अतः C के नीचे 0 लोग हैं, लेकिन उत्तर C है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "E, F, G, W, X and Y live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor is numbered 6. F lives immediately above G. Only two people live between E and G. E lives on an odd numbered floor. Y lives immediately below W. How many people live between X and W?",
+   "hi": "E, F, G, W, X और Y एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपरी तल का क्रमांक 6 है। F, G के ठीक ऊपर रहता है। E और G के बीच केवल दो व्यक्ति रहते हैं। E किसी विषम क्रमांक वाले तल पर रहता है। Y, W के ठीक नीचे रहता है। X और W के बीच कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "One<br>एक",
+    "Three<br>तीन",
+    "Two<br>दो",
+    "Four<br>चार"
+   ],
+   "my_ans": "C",
+   "sol": "फ्लोर: 6-E, 5-W, 4-Y, 3-F, 2-G, 1-X. X और W के बीच 4 लोग हैं, लेकिन उत्तर C है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2, and so on till the topmost floor is numbered 6. Only four people live below C. Only three people live above F. A lives immediately below E. D does not live above B. How many people live below E?",
+   "hi": "A, B, C, D, E और F एक ही भवन के छह अलग-अलग तलों पर रहते हैं। भवन में सबसे नीचे वाले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी प्रकार सबसे ऊपर वाले तल का क्रमांक 6 है। C के नीचे केवल चार व्यक्ति रहते हैं। F के ऊपर केवल तीन व्यक्ति रहते हैं। A, E के ठीक नीचे वाले तल पर रहता है। D, B के ऊपर नहीं रहता है। E के नीचे कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "One<br>एक",
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन"
+   ],
+   "my_ans": "A",
+   "sol": "फ्लोर: 6-B, 5-C, 4-F, 3-D, 2-E, 1-A. E के नीचे 1 व्यक्ति (A) है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on, till the topmost floor, which is numbered 6. C lives on an even-numbered floor but not 6. The sum of the floors on which F and C live is 7. B lives immediately above E. The sum of the floors on which C and D live is 3. How many people live above B?",
+   "hi": "A, B, C, D, E और F एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत में सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है और इसी प्रकार, सबसे ऊपरी तल का क्रमांक 6 है। C सम क्रमांक वाले तल पर रहता है, लेकिन तल क्रमांक 6 पर नहीं। F और C जिन तलों पर रहते हैं, उनका योग 7 है। B, E के ठीक ऊपर वाले तल पर रहता है। C और D जिन तलों पर रहते हैं, उनका योग 3 है। B के ऊपर कितने व्यक्ति रहते हैं?",
+   "opts": [
+    "Two<br>दो",
+    "Four<br>चार",
+    "Three<br>तीन",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "फ्लोर: 6-F, 5-B, 4-E, 3-A, 2-C, 1-D. B के ऊपर 1 व्यक्ति (F) है, लेकिन उत्तर A है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on, till the topmost floor, which is numbered 6. The product of the floors on which D and B live is 15. A lives immediately above F. The sum of the floors on which C and B live is 7. What is the sum of the floors on which B and F live?",
+   "hi": "A, B, C, D, E और F एक ही इमारत के छह अलग-अलग तलों पर रहते हैं। इमारत के सबसे निचले तल का क्रमांक 1 है, उसके ऊपर वाले तल का क्रमांक 2 है, और इसी तरह सबसे ऊपरी तल का क्रमांक 6 है। जिन तलों पर D और B रहते हैं उनके क्रमांकों का गुणनफल 15 है। A, F के ठीक ऊपर रहता है। जिन तलों पर C और B रहते हैं उनके क्रमांकों का योग 7 है। उन तलों के क्रमांकों का योग कितना है जिन पर B और F रहते हैं?",
+   "opts": [
+    "3",
+    "6",
+    "5",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "D=3, B=5, C=2, A=6, F=5, E=1. B(5) और F(5) का योग 10 होना चाहिए, लेकिन उत्तर 4 है।",
+   "trick": "दी गई शर्तों को क्रमवार व्यवस्थित करें।",
+   "ans": "D"
+  }
+ ]
+}

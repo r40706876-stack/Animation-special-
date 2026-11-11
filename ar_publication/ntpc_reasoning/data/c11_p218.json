@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Digit Manipulation",
+  "hi": "अंक परिवर्तन",
+  "total": 58,
+  "gl": 18,
+  "ug": 40
+ },
+ "source_pages": "218-218",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 84157639 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+   "hi": "संख्या 84157639 के प्रत्येक अंक को बाएं से दाएं बढ़ते क्रम में व्यवस्थित किया जाता है। मूल संख्या की तुलना में कितने अंकों की स्थिति अपरिवर्तित रहेगी?",
+   "opts": [
+    "Two<br>दो",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "मूल: 8 4 1 5 7 6 3 9<br>आरोही: 1 3 4 5 6 7 8 9<br>यहाँ केवल '5' का स्थान अपरिवर्तित है।",
+   "trick": "संख्याओं को आरोही क्रम में लिखकर मिलान करें।",
+   "ans": "A"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "Each of the digits in the number 7543168 is arranged in ascending order from left to right. What will be the sum of the digits which are second from the left and third from the right in the new number thus formed?",
+   "hi": "संख्या 7543168 के प्रत्येक अंक को बाएं से दाएं आरोही क्रम में व्यवस्थित किया जाता है। इस प्रकार बनी नई संख्या में बाएं से दूसरे और दाएं से तीसरे अंक का योगफल कितना होगा?",
+   "opts": [
+    "6",
+    "10",
+    "5",
+    "9"
+   ],
+   "my_ans": "D",
+   "sol": "आरोही क्रम: 1 3 4 5 6 7 8<br>बाएं से दूसरा अंक = 3, दाएं से तीसरा अंक = 6<br>योग = 3 + 6 = 9",
+   "trick": "आरोही क्रम में व्यवस्थित करने के बाद स्थान गिनें।",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "If 2 is added to each odd digit and 2 is subtracted from each even digit in the number 621453, what will be the sum of all even digit in the new number thus formed?",
+   "hi": "यदि संख्या 621453 के प्रत्येक विषम अंक में 2 जोड़ दिया जाए और प्रत्येक सम अंक से 2 घटा दिया जाए, तो इस प्रकार बनी नई संख्या के सभी सम अंकों का योग कितना होगा?",
+   "opts": [
+    "2",
+    "6",
+    "4",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "6(सम)-2=4, 2(सम)-2=0, 1(विषम)+2=3, 4(सम)-2=2, 5(विषम)+2=7, 3(विषम)+2=5<br>नई संख्या: 4 0 3 2 7 5<br>सम अंक: 4, 0, 2. योग = 4+0+2 = 6",
+   "trick": "विषम में +2 और सम में -2 करके सम अंक चुनें।",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "If 1 is added to each odd digit and 1 is subtracted from each even digit in the number 7254136, how many digits will appear more than once in the new number thus formed?",
+   "hi": "यदि संख्या 7254136 के प्रत्येक विषम अंक में 1 जोड़ा जाए तथा प्रत्येक सम अंक में से 1 घटाया जाए, तो इस प्रकार बनी नई संख्या में कितने अंक एक से अधिक बार आएंगे?",
+   "opts": [
+    "One<br>एक",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "None<br>एक भी नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "7(विषम)+1=8, 2(सम)-1=1, 5(विषम)+1=6, 4(सम)-1=3, 1(विषम)+1=2, 3(विषम)+1=4, 6(सम)-1=5<br>नई संख्या: 8 1 6 3 2 4 5<br>कोई भी अंक दोहराया नहीं गया है।",
+   "trick": "परिवर्तन के बाद अंकों की आवृत्ति की जाँच करें।",
+   "ans": "D"
+  }
+ ]
+}

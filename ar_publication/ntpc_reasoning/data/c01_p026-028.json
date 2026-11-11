@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "26-28",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. DCF−GFI YXA−BAD",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। नीचे दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DCF−GFI YXA−BAD",
+   "opts": [
+    "RQT−UTW",
+    "TRT−WVY",
+    "TRT−VUX",
+    "TSV−VVX"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: पहले अक्षर में +3, दूसरे में +3, तीसरे में +3। DCF → GFI (+3, +3, +3), YXA → BAD (+3, +3, +3)। RQT → UTW (+3, +3, +3) सही है।",
+   "trick": "प्रत्येक अक्षर में +3 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. UOM : YRK VSL : ZVJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। UOM : YRK VSL : ZVJ",
+   "opts": [
+    "KRX : OTV",
+    "INK : MQI",
+    "GVS : KYR",
+    "FEO : JHL"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: U+4=Y, O+3=R, M-2=K। V+4=Z, S+3=V, L-2=J। INK → MQI: I+4=M, N+3=Q, K-2=I।",
+   "trick": "अक्षरों में +4, +3, -2 का क्रम है।",
+   "ans": "B"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "BO 7 is related to EI -7 in a certain way. In the same way, CS 10 is related to FM -4. To which of the following is IJ 20 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से BO 7 का संबंध EI -7 से है। उसी प्रकार, CS 10 का संबंध FM -4 से है। उसी तर्क का अनुसरण करते हुए, IJ 20 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "HT -6",
+    "OP -3",
+    "LD 6",
+    "GJ 9"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: B+3=E, O-6=I। संख्या: 7-14=-7। CS → FM: C+3=F, S-6=M, 10-14=-4। IJ 20: I+3=L, J-6=D, 20-14=6।",
+   "trick": "अक्षर में +3, -6 और संख्या में -14 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern. DKW : HEV EGK : IAJ",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के सेटों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DKW : HEV EGK : IAJ",
+   "opts": [
+    "SOT : WJS",
+    "JGX : NAV",
+    "FQK : JKL",
+    "LRD : PLC"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: D+4=H, K-6=E, W-1=V। E+4=I, G-6=A, K-1=J। LRD → PLC: L+4=P, R-6=L, D-1=C।",
+   "trick": "अक्षरों में +4, -6, -1 का क्रम है।",
+   "ans": "D"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "SMAL is related to VQFR in a certain way based on the English alphabetical order. In the same way, ECUJ is related to HGZP. To which of the following options is NOJB related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से SMAL का संबंध VQFR से है। उसी प्रकार, ECUJ का संबंध HGZP से है। समान तर्क का अनुसरण करते हुए, NOJB का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "QSIO",
+    "QOSH",
+    "QSHO",
+    "QSOH"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: S+3=V, M+4=Q, A+5=F, L+6=R। E+3=H, C+4=G, U+5=Z, J+6=P। NOJB: N+3=Q, O+4=S, J+5=O, B+6=H।",
+   "trick": "अक्षरों में +3, +4, +5, +6 जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. DGD−ADA ILI−FIF",
+   "hi": "उस युग्म का चयन कीजिए जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। DGD−ADA ILI−FIF",
+   "opts": [
+    "ACY−XAX",
+    "ADA−XAX",
+    "ADA−WAW",
+    "ACY−WZW"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: DGD → ADA (D-3=A, G-3=D, D-3=A)। ILI → FIF (I-3=F, L-3=I, I-3=F)। ADA → XAX (A-3=X, D-3=A, A-3=X)।",
+   "trick": "प्रत्येक अक्षर में -3 करें।",
+   "ans": "B"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "In the following triad, each group of letters is related to the subsequent one following a certain logic. Select, from the given options, the one which follows the same logic. TREK - RTEK – KRTE MAPS - AMPS - SAMP",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क के अनुसार अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन कीजिए जो समान तर्क का अनुसरण करता है। TREK - RTEK - KRTE MAPS - AMPS - SAMP",
+   "opts": [
+    "SIDE - ISDE - IDES",
+    "WISE - IWSE - EIWS",
+    "MANY - AMNY - YANM",
+    "OPEN - OEPN - NEPO"
+   ],
+   "my_ans": "B",
+   "sol": "TREK → RTEK (पहला-दूसरा बदला) → KRTE (तीसरा-चौथा बदला)। WISE → IWSE → EIWS में यही पैटर्न है।",
+   "trick": "अक्षरों की अदला-बदली का पैटर्न देखें।",
+   "ans": "B"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "CZAZ is related to VSTS in a certain way based on the English alphabetical order. In the same way, EBCB is related to XUVU. To which of the following is GDED related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से CZAZ का संबंध VSTS से है। उसी प्रकार, EBCB का संबंध XUVU से है। समान तर्क का अनुसरण करते हुए, GDED का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "ZVWW",
+    "ZXWA",
+    "ZWXW",
+    "ZWWW"
+   ],
+   "my_ans": "C",
+   "sol": "पैटर्न: C-4=Y (V), Z-3=W, A-4=W, Z-3=W। E-4=A (X), B-3=U, C-4=V, B-3=U। GDED: G-4=C (Z), D-3=A (W), E-4=A (X), D-3=A (W)।",
+   "trick": "अक्षरों में -4, -3, -4, -3 का चक्र है।",
+   "ans": "C"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "WTQT is related to VSPS in a certain way based on the English alphabetical order. In the same way, ZWTW is related to YVSV. To which of the following is OLIL related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से WTQT का संबंध VSPS से है। उसी प्रकार, ZWTW का संबंध YVSV से है। समान तर्क का अनुसरण करते हुए, OLIL का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NKGK",
+    "NJGK",
+    "NLGO",
+    "NKHK"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: W-1=V, T-1=S, Q-1=P, T-1=S। Z-1=Y, W-1=V, T-1=S, W-1=V। OLIL: O-1=N, L-1=K, I-1=H, L-1=K।",
+   "trick": "प्रत्येक अक्षर में -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "Select the triad which follows the same pattern as that followed by the two triads given below. Both triads follow the same pattern. DF – HJ – LN GI – KM –OQ",
+   "hi": "उस त्रिक का चयन कीजिए जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। DF – HJ – LN GI – KM –OQ",
+   "opts": [
+    "AC – EG – IK",
+    "HI – MP – SU",
+    "ME – QK – XQ",
+    "EB – IG – NL"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: D+2=F, F+4=H, H+2=J, J+4=L, L+2=N। AC-EG-IK में: A+2=C, C+4=E, E+2=G, G+4=I, I+2=K।",
+   "trick": "+2, +4 का एकांतर क्रम है।",
+   "ans": "A"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "In the following triads, each group of letters is related to the subsequent one following a certain logic. Select from the given options, the one which follows the same logic. LIES - ILSE – LSIE , FROG - RFGO - FGRO",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क का अनुसरण करते हुए अगले समूह से संबंधित है। दिए गए विकल्पों में से उसका चयन करें, जो समान तर्क का अनुसरण करता हो। LIES - ILSE - LSIE FROG - RFGO - FGRO",
+   "opts": [
+    "SCAM - MSCA - AMSC",
+    "PALE - ALEP - LEPA",
+    "CUPS - UCSP - CSUP",
+    "LUCK - UCLK - CLUK"
+   ],
+   "my_ans": "C",
+   "sol": "पैटर्न: LIES → ILSE (1-2 बदले) → LSIE (2-3 बदले)। CUPS → UCSP → CSUP में यही पैटर्न है।",
+   "trick": "अक्षरों के स्थान बदलने का क्रम देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "In the following triad, each group of letters is related to the subsequent one following a certain logic. Select, from the given options, the one which follows the same logic. ROSE - RSEO – OSRE , JUGS - JGSU - UGJS",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क के अनुसार अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन कीजिए जो समान तर्क का अनुसरण करता है। ROSE - RSEO - OSRE JUGS - JGSU - UGJS",
+   "opts": [
+    "BOND - BNOD - DNOB",
+    "COLD - OCLD - OLDC",
+    "LADY - LDYA - ALYD",
+    "PING - PNGI - INPG"
+   ],
+   "my_ans": "D",
+   "sol": "पैटर्न: ROSE → RSEO (2-3 बदले) → OSRE (1-2 बदले)। PING → PNGI → INPG में यही पैटर्न है।",
+   "trick": "अक्षरों के स्थान बदलने का क्रम देखें।",
+   "ans": "D"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "LL 22 is related to JH 6 in a certain way. In the same way, CR 20 is related to AN 4. To which of the following is GN 14 related, following the same logic?",
+   "hi": "LL 22 का संबंध एक निश्चित तरीके से JH 6 से है। उसी प्रकार, CR 20 का संबंध AN 4 से है। समान तर्क का अनुसरण करते हुए, GN 14 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "EI −2",
+    "FI −4",
+    "EJ −2",
+    "FJ −4"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: L-4=H, L-4=H। संख्या: 22-16=6। CR → AN: C-2=A, R-4=N, 20-16=4। GN: G-2=E, N-4=J, 14-16=-2।",
+   "trick": "अक्षर में -2, -4 और संख्या में -16 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "LM 5 is related to NL -14 in a certain way. In the same way, JK 9 is related to LJ -10. To which of the following is UV 11 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से LM 5 का संबंध NL -14 से है। उसी प्रकार, JK 9 का संबंध LJ -10 से है। समान तर्क का अनुसरण करते हुए, UV 11 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "GT 3",
+    "YT -7",
+    "NJ 9",
+    "WU -8"
+   ],
+   "my_ans": "D",
+   "sol": "अक्षर: L+2=N, M-1=L। संख्या: 5-19=-14। JK → LJ: J+2=L, K-1=J, 9-19=-10। UV: U+2=W, V-1=U, 11-19=-8।",
+   "trick": "अक्षर में +2, -1 और संख्या में -19 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "KY 1 is related to MU 17 in a certain way. In the same way, FI 8 is related to HE 24. To which of the following is RF 3 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से KY 1 का संबंध MU 17 से है। उसी प्रकार, FI 8 का संबंध HE 24 से है। समान तर्क के आधार पर, RF 3 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "KL 5",
+    "YG 9",
+    "TB 19",
+    "KJ 7"
+   ],
+   "my_ans": "C",
+   "sol": "अक्षर: K+2=M, Y-4=U। संख्या: 1+16=17। FI → HE: F+2=H, I-4=E, 8+16=24। RF: R+2=T, F-4=B, 3+16=19।",
+   "trick": "अक्षर में +2, -4 और संख्या में +16 करें।",
+   "ans": "C"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Select the pair which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern. VUT−PON TSR−NML",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्मों के समान पैटर्न का अनुसरण करता है। नीचे दिए गए दोनों युग्म समान पैटर्न का अनुसरण करते हैं। VUT−PON TSR−NML",
+   "opts": [
+    "YXW−SRQ",
+    "YWU−RQP",
+    "YXW−RRP",
+    "YWU−SRQ"
+   ],
+   "my_ans": "A",
+   "sol": "पैटर्न: V-1=U, U-1=T, T-6=N, N+1=O, O-1=N। YXW → SRQ में यही पैटर्न है।",
+   "trick": "अक्षरों के बीच का अंतर देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "Select the triad that follows the same pattern as the one followed by the two triads given below. Both triads follow the same pattern. FA - HC – JL ID - KF - MO",
+   "hi": "उस त्रिक का चयन कीजिए, जो नीचे दिए गए दो त्रिकों के समान पैटर्न का अनुसरण करता है। दोनों त्रिक समान पैटर्न का अनुसरण करते हैं। FA - HC - JL ID - KF - MO",
+   "opts": [
+    "NH - OJ - QR",
+    "MH - OJ - QS",
+    "MH - OJ - QR",
+    "NH - OI - QR"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: F+2=H, A+2=C, H+2=J, C+9=L। ID → KF → MO में भी यही +2, +2, +9 का अंतर है।",
+   "trick": "अक्षरों में +2, +2, +9 का अंतर है।",
+   "ans": "B"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "SMAL is related to PIVF in a certain way based on the English alphabetical order. In the same way, GWGN is related to DSBH. To which of the following options is XKRV related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर, एक निश्चित तरीके से SMAL का संबंध PIVF से है। उसी तरीके से, GWGN का संबंध DSBH से है। समान तर्क का अनुसरण करते हुए, XKRV का संबंध निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "UPLO",
+    "UGMP",
+    "UMPG",
+    "UGPM"
+   ],
+   "my_ans": "B",
+   "sol": "पैटर्न: S-3=P, M-4=I, A+5=F, L-6=F। G-3=D, W-4=S, G+1=H, N-6=H। XKRV: X-3=U, K-4=G, R-5=M, V-6=P।",
+   "trick": "अक्षरों में -3, -4, -5, -6 का क्रम है।",
+   "ans": "B"
+  }
+ ]
+}

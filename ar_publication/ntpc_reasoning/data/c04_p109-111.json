@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Coding-Decoding",
+  "hi": "कोडिंग-डिकोडिंग",
+  "total": 128,
+  "gl": 64,
+  "ug": 64
+ },
+ "source_pages": "109-111",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘COLD’ is coded as ‘4928’ and ‘CLOG’ is coded as ‘7428’. What is the code for ‘D’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘COLD’ को ‘4928’ के रूप में कूटबद्ध किया जाता है और ‘CLOG’ को ‘7428’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘D’ का कूट क्या होगा?",
+   "opts": [
+    "2",
+    "9",
+    "4",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "COLD = 4928, CLOG = 7428. कॉमन अक्षर C, L, O हैं, जिनके कोड 4, 2, 8 हैं। बचा हुआ अक्षर D का कोड 9 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "B"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘DOLT’ is coded as ‘4963’ and ‘LOTS’ is coded as ‘6435’. What is the code for ‘S’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘DOLT’ को ‘4963’ के रूप में कूटबद्ध किया जाता है और ‘LOTS’ को ‘6435’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘S’ के लिए कूट क्या है?",
+   "opts": [
+    "5",
+    "4",
+    "6",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "DOLT = 4963, LOTS = 6435. कॉमन अक्षर L, O, T हैं, जिनके कोड 6, 4, 3 हैं। बचा हुआ अक्षर S का कोड 5 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘depth salad road’ is coded as ' ok oh wc' and ‘salad shirt rat’ is coded as ‘ut cu oh’. How is ‘salad’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, 'depth salad road' को 'ok oh wc' के रूप में और 'salad shirt rat' को 'ut cu oh' के रूप में कूटबद्ध किया जाता है। दी गई भाषा में 'salad' को किस रूप में कूटबद्ध किया जाएगा?",
+   "opts": [
+    "ut",
+    "oh",
+    "wc",
+    "ok"
+   ],
+   "my_ans": "B",
+   "sol": "दोनों वाक्यों में 'salad' कॉमन है। दोनों कोड्स में 'oh' कॉमन है। अतः salad = oh.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "B"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘FILM’ is coded as ‘6043’ and ‘LIME’ is coded as ‘7304’. What is the code for ‘E' in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘FILM’ को ‘6043’ के रूप में कूटबद्ध किया जाता है और ‘LIME’ को ‘7304’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘E’ के लिए कूट क्या है?",
+   "opts": [
+    "0",
+    "3",
+    "4",
+    "7"
+   ],
+   "my_ans": "D",
+   "sol": "FILM = 6043, LIME = 7304. कॉमन अक्षर L, I, M हैं, जिनके कोड 0, 4, 3 हैं। बचा हुआ अक्षर E का कोड 7 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘rest restores energy’ is coded as ‘rk fj mg’ and ‘positive energy attracts’ is coded as ‘tw es fj’. How is ‘energy’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘rest restores energy’ को ‘rk fj mg’ के रूप में कूटबद्ध किया जाता है और ‘positive energy attracts’ को ‘tw es fj’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘energy’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "mg",
+    "rk",
+    "fj",
+    "es"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में 'energy' कॉमन है। दोनों कोड्स में 'fj' कॉमन है। अतः energy = fj.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "C"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘stage pig add ’ is coded as ‘ yv se kk’ and ‘third add bee’ is coded as ‘se ec wm ’. How is ‘add’ coded in that language? (All codes are two-letter codes.)",
+   "hi": "किसी निश्चित कूट भाषा में, ‘stage pig add’ को ‘yv se kk’ के रूप में कूट किया जाता है और ‘third add bee’ को ‘se ec wm’ के रूप में कूट किया जाता है। तो उस भाषा में ‘add’ को कैसे कूट किया जाएगा? (सभी कूट दो अक्षरों वाले कूट हैं।)",
+   "opts": [
+    "ec",
+    "kk",
+    "yv",
+    "se"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों वाक्यों में 'add' कॉमन है। दोनों कोड्स में 'se' कॉमन है। अतः add = se.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "D"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘FISH’ is coded as ‘1963’ and ‘HITS’ is coded as ‘6983’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'FISH' को '1963' के रूप में कूटबद्ध किया जाता है और 'HITS' को '6983' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'T' के लिए कूट क्या होगा?",
+   "opts": [
+    "6",
+    "9",
+    "3",
+    "8"
+   ],
+   "my_ans": "D",
+   "sol": "FISH = 1963, HITS = 6983. कॉमन अक्षर H, I, S हैं, जिनके कोड 6, 9, 3 हैं। बचा हुआ अक्षर T का कोड 8 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘uncle steak gum’ is coded as 'xl wc iv' and ‘sir gum barn’ is coded as ‘wc mn ut’. How is ‘gum’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘uncle steak gum’ को ‘xl wc iv’ के रूप में और ‘sir gum barn’ को ‘wc mn ut’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘gum’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "wc",
+    "mn",
+    "xl",
+    "iv"
+   ],
+   "my_ans": "A",
+   "sol": "दोनों वाक्यों में 'gum' कॉमन है। दोनों कोड्स में 'wc' कॉमन है। अतः gum = wc.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘SOAP’ is coded as ‘5279’ and ‘ATOP’ is coded as ‘4527’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘SOAP’ को ‘5279’ के रूप में कूटबद्ध किया जाता है और ‘ATOP’ को ‘4527’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘T’ के लिए कूट क्या है?",
+   "opts": [
+    "2",
+    "7",
+    "5",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "SOAP = 5279, ATOP = 4527. कॉमन अक्षर A, O, P हैं, जिनके कोड 5, 2, 7 हैं। बचा हुआ अक्षर T का कोड 4 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘zebra peak blue’ is coded as 'sr dt tx' and ‘bee zebra chest’ is coded as ‘dt bm qb’. How is ‘zebra’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, 'zebra peak blue' को 'sr dt tx' के रूप में कूटबद्ध किया जाता है और 'bee zebra chest' को 'dt bm qb' के रूप में कूटबद्ध किया जाता है। दी गई भाषा में 'zebra' को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "sr",
+    "tx",
+    "bm",
+    "dt"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों वाक्यों में 'zebra' कॉमन है। दोनों कोड्स में 'dt' कॉमन है। अतः zebra = dt.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘rain calms storms’ is coded as ‘gl ot fr’ and ‘patience gently calms’ is coded as ‘ot mi zp’. How is ‘calms’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, 'rain calms storms' को 'gl ot fr' के रूप में कूटबद्ध किया जाता है और 'patience gently calms' को 'ot mi zp' के रूप में कूटबद्ध किया जाता है। दी गई भाषा में 'calms' को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "gl",
+    "zp",
+    "ot",
+    "fr"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में 'calms' कॉमन है। दोनों कोड्स में 'ot' कॉमन है। अतः calms = ot.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘DESK’ is coded as ‘2794’ and ‘KIDS’ is coded as ‘6924’. What is the code for ‘I’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'DESK' को '2794' के रूप में कूटबद्ध किया जाता है और 'KIDS' को '6924' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'I' का कूट क्या होगा?",
+   "opts": [
+    "9",
+    "6",
+    "4",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "DESK = 2794, KIDS = 6924. कॉमन अक्षर D, S, K हैं, जिनके कोड 2, 9, 4 हैं। बचा हुआ अक्षर I का कोड 6 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "B"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘MOPS’ is coded as ‘5863’ and ‘POEM’ is coded as ‘8765’. What is the code for ‘E’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘MOPS’ को ‘5863’ के रूप में कूटबद्ध किया जाता है और ‘POEM’ को ‘8765’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘E’ के लिए कूट क्या है?",
+   "opts": [
+    "5",
+    "6",
+    "8",
+    "7"
+   ],
+   "my_ans": "D",
+   "sol": "MOPS = 5863, POEM = 8765. कॉमन अक्षर M, O, P हैं, जिनके कोड 5, 8, 6 हैं। बचा हुआ अक्षर E का कोड 7 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘SAFE’ is coded as ‘3698’ and ‘FACE’ is coded as ‘5398’. What is the code for ‘S’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'SAFE' को '3698' के रूप में कूटबद्ध किया जाता है और 'FACE' को '5398' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘S’ का कूट क्या है?",
+   "opts": [
+    "9",
+    "3",
+    "8",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "SAFE = 3698, FACE = 5398. कॉमन अक्षर A, F, E हैं, जिनके कोड 3, 9, 8 हैं। बचा हुआ अक्षर S का कोड 6 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘CANE’ is coded as ‘5731’ and ‘RACE’ is coded as ‘7435’. What is the code for ‘R’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘CANE’ को ‘5731’ के रूप में कूटबद्ध किया जाता है और ‘RACE’ को ‘7435’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘R’ का कूट क्या होगा?",
+   "opts": [
+    "7",
+    "4",
+    "5",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "CANE = 5731, RACE = 7435. कॉमन अक्षर A, C, E हैं, जिनके कोड 5, 7, 3 हैं। बचा हुआ अक्षर R का कोड 4 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "B"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘NORM’ is coded as ‘7341’ and ‘ROME’ is coded as ‘3748’. What is the code for ‘E’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘NORM’ को ‘7341’ के रूप में कूटबद्ध किया जाता है और ‘ROME’ को ‘3748’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'E' का कूट क्या है?",
+   "opts": [
+    "7",
+    "4",
+    "3",
+    "8"
+   ],
+   "my_ans": "D",
+   "sol": "NORM = 7341, ROME = 3748. कॉमन अक्षर R, O, M हैं, जिनके कोड 7, 3, 4 हैं। बचा हुआ अक्षर E का कोड 8 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘queen chin steak’ is coded as ' kc eq rq' and ‘steak arch food’ is coded as ‘yg kc mz’. How is ‘steak’ coded in the given language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘queen chin steak’ को 'kc eq rq' के रूप में और ‘steak arch food’ को ‘yg kc mz’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘steak’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "rq",
+    "yg",
+    "eq",
+    "kc"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों वाक्यों में 'steak' कॉमन है। दोनों कोड्स में 'kc' कॉमन है। अतः steak = kc.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "D"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘PRIME’ is coded as ‘37862’ and ‘REMAP’ is coded as ‘87423’. What is the code for ‘A’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘PRIME’ को ‘37862’ के रूप में कूटबद्ध किया जाता है और ‘REMAP’ को ‘87423’ के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में ‘A’ के लिए कूट क्या है?",
+   "opts": [
+    "4",
+    "2",
+    "7",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "PRIME = 37862, REMAP = 87423. कॉमन अक्षर P, R, I, M, E हैं, जिनके कोड 3, 7, 8, 6, 2 हैं। A का कोड 4 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘hall menu peak’ is coded as ‘yy ae wp’ and ‘peak boat owner’ is coded as ‘mr yy sf’. How is ‘peak’ coded in that language?",
+   "hi": "एक निश्चित कूट भाषा में, ‘hall menu peak’ को ‘yy ae wp’ के रूप में और ‘peak boat owner’ को ‘mr yy sf’ के रूप में कूटबद्ध किया जाता है। दी गई भाषा में ‘peak’ को किस प्रकार कूटबद्ध किया जाएगा?",
+   "opts": [
+    "mr",
+    "ae",
+    "yy",
+    "wp"
+   ],
+   "my_ans": "C",
+   "sol": "दोनों वाक्यों में 'peak' कॉमन है। दोनों कोड्स में 'yy' कॉमन है। अतः peak = yy.",
+   "trick": "कॉमन शब्द ढूँढें।",
+   "ans": "C"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "In a certain code language, ‘VIBE’ is coded as ‘4395’ and ‘BITE’ is coded as ‘5914’. What is the code for ‘T’ in the given code language?",
+   "hi": "एक निश्चित कूट भाषा में, 'VIBE' को '4395' के रूप में कूटबद्ध किया जाता है और 'BITE' को '5914' के रूप में कूटबद्ध किया जाता है। दी गई कूट भाषा में 'T' का कूट क्या होगा?",
+   "opts": [
+    "1",
+    "9",
+    "4",
+    "5"
+   ],
+   "my_ans": "A",
+   "sol": "VIBE = 4395, BITE = 5914. कॉमन अक्षर B, I, E हैं, जिनके कोड 4, 9, 5 हैं। बचा हुआ अक्षर T का कोड 1 है।",
+   "trick": "कॉमन शब्दों और कोड्स की तुलना करें।",
+   "ans": "A"
+  }
+ ]
+}

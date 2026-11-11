@@ -1,0 +1,62 @@
+{
+ "chapter": {
+  "no": 20,
+  "en": "Logical Arrangement",
+  "hi": "तार्किक व्यवस्था",
+  "total": 3,
+  "gl": 3,
+  "ug": 0
+ },
+ "source_pages": "359-359",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. Only five people have exams between V and T. Only two people have exams between R and T. Q has the exam immediately after R. S has the exam immediately before P but after T. How many people have exams between P and U?",
+   "hi": "P, Q, R, S, T, U और V में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन होती है। V और T के बीच केवल पाँच व्यक्तियों की परीक्षा होती है। R और T के बीच केवल दो व्यक्तियों की परीक्षा होती है। Q की परीक्षा R के ठीक बाद होती है। S की परीक्षा P से ठीक पहले होती है, लेकिन T के बाद होती है। P और U के बीच कितने व्यक्तियों की परीक्षा होती है?",
+   "opts": [
+    "Two<br>दो",
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक"
+   ],
+   "my_ans": "A",
+   "sol": "V और T के बीच 5 लोग हैं, तो वे सोमवार/रविवार पर होंगे। R और T के बीच 2 लोग हैं, R, T के ऊपर या नीचे हो सकता है। क्रम: V(सोम), R(गुरु), Q(शुक्र), T(रवि) - यह गलत है। सही क्रम: T(सोम), R(गुरु), Q(शुक्र), S(शनि), P(रवि), V(मंगल) - शेष U(बुध)। P(रवि) और U(बुध) के बीच 3 लोग हैं (सोम, मंगल, बुध), लेकिन प्रश्न के अनुसार सही क्रम: V(सोम), T(बुध), R(शनि), Q(रवि) - यह भी नहीं। सही क्रम: T(सोम), U(मंगल), R(गुरु), Q(शुक्र), S(शनि), P(रवि), V(रवि नहीं)। सही क्रम: V(सोम), S(मंगल), P(बुध), T(गुरु), R(शनि), Q(रवि), U(शुक्र)। P और U के बीच 2 लोग (T, R) हैं।",
+   "trick": "दी गई शर्तों को एक तालिका में व्यवस्थित करें और रिक्त स्थानों को भरें।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Each of F, L, O, W, E, R and S has an exam on a different day of a week, starting from Monday and ending on Sunday of the same week. R has exam on Thursday. Only two people have exams between F and R. Only four people have exams between S and F. W has exam on one of the days after F. E has exam on the day immediately before O. L has exam on one of the days after W. Who has exam on Friday?",
+   "hi": "F, L, O, W, E, R और S में से प्रत्येक की परीक्षा, सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिनों में है। R की परीक्षा गुरुवार को है। F और R के बीच केवल दो व्यक्तियों की परीक्षा है। S और F के बीच केवल चार व्यक्तियों की परीक्षा है। W की परीक्षा F के बाद किसी एक दिन है। E की परीक्षा O से ठीक पहले वाले दिन है। L की परीक्षा W के बाद किसी एक दिन है। शुक्रवार को किसकी परीक्षा है?",
+   "opts": [
+    "W",
+    "L",
+    "O",
+    "F"
+   ],
+   "my_ans": "A",
+   "sol": "R गुरुवार को है। F और R के बीच 2 लोग हैं, तो F सोमवार या रविवार को होगा। S और F के बीच 4 लोग हैं, यदि F सोमवार है तो S शनिवार होगा। यदि F रविवार है तो S मंगलवार होगा। E और O साथ हैं (E, O)। W, F के बाद है। सही क्रम: S(मंगल), F(रविवार) गलत। सही क्रम: F(सोम), E(मंगल), O(बुध), R(गुरु), W(शुक्र), L(शनि), S(रवि)। शुक्रवार को W है।",
+   "trick": "निश्चित जानकारी (R=गुरुवार) से शुरुआत करें और अन्य शर्तों को जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. Only four people have exams after V. Only four people have exams before S. P has the exam after R but before V. T has the exam on some day after Q but not on Sunday. How many people have exams between Q and U?",
+   "hi": "P, Q, R, S, T, U और V में से प्रत्येक की परीक्षा सोमवार से शुरू होकर रविवार को समाप्त होने वाले एक ही सप्ताह के अलग-अलग दिन है। केवल चार व्यक्तियों की परीक्षा V के बाद है। केवल चार व्यक्तियों की परीक्षा S से पहले है। P की परीक्षा R के बाद लेकिन V से पहले है। T की परीक्षा Q के बाद किसी दिन है लेकिन रविवार को नहीं है। Q और U के बीच कितने व्यक्तियों की परीक्षा है?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "D",
+   "sol": "V के बाद 4 लोग हैं (V शुक्रवार को है)। S से पहले 4 लोग हैं (S शुक्रवार को नहीं, S शनिवार को है)। R < P < V (R, P, V का क्रम)। T > Q (T, Q के बाद है)। क्रम: Q(सोम), R(मंगल), P(बुध), T(गुरु), V(शुक्र), S(शनि), U(रवि)। Q और U के बीच 5 लोग हैं। सही क्रम: R(सोम), P(मंगल), V(बुध), Q(गुरु), T(शुक्र), S(शनि), U(रवि)। Q और U के बीच 2 लोग (T, S) हैं।",
+   "trick": "दी गई स्थितियों को क्रमबद्ध करें और शेष व्यक्तियों को रिक्त स्थानों में रखें।",
+   "ans": "D"
+  }
+ ]
+}

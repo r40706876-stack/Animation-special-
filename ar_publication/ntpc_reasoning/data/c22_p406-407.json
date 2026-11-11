@@ -1,0 +1,48 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Venn Diagram",
+  "hi": "वेन आरेख",
+  "total": 5,
+  "gl": 0,
+  "ug": 5
+ },
+ "source_pages": "406-407",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. The numbers in different sections indicate the number of persons in a room. How many such engineers are there who are also athletes but not teachers?",
+   "hi": "दिए गए चित्र का ध्यानपूर्वक अध्ययन करें और प्रश्न का उत्तर दें। विभिन्न खंडों में दी गई संख्याएँ कमरे में मौजूद व्यक्तियों की संख्या दर्शाती हैं। ऐसे कितने इंजीनियर हैं जो एथलीट तो हैं लेकिन शिक्षक नहीं हैं?",
+   "opts": [
+    "24",
+    "35",
+    "23",
+    "28"
+   ],
+   "my_ans": "A",
+   "sol": "हमें ऐसे इंजीनियर चाहिए जो एथलीट भी हों, लेकिन शिक्षक न हों। वेन आरेख में, इंजीनियर और एथलीट के उभयनिष्ठ भाग में '24' संख्या है जो शिक्षक वाले वृत्त से बाहर है।",
+   "trick": "वेन आरेख में वह हिस्सा चुनें जो इंजीनियर और एथलीट दोनों में हो, पर शिक्षक में न हो।",
+   "img": "figs/c22_q004.png",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. The numbers in different sections indicate the number of persons. How many such Consultants are there who are Bankers as well as Advocates?",
+   "hi": "निम्नांकित आरेख का ध्यानपूर्वक अध्ययन कीजिए और दिए गए प्रश्न का उत्तर दीजिए। विभिन्न खंडों में दी गई संख्याएँ, व्यक्तियों की संख्या को इंगित करती हैं। ऐसे कितने सलाहकार हैं, जो बैंकर होने के साथ-साथ वकील भी हैं?",
+   "opts": [
+    "17",
+    "25",
+    "11",
+    "32"
+   ],
+   "my_ans": "D",
+   "sol": "हमें ऐसे सलाहकार (Consultants) चाहिए जो बैंकर और वकील (Advocates) दोनों हों। यह वह क्षेत्र है जहाँ तीनों वृत्त एक-दूसरे को काटते हैं, जो कि '32' है।",
+   "trick": "तीनों वृत्तों के उभयनिष्ठ (common) भाग वाली संख्या ही उत्तर है।",
+   "img": "figs/c22_q005.png",
+   "ans": "D"
+  }
+ ]
+}

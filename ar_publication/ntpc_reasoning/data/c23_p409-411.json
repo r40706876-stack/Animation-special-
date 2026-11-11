@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Data Sufficiency",
+  "hi": "आँकड़ों की पर्याप्तता",
+  "total": 22,
+  "gl": 22,
+  "ug": 0
+ },
+ "source_pages": "409-411",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Five people – Pallavi, Shreya, Monika, Ritu, and Alka – are sitting in a straight line facing north. Who is sitting at the extreme left end?",
+   "hi": "पाँच व्यक्ति - पल्लवी, श्रेया, मोनिका, ऋतु और अलका - उत्तर दिशा की ओर अभिमुख होकर एक सीधी पंक्ति में बैठे हैं। बाएं छोर पर कौन बैठा है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)"
+   ],
+   "my_ans": "D",
+   "sol": "I: P-S. II: S-M, R is not at ends. Combining: P-S-M. Since R is not at ends, R must be between P, S, M or at the other end. With 5 people, we can determine the arrangement to find the left end.",
+   "trick": "सभी व्यक्तियों को पंक्ति में बैठाकर छोर की स्थिति ज्ञात करें।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Five people – Riya, Meena, Tanu, Sunita, and Kavita – are sitting in a row facing north. Who is sitting exactly in the middle of the row?",
+   "hi": "पाँच व्यक्ति – रिया, मीना, तनु, सुनीता और कविता – उत्तर दिशा की ओर अभिमुख होकर एक पंक्ति में बैठे हैं। पंक्ति के ठीक मध्य में कौन बैठा है?",
+   "opts": [
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)।",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "A",
+   "sol": "I: Meena-Tanu-Sunita. II: Riya is at end, Kavita is left of Riya. Combining: Riya-Kavita-Meena-Tanu-Sunita. Middle is Meena.",
+   "trick": "दोनों कथनों को मिलाकर बैठने का क्रम व्यवस्थित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Ritu, Seema, Tanya, Usha, and Varsha scored different marks. Who scored the highest marks?",
+   "hi": "ऋतु, सीमा, तान्या, उषा और वर्षा ने अलग-अलग अंक प्राप्त किए। सबसे अधिक अंक किसने प्राप्त किए?",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)"
+   ],
+   "my_ans": "D",
+   "sol": "I: Usha > Tanya > Ritu/Seema. II: Usha > Varsha > Tanya. Combining: Usha is the highest.",
+   "trick": "अंकों की तुलना करके क्रम (Order) बनाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the tallest?",
+   "hi": "5 वृक्षों L, M, N, T और V में से प्रत्येक की ऊंचाई भिन्न है। सबसे ऊंचा वृक्ष कौन-सा है?",
+   "opts": [
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>कथन I और II दोनों एक साथ (और अकेले कथन I नहीं या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों एक साथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है",
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त है जबकि कथन II में दिया गया डेटा प्रश्न का उत्तर देने के लिए पर्याप्त नहीं है"
+   ],
+   "my_ans": "B",
+   "sol": "I: T > M > L. II: N > L > V. Combining: T > M > L > V and N > L > V. We don't know the relation between N and T/M.",
+   "trick": "सभी का तुलनात्मक क्रम बनाने का प्रयास करें।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Rahul, Aman, Karan, Nikhil, and Varun each have different height. Who is the second tallest?",
+   "hi": "राहुल, अमन, करण, निखिल और वरुण में से प्रत्येक की लंबाई अलग-अलग है। इनमें से दूसरा सबसे लंबा कौन है?",
+   "opts": [
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं"
+   ],
+   "my_ans": "A",
+   "sol": "I: Nikhil > Karan > Rahul/Aman. II: Nikhil > Varun > Karan. Combining: Nikhil > Varun > Karan > Rahul/Aman. Second tallest is Varun.",
+   "trick": "लंबाई का घटता क्रम (Descending order) लिखें।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the tallest?",
+   "hi": "5 वृक्षों - L, M, N, T और V में से प्रत्येक की लंबाई अलग-अलग है, तो कौन-सा वृक्ष सबसे लंबा है?",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से (अकेले कथन I या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।"
+   ],
+   "my_ans": "A",
+   "sol": "I: N > M > V. M is shorter than only one tree, so N is the tallest. Statement I alone is sufficient.",
+   "trick": "कथन I में ही 'केवल एक वृक्ष से छोटा' जानकारी से सबसे लंबा मिल जाता है।",
+   "ans": "A"
+  }
+ ]
+}

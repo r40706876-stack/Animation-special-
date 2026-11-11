@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "367-369",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. You have to decide which conclusion/s logically follow/s from the given statements. Statements: All vultures are sparrows. Some sparrows are crows. No crow is a pigeon. Conclusions: (I) Some vultures are crows. (II) No sparrow is a pigeon.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी गिद्ध, गौरैया हैं। कुछ गौरैया, कौवा हैं। कोई भी कौवा, कबूतर नहीं है। निष्कर्ष: (I) कुछ गिद्ध, कौवा हैं। (II) कोई भी गौरैया, कबूतर नहीं है।",
+   "opts": [
+    "Only conclusion I follows.<br>केवल निष्कर्ष I अनुसरण करता है।",
+    "Only conclusion II follows.<br>केवल निष्कर्ष II अनुसरण करता है।",
+    "Neither conclusion I nor II follows.<br>न तो निष्कर्ष I और न ही II अनुसरण करता है।",
+    "Both conclusions I and II follow.<br>निष्कर्ष I और II, दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "C",
+   "sol": "गिद्ध और कौवा के बीच कोई सीधा संबंध नहीं है। गौरैया और कबूतर के बीच भी कोई सीधा संबंध नहीं है, इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "सीधा संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: Some towns are districts. No district is a state. No state is a city. Conclusions: (I) No town is a state. (II) No district is a city.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: कुछ कस्बे, जिले हैं। कोई भी जिला, राज्य नहीं है। कोई भी राज्य, शहर नहीं है। निष्कर्ष: (I) कोई भी कस्बा, राज्य नहीं है। (II) कोई भी जिला, शहर नहीं है।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।"
+   ],
+   "my_ans": "A",
+   "sol": "कस्बे और राज्य के बीच कोई सीधा संबंध नहीं है। जिला और शहर के बीच भी कोई सीधा संबंध नहीं है, इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "कथन में संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: All heaters are fans. Some heaters are lights. No heater is a bulb. Conclusions: Some fans are lights. (II) No bulb is a heater.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। कथनों में दी गई जानकारी को सत्य मानते हुए, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-सा/से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करता/करते है/हैं। कथन: सभी हीटर, फैन हैं। कुछ हीटर, लाइट हैं। कोई भी हीटर, बल्ब नहीं है। निष्कर्ष: (I) कुछ फैन, लाइट हैं। (II) कोई भी बल्ब, हीटर नहीं है।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "सभी हीटर फैन हैं और कुछ हीटर लाइट हैं, इसलिए कुछ फैन लाइट हैं (I सही)। कोई भी हीटर बल्ब नहीं है, तो कोई भी बल्ब हीटर नहीं है (II सही)।",
+   "trick": "कथन का उल्टा संबंध भी सत्य होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: Some hens are turkeys. Some hens are ostriches. Some turkeys are eagles. Conclusions: (I) Some hens are eagles. (II) Some turkeys are ostriches.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ मुर्गी, टर्की हैं। कुछ मुर्गी, शुतुरमुर्ग हैं। कुछ टर्की, चील हैं। निष्कर्ष: (I) कुछ मुर्गी, चील हैं। (II) कुछ टर्की, शुतुरमुर्ग हैं।",
+   "opts": [
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "मुर्गी और चील के बीच कोई सीधा संबंध नहीं है। टर्की और शुतुरमुर्ग के बीच भी कोई सीधा संबंध नहीं है, इसलिए दोनों निष्कर्ष गलत हैं।",
+   "trick": "सीधा संबंध न होने पर निष्कर्ष गलत होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statement. Statements: All liquid is water. All water is juice. Some juices are syrup. Conclusions: (I) All liquid is juice. (II) Some syrups are liquid.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी द्रव, जल है। सभी जल, रस है। कुछ रस, सिरप हैं। निष्कर्ष: (I) सभी द्रव, रस हैं। (II) कुछ सिरप, द्रव हैं।",
+   "opts": [
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।"
+   ],
+   "my_ans": "B",
+   "sol": "सभी द्रव जल हैं और सभी जल रस हैं, इसलिए सभी द्रव रस हैं (I सही)। सिरप और द्रव के बीच कोई सीधा संबंध नहीं है (II गलत)।",
+   "trick": "सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusion(s) logically follow(s) from the statements. Statements: All phones are mobiles. No mobile is a pager. No mobile is a walkie-talkie. Conclusions: (I) No phone is a pager. (II) Some walkie-talkies are pagers.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यान से पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत होती हो, तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी फोन, मोबाइल हैं। कोई भी मोबाइल, पेजर नहीं है। कोई भी मोबाइल, वॉकी-टॉकी नहीं है। निष्कर्ष: (I) कोई भी फोन, पेजर नहीं है। (II) कुछ वॉकी-टॉकी, पेजर हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow.<br>निष्कर्ष (I) और (II), दोनों अनुसरण करते हैं।",
+    "Only conclusion (II) follows.<br>केवल निष्कर्ष (II) अनुसरण करता है।",
+    "Neither conclusion (I) nor (II) follows.<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है।",
+    "Only conclusion (I) follows.<br>केवल निष्कर्ष (I) अनुसरण करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "सभी फोन मोबाइल हैं और कोई मोबाइल पेजर नहीं है, इसलिए कोई फोन पेजर नहीं है (I सही)। वॉकी-टॉकी और पेजर के बीच कोई संबंध नहीं दिया गया है (II गलत)।",
+   "trick": "सभी A, B हैं और कोई B, C नहीं है, तो कोई A, C नहीं है।",
+   "ans": "D"
+  }
+ ]
+}

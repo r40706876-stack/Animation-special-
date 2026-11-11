@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Data Sufficiency",
+  "hi": "आँकड़ों की पर्याप्तता",
+  "total": 22,
+  "gl": 22,
+  "ug": 0
+ },
+ "source_pages": "412-414",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Anita, Bhavna, Charu, Deepa, and Esha, each scored different marks. Who scored the lowest marks? (I) Bhavna scored more than Anita but less than Charu. (II) Deepa scored more than Anita but less than Bhavna.",
+   "hi": "अनीता, भावना, चारू, दीपा और ईशा में से प्रत्येक के अंक अलग-अलग हैं। सबसे कम अंक किसके हैं? (I) भावना के अंक अनीता से अधिक लेकिन चारू से कम हैं। (II) दीपा के अंक अनीता से अधिक लेकिन भावना से कम हैं।",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)"
+   ],
+   "my_ans": "C",
+   "sol": "I: Charu > Bhavna > Anita. II: Bhavna > Deepa > Anita.<br>दोनों से पता चलता है कि अनीता सबसे कम हो सकती है, लेकिन ईशा के बारे में कोई जानकारी नहीं है।",
+   "trick": "सभी व्यक्तियों का स्थान स्पष्ट न हो तो उत्तर नहीं दिया जा सकता।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Five students – Alok, Bharti, Celine, Darpan, and Ema – obtained different marks in an examination. Who scored the third highest marks? (I) Darpan scored more than Alok and Bharti but less than Celine. (II) Ema scored more than Darpan but less than Celine.",
+   "hi": "पाँच विद्यार्थियों - आलोक, भारती, सेलीन, दर्पण और एमा - ने एक परीक्षा में अलग-अलग अंक प्राप्त किए। तीसरा सबसे अधिक अंक किसने प्राप्त किया? (I) दर्पण ने आलोक और भारती से अधिक लेकिन सेलीन से कम अंक प्राप्त किए। (II) एमा ने दर्पण से अधिक लेकिन सेलीन से कम अंक प्राप्त किए।",
+   "opts": [
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं"
+   ],
+   "my_ans": "A",
+   "sol": "I: Celine > Darpan > (Alok, Bharti). II: Celine > Ema > Darpan.<br>दोनों को मिलाने पर: Celine > Ema > Darpan > (Alok, Bharti)। तीसरा स्थान दर्पण का है।",
+   "trick": "क्रम व्यवस्थित करने पर ही सही स्थान का पता चलता है।",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Five students – Isha, Kavita, Meenal, Nisha, and Priti – scored different marks. Who scored the second highest? (I) Meenal scored more than Isha but less than Nisha (II) Priti scored more than Meenal but less than Nisha.",
+   "hi": "पाँच छात्राओं - ईशा, कविता, मीनल, निशा और प्रीति - ने अलग-अलग अंक प्राप्त किए। दूसरा सबसे अधिक अंक किसने प्राप्त किया? (I) मीनल ने ईशा से अधिक लेकिन निशा से कम अंक प्राप्त किए। (II) प्रीति ने मीनल से अधिक लेकिन निशा से कम अंक प्राप्त किए।",
+   "opts": [
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं"
+   ],
+   "my_ans": "D",
+   "sol": "I: Nisha > Meenal > Isha. II: Nisha > Priti > Meenal.<br>दोनों से: Nisha > (Priti, Meenal) > Isha. कविता का स्थान अज्ञात है, इसलिए दूसरा स्थान निश्चित नहीं है।",
+   "trick": "यदि किसी एक व्यक्ति का स्थान अज्ञात हो, तो उत्तर नहीं दिया जा सकता।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Among 5 trees, L, M, N, T and V each having a different height, which tree is the shortest? (I) V is shorter than N but taller than T. M is taller than T. (II) L is taller than only one tree.",
+   "hi": "5 वृक्षों L, M, N, T और V में से प्रत्येक की लंबाई अलग-अलग है, कौन-सा वृक्ष सबसे छोटा है? (I) V, N से छोटा है लेकिन T से लंबा है। M, T से लंबा है। (II) L केवल एक वृक्ष से लंबा है।",
+   "opts": [
+    "Both statements I and II together are NOT sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से (अकेले कथन I या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं",
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है"
+   ],
+   "my_ans": "B",
+   "sol": "I: N > V > T, M > T. II: L > (केवल एक)।<br>दोनों से: N, M, V, L, T का क्रम बनता है, जहाँ T सबसे छोटा है।",
+   "trick": "सभी का तुलनात्मक क्रम बनाने पर ही सबसे छोटा ज्ञात होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Anuj, Bhavesh, Chirag, Darshan, and Eklavya - each have different height. Who is the tallest? (I) Chirag is taller than Anuj and Bhavesh but shorter than Darshan. (II) Eklavya is taller than Chirag but shorter than Darshan.",
+   "hi": "अनुज, भावेश, चिराग, दर्शन और एकलव्य - की लंबाई अलग-अलग है। इनमें से सबसे लंबा कौन है? (I) चिराग की लंबाई अनुज और भावेश से अधिक है, लेकिन दर्शन से कम है। (II) एकलव्य, चिराग से लंबा है, लेकिन दर्शन से छोटा है।",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है"
+   ],
+   "my_ans": "B",
+   "sol": "I: Darshan > Chirag > (Anuj, Bhavesh). II: Darshan > Eklavya > Chirag.<br>दोनों से: Darshan > Eklavya > Chirag > (Anuj, Bhavesh)। सबसे लंबा दर्शन है।",
+   "trick": "सभी को एक क्रम में रखने पर ही सबसे लंबा व्यक्ति मिलता है।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Five parcels – Alpha, Bravo, Cargo, Delta, and Echo – have different weights. Which parcel is the lightest? (I) Bravo is heavier than Alpha but lighter than Cargo. (II) Delta is heavier than Bravo but lighter than Echo.",
+   "hi": "पाँच पार्सल – अल्फा, ब्रावो, कार्गो, डेल्टा और इको – का वजन अलग-अलग है। इनमें से सबसे हल्का पार्सल कौन-सा है? (I) ब्रावो, अल्फा से भारी है लेकिन कार्गो से हल्का है। (II) डेल्टा, ब्रावो से भारी है लेकिन इको से हल्का है।",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in Statement I is not<br>कथन II में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together are NOT sufficient to answer the question<br>कथन I और II दोनों मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं",
+    "Data in Statement I alone is sufficient to answer the question while data in Statement II is not<br>कथन I में दी गई जानकारी ही प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question<br>प्रश्न का उत्तर देने के लिए कथन I और II दोनों एक साथ पर्याप्त हैं (केवल कथन I या केवल कथन II नहीं)"
+   ],
+   "my_ans": "D",
+   "sol": "I: Cargo > Bravo > Alpha. II: Echo > Delta > Bravo.<br>दोनों से: Echo > Delta > Bravo > Alpha. सबसे हल्का अल्फा है।",
+   "trick": "सभी का वजन क्रमबद्ध करने पर सबसे हल्का पार्सल पता चलता है।",
+   "ans": "D"
+  }
+ ]
+}

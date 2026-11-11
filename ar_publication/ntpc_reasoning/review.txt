@@ -1,0 +1,8 @@
+pages [291, 292, 293] chapter 16 Q.10: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c16_q010.png)
+pages [294, 295, 296] chapter 16 Q.19: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c16_q019.png)
+pages [312, 313, 314] chapter 16 Q.101: options 4 nahi aaye
+pages [403, 404, 405] chapter 22 Q.1: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c22_q001.png)
+pages [403, 404, 405] chapter 22 Q.2: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c22_q002.png)
+pages [403, 404, 405] chapter 22 Q.3: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c22_q003.png)
+pages [406, 407] chapter 22 Q.4: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c22_q004.png)
+pages [406, 407] chapter 22 Q.5: chitra (figure) wala sawaal - image ek baar dekh lena (figs/c22_q005.png)

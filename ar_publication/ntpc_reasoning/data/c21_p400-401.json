@@ -1,0 +1,94 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Syllogism",
+  "hi": "न्याय निगमन",
+  "total": 104,
+  "gl": 47,
+  "ug": 57
+ },
+ "source_pages": "400-401",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All eggs are squares. Some crows are eggs. Conclusion (I): Some squares are crows. (II): All eggs are crows.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं? कथन: सभी अंडे, वर्ग हैं। कुछ कौवे, अंडे हैं। निष्कर्ष (I): कुछ वर्ग, कौवे हैं। निष्कर्ष (II): सभी अंडे, कौवे हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "सभी अंडे वर्ग हैं और कुछ कौवे अंडे हैं, इसलिए कुछ वर्ग निश्चित रूप से कौवे हैं।<br>सभी अंडे कौवे हैं, यह निश्चित नहीं है।",
+   "trick": "वेन आरेख बनाकर देखें कि कौन सा निष्कर्ष निश्चित रूप से सही है।",
+   "ans": "C"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statement: All Eagles are Seagulls. Some Seagulls are Peacocks. Conclusion (I): Some Eagles are Peacocks. Conclusion (II): No Peacocks are Eagles.",
+   "hi": "दिए गए कथनों और निष्कर्षों का ध्यानपूर्वक अध्ययन कीजिए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी चील, समुद्री चिड़िया हैं। कुछ समुद्री चिड़िया, मोर हैं। निष्कर्ष (I): कुछ चील, मोर हैं। निष्कर्ष (II): कोई भी मोर, चील नहीं है।",
+   "opts": [
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है"
+   ],
+   "my_ans": "D",
+   "sol": "चील और मोर के बीच कोई सीधा संबंध नहीं है, इसलिए दोनों निष्कर्ष अनिश्चित हैं।",
+   "trick": "जब दो समूहों के बीच कोई सीधा संबंध न हो, तो उनके बारे में कोई निश्चित निष्कर्ष नहीं निकलता।",
+   "ans": "D"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statements: Some engineers are designers. All designers are creators. Conclusions: (I) All creators are engineers. (II) Some engineers are creators.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़िए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत होते हो, यह निर्णय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: कुछ इंजीनियर, डिज़ाइनर हैं। सभी डिज़ाइनर, निर्माता हैं। निष्कर्ष: (I) सभी निर्माता, इंजीनियर हैं। (II) कुछ इंजीनियर, निर्माता हैं।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "कुछ इंजीनियर डिज़ाइनर हैं और सभी डिज़ाइनर निर्माता हैं, इसलिए कुछ इंजीनियर निश्चित रूप से निर्माता हैं।",
+   "trick": "कथन के अनुसार 'कुछ' का संबंध 'सभी' के माध्यम से जुड़ रहा है।",
+   "ans": "B"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements. Statement: All Cobalt is Silver. No Silver is Vanadium. Conclusion I: No Vanadium is Cobalt. Some Vanadium is Cobalt.",
+   "hi": "दिए गए कथनों और निष्कर्षों का ध्यानपूर्वक अध्ययन कीजिए। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही यह सामान्यतः ज्ञात तथ्यों से भिन्न प्रतीत हो, तय कीजिए कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी कोबाल्ट, चांदी है। कोई चांदी, वैनेडियम नहीं है। निष्कर्ष 1: कोई वैनेडियम, कोबाल्ट नहीं है। निष्कर्ष 2: कुछ वैनेडियम, कोबाल्ट है।",
+   "opts": [
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "B",
+   "sol": "चूंकि सभी कोबाल्ट चांदी हैं और कोई चांदी वैनेडियम नहीं है, इसलिए कोई भी कोबाल्ट वैनेडियम नहीं हो सकता।",
+   "trick": "यदि A, B के अंदर है और B का C से कोई संबंध नहीं है, तो A का भी C से कोई संबंध नहीं होगा।",
+   "ans": "B"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "Read the given statement(s) and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement(s). Statements: All bats are chicks. All bats are mats. Conclusions: (I) Some chicks are mats. (II) All mats are bats.",
+   "hi": "दिए गए कथनों और निष्कर्षों को ध्यानपूर्वक पढ़ें। यह मानते हुए कि कथनों में दी गई जानकारी सत्य है, भले ही वह सामान्य रूप से ज्ञात तथ्यों से भिन्न प्रतीत हो, यह तय करें कि दिए गए निष्कर्षों में से कौन-से निष्कर्ष, कथनों का तार्किक रूप से अनुसरण करते हैं। कथन: सभी चमगादड़, चूजे हैं। सभी चमगादड़, चटाई हैं। निष्कर्ष: (I) कुछ चूजे, चटाई हैं। (II) सभी चटाई, चमगादड़ हैं।",
+   "opts": [
+    "Neither conclusion (I) nor (II) follows<br>न तो निष्कर्ष (I) और न ही (II) अनुसरण करता है",
+    "Both conclusions (I) and (II) follow<br>निष्कर्ष (I) और (II) दोनों अनुसरण करते हैं",
+    "Only conclusion (I) follows<br>केवल निष्कर्ष (I) अनुसरण करता है",
+    "Only conclusion (II) follows<br>केवल निष्कर्ष (II) अनुसरण करता है"
+   ],
+   "my_ans": "C",
+   "sol": "चूंकि सभी चमगादड़ चूजे हैं और सभी चमगादड़ चटाई हैं, इसलिए कुछ चूजे निश्चित रूप से चटाई हैं।",
+   "trick": "दो 'सभी' वाले कथनों में उभयनिष्ठ (common) पद से 'कुछ' वाला निष्कर्ष निकलता है।",
+   "ans": "C"
+  }
+ ]
+}

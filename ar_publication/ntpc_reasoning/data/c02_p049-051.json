@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Number Analogy",
+  "hi": "संख्या सादृश्यता",
+  "total": 92,
+  "gl": 60,
+  "ug": 32
+ },
+ "source_pages": "49-51",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "12 is related to 66 following a certain logic. Following the same logic, 24 is related to 276. To which of the following is 10 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार 12 का संबंध 66 से है। उसी तर्क के अनुसार, 24 का संबंध 276 से है। समान तर्क का अनुसरण करते हुए, 10 का संबंध दिए गए विकल्पों में किससे है?",
+   "opts": [
+    "110",
+    "55",
+    "45",
+    "90"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: (संख्या × (संख्या/2 + 1))<br>12 × (6+1) = 12 × 7 = 84 (नहीं), सही तर्क: 12 × 5.5 = 66, 24 × 11.5 = 276.<br>यहाँ तर्क है: (x × 5) + (x/2) = 10 × 5 + 5 = 55 (नहीं), सही तर्क: 12 × 6 - 6 = 66, 24 × 12 - 12 = 276, 10 × 5 - 5 = 45.",
+   "trick": "संख्या × (संख्या/2) - (संख्या/2)",
+   "ans": "C"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "17 is related to 68 following a certain logic. Following the same logic, 24 is related to 96. To which of the following is 21 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 17 का संबंध 68 से है। समान तर्क का अनुसरण करते हुए, 24 का संबंध 96 से है। समान तर्क का अनुसरण करते हुए, 21 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "77",
+    "72",
+    "89",
+    "84"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: पहली संख्या × 4 = दूसरी संख्या<br>17 × 4 = 68<br>24 × 4 = 96<br>21 × 4 = 84.",
+   "trick": "संख्या × 4",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "48 is related to 192 following a certain logic. Following the same logic, 52 is related to 208. To which of the following is 61 related, following the same logic?",
+   "hi": "एक निश्चित तर्क का अनुसरण करते हुए, 48 का संबंध 192 से है। उसी तर्क का अनुसरण करते हुए, 52 का संबंध 208 से है। समान तर्क का अनुसरण करने पर, 61 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "244",
+    "264",
+    "254",
+    "234"
+   ],
+   "my_ans": "A",
+   "sol": "तर्क: पहली संख्या × 4 = दूसरी संख्या<br>48 × 4 = 192<br>52 × 4 = 208<br>61 × 4 = 244.",
+   "trick": "संख्या × 4",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "In the following number-pairs, the second number is obtained by applying certain mathematical operations to the first number. Select the set in which the numbers are related in the same way as are the numbers of the following sets. 15, 29; 32, 63",
+   "hi": "निम्नलिखित संख्या-युग्मों में, पहली संख्या पर कुछ गणितीय संक्रियाएं लागू करके दूसरी संख्या प्राप्त की जाती है। उस समुच्चय का चयन कीजिए, जिसमें संख्याएं उसी प्रकार संबंधित हों, जिस प्रकार निम्नलिखित समुच्चयों की संख्याएं संबंधित हैं। 15, 29; 32, 63",
+   "opts": [
+    "17, 33",
+    "14, 44",
+    "23, 49",
+    "11, 34"
+   ],
+   "my_ans": "A",
+   "sol": "तर्क: (पहली संख्या × 2) - 1 = दूसरी संख्या<br>15 × 2 - 1 = 29<br>32 × 2 - 1 = 63<br>17 × 2 - 1 = 33.",
+   "trick": "(संख्या × 2) - 1",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "In the following number-pairs, the second number is obtained by applying certain mathematical operations to the first number. Select the set in which the numbers are related in the same way as are the numbers of the following sets. (17, 67), (22, 87)",
+   "hi": "निम्नलिखित संख्या-युग्मों में, पहली संख्या पर निश्चित गणितीय संक्रियाएं करके दूसरी संख्या प्राप्त होती है। उस सेट का चयन कीजिए जिसमें संख्याएं उसी प्रकार संबंधित हैं जिस प्रकार निम्नलिखित सेटों की संख्याएं संबंधित हैं। (17, 67), (22, 87)",
+   "opts": [
+    "24, 98",
+    "25, 98",
+    "25, 99",
+    "24, 99"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: (पहली संख्या × 4) - 1 = दूसरी संख्या<br>17 × 4 - 1 = 67<br>22 × 4 - 1 = 87<br>25 × 4 - 1 = 99.",
+   "trick": "(संख्या × 4) - 1",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Select the set in which the numbers are related in the same way as are the numbers of the following sets. (19, 24, 7), (12, 14, 5)",
+   "hi": "उस सेट का चयन कीजिए, जिसमें संख्याएं उसी प्रकार से संबंधित हैं जिस प्रकार निम्नलिखित सेटों की संख्याएं संबंधित हैं। (19, 24, 7), (12, 14, 5)",
+   "opts": [
+    "(12, 5, 3)",
+    "(12, 5, 4)",
+    "(3, 4, 1)",
+    "(7, 5, 3)"
+   ],
+   "my_ans": "C",
+   "sol": "तर्क: (पहली संख्या - तीसरी संख्या) × 2 = दूसरी संख्या<br>(19 - 7) × 2 = 24<br>(12 - 5) × 2 = 14<br>(3 - 1) × 2 = 4.",
+   "trick": "(पहली - तीसरी) × 2 = दूसरी",
+   "ans": "C"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "In the following number-pairs, the second number is obtained by applying certain mathematical operations to the first number. Select the set in which the numbers are related in the same way as are the numbers of the following sets. 16, 62; 21, 82",
+   "hi": "निम्नलिखित संख्या-युग्मों में, पहली संख्या पर निश्चित गणितीय संक्रियाएं करके दूसरी संख्या प्राप्त होती है। उस सेट का चयन कीजिए, जिसमें संख्याएं उसी प्रकार संबंधित हैं जिस प्रकार निम्नलिखित सेटों की संख्याएं संबंधित हैं। 16, 62; 21, 82",
+   "opts": [
+    "23, 95",
+    "24, 94",
+    "24, 95",
+    "23, 94"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: (पहली संख्या × 4) - 2 = दूसरी संख्या<br>16 × 4 - 2 = 62<br>21 × 4 - 2 = 82<br>24 × 4 - 2 = 94.",
+   "trick": "(संख्या × 4) - 2",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "48 is related to 192 following a certain logic. Following the same logic, 52 is related to 208. To which of the following is 61 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 48 का संबंध 192 से है। समान तर्क का अनुसरण करते हुए, 52 का संबंध 208 से है। समान तर्क का अनुसरण करते हुए, 61 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "264",
+    "244",
+    "254",
+    "234"
+   ],
+   "my_ans": "B",
+   "sol": "तर्क: पहली संख्या × 4 = दूसरी संख्या<br>48 × 4 = 192<br>52 × 4 = 208<br>61 × 4 = 244.",
+   "trick": "संख्या × 4",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "22 is related to 60 following a certain logic. Following the same logic, 27 is related to 75. To which of the following is 33 related, following the same logic?",
+   "hi": "एक निश्चित तर्क के अनुसार, 22 का संबंध 60 से है। समान तर्क का अनुसरण करते हुए, 27 का संबंध 75 से है। समान तर्क का अनुसरण करते हुए, 33 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "97",
+    "103",
+    "86",
+    "93"
+   ],
+   "my_ans": "D",
+   "sol": "तर्क: (संख्या × 3) - 6 = दूसरी संख्या<br>22 × 3 - 6 = 60<br>27 × 3 - 6 = 75<br>33 × 3 - 6 = 93.",
+   "trick": "(संख्या × 3) - 6",
+   "ans": "D"
+  }
+ ]
+}

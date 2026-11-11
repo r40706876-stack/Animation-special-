@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Analogy",
+  "hi": "सादृश्यता",
+  "total": 155,
+  "gl": 60,
+  "ug": 95
+ },
+ "source_pages": "5-7",
+ "model": "gemini-3.5-flash",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "KD 15 is related to PI 12 in a certain way. In the same way, NG 20 is related to SL 17. To which of the following is QJ 26 related, following the same logic?",
+   "hi": "एक निश्चित तरीके से KD 15 का संबंध PI 12 से है। उसी प्रकार, NG 20 का संबंध SL 17 से है। उसी तर्क का अनुसरण करते हुए, QJ 26 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "UO 24",
+    "VO 23",
+    "VM 23",
+    "VN 24"
+   ],
+   "my_ans": "B",
+   "sol": "K(+5)=P, D(+5)=I, 15(-3)=12<br>N(+5)=S, G(+5)=L, 20(-3)=17<br>Q(+5)=V, J(+5)=O, 26(-3)=23 → VO 23",
+   "trick": "अक्षरों में +5 और संख्या में -3 का पैटर्न है।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : KUC :: VFN : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : KUC :: VFN : %",
+   "opts": [
+    "# = DNV % = CNU",
+    "# = DNV % = CMU",
+    "# = DNV % = CMP",
+    "# = DUV % = CMU"
+   ],
+   "my_ans": "B",
+   "sol": "# = DNV लेने पर:<br>D(+7)=K, N(+7)=U, V(+7)=C<br>V(+7)=C, F(+7)=M, N(+7)=U (% = CMU)<br>दोनों ओर +7 का पैटर्न है।",
+   "trick": "प्रत्येक अक्षर में +7 जोड़ने पर उत्तर मिलता है।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Select the triad which follows the same pattern as that followed by the two pairs given below. Both pairs follow the same pattern.\nCLUB - CUBL - ULCB\nHANG - HNGA - NAHG",
+   "hi": "उस त्रिक का चयन करें, जो नीचे दिए गए दो युग्मों द्वारा अनुसरित किए गए पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं।\nCLUB - CUBL - ULCB\nHANG - HNGA - NAHG",
+   "opts": [
+    "MASK - MSKA - SAMK",
+    "EARN - ARNE - ENRA",
+    "NEST - ETNS - TNSE",
+    "BALD - DLAB - LADB"
+   ],
+   "my_ans": "A",
+   "sol": "CLUB (1 2 3 4) → CUBL (1 3 2 4) → ULCB (3 2 1 4)<br>MASK → MSKA (1 3 2 4) → SAMK (3 2 1 4)",
+   "trick": "अक्षरों के स्थान परिवर्तन (1,3,2,4 और 3,2,1,4) का पैटर्न देखें।",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "MELD is related to QHHA in a certain way based on the English alphabetical order. In the same way, UKDX is related to YNZU. To which of the following is CQVR related to, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला के क्रम के आधार पर एक निश्चित तरीके से MELD का संबंध QHHA से है। उसी प्रकार, UKDX का संबंध YNZU से है। समान तर्क का अनुसरण करते हुए, CQVR का संबंध निम्न में से किससे है?",
+   "opts": [
+    "HTSO",
+    "GTRO",
+    "FUSN",
+    "HSQP"
+   ],
+   "my_ans": "B",
+   "sol": "M(+4)=Q, E(+3)=H, L(-4)=H, D(-3)=A<br>C(+4)=G, Q(+3)=T, V(-4)=R, R(-3)=O → GTRO",
+   "trick": "+4, +3, -4, -3 का पैटर्न लागू करें।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "LINO is related to PKRQ in a certain way based on the English alphabetical order. In the same way, BQDW is related to FSHY. To which of the following options is NWPC related to, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम पर आधारित, LINO का संबंध किसी निश्चित तरीके से PKRQ से है। इसी प्रकार, BQDW का संबंध FSHY से है। इसी तर्क के आधार पर, NWPC का संबंध, निम्नलिखित में से किस विकल्प से है?",
+   "opts": [
+    "REJI",
+    "RITE",
+    "REWQ",
+    "RYTE"
+   ],
+   "my_ans": "D",
+   "sol": "L(+4)=P, I(+2)=K, N(+4)=R, O(+2)=Q<br>N(+4)=R, W(+2)=Y, P(+4)=T, C(+2)=E → RYTE",
+   "trick": "+4, +2, +4, +2 का पैटर्न लागू करें।",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : PZH :: MWE : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : PZH :: MWE : %",
+   "opts": [
+    "# = FPX % = WGP",
+    "# = YPX % = WGO",
+    "# = FPX % = WHO",
+    "# = FPX % = WGO"
+   ],
+   "my_ans": "D",
+   "sol": "# = FPX लेने पर: F(+10)=P, P(+10)=Z, X(+10)=H<br>M(+10)=W, W(+10)=G, E(+10)=O (% = WGO)<br>दोनों ओर +10 का अंतर है।",
+   "trick": "सभी अक्षरों में +10 जोड़ने पर उत्तर मिलेगा।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : LHN :: PLR : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : LHN :: PLR : %",
+   "opts": [
+    "# = MIP , % = OKQ",
+    "# = MIO , % = OLQ",
+    "# = MIO , % = OKR",
+    "# = MIO , % = OKQ"
+   ],
+   "my_ans": "D",
+   "sol": "# = MIO लेने पर: M(-1)=L, I(-1)=H, O(-1)=N<br>P(-1)=O, L(-1)=K, R(-1)=Q (% = OKQ)<br>सभी अक्षरों में -1 का पैटर्न है।",
+   "trick": "प्रत्येक अक्षर से -1 करें।",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "In the following triads, each group of letters is related to the subsequent one following a certain logic. Select from the given options, the one which follows the same logic.\nHUGE - UEGH - EGUH\nLIST - ITSL - TSIL",
+   "hi": "निम्नलिखित त्रिकों में, अक्षरों का प्रत्येक समूह एक निश्चित तर्क का अनुसरण करते हुए अगले समूह से संबंधित है। दिए गए विकल्पों में से उस विकल्प का चयन करें, जो समान तर्क का अनुसरण करता हो।\nHUGE - UEGH - EGUH\nLIST - ITSL - TSIL",
+   "opts": [
+    "VIBE - IVBE - EIBV",
+    "HEAR - ERAH - RAEH",
+    "BANK - BNAK - KNAB",
+    "EAST - AEST - TASE"
+   ],
+   "my_ans": "B",
+   "sol": "1 2 3 4 → 2 3 1 4 → 3 1 2 4<br>HEAR → ERAH → RAEH (2 3 1 4 और 3 1 2 4)",
+   "trick": "स्थान परिवर्तन: 2-3-1-4 फिर 3-1-2-4 का पालन होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : NXF :: JTB : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : NXF :: JTB : %",
+   "opts": [
+    "# = CMU % = UEM",
+    "# = CMU % = UEN",
+    "# = DMU % = UEM",
+    "# = CNU % = UEM"
+   ],
+   "my_ans": "A",
+   "sol": "# = CMU लेने पर: C(+11)=N, M(+11)=X, U(+11)=F<br>J(+11)=U, T(+11)=E, B(+11)=M (% = UEM)<br>दोनों ओर +11 का संबंध है।",
+   "trick": "प्रत्येक अक्षर में +11 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "TN 13 is related to WR 16 in a certain way. In the same way, KE 18 is related to NI 21. To which of the following is VP 26 related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तर्क के अनुसार, TN 13 का संबंध WR 16 से है। इसी प्रकार, KE 18 का संबंध NI 21 से है। समान तर्क का अनुसरण करते हुए VP 26 का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "YV 29",
+    "XY 28",
+    "XU 28",
+    "YT 29"
+   ],
+   "my_ans": "D",
+   "sol": "T(+3)=W, N(+4)=R, 13(+3)=16<br>K(+3)=N, E(+4)=I, 18(+3)=21<br>V(+3)=Y, P(+4)=T, 26(+3)=29 → YT 29",
+   "trick": "अक्षरों में +3, +4 और संख्या में +3 का पैटर्न है।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "LEKO is related to OIPU in a certain way based on the English alphabetical order. In the same way, CANQ is related to FESW. To which of the following is EIJS related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से LEKO का संबंध OIPU से है। उसी प्रकार, CANQ का संबंध FESW से है। उसी तर्क का अनुसरण करते हुए, EIJS का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "LLPP",
+    "MNPZ",
+    "HMOY",
+    "NOPA"
+   ],
+   "my_ans": "C",
+   "sol": "L(+3)=O, E(+4)=I, K(+5)=P, O(+6)=U<br>E(+3)=H, I(+4)=M, J(+5)=O, S(+6)=Y → HMOY",
+   "trick": "+3, +4, +5, +6 का लगातार योग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : MNI :: UVQ : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : MNI :: UVQ : %",
+   "opts": [
+    "# = RJH % = IQL",
+    "# = RUN % = IOL",
+    "# = RSN % = PQL",
+    "# = OPN % = PBW"
+   ],
+   "my_ans": "C",
+   "sol": "# = RSN लेने पर: R(-5)=M, S(-5)=N, N(-5)=I<br>U(-5)=P, V(-5)=Q, Q(-5)=L (% = PQL)<br>सभी अक्षरों में -5 का पैटर्न है।",
+   "trick": "प्रत्येक अक्षर से -5 घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of :: ?\n# : NSO :: SXT : %",
+   "hi": "निम्नलिखित में से किस अक्षर-समूह द्वारा # और % को प्रतिस्थापित किया जाना चाहिए ताकि :: के बाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किया गया पैटर्न और संबंध, :: के दाईं ओर के अक्षर-समूह युग्म के बीच अनुसरण किए गए पैटर्न और संबंध के समान हो?\n# : NSO :: SXT : %",
+   "opts": [
+    "# = PUQ , % = QWS",
+    "# = PUQ , % = QVS",
+    "# = PUQ , % = QVR",
+    "# = PUR , % = QVS"
+   ],
+   "my_ans": "C",
+   "sol": "# = PUQ लेने पर: P(-2)=N, U(-2)=S, Q(-2)=O<br>S(-2)=Q, X(-2)=V, T(-2)=R (% = QVR)<br>दोनों ओर -2 का अंतर है।",
+   "trick": "अक्षरों में -2 का पैटर्न है।",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Select the pair which follows the same pattern as that followed by the two sets of pairs given below. Both pairs follow the same pattern.\nLUB : OSE\nRQH : UOK",
+   "hi": "उस युग्म का चयन कीजिए, जो नीचे दिए गए दो युग्म-समुच्चयों के समान पैटर्न का अनुसरण करता है। दोनों युग्म समान पैटर्न का अनुसरण करते हैं।\nLUB : OSE\nRQH : UOK",
+   "opts": [
+    "KGY : OBC",
+    "XMN : AKQ",
+    "GOQ : LMV",
+    "KMT : MHV"
+   ],
+   "my_ans": "B",
+   "sol": "L(+3)=O, U(-2)=S, B(+3)=E<br>R(+3)=U, Q(-2)=O, H(+3)=K<br>X(+3)=A, M(-2)=K, N(+3)=Q → XMN : AKQ",
+   "trick": "+3, -2, +3 का नियम लागू करें।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "JELU is related to NHNV in a certain way based on the English alphabetical order. In the same way, BGMQ is related to FJOR. To which of the following is GKNP related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से JELU का संबंध NHNV से है। उसी प्रकार, BGMQ का संबंध FJOR से है। उसी तर्क का अनुसरण करते हुए, GKNP का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "LOQQ",
+    "KNPQ",
+    "HMNQ",
+    "JMOQ"
+   ],
+   "my_ans": "B",
+   "sol": "J(+4)=N, E(+3)=H, L(+2)=N, U(+1)=V<br>G(+4)=K, K(+3)=N, N(+2)=P, P(+1)=Q → KNPQ",
+   "trick": "+4, +3, +2, +1 का पैटर्न अपनाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Right to free and compulsory education for children aged 6–14 years is provided under which Article?",
+   "hi": "6 से 14 वर्ष की आयु के बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा का अधिकार किस अनुच्छेद के अंतर्गत प्रदान किया गया है?",
+   "opts": [
+    "Article 21A<br>अनुच्छेद 21A",
+    "Article 51A(k)<br>अनुच्छेद 51A(k)",
+    "Article 45<br>अनुच्छेद 45",
+    "Article 19<br>अनुच्छेद 19"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान का अनुच्छेद 21A, 6 से 14 वर्ष की आयु के बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा का मौलिक अधिकार प्रदान करता है। इसे 86वें संशोधन अधिनियम 2002 द्वारा जोड़ा गया था।",
+   "trick": "अनुच्छेद 21A = 6-14 वर्ष के बच्चों के लिए मुफ्त और अनिवार्य शिक्षा।",
+   "ans": "A"
+  }
+ ]
+}
