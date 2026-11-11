@@ -40,7 +40,7 @@ CSS = """
 @font-face { font-family: ARSerif; src: url("FONTDIR/FreeSerif.ttf"); }
 @font-face { font-family: ARSerif; font-style: italic; src: url("FONTDIR/FreeSerifItalic.ttf"); }
 * { box-sizing: border-box; }
-body { margin:0; font-family: ARSans, sans-serif; font-size:12pt; line-height:1.55; color:#262a35; }
+body { margin:0; font-family: ARSans, sans-serif; font-size:13pt; line-height:1.42; color:#262a35; }
 i { font-family: ARSerif, serif; }
 .page { page-break-after: always; }
 .grad { background: linear-gradient(115deg,#e91e63 0%,#7c3aed 50%,#0284c7 100%); color:#fff; }
@@ -70,24 +70,24 @@ i { font-family: ARSerif, serif; }
 .lvl { border-radius:14px; padding:9px 16px; margin:0; font-weight:bold; display:flex; justify-content:space-between; align-items:center; }
 .lvl span:last-child { background:#ffd23f; color:#3b1d6e; border-radius:10px; padding:1px 10px; }
 /* question */
-.q { break-inside:avoid; border:2px solid var(--s); border-radius:16px; padding:12px 14px; display:flex; flex-direction:column; gap:9px; }
-.sheet { height:262mm; display:flex; flex-direction:column; gap:5mm; page-break-after:always; }
+.q { break-inside:avoid; border:2px solid var(--s); border-radius:16px; padding:9px 12px; display:flex; flex-direction:column; gap:6px; }
+.sheet { height:262mm; display:flex; flex-direction:column; gap:4mm; page-break-after:always; }
 .sheet.long { height:auto; }
 .q.fill { flex:1; justify-content:space-around; }
 .sheet .lvl { margin:0; }
-#measure { width:180mm; } #measure .q { margin-bottom:5mm; }
+#measure { width:180mm; } #measure .q { margin-bottom:4mm; }
 .qt { display:flex; gap:14px; }
 .n { flex:0 0 40px; height:40px; border-radius:12px; background:var(--c); color:#fff; font-weight:bold; display:flex; align-items:center; justify-content:center; font-size:12.5pt; box-shadow:0 3px 0 var(--d); }
-.tag { display:inline-block; background:var(--s); color:var(--c); font-weight:bold; font-size:9.5pt; border-radius:20px; padding:0 10px; margin-bottom:3px; }
+.tag { display:inline-block; background:var(--s); color:var(--c); font-weight:bold; font-size:10.5pt; border-radius:20px; padding:0 10px; margin-bottom:3px; }
 .en { font-weight:bold; color:#1b1f2b; } .hi2 { color:#5a5f6b; margin-top:3px; }
-.os { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin:0 0 0 54px; }
-.o { display:flex; gap:10px; align-items:center; padding:6px 12px; border:2px solid #eceef3; border-radius:12px; background:#fff; }
-.l { width:24px; height:24px; border-radius:50%; color:#fff; font-weight:bold; font-size:10.5pt; display:flex; align-items:center; justify-content:center; flex:0 0 24px; }
+.os { display:grid; grid-template-columns:1fr 1fr; gap:6px 14px; margin:0 0 0 54px; }
+.o { display:flex; gap:10px; align-items:center; padding:4px 12px; border:2px solid #eceef3; border-radius:12px; background:#fff; }
+.l { width:26px; height:26px; border-radius:50%; color:#fff; font-weight:bold; font-size:11.5pt; display:flex; align-items:center; justify-content:center; flex:0 0 26px; }
 .ans { margin:0 0 0 54px; font-weight:bold; color:#1b1f2b; }
 .ans span { display:inline-block; background:var(--s); color:var(--c); border:2px solid var(--c); border-radius:10px; padding:1px 12px; }
-.s { margin-left:54px; padding:12px 16px; background:var(--s); border-left:5px solid var(--c); border-radius:12px; }
-.s .tl { font-size:10pt; letter-spacing:2px; font-weight:bold; color:var(--c); margin-bottom:3px; }
-.tr { margin:0 0 0 54px; padding:6px 12px; background:#fff7cc; border-radius:10px; font-size:11.5pt; display:inline-block; }
+.s { margin-left:54px; padding:8px 14px; background:var(--s); border-left:5px solid var(--c); border-radius:12px; }
+.s .tl { font-size:11pt; letter-spacing:2px; font-weight:bold; color:var(--c); margin-bottom:3px; }
+.tr { margin:0 0 0 54px; padding:6px 12px; background:#fff7cc; border-radius:10px; font-size:12.5pt; display:inline-block; }
 .tr b { color:#c2410c; }
 """
 
@@ -107,7 +107,7 @@ def q_html(q, k):
     ans_txt = strip_tags(q["opts"][LETTERS.index(a)].split("<br>")[0]) if a in LETTERS else ""
     trick = f'<div class="tr"><b>⚡ याद रखो —</b> {q["trick"]}</div>' if q.get("trick") else ""
     return f"""<div class="q" style="--c:{c};--s:{s};--d:{DARK[c]}"><div class="qt"><div class="n">{q['n']}</div><div>
-<span class="tag">RRB NTPC 2025 · {q['lvl']}</span><div class="en">{q['en']}</div><div class="hi2">{q['hi']}</div></div></div>
+<span class="tag">RRB NTPC 2025-26 · {q['lvl']}</span><div class="en">{q['en']}</div><div class="hi2">{q['hi']}</div></div></div>
 <div class="os"{' style="grid-template-columns:1fr"' if long_opt else ''}>{opts}</div>
 <div class="ans">उत्तर: <span>विकल्प ({a}) {html.escape(ans_txt)}</span></div>
 <div class="s"><div class="tl">💡 हल · SOLUTION</div>{q['sol']}</div>{trick}</div>"""
@@ -148,8 +148,8 @@ def chapter_pages(d):
     return out, items
 
 
-PAGE_MM, GAP_MM, PX_MM = 262, 5, 96 / 25.4
-MIN_ZOOM = 0.92  # isse chhota nahi (12pt x 0.92 = purane 11pt jitna)
+PAGE_MM, GAP_MM, PX_MM = 262, 4, 96 / 25.4
+MIN_ZOOM = 0.93  # isse chhota nahi (13pt x 0.93 = ~12pt)
 
 
 def pack(items, h):
