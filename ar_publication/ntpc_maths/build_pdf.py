@@ -11,6 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
 FONT_DIR = os.path.join(HERE, "fonts")
 BRAND = "AR Publication"
+WHATSAPP = "8989971379"
 TITLE = "RRB NTPC 2025-26 · Maths PYQ (GL + UG) · हल सहित"
 
 TOPICS = [
@@ -42,6 +43,8 @@ CSS = """
 * { box-sizing: border-box; }
 body { margin:0; font-family: ARSans, sans-serif; font-size:13pt; line-height:1.42; color:#262a35; }
 i { font-family: ARSerif, serif; }
+.wm { position:fixed; top:46%; left:-10%; width:120%; text-align:center; transform:rotate(-38deg); font-size:68pt; font-weight:bold; letter-spacing:10px; white-space:nowrap; color:rgba(124,58,237,0.075); z-index:9999; pointer-events:none; }
+.wa { display:inline-block; background:#16a34a; color:#fff; font-weight:bold; border-radius:20px; padding:4px 14px; }
 .page { page-break-after: always; }
 .grad { background: linear-gradient(115deg,#e91e63 0%,#7c3aed 50%,#0284c7 100%); color:#fff; }
 /* cover */
@@ -119,7 +122,7 @@ def front_pages():
 <h1>RRB NTPC<br>Maths PYQ</h1><div class="sub">2025-26 · CBT-1 · Graduate + Under Graduate</div>
 <div class="hi">गणित · विषयवार पूर्व वर्ष प्रश्न · हर प्रश्न का आसान हल</div>
 <div class="chips"><span class="chip">English + हिन्दी</span><span class="chip">{len(TOPICS)} Topics</span><span class="chip">💡 Step हल</span><span class="chip">⚡ याद रखो ट्रिक</span></div>
-<div class="big">{total:,} प्रश्न</div></div></div>"""
+<div class="big">{total:,} प्रश्न</div><div style="margin-top:8mm"><span class="wa" style="font-size:14pt">📞 WhatsApp: {WHATSAPP}</span></div></div></div>"""
     items = "".join(
         f'<div class="ix" style="--c:{QCOL[i % 4][0]};--s:{QCOL[i % 4][1]}"><div class="no">{i + 1:02d}</div>'
         f'<div class="t"><b>{ic} {en}</b>{hi}</div><div class="c">{c}</div></div>'
@@ -128,7 +131,7 @@ def front_pages():
     about = f"""<div class="page"><div class="sec">पुस्तक परिचय · About</div><div class="bar grad"></div>
 <div class="box" style="--c:#e91e63;--s:#fde4ee"><h3>📘 पुस्तक में क्या है</h3>RRB NTPC 2025-26 CBT-1 में पूछे गए {total:,} गणित प्रश्न — स्नातक (GL) और स्नातक-पूर्व (UG) दोनों स्तर, {len(TOPICS)} टॉपिक में टॉपिकवार।</div>
 <div class="box" style="--c:#7c3aed;--s:#efe7ff"><h3>🧭 उपयोग कैसे करें</h3>• हर प्रश्न: ऊपर English, नीचे हिन्दी<br>• पहले खुद हल करें, फिर नीचे "उत्तर" और "💡 हल" से मिलाएँ<br>• "⚡ याद रखो" वाली लाइन परीक्षा से पहले दोहराएँ<br>• GL / UG टैग परीक्षा का स्तर बताता है</div>
-<div class="box" style="--c:#0284c7;--s:#e0f2fe"><h3>✍️ {BRAND}</h3>प्रतियोगी परीक्षाओं के लिए नोट्स, PYQ और प्रैक्टिस सामग्री।</div></div>"""
+<div class="box" style="--c:#0284c7;--s:#e0f2fe"><h3>✍️ {BRAND}</h3>प्रतियोगी परीक्षाओं के लिए नोट्स, PYQ और प्रैक्टिस सामग्री।<br>किसी भी सवाल या नई किताब के लिए संपर्क करें: <span class="wa">📞 WhatsApp: {WHATSAPP}</span></div></div>"""
     return cover + index + about
 
 
@@ -199,7 +202,9 @@ def main():
     open(html_path, "w", encoding="utf-8").write(wrap('<div id="measure">' + "".join(x[1] for x in allitems) + "</div>"))
     pdf_path = os.path.join(OUT, "RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf")
     head = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#7c3aed;font-family:sans-serif"><b>{TITLE}</b><b>{BRAND}</b></div>'
-    foot = f'<div style="font-size:8px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#777;font-family:sans-serif"><span>© {BRAND}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
+    foot = (f'<div style="font-size:9px;width:100%;padding:0 15mm;display:flex;justify-content:space-between;align-items:center;color:#555;font-family:sans-serif;-webkit-print-color-adjust:exact">'
+            f'<b style="color:#7c3aed">© {BRAND}</b><span style="background:#16a34a;color:#fff;font-weight:bold;font-size:10px;border-radius:10px;padding:2px 10px">WhatsApp: {WHATSAPP}</span>'
+            f'<span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>')
     with sync_playwright() as p:
         try:
             b = p.chromium.launch()
@@ -213,7 +218,7 @@ def main():
         h = {x[1]: px / PX_MM for x, px in zip(allitems, hs)}
         for cp, its in parts:
             body += cp + pack(its, h)
-        open(html_path, "w", encoding="utf-8").write(wrap(body))
+        open(html_path, "w", encoding="utf-8").write(wrap(f'<div class="wm">AR PUBLICATION</div>{body}'))
         pg.goto("file://" + html_path)
         pg.pdf(path=pdf_path, format="A4", print_background=True, display_header_footer=True,
                header_template=head, footer_template=foot,

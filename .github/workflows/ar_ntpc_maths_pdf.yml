@@ -5,10 +5,12 @@ on:
     inputs:
       start_page:
         description: "Book ka pehla page"
-        default: "11"
+        default: "1"
       end_page:
         description: "Book ka aakhri page"
-        default: "20"
+        default: "330"
+  schedule:
+    - cron: "17 20 * * *"   # roz raat ~1:47 AM IST: jo page baaki hain wahi banenge (sab bane hon to kuch nahi karega)
 
 permissions:
   contents: write
@@ -20,7 +22,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 340
     env:
       # GEMINI_API_KEY_PDF ho to wo, warna repo ki purani GEMINI_API_KEY
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_PDF || secrets.GEMINI_API_KEY }}
@@ -43,22 +45,27 @@ jobs:
 
       - name: Gemini se sawaal + hal
         working-directory: ar_publication/ntpc_maths
-        run: python gemini_solve.py "${{ inputs.start_page }}" "${{ inputs.end_page }}"
-
-      - name: PDF banao
-        run: python ar_publication/ntpc_maths/build_pdf.py
+        timeout-minutes: 300
+        continue-on-error: true   # beech mein ruke tab bhi bane hue page save honge
+        run: python -u gemini_solve.py "${{ inputs.start_page || '1' }}" "${{ inputs.end_page || '330' }}"
 
       - name: Data save (repo mein)
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add ar_publication/ntpc_maths/data ar_publication/ntpc_maths/review.txt 2>/dev/null || true
-          git commit -m "NTPC maths: pages ${{ inputs.start_page }}-${{ inputs.end_page }} (Gemini)" || echo "kuch naya nahi"
+          git commit -m "NTPC maths: Gemini pages (run ${{ github.run_number }})" || echo "kuch naya nahi"
           git pull --rebase origin main && git push
 
+      - name: PDF banao
+        if: always()
+        run: python ar_publication/ntpc_maths/build_pdf.py
+
       - name: PDF download ke liye
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: AR_Publication_NTPC_Maths_PDF
           path: ar_publication/ntpc_maths/out/RRB_NTPC_Maths_PYQ_Solutions_AR_Publication.pdf
-          retention-days: 7
+          retention-days: 14

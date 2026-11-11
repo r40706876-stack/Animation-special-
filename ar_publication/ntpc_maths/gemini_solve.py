@@ -192,8 +192,12 @@ def main():
         try:
             qs, model = ask_gemini(p, text, keys)
         except RuntimeError as e:
-            print(f"page {p}: Gemini fail -> {e}\nAaj ki limit khatam lagti hai. Kal isi range ko dobara chalao, bane hue page skip honge.")
-            break
+            if "HTTP 429" in str(e):
+                print(f"page {p}: Gemini ki aaj ki limit khatam -> {e}\nKal raat wala run yahin se aage banayega.")
+                break
+            print(f"page {p}: Gemini fail -> {e} (ye page agle run mein dobara)")
+            review.append(f"page {p}: Gemini se nahi bana, agle run mein dobara try hoga")
+            continue
         for q in qs:
             q["ans"] = key.get(q["n"], q.get("my_ans", "?"))
             if q.get("my_ans") != q["ans"]:
