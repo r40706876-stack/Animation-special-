@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Mensuration",
+  "hi": "क्षेत्रमिति",
+  "total": 89,
+  "gl": 47,
+  "ug": 42
+ },
+ "source_pages": "263-265",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "Find the surface area of a sphere of radius 7 cm. (Take π = 22/7)",
+   "hi": "7 cm त्रिज्या वाले गोले का पृष्ठीय क्षेत्रफल ज्ञात कीजिए। (π = 22/7 लीजिए)",
+   "opts": [
+    "588 sq cm",
+    "704 sq cm",
+    "484 sq cm",
+    "616 sq cm"
+   ],
+   "my_ans": "D",
+   "sol": "पृष्ठीय क्षेत्रफल = 4πr² = 4 × (22/7) × 7 × 7<br>= 4 × 22 × 7 = 616 cm².",
+   "trick": "गोले का पृष्ठीय क्षेत्रफल = 4πr²",
+   "ans": "D"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Four identical cubes are placed one after another and the length of the cuboid so formed is 256 cm. Find the volume of a single cube.",
+   "hi": "चार एकसमान घनों को एक के बाद एक करके रखा जाता है और इस प्रकार निर्मित घनाभ की लंबाई 256 cm है। एकल घन का आयतन ज्ञात कीजिए।",
+   "opts": [
+    "262144 cm³",
+    "265144 cm³",
+    "362144 cm³",
+    "262154 cm³"
+   ],
+   "my_ans": "A",
+   "sol": "4 × भुजा = 256 → भुजा = 64 cm<br>आयतन = (64)³ = 262144 cm³.",
+   "trick": "घनाभ की लंबाई = n × भुजा (जहाँ n घनों की संख्या है)",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "The radius of the base of a cylinder is 3.5 cm and its curved surface area is 616 cm². Find the volume of the cylinder.",
+   "hi": "एक बेलन के आधार की त्रिज्या 3.5 cm है और इसका वक्र पृष्ठीय क्षेत्रफल 616 cm² है। बेलन का आयतन ज्ञात कीजिए।",
+   "opts": [
+    "1424 cm³",
+    "1370 cm³",
+    "1078 cm³",
+    "1024 cm³"
+   ],
+   "my_ans": "C",
+   "sol": "2πrh = 616 → 2 × (22/7) × 3.5 × h = 616<br>22 × h = 616 → h = 28 cm<br>आयतन = πr²h = (22/7) × 3.5 × 3.5 × 28 = 1078 cm³.",
+   "trick": "बेलन का आयतन = πr²h",
+   "ans": "C"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "A cylindrical tank has a radius of 7 m and a height of 11 m. How many litres of water can it hold? (Use π = 22/7)",
+   "hi": "एक बेलनाकार टैंक की त्रिज्या 7 m और ऊँचाई 11 m है। इसमें कितना लीटर जल भरा जा सकता है? (π = 22/7 का उपयोग कीजिए)",
+   "opts": [
+    "16,84,000",
+    "16,74,000",
+    "16,64,000",
+    "16,94,000"
+   ],
+   "my_ans": "D",
+   "sol": "आयतन = πr²h = (22/7) × 7 × 7 × 11 = 1694 m³<br>1 m³ = 1000 लीटर → 1694 × 1000 = 16,94,000 लीटर.",
+   "trick": "1 m³ = 1000 लीटर",
+   "ans": "D"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "Find the diameter of a sphere of surface area 28962 cm². (round off to the closest integer)",
+   "hi": "28962 सेमी² पृष्ठीय क्षेत्रफल वाले गोले का व्यास ज्ञात कीजिए। (निकटतम पूर्णांक तक पूर्णांकित करें)",
+   "opts": [
+    "98 cm",
+    "48 cm",
+    "108 cm",
+    "96 cm"
+   ],
+   "my_ans": "D",
+   "sol": "4πr² = 28962 → r² = 28962 / (4 × 22/7) ≈ 2300<br>r ≈ √2300 ≈ 48 cm → व्यास = 2r ≈ 96 cm.",
+   "trick": "व्यास = 2 × √(क्षेत्रफल / 4π)",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "A rectangular garden has a length of 25 meters and a width of 18 meters. If a path of uniform width 2 meters is constructed around the outside of the garden, what is the perimeter of the outer edge of the path?",
+   "hi": "एक आयताकार बगीचे की लंबाई 25 मीटर और चौड़ाई 18 मीटर है। यदि बगीचे के बाहर चारों तरफ 2 मीटर की एकसमान चौड़ाई का एक पथ बनाया जाता है, तो पथ के बाहरी कोर का परिमाप कितना होगा?",
+   "opts": [
+    "98 meters",
+    "112 meters",
+    "86 meters",
+    "102 meters"
+   ],
+   "my_ans": "D",
+   "sol": "बाहरी लंबाई = 25 + 2 + 2 = 29 m, बाहरी चौड़ाई = 18 + 2 + 2 = 22 m<br>परिमाप = 2 × (29 + 22) = 2 × 51 = 102 m.",
+   "trick": "बाहरी लंबाई = L + 2w, बाहरी चौड़ाई = B + 2w",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "The sum of the surface areas of two spheres is 12584 π sq. cm. The radius of the larger sphere is five times the radius of the smaller sphere. Find the diameter of the larger sphere.",
+   "hi": "दो गोलों के पृष्ठीय क्षेत्रफलों का योग 12584 π sq. cm है। बड़े गोले की त्रिज्या, छोटे गोले की त्रिज्या का पाँच गुना है। बड़े गोले का व्यास ज्ञात कीजिए।",
+   "opts": [
+    "120 cm",
+    "125 cm",
+    "115 cm",
+    "110 cm"
+   ],
+   "my_ans": "D",
+   "sol": "4πr² + 4π(5r)² = 12584π → 4r² + 100r² = 12584<br>104r² = 12584 → r² = 121 → r = 11 cm<br>बड़े गोले का व्यास = 2 × 5r = 10 × 11 = 110 cm.",
+   "trick": "क्षेत्रफलों का योग = 4π(r₁² + r₂²)",
+   "ans": "D"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "A solid metallic sphere is melted and recast into a cone whose radius is equal to the radius of the sphere. If the height of the cone is 84 cm, what was the volume of the original sphere?",
+   "hi": "एक ठोस धात्विक गोले को पिघलाकर एक शंकु के रूप में ढाला जाता है जिसकी त्रिज्या गोले की त्रिज्या के बराबर होती है। यदि शंकु की ऊँचाई 84 cm है, तो मूल गोले का आयतन ज्ञात कीजिए।",
+   "opts": [
+    "49808 cm³",
+    "38808 cm³",
+    "16808 cm³",
+    "27808 cm³"
+   ],
+   "my_ans": "B",
+   "sol": "गोले का आयतन = शंकु का आयतन → (4/3)πr³ = (1/3)πr²h<br>4r = h = 84 → r = 21 cm<br>आयतन = (4/3) × (22/7) × 21 × 21 × 21 = 38808 cm³.",
+   "trick": "पिघलाने पर आयतन समान रहता है",
+   "ans": "B"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "The total surface area of a cube having side 86 cm is:",
+   "hi": "86 cm भुजा वाले घन का संपूर्ण पृष्ठीय क्षेत्रफल कितना होगा?",
+   "opts": [
+    "44,376 cm²",
+    "44,325 cm²",
+    "44,462 cm²",
+    "44,294 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = 6 × (भुजा)² = 6 × 86 × 86<br>= 6 × 7396 = 44376 cm².",
+   "trick": "घन का पृष्ठीय क्षेत्रफल = 6a²",
+   "ans": "A"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "The total surface area of a cube having side 64 cm is:",
+   "hi": "64 cm भुजा वाले घन का संपूर्ण पृष्ठीय क्षेत्रफल कितना होगा?",
+   "opts": [
+    "24,528 cm²",
+    "24,548 cm²",
+    "24,576 cm²",
+    "24,589 cm²"
+   ],
+   "my_ans": "C",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = 6 × (64)² = 6 × 4096 = 24576 cm².",
+   "trick": "घन का पृष्ठीय क्षेत्रफल = 6a²",
+   "ans": "C"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "A metallic sphere of radius 6 units is melted and recast into 27 smaller identical spheres. Find the ratio of the surface area of the larger sphere to the sum of the surface areas of all the smaller spheres.",
+   "hi": "एक धात्विक गोले जिसकी त्रिज्या 6 इकाई है, को पिघलाकर 27 छोटे समान गोलों में ढाला जाता है। बड़े गोले के पृष्ठीय क्षेत्रफल का सभी छोटे गोलों के पृष्ठीय क्षेत्रफलों के योग से अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "2:3",
+    "2:5",
+    "1:3",
+    "1:4"
+   ],
+   "my_ans": "C",
+   "sol": "बड़े गोले का आयतन = 27 × छोटे गोले का आयतन → R³ = 27r³ → R = 3r<br>क्षेत्रफल अनुपात = 4πR² : 27 × 4πr² = (3r)² : 27r² = 9 : 27 = 1:3.",
+   "trick": "क्षेत्रफल अनुपात = R² : n × r²",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "A hollow cylinder of thickness 1 unit and length 14 units is made with 396 cubic units of metal. Its inner volume is _____ cubic units.",
+   "hi": "एक खोखला बेलन जिसकी मोटाई 1 इकाई और लंबाई 14 इकाई है, 396 घन इकाइयों धातु से बना है। इसका आंतरिक आयतन _____ घन इकाइयां है।",
+   "opts": [
+    "636",
+    "704",
+    "730",
+    "676"
+   ],
+   "my_ans": "B",
+   "sol": "बाहरी त्रिज्या R, आंतरिक r = R-1. आयतन = πh(R² - r²) = 396<br>(22/7) × 14 × (R² - (R-1)²) = 396 → 44(2R-1) = 396 → 2R-1 = 9 → R=5, r=4<br>आंतरिक आयतन = πr²h = (22/7) × 4 × 4 × 14 = 704.",
+   "trick": "खोखले बेलन का आयतन = πh(R² - r²)",
+   "ans": "B"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Find the sum of the surface areas of three spheres of radii 2 cm, 3 cm and 6 cm.",
+   "hi": "2 सेमी, 3 सेमी और 6 सेमी त्रिज्या वाले तीन गोलों के पृष्ठीय क्षेत्रफलों का योग ज्ञात कीजिए।",
+   "opts": [
+    "616 cm²",
+    "620 cm²",
+    "608 cm²",
+    "612 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "योग = 4π(2² + 3² + 6²) = 4 × (22/7) × (4 + 9 + 36) = 4 × (22/7) × 49 = 4 × 22 × 7 = 616 cm².",
+   "trick": "कुल क्षेत्रफल = 4π(r₁² + r₂² + r₃²)",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "The curved surface area of a solid cylinder is numerically equal to the total surface area of another cylinder whose radius is half of the first cylinder. If the height and radius of the first cylinder are 7 cm and 4 cm, respectively. find the curved surface area of the second cylinder.",
+   "hi": "एक ठोस बेलन का वक्र पृष्ठीय क्षेत्रफल संख्यात्मक रूप से उस दूसरे बेलन के संपूर्ण पृष्ठीय क्षेत्रफल के बराबर है जिसकी त्रिज्या पहले बेलन की आधी है। यदि पहले बेलन की ऊँचाई और त्रिज्या क्रमशः 7 cm और 4 cm हैं, तो दूसरे बेलन का वक्र पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "65 π cm²",
+    "4 2 π cm²",
+    "48π cm²",
+    "52 π cm²"
+   ],
+   "my_ans": "C",
+   "sol": "पहला बेलन: CSA = 2πrh = 2π(4)(7) = 56π<br>दूसरा बेलन: r₂ = 2, TSA = 2πr₂(h₂+r₂) = 56π → 2π(2)(h₂+2) = 56π → h₂+2 = 14 → h₂ = 12<br>दूसरे का CSA = 2πr₂h₂ = 2π(2)(12) = 48π.",
+   "trick": "CSA = 2πrh, TSA = 2πr(h+r)",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "A hollow spherical shell is made of a metal of density 39 g/cm³. Its internal and external radii are 12 cm and 13 cm, respectively. What is the weight (in kg) of the shell?",
+   "hi": "एक खोखला गोलाकार खोल 39 ग्राम/सेमी³ घनत्व वाली धातु से बना है। इसकी आंतरिक और बाहरी त्रिज्याएँ क्रमशः 12 सेमी और 13 सेमी हैं। खोल का वजन (किलोग्राम में) क्या है?",
+   "opts": [
+    "73.648",
+    "76.648",
+    "77.9",
+    "77.7"
+   ],
+   "my_ans": "B",
+   "sol": "आयतन = (4/3)π(13³ - 12³) = (4/3) × (22/7) × (2197 - 1728) = (4/3) × (22/7) × 469 ≈ 1965.33 cm³<br>द्रव्यमान = आयतन × घनत्व = 1965.33 × 39 = 76648 ग्राम = 76.648 kg.",
+   "trick": "द्रव्यमान = घनत्व × (4/3)π(R³ - r³)",
+   "ans": "B"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "A closed cylindrical reservoir features a radius of 14 cm and a height of 10 cm. If 20% of the total surface area of this reservoir is coated in blue paint and the remaining surface is coated in red, determine the total area in square centimeters that is painted red.",
+   "hi": "एक संवृत बेलनाकार जलाशय की त्रिज्या 14 cm और ऊँचाई 10 cm है। यदि इस जलाशय के कुल पृष्ठीय क्षेत्रफल का 20% भाग नीले रंग से रंगा हुआ है और शेष भाग लाल रंग से रंगा हुआ है, तो लाल रंग से रंगे हुए कुल क्षेत्रफल को वर्ग सेंटीमीटर में ज्ञात कीजिए।",
+   "opts": [
+    "1487 .6 cm²",
+    "422.4 cm²",
+    "1689.6 cm²",
+    "424.4 cm²"
+   ],
+   "my_ans": "C",
+   "sol": "TSA = 2πr(r+h) = 2 × (22/7) × 14 × (14+10) = 88 × 24 = 2112 cm²<br>लाल रंग का क्षेत्रफल = 80% of 2112 = 0.8 × 2112 = 1689.6 cm².",
+   "trick": "TSA = 2πr(r+h)",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "A cylindrical tank has a diameter of 12 m and a height of 10 m. If the tank is closed at both ends, what is the ratio of its curved surface area to its total surface area?",
+   "hi": "एक बेलनाकार टैंक का व्यास 12 m और ऊँचाई 10 m है। यदि टैंक दोनों सिरों पर बंद है, तो इसके वक्र पृष्ठीय क्षेत्रफल का इसके कुल पृष्ठीय क्षेत्रफल से अनुपात क्या है?",
+   "opts": [
+    "4:7",
+    "3:5",
+    "5:8",
+    "2:5"
+   ],
+   "my_ans": "C",
+   "sol": "CSA = 2πrh, TSA = 2πrh + 2πr² = 2πr(h+r)<br>अनुपात = h : (h+r) = 10 : (10+6) = 10 : 16 = 5:8.",
+   "trick": "अनुपात = h : (h+r)",
+   "ans": "C"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "The volume of a cylinder having height 27 cm and radius 7 cm is:",
+   "hi": "एक बेलन का आयतन जिसकी ऊँचाई 27 सेमी और त्रिज्या 7 सेमी है:",
+   "opts": [
+    "4187 cm³",
+    "4146 cm³",
+    "4158 cm³",
+    "4068 cm³"
+   ],
+   "my_ans": "C",
+   "sol": "आयतन = πr²h = (22/7) × 7 × 7 × 27 = 22 × 7 × 27 = 4158 cm³.",
+   "trick": "बेलन का आयतन = πr²h",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "A water pipe is in the shape of a hollow cylinder with an outer radius of 10 cm and an inner radius of 8 cm. If the length of the pipe is 2 m, what is the total surface area (including both ends and the inner and outer curved surfaces) of the pipe in square centimeters?",
+   "hi": "एक जल पाइप खोखले बेलन की आकृति का है, जिसकी बाह्य त्रिज्या 10 cm और आंतरिक त्रिज्या 8 cm है। यदि पाइप की लंबाई 2 m है, तो पाइप का संपूर्ण पृष्ठीय क्षेत्रफल (दोनों सिरों तथा आंतरिक और बाह्य वक्र पृष्ठ सहित) वर्ग सेंटीमीटर में कितना होगा?",
+   "opts": [
+    "25124 cm²",
+    "22855 cm²",
+    "18848 cm²",
+    "22848 cm²"
+   ],
+   "my_ans": "B",
+   "sol": "h = 200 cm. TSA = 2πRh + 2πrh + 2π(R²-r²)<br>= 2π(10×200 + 8×200 + 100-64) = 2π(1800 + 36) = 2 × (22/7) × 1836 ≈ 115200/7 ≈ 22855 cm².",
+   "trick": "खोखले बेलन का TSA = 2πh(R+r) + 2π(R²-r²)",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "A spherical tank has a diameter of 28 cm. What is the total surface area of the tank?",
+   "hi": "एक गोलाकार टंकी का व्यास 28 cm है। टंकी का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "2456 cm²",
+    "2464 cm²",
+    "2458 cm²",
+    "2460 cm²"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिज्या r = 14 cm. पृष्ठीय क्षेत्रफल = 4πr² = 4 × (22/7) × 14 × 14 = 4 × 22 × 2 × 14 = 2464 cm².",
+   "trick": "गोले का पृष्ठीय क्षेत्रफल = 4πr²",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 20,
+  "en": "Race",
+  "hi": "दौड़",
+  "total": 7,
+  "gl": 7,
+  "ug": 0
+ },
+ "source_pages": "248-249",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "In a circular race of 1850 m, Aman and Suman start from the same point and at the same time with speeds of 22 km/h and 15 km/h, respectively. After how long will they meet again for the first time on the track when they are running in the opposite direction?",
+   "hi": "1850 m की एक वृत्तीय दौड़ में, अमन और सुमन एक ही बिंदु से एक ही समय पर क्रमशः 22 km/h और 15 km/h की चाल से दौड़ना शुरू करते हैं। कितने समय बाद वे विपरीत दिशा में दौड़ते हुए ट्रैक पर पहली बार मिलेंगे?",
+   "opts": [
+    "170 seconds<br>170 सेकंड",
+    "172 seconds<br>172 सेकंड",
+    "180 seconds<br>180 सेकंड",
+    "189 seconds<br>189 सेकंड"
+   ],
+   "my_ans": "C",
+   "sol": "सापेक्ष चाल = 22 + 15 = 37 km/h = 37 × (5/18) m/s.<br>समय = दूरी / सापेक्ष चाल = 1850 / (37 × 5/18) = (1850 × 18) / (37 × 5) = 50 × 18 / 5 = 10 × 18 = 180 सेकंड।",
+   "trick": "विपरीत दिशा में सापेक्ष चाल जुड़ जाती है (S1 + S2)।",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "In a circular race of length 1530 m, Shahrukh and Amir start simultaneously from the same point and run in the same direction. Shahrukh completes one round in 85 seconds, while Amir completes one round in 90 seconds. How many different meeting points are there on the circumference of the track?",
+   "hi": "1530 m लंबी एक वृत्ताकार रेस में, शाहरुख और आमिर एक ही बिंदु से एक ही दिशा में एक साथ दौड़ना शुरू करते हैं। शाहरुख एक चक्कर 85 सेकंड में पूरा करता है, जबकि आमिर 90 सेकंड में एक चक्कर पूरा करता है। ट्रैक की परिधि पर कितने अलग-अलग मिलन बिंदु हैं?",
+   "opts": [
+    "2",
+    "11",
+    "1",
+    "35"
+   ],
+   "my_ans": "C",
+   "sol": "समय का अनुपात = 85:90 = 17:18.<br>एक ही दिशा में मिलने वाले बिंदुओं की संख्या = |18 - 17| = 1.",
+   "trick": "एक ही दिशा में मिलने वाले बिंदुओं की संख्या = |n1 - n2| जहाँ n1:n2 सरल अनुपात है।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "In a 150-meter race, R beats S by 6 meters. In a 250-meter race, R beats S by 2 seconds. As per this, in a race, if R runs for 30 seconds, then he beats S by ___ meters.",
+   "hi": "150 मीटर की दौड़ में R, 6 मीटर के अंतर से S को हरा देता है। 250 मीटर की दौड़ में R, 2 सेकंड के अंतर से S को हरा देता है। इसके अनुसार एक दौड़ में, यदि R, 30 सेकंड तक दौड़ता है, तो वह S को ___________ मीटर के अंतर से हरा देगा।",
+   "opts": [
+    "6.25",
+    "6.75",
+    "5.75",
+    "7.25"
+   ],
+   "my_ans": "A",
+   "sol": "R की चाल = v, S की चाल = (144/150)v = 0.96v.<br>250/0.96v - 250/v = 2 → v = 5.208 m/s.<br>30 सेकंड में R की दूरी = 30v, S की दूरी = 30 × 0.96v = 28.8v.<br>अंतर = 1.2v = 1.2 × 5.208 = 6.25 मीटर।",
+   "ans": "A",
+   "trick": "दूरी का अनुपात चाल का अनुपात होता है, सापेक्ष चाल से समय का अंतर निकालें।"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "A and B start running on a circular track of length 900 m. A runs at 225 m/min and B at 180 m/min. Every time A overtakes B, both reduce their speeds by 5% of their then speeds before continuing. After how many minutes (correct to two decimal places) does A overtake B for the 3rd time?",
+   "hi": "A और B, 900 m लंबे एक वृत्तीय ट्रैक पर दौड़ना शुरू करते हैं। A की चाल 225 m/min और B की चाल 180 m/min है। प्रत्येक बार जब A, B से आगे निकलता है, तो दोनों अपनी चाल को 5% कम कर लेते हैं और फिर दौड़ना जारी रखते हैं। कितने मिनट बाद (दो दशमलव स्थानों तक पूर्णांकित) A तीसरी बार B से आगे निकलेगा?",
+   "opts": [
+    "62.11 min",
+    "63.21 min",
+    "64.41 min",
+    "64.21 min"
+   ],
+   "my_ans": "B",
+   "sol": "सापेक्ष चाल = 225-180=45. समय = 900/45 = 20 मिनट।<br>अगली बार चाल 0.95 गुना हो जाएगी, तो समय 1/0.95 गुना हो जाएगा।<br>कुल समय = 20 + 20/0.95 + 20/(0.95)² = 20 + 21.05 + 22.16 = 63.21 मिनट।",
+   "ans": "B",
+   "trick": "सापेक्ष चाल से पहला समय निकालें, फिर चाल घटने पर समय को 1/r से बढ़ाएं।"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "In a race of 1200 metres, Amit gives Bhushan a head-start of 200 metres. Amit starts 20 seconds after Bhushan. Amit overtakes Bhushan 4 minutes after he (Amit) starts running. Amit finishes the race 10 seconds before Bhushan. What is the running speed (in m/s) of Amit?",
+   "hi": "1200 m की दौड़ में अमित, भूषण को 200 m की बढ़त देता है। अमित, भूषण से 20 सेकंड बाद दौड़ शुरू करता है। अमित द्वारा दौड़ना शुरू करने के 4 मिनट बाद वह (अमित) भूषण को ओवरटेक करता है। अमित, भूषण से 10 सेकंड पहले दौड़ पूरी करता है। अमित की दौड़ने की चाल (m/s में) ज्ञात कीजिए।",
+   "opts": [
+    "3 4/9",
+    "4 1/3",
+    "3 1/3",
+    "4 4/9"
+   ],
+   "my_ans": "D",
+   "sol": "अमित 4 मिनट (240s) में 200m की बढ़त कवर करता है।<br>अमित की चाल = 200/240 = 5/6 m/s (यह सापेक्ष चाल है)।<br>अमित की चाल = 1200 / (240 + 10) = 1200/250 = 4.8 m/s (लगभग 4 4/9)।",
+   "ans": "D",
+   "trick": "अमित की चाल = कुल दूरी / (अमित का समय), सापेक्ष चाल = बढ़त / समय।"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Along a circular running track, P can complete 5 rounds in 40 minutes. Time taken by R to complete 7 rounds is equal to time taken by P to complete 6 rounds. If they start running in the same direction from two different ends of a diameter, then they will meet for the first time after ____ minutes.",
+   "hi": "एक वृत्ताकार रनिंग ट्रैक पर, P को 5 चक्कर पूरे करने में 40 मिनट लगते हैं। R को 7 चक्कर पूरे करने में उतना ही समय लगता है जितना P को 6 चक्कर पूरे करने में लगता है। यदि वे व्यास के दो अलग-अलग छोरों से एक ही दिशा में दौड़ना शुरू करते हैं, तो वे पहली बार _________ मिनट के बाद मिलेंगे।",
+   "opts": [
+    "20",
+    "30",
+    "24",
+    "28"
+   ],
+   "my_ans": "C",
+   "sol": "P की चाल = 5/40 = 1/8 चक्कर/मिनट।<br>R का समय = P के 6 चक्कर का समय = 6 / (1/8) = 48 मिनट। R की चाल = 7/48 चक्कर/मिनट।<br>सापेक्ष चाल = 7/48 - 1/8 = 1/48 चक्कर/मिनट।<br>दूरी = 0.5 चक्कर। समय = 0.5 / (1/48) = 24 मिनट।",
+   "ans": "C",
+   "trick": "सापेक्ष चाल = चालों का अंतर, व्यास से शुरू करने पर दूरी 0.5 चक्कर लें।"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "A, B, and C run a 1200 m race. A gives to B a headstart of 300 m, and to C a headstart of 600 m. A finishes the race 30 seconds before B and 60 seconds before C. If A’s speed is 10 m/s, then find the respective speeds of B and C.",
+   "hi": "A, B और C 1200 m की दौड़ लगाते हैं। A, B को 300 m और C को 600 m की अग्रिम बढ़त देता है। A, B से 30 सेकंड पहले और C से 60 सेकंड पहले दौड़ पूरी करता है। यदि A की चाल 10 m/s है, तो क्रमशः B और C की चाल ज्ञात कीजिए।",
+   "opts": [
+    "7.5 m/s, 2.5 m/s",
+    "5.5 m/s, 3 m/s",
+    "6 m/s, 3.3 m/s",
+    "8.5 m/s, 5 m/s"
+   ],
+   "my_ans": "C",
+   "sol": "A का समय = 1200/10 = 120 सेकंड।<br>B का समय = 120 + 30 = 150s, दूरी = 900m. चाल = 900/150 = 6 m/s.<br>C का समय = 120 + 60 = 180s, दूरी = 600m. चाल = 600/180 = 3.33 m/s.",
+   "ans": "C",
+   "trick": "चाल = (कुल दूरी - हेडस्टार्ट) / (A का समय + देरी का समय)।"
+  }
+ ]
+}

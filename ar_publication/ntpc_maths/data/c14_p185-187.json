@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Average",
+  "hi": "औसत",
+  "total": 93,
+  "gl": 53,
+  "ug": 40
+ },
+ "source_pages": "185-187",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "The average of the first 63 even natural numbers is:",
+   "hi": "प्रथम 63 सम प्राकृत संख्याओं का औसत ज्ञात कीजिए।",
+   "opts": [
+    "63",
+    "65",
+    "64",
+    "62"
+   ],
+   "my_ans": "C",
+   "sol": "प्रथम n सम संख्याओं का औसत (n+1) होता है।<br>यहाँ n=63, अतः औसत = 63+1 = 64.",
+   "trick": "प्रथम n सम संख्याओं का औसत = n+1",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Find the average value of the first 350 positive multiples of 7.",
+   "hi": "7 के प्रथम 350 धनात्मक गुणजों का औसत मान ज्ञात कीजिए।",
+   "opts": [
+    "1228.5",
+    "1416.5",
+    "1254.5",
+    "1326.5"
+   ],
+   "my_ans": "A",
+   "sol": "औसत = 7 × (प्रथम + अंतिम)/2 = 7 × (1 + 350)/2<br>= 7 × 351 / 2 = 2457 / 2 = 1228.5.",
+   "trick": "औसत = गुणज × (1 + n) / 2",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "The average of 7 numbers is 47. If each number is decreased by 7, what will the new average be?",
+   "hi": "7 संख्याओं का औसत 47 है। यदि प्रत्येक संख्या से 7 कम कर दिया जाए, तो नया औसत कितना होगा?",
+   "opts": [
+    "47",
+    "7",
+    "33",
+    "40"
+   ],
+   "my_ans": "D",
+   "sol": "यदि प्रत्येक संख्या में से x घटाया जाए, तो औसत भी x कम हो जाता है।<br>नया औसत = 47 - 7 = 40.",
+   "trick": "प्रत्येक संख्या में परिवर्तन = औसत में परिवर्तन",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "There are 45 members in group A, 31 members in group B and 48 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹295, ₹311 and ₹233, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 45 सदस्य, समूह B में 31 सदस्य और समूह C में 48 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹295, ₹311 और ₹233 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "276",
+    "273",
+    "275",
+    "272"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (45×295 + 31×311 + 48×233) = 13275 + 9641 + 11184 = 34100<br>कुल सदस्य = 45+31+48 = 124<br>औसत = 34100 / 124 = 275.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "There are 25 members in group A, 26 members in group B and 21 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹137, ₹443 and ₹461, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 25 सदस्य, समूह B में 26 सदस्य और समूह C में 21 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में जाते हैं। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹137, ₹443 और ₹461 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "342",
+    "344",
+    "339",
+    "347"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = (25×137 + 26×443 + 21×461) = 3425 + 11518 + 9681 = 24624<br>कुल सदस्य = 25+26+21 = 72<br>औसत = 24624 / 72 = 342.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "There are 12 members in group A, 55 members in group B and 89 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹160, ₹109 and ₹181, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 12 सदस्य, समूह B में 55 सदस्य और समूह C में 89 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹160, ₹109 और ₹181 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "151",
+    "157",
+    "154",
+    "153"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (12×160 + 55×109 + 89×181) = 1920 + 5995 + 16109 = 24024<br>कुल सदस्य = 12+55+89 = 156<br>औसत = 24024 / 156 = 154.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "The average of the first 62 even natural numbers is:",
+   "hi": "प्रथम 62 सम प्राकृत संख्याओं का औसत ज्ञात कीजिए।",
+   "opts": [
+    "64",
+    "63",
+    "61",
+    "62"
+   ],
+   "my_ans": "B",
+   "sol": "प्रथम n सम संख्याओं का औसत (n+1) होता है।<br>यहाँ n=62, अतः औसत = 62+1 = 63.",
+   "trick": "प्रथम n सम संख्याओं का औसत = n+1",
+   "ans": "B"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "The average of six consecutive even numbers is 175. What is the smallest of these numbers?",
+   "hi": "छह क्रमागत सम संख्याओं का औसत 175 है। उनमें में से सबसे छोटी संख्या कौन-सी है?",
+   "opts": [
+    "170",
+    "172",
+    "168",
+    "166"
+   ],
+   "my_ans": "A",
+   "sol": "औसत 175 है, तो संख्याएँ 170, 172, 174, 176, 178, 180 होंगी।<br>सबसे छोटी संख्या 170 है।",
+   "trick": "औसत के आसपास सम संख्याएँ लिखें",
+   "ans": "A"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "The average weight of a group of 10 students is 50 kg. If the weight of the teacher is also included, the average weight increases by 1 kg. What is the teacher’s weight?",
+   "hi": "10 विद्यार्थियों के एक समूह का औसत वज़न 50 kg है। यदि शिक्षक का वज़न भी इसमें शामिल कर लिया जाए, तो औसत वज़न में 1 kg की वृद्धि हो जाती है। शिक्षक का वज़न कितना है?",
+   "opts": [
+    "58 kg",
+    "61 kg",
+    "60 kg",
+    "59 kg"
+   ],
+   "my_ans": "B",
+   "sol": "शिक्षक का वज़न = पुराना औसत + (कुल सदस्य × औसत में वृद्धि)<br>= 50 + (11 × 1) = 61 kg.",
+   "trick": "नया व्यक्ति = पुराना औसत + (कुल संख्या × वृद्धि)",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "There are 25 members in group A, 32 members in group B and 31 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹101, ₹249 and ₹269, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 25 सदस्य, समूह B में 32 सदस्य और समूह C में 31 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹101, ₹249 और ₹269 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "219",
+    "214",
+    "215",
+    "216"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = (25×101 + 32×249 + 31×269) = 2525 + 7968 + 8339 = 18832<br>कुल सदस्य = 25+32+31 = 88<br>औसत = 18832 / 88 = 214.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "The average of first 13 multiples of 9 is:",
+   "hi": "9 के प्रथम 13 गुणजों का औसत ज्ञात कीजिए।",
+   "opts": [
+    "9",
+    "63",
+    "13",
+    "58.5"
+   ],
+   "my_ans": "B",
+   "sol": "औसत = 9 × (1 + 13) / 2 = 9 × 14 / 2 = 9 × 7 = 63.",
+   "trick": "औसत = गुणज × (1 + n) / 2",
+   "ans": "B"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "The sum of 12 numbers is 528. Find their average.",
+   "hi": "12 संख्याओं का योगफल 528 है। उनका औसत ज्ञात कीजिए।",
+   "opts": [
+    "45",
+    "44",
+    "43",
+    "42"
+   ],
+   "my_ans": "B",
+   "sol": "औसत = योग / संख्या = 528 / 12 = 44.",
+   "trick": "औसत = योग / संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "There are 16 members in group A, 86 members in group B and 21 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹447, ₹396 and ₹158, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 16 सदस्य, समूह B में 86 सदस्य और समूह C में 21 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹447, ₹396 और ₹158 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "360",
+    "366",
+    "362",
+    "367"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (16×447 + 86×396 + 21×158) = 7152 + 34056 + 3318 = 44526<br>कुल सदस्य = 16+86+21 = 123<br>औसत = 44526 / 123 = 362.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "C"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "There are 72 members in group A, 12 members in group B and 87 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹404, ₹316 and ₹424, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 72 सदस्य, समूह B में 12 सदस्य और समूह C में 87 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹404, ₹316 और ₹424 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "409",
+    "404",
+    "408",
+    "412"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (72×404 + 12×316 + 87×424) = 29088 + 3792 + 36888 = 69768<br>कुल सदस्य = 72+12+87 = 171<br>औसत = 69768 / 171 = 408.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "There are 78 members in group A, 22 members in group B and 34 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹136, ₹383 and ₹457, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 78 सदस्य, समूह B में 22 सदस्य और समूह C में 34 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य द्वारा खर्च की गई औसत राशि क्रमशः ₹136, ₹383 और ₹457 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "258",
+    "261",
+    "255",
+    "256"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = (78×136 + 22×383 + 34×457) = 10608 + 8426 + 15538 = 34572<br>कुल सदस्य = 78+22+34 = 134<br>औसत = 34572 / 134 = 258.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "There are 39 members in group A, 33 members in group B and 52 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹377, ₹401 and ₹233, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 39 सदस्य, समूह B में 33 सदस्य और समूह C में 52 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹377, ₹401 और ₹233 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "324",
+    "325",
+    "328",
+    "323"
+   ],
+   "my_ans": "D",
+   "sol": "कुल योग = (39×377 + 33×401 + 52×233) = 14703 + 13233 + 12116 = 40052<br>कुल सदस्य = 39+33+52 = 124<br>औसत = 40052 / 124 = 323.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "A company has three branches. Branch A has 40 employees with average monthly sales of ₹1,20,000, Branch B has 30 employees with average monthly sales of ₹1,80,000, and Branch C has 30 employees with average monthly sales of ₹1,50,000. What is the average monthly sales per employee of the company (in ₹)?",
+   "hi": "एक कंपनी की तीन शाखाएं हैं। शाखा A में 40 कर्मचारी हैं जिनकी औसत मासिक बिक्री ₹1,20,000 है; शाखा B में 30 कर्मचारी हैं जिनकी औसत मासिक बिक्री ₹1,80,000 है; और शाखा C में 30 कर्मचारी हैं जिनकी औसत मासिक बिक्री ₹1,50,000 है। कंपनी की प्रति कर्मचारी औसत मासिक बिक्री (₹ में) कितनी है?",
+   "opts": [
+    "1,50,000",
+    "1,47,000",
+    "1,60,000",
+    "1,20,000"
+   ],
+   "my_ans": "B",
+   "sol": "कुल बिक्री = (40×1.2 + 30×1.8 + 30×1.5) लाख = 48 + 54 + 45 = 147 लाख<br>कुल कर्मचारी = 40+30+30 = 100<br>औसत = 14700000 / 100 = 1,47,000.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "The arithmetic mean of the first 15 numbers is 82. The mean is reduced by 6 when one of the numbers is removed. Find the number that is excluded?",
+   "hi": "प्रथम 15 संख्याओं का समांतर माध्य 82 है। एक संख्या को हटाने पर माध्य में 6 की कमी हो जाती है। हटाई गई संख्या ज्ञात कीजिए।",
+   "opts": [
+    "100",
+    "142",
+    "164",
+    "166"
+   ],
+   "my_ans": "D",
+   "sol": "पुरानी कुल योग = 15×82 = 1230<br>नई कुल योग = 14×(82-6) = 14×76 = 1064<br>हटाई गई संख्या = 1230 - 1064 = 166.",
+   "trick": "हटाई गई संख्या = पुराना योग - नया योग",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "A student scores an average of 72 marks in 5 subjects and 84 marks in 3 additional subjects. The overall average marks is",
+   "hi": "एक विद्यार्थी के 5 विषयों का औसत अंक 72 है और 3 अतिरिक्त विषयों का औसत अंक 84 है। समग्र औसत अंक ज्ञात कीजिए।",
+   "opts": [
+    "75.25",
+    "75.5",
+    "76.25",
+    "76.5"
+   ],
+   "my_ans": "D",
+   "sol": "कुल अंक = (5×72 + 3×84) = 360 + 252 = 612<br>कुल विषय = 5+3 = 8<br>औसत = 612 / 8 = 76.5.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "The average of 6.5, 10.8, 20 and a is 15. The value of a is:",
+   "hi": "6.5, 10.8, 20 और a का औसत 15 है, तो a का मान ज्ञात कीजिए।",
+   "opts": [
+    "21.7",
+    "22.7",
+    "23.7",
+    "24.7"
+   ],
+   "my_ans": "B",
+   "sol": "(6.5 + 10.8 + 20 + a) / 4 = 15<br>37.3 + a = 60<br>a = 60 - 37.3 = 22.7.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "B"
+  }
+ ]
+}

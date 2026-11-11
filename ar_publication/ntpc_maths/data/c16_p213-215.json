@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Time & Work",
+  "hi": "समय एवं कार्य",
+  "total": 88,
+  "gl": 49,
+  "ug": 39
+ },
+ "source_pages": "213-215",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 18 days, respectively. Both work for 2 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 और 18 दिनों में पूरा कर सकते हैं। दोनों 2 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "14",
+    "12",
+    "13",
+    "15"
+   ],
+   "my_ans": "C",
+   "sol": "कुल काम = 36 (LCM of 12, 18). A की क्षमता = 3, B की = 2.<br>2 दिन में किया काम = (3+2)×2 = 10. शेष काम = 36-10 = 26.<br>B द्वारा लिया समय = 26 ÷ 2 = 13 दिन।",
+   "trick": "शेष काम = कुल काम - (दोनों की क्षमता × साथ किए दिन)",
+   "ans": "C"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "A military camp has provisions for 360 soldiers for 50 days. After 10 days, 120 more soldiers arrive at the camp. Assuming the daily consumption per soldier remains constant, for how many more days will the remaining provisions last?",
+   "hi": "एक सैन्य शिविर में 360 सैनिकों के लिए 50 दिनों का राशन है। 10 दिनों के बाद, शिविर में 120 और सैनिक आ जाते हैं। यह मानते हुए कि प्रति सैनिक दैनिक खपत नियत रहती है, तो शेष राशन और कितने दिनों तक चलेगा?",
+   "opts": [
+    "28 days",
+    "30 days",
+    "25 days",
+    "32 days"
+   ],
+   "my_ans": "B",
+   "sol": "360 सैनिकों का 40 दिन का राशन बचा (50-10=40).<br>कुल सैनिक = 360+120 = 480.<br>360 × 40 = 480 × D → D = 14400 ÷ 480 = 30 दिन।",
+   "trick": "M1D1 = M2D2 (जहाँ D2 शेष दिनों की संख्या है)",
+   "ans": "B"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "2 men and 8 women can complete a piece of work in 13 days, and 3 men and 19 women can complete the same work in 8 days. The work of how many women is equivalent to that of one man?",
+   "hi": "2 पुरुष और 8 महिलाएं मिलकर एक कार्य को 13 दिनों में पूरा कर सकते हैं, तथा 3 पुरुष और 19 महिलाएं मिलकर उसी कार्य को 8 दिनों में पूरा कर सकते हैं। कितनी महिलाओं द्वारा किया गया कार्य, एक पुरुष द्वारा किए गए कार्य के बराबर है?",
+   "opts": [
+    "25",
+    "29",
+    "23",
+    "24"
+   ],
+   "my_ans": "D",
+   "sol": "13(2M + 8W) = 8(3M + 19W)<br>26M + 104W = 24M + 152W<br>2M = 48W → 1M = 24W.",
+   "trick": "कुल कार्य को बराबर रखकर M और W की क्षमता का अनुपात निकालें",
+   "ans": "D"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Three friends, Amit, Bharat, and Chitra, can individually complete a painting project in 12 hours, 18 hours, and 24 hours, respectively. If they all work together for 4 hours and then Amit leaves, how many hours will Bharat and Chitra take to finish the remaining work?",
+   "hi": "तीन दोस्त अमित, भरत और चित्रा किसी पेंटिंग प्रोजेक्ट को व्यक्तिगत रूप से क्रमशः 12 घंटे, 18 घंटे और 24 घंटे में पूरा कर सकते हैं। यदि वे सभी 4 घंटे तक एक साथ कार्य करते हैं और फिर अमित चला जाता है, तो भरत और चित्रा शेष कार्य को कितने घंटे में पूरा करेंगे?",
+   "opts": [
+    "3 5/7 hours",
+    "3 6/7 hours",
+    "2 6/7 hours",
+    "2 5/7 hours"
+   ],
+   "my_ans": "C",
+   "sol": "LCM(12, 18, 24) = 72. क्षमता: A=6, B=4, C=3.<br>4 घंटे में काम = (6+4+3)×4 = 52. शेष = 72-52 = 20.<br>B+C की क्षमता = 4+3 = 7. समय = 20/7 = 2 6/7 घंटे।",
+   "trick": "शेष काम / (शेष व्यक्तियों की क्षमता)",
+   "ans": "C"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "A and B can complete a piece of work in 12 days and 6 days, respectively. Both work together for 2 days and then A leaves. B completes the remaining work alone. In how many days is the whole work completed?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 6 दिन में पूरा कर सकते हैं। दोनों 2 दिन साथ काम करते हैं और फिर A काम छोड़कर चला जाता है। B शेष काम अकेले पूरा करता है। संपूर्ण काम कितने दिनों में पूरा होगा?",
+   "opts": [
+    "5",
+    "4",
+    "6",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "LCM=12. A=1, B=2. साथ काम = (1+2)×2 = 6.<br>शेष = 12-6 = 6. B का समय = 6/2 = 3 दिन.<br>कुल दिन = 2 (साथ) + 3 (अकेले) = 5 दिन।",
+   "trick": "कुल समय = साथ किए दिन + शेष काम/क्षमता",
+   "ans": "A"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 6 days, respectively. Both work for 2 days and then A leaves. B completed the remaining work alone. The whole work was completed in ______________ days.",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 6 दिन में पूरा कर सकते हैं। दोनों 2 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। B ने शेष काम अकेले पूरा किया। संपूर्ण काम ______________ दिनों में पूरा हुआ।",
+   "opts": [
+    "4",
+    "5",
+    "3",
+    "6"
+   ],
+   "my_ans": "B",
+   "sol": "LCM=12. A=1, B=2. साथ काम = (1+2)×2 = 6.<br>शेष = 12-6 = 6. B का समय = 6/2 = 3 दिन.<br>कुल दिन = 2+3 = 5 दिन।",
+   "trick": "कुल दिन = साथ किए दिन + शेष काम/क्षमता",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "15 men and 19 women can complete a piece of work in 8 days, and 9 men and 4 women can complete the same work in 14 days. The work of how many women is equivalent to that of one man?",
+   "hi": "15 पुरुष और 19 महिलाएं मिलकर एक कार्य को 8 दिनों में पूरा कर सकते हैं, तथा 9 पुरुष और 4 महिलाएं मिलकर उसी कार्य को 14 दिनों में पूरा कर सकते हैं। कितनी महिलाओं द्वारा किया गया कार्य, एक पुरुष द्वारा किए गए कार्य के बराबर है?",
+   "opts": [
+    "17",
+    "18",
+    "16",
+    "15"
+   ],
+   "my_ans": "C",
+   "sol": "8(15M + 19W) = 14(9M + 4W)<br>120M + 152W = 126M + 56W<br>96W = 6M → 1M = 16W.",
+   "trick": "कुल कार्य को बराबर रखकर M और W की क्षमता का अनुपात निकालें",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Workers P and Q can complete a task in 16 days if working together. P alone takes 24 days. If P and Q start the task together, but Q leaves after 4 days, how many more days will P alone take to finish the work?",
+   "hi": "श्रमिक P और Q एक साथ कार्य करके किसी कार्य को 16 दिनों में पूरा कर सकते हैं। P अकेले उस कार्य को 24 दिनों में पूरा करता है। यदि P और Q एक साथ कार्य करना शुरू करते हैं, लेकिन Q, 4 दिनों के बाद कार्य करना छोड़ देता है, तो P को अकेले कार्य पूरा करने में कितने दिन और लगेंगे?",
+   "opts": [
+    "9 days",
+    "6 days",
+    "10 days",
+    "18 days"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(16, 24) = 48. (P+Q)=3, P=2. तो Q=1.<br>4 दिन में काम = 3×4 = 12. शेष = 48-12 = 36.<br>P का समय = 36/2 = 18 दिन।",
+   "trick": "शेष काम / P की क्षमता",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 30 days, respectively. Both work for 2 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 30 दिन में पूरा कर सकते हैं। दोनों 2 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "24",
+    "22",
+    "25",
+    "23"
+   ],
+   "my_ans": "D",
+   "sol": "LCM=60. A=5, B=2. साथ काम = (5+2)×2 = 14.<br>शेष = 60-14 = 46. B का समय = 46/2 = 23 दिन।",
+   "trick": "शेष काम / B की क्षमता",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "A company hires a certain number of temporary workers for a project. If each worker is paid ₹500 per day, the total daily wage bill exceeds the company’s budget by ₹4,000. If instead each worker is paid ₹450 per day, the total daily wage bill falls short of the budget by ₹2,000. Find the number of workers hired.",
+   "hi": "एक कंपनी किसी परियोजना के लिए कुछ अस्थायी श्रमिकों को काम पर रखती है। यदि प्रत्येक श्रमिक को प्रतिदिन ₹500 का भुगतान किया जाता है, तो कुल दैनिक मजदूरी बिल कंपनी के बजट से ₹4,000 अधिक हो जाता है। यदि इसके स्थान पर प्रत्येक श्रमिक को प्रतिदिन ₹450 का भुगतान किया जाता है, तो कुल दैनिक मजदूरी बिल बजट से ₹2,000 कम हो जाता है। काम पर रखे गए श्रमिकों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "280",
+    "200",
+    "120",
+    "160"
+   ],
+   "my_ans": "C",
+   "sol": "माना श्रमिक = x. 500x - B = 4000, B - 450x = 2000.<br>जोड़ने पर: 50x = 6000 → x = 120.",
+   "trick": "श्रमिकों की संख्या = (बजट अंतर) / (वेतन अंतर)",
+   "ans": "C"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "A team of 3 workers, P, Q, and R, is assigned to paint a large wall. P alone can finish the work in 14 days, Q alone in 21 days, and R alone in 42 days. If they start together but P leaves after 4 days, and the remaining work is completed by Q and R together, in how many total days is the wall completely painted?",
+   "hi": "तीन श्रमिकों, P, Q और R की एक टीम को एक बड़ी दीवार को रंगने का काम सौंपा गया है। P अकेले इस काम को 14 दिनों में, Q अकेले 21 दिनों में और R अकेले 42 दिनों में पूरा कर सकता है। यदि वे एक साथ काम शुरू करते हैं, लेकिन P, 4 दिनों के बाद काम छोड़ देता है, और शेष काम Q और R मिलकर पूरा करते हैं, तो दीवार को पूरी तरह से रंगने में कुल कितने दिन लगे?",
+   "opts": [
+    "9 days",
+    "12 days",
+    "11 days",
+    "10 days"
+   ],
+   "my_ans": "D",
+   "sol": "LCM=42. P=3, Q=2, R=1. साथ क्षमता = 6.<br>4 दिन में काम = 6×4 = 24. शेष = 42-24 = 18.<br>Q+R क्षमता = 3. समय = 18/3 = 6 दिन. कुल = 4+6 = 10 दिन।",
+   "trick": "कुल दिन = साथ किए दिन + शेष काम / (Q+R की क्षमता)",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 30 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 30 दिन में पूरा कर सकते हैं। दोनों 4 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "16",
+    "18",
+    "17",
+    "15"
+   ],
+   "my_ans": "A",
+   "sol": "LCM=60. A=5, B=2. साथ काम = (5+2)×4 = 28.<br>शेष = 60-28 = 32. B का समय = 32/2 = 16 दिन।",
+   "trick": "शेष काम / B की क्षमता",
+   "ans": "A"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "40 persons begin to work together on a job. But after some days 10 persons left the work. As a result, the job which should have been completed in 50 days is completed in 60 days. How many days after the commencement of the work did the 10 persons leave?",
+   "hi": "किसी कार्य पर 40 व्यक्ति एक साथ कार्य करना शुरू करते हैं। लेकिन कुछ दिन बाद, 10 व्यक्ति कार्य छोड़कर चले जाते हैं। परिणामस्वरूप, जो कार्य 50 दिन में पूरा होना चाहिए था, वह 60 दिन में पूरा होता है। कार्य शुरू होने के कितने दिन बाद, वे 10 व्यक्ति कार्य छोड़कर चले गए?",
+   "opts": [
+    "20",
+    "15",
+    "22",
+    "18"
+   ],
+   "my_ans": "A",
+   "sol": "कुल काम = 40×50 = 2000. माना x दिन बाद 10 गए.<br>40x + 30(60-x) = 2000<br>40x + 1800 - 30x = 2000 → 10x = 200 → x = 20.",
+   "trick": "कुल कार्य = (प्रारंभिक व्यक्ति × दिन) = (व्यक्ति × दिन) + (शेष व्यक्ति × शेष दिन)",
+   "ans": "A"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 24 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 और 24 दिनों में पूरा कर सकते हैं। दोनों 4 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "14",
+    "12",
+    "11",
+    "13"
+   ],
+   "my_ans": "B",
+   "sol": "LCM=24. A=2, B=1. साथ काम = (2+1)×4 = 12.<br>शेष = 24-12 = 12. B का समय = 12/1 = 12 दिन।",
+   "trick": "शेष काम / B की क्षमता",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 39 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक कार्य को क्रमशः 12 दिन और 39 दिन में पूरा कर सकते हैं। दोनों 4 दिन कार्य करते हैं और फिर A कार्य छोड़कर चला जाता है। शेष कार्य को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "22",
+    "24",
+    "23",
+    "21"
+   ],
+   "my_ans": "A",
+   "sol": "LCM=156. A=13, B=4. साथ काम = (13+4)×4 = 68.<br>शेष = 156-68 = 88. B का समय = 88/4 = 22 दिन।",
+   "trick": "शेष काम / B की क्षमता",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Mike, Connor and Floyd can finish a certain piece of work in 8, 22 and 33 days, respectively. All three of them started the work together. Mike left the work after 4 days and Connor left just 2 days before the work was completed. Find the total number of days taken for the work to be completed.",
+   "hi": "माइक, कॉनर और फ्लॉयड एक कार्य को क्रमशः 8, 22 और 33 दिनों में पूरा कर सकते हैं। तीनों ने एक साथ कार्य करना शुरू किया। माइक ने 4 दिन बाद कार्य छोड़ दिया और कॉनर ने कार्य पूरा होने से ठीक 2 दिन पहले कार्य छोड़ दिया। कार्य को पूरा होने में कुल कितने दिन लगे?",
+   "opts": [
+    "18.9",
+    "7.1",
+    "7.8",
+    "3.8"
+   ],
+   "my_ans": "C",
+   "sol": "LCM=264. M=33, C=12, F=8. माना कुल दिन x.<br>33(4) + 12(x-2) + 8(x) = 264<br>132 + 12x - 24 + 8x = 264 → 20x = 156 → x = 7.8.",
+   "trick": "कुल काम = (M×4) + (C×(x-2)) + (F×x)",
+   "ans": "C"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "X can finish a job in 20 days. Y can complete the same job in 15 days. If X and Y work together for 5 days and X leaves, how long will Y take to finish the remaining work?",
+   "hi": "X किसी कार्य को 20 दिनों में पूरा कर सकता है। Y उसी कार्य को 15 दिनों में पूरा कर सकता है। यदि X तथा Y, 5 दिनों तक एक-साथ कार्य करते हैं और X कार्य छोड़कर चला जाता है, तो Y को शेष कार्य को पूरा करने में कितना समय लगेगा?",
+   "opts": [
+    "4.5 days",
+    "6.25 days",
+    "5 days",
+    "7 days"
+   ],
+   "my_ans": "B",
+   "sol": "LCM=60. X=3, Y=4. साथ काम = (3+4)×5 = 35.<br>शेष = 60-35 = 25. Y का समय = 25/4 = 6.25 दिन।",
+   "trick": "शेष काम / Y की क्षमता",
+   "ans": "B"
+  }
+ ]
+}

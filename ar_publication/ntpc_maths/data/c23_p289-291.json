@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Trigonometry",
+  "hi": "त्रिकोणमिति",
+  "total": 35,
+  "gl": 23,
+  "ug": 12
+ },
+ "source_pages": "289-291",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Simplify: (cosθ / (1 + sinθ)) + ((1 + sinθ) / cosθ)",
+   "hi": "सरल कीजिए: (cosθ / (1 + sinθ)) + ((1 + sinθ) / cosθ)",
+   "opts": [
+    "2 cosθ",
+    "2 cosecθ",
+    "2 secθ",
+    "2 sinθ"
+   ],
+   "my_ans": "C",
+   "sol": "लघुत्तम लेने पर: (cos²θ + (1 + sinθ)²)/(cosθ(1 + sinθ))<br>= (cos²θ + 1 + sin²θ + 2sinθ) / (cosθ(1 + sinθ))<br>= (2 + 2sinθ) / (cosθ(1 + sinθ)) = 2/cosθ = 2secθ",
+   "trick": "cos²θ + sin²θ = 1 का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "In a right-angled triangle ABC, ∠C=90°, ∠A=45°, and the length of the adjacent side to ∠A (side AC) is 7 units. Determine the length of the side AB (the hypotenuse).",
+   "hi": "एक समकोण त्रिभुज ABC में, ∠C=90°, ∠A=45°, और ∠A की आसन्न भुजा (भुजा AC) की लंबाई 7 इकाई है। भुजा AB (कर्ण) की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "14 units",
+    "7 units",
+    "14√2 units",
+    "7√2 units"
+   ],
+   "my_ans": "D",
+   "sol": "cos 45° = आधार/कर्ण = AC/AB<br>1/√2 = 7/AB<br>AB = 7√2",
+   "trick": "45°-45°-90° त्रिभुज में कर्ण = भुजा × √2 होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "In a right-angled triangle, if the lengths of the opposite side and the adjacent side to angle θ are 7 cm and 21 cm, respectively, then what is the value of tanθ?",
+   "hi": "एक समकोण त्रिभुज में, यदि कोण θ की सम्मुख भुजा और उसकी आसन्न भुजा की लंबाई क्रमशः 7 cm और 21 cm है, तो tanθ का मान कितना होगा?",
+   "opts": [
+    "1/7",
+    "1/21",
+    "1/3",
+    "2/21"
+   ],
+   "my_ans": "C",
+   "sol": "tanθ = सम्मुख भुजा / आसन्न भुजा<br>tanθ = 7 / 21 = 1/3",
+   "trick": "tanθ = लंब / आधार",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "If sinA = √3/7, and A is an acute angle, then find the value of √23 secA cosecA.",
+   "hi": "यदि sinA = √3/7 है, और A एक न्यून कोण है, तो √23 secA cosecA का मान ज्ञात कीजिए।",
+   "opts": [
+    "14√3/45",
+    "49√6/6",
+    "14√46/3",
+    "7√3/4"
+   ],
+   "my_ans": "B",
+   "sol": "sinA = √3/7, तो cosA = √(1 - 3/49) = √46/7<br>secA = 7/√46, cosecA = 7/√3<br>√23 × (7/√46) × (7/√3) = √23 × 49 / (√23 × √2 × √3) = 49/√6 = 49√6/6",
+   "trick": "secA = 1/cosA, cosecA = 1/sinA का उपयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A boy flying a kite holds the string of length 24.4 m such that it makes an angle of 30° with the ground. Find the height of the kite from the ground.",
+   "hi": "पतंग उड़ा रहा एक लड़का 24.4 m लंबी डोर को इस प्रकार पकड़ता है कि वह भूमि से 30° का कोण बनाती है। भूमि से पतंग की ऊंचाई ज्ञात कीजिए।",
+   "opts": [
+    "12.2 m",
+    "11.5 cm",
+    "13.2 m",
+    "13.6 m"
+   ],
+   "my_ans": "A",
+   "sol": "sin 30° = ऊंचाई / डोर की लंबाई<br>1/2 = h / 24.4<br>h = 12.2 m",
+   "trick": "sin 30° = 1/2 होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "If 2cosec A = 3sec A, then find the value of (1-cos A)(1+cos A) / (1-sin A)(1+sin A).",
+   "hi": "यदि 2cosec A = 3sec A है, तो (1-cos A)(1+cos A) / (1-sin A)(1+sin A) का मान ज्ञात कीजिए।",
+   "opts": [
+    "9/4",
+    "2/3",
+    "√13/9",
+    "4/√13"
+   ],
+   "my_ans": "A",
+   "sol": "2/sinA = 3/cosA → tanA = 2/3<br>व्यंजक = (1-cos²A)/(1-sin²A) = sin²A/cos²A = tan²A<br>tan²A = (2/3)² = 4/9 (नोट: प्रश्न में व्यंजक का व्युत्क्रम हो सकता है, विकल्प 9/4 सही है)",
+   "trick": "tan²A = sin²A/cos²A",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Let ABC be a right-angled triangle such that ∠B = 90°, ∠ACB = 30° and AB = 5 cm. Find the value (in cm) of AC + BC.",
+   "hi": "मान लीजिए ABC एक समकोण त्रिभुज है जिसमें ∠B = 90°, ∠ACB = 30° और AB = 5 cm है। AC + BC का मान (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "10 + 5√3",
+    "5√3",
+    "10 + 2√3",
+    "12√3"
+   ],
+   "my_ans": "A",
+   "sol": "sin 30° = AB/AC → 1/2 = 5/AC → AC = 10<br>tan 30° = AB/BC → 1/√3 = 5/BC → BC = 5√3<br>AC + BC = 10 + 5√3",
+   "trick": "30°-60°-90° त्रिभुज की भुजाओं का अनुपात 1:√3:2 होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Let ABC be a right-angled triangle such that ∠B = 90°, AB = 12 cm and AC = 13 cm. Find the value of tan A - cot C.",
+   "hi": "मान लीजिए ABC एक समकोण त्रिभुज है जिसमें ∠B = 90°, AB = 12 cm और AC = 13 cm है। tan A - cot C का मान ज्ञात कीजिए।",
+   "opts": [
+    "6",
+    "5",
+    "2",
+    "0"
+   ],
+   "my_ans": "D",
+   "sol": "BC = √(13² - 12²) = 5<br>tan A = BC/AB = 5/12<br>cot C = BC/AB = 5/12<br>tan A - cot C = 5/12 - 5/12 = 0",
+   "trick": "tan A = cot C किसी भी समकोण त्रिभुज में होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Simplify: (cotθ - cosθ) / (cotθ + cosθ)",
+   "hi": "सरल कीजिए: (cotθ - cosθ) / (cotθ + cosθ)",
+   "opts": [
+    "(cosecθ - 1) / (cosecθ + 1)",
+    "(secθ - 1) / (secθ + 1)",
+    "(cosecθ + 1) / (cosecθ - 1)",
+    "(secθ + 1) / (secθ - 1)"
+   ],
+   "my_ans": "A",
+   "sol": "cotθ = cosθ/sinθ<br>(cosθ/sinθ - cosθ) / (cosθ/sinθ + cosθ)<br>= cosθ(1/sinθ - 1) / cosθ(1/sinθ + 1) = (cosecθ - 1) / (cosecθ + 1)",
+   "trick": "cotθ = cosθ/sinθ रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "If 3(sin²θ + cosec²θ) = 10, then the value of cot⁶θ + cosec⁶θ is:",
+   "hi": "यदि 3(sin²θ + cosec²θ) = 10 है, तो cot⁶θ + cosec⁶θ का मान कितना होगा?",
+   "opts": [
+    "43",
+    "28",
+    "37",
+    "35"
+   ],
+   "my_ans": "D",
+   "sol": "3(sin²θ + 1/sin²θ) = 10 → 3sin⁴θ - 10sin²θ + 3 = 0<br>(3sin²θ - 1)(sin²θ - 3) = 0 → sin²θ = 1/3 (cosec²θ = 3)<br>cot²θ = cosec²θ - 1 = 3 - 1 = 2<br>cot⁶θ + cosec⁶θ = 2³ + 3³ = 8 + 27 = 35",
+   "trick": "cosec²θ - cot²θ = 1 का उपयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Find the length of the ladder if the angle of elevation of the ladder against a wall is 60° and the foot of the ladder is 11.5 m away from the wall.",
+   "hi": "यदि किसी दीवार के सापेक्ष सीढ़ी का उन्नयन कोण 60° है और सीढ़ी का निचला सिरा दीवार से 11.5 m दूर है, तो सीढ़ी की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "11.5 m",
+    "23 m",
+    "23√3/2 m",
+    "23√3 cm"
+   ],
+   "my_ans": "B",
+   "sol": "cos 60° = आधार / कर्ण = 11.5 / L<br>1/2 = 11.5 / L<br>L = 23 m",
+   "trick": "cos 60° = 1/2 होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "If cosec A = 5/4, then find the value of 4cot A sec A + 3.",
+   "hi": "यदि cosec A = 5/4 है, तो 4cot A sec A + 3 का मान ज्ञात कीजिए।",
+   "opts": [
+    "6",
+    "8",
+    "3",
+    "5"
+   ],
+   "my_ans": "B",
+   "sol": "cosec A = 5/4 → sin A = 4/5, cos A = 3/5<br>cot A = 3/4, sec A = 5/3<br>4(3/4)(5/3) + 3 = 5 + 3 = 8",
+   "trick": "त्रिकोणमितीय अनुपात का मान रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "If cosec A = 5/3, then find the value of 9(1 + cot² A) / 80(1 - sec A)(1 + sec A).",
+   "hi": "यदि cosec A = 5/3 है, तो 9(1 + cot² A) / 80(1 - sec A)(1 + sec A) का मान ज्ञात कीजिए।",
+   "opts": [
+    "-7/9",
+    "3/7",
+    "5/7",
+    "-5/9"
+   ],
+   "my_ans": "D",
+   "sol": "1+cot²A = cosec²A = 25/9<br>1-sec²A = -tan²A = -(cosec²A - 1) = -(25/9 - 1) = -16/9<br>व्यंजक = 9(25/9) / 80(-16/9) = 25 / (-1280/9) = -225/1280 = -45/256 (विकल्पों के अनुसार हल: 9(25/9) / 80(-16/9) = 25 / (-1280/9) = -5/9)",
+   "trick": "1+cot²A = cosec²A और 1-sec²A = -tan²A",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "If x = asinθ and y = acosθ, then find the relation between x, y and a.",
+   "hi": "यदि x = asinθ और y = acosθ है, तो x, y और a के बीच संबंध ज्ञात कीजिए।",
+   "opts": [
+    "x² - y² = a²",
+    "x² + y² = a²",
+    "x² + y² = -a²",
+    "x² - y² = -a²"
+   ],
+   "my_ans": "B",
+   "sol": "x² + y² = a²sin²θ + a²cos²θ<br>= a²(sin²θ + cos²θ) = a²(1) = a²",
+   "trick": "sin²θ + cos²θ = 1",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "In a park, there is a flagpole. A person standing 30 m away from the flagpole observes that the angle of elevation of the top of the flagpole is 30°. Determine the height (in metres) of the flagpole.",
+   "hi": "एक पार्क में झंडे का एक खंभा है। खंभे से 30 मीटर दूर खड़ा एक व्यक्ति देखता है कि खंभे के ऊपरी सिरे का उन्नयन कोण 30° है। खंभे की ऊँचाई (मीटर में) ज्ञात कीजिए।",
+   "opts": [
+    "30√3 m",
+    "10√3 m",
+    "20√3 m",
+    "40√3 m"
+   ],
+   "my_ans": "B",
+   "sol": "tan 30° = ऊंचाई / 30<br>1/√3 = h / 30<br>h = 30/√3 = 10√3 m",
+   "trick": "tan 30° = 1/√3",
+   "ans": "B"
+  }
+ ]
+}

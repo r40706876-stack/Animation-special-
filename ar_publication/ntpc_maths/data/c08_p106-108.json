@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Discount",
+  "hi": "बट्टा / छूट",
+  "total": 101,
+  "gl": 23,
+  "ug": 78
+ },
+ "source_pages": "106-108",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 150% above its cost price. What percentage of discount on marked price should be allowed to gain 60%?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य उसके क्रय मूल्य से 150% अधिक अंकित करता है। 60% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "33%",
+    "34%",
+    "36%",
+    "39%"
+   ],
+   "my_ans": "C",
+   "sol": "CP=100, MP=250, SP=160.<br>Discount = 250-160 = 90.<br>Discount % = (90/250)×100 = 36%.",
+   "trick": "छूट % = (अंकित मूल्य - विक्रय मूल्य) / अंकित मूल्य × 100",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 140% above its cost price. What percentage of discount on marked price should be allowed to gain 68%?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य उसके क्रय मूल्य से 140% अधिक अंकित करता है। 68% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "29%",
+    "32%",
+    "30%",
+    "28%"
+   ],
+   "my_ans": "C",
+   "sol": "CP=100, MP=240, SP=168.<br>Discount = 240-168 = 72.<br>Discount % = (72/240)×100 = 30%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item at 150% above its cost price. What percentage of discount on the marked price should be allowed to gain 20%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 150% अधिक निर्धारित करता है। 20% का लाभ अर्जित करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट दी जानी चाहिए?",
+   "opts": [
+    "49%",
+    "54%",
+    "55%",
+    "52%"
+   ],
+   "my_ans": "D",
+   "sol": "CP=100, MP=250, SP=120.<br>Discount = 250-120 = 130.<br>Discount % = (130/250)×100 = 52%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "A trader marks his goods at a certain price and offers a 10% discount on it. In addition, he runs a scheme where for every 104 articles purchased, 16 articles are given free. If he still makes a profit of 17% on the overall transaction, find out by what percentage the marked price of an article is more than its cost price. Assume the customer pays for only 104 articles.",
+   "hi": "एक व्यापारी अपने वस्तु पर एक निश्चित मूल्य अंकित करता है और उस पर 10% की छूट देता है। इसके अतिरिक्त, वह एक स्कीम चलाता है जिसमें प्रत्येक 104 वस्तुओं की खरीद पर 16 वस्तुएं मुफ्त दी जाती हैं। यदि उसे संपूर्ण लेन-देन पर 17% का लाभ प्राप्त होता है, तो ज्ञात कीजिए कि वस्तु का अंकित मूल्य, उसके क्रय मूल्य से कितने प्रतिशत अधिक है। मान लीजिए कि ग्राहक केवल 104 वस्तुओं के लिए भुगतान करता है।",
+   "opts": [
+    "60%",
+    "50%",
+    "53%",
+    "44%"
+   ],
+   "my_ans": "B",
+   "sol": "कुल वस्तुएं = 104+16=120. SP = 104 × 0.9 × MP = 93.6 MP.<br>CP = 120. Profit 17% → SP = 120 × 1.17 = 140.4.<br>93.6 MP = 140.4 → MP = 1.5 CP. अधिक = 50%.",
+   "trick": "कुल SP = (भुगतान की गई वस्तुएं) × (1-छूट) × MP",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 160% above its cost price. What percentage of discount on marked price should be allowed to gain 30%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 160% अधिक निर्धारित करता है। 30% का लाभ प्राप्त करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट दी जानी चाहिए?",
+   "opts": [
+    "47%",
+    "49%",
+    "48%",
+    "50%"
+   ],
+   "my_ans": "D",
+   "sol": "CP=100, MP=260, SP=130.<br>Discount = 260-130 = 130.<br>Discount % = (130/260)×100 = 50%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 180% above its cost price. What percentage of discount on marked price should be allowed to gain 152%?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य उसके क्रय मूल्य से 180% अधिक अंकित करता है। 152% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "10%",
+    "9%",
+    "8%",
+    "7%"
+   ],
+   "my_ans": "A",
+   "sol": "CP=100, MP=280, SP=252.<br>Discount = 280-252 = 28.<br>Discount % = (28/280)×100 = 10%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 100% above its cost price. What percentage of discount on marked price should be allowed to gain 26%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 100% अधिक निर्धारित करता है। 26% का लाभ प्राप्त करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "37%",
+    "39%",
+    "36%",
+    "40%"
+   ],
+   "my_ans": "A",
+   "sol": "CP=100, MP=200, SP=126.<br>Discount = 200-126 = 74.<br>Discount % = (74/200)×100 = 37%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹500 each. He marks each of them at the same price. He sells X by giving two successive discounts of 20% and 45% and still earns ₹636 as profit. If he sells Y at a single discount of 67%, then what is the pro fit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तुएँ X और Y को ₹500 प्रत्येक वस्तु की दर से खरीदता है। वह दोनों वस्तुओं पर समान मूल्य अंकित करता है। वह X को 20% और 45% की दो क्रमागत छूट देकर बेचता है और ₹636 का लाभ अर्जित करता है। यदि वह Y को 67% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत कितना है?",
+   "opts": [
+    "70.4%",
+    "69.4%",
+    "70%",
+    "69%"
+   ],
+   "my_ans": "A",
+   "sol": "X का SP = 500+636 = 1136. MP × 0.8 × 0.55 = 1136 → MP = 1136/0.44 = 2581.81.<br>Y का SP = 2581.81 × 0.33 = 852. Profit = 852-500 = 352. % = 70.4%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A man sold an article for ₹ 234 by first giving a d% discount on its marked price, and then another discount having the same nominal value (in ₹) as that of the first discount. If the marked price of the article is ₹1,800, then what is the value of d?",
+   "hi": "एक व्यक्ति ने पहले वस्तु के अंकित मूल्य पर d% की छूट देकर और फिर पहली छूट के बराबर छूट (₹ में) की एक और छूट देकर किसी वस्तु को ₹234 में बेचा। यदि वस्तु का अंकित मूल्य ₹1,800 है, तो d का मान ज्ञात कीजिए।",
+   "opts": [
+    "47",
+    "41.9",
+    "38.1",
+    "43.5"
+   ],
+   "my_ans": "D",
+   "sol": "MP=1800, SP=234. माना छूट x है। 1800 - 2x = 234 → 2x = 1566 → x = 783.<br>d% = (783/1800)×100 = 43.5%.",
+   "trick": "अंकित मूल्य - 2 × (छूट राशि) = विक्रय मूल्य",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹1,000 each. He marks each of them at the same price. He sells X by giving two successive discounts of 15% and 30% and still earns ₹337 as profit. If he sells Y at a single discount of 49%, then what is the profit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तुओं X और Y में से प्रत्येक को ₹1,000 में खरीदता है। वह दोनों वस्तुओं पर समान मूल्य अंकित करता है। वह वस्तु X को 15% और 30% की दो क्रमिक छूट पर बेचता है और फिर भी ₹337 का लाभ अर्जित करता है। यदि वह वस्तु Y को 49% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "14%",
+    "13%",
+    "14.6%",
+    "13.6%"
+   ],
+   "my_ans": "C",
+   "sol": "X का SP = 1000+337 = 1337. MP × 0.85 × 0.7 = 1337 → MP = 1337/0.595 = 2247.05.<br>Y का SP = 2247.05 × 0.51 = 1146. Profit = 146. % = 14.6%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹500 each. He marks each of them at the same price. He sells X by giving two successive discounts of 50% and 28% and still earns ₹958 as profit. If he sells Y at a single discount of 77%, then what is the profit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तुएँ X और Y में से प्रत्येक को ₹500 में से खरीदता है। वह दोनों वस्तुओं पर समान मूल्य अंकित करता है। वह X को 50% और 28% की दो क्रमिक छूट देकर बेचता है और फिर भी ₹958 का लाभ अर्जित करता है। यदि वह Y को 77% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "86.3%",
+    "85.3%",
+    "86%",
+    "85%"
+   ],
+   "my_ans": "A",
+   "sol": "X का SP = 500+958 = 1458. MP × 0.5 × 0.72 = 1458 → MP = 1458/0.36 = 4050.<br>Y का SP = 4050 × 0.23 = 931.5. Profit = 431.5. % = 86.3%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹2300 each. He marks each of them at the same price. He sells X by giving two successive discounts of 46% and 68% and still earns ₹460 as profit. If he sells Y at a single discount of 73%, then what is the profit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तु X और Y प्रत्येक को ₹2300 की दर से खरीदता है। वह दोनों पर समान मूल्य अंकित करता है। वह X को 46% और 68% की दो क्रमिक छूट देकर बेचता है और फिर भी ₹460 का लाभ अर्जित करता है। यदि वह Y को 73% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "86%",
+    "87%",
+    "86.5%",
+    "87.5%"
+   ],
+   "my_ans": "D",
+   "sol": "X का SP = 2300+460 = 2760. MP × 0.54 × 0.32 = 2760 → MP = 2760/0.1728 = 15972.2.<br>Y का SP = 15972.2 × 0.27 = 4312.5. Profit = 2012.5. % = 87.5%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "A trader gives 5% discount on the marked price of an article and gives 2 articles free for buying 14 articles and gains 33% in the entire transaction. Assuming a customer pays for 14 articles, the marked price of an article is what percent more than its cost price?",
+   "hi": "एक व्यापारी किसी वस्तु के अंकित मूल्य पर 5% की छूट देता है और 14 वस्तुएँ खरीदने पर 2 वस्तुएँ निःशुल्क देता है, जिससे उसे सम्पूर्ण लेन-देन में 33% का लाभ प्राप्त होता है। मान लीजिए कि एक ग्राहक 14 वस्तुओं के लिए भुगतान करता है, तो किसी वस्तु का अंकित मूल्य उसके लागत मूल्य से कितने प्रतिशत अधिक होगा?",
+   "opts": [
+    "52%",
+    "58%",
+    "60%",
+    "68%"
+   ],
+   "my_ans": "C",
+   "sol": "कुल वस्तुएं = 16. SP = 14 × 0.95 × MP = 13.3 MP.<br>CP = 16. Profit 33% → SP = 16 × 1.33 = 21.28.<br>13.3 MP = 21.28 → MP = 1.6 CP. अधिक = 60%.",
+   "trick": "कुल SP = (भुगतान की गई वस्तुएं) × (1-छूट) × MP",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "A trader marks an article at a certain price and offers a 20% discount on it. Additionally, for every 120 articles purchased, he gives 3 more articles free of cost. If his overall profit on the transaction is 28%, find the percentage by which the marked price of an article exceeds its cost price. Assume the customer pays for only 120 articles.",
+   "hi": "एक व्यापारी किसी वस्तु का निश्चित मूल्य अंकित करता है और उस पर 20% की छूट देता है। इसके अतिरिक्त, प्रत्येक 120 वस्तुओं की खरीद पर वह 3 वस्तुएँ मुफ्त देता है। यदि इस लेन-देन पर उसका कुल लाभ 28% है, तो वस्तु के अंकित मूल्य और क्रय मूल्य में अंतर प्रतिशत ज्ञात कीजिए। मान लीजिए कि ग्राहक केवल 120 वस्तुओं का भुगतान करता है।",
+   "opts": [
+    "64%",
+    "68%",
+    "60%",
+    "72%"
+   ],
+   "my_ans": "A",
+   "sol": "कुल वस्तुएं = 123. SP = 120 × 0.8 × MP = 96 MP.<br>CP = 123. Profit 28% → SP = 123 × 1.28 = 157.44.<br>96 MP = 157.44 → MP = 1.64 CP. अधिक = 64%.",
+   "trick": "कुल SP = (भुगतान की गई वस्तुएं) × (1-छूट) × MP",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹800 each. He marks each of them at the same price. He sells X by giving two successive discounts of 45% and 73% and still earns ₹523 as profit. If he sells Y at a single discount of 89%, then what is the profit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तुएँ X और Y प्रत्येक को ₹800 की दर से खरीदता है। वह दोनों वस्तुओं पर समान मूल्य अंकित करता है। वह X को 45% और 73% की दो क्रमिक छूटें देकर बेचता है और लाभ के रूप में ₹523 अर्जित करता है। यदि वह Y को 89% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "21%",
+    "22.5%",
+    "22%",
+    "21.5%"
+   ],
+   "my_ans": "B",
+   "sol": "X का SP = 800+523 = 1323. MP × 0.55 × 0.27 = 1323 → MP = 1323/0.1485 = 8909.<br>Y का SP = 8909 × 0.11 = 980. Profit = 180. % = 22.5%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 136% above its cost price. What percentage of discount on marked price should be allowed to gain 18%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 136% अधिक निर्धारित करता है। 18% का लाभ प्राप्त करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "50%",
+    "47%",
+    "48%",
+    "51%"
+   ],
+   "my_ans": "A",
+   "sol": "CP=100, MP=236, SP=118.<br>Discount = 236-118 = 118.<br>Discount % = (118/236)×100 = 50%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "A"
+  }
+ ]
+}

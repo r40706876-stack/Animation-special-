@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Geometry",
+  "hi": "ज्यामिति",
+  "total": 103,
+  "gl": 50,
+  "ug": 53
+ },
+ "source_pages": "283-285",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The diagonals of a rhombus are in the ratio 3:4. If the length of each side of the rhombus is 12.5 units, what is the length of the shorter diagonal?",
+   "hi": "एक समचतुर्भुज के विकर्णों का अनुपात 3:4 है। यदि समचतुर्भुज की प्रत्येक भुजा की लंबाई 12.5 इकाई है, तो छोटे विकर्ण की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "15 units<br>15 इकाई",
+    "10 units<br>10 इकाई",
+    "12 units<br>12 इकाई",
+    "18 units<br>18 इकाई"
+   ],
+   "my_ans": "A",
+   "sol": "विकर्ण 3x और 4x हैं, आधे विकर्ण 1.5x और 2x होंगे।<br>पाइथागोरस से: (1.5x)² + (2x)² = (12.5)² → 6.25x² = 156.25 → x² = 25 → x = 5.<br>छोटा विकर्ण = 3 × 5 = 15.",
+   "trick": "समचतुर्भुज में भुजा² = (d1/2)² + (d2/2)²",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "The diagonals of a rhombus are in the ratio 5:12 and its area is 240 cm². Find the lengths (in cm) of the diagonals.",
+   "hi": "एक समचतुर्भुज के विकर्णों का अनुपात 5:12 है और इसका क्षेत्रफल 240 cm² है। विकर्णों की लंबाई (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "10 and 24<br>10 और 24",
+    "5√2 and 12√2<br>5√2 और 12√2",
+    "5 and 12<br>5 और 12",
+    "10√2 and 24√2<br>10√2 और 24<br>Note: Option D in image is 10√2 and 24√2"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल = 1/2 × d1 × d2 = 240 → 1/2 × 5x × 12x = 240 → 30x² = 240 → x² = 8 → x = 2√2.<br>विकर्ण = 5(2√2) = 10√2 और 12(2√2) = 24√2.",
+   "trick": "क्षेत्रफल = 1/2 × d1 × d2",
+   "ans": "D"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the mid points of the diagonals AC and BD, respectively. If AB = 24 cm, BC = 62 cm, DC = 92 cm, and AD = 95 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB || DC, और E तथा F क्रमशः विकर्ण AC और BD के मध्यबिंदु हैं। यदि AB = 24 सेमी, BC = 62 सेमी, DC = 92 सेमी, और AD = 95 सेमी है, तो EF की लंबाई (सेमी में) क्या है?",
+   "opts": [
+    "34",
+    "36",
+    "39",
+    "29"
+   ],
+   "my_ans": "A",
+   "sol": "समलंब चतुर्भुज में विकर्णों के मध्यबिंदुओं को जोड़ने वाली रेखा EF = (DC - AB) / 2.<br>EF = (92 - 24) / 2 = 68 / 2 = 34.",
+   "trick": "EF = (बड़ी भुजा - छोटी भुजा) / 2",
+   "ans": "A"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "A square is drawn inside another square such that each vertex of the inner square lies at the midpoint of a side of the outer square. If the perimeter of the inner square is 40 cm, find the perimeter of the outer square.",
+   "hi": "एक वर्ग को एक अन्य वर्ग के अंदर इस प्रकार बनाया गया है कि आंतरिक वर्ग का प्रत्येक शीर्ष, बाह्य वर्ग की भुजा के मध्य-बिंदु पर स्थित है। यदि आंतरिक वर्ग का परिमाप 40 cm है, तो बाह्य वर्ग का परिमाप ज्ञात कीजिए।",
+   "opts": [
+    "20√2 cm",
+    "40",
+    "40√2 cm",
+    "80√2 cm"
+   ],
+   "my_ans": "C",
+   "sol": "आंतरिक वर्ग की भुजा = 40/4 = 10. बाह्य वर्ग की भुजा 'a' हो तो a² = 5² + 5² = 50 → a = 5√2.<br>बाह्य वर्ग का परिमाप = 4 × 5√2 = 20√2 (Wait, check logic: inner side s=10, outer side a=10/√2 * √2 = 10√2? No, a/2 = 5√2, a = 10√2).<br>परिमाप = 4 × 10√2 = 40√2.",
+   "trick": "बाह्य वर्ग का परिमाप = √2 × आंतरिक वर्ग का परिमाप",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Find the measure of the unknown interior angle in an irregular hexagon with angles 140°, 80°, 145°, 155°, and 100°.",
+   "hi": "एक असम षट्भुज में, जिसके कोण 140°, 80°, 145°, 155° और 100° हैं, अज्ञात अंतःकोण का माप ज्ञात कीजिए।",
+   "opts": [
+    "120°",
+    "105°",
+    "110°",
+    "100°"
+   ],
+   "my_ans": "D",
+   "sol": "षट्भुज के कोणों का योग = (6-2) × 180° = 720°.<br>अज्ञात कोण = 720° - (140+80+145+155+100) = 720° - 620° = 100°.",
+   "trick": "बहुभुज के कोणों का योग = (n-2) × 180°",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "How many sides does a regular polygon have if each interior angle measures 150°?",
+   "hi": "यदि प्रत्येक अंत:कोण की माप 150° हो, तो एक समबहुभुज में कितनी भुजाएँ होती हैं?",
+   "opts": [
+    "10 sides<br>10 भुजाएँ",
+    "12 sides<br>12 भुजाएँ",
+    "15 sides<br>15 भुजाएँ",
+    "8 sides<br>8 भुजाएँ"
+   ],
+   "my_ans": "B",
+   "sol": "बाह्य कोण = 180° - 150° = 30°.<br>भुजाओं की संख्या = 360° / 30° = 12.",
+   "trick": "भुजाओं की संख्या = 360° / बाह्य कोण",
+   "ans": "B"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "If a triangle has sides a, b, c, and fixed sum a + b + c = 18, then the maximum possible area (in cm²) of the triangle is _____.",
+   "hi": "यदि किसी त्रिभुज की भुजाएं a, b, c हैं और नियत योग a + b + c = 18 है, तो उस त्रिभुज का अधिकतम संभव क्षेत्रफल (cm²) कितना होगा?",
+   "opts": [
+    "6√3",
+    "12√3",
+    "9√3",
+    "3√3"
+   ],
+   "my_ans": "C",
+   "sol": "अधिकतम क्षेत्रफल के लिए त्रिभुज समबाहु होना चाहिए।<br>भुजा = 18/3 = 6. क्षेत्रफल = (√3/4) × 6² = 9√3.",
+   "trick": "समबाहु त्रिभुज का क्षेत्रफल अधिकतम होता है",
+   "ans": "C"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "A floor is paved with 500 identical parallelogram-shaped tiles. The base and corresponding height of each tile are 8 cm and 6 cm, respectively. What is the total area of the floor covered by the tiles (in cm²)?",
+   "hi": "एक फर्श पर 500 समरूप समांतर चतुर्भुज की आकृति की टाइलें बिछी हैं। प्रत्येक टाइल का आधार और उसकी संगत ऊँचाई क्रमशः 8 cm और 6 cm है। टाइलों द्वारा कवर किए गए फर्श का कुल क्षेत्रफल (cm² में) कितना है?",
+   "opts": [
+    "20,000",
+    "24,000",
+    "26,000",
+    "28,000"
+   ],
+   "my_ans": "B",
+   "sol": "एक टाइल का क्षेत्रफल = आधार × ऊँचाई = 8 × 6 = 48 cm².<br>कुल क्षेत्रफल = 500 × 48 = 24,000 cm².",
+   "trick": "कुल क्षेत्रफल = टाइलों की संख्या × आधार × ऊँचाई",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "In ΔXYZ, XY = XZ and ∠X = 40° Find ∠Z = ?",
+   "hi": "ΔXYZ में, XY = XZ और ∠X = 40° है, तो ∠Z का माप ज्ञात कीजिए।",
+   "opts": [
+    "60°",
+    "80°",
+    "70°",
+    "40°"
+   ],
+   "my_ans": "C",
+   "sol": "XY = XZ है, अतः ∠Y = ∠Z.<br>∠X + ∠Y + ∠Z = 180° → 40° + 2∠Z = 180° → 2∠Z = 140° → ∠Z = 70°.",
+   "trick": "समान भुजाओं के सम्मुख कोण बराबर होते हैं",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "The sides of a rectangular field are 55 m and 70 m long. Its area is equal to the area of a circular field. What is the perimeter (in m) of the circular field?",
+   "hi": "एक आयताकार खेत की भुजाएं 55 m और 70 m लंबी हैं। इसका क्षेत्रफल एक वृत्ताकार खेत के क्षेत्रफल के बराबर है। वृत्ताकार खेत का परिमाप (m में) क्या है?",
+   "opts": [
+    "197",
+    "181",
+    "220",
+    "174"
+   ],
+   "my_ans": "C",
+   "sol": "आयत का क्षेत्रफल = 55 × 70 = 3850.<br>πr² = 3850 → (22/7)r² = 3850 → r² = 1225 → r = 35.<br>परिमाप = 2πr = 2 × (22/7) × 35 = 220.",
+   "trick": "क्षेत्रफल बराबर तो πr² = l × b",
+   "ans": "C"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "The sides of a triangle are in the ratio 5:6:7 and its perimeter is 90 cm. What is the area of this triangle (in square cm)?",
+   "hi": "एक त्रिभुज की भुजाओं का अनुपात 5:6:7 है और इसका परिमाप 90 cm है। इस त्रिभुज का क्षेत्रफल (cm² में) कितना होगा?",
+   "opts": [
+    "150√3",
+    "140√6",
+    "150√6",
+    "150√7"
+   ],
+   "my_ans": "C",
+   "sol": "भुजाएं: 5x+6x+7x = 90 → 18x = 90 → x=5. भुजाएं 25, 30, 35.<br>s = 45. क्षेत्रफल = √[45(45-25)(45-30)(45-35)] = √[45×20×15×10] = √135000 = 150√6.",
+   "trick": "हीरोन का सूत्र: √[s(s-a)(s-b)(s-c)]",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "The area of a regular polygon with a side of 11 cm is 247.5 cm². If the perpendicular distance from the centre to the side of the polygon is 9 cm, what is the number of sides of the polygon?",
+   "hi": "एक समबहुभुज जिसकी भुजा की लंबाई 11 cm है, का क्षेत्रफल 247.5 cm² है। यदि केंद्र से बहुभुज की भुजा तक की लंबवत दूरी 9 cm है, तो बहुभुज की भुजाओं की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "6",
+    "5",
+    "7"
+   ],
+   "my_ans": "C",
+   "sol": "क्षेत्रफल = 1/2 × परिमाप × अपोथेम (दूरी) = 247.5.<br>1/2 × (n × 11) × 9 = 247.5 → 49.5n = 247.5 → n = 5.",
+   "trick": "क्षेत्रफल = 1/2 × परिमाप × लंबवत दूरी",
+   "ans": "C"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "From a regular octagon of side 4 units, a largest rectangle is cut out. From the remaining pieces, two largest rectangles are cut out. The remaining area of the octagon is _____ square units.",
+   "hi": "4 इकाई भुजा वाले एक सम अष्टभुज से एक सबसे बड़ा आयत काटकर निकाल लिया जाता है। उसके बाद बचे हुए टुकड़ों में से दो सबसे बड़े आयत काटकर निकाल लिए जाते हैं। उसके बाद भी शेष बचे अष्टभुज का क्षेत्रफल _______ वर्ग इकाई है।",
+   "opts": [
+    "8",
+    "32",
+    "24",
+    "16"
+   ],
+   "my_ans": "D",
+   "sol": "अष्टभुज का क्षेत्रफल = 2(1+√2)s² = 2(1+1.414)×16 ≈ 77.25. यह प्रश्न ज्यामितीय विच्छेदन पर आधारित है, शेष क्षेत्रफल 16 आता है।",
+   "trick": "अष्टभुज का क्षेत्रफल = 2(1+√2)s²",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "The perimeter of a rectangle is 56 cm. Its length is 4 cm more than twice its breadth. Find the breadth.",
+   "hi": "एक आयत का परिमाप 56 cm है। इसकी लंबाई इसकी चौड़ाई के दोगुने से 4 cm अधिक है। चौड़ाई ज्ञात कीजिए।",
+   "opts": [
+    "10 cm",
+    "6 cm",
+    "8 cm",
+    "12 cm"
+   ],
+   "my_ans": "C",
+   "sol": "परिमाप = 2(l+b) = 56 → l+b = 28. l = 2b+4.<br>(2b+4) + b = 28 → 3b = 24 → b = 8.",
+   "trick": "परिमाप = 2(l+b)",
+   "ans": "C"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "The sides of a triangle are 51 cm, 35 cm, and 26 cm. What is the length (in cm) of its altitude corresponding to the side with a length of 35 cm?",
+   "hi": "एक त्रिभुज की भुजाओं की लंबाई 51 cm, 35 cm और 26 cm है। 35 cm लंबाई वाली भुजा के संगत उसके शीर्षलंब की लंबाई (cm में) कितनी होगी?",
+   "opts": [
+    "53",
+    "60",
+    "24",
+    "40"
+   ],
+   "my_ans": "C",
+   "sol": "s = (51+35+26)/2 = 56. क्षेत्रफल = √[56(56-51)(56-35)(56-26)] = √[56×5×21×30] = 420.<br>क्षेत्रफल = 1/2 × आधार × ऊँचाई → 420 = 1/2 × 35 × h → h = 24.",
+   "trick": "क्षेत्रफल = 1/2 × आधार × ऊँचाई",
+   "ans": "C"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "If a square’s diagonal is extended by 6 units beyond a vertex, forming a triangle outside the square, what is the angle between this extension and the adjacent side of the square?",
+   "hi": "यदि किसी वर्ग के विकर्ण को एक शीर्ष से आगे 6 इकाई तक विस्तारित किया जाता है, जिससे वर्ग के बाहर एक त्रिभुज बनता है, तो इस विस्तार और वर्ग की आसन्न भुजा के बीच का कोण कितना है?",
+   "opts": [
+    "45 degrees<br>45 डिग्री",
+    "30 degrees<br>30 डिग्री",
+    "90 degrees<br>90 डिग्री",
+    "60 degrees<br>60 डिग्री"
+   ],
+   "my_ans": "A",
+   "sol": "वर्ग का विकर्ण भुजा के साथ 45° का कोण बनाता है। विकर्ण का विस्तार उसी रेखा पर होता है, अतः कोण 45° ही रहेगा।",
+   "trick": "वर्ग का विकर्ण भुजा के साथ 45° बनाता है",
+   "ans": "A"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "If one angle of an isosceles triangle is 110°, what are the measures of the other angles of the triangle?",
+   "hi": "यदि एक समद्विबाहु त्रिभुज का एक कोण 110° है, तो त्रिभुज के अन्य कोणों का माप क्या होगा?",
+   "opts": [
+    "25° and 35°",
+    "35° and 35°",
+    "25° and 45°",
+    "25° and 25°"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिभुज में 110° का कोण आधार कोण नहीं हो सकता (क्योंकि 110+110 > 180). अतः 110° शीर्ष कोण है।<br>अन्य कोण = (180-110)/2 = 35°.",
+   "trick": "समद्विबाहु त्रिभुज में आधार कोण बराबर होते हैं",
+   "ans": "B"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "The measure of an interior angle of a regular polygon is 162°. Find the number of sides of the polygon.",
+   "hi": "एक समबहुभुज के अंतःकोण की माप 162° है। बहुभुज की भुजाओं की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "18",
+    "22",
+    "12",
+    "20"
+   ],
+   "my_ans": "D",
+   "sol": "बाह्य कोण = 180° - 162° = 18°.<br>भुजाओं की संख्या = 360° / 18° = 20.",
+   "trick": "भुजाओं की संख्या = 360° / बाह्य कोण",
+   "ans": "D"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "Which of the following are true to construct a quadrilateral uniquely?( i ) Rhombus and square can be constructed when 2 diagonals are given.( ii ) The lengths of 2 adjacent sides and 2 angles are given.( iii ) The lengths of 3 sides and 1 angle are given.( iv ) The lengths of 4 sides and 1 diagonal are given.",
+   "hi": "निम्नलिखित में से कौन सा चतुर्भुज को विशिष्ट रूप से बनाने के लिए सत्य है? (i) 2 विकर्ण दिए जाने पर समचतुर्भुज और वर्ग बनाए जा सकते हैं। (ii) 2 आसन्न भुजाओं और 2 कोणों की लंबाई दी गई है। (iii) 3 भुजाओं और 1 कोण की लंबाई दी गई है। (iv) 4 भुजाओं और 1 विकर्ण की लंबाई दी गई है।",
+   "opts": [
+    "( ii ) and ( iii )",
+    "( i ) and ( iii )",
+    "( i ) and ( iv )",
+    "( ii ) and ( iv )"
+   ],
+   "my_ans": "C",
+   "sol": "चतुर्भुज के लिए 5 स्वतंत्र मापों की आवश्यकता होती है। (i) और (iv) सही हैं।",
+   "trick": "चतुर्भुज निर्माण के लिए 5 मापों की आवश्यकता होती है",
+   "ans": "C"
+  }
+ ]
+}

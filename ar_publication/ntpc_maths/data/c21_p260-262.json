@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Mensuration",
+  "hi": "क्षेत्रमिति",
+  "total": 89,
+  "gl": 47,
+  "ug": 42
+ },
+ "source_pages": "260-262",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "A solid cylinder of radius R and height H, is melted and recast into three identical cylinders, each having the same height as the original cylinder but half the radius of the original cylinder. What fraction of the original cylinder’s volume remains unused?",
+   "hi": "R त्रिज्या और H ऊंचाई वाले एक ठोस बेलन को पिघलाकर तीन समान बेलनों में ढाला जाता है, जिनमें से प्रत्येक की ऊंचाई मूल बेलन के समान है लेकिन त्रिज्या मूल बेलन की आधी है। मूल बेलन के आयतन का कितना भाग अप्रयुक्त रहता है?",
+   "opts": [
+    "1/4",
+    "2/3",
+    "1/2",
+    "3/4"
+   ],
+   "my_ans": "A",
+   "sol": "मूल आयतन = πR²H. नए 3 बेलनों का आयतन = 3 × π(R/2)²H = 3/4 πR²H.<br>अप्रयुक्त भाग = 1 - 3/4 = 1/4.",
+   "trick": "आयतन में त्रिज्या का वर्ग होता है, इसलिए (1/2)² = 1/4 भाग ही उपयोग होगा।",
+   "ans": "A"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "The sides of a rectangular field are 77 m and 98 m long. Its area is equal to the area of a circular field. What is the perimeter (in m) of the circular field?( Take π = 22/7 )",
+   "hi": "एक आयताकार मैदान की भुजाएँ 77 मी और 98 मी लंबी हैं। इसका क्षेत्रफल एक वृत्ताकार मैदान के क्षेत्रफल के बराबर है। वृत्ताकार मैदान का परिमाप (मीटर में) क्या है? (π = 22/7 लीजिए)",
+   "opts": [
+    "308",
+    "304",
+    "353",
+    "330"
+   ],
+   "my_ans": "A",
+   "sol": "आयताकार क्षेत्रफल = 77 × 98 = 7546. πr² = 7546 → r² = 7546 × 7/22 = 2401 → r = 49.<br>परिमाप = 2πr = 2 × 22/7 × 49 = 308.",
+   "trick": "क्षेत्रफल बराबर होने पर πr² = L×B का उपयोग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "A cube is melted and recast into a cuboid whose dimensions are in the ratio 4:5:8. If the height of the cuboid is 12 cm, then the edge of the original cube is (correct to 2 decimal places).",
+   "hi": "एक घन को पिघलाकर एक ऐसा घनाभ बनाया जाता है जिसकी विमाओं का अनुपात 4 : 5 : 8 है। यदि घनाभ की ऊँचाई 12 cm है, तो मूल घन की कोर (ठीक दो दशमलव स्थानों तक) ज्ञात कीजिए।",
+   "opts": [
+    "15.34 cm",
+    "8.14 cm",
+    "12.12 cm",
+    "9.44 cm"
+   ],
+   "my_ans": "B",
+   "sol": "अनुपात 4x:5x:8x. 8x = 12 → x = 1.5. विमाएँ = 6, 7.5, 12. आयतन = 6×7.5×12 = 540.<br>घन की भुजा = ∛540 ≈ 8.14.",
+   "trick": "घन का आयतन = घनाभ का आयतन (a³ = l×b×h)",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "A solid cube is melted and half of its material is recast into a cuboid whose length, breadth, and height are in the ratio 2 : 1 : 1. The difference between the volume of the original cube and the cuboid formed is 250 cm³. Find the total surface area of the cuboid.",
+   "hi": "एक ठोस घन को पिघलाया जाता है और उसकी सामग्री के आधे भाग को एक घनाभ के रूप में ढाला जाता है जिसकी लंबाई, चौड़ाई और ऊंचाई 2 : 1 : 1 के अनुपात में है। मूल घन और निर्मित घनाभ के आयतन के बीच का अंतर 250 cm³ है। घनाभ का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "80 cm²",
+    "120 cm²",
+    "250 cm²",
+    "100 cm²"
+   ],
+   "my_ans": "C",
+   "sol": "घन का आयतन V, घनाभ का V/2. V - V/2 = 250 → V = 500. घनाभ का आयतन = 250. विमाएँ 2x, x, x → 2x³ = 250 → x³ = 125 → x = 5. विमाएँ 10, 5, 5.<br>पृष्ठीय क्षेत्रफल = 2(10×5 + 5×5 + 5×10) = 2(50+25+50) = 250.",
+   "trick": "घनाभ का कुल पृष्ठीय क्षेत्रफल = 2(lb + bh + hl)",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "A solid right circular cylinder has total surface area 1408π cm². If the volume of the cylinder is maximum, then the ratio of radius to height is?",
+   "hi": "एक ठोस लंब गोलाकार सिलेंडर का कुल सतही क्षेत्रफल 1408π cm² है। यदि सिलेंडर का आयतन अधिकतम है, तो त्रिज्या और ऊंचाई का अनुपात क्या होगा?",
+   "opts": [
+    "1:4",
+    "1:2",
+    "1:3",
+    "2:1"
+   ],
+   "my_ans": "B",
+   "sol": "अधिकतम आयतन के लिए बेलन में h = 2r होता है।<br>अतः r/h = 1/2.",
+   "trick": "अधिकतम आयतन के लिए बेलन में ऊँचाई व्यास के बराबर (h = 2r) होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "A cylindrical tank of radius 20 cm contains water up to a height of 10 cm. If 30 solid spheres, each of radius 7 cm, are completely immersed in the water, then the rise in the water level (in cm) is: (Use π = 3.14)",
+   "hi": "20 cm त्रिज्या वाले एक बेलनाकार टैंक में 10 cm की ऊंचाई तक जल भरा है। यदि 30 ठोस गोले, जिनमें से प्रत्येक की त्रिज्या 7 cm है, जल में पूरी तरह से डुबोए जाएं, तो जल स्तर में कितनी वृद्धि (cm में) होगी? (π = 3.14 का उपयोग कीजिए)",
+   "opts": [
+    "36.5 cm",
+    "34.3 cm",
+    "32.4 cm",
+    "28.7 cm"
+   ],
+   "my_ans": "B",
+   "sol": "30 गोलों का आयतन = 30 × 4/3 × π × 7³ = 40 × π × 343. बेलन में वृद्धि = π × 20² × h.<br>h = (40 × 343) / 400 = 34.3.",
+   "trick": "बेलन में जल वृद्धि = गोलों का कुल आयतन / बेलन का आधार क्षेत्रफल",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "A solid cylinder of radius 35 cm and height 50 cm is melted and recast into smaller identical cylinders, each having radius 3.5 cm and height 15 cm. How many complete such smaller cylinders are formed?",
+   "hi": "35 cm त्रिज्या और 50 cm ऊँचाई वाले एक ठोस बेलन को पिघलाकर छोटे-छोटे एकसमान बेलनों में ढाला जाता है, जिनमें से प्रत्येक की त्रिज्या 3.5 cm और ऊँचाई 15 cm है। ऐसे कितने पूर्ण छोटे बेलन बनते हैं?",
+   "opts": [
+    "222",
+    "333",
+    "260",
+    "121"
+   ],
+   "my_ans": "B",
+   "sol": "संख्या = (π × 35² × 50) / (π × 3.5² × 15) = (1225 × 50) / (12.25 × 15) = 100 × 50 / 15 = 5000 / 15 ≈ 333.33.",
+   "trick": "संख्या = बड़े बेलन का आयतन / छोटे बेलन का आयतन",
+   "ans": "B"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "A spherical water tank has an internal diameter of 10 meters. If the tank is coated with a material that costs ₹5 per square meter, what is the total cost to coat the entire internal surface? (Use π = 3.14)",
+   "hi": "पानी की एक गोलाकार टंकी का आंतरिक व्यास 10 मीटर है। यदि टंकी को ₹5 प्रति वर्ग मीटर की लागत से एक सामग्री से लेपित किया जाता है, तो संपूर्ण आंतरिक पृष्ठ को लेपित करने की कुल लागत कितनी होगी? (π = 3.14 का उपयोग करें)",
+   "opts": [
+    "₹1257",
+    "₹1570",
+    "₹785",
+    "₹314"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिज्या r = 5m. पृष्ठीय क्षेत्रफल = 4πr² = 4 × 3.14 × 25 = 314 m². लागत = 314 × 5 = 1570.",
+   "trick": "गोले का पृष्ठीय क्षेत्रफल = 4πr²",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Find the volume of a cylinder whose height is 21 cm and its radius is 3/5 of the radius of another cylinder with a volume of 317900 cm³ and a height of 14 cm. (Use π = 22/7)",
+   "hi": "एक बेलन का आयतन ज्ञात कीजिए जिसकी ऊँचाई 21 cm है और उसकी त्रिज्या, 317900 cm³ आयतन और 14 cm ऊँचाई वाले दूसरे बेलन की त्रिज्या का 3/5 है। (π = 22/7 का प्रयोग करें)",
+   "opts": [
+    "171666 cm³",
+    "171660 cm³",
+    "171656 cm³",
+    "161666 cm³"
+   ],
+   "my_ans": "A",
+   "sol": "V2 = πr2²h2 = 317900. r2² = 317900 × 7 / (22 × 14) = 7225 → r2 = 85. r1 = 3/5 × 85 = 51. V1 = π × 51² × 21 = 22/7 × 2601 × 21 = 171666.",
+   "trick": "बेलन का आयतन = πr²h",
+   "ans": "A"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "The length of each edge of a cube is 10 cm. If a sphere is inscribed inside the cube, what is the ratio of the surface area of the sphere to the outer surface area of the cube?",
+   "hi": "एक घन के प्रत्येक कोर की लंबाई 10 cm है। यदि घन के भीतर एक गोला उत्कीर्ण किया जाए, तो गोले के पृष्ठीय क्षेत्रफल और घन के बाह्य पृष्ठीय क्षेत्रफल का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "π:3",
+    "π:6",
+    "3:π",
+    "6:π"
+   ],
+   "my_ans": "B",
+   "sol": "गोले का व्यास = घन की भुजा (a=10), r=5. गोले का क्षेत्रफल = 4πr² = 100π. घन का क्षेत्रफल = 6a² = 600. अनुपात = 100π / 600 = π/6.",
+   "trick": "अन्तःवृत्त गोले की त्रिज्या = भुजा/2",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "If a sphere with radius 10 cm is painted, but 25% of its surface area is masked and not painted, what is the painted area?",
+   "hi": "यदि 10 cm त्रिज्या वाले एक गोले को पेंट किया जाता है, लेकिन उसके पृष्ठ क्षेत्रफल का 25% हिस्सा छिपा हुआ है और उसे पेंट नहीं किया जाता है, तो पेंट किया गया क्षेत्रफल कितना होगा?",
+   "opts": [
+    "300π cm²",
+    "100π cm²",
+    "200π cm²",
+    "400π cm²"
+   ],
+   "my_ans": "A",
+   "sol": "कुल क्षेत्रफल = 4πr² = 4 × π × 100 = 400π. पेंट किया गया = 75% of 400π = 300π.",
+   "trick": "पेंट किया गया क्षेत्रफल = कुल क्षेत्रफल × (100 - %छिपा हुआ)/100",
+   "ans": "A"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Sphere A has a radius of 6 cm and Sphere B has a radius of 3 cm. What is the ratio of the surface area of A to that of B?",
+   "hi": "गोले A की त्रिज्या 6 cm है और गोले B की त्रिज्या 3 cm है। गोले A और गोले B के पृष्ठीय क्षेत्रफल का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "6:1",
+    "3:1",
+    "2:1",
+    "4:1"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल का अनुपात = (r1/r2)² = (6/3)² = 2² = 4:1.",
+   "trick": "क्षेत्रफल का अनुपात = त्रिज्याओं के अनुपात का वर्ग",
+   "ans": "D"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "A new cuboid is formed by placing three cuboids of length 10.5 cm, breadth 6.4 cm, and height 2 cm, one on top of the other. What is the volume of the new cuboid?",
+   "hi": "10.5 cm लंबाई, 6.4 cm चौड़ाई और 2 cm ऊंचाई वाले तीन घनाभों को एक के ऊपर एक रखकर एक नया घनाभ बनाया जाता है। इस नए घनाभ का आयतन कितना होगा?",
+   "opts": [
+    "403.2 cm³",
+    "503.2 cm³",
+    "303.2 cm³",
+    "413.2 cm³"
+   ],
+   "my_ans": "A",
+   "sol": "एक घनाभ का आयतन = 10.5 × 6.4 × 2 = 134.4. तीन का कुल आयतन = 3 × 134.4 = 403.2.",
+   "trick": "कुल आयतन = n × (l×b×h)",
+   "ans": "A"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "The ratio of the radii of two spheres is 2 : 3. If the radius of the first sphere is increased by 50% and the radius of the second sphere is increased by 20%, find the ratio of their new volumes.",
+   "hi": "दो गोलों की त्रिज्या का अनुपात 2 : 3 है। यदि पहले गोले की त्रिज्या में 50% की वृद्धि की जाए और दूसरे गोले की त्रिज्या में 20% की वृद्धि की जाए, तो उनके नए आयतन का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "144 : 125",
+    "125 : 216",
+    "125 : 169",
+    "216 : 125"
+   ],
+   "my_ans": "B",
+   "sol": "नई त्रिज्याएँ: 2×1.5 = 3, 3×1.2 = 3.6. आयतन अनुपात = 3³ : 3.6³ = 27 : 46.656 = 125 : 216.",
+   "trick": "आयतन का अनुपात = (r1')³ : (r2')³",
+   "ans": "B"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "The ratio of land to water for Earth as a whole is 1:3, and it is 2:5 in the Northern hemisphere. If the areas of the Northern and the Southern hemispheres are equal, then the ratio of land to water in the Southern hemisphere is:",
+   "hi": "संपूर्ण पृथ्वी पर भूमि और जल का अनुपात 1:3 है, जबकि उत्तरी गोलार्ध में यह 2:5 है। यदि उत्तरी तथा दक्षिणी गोलार्ध का क्षेत्रफल बराबर हैं, तो दक्षिणी गोलार्ध में भूमि और जल का अनुपात कितना होगा?",
+   "opts": [
+    "7:5",
+    "1:5",
+    "11:7",
+    "3:11"
+   ],
+   "my_ans": "D",
+   "sol": "पृथ्वी (कुल) = 1+3=4 भाग. उत्तरी = 2 भाग, दक्षिणी = 2 भाग. कुल भूमि = 1, कुल जल = 3. उत्तरी भूमि = 2/7 × 2 = 4/7. दक्षिणी भूमि = 1 - 4/7 = 3/7. दक्षिणी जल = 3 - 10/7 = 11/7. अनुपात = 3:11.",
+   "trick": "दक्षिणी भाग = (कुल - उत्तरी भाग)",
+   "ans": "D"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "A cylindrical pipe has an external radius of 8 cm and an internal radius of 7 cm. If its length is 20 cm, what is the volume of material used in the pipe? (Use π = 3.14)",
+   "hi": "एक बेलनाकार पाइप की बाह्य त्रिज्या 8 cm और आंतरिक त्रिज्या 7 cm है। यदि इसकी लंबाई 20 cm है, तो पाइप में प्रयुक्त पदार्थ का आयतन ज्ञात कीजिए। (π = 3.14 का उपयोग कीजिए)",
+   "opts": [
+    "201 cubic cm",
+    "320 cubic cm",
+    "192 cubic cm",
+    "942 cubic cm"
+   ],
+   "my_ans": "D",
+   "sol": "आयतन = πh(R² - r²) = 3.14 × 20 × (8² - 7²) = 62.8 × (64 - 49) = 62.8 × 15 = 942.",
+   "trick": "खोखले बेलन का आयतन = πh(R² - r²)",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "A solid cuboid of dimensions 30 cm × 20 cm × 8 cm is melted. During melting, 10% of the material is lost. The remaining material is recast into identical cubes of side 4 cm. How many complete cubes are formed?",
+   "hi": "30 cm x 20 cm x 8 cm विमाओं वाले एक ठोस घनाभ को पिघलाया जाता है। पिघलने की प्रक्रिया में 10% पदार्थ नष्ट हो जाता है। शेष धातु को 4 cm भुजा वाले एकसमान घनों में ढाला जाता है। इस प्रकार कुल कितने घन बनते हैं?",
+   "opts": [
+    "63",
+    "60",
+    "66",
+    "67"
+   ],
+   "my_ans": "D",
+   "sol": "कुल आयतन = 4800. 10% नष्ट = 480. शेष = 4320. घन का आयतन = 4³ = 64. संख्या = 4320/64 = 67.5. पूर्ण घन = 67.",
+   "trick": "शेष आयतन = कुल आयतन × 0.9",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "A solid cylinder of radius 6 cm and height 14 cm is melted and recast into a hollow cylinder of half the height of the original cylinder. If the outer radius of the hollow cylinder is twice its inner radius, find the outer radius (in cm) of the hollow cylinder.",
+   "hi": "6 cm त्रिज्या और 14 cm ऊँचाई वाले एक ठोस बेलन को पिघलाकर, मूल बेलन की आधी ऊँचाई वाले एक खोखले बेलन में ढाला जाता है। यदि खोखले बेलन की बाह्य त्रिज्या उसकी आंतरिक त्रिज्या से दोगुनी है, तो खोखले बेलन की बाह्य त्रिज्या (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "4√6",
+    "6√6",
+    "8√3"
+   ],
+   "my_ans": "B",
+   "sol": "ठोस आयतन = π × 6² × 14 = 504π. खोखला बेलन: h = 7, R = 2r. आयतन = π × 7 × (R² - r²) = π × 7 × (4r² - r²) = 21πr². 21πr² = 504π → r² = 24 → r = 2√6. R = 2r = 4√6.",
+   "trick": "ठोस आयतन = खोखले बेलन का आयतन (πh(R²-r²))",
+   "ans": "B"
+  }
+ ]
+}

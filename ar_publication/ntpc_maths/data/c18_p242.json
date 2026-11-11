@@ -1,0 +1,30 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Time, Speed & Distance",
+  "hi": "समय, चाल एवं दूरी",
+  "total": 89,
+  "gl": 24,
+  "ug": 65
+ },
+ "source_pages": "242-242",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Ritu covers a distance of 40 km at 20 km/h and another distance at 40 km/h in 3 hours. Find the average speed for the whole journey.",
+   "hi": "रितु 40 km की दूरी 20 km/h की चाल से और एक अन्य दूरी 40 km/h की चाल से 3 घंटे में तय करती है। संपूर्ण यात्रा के लिए औसत चाल ज्ञात कीजिए।",
+   "opts": [
+    "38 km/h",
+    "31 km/h",
+    "26 km/h",
+    "32 km/h"
+   ],
+   "my_ans": "D",
+   "sol": "समय 1 = 40 ÷ 20 = 2 घंटे, समय 2 = 3 घंटे<br>दूरी 1 = 40 km, दूरी 2 = 40 × 3 = 120 km<br>औसत चाल = कुल दूरी ÷ कुल समय = (40 + 120) ÷ (2 + 3) = 160 ÷ 5 = 32 km/h",
+   "trick": "औसत चाल = कुल दूरी / कुल समय का प्रयोग करें।",
+   "ans": "D"
+  }
+ ]
+}

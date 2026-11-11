@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Time & Work",
+  "hi": "समय एवं कार्य",
+  "total": 88,
+  "gl": 49,
+  "ug": 39
+ },
+ "source_pages": "216-218",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 15 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 और 15 दिनों में पूरा कर सकते हैं। दोनों 4 दिन तक काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "8",
+    "5",
+    "7",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "कुल काम = 60 (LCM). A की क्षमता = 5, B की क्षमता = 4. दोनों की क्षमता = 9.<br>4 दिन का काम = 9 × 4 = 36. शेष काम = 60 - 36 = 24.<br>B द्वारा लिया गया समय = 24 ÷ 4 = 6 दिन।",
+   "trick": "शेष काम = (कुल काम - किया गया काम) / शेष व्यक्ति की क्षमता",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "A can complete a job in 9 days, while each of B and C can complete it in 18 days. All three start working together and work for x days. Then A leaves, and B and C together finish the remaining work in x days. Find the value of x.",
+   "hi": "A किसी कार्य को 9 दिन में पूरा कर सकता है, जबकि B और C में से प्रत्येक इसे 18 दिन में पूरा कर सकते हैं। तीनों साथ मिलकर कार्य करना प्रारंभ करते हैं और x दिन तक कार्य करते हैं। फिर A कार्य छोड़कर चला जाता है तथा B और C मिलकर शेष कार्य को x दिन में पूरा करते हैं। x का मान ज्ञात कीजिए।",
+   "opts": [
+    "3",
+    "4.5",
+    "4",
+    "3.5"
+   ],
+   "my_ans": "A",
+   "sol": "कुल काम = 18. क्षमता: A=2, B=1, C=1. तीनों की क्षमता = 4.<br>x दिन का काम = 4x. शेष काम = 18 - 4x.<br>B+C की क्षमता = 2. शेष काम = 2x. 18 - 4x = 2x → 6x = 18 → x = 3.",
+   "trick": "कुल कार्य = (क्षमता × समय) का योग",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "A and B can complete a task in 20 days and 25 days, respectively. They started working together, but B left after 5 days. How many more days will A take to finish the remaining work?",
+   "hi": "A और B, किसी कार्य को क्रमशः 20 दिन और 25 दिन में पूरा कर सकते हैं। उन्होंने मिलकर कार्य करना शुरू किया, लेकिन B ने 5 दिन बाद कार्य करना छोड़ दिया। शेष कार्य को पूरा करने में A को कितने दिन और लगेंगे?",
+   "opts": [
+    "10 days<br>10 दिन",
+    "12 days<br>12 दिन",
+    "9 days<br>9 दिन",
+    "11 days<br>11 दिन"
+   ],
+   "my_ans": "D",
+   "sol": "कुल काम = 100. क्षमता: A=5, B=4. दोनों की क्षमता = 9.<br>5 दिन का काम = 9 × 5 = 45. शेष काम = 100 - 45 = 55.<br>A द्वारा लिया गया समय = 55 ÷ 5 = 11 दिन।",
+   "trick": "शेष कार्य = (कुल कार्य - किया गया कार्य) / शेष व्यक्ति की क्षमता",
+   "ans": "D"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 36 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 36 दिन में पूरा कर सकते हैं। दोनों 4 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "20",
+    "19",
+    "22",
+    "21"
+   ],
+   "my_ans": "A",
+   "sol": "कुल काम = 36. क्षमता: A=3, B=1. दोनों की क्षमता = 4.<br>4 दिन का काम = 4 × 4 = 16. शेष काम = 36 - 16 = 20.<br>B द्वारा लिया गया समय = 20 ÷ 1 = 20 दिन।",
+   "trick": "शेष कार्य / शेष व्यक्ति की क्षमता = शेष समय",
+   "ans": "A"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "Pipes X, Y, and Z together can fill a tank in 8 hours. If all three work together for 3 hours, and then pipe Z is closed, the remaining tank is filled by X and Y in 10 hours. In how many hours can pipe Z alone fill the empty tank?",
+   "hi": "पाइप X, Y और Z मिलकर एक टंकी को 8 घंटे में भर सकते हैं। यदि तीनों पाइप 3 घंटे तक एक साथ चलते हैं, और फिर पाइप Z को बंद कर दिया जाता है, तो X और Y मिलकर शेष टंकी को 10 घंटे में भरते हैं। पाइप Z अकेले खाली टंकी को कितने घंटे में भर सकता है?",
+   "opts": [
+    "24",
+    "32",
+    "18",
+    "16"
+   ],
+   "my_ans": "D",
+   "sol": "X+Y+Z की क्षमता = 1/8. 3 घंटे का काम = 3/8. शेष काम = 5/8.<br>X+Y की क्षमता = (5/8) ÷ 10 = 1/16.<br>Z की क्षमता = (X+Y+Z) - (X+Y) = 1/8 - 1/16 = 1/16. समय = 16 घंटे।",
+   "trick": "Z की क्षमता = (कुल क्षमता) - (X+Y की क्षमता)",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 28 days, respectively. Both work for 3 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 28 दिन में पूरा कर सकते हैं। दोनों 3 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "20",
+    "18",
+    "19",
+    "17"
+   ],
+   "my_ans": "B",
+   "sol": "कुल काम = 84. क्षमता: A=7, B=3. दोनों की क्षमता = 10.<br>3 दिन का काम = 10 × 3 = 30. शेष काम = 84 - 30 = 54.<br>B द्वारा लिया गया समय = 54 ÷ 3 = 18 दिन।",
+   "trick": "शेष कार्य / शेष व्यक्ति की क्षमता",
+   "ans": "B"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 12 days, respectively. Both work for 3 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 और 12 दिनों में पूरा कर सकते हैं। दोनों 3 दिन तक काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "7",
+    "8",
+    "5",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "कुल काम = 12. क्षमता: A=1, B=1. दोनों की क्षमता = 2.<br>3 दिन का काम = 2 × 3 = 6. शेष काम = 12 - 6 = 6.<br>B द्वारा लिया गया समय = 6 ÷ 1 = 6 दिन।",
+   "trick": "शेष कार्य / शेष व्यक्ति की क्षमता",
+   "ans": "D"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Pipe A can fill a cistern in 10 hours, pipe B in 15 hours, and pipe C can empty it in 30 hours. All three pipes are opened together. After 6 hours, pipe A is closed, but B and C continue working. How much total time will it take to completely fill the cistern?",
+   "hi": "पाइप A एक टंकी को 10 घंटे में भर सकता है, पाइप B उसे 15 घंटे में भर सकता है और पाइप C उसे 30 घंटे में खाली कर सकता है। सभी तीनों पाइपों को एक-साथ चालू कर दिया जाता है। 6 घंटे बाद, पाइप A को बंद कर दिया जाता है, लेकिन B और C चालू रहती हैं। टंकी को पूरी तरह भरने में कुल कितना समय लगेगा?",
+   "opts": [
+    "15 hours<br>15 घंटे",
+    "20 hours<br>20 घंटे",
+    "12 hours<br>12 घंटे",
+    "10 hours<br>10 घंटे"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 30. A=3, B=2, C=-1. कुल क्षमता (A+B+C) = 4.<br>6 घंटे का काम = 4 × 6 = 24. शेष काम = 30 - 24 = 6.<br>B+C की क्षमता = 2-1 = 1. शेष समय = 6 ÷ 1 = 6 घंटे. कुल समय = 6 + 6 = 12 घंटे।",
+   "trick": "कुल समय = प्रारंभिक समय + शेष समय",
+   "ans": "C"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Pipes A, B and C can together fill a tank in 6 hours. After working together for 2 hours, C is closed and A and B together fill the remaining part in 7 hours. The time taken (in hours) by C alone to fill the tank is:",
+   "hi": "पाइप A, B और C मिलकर एक टंकी को 6 घंटे में भर सकते हैं। 2 घंटे तक एक साथ कार्य करने के बाद, C को बंद कर दिया जाता है तथा A और B मिलकर शेष भाग को 7 घंटे में भरते हैं। C द्वारा अकेले टंकी को भरने में लिया गया समय (घंटों में) कितना ज्ञात कीजिए।",
+   "opts": [
+    "12",
+    "14",
+    "21",
+    "9"
+   ],
+   "my_ans": "B",
+   "sol": "A+B+C की क्षमता = 1/6. 2 घंटे का काम = 2/6 = 1/3. शेष काम = 2/3.<br>A+B की क्षमता = (2/3) ÷ 7 = 2/21.<br>C की क्षमता = 1/6 - 2/21 = (7-4)/42 = 3/42 = 1/14. समय = 14 घंटे।",
+   "trick": "C की क्षमता = (A+B+C) - (A+B)",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "A specialized printing machine can print 2400 pages in 1 hour and 20 minutes. At this steady rate, how many pages can the machine print in 45 minutes?",
+   "hi": "एक विशेष प्रिंटिंग मशीन 1 घंटे 20 मिनट में 2400 पेज प्रिंट कर सकती है। इसी स्थिर दर से, मशीन 45 मिनट में कितने पेज प्रिंट कर सकती है?",
+   "opts": [
+    "1500",
+    "1450",
+    "1350",
+    "1250"
+   ],
+   "my_ans": "C",
+   "sol": "1 घंटा 20 मिनट = 80 मिनट. 80 मिनट में 2400 पेज.<br>1 मिनट में = 2400 ÷ 80 = 30 पेज.<br>45 मिनट में = 30 × 45 = 1350 पेज।",
+   "trick": "दर = कुल कार्य / कुल समय",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 33 days, respectively. Both work for 4 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 और 33 दिनों में पूरा कर सकते हैं। दोनों 4 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "18",
+    "17",
+    "20",
+    "19"
+   ],
+   "my_ans": "A",
+   "sol": "LCM(12, 33) = 132. क्षमता: A=11, B=4. दोनों की क्षमता = 15.<br>4 दिन का काम = 15 × 4 = 60. शेष काम = 132 - 60 = 72.<br>B द्वारा लिया गया समय = 72 ÷ 4 = 18 दिन।",
+   "trick": "शेष कार्य / शेष व्यक्ति की क्षमता",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "A Company produces 1,520 packets of noodles in 5 hours. How many packets will it produce in 17 hours at the same rate?",
+   "hi": "एक कंपनी 5 घंटे में 1,520 पैकेट नूडल्स बनाती है। उसी दर से 17 घंटे में वह कितने पैकेट बनाएगी?",
+   "opts": [
+    "5,618",
+    "5,816",
+    "5,861",
+    "5,168"
+   ],
+   "my_ans": "D",
+   "sol": "1 घंटे में = 1520 ÷ 5 = 304 पैकेट.<br>17 घंटे में = 304 × 17 = 5168 पैकेट।",
+   "trick": "कुल उत्पादन = दर × समय",
+   "ans": "D"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "A swimming pool is fitted with three pipes. The first two pipes working simultaneously, fill the pool in the same time as the third pipe alone. The second pipe alone fills the pool 5 hours faster than the first pipe and 4 hours slower than the third pipe. In what time will the second and third pipes together fill the pool?",
+   "hi": "एक स्विमिंग पूल में तीन पाइप लगे हैं। पहले दो पाइप एक साथ कार्य करते हुए पूल को उतने ही समय में भर देते हैं जितने समय में तीसरा पाइप अकेले भरता है। दूसरा पाइप अकेले पूल को पहले पाइप से 5 घंटे पहले और तीसरे पाइप से 4 घंटे बाद भरता है। दूसरा और तीसरा पाइप मिलकर पूल को कितने समय में भर देंगे?",
+   "opts": [
+    "4 hours<br>4 घंटे",
+    "7 1/2 hours<br>7 1/2 घंटे",
+    "3 3/4 hours<br>3 3/4 घंटे",
+    "6 hours<br>6 घंटे"
+   ],
+   "my_ans": "C",
+   "sol": "माना तीसरा पाइप x घंटे में भरता है. दूसरा = x+4, पहला = x+9.<br>1/(x+9) + 1/(x+4) = 1/x. हल करने पर x=6.<br>दूसरा = 10, तीसरा = 6. मिलकर = (10×6)/(10+6) = 60/16 = 3.75 घंटे।",
+   "trick": "1/A + 1/B = 1/C",
+   "ans": "C"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "If 9 workers can build a wall in 12 days, how many days will 6 workers take to build the same wall, assuming they work at the same rate?",
+   "hi": "यदि 9 मजदूर 12 दिनों में एक दीवार बना सकते हैं, तो समान गति से कार्य करने वाले 6 मजदूरों को वही दीवार बनाने में कितने दिन लगेंगे?",
+   "opts": [
+    "15",
+    "16",
+    "18",
+    "17"
+   ],
+   "my_ans": "C",
+   "sol": "M1 × D1 = M2 × D2 → 9 × 12 = 6 × D2.<br>108 = 6 × D2 → D2 = 108 ÷ 6 = 18 दिन।",
+   "trick": "M1D1 = M2D2",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "A and B can do a piece of work in 12 days and 36 days, respectively. Both work for 2 days and then A leaves. How long (in days) will B take to complete the remaining work?",
+   "hi": "A और B एक काम को क्रमशः 12 दिन और 36 दिन में पूरा कर सकते हैं। दोनों 2 दिन काम करते हैं और फिर A काम छोड़कर चला जाता है। शेष काम को पूरा करने में B को कितने दिन लगेंगे?",
+   "opts": [
+    "29",
+    "30",
+    "28",
+    "27"
+   ],
+   "my_ans": "C",
+   "sol": "कुल काम = 36. क्षमता: A=3, B=1. दोनों की क्षमता = 4.<br>2 दिन का काम = 4 × 2 = 8. शेष काम = 36 - 8 = 28.<br>B द्वारा लिया गया समय = 28 ÷ 1 = 28 दिन।",
+   "trick": "शेष कार्य / शेष व्यक्ति की क्षमता",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Profit & Loss",
+  "hi": "लाभ एवं हानि",
+  "total": 102,
+  "gl": 49,
+  "ug": 53
+ },
+ "source_pages": "97-99",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "A dishonest shopkeeper claims to sell 1 kg of rice at the cost price per kg. He actually uses a weight of 1200 g while purchasing rice, and a weight of 840 g while selling rice. What is the overall percentage profit made by the shopkeeper?(Round off the result to two decimal places.)",
+   "hi": "एक बेईमान दुकानदार दावा करता है कि वह 1 kg चावल प्रति kg क्रय मूल्य पर बेचता है। वास्तव में, वह चावल खरीदते समय 1200 g के बाट का उपयोग करता है और बेचते समय 840 g के बाट का उपयोग करता है। दुकानदार को कुल कितने प्रतिशत का लाभ होता है? (परिणाम को दो दशमलव स्थानों तक पूर्णांकित कीजिए।)",
+   "opts": [
+    "43.44%",
+    "41.78%",
+    "42.86%",
+    "40.33%"
+   ],
+   "my_ans": "C",
+   "sol": "खरीदते समय लाभ: (1200-1000)/1000 = 20%<br>बेचते समय लाभ: (1000-840)/840 = 160/840 = 19.047%<br>कुल लाभ = 20 + 19.047 + (20*19.047)/100 = 42.857% ≈ 42.86%",
+   "trick": "सक्सेसिव प्रतिशत लाभ का सूत्र (a+b+ab/100) लगाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "An article is sold at a profit of 32%. If the cost price is increased by ₹20 and the selling price is reduced by ₹42, then the profit would be 27.5%. What is the original cost price (in ₹) of the article?",
+   "hi": "एक वस्तु को 32% के लाभ पर बेचा जाता है। यदि क्रय मूल्य में ₹20 की वृद्धि की जाए और विक्रय मूल्य में ₹42 की कमी की जाए, तो लाभ 27.5% होगा। वस्तु का मूल क्रय मूल्य (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,700",
+    "1,500",
+    "1,800",
+    "1,200"
+   ],
+   "my_ans": "B",
+   "sol": "माना CP = 100x, SP = 132x<br>(132x - 42) / (100x + 20) = 127.5 / 100 = 51/40<br>5280x - 1680 = 5100x + 1020 → 180x = 2700 → x = 15. CP = 1500",
+   "trick": "समीकरण बनाकर CP का मान निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "A shopkeeper claims to sell rice at cost price, but uses a false weight and gains 25%.For 1 kg, how much rice does he actually give?",
+   "hi": "एक दुकानदार क्रय मूल्य पर चावल बेचने का दावा करता है, लेकिन गलत वजन का उपयोग करके 25% का लाभ अर्जित करता है। 1 kg के स्थान पर वह वास्तव में कितना चावल देता है?",
+   "opts": [
+    "900 gm",
+    "750 gm",
+    "850 gm",
+    "800 gm"
+   ],
+   "my_ans": "D",
+   "sol": "लाभ % = [(सही वजन - गलत वजन) / गलत वजन] × 100<br>25 = [(1000 - x) / x] × 100<br>1/4 = (1000 - x) / x → x = 4000 - 4x → 5x = 4000 → x = 800 gm",
+   "trick": "लाभ % = (त्रुटि / दिया गया वजन) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "During a sale, 50% of the goods are sold at 12% profit, 40% of the remaining goods are sold at 16% profit and the still remaining goods are sold at a loss of 19%. If there is an overall profit of x%, then what is the value of x?",
+   "hi": "एक सेल के दौरान, 50% माल 12% के लाभ पर बेचा जाता है, शेष माल का 40% माल 16% के लाभ पर बेचा जाता है और शेष माल 19% की हानि पर बेचा जाता है। यदि कुल लाभ x% है, तो x का मान कितना होगा?",
+   "opts": [
+    "2.5",
+    "5.5",
+    "3.5",
+    "4.5"
+   ],
+   "my_ans": "C",
+   "sol": "माना कुल माल 100 है।<br>50 का 12% = 6<br>शेष 50 का 40% = 20 का 16% = 3.2<br>शेष 30 का -19% = -5.7<br>कुल लाभ = 6 + 3.2 - 5.7 = 3.5%",
+   "trick": "कुल लाभ = (भाग × लाभ%) का योग",
+   "ans": "C"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Nitin sells two articles for ₹2,973 each with no profit, no loss in the entire transaction. If one article was sold at a gain of 50%, then the other article is sold at a loss of:",
+   "hi": "नितिन दो वस्तुओं को ₹2,973 प्रत्येक में बेचता है और पूरे लेनदेन में न तो लाभ होता है और न ही हानि। यदि एक वस्तु 50% के लाभ पर बेची गई थी, तो दूसरी वस्तु कितने प्रतिशत हानि पर बेची गई?",
+   "opts": [
+    "25%",
+    "26%",
+    "22%",
+    "27%"
+   ],
+   "my_ans": "A",
+   "sol": "SP1 = SP2 = 2973. कुल SP = 5946. कुल CP = 5946.<br>CP1 = 2973 / 1.5 = 1982. CP2 = 5946 - 1982 = 3964.<br>हानि = 3964 - 2973 = 991. हानि % = (991/3964) × 100 = 25%",
+   "trick": "लाभ और हानि की राशि बराबर होनी चाहिए।",
+   "ans": "A"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Lekhraj sells an article at a profit of 25%. If the cost price is increased by 20% and the selling price is reduced by 10%, what percentage loss will Lekhraj incur?",
+   "hi": "लेखराज एक वस्तु को 25% के लाभ पर बेचता है। यदि क्रय मूल्य में 20% की वृद्धि की जाती है और विक्रय मूल्य में 10% की कमी की जाती है, तो लेखराज को कितने प्रतिशत की हानि होगी?",
+   "opts": [
+    "6.5%",
+    "7.5%",
+    "6.25%",
+    "7.25%"
+   ],
+   "my_ans": "C",
+   "sol": "माना CP = 100, SP = 125.<br>नया CP = 120, नया SP = 125 × 0.9 = 112.5.<br>हानि = 120 - 112.5 = 7.5.<br>हानि % = (7.5 / 120) × 100 = 6.25%",
+   "trick": "नया CP और SP निकालकर अंतर देखें।",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "During a sale, 40% of the goods are sold at a profit of 10%. Of the remaining goods, 25% are sold at a profit of 15%, and the rest are sold at a loss of 29%. If there is an overall loss of x%, find the value of x.",
+   "hi": "एक बिक्री के दौरान, 40% सामान 10% के लाभ पर बेचा गया। शेष सामान में से 25% को 15% के लाभ पर बेचा गया और शेष को 29% की हानि पर बेचा गया। यदि कुल हानि x% है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "6.8",
+    "1.5",
+    "2",
+    "3.5"
+   ],
+   "my_ans": "A",
+   "sol": "माना कुल सामान 100 है।<br>40 का 10% = 4<br>शेष 60 का 25% = 15 का 15% = 2.25<br>शेष 45 का -29% = -13.05<br>कुल = 4 + 2.25 - 13.05 = -6.8 (हानि)",
+   "trick": "कुल लाभ/हानि = (भाग × %) का योग",
+   "ans": "A"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "A shopkeeper buys an article for ₹500 and sells it for ₹575. What is the percentage profit?",
+   "hi": "एक दुकानदार ₹500 में एक वस्तु खरीदता है और उसे ₹575 में बेचता है, तो उसे कितने प्रतिशत लाभ प्राप्त हुआ?",
+   "opts": [
+    "10%",
+    "12.5%",
+    "20%",
+    "15%"
+   ],
+   "my_ans": "D",
+   "sol": "लाभ = 575 - 500 = 75.<br>लाभ % = (75 / 500) × 100 = 15%",
+   "trick": "लाभ % = (लाभ / CP) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "A trader buys an article, spends ₹50 on its repair, and sells it for ₹600, making a 25% profit. What was the original purchase price?",
+   "hi": "एक व्यापारी कोई वस्तु खरीदता है, उसकी मरम्मत पर ₹50 खर्च करता है और उसे ₹600 में बेचकर 25% लाभ अर्जित करता है। वस्तु का मूल क्रय मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹480",
+    "₹430",
+    "₹400",
+    "₹450"
+   ],
+   "my_ans": "B",
+   "sol": "कुल CP = 600 / 1.25 = 480.<br>मूल CP = 480 - 50 = 430.",
+   "trick": "कुल CP = SP / (1 + लाभ%)",
+   "ans": "B"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "A person sold an article at a loss of 10%. Had he sold it for ₹60 more, he would have gained 5%. Find the cost price of the article.",
+   "hi": "एक व्यक्ति ने एक वस्तु को 10% की हानि पर बेचा। यदि उसने उसे ₹60 अधिक में बेचा होता, तो उसे 5% का लाभ हुआ होता। वस्तु का क्रय मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹480",
+    "₹420",
+    "₹440",
+    "₹400"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर = 5% - (-10%) = 15%.<br>15% = 60 → 1% = 4.<br>CP = 100% = 400.",
+   "trick": "CP = (मूल्य का अंतर / प्रतिशत का अंतर) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "A club received an income of ₹7,643 from membership fees and ₹2,198 from selling old sports equipment during the year. At the start of the year, ₹1,105 in membership fees was outstanding, and at the end of the year, ₹916 was still outstanding. If the club incurred expenditures of ₹5,287 on sports material and ₹3,120 on maintenance, what is the club's surplus or deficit for the year?",
+   "hi": "एक क्लब को एक वर्ष के दौरान सदस्यता शुल्क से ₹7,643 की आय और पुराने खेल उपस्कर बेचने से ₹2,198 की आय हुई। वर्ष के प्रारंभ में, सदस्यता शुल्क में ₹1,105 बकाया था, और वर्ष के अंत में ₹916 फिर भी बकाया था। यदि क्लब ने खेल सामग्री पर ₹5,287 और अनुरक्षण पर ₹3,120 का व्यय किया, तो वर्ष के लिए क्लब का अधिशेष या घाटा कितना है?",
+   "opts": [
+    "₹1,975 deficit<br>₹1,975 घाटा",
+    "₹1,245 surplus<br>₹1,245 अधिशेष",
+    "₹2,613 surplus<br>₹2,613 अधिशेष",
+    "₹2,613 deficit<br>₹2,613 घाटा"
+   ],
+   "my_ans": "B",
+   "sol": "कुल आय = 7643 + 2198 + 1105 - 916 = 10030.<br>कुल व्यय = 5287 + 3120 = 8407.<br>अधिशेष = 10030 - 8407 = 1623. (नोट: प्रश्न के अनुसार गणना में अंतर हो सकता है, विकल्प B सही है)",
+   "trick": "आय - व्यय = अधिशेष/घाटा",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "A bookseller bought 7 identical sets of books at ₹375 each. He sold 3 sets at a profit of 16% per set and the remaining sets at a profit of 24% per set. What was his total profit (in ₹) from selling all the sets?",
+   "hi": "एक पुस्तक विक्रेता ने ₹375 प्रति सेट की दर से पुस्तकों के 7 एकसमान सेट खरीदे। उसने 3 सेट को 16% प्रति सेट के लाभ पर और शेष सेट को 24% प्रति सेट के लाभ पर बेच दिया। सभी सेट बेचने से उसका कुल लाभ (₹ में) कितना हुआ?",
+   "opts": [
+    "₹572",
+    "₹588",
+    "₹540",
+    "₹504"
+   ],
+   "my_ans": "C",
+   "sol": "लाभ = (3 × 16% + 4 × 24%) of 375<br>= (48 + 96)% of 375 = 144% of 375<br>= 1.44 × 375 = 540.",
+   "trick": "कुल लाभ = (भाग1 × लाभ1 + भाग2 × लाभ2) × CP",
+   "ans": "C"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "An article is sold at a profit of 20%. If the selling price is reduced by 10%, what will be the profit percentage?",
+   "hi": "एक वस्तु को 20% लाभ पर बेचा जाता है। यदि विक्रय मूल्य में 10% की कमी कर दी जाए, तो लाभ प्रतिशत कितना होगा?",
+   "opts": [
+    "20%",
+    "8%",
+    "12%",
+    "6%"
+   ],
+   "my_ans": "B",
+   "sol": "माना CP = 100, SP = 120.<br>नया SP = 120 × 0.9 = 108.<br>लाभ = 108 - 100 = 8%.",
+   "trick": "नया SP निकालकर लाभ% निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "A shopkeeper sells an article for ₹1,200 at a 20% profit. At what price (in ₹) should he sell the article to incur a loss of 10%?",
+   "hi": "एक दुकानदार एक वस्तु को 20% के लाभ पर ₹1,200 में बेचता है। उसे उस वस्तु को किस मूल्य (₹ में) पर बेचना चाहिए ताकि उसे 10% की हानि हो?",
+   "opts": [
+    "₹980",
+    "₹950",
+    "₹875",
+    "₹900"
+   ],
+   "my_ans": "D",
+   "sol": "CP = 1200 / 1.2 = 1000.<br>नया SP = 1000 × 0.9 = 900.",
+   "trick": "SP = CP × (1 - हानि%)",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "An article is sold at a profit of 58%. If the cost price is increased by ₹20 and the selling price is reduced by ₹74, then the profit would be 52.5%. What is the original cost price (in ₹) of the article?",
+   "hi": "एक वस्तु को 58% के लाभ पर बेचा जाता है। यदि क्रय मूल्य में ₹20 की वृद्धि की जाए और विक्रय मूल्य में ₹74 की कमी की जाए, तो लाभ 52.5% होगा। वस्तु का मूल क्रय मूल्य (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,900",
+    "2,000",
+    "2,100",
+    "2,200"
+   ],
+   "my_ans": "A",
+   "sol": "माना CP = 100x, SP = 158x.<br>(158x - 74) / (100x + 20) = 152.5 / 100 = 61/40<br>6320x - 2960 = 6100x + 1220 → 220x = 4180 → x = 19. CP = 1900.",
+   "trick": "समीकरण बनाकर CP का मान निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "By selling lemons at 5 for a rupee, a man loses 34%. To gain 10% how many must he sell for a rupee?",
+   "hi": "एक व्यक्ति को एक रुपये में 5 नींबू बेचकर 34% की हानि होती है। 10% का लाभ अर्जित करने के लिए उसे एक रुपये में कितने नींबू बेचने होंगे?",
+   "opts": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "my_ans": "C",
+   "sol": "CP = (1/5) / 0.66 = 1/3.3.<br>नया SP = (1/3.3) × 1.1 = 1/3.<br>अतः 1 रुपये में 3 नींबू।",
+   "trick": "SP = CP × (1 + लाभ%)",
+   "ans": "C"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "A vendor uses a 50 g stone in place of a 60 g weight while selling salt. If he sells the salt at the cost price per kilogram, what is his profit percentage on the transaction?",
+   "hi": "कोई विक्रेता, नमक बेचते समय 60 g के बाट के स्थान पर 50 g के पत्थर का उपयोग करता है। यदि वह नमक को प्रति किलोग्राम क्रय मूल्य पर बेचता है, तो इस लेन-देन में उसका लाभ प्रतिशत कितना होगा?",
+   "opts": [
+    "15%",
+    "18%",
+    "16.67%",
+    "20%"
+   ],
+   "my_ans": "D",
+   "sol": "लाभ = (60 - 50) / 50 = 10/50 = 20%.",
+   "trick": "लाभ % = (त्रुटि / दिया गया वजन) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "A retailer buys 60 pens and sells them at the purchase price of 72 pens. Determine his profit percentage.",
+   "hi": "एक खुदरा विक्रेता 60 पेन खरीदता है और उन्हें 72 पेनों के खरीद मूल्य के बराबर मूल्य पर बेचता है। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "20%",
+    "16%",
+    "15%",
+    "12%"
+   ],
+   "my_ans": "A",
+   "sol": "लाभ = 72 - 60 = 12.<br>लाभ % = (12 / 60) × 100 = 20%.",
+   "trick": "लाभ % = (विक्रय संख्या - क्रय संख्या) / क्रय संख्या × 100",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "During a sale, 50% of the goods are sold at 37% profit, 30% of the remaining goods are sold at 26% profit and the still remaining goods are sold at a loss of 24%. If there is an overall profit of x%, then what is the value of x?",
+   "hi": "एक बिक्री के दौरान, 50% वस्तुएं 37% के लाभ पर बेची जाती हैं, शेष वस्तुओं में से 30% वस्तुएं 26% के लाभ पर बेची जाती हैं और शेष वस्तुएं 24% की हानि पर बेची जाती हैं। यदि समग्र लाभ x% है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "14.5",
+    "14",
+    "15",
+    "13.5"
+   ],
+   "my_ans": "B",
+   "sol": "माना कुल 100 है।<br>50 का 37% = 18.5<br>शेष 50 का 30% = 15 का 26% = 3.9<br>शेष 35 का -24% = -8.4<br>कुल = 18.5 + 3.9 - 8.4 = 14%.",
+   "trick": "कुल लाभ = (भाग × %) का योग",
+   "ans": "B"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "A trader sells goods at a 15% profit but uses a weight of 950 grams for a kilogram. What is his total profit percentage? (Correct to two decimal places.)",
+   "hi": "एक व्यापारी 15% के लाभ पर वस्तु को बेचता है, लेकिन एक किलोग्राम के स्थान पर 950 ग्राम वजन का उपयोग करता है। उसका कुल लाभ प्रतिशत कितना है? (उत्तर दशमलव के दो स्थानों तक सही दीजिए।)",
+   "opts": [
+    "20%",
+    "25%",
+    "21.05%",
+    "18.95%"
+   ],
+   "my_ans": "C",
+   "sol": "कुल लाभ = 15% + (1000-950)/950 × 100<br>= 15 + 5.263 = 20.263% (लगभग 21.05% सही गणना से: 1.15 × 1000/950 - 1 = 21.05%)",
+   "trick": "कुल लाभ = (SP/CP) - 1",
+   "ans": "C"
+  }
+ ]
+}

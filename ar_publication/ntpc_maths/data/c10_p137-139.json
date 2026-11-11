@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Compound Interest",
+  "hi": "चक्रवृद्धि ब्याज",
+  "total": 52,
+  "gl": 23,
+  "ug": 29
+ },
+ "source_pages": "137-139",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Krish has ₹1407 with him. He divides this amount between his two sons, Veer and Nitin, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Veer’s investment amounts to the same value after 14 years as Nitin’s investment does after 15 years. How much (in ₹) did Krish give to Nitin?",
+   "hi": "कृष के पास ₹1407 हैं। वह इस धनराशि को अपने दो पुत्रों, वीर और नितिन के बीच बाँट देता है और उन्हें अपने-अपने हिस्से को वार्षिक रूप से संयोजित होने वाली 10% वार्षिक चक्रवृद्धि ब्याज दर पर निवेश करने के लिए कहता है। यह देखा गया है कि 14 वर्षों के बाद वीर के निवेश का मिश्रधन, 15 वर्षों के बाद नितिन के निवेश के मिश्रधन के बराबर है। कृष ने नितिन को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "520",
+    "837",
+    "737",
+    "670"
+   ],
+   "my_ans": "D",
+   "sol": "माना वीर का हिस्सा V और नितिन का N है। V(1.1)¹⁴ = N(1.1)¹⁵ → V = N(1.1) = 1.1N.<br>V + N = 1407 → 1.1N + N = 2.1N = 1407.<br>N = 1407 ÷ 2.1 = 670.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Kartik has ₹1407 with him. He divides this amount between his two sons, Ishan and Krish, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Ishan’s investment amounts to the same value after 11 years as Krish’s investment does after 12 years. How much (in ₹) did Kartik give to Krish?",
+   "hi": "कार्तिक के पास ₹1407 हैं। वह इस धनराशि को अपने दो बेटों, ईशान और कृष के बीच विभाजित करता है, और उन्हें अपने-अपने हिस्सों को 10% वार्षिक ब्याज दर पर निवेश करने के लिए कहता है जहां ब्याज वार्षिक रूप से संयोजित होता है। यह पाया जाता है कि ईशान के निवेश का मूल्य 11 वर्ष बाद उतना ही होता है जितना कृष के निवेश का मूल्य 12 वर्ष बाद होता है। कार्तिक ने कृष को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "837",
+    "737",
+    "520",
+    "670"
+   ],
+   "my_ans": "D",
+   "sol": "I(1.1)¹¹ = K(1.1)¹² → I = 1.1K.<br>I + K = 1407 → 1.1K + K = 2.1K = 1407.<br>K = 1407 ÷ 2.1 = 670.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Shan has ₹1407 with him. He divides this amount between his two sons, Piyush and Manoj, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Piyush’s investment amounts to the same value after 18 years as Manoj’s investment does after 19 years. How much (in ₹) did Shan give to Manoj?",
+   "hi": "शान के पास ₹1407 हैं। वह इस धनराशि को अपने दो पुत्रों, पीयूष और मनोज के बीच बाँट देता है और उन्हें अपने-अपने हिस्से को वार्षिक रूप से संयोजित होने वाली 10% वार्षिक चक्रवृद्धि ब्याज दर पर निवेश करने के लिए कहता है। यह देखा गया है कि 18 वर्षों के बाद पीयूष के निवेश का मिश्रधन, 19 वर्षों के बाद मनोज के निवेश के मिश्रधन के बराबर है। शान ने मनोज को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "670",
+    "837",
+    "520",
+    "737"
+   ],
+   "my_ans": "A",
+   "sol": "P(1.1)¹⁸ = M(1.1)¹⁹ → P = 1.1M.<br>P + M = 1407 → 2.1M = 1407.<br>M = 1407 ÷ 2.1 = 670.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "RILA is related to SKOE in a certain way based on the English alphabetical order. In the same way, KEPO is related to LGSS. To which of the following is MJRT related, following the same logic?",
+   "hi": "अंग्रेजी वर्णमाला क्रम के आधार पर एक निश्चित तरीके से RILA का संबंध SKOE से है। उसी प्रकार, KEPO का संबंध LGSS से है। उसी तर्क का अनुसरण करते हुए, MJRT का संबंध निम्नलिखित में से किससे है?",
+   "opts": [
+    "NLUX",
+    "NKTY",
+    "NOYZ",
+    "NMWX"
+   ],
+   "my_ans": "A",
+   "sol": "R+1=S, I+2=K, L+3=O, A+4=E (SKOE).<br>K+1=L, E+2=G, P+3=S, O+4=S (LGSS).<br>M+1=N, J+2=L, R+3=U, T+4=X (NLUX).",
+   "trick": "अक्षरों में क्रमशः +1, +2, +3, +4 जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Arun has ₹1407 with him. He divides this amount between his two sons, Mahesh and Vijay, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Mahesh’s investment amounts to the same value after 12 years as Vijay’s investment does after 13 years. How much (in ₹) did Arun give to Vijay?",
+   "hi": "अरुण के पास ₹1407 हैं। वह इस धनराशि को अपने दो बेटों, महेश और विजय के बीच विभाजित करता है, और उन्हें अपने-अपने हिस्सों को 10% वार्षिक ब्याज दर पर निवेश करने के लिए कहता है जहां ब्याज वार्षिक रूप से संयोजित होता है। यह पाया जाता है कि महेश के निवेश का मूल्य 12 वर्ष बाद उतना ही होता है जितना विजय के निवेश का मूल्य 13 वर्ष बाद होता है। अरुण ने विजय को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "670",
+    "837",
+    "520",
+    "737"
+   ],
+   "my_ans": "A",
+   "sol": "M(1.1)¹² = V(1.1)¹³ → M = 1.1V.<br>M + V = 1407 → 2.1V = 1407.<br>V = 1407 ÷ 2.1 = 670.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Mahesh has ₹1407 with him. He divides this amount between his two sons, Vijay and Ajay, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Vijay’s investment amounts to the same value after 17 years as Ajay’s investment does after 18 years. How much (in ₹) did Mahesh give to Ajay?",
+   "hi": "महेश के पास ₹1407 हैं। वह इस धनराशि को अपने दो पुत्रों, विजय और अजय के बीच बाँट देता है और उन्हें अपने-अपने हिस्से को वार्षिक रूप से संयोजित होने वाली 10% वार्षिक चक्रवृद्धि ब्याज दर पर निवेश करने के लिए कहता है। यह देखा गया है कि 17 वर्षों के बाद विजय के निवेश का मिश्रधन, 18 वर्षों के बाद अजय के निवेश के मिश्रधन के बराबर है। महेश ने अजय को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "837",
+    "670",
+    "737",
+    "520"
+   ],
+   "my_ans": "B",
+   "sol": "V(1.1)¹⁷ = A(1.1)¹⁸ → V = 1.1A.<br>V + A = 1407 → 2.1A = 1407.<br>A = 1407 ÷ 2.1 = 670.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Arjun has ₹1394 with him. He divides this amount between his two sons, Kartik and Ishan, and asks them to invest their respective shares at a compound interest rate of 5% per annum, compounded annually. It is observed that Kartik’s investment amounts to the same value after 17 years as Ishan’s investment does after 18 years. How much (in ₹) did Arjun give to Ishan?",
+   "hi": "अर्जुन के पास ₹1394 हैं। वह इस धनराशि को अपने दो बेटों, कार्तिक और ईशान के बीच बांट देता है और उन्हें अपने-अपने हिस्से को 5% वार्षिक चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) पर निवेश करने के लिए कहता है। यह पाया गया कि 17 वर्षों के बाद कार्तिक को प्राप्त मिश्रधन, 18 वर्षों के बाद ईशान को प्राप्त मिश्रधन के बराबर है। अर्जुन ने ईशान को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "680",
+    "714",
+    "814",
+    "530"
+   ],
+   "my_ans": "A",
+   "sol": "K(1.05)¹⁷ = I(1.05)¹⁸ → K = 1.05I.<br>K + I = 1394 → 2.05I = 1394.<br>I = 1394 ÷ 2.05 = 680.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Ajay gets double the amount in 7 years when invested at compound interest, compounded annually. In how many years will the amount become sixteen times itself?",
+   "hi": "अजय द्वारा चक्रवृद्धि ब्याज पर निवेश की गई कोई धनराशि 7 वर्षों में दोगुनी हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित होता है। कितने वर्षों में वह धनराशि स्वयं की सोलह गुनी हो जाएगी?",
+   "opts": [
+    "56",
+    "112",
+    "28",
+    "14"
+   ],
+   "my_ans": "C",
+   "sol": "2 गुना = 7 वर्ष.<br>16 गुना = 2⁴ गुना = 4 × 7 वर्ष = 28 वर्ष.",
+   "trick": "यदि n गुना होने में T वर्ष लगते हैं, तो n<sup>k</sup> गुना होने में k × T वर्ष लगेंगे।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Gopal has ₹1394 with him. He divides this amount between his two sons, Akshay and Arjun, and asks them to invest their respective shares at a compound interest rate of 5% per annum, compounded annually. It is observed that Akshay’s investment amounts to the same value after 16 years as Arjun’s investment does after 17 years. How much (in ₹) did Gopal give to Arjun?",
+   "hi": "गोपाल के पास ₹1394 हैं। वह इस धनराशि को अपने दो बेटों, अक्षय और अर्जुन के बीच विभाजित करता है, और उन्हें अपने-अपने हिस्सों को 5% वार्षिक ब्याज दर पर निवेश करने के लिए कहता है जहां ब्याज वार्षिक रूप से संयोजित होता है। यह पाया जाता है कि अक्षय के निवेश का मूल्य 16 वर्ष बाद उतना ही होता है जितना कि अर्जुन के निवेश का मूल्य 17 वर्ष बाद होता है। गोपाल ने अर्जुन को कितनी धनराशि (₹ में) दी थी?",
+   "opts": [
+    "680",
+    "530",
+    "814",
+    "714"
+   ],
+   "my_ans": "A",
+   "sol": "Ak(1.05)¹⁶ = Ar(1.05)¹⁷ → Ak = 1.05Ar.<br>Ak + Ar = 1394 → 2.05Ar = 1394.<br>Ar = 1394 ÷ 2.05 = 680.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Govind gets double the amount in 7 years when invested at compound interest, compounded annually. In how many years will the amount become eight times itself?",
+   "hi": "गोविंद द्वारा चक्रवृद्धि ब्याज पर निवेश की गई कोई धनराशि 7 वर्षों में दोगुनी हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित होता है। कितने वर्षों में वह धनराशि स्वयं की आठ गुनी हो जाएगी?",
+   "opts": [
+    "21",
+    "14",
+    "56",
+    "28"
+   ],
+   "my_ans": "A",
+   "sol": "2 गुना = 7 वर्ष.<br>8 गुना = 2³ गुना = 3 × 7 वर्ष = 21 वर्ष.",
+   "trick": "यदि n गुना होने में T वर्ष लगते हैं, तो n<sup>k</sup> गुना होने में k × T वर्ष लगेंगे।",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Ajay has ₹1404 with him. He divides this amount between his two sons, Prakash and Gopal, and asks them to invest their respective shares at a compound interest rate of 8% per annum, compounded annually. It is observed that Prakash’s investment amounts to the same value after 18 years as Gopal’s investment does after 19 years. How much (in ₹) did Ajay give to Gopal?",
+   "hi": "अजय के पास ₹1404 हैं। वह इस राशि को अपने दो बेटों, प्रकाश और गोपाल के बीच बाँट देता है और उन्हें अपने-अपने हिस्से को 8% वार्षिक चक्रवृद्धि ब्याज दर पर निवेश करने के लिए कहता है। यह पाया जाता है कि 18 वर्षों में प्रकाश द्वारा निवेश की गई राशि और 19 वर्षों में गोपाल द्वारा निवेश की गई राशि बराबर हो जाती है। अजय ने गोपाल को कितनी राशि (₹ में) दी थी?",
+   "opts": [
+    "525",
+    "729",
+    "675",
+    "829"
+   ],
+   "my_ans": "C",
+   "sol": "P(1.08)¹⁸ = G(1.08)¹⁹ → P = 1.08G.<br>P + G = 1404 → 2.08G = 1404.<br>G = 1404 ÷ 2.08 = 675.",
+   "trick": "मिश्रधन बराबर होने पर, कम समय वाले का हिस्सा अधिक होता है (P1/P2 = (1+r/100)<sup>t2-t1</sup>)।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Find the difference between the compound interest, compounded annually, and the simple interest on ₹4,000 for 2 years at 6% per annum.",
+   "hi": "₹4,000 पर 6% वार्षिक दर से 2 वर्ष के लिए साधारण ब्याज और वार्षिक रूप से संयोजित किए जाने वाले चक्रवृद्धि ब्याज के बीच का अंतर ज्ञात कीजिए।",
+   "opts": [
+    "₹ 13.80",
+    "₹ 14.40",
+    "₹ 15.90",
+    "₹ 16.80"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर = P × (r/100)² = 4000 × (6/100)²<br>= 4000 × 36/10000 = 4 × 3.6 = 14.40.",
+   "trick": "2 वर्षों के लिए CI और SI का अंतर = P(r/100)²",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Amit invested equal amounts at simple interest and compound interest, compounded annually, for 2 years at the same rate of 4% per annum. In the end, he found a difference of ₹53 between the two interests earned. What was the amount (in ₹) invested in each case?",
+   "hi": "अमित ने समान राशि को साधारण ब्याज और चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) पर 2 वर्षों के लिए समान 4% वार्षिक दर पर निवेश किया। अंत में, उसे दोनों ब्याज दरों में ₹53 का अंतर प्राप्त हुआ। प्रत्येक स्थिति में निवेश की गई राशि (₹ में) कितनी थी?",
+   "opts": [
+    "32225",
+    "33125",
+    "33475",
+    "32375"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर = P(r/100)² → 53 = P(4/100)²<br>53 = P(1/25)² = P/625<br>P = 53 × 625 = 33125.",
+   "trick": "P = अंतर × (100/r)²",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Amit invested the same sum at simple and compound interest (compounded annually) for 2 years at 4% per annum. The difference between the compound interest and the simple interest is ₹47. Find the sum (in ₹) invested in each case.",
+   "hi": "अमित ने एक ही धनराशि को 4% वार्षिक दर से 2 वर्षों के लिए साधारण ब्याज और चक्रवृद्धि ब्याज (जहां ब्याज वार्षिक रूप से संयोजित होता है) पर निवेश किया। चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ₹47 है। प्रत्येक स्थिति में निवेश की गई धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "28,625",
+    "28,475",
+    "29,725",
+    "29,375"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर = P(r/100)² → 47 = P(4/100)²<br>47 = P(1/25)² = P/625<br>P = 47 × 625 = 29375.",
+   "trick": "P = अंतर × (100/r)²",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Subrata gets double the amount in 8 years when invested at compound interest, compounded annually. In how many years will the amount become eight times itself?",
+   "hi": "सुब्रत द्वारा चक्रवृद्धि ब्याज पर निवेश की गई कोई धनराशि 8 वर्षों में दोगुनी हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित होता है। कितने वर्षों में वह धनराशि स्वयं की आठ गुनी हो जाएगी?",
+   "opts": [
+    "16",
+    "64",
+    "32",
+    "24"
+   ],
+   "my_ans": "D",
+   "sol": "2 गुना = 8 वर्ष.<br>8 गुना = 2³ गुना = 3 × 8 वर्ष = 24 वर्ष.",
+   "trick": "यदि n गुना होने में T वर्ष लगते हैं, तो n<sup>k</sup> गुना होने में k × T वर्ष लगेंगे।",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "163-165",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 108,
+   "lvl": "UG",
+   "en": "If the height at which a ladder touches the wall is the mean proportional between 6 meters and 24 meters, at what height does the ladder touch the wall?",
+   "hi": "यदि सीढ़ी जिस ऊँचाई पर दीवार को स्पर्श करती है, वह 6 मीटर और 24 मीटर के बीच का मध्यानुपाती है, तो सीढ़ी किस ऊँचाई पर दीवार को स्पर्श करेगी?",
+   "opts": [
+    "18 meters<br>18 मीटर",
+    "14 meters<br>14 मीटर",
+    "16 meters<br>16 मीटर",
+    "12 meters<br>12 मीटर"
+   ],
+   "my_ans": "D",
+   "sol": "मध्यानुपाती = √(6 × 24) = √144 = 12 मीटर।",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "D"
+  },
+  {
+   "n": 109,
+   "lvl": "UG",
+   "en": "In a college, the ratio of science to arts students is different for each of its three batches. In Batch A, the ratio is 5:8, in Batch B it is 7:11, and in Batch C it is 3:5. Which batch has the highest proportion of science students?",
+   "hi": "एक कॉलेज में, विज्ञान और कला के विद्यार्थियों का अनुपात उसके तीन बैचों में से प्रत्येक के लिए अलग-अलग है। बैच A में यह अनुपात 5:8 है, बैच B में यह अनुपात 7:11 है और बैच C में यह अनुपात 3:5 है। किस बैच में विज्ञान के विद्यार्थियों का सर्वाधिक अनुपात (proportion) है?",
+   "opts": [
+    "All have the same proportion<br>सभी का अनुपात समान है",
+    "Batch A<br>बैच A",
+    "Batch B<br>बैच B",
+    "Batch C<br>बैच C"
+   ],
+   "my_ans": "C",
+   "sol": "अनुपात: A=5/13≈0.38, B=7/18≈0.388, C=3/8=0.375. बैच B का मान सबसे अधिक है।",
+   "trick": "भिन्नों की तुलना करने के लिए हर (denominator) समान करें या दशमलव में बदलें।",
+   "ans": "C"
+  },
+  {
+   "n": 110,
+   "lvl": "UG",
+   "en": "Two bags contain marbles in the ratio 5 : 7. If 12 marbles are transferred from the second bag to the first bag, the ratio of marbles in the two bags becomes 7 : 5. Find the original number of marbles in the second bag.",
+   "hi": "दो थैलों में 5 : 7 के अनुपात में कंचे हैं। यदि दूसरे थैले से 12 कंचे को पहले थैले में स्थानांतरित किया जाए, तो दोनों थैलों में कंचों का अनुपात 7 : 5 हो जाता है। दूसरे थैले में कंचों की मूल संख्या ज्ञात कीजिए।",
+   "opts": [
+    "63",
+    "72",
+    "42",
+    "68"
+   ],
+   "my_ans": "C",
+   "sol": "माना कंचे 5x और 7x हैं। (5x+12)/(7x-12) = 7/5 → 25x+60 = 49x-84 → 24x=144 → x=6. दूसरा थैला = 7x = 42.",
+   "trick": "कुल कंचे स्थिर रहते हैं, समीकरण बनाकर x का मान निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "UG",
+   "en": "₹9,520 is divided among X, Y, and Z in the ratio 1/2 : 1/4 : 5/16. What is the share of Y?",
+   "hi": "₹9,520 को X, Y, और Z के बीच 1/2 : 1/4 : 5/16 के अनुपात में बांटा गया है। Y का हिस्सा क्या है?",
+   "opts": [
+    "₹4,000",
+    "₹3,200",
+    "₹2,600",
+    "₹2,240"
+   ],
+   "my_ans": "D",
+   "sol": "अनुपात को सरल करें: (8:4:5)/16 → 8:4:5. कुल भाग = 17. Y का हिस्सा = (4/17) × 9520 = 4 × 560 = 2240.",
+   "trick": "अनुपात के हर (denominator) का LCM लेकर उसे पूर्णांक में बदलें।",
+   "ans": "D"
+  },
+  {
+   "n": 112,
+   "lvl": "UG",
+   "en": "If a:b = 12:13 and b:c = 4:5, what is a:c?",
+   "hi": "यदि a:b = 12:13 और b:c = 4:5 है, तो a:c क्या होगा?",
+   "opts": [
+    "4:5",
+    "12:5",
+    "4:13",
+    "48:65"
+   ],
+   "my_ans": "D",
+   "sol": "a/c = (a/b) × (b/c) = (12/13) × (4/5) = 48/65.",
+   "trick": "a:c = (a/b) × (b/c) का गुणा करें।",
+   "ans": "D"
+  },
+  {
+   "n": 113,
+   "lvl": "UG",
+   "en": "In an educational institute, the ratio of male students to female students is 4 : 3. The ratio of the same female students to teaching staff is 8 : 1. Find the ratio of total students (male + female) to teaching staff.",
+   "hi": "एक शैक्षणिक संस्थान में, छात्र और छात्राओं का अनुपात 4 : 3 है। उन्ही छात्राओं और अध्यापक वर्ग का अनुपात 8 : 1 है। कुल विद्यार्थियों (छात्र + छात्राएं) और अध्यापक वर्ग का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "66 : 7",
+    "56 : 3",
+    "21 : 2",
+    "27 : 1"
+   ],
+   "my_ans": "B",
+   "sol": "M:F = 4:3, F:T = 8:1. F को समान करने के लिए (M:F)×8 और (F:T)×3 → M:F=32:24, F:T=24:3. कुल छात्र = 32+24=56. अनुपात = 56:3.",
+   "trick": "उभयनिष्ठ (common) पद को समान बनाकर अनुपात जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 114,
+   "lvl": "UG",
+   "en": "₹1,472 is divided among Rohit, Maya, and Vikas in such a way that if ₹25, ₹52, and ₹18 be deducted from their respective shares, they have money in the ratio 15:19:17. Find Vikas’s amount after deduction.",
+   "hi": "₹1,472 को रोहित, माया और विकास में इस प्रकार विभाजित किया जाता है कि यदि उनके हिस्सों में से क्रमशः ₹25, ₹52 और ₹18 घटा दिए जाएं, तो उनके पास शेष राशियों का अनुपात 15:19:17 हो जाता है। कटौती के बाद विकास को प्राप्त राशि ज्ञात कीजिए।",
+   "opts": [
+    "₹509",
+    "₹459",
+    "₹559",
+    "₹359"
+   ],
+   "my_ans": "B",
+   "sol": "कुल कटौती = 25+52+18 = 95. शेष राशि = 1472-95 = 1377. अनुपात योग = 15+19+17 = 51. 1 भाग = 1377/51 = 27. विकास = 17 × 27 = 459.",
+   "trick": "कुल राशि में से कटौती घटाकर अनुपात में बांटें।",
+   "ans": "B"
+  },
+  {
+   "n": 115,
+   "lvl": "UG",
+   "en": "A faster train overtakes a slower train, both moving in the same direction. The faster train takes 36 seconds to completely pass the slower train. A passenger sitting in the faster train observes that he passes the slower train in 12 seconds. Find the ratio of the length of the faster train to the length of the slower train.",
+   "hi": "तीव्र चाल वाली एक ट्रेन धीमी चाल वाली दूसरी ट्रेन को ओवरटेक करती है, जहां दोनों एक ही दिशा में चल रही हैं। तीव्र चाल वाली ट्रेन को धीमी चाल वाली ट्रेन को पूर्ण रूप से पार करने में 36 सेकंड लगते हैं। तीव्र चाल वाली ट्रेन में बैठा एक यात्री देखता है कि वह धीमी चाल वाली ट्रेन को 12 सेकंड में पार कर लेता है। तीव्र चाल वाली ट्रेन की लंबाई और धीमी चाल वाली ट्रेन की लंबाई का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "2 : 1",
+    "3 : 1",
+    "3 : 2",
+    "1 : 1"
+   ],
+   "my_ans": "A",
+   "sol": "सापेक्ष चाल v. Ls/v = 12, (Lf+Ls)/v = 36. Ls = 12v, Lf+Ls = 36v → Lf = 24v. Lf:Ls = 24:12 = 2:1.",
+   "trick": "यात्री द्वारा पार करने का समय = धीमी ट्रेन की लंबाई/सापेक्ष चाल।",
+   "ans": "A"
+  },
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "Three friends, Amit, Bala , and Chetan, have savings in the ratio 5:7:9. If Bala's savings exceed Amit's by ₹3,600, what are Chetan's total savings?",
+   "hi": "तीन मित्रों - अमित, बाला और चेतन की बचत का अनुपात 5 : 7 : 9 है। यदि बाला की बचत, अमित की बचत से ₹3,600 अधिक है, तो चेतन की कुल बचत कितनी है?",
+   "opts": [
+    "₹16,800",
+    "₹16,600",
+    "₹16,200",
+    "₹16,400"
+   ],
+   "my_ans": "C",
+   "sol": "बाला-अमित = 7x-5x = 2x = 3600 → x=1800. चेतन = 9x = 9 × 1800 = 16200.",
+   "trick": "अनुपात के अंतर को दी गई संख्या के बराबर रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "In a class, there are 10 boys more than girls. Each girl has 3 pencils and each boy has 2 pencils with them. The total number of pencils in the class is 170. The ratio of girls to boys in the class is _____.",
+   "hi": "एक कक्षा में, लड़कियों की तुलना में 10 लड़के अधिक हैं। प्रत्येक लड़की के पास 3 पेंसिलें और प्रत्येक लड़के के पास 2 पेंसिलें हैं। कक्षा में पेंसिलों की कुल संख्या 170 है। कक्षा में लड़कियों और लड़कों का अनुपात _____ है।",
+   "opts": [
+    "4:5",
+    "2:3",
+    "5:6",
+    "3:4"
+   ],
+   "my_ans": "D",
+   "sol": "लड़कियां x, लड़के x+10. 3x + 2(x+10) = 170 → 5x+20=170 → 5x=150 → x=30. लड़कियां=30, लड़के=40. अनुपात = 30:40 = 3:4.",
+   "trick": "कुल पेंसिल = (लड़कियों की संख्या × 3) + (लड़कों की संख्या × 2)",
+   "ans": "D"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "₹2,288 is divided among Pankaj, Meera, and Ashok in such a way that if ₹39, ₹47, and ₹40 are deducted from their respective shares, they have money in the ratio 17:15:14. Find Meera’s share after deduction.",
+   "hi": "₹2,288 को पंकज, मीरा और अशोक के बीच इस प्रकार विभाजित किया जाता है कि यदि उनके हिस्सों में से क्रमशः ₹39, ₹47 और ₹40 घटा दिए जाएं, तो उनके पास शेष राशियों का अनुपात 17:15:14 हो जाता है। कटौती के बाद मीरा का हिस्सा ज्ञात कीजिए।",
+   "opts": [
+    "₹805",
+    "₹705",
+    "₹605",
+    "₹855"
+   ],
+   "my_ans": "B",
+   "sol": "कुल कटौती = 39+47+40 = 126. शेष = 2288-126 = 2162. अनुपात योग = 17+15+14 = 46. 1 भाग = 2162/46 = 47. मीरा = 15 × 47 = 705.",
+   "trick": "कुल राशि से कटौती घटाकर अनुपात में बांटें।",
+   "ans": "B"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which of the following ratios is equal to 3:2?",
+   "hi": "निम्नलिखित में से कौन-सा अनुपात, 3:2 के बराबर है?",
+   "opts": [
+    "45:20",
+    "120:80",
+    "35:25",
+    "60:45"
+   ],
+   "my_ans": "B",
+   "sol": "120/80 = 12/8 = 3/2.",
+   "trick": "अनुपात को सरलतम रूप (simplest form) में बदलें।",
+   "ans": "B"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "The following ratios are given: a : b = 2 : 3, b : c = 4 : 5, c : d = 3 : 2, d : e = 5 : 4. What is the value of the ratio a : e?",
+   "hi": "निम्नलिखित अनुपात दिए गए हैं: a : b = 2 : 3, b : c = 4 : 5, c : d = 3 : 2, d : e = 5 : 4. अनुपात a : e का मान ज्ञात कीजिए।",
+   "opts": [
+    "3 : 4",
+    "1 : 1",
+    "4 : 7",
+    "3 : 5"
+   ],
+   "my_ans": "B",
+   "sol": "a/e = (a/b)×(b/c)×(c/d)×(d/e) = (2/3)×(4/5)×(3/2)×(5/4) = 1/1.",
+   "trick": "सभी अनुपातों का आपस में गुणा करें।",
+   "ans": "B"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "If the ratio of the height of a tower and the length of its shadow on the ground is √3 : 1, then the angle of elevation of the sun is:",
+   "hi": "यदि किसी मीनार की ऊंचाई और भूतल पर पड़ने वाली उसकी परछाई की लंबाई का अनुपात √3 : 1 है, तो सूर्य का उन्नयन कोण ज्ञात कीजिए।",
+   "opts": [
+    "60°",
+    "65°",
+    "30°",
+    "45°"
+   ],
+   "my_ans": "A",
+   "sol": "tan θ = लंब/आधार = √3/1 = √3. θ = 60°.",
+   "trick": "tan θ = ऊंचाई/परछाई।",
+   "ans": "A"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "In a class, the ratio of students who passed to those who failed is 11:2. If 44 students failed, what is the total number of students in the class?",
+   "hi": "एक कक्षा में, उत्तीर्ण और अनुत्तीर्ण विद्यार्थियों का अनुपात 11 : 2 है। यदि 44 विद्यार्थी अनुत्तीर्ण हुए, तो कक्षा में विद्यार्थियों की कुल संख्या कितनी है?",
+   "opts": [
+    "280",
+    "286",
+    "284",
+    "282"
+   ],
+   "my_ans": "B",
+   "sol": "2 भाग = 44 → 1 भाग = 22. कुल छात्र = 11+2 = 13 भाग. 13 × 22 = 286.",
+   "trick": "अनुपात के एक भाग का मान निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "A prize of ₹8,400 is to be shared between A and B in the ratio 3:5. Find B’s share.",
+   "hi": "₹8,400 का पुरस्कार, A और B के बीच 3 : 5 के अनुपात में बांटा जाना है। B का हिस्सा ज्ञात कीजिए।",
+   "opts": [
+    "₹5,250",
+    "₹5,000",
+    "₹5,150",
+    "₹5,200"
+   ],
+   "my_ans": "A",
+   "sol": "कुल भाग = 3+5=8. 1 भाग = 8400/8 = 1050. B का हिस्सा = 5 × 1050 = 5250.",
+   "trick": "कुल राशि को अनुपात के योग से विभाजित करें।",
+   "ans": "A"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "If the ratio of the number of boys to girls in a class is 5:7 and the ratio of girls to teachers is 14:1, what is the ratio of boys to teachers?",
+   "hi": "यदि किसी कक्षा में लड़कों और लड़कियों का अनुपात 5:7 है तथा लड़कियों और शिक्षकों का अनुपात 14:1 है, तो लड़कों और शिक्षकों का अनुपात कितना है?",
+   "opts": [
+    "7:2",
+    "5:2",
+    "7:1",
+    "10:1"
+   ],
+   "my_ans": "D",
+   "sol": "B:G = 5:7, G:T = 14:1. G को समान करने के लिए (B:G)×2 → B:G=10:14. B:T = 10:1.",
+   "trick": "उभयनिष्ठ पद (G) को समान बनाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "Chetan’s salary is ₹17,000 per month. He spends ₹4,000 on house rent, ₹2,500 on bills, and the rest of the amount is his monthly savings. Find his savings (in ₹) in a year, if in the month of his birthday, he spent his complete monthly savings for a birthday celebration.",
+   "hi": "चेतन का मासिक वेतन ₹17,000 है। वह मकान के किराए पर ₹4,000, बिलों पर ₹2,500 खर्च करता है और शेष राशि उसकी मासिक बचत है। यदि वह अपने जन्मदिन वाले महीने में अपनी पूरी मासिक बचत जन्मदिन समारोह पर खर्च करता है, तो एक वर्ष में उसकी बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "94,500",
+    "1,05,000",
+    "1,26,000",
+    "1,15,500"
+   ],
+   "my_ans": "D",
+   "sol": "मासिक बचत = 17000 - (4000+2500) = 10500. 11 महीने की बचत = 11 × 10500 = 115500.",
+   "trick": "12 महीने की बचत में से 1 महीने की बचत घटाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "What is the correct ascending order of the following ratios? 11:15, 23:55, 32:33, 4:11, 26:35",
+   "hi": "निम्नलिखित अनुपातों का सही आरोही क्रम क्या है? 11:15, 23:55, 32:33, 4:11, 26:35",
+   "opts": [
+    "4:11, 11:15, 23:55, 26:35, 32:33",
+    "4:11, 26:35, 11:15, 23:55, 32:33",
+    "4:11, 23:55, 26:35, 11:15, 32:33",
+    "4:11, 23:55, 11:15, 26:35, 32:33"
+   ],
+   "my_ans": "D",
+   "sol": "दशमलव मान: 4/11≈0.36, 23/55≈0.41, 11/15≈0.73, 26/35≈0.74, 32/33≈0.96. क्रम: 0.36 < 0.41 < 0.73 < 0.74 < 0.96.",
+   "trick": "अनुपातों को दशमलव में बदलकर तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "The sum of two numbers is 72. If the larger number is increased by 8 and the smaller number is decreased by 6, then the resulting numbers are in the ratio 3 : 2, respectively. Find the smaller of the original two numbers.",
+   "hi": "दो संख्याओं का योग 72 है। यदि बड़ी संख्या में 8 की वृद्धि की जाए और छोटी संख्या में 6 की कमी की जाए, तो परिणामी संख्याएं क्रमशः 3 : 2 के अनुपात में होती हैं। मूल दो संख्याओं में से छोटी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "35.6",
+    "35",
+    "34.2",
+    "32.5"
+   ],
+   "my_ans": "A",
+   "sol": "बड़ी x, छोटी 72-x. (x+8)/(72-x-6) = 3/2 → 2x+16 = 3(66-x) → 2x+16 = 198-3x → 5x=182 → x=36.4. छोटी संख्या = 72-36.4 = 35.6.",
+   "trick": "समीकरण बनाकर x का मान निकालें।",
+   "ans": "A"
+  }
+ ]
+}

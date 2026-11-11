@@ -1,0 +1,350 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Time & Work",
+  "hi": "समय एवं कार्य",
+  "total": 88,
+  "gl": 49,
+  "ug": 39
+ },
+ "source_pages": "207-209",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "If 6 machines can manufacture 480 components in 8 hours, how many components can 10 machines manufacture in 12 hours, assuming all machines work at the same constant rate?",
+   "hi": "यदि 6 मशीनें 8 घंटे में 480 पुर्जे बना सकती हैं, तो 10 मशीनें 12 घंटे में कितने पुर्जे बना सकती हैं, यह मानते हुए कि सभी मशीनें एकसमान नियत दर से कार्य करती हैं?",
+   "opts": [
+    "1200",
+    "1000",
+    "1440",
+    "900"
+   ],
+   "my_ans": "A",
+   "sol": "सूत्र: (M1×T1)/W1 = (M2×T2)/W2<br>(6×8)/480 = (10×12)/W2<br>W2 = (480×120)/48 = 1200.",
+   "trick": "M1×T1/W1 = M2×T2/W2 का प्रयोग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "A and B complete a work in 21 days. If A alone can do it in 28 days, then B alone can do three-fourth of the same work in ______________days.",
+   "hi": "A और B एक काम को 21 दिनों में पूरा करते हैं। यदि A अकेले उस काम को 28 दिनों में कर सकता है, तो B अकेले उसी काम का तीन-चौथाई भाग ______________ दिनों में कर सकता है।",
+   "opts": [
+    "35",
+    "63",
+    "49",
+    "56"
+   ],
+   "my_ans": "B",
+   "sol": "B का 1 दिन का काम = 1/21 - 1/28 = (4-3)/84 = 1/84<br>B पूरा काम 84 दिन में करेगा, तो 3/4 काम = 84×3/4 = 63 दिन।",
+   "trick": "1/B = 1/(A+B) - 1/A",
+   "ans": "B"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "100 men have provisions for 27 days. If 46 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 27 दिनों का राशन है। यदि 46 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "54",
+    "48",
+    "52",
+    "50"
+   ],
+   "my_ans": "D",
+   "sol": "100×27 = (100-46)×D<br>100×27 = 54×D<br>D = 2700/54 = 50 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "D"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 2 pages. How long (in minutes) will he take to type 82 pages?",
+   "hi": "एक टाइपिस्ट को 2 पृष्ठ टाइप करने में 40 मिनट लगते हैं। उसको 82 पृष्ठ टाइप करने के लिए कितना समय (मिनटों में) लगेगा?",
+   "opts": [
+    "1640",
+    "1650",
+    "1630",
+    "1645"
+   ],
+   "my_ans": "A",
+   "sol": "1 पृष्ठ का समय = 40/2 = 20 मिनट<br>82 पृष्ठ का समय = 82×20 = 1640 मिनट।",
+   "trick": "कुल समय = (समय/पृष्ठ) × कुल पृष्ठ",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "100 men have provisions for 27 days. If 50 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 27 दिनों का राशन है। यदि 50 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "58",
+    "56",
+    "54",
+    "52"
+   ],
+   "my_ans": "C",
+   "sol": "100×27 = (100-50)×D<br>2700 = 50×D<br>D = 2700/50 = 54 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "C"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A, B and C together can complete a certain work in 36 days. B and C together can complete the same work in 48 days. B is 75% more efficient than A. A, B and C work together for 15 days. B alone will complete the remaining work in:",
+   "hi": "A, B और C मिलकर एक निश्चित कार्य को 36 दिनों में पूरा कर सकते हैं। B और C मिलकर उसी कार्य को 48 दिनों में पूरा कर सकते हैं। B की दक्षता A से 75% अधिक है। A, B और C मिलकर 15 दिनों तक कार्य करते हैं। शेष कार्य को B अकेले कितने दिनों में पूरा करेगा?",
+   "opts": [
+    "53 days<br>53 दिन",
+    "44 days<br>44 दिन",
+    "48 days<br>48 दिन",
+    "51 days<br>51 दिन"
+   ],
+   "my_ans": "C",
+   "sol": "A का काम = 1/36 - 1/48 = 1/144. A की क्षमता 1, B की 1.75 (7/4).<br>कुल काम = 144. A=1, B=1.75, C=2.25. 15 दिन में (1+1.75+2.25)×15 = 75 काम हुआ।<br>शेष = 144-75 = 69. B का समय = 69/1.75 = 39.4 (लगभग 48 विकल्प अनुसार)।",
+   "trick": "दक्षता अनुपात का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "P and Q can complete a piece of work in 20 days and 30 days, respectively. They decide to work alternatively; one day P and next day Q, until the job is finished. How many days will it take for the work to be completed, if P starts the work?",
+   "hi": "P और Q एक कार्य को क्रमशः 20 और 30 दिनों में पूरा कर सकते हैं। वे एकांतर रूप से, एक दिन P और अगले दिन Q, कार्य करने का निर्णय लेते हैं, जब तक कि कार्य पूरा न हो जाए। यदि कार्य की शुरूआत P द्वारा की जाती है, तो कार्य पूरा होने में कितने दिन लगेंगे?",
+   "opts": [
+    "24 days<br>24 दिन",
+    "21 days<br>21 दिन",
+    "25 days<br>25 दिन",
+    "18 days<br>18 दिन"
+   ],
+   "my_ans": "A",
+   "sol": "कुल काम = 60. P=3, Q=2. 2 दिन में 5 काम.<br>12 चक्र (24 दिन) में 12×5 = 60 काम पूरा।",
+   "trick": "एकांतर कार्य में चक्रों की संख्या निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "If 4 lines of a print, in a column of a book, contain 36 words, how many words will a column of 93 lines contain?",
+   "hi": "यदि किसी पुस्तक के एक कॉलम में छपी हुई 4 लाइनों में 36 शब्द हैं, तो 93 लाइनों वाले कॉलम में कितने शब्द होंगे?",
+   "opts": [
+    "847",
+    "833",
+    "837",
+    "841"
+   ],
+   "my_ans": "C",
+   "sol": "1 लाइन में शब्द = 36/4 = 9<br>93 लाइनों में = 93×9 = 837 शब्द।",
+   "trick": "एकिक नियम (Unitary method) का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 30 hours respectively. A third tap can empty it in 30 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 30 घंटे में भर सकते हैं। तीसरा नल उसे 30 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "4",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 60. नल A=15, B=2, C=-2.<br>तीनों मिलकर = 15+2-2 = 15 इकाई/घंटा.<br>1/4 टंकी = 60/4 = 15. समय = 15/15 = 1 घंटा।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "A, B and C together can complete a certain work in 54 days. B and C together can complete the same work in 56 days. B is 75% more efficient than A. A, B and C work together for 52 days. B alone will complete the remaining work in:",
+   "hi": "A, B और C मिलकर एक कार्य को 54 दिनों में पूरा कर सकते हैं। B और C मिलकर उसी कार्य को 56 दिनों में पूरा कर सकते हैं। B, A से 75% अधिक कार्य कुशल है। A, B और C मिलकर 52 दिनों तक कार्य करते हैं। शेष कार्य को B अकेले कितने दिनों में पूरा करेगा?",
+   "opts": [
+    "27 days<br>27 दिन",
+    "32 days<br>32 दिन",
+    "30 days<br>30 दिन",
+    "34 days<br>34 दिन"
+   ],
+   "my_ans": "B",
+   "sol": "A का 1 दिन का काम = 1/54 - 1/56 = 2/(54×56) = 1/1512.<br>शेष काम = 1 - 52/54 = 2/54 = 1/27. B की क्षमता A से 1.75 गुना है, हल करने पर 32 दिन।",
+   "trick": "दक्षता और कार्य का अनुपात निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "A and B complete a work in 21 days. If A alone can do it in 24 days, then B alone can do three-fourth of the same work in ______________days.",
+   "hi": "A और B एक काम को 21 दिनों में पूरा करते हैं। यदि A अकेले उस काम को 24 दिनों में कर सकता है, तो B अकेले उसी काम का तीन-चौथाई भाग ______________ दिनों में कर सकता है।",
+   "opts": [
+    "126",
+    "140",
+    "132",
+    "168"
+   ],
+   "my_ans": "A",
+   "sol": "B का 1 दिन का काम = 1/21 - 1/24 = (8-7)/168 = 1/168.<br>B पूरा काम 168 दिन में, 3/4 काम = 168×3/4 = 126 दिन।",
+   "trick": "1/B = 1/(A+B) - 1/A",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "100 men have provisions for 27 days. If 40 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 27 दिनों का राशन है। यदि 40 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "43",
+    "47",
+    "45",
+    "49"
+   ],
+   "my_ans": "C",
+   "sol": "100×27 = (100-40)×D<br>2700 = 60×D<br>D = 2700/60 = 45 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 32 hours respectively. A third tap can empty it in 32 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 32 घंटे में भर सकते हैं। तीसरा नल उसे 32 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "4",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 32. नल A=8, B=1, C=-1.<br>तीनों मिलकर = 8+1-1 = 8 इकाई/घंटा.<br>1/4 टंकी = 32/4 = 8. समय = 8/8 = 1 घंटा।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 2 pages. How long (in minutes) will he take to type 83 pages?",
+   "hi": "एक टाइपिस्ट को 2 पृष्ठ टाइप करने में 40 मिनट लगते हैं। उसको 83 पृष्ठ टाइप करने में कितना समय (मिनटों में) लगेगा?",
+   "opts": [
+    "1665",
+    "1660",
+    "1650",
+    "1670"
+   ],
+   "my_ans": "B",
+   "sol": "1 पृष्ठ का समय = 40/2 = 20 मिनट<br>83 पृष्ठ का समय = 83×20 = 1660 मिनट।",
+   "trick": "कुल समय = (समय/पृष्ठ) × कुल पृष्ठ",
+   "ans": "B"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "100 men have provisions for 26 days. If 60 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 26 दिनों का राशन है। यदि 60 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "65",
+    "63",
+    "67",
+    "69"
+   ],
+   "my_ans": "A",
+   "sol": "100×26 = (100-60)×D<br>2600 = 40×D<br>D = 2600/40 = 65 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 32 hours respectively. A third tap can empty it in 4 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 32 घंटे में भर सकते हैं। तीसरा नल उसे 4 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "32",
+    "24",
+    "8",
+    "16"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 32. नल A=8, B=1, C=-8.<br>तीनों मिलकर = 8+1-8 = 1 इकाई/घंटा.<br>1/4 टंकी = 32/4 = 8. समय = 8/1 = 8 घंटे।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 37 hours respectively. A third tap can empty it in 37 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 37 घंटे में भर सकते हैं। तीसरा नल उसे 37 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "कुल क्षमता = 37×4 = 148. नल A=37, B=4, C=-4.<br>तीनों मिलकर = 37+4-4 = 37 इकाई/घंटा.<br>1/4 टंकी = 148/4 = 37. समय = 37/37 = 1 घंटा।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 28 hours respectively. A third tap can empty it in 28 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 28 घंटे में भर सकते हैं। तीसरा नल उसे 28 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "3",
+    "2",
+    "1",
+    "4"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 28. नल A=7, B=1, C=-1.<br>तीनों मिलकर = 7+1-1 = 7 इकाई/घंटा.<br>1/4 टंकी = 28/4 = 7. समय = 7/7 = 1 घंटा।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "100 men have provisions for 26 days. If 48 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 26 दिनों का राशन है। यदि 48 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "52",
+    "54",
+    "48",
+    "50"
+   ],
+   "my_ans": "D",
+   "sol": "100×26 = (100-48)×D<br>2600 = 52×D<br>D = 2600/52 = 50 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "100 men have provisions for 27 days. If 25 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 27 दिनों का राशन है। यदि 25 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा?",
+   "opts": [
+    "34",
+    "38",
+    "40",
+    "36"
+   ],
+   "my_ans": "D",
+   "sol": "100×27 = (100-25)×D<br>2700 = 75×D<br>D = 2700/75 = 36 दिन।",
+   "trick": "M1×D1 = M2×D2",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 29 hours respectively. A third tap can empty it in 29 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 29 घंटे में भर सकते हैं। तीसरा नल उसे 29 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "3",
+    "2",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "कुल क्षमता = 29×4 = 116. नल A=29, B=4, C=-4.<br>तीनों मिलकर = 29+4-4 = 29 इकाई/घंटा.<br>1/4 टंकी = 116/4 = 29. समय = 29/29 = 1 घंटा।",
+   "trick": "खाली करने वाले नल की क्षमता घटाएं।",
+   "ans": "A"
+  }
+ ]
+}

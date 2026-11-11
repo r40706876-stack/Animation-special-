@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "85-85",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "When the cost of an article was decreased by 7%, the number of articles sold was increased by 20%. What was the effect (in percentage) on the revenue?",
+   "hi": "जब किसी वस्तु की कीमत में 7% की कमी की गई, तो बेची गई वस्तुओं की संख्या में 20% की वृद्धि हुई। राजस्व पर इसका क्या प्रभाव (प्रतिशत में) पड़ा?",
+   "opts": [
+    "decrease of 10.6%<br>10.6% की कमी",
+    "increase of 10.4%<br>10.4% की वृद्धि",
+    "increase of 11.6%<br>11.6% की वृद्धि",
+    "decrease of 9.6%<br>9.6% की कमी"
+   ],
+   "my_ans": "C",
+   "sol": "राजस्व = कीमत × संख्या<br>नेट प्रभाव = -7 + 20 + (-7 × 20)/100 = 13 - 1.4 = 11.6% वृद्धि।",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन का सूत्र: a + b + (ab/100) का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "Girish scored 448 marks in an examination and was 81 marks short of 46% of maximum marks. In the same examination, his friend scored 805 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 448 अंक प्राप्त किए, जो अधिकतम अंकों के 46% से 81 अंक कम थे। उसी परीक्षा में उसके मित्र ने 805 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत कितना है?",
+   "opts": [
+    "71%",
+    "67%",
+    "72%",
+    "70%"
+   ],
+   "my_ans": "D",
+   "sol": "46% अधिकतम अंक = 448 + 81 = 529<br>अधिकतम अंक = 529 ÷ 0.46 = 1150<br>मित्र का प्रतिशत = (805 ÷ 1150) × 100 = 70%。",
+   "trick": "पहले कुल अधिकतम अंक निकालें, फिर मित्र के अंकों का प्रतिशत ज्ञात करें।",
+   "ans": "D"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "The price of fuel decreases by 45%, 50% and 25% in three successive months, but increases by 65% in the fourth month. What is the percentage decrease in the price of fuel in the fourth month as compared to its original price? (Round off to 2 decimal places.)",
+   "hi": "ईंधन की कीमत में क्रमिक तीन महीनों में 45%, 50% और 25% की कमी होती है, लेकिन चौथे महीने में 65% की वृद्धि हो जाती है। मूल कीमत की तुलना में चौथे महीने में ईंधन की कीमत में प्रतिशत कमी (दशमलव के दो स्थानों तक पूर्णांकित) कितनी है?",
+   "opts": [
+    "70.35%",
+    "67.46%",
+    "69.13%",
+    "65.97%"
+   ],
+   "my_ans": "D",
+   "sol": "माना मूल कीमत = 100<br>चौथे महीने की कीमत = 100 × (55/100) × (50/100) × (75/100) × (165/100) = 34.03125<br>कमी = 100 - 34.03125 = 65.96875% ≈ 65.97%。",
+   "trick": "क्रमिक परिवर्तनों को गुणा करें: 100 × (1-a/100) × (1-b/100)...",
+   "ans": "D"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "The price of an article is increased by 20%. In the next step, it is decreased by x% of the new price. Finally, the price is increased by 10% of the original price. If the final price becomes exactly equal to the original price, the value of x is:",
+   "hi": "किसी वस्तु की कीमत में 20% की वृद्धि की जाती है। अगले चरण में, इसमें नई कीमत के x% की कमी की जाती है। अंत में, कीमत में मूल कीमत के 10% की वृद्धि की जाती है। यदि अंतिम कीमत, मूल कीमत के ठीक बराबर हो जाती है, तो x का मान कितना होगा?",
+   "opts": [
+    "12.25",
+    "22.75",
+    "25",
+    "17.5"
+   ],
+   "my_ans": "C",
+   "sol": "माना मूल कीमत = 100<br>नई कीमत = 120<br>x% कमी के बाद = 120(1 - x/100)<br>अंत में 10% वृद्धि = 120(1 - x/100) + 10 = 100<br>120(1 - x/100) = 90 → 1 - x/100 = 0.75 → x = 25。",
+   "trick": "मूल कीमत को 100 मानकर समीकरण को चरण-दर-चरण हल करें।",
+   "ans": "C"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "The price of an article is first increased by 20% and then decreased by 20%. If the original price of the article is ₹500, what is the net percentage change in the price?",
+   "hi": "किसी वस्तु की कीमत में पहले 20% की वृद्धि की जाती है और फिर 20% की कमी की जाती है। यदि वस्तु की मूल कीमत ₹500 है, तो कीमत में कुल कितने प्रतिशत परिवर्तन हुआ?",
+   "opts": [
+    "4% decrease<br>4% की कमी",
+    "5% decrease<br>5% की कमी",
+    "2% increase<br>2% की वृद्धि",
+    "No change<br>कोई परिवर्तन नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "नेट परिवर्तन = (x² / 100)% कमी<br>नेट परिवर्तन = (20² / 100)% = 400/100 = 4% कमी।",
+   "trick": "जब वृद्धि और कमी समान हो, तो हमेशा (x²/100)% की कमी होती है।",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "The price of a trouser is first increased by 20% and then decreased by 25%. What is the net percentage change in the price?",
+   "hi": "किसी पतलून की कीमत में पहले 20% की वृद्धि की जाती है और फिर 25% की कमी की जाती है। कीमत में नेट प्रतिशत परिवर्तन क्या है?",
+   "opts": [
+    "5% decrease<br>5% की कमी",
+    "10% increase<br>10% की वृद्धि",
+    "10% decrease<br>10% की कमी",
+    "5% increase<br>5% की वृद्धि"
+   ],
+   "my_ans": "C",
+   "sol": "नेट प्रभाव = 20 - 25 + (20 × -25)/100<br>= -5 - 500/100 = -5 - 5 = -10% (10% की कमी)।",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन सूत्र: a + b + (ab/100) का उपयोग करें।",
+   "ans": "C"
+  }
+ ]
+}

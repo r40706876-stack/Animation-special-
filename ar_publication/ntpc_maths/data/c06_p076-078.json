@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "76-78",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "If A's salary is 130% more than that of B, then by how much percent is B's salary less than that of A (correct to 2 decimal places)?",
+   "hi": "यदि A का वेतन B के वेतन से 130% अधिक है, तो B का वेतन A के वेतन से कितने प्रतिशत (दशमलव के दो स्थानों तक सही उत्तर दीजिए) कम है?",
+   "opts": [
+    "58.42%",
+    "56.52%",
+    "54.62%",
+    "55.88%"
+   ],
+   "my_ans": "B",
+   "sol": "माना B=100, तो A=230. अंतर=130.<br>प्रतिशत कमी = (130/230)×100 = 56.52%.",
+   "trick": "x% अधिक हो तो कमी = (x/(100+x))×100",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 84% of the registered voters cast their votes and 20% of the votes polled were found invalid. Winning candidate got 58% of the valid votes and won the election by a margin of 336 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 84% ने अपना वोट डाला और डाले गए वोटों में से 20% वोट अवैध पाए गए। विजयी उम्मीदवार को वैध वोटों का 58% प्राप्त हुआ और उसने 336 वोटों के अंतर से चुनाव जीत लिया। कुल कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "3125",
+    "3123",
+    "3120",
+    "3124"
+   ],
+   "my_ans": "A",
+   "sol": "माना कुल मतदाता x. वैध वोट = x × 0.84 × 0.80 = 0.672x.<br>जीत का अंतर = (58%-42%) = 16% वैध वोट = 336.<br>0.672x × 0.16 = 336 → x = 336 / 0.10752 = 3125.",
+   "trick": "कुल मतदाता × (डाले गए %) × (वैध %) × (जीत का अंतर %) = अंतर",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Girish scored 572 marks in an examination and was 30 marks short of 28% of maximum marks. In the same examination, his friend scored 473 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 572 अंक प्राप्त किए जो कि पूर्णांक के 28% से 30 अंक कम थे। उसी परीक्षा में उसके मित्र ने 473 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "21%",
+    "24%",
+    "23%",
+    "22%"
+   ],
+   "my_ans": "D",
+   "sol": "28% पूर्णांक = 572+30 = 602.<br>पूर्णांक = 602/0.28 = 2150.<br>मित्र का % = (473/2150)×100 = 22%.",
+   "trick": "पहले पूर्णांक निकालें, फिर मित्र के अंकों का प्रतिशत निकालें",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 5% in the first year and increased by 30% in the second year. Its population after two years is _______.",
+   "hi": "एक गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 5% की वृद्धि हुई और दूसरे वर्ष 30% की वृद्धि हुई। दो वर्ष बाद गाँव की जनसंख्या कितनी होगी?",
+   "opts": [
+    "3,77,000",
+    "3,95,850",
+    "3,91,500",
+    "3,04,500"
+   ],
+   "my_ans": "B",
+   "sol": "2,90,000 × 1.05 × 1.30 = 3,95,850.",
+   "trick": "क्रमिक वृद्धि = P × (1+a/100) × (1+b/100)",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "If A’s salary is 13% more than that of B, then by what per cent is B’s salary less than that of A? (Give your answer correct to two decimal places.)",
+   "hi": "यदि A का वेतन, B के वेतन से 13% अधिक है, तो B का वेतन, A के वेतन से कितने प्रतिशत कम है? (अपना उत्तर दशमलव के ठीक दो स्थानों तक दीजिए।)",
+   "opts": [
+    "11.50%",
+    "14.72%",
+    "10.50%",
+    "14.22%"
+   ],
+   "my_ans": "A",
+   "sol": "कमी % = (13/113)×100 = 11.504% ≈ 11.50%.",
+   "trick": "x% अधिक हो तो कमी = (x/(100+x))×100",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "If 160% of 75% of A is equal to two times the value of 150% of B, then A is more/less than B by how much percentage?",
+   "hi": "यदि A के 75% का 160%, B के 150% के दोगुने के बराबर है, तो A, B से कितने प्रतिशत अधिक / कम है?",
+   "opts": [
+    "150%, more<br>150%, अधिक",
+    "60%, less<br>60%, कम",
+    "150%, less<br>150%, कम",
+    "60%, more<br>60%, अधिक"
+   ],
+   "my_ans": "A",
+   "sol": "A × 0.75 × 1.6 = 2 × B × 1.5 → 1.2A = 3B.<br>A/B = 3/1.2 = 2.5. A, B से 1.5 अधिक है (150%).",
+   "trick": "समीकरण बनाकर A और B का अनुपात निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Kiran’s salary is ₹18000 per month. He spends ₹5000 on house rent, ₹3000 on bills and the rest of the amount is his monthly savings. Find his savings (in ₹) in a year, if in the month of his birthday, he spent his complete monthly saving for birthday celeb ration.",
+   "hi": "किरण का मासिक वेतन ₹18000 है। वह मकान किराए पर ₹ 5000, बिलों पर ₹3000 खर्च करती है और शेष राशि उसकी मासिक बचत है। यदि वह अपने जन्मदिन के महीने में अपनी पूरी मासिक बचत जन्मदिन मनाने में खर्च कर देती है, तो एक वर्ष में उसकी बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "100000",
+    "90000",
+    "110000",
+    "120000"
+   ],
+   "my_ans": "C",
+   "sol": "मासिक बचत = 18000 - 5000 - 3000 = 10000.<br>12 महीने में से 1 महीने की बचत खर्च हुई, तो 11 महीने की बची = 11 × 10000 = 110000.",
+   "trick": "कुल बचत = (कुल महीने - 1) × मासिक बचत",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "If the income tax is increased by 18%, the net income is reduced by 2%. Find the original rate of income tax.",
+   "hi": "यदि आयकर में 18% की वृद्धि की जाती है, तो नेट आय में 2% की कमी हो जाती है। आयकर की मूल दर ज्ञात कीजिए।",
+   "opts": [
+    "10%",
+    "5%",
+    "12%",
+    "8%"
+   ],
+   "my_ans": "A",
+   "sol": "आयकर का 18% = नेट आय का 2%.<br>आयकर/नेट आय = 2/18 = 1/9.<br>कुल आय = 1+9 = 10. दर = (1/10)×100 = 10%.",
+   "trick": "दर = (कमी% / (वृद्धि%+कमी%)) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "The radius of a spherical balloon is increased by 20%. Find the percentage increase in its surface area.",
+   "hi": "एक गोलाकार गुब्बारे की त्रिज्या में 20% की वृद्धि हुई है। इसके पृष्ठीय क्षेत्रफल में प्रतिशत वृद्धि ज्ञात कीजिए।",
+   "opts": [
+    "22%",
+    "20%",
+    "40%",
+    "44%"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल ∝ r². वृद्धि = 20+20+(20×20/100) = 44%.",
+   "trick": "क्षेत्रफल में वृद्धि = a+a+(a²/100)",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "A shirt's price is decreased from ₹200 to ₹180. What is the percentage decrease?",
+   "hi": "एक शर्ट की कीमत ₹200 से घटकर ₹180 हो गई। कीमत में प्रतिशत कमी ज्ञात कीजिए।",
+   "opts": [
+    "5%",
+    "15%",
+    "20%",
+    "10%"
+   ],
+   "my_ans": "D",
+   "sol": "कमी = 200-180 = 20. % कमी = (20/200)×100 = 10%.",
+   "trick": "कमी % = (कमी/मूल मान) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "A person spends 75% of his income. If his income increases by 20% and his expenditure increases by 10%, what is the percentage change in his savings?",
+   "hi": "एक व्यक्ति अपनी आय का 75% खर्च करता है। यदि उसकी आय में 20% की वृद्धि होती है और उसके खर्च में 10% की वृद्धि होती है, तो उसकी बचत में प्रतिशत परिवर्तन क्या होगा?",
+   "opts": [
+    "60% increase<br>60% की वृद्धि",
+    "50% increase<br>50% की वृद्धि",
+    "40% increase<br>40% की वृद्धि",
+    "25% increase<br>25% की वृद्धि"
+   ],
+   "my_ans": "B",
+   "sol": "आय 100, खर्च 75, बचत 25. नई आय 120, नया खर्च 75×1.1=82.5. नई बचत = 120-82.5 = 37.5. वृद्धि = (12.5/25)×100 = 50%.",
+   "trick": "आय = खर्च + बचत का प्रयोग करें",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Article M is sold at a reduction of ₹3,000 from its original price, and Article N is sold at a reduction of ₹2,500 from its original price. If the original prices of both articles were ₹10,000, reduction in price of M is R1% and reduction in price of N is R2%, find the difference between R1 and R2.",
+   "hi": "वस्तु M को उसकी मूल कीमत से ₹3,000 की कटौती (Reduction) पर बेचा जाता है और वस्तु N को उसकी मूल कीमत से ₹2,500 की कटौती पर बेचा जाता है। यदि दोनों वस्तुओं की मूल कीमतें ₹10,000 थीं, वस्तु M की कीमत में कटौती R1% है और वस्तु N की कीमत में कटौती R2% है, तो R1 और R2 के बीच का अंतर ज्ञात कीजिए।",
+   "opts": [
+    "15",
+    "20",
+    "5",
+    "10"
+   ],
+   "my_ans": "C",
+   "sol": "R1 = (3000/10000)×100 = 30%. R2 = (2500/10000)×100 = 25%. अंतर = 30-25 = 5.",
+   "trick": "प्रतिशत कटौती = (कटौती/मूल्य) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "The price of an article increases by 25%, then decreases by 20%, and finally increases by 15%. What is the overall percentage change in the price?",
+   "hi": "किसी वस्तु की कीमत में पहले 25% की वृद्धि होती है, फिर 20% की कमी होती है और अंत में 15% की वृद्धि होती है। कीमत में समग्र प्रतिशत परिवर्तन ज्ञात कीजिए।",
+   "opts": [
+    "25%",
+    "10%",
+    "15%",
+    "20%"
+   ],
+   "my_ans": "C",
+   "sol": "100 × 1.25 × 0.80 × 1.15 = 100 × 1 × 1.15 = 115. वृद्धि = 15%.",
+   "trick": "क्रमिक परिवर्तन = 100 × (1±a/100) × (1±b/100) × (1±c/100)",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "In a smart city, the number of electric vehicles increased by 18% in 2021 and 22% in 2022. What is the total percentage increase in electric vehicles over the two years?",
+   "hi": "एक स्मार्ट शहर में, 2021 में इलेक्ट्रिक वाहनों की संख्या में 18% की वृद्धि हुई और 2022 में 22% की वृद्धि हुई। इन दोनों वर्षों में इलेक्ट्रिक वाहनों में कुल कितनी प्रतिशत वृद्धि है?",
+   "opts": [
+    "41.6%",
+    "43.96%",
+    "40%",
+    "46%"
+   ],
+   "my_ans": "B",
+   "sol": "कुल वृद्धि = 18 + 22 + (18×22/100) = 40 + 3.96 = 43.96%.",
+   "trick": "क्रमिक वृद्धि = a+b+(ab/100)",
+   "ans": "B"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "If 45% of a number is 36 more than 20% of that number, then what is the number?",
+   "hi": "यदि किसी संख्या का 45% उसके 20% से 36 अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "144",
+    "124",
+    "184",
+    "164"
+   ],
+   "my_ans": "A",
+   "sol": "(45%-20%) = 25% = 36. संख्या = 36/0.25 = 144.",
+   "trick": "प्रतिशत अंतर = संख्या का मान",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "If 45% of a number exceeds 20% of it by 30, then the number is:",
+   "hi": "यदि किसी संख्या का 45% उसके 20% से 30 अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "140",
+    "100",
+    "120",
+    "160"
+   ],
+   "my_ans": "C",
+   "sol": "25% = 30. संख्या = 30/0.25 = 120.",
+   "trick": "प्रतिशत अंतर = संख्या का मान",
+   "ans": "C"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "The price of fuel decreases by 45%, 25% and 15% in three successive months, but increases by 45% in the fourth month. What is the percentage decrease in the price of fuel in the fourth month as compared to its original price? (Round off to 2 decimal places.)",
+   "hi": "ईंधन की कीमत में क्रमिक तीन महीनों में 45%, 25% और 15% की कमी होती है, लेकिन चौथे महीने में 45% की वृद्धि हो जाती है। मूल कीमत की तुलना में चौथे महीने में ईंधन की कीमत में प्रतिशत कमी (दशमलव के दो स्थानों तक पूर्णांकित) कितनी है?",
+   "opts": [
+    "47.82%",
+    "49.16%",
+    "53.54%",
+    "46.44%"
+   ],
+   "my_ans": "B",
+   "sol": "100 × 0.55 × 0.75 × 0.85 × 1.45 = 50.84. कमी = 100 - 50.84 = 49.16%.",
+   "trick": "क्रमिक परिवर्तन का गुणा करें",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "If the price of a shirt increases from ₹400 to ₹500, what is the percentage increase in the price?",
+   "hi": "यदि एक शर्ट का मूल्य ₹400 से बढ़ा कर ₹500 कर दिया जाता है, तो मूल्य में कितने प्रतिशत की वृद्धि होगी?",
+   "opts": [
+    "30%",
+    "25%",
+    "10%",
+    "15%"
+   ],
+   "my_ans": "B",
+   "sol": "वृद्धि = 100. % वृद्धि = (100/400)×100 = 25%.",
+   "trick": "वृद्धि % = (वृद्धि/मूल्य) × 100",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Ravi spends 70% of his income. If his income increases by 25% and his expenditure increases by 10%, by what percentage do his savings increase?",
+   "hi": "रवि अपनी आय का 70% खर्च करता है। यदि उसकी आय में 25% की वृद्धि होती है तथा व्यय में 10% की वृद्धि होती है, तो उसकी बचत में कितने प्रतिशत की वृद्धि होगी?",
+   "opts": [
+    "Savings increase by 60%<br>बचत में 60% की वृद्धि होगी",
+    "Savings increase by 50%<br>बचत में 50% की वृद्धि होगी",
+    "Savings increase by 40%<br>बचत में 40% की वृद्धि होगी",
+    "Savings increase by 30%<br>बचत में 30% की वृद्धि होगी"
+   ],
+   "my_ans": "A",
+   "sol": "आय 100, खर्च 70, बचत 30. नई आय 125, नया खर्च 70×1.1=77. नई बचत = 125-77 = 48. वृद्धि = (18/30)×100 = 60%.",
+   "trick": "आय = खर्च + बचत का प्रयोग करें",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,382 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "157-159",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "If a recipe requires ingredients in the ratio 1:2 and you have 3 cups of the first ingredient, how many cups of the second ingredient should you use?",
+   "hi": "यदि किसी रेसिपी के लिए 1:2 के अनुपात में इंग्रेडिएंट की आवश्यकता है और आपके पास पहले इंग्रेडिएंट के 3 कप हैं, तो आपको दूसरे इंग्रेडिएंट के कितने कप का उपयोग करना चाहिए?",
+   "opts": [
+    "3",
+    "4",
+    "6",
+    "8"
+   ],
+   "my_ans": "C",
+   "sol": "अनुपात 1:2 है। यदि 1 भाग = 3 कप, तो 2 भाग = 2 × 3 = 6 कप।",
+   "trick": "अनुपात के अनुसार मान को गुणा करें।",
+   "ans": "C"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Three numbers in the ratio 2 : 5 : 7 are taken as the first, second, and third terms, respectively. If their fourth proportional is 140, find the middle number.",
+   "hi": "तीन संख्याएँ 2 : 5 : 7 के अनुपात में हैं और इन्हें क्रमशः प्रथम, द्वितीय और तृतीय पद के रूप में लिया जाता है। यदि इनका चतुर्थानुपाती 140 है, तो मध्य संख्या ज्ञात कीजिए।",
+   "opts": [
+    "35",
+    "30",
+    "40",
+    "50"
+   ],
+   "my_ans": "C",
+   "sol": "संख्याएँ 2k, 5k, 7k हैं। चतुर्थानुपाती = (5k × 7k) / 2k = 140 → 17.5k = 140 → k = 8. मध्य संख्या = 5 × 8 = 40.",
+   "trick": "चतुर्थानुपाती = (b × c) / a",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Find the positive integral value of x if the fourth proportional of x, x + 1, 2x + 3 is y and y = 3x + 3.",
+   "hi": "यदि x, x + 1, 2x + 3 का चतुर्थानुपाती y है और y = 3x + 3 है, तो x का धनात्मक पूर्णांक मान ज्ञात कीजिए।",
+   "opts": [
+    "4",
+    "5",
+    "2",
+    "3"
+   ],
+   "my_ans": "D",
+   "sol": "चतुर्थानुपाती y = ((x + 1)(2x + 3)) / x = 3x + 3. (x + 1)(2x + 3) = 3x(x + 1). x = 3 रखने पर: 4 × 9 = 3 × 3 × 4 (सत्य)।",
+   "trick": "विकल्पों का उपयोग करके समीकरण की जाँच करें।",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "The sides of two square gardens are 16 m and 25 m, respectively. A third square garden is to be constructed such that the length of its side is the mean proportional between the sides of the given two gardens. What will be the length of the side of the new square garden?",
+   "hi": "दो वर्गाकार बगीचों की भुजाएँ क्रमशः 16 m और 25 m हैं। एक तीसरा वर्गाकार बगीचा इस प्रकार बनाया जाना है कि उसकी भुजा की लंबाई, दिए गए दोनों बगीचों की भुजाओं की लंबाई का मध्यानुपाती हो। नए वर्गाकार बगीचे की भुजा की लंबाई कितनी होगी?",
+   "opts": [
+    "21 m",
+    "18 m",
+    "20 m",
+    "19 m"
+   ],
+   "my_ans": "C",
+   "sol": "मध्यानुपाती = √(16 × 25) = √400 = 20 m.",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "C"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "The third proportional to 75 and 45 is the same as the fourth proportional to 10, 5x and 6x. Find the value of x.",
+   "hi": "75 और 45 का तृतीयानुपाती, 10, 5x और 6x के चतुर्थानुपाती के समान है। x का मान ज्ञात कीजिए।",
+   "opts": [
+    "3",
+    "4",
+    "5",
+    "2"
+   ],
+   "my_ans": "A",
+   "sol": "75, 45 का तृतीयानुपाती = 45²/75 = 27. 10, 5x, 6x का चतुर्थानुपाती = (5x × 6x) / 10 = 3x². 3x² = 27 → x² = 9 → x = 3.",
+   "trick": "तृतीयानुपाती = b²/a, चतुर्थानुपाती = (b × c)/a",
+   "ans": "A"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "The fourth proportional to the first number, the second number, and 20 is 36. If the sum of the first two numbers is 14, find the geometric mean of the first two numbers.",
+   "hi": "पहली संख्या, दूसरी संख्या और 20 का चतुर्थानुपाती 36 है। यदि पहली दो संख्याओं का योगफल 14 है, तो पहली दो संख्याओं का गुणोत्तर माध्य ज्ञात कीजिए।",
+   "opts": [
+    "2 √ 5",
+    "3 √ 5",
+    "5 √ 3",
+    "5 √ 2"
+   ],
+   "my_ans": "B",
+   "sol": "माना संख्याएँ a, b हैं। a+b=14, (b×20)/a = 36 → 20b = 36a → 5b = 9a. b = 14-a → 5(14-a) = 9a → 70 = 14a → a=5, b=9. गुणोत्तर माध्य = √(5×9) = 3√5.",
+   "trick": "गुणोत्तर माध्य = √(a × b)",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Two positive numbers differ by 20. The mean proportional between these two numbers is 24. What is the sum of these two numbers?",
+   "hi": "दो धनात्मक संख्याओं का अंतर 20 है। इन दोनों संख्याओं के बीच का मध्यानुपाती 24 है। इन दोनों संख्याओं का योगफल ज्ञात कीजिए।",
+   "opts": [
+    "51",
+    "53",
+    "50",
+    "52"
+   ],
+   "my_ans": "D",
+   "sol": "a-b=20, √(ab)=24 → ab=576. (a+b)² = (a-b)² + 4ab = 20² + 4(576) = 400 + 2304 = 2704. a+b = √2704 = 52.",
+   "trick": "(a+b)² = (a-b)² + 4ab",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Find the third proportional to 6 and 12.",
+   "hi": "6 और 12 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "48",
+    "18",
+    "36",
+    "24"
+   ],
+   "my_ans": "D",
+   "sol": "तृतीयानुपाती = b²/a = 12²/6 = 144/6 = 24.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "The mean proportional between two positive numbers is 30. If the difference between the two numbers is 45, what is the smaller of the two numbers?",
+   "hi": "दो धनात्मक संख्याओं के बीच का मध्यानुपाती 30 है। यदि दोनों संख्याओं का अंतर 45 है, तो उनमें से छोटी संख्या कौन-सी है?",
+   "opts": [
+    "21",
+    "12",
+    "15",
+    "18"
+   ],
+   "my_ans": "C",
+   "sol": "√(ab)=30 → ab=900. a-b=45 → a=b+45. (b+45)b=900 → b²+45b-900=0. (b+60)(b-15)=0. b=15.",
+   "trick": "द्विघात समीकरण हल करें या विकल्पों का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Find the third proportional to 8 and 48.2.",
+   "hi": "8 और 48.2 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "290.405",
+    "296.605",
+    "292.805",
+    "294.205"
+   ],
+   "my_ans": "A",
+   "sol": "तृतीयानुपाती = 48.2²/8 = 2323.24 / 8 = 290.405.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "What is the third proportional to 0.25 and 0.15?",
+   "hi": "0.25 और 0.15 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "0.15",
+    "0.02",
+    "0.09",
+    "0.04"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयानुपाती = 0.15²/0.25 = 0.0225 / 0.25 = 0.09.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The mean proportional between 12 and a number is twice the mean proportional between 9 and 16. Find the number.",
+   "hi": "12 और एक संख्या के बीच का मध्यानुपाती, 9 और 16 के बीच के मध्यानुपाती का दोगुना है। संख्या ज्ञात कीजिए।",
+   "opts": [
+    "56",
+    "60",
+    "72",
+    "48"
+   ],
+   "my_ans": "D",
+   "sol": "√(12x) = 2 × √(9×16) = 2 × 12 = 24. 12x = 24² = 576. x = 576/12 = 48.",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "D"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "A rectangular garden has a length of 16 meters and a width of x meters. If the width is the mean proportional between 4 meters and 64 meters, what is the value of x?",
+   "hi": "एक आयताकार बगीचे की लंबाई 16 मीटर और चौड़ाई x मीटर है। यदि चौड़ाई 4 मीटर और 64 मीटर के बीच मध्यानुपाती है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "24",
+    "12",
+    "16",
+    "8"
+   ],
+   "my_ans": "C",
+   "sol": "x = √(4 × 64) = √256 = 16.",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "C"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The ratio of two numbers is 3 : 5. If 6 is subtracted from each, the resulting numbers are in the ratio 1 : 2. Find the difference between the two original numbers.",
+   "hi": "दो संख्याओं का अनुपात 3 : 5 है। यदि प्रत्येक संख्या में से 6 घटाया जाता है, तो परिणामी संख्याओं का अनुपात 1 : 2 हो जाता है। दोनों मूल संख्याओं के बीच का अंतर ज्ञात कीजिए।",
+   "opts": [
+    "16",
+    "10",
+    "12",
+    "14"
+   ],
+   "my_ans": "C",
+   "sol": "(3x-6)/(5x-6) = 1/2 → 6x-12 = 5x-6 → x=6. अंतर = 5x-3x = 2x = 2×6 = 12.",
+   "trick": "अनुपात अंतर विधि का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "In a fitness park, a straight walking path is divided into three consecutive segments. The lengths of the first and third segments are 18 m and 50 m respectively. If the length of the middle segment is the mean proportional between the other two, what is its length?",
+   "hi": "एक फिटनेस पार्क में, एक सीधी पैदल पथ को तीन लगातार खंडों में विभाजित किया गया है। पहले और तीसरे खंड की लंबाई क्रमशः 18 m और 50 m है। यदि मध्य खंड की लंबाई, अन्य दो खंडों की लंबाई के बीच मध्यानुपाती है, तो उसकी लंबाई कितनी होगी?",
+   "opts": [
+    "30 m",
+    "36 m",
+    "27 m",
+    "25 m"
+   ],
+   "my_ans": "A",
+   "sol": "मध्यानुपाती = √(18 × 50) = √900 = 30 m.",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "The mean proportional of 0.15 and 0.000135 is ______.",
+   "hi": "0.15 और 0.000135 का मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "0.00045",
+    "0.000045",
+    "0.0045",
+    "0.045"
+   ],
+   "my_ans": "C",
+   "sol": "√(0.15 × 0.000135) = √(15 × 10⁻² × 135 × 10⁻⁶) = √(2025 × 10⁻⁸) = 45 × 10⁻⁴ = 0.0045.",
+   "trick": "दशमलव हटाकर वर्गमूल लें।",
+   "ans": "C"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "If the third proportional to two numbers is 32 and the second number is 16, find the first number.",
+   "hi": "यदि दो संख्याओं का तृतीयानुपाती 32 है और दूसरी संख्या 16 है, तो पहली संख्या ज्ञात कीजिए।",
+   "opts": [
+    "5",
+    "6",
+    "8",
+    "7"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयानुपाती = b²/a → 32 = 16²/a → 32 = 256/a → a = 256/32 = 8.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "If the third proportional to 4 and 6 is used as the base of a rectangle, and the first number (4) is its height, what is the area of the rectangle?",
+   "hi": "यदि 4 और 6 के तृतीयानुपाती को आयत के आधार के रूप में उपयोग किया जाता है और पहली संख्या (4) इसकी ऊँचाई है, तो आयत का क्षेत्रफल क्या है?",
+   "opts": [
+    "30 unit ²",
+    "24 unit ²",
+    "36 unit ²",
+    "48 unit ²"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयानुपाती = 6²/4 = 36/4 = 9. आधार = 9, ऊँचाई = 4. क्षेत्रफल = 9 × 4 = 36.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "If x is the fourth proportional of 37, 25 and 888, what is the value of x?",
+   "hi": "यदि 37, 25 और 888 का चतुर्थानुपाती x है, तो x का मान कितना होगा?",
+   "opts": [
+    "500",
+    "400",
+    "800",
+    "600"
+   ],
+   "my_ans": "D",
+   "sol": "x = (25 × 888) / 37 = 25 × 24 = 600.",
+   "trick": "चतुर्थानुपाती = (b × c) / a",
+   "ans": "D"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Two alloys A and B contain copper and zinc in the ratio 3:4 and 5:9, respectively. If equal weights of both alloys are melted together to form a new alloy, what is the ratio of copper to zinc in the new alloy?",
+   "hi": "मिश्रधातु A और मिश्रधातु B में तांबा और जस्ता क्रमशः 3 : 4 और 5 : 9 के अनुपात में हैं। यदि दोनों मिश्रधातुओं के बराबर भार को एक साथ पिघलाकर एक नई मिश्रधातु बनाई जाए, तो नई मिश्रधातु में तांबे और जस्ते का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "11:17",
+    "8:13",
+    "9:16",
+    "12:19"
+   ],
+   "my_ans": "A",
+   "sol": "A: 3/7 तांबा, 4/7 जस्ता. B: 5/14 तांबा, 9/14 जस्ता. कुल तांबा = 3/7 + 5/14 = 11/14. कुल जस्ता = 4/7 + 9/14 = 17/14. अनुपात = 11:17.",
+   "trick": "अनुपात को समान भार में बदलकर जोड़ें।",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Find the mean proportional between (2 + √3) and (10 − √75)",
+   "hi": "(2 + √3) और (10 − √75) के बीच मध्यानुपाती ज्ञात करें",
+   "opts": [
+    "2 + √3",
+    "√3",
+    "√ 5",
+    "√ 2"
+   ],
+   "my_ans": "C",
+   "sol": "10-√75 = 10-5√3 = 5(2-√3). मध्यानुपाती = √((2+√3) × 5(2-√3)) = √(5(4-3)) = √5.",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "C"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "If the cost of 6 chocolates, 12 chocolates, and x chocolates are in proportion such that x is the third proportional, how many chocolates correspond to x?",
+   "hi": "यदि 6 चॉकलेट, 12 चॉकलेट और x चॉकलेट की कीमत समानुपात में इस प्रकार है कि x तृतीयानुपाती है, तो x के संगत कितनी चॉकलेट होंगी?",
+   "opts": [
+    "24",
+    "28",
+    "26",
+    "32"
+   ],
+   "my_ans": "A",
+   "sol": "6, 12, x समानुपात में हैं, तो x = 12²/6 = 144/6 = 24.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "If p is the third proportional to 6 and 18, and q is the third proportional to p and 54, find the value of q.",
+   "hi": "यदि 6 और 18 का तृतीयानुपाती p है, तथा p और 54 का तृतीयानुपाती q है, तो q का मान ज्ञात कीजिए।",
+   "opts": [
+    "18",
+    "36",
+    "72",
+    "54"
+   ],
+   "my_ans": "D",
+   "sol": "p = 18²/6 = 54. q = 54²/54 = 54.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "D"
+  }
+ ]
+}

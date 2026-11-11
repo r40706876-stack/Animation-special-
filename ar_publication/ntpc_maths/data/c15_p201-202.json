@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "Problems on Age",
+  "hi": "आयु संबंधी प्रश्न",
+  "total": 43,
+  "gl": 8,
+  "ug": 35
+ },
+ "source_pages": "201-202",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "The sum of the present ages of a father and his son is 50 years. Five years ago, the father’s age was three times the son’s age. By how many years is the father older than his son?",
+   "hi": "एक पिता और उसके पुत्र की वर्तमान आयु का योग 50 वर्ष है। पाँच वर्ष पहले, पिता की आयु उसके पुत्र की आयु की तीन गुनी थी। पिता अपने पुत्र से कितने वर्ष बड़ा है?",
+   "opts": [
+    "20",
+    "21",
+    "19",
+    "18"
+   ],
+   "my_ans": "A",
+   "sol": "माना पुत्र की आयु 5 वर्ष पहले x थी, तो पिता 3x। वर्तमान आयु: पुत्र (x+5), पिता (3x+5)<br>(x+5) + (3x+5) = 50 → 4x = 40 → x = 10<br>पिता = 35, पुत्र = 15, अंतर = 35 - 15 = 20 वर्ष।",
+   "trick": "वर्तमान आयु का योग और अनुपात का उपयोग करके समीकरण हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "The ratio of the age of a father and his son at present is 6:1. After 5 years from now, the ratio will become 7:2. Find the present age of the son.",
+   "hi": "वर्तमान में पिता और पुत्र की आयु का अनुपात 6 : 1 है। 5 वर्ष बाद, यह अनुपात 7 : 2 हो जाएगा। पुत्र की वर्तमान आयु ज्ञात कीजिए।",
+   "opts": [
+    "7 years<br>7 वर्ष",
+    "8 years<br>8 वर्ष",
+    "5 years<br>5 वर्ष",
+    "4 years<br>4 वर्ष"
+   ],
+   "my_ans": "C",
+   "sol": "माना वर्तमान आयु 6x और x है।<br>(6x+5)/(x+5) = 7/2 → 12x + 10 = 7x + 35<br>5x = 25 → x = 5 वर्ष।",
+   "trick": "अनुपात में अंतर समान न हो तो तिरछा गुणा (Cross-multiplication) करें।",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "The sum of the ages of two siblings is 28 years and the difference of their ages is 8 years. What is the present age of the elder sibling?",
+   "hi": "दो सहोदर की आयु का योगफल 28 वर्ष है और उनकी आयु का अंतर 8 वर्ष है। बड़े सहोदर की वर्तमान आयु क्या है?",
+   "opts": [
+    "20 years<br>20 वर्ष",
+    "16 years<br>16 वर्ष",
+    "14 years<br>14 वर्ष",
+    "18 years<br>18 वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "बड़ा = (योग + अंतर) / 2 = (28 + 8) / 2 = 36 / 2 = 18 वर्ष।",
+   "trick": "बड़ी संख्या = (योग + अंतर) / 2, छोटी संख्या = (योग - अंतर) / 2",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "The present age of a father is equal to sum of ages of his son and daughter. Ten years ago from now, the age of the father was double the age of the son and four times the age of the daughter. The total present age of the father, daughter and son is ____ years.",
+   "hi": "एक पिता की वर्तमान आयु उसके पुत्र और पुत्री की आयु के योग के बराबर है। दस वर्ष पहले, पिता की आयु, पुत्र की आयु की दोगुनी और पुत्री की आयु की चार गुनी थी। पिता, पुत्री और पुत्र की कुल वर्तमान आयु ____ वर्ष है।",
+   "opts": [
+    "80",
+    "100",
+    "120",
+    "60"
+   ],
+   "my_ans": "B",
+   "sol": "माना 10 वर्ष पहले पुत्र x, पुत्री y, पिता (x+y) थे।<br>पिता की आयु (x+y+20) = 2(x+10) = 4(y+10)<br>2x+20 = 4y+40 → x-2y=10; x+y+20 = 2x+20 → x=y. अतः x=20, y=10. पिता=30. कुल = 30+20+10+40(10 वर्ष बाद) = 100",
+   "trick": "वर्तमान आयु का योग = (10 वर्ष पहले का योग) + 3 × 10",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "The ages of a mother and daughter are 36 years and 12 years, respectively. In how many years will the mother be twice the age of the daughter?",
+   "hi": "एक माँ और एक पुत्री की आयु क्रमशः 36 वर्ष और 12 वर्ष है। कितने वर्षों में माँ की आयु, पुत्री की आयु की दोगुनी हो जाएगी?",
+   "opts": [
+    "12 years<br>12 वर्ष",
+    "8 years<br>8 वर्ष",
+    "15 years<br>15 वर्ष",
+    "10 years<br>10 वर्ष"
+   ],
+   "my_ans": "A",
+   "sol": "माना x वर्ष बाद: (36+x) = 2(12+x)<br>36+x = 24+2x → x = 12 वर्ष।",
+   "trick": "समीकरण (माँ+x) = 2(पुत्री+x) का प्रयोग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "The present ages of A and B are in the ratio 4:5. If after 8 years from now, A will be 32 years old, what is B’s present age?",
+   "hi": "A और B की वर्तमान आयु का अनुपात 4:5 है। यदि 8 वर्ष बाद A की आयु 32 वर्ष होगी, तो B की वर्तमान आयु कितनी होगी?",
+   "opts": [
+    "28 years<br>28 वर्ष",
+    "30 years<br>30 वर्ष",
+    "32 years<br>32 वर्ष",
+    "34 years<br>34 वर्ष"
+   ],
+   "my_ans": "B",
+   "sol": "A की वर्तमान आयु = 32 - 8 = 24 वर्ष।<br>4 अनुपात = 24 → 1 अनुपात = 6<br>B की वर्तमान आयु = 5 × 6 = 30 वर्ष।",
+   "trick": "अनुपात की इकाई का मान निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "The present age of a father is thrice that of his son. After 15 years, the age of the father will be twice that of his son. What is the present age ( in years) of the father?",
+   "hi": "एक पिता की वर्तमान आयु उसके पुत्र की आयु की तिगुनी है। 15 वर्ष बाद पिता की आयु उसके पुत्र की आयु की दुगुनी होगी। पिता की वर्तमान आयु (वर्ष में) क्या है?",
+   "opts": [
+    "52",
+    "42",
+    "45",
+    "48"
+   ],
+   "my_ans": "C",
+   "sol": "माना पुत्र x, पिता 3x।<br>(3x+15) = 2(x+15) → 3x+15 = 2x+30 → x = 15<br>पिता = 3 × 15 = 45 वर्ष।",
+   "trick": "वर्तमान अनुपात 3:1 और भविष्य का 2:1 का अंतर बराबर करें।",
+   "ans": "C"
+  }
+ ]
+}

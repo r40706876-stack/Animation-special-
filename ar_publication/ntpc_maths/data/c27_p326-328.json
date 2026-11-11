@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 27,
+  "en": "Statement Based Questions",
+  "hi": "कथन आधारित प्रश्न",
+  "total": 20,
+  "gl": 0,
+  "ug": 20
+ },
+ "source_pages": "326-328",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "A local library purchased several biography books and mystery novels for their new collection. The library spent exactly ₹4,800 on biography books and ₹4,800 on mystery novels. Each biography book costs ₹40 more than a mystery novel. The library was able to buy 10 more mystery novels than biography books. Find the number of biography books purchased.",
+   "hi": "एक स्थानीय पुस्तकालय अपने नए संग्रह के लिए कई जीवनी पुस्तकें और रहस्य उपन्यास खरीदता है। पुस्तकालय ने जीवनी पुस्तकों पर ठीक ₹4,800 और रहस्य उपन्यासों पर ₹4,800 खर्च किए। प्रत्येक जीवनी पुस्तक की कीमत एक रहस्य उपन्यास से ₹40 अधिक है। पुस्तकालय जीवनी पुस्तकों की तुलना में 10 अधिक रहस्य उपन्यास खरीद पाया। खरीदी गई जीवनी पुस्तकों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "30",
+    "18",
+    "21",
+    "24"
+   ],
+   "my_ans": "A",
+   "sol": "माना जीवनी पुस्तक की संख्या x है। रहस्य उपन्यास = x+10.<br>4800/x - 4800/(x+10) = 40.<br>हल करने पर x = 30.",
+   "trick": "विकल्पों का प्रयोग करें: 4800/30 = 160, 4800/40 = 120, अंतर 40 है।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "A shopkeeper buys two types of notebooks. The cost of 3 notebooks of the first type and 5 notebooks of the second type together is ₹420. The cost of one notebook of the second type is ₹20 more than the cost of one notebook of the first type. What is the cost of one notebook of the first type?",
+   "hi": "एक दुकानदार दो प्रकार की नोटबुक खरीदता है। पहली प्रकार की 3 नोटबुक और दूसरी प्रकार की 5 नोटबुक की कुल कीमत ₹420 है। दूसरी प्रकार की एक नोटबुक की कीमत, पहली प्रकार की एक नोटबुक की कीमत से ₹20 अधिक है। पहली प्रकार की एक नोटबुक की कीमत क्या है?",
+   "opts": [
+    "₹48",
+    "₹45",
+    "₹42",
+    "₹40"
+   ],
+   "my_ans": "D",
+   "sol": "माना पहली नोटबुक x है, दूसरी x+20 है।<br>3x + 5(x+20) = 420<br>3x + 5x + 100 = 420 → 8x = 320 → x = 40.",
+   "trick": "समीकरण बनाकर हल करें: 3x + 5(x+20) = 420",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "A store sells pens and notebooks. If 3 pens and 2 notebooks cost ₹120, and 2 pens and 4 notebooks cost ₹140, what is the price of one notebook?",
+   "hi": "एक दुकान पेन और नोटबुक बेचती है। यदि 3 पेन और 2 नोटबुक की कीमत ₹120 है, तथा 2 पेन और 4 नोटबुक की कीमत ₹140 है, तो एक नोटबुक की कीमत कितनी है?",
+   "opts": [
+    "₹35.00",
+    "₹32.50",
+    "₹22.50",
+    "₹25.00"
+   ],
+   "my_ans": "C",
+   "sol": "समीकरण 1: 3P+2N=120 (गुणा 2 करें: 6P+4N=240)<br>समीकरण 2: 2P+4N=140<br>घटाने पर: 4P=100 → P=25. 2(25)+4N=140 → 4N=90 → N=22.5.",
+   "trick": "समीकरणों को घटाकर एक चर का मान निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "The cost of 5 chairs and 3 tables is ₹12,500, while the cost of 3 chairs and 5 tables is ₹15,500. Find the cost of 2 chairs and 2 tables.",
+   "hi": "5 कुर्सियों और 3 मेजों की कीमत ₹12,500 है, जबकि 3 कुर्सियों और 5 मेजों की कीमत ₹15,500 है। 2 कुर्सियों और 2 मेजों की कीमत ज्ञात कीजिए।",
+   "opts": [
+    "₹6,000",
+    "₹7,500",
+    "₹6,500",
+    "₹7,000"
+   ],
+   "my_ans": "D",
+   "sol": "5C+3T=12500, 3C+5T=15500.<br>जोड़ने पर: 8C+8T=28000 → C+T=3500.<br>2(C+T) = 2×3500 = 7000.",
+   "trick": "दोनों समीकरणों को जोड़कर 8(C+T) निकालें, फिर 2(C+T) प्राप्त करें।",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Eight mangoes and five oranges cost ₹164, while five mangoes and eight oranges cost ₹148. Determine the cost of three mangoes and three oranges.",
+   "hi": "आठ आम और पाँच संतरे का मूल्य ₹164 है, जबकि पाँच आम और आठ संतरे का मूल्य ₹148 है। तीन आम और तीन संतरे का मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹70",
+    "₹72",
+    "₹76",
+    "₹74"
+   ],
+   "my_ans": "B",
+   "sol": "8M+5O=164, 5M+8O=148.<br>घटाने पर: 3M-3O=16. जोड़ने पर: 13M+13O=312 → M+O=24.<br>3(M+O) = 3×24 = 72.",
+   "trick": "समीकरणों को जोड़कर M+O का मान निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "A dealer of stationery items buys two types of pens, named Rajat Pen and Naveen Pen. The cost of 4 Rajat Pens and 6 Naveen Pens together is ₹540. The cost of one Naveen Pen is ₹15 more than the cost of one Rajat Pen. What is the cost of one Rajat Pen?",
+   "hi": "स्टेशनरी सामग्री का एक विक्रेता दो प्रकार के पेन खरीदता है, जिनके नाम रजत पेन और नवीन पेन हैं। 4 रजत पेन और 6 नवीन पेन का कुल मूल्य ₹540 है। एक नवीन पेन का मूल्य, एक रजत पेन के मूल्य से ₹15 अधिक है। एक रजत पेन का मूल्य क्या है?",
+   "opts": [
+    "₹45",
+    "₹42",
+    "₹50",
+    "₹48"
+   ],
+   "my_ans": "A",
+   "sol": "4R + 6(R+15) = 540<br>4R + 6R + 90 = 540<br>10R = 450 → R = 45.",
+   "trick": "समीकरण में नवीन पेन = रजत + 15 रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "If a car travels 120 km using 8 liters of petrol, how much petrol will be required to travel 225 km?",
+   "hi": "यदि कोई कार 8 लीटर पेट्रोल में 120 km की दूरी तय करती है, तो 225 km की दूरी तय करने के लिए कितने पेट्रोल की आवश्यकता होगी?",
+   "opts": [
+    "18 liters<br>18 लीटर",
+    "15 liters<br>15 लीटर",
+    "17 liters<br>17 लीटर",
+    "16 liters<br>16 लीटर"
+   ],
+   "my_ans": "B",
+   "sol": "120 km = 8 लीटर → 1 km = 8/120 = 1/15 लीटर.<br>225 km = 225 × (1/15) = 15 लीटर.",
+   "trick": "एकांक नियम (Unitary Method) का प्रयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "A shopkeeper buys two types of rice costing ₹32 per kg and ₹40 per kg. He buys a total of 45 kg of rice for ₹1600. The ratio of the quantity (in kg) of rice costing ₹32 per kg to that costing ₹40 per kg is",
+   "hi": "एक दुकानदार दो किस्मों के चावल खरीदता है जिनका मूल्य क्रमशः ₹32 प्रति kg और ₹40 प्रति kg है। वह कुल 45 kg चावल ₹1600 में खरीदता है। ₹32 प्रति kg मूल्य वाले चावल की मात्रा और ₹40 प्रति kg मूल्य वाले चावल की मात्रा (kg में) का अनुपात क्या है?",
+   "opts": [
+    "2:3",
+    "4:5",
+    "5:4",
+    "3:2"
+   ],
+   "my_ans": "C",
+   "sol": "माना 32 वाले x और 40 वाले y हैं। x+y=45, 32x+40y=1600.<br>32x+40(45-x)=1600 → 32x+1800-40x=1600 → 8x=200 → x=25, y=20.<br>अनुपात 25:20 = 5:4.",
+   "trick": "मिश्रण (Alligation) विधि: (40-35.55) और (35.55-32) का अनुपात निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "A group of 3 adults and 4 children pay ₹380 for movie tickets. Another group of 2 adults and 3 children pay ₹270 for the same tickets. What is the price of one adult ticket?",
+   "hi": "3 वयस्कों और 4 बच्चों के एक समूह ने फिल्म टिकट के लिए ₹380 का भुगतान किया। 2 वयस्कों और 3 बच्चों के एक अन्य समूह ने समान टिकट के लिए ₹270 का भुगतान किया। एक वयस्क टिकट की कीमत कितनी है?",
+   "opts": [
+    "₹70",
+    "₹80",
+    "₹50",
+    "₹60"
+   ],
+   "my_ans": "D",
+   "sol": "3A+4C=380 (गुणा 3: 9A+12C=1140)<br>2A+3C=270 (गुणा 4: 8A+12C=1080)<br>घटाने पर: A = 60.",
+   "trick": "समीकरणों को गुणा करके बच्चों की संख्या समान करें और घटाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "If 9 notebooks cost ₹135, how much will 20 notebooks of the same type cost?",
+   "hi": "यदि 9 नोटबुक की कीमत ₹135 है, तो उसी प्रकार की 20 नोटबुक की कीमत कितनी होगी?",
+   "opts": [
+    "₹270",
+    "₹280",
+    "₹320",
+    "₹300"
+   ],
+   "my_ans": "D",
+   "sol": "1 नोटबुक = 135/9 = ₹15.<br>20 नोटबुक = 20 × 15 = ₹300.",
+   "trick": "पहले एक वस्तु का मूल्य निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "A stationery shop sells notebooks and pens. The cost of 4 notebooks and 6 pens is ₹228. The cost of 7 notebooks and 6 pens is ₹333. Find the cost of one notebook.",
+   "hi": "एक स्टेशनरी की दुकान नोटबुक और पेन बेचती है। 4 नोटबुक और 6 पेन की कीमत ₹228 है। 7 नोटबुक और 6 पेन की कीमत ₹333 है। एक नोटबुक की कीमत ज्ञात कीजिए।",
+   "opts": [
+    "₹ 32",
+    "₹ 39",
+    "₹ 37.50",
+    "₹ 35"
+   ],
+   "my_ans": "D",
+   "sol": "7N+6P=333<br>4N+6P=228<br>घटाने पर: 3N = 105 → N = 35.",
+   "trick": "समीकरणों को घटाकर सीधे N का मान निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "A recipe requires 0.75 cups of sugar and 1 1/4 cups of flour. What is the total amount (in cups) of ingredients used, expressed as a decimal?",
+   "hi": "एक रेसिपी के लिए 0.75 कप चीनी और 1 1/4 कप मैदा चाहिए। उपयोग की गई सामग्री की कुल मात्रा (कप में), दशमलव के रूप में व्यक्त करें?",
+   "opts": [
+    "2.05",
+    "2.0",
+    "2.5",
+    "1.95"
+   ],
+   "my_ans": "B",
+   "sol": "0.75 + 1.25 = 2.0.",
+   "trick": "1 1/4 को 1.25 में बदलें।",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "A shopkeeper sells two types of pens, A and B. The total number of pens sold in a day is 120. The price of pen A is ₹12 each and pen B is ₹8 each. If the total sale amount is ₹1120, how many pens of type A did he sell?",
+   "hi": "एक दुकानदार दो प्रकार के पेन, A और B बेचता है। एक दिन में बेचे गए पेन की कुल संख्या 120 है। पेन A की कीमत ₹12 और पेन B की कीमत ₹8 है। यदि कुल बिक्री राशि ₹1120 है, तो उसने प्रकार A के कितने पेन बेचे?",
+   "opts": [
+    "70",
+    "80",
+    "50",
+    "40"
+   ],
+   "my_ans": "D",
+   "sol": "माना A=x, B=120-x.<br>12x + 8(120-x) = 1120<br>12x + 960 - 8x = 1120 → 4x = 160 → x = 40.",
+   "trick": "समीकरण: 12x + 8(120-x) = 1120",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "A family consumes 12 units of electricity per day. Cost per unit is ₹8. How much do they pay for a 31-day month?",
+   "hi": "एक परिवार प्रति दिन 12 यूनिट बिजली की खपत करता है। प्रति यूनिट लागत ₹8 है। 31 दिनों के महीने में वे कितना भुगतान करते हैं?",
+   "opts": [
+    "₹2,967",
+    "₹2,976",
+    "₹2,769",
+    "₹2,796"
+   ],
+   "my_ans": "B",
+   "sol": "12 यूनिट × 8 रुपये × 31 दिन = 96 × 31 = 2976.",
+   "trick": "कुल खपत = यूनिट × दिन × दर।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "Meena and her mother visit a shop. The shopkeeper tells them that the price of 5 identical dresses is ₹4,955. Meena buys 9 such dresses. Find the total cost of the 9 dresses.",
+   "hi": "मीना और उसकी माता एक दुकान पर जाती हैं। दुकानदार उन्हें बताता है कि 5 एक जैसी पोशाकों की कीमत ₹4,955 है। मीना ऐसी 9 पोशाकें खरीदती है। 9 पोशाकों की कुल कीमत ज्ञात कीजिए।",
+   "opts": [
+    "₹8,099",
+    "₹8,991",
+    "₹8,199",
+    "₹8,919"
+   ],
+   "my_ans": "D",
+   "sol": "1 पोशाक = 4955/5 = 991.<br>9 पोशाक = 991 × 9 = 8919.",
+   "trick": "पहले एक वस्तु का मूल्य निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "A recipe uses 2 cups of rice for every 3 cups of water. If you want to cook using 6 cups of rice, how much water will you need?",
+   "hi": "एक रेसिपी में प्रत्येक 3 कप पानी के लिए 2 कप चावल का उपयोग होता है। यदि आप 6 कप चावल पकाना चाहते हैं, तो आपको कितने पानी की आवश्यकता होगी?",
+   "opts": [
+    "9 cups<br>9 कप",
+    "7 cups<br>7 कप",
+    "6 cups<br>6 कप",
+    "3 cups<br>3 कप"
+   ],
+   "my_ans": "A",
+   "sol": "2 चावल : 3 पानी.<br>6 चावल (3 गुना) : 3×3 = 9 पानी.",
+   "trick": "अनुपात समान रखें (2:3 = 6:x)।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "Juhi and Mamta have certain amount of money. If Juhi gives ₹30 to Mamta, Juhi will then have twice as much money as Mamta. However, if Mamta gives ₹10 to Juhi, Juhi will then have four times as much money as Mamta. What is the total amount of money (in ₹) that Juhi and Mamta initially had together?",
+   "hi": "जूही और ममता के पास एक निश्चित धनराशि है। यदि जूही, ममता को ₹30 देती है, तो जूही के पास, ममता से दोगुनी धनराशि होगी। लेकिन, यदि ममता, जूही को ₹10 देती है, तो जूही के पास, ममता से चार गुना धनराशि होगी। प्रारंभ में जूही और ममता के पास मिलाकर कुल कितनी धनराशि (₹ में) थी?",
+   "opts": [
+    "310",
+    "300",
+    "320",
+    "290"
+   ],
+   "my_ans": "B",
+   "sol": "J-30 = 2(M+30) → J-2M=90.<br>J+10 = 4(M-10) → J-4M=-50.<br>घटाने पर: 2M=140 → M=70, J=230. कुल = 300.",
+   "trick": "समीकरणों को हल करें: J+M का मान स्थिर रहता है।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Riya and Neha have certain amount of money. If Riya gives ₹20 to Neha, then Riya will have three times as much money as Neha. However, if Neha gives ₹40 to Riya, then Riya will have five times as much money as Neha. What is the total amount of money (in ₹) that Riya and Neha initially had together?",
+   "hi": "रिया और नेहा के पास एक निश्चित धनराशि है। यदि रिया, नेहा को ₹20 देती है, तो रिया के पास नेहा की धनराशि से तीन गुना अधिक धनराशि हो जाएगी। वहीं, यदि नेहा, रिया को ₹40 देती है, तो रिया के पास नेहा की धनराशि से पाँच गुना अधिक धनराशि हो जाएगी। प्रारंभ में रिया और नेहा के पास मिलाकर कुल कितनी धनराशि (₹ में) थी?",
+   "opts": [
+    "710",
+    "700",
+    "690",
+    "720"
+   ],
+   "my_ans": "D",
+   "sol": "R-20 = 3(N+20) → R-3N=80.<br>R+40 = 5(N-40) → R-5N=-240.<br>घटाने पर: 2N=320 → N=160, R=560. कुल = 720.",
+   "trick": "समीकरणों को हल करें: R+N का योग निकालें।",
+   "ans": "D"
+  }
+ ]
+}

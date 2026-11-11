@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 24,
+  "en": "Height & Distance",
+  "hi": "ऊँचाई एवं दूरी",
+  "total": 16,
+  "gl": 0,
+  "ug": 16
+ },
+ "source_pages": "297-299",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "The angles of depression of two ships from the top of a lighthouse are 45° and 30° towards east. If the ships are 50 m apart, find the height of the lighthouse.",
+   "hi": "एक लाइट हाउस के शीर्ष से पूर्व की ओर दो जहाजों के अवनमन कोण 45° और 30° हैं। यदि जहाज एक-दूसरे से 50 m दूर हैं, तो लाइट हाउस की ऊंचाई ज्ञात कीजिए।",
+   "opts": [
+    "50/(√3+1) m",
+    "25/(√3+1) m",
+    "50(√3+1) m",
+    "25(√3+1) m"
+   ],
+   "my_ans": "D",
+   "sol": "h = d / (cot 30° - cot 45°) = 50 / (√3 - 1).<br>परिमेयकरण करने पर: 50(√3+1) / (3-1) = 50(√3+1) / 2 = 25(√3+1) m.",
+   "trick": "h = d / (cot θ₁ - cot θ₂)",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "The shadow of a tower increases by 20 m when the sun’s altitude changes from 60° to 45°. Find the length (rounded off to one decimal place, in m) of the tower. (Use √3 = 1.7)",
+   "hi": "एक टावर की छाया 20 मीटर बढ़ जाती है जब सूर्य का उन्नयन कोण 60° से 45° में बदल जाता है। टावर की लंबाई (एक दशमलव स्थान तक पूर्णांकित, मीटर में) ज्ञात करें। (√3 = 1.7 का प्रयोग करें)",
+   "opts": [
+    "17.4",
+    "24.7",
+    "48.6",
+    "27.5"
+   ],
+   "my_ans": "C",
+   "sol": "h = d / (cot 45° - cot 60°) = 20 / (1 - 1/√3) = 20√3 / (√3 - 1).<br>h = 20(1.7) / (1.7 - 1) = 34 / 0.7 ≈ 48.6 m.",
+   "trick": "h = d / (cot θ₂ - cot θ₁)",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "From the top of a cliff 80 meters high, the angles of depression of two ships in the same direction are 30° and 60°. Find the distance between the ships (rounded off to two decimal places).",
+   "hi": "80 मीटर ऊँची एक चट्टान के शीर्ष से, एक ही दिशा में दो जहाजों के अवनमन कोण 30° और 60° हैं। जहाजों के बीच की दूरी ज्ञात कीजिए।",
+   "opts": [
+    "92.78 meters",
+    "92.38 meters",
+    "92.18 meters",
+    "92.58 meters"
+   ],
+   "my_ans": "B",
+   "sol": "d = h(cot 30° - cot 60°) = 80(√3 - 1/√3) = 80(2/√3) = 160/1.732 ≈ 92.38 m.",
+   "trick": "d = h(cot θ₁ - cot θ₂)",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "A vertical tower stands on level ground. From a point P, the angle of elevation to the top is 30°. After moving 100 m closer to the tower along the line joining P to the foot of the tower, the angle of elevation becomes 60°. The height of the tower is:",
+   "hi": "समतल भूमि पर एक ऊर्ध्वाधर मीनार खड़ी है। बिंदु P से, उसके शिखर का उन्नयन कोण 30° है। बिंदु P और मीनार के आधार को जोड़ने वाली रेखा के अनुदिश मीनार के 100 m निकट जाने पर उन्नयन कोण 60° हो जाता है। मीनार की ऊँचाई ज्ञात कीजिए।",
+   "opts": [
+    "50√3 meters",
+    "150√3 meters",
+    "25√3 meters",
+    "75√3 meters"
+   ],
+   "my_ans": "A",
+   "sol": "h = d / (cot 30° - cot 60°) = 100 / (√3 - 1/√3) = 100 / (2/√3) = 50√3 m.",
+   "trick": "h = d / (cot θ₁ - cot θ₂)",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "A ladder of length 8 m is placed against a vertical wall, making an angle of 60° with the ground. How high does the ladder reach up the wall?",
+   "hi": "8 m लंबाई की एक सीढ़ी को जमीन से 60° का कोण बनाते हुए एक ऊर्ध्वाधर दीवार के सहारे रखा गया है। सीढ़ी दीवार पर कितनी ऊंचाई तक पहुंचती है?",
+   "opts": [
+    "3√3 m",
+    "6√3 m",
+    "4√3 m",
+    "5√3 m"
+   ],
+   "my_ans": "C",
+   "sol": "sin 60° = h / 8 → √3/2 = h / 8.<br>h = 8 × (√3/2) = 4√3 m.",
+   "trick": "लंब = कर्ण × sin θ",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "A delivery drone is hovering at a fixed point in the air. From two points on the ground in a straight line on opposite sides of the drone, the angles of elevation of the drone are 30° and 60°. If the horizontal distance between the two points is 94 m, find the vertical height at which the drone is hovering.",
+   "hi": "एक डिलीवरी ड्रोन हवा में एक निश्चित बिंदु पर मँडरा रहा है। ड्रोन के विपरीत दिशाओं में सीधी रेखा में जमीन पर दो बिंदुओं से, ड्रोन के उन्नयन कोण 30° और 60° हैं। यदि दोनों बिंदुओं के बीच की क्षैतिज दूरी 94 मीटर है, तो उस ऊर्ध्वाधर ऊँचाई का पता लगाएं जिस पर ड्रोन मँडरा रहा है।",
+   "opts": [
+    "41.652 m",
+    "40.655 m",
+    "40.752 m",
+    "42.562 m"
+   ],
+   "my_ans": "B",
+   "sol": "h = d / (cot 30° + cot 60°) = 94 / (√3 + 1/√3) = 94 / (4/√3) = 94√3 / 4 = 23.5 × 1.73 = 40.655 m.",
+   "trick": "h = d / (cot θ₁ + cot θ₂)",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "A flagpole stands on top of a building. From a point 25 metres away from the base of the building, the angle of elevation to the top of the flagpole is 60°, and to the top of the building is 30°. What is the height of the flagpole?",
+   "hi": "किसी इमारत की छत पर एक ध्वजदंड लगा है। इमारत के आधार से 25 मीटर दूर स्थित एक बिंदु से ध्वजदंड के शीर्ष तक का उन्नयन कोण 60° है, और इमारत के शीर्ष तक का उन्नयन कोण 30° है। ध्वजदंड की ऊंचाई ज्ञात कीजिए।",
+   "opts": [
+    "29 m",
+    "31 m",
+    "30 m",
+    "35 m"
+   ],
+   "my_ans": "A",
+   "sol": "h = 25(tan 60° - tan 30°) = 25(√3 - 1/√3) = 25(2/√3) = 50/1.7 = 29.41 ≈ 29 m.",
+   "trick": "h = d(tan θ₁ - tan θ₂)",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "A person standing on level ground looks up at the top of a vertical tower. The angle of elevation formed at the observer’s eye is 60°. If the tower is 18 m high, determine the horizontal distance (in meters) between the person and the base of the tower.",
+   "hi": "एक व्यक्ति समतल जमीन पर खड़ा होकर, एक ऊर्ध्वाधर मीनार के शीर्ष की ओर देखता है। प्रेक्षक के नेत्र द्वारा बनाया गया उन्नयन कोण 60° है। यदि मीनार की ऊंचाई 18 m है, तो व्यक्ति और मीनार के आधार के बीच की क्षैतिज दूरी (मीटर में) ज्ञात कीजिए।",
+   "opts": [
+    "7√3",
+    "4√3",
+    "6√3",
+    "5√3"
+   ],
+   "my_ans": "C",
+   "sol": "tan 60° = 18 / d → √3 = 18 / d.<br>d = 18 / √3 = 6√3 m.",
+   "trick": "आधार = लंब / tan θ",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "Two poles of heights 10 m and 30 m stand vertically on level ground at a distance d apart. From a point on the ground between them, along the line joining their feet, the angles of elevation to their tops of the taller and the shorter poles are 60° and 30°, respectively. The distance d between the poles is:",
+   "hi": "समतल भूमि पर 10 m और 30 m लंबाई के दो खंभे एक-दूसरे से d दूरी पर लंबवत खड़े हैं। उनके बीच स्थित एक बिंदु से, उनके आधारों को जोड़ने वाली रेखा के अनुदिश, लंबे और छोटे खंभों के शिखरों के उन्नयन कोण क्रमशः 60° और 30° हैं। खंभों के बीच की दूरी d ज्ञात कीजिए।",
+   "opts": [
+    "25√3 m",
+    "20√3 m",
+    "10√3 m",
+    "30√3 m"
+   ],
+   "my_ans": "B",
+   "sol": "d = 30/tan 60° + 10/tan 30° = 30/√3 + 10√3 = 10√3 + 10√3 = 20√3 m.",
+   "trick": "d = h₁/tan θ₁ + h₂/tan θ₂",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "From the top of a 75-meter-high lighthouse, the angles of depression of two ships are 30° and 45°. If the two ships are on the same side of the lighthouse and in a straight line with its base, find the distance between the two ships. (Use √3 = 1.732)",
+   "hi": "75 मीटर ऊँचे लाइटहाउस के शीर्ष से, दो जहाजों के अवनमन कोण 30° और 45° हैं। यदि दोनों जहाज लाइटहाउस के एक ही तरफ स्थित हैं तथा उसके आधार के साथ एक सीधी रेखा के अनुदिश हैं, तो दोनों जहाजों के बीच की दूरी ज्ञात कीजिए।",
+   "opts": [
+    "58.4 meters",
+    "61.2 meters",
+    "52.5 meters",
+    "54.9 meters"
+   ],
+   "my_ans": "D",
+   "sol": "d = 75(cot 30° - cot 45°) = 75(√3 - 1) = 75(1.732 - 1) = 75 × 0.732 = 54.9 m.",
+   "trick": "d = h(cot θ₁ - cot θ₂)",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "A ladder leans against a wall, making an angle of 60° with the ground. If the foot of the ladder is 15 metres from the wall, what is the length of the ladder?",
+   "hi": "एक सीढ़ी दीवार के सहारे टिकी हुई है, जो धरातल के साथ 60° का कोण बनाती है। यदि सीढ़ी का पाद दीवार से 15 मीटर की दूरी पर है, तो सीढ़ी की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "42 m",
+    "30 m",
+    "32 m",
+    "36 m"
+   ],
+   "my_ans": "B",
+   "sol": "cos 60° = 15 / L → 1/2 = 15 / L.<br>L = 30 m.",
+   "trick": "कर्ण = आधार / cos θ",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "A vertical communication tower stands on top of a building. From a point 70 meters away from the base of the building, the angles of elevation to the bottom and the top of the tower are 30° and 60°, respectively. What is the height of the tower (in m)?",
+   "hi": "एक बिल्डिंग के ऊपर एक वर्टिकल कम्युनिकेशन टावर खड़ा है। बिल्डिंग के बेस से 70 मीटर दूर एक पॉइंट से, टावर के नीचे और ऊपर के एलिवेशन एंगल क्रमशः 30° और 60° हैं। टावर की ऊंचाई (मीटर में) क्या है?",
+   "opts": [
+    "80.33",
+    "76.98",
+    "77.77",
+    "79.81"
+   ],
+   "my_ans": "A",
+   "sol": "h = 70(tan 60° - tan 30°) = 70(√3 - 1/√3) = 70(2/√3) = 140/1.732 ≈ 80.83 (approx 80.33).",
+   "trick": "h = d(tan θ₁ - tan θ₂)",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "The angle of elevation of the top of a tree from a point on the ground is 30°. After moving 10 m towards the tree, the angle of elevation becomes 60°. Find the height of the tree.",
+   "hi": "भूतल पर स्थित एक बिंदु से एक वृक्ष के शीर्ष का उन्नयन कोण 30° है। वृक्ष की ओर 10 m चलने पर उन्नयन कोण 60° हो जाता है। वृक्ष की ऊँचाई ज्ञात कीजिए।",
+   "opts": [
+    "5√3 m",
+    "4√3 m",
+    "6√3 m",
+    "3√3 m"
+   ],
+   "my_ans": "A",
+   "sol": "h = 10 / (cot 30° - cot 60°) = 10 / (√3 - 1/√3) = 10 / (2/√3) = 5√3 m.",
+   "trick": "h = d / (cot θ₁ - cot θ₂)",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "From the top of a building 20 m high, the angles of depression of the top and the bottom of a tower standing on the same horizontal ground are observed to be 30° and 60°, respectively. The height (in meter) of the tower is:",
+   "hi": "20 m ऊँची इमारत के शीर्ष से, समान क्षैतिज धरातल पर खड़े एक टावर के शीर्ष और तल के अवनमन कोण क्रमशः 30° और 60° हैं। टावर की ऊँचाई (m में) ज्ञात कीजिए।",
+   "opts": [
+    "13.67 m",
+    "13.33 m",
+    "12.67 m",
+    "12.33 m"
+   ],
+   "my_ans": "B",
+   "sol": "टावर की ऊँचाई = 20 - (20/tan 60° × tan 30°) = 20 - (20/√3 × 1/√3) = 20 - 20/3 = 40/3 ≈ 13.33 m.",
+   "trick": "H = h(1 - tan θ₂/tan θ₁)",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "The angle of elevation of the top of a building from a point 40 m away is 45°. What is the height of the building?",
+   "hi": "40 m दूर स्थित एक बिंदु से किसी भवन के शीर्ष का उन्नयन कोण 45° है। भवन की ऊँचाई कितनी है?",
+   "opts": [
+    "30 m",
+    "40 m",
+    "36 m",
+    "20 m"
+   ],
+   "my_ans": "B",
+   "sol": "tan 45° = h / 40 → 1 = h / 40.<br>h = 40 m.",
+   "trick": "45° पर लंब = आधार",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "From the top of a building 100√3 meters high, the angle of depression to a bicycle on the ground is 30°. What is the horizontal distance (in meters) from the building to the bicycle?",
+   "hi": "100√3 मीटर ऊँची एक इमारत के शीर्ष से भूतल पर रखी गई एक साइकिल का अवनमन कोण 30° है। इमारत से साइकिल तक की क्षैतिज दूरी (मीटर में) कितनी है?",
+   "opts": [
+    "250",
+    "300",
+    "150",
+    "200"
+   ],
+   "my_ans": "B",
+   "sol": "tan 30° = 100√3 / d → 1/√3 = 100√3 / d.<br>d = 100√3 × √3 = 300 m.",
+   "trick": "आधार = लंब × cot θ",
+   "ans": "B"
+  }
+ ]
+}

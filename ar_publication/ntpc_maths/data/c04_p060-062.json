@@ -1,0 +1,366 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Algebra",
+  "hi": "बीजगणित",
+  "total": 112,
+  "gl": 75,
+  "ug": 37
+ },
+ "source_pages": "60-62",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "Which of the following is not a quadratic equation?",
+   "hi": "निम्नलिखित में से कौन-सा, द्विघात समीकरण नहीं है?",
+   "opts": [
+    "3x² – 5x + 2 = 0",
+    "x(x – 3) = 2",
+    "x² + 2x + 1 = 0",
+    "(x – 1)(x + 2) = x² + 3"
+   ],
+   "my_ans": "D",
+   "sol": "विकल्प D को हल करने पर: x² + x - 2 = x² + 3, यहाँ x² कट जाएगा, इसलिए यह द्विघात नहीं है।",
+   "trick": "समीकरण में x² का पद बचना चाहिए।",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "If (3⁻²² + 3⁻¹⁹ + 3⁻¹⁷ + 3⁻¹⁶) = k(3⁻²⁴), then find the value of k.",
+   "hi": "यदि (3⁻²² + 3⁻¹⁹ + 3⁻¹⁷ + 3⁻¹⁶) = k(3⁻²⁴), तो k का मान ज्ञात करें।",
+   "opts": [
+    "1000",
+    "900",
+    "9000",
+    "3000"
+   ],
+   "my_ans": "C",
+   "sol": "3⁻²⁴ कॉमन लेने पर: 3⁻²⁴(3² + 3⁵ + 3⁷ + 3⁸) = k(3⁻²⁴)<br>k = 9 + 243 + 2187 + 6561 = 9000.",
+   "trick": "सबसे छोटी घात कॉमन लें।",
+   "ans": "C"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Two numbers differ by 8. If five times the smaller number is subtracted from twice the larger number, the result is 13. What is the larger number?",
+   "hi": "दो संख्याओं में अंतर 8 है। यदि बड़ी संख्या के दोगुने में से छोटी संख्या के पाँच गुने को घटाया जाए, तो परिणाम 13 प्राप्त होता है। बड़ी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "10",
+    "12",
+    "9"
+   ],
+   "my_ans": "D",
+   "sol": "x-y=8, 2x-5y=13. y=x-8 रखने पर: 2x-5(x-8)=13 → 2x-5x+40=13 → -3x=-27 → x=9.",
+   "trick": "समीकरण बनाकर हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 27 and their product is 170. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 27 है और उनका गुणनफल 170 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "19",
+    "12",
+    "7",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "(x-y)² = (x+y)² - 4xy = 27² - 4(170) = 729 - 680 = 49.<br>x-y = √49 = 7.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "If 2(x + 1) × 4(y − 2) = 32 and x = 3y, what is the value of y?",
+   "hi": "यदि 2(x + 1) × 4(y − 2) = 32 और x = 3y है, तो y का मान क्या है?",
+   "opts": [
+    "1",
+    "1.4",
+    "1.5",
+    "1.6"
+   ],
+   "my_ans": "D",
+   "sol": "2(3y+1) × 4(y-2) = 32 → (3y+1)(y-2) = 4 → 3y² - 6y + y - 2 = 4 → 3y² - 5y - 6 = 0. हल करने पर y=1.6.",
+   "trick": "x का मान y के पदों में रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 51 and their product is 230. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 51 है और उनका गुणनफल 230 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "52",
+    "41",
+    "32",
+    "61"
+   ],
+   "my_ans": "B",
+   "sol": "(x-y)² = 51² - 4(230) = 2601 - 920 = 1681.<br>x-y = √1681 = 41.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "B"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 13 and their product is 30. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 13 है और उनका गुणनफल 30 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "12",
+    "9",
+    "7"
+   ],
+   "my_ans": "D",
+   "sol": "(x-y)² = 13² - 4(30) = 169 - 120 = 49.<br>x-y = √49 = 7.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "D"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Find the value of m which satisfies (19/10)⁷ × (10/19)⁶ × (19/10)¹⁰ = (10/19)⁶ᵐ⁺¹⁸",
+   "hi": "m का मान ज्ञात कीजिए जो संतुष्ट करता है (19/10)⁷ × (10/19)⁶ × (19/10)¹⁰ = (10/19)⁶ᵐ⁺¹⁸",
+   "opts": [
+    "-38/6",
+    "-20/6",
+    "-27/6",
+    "-29/6"
+   ],
+   "my_ans": "D",
+   "sol": "(10/19)⁻⁷ × (10/19)⁶ × (10/19)⁻¹⁰ = (10/19)⁶ᵐ⁺¹⁸ → -7+6-10 = 6m+18 → -11 = 6m+18 → 6m = -29 → m = -29/6.",
+   "trick": "आधार समान करके घातों की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 32 and their product is 220. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 32 है और उनका गुणनफल 220 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "16",
+    "11",
+    "17",
+    "12"
+   ],
+   "my_ans": "D",
+   "sol": "(x-y)² = 32² - 4(220) = 1024 - 880 = 144.<br>x-y = √144 = 12.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "D"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 26 and their product is 144. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 26 है और उनका गुणनफल 144 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "13",
+    "16",
+    "5",
+    "10"
+   ],
+   "my_ans": "D",
+   "sol": "(x-y)² = 26² - 4(144) = 676 - 576 = 100.<br>x-y = √100 = 10.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "The sum of two numbers is 54. If three times the smaller number exceeds twice the larger number by 6, find the difference between the two numbers.",
+   "hi": "दो संख्याओं का योग 54 है। यदि छोटी संख्या के तिगुने का मान, बड़ी संख्या के दोगुने से 6 अधिक है, तो दोनों संख्याओं का अंतर ज्ञात कीजिए।",
+   "opts": [
+    "6.6",
+    "7.2",
+    "7.6",
+    "8.4"
+   ],
+   "my_ans": "D",
+   "sol": "x+y=54, 3y-2x=6. 2x+2y=108. जोड़ने पर: 5y=114 → y=22.8, x=31.2. अंतर = 31.2-22.8 = 8.4.",
+   "trick": "समीकरण हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 14 and their product is 45. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 14 है और उनका गुणनफल 45 है। उनके बीच का धनात्मक अंतर कितना होगा?",
+   "opts": [
+    "7",
+    "4",
+    "11",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "(x-y)² = 14² - 4(45) = 196 - 180 = 16.<br>x-y = √16 = 4.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "B"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 77 and their product is 1392. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 77 है और उनका गुणनफल 1392 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "19",
+    "24",
+    "37",
+    "21"
+   ],
+   "my_ans": "A",
+   "sol": "(x-y)² = 77² - 4(1392) = 5929 - 5568 = 361.<br>x-y = √361 = 19.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "A"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "If twice the smaller of two numbers is added to three times the larger number, the result is 55. If the larger is increased by 5, it becomes twice the smaller. What is the larger number?",
+   "hi": "यदि दो संख्याओं में से छोटी संख्या के दोगुने को बड़ी संख्या के तिगुने में जोड़ा जाए, तो परिणाम 55 प्राप्त होता है। यदि बड़ी संख्या में 5 की वृद्धि की जाए, तो वह छोटी संख्या के दोगुने के बराबर हो जाती है। बड़ी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "12.5",
+    "10.75",
+    "10.5",
+    "12.75"
+   ],
+   "my_ans": "A",
+   "sol": "2y+3x=55, x+5=2y. 3x+(x+5)=55 → 4x=50 → x=12.5.",
+   "trick": "समीकरण बनाकर हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Find the value of m which satisfies (22/5)¹⁸ × (5/22)⁸ × (22/5)⁶ = (5/22)⁹ᵐ⁺⁴",
+   "hi": "m का मान ज्ञात करें जो संतुष्ट करता है (22/5)¹⁸ × (5/22)⁸ × (22/5)⁶ = (5/22)⁹ᵐ⁺⁴",
+   "opts": [
+    "-17/9",
+    "-16/9",
+    "-10/9",
+    "-20/9"
+   ],
+   "my_ans": "D",
+   "sol": "(5/22)⁻¹⁸ × (5/22)⁸ × (5/22)⁻⁶ = (5/22)⁹ᵐ⁺⁴ → -18+8-6 = 9m+4 → -16 = 9m+4 → 9m = -20 → m = -20/9.",
+   "trick": "आधार समान करके घातों की तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 27 and their product is 176. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 27 है और उनका गुणनफल 176 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "21",
+    "24",
+    "5",
+    "10"
+   ],
+   "my_ans": "C",
+   "sol": "(x-y)² = 27² - 4(176) = 729 - 704 = 25.<br>x-y = √25 = 5.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "C"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 36 and their product is 180. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 36 है और उनका गुणनफल 180 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "24",
+    "37",
+    "34",
+    "32"
+   ],
+   "my_ans": "A",
+   "sol": "(x-y)² = 36² - 4(180) = 1296 - 720 = 576.<br>x-y = √576 = 24.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "A"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 35 and their product is 286. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 35 है और उनका गुणनफल 286 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "18",
+    "9",
+    "14",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "(x-y)² = 35² - 4(286) = 1225 - 1144 = 81.<br>x-y = √81 = 9.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 44 and their product is 228. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 44 है और उनका गुणनफल 228 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "36",
+    "33",
+    "32",
+    "37"
+   ],
+   "my_ans": "C",
+   "sol": "(x-y)² = 44² - 4(228) = 1936 - 912 = 1024.<br>x-y = √1024 = 32.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "C"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 88 and their product is 1927. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 88 है और उनका गुणनफल 1927 है। उनके बीच धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "21",
+    "17",
+    "6",
+    "26"
+   ],
+   "my_ans": "C",
+   "sol": "(x-y)² = 88² - 4(1927) = 7744 - 7708 = 36.<br>x-y = √36 = 6.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "C"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "The difference between two numbers is 8. If twice the larger number is 4 more than three times the smaller number, what is the larger number?",
+   "hi": "दो संख्याओं का अंतर 8 है। यदि बड़ी संख्या का दोगुना, छोटी संख्या के तीन गुना से 4 अधिक है, तो बड़ी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "14",
+    "20",
+    "16",
+    "18"
+   ],
+   "my_ans": "B",
+   "sol": "x-y=8, 2x=3y+4. 2(y+8)=3y+4 → 2y+16=3y+4 → y=12. x=12+8=20.",
+   "trick": "समीकरण बनाकर हल करें।",
+   "ans": "B"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "The sum of two positive numbers is 40 and their product is 175. The positive difference between them is:",
+   "hi": "दो धनात्मक संख्याओं का योगफल 40 है और उनका गुणनफल 175 है। उनके बीच का धनात्मक अंतर ज्ञात कीजिए।",
+   "opts": [
+    "30",
+    "34",
+    "32",
+    "36"
+   ],
+   "my_ans": "A",
+   "sol": "(x-y)² = 40² - 4(175) = 1600 - 700 = 900.<br>x-y = √900 = 30.",
+   "trick": "(x-y)² = (x+y)² - 4xy",
+   "ans": "A"
+  }
+ ]
+}

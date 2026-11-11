@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "79-81",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "If the salary of a person is first increased by 15% and thereafter decreased by 12%, what is the net change in his salary?",
+   "hi": "यदि किसी व्यक्ति के वेतन में पहले 15% की वृद्धि होती है और फिर उसके बाद 12% की कमी होती है, तो उसके वेतन में नेट परिवर्तन क्या होगा?",
+   "opts": [
+    "1.32% decrease<br>1.32% की कमी",
+    "1.2% decrease<br>1.2% की कमी",
+    "1.4% decrease<br>1.4% की कमी",
+    "1.2% increase<br>1.2% की वृद्धि"
+   ],
+   "my_ans": "D",
+   "sol": "नेट परिवर्तन = 15 - 12 - (15 × 12)/100<br>= 3 - 1.8 = 1.2% वृद्धि।",
+   "trick": "नेट % परिवर्तन = a - b - (ab/100)",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "A shirt costs ₹655. During a sale, its price is reduced by 20%. What is the new price (in ₹) of the shirt?",
+   "hi": "एक शर्ट की कीमत ₹655 है। सेल के दौरान, इसकी कीमत में 20% की छूट प्रदान की जाती है। शर्ट की नई कीमत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "525",
+    "524",
+    "526",
+    "527"
+   ],
+   "my_ans": "B",
+   "sol": "नई कीमत = 655 × (100 - 20)/100<br>= 655 × 0.8 = 524.",
+   "trick": "नई कीमत = मूल कीमत × (100 - छूट%)/100",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "The salary of an employee is increased by 5% in the first year and again by 5% in the second year. What is the overall percentage increase in the salary after two years?",
+   "hi": "एक कर्मचारी के वेतन में पहले वर्ष में 5% की वृद्धि की जाती है और दूसरे वर्ष में 5% की वृद्धि की जाती है। दो वर्ष बाद, वेतन में कुल कितने प्रतिशत की वृद्धि होगी?",
+   "opts": [
+    "11.5%",
+    "10.25%",
+    "10%",
+    "11%"
+   ],
+   "my_ans": "B",
+   "sol": "कुल वृद्धि = 5 + 5 + (5 × 5)/100<br>= 10 + 0.25 = 10.25%.",
+   "trick": "क्रमिक वृद्धि = a + b + (ab/100)",
+   "ans": "B"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "The price of an article is successively increased by 9% and 13%. Find the percentage increase in the price of the article.",
+   "hi": "किसी वस्तु की कीमत में 9% और 13% की क्रमिक वृद्धि की जाती है। वस्तु की कीमत में प्रतिशत वृद्धि ज्ञात कीजिए।",
+   "opts": [
+    "23.17%",
+    "24.69%",
+    "22.57%",
+    "20.68%"
+   ],
+   "my_ans": "A",
+   "sol": "कुल वृद्धि = 9 + 13 + (9 × 13)/100<br>= 22 + 1.17 = 23.17%.",
+   "trick": "क्रमिक वृद्धि = a + b + (ab/100)",
+   "ans": "A"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "If 40% of a number exceeds 25% of it by 42, then the number is:",
+   "hi": "यदि किसी संख्या का 40% उसके 25% से 42 से अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "260",
+    "320",
+    "300",
+    "280"
+   ],
+   "my_ans": "D",
+   "sol": "(40% - 25%) = 15% = 42<br>संख्या = 42 × 100 / 15 = 280.",
+   "trick": "अंतर का प्रतिशत = दी गई संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "A spherical tank has a radius of 2 meters. If the tank is filled with water to 80% of its total volume, what is the volume of water in the tank (rounded to the nearest cubic meter)?",
+   "hi": "एक गोलाकार टैंक की त्रिज्या 2 मीटर है। यदि टैंक को उसके कुल आयतन के 80% तक पानी से भर दिया जाए, तो टैंक में पानी का आयतन कितना (निकटतम घन मीटर में पूर्णांकित) होगा?",
+   "opts": [
+    "21",
+    "33",
+    "27",
+    "38"
+   ],
+   "my_ans": "C",
+   "sol": "आयतन = 4/3 × π × r³ = 4/3 × 3.14 × 8 ≈ 33.5<br>पानी = 80% of 33.5 ≈ 26.8 ≈ 27.",
+   "trick": "गोले का आयतन = 4/3 πr³",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "A town had a population of 5,000 at the beginning of a year. During the first year, the population decreased by 10%. In the following year, the population increased by 20%. What was the population of the town at the end of two years?",
+   "hi": "वर्ष के आरंभ में किसी कस्बे की जनसंख्या 5,000 थी। पहले वर्ष के दौरान, जनसंख्या में 10% की कमी आई। अगले वर्ष, जनसंख्या में 20% की वृद्धि हुई। दो वर्ष के अंत में कस्बे की जनसंख्या कितनी थी?",
+   "opts": [
+    "5200",
+    "5400",
+    "5500",
+    "5800"
+   ],
+   "my_ans": "B",
+   "sol": "अंतिम जनसंख्या = 5000 × 0.9 × 1.2<br>= 5000 × 1.08 = 5400.",
+   "trick": "अंतिम मान = प्रारंभिक मान × (1 ± a/100) × (1 ± b/100)",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "A person spends 70% of his income. If his income increases by 20% and his expenditure increases by 25%, then find the percentage change in his savings.",
+   "hi": "कोई व्यक्ति अपनी आय का 70% खर्च करता है। यदि उसकी आय में 20% की वृद्धि होती है और उसके व्यय में 25% की वृद्धि होती है, तो उसकी बचत में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+   "opts": [
+    "6 1/4% decrease<br>कमी 6 1/4%",
+    "7 1/4% increase<br>वृद्धि 7 1/4%",
+    "8 1/3% increase<br>वृद्धि 8 1/3%",
+    "8 1/3% decrease<br>कमी 8 1/3%"
+   ],
+   "my_ans": "C",
+   "sol": "आय 100, खर्च 70, बचत 30. नई आय 120, नया खर्च 70×1.25=87.5. नई बचत = 120-87.5=32.5. वृद्धि = 2.5/30 = 1/12 = 8 1/3%.",
+   "trick": "बचत = आय - व्यय",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Sangeeta’s salary is revised twice in two consecutive years. In the first year, the salary is increased by 12%. In the second year, it is decreased by 10%. Despite this, her salary after the second revision is ₹1,584 more than the original salary. What is Sangeeta’s original monthly salary (in ₹)?",
+   "hi": "संगीता के वेतन में दो क्रमागत वर्षों में दो बार संशोधन किया जाता है। पहले वर्ष में, वेतन में 12% की वृद्धि की जाती है। दूसरे वर्ष में, इसमें 10% की कमी की जाती है। इसके बावजूद, उसका वेतन दूसरे संशोधन के बाद मूल वेतन से ₹1,584 अधिक होता है। संगीता का मूल मासिक वेतन (₹ में) कितना है?",
+   "opts": [
+    "2,00,000",
+    "1,89,000",
+    "1,98,000",
+    "1,75,000"
+   ],
+   "my_ans": "C",
+   "sol": "नेट परिवर्तन = 12 - 10 - 1.2 = 0.8% = 1584<br>मूल वेतन = 1584 / 0.008 = 1,98,000.",
+   "trick": "नेट % परिवर्तन = a - b - (ab/100)",
+   "ans": "C"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "The price of an article is increased by 25%. By what percentage should the increased price be reduced so that it becomes equal to the original price?",
+   "hi": "किसी वस्तु की कीमत में 25% की वृद्धि की जाती है। वृद्धि के बाद वाली कीमत में कितने प्रतिशत की कमी की जानी चाहिए ताकि वह मूल कीमत के बराबर हो जाए?",
+   "opts": [
+    "20%",
+    "30%",
+    "25%",
+    "22%"
+   ],
+   "my_ans": "A",
+   "sol": "कमी % = (25 / 125) × 100 = 20%.",
+   "trick": "कमी % = (x / (100+x)) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "A student initially scored equal marks in Mathematics and Physics. Later, the marks in Mathematics increase by 20% of the original Mathematics marks, while the marks in Physics decrease by 10% of the original Physics marks. Taking the initial total marks as the base, what is the overall percentage change in the total marks?",
+   "hi": "एक विद्यार्थी ने प्रारंभ में गणित और भौतिकी में समान अंक प्राप्त किए। बाद में, गणित के अंकों में मूल अंकों के 20% की वृद्धि होती है, जबकि भौतिकी के अंकों में मूल अंकों के 10% की कमी होती है। प्रारंभिक कुल अंकों को आधार मानते हुए, कुल अंकों में समग्र प्रतिशत परिवर्तन ज्ञात कीजिए।",
+   "opts": [
+    "No change<br>कोई परिवर्तन नहीं",
+    "10% increase<br>10% की वृद्धि",
+    "5% decrease<br>5% की कमी",
+    "5% increase<br>5% की वृद्धि"
+   ],
+   "my_ans": "D",
+   "sol": "माना गणित=100, भौतिकी=100, कुल=200. नए अंक: गणित=120, भौतिकी=90, कुल=210. वृद्धि = 10/200 = 5%.",
+   "trick": "औसत परिवर्तन = (a+b)/2",
+   "ans": "D"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "The population of a town increases by 10% in the year 2015 and decreases by 15% in the year 2016. If the population of the town at the end of the year 2016 is 1,87,000, find the population of the town in the beginning of the year 2015.",
+   "hi": "एक कस्बे की जनसंख्या में वर्ष 2015 में 10% की वृद्धि होती है और वर्ष 2016 में 15% की कमी होती है। यदि वर्ष 2016 के अंत में कस्बे की जनसंख्या 1,87,000 है, तो वर्ष 2015 के प्रारंभ में कस्बे की जनसंख्या ज्ञात कीजिए।",
+   "opts": [
+    "1,95,000",
+    "2,00,000",
+    "2,15,000",
+    "2,10,000"
+   ],
+   "my_ans": "B",
+   "sol": "प्रारंभिक = 187000 / (1.1 × 0.85) = 187000 / 0.935 = 2,00,000.",
+   "trick": "प्रारंभिक मान = अंतिम मान / [(1±a/100)(1±b/100)]",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "The price of an item is increased by 15% and then by 20%. Now the price of the item is decreased so that the overall effective increment in the price is 5%. The price is decreased approximately by ____%.",
+   "hi": "किसी वस्तु की कीमत में पहले 15% की वृद्धि की जाती है और फिर 20% की वृद्धि की जाती है। अब वस्तु की कीमत में इस प्रकार कमी की जाती है कि समग्र प्रभावी वृद्धि 5% हो जाती है। कीमत में लगभग ____% की कमी की जाती है।",
+   "opts": [
+    "21.93",
+    "23.19",
+    "21.39",
+    "23.91"
+   ],
+   "my_ans": "D",
+   "sol": "कुल वृद्धि = 1.15 × 1.2 = 1.38 (38%). माना कमी x% है: 1.38 × (1 - x/100) = 1.05. 1 - x/100 = 1.05/1.38 ≈ 0.7608. x ≈ 23.91.",
+   "trick": "अंतिम मूल्य = प्रारंभिक × (1+a/100) × (1+b/100) × (1-x/100)",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "The price of an article increases and decreases alternately by 20% every year. If the difference between the prices at the end of the second year and third year is ₹1,920, find 40% of the price (in ₹) of the article at the end of the first year.",
+   "hi": "किसी वस्तु की कीमत में प्रति वर्ष एकांतर क्रम में 20% की दर से वृद्धि और कमी होती है। यदि दूसरे और तीसरे वर्ष के अंत में कीमतों के बीच अंतर ₹1,920 है, तो पहले वर्ष के अंत में वस्तु की कीमत का 40% (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "₹3,600",
+    "₹4,800",
+    "₹2,400",
+    "₹3,200"
+   ],
+   "my_ans": "B",
+   "sol": "माना वर्ष 1 के अंत में कीमत P है। वर्ष 2 के अंत में = P × 0.8. वर्ष 3 के अंत में = P × 0.8 × 1.2 = 0.96P. अंतर = 0.96P - 0.8P = 0.16P = 1920. P = 12000. 40% of P = 4800.",
+   "trick": "क्रमिक परिवर्तन का अंतर",
+   "ans": "B"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "If 40% of a number exceeds 25% of it by 36, then the number is:",
+   "hi": "यदि किसी संख्या का 40% उसके 25% से 36 अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "240",
+    "260",
+    "220",
+    "280"
+   ],
+   "my_ans": "A",
+   "sol": "15% = 36. संख्या = 36 × 100 / 15 = 240.",
+   "trick": "अंतर का प्रतिशत = दी गई संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "If 45% of a number exceeds 20% of it by 48, then the number is:",
+   "hi": "यदि किसी संख्या का 45% उसके 20% से 48 अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "172",
+    "192",
+    "232",
+    "212"
+   ],
+   "my_ans": "B",
+   "sol": "25% = 48. संख्या = 48 × 4 = 192.",
+   "trick": "अंतर का प्रतिशत = दी गई संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Two successive price increases of 15% and 15% on an article are equivalent to a single percentage increase of:",
+   "hi": "किसी वस्तु पर 15% और 15% की दो क्रमिक मूल्य वृद्धि ____________________ की एकल प्रतिशत वृद्धि के तुल्य है।",
+   "opts": [
+    "30%",
+    "31.5%",
+    "31%",
+    "31.25%"
+   ],
+   "my_ans": "D",
+   "sol": "कुल वृद्धि = 15 + 15 + (15 × 15)/100 = 30 + 2.25 = 31.25%.",
+   "trick": "क्रमिक वृद्धि = a + b + (ab/100)",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The price of a jacket is first increased by 20% and then decreased by 25%. If the original price was ₹600, what is the final price of the jacket?",
+   "hi": "एक जैकेट की कीमत में पहले 20% की वृद्धि की जाती है और फिर 25% की कमी की जाती है। यदि मूल कीमत ₹600 थी, तो जैकेट की अंतिम कीमत कितनी होगी?",
+   "opts": [
+    "₹540",
+    "₹570",
+    "₹600",
+    "₹480"
+   ],
+   "my_ans": "A",
+   "sol": "अंतिम कीमत = 600 × 1.2 × 0.75 = 600 × 0.9 = 540.",
+   "trick": "अंतिम मान = प्रारंभिक × (1±a/100) × (1±b/100)",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "The value of a machine depreciates by 10% every year. What is the total percentage depreciation after 2 years?",
+   "hi": "एक मशीन के मूल्य में 10% वार्षिक दर से मूल्यह्रास होता है। 2 वर्ष बाद कुल प्रतिशत मूल्यह्रास कितना होगा?",
+   "opts": [
+    "19%",
+    "22%",
+    "21%",
+    "20%"
+   ],
+   "my_ans": "A",
+   "sol": "कुल कमी = 10 + 10 - (10 × 10)/100 = 20 - 1 = 19%.",
+   "trick": "क्रमिक कमी = a + b - (ab/100)",
+   "ans": "A"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "S's expenditure is double the difference between his savings and expenditure. What percentage of his salary is his expenditure?",
+   "hi": "S का व्यय, उसकी बचत और व्यय के अंतर का दोगुना है। उसके वेतन का कितना प्रतिशत, उसका व्यय है?",
+   "opts": [
+    "40%",
+    "42%",
+    "44%",
+    "46%"
+   ],
+   "my_ans": "A",
+   "sol": "E = 2(S - E) → E = 2S - 2E → 3E = 2S → E/S = 2/3. आय = E + S = 2x + 1.5x = 3.5x. व्यय % = (2/5) × 100 = 40%.",
+   "trick": "आय = व्यय + बचत",
+   "ans": "A"
+  }
+ ]
+}

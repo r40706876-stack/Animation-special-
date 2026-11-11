@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Geometry",
+  "hi": "ज्यामिति",
+  "total": 103,
+  "gl": 50,
+  "ug": 53
+ },
+ "source_pages": "286-287",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "A triangle has sides of lengths 5 cm, 12 cm, and 13 cm. If a perpendicular is drawn from the vertex opposite the longest side to the longest side, what is the length of the perpendicular? (Rounded off to two decimal places)",
+   "hi": "एक त्रिभुज की भुजाओं की लंबाई 5 cm, 12 cm, और 13 cm है। यदि सबसे लंबी भुजा के सम्मुख शीर्ष से सबसे लंबी भुजा पर एक लंब खींचा जाए, तो लंब की लंबाई क्या होगी? (उत्तर को दो दशमलव स्थानों तक पूर्णांकित कीजिए)",
+   "opts": [
+    "6.51 cm",
+    "5.08 cm",
+    "4.62 cm",
+    "5.37 cm"
+   ],
+   "my_ans": "C",
+   "sol": "यह एक समकोण त्रिभुज है (5²+12²=13²)।<br>क्षेत्रफल = 1/2 × 5 × 12 = 30 cm²<br>क्षेत्रफल = 1/2 × 13 × h → 30 = 6.5h → h = 60/13 ≈ 4.62 cm.",
+   "trick": "समकोण त्रिभुज में लंब = (आधार × लंब) / कर्ण",
+   "ans": "C"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "In ΔABC, ∠A = (3x − 7)°, ∠B = 2∠A and ∠C = (4x + 6)°. Find ∠A + ∠C.",
+   "hi": "ΔABC में, ∠A = (3x − 7)°, ∠B = 2∠A और ∠C = (4x + 6)° है। ∠A + ∠C का मान ज्ञात कीजिए।",
+   "opts": [
+    "148°",
+    "135°",
+    "104°",
+    "115°"
+   ],
+   "my_ans": "C",
+   "sol": "∠A = 3x-7, ∠B = 2(3x-7) = 6x-14, ∠C = 4x+6<br>योग = 180° → (3x-7) + (6x-14) + (4x+6) = 180 → 13x - 15 = 180 → 13x = 195 → x = 15<br>∠A = 3(15)-7 = 38°, ∠C = 4(15)+6 = 66° → ∠A+∠C = 38+66 = 104°.",
+   "trick": "त्रिभुज के तीनों कोणों का योग 180° होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "The diagonals of a rhombus-shaped field are 224 m and 420 m long. What is the perimeter (in m) of the field?",
+   "hi": "एक समचतुर्भुज-आकृति के मैदान के विकर्ण 224 m और 420 m लंबे हैं। मैदान का परिमाप (m में) कितना होगा?",
+   "opts": [
+    "952",
+    "922",
+    "944",
+    "904"
+   ],
+   "my_ans": "A",
+   "sol": "विकर्णों के आधे = 112 और 210<br>भुजा = √(112² + 210²) = √(12544 + 44100) = √56644 = 238<br>परिमाप = 4 × 238 = 952 m.",
+   "trick": "समचतुर्भुज की भुजा = √((d1/2)² + (d2/2)²)",
+   "ans": "A"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "The base of a triangle is 18 cm and height is 20 cm. Find the height of another triangle of double the area having base 24 cm.",
+   "hi": "एक त्रिभुज का आधार 18 cm और ऊंचाई 20 cm है। 24 cm आधार और दोगुने क्षेत्रफल वाले अन्य त्रिभुज की ऊंचाई ज्ञात कीजिए।",
+   "opts": [
+    "22 cm",
+    "20 cm",
+    "24 cm",
+    "30 cm"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल1 = 1/2 × 18 × 20 = 180<br>क्षेत्रफल2 = 2 × 180 = 360<br>360 = 1/2 × 24 × h → 360 = 12h → h = 30 cm.",
+   "trick": "क्षेत्रफल = 1/2 × आधार × ऊंचाई",
+   "ans": "D"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "A landscape architect is designing a garden in the shape of a quadrilateral where the diagonals intersect at right angles but are not equal in length. If the diagonals are 12 meters and 16 meters, what is the area of the garden?",
+   "hi": "एक लैंडस्केप आर्किटेक्ट, चतुर्भुज की आकृति का एक बगीचा डिजाइन कर रहा है, जहाँ विकर्ण समकोण पर प्रतिच्छेद करते हैं, लेकिन उनकी लंबाई बराबर नहीं है। यदि विकर्णों की लंबाई 12 मीटर और 16 मीटर है, तो बगीचे का क्षेत्रफल कितना होगा?",
+   "opts": [
+    "48 square meters<br>48 वर्ग मीटर",
+    "192 square meters<br>192 वर्ग मीटर",
+    "64 square meters<br>64 वर्ग मीटर",
+    "96 square meters<br>96 वर्ग मीटर"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल = 1/2 × d1 × d2<br>क्षेत्रफल = 1/2 × 12 × 16 = 6 × 16 = 96 वर्ग मीटर.",
+   "trick": "समकोण पर काटने वाले चतुर्भुज का क्षेत्रफल = 1/2 × d1 × d2",
+   "ans": "D"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "A park is designed in the shape of a right-angled triangle, where the two shorter sides measure 13 m and 84 m. A circular track with a uniform width of 2 m is constructed such that its outer boundary coincides with the circumcircle of the triangular park. Determine the perimeter of the inner boundary of this circular track.",
+   "hi": "एक पार्क को समकोण त्रिभुज के आकार में बनाया गया है, जिसकी दो छोटी भुजाओं की माप क्रमशः 13 m और 84 m है। 2 m की एकसमान चौड़ाई वाला एक वृत्ताकार ट्रैक इस प्रकार बनाया गया है कि इसकी बाह्य सीमा त्रिभुजाकार पार्क के परिवृत्त के साथ संपाती है। इस वृत्ताकार ट्रैक की आंतरिक सीमा की परिधि ज्ञात कीजिए।",
+   "opts": [
+    "82π m",
+    "85π m",
+    "81π m",
+    "89π m"
+   ],
+   "my_ans": "C",
+   "sol": "कर्ण = √(13² + 84²) = √(169 + 7056) = √7225 = 85 m<br>परिवृत्त की त्रिज्या (R) = कर्ण/2 = 85/2 = 42.5 m<br>आंतरिक त्रिज्या (r) = 42.5 - 2 = 40.5 m<br>परिधि = 2πr = 2 × π × 40.5 = 81π m.",
+   "trick": "समकोण त्रिभुज का परिवृत्त व्यास = कर्ण",
+   "ans": "C"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the mid points of the diagonals AC and BD, respectively. If AB = 74 cm, BC = 91 cm, DC = 26 cm, and AD = 39 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB || DC है, और E तथा F क्रमशः विकर्ण AC और BD के मध्य बिंदु हैं। यदि AB = 74 सेमी, BC = 91 सेमी, DC = 26 सेमी, और AD = 39 सेमी है, तो EF की लंबाई (सेमी में) क्या है?",
+   "opts": [
+    "22",
+    "21",
+    "25",
+    "24"
+   ],
+   "my_ans": "D",
+   "sol": "EF = (AB - DC) / 2<br>EF = (74 - 26) / 2 = 48 / 2 = 24 cm.",
+   "trick": "समलंब चतुर्भुज में विकर्णों के मध्य बिंदुओं की दूरी = (AB - DC) / 2",
+   "ans": "D"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "In a triangle, the ratio of three angles is 3 : 3 : 4. Find the measure of the largest angle.",
+   "hi": "एक त्रिभुज में, तीन कोणों का अनुपात 3 : 3 : 4 है। सबसे बड़े कोण का माप ज्ञात कीजिए।",
+   "opts": [
+    "84°",
+    "72°",
+    "40°",
+    "62°"
+   ],
+   "my_ans": "B",
+   "sol": "अनुपात का योग = 3+3+4 = 10<br>सबसे बड़ा कोण = (4/10) × 180° = 72°.",
+   "trick": "त्रिभुज के कोणों का योग 180° होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "Sides PQ and QR of a ΔPQR are produced to points S and T. If ∠PRT > ∠RQS > 50ᵒ and ∠PRT + ∠RQS = 220ᵒ, which of the following statements is true?",
+   "hi": "एक ΔPQR की भुजाएँ PQ और QR को पॉइंट S और T तक बढ़ाया जाता है। अगर ∠PRT > ∠RQS > 50ᵒ और ∠PRT + ∠RQS = 220ᵒ, तो नीचे दिए गए स्टेटमेंट में से कौन सा सही है?",
+   "opts": [
+    "PQ < PR < QR",
+    "PR < PQ < QR",
+    "QR < PQ < PR",
+    "None"
+   ],
+   "my_ans": "D",
+   "sol": "∠PRT + ∠RQS = 220° और ∠PRT > ∠RQS > 50°<br>माना ∠PRT = x, ∠RQS = y → x+y=220, x>y>50<br>बाह्य कोण प्रमेय से: ∠PRT = ∠P + ∠Q, ∠RQS = ∠P + ∠R<br>चूँकि x > y, अतः ∠Q > ∠R. अतः PR > PQ. चूँकि x+y=220, x=120, y=100 (उदाहरण), तो ∠P+∠Q=120, ∠P+∠R=100. यहाँ कोई विकल्प सही नहीं है।",
+   "trick": "बड़ा कोण, बड़ी भुजा के सामने होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "ABC is an equilateral triangle with side 24 cm and AD is the median. If G is the centroid of the triangle ABC, find the length (in cm) of GD.",
+   "hi": "ABC एक समबाहु त्रिभुज है, जिसकी भुजा 24 cm है और AD माध्यिका है। यदि G त्रिभुज ABC का केंद्रक है, तो GD की लंबाई (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "4√3",
+    "3√2",
+    "6√2",
+    "9√3"
+   ],
+   "my_ans": "A",
+   "sol": "ऊंचाई (AD) = (√3/2) × भुजा = (√3/2) × 24 = 12√3<br>केंद्रक माध्यिका को 2:1 में बांटता है, अतः GD = 1/3 × AD = 1/3 × 12√3 = 4√3 cm.",
+   "trick": "केंद्रक माध्यिका को 2:1 के अनुपात में विभाजित करता है।",
+   "ans": "A"
+  }
+ ]
+}

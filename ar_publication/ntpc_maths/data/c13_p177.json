@@ -1,0 +1,62 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Mixture & Alligation",
+  "hi": "मिश्रण",
+  "total": 3,
+  "gl": 0,
+  "ug": 3
+ },
+ "source_pages": "177-177",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "To prepare a fruit punch, 2 litres of orange juice are mixed with 5 litres of water. How much water is required if 5 litres of orange juice are used?",
+   "hi": "फ्रूट पंच बनाने के लिए, 2 लीटर संतरे के रस को 5 लीटर पानी के साथ मिलाया जाता है। यदि 5 लीटर संतरे का रस उपयोग किया जाता है, तो कितना पानी आवश्यक होगा?",
+   "opts": [
+    "12.5 litres<br>12.5 लीटर",
+    "18 litres<br>18 लीटर",
+    "15.5 litres<br>15.5 लीटर",
+    "10 litres<br>10 लीटर"
+   ],
+   "my_ans": "A",
+   "sol": "2 लीटर रस के लिए 5 लीटर पानी चाहिए।<br>1 लीटर रस के लिए 5/2 = 2.5 लीटर पानी चाहिए।<br>5 लीटर रस के लिए 5 × 2.5 = 12.5 लीटर पानी चाहिए।",
+   "trick": "समानुपात का प्रयोग करें: रस1/पानी1 = रस2/पानी2",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "A mixture contains milk and water in the ratio 5:3. If 48 liters of water is added, the ratio becomes 5:5. Find the initial quantity of milk.",
+   "hi": "एक मिश्रण में दूध और पानी का अनुपात 5 : 3 है। यदि इसमें 48 लीटर पानी मिलाया जाता है, तो अनुपात 5 : 5 हो जाता है। दूध की प्रारंभिक मात्रा ज्ञात कीजिए।",
+   "opts": [
+    "120 liters<br>120 लीटर",
+    "125 liters<br>125 लीटर",
+    "115 liters<br>115 लीटर",
+    "110 liters<br>110 लीटर"
+   ],
+   "my_ans": "A",
+   "sol": "अनुपात में पानी की वृद्धि = 5 - 3 = 2 यूनिट।<br>2 यूनिट = 48 लीटर, इसलिए 1 यूनिट = 24 लीटर।<br>दूध की मात्रा = 5 यूनिट = 5 × 24 = 120 लीटर।",
+   "trick": "अनुपात में अंतर को वास्तविक मात्रा के बराबर रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "In a science experiment, chemicals X, Y, and Z are mixed in the ratio 5:2:3. If the total weight of the mixture is 100 grams, how much of chemical Y is present?",
+   "hi": "एक विज्ञान प्रयोग में, रसायन X, Y और Z को 5:2:3 के अनुपात में मिलाया जाता है। यदि मिश्रण का कुल वजन 100 ग्राम है, तो रसायन Y की कितनी मात्रा मौजूद है?",
+   "opts": [
+    "50 grams<br>50 ग्राम",
+    "30 grams<br>30 ग्राम",
+    "10 grams<br>10 ग्राम",
+    "20 grams<br>20 ग्राम"
+   ],
+   "my_ans": "D",
+   "sol": "कुल अनुपात = 5 + 2 + 3 = 10 यूनिट।<br>10 यूनिट = 100 ग्राम, इसलिए 1 यूनिट = 10 ग्राम।<br>रसायन Y = 2 यूनिट = 2 × 10 = 20 ग्राम।",
+   "trick": "कुल मात्रा को अनुपातिक योग से विभाजित करें।",
+   "ans": "D"
+  }
+ ]
+}

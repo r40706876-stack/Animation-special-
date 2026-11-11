@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Average",
+  "hi": "औसत",
+  "total": 93,
+  "gl": 53,
+  "ug": 40
+ },
+ "source_pages": "191-192",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "What is the average of prime numbers lying between 5 and 30?",
+   "hi": "5 और 30 के बीच की अभाज्य संख्याओं का औसत ज्ञात कीजिए।",
+   "opts": [
+    "19",
+    "17",
+    "23",
+    "21"
+   ],
+   "my_ans": "B",
+   "sol": "5 और 30 के बीच अभाज्य संख्याएँ: 7, 11, 13, 17, 19, 23, 29<br>योग = 119, संख्या = 7<br>औसत = 119 ÷ 7 = 17.",
+   "trick": "अभाज्य संख्याओं को ध्यान से लिखें और उनका औसत निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "If the average of four numbers is 15, and three of the numbers are 10, 20, and 25, what is the fourth number?",
+   "hi": "यदि चार संख्याओं का औसत 15 है, और उनमें से तीन संख्याएँ 10, 20 और 25 हैं, तो चौथी संख्या कितनी होगी?",
+   "opts": [
+    "5",
+    "15",
+    "20",
+    "10"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = 4 × 15 = 60<br>तीन संख्याओं का योग = 10 + 20 + 25 = 55<br>चौथी संख्या = 60 - 55 = 5.",
+   "trick": "कुल योग = औसत × संख्याएँ",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "The average of 5 consecutive integers is 10. What is the smallest integer?",
+   "hi": "5 क्रमागत पूर्णांकों का औसत 10 है। सबसे छोटा पूर्णांक कितना है?",
+   "opts": [
+    "6",
+    "8",
+    "9",
+    "7"
+   ],
+   "my_ans": "B",
+   "sol": "क्रमागत संख्याओं में औसत ही बीच वाली संख्या होती है।<br>संख्याएँ: 8, 9, 10, 11, 12<br>सबसे छोटी संख्या = 8.",
+   "trick": "विषम संख्या में औसत हमेशा बीच वाली संख्या होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "In a class, the average score of 8 boys is 56 and the average score of 4 girls is 80. What is the average score of all 12 students?",
+   "hi": "एक कक्षा में 8 लड़कों का औसत अंक 56 है और 4 लड़कियों का औसत अंक 80 है। सभी 12 विद्यार्थियों का औसत अंक कितना है?",
+   "opts": [
+    "66",
+    "68",
+    "64",
+    "62"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (8 × 56) + (4 × 80) = 448 + 320 = 768<br>औसत = 768 ÷ 12 = 64.",
+   "trick": "कुल योग / कुल संख्या = औसत",
+   "ans": "C"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "The average of 6.5, 10.8, 20 and a is 13. The value of a is:",
+   "hi": "6.5, 10.8, 20 और a का औसत 13 है, तो a का मान ज्ञात कीजिए।",
+   "opts": [
+    "14.7",
+    "13.7",
+    "15.7",
+    "16.7"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = 4 × 13 = 52<br>6.5 + 10.8 + 20 + a = 52<br>37.3 + a = 52 → a = 52 - 37.3 = 14.7.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "The average of 8 numbers is 45. If each number is decreased by 4, what will the new average be?",
+   "hi": "8 संख्याओं का औसत 45 है। यदि प्रत्येक संख्या में 4 की कमी की जाए, तो नया औसत ज्ञात कीजिए।",
+   "opts": [
+    "41",
+    "37",
+    "8",
+    "45"
+   ],
+   "my_ans": "A",
+   "sol": "यदि प्रत्येक संख्या में से कुछ घटाया जाता है, तो औसत में से भी वही संख्या घट जाती है।<br>नया औसत = 45 - 4 = 41.",
+   "trick": "प्रत्येक संख्या में बदलाव = औसत में वही बदलाव",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "The average of five numbers 7, 11, 15, x, and 23 is 15. What is the value of x?",
+   "hi": "पाँच संख्याओं 7, 11, 15, x और 23 का औसत 15 है। x का मान कितना है?",
+   "opts": [
+    "17",
+    "19",
+    "23",
+    "21"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = 5 × 15 = 75<br>7 + 11 + 15 + x + 23 = 56 + x = 75<br>x = 75 - 56 = 19.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "The average monthly income of six employees in an office is ₹24,000. When a new employee joins the office, the average income of all seven employees becomes ₹25,500. What is the monthly income of the new employee?",
+   "hi": "एक कार्यालय में छह कर्मचारियों की औसत मासिक आय ₹24,000 है। जब एक नया कर्मचारी कार्यालय में नियुक्त होता है, तो सभी सात कर्मचारियों की औसत आय ₹25,500 हो जाती है। नए कर्मचारी की मासिक आय क्या है?",
+   "opts": [
+    "₹34,000",
+    "₹33,000",
+    "₹33,500",
+    "₹34,500"
+   ],
+   "my_ans": "D",
+   "sol": "नया योग = 7 × 25500 = 178500<br>पुराना योग = 6 × 24000 = 144000<br>नया कर्मचारी = 178500 - 144000 = 34500.",
+   "trick": "नया व्यक्ति = (नया औसत × नई संख्या) - (पुराना औसत × पुरानी संख्या)",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "The average of k numbers is x. If 48 is subtracted from each of any two of the numbers, then we get (x-12) as the new average. Find the value of k.",
+   "hi": "k संख्याओं का औसत x है। यदि किन्हीं दो संख्याओं में से प्रत्येक से 48 घटाया जाए, तो नया औसत (x-12) प्राप्त होता है। k का मान ज्ञात कीजिए।",
+   "opts": [
+    "10",
+    "8",
+    "5",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "कुल कमी = 48 + 48 = 96<br>औसत में कमी = 12<br>कुल संख्या (k) = कुल कमी / औसत में कमी = 96 / 12 = 8.",
+   "trick": "संख्या = कुल कमी / औसत में कमी",
+   "ans": "B"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "The average of 6.5, 10.8, 19.9 and a is 18. The value of a is:",
+   "hi": "6.5, 10.8, 19.9 और a का औसत 18 है, तो a का मान ज्ञात कीजिए।",
+   "opts": [
+    "35.8",
+    "36.8",
+    "33.8",
+    "34.8"
+   ],
+   "my_ans": "D",
+   "sol": "कुल योग = 4 × 18 = 72<br>6.5 + 10.8 + 19.9 + a = 37.2 + a = 72<br>a = 72 - 37.2 = 34.8.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "The arithmetic mean of 10 observations is 42. Three of the observations are 30, 38, and 50. The remaining six observations have an average of 45. Find the missing observation.",
+   "hi": "10 प्रेक्षणों का समांतर माध्य 42 है। इनमें से तीन प्रेक्षणों का मान 30, 38 और 50 है। शेष छह प्रेक्षणों का औसत 45 है। अज्ञात प्रेक्षण ज्ञात कीजिए।",
+   "opts": [
+    "34",
+    "32",
+    "31",
+    "33"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = 10 × 42 = 420<br>3 का योग = 30+38+50 = 118<br>6 का योग = 6 × 45 = 270<br>अज्ञात = 420 - (118 + 270) = 420 - 388 = 32.",
+   "trick": "कुल योग - ज्ञात योग = अज्ञात",
+   "ans": "B"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "A student's marks were incorrectly entered as 37 instead of 22. Due to this, the average marks of the class got increased by 5/4. What is the number of students in the class?",
+   "hi": "एक छात्र के अंक गलती से 22 की जगह 37 दर्ज कर दिए गए। इसके कारण, कक्षा के औसत अंक 5/4 बढ़ गए। कक्षा में छात्रों की संख्या क्या है?",
+   "opts": [
+    "11",
+    "12",
+    "4",
+    "21"
+   ],
+   "my_ans": "B",
+   "sol": "अंकों में अंतर = 37 - 22 = 15<br>औसत में वृद्धि = 15 / n = 5/4<br>n = (15 × 4) / 5 = 12.",
+   "trick": "संख्या = कुल अंतर / औसत में वृद्धि",
+   "ans": "B"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "The average of five numbers is 24. If four of the numbers are 18, 20, 25 and 27, what is the fifth number?",
+   "hi": "पाँच संख्याओं का औसत 24 है। यदि इनमें से चार संख्याएँ 18, 20, 25 और 27 हैं, तो पाँचवीं संख्या ज्ञात कीजिए।",
+   "opts": [
+    "30",
+    "35",
+    "28",
+    "32"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = 5 × 24 = 120<br>4 का योग = 18+20+25+27 = 90<br>पाँचवीं संख्या = 120 - 90 = 30.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "In a batch of 50 managers and supervisors, the average monthly salary of managers is ₹48,000 and that of supervisors is ₹42,000. If the overall monthly average salary of the batch is ₹44,400, find the number of supervisors in the batch.",
+   "hi": "50 प्रबंधकों और पर्यवेक्षकों के एक बैच में, प्रबंधकों का औसत मासिक वेतन ₹48,000 और पर्यवेक्षकों का औसत मासिक वेतन ₹42,000 है। यदि बैच का कुल मासिक औसत वेतन ₹44,400 है, तो बैच में पर्यवेक्षकों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "24",
+    "30",
+    "27",
+    "33"
+   ],
+   "my_ans": "B",
+   "sol": "एलिगेशन: M(48000), S(42000), Avg(44400)<br>अंतर: (48000-44400)=3600, (44400-42000)=2400<br>अनुपात M:S = 2400:3600 = 2:3<br>पर्यवेक्षक = 3/5 × 50 = 30.",
+   "trick": "एलिगेशन विधि का प्रयोग करें",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "A smart city metro line had an average of 4,500 daily riders last month. This month, it averaged 4,860 riders per day. What is the percentage growth in ridership?",
+   "hi": "किसी स्मार्ट सिटी मेट्रो लाइन में पिछले माह औसतन 4,500 यात्री प्रतिदिन यात्रा करते थे। इस माह, यह औसत 4,860 यात्री प्रतिदिन रहा। यात्रियों की संख्या में प्रतिशत वृद्धि ज्ञात कीजिए।",
+   "opts": [
+    "10.2%",
+    "4.5%",
+    "6.4%",
+    "8%"
+   ],
+   "my_ans": "D",
+   "sol": "वृद्धि = 4860 - 4500 = 360<br>प्रतिशत वृद्धि = (360 / 4500) × 100 = 360 / 45 = 8%.",
+   "trick": "प्रतिशत वृद्धि = (अंतर / मूल मान) × 100",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,366 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Simple Interest",
+  "hi": "साधारण ब्याज",
+  "total": 59,
+  "gl": 24,
+  "ug": 35
+ },
+ "source_pages": "127-129",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹8,400 fetch a simple interest of ₹840 at 4% per annum rate of interest?",
+   "hi": "कितने वर्षों में ₹8,400 पर 4% वार्षिक ब्याज दर से ₹840 साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "3.5",
+    "5",
+    "2.5",
+    "1.5"
+   ],
+   "my_ans": "C",
+   "sol": "SI = (P×R×T)/100 → 840 = (8400×4×T)/100<br>840 = 336×T → T = 840/336 = 2.5 वर्ष",
+   "trick": "समय = (ब्याज × 100) / (मूलधन × दर)",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become four times itself in 25 years under simple interest?",
+   "hi": "साधारण ब्याज के अंतर्गत 25 वर्षों में कोई धनराशि किस वार्षिक ब्याज दर पर स्वयं की चार गुनी हो जाएगी?",
+   "opts": [
+    "12%",
+    "14%",
+    "24%",
+    "10%"
+   ],
+   "my_ans": "A",
+   "sol": "4 गुना मतलब ब्याज = 3 गुना मूलधन<br>R = (300/T) = 300/25 = 12%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 5 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 5 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "80%",
+    "82%",
+    "78%",
+    "160%"
+   ],
+   "my_ans": "A",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/T) = 400/5 = 80%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹8,400 fetch a simple interest of ₹840 at 5% per annum rate of interest?",
+   "hi": "कितने वर्षों में ₹8,400 पर 5% वार्षिक ब्याज दर से ₹840 साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "2",
+    "4",
+    "3",
+    "1"
+   ],
+   "my_ans": "A",
+   "sol": "SI = (P×R×T)/100 → 840 = (8400×5×T)/100<br>840 = 420×T → T = 840/420 = 2 वर्ष",
+   "trick": "समय = (ब्याज × 100) / (मूलधन × दर)",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹7,200 fetch a simple interest of ₹1,080 at 6% per annum rate of interest?",
+   "hi": "कितने वर्षों में ₹7,200 पर 6% वार्षिक ब्याज दर से ₹1,080 साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "1.5",
+    "5",
+    "3.5",
+    "2.5"
+   ],
+   "my_ans": "D",
+   "sol": "SI = (P×R×T)/100 → 1080 = (7200×6×T)/100<br>1080 = 432×T → T = 1080/432 = 2.5 वर्ष",
+   "trick": "समय = (ब्याज × 100) / (मूलधन × दर)",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "At what rate (in percentage) per year will a sum of money 5 times itself in 16 years on simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर (प्रतिशत में) से 16 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "23",
+    "27",
+    "50",
+    "25"
+   ],
+   "my_ans": "D",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/T) = 400/16 = 25%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹7,200 fetch a simple interest of ₹360 at 4% per annum rate of interest?",
+   "hi": "कितने वर्षों में ₹7,200 पर 4% वार्षिक ब्याज दर से ₹360 साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "2.5",
+    "1.25",
+    "2.25",
+    "0.25"
+   ],
+   "my_ans": "B",
+   "sol": "SI = (P×R×T)/100 → 360 = (7200×4×T)/100<br>360 = 288×T → T = 360/288 = 1.25 वर्ष",
+   "trick": "समय = (ब्याज × 100) / (मूलधन × दर)",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money 5 times itself in 12 years on simple interest?",
+   "hi": "कोई धनराशि साधारण ब्याज पर किस वार्षिक दर (प्रतिशत में, दशमलव के दो स्थानों तक पूर्णांकित) से 12 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "33.33",
+    "31.33",
+    "35.33",
+    "66.66"
+   ],
+   "my_ans": "A",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/12) = 33.33%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money 5 times itself in 15 years on simple interest?",
+   "hi": "कोई धनराशि साधारण ब्याज पर किस वार्षिक दर (प्रतिशत में, दशमलव के दो स्थानों तक पूर्णांकित) से 15 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "28.67",
+    "24.67",
+    "26.67",
+    "53.34"
+   ],
+   "my_ans": "C",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/15) = 26.666... = 26.67%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money double itself in 15 years on simple interest?",
+   "hi": "साधारण ब्याज पर किसी धनराशि के 15 वर्षों में दोगुना होने के लिए वार्षिक ब्याज दर (प्रतिशत में, दशमलव के बाद दो स्थानों तक पूर्णांकित) कितनी होगी?",
+   "opts": [
+    "13.34",
+    "8.67",
+    "4.67",
+    "6.67"
+   ],
+   "my_ans": "D",
+   "sol": "2 गुना मतलब ब्याज = 1 गुना मूलधन<br>R = (100/15) = 6.666... = 6.67%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "At what rate (in percentage) per year will a sum of money double itself in 16 years on simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से (प्रतिशत में) 16 वर्षों में स्वयं की दोगुनी हो जाएगी?",
+   "opts": [
+    "4.25",
+    "8.25",
+    "6.25",
+    "12.5"
+   ],
+   "my_ans": "C",
+   "sol": "2 गुना मतलब ब्याज = 1 गुना मूलधन<br>R = (100/16) = 6.25%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "At what rate (in percentage) per year will a sum of money 5 times itself in 20 years on simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर (प्रतिशत में) से 20 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "22",
+    "20",
+    "18",
+    "40"
+   ],
+   "my_ans": "B",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/20) = 20%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money double itself in 18 years on simple interest?",
+   "hi": "कोई धनराशि किस वार्षिक साधारण ब्याज दर (प्रतिशत में, दशमलव के दो स्थानों तक पूर्णांकित) से 18 वर्षों में स्वयं की दोगुनी हो जाएगी?",
+   "opts": [
+    "11.12",
+    "7.56",
+    "3.56",
+    "5.56"
+   ],
+   "my_ans": "D",
+   "sol": "2 गुना मतलब ब्याज = 1 गुना मूलधन<br>R = (100/18) = 5.555... = 5.56%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 11 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 11 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "63 4/11%",
+    "96 4/11%",
+    "46 4/11%",
+    "36 4/11%"
+   ],
+   "my_ans": "D",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/11) = 36 4/11%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 4 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 4 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "100%",
+    "98%",
+    "102%",
+    "200%"
+   ],
+   "my_ans": "A",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/4) = 100%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money 5 times itself in 24 years on simple interest?",
+   "hi": "साधारण ब्याज पर किस वार्षिक दर से (प्रतिशत में, दो दशमलव स्थान तक पूर्णांकित) 24 वर्षों में कोई धनराशि 5 गुना हो जाएगी?",
+   "opts": [
+    "33.34",
+    "18.67",
+    "16.67",
+    "14.67"
+   ],
+   "my_ans": "C",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/24) = 16.666... = 16.67%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 6 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 6 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "56 2/3%",
+    "46 2/3%",
+    "76 2/3%",
+    "66 2/3%"
+   ],
+   "my_ans": "D",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/6) = 200/3 = 66 2/3%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money 5 times itself in 18 years on simple interest?",
+   "hi": "कोई धनराशि साधारण ब्याज पर किस वार्षिक दर (प्रतिशत में, दशमलव के दो स्थानों तक पूर्णांकित) से 18 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "24.22",
+    "22.22",
+    "20.22",
+    "44.44"
+   ],
+   "my_ans": "B",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/18) = 22.22%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 10 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 10 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "80%",
+    "42%",
+    "40%",
+    "38%"
+   ],
+   "my_ans": "C",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/10) = 40%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "In traditional development economics, development primarily meant:",
+   "hi": "पारंपरिक विकास अर्थशास्त्र में, विकास का मुख्य अर्थ था:",
+   "opts": [
+    "Growth of per capita real income<br>प्रति व्यक्ति वास्तविक आय में वृद्धि",
+    "Rise in national income levels<br>राष्ट्रीय आय स्तरों में वृद्धि",
+    "Increase in employment opportunities<br>रोजगार के अवसरों में वृद्धि",
+    "Expansion of industrial production<br>औद्योगिक उत्पादन का विस्तार"
+   ],
+   "my_ans": "A",
+   "sol": "पारंपरिक अर्थशास्त्र में विकास का मुख्य पैमाना प्रति व्यक्ति वास्तविक आय में वृद्धि को माना जाता था।",
+   "trick": "विकास = प्रति व्यक्ति वास्तविक आय में वृद्धि",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "At what rate per annum will a sum of money become five times itself in 9 years under simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से 9 वर्षों में स्वयं की पांच गुनी हो जाएगी?",
+   "opts": [
+    "48 4/9%",
+    "44 4/9%",
+    "46 4/9%",
+    "42 4/9%"
+   ],
+   "my_ans": "B",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/9) = 44 4/9%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "At what rate (in percentage, rounded off to two decimal place) per year will a sum of money 5 times itself in 22 years on simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर (प्रतिशत में, दशमलव के दो स्थानों तक पूर्णांकित) से 22 वर्षों में स्वयं की 5 गुनी हो जाएगी?",
+   "opts": [
+    "36.36",
+    "16.18",
+    "20.18",
+    "18.18"
+   ],
+   "my_ans": "D",
+   "sol": "5 गुना मतलब ब्याज = 4 गुना मूलधन<br>R = (400/22) = 18.18%",
+   "trick": "दर = (गुना - 1) × 100 / समय",
+   "ans": "D"
+  }
+ ]
+}

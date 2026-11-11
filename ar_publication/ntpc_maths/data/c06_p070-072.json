@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "70-72",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Chetan’s salary is ₹18000 per month. He spends ₹5000 on house rent, ₹2000 on bills and the rest of the amount is his monthly savings. Find his savings (in ₹) in a year, if in the month of his birthday, he spent his complete monthly saving for birthday celebration.",
+   "hi": "चेतन का वेतन ₹18000 प्रति माह है। वह मकान किराए पर ₹5000, बिलों पर ₹2000 खर्च करता है और शेष राशि उसकी मासिक बचत है। यदि उसने अपने जन्मदिन के महीने में अपनी पूरी मासिक बचत जन्मदिन समारोह पर खर्च कर दी, तो एक वर्ष में उसकी बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "121000",
+    "132000",
+    "99000",
+    "110000"
+   ],
+   "my_ans": "A",
+   "sol": "मासिक बचत = 18000 - (5000 + 2000) = 11000.<br>11 महीने की बचत = 11 × 11000 = 121000.",
+   "trick": "कुल बचत = (मासिक बचत × 11 महीने)",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 190. The number is:",
+   "hi": "किसी संख्या का 20%, 620 के 20% से 190 अधिक है। वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1420",
+    "1570",
+    "1620",
+    "1670"
+   ],
+   "my_ans": "B",
+   "sol": "0.20x - 0.20(620) = 190<br>0.20(x - 620) = 190<br>x - 620 = 950 → x = 1570.",
+   "trick": "संख्या = (अंतर / प्रतिशत) + आधार संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 210. The number is:",
+   "hi": "किसी संख्या के 20% का मान, 620 के 20% से 210 अधिक है। वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1670",
+    "1770",
+    "1520",
+    "1720"
+   ],
+   "my_ans": "A",
+   "sol": "0.20(x - 620) = 210<br>x - 620 = 1050<br>x = 1670.",
+   "trick": "संख्या = (अंतर / प्रतिशत) + आधार संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Girish scored 424 marks in an examination and was 13 marks short of 19% of the maximum marks. In the same examination, his friend scored 529 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 424 अंक प्राप्त किए जो कि पूर्णांक के 19% से 13 अंक कम थे। उसी परीक्षा में उसके मित्र ने 529 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "22%",
+    "25%",
+    "23%",
+    "26%"
+   ],
+   "my_ans": "C",
+   "sol": "19% = 424 + 13 = 437<br>1% = 437 / 19 = 23<br>पूर्णांक = 2300<br>प्रतिशत = (529 / 2300) × 100 = 23%.",
+   "trick": "पहले पूर्णांक निकालें, फिर मित्र के अंकों का प्रतिशत",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 200. The number is:",
+   "hi": "किसी संख्या के 20% का मान, 620 के 20% से 200 अधिक है। वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1720",
+    "1670",
+    "1470",
+    "1620"
+   ],
+   "my_ans": "D",
+   "sol": "0.20(x - 620) = 200<br>x - 620 = 1000<br>x = 1620.",
+   "trick": "संख्या = (अंतर / प्रतिशत) + आधार संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "If A's salary is 143% more than that of B, then how much percent is B's salary less than that of A (correct to 2 decimal places)?",
+   "hi": "यदि A का वेतन B के वेतन से 143% अधिक है, तो B का वेतन A के वेतन से कितने प्रतिशत (दशमलव के दो स्थानों तक सही उत्तर दीजिए) कम है?",
+   "opts": [
+    "56.62%",
+    "59.64%",
+    "58.85%",
+    "61.92%"
+   ],
+   "my_ans": "C",
+   "sol": "B = 100, A = 243<br>अंतर = 143<br>प्रतिशत कमी = (143 / 243) × 100 = 58.847% ≈ 58.85%.",
+   "trick": "कमी % = [x / (100 + x)] × 100",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 10% in the first year and increased by 30% in the second year. Its population after two years is _______.7674",
+   "hi": "एक गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 10% और दूसरे वर्ष में 30% की वृद्धि हुई। दो वर्षों के बाद इसकी जनसंख्या _______ होगी।",
+   "opts": [
+    "4,14,700",
+    "4,06,000",
+    "3,77,000",
+    "3,19,000"
+   ],
+   "my_ans": "A",
+   "sol": "290000 × 1.10 × 1.30 = 290000 × 1.43 = 414700.",
+   "trick": "अंतिम मान = प्रारंभिक × (1 + r1/100) × (1 + r2/100)",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 10% in the first year and increased by 20% in the second year. Its population after two years is _______.",
+   "hi": "एक गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 10% की वृद्धि हुई और दूसरे वर्ष में 20% की वृद्धि हुई। दो वर्षों के बाद इसकी जनसंख्या _______ होगी।",
+   "opts": [
+    "3,48,000",
+    "3,19,000",
+    "3,77,000",
+    "3,82,800"
+   ],
+   "my_ans": "D",
+   "sol": "290000 × 1.10 × 1.20 = 290000 × 1.32 = 382800.",
+   "trick": "अंतिम मान = प्रारंभिक × (1 + r1/100) × (1 + r2/100)",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "How many solutions for given three unknowns are possible to satisfy all these equations? −3 α + 2 β − 3 γ = −14 2 α − 3 β + 4 γ = 10 α + β + γ = 4",
+   "hi": "दिए गए तीन अज्ञातों के लिए इन सभी समीकरणों को संतुष्ट करने वाले समाधानों की संख्या कितनी है? −3 α + 2 β − 3 γ = −14 2 α − 3 β + 4 γ = 10 α + β + γ = 4",
+   "opts": [
+    "Two solutions",
+    "Unique solution",
+    "Infinite solutions",
+    "No solution"
+   ],
+   "my_ans": "C",
+   "sol": "समीकरणों को हल करने पर, वे एक-दूसरे पर निर्भर हैं, जिससे अनंत समाधान प्राप्त होते हैं।",
+   "trick": "समीकरणों का अनुपात समान होने पर अनंत समाधान होते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "If A's salary is 126% more than that of B, then by how much percent is B's salary less than that of A (correct to 2 decimal places)?",
+   "hi": "यदि A का वेतन B के वेतन से 126% अधिक है, तो B का वेतन A के वेतन से कितने प्रतिशत (दशमलव के दो स्थानों तक सही उत्तर दीजिए) कम है?",
+   "opts": [
+    "54.74%",
+    "56.18%",
+    "55.75%",
+    "54.65%"
+   ],
+   "my_ans": "C",
+   "sol": "B = 100, A = 226<br>कमी = (126 / 226) × 100 = 55.752% ≈ 55.75%.",
+   "trick": "कमी % = [x / (100 + x)] × 100",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 86% of the registered voters cast their vote and 20% of the votes polled were found invalid. Winning candidate got 55% of the valid votes and won the election by a margin of 3010 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 86% ने अपना वोट डाला और 20% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 55% प्राप्त हुआ और उसने 3010 वोटों के अंतर से चुनाव जीत लिया। कुल कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "43770",
+    "43760",
+    "43740",
+    "43750"
+   ],
+   "my_ans": "D",
+   "sol": "माना कुल मतदाता x हैं।<br>वैध वोट = x × 0.86 × 0.80 = 0.688x<br>जीत का अंतर = 10% (55-45) वैध वोटों का = 0.10 × 0.688x = 3010<br>x = 3010 / 0.0688 = 43750.",
+   "trick": "कुल मतदाता = अंतर / (वैध% × जीत का अंतर%)",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 80% of the registered voters cast their vote and 20% of the votes polled were found invalid. Winning candidate got 55% of the valid votes and won the election by a margin of 368 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 80% ने अपना वोट डाला और 20% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 55% प्राप्त हुआ और उसने 368 वोटों के अंतर से चुनाव जीत लिया। कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "5750",
+    "5751",
+    "5747",
+    "5749"
+   ],
+   "my_ans": "A",
+   "sol": "वैध वोट = x × 0.80 × 0.80 = 0.64x<br>जीत का अंतर = 10% वैध वोटों का = 0.064x = 368<br>x = 368 / 0.064 = 5750.",
+   "trick": "कुल मतदाता = अंतर / (वैध% × जीत का अंतर%)",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 170. The number is:",
+   "hi": "किसी संख्या के 20% का मान, 620 के 20% से 170 अधिक है। वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1470",
+    "1320",
+    "1570",
+    "1520"
+   ],
+   "my_ans": "A",
+   "sol": "0.20(x - 620) = 170<br>x - 620 = 850<br>x = 1470.",
+   "trick": "संख्या = (अंतर / प्रतिशत) + आधार संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Girish scored 831 marks in an examination and was 72 marks short of 35% of maximum marks. In the same examination, his friend scored 774 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 831 अंक प्राप्त किए और उसके अंक पूर्णांक के 35% से 72 अंक कम थे। उसी परीक्षा में उसके मित्र ने 774 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "28%",
+    "34%",
+    "30%",
+    "32%"
+   ],
+   "my_ans": "C",
+   "sol": "35% = 831 + 72 = 903<br>1% = 903 / 35 = 25.8<br>पूर्णांक = 2580<br>प्रतिशत = (774 / 2580) × 100 = 30%.",
+   "trick": "पहले पूर्णांक निकालें, फिर मित्र के अंकों का प्रतिशत",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "If A's salary is 113% more than that of B, then by how much percent is B's salary less than that of A (correct to 2 decimal places)?",
+   "hi": "यदि A का वेतन B के वेतन से 113% अधिक है, तो B का वेतन A के वेतन से कितने प्रतिशत कम है (दो दशमलव स्थानों तक उत्तर दें)?",
+   "opts": [
+    "51.35%",
+    "53.05%",
+    "50.45%",
+    "55.15%"
+   ],
+   "my_ans": "B",
+   "sol": "B = 100, A = 213<br>कमी = (113 / 213) × 100 = 53.051% ≈ 53.05%.",
+   "trick": "कमी % = [x / (100 + x)] × 100",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "In an election between two candidates, a candidate got 38% of the total votes and lost the election by 28,800 votes. What is the total number of voters?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, एक उम्मीदवार को कुल वोटों का 38% प्राप्त हुआ और वह 28,800 वोटों से हार गया। मतदाताओं की कुल संख्या कितनी है?",
+   "opts": [
+    "122,000",
+    "122,800",
+    "120,000",
+    "124,000"
+   ],
+   "my_ans": "C",
+   "sol": "हारने वाले को 38%, जीतने वाले को 62%<br>अंतर = 62 - 38 = 24%<br>24% = 28800<br>100% = (28800 / 24) × 100 = 120000.",
+   "trick": "कुल मतदाता = हार का अंतर / प्रतिशत अंतर",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 160. The number is:",
+   "hi": "किसी संख्या का 20%, 620 के 20% से 160 अधिक है। वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1420",
+    "1270",
+    "1520",
+    "1470"
+   ],
+   "my_ans": "A",
+   "sol": "0.20(x - 620) = 160<br>x - 620 = 800<br>x = 1420.",
+   "trick": "संख्या = (अंतर / प्रतिशत) + आधार संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 80% of the registered voters cast their votes and 3% of the votes polled were found invalid. Winning candidate got 52% of the valid votes and won the election by a margin of 291 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 80% ने अपना वोट डाला और डाले गए वोट में से 3% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 52% प्राप्त हुआ और उसने 291 वोटों के अंतर से चुनाव जीता। कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "9373",
+    "9378",
+    "9375",
+    "9370"
+   ],
+   "my_ans": "C",
+   "sol": "वैध वोट = x × 0.80 × 0.97 = 0.776x<br>जीत का अंतर = 4% (52-48) वैध वोटों का = 0.04 × 0.776x = 291<br>x = 291 / 0.03104 ≈ 9375.",
+   "trick": "कुल मतदाता = अंतर / (वैध% × जीत का अंतर%)",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Girish scored 441 marks in an examination and was 75 marks short of 30% of maximum marks. In the same examination, his friend scored 688 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 441 अंक प्राप्त किए जो कि पूर्णांक के 30% से 75 अंक कम थे। उसी परीक्षा में उसके मित्र ने 688 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "44%",
+    "42%",
+    "40%",
+    "38%"
+   ],
+   "my_ans": "C",
+   "sol": "30% = 441 + 75 = 516<br>1% = 516 / 30 = 17.2<br>पूर्णांक = 1720<br>प्रतिशत = (688 / 1720) × 100 = 40%.",
+   "trick": "पहले पूर्णांक निकालें, फिर मित्र के अंकों का प्रतिशत",
+   "ans": "C"
+  }
+ ]
+}

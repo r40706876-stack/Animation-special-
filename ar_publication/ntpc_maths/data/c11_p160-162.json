@@ -1,0 +1,382 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "160-162",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "What is the mean proportional between 0.0009 and 0.25?",
+   "hi": "0.0009 और 0.25 के बीच का मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "0.16",
+    "0.15",
+    "0.015",
+    "0.016"
+   ],
+   "my_ans": "C",
+   "sol": "मध्यानुपाती = √(0.0009 × 0.25) = √(0.000225) = 0.015",
+   "trick": "दो संख्याओं का मध्यानुपाती = √(a × b)",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "What is the smallest natural number ‘x’ that needs to be subtracted from 13 and 25 so that the fourth proportional of the resulting numbers is 49?",
+   "hi": "वह सबसे छोटी प्राकृतिक संख्या 'x' क्या है, जिसे 13 और 25 में से घटाने पर प्राप्त संख्याओं का चतुर्थानुपाती 49 हो जाए?",
+   "opts": [
+    "2",
+    "5",
+    "3",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "(13-x)/(25-x) = x/49 (यहाँ x का मान 4 रखने पर: 9/21 = 4/49 गलत है, प्रश्न अनुसार (13-x)/(25-x) = (25-x)/49 होगा, x=4 रखने पर 9/21 = 21/49 = 3/7 सही है)",
+   "trick": "चतुर्थानुपाती के लिए (a-x)/(b-x) = (b-x)/49 का प्रयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "The fourth proportional to 4, 6, and 8 is m. The third proportional to 8 and m is n. What is the value of n?",
+   "hi": "4, 6 और 8 का चतुर्थानुपाती m है। 8 और m का तृतीयानुपाती n है। n का मान क्या है?",
+   "opts": [
+    "16",
+    "24",
+    "20",
+    "18"
+   ],
+   "my_ans": "D",
+   "sol": "4/6 = 8/m → m = 12. अब 8, 12 का तृतीयानुपाती n है: 8/12 = 12/n → n = (12×12)/8 = 18",
+   "trick": "चतुर्थानुपाती a/b = c/d, तृतीयानुपाती a/b = b/c",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "If the third proportional to 4 and 20 is m and the third proportional to m and 50 is n, what is the value of n?",
+   "hi": "यदि 4 और 20 का तृतीयानुपाती m है तथा m और 50 का तृतीयानुपाती n है, तो n का मान कितना होगा?",
+   "opts": [
+    "28",
+    "20",
+    "24",
+    "25"
+   ],
+   "my_ans": "D",
+   "sol": "4/20 = 20/m → m = 100. अब 100/50 = 50/n → n = 2500/100 = 25",
+   "trick": "तृतीयानुपाती के लिए b²/a का प्रयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "What is the mean proportional between 0.16 and 0.49?",
+   "hi": "0.16 और 0.49 के बीच मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "0.28",
+    "0.21",
+    "0.24",
+    "0.26"
+   ],
+   "my_ans": "A",
+   "sol": "मध्यानुपाती = √(0.16 × 0.49) = 0.4 × 0.7 = 0.28",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "If 5 and 10 are given, what is the third proportional to these numbers?",
+   "hi": "यदि 5 और 10 दिए गए हैं, तो इन संख्याओं का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "30",
+    "15",
+    "25",
+    "20"
+   ],
+   "my_ans": "D",
+   "sol": "तृतीयानुपाती = b²/a = 10²/5 = 100/5 = 20",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "D"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "Find the third proportional to 240 and 120.",
+   "hi": "240 और 120 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "50",
+    "40",
+    "60",
+    "80"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयानुपाती = 120²/240 = 14400/240 = 60",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "A recipe requires sugar and flour in the ratio 7:11. If you have 154 grams of sugar and want to maintain the same proportion, how much flour should you use?",
+   "hi": "एक रेसिपी में चीनी और मैदे का अनुपात 7:11 है। यदि आपके पास 154 ग्राम चीनी है और आप समानुपात को बनाए रखना चाहते हैं, तो आपको कितने मैदे का उपयोग करना चाहिए?",
+   "opts": [
+    "220 grams<br>220 ग्राम",
+    "242 grams<br>242 ग्राम",
+    "264 grams<br>264 ग्राम",
+    "198 grams<br>198 ग्राम"
+   ],
+   "my_ans": "B",
+   "sol": "7 इकाई = 154 ग्राम → 1 इकाई = 22 ग्राम. मैदा = 11 इकाई = 11 × 22 = 242 ग्राम",
+   "trick": "अनुपात की तुलना करें",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "Find the third proportional to 8 and 16.",
+   "hi": "8 और 16 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "32",
+    "28",
+    "24",
+    "30"
+   ],
+   "my_ans": "A",
+   "sol": "तृतीयानुपाती = 16²/8 = 256/8 = 32",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "A"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "If x is the mean proportional between (a+b) and (a-b), then find the value of x.",
+   "hi": "यदि (a + b) और (a-b) का मध्यानुपाती x है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "√(a+b)",
+    "√(a²+b²)",
+    "√(a²-b²)",
+    "√(a-b)"
+   ],
+   "my_ans": "C",
+   "sol": "x = √((a+b)(a-b)) = √(a²-b²)",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "C"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "Of three numbers, the first number is 25 and the third number is 100. If the second number is the mean proportional between the first and the third numbers, find the value of the second number.",
+   "hi": "तीन संख्याओं में से पहली संख्या 25 है और तीसरी संख्या 100 है। यदि दूसरी संख्या, पहली और तीसरी संख्या के बीच मध्यानुपाती है, तो दूसरी संख्या का मान ज्ञात कीजिए।",
+   "opts": [
+    "40",
+    "75",
+    "45",
+    "50"
+   ],
+   "my_ans": "D",
+   "sol": "दूसरी संख्या = √(25 × 100) = 5 × 10 = 50",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "D"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "What smallest positive number should be subtracted from 3 and 5 so that 8 is the third proportional to them?",
+   "hi": "3 और 5 में से कौन-सी सबसे छोटी धनात्मक संख्या घटाई जानी चाहिए, ताकि 8 उनका तृतीयानुपाती हो?",
+   "opts": [
+    "2",
+    "1",
+    "-2",
+    "-1"
+   ],
+   "my_ans": "B",
+   "sol": "(5-x)²/(3-x) = 8. x=1 रखने पर: (4)²/2 = 16/2 = 8. सही है",
+   "trick": "विकल्पों का प्रयोग करें",
+   "ans": "B"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "If the third proportional to 0.8 and 5.6 is n, then what is the value of n?",
+   "hi": "यदि 0.8 और 5.6 का तृतीयानुपाती n है, तो n का मान कितना है?",
+   "opts": [
+    "0.84",
+    "4.48",
+    "39.2",
+    "31.36"
+   ],
+   "my_ans": "C",
+   "sol": "n = 5.6²/0.8 = (5.6 × 5.6)/0.8 = 5.6 × 7 = 39.2",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "What is the ratio between the third proportional of 36 and 48 to the third proportional of 49 and 64?",
+   "hi": "36 और 48 के तृतीयानुपाती तथा 49 और 64 के तृतीयानुपाती का अनुपात क्या है?",
+   "opts": [
+    "38:41",
+    "49:64",
+    "3:5",
+    "16:25"
+   ],
+   "my_ans": "B",
+   "sol": "पहला = 48²/36 = 64. दूसरा = 64²/49. अनुपात = 64 : (64²/49) = 1 : 64/49 = 49 : 64",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "B"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Find the mean proportional between (x + y)² and (x - y)², (x and y are natural number and x > y).",
+   "hi": "(x + y)² और (x - y)² के बीच मध्यानुपाती ज्ञात कीजिए, (जहाँ x और y प्राकृतिक संख्याएँ हैं और x > y है)।",
+   "opts": [
+    "x² + y²",
+    "xy + y²",
+    "xy + x²",
+    "x² – y²"
+   ],
+   "my_ans": "D",
+   "sol": "मध्यानुपाती = √((x+y)²(x-y)²) = (x+y)(x-y) = x²-y²",
+   "trick": "मध्यानुपाती = √(a × b)",
+   "ans": "D"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "If the fourth proportional to 5, 15, and 25 is k, then find k.",
+   "hi": "यदि 5, 15 और 25 का चतुर्थानुपाती k है, तो k का मान ज्ञात कीजिए।",
+   "opts": [
+    "k = 60",
+    "k = 75",
+    "k = 90",
+    "k = 125"
+   ],
+   "my_ans": "B",
+   "sol": "5/15 = 25/k → 1/3 = 25/k → k = 75",
+   "trick": "चतुर्थानुपाती a/b = c/d",
+   "ans": "B"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "The cost of a certain fabric is directly proportional to its length for a given width. If the cost of 8 meters of the fabric is ₹3,200, what will be the cost of 25 meters of the same fabric?",
+   "hi": "एक निश्चित कपड़े की कीमत, दी गई चौड़ाई के लिए उसकी लंबाई के अनुक्रमानुपाती है। यदि 8 मीटर कपड़े की कीमत ₹3,200 है, तो उसी 25 मीटर कपड़े की कीमत क्या होगी?",
+   "opts": [
+    "₹9,600",
+    "₹9,800",
+    "₹10,000",
+    "₹9,400"
+   ],
+   "my_ans": "C",
+   "sol": "8 मीटर = 3200 → 1 मीटर = 400. 25 मीटर = 25 × 400 = 10,000",
+   "trick": "एकांक नियम (Unitary Method)",
+   "ans": "C"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "The fourth proportional to three positive numbers is 120. If the first number is twice the second, and the third number is five times the first, then find the sum of all the three numbers.",
+   "hi": "तीन धनात्मक संख्याओं का चतुर्थानुपाती 120 है। यदि पहली संख्या दूसरी संख्या की दोगुनी है और तीसरी संख्या पहली संख्या की पाँच गुनी है, तो तीनों संख्याओं का योग ज्ञात कीजिए।",
+   "opts": [
+    "300",
+    "288",
+    "336",
+    "312"
+   ],
+   "my_ans": "D",
+   "sol": "माना दूसरी = x, पहली = 2x, तीसरी = 10x. (2x/x) = (10x/120) → 2 = 10x/120 → x = 24. संख्याएँ: 48, 24, 240. योग = 312",
+   "trick": "अनुपात और चतुर्थानुपाती का उपयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "The fourth proportional to 1.2, 4.8, and 7.15 is:",
+   "hi": "1.2, 4.8 और 7.15 का चतुर्थानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "28.8",
+    "28.2",
+    "28.4",
+    "28.6"
+   ],
+   "my_ans": "D",
+   "sol": "1.2/4.8 = 7.15/x → 1/4 = 7.15/x → x = 7.15 × 4 = 28.6",
+   "trick": "चतुर्थानुपाती a/b = c/d",
+   "ans": "D"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "If 27 and 81 are the first two terms of a proportion and the third proportional to these numbers is used as the length of a rectangle whose width is 4 units, what is the numeric value of the area of the rectangle?",
+   "hi": "यदि 27 और 81 एक समानुपात के पहले दो पद हैं और इन संख्याओं के तृतीयानुपाती का उपयोग 4 इकाई चौड़ाई वाले आयत की लंबाई के रूप में किया जाता है, तो आयत के क्षेत्रफल का संख्यात्मक मान क्या होगा?",
+   "opts": [
+    "6561",
+    "729",
+    "972",
+    "486"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयानुपाती = 81²/27 = 243. क्षेत्रफल = लंबाई × चौड़ाई = 243 × 4 = 972",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "C"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "Find the third proportional to (a² − b²) and (a + b), given that a ≠ b.",
+   "hi": "(a² − b²) और (a + b) का तीसरा समानुपाती ज्ञात करें, दिया गया है कि a ≠ b है।",
+   "opts": [
+    "(a-b)²/(a+b)",
+    "(a+b)²/(a-b)",
+    "(a-b)/(a+b)",
+    "(a+b)/(a-b)"
+   ],
+   "my_ans": "D",
+   "sol": "तृतीयानुपाती = (a+b)²/(a²-b²) = (a+b)²/((a+b)(a-b)) = (a+b)/(a-b)",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "D"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "If 2, x, and 18 are in continued proportion, find the positive value of x.",
+   "hi": "यदि 2, x और 18 वितत समानुपात (continued proportion) में हैं, तो x का धनात्मक मान ज्ञात कीजिए।",
+   "opts": [
+    "6",
+    "12",
+    "4",
+    "9"
+   ],
+   "my_ans": "A",
+   "sol": "2/x = x/18 → x² = 36 → x = 6",
+   "trick": "वितत समानुपात में x² = ac",
+   "ans": "A"
+  },
+  {
+   "n": 107,
+   "lvl": "UG",
+   "en": "Three positive numbers are in proportion such that the ratio of the first number to the second number is the same as the ratio of the second number to the third number. If the first number is 16 and the second number is 24, find the value of the third number.",
+   "hi": "तीन धनात्मक संख्याएँ, समानुपात में इस प्रकार हैं कि पहली संख्या और दूसरी संख्या का अनुपात, दूसरी संख्या और तीसरी संख्या के अनुपात के बराबर है। यदि पहली संख्या 16 और दूसरी संख्या 24 है, तो तीसरी संख्या का मान ज्ञात कीजिए।",
+   "opts": [
+    "36",
+    "64",
+    "32",
+    "48"
+   ],
+   "my_ans": "A",
+   "sol": "16/24 = 24/x → 2/3 = 24/x → 2x = 72 → x = 36",
+   "trick": "समानुपात a/b = b/c",
+   "ans": "A"
+  }
+ ]
+}

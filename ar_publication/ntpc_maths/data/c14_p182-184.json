@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Average",
+  "hi": "औसत",
+  "total": 93,
+  "gl": 53,
+  "ug": 40
+ },
+ "source_pages": "182-184",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Find the average of 312, 126, 100 and 99.",
+   "hi": "312, 126, 100 और 99 का औसत ज्ञात कीजिए।",
+   "opts": [
+    "158.25",
+    "159.25",
+    "157.25",
+    "156.25"
+   ],
+   "my_ans": "B",
+   "sol": "योग = 312+126+100+99 = 637<br>औसत = 637 ÷ 4 = 159.25",
+   "trick": "औसत = कुल योग ÷ कुल संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "There are 42 members in group A, 31 members in group B and 32 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹335, ₹103 and ₹271, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 42 सदस्य, समूह B में 31 सदस्य और समूह C में 32 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹335, ₹103 और ₹271 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "247",
+    "248",
+    "242",
+    "249"
+   ],
+   "my_ans": "A",
+   "sol": "कुल खर्च = (42×335) + (31×103) + (32×271) = 14070 + 3193 + 8672 = 25935<br>कुल सदस्य = 42+31+32 = 105<br>औसत = 25935 ÷ 105 = 247",
+   "trick": "कुल औसत = (कुल योग) ÷ (कुल संख्या)",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "In a cricket match, a team needs 300 runs in 50 overs to win. In the first 15 overs, the team scores at an average rate of 5 runs per over. In the next 15 overs, the scoring rate improves to 8 runs per over. In the following 10 overs, the rate drops to 4 runs per over. What should be the run rate per over required in the remaining overs to win the match?",
+   "hi": "एक क्रिकेट मैच में, एक टीम को जीतने के लिए 50 ओवरों में 300 रन चाहिए। पहले 15 ओवरों में, टीम 5 रन प्रति ओवर के औसत से स्कोर बनाती है। अगले 15 ओवरों में, स्कोर का औसत बढ़कर 8 रन प्रति ओवर हो जाता है। उसके बाद के 10 ओवरों में, यह घटकर 4 रन प्रति ओवर हो जाता है। मैच जीतने के लिए शेष ओवरों में, प्रति ओवर कितना औसत रन बनाना होगा?",
+   "opts": [
+    "7.5 runs per over<br>7.5 रन प्रति ओवर",
+    "6.95 runs per over<br>6.95 रन प्रति ओवर",
+    "6.5 runs per over<br>6.5 रन प्रति ओवर",
+    "6.75 runs per over<br>6.75 रन प्रति ओवर"
+   ],
+   "my_ans": "C",
+   "sol": "बनाए गए रन = (15×5) + (15×8) + (10×4) = 75 + 120 + 40 = 235<br>शेष रन = 300 - 235 = 65<br>शेष ओवर = 50 - (15+15+10) = 10<br>आवश्यक रन रेट = 65 ÷ 10 = 6.5",
+   "trick": "शेष रन ÷ शेष ओवर = आवश्यक रन रेट",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "The average of 11 results is 61. If the average of the first 6 results is 64 and that of the last 6 is 61, find the 6th result.",
+   "hi": "11 परिणामों का औसत 61 है। यदि पहले 6 परिणामों का औसत 64 है और अंतिम 6 का औसत 61 है, तो 6वां परिणाम ज्ञात कीजिए।",
+   "opts": [
+    "78",
+    "79",
+    "80",
+    "81"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = 11×61 = 671<br>पहले 6 + अंतिम 6 का योग = (6×64) + (6×61) = 384 + 366 = 750<br>6वां परिणाम = 750 - 671 = 79",
+   "trick": "6वां परिणाम = (पहले 6 का योग + अंतिम 6 का योग) - कुल योग",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "There are 30 members in group A, 21 members in group B and 40 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹378, ₹355 and ₹224, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 30 सदस्य, समूह B में 21 सदस्य और समूह C में 40 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹378, ₹355 और ₹224 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "304",
+    "305",
+    "302",
+    "303"
+   ],
+   "my_ans": "B",
+   "sol": "कुल खर्च = (30×378) + (21×355) + (40×224) = 11340 + 7455 + 8960 = 27755<br>कुल सदस्य = 30+21+40 = 91<br>औसत = 27755 ÷ 91 = 305",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A car runs for 10 hours and Its speed during the i-th hour is i³ km per hour, where i=1,2,3...,10. The average speed of the car for the journey is _____ km per hour.",
+   "hi": "एक कार 10 घंटे चलती है और i वें घंटे के दौरान उसकी चाल i³ km प्रति घंटा है, जहाँ i=1,2,3...,10 है। यात्रा के दौरान कार की औसत चाल _____ km प्रति घंटा है।",
+   "opts": [
+    "320.5",
+    "350.2",
+    "305.2",
+    "302.5"
+   ],
+   "my_ans": "D",
+   "sol": "कुल दूरी = 1³ + 2³ + ... + 10³ = [n(n+1)/2]² = [10×11/2]² = 55² = 3025<br>औसत चाल = कुल दूरी ÷ कुल समय = 3025 ÷ 10 = 302.5",
+   "trick": "प्रथम n घनों का योग = [n(n+1)/2]²",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "There are 42 members in group A, 14 members in group B and 21 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹275, ₹430 and ₹498, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 42 सदस्य, समूह B में 14 सदस्य और समूह C में 21 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹275, ₹430 और ₹498 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "364",
+    "369",
+    "366",
+    "365"
+   ],
+   "my_ans": "A",
+   "sol": "कुल खर्च = (42×275) + (14×430) + (21×498) = 11550 + 6020 + 10458 = 28028<br>कुल सदस्य = 42+14+21 = 77<br>औसत = 28028 ÷ 77 = 364",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "The average marks of 17 students in a class is 40. If the marks of each student are doubled, find the new average.",
+   "hi": "एक कक्षा में 17 विद्यार्थियों के अंकों का औसत 40 है। यदि प्रत्येक विद्यार्थी के अंक दोगुने कर दिए जाएं, तो नया औसत ज्ञात कीजिए।",
+   "opts": [
+    "17",
+    "34",
+    "80",
+    "40"
+   ],
+   "my_ans": "C",
+   "sol": "यदि प्रत्येक संख्या को k से गुणा किया जाए, तो नया औसत = पुराना औसत × k<br>नया औसत = 40 × 2 = 80",
+   "trick": "प्रत्येक संख्या में बदलाव औसत में भी वही बदलाव लाता है",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "There are 52 members in group A, 22 members in group B and 36 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹420, ₹437 and ₹101, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 52 सदस्य, समूह B में 22 सदस्य और समूह C में 36 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य द्वारा खर्च की गई औसत राशि क्रमशः ₹420, ₹437 और ₹101 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "323",
+    "320",
+    "319",
+    "322"
+   ],
+   "my_ans": "C",
+   "sol": "कुल खर्च = (52×420) + (22×437) + (36×101) = 21840 + 9614 + 3636 = 35090<br>कुल सदस्य = 52+22+36 = 110<br>औसत = 35090 ÷ 110 = 319",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "A building contractor employs 25 skilled workers and 5 unskilled workers. To a skilled worker he pays ₹30 per hour and to an unskilled worker ₹24 per hour. The average wage per hour (in ₹) paid by the contractor is:",
+   "hi": "एक बिल्डिंग ठेकेदार 25 कुशल श्रमिकों और 5 अकुशल श्रमिकों को काम पर रखता है। एक कुशल श्रमिक को वह ₹30 प्रति घंटा और एक अकुशल श्रमिक को ₹24 प्रति घंटा की दर से भुगतान करता है। ठेकेदार द्वारा भुगतान की जाने वाली प्रति घंटा औसत मजदूरी (₹ में) ज्ञात करें।",
+   "opts": [
+    "29",
+    "25",
+    "32",
+    "27"
+   ],
+   "my_ans": "A",
+   "sol": "कुल मजदूरी = (25×30) + (5×24) = 750 + 120 = 870<br>कुल श्रमिक = 25+5 = 30<br>औसत = 870 ÷ 30 = 29",
+   "trick": "औसत = (कुल मजदूरी) ÷ (कुल श्रमिक)",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "The average of 13 numbers is 8. If each number is multiplied by 7, then what will the new average be:",
+   "hi": "13 संख्याओं का औसत 8 है। यदि प्रत्येक संख्या को 7 से गुणा किया जाए, तो नया औसत कितना होगा?",
+   "opts": [
+    "7",
+    "8",
+    "13",
+    "56"
+   ],
+   "my_ans": "D",
+   "sol": "नया औसत = पुराना औसत × 7<br>नया औसत = 8 × 7 = 56",
+   "trick": "प्रत्येक संख्या में गुणा करने पर औसत भी उसी संख्या से गुणा होता है",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "There are 32 members in group A, 52 members in group B and 73 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹266, ₹470 and ₹168, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 32 सदस्य, समूह B में 52 सदस्य और समूह C में 73 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹266, ₹470 और ₹168 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "291",
+    "288",
+    "286",
+    "292"
+   ],
+   "my_ans": "B",
+   "sol": "कुल खर्च = (32×266) + (52×470) + (73×168) = 8512 + 24440 + 12264 = 45216<br>कुल सदस्य = 32+52+73 = 157<br>औसत = 45216 ÷ 157 = 288",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "What is the average of all the natural numbers from 1 to 63?",
+   "hi": "1 से 63 तक की सभी प्राकृत संख्याओं का औसत ज्ञात कीजिए।",
+   "opts": [
+    "32.5",
+    "33",
+    "32",
+    "31.5"
+   ],
+   "my_ans": "C",
+   "sol": "औसत = (प्रथम संख्या + अंतिम संख्या) ÷ 2<br>औसत = (1 + 63) ÷ 2 = 64 ÷ 2 = 32",
+   "trick": "लगातार संख्याओं का औसत = (पहला + अंतिम) ÷ 2",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "What is the average of 7, 9 and 11?",
+   "hi": "7, 9 और 11 का औसत ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "10",
+    "7",
+    "9"
+   ],
+   "my_ans": "D",
+   "sol": "औसत = (7+9+11) ÷ 3 = 27 ÷ 3 = 9",
+   "trick": "लगातार अंतर वाली संख्याओं में बीच वाली संख्या ही औसत होती है",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "What is the average of all the natural numbers from 1 to 64?",
+   "hi": "1 से 64 तक की सभी प्राकृत संख्याओं का औसत ज्ञात कीजिए।",
+   "opts": [
+    "32.5",
+    "33",
+    "33.5",
+    "32"
+   ],
+   "my_ans": "A",
+   "sol": "औसत = (1 + 64) ÷ 2 = 65 ÷ 2 = 32.5",
+   "trick": "औसत = (पहला + अंतिम) ÷ 2",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The average of the marks of 16 students in a class is 56. If the marks of each student are doubled, find the new average.",
+   "hi": "एक कक्षा के 16 विद्यार्थियों के अंकों का औसत 56 है। यदि प्रत्येक विद्यार्थी के अंक दोगुने कर दिए जाएं, तो नया औसत क्या होगा?",
+   "opts": [
+    "16",
+    "32",
+    "112",
+    "56"
+   ],
+   "my_ans": "C",
+   "sol": "नया औसत = पुराना औसत × 2<br>नया औसत = 56 × 2 = 112",
+   "trick": "प्रत्येक संख्या में गुणा करने पर औसत भी उसी संख्या से गुणा होता है",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "There are 75 members in group A, 47 members in group B and 15 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹493, ₹397 and ₹465, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 75 सदस्य, समूह B में 47 सदस्य और समूह C में 15 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹493, ₹397 और ₹465 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "462",
+    "461",
+    "457",
+    "455"
+   ],
+   "my_ans": "C",
+   "sol": "कुल खर्च = (75×493) + (47×397) + (15×465) = 36975 + 18659 + 6975 = 62609<br>कुल सदस्य = 75+47+15 = 137<br>औसत = 62609 ÷ 137 = 457",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "C"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "There are 53 members in group A, 86 members in group B and 57 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹424, ₹337 and ₹122, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 53 सदस्य, समूह B में 86 सदस्य और समूह C में 57 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य द्वारा खर्च की गई औसत राशि क्रमशः ₹424, ₹337 और ₹122 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "302",
+    "298",
+    "303",
+    "297"
+   ],
+   "my_ans": "B",
+   "sol": "कुल खर्च = (53×424) + (86×337) + (57×122) = 22472 + 28982 + 6954 = 58408<br>कुल सदस्य = 53+86+57 = 196<br>औसत = 58408 ÷ 196 = 298",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "There are 21 members in group A, 11 members in group B and 17 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹465, ₹410 and ₹466, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 21 सदस्य, समूह B में 11 सदस्य और समूह C में 17 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹465, ₹410 और ₹466 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "452",
+    "453",
+    "454",
+    "455"
+   ],
+   "my_ans": "B",
+   "sol": "कुल खर्च = (21×465) + (11×410) + (17×466) = 9765 + 4510 + 7922 = 22197<br>कुल सदस्य = 21+11+17 = 49<br>औसत = 22197 ÷ 49 = 453",
+   "trick": "कुल औसत = (कुल खर्च) ÷ (कुल सदस्य)",
+   "ans": "B"
+  }
+ ]
+}

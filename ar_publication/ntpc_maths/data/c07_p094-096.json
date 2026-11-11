@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Profit & Loss",
+  "hi": "लाभ एवं हानि",
+  "total": 102,
+  "gl": 49,
+  "ug": 53
+ },
+ "source_pages": "94-96",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 59 dozens of articles at the rate of ₹520 per dozen. He sold each one of them at the rate of ₹52. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने ₹520 प्रति दर्जन की दर से 59 दर्जन वस्तुएँ खरीदीं। उसने प्रत्येक वस्तु को ₹52 की दर से बेचा। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "23%",
+    "21%",
+    "20%",
+    "19%"
+   ],
+   "my_ans": "C",
+   "sol": "CP प्रति वस्तु = 520/12 = 43.33, SP प्रति वस्तु = 52.<br>लाभ = 52 - 43.33 = 8.67.<br>लाभ % = (8.67/43.33) × 100 = 20%.",
+   "trick": "लाभ % = (SP/CP - 1) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 60 dozens of articles at the rate of ₹474 per dozen. He sold each one of them at the rate of ₹79. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 60 दर्जन वस्तुएं ₹474 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹79 की दर से बेची। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "99%",
+    "102%",
+    "100%",
+    "101%"
+   ],
+   "my_ans": "C",
+   "sol": "CP प्रति वस्तु = 474/12 = 39.5.<br>SP प्रति वस्तु = 79.<br>लाभ % = ((79 - 39.5)/39.5) × 100 = 100%.",
+   "trick": "प्रति वस्तु CP और SP निकालें, फिर लाभ % निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "By selling an article at 4/11 of its actual selling price, Nirbhay incurs a loss of 20%. If he sells it at 71% of its actual selling price, then the profit percentage is:",
+   "hi": "वस्तु को उसके वास्तविक विक्रय मूल्य के 4/11 पर बेचने पर, निर्भय को 20% की हानि होती है। यदि वह इसे वास्तविक विक्रय मूल्य के 71% पर बेचता है, तो लाभ प्रतिशत क्या होगा:",
+   "opts": [
+    "58.3%",
+    "58.5%",
+    "56.2%",
+    "57.8%"
+   ],
+   "my_ans": "C",
+   "sol": "माना वास्तविक SP = 1100. 4/11 पर SP = 400. CP = 400/0.8 = 500.<br>71% पर SP = 781. लाभ = 781 - 500 = 281.<br>लाभ % = (281/500) × 100 = 56.2%.",
+   "trick": "वास्तविक SP को ऐसी संख्या मानें जो 11 से कटे।",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "By selling an article at 3/11 of its marked price, Hitesh incurs a loss of 15%. If he sells it at 54% of its marked price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके अंकित मूल्य के 3/11 पर बेचने पर हितेश को 15% की हानि होती है। यदि वह उसे अंकित मूल्य के 54% पर बेचता है, तो लाभ प्रतिशत क्या होगा:",
+   "opts": [
+    "67.2%",
+    "68.3%",
+    "67.4%",
+    "69.5%"
+   ],
+   "my_ans": "B",
+   "sol": "माना MP = 1100. 3/11 पर SP = 300. CP = 300/0.85 = 352.94.<br>54% पर SP = 594. लाभ = 594 - 352.94 = 241.06.<br>लाभ % = (241.06/352.94) × 100 ≈ 68.3%.",
+   "trick": "MP को 1100 मानकर CP निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "A vendor bought oranges at the rate of 40 oranges for ₹220, and sold them at ₹98 per dozen. Find his profit or loss percent. (Round off to two decimal places.)",
+   "hi": "एक विक्रेता ने ₹220 में 40 संतरे खरीदे और उन्हें ₹98 प्रति दर्जन की दर से बेचा। उसका लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "Loss 28.56%",
+    "Loss 48.48%",
+    "Profit 28.56%",
+    "Profit 48.48%"
+   ],
+   "my_ans": "D",
+   "sol": "CP प्रति संतरा = 220/40 = 5.5. SP प्रति संतरा = 98/12 = 8.166.<br>लाभ = 8.166 - 5.5 = 2.666.<br>लाभ % = (2.666/5.5) × 100 ≈ 48.48%.",
+   "trick": "एक वस्तु का CP और SP निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 52 dozens of articles at the rate of ₹400 per dozen. He sold each one of them at the rate of ₹58. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 52 दर्जन वस्तुएं ₹400 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹58 की दर से बेची। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "75%",
+    "74%",
+    "71%",
+    "73%"
+   ],
+   "my_ans": "B",
+   "sol": "CP प्रति वस्तु = 400/12 = 33.33. SP प्रति वस्तु = 58.<br>लाभ = 58 - 33.33 = 24.67.<br>लाभ % = (24.67/33.33) × 100 = 74%.",
+   "trick": "प्रति वस्तु CP और SP निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 32 dozens of articles at the rate of ₹102 per dozen. He sold each one of them at the rate of ₹68. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 32 दर्जन वस्तुएँ ₹102 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹68 की दर से बेची। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "702%",
+    "700%",
+    "697%",
+    "701%"
+   ],
+   "my_ans": "B",
+   "sol": "CP प्रति वस्तु = 102/12 = 8.5. SP प्रति वस्तु = 68.<br>लाभ = 68 - 8.5 = 59.5.<br>लाभ % = (59.5/8.5) × 100 = 700%.",
+   "trick": "लाभ % = ((SP/CP) - 1) × 100",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 67 dozens of articles at the rate of ₹300 per dozen. He sold each one of them at the rate of ₹34. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने ₹300 प्रति दर्जन की दर से 67 दर्जन वस्तुएं खरीदीं। उसने प्रत्येक वस्तु को ₹34 की दर से बेचा। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "37%",
+    "38%",
+    "34%",
+    "36%"
+   ],
+   "my_ans": "D",
+   "sol": "CP प्रति वस्तु = 300/12 = 25. SP प्रति वस्तु = 34.<br>लाभ = 34 - 25 = 9.<br>लाभ % = (9/25) × 100 = 36%.",
+   "trick": "प्रति वस्तु CP और SP निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 30% profit. Q sells the same item to R at 52% loss. If R paid ₹ 3900 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 30% लाभ पर बेचता है। Q उसी वस्तु को R को 52% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹3900 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "6250",
+    "6253",
+    "6252",
+    "6248"
+   ],
+   "my_ans": "A",
+   "sol": "माना P का CP = x. Q का CP = 1.3x. R का CP = 1.3x × 0.48 = 3900.<br>0.624x = 3900 → x = 3900/0.624 = 6250.",
+   "trick": "क्रमिक प्रतिशत परिवर्तन का उपयोग करें: x × 1.3 × 0.48 = 3900",
+   "ans": "A"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 19 dozens of articles at the rate of ₹390 per dozen. He sold each one of them at the rate of ₹78. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 19 दर्जन वस्तुएं ₹390 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹78 की दर से बेची। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "140%",
+    "143%",
+    "137%",
+    "142%"
+   ],
+   "my_ans": "A",
+   "sol": "CP प्रति वस्तु = 390/12 = 32.5. SP प्रति वस्तु = 78.<br>लाभ = 78 - 32.5 = 45.5.<br>लाभ % = (45.5/32.5) × 100 = 140%.",
+   "trick": "प्रति वस्तु CP और SP निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "During a sale 35% of the goods are sold at 22% profit, 40% of the remaining goods are sold at 37% profit and the still remaining goods are sold at a loss of 38%. If there is an overall profit of x%, then what is the value of x?",
+   "hi": "एक सेल के दौरान, 35% माल को 22% के लाभ पर बेचा जाता है, शेष माल का 40% माल, 37% के लाभ पर बेचा जाता है और उसके बाद के शेष माल को 38% की हानि पर बेचा जाता है। यदि समग्र लाभ x% है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "6.8",
+    "5.4",
+    "2.5",
+    "10.8"
+   ],
+   "my_ans": "C",
+   "sol": "कुल माल = 100. 35% का लाभ = 35 × 0.22 = 7.7.<br>शेष 65 का 40% = 26. लाभ = 26 × 0.37 = 9.62.<br>अंतिम शेष = 39. हानि = 39 × (-0.38) = -14.82.<br>कुल लाभ = 7.7 + 9.62 - 14.82 = 2.5%.",
+   "trick": "भारित औसत (Weighted Average) का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "A trader sells an article at a profit of 16%. If he had sold it for ₹80 more, his profit would have been 48%. Find the number of articles sold, given that the total cost price is ₹8,000.",
+   "hi": "एक व्यापारी एक वस्तु को 16% के लाभ पर बेचता है। यदि उसने इसे ₹80 अधिक में बेचा होता, तो उसका लाभ 48% होता। यदि कुल क्रय मूल्य ₹8,000 है, तो बेची गई वस्तुओं की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "35",
+    "38",
+    "32",
+    "25"
+   ],
+   "my_ans": "C",
+   "sol": "लाभ में अंतर = 48% - 16% = 32%.<br>32% of CP = 80 → 0.32 × CP = 80 → CP = 250.<br>कुल CP 8000 है, तो वस्तुएं = 8000/250 = 32.",
+   "trick": "लाभ का अंतर = विक्रय मूल्य का अंतर",
+   "ans": "C"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Surjeet buys 20 kg of sugar for ₹900. He sells 18 kg of sugar for ₹918. What is the percentage profit made by Surjeet?",
+   "hi": "सुर्जित 20 kg चीनी ₹900 में खरीदता है और 18 kg चीनी ₹918 में बेचता है। सुर्जित द्वारा अर्जित लाभ का प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "11 1/9%",
+    "13 1/9%",
+    "13 1/3%",
+    "11 1/3%"
+   ],
+   "my_ans": "C",
+   "sol": "CP प्रति kg = 900/20 = 45. SP प्रति kg = 918/18 = 51.<br>लाभ = 51 - 45 = 6.<br>लाभ % = (6/45) × 100 = 13 1/3%.",
+   "trick": "प्रति kg CP और SP निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "A shopkeeper sells a watch at a loss of 10%. If he had sold it for ₹450 more, he would have made a profit of 5%. What is the cost price of the watch?",
+   "hi": "एक दुकानदार, किसी घड़ी को 10% हानि पर बेचता है। यदि उसने उसे ₹450 अधिक में बेचा होता, तो उसे 5% लाभ हुआ होता। घड़ी का क्रय मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹4,500",
+    "₹3,500",
+    "₹3,000",
+    "₹4,000"
+   ],
+   "my_ans": "C",
+   "sol": "प्रतिशत अंतर = 5% - (-10%) = 15%.<br>15% = 450 → 1% = 30.<br>100% = 3000.",
+   "trick": "CP = (अंतर / % अंतर) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "A fruit seller uses a faulty balance that reads 900 grams as 1 kg. He sells apples at ₹150 per kg (as per faulty balance). If his purchase price is ₹120 per kg (actual weight), what is his actual profit percentage?",
+   "hi": "कोई फल विक्रेता, उस दोषपूर्ण तराजू का उपयोग करता है जो 900 ग्राम को 1 kg दर्शाता है। वह ₹150 प्रति kg (दोषपूर्ण तराजू के अनुसार) की दर से सेब बेचता है। यदि उसका क्रय मूल्य ₹120 प्रति kg (वास्तविक वजन) है, तो उसका वास्तविक लाभ प्रतिशत कितना है?",
+   "opts": [
+    "37 8/9%",
+    "37 4/9%",
+    "38 8/9%",
+    "38 4/9%"
+   ],
+   "my_ans": "C",
+   "sol": "900g का CP = 0.9 × 120 = 108. SP = 150.<br>लाभ = 150 - 108 = 42.<br>लाभ % = (42/108) × 100 = 38 8/9%.",
+   "trick": "वास्तविक CP और SP की तुलना करें।",
+   "ans": "C"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "A trader buys a consignment of goods for ₹2400. He sells one-third of the goods at a 20% profit, and one-fourth of the goods at a 10% loss, and the remaining goods at cost price. What is the overall profit or loss percentage?",
+   "hi": "कोई व्यापारी, ₹2400 में माल खरीदता है। वह माल का एक-तिहाई भाग 20% के लाभ पर बेचता है और माल का एक-चौथाई भाग 10% की हानि पर बेचता है, तथा शेष माल को क्रय मूल्य पर बेचता है। समग्र लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "4 1/5% loss",
+    "4 1/5% profit",
+    "4 1/6% loss",
+    "4 1/6% profit"
+   ],
+   "my_ans": "D",
+   "sol": "1/3 पर 20% लाभ = 20/3 = 6.66%.<br>1/4 पर 10% हानि = -10/4 = -2.5%.<br>शेष (1 - 1/3 - 1/4 = 5/12) पर 0% लाभ = 0.<br>कुल लाभ = 6.66 - 2.5 = 4.166% = 4 1/6% profit.",
+   "trick": "भारित औसत (Weighted Average) का उपयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "A shopkeeper sells an article to A at a profit of 20%. A sells it to B at a profit of 25%. If B pays ₹3,000, what is the cost price of the article for the shopkeeper?",
+   "hi": "एक दुकानदार, A को एक वस्तु 20% के लाभ पर बेचता है। A उसे B को 25% के लाभ पर बेचता है। यदि B इसके लिए ₹3,000 का भुगतान करता है, तो दुकानदार के लिए वस्तु का क्रय मूल्य क्या है?",
+   "opts": [
+    "₹2,200",
+    "₹2,100",
+    "₹2,080",
+    "₹2,000"
+   ],
+   "my_ans": "D",
+   "sol": "माना CP = x. x × 1.2 × 1.25 = 3000.<br>x × 1.5 = 3000 → x = 2000.",
+   "trick": "क्रमिक लाभ: CP × (1+a/100) × (1+b/100) = Final Price",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "73-75",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Raghav earns a monthly salary of ₹24,000. He spends ₹7,500 on house rent and ₹3,500 on food and utility bills every month. The remaining amount is his monthly savings. In the month of his birthday, he spends his entire monthly saving on celebrations. Find Raghav’s total savings in a year (in ₹).",
+   "hi": "राघव की मासिक आय ₹24,000 है। वह प्रत्येक महीने मकान किराए पर ₹7,500 और खाने-पीने व बिजली-पानी के बिलों पर ₹3,500 खर्च करता है। शेष राशि उसकी मासिक बचत है। अपने जन्मदिन वाले महीने में वह अपनी संपूर्ण मासिक बचत उत्सव मनाने में खर्च कर देता है। राघव की एक वर्ष की कुल बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,43,000",
+    "1,45,000",
+    "1,36,000",
+    "1,38,000"
+   ],
+   "my_ans": "A",
+   "sol": "मासिक बचत = 24000 - (7500 + 3500) = 13000.<br>एक वर्ष में 12 महीने होते हैं, जन्मदिन के महीने में बचत 0 है, तो कुल बचत = 11 × 13000 = 1,43,000.",
+   "trick": "कुल बचत = (12 - 1) × मासिक बचत",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Girish scored 768 marks in an examination and was 60 marks short of 92% of maximum marks. In the same examination, his friend scored 738 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 768 अंक प्राप्त किए जो पूर्णांक के 92% से 60 अंक कम थे। उसी परीक्षा में उसके मित्र ने 738 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "81%",
+    "79%",
+    "80%",
+    "82%"
+   ],
+   "my_ans": "D",
+   "sol": "92% = 768 + 60 = 828.<br>कुल अंक (100%) = 828 ÷ 0.92 = 900.<br>मित्र का प्रतिशत = (738 ÷ 900) × 100 = 82%.",
+   "trick": "कुल अंक = (प्राप्त अंक + कमी) ÷ प्रतिशत",
+   "ans": "D"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "20% of a number is more than 20% of 620 by 220. The number is:",
+   "hi": "किसी संख्या का 20%, 620 के 20% से 220 अधिक है। वह संख्या ___________ है।",
+   "opts": [
+    "1770",
+    "1720",
+    "1820",
+    "1570"
+   ],
+   "my_ans": "B",
+   "sol": "माना संख्या x है। 0.2x - 0.2(620) = 220.<br>0.2x - 124 = 220 → 0.2x = 344.<br>x = 344 ÷ 0.2 = 1720.",
+   "trick": "संख्या का अंतर = अंतर ÷ प्रतिशत",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 15% in the first year and increased by 25% in the second year. Its population after two years is _______.",
+   "hi": "एक गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 15% की वृद्धि हुई और दूसरे वर्ष में 25% की वृद्धि हुई। दो वर्षों के बाद इसकी जनसंख्या _______ होगी।",
+   "opts": [
+    "4,16,875",
+    "3,62,500",
+    "4,06,000",
+    "3,33,500"
+   ],
+   "my_ans": "A",
+   "sol": "जनसंख्या = 290000 × (115/100) × (125/100).<br>2900 × 115 × 1.25 = 4,16,875.",
+   "trick": "अंतिम मान = प्रारंभिक मान × (1+r1/100) × (1+r2/100)",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "What will be the positive difference in the population of a town 3 years ago and 2 years ago, if its current population is 450000 and the population has been increasing at a rate of 25% every year?",
+   "hi": "यदि किसी शहर की वर्तमान जनसंख्या 450,000 है और जनसंख्या में 25% वार्षिक दर से वृद्धि हो रही है, तो 3 वर्ष पहले और 2 वर्ष पहले की जनसंख्या में धनात्मक अंतर कितना होगा?",
+   "opts": [
+    "57950",
+    "57050",
+    "57600",
+    "56850"
+   ],
+   "my_ans": "C",
+   "sol": "2 वर्ष पहले = 450000 ÷ (1.25)² = 288000.<br>3 वर्ष पहले = 288000 ÷ 1.25 = 230400.<br>अंतर = 288000 - 230400 = 57600.",
+   "trick": "पीछे जाने के लिए जनसंख्या को (1+r/100) से भाग दें",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Rohit gets double the amount in 6 years when invested at compound interest, compounded annually. In how many years will the amount become sixteen times itself?",
+   "hi": "रोहित द्वारा चक्रवृद्धि ब्याज पर निवेश की गई कोई धनराशि 6 वर्षों में दोगुनी हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित होता है। कितने वर्षों में वह धनराशि स्वयं की सोलह गुनी हो जाएगी?",
+   "opts": [
+    "12",
+    "48",
+    "24",
+    "96"
+   ],
+   "my_ans": "C",
+   "sol": "2 गुना = 6 वर्ष.<br>16 गुना = 2⁴ गुना.<br>समय = 4 × 6 = 24 वर्ष.",
+   "trick": "गुना की घात को समय से गुणा करें",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Girish scored 416 marks in an examination and was 79 marks short of 33% of maximum marks. In the same examination, his friend scored 555 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 416 अंक प्राप्त किए जो कि पूर्णांक के 33% से 79 अंक कम थे। उसी परीक्षा में उसके मित्र ने 555 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत क्या है?",
+   "opts": [
+    "38%",
+    "36%",
+    "37%",
+    "39%"
+   ],
+   "my_ans": "C",
+   "sol": "33% = 416 + 79 = 495.<br>कुल अंक = 495 ÷ 0.33 = 1500.<br>मित्र का % = (555 ÷ 1500) × 100 = 37%.",
+   "trick": "कुल अंक = (प्राप्त अंक + कमी) ÷ प्रतिशत",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "The price of fuel decreases by 30%, 20% and 50% in three successive months, but increases by 40% in the fourth month. What is the percentage increase or decrease in the price of fuel in the fourth month as compared to its original price?",
+   "hi": "ईंधन की कीमत लगातार तीन महीनों में 30%, 20% और 50% घटती है, लेकिन चौथे महीने में 40% बढ़ जाती है। चौथे महीने में ईंधन की कीमत में इसकी मूल कीमत की तुलना में कितना प्रतिशत वृद्धि या कमी हुई है?",
+   "opts": [
+    "Increase by 55.4%<br>55.4% की वृद्धि",
+    "Decrease by 57.2%<br>57.2% की कमी",
+    "Decrease by 60.8%<br>60.8% की कमी",
+    "Increase by 63.2%<br>63.2% की वृद्धि"
+   ],
+   "my_ans": "C",
+   "sol": "100 × 0.7 × 0.8 × 0.5 × 1.4 = 39.2.<br>कमी = 100 - 39.2 = 60.8%.",
+   "trick": "क्रमिक परिवर्तन = 100 × (1-r1/100) × (1-r2/100)...",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 15% in the first year and increased by 30% in the second year. Its population after two years is _______.",
+   "hi": "किसी गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 15% और दूसरे वर्ष में 30% की वृद्धि हुई। दो वर्षों के बाद इसकी जनसंख्या कितनी है?",
+   "opts": [
+    "3,33,500",
+    "3,77,000",
+    "4,33,550",
+    "4,20,500"
+   ],
+   "my_ans": "C",
+   "sol": "290000 × 1.15 × 1.30 = 4,33,550.",
+   "trick": "अंतिम जनसंख्या = प्रारंभिक × (1+r1/100) × (1+r2/100)",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "The price of fuel decreases by 40%, 60% and 60% in three successive months, but increases by 70% in the fourth month. What is the percentage increase or decrease in the price of fuel in the fourth month as compared to its original price?",
+   "hi": "ईंधन की कीमत लगातार तीन महीनों में 40%, 60% और 60% घटती है, लेकिन चौथे महीने में 70% बढ़ जाती है। चौथे महीने में ईंधन की कीमतों में इसकी मूल कीमत की तुलना में कितना प्रतिशत वृद्धि या कमी हुई है?",
+   "opts": [
+    "Decrease by 84.38%<br>84.38% की कमी",
+    "Increase by 87.04%<br>87.04% की वृद्धि",
+    "Decrease by 83.68%<br>83.68% की कमी",
+    "Increase by 80.38%<br>80.38% की वृद्धि"
+   ],
+   "my_ans": "C",
+   "sol": "100 × 0.6 × 0.4 × 0.4 × 1.7 = 16.32.<br>कमी = 100 - 16.32 = 83.68%.",
+   "trick": "क्रमिक परिवर्तन = 100 × (1-r1/100) × (1-r2/100)...",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "S, T, U, V, E, F and G are sitting around a circular table facing the centre. Only two people sit between E and F when counted from the right of E. Only two people sit between F and T. Only three people sit between E and U. S sits to the immediate left of V. Who sits third to the left of G?",
+   "hi": "S, T, U, V, E, F और G एक गोल मेज के परितः केंद्र की ओर अभिमुख होकर बैठे हैं। E के दाएं से गिनती करने पर E और F के बीच केवल दो व्यक्ति बैठे हैं। F और T के बीच केवल दो व्यक्ति बैठे हैं। E और U के बीच केवल तीन व्यक्ति बैठे हैं। S, V के ठीक बाएं पड़ोस में बैठा है। G के बाएं से तीसरे स्थान पर कौन बैठा है?",
+   "opts": [
+    "F",
+    "S",
+    "V",
+    "U"
+   ],
+   "my_ans": "C",
+   "sol": "बैठने का क्रम: E, G, F, V, S, T, U (दाएं से बाएं).<br>G के बाएं तीसरा V है।",
+   "trick": "वृत्ताकार व्यवस्था में दायां/बायां ध्यान से देखें",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 90% of the registered voters cast their vote and 20% of the votes polled were found invalid. Winning candidate got 51% of the valid votes and won the election by a margin of 3870 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 90% ने अपना वोट डाला और 20% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 51% प्राप्त हुआ और उसने 3870 वोटों के अंतर से चुनाव जीता। कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "268750",
+    "268730",
+    "268760",
+    "268720"
+   ],
+   "my_ans": "A",
+   "sol": "माना कुल मतदाता x.<br>वैध वोट = x × 0.9 × 0.8 = 0.72x.<br>जीत का अंतर = 0.72x × (0.51 - 0.49) = 3870.<br>0.72x × 0.02 = 3870 → x = 268750.",
+   "trick": "कुल मतदाता = अंतर ÷ (वैध % × जीत का अंतर %)",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "A pharmaceutical research laboratory purchases analytical testing kits priced at ₹12,000 each. The supplier offers a scheme of 'Buy 10 kits, get 2 free,' along with a volume discount of 15% on purchases exceeding ₹1,00,000, and an additional 5% institutional discount for research facilities. If the laboratory takes advantage of the complete scheme offer, what is the effective discount percentage they receive on the total value of kits? (Rounded off to two decimal places)",
+   "hi": "एक फार्मास्युटिकल अनुसंधान प्रयोगशाला ₹12,000 प्रति किट की दर से विश्लेषणात्मक परीक्षण किट खरीदती है। आपूर्तिकर्ता '10 किट खरीदने पर, 2 मुफ्त पाएं' की योजना के साथ-साथ ₹1,00,000 से अधिक की खरीद पर 15% की मात्रा छूट (volume discount) और अनुसंधान संस्थानों के लिए 5% की अतिरिक्त संस्थागत छूट प्रदान करता है। यदि प्रयोगशाला इस पूरी योजना का लाभ उठाती है, तो किटों के कुल मूल्य पर उसे प्राप्त प्रभावी छूट प्रतिशत कितना होगा?",
+   "opts": [
+    "34.18%",
+    "30.25%",
+    "35.42%",
+    "32.71%"
+   ],
+   "my_ans": "D",
+   "sol": "12 किट का मूल्य = 120000.<br>मुफ्त छूट = 2/12 = 16.66%.<br>शेष पर 15% और फिर 5% छूट.<br>प्रभावी छूट = 1 - (10/12 × 0.85 × 0.95) = 32.71%.",
+   "trick": "प्रभावी छूट = 1 - (सफल मूल्य/अंकित मूल्य)",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Due to a decrease in manpower, production in a factory falls by 52%. By what percentage should the working hours be increased to restore the original level of production?",
+   "hi": "कर्मचारियों की संख्या में कमी के कारण एक कारखाने में उत्पादन 52% कम हो जाता है। उत्पादन को मूल स्तर पर वापस लाने के लिए कार्य-घंटों में कितने प्रतिशत की वृद्धि की जानी चाहिए?",
+   "opts": [
+    "104 2/3%",
+    "52%",
+    "108 1/3%",
+    "48%"
+   ],
+   "my_ans": "C",
+   "sol": "उत्पादन = 100 से 48 हो गया.<br>वापस 100 करने के लिए वृद्धि = (52/48) × 100 = 108.33%.",
+   "trick": "वृद्धि % = (कमी / (100 - कमी)) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 80% of the registered voters cast their vote and 10% of the votes polled were found invalid. Winning candidate got 89% of the valid votes and won the election by a margin of 351 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 80% ने अपना वोट डाला और 10% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 89% प्राप्त हुआ और उसने 351 वोटों के अंतर से चुनाव जीत लिया। कुल कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "650",
+    "675",
+    "600",
+    "625"
+   ],
+   "my_ans": "D",
+   "sol": "वैध वोट = x × 0.8 × 0.9 = 0.72x.<br>जीत का अंतर = 0.72x × (0.89 - 0.11) = 351.<br>0.72x × 0.78 = 351 → x = 625.",
+   "trick": "कुल मतदाता = अंतर ÷ (वैध % × जीत का अंतर %)",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "In an election between two candidates, 80% of the registered voters cast their vote and 15% of the votes polled were found invalid. Winning candidate got 75% of the valid votes and won the election by a margin of 289 votes. How many voters were registered?",
+   "hi": "दो उम्मीदवारों के बीच हुए चुनाव में, पंजीकृत मतदाताओं में से 80% ने अपना वोट डाला और 15% वोट अमान्य पाए गए। विजयी उम्मीदवार को वैध वोटों का 75% प्राप्त हुआ और उसने 289 वोटों के अंतर से चुनाव जीत लिया। कितने मतदाता पंजीकृत थे?",
+   "opts": [
+    "848",
+    "852",
+    "851",
+    "850"
+   ],
+   "my_ans": "D",
+   "sol": "वैध वोट = x × 0.8 × 0.85 = 0.68x.<br>जीत का अंतर = 0.68x × (0.75 - 0.25) = 289.<br>0.68x × 0.5 = 289 → x = 850.",
+   "trick": "कुल मतदाता = अंतर ÷ (वैध % × जीत का अंतर %)",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "The population of a village was 2,90,000. It increased by 15% in the first year and increased by 20% in the second year. Its population after two years is _______.",
+   "hi": "एक गाँव की जनसंख्या 2,90,000 थी। पहले वर्ष में इसमें 15% की वृद्धि हुई और दूसरे वर्ष 20% की वृद्धि हुई। दो वर्ष बाद गाँव की जनसंख्या कितनी होगी?",
+   "opts": [
+    "4,00,200",
+    "3,91,500",
+    "3,33,500",
+    "3,48,000"
+   ],
+   "my_ans": "A",
+   "sol": "290000 × 1.15 × 1.20 = 4,00,200.",
+   "trick": "अंतिम जनसंख्या = प्रारंभिक × (1+r1/100) × (1+r2/100)",
+   "ans": "A"
+  }
+ ]
+}

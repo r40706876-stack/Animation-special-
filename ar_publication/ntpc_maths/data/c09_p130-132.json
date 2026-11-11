@@ -1,0 +1,350 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Simple Interest",
+  "hi": "साधारण ब्याज",
+  "total": 59,
+  "gl": 24,
+  "ug": 35
+ },
+ "source_pages": "130-132",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "At what rate (in percentage) per year will a sum of money double itself in 20 years on simple interest?",
+   "hi": "साधारण ब्याज पर कोई धनराशि किस वार्षिक दर से (प्रतिशत में) 20 वर्षों में स्वयं की दोगुनी हो जाएगी?",
+   "opts": [
+    "10",
+    "5",
+    "7",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "धनराशि दोगुनी होने का मतलब है ब्याज = मूलधन।<br>दर = 100 / समय = 100 / 20 = 5%.",
+   "trick": "दर × समय = 100 (दोगुना होने के लिए)",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹6,000 fetch a simple interest of ₹1,080 at 6% per annum rate of interest?",
+   "hi": "किस अवधि में (वर्ष में) ₹6,000 की धनराशि पर 6% वार्षिक साधारण ब्याज की दर से साधारण ब्याज के रूप में ₹1,080 प्राप्त होंगे?",
+   "opts": [
+    "6",
+    "3",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "समय = (ब्याज × 100) / (मूलधन × दर)<br>समय = (1080 × 100) / (6000 × 6) = 108000 / 36000 = 3 वर्ष।",
+   "trick": "समय = (SI × 100) / (P × R)",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Priya lent ₹920 to her friend at 5% per annum simple interest for 3 years. How much simple interest does she earn in this period?",
+   "hi": "प्रिया ने अपनी सहेली को ₹920 की धनराशि 5% वार्षिक साधारण ब्याज दर पर 3 वर्ष के लिए उधार दी। इस समयावधि में वह कितना साधारण ब्याज अर्जित करती है?",
+   "opts": [
+    "₹150",
+    "₹138",
+    "₹145",
+    "₹127"
+   ],
+   "my_ans": "B",
+   "sol": "ब्याज = (P × R × T) / 100<br>ब्याज = (920 × 5 × 3) / 100 = 13800 / 100 = ₹138.",
+   "trick": "SI = (P × R × T) / 100",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "A sum of money is invested at a simple interest rate of 8% per annum. After 3 years, the simple interest earned is ₹1,920. What is the principal invested?",
+   "hi": "किसी धनराशि को 8% वार्षिक साधारण ब्याज दर पर निवेश किया जाता है। 3 वर्ष बाद अर्जित साधारण ब्याज ₹1,920 है। निवेशित मूलधन ज्ञात कीजिए।",
+   "opts": [
+    "₹6,000",
+    "₹8,000",
+    "₹7,500",
+    "₹9,000"
+   ],
+   "my_ans": "B",
+   "sol": "मूलधन = (ब्याज × 100) / (दर × समय)<br>मूलधन = (1920 × 100) / (8 × 3) = 192000 / 24 = ₹8,000.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "A certain sum amounts to ₹5,200 in 2 years and ₹6,400 in 4 years at simple interest. What is the rate of interest per annum?",
+   "hi": "एक निश्चित धनराशि साधारण ब्याज पर 2 वर्षों में ₹5,200 और 4 वर्षों में ₹6,400 हो जाती है। वार्षिक ब्याज दर कितनी है?",
+   "opts": [
+    "15 percent<br>15 प्रतिशत",
+    "18 percent<br>18 प्रतिशत",
+    "12 percent<br>12 प्रतिशत",
+    "10 percent<br>10 प्रतिशत"
+   ],
+   "my_ans": "A",
+   "sol": "2 वर्ष का ब्याज = 6400 - 5200 = ₹1200।<br>मूलधन = 5200 - (2 × 600) = ₹4000।<br>दर = (1200 × 100) / (4000 × 2) = 15%.",
+   "trick": "दर = (ब्याज का अंतर × 100) / (मूलधन × समय का अंतर)",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Priya invested ₹3200 in a bank at a simple interest rate of 12% per annum. If she kept her money in the bank for 5 years, what will be the total interest earned?",
+   "hi": "प्रिया ने एक बैंक में ₹3200 की धनराशि 12% वार्षिक साधारण ब्याज दर पर निवेश की। यदि वह अपनी धनराशि 5 वर्षों तक बैंक में रखती है, तो उसे कुल कितना ब्याज प्राप्त होगा?",
+   "opts": [
+    "₹1940",
+    "₹1930",
+    "₹1910",
+    "₹1920"
+   ],
+   "my_ans": "D",
+   "sol": "ब्याज = (3200 × 12 × 5) / 100<br>ब्याज = 32 × 60 = ₹1,920.",
+   "trick": "SI = (P × R × T) / 100",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "What sum (in ₹) will earn a simple interest of ₹1,440 in 2 years at 12% per year rate of interest?",
+   "hi": "निम्नलिखित में से किस राशि (₹ में) पर 12% की वार्षिक ब्याज दर से 2 वर्षों में ₹1,440 का साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "345.6",
+    "3,000",
+    "6,000",
+    "12,000"
+   ],
+   "my_ans": "C",
+   "sol": "मूलधन = (1440 × 100) / (12 × 2)<br>मूलधन = 144000 / 24 = ₹6,000.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Two equal sums of money are lent out for 2 years each, one at 5% per annum simple interest and the other at 7% per annum simple interest. If the difference in simple interest earned on the two sums is ₹40, then what was the principal of each sum (in ₹)?",
+   "hi": "दो बराबर राशियाँ, एक 5% वार्षिक साधारण ब्याज दर पर और दूसरी 7% वार्षिक साधारण ब्याज दर पर 2 वर्ष के लिए उधार दी जाती हैं। यदि दोनों राशियों पर अर्जित साधारण ब्याज का अंतर ₹40 है, तो प्रत्येक राशि का मूलधन (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,200",
+    "1,400",
+    "1,000",
+    "800"
+   ],
+   "my_ans": "C",
+   "sol": "ब्याज का अंतर = P × (R2 - R1) × T / 100<br>40 = P × (7 - 5) × 2 / 100 → 40 = P × 4 / 100<br>P = 4000 / 4 = ₹1,000.",
+   "trick": "P = (SI का अंतर × 100) / (दरों का अंतर × समय)",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "The amount under simple interest on a sum of ₹8,000 for 3 years at an interest rate of 7.5% per annum is",
+   "hi": "₹8,000 की धनराशि पर 3 वर्षों के लिए 7.5% वार्षिक ब्याज की दर से साधारण ब्याज के तहत प्राप्त होने वाला मिश्रधन ज्ञात कीजिए।",
+   "opts": [
+    "₹9800",
+    "₹9400",
+    "₹9600",
+    "₹10000"
+   ],
+   "my_ans": "A",
+   "sol": "ब्याज = (8000 × 7.5 × 3) / 100 = 80 × 22.5 = ₹1800。<br>मिश्रधन = मूलधन + ब्याज = 8000 + 1800 = ₹9800.",
+   "trick": "A = P + SI",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "A sum of money amounts to ₹4,600 in 3 years at 5% simple interest per annum. What is the sum?",
+   "hi": "यदि कोई धनराशि, 5% वार्षिक साधारण ब्याज दर पर 3 वर्षों में ₹4,600 हो जाती है, तो वह धनराशि ज्ञात कीजिए।",
+   "opts": [
+    "₹3,500",
+    "₹4,200",
+    "₹3,800",
+    "₹4,000"
+   ],
+   "my_ans": "D",
+   "sol": "मिश्रधन = P(1 + RT/100)<br>4600 = P(1 + 15/100) = P(1.15)<br>P = 4600 / 1.15 = ₹4,000.",
+   "trick": "P = (A × 100) / (100 + RT)",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Two banks, A and B, offered loans at 3.5% and 6.5% per annum, respectively. Ashish borrowed an amount of ₹3,40,000 from each bank. Find the positive difference between the amounts of simple interest (in ₹) paid to the two banks by Ashish after 2 years.",
+   "hi": "दो बैंक, A और B, क्रमशः 3.5% और 6.5% वार्षिक दर से ऋण देते हैं। आशीष ने प्रत्येक बैंक से ₹3,40,000 का ऋण लिया। 2 वर्षों के बाद आशीष द्वारा दोनों बैंकों को भुगतान किए गए साधारण ब्याज की धनराशियों के बीच धनात्मक अंतर (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "21,900",
+    "19,900",
+    "21,400",
+    "20,400"
+   ],
+   "my_ans": "D",
+   "sol": "ब्याज का अंतर = P × (R2 - R1) × T / 100<br>अंतर = 340000 × (6.5 - 3.5) × 2 / 100<br>अंतर = 3400 × 3 × 2 = ₹20,400.",
+   "trick": "SI का अंतर = P × (दरों का अंतर) × T / 100",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "If a sum is invested at a simple interest rate of 8% per annum for 9 months to earn an interest of ₹18,000, what was the principal amount invested?",
+   "hi": "यदि किसी राशि को 8% वार्षिक साधारण ब्याज दर पर 9 महीने के लिए निवेश किया जाता है और उस पर ₹18,000 ब्याज के रूप में प्राप्त होता है, तो निवेश की गई मूल राशि कितनी थी?",
+   "opts": [
+    "₹4,00,000",
+    "₹3,5,000",
+    "₹3,00,000",
+    "₹2,50,000"
+   ],
+   "my_ans": "C",
+   "sol": "समय = 9/12 = 3/4 वर्ष।<br>मूलधन = (18000 × 100) / (8 × 3/4) = 1800000 / 6 = ₹3,00,000.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "A sum, when invested at 20% simple interest per annum, amounts to ₹5,280 after 3 years. What is the simple interest (in ₹) on the same sum at the same rate in 2 years?",
+   "hi": "एक राशि को 20% वार्षिक साधारण ब्याज दर पर निवेश करने पर 3 वर्षों में वह ₹5,280 हो जाती। उसी राशि पर उसी ब्याज दर से 2 वर्षों में साधारण ब्याज (₹ में) कितना होगा?",
+   "opts": [
+    "2,640",
+    "1,320",
+    "5,280",
+    "660"
+   ],
+   "my_ans": "B",
+   "sol": "मिश्रधन = P(1 + 0.20 × 3) = 1.6P = 5280 → P = 3300。<br>ब्याज (2 वर्ष) = 3300 × 0.20 × 2 = ₹1,320.",
+   "trick": "SI = P × R × T / 100",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "Two banks, A and B, offered loans at 3.5% and 6.5% per annum, respectively. Ajay borrowed an amount of ₹2,60,000 from each bank. Find the positive difference between the amounts of simple interest (in ₹) paid to the two banks by Ajay after 2 years.",
+   "hi": "दो बैंक, A और B, क्रमशः 3.5% और 6.5% वार्षिक दर से ऋण देते हैं। अजय ने प्रत्येक बैंक से ₹2,60,000 का ऋण लिया। 2 वर्षों के बाद अजय द्वारा दोनों बैंकों को भुगतान किए गए साधारण ब्याज की धनराशियों के बीच धनात्मक अंतर (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "16,600",
+    "17,100",
+    "15,100",
+    "15,600"
+   ],
+   "my_ans": "D",
+   "sol": "ब्याज का अंतर = 260000 × (6.5 - 3.5) × 2 / 100<br>अंतर = 2600 × 3 × 2 = ₹15,600.",
+   "trick": "SI का अंतर = P × (दरों का अंतर) × T / 100",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "What sum (in ₹) will earn a simple interest of ₹1,320 in 4 years at 12% per year rate of interest?",
+   "hi": "निम्नलिखित में से किस राशि (₹ में) पर 12% की वार्षिक ब्याज दर से 4 वर्षों में ₹1,320 का साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "2,750",
+    "1,375",
+    "633.6",
+    "5,500"
+   ],
+   "my_ans": "A",
+   "sol": "मूलधन = (1320 × 100) / (12 × 4) = 132000 / 48 = ₹2,750.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "What sum (in ₹) will earn a simple interest of ₹1,440 in 2 years at 16% per year rate of interest?",
+   "hi": "निम्नलिखित में से किस राशि (₹ में) पर 16% की वार्षिक ब्याज दर से 2 वर्षों में ₹1,440 का साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "4,500",
+    "2,250",
+    "460.8",
+    "9,000"
+   ],
+   "my_ans": "A",
+   "sol": "मूलधन = (1440 × 100) / (16 × 2) = 144000 / 32 = ₹4,500.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "The difference in simple interest on a sum of money invested at 4% per annum for five years and for three years is ₹784. Find the simple interest (in ₹) on the same sum invested at the same rate of interest for eight years.",
+   "hi": "किसी राशि को 4% वार्षिक दर से पाँच वर्ष और तीन वर्ष के लिए निवेश करने पर प्राप्त साधारण ब्याज में अंतर ₹784 है। उसी राशि को समान ब्याज दर पर आठ वर्ष के लिए निवेश करने पर प्राप्त साधारण ब्याज (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "3136",
+    "2352",
+    "4144",
+    "3920"
+   ],
+   "my_ans": "A",
+   "sol": "ब्याज का अंतर = P × R × (T2 - T1) / 100<br>784 = P × 4 × 2 / 100 → P = 78400 / 8 = 9800。<br>8 वर्ष का ब्याज = 9800 × 4 × 8 / 100 = 98 × 32 = ₹3,136.",
+   "trick": "SI = P × R × T / 100",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "If ₹25,200 is invested at a simple interest rate of 6% per annum for 4 years, find the interest earned.",
+   "hi": "यदि ₹25,200 को 6% वार्षिक साधारण ब्याज दर पर 4 वर्षों के लिए निवेश किया जाता है, तो अर्जित ब्याज ज्ञात कीजिए।",
+   "opts": [
+    "₹6,048",
+    "₹6,070",
+    "₹8,021",
+    "₹6,025"
+   ],
+   "my_ans": "A",
+   "sol": "ब्याज = (25200 × 6 × 4) / 100 = 252 × 24 = ₹6,048.",
+   "trick": "SI = (P × R × T) / 100",
+   "ans": "A"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "What sum (in ₹) will earn a simple interest of ₹1,320 in 3 years at 16% per year rate of interest?",
+   "hi": "वह राशि (₹ में) ज्ञात कीजिए जिस पर 16% वार्षिक ब्याज दर से 3 वर्षों में साधारण ब्याज के रूप में ₹1,320 प्राप्त होंगे?",
+   "opts": [
+    "633.6",
+    "2,750",
+    "1,375",
+    "5,500"
+   ],
+   "my_ans": "B",
+   "sol": "मूलधन = (1320 × 100) / (16 × 3) = 132000 / 48 = ₹2,750.",
+   "trick": "P = (SI × 100) / (R × T)",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "If the simple interest on ₹5,000 for T years at 6% p.a. equals the simple interest on ₹7,500 for 4 years at 4% per annum, then find the value of T.",
+   "hi": "यदि ₹5,000 पर T वर्षों के लिए 6% वार्षिक दर से प्राप्त साधारण ब्याज, ₹7,500 पर 4 वर्षों के लिए 4% वार्षिक दर से प्राप्त साधारण ब्याज के बराबर है, तो T का मान ज्ञात कीजिए।",
+   "opts": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "my_ans": "B",
+   "sol": "(5000 × 6 × T) / 100 = (7500 × 4 × 4) / 100<br>30000T = 120000 → T = 4.",
+   "trick": "P1 × R1 × T1 = P2 × R2 × T2",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "Which formula correctly calculates simple interest when the principal, rate, and time are known?",
+   "hi": "मूलधन, ब्याज दर और समय ज्ञात होने पर साधारण ब्याज की सही गणना करने का सूत्र कौन-सा है?",
+   "opts": [
+    "Simple Interest = (Principal × Rate × Time) / 100<br>साधारण ब्याज = (मूलधन × ब्याज दर × समय) / 100",
+    "Simple Interest = Principal + Rate + Time<br>साधारण ब्याज = मूलधन + ब्याज दर + समय",
+    "Simple Interest = Principal × Time / Rate<br>साधारण ब्याज = मूलधन × समय / ब्याज दर",
+    "Simple Interest = Principal × Rate / Time<br>साधारण ब्याज = मूलधन × ब्याज दर / समय"
+   ],
+   "my_ans": "A",
+   "sol": "साधारण ब्याज का मानक सूत्र SI = (P × R × T) / 100 है।",
+   "trick": "SI = (P × R × T) / 100",
+   "ans": "A"
+  }
+ ]
+}

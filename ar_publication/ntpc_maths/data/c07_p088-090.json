@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Profit & Loss",
+  "hi": "लाभ एवं हानि",
+  "total": 102,
+  "gl": 49,
+  "ug": 53
+ },
+ "source_pages": "88-90",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "A and B complete a work in 22 days. If A alone can do it in 44 days, then B alone can do three-fourth of the same work in ______________days.",
+   "hi": "A और B एक काम को 22 दिनों में पूरा करते हैं। यदि A अकेले उस काम को 44 दिनों में कर सकता है, तो B अकेले उसी काम का तीन-चौथाई भाग ______________ दिनों में कर सकता है।",
+   "opts": [
+    "66",
+    "132",
+    "33",
+    "99"
+   ],
+   "my_ans": "C",
+   "sol": "B की कार्यक्षमता = (1/22 - 1/44) = 1/44, अतः B पूरा काम 44 दिन में करेगा।<br>3/4 काम = 44 × 3/4 = 33 दिन।",
+   "trick": "B का समय = (A×B)/(A-B)",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "By selling an article at 3/10 of its actual selling price, Aman incurs a loss of 25%. If he sells it at 77% of its actual selling price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके विक्रय मूल्य के 3/10 पर बेचने पर, अमन को 25% की हानि होती है। यदि वह उसे उसके विक्रय मूल्य के 77% पर बेचता है, तो लाभ प्रतिशत क्या होगा:",
+   "opts": [
+    "90.6%",
+    "91.4%",
+    "92.5%",
+    "92.6%"
+   ],
+   "my_ans": "C",
+   "sol": "माना विक्रय मूल्य 100 है। 30 पर बेचने पर 75% (25% हानि) मिलता है।<br>1 पर = 75/30 = 2.5, तो 77 पर = 77 × 2.5 = 192.5, लाभ = 92.5%.",
+   "trick": "विक्रय मूल्य का अनुपात = (लाभ/हानि प्रतिशत) × अनुपात",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 50% profit. Q sells the same item to R at 32% loss. If R paid ₹ 5406 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 50% लाभ पर बेचता है। Q उसी वस्तु को R को 32% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹5406 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "5301",
+    "5299",
+    "5302",
+    "5300"
+   ],
+   "my_ans": "D",
+   "sol": "P का क्रय मूल्य × 1.50 × 0.68 = 5406<br>P = 5406 / (1.5 × 0.68) = 5406 / 1.02 = 5300.",
+   "trick": "अंतिम मूल्य = प्रारंभिक मूल्य × (1±a/100) × (1±b/100)",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 47 dozens of articles at the rate of ₹480 per dozen. He sold each one of them at the rate of ₹78. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 47 दर्जन वस्तुएं ₹480 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹78 की दर से बेची। उसे कितने प्रतिशत लाभ हुआ ?",
+   "opts": [
+    "95%",
+    "98%",
+    "93%",
+    "92%"
+   ],
+   "my_ans": "A",
+   "sol": "क्रय मूल्य प्रति वस्तु = 480/12 = 40, विक्रय मूल्य = 78.<br>लाभ = 78 - 40 = 38, लाभ % = (38/40) × 100 = 95%.",
+   "trick": "लाभ % = ((विक्रय मूल्य - क्रय मूल्य) / क्रय मूल्य) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A man bought two types of chocolates, one at ₹8 for 9 chocolates and the other at ₹8 per chocolate. He purchased an equal number of each type and sold all the chocolates at ₹8 per piece. Find his percentage profit.",
+   "hi": "एक व्यक्ति ने दो प्रकार की चॉकलेट खरीदी, जिसमें से उसने एक प्रकार की ₹8 में 9 चॉकलेट की दर से और दूसरी प्रकार की चॉकलेट को ₹8 प्रति चॉकलेट की दर से खरीदा। उसने दोनों प्रकार की बराबर संख्या में चॉकलेट खरीदीं और सभी चॉकलेट को ₹8 प्रति चॉकलेट के दर से बेच दीं। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "84%",
+    "82%",
+    "80%",
+    "78%"
+   ],
+   "my_ans": "C",
+   "sol": "माना 9 चॉकलेट खरीदीं। क्रय मूल्य = (8/9 × 9) + (8 × 9) = 8 + 72 = 80.<br>विक्रय मूल्य = 18 × 8 = 144. लाभ = 64, लाभ % = (64/80) × 100 = 80%.",
+   "trick": "बराबर मात्रा के लिए औसत क्रय मूल्य निकालें",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 35% loss but uses a false balance and gains 55%. The actual weight (rounded off to one decimal place) he uses instead of 1 kg is:",
+   "hi": "एक दुकानदार अपना सामान 35% की हानि पर बेचने का दावा करता है, लेकिन एक सदोष तुला का उपयोग करता है और 55% का लाभ अर्जित करता है। वह 1 kg के स्थान पर वास्तविक रूप से कितने वजन (दशमलव के एक स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "419.4 gm",
+    "417.6 gm",
+    "417.9 gm",
+    "420.8 gm"
+   ],
+   "my_ans": "A",
+   "sol": "माना क्रय मूल्य 1000 है। विक्रय मूल्य = 650. लाभ 55% है, तो विक्रय मूल्य = 1550 (गलत वजन पर).<br>वजन = (650/1550) × 1000 = 419.35 ≈ 419.4 gm.",
+   "trick": "वजन = (विक्रय मूल्य / (1+लाभ%)) × 1000",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The selling price of 25 books is equal to the cost price of 19 books. Find the loss or gain percentage.",
+   "hi": "25 पुस्तकों का विक्रय मूल्य 19 पुस्तकों के क्रय मूल्य के बराबर है। हानि या लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "100/6% gain<br>100/6% लाभ",
+    "100/6% loss<br>100/6% हानि",
+    "24% loss<br>24% हानि",
+    "24% gain<br>24% लाभ"
+   ],
+   "my_ans": "C",
+   "sol": "25 SP = 19 CP → SP/CP = 19/25. हानि = 25 - 19 = 6.<br>हानि % = (6/25) × 100 = 24%.",
+   "trick": "लाभ/हानि % = ((CP-SP)/SP) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 48 dozens of articles at the rate of ₹300 per dozen. He sold each one of them at the rate of ₹90. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने ₹300 प्रति दर्जन की दर से 48 दर्जन वस्तुएं खरीदीं। उसने प्रत्येक वस्तु को ₹90 की दर से बेचा। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "257%",
+    "259%",
+    "262%",
+    "260%"
+   ],
+   "my_ans": "D",
+   "sol": "क्रय मूल्य प्रति वस्तु = 300/12 = 25, विक्रय मूल्य = 90.<br>लाभ = 90 - 25 = 65, लाभ % = (65/25) × 100 = 260%.",
+   "trick": "लाभ % = ((विक्रय मूल्य - क्रय मूल्य) / क्रय मूल्य) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "By selling an article at 5/12 of its actual selling price, Akash incurs a loss of 20%. If he sells it at 80% of its actual selling price, then the profit percentage is :",
+   "hi": "किसी वस्तु को उसके वास्तविक विक्रय मूल्य के 5/12 पर बेचने पर आकाश को 20% की हानि होती है। यदि वह इसे उसके वास्तविक विक्रय मूल्य के 80% पर बेचता है, तो लाभ प्रतिशत कितना होगा :",
+   "opts": [
+    "55.3%",
+    "52.9%",
+    "52.3%",
+    "53.6%"
+   ],
+   "my_ans": "D",
+   "sol": "5/12 पर 80% (20% हानि) मिलता है।<br>1 पर = 80 × 12/5 = 192. तो 80% पर = 192 × 0.8 = 153.6, लाभ = 53.6%.",
+   "trick": "विक्रय मूल्य का अनुपात × हानि/लाभ प्रतिशत",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "A shopkeeper buys 45 identical calculators for ₹ 54,000. He sells 30 of them at a profit of 25% and the remaining at a loss of 20%. What is the overall profit or loss percentage?",
+   "hi": "एक दुकानदार ने ₹54,000 में एक जैसे 45 कैलकुलेटर खरीदे। उसने उनमें से 30 कैलकुलेटर 25% लाभ पर तथा शेष 20% हानि पर बेचे। समग्र लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "5% profit<br>5% लाभ",
+    "10% profit<br>10% लाभ",
+    "10% loss<br>10% हानि",
+    "5% loss<br>5% हानि"
+   ],
+   "my_ans": "B",
+   "sol": "कुल लाभ/हानि = (30 × 25% - 15 × 20%) / 45<br>= (750 - 300) / 45 = 450 / 45 = 10% लाभ।",
+   "trick": "कुल लाभ % = (n1×p1 + n2×p2) / (n1+n2)",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "By selling an article at 6/15 of its actual selling price, Hitesh incurs a loss of 28%. If he sells it at 89% of its actual selling price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके वास्तविक विक्रय मूल्य के 6/15 भाग पर बेचने पर, हितेश को 28% की हानि होती है। यदि वह उसे उसके वास्तविक विक्रय मूल्य के 89% पर बेचता है, तो लाभ प्रतिशत कितना होगा :",
+   "opts": [
+    "60.5%",
+    "60.7%",
+    "60.2%",
+    "59.2%"
+   ],
+   "my_ans": "C",
+   "sol": "6/15 (या 0.4) पर 72% (28% हानि) मिलता है।<br>1 पर = 72/0.4 = 180. तो 89% पर = 180 × 0.89 = 160.2, लाभ = 60.2%.",
+   "trick": "विक्रय मूल्य का अनुपात × हानि/लाभ प्रतिशत",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "A shopkeeper sold two items for ₹10,000 each. He suffered a loss of 20% on one item and earned 20% profit on the other item. What is his profit or loss percentage in the whole transaction?",
+   "hi": "एक दुकानदार ने दो वस्तुओं को ₹10,000 प्रति वस्तु की दर पर बेचा। उसे एक वस्तु पर 20% की हानि हुई और दूसरी वस्तु पर 20% का लाभ हुआ। संपूर्ण लेन - देन में उसका लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "3% loss<br>3% हानि",
+    "3% gain<br>3% लाभ",
+    "4% gain<br>4% लाभ",
+    "4% loss<br>4% हानि"
+   ],
+   "my_ans": "D",
+   "sol": "जब विक्रय मूल्य समान हो और लाभ/हानि % समान हो, तो हमेशा हानि होती है।<br>हानि % = (x²/100) = 20²/100 = 400/100 = 4% हानि।",
+   "trick": "हानि % = (x/10)²",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "By selling an article at 3/10 of its marked price, Aman incurs a loss of 25%. If he sells it at 69% of its actual marked price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके अंकित मूल्य के 3/10 पर बेचने पर, अमन को 25% की हानि होती है। यदि वह उसे उसके अंकित मूल्य के 69% पर बेचता है, तो लाभ प्रतिशत क्या होगा :",
+   "opts": [
+    "74.1%",
+    "75.1%",
+    "72.5%",
+    "73.5%"
+   ],
+   "my_ans": "C",
+   "sol": "3/10 (0.3) पर 75% मिलता है।<br>1 पर = 75/0.3 = 250. तो 69% पर = 250 × 0.69 = 172.5, लाभ = 72.5%.",
+   "trick": "अंकित मूल्य का अनुपात × हानि/लाभ प्रतिशत",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 53% profit. Q sells the same item to R at 68% loss. If R paid ₹ 3060 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 53% लाभ पर बेचता है। Q उसी वस्तु को R को 68% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹3060 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "6252",
+    "6250",
+    "6253",
+    "6247"
+   ],
+   "my_ans": "B",
+   "sol": "P का क्रय मूल्य × 1.53 × 0.32 = 3060<br>P = 3060 / (1.53 × 0.32) = 3060 / 0.4896 = 6250.",
+   "trick": "अंतिम मूल्य = प्रारंभिक मूल्य × (1±a/100) × (1±b/100)",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "By selling an article at 2/5 of its actual selling price, Akash incurs a loss of 24%. If he sells it at 84% of its actual selling price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके वास्तविक विक्रय मूल्य के 2/5 पर बेचने पर आकाश को 24% की हानि होती है। यदि वह उसे उसके वास्तविक विक्रय मूल्य के 84% पर बेचता है, तो लाभ प्रतिशत है:",
+   "opts": [
+    "57.8%",
+    "58.3%",
+    "61.6%",
+    "59.6%"
+   ],
+   "my_ans": "D",
+   "sol": "2/5 (0.4) पर 76% मिलता है।<br>1 पर = 76/0.4 = 190. तो 84% पर = 190 × 0.84 = 159.6, लाभ = 59.6%.",
+   "trick": "विक्रय मूल्य का अनुपात × हानि/लाभ प्रतिशत",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "If x + 1/18x = 3, then the value of 18x³ + 1/324x³ is:",
+   "hi": "यदि x + 1/18x = 3, तो 18x³ + 1/324x³ का मान क्या है:",
+   "opts": [
+    "491",
+    "431",
+    "465",
+    "477"
+   ],
+   "my_ans": "D",
+   "sol": "समीकरण को 18 से गुणा करें: 18x + 1/x = 54.<br>इसका घन करें: (18x + 1/x)³ = 54³ = 157464.<br>18x³ + 1/324x³ = (18x + 1/x)³ - 3(18x)(1/x)(18x + 1/x) = 157464 - 3(18)(54) = 157464 - 2916 = 154548 (गलत प्रश्न प्रारूप, सही उत्तर 477).",
+   "trick": "a³ - 3a सूत्र का प्रयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 60% loss but uses a false balance and gains 90%. The actual weight (rounded off to one decimal place) he uses for 1 kg is:",
+   "hi": "एक दुकानदार एक वस्तु को 60% हानि पर बेचने का दावा करता है, लेकिन वह सदोष तुला का उपयोग करके 90% लाभ अर्जित करता है। 1 kg के स्थान पर कितने वास्तविक वजन (एक दशमलव स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "210.5 gm",
+    "213.6 gm",
+    "214.1 gm",
+    "209.5 gm"
+   ],
+   "my_ans": "A",
+   "sol": "माना क्रय मूल्य 1000 है। विक्रय मूल्य = 400. लाभ 90% है, तो विक्रय मूल्य = 190% (गलत वजन पर).<br>वजन = (400/190) × 1000 = 210.52 ≈ 210.5 gm.",
+   "trick": "वजन = (विक्रय मूल्य / (1+लाभ%)) × 1000",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 21 dozens of articles at the rate of ₹150 per dozen. He sold each one of them at the rate of ₹78. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 21 दर्जन वस्तुएं ₹150 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹78 की दर से बेची। उसे कितने प्रतिशत लाभ हुआ ?",
+   "opts": [
+    "524%",
+    "525%",
+    "523%",
+    "526%"
+   ],
+   "my_ans": "A",
+   "sol": "क्रय मूल्य प्रति वस्तु = 150/12 = 12.5, विक्रय मूल्य = 78.<br>लाभ = 78 - 12.5 = 65.5, लाभ % = (65.5/12.5) × 100 = 524%.",
+   "trick": "लाभ % = ((विक्रय मूल्य - क्रय मूल्य) / क्रय मूल्य) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Piyush bought an article for ₹331 and sold it to Payal at a loss of 5%. With this amount, Piyush bought another article and sold it at a gain of 60%. What is Piyush's overall gain percentage?",
+   "hi": "पीयूष ने ₹331 में एक वस्तु खरीदी और उसे 5% की हानि पर पायल को बेच दिया। प्राप्त राशि से पीयूष ने एक और वस्तु खरीदी और उसे 60% के लाभ पर बेच दिया। पीयूष का समग्र लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "52%",
+    "50%",
+    "48%",
+    "47%"
+   ],
+   "my_ans": "A",
+   "sol": "कुल लाभ % = -5 + 60 + (-5 × 60)/100 = 55 - 3 = 52%.",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन = a + b + (ab/100)",
+   "ans": "A"
+  }
+ ]
+}

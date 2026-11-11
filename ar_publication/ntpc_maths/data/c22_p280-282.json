@@ -1,0 +1,350 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Geometry",
+  "hi": "ज्यामिति",
+  "total": 103,
+  "gl": 50,
+  "ug": 53
+ },
+ "source_pages": "280-282",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "The difference between the measure of an interior angle and an exterior angle of a regular polygon is 100°. What is the number of sides of the polygon?",
+   "hi": "एक सम बहुभुज के अंतः कोण और बाह्य कोण के माप का अंतर 100° है। बहुभुज की भुजाओं की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "12",
+    "9",
+    "8",
+    "10"
+   ],
+   "my_ans": "B",
+   "sol": "माना बाह्य कोण x है, तो अंतः कोण (180-x) है।<br>(180-x) - x = 100 → 2x = 80 → x = 40°<br>भुजाएं = 360/40 = 9.",
+   "trick": "बाह्य कोण = 360/n, अंतः + बाह्य = 180°",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "In quadrilateral PQRS, ∠ P = 2 ∠ Q, ∠ Q = ∠ R/4, ∠ R = 2 ∠ S. Find the value of ∠ S.",
+   "hi": "चतुर्भुज PQRS में, ∠ P = 2 ∠ Q, ∠ Q = ∠ R/4, ∠ R = 2 ∠ S है। ∠ S का मान ज्ञात कीजिए।",
+   "opts": [
+    "85°",
+    "80°",
+    "45°",
+    "60°"
+   ],
+   "my_ans": "B",
+   "sol": "∠R = 2∠S, ∠Q = 2∠S/4 = 0.5∠S, ∠P = 2(0.5∠S) = ∠S.<br>योग = P+Q+R+S = 360° → S + 0.5S + 2S + S = 360° → 4.5S = 360° → S = 80°.",
+   "trick": "सभी कोणों को एक चर (∠S) में बदलें और योग 360° रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "The sum of all interior angles of a regular polygon is 1800°. How many diagonals does the polygon have?",
+   "hi": "एक समबहुभुज के सभी अंत:कोणों का योगफल 1800° है। इस बहुभुज में कितने विकर्ण हैं?",
+   "opts": [
+    "54",
+    "51",
+    "50",
+    "53"
+   ],
+   "my_ans": "A",
+   "sol": "(n-2)×180 = 1800 → n-2 = 10 → n = 12.<br>विकर्ण = n(n-3)/2 = 12(9)/2 = 54.",
+   "trick": "अंतः कोण योग = (n-2)×180, विकर्ण = n(n-3)/2",
+   "ans": "A"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "A regular octagonal fountain has a circumradius of 10 m. Find the approximate length of each side.",
+   "hi": "एक सम अष्टभुजीय फव्वारे की परित्रिज्या 10 m है। प्रत्येक भुजा की सन्निकट लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "7.65 m",
+    "9.27 m",
+    "6.13 m",
+    "8.71 m"
+   ],
+   "my_ans": "A",
+   "sol": "भुजा = 2R sin(180/n) = 2×10×sin(180/8) = 20×sin(22.5°).<br>sin(22.5°) ≈ 0.3827 → 20×0.3827 = 7.654 m.",
+   "trick": "भुजा = 2R sin(π/n)",
+   "ans": "A"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the midpoints of the diagonals AC and BD, respectively. If AB = 21 cm, BC = 33 cm, DC = 11 cm, and AD = 52 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB || DC है और E तथा F क्रमशः विकर्ण AC और BD के मध्य बिंदु हैं। यदि AB = 21 cm, BC = 33 cm, DC = 11 cm और AD = 52 cm है, तो EF की लंबाई (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "5",
+    "4",
+    "6",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "EF = |AB - DC| / 2 = |21 - 11| / 2 = 10 / 2 = 5 cm.",
+   "trick": "समांतर भुजाओं वाले चतुर्भुज में विकर्णों के मध्य बिंदुओं की दूरी = (a-b)/2",
+   "ans": "A"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "A string initially in the shape of a circle with a radius of 21 cm is cut into two distinct pieces. The first piece is reshaped into a rectangle where the length is twice its breadth, while the second piece is formed into a square. If the perimeter of the rectangle is 24 cm greater than the perimeter of the square, find the breadth of the rectangle. [Use π = 22/7]",
+   "hi": "एक डोरी, जो प्रारंभ में 21 cm त्रिज्या वाले वृत्त के आकार की है, को दो अलग-अलग टुकड़ों में काटा जाता है। पहले टुकड़े को पुनः आकार देकर एक आयत बनाया जाता है जिसकी लंबाई, उसकी चौड़ाई की दोगुनी है, जबकि दूसरे टुकड़े से एक वर्ग बनाया जाता है। यदि आयत का परिमाप, वर्ग के परिमाप से 24 cm अधिक है, तो आयत की चौड़ाई ज्ञात कीजिए। [π = 22/7 का प्रयोग कीजिए]",
+   "opts": [
+    "4 cm",
+    "13 cm",
+    "4.25 cm",
+    "26 cm"
+   ],
+   "my_ans": "B",
+   "sol": "कुल परिधि = 2×(22/7)×21 = 132 cm. माना आयत का परिमाप P1, वर्ग का P2.<br>P1+P2 = 132, P1-P2 = 24 → 2P1 = 156 → P1 = 78.<br>आयत परिमाप 2(2b+b) = 6b = 78 → b = 13 cm.",
+   "trick": "कुल लंबाई स्थिर रहती है, परिमाप का योग = वृत्त की परिधि",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "A quadrilateral has one diagonal of length 36 cm, and the perpendiculars from the other two vertices to this diagonal are 20 cm and 10 cm. What is the area of this quadrilateral?",
+   "hi": "एक चतुर्भुज के एक विकर्ण की लंबाई 36 cm है तथा अन्य दो शीर्षों से इस विकर्ण पर डाले गए लंब क्रमशः 20 cm और 10 cm हैं। इस चतुर्भुज का क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "360 cm²",
+    "540 cm²",
+    "480 cm²",
+    "600 cm²"
+   ],
+   "my_ans": "B",
+   "sol": "क्षेत्रफल = 1/2 × विकर्ण × (h1 + h2) = 1/2 × 36 × (20 + 10) = 18 × 30 = 540 cm².",
+   "trick": "क्षेत्रफल = 1/2 × d × (h1 + h2)",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the mid points of the diagonals AC and BD, respectively. If AB = 14 cm, BC = 64 cm, DC = 72 cm and AD = 47 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB || DC है, तथा E और F क्रमशः विकर्ण AC और BD के मध्य बिंदु हैं। यदि AB = 14 cm, BC = 64 cm, DC = 72 cm और AD = 47 cm है, तो EF की लंबाई (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "28",
+    "31",
+    "27",
+    "29"
+   ],
+   "my_ans": "D",
+   "sol": "EF = |DC - AB| / 2 = |72 - 14| / 2 = 58 / 2 = 29 cm.",
+   "trick": "EF = (बड़ी समांतर भुजा - छोटी समांतर भुजा) / 2",
+   "ans": "D"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the midpoints of the diagonals AC and BD, respectively. If AB = 60 cm, BC = 65 cm, DC = 18 cm, and AD = 10 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB ∥ DC है, तथा E और F क्रमशः विकर्णों AC और BD के मध्य बिंदु हैं। यदि AB = 60 cm, BC = 65 cm, DC = 18 cm, और AD = 10 cm है, तो EF की लंबाई (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "25",
+    "23",
+    "21",
+    "22"
+   ],
+   "my_ans": "C",
+   "sol": "EF = |60 - 18| / 2 = 42 / 2 = 21 cm.",
+   "trick": "EF = (AB - DC) / 2",
+   "ans": "C"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "The perimeter of a rhombus is 100 meters and one of its diagonals is 14 meters long. What is the length of the other diagonal?",
+   "hi": "एक समचतुर्भुज का परिमाप 100 मीटर है और इसके एक विकर्ण की लंबाई 14 मीटर है। दूसरे विकर्ण की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "40 meters<br>40 मीटर",
+    "48 meters<br>48 मीटर",
+    "50 meters<br>50 मीटर",
+    "42 meters<br>42 मीटर"
+   ],
+   "my_ans": "B",
+   "sol": "भुजा = 100/4 = 25. विकर्ण/2 = 7.<br>दूसरा विकर्ण/2 = √(25² - 7²) = √(625 - 49) = √576 = 24.<br>दूसरा विकर्ण = 24 × 2 = 48 m.",
+   "trick": "भुजा² = (d1/2)² + (d2/2)²",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "If the consecutive angles of a parallelogram are in the ratio 2:3, what is the measure of the smaller angle?",
+   "hi": "यदि एक समांतर चतुर्भुज के क्रमागत कोण 2:3 के अनुपात में हैं, तो छोटे कोण का माप क्या है?",
+   "opts": [
+    "70°",
+    "74°",
+    "76°",
+    "72°"
+   ],
+   "my_ans": "D",
+   "sol": "2x + 3x = 180° → 5x = 180° → x = 36°.<br>छोटा कोण = 2x = 72°.",
+   "trick": "समांतर चतुर्भुज के आसन्न कोणों का योग 180° होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "The diagonals of a rhombus are mutually perpendicular and bisect each other. One diagonal is 10 cm longer than the other. If the area of the rhombus is 600 cm², the perimeter (in cm) of the rhombus is:",
+   "hi": "एक समचतुर्भुज के विकर्ण परस्पर लंबवत होते हैं और एक-दूसरे को समद्विभाजित करते हैं। एक विकर्ण दूसरे से 10 cm लंबा है। यदि समचतुर्भुज का क्षेत्रफल 600 cm² है, तो समचतुर्भुज का परिमाप (cm में) है:",
+   "opts": [
+    "84 cm",
+    "120 cm",
+    "96 cm",
+    "100 cm"
+   ],
+   "my_ans": "D",
+   "sol": "1/2 × d1 × d2 = 600 → d1(d1+10) = 1200 → d1=30, d2=40.<br>भुजा = √(15²+20²) = 25. परिमाप = 4×25 = 100 cm.",
+   "trick": "क्षेत्रफल = 1/2 × d1 × d2, भुजा = √( (d1/2)² + (d2/2)² )",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "Two complementary angles are such that twice the measure of one angle is equal to three times the measure of the other. The measure of the larger angle is:",
+   "hi": "दो पूरक कोण इस प्रकार हैं कि एक कोण के माप का दोगुना, दूसरे कोण के माप के तीन गुने के बराबर है। बड़े कोण की माप क्या है?",
+   "opts": [
+    "45°",
+    "60°",
+    "54°",
+    "72°"
+   ],
+   "my_ans": "C",
+   "sol": "x + y = 90, 2x = 3y → x = 1.5y.<br>1.5y + y = 90 → 2.5y = 90 → y = 36.<br>x = 1.5×36 = 54°.",
+   "trick": "पूरक कोणों का योग 90° होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "ABCD is a quadrilateral in which AB || DC, and E and F are the mid points of the diagonals AC and BD, respectively. If AB = 23 cm, BC = 91 cm, DC = 35 cm, and AD = 62 cm, then what is the length (in cm) of EF?",
+   "hi": "ABCD एक चतुर्भुज है जिसमें AB || DC है, तथा E और F क्रमशः विकर्ण AC और BD के मध्य बिंदु हैं। यदि AB = 23 cm, BC = 91 cm, DC = 35 cm, और AD = 62 cm है, तो EF की लंबाई (cm में) कितनी है?",
+   "opts": [
+    "6",
+    "9",
+    "7",
+    "8"
+   ],
+   "my_ans": "A",
+   "sol": "EF = |35 - 23| / 2 = 12 / 2 = 6 cm.",
+   "trick": "EF = (बड़ी समांतर भुजा - छोटी समांतर भुजा) / 2",
+   "ans": "A"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "A city is planning a new park in the shape of a regular hexagon with each side measuring 10 meters. Which of the following is closest to the area of the park?",
+   "hi": "किसी शहर में सम षट्भुज के आकार का एक ऐसा नया पार्क बनाने की योजना बनाई जाती है, जिसकी प्रत्येक भुजा का माप 10 मीटर है। निम्नलिखित में से कौन-सा मान इस पार्क के क्षेत्रफल का निकटतम मान होगा?",
+   "opts": [
+    "600 square meters<br>600 वर्ग मीटर",
+    "150 square meters<br>150 वर्ग मीटर",
+    "259.8 square meters<br>259.8 वर्ग मीटर",
+    "173.2 square meters<br>173.2 वर्ग मीटर"
+   ],
+   "my_ans": "C",
+   "sol": "क्षेत्रफल = (3√3 / 2) × a² = (3×1.732 / 2) × 100 = 3 × 1.732 × 50 = 259.8 m².",
+   "trick": "सम षट्भुज का क्षेत्रफल = 6 × (√3/4)a²",
+   "ans": "C"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "A regular polygon has 45 sides, each of length 2 cm. The area (in cm²) of the polygon is ______________.",
+   "hi": "एक सम बहुभुज में 45 भुजाएं हैं, जिनमें से प्रत्येक की लंबाई 2 cm है। बहुभुज का क्षेत्रफल (cm²) कितना होगा?",
+   "opts": [
+    "45",
+    "45 cos (4°)",
+    "45 tan(4°)",
+    "45 cot(4°)"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल = (n × a²) / (4 × tan(180/n)) = (45 × 2²) / (4 × tan(180/45)) = 45 / tan(4°) = 45 cot(4°).",
+   "trick": "क्षेत्रफल = (n × a²) / (4 × tan(180/n))",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "An altitude of 12√2 cm is drawn to the base of an isosceles triangle. The perimeter of this triangle is 48 cm. Find the area of the triangle.",
+   "hi": "एक समद्विबाहु त्रिभुज के आधार पर 12√2 सेमी का एक शीर्षलंब खींचा गया है। इस त्रिभुज का परिमाप 48 सेमी है। त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "60 √2 cm²",
+    "1 2√2 cm²",
+    "36 √2 cm²",
+    "72√2 cm²"
+   ],
+   "my_ans": "D",
+   "sol": "माना आधार 2x, भुजा y. 2x+2y=48 → x+y=24. शीर्षलंब² + x² = y² → (12√2)² + x² = (24-x)².<br>288 + x² = 576 - 48x + x² → 48x = 288 → x=6. आधार=12.<br>क्षेत्रफल = 1/2 × 12 × 12√2 = 72√2 cm².",
+   "trick": "पाइथागोरस प्रमेय और परिमाप का उपयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "In a parallelogram, one angle is 70°. What are the measures of the other three angles?",
+   "hi": "एक समांतर चतुर्भुज में एक कोण 70° है। अन्य तीन कोणों का माप ज्ञात कीजिए।",
+   "opts": [
+    "110°, 110°, 110°",
+    "70°, 70°, 70°",
+    "70°, 90°, 110°",
+    "70°, 110°, 110°"
+   ],
+   "my_ans": "D",
+   "sol": "समांतर चतुर्भुज में सम्मुख कोण बराबर होते हैं और आसन्न कोणों का योग 180° होता है।<br>कोण: 70°, 180-70=110°, 70°, 110°.",
+   "trick": "सम्मुख कोण बराबर, आसन्न कोण संपूरक।",
+   "ans": "D"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "The sides of a triangle are 75 cm, 21 cm, and 72 cm. What is the length (in cm) of its altitude corresponding to the side with a length of 21 cm?",
+   "hi": "एक त्रिभुज की भुजाएं 75 cm, 21 cm और 72 cm हैं। 21 cm लंबाई वाली भुजा के संगत इसके शीर्षलंब की लंबाई (cm में) कितनी होगी?",
+   "opts": [
+    "107",
+    "65",
+    "72",
+    "90"
+   ],
+   "my_ans": "C",
+   "sol": "यह एक समकोण त्रिभुज है (21²+72² = 441+5184 = 5625 = 75²).<br>क्षेत्रफल = 1/2 × 21 × 72 = 1/2 × 21 × h → h = 72 cm.",
+   "trick": "क्षेत्रफल = 1/2 × आधार × ऊँचाई",
+   "ans": "C"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The diagonals of a rhombus are 19 cm and 29 cm. Find its area.",
+   "hi": "एक समचतुर्भुज के विकर्णों की लंबाई 19 cm और 29 cm है। इसका क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "275.5 cm²",
+    "265.5 cm²",
+    "255.5 cm²",
+    "285.5 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "क्षेत्रफल = 1/2 × d1 × d2 = 1/2 × 19 × 29 = 19 × 14.5 = 275.5 cm².",
+   "trick": "क्षेत्रफल = 1/2 × d1 × d2",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "A parallelogram has sides 12 cm and 9 cm long. The length of one of its diagonals is 15 cm. What is the area (in cm²) of the parallelogram?",
+   "hi": "एक समांतर चतुर्भुज की भुजाओं की लंबाई 12 cm और 9 cm है। इसके एक विकर्ण की लंबाई 15 cm है। समांतर चतुर्भुज का क्षेत्रफल (cm² में) कितना होगा?",
+   "opts": [
+    "135",
+    "108",
+    "90",
+    "120"
+   ],
+   "my_ans": "B",
+   "sol": "यह एक समकोण त्रिभुज है (9²+12² = 81+144 = 225 = 15²).<br>क्षेत्रफल = 2 × (1/2 × 9 × 12) = 108 cm².",
+   "trick": "विकर्ण समांतर चतुर्भुज को दो बराबर त्रिभुजों में बांटता है।",
+   "ans": "B"
+  }
+ ]
+}

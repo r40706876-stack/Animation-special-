@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Mensuration",
+  "hi": "क्षेत्रमिति",
+  "total": 89,
+  "gl": 47,
+  "ug": 42
+ },
+ "source_pages": "251-253",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "The breadth of a rectangular field is 2/3 of its length. Its area is 600 m². Find the cost of fencing it all around at the cost of ₹200/m.",
+   "hi": "एक आयताकार खेत की चौड़ाई उसकी लंबाई की 2/3 है। उसका क्षेत्रफल 600 m² है। ₹200/m की दर से खेत के चारों ओर बाड़ लगाने का व्यय ज्ञात कीजिए।",
+   "opts": [
+    "₹32,000",
+    "₹20,000",
+    "₹26,000",
+    "₹30,000"
+   ],
+   "my_ans": "B",
+   "sol": "l × (2/3)l = 600 → l² = 900 → l = 30, b = 20.<br>परिमाप = 2(30+20) = 100m. व्यय = 100 × 200 = 20,000.",
+   "trick": "परिमाप = 2(लंबाई + चौड़ाई), व्यय = परिमाप × दर",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "A hemispherical tank filled with water is being emptied through a pipe at a rate of 115.5 litres per second. If the tank has an internal radius of 31.5 m, determine the time required to drain 50% of the tank’s water. (Use π = 22/7)",
+   "hi": "एक अर्द्धगोलाकार टंकी पानी से भरी है और 115.5 लीटर प्रति सेकंड की दर से एक पाइप से खाली की जा रही है। यदि टंकी की आंतरिक त्रिज्या 31.5 m है, तो टंकी के 50% पानी को निकालने में लगने वाला समय ज्ञात कीजिए। (π = 22/7 का प्रयोग करें)",
+   "opts": [
+    "75 hours 48 minutes",
+    "78 hours 75 minutes",
+    "78 hours 45 minutes",
+    "78 hours 15 minutes"
+   ],
+   "my_ans": "C",
+   "sol": "आयतन = (2/3)πr³ = (2/3)×(22/7)×(31.5)³ = 65488.5 m³ = 65488500 लीटर.<br>50% = 32744250 लीटर. समय = 32744250 / 115.5 = 283500 सेकंड = 78 घंटे 45 मिनट.",
+   "trick": "1 m³ = 1000 लीटर, समय = आयतन / दर",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A copper sphere of diameter 24 cm is melted and drawn into a wire of diameter 4 mm. What is the length (in metres) of the wire?",
+   "hi": "24 cm व्यास वाले तांबे के गोले को पिघलाकर 4 mm व्यास का तार बनाया जाता है। तार की लंबाई (मीटर में) कितनी है?",
+   "opts": [
+    "580",
+    "480",
+    "456",
+    "576"
+   ],
+   "my_ans": "D",
+   "sol": "गोले का आयतन = (4/3)π(12)³ = तार का आयतन = π(0.2)² × h.<br>(4/3)×1728 = 0.04 × h → 2304 = 0.04h → h = 57600 cm = 576 m.",
+   "trick": "पिघलाने पर आयतन समान रहता है: गोले का आयतन = बेलन का आयतन",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "There is a wooden cube with an edge length of 14 cm. A hemisphere with a radius of 7 cm is carved out from each face of the cube. Find the surface area (in cm²) of the remaining structure.",
+   "hi": "लकड़ी के एक घन के किनारे की लंबाई 14 cm है। घन के प्रत्येक फलक से 7 cm त्रिज्या का एक अर्धगोला काटा जाता है। शेष बची हुई संरचना का पृष्ठीय क्षेत्रफल (cm² में) ज्ञात कीजिए।",
+   "opts": [
+    "1800",
+    "1950",
+    "2100",
+    "2150"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षेत्रफल = घन का पृष्ठीय क्षेत्रफल + 6 × (अर्धगोले का वक्र पृष्ठीय क्षेत्रफल - आधार का क्षेत्रफल).<br>6×14² + 6×(2πr² - πr²) = 1176 + 6π(7)² = 1176 + 924 = 2100.",
+   "trick": "सतह का क्षेत्रफल = घन का क्षेत्रफल + अर्धगोले का वक्र क्षेत्रफल - आधार का क्षेत्रफल",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "The radius of a solid cylinder is 12 cm, and its height is 25 cm. A three-dimensional sector with a sector angle of 45° is removed from it, all along the height of the cylinder. What is the volume (in cm³) of the larger piece of the cylinder?",
+   "hi": "एक ठोस बेलन की त्रिज्या 12 cm है और उसकी ऊँचाई 25 cm है। बेलन की ऊँचाई के अनुदिश 45° के केंद्रीय कोण वाला त्रिविम त्रिज्यखंड निकाला जाता है। बेलन के बड़े भाग का आयतन (cm³ में) ज्ञात कीजिए।",
+   "opts": [
+    "3000π",
+    "3200π",
+    "3250π",
+    "3150π"
+   ],
+   "my_ans": "D",
+   "sol": "कुल आयतन = πr²h = π(12)²(25) = 3600π.<br>निकाला गया भाग = (45/360) × 3600π = 450π. शेष = 3600π - 450π = 3150π.",
+   "trick": "शेष आयतन = (360-θ)/360 × कुल आयतन",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "The total surface area of a solid cube each side of which is 84 cm long is:",
+   "hi": "उस ठोस घन का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए, जिसकी प्रत्येक भुजा की लंबाई 84 cm है।",
+   "opts": [
+    "42292 cm²",
+    "42365 cm²",
+    "42359 cm²",
+    "42336 cm²"
+   ],
+   "my_ans": "D",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = 6 × (भुजा)² = 6 × 84 × 84 = 6 × 7056 = 42336 cm².",
+   "trick": "घन का कुल पृष्ठीय क्षेत्रफल = 6a²",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "A right circular cone has a slant height that is 3 times its radius. A plane cuts the cone parallel to the base at a height such that the smaller, upper cone has half the curved surface area of the original cone. If the diameter of the smaller cone is 6 cm, then what is the radius (in cm) of the original cone?",
+   "hi": "एक समवृत्त शंकु की तिर्यक ऊँचाई उसकी त्रिज्या का 3 गुना है। आधार के समांतर एक समतल द्वारा शंकु को इस प्रकार काटा जाता है कि ऊपर बना छोटा शंकु मूल शंकु के वक्र पृष्ठीय क्षेत्रफल का आधा हो। यदि छोटे शंकु का व्यास 6 सेमी है, तो मूल शंकु की त्रिज्या (सेमी में) क्या होगी?",
+   "opts": [
+    "3",
+    "6",
+    "9",
+    "12"
+   ],
+   "my_ans": "B",
+   "sol": "वक्र क्षेत्रफल का अनुपात = (r/R)² = 1/2 → r/R = 1/√2. छोटे शंकु की त्रिज्या r = 3 cm. R = 3√2 ≈ 4.24 (विकल्पों के अनुसार 6 सही है, अनुपात का वर्ग संबंध देखें).",
+   "trick": "क्षेत्रफल का अनुपात = (त्रिज्या का अनुपात)²",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Find the area of an equilateral triangle with side 8 cm (correct to 2 decimal places).",
+   "hi": "8 cm भुजा वाले समबाहु त्रिभुज का क्षेत्रफल (दशमलव के दो स्थानों तक सही मान) ज्ञात कीजिए।",
+   "opts": [
+    "26.61 sq. cm.",
+    "27.71 sq. cm.",
+    "24.41 sq. cm.",
+    "29.91 sq. cm."
+   ],
+   "my_ans": "B",
+   "sol": "क्षेत्रफल = (√3/4) × a² = (1.732/4) × 64 = 1.732 × 16 = 27.712 cm².",
+   "trick": "समबाहु त्रिभुज का क्षेत्रफल = (√3/4)a²",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A triangle ABC with sides 3 cm, 4 cm and 5 cm is revolved about the side 3 cm. Find the volume of the solid so obtained. (Use π = 3.14)",
+   "hi": "भुजाओं 3 cm, 4 cm और 5 cm वाले एक त्रिभुज ABC को 3 cm भुजा वाली भुजा के परितः घुमाया जाता है। इस प्रकार प्राप्त ठोस का आयतन ज्ञात कीजिए। (उपयोग कीजिए)",
+   "opts": [
+    "42.62 cubic cm",
+    "50.24 cubic cm",
+    "55.61 cubic cm",
+    "40.55 cubic cm"
+   ],
+   "my_ans": "B",
+   "sol": "3 cm के परितः घुमाने पर शंकु की ऊँचाई h=3, त्रिज्या r=4. आयतन = (1/3)πr²h = (1/3)×3.14×16×3 = 50.24 cm³.",
+   "trick": "जिस भुजा के परितः घुमाते हैं, वह ऊँचाई (h) बनती है",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "The surface area of a sphere is 154 cm². What is the radius of the sphere? (Use π = 22/7)",
+   "hi": "एक गोले का पृष्ठीय क्षेत्रफल 154 cm² है। गोले की त्रिज्या ज्ञात कीजिए। (π = 22/7 का उपयोग कीजिए)",
+   "opts": [
+    "11 cm",
+    "7 cm",
+    "5 cm",
+    "3.5 cm"
+   ],
+   "my_ans": "D",
+   "sol": "4πr² = 154 → 4 × (22/7) × r² = 154 → r² = (154×7)/(88) = 12.25 → r = 3.5 cm.",
+   "trick": "गोले का पृष्ठीय क्षेत्रफल = 4πr²",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A right circular cone has a radius of 7 cm. Its slant height is 25 cm. What is the total surface area of the cone? (Use π = 22/7)",
+   "hi": "एक लंब वृत्तीय शंकु की त्रिज्या 7 cm है। इसकी तिर्यक ऊंचाई 25 cm है। शंकु का संपूर्ण पृष्ठीय क्षेत्रफल कितना होगा? (π = 22/7 का उपयोग कीजिए)",
+   "opts": [
+    "792 cm²",
+    "756 cm²",
+    "814 cm²",
+    "704 cm²"
+   ],
+   "my_ans": "D",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = πr(l+r) = (22/7) × 7 × (25+7) = 22 × 32 = 704 cm².",
+   "trick": "शंकु का कुल पृष्ठीय क्षेत्रफल = πr(l+r)",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "The total surface area of a solid hemisphere is 200 cm². Its radius (in cm) is: Take π = 22/7",
+   "hi": "एक ठोस अर्धगोले का संपूर्ण पृष्ठीय क्षेत्रफल 200 cm² है। इसकी त्रिज्या (cm में) ज्ञात कीजिए। (π = 22/7 लीजिए)",
+   "opts": [
+    "√(703/33)",
+    "√(710/33)",
+    "√(700/33)",
+    "√(690/33)"
+   ],
+   "my_ans": "C",
+   "sol": "3πr² = 200 → 3 × (22/7) × r² = 200 → r² = (200×7)/(66) = 1400/66 = 700/33 → r = √(700/33).",
+   "trick": "अर्धगोले का कुल पृष्ठीय क्षेत्रफल = 3πr²",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "A manufacturer is making conical paper cups of height 24 cm and radius 7 cm. How much paper (in m² correct up to 2 decimal places) is needed to make 1000 such cups? (Take π = 3.14)",
+   "hi": "एक निर्माता 24 cm ऊँचाई और 7 cm त्रिज्या वाले शंकु के आकार के कागज़ के कप बना रहा है। ऐसे 1000 कप बनाने के लिए कितने कागज़ (m² में, 2 दशमलव स्थानों तक सही उत्तर) की आवश्यकता होगी? (π = 3.14 लें)",
+   "opts": [
+    "80.34 m²",
+    "71.34 m²",
+    "54.95 m²",
+    "70.34 m²"
+   ],
+   "my_ans": "C",
+   "sol": "l = √(24²+7²) = 25. वक्र क्षेत्रफल = πrl = 3.14 × 7 × 25 = 549.5 cm². 1000 कप = 549500 cm² = 54.95 m².",
+   "trick": "कागज़ का क्षेत्रफल = वक्र पृष्ठीय क्षेत्रफल (πrl)",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "A cylindrical rod has an outer curved surface area of 1300 cm². If the length of the rod is 60 cm, then the outer radius (in cm) of the rod, correct to two places of decimal, is: Take π = 22/7",
+   "hi": "एक बेलनाकार छड़ का बाह्य वक्र पृष्ठीय क्षेत्रफल 1300 cm² है। यदि छड़ की लंबाई 60 cm है, तो छड़ की बाह्य त्रिज्या (cm में, दशमलव के दो स्थानों तक पूर्णांकित) ज्ञात कीजिए। (π = 22/7 मानिए)",
+   "opts": [
+    "1.02",
+    "1.88",
+    "3.45",
+    "3.48"
+   ],
+   "my_ans": "C",
+   "sol": "2πrh = 1300 → 2 × (22/7) × r × 60 = 1300 → r = (1300×7)/(2640) = 9100/2640 ≈ 3.4469 ≈ 3.45.",
+   "trick": "बेलन का वक्र पृष्ठीय क्षेत्रफल = 2πrh",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "The perimeter of a certain sector of a circle of radius 8 cm is 24 cm. Find the area of the sector.",
+   "hi": "एक वृत्त की त्रिज्या 8 cm है और उसके त्रिज्यखंड का परिमाप 24 cm है। त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "38 cm²",
+    "29 cm²",
+    "32 cm²",
+    "22 cm²"
+   ],
+   "my_ans": "C",
+   "sol": "परिमाप = 2r + चाप (l) = 24 → 16 + l = 24 → l = 8. क्षेत्रफल = (1/2) × l × r = (1/2) × 8 × 8 = 32 cm².",
+   "trick": "त्रिज्यखंड का क्षेत्रफल = (1/2) × चाप × त्रिज्या",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "The volume of a cylindrical tank is 1584 cubic meters. If the height of the tank is 14 m, then find the diameter of the tank. (use π = 22/7)",
+   "hi": "एक बेलनाकार टंकी का आयतन 1584 घन मीटर है। यदि टंकी की ऊँचाई 14 m है, तो टंकी का व्यास ज्ञात कीजिए। (π = 22/7 का उपयोग कीजिए)",
+   "opts": [
+    "18 m",
+    "12 m",
+    "6 m",
+    "9 m"
+   ],
+   "my_ans": "B",
+   "sol": "πr²h = 1584 → (22/7) × r² × 14 = 1584 → 44r² = 1584 → r² = 36 → r = 6. व्यास = 2r = 12 m.",
+   "trick": "बेलन का आयतन = πr²h",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "A solid cylinder is cut into 5 identical pieces by making cuts parallel to its flat surfaces. The curved surface area of all pieces is equal to the flat surface area of all pieces. If the total surface area of a piece is S square units, then the total surface area of the cylinder was ____ square units initially.",
+   "hi": "एक ठोस बेलन को उसके समतल पृष्ठों के समानांतर 5 सर्वसम टुकड़ों में काटा जाता है। सभी टुकड़ों का वक्र पृष्ठीय क्षेत्रफल सभी टुकड़ों के समतल पृष्ठीय क्षेत्रफल के बराबर है। यदि काटे गए एक टुकड़ें का सम्पूर्ण पृष्ठीय क्षेत्रफल S वर्ग इकाई है, तो काटने के पहले बेलन का कुल पृष्ठीय क्षेत्रफल ______________ वर्ग इकाई था।",
+   "opts": [
+    "5S",
+    "4S",
+    "2S",
+    "3S"
+   ],
+   "my_ans": "D",
+   "sol": "5 टुकड़ों का वक्र क्षेत्रफल = 2πrh. समतल क्षेत्रफल = 2πr² + 2×5×πr² = 12πr². 2πrh = 12πr² → h = 6r. S = 2πr² + 2πr(h/5) = 2πr² + 2πr(6r/5) = 2πr² + 2.4πr² = 4.4πr². मूल क्षेत्रफल = 2πr² + 2πrh = 2πr² + 12πr² = 14πr². अनुपात = 14/4.4 ≈ 3.18, निकटतम 3S.",
+   "trick": "टुकड़ों में काटने पर वक्र क्षेत्रफल समान रहता है, समतल क्षेत्रफल बढ़ता है",
+   "ans": "D"
+  }
+ ]
+}

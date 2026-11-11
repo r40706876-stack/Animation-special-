@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Mensuration",
+  "hi": "क्षेत्रमिति",
+  "total": 89,
+  "gl": 47,
+  "ug": 42
+ },
+ "source_pages": "257-259",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "A cube has a lateral surface area of 324 cm². It is fully submerged in a rectangular container of height 18 cm, having a square base and a lateral surface area of 864 cm². If the container was partially filled with water before the cube was submerged, find the rise in the water level after the cube is submerged. (Round your answer to the nearst integer.)",
+   "hi": "एक घन का पार्श्व पृष्ठीय क्षेत्रफल 324 cm² है। इसे 18 cm ऊँचाई वाले एक आयताकार पात्र में पूरी तरह से डुबोया जाता है, जिसका आधार वर्गाकार है और इसका पार्श्व पृष्ठीय क्षेत्रफल 864 cm² है। यदि घन को डुबोने से पहले पात्र आंशिक रूप से पानी से भरा था, तो घन के डूबने के बाद पानी के स्तर में हुई वृद्धि ज्ञात कीजिए।",
+   "opts": [
+    "5 cm",
+    "4 cm",
+    "7 cm",
+    "6 cm"
+   ],
+   "my_ans": "A",
+   "sol": "घन की भुजा a² = 324/4 = 81 → a=9, आयतन = 729.<br>पात्र का आधार भुजा b: 4b×18 = 864 → b=12.<br>वृद्धि = घन का आयतन / पात्र का आधार = 729 / (12×12) = 729/144 ≈ 5.06 cm.",
+   "trick": "पानी के स्तर में वृद्धि = डूबी हुई वस्तु का आयतन / पात्र का आधार क्षेत्रफल",
+   "ans": "A"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "The length of each side of a rhombus is 17 cm and one of the diagonals is 30 cm. What is the area of the rhombus?",
+   "hi": "एक समचतुर्भुज के प्रत्येक भुजा की लंबाई 17 cm है और एक विकर्ण 30 cm है। समचतुर्भुज का क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "510 cm²",
+    "240 cm²",
+    "255 cm²",
+    "272 cm²"
+   ],
+   "my_ans": "B",
+   "sol": "दूसरा विकर्ण d₂ = 2√(17² - 15²) = 2√(289-225) = 2×8 = 16.<br>क्षेत्रफल = 1/2 × d₁ × d₂ = 1/2 × 30 × 16 = 240 cm².",
+   "trick": "समचतुर्भुज में विकर्ण एक-दूसरे को 90° पर समद्विभाजित करते हैं (पाइथागोरस प्रमेय का उपयोग करें)",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Find the area of a regular hexagon whose side measures 14√3 cm.",
+   "hi": "उस सम षट्भुज का क्षेत्रफल ज्ञात कीजिए जिसकी भुजा की लंबाई 14√3 cm है।",
+   "opts": [
+    "509√3 cm²",
+    "882√3 cm²",
+    "441√3 cm²",
+    "294√3 cm²"
+   ],
+   "my_ans": "B",
+   "sol": "क्षेत्रफल = (3√3 / 2) × a²<br>= (3√3 / 2) × (14√3)² = (3√3 / 2) × (196 × 3) = 3√3 × 98 × 3 = 882√3 cm².",
+   "trick": "सम षट्भुज का क्षेत्रफल = 6 × (समबाहु त्रिभुज का क्षेत्रफल) = 6 × (√3/4)a²",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "∛6859 / ∜256 × 2/57 × 168 = ?",
+   "hi": "∛6859 / ∜256 × 2/57 × 168 = ?",
+   "opts": [
+    "30",
+    "28",
+    "38",
+    "37"
+   ],
+   "my_ans": "B",
+   "sol": "∛6859 = 19, ∜256 = 4.<br>समीकरण: (19/4) × (2/57) × 168 = (1/2) × (1/3) × 168 = 168 / 6 = 28.",
+   "trick": "वर्गमूल और घनमूल के मान याद रखें",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Find the volume of largest possible sphere that can be inscribed in a cone whose base radius is 42√3 cm and slant height equal to the diameter of the base. (Use π = 22/7 )",
+   "hi": "उस शंकु के भीतर निर्मित किए जा सकने वाले सबसे बड़े गोले का आयतन ज्ञात कीजिए, जिसके आधार की त्रिज्या 42√3 cm है और तिर्यक ऊँचाई आधार के व्यास के बराबर है।",
+   "opts": [
+    "314046 cm³",
+    "301644 cm³",
+    "314064 cm³",
+    "310464 cm³"
+   ],
+   "my_ans": "D",
+   "sol": "शंकु: r=42√3, l=2r=84√3. ऊँचाई h = √(l²-r²) = √( (84√3)² - (42√3)² ) = 42√3 × √3 = 126.<br>गोले की त्रिज्या R = (r×h)/(r+l) = (42√3 × 126) / (42√3 + 84√3) = (42√3 × 126) / 126√3 = 42.<br>आयतन = 4/3 × π × R³ = 4/3 × 22/7 × 42³ = 310464 cm³.",
+   "trick": "शंकु के भीतर गोले की त्रिज्या R = (r×h)/(r+l)",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "A conical tent is to be made for a school event. The radius of the base is 7 metres , and the height of the tent is 24 metres . A decorative cloth is to be used to cover the entire curved surface area of the tent. The cloth costs ₹40 per square metre . What will be the total cost of the cloth required? Use π = 22/7",
+   "hi": "एक विद्यालय कार्यक्रम के लिए एक शंक्वाकार टेंट लगाया जाना है। टेंट की आधार त्रिज्या 7 मीटर है, और ऊंचाई 24 मीटर है। टेंट के संपूर्ण वक्रित पृष्ठ क्षेत्रफल को कवर करने के लिए एक सजावटी कपड़े का उपयोग किया जाना है कपड़े की कीमत ₹40 प्रति वर्ग मीटर है। आवश्यक कपड़े की कुल लागत ज्ञात कीजिए।",
+   "opts": [
+    "₹22,800",
+    "₹21,000",
+    "₹22,000",
+    "₹23,800"
+   ],
+   "my_ans": "C",
+   "sol": "तिर्यक ऊँचाई l = √(7²+24²) = 25.<br>वक्र पृष्ठ क्षेत्रफल = πrl = 22/7 × 7 × 25 = 550 m².<br>कुल लागत = 550 × 40 = ₹22,000.",
+   "trick": "शंकु का वक्र पृष्ठ क्षेत्रफल = πrl",
+   "ans": "C"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "A solid is composed of a cube surmounted by a cuboid. The edge of the cube is x cm. The cuboid placed on top has a square base exactly fitting the top face of the cube, and its height is (x − 4) cm. If the total volume of the solid is 1.5 times the volume of the cube, what is the value of x?",
+   "hi": "एक ठोस, एक घन और उसके ऊपर अध्यारोपित एक घनाभ से बना है। घन का कोर x cm है। ऊपर रखे घनाभ का आधार एक वर्ग है जो घन के शीर्ष फलक पर पूरी तरह से समंजित है और इसकी ऊँचाई (x − 4) cm है। यदि ठोस का कुल आयतन, घन के आयतन का 1.5 गुना है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "7",
+    "8",
+    "5",
+    "6"
+   ],
+   "my_ans": "B",
+   "sol": "कुल आयतन = x³ + x²(x-4) = 1.5x³<br>x³ + x³ - 4x² = 1.5x³ → 0.5x³ = 4x² → x = 8.",
+   "trick": "कुल आयतन = घन का आयतन + घनाभ का आयतन",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "A cylindrical wax block with radius 7 cm and height 10 cm is melted and reshaped into a cone with the same base radius. Find the height of the cone. Take π = 22/7",
+   "hi": "7 cm त्रिज्या और 10 cm ऊँचाई वाले एक बेलनाकार मोम के टुकड़े को पिघलाकर उसी आधार त्रिज्या वाले शंकु में ढाला जाता है। शंकु की ऊँचाई ज्ञात कीजिए।",
+   "opts": [
+    "18 cm",
+    "30 cm",
+    "20 cm",
+    "25 cm"
+   ],
+   "my_ans": "B",
+   "sol": "बेलन का आयतन = πr²h = π × 7² × 10.<br>शंकु का आयतन = 1/3 × πr²H = 1/3 × π × 7² × H.<br>π × 7² × 10 = 1/3 × π × 7² × H → H = 30 cm.",
+   "trick": "पिघलाने पर आयतन समान रहता है (V<sub>बेलन</sub> = V<sub>शंकु</sub>)",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "The total surface area of a cube having side 91 cm is:",
+   "hi": "91 cm भुजा वाले घन का संपूर्ण पृष्ठीय क्षेत्रफल कितना है?",
+   "opts": [
+    "49686 cm²",
+    "49666 cm²",
+    "49668 cm²",
+    "49716 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = 6a² = 6 × (91)² = 6 × 8281 = 49686 cm².",
+   "trick": "घन का कुल पृष्ठीय क्षेत्रफल = 6a²",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "The length, breadth and height of a room are 20m, 10m and 6m, respectively. If the rate of painting the four walls and the ceiling of the room is ₹15/square metre , then find the total cost.",
+   "hi": "एक कमरे की लंबाई, चौड़ाई और ऊंचाई क्रमशः 20 m, 10 m और 6 m है। यदि कमरे की चारों दीवारों और छत को रंगने की दर ₹15 प्रति वर्ग मीटर है, तो कुल लागत ज्ञात कीजिए।",
+   "opts": [
+    "₹9200",
+    "₹6500",
+    "₹8400",
+    "₹7200"
+   ],
+   "my_ans": "C",
+   "sol": "क्षेत्रफल = 2h(l+b) + lb = 2×6(20+10) + 20×10 = 12×30 + 200 = 360 + 200 = 560 m².<br>लागत = 560 × 15 = ₹8400.",
+   "trick": "चारों दीवारों का क्षेत्रफल = 2h(l+b), छत = l×b",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "A circle has a radius of 7 cm. Calculate the length of an arc that subtends a central angle of 240°. (Give your answer in cm, rounded up to two decimal places; ( Use π = 22/7)",
+   "hi": "एक वृत्त की त्रिज्या 7 cm है। 240° का केंद्रीय कोण अंतरित करने वाले चाप की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "27.33 cm",
+    "28.67 cm",
+    "31.33 cm",
+    "29.33 cm"
+   ],
+   "my_ans": "D",
+   "sol": "चाप की लंबाई = (θ/360) × 2πr = (240/360) × 2 × 22/7 × 7 = 2/3 × 44 = 88/3 ≈ 29.33 cm.",
+   "trick": "चाप की लंबाई = (θ/360) × 2πr",
+   "ans": "D"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Three solid cubes whose edges measure 1 cm, 6 cm, and 8 cm, respectively, are melted and recast into a single cube. What is the length (in cm) of the diagonal of the cube?",
+   "hi": "तीन ठोस घन, जिनकी कोर की लंबाई क्रमशः 1 cm, 6 cm और 8 cm है, को पिघलाकर एक घन में ढाला जाता है। घन के विकर्ण की लंबाई (cm में) कितनी है?",
+   "opts": [
+    "10√3 cm",
+    "9√3 cm",
+    "2√3 cm",
+    "8√3 cm"
+   ],
+   "my_ans": "B",
+   "sol": "कुल आयतन = 1³ + 6³ + 8³ = 1 + 216 + 512 = 729.<br>नए घन की भुजा a = ∛729 = 9.<br>विकर्ण = a√3 = 9√3 cm.",
+   "trick": "नए घन की भुजा = ∛(a₁³ + a₂³ + a₃³)",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "The total surface area of a solid hemisphere is 281 cm². What is its radius (in cm)?",
+   "hi": "यदि किसी ठोस अर्धगोले का संपूर्ण पृष्ठीय क्षेत्रफल 281 cm² है, तो इसकी त्रिज्या (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "√1966/66",
+    "√1965/66",
+    "√1957/132",
+    "√1967/66"
+   ],
+   "my_ans": "D",
+   "sol": "3πr² = 281 → r² = 281 / (3 × 22/7) = (281 × 7) / 66 = 1967/66.<br>r = √(1967/66).",
+   "trick": "ठोस अर्धगोले का कुल पृष्ठीय क्षेत्रफल = 3πr²",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "A conical open packet is made from a rectangular sheet of paper of length 66 cm and breadth 30 cm. The height of the packet is as large as possible and the length of the rectangle forms the circumference of the base of the conical packet. The conical packet is stapled at a height of 2 cm from the vertex of the cone, to avoid spilling of items inside it. Find the volume (in cm³) of the packet, rounded off to the nearest whole number. (use π = 22/7)",
+   "hi": "66 cm लंबाई और 30 cm चौड़ाई वाले आयताकार कागज से एक शंकु के आकार का खुला पैकेट बनाया जाता है। पैकेट की ऊंचाई यथासंभव अधिक रखी जाती है और आयत की लंबाई शंकु के आकार के पैकेट के आधार की परिधि बनाती है। पैकेट को शंकु के शीर्ष से 2 cm की ऊंचाई पर स्टेपल किया जाता है। पैकेट का आयतन (cm³) ज्ञात कीजिए।",
+   "opts": [
+    "3638",
+    "3296",
+    "3582",
+    "3464"
+   ],
+   "my_ans": "D",
+   "sol": "परिधि 2πr = 66 → r = 66/(2×22/7) = 10.5.<br>ऊँचाई h = 30. शंकु का आयतन = 1/3πr²h = 1/3 × 22/7 × 10.5² × 30 = 3465.<br>स्टेपल करने पर आयतन में कमी (छोटे शंकु का आयतन) = 1/3πr'²h' = 1/3π(r×2/30)² × 2 ≈ 1.3. कुल ≈ 3464.",
+   "trick": "शंकु का आयतन = 1/3πr²h",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "A cylindrical water tank has a radius of 7 cm and a height of 10 cm. What is its volume? (Use π = 22/7)",
+   "hi": "पानी की एक बेलनाकार टंकी की त्रिज्या 7 cm और ऊँचाई 10 cm है। इसका आयतन ज्ञात कीजिए।",
+   "opts": [
+    "1540 cm³",
+    "2200 cm³",
+    "700 cm³",
+    "440 cm³"
+   ],
+   "my_ans": "A",
+   "sol": "आयतन = πr²h = 22/7 × 7² × 10 = 22 × 7 × 10 = 1540 cm³.",
+   "trick": "बेलन का आयतन = πr²h",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Two solid hemispheres are joined together to make a sphere. The total surface area of solids reduced by approximately ___%.",
+   "hi": "दो ठोस अर्धगोलों को आपस में जोड़कर एक गोला बनाया जाता है। ठोस का संपूर्ण पृष्ठीय क्षेत्रफल लगभग _____% कम हो जाता है।",
+   "opts": [
+    "33.33",
+    "25",
+    "66.67",
+    "50"
+   ],
+   "my_ans": "A",
+   "sol": "दो अर्धगोले का क्षेत्रफल = 2 × 3πr² = 6πr². गोले का क्षेत्रफल = 4πr².<br>कमी = 6πr² - 4πr² = 2πr².<br>% कमी = (2πr² / 6πr²) × 100 = 1/3 × 100 = 33.33%.",
+   "trick": "क्षेत्रफल में कमी = (प्रारंभिक - अंतिम) / प्रारंभिक × 100",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Sixteen identical solid cubes, each of side 2 cm, are melted and recast into a cuboid whose length is twice its breadth and height equals its breadth. Find the volume of the cuboid.",
+   "hi": "सोलह एकसमान ठोस घन जिनमें से प्रत्येक की भुजा 2 cm है, को पिघलाकर उस घनाभ के रूप में ढाला जाता है जिसकी लंबाई उसकी चौड़ाई की दोगुनी है और ऊँचाई उसकी चौड़ाई के बराबर है। घनाभ का आयतन ज्ञात कीजिए।",
+   "opts": [
+    "128 cm³",
+    "96 cm³",
+    "100 cm³",
+    "64 cm³"
+   ],
+   "my_ans": "A",
+   "sol": "16 घनों का आयतन = 16 × 2³ = 16 × 8 = 128 cm³.<br>पिघलाने पर आयतन वही रहता है, अतः घनाभ का आयतन = 128 cm³.",
+   "trick": "पिघलाने पर कुल आयतन समान रहता है",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "The total surface area of a cube having side 94 cm is:",
+   "hi": "94 cm भुजा वाले घन का संपूर्ण पृष्ठीय क्षेत्रफल कितना होगा?",
+   "opts": [
+    "53,016 cm²",
+    "53,006 cm²",
+    "52,989 cm²",
+    "53,026 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "कुल पृष्ठीय क्षेत्रफल = 6a² = 6 × 94² = 6 × 8836 = 53016 cm².",
+   "trick": "घन का कुल पृष्ठीय क्षेत्रफल = 6a²",
+   "ans": "A"
+  }
+ ]
+}

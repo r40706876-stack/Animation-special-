@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "148-150",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Two numbers A and B are such that the sum of 10% of A and 20% of B is equal to three-fourths the sum of 20% of A and 10% of B. Find the ratio of A to B.",
+   "hi": "दो संख्याएं A और B इस प्रकार हैं कि A के 10% और B के 20% का योगफल, A के 20% और B के 10% के योगफल के तीन-चौथाई के बराबर है। A और B का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "5 : 2",
+    "2 : 5",
+    "3 : 5",
+    "5 : 3"
+   ],
+   "my_ans": "A",
+   "sol": "0.1A + 0.2B = 0.75(0.2A + 0.1B)<br>0.1A + 0.2B = 0.15A + 0.075B<br>0.125B = 0.05A → A/B = 0.125/0.05 = 5/2.",
+   "trick": "समीकरण बनाकर A और B को एक तरफ करें।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Four classes have a ratio of boys to girls as 4 : 5, 3 : 2, 6 : 5 and 5 : 6, respectively. Which class has a higher proportion of boys?",
+   "hi": "चार कक्षाओं में लड़कों और लड़कियों का अनुपात क्रमशः 4 : 5, 3 : 2, 6 : 5 और 5 : 6 है। किस कक्षा में लड़कों का अनुपात अधिक है?",
+   "opts": [
+    "Fourth class (5 : 6)<br>चौथी कक्षा (5 : 6)",
+    "Third class (6 : 5)<br>तृतीय कक्षा (6 : 5)",
+    "First class (4 : 5)<br>प्रथम कक्षा (4 : 5)",
+    "Second class (3 : 2)<br>द्वितीय कक्षा (3 : 2)"
+   ],
+   "my_ans": "D",
+   "sol": "लड़कों का अनुपात: 4/9=0.44, 3/5=0.6, 6/11=0.54, 5/11=0.45<br>सबसे अधिक 0.6 है जो 3:2 (द्वितीय कक्षा) का है।",
+   "trick": "अनुपात को भिन्न में बदलकर तुलना करें।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "The ratio of three numbers is 3 : 5 : 7. If the sum of the largest and smallest numbers is 60, what is the sum of all the three numbers?",
+   "hi": "तीन संख्याओं का अनुपात 3 : 5 : 7 है। यदि सबसे बड़ी और सबसे छोटी संख्याओं का योगफल 60 है, तो तीनों संख्याओं का योगफल ज्ञात कीजिए।",
+   "opts": [
+    "70",
+    "120",
+    "90",
+    "100"
+   ],
+   "my_ans": "C",
+   "sol": "संख्याएं 3x, 5x, 7x हैं।<br>3x + 7x = 60 → 10x = 60 → x = 6<br>कुल योग = 3x+5x+7x = 15x = 15×6 = 90.",
+   "trick": "अनुपात के योग से कुल मान निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "There are 9,632 students in a school and the ratio of boys to girls in the school is 17 : 11, then find the number of boys in the school.",
+   "hi": "एक स्कूल में 9,632 विद्यार्थी हैं तथा स्कूल में लड़कों और लड़कियों की संख्या का अनुपात 17 : 11 है, तो स्कूल में लड़कों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "5,851",
+    "5,848",
+    "5,831",
+    "5,828"
+   ],
+   "my_ans": "B",
+   "sol": "कुल अनुपात = 17+11 = 28<br>लड़के = (17/28) × 9632 = 17 × 344 = 5848.",
+   "trick": "कुल संख्या को अनुपात के योग से विभाजित करें।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "The distance between two points on a map is 4 cm. The scale of the map is 1 : 829483. The actual distance between the two points (in km) is: (Round off your answer to two decimal places.)",
+   "hi": "मानचित्र पर दो बिंदुओं के बीच की दूरी 4 cm है। मानचित्र का पैमाना 1 : 829483 है। दोनों बिंदुओं के बीच की वास्तविक दूरी (km में) ज्ञात कीजिए। (अपने उत्तर को दो दशमलव स्थानों तक पूर्णांकित कीजिए।)",
+   "opts": [
+    "33.63",
+    "30.25",
+    "33.18",
+    "38.85"
+   ],
+   "my_ans": "C",
+   "sol": "दूरी = 4 × 829483 cm = 3317932 cm<br>km में = 3317932 / 100000 = 33.17932 ≈ 33.18 km.",
+   "trick": "cm को km में बदलने के लिए 1,00,000 से भाग दें।",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "If a : b = 1 : 3, b : c = 5 : 7 and c : d = 9 : 5, then the value of a : b : c : d is:",
+   "hi": "यदि a : b = 1 : 3, b : c = 5 : 7 और c : d = 9 : 5 है, तो a : b : c : d का मान कितना होगा?",
+   "opts": [
+    "25 : 75 : 105 : 45",
+    "15 : 75 : 105 : 35",
+    "5 : 75 : 105 : 35",
+    "15 : 45 : 63 : 35"
+   ],
+   "my_ans": "D",
+   "sol": "a:b=1:3=15:45, b:c=5:7=45:63, c:d=9:5=63:35<br>a:b:c:d = 15:45:63:35.",
+   "trick": "उभयनिष्ठ पदों (b, c) को बराबर करें।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The prices of articles of types P, Q, and R are ₹280, ₹180 and ₹120, respectively. Tejas buys these articles in the ratio 3 : 2 : 5 for a total of ₹12,600. How many articles of type Q did he purchase?",
+   "hi": "P, Q और R प्रकार की वस्तुओं की कीमतें क्रमशः ₹280, ₹180 और ₹120 हैं। तेजस इन वस्तुओं को 3 : 2 : 5 के अनुपात में कुल ₹12,600 में खरीदता है। वह Q प्रकार की कितनी वस्तुएँ खरीदता है?",
+   "opts": [
+    "15",
+    "14",
+    "7",
+    "13"
+   ],
+   "my_ans": "B",
+   "sol": "कुल मूल्य = 3x(280) + 2x(180) + 5x(120) = 840x + 360x + 600x = 1800x<br>1800x = 12600 → x = 7<br>Q की वस्तुएं = 2x = 2×7 = 14.",
+   "trick": "कुल मूल्य = (कीमत × अनुपात) का योग।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "If 2820 is divided into two parts such that one-fifth of the first part and one-eighth of the second part are in the ratio 3 : 4, what is the ratio of the first part to the second part?",
+   "hi": "यदि 2820 को दो भागों में इस प्रकार बांटा जाए कि पहले भाग का 1/5 भाग और दूसरे भाग का 1/8 भाग का अनुपात 3 : 4 हो, तो पहले भाग और दूसरे भाग का अनुपात कितना होगा?",
+   "opts": [
+    "15 : 32",
+    "17 : 36",
+    "15 : 37",
+    "18 : 19"
+   ],
+   "my_ans": "A",
+   "sol": "(A/5) / (B/8) = 3/4<br>8A / 5B = 3/4<br>A/B = (3×5) / (4×8) = 15/32.",
+   "trick": "समीकरण (A/5)/(B/8) = 3/4 को हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A data scientist finds that the mean proportional between two experimental values 18 and 32 needs to be increased by 25% for optimal model performance. If this new increased value becomes the mean proportional between 18 and another value y, what is y?",
+   "hi": "एक डेटा वैज्ञानिक ने पाया कि दो प्रायोगिक मानों 18 और 32 के बीच मध्यानुपाती को मॉडल के इष्टतम निष्पादन के लिए 25% बढ़ाने की आवश्यकता है। यदि यह नया बढ़ा हुआ मान 18 और किसी अन्य मान y के बीच मध्यानुपाती बन जाता है, तो y का मान क्या है?",
+   "opts": [
+    "50",
+    "45",
+    "45",
+    "48"
+   ],
+   "my_ans": "A",
+   "sol": "मूल मध्यानुपाती = √(18×32) = √(576) = 24<br>नया मान = 24 × 1.25 = 30<br>√(18×y) = 30 → 18y = 900 → y = 50.",
+   "trick": "मध्यानुपाती = √(a×b) का उपयोग करें।",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "What number will be in the place of x? 2.8 : 3.8 : : x : 5.7",
+   "hi": "x के स्थान पर कौन-सी संख्या आएगी? 2.8 : 3.8 : : x : 5.7",
+   "opts": [
+    "3.6",
+    "4.8",
+    "5.1",
+    "4.2"
+   ],
+   "my_ans": "D",
+   "sol": "2.8/3.8 = x/5.7<br>x = (2.8 × 5.7) / 3.8 = 2.8 × 1.5 = 4.2.",
+   "trick": "बाह्य पदों का गुणनफल = मध्य पदों का गुणनफल।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "The monthly incomes of A and B are in the ratio 4 : 5, and their monthly expenditures are in the ratio 3 : 4. A saves ₹10,000 while B saves ₹12,000, find the monthly income of A (in ₹)",
+   "hi": "A और B की मासिक आय का अनुपात 4 : 5 है, और उनके मासिक व्यय का अनुपात 3 : 4 है। A, ₹10,000 की बचत करता है जबकि B, ₹12,000 की बचत करता है। A की मासिक आय (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "16,000",
+    "15,000",
+    "13,000",
+    "14,000"
+   ],
+   "my_ans": "A",
+   "sol": "आय 4x, 5x; व्यय 3y, 4y<br>4x-3y=10000, 5x-4y=12000<br>हल करने पर x=4000, आय A=4x=16000.",
+   "trick": "आय - बचत = व्यय का समीकरण हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "If the mean proportional between x and 36 is 18, what is the value of x?",
+   "hi": "यदि x और 36 के बीच मध्यानुपाती 18 है, तो x का मान कितना है?",
+   "opts": [
+    "12",
+    "18",
+    "9",
+    "6"
+   ],
+   "my_ans": "C",
+   "sol": "√(x × 36) = 18<br>x × 36 = 18² = 324<br>x = 324 / 36 = 9.",
+   "trick": "मध्यानुपाती का वर्ग = दोनों संख्याओं का गुणनफल।",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "₹6241 is divided among A, B, C, and D in such a way that the shares of A and B, B and C, and C and D are in the ratios of 2 : 3, 4 : 5, and 10 : 3 respectively. The share of A (in ₹) is:",
+   "hi": "₹6241 को A, B, C और D में इस प्रकार विभाजित किया जाता है कि A और B, B और C, तथा C और D के हिस्से क्रमशः 2 : 3, 4 : 5, और 10 : 3 के अनुपात में हैं। A का हिस्सा (₹ में) कितना है?",
+   "opts": [
+    "1334",
+    "1264",
+    "1174",
+    "1384"
+   ],
+   "my_ans": "B",
+   "sol": "A:B=8:12, B:C=12:15, C:D=15:4.5<br>A:B:C:D = 8:12:15:4.5 = 16:24:30:9<br>A = (16/79) × 6241 = 16 × 79 = 1264.",
+   "trick": "सभी अनुपातों को एक साथ जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "If 4 : 28 :: 4.1 : x and 4 : 32 :: 3 : y, then what is the ratio of x to y ?",
+   "hi": "यदि 4 : 28 :: 4.1 : x और 4 : 32 :: 3 : y है, तो x और y का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "288 : 238",
+    "285 : 241",
+    "291 : 250",
+    "287 : 240"
+   ],
+   "my_ans": "D",
+   "sol": "x = (28×4.1)/4 = 28.7<br>y = (32×3)/4 = 24<br>x:y = 28.7 : 24 = 287 : 240.",
+   "trick": "समानुपात के नियम से x और y निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "The mean proportion of 15 and 72.6 is:",
+   "hi": "15 और 72.6 का मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "36",
+    "32",
+    "33",
+    "28"
+   ],
+   "my_ans": "C",
+   "sol": "√(15 × 72.6) = √(1089) = 33.",
+   "trick": "मध्यानुपाती = √(a×b) का प्रयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "The ratio of the salaries of A and B is 4 : 5. If A's salary is increased by 20% and B's salary is decreased by 10%, what is the new ratio of their salaries?",
+   "hi": "A और B के वेतन का अनुपात 4 : 5 है। यदि A के वेतन में 20% की वृद्धि की जाए और B के वेतन में 10% की कमी की जाए, तो उनके वेतन का नया अनुपात क्या होगा?",
+   "opts": [
+    "15 : 14",
+    "16 : 15",
+    "13 : 12",
+    "14 : 13"
+   ],
+   "my_ans": "B",
+   "sol": "नया अनुपात = (4×1.2) : (5×0.9) = 4.8 : 4.5 = 48 : 45 = 16 : 15.",
+   "trick": "अनुपात में प्रतिशत परिवर्तन सीधे लागू करें।",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "The present ages of Ayushi and Anmol are in the ratio of 2 : 3 respectively. After 6 years the ratio of their ages will be 8 : 9. What is the positive difference (in years) in their present ages?",
+   "hi": "आयुषी और अनमोल की वर्तमान आयु का अनुपात क्रमशः 2 : 3 है। 6 वर्ष बाद उनकी आयु का अनुपात 8 : 9 होगा। उनकी वर्तमान आयु में धनात्मक अंतर (वर्षों में) ज्ञात कीजिए।",
+   "opts": [
+    "11",
+    "1",
+    "19",
+    "12"
+   ],
+   "my_ans": "B",
+   "sol": "2x+6 / 3x+6 = 8/9<br>18x+54 = 24x+48 → 6x = 6 → x = 1<br>अंतर = 3x-2x = x = 1.",
+   "trick": "अनुपात के अंतर का उपयोग करके x निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "If 7 : 63 :: 6.5 : x and 7 : 42 :: 4 : y, then what is the ratio of x to y ?",
+   "hi": "यदि 7 : 63 :: 6.5 : x और 7 : 42 :: 4 : y है, तो x और y का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "43 : 26",
+    "40 : 14",
+    "37 : 17",
+    "39 : 16"
+   ],
+   "my_ans": "D",
+   "sol": "x = (63×6.5)/7 = 9×6.5 = 58.5<br>y = (42×4)/7 = 6×4 = 24<br>x:y = 58.5 : 24 = 117 : 48 = 39 : 16.",
+   "trick": "समानुपात के नियम से x और y निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "The price of each article of type P, Q, and R is ₹280, ₹180 and ₹115, respectively. Tejas buys articles of each type in the ratio 4 : 2 : 5 for ₹6,165. How many articles of type Q did he purchase?",
+   "hi": "P, Q और R प्रकार की प्रत्येक वस्तु की कीमत क्रमशः ₹280, ₹180 और ₹115 है। तेजस प्रत्येक प्रकार की वस्तुएँ 4 : 2 : 5 के अनुपात में ₹ 6,165 में खरीदता है। उसने Q प्रकार की कितनी वस्तुएँ खरीदीं?",
+   "opts": [
+    "3",
+    "14",
+    "12",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "कुल मूल्य = 4x(280) + 2x(180) + 5x(115) = 1120x + 360x + 575x = 2055x<br>2055x = 6165 → x = 3<br>Q की वस्तुएं = 2x = 2×3 = 6.",
+   "trick": "कुल मूल्य = (कीमत × अनुपात) का योग।",
+   "ans": "D"
+  }
+ ]
+}

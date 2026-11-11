@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Geometry",
+  "hi": "ज्यामिति",
+  "total": 103,
+  "gl": 50,
+  "ug": 53
+ },
+ "source_pages": "271-273",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Simplify the following expression: [3.75 + 4/5] - [3.5 - 8/20]",
+   "hi": "निम्नलिखित व्यंजक को सरल कीजिए: [3.75 + 4/5] - [3.5 - 8/20]",
+   "opts": [
+    "1.4",
+    "1.5",
+    "1.45",
+    "1.35"
+   ],
+   "my_ans": "C",
+   "sol": "[3.75 + 0.8] - [3.5 - 0.4] = 4.55 - 3.1 = 1.45.",
+   "trick": "भिन्नों को दशमलव में बदलकर सरल करें।",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Two parallel lines, L1 and L2, are cut by a transversal. If one of the interior angles on the same side of the transversal is 70°, what is the measure of the other interior angle on the same side of the transversal?",
+   "hi": "दो समांतर रेखाओं, L1 और L2 को एक तिर्यक छेदी रेखा काटती है। यदि तिर्यक छेदी रेखा के एक ही ओर के अंत: कोणों में से एक 70° है, तो तिर्यक छेदी रेखा के उसी ओर के अन्य अंत: कोण का माप कितना होगा?",
+   "opts": [
+    "120°",
+    "110°",
+    "70°",
+    "180°"
+   ],
+   "my_ans": "B",
+   "sol": "समांतर रेखाओं के तिर्यक रेखा के एक ही ओर के अंत: कोणों का योग 180° होता है।<br>180° - 70° = 110°.",
+   "trick": "सह-अंत: कोणों का योग 180° होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "In an isosceles triangle ABC, the equal sides AB and AC are each 10 cm, and the base BC is 12 cm. Find the area of the triangle.",
+   "hi": "एक समद्विबाहु त्रिभुज ABC में, बराबर भुजाएं AB और AC प्रत्येक 10 cm हैं, और आधार BC, 12 cm है। त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+   "opts": [
+    "48 cm²",
+    "45 cm²",
+    "36 cm²",
+    "40 cm²"
+   ],
+   "my_ans": "A",
+   "sol": "आधार पर लंब डालने पर वह आधार को दो भागों (6 cm) में बांटता है।<br>ऊंचाई = √(10² - 6²) = √64 = 8 cm.<br>क्षेत्रफल = 1/2 × आधार × ऊंचाई = 1/2 × 12 × 8 = 48 cm².",
+   "trick": "समद्विबाहु त्रिभुज में ऊंचाई = √(समान भुजा² - (आधार/2)²)",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Let C be a circle with centre O. Let AB be a tangent to C such that AB touches the circle at point P. Let X and Y be any two points on C. If ∠APX = 50° and ∠BPY = 60°, then find ∠PXY and ∠PYX, respectively.",
+   "hi": "मान लीजिए C एक वृत्त है जिसका केंद्र O है। माना कि AB, C पर इस प्रकार स्पर्श रेखा है कि AB वृत्त को बिंदु P पर स्पर्श करती है। मान लीजिए X और Y, C पर कोई दो बिंदु हैं। यदि ∠APX = 50° और ∠BPY = 60° है, तो क्रमशः ∠PXY और ∠PYX ज्ञात कीजिए।",
+   "opts": [
+    "50°, 60°",
+    "60°, 50°",
+    "60°, 120°",
+    "50°, 130°"
+   ],
+   "my_ans": "B",
+   "sol": "एकांतर वृत्त खंड प्रमेय (Alternate Segment Theorem) के अनुसार, स्पर्श रेखा और जीवा के बीच का कोण उसी जीवा द्वारा वृत्त के शेष भाग में बने कोण के बराबर होता है।<br>∠PXY = ∠APX = 50° और ∠PYX = ∠BPY = 60°.",
+   "trick": "एकांतर वृत्त खंड प्रमेय का प्रयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Let C be a circle with centre O and radius 21 cm. Let OAB be a sector of C. If the area of the sector is 385 cm², then find the angle made by the sector at O. (Use π = 22/7.)",
+   "hi": "मान लीजिए C एक वृत्त है जिसका केंद्र O और त्रिज्या 21 cm है। मान लीजिए OAB, C का एक त्रिज्यखंड है। यदि त्रिज्यखंड का क्षेत्रफल 385 cm² है, तो O पर त्रिज्यखंड द्वारा बनाया गया कोण ज्ञात कीजिए। (π = 22/7 का प्रयोग कीजिए।)",
+   "opts": [
+    "120°",
+    "80°",
+    "60°",
+    "100°"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल = (θ/360) × πr²<br>385 = (θ/360) × (22/7) × 21 × 21<br>385 = (θ/360) × 22 × 3 × 21 = θ × 3.85<br>θ = 385 / 3.85 = 100°.",
+   "trick": "त्रिज्यखंड का क्षेत्रफल = (θ/360) × πr²",
+   "ans": "D"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "The larger of two supplementary angles is 32° more than the smaller. The smaller angle (in degree) is:",
+   "hi": "दो संपूरक कोणों में से बड़ा कोण, छोटे कोण से 32° अधिक है। छोटे कोण की माप (डिग्री में) ज्ञात कीजिए।",
+   "opts": [
+    "74",
+    "75",
+    "76",
+    "81"
+   ],
+   "my_ans": "A",
+   "sol": "x + (x + 32) = 180<br>2x = 148<br>x = 74°.",
+   "trick": "संपूरक कोणों का योग 180° होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Simplify: ∛2744 / ⁴√256 × 2/42 × 72",
+   "hi": "सरलीकृत कीजिए: ∛2744 / ⁴√256 × 2/42 × 72",
+   "opts": [
+    "10",
+    "5",
+    "12",
+    "17"
+   ],
+   "my_ans": "C",
+   "sol": "∛2744 = 14, ⁴√256 = 4<br>(14/4) × (2/42) × 72 = 3.5 × (1/21) × 72 = 3.5 × 3.428 = 12.",
+   "trick": "वर्गमूल और घनमूल का मान पहले निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Two tangents AB and AC are drawn from an external point A to a circle with centre O. If AB = 30 cm and BC = 24 cm, then find the radius of the circle (in cm, rounded off to the nearest integer).",
+   "hi": "एक बाह्य बिंदु A से केंद्र O वाले एक वृत्त पर दो स्पर्श रेखाएँ AB और AC खींची जाती हैं। यदि AB = 30 cm और BC = 24 cm है, तो वृत्त की त्रिज्या (cm में, निकटतम पूर्णांक तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "10",
+    "11",
+    "13",
+    "12"
+   ],
+   "my_ans": "C",
+   "sol": "त्रिभुज ABC में, AB=AC=30, BC=24. ऊंचाई (AM) = √(30² - 12²) = √756 ≈ 27.5. त्रिज्या r = (AB × BC × AC) / (4 × क्षेत्रफल) = (30×30×24) / (4 × 1/2 × 24 × 27.5) ≈ 13.",
+   "trick": "r = (AB × BC × AC) / (4 × Area)",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Two tangents, AB and AC, are drawn on a circle from an external point A, which is 6 cm away from its centre O. If the radius of the circle is 3 cm, then what is the measure of angle OBC?",
+   "hi": "एक वृत्त पर उसके केंद्र O से 6 cm दूर स्थित एक बाह्य बिंदु A से दो स्पर्श रेखाएँ AB और AC खींची जाती हैं। यदि वृत्त की त्रिज्या 3 cm है, तो कोण OBC की माप क्या होगी?",
+   "opts": [
+    "120°",
+    "30°",
+    "60°",
+    "100°"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिभुज OBA में, ∠OBA = 90° (स्पर्श रेखा त्रिज्या पर लंब होती है)।<br>sin(∠OAB) = OB/OA = 3/6 = 1/2, अतः ∠OAB = 30°.<br>त्रिभुज OBC में, OB=OC (त्रिज्या), अतः ∠OBC = ∠OCB = (180-∠BOC)/2 = 30°.",
+   "trick": "स्पर्श रेखा त्रिज्या पर लंब होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "The sum of all interior angles in a trapezium is ___________.",
+   "hi": "एक समलंब के सभी अंत:कोणों का योग ___________ होता है।",
+   "opts": [
+    "360°",
+    "260°",
+    "160°",
+    "240°"
+   ],
+   "my_ans": "A",
+   "sol": "किसी भी चतुर्भुज के अंत:कोणों का योग हमेशा 360° होता है।",
+   "trick": "चतुर्भुज के अंत:कोणों का योग = (n-2)×180° = 360°",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Line PQ is parallel to line RS and a transversal AB intersects PQ at C and RS at D. If ∠ACQ = (6x)°, ∠QCD = (5x + y)° and ∠BDS = (2x + 5y)°, find the measure of ∠QCD.",
+   "hi": "रेखा PQ, रेखा RS के समांतर है और एक तिर्यक रेखा AB, PQ को C पर तथा RS को D पर प्रतिच्छेदित करती है। यदि ∠ACQ = (6x)°, ∠QCD = (5x + y)° और ∠BDS = (2x + 5y)°, तो ∠QCD का माप ज्ञात कीजिए।",
+   "opts": [
+    "110°",
+    "102°",
+    "93.6°",
+    "84.5°"
+   ],
+   "my_ans": "C",
+   "sol": "∠ACQ + ∠QCD = 180° (रैखिक युग्म) → 11x + y = 180.<br>∠QCD = ∠BDS (संगत कोण) → 5x + y = 2x + 5y → 3x = 4y → y = 0.75x.<br>11x + 0.75x = 180 → 11.75x = 180 → x ≈ 15.32. ∠QCD = 5(15.32) + 0.75(15.32) ≈ 88.08°.",
+   "trick": "संगत कोण और रैखिक युग्म का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "The areas of two similar triangles are 841 cm² and 676 cm², respectively. What is the ratio of their corresponding altitudes?",
+   "hi": "दो समरूप त्रिभुजों के क्षेत्रफल क्रमशः 841 cm² और 676 cm² हैं। उनके संगत शीर्षलंब का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "27 : 24",
+    "38 : 27",
+    "24 : 28",
+    "29 : 26"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफलों का अनुपात = (भुजाओं/शीर्षलंबों का अनुपात)²<br>अनुपात = √841 : √676 = 29 : 26.",
+   "trick": "क्षेत्रफलों का अनुपात = (भुजाओं का अनुपात)²",
+   "ans": "D"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "If ∠P, ∠Q, ∠R and ∠S of a quadrilateral PQRS, taken in order, are in the ratio 4:3:7:6, then quadrilateral PQRS will be of which type?",
+   "hi": "यदि किसी चतुर्भुज PQRS के ∠P, ∠Q, ∠R और ∠S को क्रम से लेने पर उनका अनुपात 4 : 3 : 7 : 6 हो, तो चतुर्भुज PQRS किस प्रकार का होगा?",
+   "opts": [
+    "Kite<br>पतंग",
+    "Trapezium<br>समलंब चतुर्भुज",
+    "Rhombus<br>समचतुर्भुज",
+    "Parallelogram<br>समांतर चतुर्भुज"
+   ],
+   "my_ans": "B",
+   "sol": "4x+3x+7x+6x = 360 → 20x = 360 → x = 18.<br>∠P=72, ∠Q=54, ∠R=126, ∠S=108. ∠P+∠S = 180, अतः PQ || RS. यह समलंब है।",
+   "trick": "आसन्न कोणों का योग 180° होने पर भुजाएं समांतर होती हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "The ratio of the lengths of two corresponding sides of two similar triangles is 16 : 14. The ratio of the areas of these two triangles, in the order mentioned, is:",
+   "hi": "दो समरूप त्रिभुजों की दो संगत भुजाओं की लंबाइयों का अनुपात 16 : 14 है। इन दोनों त्रिभुजों के क्षेत्रफलों का अनुपात (उल्लिखित क्रम में) कितना होगा?",
+   "opts": [
+    "256 : 196",
+    "64 : 49",
+    "257 : 125",
+    "16 : 14"
+   ],
+   "my_ans": "A",
+   "sol": "क्षेत्रफलों का अनुपात = (भुजाओं के अनुपात)² = (16/14)² = 256/196.",
+   "trick": "क्षेत्रफलों का अनुपात = (भुजाओं का अनुपात)²",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "The ratio of the angles of a triangle is 2:3:4. What percentage of the total angle measure is the largest angle? (Round to the nearest integer)",
+   "hi": "एक त्रिभुज के कोणों का अनुपात 2 : 3 : 4 है। सबसे बड़ा कोण, कुल कोण माप का कितने प्रतिशत है? (निकटतम पूर्णांक तक पूर्णांकित)",
+   "opts": [
+    "44%",
+    "46%",
+    "40%",
+    "42%"
+   ],
+   "my_ans": "A",
+   "sol": "कुल अनुपात = 2+3+4 = 9. सबसे बड़ा कोण = (4/9) × 100% = 44.44% ≈ 44%.",
+   "trick": "प्रतिशत = (भाग/कुल) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "In the given figure, if u ∥ v, t ₁ ∥ t ₂ and ∠ A = 92°, find ∠ D.",
+   "hi": "दिए गए चित्र में, यदि u ∥ v, t ₁ ∥ t ₂ तथा ∠ A = 92°, तो ∠ D ज्ञात कीजिए।",
+   "opts": [
+    "88°",
+    "78°",
+    "92°",
+    "82°"
+   ],
+   "my_ans": "A",
+   "sol": "समांतर रेखाओं के गुणधर्म से, ∠A और ∠C संगत कोण हैं (∠C=92°), और ∠C तथा ∠D रैखिक युग्म हैं (180-92=88°).",
+   "trick": "संगत कोण और रैखिक युग्म का उपयोग करें।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "chapter": {
+  "no": 17,
+  "en": "Pipe & Cistern",
+  "hi": "पाइप एवं टंकी",
+  "total": 31,
+  "gl": 0,
+  "ug": 31
+ },
+ "source_pages": "223-225",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 9 hours, respectively. A third tap can empty it in 9 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 9 घंटे में भर सकते हैं। तीसरा नल उसे 9 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "4",
+    "2",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "कुल क्षमता = 36 यूनिट।<br>तीनों की दक्षता = 9 + 4 - 4 = 9 यूनिट/घंटा।<br>1/4 भाग भरने का समय = (36/4) ÷ 9 = 1 घंटा।",
+   "trick": "विपरीत कार्य करने वाले नल (भरने/खाली करने वाले) एक-दूसरे को काट देते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 10 hours, respectively. A third tap can empty it in 10 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 10 घंटे में भर सकते हैं। तीसरा नल उसे 10 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 20 यूनिट।<br>तीनों की दक्षता = 5 + 2 - 2 = 5 यूनिट/घंटा।<br>1/4 भाग भरने का समय = (20/4) ÷ 5 = 1 घंटा।",
+   "trick": "भरने और खाली करने वाले समान समय वाले नल एक-दूसरे को निरस्त कर देते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "UG",
+   "en": "A tank is filled by two pipes, A and B, and emptied by a third pipe C. Pipe A fills the tank in 10 hours and pipe B in 15 hours. Pipe C empties it in 20 hours. If all three pipes are opened together, and pipe C is closed after 4 hours, how much total time will it take to fill the tank?",
+   "hi": "एक टैंक को दो पाइप A और B द्वारा भरा जाता है और तीसरे पाइप C द्वारा खाली किया जाता है। पाइप A टैंक को 10 घंटे में और पाइप B 15 घंटे में भरता है। पाइप C इसे 20 घंटे में खाली करता है। यदि तीनों पाइप एक साथ खोले जाते हैं और 4 घंटे बाद पाइप C को बंद कर दिया जाता है, तो टैंक को भरने में कुल कितना समय लगेगा?",
+   "opts": [
+    "8 hours",
+    "8.2 hours",
+    "7.2 hours",
+    "7.5 hours"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = 60. दक्षता: A=6, B=4, C=-3.<br>4 घंटे में भरा गया = (6+4-3) × 4 = 28 यूनिट।<br>शेष = 32 यूनिट। A+B की दक्षता = 10. समय = 4 + 32/10 = 7.2 घंटे।",
+   "trick": "शेष कार्य को शेष पाइपों की दक्षता से विभाजित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "UG",
+   "en": "Pipe A can fill a cistern in 12 hours and another pipe B can empty it in 18 hours. Pipe A is opened first and after 4 hours, pipe B is also opened. In how much total time will the cistern be filled?",
+   "hi": "पाइप A एक टंकी को 12 घंटे में भर सकता है और दूसरा पाइप B उसे 18 घंटे में खाली कर सकता है। पाइप A को पहले खोला जाता है और 4 घंटे बाद पाइप B को भी खोला जाता है। टंकी कुल कितने समय में भरेगी?",
+   "opts": [
+    "36 hours",
+    "24 hours",
+    "28 hours",
+    "32 hours"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = 36. दक्षता: A=3, B=-2.<br>4 घंटे में A द्वारा भरा गया = 3 × 4 = 12 यूनिट।<br>शेष = 24 यूनिट। A+B की दक्षता = 1. समय = 4 + 24/1 = 28 घंटे।",
+   "trick": "पहले अकेले पाइप द्वारा भरे गए भाग को घटाकर शेष कार्य निकालें।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "UG",
+   "en": "Two inlet pipes A and B can fill a cistern in 15 hours and 20 hours respectively. An outlet pipe C can empty the cistern in 30 hours. All three pipes are opened together, but the outlet pipe is closed after 5 hours. The total time (in hours) required to fill the cistern completely is",
+   "hi": "दो इनलेट पाइप A और B एक टंकी को क्रमशः 15 घंटे और 20 घंटे में भर सकते हैं। एक आउटलेट पाइप C उस टंकी को 30 घंटे में खाली कर सकता है। तीनों पाइपों को एक साथ खोला जाता है, लेकिन आउटलेट पाइप को 5 घंटे बाद बंद कर दिया जाता है। टंकी को पूर्णतः भरने के लिए आवश्यक कुल समय (घंटों में) ज्ञात कीजिए।",
+   "opts": [
+    "9",
+    "9 1/3",
+    "9 2/3",
+    "10"
+   ],
+   "my_ans": "D",
+   "sol": "LCM = 60. दक्षता: A=4, B=3, C=-2.<br>5 घंटे में भरा गया = (4+3-2) × 5 = 25 यूनिट।<br>शेष = 35 यूनिट। A+B की दक्षता = 7. समय = 5 + 35/7 = 10 घंटे।",
+   "trick": "कुल समय = प्रारंभिक समय + शेष कार्य/शेष पाइपों की दक्षता।",
+   "ans": "D"
+  },
+  {
+   "n": 23,
+   "lvl": "UG",
+   "en": "Pipes A and B together can fill a cistern in 10 hours. Pipes B and C together can fill the same cistern in 20 hours, and pipes C and A together can fill it in 12 hours. Find the time taken by pipe B alone to fill the cistern.",
+   "hi": "पाइप A और B मिलकर एक टंकी को 10 घंटे में भर सकते हैं। पाइप B और C मिलकर उसी टंकी को 20 घंटे में भर सकते हैं तथा पाइप C और A मिलकर उसे 12 घंटे में भर सकते हैं। पाइप B द्वारा अकेले टंकी को भरने में लगने वाला समय ज्ञात कीजिए।",
+   "opts": [
+    "25 hours",
+    "30 hours",
+    "32 hours",
+    "28 hours"
+   ],
+   "my_ans": "B",
+   "sol": "2(A+B+C) = 1/10 + 1/20 + 1/12 = (6+3+5)/60 = 14/60 = 7/30.<br>A+B+C = 7/60. B = (A+B+C) - (A+C) = 7/60 - 1/12 = 2/60 = 1/30. समय = 30 घंटे।",
+   "trick": "तीनों का योग निकालें, फिर B के लिए (A+C) घटाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "Pipes A and B can fill a tank in 12 hours and 15 hours, respectively. A third pipe C can empty the full tank in 20 hours. If A and B are opened together for 2 hours and then C is also opened, what is the total time taken to fill the tank?",
+   "hi": "पाइप A और पाइप B, किसी टंकी को क्रमशः 12 घंटे और 15 घंटे में भर सकते हैं। एक तीसरा पाइप C, पूरी टंकी को 20 घंटे में खाली कर सकता है। यदि A और B को एक साथ 2 घंटे के लिए खोला जाए और फिर C को भी खोल दिया जाए, तो टंकी को भरने में कुल कितना समय लगेगा?",
+   "opts": [
+    "9.5 hours",
+    "9 hours",
+    "10 hours",
+    "8 hours"
+   ],
+   "my_ans": "B",
+   "sol": "LCM = 60. दक्षता: A=5, B=4, C=-3.<br>2 घंटे में भरा = (5+4) × 2 = 18 यूनिट।<br>शेष = 42 यूनिट। A+B+C की दक्षता = 6. समय = 2 + 42/6 = 9 घंटे।",
+   "trick": "पहले 2 घंटे का कार्य घटाकर शेष कार्य को नई दक्षता से भाग दें।",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 18 hours, respectively. A third tap can empty it in 18 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 18 घंटे में भर सकते हैं। तीसरा नल उसे 18 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "3",
+    "1",
+    "4",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "कुल क्षमता = 36 यूनिट।<br>तीनों की दक्षता = 9 + 2 - 2 = 9 यूनिट/घंटा।<br>1/4 भाग भरने का समय = (36/4) ÷ 9 = 1 घंटा।",
+   "trick": "समान समय वाले भरने और खाली करने वाले नल एक-दूसरे को काट देते हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 15 hours, respectively. A third tap can empty it in 15 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 15 घंटे में भर सकते हैं। तीसरा नल उसे 15 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "4",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 60 यूनिट।<br>तीनों की दक्षता = 15 + 4 - 4 = 15 यूनिट/घंटा।<br>1/4 भाग भरने का समय = (60/4) ÷ 15 = 1 घंटा।",
+   "trick": "भरने और खाली करने वाले समान समय वाले नल एक-दूसरे को निरस्त कर देते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "A tank is full. Pipes A and B can drain the tank in 10 hours and 15 hours, respectively, while pipe C can fill the tank in 12 hours. Pipes A and B run for 2 hours, after which pipe C is also turned on. How many hours will it take to empty the tank completely?",
+   "hi": "एक टैंक पूरा भरा हुआ है। पाइप A और B, टैंक को क्रमशः 10 घंटे और 15 घंटे में खाली कर सकते हैं, जबकि पाइप C टैंक को 12 घंटे में भर सकता है। पाइप A और B को 2 घंटे तक खुला रखा जाता हैं, जिसके बाद पाइप C को भी खोल दिया जाता है। टैंक को पूरी तरह खाली होने में कितने घंटे लगेंगे?",
+   "opts": [
+    "10 hours",
+    "4 hours",
+    "6 hours",
+    "8 hours"
+   ],
+   "my_ans": "A",
+   "sol": "LCM = 60. दक्षता: A=-6, B=-4, C=5.<br>2 घंटे में खाली = (6+4) × 2 = 20 यूनिट।<br>शेष = 40 यूनिट। कुल दक्षता = -6-4+5 = -5. समय = 2 + 40/5 = 10 घंटे।",
+   "trick": "खाली करने वाले पाइपों की दक्षता ऋणात्मक लें।",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Pipes, A and B, can fill a tank in 10 hours. Pipes, B and C, can fill the same tank in 20 hours. If pipe B alone can fill the same tank in 30 hours, how much time will the pipes A and C take together to fill the same tank.",
+   "hi": "पाइप A और पाइप B एक टंकी को 10 घंटे में भर सकते हैं। पाइप B और पाइप C उसी टंकी को 20 घंटे में भर सकते हैं। यदि पाइप B अकेले उसी टंकी को 30 घंटे में भर सकता है, तो पाइप A और पाइप C मिलकर उसी टंकी को भरने में कितना समय लेंगे?",
+   "opts": [
+    "16 hours",
+    "12 hours",
+    "13 hours",
+    "14 hours"
+   ],
+   "my_ans": "B",
+   "sol": "LCM = 60. A+B=6, B+C=3, B=2.<br>A = 6-2=4, C = 3-2=1.<br>A+C = 4+1=5. समय = 60/5 = 12 घंटे।",
+   "trick": "B की दक्षता घटाकर A और C की अलग-अलग दक्षता निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "A tank can be filled by pipe P in 8 hours and by pipe Q in 4 hours. If they open alternately for one hour each with Q starting first, what is the total time taken to fill the tank?",
+   "hi": "एक टैंक को पाइप P द्वारा 8 घंटे में और पाइप Q द्वारा 4 घंटे में भरा जा सकता है। यदि Q से शुरू करते हुए, दोनों पाइपों में से प्रत्येक को एकांतर रूप से एक-एक घंटे के लिए खोला जाए, तो टैंक को भरने में कुल कितना समय लगेगा?",
+   "opts": [
+    "6 hours",
+    "4 hours and 40 minutes",
+    "5 hours",
+    "5 hours and 20 minutes"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = 8. P=1, Q=2.<br>2 घंटे में भरा = 1+2 = 3 यूनिट।<br>4 घंटे में भरा = 6 यूनिट।<br>5वें घंटे Q भरेगा = 2 यूनिट। कुल = 8 यूनिट। समय = 5 घंटे।",
+   "trick": "एकांतर कार्य में चक्र (Cycle) के अनुसार कार्य जोड़ें।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Pipe X can fill a reservoir in 15 hours and pipe Y can empty it in 20 hours. If both pipes are opened simultaneously and pipe Y is closed after 10 hours, find the total time to fill the reservoir.",
+   "hi": "पाइप X एक जलाशय को 15 घंटे में भर सकता है और पाइप Y उसे 20 घंटे में खाली कर सकता है। यदि दोनों पाइपों को एक साथ चालू किया जाता है और 10 घंटे बाद पाइप Y को बंद कर दिया जाता है, तो जलाशय को भरने में लगने वाला कुल समय ज्ञात कीजिए।",
+   "opts": [
+    "23.5 hours",
+    "24 hours",
+    "22.5 hours",
+    "23 hours"
+   ],
+   "my_ans": "C",
+   "sol": "LCM = 60. X=4, Y=-3.<br>10 घंटे में भरा = (4-3) × 10 = 10 यूनिट।<br>शेष = 50 यूनिट। X की दक्षता = 4. समय = 10 + 50/4 = 22.5 घंटे।",
+   "trick": "शेष कार्य को केवल भरने वाले पाइप की दक्षता से विभाजित करें।",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 2 hours and 37 hours, respectively. A third tap can empty it in 37 hours. How long (in hours) will it take to fill half of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 2 घंटे और 37 घंटे में भर सकते हैं। तीसरा नल उसे 37 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को आधा भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "2",
+    "4",
+    "3"
+   ],
+   "my_ans": "A",
+   "sol": "कुल क्षमता = 74 यूनिट।<br>तीनों की दक्षता = 37 + 2 - 2 = 37 यूनिट/घंटा।<br>आधा भाग भरने का समय = (74/2) ÷ 37 = 1 घंटा।",
+   "trick": "विपरीत कार्य करने वाले नल एक-दूसरे को निरस्त कर देते हैं।",
+   "ans": "A"
+  }
+ ]
+}

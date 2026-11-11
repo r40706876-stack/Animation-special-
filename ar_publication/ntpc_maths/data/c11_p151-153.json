@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "151-153",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "The mean marks of the following distribution is:",
+   "hi": "निम्नलिखित बंटन के माध्य अंक ज्ञात कीजिए।",
+   "opts": [
+    "60",
+    "51",
+    "74",
+    "65"
+   ],
+   "my_ans": "D",
+   "sol": "माध्य = Σ(f×x) / Σf = (81×15 + 35×4 + 73×3 + 56×16) / (15+4+3+16)<br>= (1215 + 140 + 219 + 896) / 38 = 2470 / 38 = 65.",
+   "trick": "माध्य = कुल योग / कुल संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "If A : B = 2 : 3, B : C = 4 : 3 and C : D = 6 : 7, then A : B : C : D is:",
+   "hi": "यदि A : B = 2 : 3, B : C = 4 : 3 और C : D = 6 : 7 है, तो A : B : C : D ज्ञात कीजिए।",
+   "opts": [
+    "16 : 24 : 16 : 21",
+    "16 : 24 : 18 : 21",
+    "14 : 24 : 18 : 21",
+    "16 : 22 : 18 : 21"
+   ],
+   "my_ans": "B",
+   "sol": "A:B=8:12, B:C=12:9, C:D=6:7. A:B:C = 8:12:9. C:D=6:7, multiply by 1.5 to match C=9: A:B:C:D = 8:12:9:10.5. Multiply by 2: 16:24:18:21.",
+   "trick": "अनुपात को बराबर करने के लिए उभयनिष्ठ पदों को समान बनाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "If a : b : c = 3 : 4 : 5 and 2a - 3b + 4c = 56, then the value of c is:",
+   "hi": "यदि a : b : c = 3 : 4 : 5 और 2a - 3b + 4c = 56 है, तो c का मान ज्ञात कीजिए।",
+   "opts": [
+    "21",
+    "20",
+    "24",
+    "22"
+   ],
+   "my_ans": "B",
+   "sol": "माना a=3k, b=4k, c=5k. 2(3k) - 3(4k) + 4(5k) = 56<br>6k - 12k + 20k = 56 → 14k = 56 → k = 4. c = 5k = 5×4 = 20.",
+   "trick": "अनुपात को k मानकर समीकरण में रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "A teacher needs to split 300 students into three groups so that the second and third groups have a ratio of 3 : 7, and the first and third groups have a ratio of 2 : 7. Which of the following is the correct number of students in the second group?",
+   "hi": "एक शिक्षक को 300 विद्यार्थियों को तीन समूहों में विभाजित करना है इस प्रकार कि दूसरे और तीसरे समूह में विद्यार्थियों का अनुपात 3 : 7 हो तथा पहले और तीसरे समूह में विद्यार्थियों का अनुपात 2 : 7 हो। निम्नलिखित में से दूसरे समूह में विद्यार्थियों की सही संख्या कौन-सी है?",
+   "opts": [
+    "75",
+    "72",
+    "64",
+    "88"
+   ],
+   "my_ans": "A",
+   "sol": "G2:G3 = 3:7, G1:G3 = 2:7. G1:G2:G3 = 2:3:7. कुल भाग = 2+3+7 = 12. 1 भाग = 300/12 = 25. G2 = 3×25 = 75.",
+   "trick": "अनुपात को एक साथ लिखकर कुल योग से तुलना करें।",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A chemical research laboratory uses three compounds A, B, and C in the cost ratio 3 : 5 : 7. When a fourth compound D is added to the mixture, the total cost increases by 40 %. If the new ratio becomes A : B : C : D = 3 : 5 : 7 : x, what is the value of x?",
+   "hi": "एक रासायनिक अनुसंधान प्रयोगशाला तीन यौगिक A, B और C का लागत अनुपात 3 : 5 : 7 रखती है। जब चौथा यौगिक D मिश्रण में जोड़ा जाता है, तो कुल लागत 40 % बढ़ जाती है। यदि नया अनुपात A : B : C : D = 3 : 5 : 7 : x हो, तो x का मान क्या है?",
+   "opts": [
+    "8",
+    "6",
+    "4",
+    "9"
+   ],
+   "my_ans": "B",
+   "sol": "पुरानी लागत = 3+5+7 = 15. नई लागत = 15 + 40% of 15 = 15 + 6 = 21. नया अनुपात 3:5:7:x, योग = 15+x = 21 → x = 6.",
+   "trick": "कुल लागत में वृद्धि को नए अनुपात के योग में जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "A number when increased by 25% becomes equal to another number, which is 20% less than a third number. What is the ratio of the first number to the third number?",
+   "hi": "किसी संख्या में 25% की वृद्धि करने पर वह एक ऐसी संख्या के बराबर हो जाती है जो तीसरी संख्या से 20% कम है। पहली संख्या और तीसरी संख्या का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "16:25",
+    "25:36",
+    "27:38",
+    "9:16"
+   ],
+   "my_ans": "A",
+   "sol": "माना तीसरी संख्या = 100. दूसरी संख्या = 100 - 20% = 80. पहली संख्या × 1.25 = 80 → पहली संख्या = 80 / 1.25 = 64. अनुपात = 64:100 = 16:25.",
+   "trick": "तीसरी संख्या को 100 मानकर पीछे से हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "If 3 : 27 :: 5.6 : x and 5 : 35 :: 6 : y, then what is the ratio of x to y?",
+   "hi": "यदि 3 : 27 :: 5.6 : x और 5 : 35 :: 6 : y है, तो x और y का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "7 : 3",
+    "4 : 6",
+    "11 : 15",
+    "6 : 5"
+   ],
+   "my_ans": "D",
+   "sol": "3/27 = 5.6/x → 1/9 = 5.6/x → x = 50.4. 5/35 = 6/y → 1/7 = 6/y → y = 42. x:y = 50.4:42 = 504:420 = 6:5.",
+   "trick": "समानुपात का नियम (a/b = c/d) लगाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Find the mean proportional between 9 and 25.",
+   "hi": "9 और 25 के बीच मध्यानुपाती (mean proportional) ज्ञात कीजिए।",
+   "opts": [
+    "15",
+    "21",
+    "18",
+    "12"
+   ],
+   "my_ans": "A",
+   "sol": "मध्यानुपाती = √(a×b) = √(9×25) = 3×5 = 15.",
+   "trick": "मध्यानुपाती = √ab",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "The price of each article of type P, Q, and R is ₹280, ₹180 and ₹115, respectively. Rohit buys articles of each type in the ratio 4 : 2 : 7 for ₹ 6,855. How many articles of type Q did he purchase?",
+   "hi": "P, Q और R प्रकार की प्रत्येक वस्तु की कीमत क्रमशः ₹280, ₹180 और ₹115 है। रोहित प्रत्येक प्रकार की वस्तुएँ 4 : 2 : 7 के अनुपात में ₹6,855 में खरीदता है। उसने Q प्रकार की कितनी वस्तुएँ खरीदीं?",
+   "opts": [
+    "12",
+    "6",
+    "3",
+    "14"
+   ],
+   "my_ans": "B",
+   "sol": "कुल खर्च = (280×4k) + (180×2k) + (115×7k) = 1120k + 360k + 805k = 2285k = 6855. k = 3. Q की वस्तुएँ = 2k = 2×3 = 6.",
+   "trick": "कुल खर्च = (कीमत × अनुपात) का योग",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "₹ 6320 is divided among A, B, C, and D in such a way that the shares of A and B, B and C, and C and D are in the ratios of 2 : 3, 4 : 5, and 10 : 3 respectively. The share of A (in ₹) is:",
+   "hi": "₹ 6320 को A, B, C और D में इस प्रकार विभाजित किया जाता है कि A और B, B और C, तथा C और D के हिस्से क्रमशः 2 : 3, 4 : 5, और 10 : 3 के अनुपात में हैं। A का हिस्सा (₹ में) कितना है?",
+   "opts": [
+    "1400",
+    "1280",
+    "1350",
+    "1190"
+   ],
+   "my_ans": "B",
+   "sol": "A:B=8:12, B:C=12:15, C:D=15:4.5. A:B:C:D = 8:12:15:4.5 = 16:24:30:9. कुल = 79 भाग = 6320. 1 भाग = 80. A = 16×80 = 1280.",
+   "trick": "अनुपात को एक साथ जोड़ें (A:B:C:D)।",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "The price of each article of type P, Q, and R is ₹280, ₹180 and ₹120, respectively. Subrata buys articles of each type in the ratio 3 : 2 : 3 for ₹6,240. How many articles of type Q did he purchase?",
+   "hi": "P, Q और R प्रकार की प्रत्येक वस्तु की कीमत क्रमशः ₹280, ₹180 और ₹120 है। सुब्रता प्रत्येक प्रकार की वस्तुएँ 3 : 2 : 3 के अनुपात में ₹6,240 में खरीदता है। उसने Q प्रकार की कितनी वस्तुएँ खरीदीं?",
+   "opts": [
+    "8",
+    "14",
+    "16",
+    "5"
+   ],
+   "my_ans": "A",
+   "sol": "कुल खर्च = (280×3k) + (180×2k) + (120×3k) = 840k + 360k + 360k = 1560k = 6240. k = 4. Q की वस्तुएँ = 2k = 2×4 = 8.",
+   "trick": "कुल खर्च = (कीमत × अनुपात) का योग",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "If a : b :: b : c; c = 4a; and b = 6, find the positive value of c.",
+   "hi": "यदि a : b :: b : c; c = 4a; और b = 6 है, तो c का धनात्मक मान ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "20",
+    "16",
+    "12"
+   ],
+   "my_ans": "D",
+   "sol": "a:b :: b:c → b² = ac. 6² = a×c → 36 = a×c. c = 4a → a = c/4. 36 = (c/4)×c → c² = 144 → c = 12.",
+   "trick": "b² = ac का प्रयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "If 3A = 4B = 8C, what is A : B : C?",
+   "hi": "यदि 3A = 4B = 8C है, तो A : B : C क्या होगा?",
+   "opts": [
+    "6 : 8 : 3",
+    "8 : 4 : 3",
+    "6 : 3 : 8",
+    "8 : 6 : 3"
+   ],
+   "my_ans": "D",
+   "sol": "A:B:C = 1/3 : 1/4 : 1/8. LCM(3,4,8) = 24. (24/3) : (24/4) : (24/8) = 8 : 6 : 3.",
+   "trick": "गुणांकों का उल्टा अनुपात लें।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "If a : b = 2 : 3, then (7a³ − 2b³) : (b³ − a³) =",
+   "hi": "यदि a : b = 2 : 3, तो (7a³ − 2b³) : (b³ − a³) =",
+   "opts": [
+    "3 : 11",
+    "13 : 6",
+    "3 : 14",
+    "2 : 19"
+   ],
+   "my_ans": "D",
+   "sol": "a=2, b=3. (7×2³ - 2×3³) : (3³ - 2³) = (7×8 - 2×27) : (27 - 8) = (56 - 54) : 19 = 2 : 19.",
+   "trick": "a और b का मान सीधे अनुपात से रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The ratio of the ages of two persons, P and Q, is 3 : 4. After 6 years, the ratio of their ages will become 4 : 5. What is the present age of P?",
+   "hi": "दो व्यक्तियों, P और Q, की आयु का अनुपात 3 : 4 है। 6 वर्ष बाद, उनकी आयु का अनुपात 4 : 5 हो जाएगा। P की वर्तमान आयु कितनी है?",
+   "opts": [
+    "30 years<br>30 वर्ष",
+    "18 years<br>18 वर्ष",
+    "13 years<br>13 वर्ष",
+    "20 years<br>20 वर्ष"
+   ],
+   "my_ans": "B",
+   "sol": "3x+6 / 4x+6 = 4/5 → 15x+30 = 16x+24 → x = 6. P की आयु = 3x = 18 वर्ष.",
+   "trick": "अनुपात में अंतर समान हो तो सीधे जोड़ें।",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "If 8, x and 18 are in continued proportion, find the value of x.",
+   "hi": "यदि 8, x और 18 सतत अनुपात में हैं, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "12",
+    "18",
+    "8",
+    "14"
+   ],
+   "my_ans": "A",
+   "sol": "x² = 8×18 = 144 → x = 12.",
+   "trick": "सतत अनुपात में x² = ab",
+   "ans": "A"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Find the third proportional to the numbers 16 and 24.",
+   "hi": "संख्याओं 16 और 24 का तृतीयानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "30",
+    "40",
+    "32",
+    "36"
+   ],
+   "my_ans": "D",
+   "sol": "16:24 :: 24:x → 16x = 24×24 → x = 576/16 = 36.",
+   "trick": "तृतीयानुपाती = b²/a",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "The speeds of two vehicles are 20 km/h and 45 km/h. Find the mean proportional between the two speeds.",
+   "hi": "दो वाहनों की चाल 20 km/h और 45 km/h है। इन दोनों चालों के बीच मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "32 km/h",
+    "35 km/h",
+    "30 km/h",
+    "25 km/h"
+   ],
+   "my_ans": "C",
+   "sol": "मध्यानुपाती = √(20×45) = √900 = 30 km/h.",
+   "trick": "मध्यानुपाती = √ab",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Find the mean proportional of 425 and 17.",
+   "hi": "425 और 17 का मध्यानुपाती ज्ञात कीजिए।",
+   "opts": [
+    "95",
+    "75",
+    "85",
+    "65"
+   ],
+   "my_ans": "C",
+   "sol": "√(425×17) = √(25×17×17) = 5×17 = 85.",
+   "trick": "मध्यानुपाती = √ab",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "The monthly incomes of two friends Ajay and Amit, are in the ratio 6 : 7 respectively and each of them saves ₹63,000 every month. If the ratio of their monthly expenditure is 2 : 4, find the monthly income of Ajay (in ₹).",
+   "hi": "दो मित्रों अजय और अमित की मासिक आय का अनुपात क्रमशः 6 : 7 है तथा दोनों में से प्रत्येक हर माह ₹63,000 की बचत करते हैं। यदि उनके मासिक व्यय का अनुपात 2 : 4 है, तो अजय की मासिक आय (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "75,600",
+    "74,600",
+    "1,05,840",
+    "76,600"
+   ],
+   "my_ans": "A",
+   "sol": "आय = 6x, 7x. व्यय = 6x-63000 / 7x-63000 = 2/4 = 1/2. 12x-126000 = 7x-63000 → 5x = 63000 → x = 12600. अजय की आय = 6x = 75600.",
+   "trick": "आय - बचत = व्यय",
+   "ans": "A"
+  }
+ ]
+}

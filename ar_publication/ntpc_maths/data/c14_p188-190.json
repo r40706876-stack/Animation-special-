@@ -1,0 +1,350 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Average",
+  "hi": "औसत",
+  "total": 93,
+  "gl": 53,
+  "ug": 40
+ },
+ "source_pages": "188-190",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "The average of 7 consecutive even numbers is 32. Find the sum of the smallest and largest numbers.",
+   "hi": "7 क्रमागत सम संख्याओं का औसत 32 है। इनमें से सबसे छोटी और सबसे बड़ी संख्याओं का योग ज्ञात कीजिए।",
+   "opts": [
+    "62",
+    "68",
+    "66",
+    "64"
+   ],
+   "my_ans": "D",
+   "sol": "क्रमागत संख्याओं में औसत ही मध्य संख्या होती है। मध्य संख्या (4थी) = 32 है।<br>संख्याएं: 26, 28, 30, 32, 34, 36, 38. सबसे छोटी 26, सबसे बड़ी 38.<br>योग = 26 + 38 = 64.",
+   "trick": "सबसे छोटी + सबसे बड़ी = 2 × औसत",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "In a school, Class A has 24 students with an average height of 160 cm, and Class B has 20 students with an average height of 168 cm. The average height of students in Class C is 165 cm. If the overall average height of all students from Classes A, B and C is 164 cm, find the number of students in Class C.",
+   "hi": "एक विद्यालय में, कक्षा 'A' में 24 विद्यार्थियों की औसत लंबाई 160 cm है, और कक्षा 'B' में 20 विद्यार्थियों की औसत लंबाई 168 cm है। कक्षा 'C' में विद्यार्थियों की औसत लंबाई 165 cm है। यदि कक्षा 'A', 'B' और 'C' के सभी विद्यार्थियों की कुल औसत लंबाई 164 cm है, तो कक्षा 'C' में विद्यार्थियों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "18",
+    "26",
+    "20",
+    "16"
+   ],
+   "my_ans": "D",
+   "sol": "माना C में x छात्र हैं। कुल योग = 24×160 + 20×168 + x×165 = (44+x)×164<br>3840 + 3360 + 165x = 7216 + 164x<br>x = 7216 - 7200 = 16.",
+   "trick": "कुल योग = औसत × कुल संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "A company has 10 officers and 30 clerks. The average monthly salary of an officer is ₹45,000 and that of a clerk is ₹25,000. What is the average salary of the entire staff?",
+   "hi": "एक कंपनी में 10 अधिकारी और 30 क्लर्क हैं। एक अधिकारी का औसत मासिक वेतन ₹45,000 और एक क्लर्क का औसत मासिक वेतन ₹25,000 है। सभी कर्मचारियों का औसत वेतन कितना है?",
+   "opts": [
+    "₹30,000",
+    "₹35,000",
+    "₹28,000",
+    "₹32,000"
+   ],
+   "my_ans": "A",
+   "sol": "कुल वेतन = (10×45000) + (30×25000) = 450000 + 750000 = 1200000<br>कुल कर्मचारी = 40. औसत = 1200000 ÷ 40 = 30000.",
+   "trick": "औसत = कुल योग / कुल संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "In an apartment complex, the monthly electricity consumption (in units) for five flats is 320, 400, 360, 340, and 380. If the residents want to know the average monthly consumption (in units) per flat by using the direct method, what value will they obtain?",
+   "hi": "किसी अपार्टमेंट कॉम्प्लेक्स में, पांच फ्लैटों के मासिक विद्युत खपत (यूनिट में) 320, 400, 360, 340, और 380 है। यदि निवासी प्रत्यक्ष विधि का उपयोग करके प्रति फ्लैट औसत मासिक खपत (यूनिट में) जानना चाहते हैं, तो उन्हें कितना मान प्राप्त होगा?",
+   "opts": [
+    "365",
+    "355",
+    "350",
+    "360"
+   ],
+   "my_ans": "D",
+   "sol": "योग = 320 + 400 + 360 + 340 + 380 = 1800<br>औसत = 1800 ÷ 5 = 360.",
+   "trick": "औसत = सभी का योग / संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "20 note books, 100 pens and 50 pencils were bought for ₹3,500. If the average cost of a note book is ₹50 and that of a pencil is ₹10, find the average cost of a pen.",
+   "hi": "20 नोटबुक, 100 पेन और 50 पेंसिल ₹3,500 में खरीदी गईं। यदि एक नोटबुक की औसत लागत ₹50 है और एक पेंसिल की औसत लागत ₹10 है, तो एक पेन की औसत लागत ज्ञात कीजिए।",
+   "opts": [
+    "₹16",
+    "₹25",
+    "₹20",
+    "₹15"
+   ],
+   "my_ans": "C",
+   "sol": "नोटबुक का कुल मूल्य = 20×50 = 1000. पेंसिल का कुल मूल्य = 50×10 = 500.<br>पेन का कुल मूल्य = 3500 - 1500 = 2000. औसत पेन मूल्य = 2000 ÷ 100 = 20.",
+   "trick": "कुल खर्च - ज्ञात वस्तुओं का खर्च = शेष वस्तुओं का खर्च",
+   "ans": "C"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "A group consists of 25% boys, 55% girls, and the rest are teachers. Their average weights are 50 kg, 55 kg, and 65 kg, respectively. What is the average weight (in kg) of the group?",
+   "hi": "एक समूह में 25% लड़के, 55% लड़कियां और शेष शिक्षक हैं। उनका औसत वजन क्रमशः 50 kg, 55 kg और 65 kg है। समूह का औसत वजन (kg में) कितना है?",
+   "opts": [
+    "52.14 kg",
+    "55.75 kg",
+    "62.34 kg",
+    "58.43 kg"
+   ],
+   "my_ans": "B",
+   "sol": "शिक्षक = 100 - (25+55) = 20%.<br>औसत = (25×50 + 55×55 + 20×65) ÷ 100 = (1250 + 3025 + 1300) ÷ 100 = 5575 ÷ 100 = 55.75.",
+   "trick": "भारित औसत = Σ(प्रतिशत × औसत) / 100",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "The average of 8 numbers is 43. If each number is decreased by 7, what will the new average be?",
+   "hi": "8 संख्याओं का औसत 43 है। यदि प्रत्येक संख्या में 7 की कमी की जाए, तो नया औसत ज्ञात कीजिए।",
+   "opts": [
+    "43",
+    "8",
+    "29",
+    "36"
+   ],
+   "my_ans": "D",
+   "sol": "यदि प्रत्येक संख्या में से समान मान घटाया जाता है, तो औसत में से भी वही मान घट जाता है।<br>नया औसत = 43 - 7 = 36.",
+   "trick": "प्रत्येक संख्या में परिवर्तन = औसत में वही परिवर्तन",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "At a health club, 40% of the members are women and 60% of the members are men. If the average age of the men is 51 years and the average age of the women is 55 years, what is the average age (in years) of all the members?",
+   "hi": "एक हेल्थ क्लब में, 40% सदस्य महिलाएं हैं और 60% सदस्य पुरुष हैं। यदि पुरुषों की औसत आयु 51 वर्ष है और महिलाओं की औसत आयु 55 वर्ष है, तो सभी सदस्यों की औसत आयु (वर्ष में) कितनी है?",
+   "opts": [
+    "59.7",
+    "60.9",
+    "50.2",
+    "52.6"
+   ],
+   "my_ans": "D",
+   "sol": "औसत = (40×55 + 60×51) ÷ 100 = (2200 + 3060) ÷ 100 = 5260 ÷ 100 = 52.6.",
+   "trick": "भारित औसत = Σ(प्रतिशत × औसत) / 100",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "The arithmetic mean of 25 observations is 32.6. If the arithmetic mean of the first 24 observations is 30, what is the 25ᵗʰ observation?",
+   "hi": "25 प्रेक्षणों का समांतर माध्य 32.6 है। यदि प्रथम 24 प्रेक्षणों का समांतर माध्य 30 है, तो 25वां प्रेक्षण ज्ञात कीजिए।",
+   "opts": [
+    "90",
+    "85",
+    "80",
+    "95"
+   ],
+   "my_ans": "D",
+   "sol": "25 का योग = 25 × 32.6 = 815. 24 का योग = 24 × 30 = 720.<br>25वां प्रेक्षण = 815 - 720 = 95.",
+   "trick": "अंतिम संख्या = (कुल योग) - (बाकी संख्याओं का योग)",
+   "ans": "D"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "The average of 5 numbers is 18.5. If one number is removed, the average of the remaining 4 numbers becomes 16. Find the number that was removed.",
+   "hi": "5 संख्याओं का औसत 18.5 है। यदि एक संख्या हटा दी जाए, तो शेष 4 संख्याओं का औसत 16 हो जाता है। हटाई गई संख्या ज्ञात कीजिए।",
+   "opts": [
+    "29.5",
+    "28",
+    "29",
+    "28.5"
+   ],
+   "my_ans": "D",
+   "sol": "5 का योग = 5 × 18.5 = 92.5. 4 का योग = 4 × 16 = 64.<br>हटाई गई संख्या = 92.5 - 64 = 28.5.",
+   "trick": "हटाई गई संख्या = (पुराना योग) - (नया योग)",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "The average age of 7 students in a class is 17 years. When a new student join the class, the average age of the class becomes 18 years. Find the age of the new student.",
+   "hi": "एक कक्षा में 7 विद्यार्थियों की औसत आयु 17 वर्ष है। जब एक नया विद्यार्थी कक्षा में शामिल होता है, तो कक्षा की औसत आयु 18 वर्ष हो जाती है। नए विद्यार्थी की आयु ज्ञात कीजिए।",
+   "opts": [
+    "25 years<br>25 वर्ष",
+    "20 years<br>20 वर्ष",
+    "26 years<br>26 वर्ष",
+    "23 years<br>23 वर्ष"
+   ],
+   "my_ans": "A",
+   "sol": "7 का योग = 7 × 17 = 119. 8 का योग = 8 × 18 = 144.<br>नए छात्र की आयु = 144 - 119 = 25.",
+   "trick": "नया मान = (नया औसत × नई संख्या) - (पुराना औसत × पुरानी संख्या)",
+   "ans": "A"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "The average of 8 numbers is 45. If each number is decreased by 3, what will the new average be?",
+   "hi": "8 संख्याओं का औसत 45 है। यदि प्रत्येक संख्या में 3 की कमी की जाए, तो नया औसत ज्ञात कीजिए।",
+   "opts": [
+    "45",
+    "42",
+    "39",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "प्रत्येक संख्या में से 3 घटाने पर औसत भी 3 कम हो जाएगा।<br>नया औसत = 45 - 3 = 42.",
+   "trick": "प्रत्येक संख्या में परिवर्तन = औसत में वही परिवर्तन",
+   "ans": "B"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "A student scores 75, 80 and 90 in three tests with weights 2,3 and 5 respectively. What is the weighted average score?",
+   "hi": "एक विद्यार्थी ने तीन परीक्षाओं में क्रमशः 2, 3 और 5 के भारांक के साथ 75, 80 और 90 अंक प्राप्त किए। भारित औसत अंक कितना है?",
+   "opts": [
+    "82",
+    "83",
+    "84",
+    "85"
+   ],
+   "my_ans": "C",
+   "sol": "भारित औसत = (75×2 + 80×3 + 90×5) ÷ (2+3+5) = (150 + 240 + 450) ÷ 10 = 840 ÷ 10 = 84.",
+   "trick": "भारित औसत = Σ(अंक × भार) / Σ(भार)",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "In a class, the average weight of the boys is 65 kg and the average weight of the girls is 45 kg. The average weight of the whole class is 57 kg. What is the ratio of the number of girls to the number of boys in the class?",
+   "hi": "एक कक्षा में लड़कों का औसत वजन 65 kg है और लड़कियों का औसत वजन 45 kg है। कक्षा के सभी विद्यार्थियों का औसत वजन 57 kg है। कक्षा में लड़कियों की संख्या और लड़कों की संख्या का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "2:3",
+    "3:4",
+    "3:2",
+    "4:3"
+   ],
+   "my_ans": "A",
+   "sol": "मिश्रण नियम (Alligation):<br>लड़के (65) --- लड़कियां (45)<br>------- 57 -------<br>अंतर: (57-45)=12, (65-57)=8. अनुपात (लड़के:लड़कियां) = 12:8 = 3:2. लड़कियों:लड़कों = 2:3.",
+   "trick": "मिश्रण नियम का प्रयोग करें",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "A factory produces three types of widgets: A, B, and C. In one week, 12 units of A (average weight 47 kg each), 8 units of B (average weight 62 kg each), and 15 units of C (average weight 53 kg each) are manufactured. What is the weighted average weight of the widgets produced in that week?",
+   "hi": "एक कारखाने में तीन प्रकार की मशीनों A, B और C का उत्पादन किया जाता है। एक सप्ताह में, A के 12 यूनिट (प्रत्येक का औसत वजन 47 kg), B के 8 यूनिट (प्रत्येक का औसत वजन 62 kg), और C के 15 यूनिट (प्रत्येक का औसत वजन 53 kg) निर्मित किए जाते हैं। उस सप्ताह में उत्पादित मशीनों का भारित औसत वजन क्या है?",
+   "opts": [
+    "52.5 kg",
+    "54 kg",
+    "51 kg",
+    "53 kg"
+   ],
+   "my_ans": "D",
+   "sol": "कुल भार = (12×47 + 8×62 + 15×53) = 564 + 496 + 795 = 1855. कुल यूनिट = 12+8+15 = 35.<br>औसत = 1855 ÷ 35 = 53.",
+   "trick": "भारित औसत = कुल योग / कुल संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The weighted average marks of a student in Physics, Chemistry and Mathematics are 68. The weightages of the subjects Physics, Chemistry and Mathematics are in the ratio 3 : 2 : 5. If the student scored 60 in Physics and 70 in Chemistry, then find the marks in Mathematics.",
+   "hi": "भौतिकी, रसायन विज्ञान और गणित में एक छात्र के भारित औसत अंक 68 हैं। भौतिकी, रसायन विज्ञान और गणित विषयों के भारांक 3 : 2 : 5 के अनुपात में हैं। यदि छात्र ने भौतिकी में 60 और रसायन विज्ञान में 70 अंक प्राप्त किए हैं, तो गणित में अंक ज्ञात कीजिए।",
+   "opts": [
+    "72",
+    "74",
+    "68",
+    "66"
+   ],
+   "my_ans": "A",
+   "sol": "माना गणित के अंक x हैं। भारित औसत = (60×3 + 70×2 + x×5) ÷ (3+2+5) = 68<br>(180 + 140 + 5x) = 680 → 320 + 5x = 680 → 5x = 360 → x = 72.",
+   "trick": "भारित औसत = Σ(अंक × भार) / Σ(भार)",
+   "ans": "A"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "If the average of three numbers is 7, what is their total sum?",
+   "hi": "यदि तीन संख्याओं का औसत 7 है, तो उनका योगफल कितना होगा?",
+   "opts": [
+    "14",
+    "7",
+    "10",
+    "21"
+   ],
+   "my_ans": "D",
+   "sol": "योग = औसत × संख्या = 7 × 3 = 21.",
+   "trick": "योग = औसत × संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The average of 12 numbers is 38. If two more numbers 50 and 62 are included, the new average is (Round off your answer to two decimal places.)",
+   "hi": "12 संख्याओं का औसत 38 है। यदि दो और संख्याएं 50 और 62 शामिल की जाएं, तो नया औसत है",
+   "opts": [
+    "40.57",
+    "41.57",
+    "38.57",
+    "39.57"
+   ],
+   "my_ans": "A",
+   "sol": "12 का योग = 12 × 38 = 456. नया योग = 456 + 50 + 62 = 568.<br>नया औसत = 568 ÷ 14 = 40.5714... ≈ 40.57.",
+   "trick": "नया औसत = नया कुल योग / नई संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "Three classes have 60, 40, and 50 students respectively. Their average marks are 65, 72, and 60. What is the average mark of all 150 students combined?",
+   "hi": "तीन कक्षाओं में क्रमशः 60, 40 और 50 विद्यार्थी हैं। उनके औसत अंक क्रमशः 65, 72 और 60 हैं। सभी 150 विद्यार्थियों का संयुक्त औसत अंक कितना है?",
+   "opts": [
+    "67",
+    "65.2",
+    "70",
+    "60"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = (60×65 + 40×72 + 50×60) = 3900 + 2880 + 3000 = 9780.<br>औसत = 9780 ÷ 150 = 65.2.",
+   "trick": "संयुक्त औसत = कुल योग / कुल संख्या",
+   "ans": "B"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "At a health club, 42% of the members are women and 58% of the members are men. If the average age of the men is 57 years and the average age of the women is 42 years, what is the average age (in years) of all the members?",
+   "hi": "एक हेल्थ क्लब में, 42% सदस्य महिलाएं हैं और 58% सदस्य पुरुष हैं। यदि पुरुषों की औसत आयु 57 वर्ष है और महिलाओं की औसत आयु 42 वर्ष है, तो सभी सदस्यों की औसत आयु (वर्ष में) कितनी है?",
+   "opts": [
+    "50.7",
+    "57.6",
+    "56.7",
+    "44.9"
+   ],
+   "my_ans": "A",
+   "sol": "औसत = (42×42 + 58×57) ÷ 100 = (1764 + 3306) ÷ 100 = 5070 ÷ 100 = 50.7.",
+   "trick": "भारित औसत = Σ(प्रतिशत × औसत) / 100",
+   "ans": "A"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "A cricketer has scored an average of 55 runs in 9 matches. In the 10th match, he scores 85 runs. What is his new average?",
+   "hi": "एक क्रिकेटर ने 9 मैचों में औसतन 55 रन बनाए हैं। 10वें मैच में उसने 85 रन बनाए। उसका नया औसत कितना है?",
+   "opts": [
+    "55",
+    "57",
+    "56",
+    "58"
+   ],
+   "my_ans": "D",
+   "sol": "9 मैचों का योग = 9 × 55 = 495. 10 मैचों का योग = 495 + 85 = 580.<br>नया औसत = 580 ÷ 10 = 58.",
+   "trick": "नया औसत = (पुराना योग + नया स्कोर) / नई संख्या",
+   "ans": "D"
+  }
+ ]
+}

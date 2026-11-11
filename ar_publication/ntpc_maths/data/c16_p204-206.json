@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 16,
+  "en": "Time & Work",
+  "hi": "समय एवं कार्य",
+  "total": 88,
+  "gl": 49,
+  "ug": 39
+ },
+ "source_pages": "204-206",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "If 15 men working 6 hours a day can complete a work in 20 days, how many days will 18 men working 5 hours a day take to complete the same work?",
+   "hi": "यदि 15 पुरुष प्रतिदिन 6 घंटे काम करके किसी कार्य को 20 दिनों में पूरा कर सकते हैं, तो 18 पुरुष प्रतिदिन 5 घंटे काम करके समान कार्य को पूरा करने में कितने दिन लेंगे?",
+   "opts": [
+    "18",
+    "24",
+    "15",
+    "20"
+   ],
+   "my_ans": "D",
+   "sol": "M1×D1×H1 = M2×D2×H2<br>15×20×6 = 18×D2×5<br>1800 = 90×D2 → D2 = 20.",
+   "trick": "M1D1H1 = M2D2H2",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Reema and Juhi, when each is working alone, can complete a piece of work in, respectively, 12 days and 36 days. Each work on alternate days, with Reema and Juhi starting to work on Day 1 and Day 2, respectively. How many days in all will it take to complete the work?",
+   "hi": "रीमा और जूही, प्रत्येक जब अकेले काम करती हैं, तो एक काम को क्रमशः 12 दिन और 36 दिन में पूरा कर सकती हैं। दोनों बारी-बारी (एक दिन छोड़कर) से काम करती हैं, रीमा पहले दिन से और जूही दूसरे दिन से काम शुरू करती है। काम पूरा करने में कुल कितने दिन लगेंगे?",
+   "opts": [
+    "16",
+    "28",
+    "18",
+    "24"
+   ],
+   "my_ans": "C",
+   "sol": "LCM(12,36)=36. Reema=3, Juhi=1 unit/day.<br>2 दिन में काम = 3+1=4. 36/4 = 9 चक्र.<br>9×2 = 18 दिन.",
+   "trick": "बारी-बारी काम में 2 दिन का एक चक्र बनाएं।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Two pipes can fill a cistern in 24 minutes and 36 minutes, respectively. A third pipe can empty it in 18 minutes. If all three are opened together, how long will it take to fill the tank?",
+   "hi": "दो पाइप एक टंकी को क्रमशः 24 मिनट और 36 मिनट में भर सकते हैं। तीसरा पाइप इसे 18 मिनट में खाली कर सकता है। यदि तीनों पाइप एक साथ खोल दिए जाएं, तो टंकी को भरने में कितना समय लगेगा?",
+   "opts": [
+    "60 minutes<br>60 मिनट",
+    "144 minutes<br>144 मिनट",
+    "108 minutes<br>108 मिनट",
+    "72 minutes<br>72 मिनट"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(24,36,18)=72. क्षमता: A=3, B=2, C=-4.<br>कुल क्षमता = 3+2-4 = 1. समय = 72/1 = 72 मिनट.",
+   "trick": "भरने वाले पाइप (+), खाली करने वाले (-)",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "P and Q can complete a piece of work in 14 days and 19 days, respectively. They work on alternate days, beginning with P. The whole work will be completed in:",
+   "hi": "P और Q एक कार्य को क्रमशः 14 और 19 दिनों में पूरा कर सकते हैं। वे P से शुरू करके एकांतर दिनों में कार्य करते हैं। सम्पूर्ण कार्य कितने दिनों में पूरा होगा?",
+   "opts": [
+    "12 2/19 days<br>12 2/19 दिन",
+    "14 2/19 days<br>14 2/19 दिन",
+    "18 2/19 days<br>18 2/19 दिन",
+    "16 2/19 days<br>16 2/19 दिन"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(14,19)=266. P=19, Q=14. 2 दिन का काम = 33.<br>266/33 = 8 चक्र (16 दिन) में काम = 264. शेष = 2.<br>17वें दिन P करेगा: 2/19. कुल = 16 2/19.",
+   "trick": "कुल काम / 2 दिन का काम = चक्र",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 2 pages. How long (in minutes) will he take to type 84 pages?",
+   "hi": "एक टाइपिस्ट को 2 पृष्ठ टाइप करने में 40 मिनट लगते हैं। उसको 84 पृष्ठ टाइप करने में कितना समय ( मिनटों में ) लगेगा ?",
+   "opts": [
+    "1685",
+    "1690",
+    "1670",
+    "1680"
+   ],
+   "my_ans": "D",
+   "sol": "1 पृष्ठ = 20 मिनट. 84 पृष्ठ = 84 × 20 = 1680 मिनट.",
+   "trick": "एक पृष्ठ का समय निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "P, Q and R, each working alone, can complete a piece of work in, respectively, 10 days, 15 days and 25 days. If P works on all days, Q works on every odd-numbered day and R works on every even-numbered day, then in how many days will the whole work be completed?",
+   "hi": "P, Q और R, प्रत्येक अकेले कार्य करते हुए, क्रमशः 10 दिन, 15 दिन और 25 दिन में एक कार्य पूरा कर सकते हैं। यदि P सभी दिन कार्य करता है, Q प्रत्येक विषम संख्या वाले दिन कार्य करता है और R प्रत्येक सम संख्या वाले दिन कार्य करता है, तो सम्पूर्ण कार्य कितने दिनों में पूरा होगा?",
+   "opts": [
+    "12 3/25",
+    "10 11/25",
+    "10 11/25",
+    "6 12/25"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(10,15,25)=150. P=15, Q=10, R=6.<br>विषम दिन (P+Q) = 25. सम दिन (P+R) = 21.<br>2 दिन का काम = 46. 150/46 = 3 चक्र (6 दिन) में 138 काम. शेष 12. 7वें दिन P+Q = 25. 12/25. कुल = 6 12/25.",
+   "trick": "विषम और सम दिनों का अलग-अलग काम जोड़ें।",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "If 9 students can prepare 117 charts in 3 hours, how many students are needed to prepare 208 charts in 1 hour?",
+   "hi": "यदि 9 विद्यार्थी 3 घंटे में 117 चार्ट तैयार कर सकते हैं, तो 1 घंटे में 208 चार्ट तैयार करने के लिए कितने विद्यार्थियों की आवश्यकता होगी?",
+   "opts": [
+    "48 students<br>48 विद्यार्थी",
+    "46 students<br>46 विद्यार्थी",
+    "42 students<br>42 विद्यार्थी",
+    "45 students<br>45 विद्यार्थी"
+   ],
+   "my_ans": "A",
+   "sol": "(M1×T1)/W1 = (M2×T2)/W2<br>(9×3)/117 = (M2×1)/208<br>27/117 = M2/208 → M2 = (27×208)/117 = 48.",
+   "trick": "M1T1/W1 = M2T2/W2",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "For 4 waffles, a recipe needs 680 g of butter. Find the quantity of butter needed if you want to make 17 waffles.",
+   "hi": "एक रेसिपी के अनुसार, 4 वफल बनाने के लिए 680 g मक्खन की आवश्यकता होती है। 17 वफल बनाने के लिए मक्खन की कितनी मात्रा की आवश्यकता होगी?",
+   "opts": [
+    "2650 g",
+    "2890 g",
+    "2930 g",
+    "3120 g"
+   ],
+   "my_ans": "B",
+   "sol": "1 वफल = 680/4 = 170 g.<br>17 वफल = 17 × 170 = 2890 g.",
+   "trick": "एक इकाई का मान निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 2 pages. How long (in minutes) will he take to type 87 pages?",
+   "hi": "एक टाइपिस्ट को 2 पृष्ठ टाइप करने में 40 मिनट लगते हैं। उसको 87 पृष्ठ टाइप करने में कितना समय ( मिनटों में ) लगेगा ?",
+   "opts": [
+    "1730",
+    "1740",
+    "1745",
+    "1750"
+   ],
+   "my_ans": "B",
+   "sol": "1 पृष्ठ = 20 मिनट. 87 पृष्ठ = 87 × 20 = 1740 मिनट.",
+   "trick": "एक पृष्ठ का समय निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 31 hours respectively. A third tap can empty it in 31 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 31 घंटे में भर सकते हैं। तीसरा नल उसे 31 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय ( घंटों में ) लगेगा ?",
+   "opts": [
+    "4",
+    "1",
+    "3",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "क्षमता: A=31/4, B=4/4, C=-4/4. कुल = 31/4 = 7.75.<br>समय = (1/4 टंकी) / (1/4) = 1 घंटा.",
+   "trick": "कुल क्षमता का 1/4 भाग निकालें।",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 2 pages. How long (in minutes) will he take to type 89 pages?",
+   "hi": "एक टाइपिस्ट को 2 पेज टाइप करने में 40 मिनट लगते हैं। उसे 89 पेज टाइप करने में कितना समय (मिनट में) लगेगा ?",
+   "opts": [
+    "1780",
+    "1785",
+    "1770",
+    "1790"
+   ],
+   "my_ans": "A",
+   "sol": "1 पेज = 20 मिनट. 89 पेज = 89 × 20 = 1780 मिनट.",
+   "trick": "एक पेज का समय निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "A typist takes 40 minutes to type 10 pages. How many pages will he type in 88 minutes?",
+   "hi": "एक टाइपिस्ट को 10 पेज टाइप करने में 40 मिनट लगते हैं। वह 88 मिनट में कितने पेज टाइप करेगा ?",
+   "opts": [
+    "21",
+    "24",
+    "23",
+    "22"
+   ],
+   "my_ans": "D",
+   "sol": "40 मिनट = 10 पेज. 1 मिनट = 10/40 = 0.25 पेज.<br>88 मिनट = 88 × 0.25 = 22 पेज.",
+   "trick": "प्रति मिनट कार्य क्षमता निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "A tank is filled by three pipes, P, Q and R, with uniform flow. The first two pipes P and Q, operating simultaneously, fill the tank in the same amount of time that it takes for the tank to be filled by pipe R alone. Pipe Q fills the tank 15 hours faster than the first pipe and 12 hours slower than pipe R. What is the time required by pipe P to fill the tank?",
+   "hi": "एक टैंक को तीन पाइप P, Q और R द्वारा एकसमान प्रवाह के साथ भरा जाता है। पहले दो पाइप P और Q, एक साथ टैंक को उतने ही समय में भरते हैं जितना कि अकेले पाइप R द्वारा टैंक को भरने में लगता है। पाइप Q पहले पाइप से 15 घंटे तेजी से और पाइप R से 12 घंटे धीमी गति से टैंक को भरता है। पाइप P को टैंक को भरने में कितना समय लगेगा?",
+   "opts": [
+    "45 hours<br>45 घंटे",
+    "47 hours<br>47 घंटे",
+    "32 hours<br>32 घंटे",
+    "25 hours<br>25 घंटे"
+   ],
+   "my_ans": "A",
+   "sol": "माना R=x, Q=x+12, P=x+27. (P+Q) का समय = R का समय.<br>1/(x+27) + 1/(x+12) = 1/x. हल करने पर x=18.<br>P = 18+27 = 45 घंटे.",
+   "trick": "1/P + 1/Q = 1/R",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "A, B and C together can complete a certain work in 40 days. B and C together can complete the same work in 72 days. B is 50% more efficient than A. A, B and C work together for 16 days. B alone will complete the remaining work in:",
+   "hi": "A, B और C मिलकर एक निश्चित कार्य को 40 दिनों में पूरा कर सकते हैं। B और C मिलकर उसी कार्य को 72 दिनों में पूरा कर सकते हैं। B की दक्षता A से 50% अधिक है। A, B और C मिलकर 16 दिनों तक कार्य करते हैं। शेष कार्य को B अकेले कितने दिनों में पूरा करेगा ?",
+   "opts": [
+    "35 days<br>35 दिन",
+    "34 days<br>34 दिन",
+    "38 days<br>38 दिन",
+    "36 days<br>36 दिन"
+   ],
+   "my_ans": "D",
+   "sol": "LCM(40,72)=360. (A+B+C)=9, (B+C)=5. अतः A=4.<br>B=1.5A=6. लेकिन B+C=5, यहाँ B=6 संभव नहीं, प्रश्न में B की दक्षता A से 50% अधिक है, A=4, B=6, C=-1. शेष काम = 360 - (9×16) = 216. B=6, समय = 216/6 = 36.",
+   "trick": "दक्षता का अनुपात निकालें।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Food sufficient for 100 people for 27 days is available. If 55 people leave, for how many days will the remaining food last for the remaining people?",
+   "hi": "100 पुरुषों के पास 27 दिनों का राशन है। यदि 55 पुरुष चले गए , तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा ?",
+   "opts": [
+    "58",
+    "64",
+    "60",
+    "62"
+   ],
+   "my_ans": "C",
+   "sol": "M1×D1 = M2×D2<br>100×27 = 45×D2<br>D2 = 2700/45 = 60.",
+   "trick": "M1D1 = M2D2",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "100 men have provisions for 26 days. If 50 men have left, for how many days the same provisions would last for the remaining men?",
+   "hi": "100 पुरुषों के पास 26 दिनों का राशन है। यदि 50 पुरुष चले गए, तो शेष पुरुषों के लिए वही राशन कितने दिनों तक चलेगा ?",
+   "opts": [
+    "52",
+    "50",
+    "56",
+    "54"
+   ],
+   "my_ans": "A",
+   "sol": "100×26 = 50×D2<br>D2 = 2600/50 = 52.",
+   "trick": "M1D1 = M2D2",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 27 hours respectively. A third tap can empty it in 27 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 27 घंटे में भर सकते हैं। तीसरा नल उसे 27 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी का एक-चौथाई भरने में कितना समय ( घंटों में ) लगेगा ?",
+   "opts": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "क्षमता: A=27/4, B=4/4, C=-4/4. कुल = 27/4 = 6.75.<br>समय = (1/4 टंकी) / (1/4) = 1 घंटा.",
+   "trick": "कुल क्षमता का 1/4 भाग निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "A and B complete a work in 20 days. If A alone can do it in 45 days, then B alone can do three-fourth of the same work in ______________days.",
+   "hi": "A और B एक काम को 20 दिनों में पूरा करते हैं। यदि A अकेले उस काम को 45 दिनों में कर सकता है, तो B अकेले उसी काम का तीन-चौथाई भाग ______________ दिनों में कर सकता है।",
+   "opts": [
+    "27",
+    "108",
+    "81",
+    "54"
+   ],
+   "my_ans": "A",
+   "sol": "1/B = 1/20 - 1/45 = (9-4)/180 = 5/180 = 1/36.<br>B पूरा काम 36 दिन में. 3/4 काम = 36 × 3/4 = 27 दिन.",
+   "trick": "1/B = 1/(A+B) - 1/A",
+   "ans": "A"
+  }
+ ]
+}

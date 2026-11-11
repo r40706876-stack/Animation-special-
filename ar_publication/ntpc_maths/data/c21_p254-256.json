@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 21,
+  "en": "Mensuration",
+  "hi": "क्षेत्रमिति",
+  "total": 89,
+  "gl": 47,
+  "ug": 42
+ },
+ "source_pages": "254-256",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "The internal surface area (in cm²) of an open (at the top) cuboidal box whose internal length, breadth and height are 8 cm, 17 cm and 22 cm, respectively, is:",
+   "hi": "एक खुले (शीर्ष पर) घनाभीय बॉक्स की आंतरिक लंबाई, चौड़ाई और ऊंचाई क्रमशः 8 cm, 17 cm और 22 cm है। उसका आंतरिक पृष्ठीय क्षेत्रफल (cm² में) ज्ञात कीजिए।",
+   "opts": [
+    "1215",
+    "1238",
+    "1236",
+    "1189"
+   ],
+   "my_ans": "C",
+   "sol": "क्षेत्रफल = lb + 2(bh + lh)<br>= (8×17) + 2(17×22 + 8×22)<br>= 136 + 2(374 + 176) = 136 + 1100 = 1236.",
+   "trick": "खुले बॉक्स का क्षेत्रफल = lb + 2bh + 2lh",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Water is pouring into a cuboidal reservoir at the rate of 70 litres per minute. The volume of the reservoir is 168 m³. Find the time (in hours) it will take to fill the reservoir.",
+   "hi": "एक घनाभाकार जलाशय में 70 लीटर प्रति मिनट की दर से पानी डाला जा रहा है। जलाशय का आयतन 168 m³ है। जलाशय को भरने में लगने वाला समय (घंटों में) ज्ञात कीजिए।",
+   "opts": [
+    "35",
+    "30",
+    "25",
+    "40"
+   ],
+   "my_ans": "D",
+   "sol": "168 m³ = 168000 लीटर<br>समय (मिनट) = 168000 ÷ 70 = 2400 मिनट<br>समय (घंटे) = 2400 ÷ 60 = 40 घंटे।",
+   "trick": "1 m³ = 1000 लीटर, समय = कुल आयतन ÷ दर",
+   "ans": "D"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Water flows out through a circular pipe, whose internal diameter is 2 cm, at the rate of 5 metres per second into a cylindrical tank, the radius of whose base is 100 cm. By how much will the level of water rise in 13 minutes?",
+   "hi": "एक वृत्तीय पाइप जिसका आंतरिक व्यास 2 cm है, इससे 5 मीटर प्रति सेकंड की दर से जल प्रवाहित होकर एक बेलनाकार टंकी में जाता है, जिसके आधार की त्रिज्या 100 cm है। 13 मिनट में जल का स्तर कितना बढ़ जाएगा?",
+   "opts": [
+    "40 cm",
+    "31 cm",
+    "30 cm",
+    "39 cm"
+   ],
+   "my_ans": "D",
+   "sol": "पाइप का क्षेत्रफल = π(1)² = π cm²<br>पानी का आयतन = π × 500 × (13 × 60) = 39000π<br>टंकी में स्तर = आयतन ÷ (π × 100²) = 39000π ÷ 10000π = 39 cm.",
+   "trick": "पाइप का आयतन = टंकी में पानी का आयतन",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "A cone has a base radius of 6 cm and a height of 7 cm. It is to be filled with water, and for every 180 cc of water poured into the cone, an additional 20 cc of water is spilled while pouring. If the spillage is proportional as described, how much water (in cc) will be required to fill the cone to its brim? (Use π = 22/7 and give your answer correct to two decimal places.)",
+   "hi": "एक शंकु के आधार की त्रिज्या 6 cm और ऊँचाई 7 cm है। इसे जल से भरना है, और शंकु में प्रविष्ट किए गए प्रत्येक 180 cc जल के लिए, जल प्रविष्ट करते समय अतिरिक्त 20 cc जल छलक जाता है। यदि अधिक्षेप वर्णन के अनुसार समानुपाती है, तो शंकु को उसके किनारी (brim) तक भरने के लिए कितने जल (cc में) की आवश्यकता होगी?",
+   "opts": [
+    "293.33",
+    "295.67",
+    "296.67",
+    "283.33"
+   ],
+   "my_ans": "A",
+   "sol": "शंकु का आयतन = (1/3) × (22/7) × 6² × 7 = 264 cc<br>प्रभावी अनुपात = 200/180 = 10/9<br>कुल जल = 264 × (10/9) = 293.33 cc.",
+   "trick": "कुल जल = आयतन × (कुल डाला गया / प्रभावी आयतन)",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "If the diameter of a circle is 14 cm, then what is the circumference of the circle? (use π = 22/7)",
+   "hi": "यदि किसी वृत्त का व्यास 14 सेमी है, तो उस वृत्त की परिधि क्या होगी? (π = 22/7 लें)",
+   "opts": [
+    "24 cm",
+    "44 cm",
+    "36 cm",
+    "22 cm"
+   ],
+   "my_ans": "B",
+   "sol": "परिधि = π × व्यास<br>= (22/7) × 14 = 44 cm.",
+   "trick": "परिधि = πd",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Find the volume (in cm³) of a sphere having a diameter of 37.8 cm, giving your answer correct to two places of decimal. (take π = 22/7)",
+   "hi": "37.8 cm व्यास वाले गोले का आयतन (cm³) ज्ञात कीजिए, उत्तर को दशमलव के दो स्थानों तक पूर्णांकित कीजिए। मानिए (π = 22/7)",
+   "opts": [
+    "28281.03",
+    "28311.03",
+    "28291.03",
+    "28301.03"
+   ],
+   "my_ans": "C",
+   "sol": "त्रिज्या r = 18.9 cm<br>आयतन = (4/3) × (22/7) × (18.9)³<br>= (4/3) × (22/7) × 6751.269 = 28291.03 cm³.",
+   "trick": "गोले का आयतन = 4/3 πr³",
+   "ans": "C"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A chemical engineer designs a cylindrical reaction vessel with inner radius 15 cm and height 40 cm. Inside this vessel, three identical cylindrical cooling tubes (each with radius 4 cm and same height as the vessel) are installed vertically. If the remaining space is filled to 75% capacity with reactive solution, what volume of solution (in liters) does the vessel contain? (Use π = 3.14) (Round your answer off to two decimal places.)",
+   "hi": "एक रासायनिक अभियंता 15 cm आंतरिक त्रिज्या और 40 cm ऊंचाई वाले एक बेलनाकार अभिक्रिया पात्र का डिजाइन तैयार करता है। इस पात्र के अंदर, तीन एकसमान बेलनाकार शीतलन नलिकाएं (प्रत्येक की त्रिज्या 4 cm और पात्र के समान ऊंचाई वाली) लंबवत रूप से लगाई गई हैं। यदि शेष स्थान की 75% धारिता को अभिक्रियाशील विलयन से भर दिया जाए, तो पात्र में विलयन का आयतन (लीटर में) कितना होगा?",
+   "opts": [
+    "16.67 liters",
+    "19.33 liters",
+    "18.15 liters",
+    "17.42 liters"
+   ],
+   "my_ans": "A",
+   "sol": "पात्र का आयतन = π(15)²(40) = 9000π<br>नलिकाओं का आयतन = 3 × π(4)²(40) = 1920π<br>शेष आयतन = 7080π = 22231.2 cm³ = 22.23 लीटर<br>75% = 22.23 × 0.75 = 16.67 लीटर.",
+   "trick": "शेष आयतन = (पात्र आयतन - नलिका आयतन) × 0.75",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "The radius of a right circular cone is increased by 8% and slant height is decreased by 15%. Find the percentage change in curved surface area of the cone.",
+   "hi": "एक लंब वृत्तीय शंकु की त्रिज्या में 8% की वृद्धि की जाती है और उसकी तिर्यक ऊंचाई में 15% की कमी की जाती है। शंकु के वक्र पृष्ठीय क्षेत्रफल में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+   "opts": [
+    "decreases by 8.2%",
+    "increases by 7%",
+    "decreases by 11.5%",
+    "decreases by 7%"
+   ],
+   "my_ans": "A",
+   "sol": "क्षेत्रफल = πrl<br>नया क्षेत्रफल = π(1.08r)(0.85l) = 0.918πrl<br>परिवर्तन = (0.918 - 1) × 100 = -8.2%.",
+   "trick": "सफल प्रतिशत परिवर्तन = a + b + (ab/100)",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Water flows out through a circular pipe, whose internal diameter is 2 cm, at the rate of 4 metres per second into a cylindrical tank, the radius of whose base is 80 cm. By how much will the level of water rise in 24 minutes?",
+   "hi": "एक वृत्तीय पाइप जिसका आंतरिक व्यास 2 cm है, इससे 4 मीटर प्रति सेकंड की दर से जल प्रवाहित होकर एक बेलनाकार टंकी में जाता है, जिसके आधार की त्रिज्या 80 cm है। 24 मिनट में जल का स्तर कितना बढ़ जाएगा?",
+   "opts": [
+    "100 cm",
+    "96 cm",
+    "91 cm",
+    "90 cm"
+   ],
+   "my_ans": "D",
+   "sol": "पानी का आयतन = π(1)² × (400 × 24 × 60) = 576000π<br>स्तर = आयतन ÷ (π × 80²) = 576000π ÷ 6400π = 90 cm.",
+   "trick": "स्तर = (पाइप का क्षेत्रफल × वेग × समय) ÷ टंकी का क्षेत्रफल",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "How many coins, each 5.5 cm in circumference and 2 mm thick, must be melted to form a cuboid of dimensions 14 cm × 11 cm × 8 cm? (Use π = 22/7)",
+   "hi": "5.5 cm परिधि और 2 mm मोटाई वाले कितने सिक्कों को पिघलाकर 14 cm × 11 cm × 8 cm विमा वाला एक घनाभ बनाया जा सकता है? (π = 22/7 का प्रयोग करें)",
+   "opts": [
+    "2240",
+    "2480",
+    "2370",
+    "2560"
+   ],
+   "my_ans": "D",
+   "sol": "सिक्के की त्रिज्या r = 5.5 / (2π) = 5.5 / (2 × 22/7) = 0.875 cm<br>सिक्के का आयतन = πr²h = (22/7) × (0.875)² × 0.2 = 0.48125<br>संख्या = (14×11×8) ÷ 0.48125 = 2560.",
+   "trick": "सिक्कों की संख्या = घनाभ आयतन ÷ सिक्के का आयतन",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Find the area of the rectangle with length 10 cm and width √5 cm. (Round off the answer to 2 decimal places.)",
+   "hi": "10 cm लंबाई और √5 cm चौड़ाई वाले आयत का क्षेत्रफल ज्ञात कीजिए। (उत्तर को 2 दशमलव स्थानों तक पूर्णांकित कीजिए)",
+   "opts": [
+    "17.58 sq. cm.",
+    "18.52 sq. cm.",
+    "15.98 sq. cm.",
+    "22.36 sq. cm."
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफल = लंबाई × चौड़ाई = 10 × √5<br>√5 ≈ 2.236<br>क्षेत्रफल = 10 × 2.236 = 22.36 sq. cm.",
+   "trick": "आयत का क्षेत्रफल = l × b",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "A solid cone is cut into two pieces (a smaller cone and a frustum) of equal volume by making a cut parallel to its flat surface. The height of the small cone is equal to the diameter of the bigger flat area of the frustum. The radius of the small cone is ____ times its height.",
+   "hi": "एक ठोस शंकु को उसके समतल पृष्ठ के समानांतर दो बराबर आयतन वाले टुकड़ों (एक छोटा शंकु और एक छिन्नक) में काटा जाता है। छोटे शंकु की ऊँचाई, छिन्नक के बड़े समतल क्षेत्र के व्यास के बराबर है। छोटे शंकु की त्रिज्या उसकी ऊँचाई की _____________ गुना है।",
+   "opts": [
+    "1/(2√2)",
+    "1/(3√2)",
+    "1/(8√2)",
+    "1/(4√2)"
+   ],
+   "my_ans": "A",
+   "sol": "आयतन बराबर है, तो छोटे शंकु का आयतन = 1/2 बड़े शंकु का आयतन<br>(r/R)³ = 1/2 → r/R = 1/∛2<br>ऊँचाई h = 2R → R = h/2<br>r = (h/2) × (1/∛2) = h / (2 × 2^(1/3)) = h / (2^(4/3)) = h / (2√2).",
+   "trick": "आयतन का अनुपात = ऊँचाई के घन का अनुपात",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "The total surface area of a solid hemisphere is 272 cm². Its radius (in cm) is: (π = 22/7)",
+   "hi": "एक ठोस अर्धगोले का संपूर्ण पृष्ठीय क्षेत्रफल 272 cm² है। इसकी त्रिज्या (cm में) ज्ञात कीजिए।",
+   "opts": [
+    "√(952/33)",
+    "√(968/33)",
+    "√(946/33)",
+    "√(962/33)"
+   ],
+   "my_ans": "A",
+   "sol": "3πr² = 272<br>3 × (22/7) × r² = 272<br>r² = (272 × 7) / 66 = 1904 / 66 = 952 / 33<br>r = √(952/33).",
+   "trick": "अर्धगोले का संपूर्ण पृष्ठीय क्षेत्रफल = 3πr²",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "A right circular cone has the ratio of slant height to radius as 29 : 20. The volume of the cone is (24192/5) π cm³. The curved surface area (in cm²) of cone is",
+   "hi": "एक समवृत्त शंकु में तिर्यक ऊँचाई का त्रिज्या से अनुपात 29 : 20 है। शंकु का आयतन (24192/5) π सेमी³ है। शंकु का वक्र पृष्ठीय क्षेत्रफल (सेमी² में) होगा:",
+   "opts": [
+    "829.5 π",
+    "823.4 π",
+    "835.2 π",
+    "832.3 π"
+   ],
+   "my_ans": "C",
+   "sol": "l=29x, r=20x, h=√(29²-20²)x = 21x<br>आयतन = 1/3 π(20x)²(21x) = 2800πx³ = 4838.4π<br>x³ = 4838.4 / 2800 = 1.728 → x = 1.2<br>वक्र क्षेत्रफल = πrl = π(20x)(29x) = 580πx² = 580π(1.44) = 835.2π.",
+   "trick": "वक्र पृष्ठीय क्षेत्रफल = πrl",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "There is a wooden block in the form of a cube whose each side is 8 meters long. The maximum possible number of cylinders with a diameter of 1 meter and a height of 4 meters were cut from this block. The cylinders are to be painted at the rate of ₹14 per square meter. What is the total amount (in ₹) needed to paint all the cylinders if we paint the entire surface of each cylinder? (take π = 22/7)",
+   "hi": "एक घनाकार लकड़ी का ब्लॉक है जिसकी प्रत्येक भुजा 8 मीटर लंबी है। इस ब्लॉक से 1 मीटर व्यास और 4 मीटर ऊँचाई वाले अधिकतम संभव संख्या में बेलन काटे गए। इन बेलनों को ₹14 प्रति वर्ग मीटर की दर से पेंट किया जाना है। यदि प्रत्येक बेलन के संपूर्ण पृष्ठ को पेंट किया जाता है, तो सभी बेलनों को पेंट करने के लिए आवश्यक कुल धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "25,344",
+    "24,527",
+    "23,455",
+    "24,325"
+   ],
+   "my_ans": "A",
+   "sol": "बेलन की संख्या = (8/1) × (8/1) × (8/4) = 8 × 8 × 2 = 128<br>संपूर्ण पृष्ठ = 2πr(r+h) = 2 × (22/7) × 0.5 × (0.5+4) = 14.1428<br>कुल खर्च = 128 × 14.1428 × 14 = 25344.",
+   "trick": "बेलन की संख्या = (L/d) × (B/d) × (H/h)",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Find the area of a quadrilateral ABCD whose area is twice the area of a triangle PQR. The sides of triangle PQR are in the ratio 4:5:6 and the perimeter of the triangle is 90 cm (use √7 = 2.6).",
+   "hi": "उस चतुर्भुज ABCD का क्षेत्रफल ज्ञात कीजिए जिसका क्षेत्रफल, एक त्रिभुज PQR के क्षेत्रफल का दोगुना है। त्रिभुज PQR की भुजाओं का अनुपात 4 : 5 : 6 है और त्रिभुज का परिमाप 90 cm है। (√7 = 2.6 का उपयोग कीजिए)",
+   "opts": [
+    "656 cm²",
+    "763 cm²",
+    "698 cm²",
+    "702 cm²"
+   ],
+   "my_ans": "D",
+   "sol": "भुजाएँ: 4x+5x+6x=90 → 15x=90 → x=6. भुजाएँ: 24, 30, 36<br>s = 45. क्षेत्रफल = √[45(45-24)(45-30)(45-36)] = √[45×21×15×9] = 135√21 = 135×4.58 = 618.3<br>चतुर्भुज = 2 × 351 = 702.",
+   "trick": "हीरोन का सूत्र: √[s(s-a)(s-b)(s-c)]",
+   "ans": "D"
+  }
+ ]
+}

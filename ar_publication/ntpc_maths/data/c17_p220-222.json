@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 17,
+  "en": "Pipe & Cistern",
+  "hi": "पाइप एवं टंकी",
+  "total": 31,
+  "gl": 0,
+  "ug": 31
+ },
+ "source_pages": "220-222",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "A tank is being filled by two taps, M and N. M fills the tank completely in 18 hours and N fills it in 9 hours. A leakage at the bottom of the tank can empty the completely filled tank in 27 hours. How long will it take to fill the empty tank completely if both taps are opened while the leakage continues?",
+   "hi": "किसी टंकी को दो नलों, M और N द्वारा भरा जा रहा है। M टंकी को पूरी तरह से 18 घंटे में भरता है और N उसे 9 घंटे में भरता है। टंकी के तली में रिसाव द्वारा पूरी तरह से भरी हुई टंकी 27 घंटे में खाली हो सकती है। रिसाव जारी रहने पर यदि दोनों नल खुले रखे जाएं, तो खाली टंकी को पूरी तरह भरने में कितना समय लगेगा?",
+   "opts": [
+    "6 5/7 hours",
+    "7 3/7 hours",
+    "7 5/7 hours",
+    "6 4/7 hours"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 54 (LCM of 18, 9, 27)<br>M=3, N=6, Leak=-2<br>नेट क्षमता = 3+6-2 = 7<br>समय = 54/7 = 7 5/7 घंटे",
+   "trick": "क्षमता = (LCM) / (नेट दक्षता)",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 17 hours, respectively. A third tap can empty it in 17 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 17 घंटे में भर सकते हैं। तीसरा नल उसे 17 घंटे में खाली कर सकता है। यदि सभी नलों को एक साथ चालू कर दिया जाएं, तो खाली टंकी का 1/4 भाग भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षता: 1/4 + 1/17 - 1/17 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 13 hours, respectively. A third tap can empty it in 13 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 13 घंटे में भर सकते हैं। तीसरा नल उसे 13 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षता: 1/4 + 1/13 - 1/13 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 8 hours, respectively. A third tap can empty it in 8 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 8 घंटे में भर सकते हैं। तीसरा नल उसे 8 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "3",
+    "1",
+    "2",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षता: 1/4 + 1/8 - 1/8 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 16 hours, respectively. A third tap can empty it in 4 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 16 घंटे में भर सकते हैं। तीसरा नल उसे 4 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "16",
+    "8",
+    "4",
+    "12"
+   ],
+   "my_ans": "C",
+   "sol": "दक्षता: 1/4 + 1/16 - 1/4 = 1/16<br>पूरा भरने में समय = 16 घंटे<br>1/4 भाग भरने में = 16 × 1/4 = 4 घंटे",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 12 hours, respectively. A third tap can empty it in 12 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 12 घंटे में भर सकते हैं। तीसरा नल उसे 12 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "4",
+    "3",
+    "2"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षता: 1/4 + 1/12 - 1/12 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 19 hours, respectively. A third tap can empty it in 19 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 19 घंटे में भर सकते हैं। तीसरा नल उसे 19 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "दक्षता: 1/4 + 1/19 - 1/19 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 8 hours, respectively. A third tap can empty it in 4 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 8 घंटे में भर सकते हैं। तीसरा नल उसे 4 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "2",
+    "4",
+    "8",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षता: 1/4 + 1/8 - 1/4 = 1/8<br>पूरा भरने में समय = 8 घंटे<br>1/4 भाग भरने में = 8 × 1/4 = 2 घंटे",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 22 hours, respectively. A third tap can empty it in 22 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 22 घंटे में भर सकते हैं। तीसरा नल उसे 22 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षता: 1/4 + 1/22 - 1/22 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 20 hours, respectively. A third tap can empty it in 20 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 20 घंटे में भर सकते हैं। तीसरा नल उसे 20 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "4",
+    "1",
+    "3",
+    "2"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षता: 1/4 + 1/20 - 1/20 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "Two taps can fill a cistern in 4 hours and 11 hours, respectively. A third tap can empty it in 11 hours. How long (in hours) will it take to fill one-fourth of the empty cistern if all the taps are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 11 घंटे में भर सकते हैं। तीसरा नल उसे 11 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोल दिए जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "3",
+    "4",
+    "1",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "दक्षता: 1/4 + 1/11 - 1/11 = 1/4<br>पूरा भरने में समय = 4 घंटे<br>1/4 भाग भरने में = 4 × 1/4 = 1 घंटा",
+   "trick": "विपरीत नल एक-दूसरे को काट देते हैं",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "Pipes A and B fill a tank in 20 and 30 minutes respectively. If both are opened together, after how many minutes will the tank be 2/3 full?",
+   "hi": "पाइप A और B एक टैंक को क्रमशः 20 और 30 मिनट में भरते हैं। यदि दोनों को एक साथ खोला जाता है, तो कितने मिनट के बाद टैंक 2/3 भरा होगा?",
+   "opts": [
+    "10 minutes<br>10 मिनट",
+    "12 minutes<br>12 मिनट",
+    "16 minutes<br>16 मिनट",
+    "8 minutes<br>8 मिनट"
+   ],
+   "my_ans": "D",
+   "sol": "दक्षता: 1/20 + 1/30 = 5/60 = 1/12<br>पूरा भरने में समय = 12 मिनट<br>2/3 भरने में = 12 × 2/3 = 8 मिनट",
+   "trick": "समय = (कुल कार्य) / (दक्षता)",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "A keg is fitted with three taps A, B and C. If opened together, all the three taps will drain the full keg in 1 1/2 minutes. Taps A and B together take 3 minutes to drain the keg while taps B and C together take 4 1/2 minutes to drain it. How long (in minutes) taps A and C together take to drain the keg?",
+   "hi": "एक पीपे में तीन नल A, B और C लगे हैं। यदि तीनों नल एक साथ खोले जाते हैं, तो वे पूरे पीपे को 1 1/2 मिनट में खाली कर देंगे। नल A और B मिलकर पीपे को 3 मिनट में खाली करते हैं जबकि नल B और C मिलकर इसे 4 1/2 मिनट में खाली करते हैं। नल A और C मिलकर पीपे को खाली करने में कितना समय (मिनटों में) लेंगे?",
+   "opts": [
+    "5/7",
+    "4/9",
+    "9/7",
+    "4/7"
+   ],
+   "my_ans": "C",
+   "sol": "A+B+C = 2/3, A+B = 1/3, B+C = 2/9<br>C = (A+B+C) - (A+B) = 2/3 - 1/3 = 1/3<br>A = (A+B+C) - (B+C) = 2/3 - 2/9 = 4/9<br>A+C = 4/9 + 3/9 = 7/9. समय = 9/7",
+   "trick": "दक्षता का योग निकालें",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "Two pipes, A and B, can fill a tank in 20 minutes and 30 minutes, respectively. A waste pipe C can empty it in 60 minutes. All three are opened together. After 10 minutes, pipe C is closed. How much total time will it take to fill the tank?",
+   "hi": "दो पाइप - A और B, एक टंकी को क्रमशः 20 मिनट और 30 मिनट में भर सकते हैं। एक निकास पाइप C इसे 60 मिनट में खाली कर सकता है। तीनों पाइप एक साथ खोले जाते हैं। 10 मिनट बाद पाइप C को बंद कर दिया जाता है, तो टंकी को भरने में कुल कितना समय लगेगा?",
+   "opts": [
+    "12 minutes<br>12 मिनट",
+    "17 minutes<br>17 मिनट",
+    "15 minutes<br>15 मिनट",
+    "14 minutes<br>14 मिनट"
+   ],
+   "my_ans": "D",
+   "sol": "दक्षता: 3+2-1 = 4. 10 मिनट में भरा = 4×10 = 40<br>शेष = 60-40 = 20. A+B की दक्षता = 3+2 = 5<br>शेष समय = 20/5 = 4 मिनट. कुल समय = 10+4 = 14 मिनट",
+   "trick": "शेष कार्य = (कुल - भरा हुआ) / नई दक्षता",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "Inlet M fills a tank in 24 minutes and Inlet N fills it in 32 minutes. Outlet O drains the tank. When all three operate simultaneously, the tank fills in 32 minutes. How long does O take to drain a full tank alone?",
+   "hi": "इनलेट M एक टैंक को 24 मिनट में भरता है और इनलेट N समान टैंक को 32 मिनट में भरता है। आउटलेट O टैंक को खाली करता है। जब तीनों को एक साथ खोल दिया जाता है, तो टैंक को भरने में 32 मिनट का समय लगता है। अकेले आउटलेट O को एक पूरे भरे हुए टैंक को खाली करने में कितना समय लगेगा?",
+   "opts": [
+    "24 minutes<br>24 मिनट",
+    "14 minutes<br>14 मिनट",
+    "34 minutes<br>34 मिनट",
+    "44 minutes<br>44 मिनट"
+   ],
+   "my_ans": "A",
+   "sol": "M=1/24, N=1/32, M+N-O=1/32<br>1/24 + 1/32 - O = 1/32<br>O = 1/24. समय = 24 मिनट",
+   "trick": "O की दक्षता = M + N - (M+N-O)",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "A tank is normally filled by pipe A in 10 hours. Due to a leak, the tank takes 12 hours to fill. Find the time taken by the leak alone to empty a full tank.",
+   "hi": "एक टैंक सामान्यतः पाइप A द्वारा 10 घंटे में भर जाता है। रिसाव के कारण, टैंक को भरने में 12 घंटे लगते हैं। केवल रिसाव के द्वारा पूरे भरे हुए टैंक को खाली होने में कितना समय लगेगा?",
+   "opts": [
+    "60 hours<br>60 घंटे",
+    "80 hours<br>80 घंटे",
+    "30 hours<br>30 घंटे",
+    "40 hours<br>40 घंटे"
+   ],
+   "my_ans": "A",
+   "sol": "A=1/10, A-Leak=1/12<br>Leak = 1/10 - 1/12 = (6-5)/60 = 1/60<br>समय = 60 घंटे",
+   "trick": "रिसाव समय = (A × B) / (B - A)",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "A cistern is filled by two taps, C and D, in 54 minutes and 81 minutes, respectively. There is also a drain E at the bottom. If all three are opened simultaneously, the cistern is filled in 108 minutes. In how many minutes can drain E alone empty the cistern? (up to two decimal places)",
+   "hi": "एक टंकी दो नलों - C और D के माध्यम से क्रमशः 54 मिनट और 81 मिनट में भर जाती है। टंकी के तल में एक निकास नल E भी है। यदि तीनों नलों को एक साथ खोला जाता है, तो टंकी 108 मिनट में भर जाती है। निकास नल E अकेले टंकी को कितने मिनट में (दशमलव के दो स्थानों तक पूर्णांकित) खाली कर सकता है?",
+   "opts": [
+    "45.64",
+    "46.29",
+    "49.24",
+    "42.06"
+   ],
+   "my_ans": "B",
+   "sol": "C=1/54, D=1/81, C+D-E=1/108<br>E = 1/54 + 1/81 - 1/108 = (6+4-3)/324 = 7/324<br>समय = 324/7 = 46.2857 ≈ 46.29",
+   "trick": "E = C + D - (C+D-E)",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Compound Interest",
+  "hi": "चक्रवृद्धि ब्याज",
+  "total": 52,
+  "gl": 23,
+  "ug": 29
+ },
+ "source_pages": "143-145",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "If the compound interest on a sum for 2 years at 5% per annum is ₹102.50, what is the sum?",
+   "hi": "यदि किसी धनराशि पर 5% वार्षिक ब्याज दर से 2 वर्ष के लिए चक्रवृद्धि ब्याज के रूप में ₹102.50 प्राप्त होता है, तो वह धनराशि ज्ञात कीजिए।",
+   "opts": [
+    "₹950",
+    "₹1,000",
+    "₹1,025",
+    "₹1,100"
+   ],
+   "my_ans": "B",
+   "sol": "प्रभावी दर = 5 + 5 + (5×5)/100 = 10.25%<br>10.25% = 102.50 → 1% = 10 → 100% = 1000.",
+   "trick": "2 वर्ष के लिए प्रभावी दर = 2r + r²/100",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "A sum of ₹8,000 is invested at a compound interest rate of 12.5% per annum for 2 years, compounded annually. What is the compound interest earned?",
+   "hi": "₹8,000 की राशि को 12.5% वार्षिक चक्रवृद्धि ब्याज दर (वार्षिक रूप से संयोजित) पर 2 वर्षों के लिए निवेश किया जाता है। अर्जित चक्रवृद्धि ब्याज कितना होगा?",
+   "opts": [
+    "₹2,500",
+    "₹2,000",
+    "₹2,250",
+    "₹2,125"
+   ],
+   "my_ans": "D",
+   "sol": "12.5% = 1/8. मूलधन 8, मिश्रधन 9 (2 वर्ष के लिए 64:81)<br>ब्याज = 81 - 64 = 17 यूनिट. 64 यूनिट = 8000 → 1 यूनिट = 125<br>17 × 125 = 2125.",
+   "trick": "12.5% को 1/8 लिखें, 2 वर्ष के लिए (8:9)² का प्रयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Venu invested a certain sum of money at 10% per annum. After 2 years, he received ₹136.50 as compound interest, compounded annually. Find the corresponding simple interest (in ₹) for 2 years at the same rate.",
+   "hi": "वेणु एक निश्चित राशि 10% वार्षिक दर पर निवेश करती है। 2 वर्षों के बाद, उसे चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) के रूप में ₹136.50 प्राप्त होते हैं। उसी ब्याज दर पर 2 वर्षों के लिए संगत साधारण ब्याज (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "115",
+    "125",
+    "130",
+    "120"
+   ],
+   "my_ans": "C",
+   "sol": "CI = 21% (10+10+1), SI = 20% (10+10)<br>21% = 136.50 → 1% = 6.5<br>20% = 20 × 6.5 = 130.",
+   "trick": "CI = 2r + r²/100, SI = 2r",
+   "ans": "C"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "If the interest on a sum of ₹y at 10% per annum compounded annually for 2 years is ₹462, then the total amount payable at the end of the two-year period will be _________.",
+   "hi": "यदि ₹y की राशि पर वार्षिक रूप से संयोजित होने वाले 10% वार्षिक दर से 2 वर्षों में प्राप्त चक्रवृद्धि ब्याज ₹462 है, तो दो वर्ष की अवधि के अंत में देय कुल राशि _________ होगी।",
+   "opts": [
+    "₹2,662",
+    "₹2,862",
+    "₹2,762",
+    "₹2,962"
+   ],
+   "my_ans": "A",
+   "sol": "CI = 21% = 462 → 1% = 22<br>मूलधन = 2200, मिश्रधन = 2200 + 462 = 2662.",
+   "trick": "मिश्रधन = मूलधन + चक्रवृद्धि ब्याज",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "A sum becomes ₹9,075 after 2 years at 10% per annum compound interest, compounded annually. What was the principal amount (in ₹)?",
+   "hi": "कोई धनराशि, 10% वार्षिक चक्रवृद्धि ब्याज दर पर 2 वर्ष के बाद ₹9,075 हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित होता है। मूलधन (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "7,650",
+    "7,800",
+    "7,500",
+    "8,000"
+   ],
+   "my_ans": "C",
+   "sol": "10% दर पर 2 वर्ष का मिश्रधन = 121%<br>121% = 9075 → 1% = 75<br>100% = 7500.",
+   "trick": "मिश्रधन = P(1 + r/100)<sup>n</sup>",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "A sum of ₹12,000 is invested at 10% per annum, compound interest, compounded half-yearly. What is the amount after 1.5 years?",
+   "hi": "₹12,000 की धनराशि 10% वार्षिक चक्रवृद्धि ब्याज दर पर निवेश की जाती है, जहां ब्याज अर्धवार्षिक रूप से संयोजित होता है। 1.5 वर्ष बाद मिश्रधन कितना होगा?",
+   "opts": [
+    "₹14,200",
+    "₹13,965.75",
+    "₹14,000",
+    "₹13,891.50"
+   ],
+   "my_ans": "D",
+   "sol": "दर = 5%, समय = 3 छमाही<br>मिश्रधन = 12000 × (1.05)³ = 12000 × 1.157625 = 13891.50.",
+   "trick": "अर्धवार्षिक में दर आधी और समय दोगुना करें",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "If a sum of ₹70,000 amounts to ₹74,263 in X years under compound interest, compounded annually at 3% per annum, find X.",
+   "hi": "यदि ₹70,000 की धनराशि, 3% चक्रवृद्धि ब्याज दर से X वर्षों में ₹74,263 हो जाती है जबकि ब्याज वार्षिक रूप से संयोजित किया जाता है, तो X का मान ज्ञात कीजिए।",
+   "opts": [
+    "3",
+    "2",
+    "5",
+    "4"
+   ],
+   "my_ans": "B",
+   "sol": "74263/70000 = (1.03)<sup>X</sup><br>1.0609 = (1.03)<sup>X</sup><br>(1.03)² = 1.0609, अतः X = 2.",
+   "trick": "मिश्रधन/मूलधन = (1 + r/100)<sup>n</sup>",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "An investment triples in 6 years under compound interest. After how many years will it become 27 times?",
+   "hi": "चक्रवृद्धि ब्याज के तहत एक निवेश 6 वर्षों में तीन गुना हो जाता है। कितने वर्षों के बाद यह 27 गुना हो जाएगा?",
+   "opts": [
+    "15 years<br>15 वर्ष",
+    "24 years<br>24 वर्ष",
+    "18 years<br>18 वर्ष",
+    "21 years<br>21 वर्ष"
+   ],
+   "my_ans": "C",
+   "sol": "3 गुना = 6 वर्ष<br>27 गुना = 3³ = 3 × 6 = 18 वर्ष.",
+   "trick": "गुना की घात को समय से गुणा करें",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "If the interest on a sum of ₹y at 2% per annum compounded annually for 2 years is ₹404, then the total amount payable at the end of the two-year period will be _________.",
+   "hi": "यदि ₹y की राशि पर वार्षिक रूप से संयोजित होने वाले 2% वार्षिक दर से 2 वर्षों में प्राप्त चक्रवृद्धि ब्याज ₹404 है, तो दो वर्ष की अवधि के अंत में देय कुल राशि _________ होगी।",
+   "opts": [
+    "₹10,404",
+    "₹10,504",
+    "₹10,604",
+    "₹10,704"
+   ],
+   "my_ans": "A",
+   "sol": "CI = 2+2+(4/100) = 4.04%<br>4.04% = 404 → 1% = 100 → 100% = 10000<br>मिश्रधन = 10000 + 404 = 10404.",
+   "trick": "मिश्रधन = मूलधन + ब्याज",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "A sum is invested at 8% per annum, compounded half-yearly. If the amount after one year is ₹10,816, then what was the principal (in ₹)?",
+   "hi": "किसी धनराशि को 8% वार्षिक चक्रवृद्धि ब्याज (अर्ध-वार्षिक रूप से संयोजित) दर पर निवेश किया जाता है। यदि एक वर्ष के बाद धनराशि ₹10,816 हो जाती है, तो मूलधन (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "10,000",
+    "10,200",
+    "10,400",
+    "10,500"
+   ],
+   "my_ans": "A",
+   "sol": "दर = 4% (अर्धवार्षिक), समय = 2 छमाही<br>P × (1.04)² = 10816 → P × 1.0816 = 10816 → P = 10000.",
+   "trick": "अर्धवार्षिक में दर आधी और समय दोगुना करें",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "If the interest on a sum of ₹y at 4% per annum compounded annually for 2 years is ₹765, then the total amount payable at the end of the two-year period will be _________.",
+   "hi": "यदि ₹y की राशि पर वार्षिक रूप से संयोजित होने वाले 4% वार्षिक दर से 2 वर्षों में प्राप्त चक्रवृद्धि ब्याज ₹765 है, तो दो वर्ष की अवधि के अंत में देय कुल राशि _________ होगी।",
+   "opts": [
+    "₹10,140",
+    "₹10,351",
+    "₹10,115",
+    "₹10,210"
+   ],
+   "my_ans": "A",
+   "sol": "CI = 4+4+(16/100) = 8.16%<br>8.16% = 765 → 1% = 93.75<br>मूलधन = 9375, मिश्रधन = 9375 + 765 = 10140.",
+   "trick": "मिश्रधन = मूलधन + ब्याज",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "Rajiv invested a certain sum of money at 10% per annum. After 2 years, he received ₹199.5 as compound interest, compounded annually. Find the corresponding simple interest (in ₹) for 2 years at the same rate.",
+   "hi": "राजीव एक निश्चित राशि 10% वार्षिक दर पर निवेश करता है। 2 वर्षों के बाद, उसे चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) के रूप में ₹199.5 प्राप्त होते हैं। समान ब्याज दर पर 2 वर्षों के लिए संगत साधारण ब्याज (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "200",
+    "185",
+    "205",
+    "190"
+   ],
+   "my_ans": "D",
+   "sol": "CI = 21%, SI = 20%<br>21% = 199.5 → 1% = 9.5<br>20% = 20 × 9.5 = 190.",
+   "trick": "CI = 2r + r²/100, SI = 2r",
+   "ans": "D"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "Subrata invested a certain amount of money at 10% per annum. After 2 years, he received ₹220.5 as compound interest, compounded annually. Find the corresponding simple interest (in ₹) for 2 years at the same rate.",
+   "hi": "सुब्रता ने एक निश्चित धनराशि को 10% वार्षिक ब्याज दर से निवेश किया। 2 वर्ष बाद, उसे चक्रवृद्धि ब्याज के रूप में ₹220.5 प्राप्त हुए, जहां ब्याज वार्षिक रूप से संयोजित होता है। समान ब्याज दर से 2 वर्षों के लिए संगत साधारण ब्याज (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "205",
+    "195",
+    "210",
+    "200"
+   ],
+   "my_ans": "C",
+   "sol": "CI = 21%, SI = 20%<br>21% = 220.5 → 1% = 10.5<br>20% = 20 × 10.5 = 210.",
+   "trick": "CI = 2r + r²/100, SI = 2r",
+   "ans": "C"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "A sum of ₹20,000 amounts to ₹21,218 in 2 years under compound interest, compounded annually. Find the rate of interest per annum.",
+   "hi": "₹20,000 की धनराशि, वार्षिक रूप से संयोजित किए जाने वाले चक्रवृद्धि ब्याज पर 2 वर्षों में ₹21,218 हो जाती है। वार्षिक ब्याज दर ज्ञात कीजिए।",
+   "opts": [
+    "8%",
+    "3%",
+    "4%",
+    "5%"
+   ],
+   "my_ans": "B",
+   "sol": "21218/20000 = (1 + r/100)²<br>1.0609 = (1 + r/100)²<br>1.03 = 1 + r/100 → r = 3%.",
+   "trick": "मिश्रधन/मूलधन = (1 + r/100)<sup>n</sup>",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "A sum of ₹10,000 is invested at a compound interest rate of 10% per annum for 2 years, compounded annually. What is the compound interest earned?",
+   "hi": "₹10,000 की राशि को 10% वार्षिक चक्रवृद्धि ब्याज दर (वार्षिक रूप से संयोजित) पर 2 वर्षों के लिए निवेश किया जाता है। अर्जित चक्रवृद्धि ब्याज कितना होगा?",
+   "opts": [
+    "₹2,000",
+    "₹1,900",
+    "₹2,100",
+    "₹2,200"
+   ],
+   "my_ans": "C",
+   "sol": "CI = 10+10+(100/100) = 21%<br>10000 का 21% = 2100.",
+   "trick": "2 वर्ष का CI = 2r + r²/100",
+   "ans": "C"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Find the compound interest on ₹25,600 at the rate of 12.5% interest per annum for 2 years 3 months, compounded annually.",
+   "hi": "₹25,600 पर 12.5% वार्षिक ब्याज दर से 2 वर्ष 3 माह के लिए वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज ज्ञात कीजिए।",
+   "opts": [
+    "₹8,650.50",
+    "₹10,580.50",
+    "₹9,750.50",
+    "₹7,812.50"
+   ],
+   "my_ans": "D",
+   "sol": "12.5% = 1/8. 2 वर्ष का मिश्रधन = 25600 × (9/8)² = 32400<br>3 माह (1/4 वर्ष) का ब्याज = 32400 × (1 + (1/8 × 1/4)) = 32400 × 33/32 = 33412.5<br>CI = 33412.5 - 25600 = 7812.5.",
+   "trick": "समय के अनुसार दर को विभाजित करें",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Yogesh invested a certain sum of money at 10% per annum. After 2 years, he received ₹147 as compound interest, compounded annually. Find the corresponding simple interest (in ₹) for 2 years at the same rate.",
+   "hi": "योगेश एक निश्चित राशि 10% वार्षिक दर पर निवेश करता है। 2 वर्ष बाद, उसे चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) के रूप में ₹147 प्राप्त होते हैं। समान ब्याज दर पर 2 वर्षों के लिए संगत साधारण ब्याज (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "140",
+    "135",
+    "130",
+    "125"
+   ],
+   "my_ans": "A",
+   "sol": "CI = 21%, SI = 20%<br>21% = 147 → 1% = 7<br>20% = 20 × 7 = 140.",
+   "trick": "CI = 2r + r²/100, SI = 2r",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "If ₹5,000 is invested at 8% per annum compounded annually, what will be the compound interest earned after 2 years?",
+   "hi": "यदि ₹5,000 की धनराशि को 8% वार्षिक ब्याज दर (वार्षिक रूप से संयोजित) से चक्रवृद्धि ब्याज पर निवेश किया जाता है, तो 2 वर्ष बाद अर्जित चक्रवृद्धि ब्याज कितना होगा?",
+   "opts": [
+    "₹816",
+    "₹800",
+    "₹840",
+    "₹832"
+   ],
+   "my_ans": "D",
+   "sol": "CI = 8+8+(64/100) = 16.64%<br>5000 का 16.64% = 832.",
+   "trick": "2 वर्ष का CI = 2r + r²/100",
+   "ans": "D"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "A sum of money amounts to ₹19,360 in 3 years at 10% per annum, compounded annually. The compound interest (in ₹) earned is",
+   "hi": "कोई धनराशि वार्षिक रूप से संयोजित होने वाले 10% वार्षिक चक्रवृद्धि ब्याज की दर से 3 वर्षों में ₹19,360 हो जाती है। अर्जित चक्रवृद्धि ब्याज (₹ में) कितना होगा?",
+   "opts": [
+    "₹4814.55",
+    "₹4914.55",
+    "₹4614.55",
+    "₹4714.55"
+   ],
+   "my_ans": "A",
+   "sol": "10% दर पर 3 वर्ष का मिश्रधन = 133.1%<br>133.1% = 19360 → 1% = 145.4545<br>CI = 33.1% = 33.1 × 145.4545 = 4814.55.",
+   "trick": "3 वर्ष का CI = 3r + 3r²/100 + r³/10000",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "At what annual interest rate will a principal amount of ₹1,000 become ₹1,728 in a period of 1 year and 6 months, assuming that the interest is compounded semi-annually?",
+   "hi": "₹1,000 का मूलधन किस वार्षिक ब्याज की दर से 1 वर्ष और 6 महीने की अवधि में ₹1,728 हो जाएगा, जबकि ब्याज, अर्ध-वार्षिक रूप से संयोजित होता है।",
+   "opts": [
+    "32%",
+    "40%",
+    "35%",
+    "41%"
+   ],
+   "my_ans": "B",
+   "sol": "समय = 3 छमाही. (1728/1000) = (1 + r/100)³<br>(12/10)³ = (1 + r/100)³ → 1.2 = 1 + r/100<br>r = 20% (छमाही), वार्षिक दर = 20 × 2 = 40%.",
+   "trick": "अर्धवार्षिक में दर आधी और समय दोगुना करें",
+   "ans": "B"
+  }
+ ]
+}

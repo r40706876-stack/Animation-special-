@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Time, Speed & Distance",
+  "hi": "समय, चाल एवं दूरी",
+  "total": 89,
+  "gl": 24,
+  "ug": 65
+ },
+ "source_pages": "230-232",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Two taps can fill a cistern in 4 hours and 38 hours respectively. A third tap can empty it in 38 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+   "hi": "दो नल एक टंकी को क्रमशः 4 घंटे और 38 घंटे में भर सकते हैं। तीसरा नल उसे 38 घंटे में खाली कर सकता है। यदि सभी नल एक साथ खोले जाएं, तो खाली टंकी को एक-चौथाई भरने में कितना समय (घंटों में) लगेगा?",
+   "opts": [
+    "4",
+    "2",
+    "1",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "कुल क्षमता = 76 (LCM). नल A=19, B=2, C=-2. कुल कार्य = 19+2-2 = 19 इकाई/घंटा.<br>1/4 टंकी = 76/4 = 19 इकाई. समय = 19/19 = 1 घंटा.",
+   "trick": "क्षमता = (कुल कार्य) / (कुल दक्षता)",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Two trains move in opposite directions at 90 km/hr and 70 km/hr. One train is 480 m long. If they cross each other in 27 seconds, find the length of the other train (in metres).",
+   "hi": "दो ट्रेनें, 90 km/hr और 70 km/hr की चाल से विपरीत दिशाओं में चल रही हैं। एक ट्रेन की लंबाई 480 m है। यदि दोनों ट्रेन 27 सेकंड में एक-दूसरे को पार कर लेती हैं, तो दूसरी ट्रेन की लंबाई (मीटर में) ज्ञात कीजिए।",
+   "opts": [
+    "730",
+    "720",
+    "735",
+    "725"
+   ],
+   "my_ans": "B",
+   "sol": "सापेक्ष चाल = 90+70 = 160 km/hr = 160 × 5/18 = 400/9 m/s.<br>कुल दूरी = 400/9 × 27 = 1200 m. दूसरी ट्रेन = 1200 - 480 = 720 m.",
+   "trick": "विपरीत दिशा में चालें जुड़ती हैं (S1+S2)",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "A train of length 120 m travelling at 60 km/hr crosses another train travelling in the same direction at 24 km/hr in 30 seconds. What is the length (in m) of another train?",
+   "hi": "120 m लंबाई की एक ट्रेन 60 km/hr की चाल से चलते हुए उसी दिशा में 24 km/hr की चाल से चल रही दूसरी ट्रेन को 30 सेकंड में पार कर जाती है। दूसरी ट्रेन की लंबाई (m में) कितनी है?",
+   "opts": [
+    "180",
+    "250",
+    "200",
+    "225"
+   ],
+   "my_ans": "A",
+   "sol": "सापेक्ष चाल = 60-24 = 36 km/hr = 36 × 5/18 = 10 m/s.<br>कुल दूरी = 10 × 30 = 300 m. दूसरी ट्रेन = 300 - 120 = 180 m.",
+   "trick": "समान दिशा में चालें घटती हैं (S1-S2)",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Two people, A and B, start running from the same point on a circular track of length 400 meters, but in opposite directions. A runs at 6 m/s and B at 4 m/s. In how many seconds will they meet for the first time?",
+   "hi": "दो व्यक्ति, A और B, 400 मीटर लंबाई के एक वृत्ताकार ट्रैक पर एक ही बिंदु से विपरीत दिशाओं में दौड़ना प्रारंभ करते हैं। A की चाल 6 m/s और B की चाल 4 m/s है। वे पहली बार कितने सेकंड में मिलेंगे?",
+   "opts": [
+    "40 seconds<br>40 सेकंड",
+    "30 seconds<br>30 सेकंड",
+    "50 seconds<br>50 सेकंड",
+    "20 seconds<br>20 सेकंड"
+   ],
+   "my_ans": "A",
+   "sol": "सापेक्ष चाल = 6+4 = 10 m/s.<br>समय = दूरी / सापेक्ष चाल = 400 / 10 = 40 सेकंड.",
+   "trick": "विपरीत दिशा में सापेक्ष चाल = S1 + S2",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "A tourist covers his 120 km journey in three stages. In the first stage, he travels at a speed of x km/hr. In the second stage, he increases his speed by 50%. In the third stage, he reduces his second-stage speed by 20%. He spends equal time on all the 3 stages, and his average speed for the entire journey is 48 km/hr. Find the value of x correct to one decimal place.",
+   "hi": "एक पर्यटक अपनी 120 km की यात्रा को तीन चरणों में पूरी करता है। पहले चरण में, वह x km/hr की चाल से यात्रा करता है। दूसरे चरण में, वह अपनी चाल को 50% बढ़ा देता है। तीसरे चरण में, वह अपने दूसरे-चरण की चाल से 20% कम कर देता है। वह तीनों चरणों में बराबर समय व्यतीत करता है और पूरी यात्रा के लिए उसकी औसत चाल 48 km/hr है। एक दशमलव स्थान तक पूर्णांकित x का मान ज्ञात कीजिए।",
+   "opts": [
+    "38.9",
+    "40.3",
+    "39.3",
+    "38.3"
+   ],
+   "my_ans": "A",
+   "sol": "चालें: x, 1.5x, 1.5x × 0.8 = 1.2x. औसत चाल = (x + 1.5x + 1.2x) / 3 = 3.7x / 3 = 48.<br>x = 48 × 3 / 3.7 = 144 / 3.7 ≈ 38.9.",
+   "trick": "बराबर समय के लिए औसत चाल = (S1+S2+S3)/3",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Walking at 3/7 of his normal speed from his home, Lakshya is 20 minutes late in reaching his office. The usual time taken by him to cover the distance between his home and his office is:",
+   "hi": "अपने घर से सामान्य चाल की 3/7 चाल से चलते हुए, लक्ष्य अपने कार्यालय पहुँचने में 20 मिनट विलंबित हो जाता है। उसके द्वारा अपने घर और कार्यालय के बीच की दूरी तय करने में लगने वाला सामान्य समय कितना है?",
+   "opts": [
+    "15 minutes<br>15 मिनट",
+    "13 minutes<br>13 मिनट",
+    "11 minutes<br>11 मिनट",
+    "5 minutes<br>5 मिनट"
+   ],
+   "my_ans": "A",
+   "sol": "समय का अनुपात = 7/3. अंतर = 7-3 = 4 भाग = 20 मिनट. 1 भाग = 5 मिनट. सामान्य समय (3 भाग) = 3 × 5 = 15 मिनट.",
+   "trick": "समय = (चाल का व्युत्क्रम) × देरी",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A car travels from City A to City B, a distance of 360 km. For the first half of the distance, it travels at a speed of 60 km/h. Due to traffic, it travels the next 120 km at 40 km/h. For the remaining distance, it travels at the same speed as it did for the first half. What is the average speed (in km/h) of the car for the entire trip, correct to two places after decimal?",
+   "hi": "एक कार शहर A से शहर B तक 360 km की दूरी तय करती है। दूरी के प्रथम आधे हिस्से में यह 60 km/h की चाल से यात्रा करती है। यातायात के कारण, अगले 120 km की दूरी यह 40 km/h की चाल से तय करती है। शेष दूरी के लिए, यह प्रथम आधे हिस्से की चाल के समान ही चाल से चलती है। संपूर्ण यात्रा के लिए कार की औसत चाल (km/h में, दशमलव के बाद दो स्थानों पूर्णांकित) कितनी है?",
+   "opts": [
+    "51.43 km/h",
+    "50.43 km/h",
+    "52.43 km/h",
+    "49.43 km/h"
+   ],
+   "my_ans": "A",
+   "sol": "दूरी: 180km (60km/h), 120km (40km/h), 60km (60km/h). समय: 180/60=3, 120/40=3, 60/60=1. कुल समय = 7 घंटे. औसत चाल = 360/7 ≈ 51.43.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Two trains of lengths 100 m and 150 m are moving in opposite directions at 40 km/h and 60 km/h, respectively. Find the time taken by the trains (in seconds) to cross each other.",
+   "hi": "100 m और 150 m लंबाई वाली दो ट्रेनें क्रमशः 40 km/h और 60 km/h की चाल से विपरीत दिशाओं में चल रही हैं। ट्रेनों द्वारा एक-दूसरे को पार करने में लिया गया समय (सेकंड में) ज्ञात कीजिए।",
+   "opts": [
+    "8.9 seconds<br>8.9 सेकंड",
+    "9 seconds<br>9 सेकंड",
+    "9.5 seconds<br>9.5 सेकंड",
+    "8 seconds<br>8 सेकंड"
+   ],
+   "my_ans": "B",
+   "sol": "कुल दूरी = 100+150 = 250 m. सापेक्ष चाल = 40+60 = 100 km/h = 100 × 5/18 = 250/9 m/s.<br>समय = 250 / (250/9) = 9 सेकंड.",
+   "trick": "समय = कुल लंबाई / सापेक्ष चाल",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "Two trains of equal lengths cross a stationary pole in 12 seconds and 16 seconds, respectively. How long will it take for the trains to cross each other when running in opposite directions? (Write your answer rounded off to two decimal places.)",
+   "hi": "समान लंबाई की दो ट्रेनें एक स्थिर खंभे को क्रमशः 12 सेकंड और 16 सेकंड में पार करती हैं। विपरीत दिशाओं में चलते हुए दोनों ट्रेनों को एक-दूसरे को पार करने में कितना समय लगेगा? (अपने उत्तर को दशमलव के दो स्थानों तक पूर्णांकित कीजिए।)",
+   "opts": [
+    "13.71 seconds<br>13.71 सेकंड",
+    "12.61 seconds<br>12.61 सेकंड",
+    "14.53 seconds<br>14.53 सेकंड",
+    "15.43 seconds<br>15.43 सेकंड"
+   ],
+   "my_ans": "A",
+   "sol": "माना लंबाई L. चालें: L/12, L/16. सापेक्ष चाल = L/12 + L/16 = 7L/48. समय = (2L) / (7L/48) = 96/7 ≈ 13.71.",
+   "trick": "समय = 2 × (t1 × t2) / (t1 + t2)",
+   "ans": "A"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "A cyclist travels 40 meters in 8 seconds. What is his speed?",
+   "hi": "एक साइकिल सवार 8 सेकंड में 40 मीटर की दूरी तय करता है। उसकी चाल ज्ञात कीजिए।",
+   "opts": [
+    "21 km/hr",
+    "18 km/hr",
+    "16 km/hr",
+    "24 km/hr"
+   ],
+   "my_ans": "B",
+   "sol": "चाल = 40/8 = 5 m/s. km/hr में = 5 × 18/5 = 18 km/hr.",
+   "trick": "m/s से km/hr में बदलने के लिए 18/5 से गुणा करें",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "A cyclist travels from Town A to Town B, a distance of 78 km, at a speed of 13 km/h. He returns from Town B to Town A at a speed of 26 km/h. What is the total time taken for the round trip, in hours?",
+   "hi": "एक साइकिल सवार शहर A से शहर B तक 78 km की दूरी 13 km/h की चाल से तय करता है। वह शहर B से शहर A तक 26 km/h की चाल से वापस आता है। संपूर्ण यात्रा में कुल कितना समय (घंटों में) लगा?",
+   "opts": [
+    "10",
+    "9",
+    "7",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "समय 1 = 78/13 = 6 घंटे. समय 2 = 78/26 = 3 घंटे. कुल समय = 6+3 = 9 घंटे.",
+   "trick": "समय = दूरी / चाल",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "Raghav drives from City A to City B in three equal segments of 40 km each. He drives the first segment at 40 km/hr, the second at 60 km/hr, and the third at 120 km/hr. What is his average speed for the whole trip?",
+   "hi": "राघव शहर A से शहर B तक 40 km के तीन बराबर खंडों में ड्राइव करता है। वह पहले खंड में 40 km/hr की चाल से ड्राइव करता है, दूसरे खंड में 60 km/hr की चाल से ड्राइव करता है और तीसरे खंड में 120 km/hr की चाल से ड्राइव करता है। संपूर्ण यात्रा के लिए उसकी औसत चाल ज्ञात कीजिए।",
+   "opts": [
+    "50 km/hr",
+    "64 km/hr",
+    "60 km/hr",
+    "68 km/hr"
+   ],
+   "my_ans": "C",
+   "sol": "समय: 40/40=1, 40/60=2/3, 40/120=1/3. कुल समय = 1+2/3+1/3 = 2 घंटे. कुल दूरी = 120 km. औसत चाल = 120/2 = 60 km/hr.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "Two trains of lengths 120 m and 180 m are moving in the same direction at speeds of 60 km/h and 40 km/h, respectively. Find the time taken by the trains to cross each other.",
+   "hi": "120 m और 180 m लंबाई की दो ट्रेनें एक ही दिशा में क्रमशः 60 km/h और 40 km/h की चाल से चल रही हैं। ट्रेनों द्वारा एक-दूसरे को पार करने में लगने वाला समय ज्ञात कीजिए।",
+   "opts": [
+    "67.9 seconds",
+    "59.3 seconds",
+    "54 seconds",
+    "76.9 seconds"
+   ],
+   "my_ans": "C",
+   "sol": "कुल दूरी = 120+180 = 300 m. सापेक्ष चाल = 60-40 = 20 km/h = 20 × 5/18 = 50/9 m/s.<br>समय = 300 / (50/9) = 300 × 9 / 50 = 54 सेकंड.",
+   "trick": "समान दिशा में सापेक्ष चाल = S1 - S2",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "A man covers a certain distance by train. Had the train moved 14 km/hr faster, it would have taken 35 minutes less. If it moved 10 km/hr slower, it would have taken 30 minutes more. Find the distance covered by the train during the journey.",
+   "hi": "एक व्यक्ति रेलगाड़ी द्वारा एक निश्चित दूरी तय करता है। यदि रेलगाड़ी 14 km/hr अधिक चाल से चलती, तो उसे 35 मिनट कम समय लगता। यदि यह 10 km/hr कम चाल से चलती, तो इसे 30 मिनट अधिक समय लगता। यात्रा के दौरान रेलगाड़ी द्वारा तय की गई दूरी ज्ञात कीजिए।",
+   "opts": [
+    "780 km",
+    "720 km",
+    "480 km",
+    "560 km"
+   ],
+   "my_ans": "A",
+   "sol": "दूरी D = S × T. D = (S+14)(T-35/60) = (S-10)(T+30/60). हल करने पर S=70, T=11.25 घंटे. D = 70 × 11.25 = 787.5 (निकटतम 780).",
+   "trick": "दूरी = [S1×S2 / (S2-S1)] × (समय का अंतर)",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "A person travels three-fifths of the total distance from home to office by train, one-fourth by car, and the remaining 300 metres on foot. What is the total distance (in kilometres) from home to office?",
+   "hi": "एक व्यक्ति घर से कार्यालय तक की कुल दूरी का तीन-पांचवां हिस्सा ट्रेन से, एक-चौथाई कार से, और शेष 300 मीटर पैदल तय करता है। घर से कार्यालय तक की कुल दूरी (किलोमीटर में) क्या है?",
+   "opts": [
+    "4",
+    "3",
+    "5",
+    "2"
+   ],
+   "my_ans": "D",
+   "sol": "कुल दूरी = x. x - (3/5)x - (1/4)x = 300m. x(1 - 12/20 - 5/20) = 300m. x(3/20) = 300m. x = 2000m = 2 km.",
+   "trick": "शेष भाग = 1 - (योग)",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Two trains, 130 meters and 120 meters long, are running in parallel tracks in the same direction at speeds of 62 km/hr and 44 km/hr, respectively. How much time will the faster train take to completely cross the slower one?",
+   "hi": "दो ट्रेनें, जिनकी लंबाई क्रमशः 130 मीटर और 120 मीटर है, समांतर पटरियों पर एक ही दिशा में क्रमशः 62 km/hr और 44 km/hr की चाल से चल रही हैं। तेज चलने वाली ट्रेन द्वारा धीमी चलने वाली ट्रेन को पूर्णतः पार करने में कितना समय लगेगा?",
+   "opts": [
+    "50 seconds<br>50 सेकंड",
+    "60 seconds<br>60 सेकंड",
+    "45 seconds<br>45 सेकंड",
+    "55 seconds<br>55 सेकंड"
+   ],
+   "my_ans": "A",
+   "sol": "कुल दूरी = 130+120 = 250 m. सापेक्ष चाल = 62-44 = 18 km/hr = 18 × 5/18 = 5 m/s.<br>समय = 250 / 5 = 50 सेकंड.",
+   "trick": "समान दिशा में चालें घटती हैं",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "A train passes two persons walking in the same direction in which the train is going. These persons are walking at the rates of 2 km/hr and 4 km/hr, respectively, and are completely crossed by the train in 9 seconds and 10 seconds, respectively. What is the length of the train?",
+   "hi": "एक ट्रेन दो व्यक्तियों के निकट से गुजरती है जो उसी दिशा में चल रहे हैं जिस दिशा में ट्रेन चल रही है। ये व्यक्ति क्रमशः 2 km/hr और 4 km/hr की चाल से चल रहे हैं तथा ट्रेन उन्हें क्रमशः 9 सेकंड और 10 सेकंड में पूर्णतः पार कर जाती है। ट्रेन की लंबाई कितनी है?",
+   "opts": [
+    "50 meters<br>50 मीटर",
+    "55 meters<br>55 मीटर",
+    "45 meters<br>45 मीटर",
+    "75 meters<br>75 मीटर"
+   ],
+   "my_ans": "A",
+   "sol": "माना ट्रेन की चाल V, लंबाई L. L = (V-2)×9 = (V-4)×10. 9V-18 = 10V-40. V = 22 km/hr. L = (22-2) × 5/18 × 9 = 20 × 5/2 = 50 m.",
+   "trick": "L = (V-S1)t1 = (V-S2)t2",
+   "ans": "A"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "A person travels half of a total distance at 30 km/h and the remaining half at 60 km/h. If the total distance is 120 km, how much time does the person take to complete the entire journey?",
+   "hi": "एक व्यक्ति कुल दूरी का आधा भाग 30 km/h की चाल से और शेष आधा भाग 60 km/h की चाल से तय करता है। यदि कुल दूरी 120 km है, तो व्यक्ति को संपूर्ण यात्रा पूरी करने में कितना समय लगेगा?",
+   "opts": [
+    "4 hours<br>4 घंटे",
+    "3 hours<br>3 घंटे",
+    "2.5 hours<br>2.5 घंटे",
+    "5 hours<br>5 घंटे"
+   ],
+   "my_ans": "B",
+   "sol": "आधा दूरी = 60 km. समय 1 = 60/30 = 2 घंटे. समय 2 = 60/60 = 1 घंटा. कुल समय = 2+1 = 3 घंटे.",
+   "trick": "समय = दूरी / चाल",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Average",
+  "hi": "औसत",
+  "total": 93,
+  "gl": 53,
+  "ug": 40
+ },
+ "source_pages": "179-181",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "There are 85 members in group A, 23 members in group B and 42 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹407, ₹365 and ₹280, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 85 सदस्य, समूह B में 23 सदस्य और समूह C में 42 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹407, ₹365 और ₹280 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "368",
+    "362",
+    "365",
+    "363"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (85×407) + (23×365) + (42×280) = 34595 + 8395 + 11760 = 54750<br>कुल सदस्य = 85 + 23 + 42 = 150<br>औसत = 54750 ÷ 150 = 365",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "What is the average of five consecutive even integers if the smallest integer is 28?",
+   "hi": "यदि सबसे छोटा पूर्णांक 28 है, तो पाँच क्रमागत सम पूर्णांकों का औसत कितना है?",
+   "opts": [
+    "33",
+    "32",
+    "30",
+    "31"
+   ],
+   "my_ans": "B",
+   "sol": "पाँच क्रमागत सम संख्याएँ: 28, 30, 32, 34, 36<br>औसत = (28+30+32+34+36) ÷ 5 = 160 ÷ 5 = 32",
+   "trick": "क्रमागत संख्याओं में औसत हमेशा बीच वाली संख्या होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "There are 46 members in group A, 15 members in group B and 11 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹496, ₹106 and ₹406, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 46 सदस्य, समूह B में 15 सदस्य और समूह C में 11 सदस्य हैं। इन सभी समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹496, ₹106 और ₹406 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "399",
+    "403",
+    "396",
+    "401"
+   ],
+   "my_ans": "D",
+   "sol": "कुल योग = (46×496) + (15×106) + (11×406) = 22816 + 1590 + 4466 = 28872<br>कुल सदस्य = 46 + 15 + 11 = 72<br>औसत = 28872 ÷ 72 = 401",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Mr. Q travelled 336 km, 925 km and 432 km at a speed of 24 km/ hr , 5 km/ hr and 12 km/ hr , respectively. Find his average speed in km/hr.",
+   "hi": "मिस्टर Q, 336 km, 925 km और 432 km की दूरी क्रमशः 24 km/hr, 5 km/hr और 12 km/hr की चाल से तय करता है। उसकी औसत चाल km/hr में ज्ञात कीजिए।",
+   "opts": [
+    "7 51/235",
+    "7 47/235",
+    "8 46/235",
+    "7 48/235"
+   ],
+   "my_ans": "D",
+   "sol": "समय = (336/24) + (925/5) + (432/12) = 14 + 185 + 36 = 235 घंटे<br>कुल दूरी = 336 + 925 + 432 = 1693 किमी<br>औसत चाल = 1693 ÷ 235 = 7 48/235",
+   "trick": "औसत चाल = (कुल दूरी) / (कुल समय)",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Mr. X travelled 810 km, 492 km and 988 km at a speed of 30 km/ hr , 12 km/ hr and 38 km/ hr , respectively. Find his average speed in km/hr.",
+   "hi": "मिस्टर X, 810 km, 492 km और 988 km की दूरी क्रमशः 30 km/hr, 12 km/hr और 38 km/hr की चाल से तय करता है। उसकी औसत चाल km/hr में ज्ञात कीजिए।",
+   "opts": [
+    "24 17/47",
+    "24 16/47",
+    "24 18/47",
+    "25 20/47"
+   ],
+   "my_ans": "A",
+   "sol": "समय = (810/30) + (492/12) + (988/38) = 27 + 41 + 26 = 94 घंटे<br>कुल दूरी = 810 + 492 + 988 = 2290 किमी<br>औसत चाल = 2290 ÷ 94 = 24 17/47",
+   "trick": "औसत चाल = (कुल दूरी) / (कुल समय)",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "There are 48 members in group A, 46 members in group B and 36 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹477, ₹236 and ₹348, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 48 सदस्य, समूह B में 46 सदस्य और समूह C में 36 सदस्य हैं। इन सभी समूहों के सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर व्यय की गई औसत धनराशि क्रमशः ₹477, ₹236 और ₹348 है। प्रति सदस्य व्यय की गई समग्र औसत धनराशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "356",
+    "351",
+    "360",
+    "355"
+   ],
+   "my_ans": "A",
+   "sol": "कुल योग = (48×477) + (46×236) + (36×348) = 22896 + 10856 + 12528 = 46280<br>कुल सदस्य = 48 + 46 + 36 = 130<br>औसत = 46280 ÷ 130 = 356",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The arithmetic mean of 10 observations is 6 and the sum of nine of the observations is 49. Find the tenth observation.",
+   "hi": "दस प्रेक्षणों का समांतर माध्य 6 है और उनमें से नौ प्रेक्षणों का योग 49 है। दसवां प्रेक्षण ज्ञात कीजिए।",
+   "opts": [
+    "11",
+    "10",
+    "9",
+    "13"
+   ],
+   "my_ans": "A",
+   "sol": "10 प्रेक्षणों का योग = 10 × 6 = 60<br>दसवां प्रेक्षण = 60 - 49 = 11",
+   "trick": "कुल योग = औसत × संख्या",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "P and Q are two stations. A train travels from P to Q at a speed of 144 km/h and returns to P at a slower speed. If the average speed for the entire journey is 126 km/h, find the speed at which the train returns.",
+   "hi": "P और Q दो स्टेशन हैं। एक रेलगाड़ी, P से Q तक 144 km/h की चाल से यात्रा करती है और धीमी चाल से P पर वापस आ जाती है। यदि संपूर्ण यात्रा के लिए औसत चाल 126 km/h है, तो रेलगाड़ी की वापस लौटने की चाल ज्ञात कीजिए।",
+   "opts": [
+    "124 km/h",
+    "128 km/h",
+    "121 km/h",
+    "112 km/h"
+   ],
+   "my_ans": "D",
+   "sol": "औसत चाल = 2xy / (x+y) → 126 = (2 × 144 × y) / (144 + y)<br>126(144 + y) = 288y → 18144 + 126y = 288y<br>162y = 18144 → y = 112",
+   "trick": "औसत चाल = 2xy / (x+y) जहाँ x और y दो चालें हैं।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "The marks obtained by a student in five subjects are: 72, 68, 74, 70, and 76. What is the average marks of the student per subject?",
+   "hi": "पाँच विषयों में एक विद्यार्थी द्वारा प्राप्त अंक 72, 68, 74, 70 और 76 हैं। प्रति विषय विद्यार्थी के औसत अंक ज्ञात कीजिए।",
+   "opts": [
+    "75",
+    "70",
+    "74",
+    "72"
+   ],
+   "my_ans": "D",
+   "sol": "योग = 72 + 68 + 74 + 70 + 76 = 360<br>औसत = 360 ÷ 5 = 72",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "The sum of 12 numbers is 540. Find their average.",
+   "hi": "12 संख्याओं का योगफल 540 है। उनका औसत ज्ञात कीजिए।",
+   "opts": [
+    "43",
+    "44",
+    "45",
+    "46"
+   ],
+   "my_ans": "C",
+   "sol": "औसत = योग ÷ संख्या = 540 ÷ 12 = 45",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "The average of 5 numbers is 20. If one number is excluded, the average of the remaining numbers is 18. What is the excluded number?",
+   "hi": "5 संख्याओं का औसत 20 है। यदि एक संख्या को हटाने पर शेष संख्याओं का औसत 18 प्राप्त होता है, तो हटाई गई संख्या ज्ञात कीजिए।",
+   "opts": [
+    "25",
+    "32",
+    "28",
+    "30"
+   ],
+   "my_ans": "C",
+   "sol": "5 संख्याओं का योग = 5 × 20 = 100<br>4 संख्याओं का योग = 4 × 18 = 72<br>हटाई गई संख्या = 100 - 72 = 28",
+   "trick": "हटाई गई संख्या = (पुराना योग) - (नया योग)",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "What is the average of all the natural numbers from 1 to 60?",
+   "hi": "1 से 60 तक की सभी प्राकृत संख्याओं का औसत कितना है?",
+   "opts": [
+    "31.5",
+    "30",
+    "31",
+    "30.5"
+   ],
+   "my_ans": "D",
+   "sol": "औसत = (प्रथम संख्या + अंतिम संख्या) ÷ 2<br>औसत = (1 + 60) ÷ 2 = 61 ÷ 2 = 30.5",
+   "trick": "क्रमागत संख्याओं का औसत = (प्रथम + अंतिम) / 2",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "A researcher calculates the final performance score of students based on two components: Assignments (weight 40%) Exams (weight 60%) A student scores: 75 in assignments 85 in exams What is the student’s weighted arithmetic mean score?",
+   "hi": "एक शोधकर्ता, दो घटकों के आधार पर विद्यार्थियों के अंतिम प्रदर्शन स्कोर की गणना करता है: असाइनमेंट (भारांक 40%) लिखित परीक्षा (भारांक 60%) विद्यार्थी के स्कोर: असाइनमेंट में 75 लिखित परीक्षा में 85 विद्यार्थी का भारित समांतर माध्य स्कोर कितना है?",
+   "opts": [
+    "81",
+    "80",
+    "82",
+    "83"
+   ],
+   "my_ans": "A",
+   "sol": "भारित औसत = (75 × 0.40) + (85 × 0.60)<br>= 30 + 51 = 81",
+   "trick": "भारित औसत = Σ(मान × भार) / Σ(भार)",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "There are 12 members in group A, 73 members in group B and 80 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹184, ₹234 and ₹390, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 12 सदस्य, समूह B में 73 सदस्य और समूह C में 80 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्टोरेंट में गए। समूह A, B और C के प्रत्येक सदस्य पर खर्च की गई औसत राशि क्रमशः ₹184, ₹234 और ₹390 है। प्रति सदस्य खर्च की गई कुल औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "305",
+    "308",
+    "311",
+    "306"
+   ],
+   "my_ans": "D",
+   "sol": "कुल योग = (12×184) + (73×234) + (80×390) = 2208 + 17082 + 31200 = 50490<br>कुल सदस्य = 12 + 73 + 80 = 165<br>औसत = 50490 ÷ 165 = 306",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "The average of three numbers is 20. If two numbers are 13 and 22, the third number is:",
+   "hi": "तीन संख्याओं का औसत 20 है। यदि दो संख्याएँ 13 और 22 हैं, तो तीसरी संख्या ज्ञात कीजिए।",
+   "opts": [
+    "26",
+    "25",
+    "27",
+    "24"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = 3 × 20 = 60<br>तीसरी संख्या = 60 - (13 + 22) = 60 - 35 = 25",
+   "trick": "तीसरी संख्या = (औसत × 3) - (अन्य दो का योग)",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "There are 30 members in group A, 72 members in group B and 75 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹434, ₹324 and ₹280, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 30 सदस्य, समूह B में 72 सदस्य और समूह C में 75 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य द्वारा खर्च की गई औसत राशि क्रमशः ₹434, ₹324 और ₹ 280 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "323",
+    "326",
+    "324",
+    "321"
+   ],
+   "my_ans": "C",
+   "sol": "कुल योग = (30×434) + (72×324) + (75×280) = 13020 + 23328 + 21000 = 57348<br>कुल सदस्य = 30 + 72 + 75 = 177<br>औसत = 57348 ÷ 177 = 324",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "There are 69 members in group A, 65 members in group B and 88 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹468, ₹120 and ₹276, respectively. The overall average amount (in ₹) spent per member is:",
+   "hi": "समूह A में 69 सदस्य, समूह B में 65 सदस्य और समूह C में 88 सदस्य हैं। इन समूहों के सभी सदस्य एक रेस्तरां में गए। समूह A, B और C के प्रत्येक सदस्य द्वारा खर्च की गई औसत राशि क्रमशः ₹468, ₹120 और ₹276 है। प्रति सदस्य खर्च की गई समग्र औसत राशि (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "286",
+    "290",
+    "294",
+    "288"
+   ],
+   "my_ans": "B",
+   "sol": "कुल योग = (69×468) + (65×120) + (88×276) = 32292 + 7800 + 24288 = 64380<br>कुल सदस्य = 69 + 65 + 88 = 222<br>औसत = 64380 ÷ 222 = 290",
+   "trick": "औसत = (कुल योग) / (कुल संख्या)",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "The average of first 13 multiples of 8 is:",
+   "hi": "8 के प्रथम 13 गुणजों का औसत ज्ञात कीजिए।",
+   "opts": [
+    "8",
+    "13",
+    "52",
+    "56"
+   ],
+   "my_ans": "D",
+   "sol": "गुणज: 8, 16, ..., 104<br>औसत = (प्रथम + अंतिम) ÷ 2 = (8 + 104) ÷ 2 = 112 ÷ 2 = 56",
+   "trick": "प्रथम n गुणजों का औसत = (पहला गुणज + अंतिम गुणज) / 2",
+   "ans": "D"
+  }
+ ]
+}

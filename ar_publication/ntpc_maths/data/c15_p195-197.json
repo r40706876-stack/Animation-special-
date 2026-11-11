@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "Problems on Age",
+  "hi": "आयु संबंधी प्रश्न",
+  "total": 43,
+  "gl": 8,
+  "ug": 35
+ },
+ "source_pages": "195-197",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "At present, Vanraj is three times as old as his son, and his daughter is 3 years younger than the son. If the sum of the ages of these three people 3 years ago was 93 years, then Vanraj's present age (in years) is:",
+   "hi": "वर्तमान में, वनराज की आयु उसके पुत्र की आयु की तीन गुनी है और उसकी पुत्री उसके पुत्र से 3 वर्ष छोटी है। यदि 3 वर्ष पूर्व इन तीनों व्यक्तियों की आयु का योगफल 93 वर्ष था, तो वनराज की वर्तमान आयु (वर्ष में) क्या है?",
+   "opts": [
+    "63",
+    "39",
+    "44",
+    "49"
+   ],
+   "my_ans": "A",
+   "sol": "माना पुत्र की वर्तमान आयु x है। वनराज = 3x, पुत्री = x-3।<br>3 वर्ष पूर्व: (3x-3) + (x-3) + (x-6) = 93 → 5x - 12 = 93 → 5x = 105 → x = 21.<br>वनराज = 3 × 21 = 63 वर्ष।",
+   "trick": "वर्तमान आयु का योग = (3 वर्ष पूर्व का योग) + (3 × 3)",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Eight years ago from now, the average age of A and B was 24 years. The average age of A, B and C today is 32 years. How old will C be after 16 years from now?",
+   "hi": "वर्तमान से आठ वर्ष पूर्व, A और B की औसत आयु 24 वर्ष थी। वर्तमान में A, B और C की औसत आयु 32 वर्ष है। वर्तमान से 16 वर्ष पश्चात C की आयु कितनी होगी?",
+   "opts": [
+    "80 years<br>80 वर्ष",
+    "56 years<br>56 वर्ष",
+    "40 years<br>40 वर्ष",
+    "48 years<br>48 वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "A+B की वर्तमान आयु = (24+8) × 2 = 64 वर्ष।<br>A+B+C की वर्तमान आयु = 32 × 3 = 96 वर्ष।<br>C = 96 - 64 = 32 वर्ष। 16 वर्ष बाद = 32 + 16 = 48 वर्ष।",
+   "trick": "औसत × संख्या = कुल योग",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Sharad is two times as old as his younger brother, and his other brother is 3 years younger than the younger brother. If the sum of the ages of these three brothers 3 years ago was 28 years, find Sharad’s present age, in years.",
+   "hi": "शरद की आयु उसके छोटे भाई की आयु की दोगुनी है तथा उसका एक और भाई है जो उसके छोटे भाई से 3 वर्ष छोटा है। यदि 3 वर्ष पूर्व इन तीनों भाइयों की आयु का योगफल 28 वर्ष था, तो शरद की वर्तमान आयु (वर्ष में) ज्ञात कीजिए।",
+   "opts": [
+    "26",
+    "22",
+    "20",
+    "18"
+   ],
+   "my_ans": "C",
+   "sol": "माना छोटा भाई x है। शरद = 2x, दूसरा भाई = x-3।<br>3 वर्ष पूर्व: (2x-3) + (x-3) + (x-6) = 28 → 4x - 12 = 28 → 4x = 40 → x = 10.<br>शरद = 2 × 10 = 20 वर्ष।",
+   "trick": "वर्तमान आयु का योग = (3 वर्ष पूर्व का योग) + (3 × 3)",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "At present, Vanraj is three times as old as his son, and his daughter is 3 years younger than the son. If the sum of the ages of these three people 3 years ago was 73 years, then Vanraj's present age (in years) is:",
+   "hi": "वर्तमान में, वनराज की आयु उसके पुत्र की आयु की तीन गुनी है और उसकी पुत्री उसके पुत्र से 3 वर्ष छोटी है। यदि 3 वर्ष पूर्व इन तीनों व्यक्तियों की आयु का योगफल 73 वर्ष था, तो वनराज की वर्तमान आयु (वर्ष में) क्या है?",
+   "opts": [
+    "53",
+    "60",
+    "57",
+    "51"
+   ],
+   "my_ans": "D",
+   "sol": "माना पुत्र x है। वनराज = 3x, पुत्री = x-3।<br>3 वर्ष पूर्व: (3x-3) + (x-3) + (x-6) = 73 → 5x - 12 = 73 → 5x = 85 → x = 17.<br>वनराज = 3 × 17 = 51 वर्ष।",
+   "trick": "वर्तमान आयु का योग = (3 वर्ष पूर्व का योग) + 9",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "At present, Sharad is three times as old as his son, and his daughter is 3 years younger than the son. If the sum of the ages of these three people 3 years ago was 63 years, then Sharad's present age (in years) is:",
+   "hi": "वर्तमान में, शरद की आयु उसके पुत्र की आयु की तीन गुनी है और उसकी पुत्री उसके पुत्र से 3 वर्ष छोटी है। यदि 3 वर्ष पूर्व इन तीनों व्यक्तियों की आयु का योगफल 63 वर्ष था, तो शरद की वर्तमान आयु (वर्ष में) क्या है?",
+   "opts": [
+    "45",
+    "35",
+    "55",
+    "50"
+   ],
+   "my_ans": "A",
+   "sol": "माना पुत्र x है। शरद = 3x, पुत्री = x-3।<br>3 वर्ष पूर्व: (3x-3) + (x-3) + (x-6) = 63 → 5x - 12 = 63 → 5x = 75 → x = 15.<br>शरद = 3 × 15 = 45 वर्ष।",
+   "trick": "वर्तमान आयु का योग = (3 वर्ष पूर्व का योग) + 9",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "At present, Vanraj is three times as old as his son, and his daughter is 3 years younger than the son. If the sum of the ages of these three people 3 years ago was 58 years, then Vanraj's present age (in years) is:",
+   "hi": "वर्तमान में, वनराज की आयु उसके पुत्र की आयु की तीन गुनी है और उसकी पुत्री उसके पुत्र से 3 वर्ष छोटी है। यदि 3 वर्ष पूर्व इन तीनों व्यक्तियों की आयु का योगफल 58 वर्ष था, तो वनराज की वर्तमान आयु (वर्ष में) क्या है?",
+   "opts": [
+    "33",
+    "45",
+    "36",
+    "42"
+   ],
+   "my_ans": "D",
+   "sol": "माना पुत्र x है। वनराज = 3x, पुत्री = x-3।<br>3 वर्ष पूर्व: (3x-3) + (x-3) + (x-6) = 58 → 5x - 12 = 58 → 5x = 70 → x = 14.<br>वनराज = 3 × 14 = 42 वर्ष।",
+   "trick": "वर्तमान आयु का योग = (3 वर्ष पूर्व का योग) + 9",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Four years ago from now, the average age of Amit, Bharat and Chitra was 36 years. Six years ago from now, the average age of Amit and Bharat was 30 years. What was the age of Chitra three years ago from now?",
+   "hi": "वर्तमान से चार वर्ष पूर्व अमित, भरत और चित्रा की औसत आयु 36 वर्ष थी। वर्तमान से छह वर्ष पूर्व, अमित और भरत की औसत आयु 30 वर्ष थी। वर्तमान से तीन वर्ष पूर्व चित्रा की आयु ज्ञात कीजिए।",
+   "opts": [
+    "42 years<br>42 वर्ष",
+    "43 years<br>43 वर्ष",
+    "45 years<br>45 वर्ष",
+    "40 years<br>40 वर्ष"
+   ],
+   "my_ans": "C",
+   "sol": "A+B+C (4 वर्ष पूर्व) = 36 × 3 = 108. वर्तमान में = 108 + 12 = 120.<br>A+B (6 वर्ष पूर्व) = 30 × 2 = 60. वर्तमान में = 60 + 12 = 72.<br>C = 120 - 72 = 48. 3 वर्ष पूर्व = 48 - 3 = 45 वर्ष।",
+   "trick": "वर्तमान आयु निकाल कर अंतर करें",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "The ages of A and B are in the ratio 5 : 8. After 6 years, the ratio becomes 3 : 4. What is A’s present age?",
+   "hi": "A और B की आयु का अनुपात 5 : 8 है। 6 वर्ष के बाद, अनुपात 3 : 4 हो जाता है। A की वर्तमान आयु कितनी है?",
+   "opts": [
+    "9 years<br>9 वर्ष",
+    "7.5 years<br>7.5 वर्ष",
+    "11 years<br>11 वर्ष",
+    "9.7 years<br>9.7 वर्ष"
+   ],
+   "my_ans": "B",
+   "sol": "माना आयु 5x, 8x है। (5x+6)/(8x+6) = 3/4<br>20x + 24 = 24x + 18 → 4x = 6 → x = 1.5.<br>A = 5 × 1.5 = 7.5 वर्ष।",
+   "trick": "अनुपात का अंतर समान करें या क्रॉस गुणा करें",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "The present ages of two sisters are in the ratio 5:7. After 4 years, their ages will be in the ratio 6:8. Find the present age of the younger sister.",
+   "hi": "दो बहनों की वर्तमान आयु का अनुपात 5 : 7 है। 4 वर्ष बाद, उनकी आयु का अनुपात 6 : 8 होगा। छोटी बहन की वर्तमान आयु ज्ञात कीजिए।",
+   "opts": [
+    "22 years<br>22 वर्ष",
+    "18 years<br>18 वर्ष",
+    "24 years<br>24 वर्ष",
+    "20 years<br>20 वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "अनुपात 5:7 और 6:8 (अंतर 1 है, जो 4 वर्ष के बराबर है)।<br>छोटी बहन = 5 × 4 = 20 वर्ष।",
+   "trick": "अनुपात का अंतर समान हो तो सीधे गुणा करें",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "If the sum of the ages of a father and son is 56 years and the father is 24 years older than his son, what is the son's age (in years)?",
+   "hi": "यदि पिता और पुत्र की आयु का योग 56 वर्ष है, तथा पिता अपने पुत्र से 24 वर्ष बड़ा है, तो पुत्र की आयु (वर्षों में) कितनी है?",
+   "opts": [
+    "16",
+    "24",
+    "20",
+    "32"
+   ],
+   "my_ans": "A",
+   "sol": "F+S = 56, F-S = 24.<br>2S = 56 - 24 = 32 → S = 16 वर्ष।",
+   "trick": "छोटी संख्या = (योग - अंतर) / 2",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "Five years ago, Rahul was twice as old as his brother. If Rahul is 10 years older than his brother, what is Rahul’s present age?",
+   "hi": "पाँच वर्ष पहले, राहुल की आयु अपने भाई की दोगुनी थी। यदि राहुल अपने भाई से 10 वर्ष बड़ा है, तो राहुल की वर्तमान आयु कितनी है?",
+   "opts": [
+    "20 years<br>20 वर्ष",
+    "15 years<br>15 वर्ष",
+    "25 years<br>25 वर्ष",
+    "30 years<br>30 वर्ष"
+   ],
+   "my_ans": "C",
+   "sol": "आयु का अंतर हमेशा समान रहता है (10 वर्ष)।<br>5 वर्ष पहले: राहुल = 2x, भाई = x. अंतर x = 10.<br>राहुल = 2 × 10 = 20 (5 वर्ष पहले), वर्तमान = 20 + 5 = 25 वर्ष।",
+   "trick": "आयु का अंतर कभी नहीं बदलता",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "Priyal is 5 years younger than her brother. After 4 years, the sum of their ages will be 39 years. What is Priyal's current age?",
+   "hi": "प्रियल, अपने भाई से 5 वर्ष छोटी है। 4 वर्ष बाद, उनकी आयु का योगफल 39 वर्ष होगा। प्रियल की वर्तमान आयु कितनी है?",
+   "opts": [
+    "13 years<br>13 वर्ष",
+    "16 years<br>14 वर्ष",
+    "14 years<br>14 वर्ष",
+    "15 years<br>15 वर्ष"
+   ],
+   "my_ans": "A",
+   "sol": "वर्तमान योग = 39 - (4+4) = 31.<br>B+P = 31, B-P = 5.<br>2P = 31 - 5 = 26 → P = 13 वर्ष।",
+   "trick": "वर्तमान योग निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "4 years ago, the age of Shyam was seven times the age of his son, Rajat. After 8 years, Shyam’s age will be three times the age of Rajat. Find the present age of Shyam .",
+   "hi": "4 वर्ष पहले, श्याम की आयु उसके पुत्र रजत की आयु की सात गुनी थी। 8 वर्ष बाद, श्याम की आयु रजत की आयु की तीन गुनी होगी। श्याम की वर्तमान आयु ज्ञात कीजिए।",
+   "opts": [
+    "38",
+    "45",
+    "42",
+    "46"
+   ],
+   "my_ans": "D",
+   "sol": "4 वर्ष पहले: S=7R. 8 वर्ष बाद: S+12 = 3(R+12) → 7R+12 = 3R+36 → 4R=24 → R=6.<br>श्याम (4 वर्ष पहले) = 7×6=42. वर्तमान = 42+4 = 46 वर्ष।",
+   "trick": "अनुपात विधि का प्रयोग करें",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "The combined present age of P and Q is 46 years. 2 years ago from now, P was twice as old as Q. What is the present age of P?",
+   "hi": "P और Q की संयुक्त वर्तमान आयु 46 वर्ष है। वर्तमान से 2 वर्ष पूर्व, P की आयु Q की आयु की दोगुनी थी। P की वर्तमान आयु ज्ञात कीजिए।",
+   "opts": [
+    "20 years<br>20 वर्ष",
+    "30 years<br>30 वर्ष",
+    "28 years<br>28 वर्ष",
+    "16 years<br>16 वर्ष"
+   ],
+   "my_ans": "B",
+   "sol": "2 वर्ष पूर्व योग = 46 - 4 = 42.<br>P=2Q → 3Q = 42 → Q=14.<br>P (वर्तमान) = 2×14 + 2 = 30 वर्ष।",
+   "trick": "2 वर्ष पूर्व का योग निकालें",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "UG",
+   "en": "The present ages of P and Q are in the ratio 4 : 5. Eight years ago, the ratio of their ages was 2 : 3. The harmonic mean of their present ages is",
+   "hi": "P और Q की वर्तमान आयु का अनुपात 4 : 5 है। आठ वर्ष पूर्व उनकी आयु का अनुपात 2 : 3 था। उनकी वर्तमान आयु का हरात्मक माध्य ज्ञात कीजिए।",
+   "opts": [
+    "16 7/9 years<br>16 7/9 वर्ष",
+    "18 7/9 years<br>18 7/9 वर्ष",
+    "17 7/9 years<br>17 7/9 वर्ष",
+    "19 7/9 years<br>19 7/9 वर्ष"
+   ],
+   "my_ans": "C",
+   "sol": "4x, 5x. (4x-8)/(5x-8) = 2/3 → 12x-24 = 10x-16 → 2x=8 → x=4.<br>आयु 16, 20. हरात्मक माध्य = 2ab/(a+b) = 2×16×20 / (16+20) = 640/36 = 160/9 = 17 7/9 वर्ष।",
+   "trick": "HM = 2ab/(a+b)",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "Two sisters, Anika and Riya, have a combined present age of 34 years. Five years ago from now, Anika was twice as old as Riya was then. What is Anika's current age in years?",
+   "hi": "दो बहनों, अनिका और रिया की संयुक्त वर्तमान आयु 34 वर्ष है। अब से पांच वर्ष पूर्व अनिका की आयु, रिया की आयु से दोगुनी थी। अनिका की वर्तमान आयु वर्ष में कितनी है?",
+   "opts": [
+    "21",
+    "18",
+    "20",
+    "23"
+   ],
+   "my_ans": "A",
+   "sol": "5 वर्ष पूर्व योग = 34 - 10 = 24.<br>A=2R → 3R=24 → R=8.<br>Anika (वर्तमान) = 2×8 + 5 = 21 वर्ष।",
+   "trick": "5 वर्ष पूर्व का योग निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "UG",
+   "en": "If the difference between the ages of a mother and her daughter is 24 years, and the sum of their ages is 52 years, how old (in years) is the mother?",
+   "hi": "यदि किसी माता और उसकी पुत्री की उम्र के बीच का अंतर 24 वर्ष है, और उनकी उम्र का योग 52 वर्ष है, तो माता की उम्र (वर्षों में) कितनी है?",
+   "opts": [
+    "38",
+    "28",
+    "40",
+    "36"
+   ],
+   "my_ans": "A",
+   "sol": "M+D = 52, M-D = 24.<br>2M = 52 + 24 = 76 → M = 38 वर्ष।",
+   "trick": "बड़ी संख्या = (योग + अंतर) / 2",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "UG",
+   "en": "Seven years ago Ramu was five times as old as his son. The present age difference between Ramu and his son is 28 years. Find the sum of their present ages.",
+   "hi": "सात वर्ष पूर्व, रामू की आयु, उसके पुत्र की आयु की पाँच गुना थी। वर्तमान में, रामू और उसके पुत्र की आयु के बीच का अंतर 28 वर्ष है। उनकी वर्तमान आयु का योगफल ज्ञात कीजिए।",
+   "opts": [
+    "56 years<br>56 वर्ष",
+    "30 years<br>30 वर्ष",
+    "73 years<br>73 वर्ष",
+    "28 years<br>28 वर्ष"
+   ],
+   "my_ans": "A",
+   "sol": "7 वर्ष पूर्व: R=5S. अंतर 4S = 28 → S=7.<br>7 वर्ष पूर्व: S=7, R=35. वर्तमान: S=14, R=42.<br>योग = 14 + 42 = 56 वर्ष।",
+   "trick": "आयु का अंतर हमेशा समान रहता है",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Trigonometry",
+  "hi": "त्रिकोणमिति",
+  "total": 35,
+  "gl": 23,
+  "ug": 12
+ },
+ "source_pages": "292-294",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Pipe P can fill 5/9 part of a tank in 15 hours and pipe Q can fill 7/9 part of the same tank in 21 hours. Both P and Q were kept open for 3 hours, then both were closed. Pipe R alone was then opened and it emptied the water in the tank in 4 hours. Pipes P, Q and R together can fill the empty tank in:",
+   "hi": "पाइप P एक टैंक का 5/9 भाग 15 घंटे में भर सकता है और पाइप Q उसी टैंक का 7/9 भाग 21 घंटे में भर सकता है। P और Q दोनों को 3 घंटे के लिए खुला रखा गया, फिर दोनों को बंद कर दिया गया। फिर पाइप R को खोला गया और उसने टैंक का पानी 4 घंटे में खाली कर दिया। पाइप P, Q और R मिलकर खाली टैंक को कितने समय में भर सकते हैं?",
+   "opts": [
+    "57 hours<br>57 घंटे",
+    "54 hours<br>54 घंटे",
+    "58 hours<br>58 घंटे",
+    "42 hours<br>42 घंटे"
+   ],
+   "my_ans": "B",
+   "sol": "P की क्षमता = (5/9)/15 = 1/27, Q की क्षमता = (7/9)/21 = 1/27. P+Q = 2/27. 3 घंटे में भरा = 3*(2/27) = 2/9. R की क्षमता = -(2/9)/4 = -1/18. P+Q+R = 1/27 + 1/27 - 1/18 = 2/27 - 1/18 = (4-3)/54 = 1/54. समय = 54 घंटे.",
+   "trick": "क्षमता = कार्य / समय, कुल क्षमता = P+Q+R",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "A tower stands vertically on the ground. From a point on the ground which is 28.6 m away from the foot of a tower, the angle of elevation of the top of the tower is found to be 45°. Find the height of the tower.",
+   "hi": "एक मीनार, भूमि पर ऊर्ध्वाधर रूप से खड़ी है। भूमि पर एक बिंदु से जो एक मीनार के आधार से 28.6 m दूर स्थित है, टावर के शीर्ष का उन्नयन कोण 45° है। मीनार की ऊँचाई ज्ञात कीजिए।",
+   "opts": [
+    "28.6 m",
+    "26.6 m",
+    "24.6 m",
+    "22.6 m"
+   ],
+   "my_ans": "A",
+   "sol": "tan 45° = ऊँचाई / आधार = h / 28.6. 1 = h / 28.6, इसलिए h = 28.6 m.",
+   "trick": "45° के कोण पर ऊँचाई = आधार",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "If cot A = 3/4, and A is an acute angle, then find the value of sin2A - cos3A.",
+   "hi": "यदि cot A = 3/4 है, और A एक न्यून कोण है, तो sin2A - cos3A का मान ज्ञात कीजिए।",
+   "opts": [
+    "3/125",
+    "141/125",
+    "273/125",
+    "237/125"
+   ],
+   "my_ans": "D",
+   "sol": "cot A = 3/4, तो sin A = 4/5, cos A = 3/5. sin2A = 2sinAcosA = 2(4/5)(3/5) = 24/25. cos3A = 4cos³A - 3cosA = 4(27/125) - 3(3/5) = 108/125 - 9/5 = (108-225)/125 = -117/125. sin2A - cos3A = 24/25 - (-117/125) = 120/125 + 117/125 = 237/125.",
+   "trick": "sin2A = 2sinAcosA, cos3A = 4cos³A - 3cosA",
+   "ans": "D"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Let ABC be a right-angled triangle such that ∠B = 90°. If tan A = 1, then find the value of cosec A sec A.",
+   "hi": "मान लीजिए ABC एक समकोण त्रिभुज है जिसमें ∠B = 90° है। यदि tan A = 1 है, तो cosec A sec A का मान ज्ञात कीजिए।",
+   "opts": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "my_ans": "D",
+   "sol": "tan A = 1, तो A = 45°. cosec 45° = √2, sec 45° = √2. cosec A sec A = √2 * √2 = 2.",
+   "trick": "tan 45° = 1",
+   "ans": "D"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "What is the value of csc²63° + 3sec²56° - 3cot²34° - tan²27°?",
+   "hi": "csc²63° + 3sec²56° - 3cot²34° - tan²27° का मान ज्ञात कीजिए।",
+   "opts": [
+    "2 A",
+    "1",
+    "4",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "csc²63° - tan²27° = csc²63° - cot²63° = 1. 3(sec²56° - cot²34°) = 3(sec²56° - tan²56°) = 3(1) = 3. कुल = 1 + 3 = 4.",
+   "trick": "पूरक कोणों का उपयोग करें: tan(90-θ)=cotθ, sec(90-θ)=cscθ",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "If sinA = 3/5, then find the value of sqrt((11 + 3cosecA)/(4 - 5sinA)).",
+   "hi": "यदि sinA = 3/5 है, तो sqrt((11 + 3cosecA)/(4 - 5sinA)) का मान ज्ञात कीजिए।",
+   "opts": [
+    "3",
+    "4",
+    "√3",
+    "√2"
+   ],
+   "my_ans": "B",
+   "sol": "sinA = 3/5, cosecA = 5/3. व्यंजक = √((11 + 3*(5/3)) / (4 - 5*(3/5))) = √((11+5)/(4-3)) = √16 = 4.",
+   "trick": "cosecA = 1/sinA",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Simplify: (4 + 4cot²A)tanA / (3 + 3tan²A)cosecA",
+   "hi": "सरलीकृत कीजिए: (4 + 4cot²A)tanA / (3 + 3tan²A)cosecA",
+   "opts": [
+    "cosA/3",
+    "4cosA/3",
+    "sinA/3",
+    "4sinA/3"
+   ],
+   "my_ans": "B",
+   "sol": "अंश = 4(1+cot²A)tanA = 4(csc²A)tanA = 4(1/sin²A)(sinA/cosA) = 4/(sinAcosA). हर = 3(1+tan²A)cosecA = 3(sec²A)cosecA = 3(1/cos²A)(1/sinA) = 3/(cos²AsinA). भाग देने पर = (4/sinAcosA) * (cos²AsinA/3) = 4cosA/3.",
+   "trick": "1+cot²A=csc²A, 1+tan²A=sec²A",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "A ladder 28 meters long leans against a wall, making an angle of 60° with the ground. Find the height at which the ladder touches the wall. (Use √3 = 1.74)",
+   "hi": "28 मीटर लंबी एक सीढ़ी, किसी दीवार के सहारे, भू-तल से 60° का कोण बनाते हुए खड़ी हुई है। वह ऊँचाई ज्ञात कीजिए, जिस पर सीढ़ी दीवार को स्पर्श करती है। (√3 = 1.74 का उपयोग कीजिए)",
+   "opts": [
+    "22.65 m",
+    "24.36 m",
+    "23.8 m",
+    "21.5 m"
+   ],
+   "my_ans": "B",
+   "sol": "sin 60° = ऊँचाई / कर्ण = h / 28. √3/2 = h / 28. h = 14 * √3 = 14 * 1.74 = 24.36 m.",
+   "trick": "sin θ = लंब / कर्ण",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "If 4 sin θ + cosec θ = 4, 0° < θ < 90°, then the value of sin 3θ + cos 3θ is _____.",
+   "hi": "यदि 4 sin θ + cosec θ = 4, 0° < θ < 90° है, तो sin 3θ + cos 3θ का मान _____ है।",
+   "opts": [
+    "2",
+    "0",
+    "1",
+    "-1"
+   ],
+   "my_ans": "C",
+   "sol": "4sinθ + 1/sinθ = 4 → 4sin²θ - 4sinθ + 1 = 0 → (2sinθ - 1)² = 0 → sinθ = 1/2, θ = 30°. sin 90° + cos 90° = 1 + 0 = 1.",
+   "trick": "समीकरण हल करके θ का मान निकालें",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "If cosx − sinx = a and cosx + sinx = b, then the value of (1 - tan²x)/(1 + tan²x) is",
+   "hi": "यदि cosx − sinx = a और cosx + sinx = b है, तो (1 - tan²x)/(1 + tan²x) का मान क्या होगा?",
+   "opts": [
+    "a² − b²",
+    "ab",
+    "- ab",
+    "a² + b²"
+   ],
+   "my_ans": "B",
+   "sol": "(1 - tan²x)/(1 + tan²x) = cos 2x. a*b = (cosx-sinx)(cosx+sinx) = cos²x - sin²x = cos 2x. अतः मान ab है।",
+   "trick": "cos 2x = (1-tan²x)/(1+tan²x) = cos²x - sin²x",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "If sin6A= cos12A, find the value of tan9A + cot9A.",
+   "hi": "यदि sin6A = cos12A है, तो tan9A + cot9A का मान ज्ञात कीजिए।",
+   "opts": [
+    "1",
+    "-2",
+    "2",
+    "0"
+   ],
+   "my_ans": "C",
+   "sol": "sin 6A = sin(90-12A) → 6A = 90-12A → 18A = 90 → A = 5°. tan 45° + cot 45° = 1 + 1 = 2.",
+   "trick": "sinθ = cosα → θ+α = 90°",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "If sin A = 5/7, find the value of: (5 cosec A - 7 sin A) / (2√6 sec A + 7 cos²A)",
+   "hi": "यदि sin A = 5/7 है, तो (5 cosec A - 7 sin A) / (2√6 sec A + 7 cos²A) का मान ज्ञात कीजिए।",
+   "opts": [
+    "14/73",
+    "3/19",
+    "9/23",
+    "11/46"
+   ],
+   "my_ans": "A",
+   "sol": "sinA=5/7, cosA=√(1-25/49)=√24/7=2√6/7. cosecA=7/5, secA=7/(2√6). अंश = 5(7/5) - 7(5/7) = 7-5=2. हर = 2√6(7/2√6) + 7(24/49) = 7 + 24/7 = 73/7. मान = 2 / (73/7) = 14/73.",
+   "trick": "त्रिकोणमितीय अनुपात का मान रखें",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "2 cot A = 4. Find the value of: (cosec²A + 1) / (cosec²A - 1)",
+   "hi": "2 cot A = 4. (cosec²A + 1) / (cosec²A - 1) का मान ज्ञात करें:",
+   "opts": [
+    "4",
+    "1.5",
+    "2.5",
+    "1"
+   ],
+   "my_ans": "B",
+   "sol": "cot A = 2. cosec²A = 1 + cot²A = 1 + 4 = 5. मान = (5+1)/(5-1) = 6/4 = 1.5.",
+   "trick": "cosec²A = 1 + cot²A",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "If sin θ + cos θ = √2 cos θ, where 0 < θ < 90°, then the value of tan θ is:",
+   "hi": "यदि sin θ + cos θ = √2 cos θ, जहाँ 0 < θ < 90° है, तो tan θ का मान क्या है?",
+   "opts": [
+    "√2 − 1",
+    "1/√3",
+    "1",
+    "√3"
+   ],
+   "my_ans": "A",
+   "sol": "sin θ = (√2 - 1) cos θ. tan θ = sin θ / cos θ = √2 - 1.",
+   "trick": "tan θ = sin θ / cos θ",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "If secθ + cosecθ = a and tanθ + cotθ = b, find the value of cosec2θ.",
+   "hi": "यदि secθ + cosecθ = a और tanθ + cotθ = b है, तो cosec2θ का मान ज्ञात कीजिए।",
+   "opts": [
+    "(a²-b²)/2",
+    "b/2",
+    "(b²-a²)/2",
+    "a/2"
+   ],
+   "my_ans": "B",
+   "sol": "b = tanθ + cotθ = 1/(sinθcosθ) = 2/sin2θ. sin2θ = 2/b. cosec2θ = 1/sin2θ = b/2.",
+   "trick": "tanθ + cotθ = 2/sin2θ",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Which of the expressions given below has the same value as that of cos²(θ) + sin²(θ)?",
+   "hi": "नीचे दिए गए व्यंजकों में से किसका मान cos²(θ) + sin²(θ) के मान के बराबर है?",
+   "opts": [
+    "1 + tan²(θ) + (1-sec²(θ))",
+    "cosec²(θ) + cot²(θ)",
+    "cosec²(θ) + sec²(θ)",
+    "1 + tan²(θ) - (1-sec²(θ))"
+   ],
+   "my_ans": "A",
+   "sol": "cos²θ + sin²θ = 1. विकल्प A: 1 + tan²θ - tan²θ = 1.",
+   "trick": "1 + tan²θ = sec²θ",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "If cos A = 4/5, find the value of (sin²A - 5cos²A + sec²A) / tan²A",
+   "hi": "यदि cos A = 4/5 है, तो (sin²A - 5cos²A + sec²A) / tan²A का मान ज्ञात करें।",
+   "opts": [
+    "23/225",
+    "109/225",
+    "-511/225",
+    "-451/225"
+   ],
+   "my_ans": "C",
+   "sol": "cosA=4/5, sinA=3/5, tanA=3/4, secA=5/4. अंश = (9/25) - 5(16/25) + (25/16) = (9-80)/25 + 25/16 = -71/25 + 25/16 = (-1136 + 625)/400 = -511/400. हर = 9/16. मान = (-511/400) * (16/9) = -511/225.",
+   "trick": "सभी त्रिकोणमितीय मानों को प्रतिस्थापित करें",
+   "ans": "C"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "If 2cos²x − 1 = 1/2, where 0° < x < 90°, find the value of: sec 2x + cosec x + cot²x",
+   "hi": "यदि 2cos²x − 1 = 1/2, जहाँ 0° < x < 90° है, तो sec 2x + cosec x + cot²x का मान ज्ञात कीजिए।",
+   "opts": [
+    "5",
+    "7",
+    "11",
+    "9"
+   ],
+   "my_ans": "B",
+   "sol": "2cos²x - 1 = cos 2x = 1/2. 2x = 60°, x = 30°. sec 60° + cosec 30° + cot² 30° = 2 + 2 + (√3)² = 4 + 3 = 7.",
+   "trick": "cos 2x = 2cos²x - 1",
+   "ans": "B"
+  }
+ ]
+}

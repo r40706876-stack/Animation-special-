@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Profit & Loss",
+  "hi": "लाभ एवं हानि",
+  "total": 102,
+  "gl": 49,
+  "ug": 53
+ },
+ "source_pages": "91-93",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "The selling price of 48 pieces of an item is same as the cost price of its x pieces. If the profit is 25%, then find the value of x.",
+   "hi": "किसी वस्तु के 48 पीस का विक्रय मूल्य उसके x पीस के क्रय मूल्य के बराबर है। यदि लाभ 25% है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "70",
+    "50",
+    "60",
+    "40"
+   ],
+   "my_ans": "C",
+   "sol": "48 × SP = x × CP. Profit 25% means SP = 1.25 × CP.<br>48 × (1.25 × CP) = x × CP → x = 48 × 1.25 = 60.",
+   "trick": "x = (वस्तुओं की संख्या) × (1 + लाभ%)",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Harishika bought an article for ₹200 and sold it to Ritu at a loss of 30%. With this amount, Harishika bought another article and sold it at a gain of 75%. What is Harishika's overall gain percentage?",
+   "hi": "हरिशिका ने ₹200 में एक वस्तु खरीदी और उसे ऋतु को 30% की हानि पर बेच दिया। प्राप्त राशि से हरिशिका ने एक और वस्तु खरीदी और उसे 75% के लाभ पर बेच दिया। हरिशिका का समग्र लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "24.5%",
+    "19.4%",
+    "17.5%",
+    "22.5%"
+   ],
+   "my_ans": "D",
+   "sol": "कुल लाभ % = -30 + 75 + (-30 × 75)/100<br>= 45 - 22.5 = 22.5%.",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन: a + b + (ab/100)",
+   "ans": "D"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 25% loss but uses a false balance and gains 70%. The actual weight (rounded off to one decimal place) that he uses instead of 1 kg is:",
+   "hi": "एक दुकानदार अपनी वस्तुओं को 25% हानि पर बेचने का दावा करता है, लेकिन वह सदोष तुला का उपयोग करके 70% का लाभ अर्जित करता है। 1 kg के स्थान पर वह कितने वास्तविक वजन (एक दशमलव स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "441.2 gm",
+    "436.4 gm",
+    "438.1 gm",
+    "443.3 gm"
+   ],
+   "my_ans": "A",
+   "sol": "माना वास्तविक वजन W है। (0.75 × 1000) / W = 1.70<br>W = 750 / 1.7 = 441.17 gm ≈ 441.2 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 35% loss but uses a false balance and gains 75%. The actual weight (rounded off to one decimal place) he uses for 1 kg is:",
+   "hi": "एक दुकानदार अपनी वस्तुओं को 35% हानि पर बेचने का दावा करता है, लेकिन वह सदोष तुला का उपयोग करके 75% का लाभ अर्जित करता है। 1 kg के लिए उसके द्वारा उपयोग किया गया वास्तविक वजन (एक दशमलव स्थान तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "371.4 gm",
+    "376.5 gm",
+    "372.9 gm",
+    "374.5 gm"
+   ],
+   "my_ans": "A",
+   "sol": "W = (0.65 × 1000) / 1.75<br>W = 650 / 1.75 = 371.42 gm ≈ 371.4 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 62 dozens of articles at the rate of ₹100 per dozen. He sold each one of them at the rate of ₹75. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने ₹100 प्रति दर्जन की दर से 62 दर्जन वस्तुएं खरीदीं। उसने प्रत्येक वस्तु को ₹75 की दर से बेचा। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "800%",
+    "801%",
+    "798%",
+    "797%"
+   ],
+   "my_ans": "A",
+   "sol": "CP प्रति वस्तु = 100/12 = 8.33. SP प्रति वस्तु = 75.<br>लाभ % = ((75 - 8.33)/8.33) × 100 = (66.67/8.33) × 100 = 800%.",
+   "trick": "लाभ % = ((SP - CP)/CP) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "By selling an article at 4/13 of its marked price, Hitesh incurs a loss of 30%. If he sells it at 60% of its marked price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके अंकित मूल्य के 4/13 पर बेचने से, हितेश को 30% की हानि होती है। यदि वह उसे उसके अंकित मूल्य के 60% पर बेचता है, तो लाभ प्रतिशत कितना होगा:",
+   "opts": [
+    "37.8%",
+    "36.3%",
+    "39.8%",
+    "36.5%"
+   ],
+   "my_ans": "D",
+   "sol": "CP = (4/13 MP) / 0.7 = 40/91 MP.<br>नया SP = 0.6 MP = 54.6/91 MP.<br>लाभ = (54.6 - 40)/40 = 14.6/40 = 36.5%.",
+   "trick": "लाभ % = ((नया SP / CP) - 1) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "By selling an article at 3/10 of its marked price, Hitesh incurs a loss of 16%. If he sells it at 69% of its marked price, then the profit percentage is:",
+   "hi": "किसी वस्तु को उसके अंकित मूल्य के 3/10 पर बेचने पर, हितेश को 16% की हानि होती है। यदि वह इसे अंकित मूल्य के 69% पर बेचता है, तो लाभ प्रतिशत कितना होगा?",
+   "opts": [
+    "95.7%",
+    "93.2%",
+    "94.8%",
+    "93.8%"
+   ],
+   "my_ans": "B",
+   "sol": "CP = (0.3 MP) / 0.84 = 0.357 MP.<br>नया SP = 0.69 MP.<br>लाभ = (0.69 - 0.357)/0.357 = 0.333/0.357 ≈ 93.2%.",
+   "trick": "लाभ % = ((नया SP / CP) - 1) × 100",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 55% loss but uses a false balance and gains 75%. The actual weight (rounded off to one decimal place) he uses for 1 kg is:",
+   "hi": "एक दुकानदार अपने माल को 55% हानि पर बेचने का दावा करता है, लेकिन वह सदोष तुला का उपयोग करके 75% लाभ अर्जित करता है। 1 kg के स्थान पर वह कितने वास्तविक वजन (दशमलव के एक स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "257.1 gm",
+    "260.7 gm",
+    "258.4 gm",
+    "253.1 gm"
+   ],
+   "my_ans": "A",
+   "sol": "W = (0.45 × 1000) / 1.75<br>W = 450 / 1.75 = 257.14 gm ≈ 257.1 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 42 dozens of articles at the rate of ₹ 630 per dozen. He sold each one of them at the rate of ₹63. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 42 दर्जन वस्तुएं ₹630 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु ₹63 की दर से बेची। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "21%",
+    "23%",
+    "20%",
+    "17%"
+   ],
+   "my_ans": "C",
+   "sol": "CP प्रति वस्तु = 630/12 = 52.5. SP प्रति वस्तु = 63.<br>लाभ % = ((63 - 52.5)/52.5) × 100 = (10.5/52.5) × 100 = 20%.",
+   "trick": "लाभ % = ((SP - CP)/CP) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "During a sale 50% of the goods are sold at 16% profit, 40% of the remaining goods are sold at 35% profit and the still remaining goods are sold at a loss of 25%. If there is an overall profit of x%, then what is the value of x?",
+   "hi": "एक सेल के दौरान, 50% माल को 16% के लाभ पर बेचा जाता है, शेष माल का 40% माल, 35% के लाभ पर बेचा जाता है और उसके बाद शेष माल को 25% की हानि पर बेचा जाता है। यदि समग्र लाभ x% है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "6",
+    "7.5",
+    "9",
+    "8"
+   ],
+   "my_ans": "B",
+   "sol": "माना कुल माल 100 है।<br>50 × 0.16 + 20 × 0.35 + 30 × (-0.25) = 8 + 7 - 7.5 = 7.5%.",
+   "trick": "कुल लाभ = (भाग × लाभ%) का योग",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 20% loss but uses a false balance and gains 40%. The actual weight (rounded off to one decimal place) he uses for 1 kg is:",
+   "hi": "एक दुकानदार अपना सामान 20% हानि पर बेचने का दावा करता है, लेकिन एक सदोष तुला का उपयोग करता है और 40% का लाभ अर्जित करता है। वह 1 kg के स्थान पर वास्तविक रूप से कितने वजन (दशमलव के एक स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "576.7 gm",
+    "571.4 gm",
+    "575.4 gm",
+    "568.8 gm"
+   ],
+   "my_ans": "B",
+   "sol": "W = (0.80 × 1000) / 1.40<br>W = 800 / 1.4 = 571.42 gm ≈ 571.4 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "A shopkeeper purchased 33 dozens of articles at the rate of ₹620 per dozen. He sold each one of them at the rate of ₹93. What percentage profit did he make?",
+   "hi": "एक दुकानदार ने 33 दर्जन वस्तुएँ ₹620 प्रति दर्जन की दर से खरीदीं। उसने प्रत्येक वस्तु को ₹93 की दर से बेचा। उसे कितने प्रतिशत लाभ हुआ?",
+   "opts": [
+    "80%",
+    "83%",
+    "79%",
+    "82%"
+   ],
+   "my_ans": "A",
+   "sol": "CP प्रति वस्तु = 620/12 = 51.67. SP प्रति वस्तु = 93.<br>लाभ % = ((93 - 51.67)/51.67) × 100 = 80%.",
+   "trick": "लाभ % = ((SP - CP)/CP) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 77% profit. Q sells the same item to R at 50% loss. If R paid ₹ 2655 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 77% लाभ पर बेचता है। Q उसी वस्तु को R को 50% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹2655 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "3000",
+    "3002",
+    "3001",
+    "3003"
+   ],
+   "my_ans": "A",
+   "sol": "P × 1.77 × 0.5 = 2655<br>P = 2655 / 0.885 = 3000.",
+   "trick": "P = R / ((1+लाभ%) × (1-हानि%))",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 40% profit. Q sells the same item to R at 50% loss. If R paid ₹ 6895 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 40% लाभ पर बेचता है। Q उसी वस्तु को R को 50% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹6895 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "9852",
+    "9850",
+    "9848",
+    "9849"
+   ],
+   "my_ans": "B",
+   "sol": "P × 1.4 × 0.5 = 6895<br>P = 6895 / 0.7 = 9850.",
+   "trick": "P = R / ((1+लाभ%) × (1-हानि%))",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The cost price of 48 books is equal to the selling price of 36 books. Find the profit percentage. (Round off your answer to two decimal places.)",
+   "hi": "48 पुस्तकों का क्रय मूल्य, 36 पुस्तकों के विक्रय मूल्य के बराबर है। लाभ प्रतिशत ज्ञात कीजिए। (उत्तर को दो दशमलव स्थानों तक पूर्णांकित कीजिए।)",
+   "opts": [
+    "39.84%",
+    "33.33%",
+    "36.23%",
+    "22.18%"
+   ],
+   "my_ans": "B",
+   "sol": "48 CP = 36 SP → SP/CP = 48/36 = 4/3.<br>लाभ = (4-3)/3 = 1/3 = 33.33%.",
+   "trick": "लाभ % = ((वस्तुओं का अंतर / SP वाली वस्तुएं) × 100)",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 60% loss but uses a false balance and gains 70%. The actual weight (rounded off to one decimal place) that he uses instead of 1 kg is:",
+   "hi": "एक दुकानदार एक वस्तु को 60% हानि पर बेचने का दावा करता है, लेकिन वह सदोष तुला का उपयोग करके 70% लाभ अर्जित करता है। 1 kg के स्थान पर कितने वास्तविक वजन (एक दशमलव स्थान तक पूर्णांकित) का उपयोग करता है?",
+   "opts": [
+    "241.3 gm",
+    "235.3 gm",
+    "239.8 gm",
+    "230.9 gm"
+   ],
+   "my_ans": "B",
+   "sol": "W = (0.40 × 1000) / 1.70<br>W = 400 / 1.7 = 235.29 gm ≈ 235.3 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 70% profit. Q sells the same item to R at 67% loss. If R paid ₹ 3927 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 70% लाभ पर बेचता है। Q उसी वस्तु को R को 67% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹3927 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "6998",
+    "6997",
+    "7000",
+    "7003"
+   ],
+   "my_ans": "C",
+   "sol": "P × 1.7 × 0.33 = 3927<br>P = 3927 / 0.561 = 7000.",
+   "trick": "P = R / ((1+लाभ%) × (1-हानि%))",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "P sells an item to Q at 50% profit. Q sells the same item to R at 60% loss. If R paid ₹ 3234 for the item, then at what price (in ₹) is the item purchased by P?",
+   "hi": "P किसी वस्तु को Q को 50% लाभ पर बेचता है। Q उसी वस्तु को R को 60% हानि पर बेचता है। यदि R ने वस्तु के लिए ₹3234 का भुगतान किया, तो P द्वारा वस्तु को किस मूल्य (₹ में) पर खरीदा गया था?",
+   "opts": [
+    "5391",
+    "5390",
+    "5387",
+    "5393"
+   ],
+   "my_ans": "B",
+   "sol": "P × 1.5 × 0.4 = 3234<br>P = 3234 / 0.6 = 5390.",
+   "trick": "P = R / ((1+लाभ%) × (1-हानि%))",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "A shopkeeper professes to sell his goods at a 45% loss but uses a false balance and gains 50%. The actual weight (rounded off to one decimal place) that he uses instead of 1 kg is:",
+   "hi": "एक दुकानदार अपने माल को 45% की हानि पर बेचने का दावा करता है, परंतु वह गलत तराजू का उपयोग करके 50% लाभ कमाता है। 1 kg के स्थान पर दुकानदार द्वारा उपयोग में लाया जाने वाला वास्तविक बाट (एक दशमलव स्थान तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "365.2 gm",
+    "369.3 gm",
+    "366.7 gm",
+    "368.6 gm"
+   ],
+   "my_ans": "C",
+   "sol": "W = (0.55 × 1000) / 1.50<br>W = 550 / 1.5 = 366.66 gm ≈ 366.7 gm.",
+   "trick": "वास्तविक वजन = (दावा किया गया SP × 1000) / (1 + लाभ%)",
+   "ans": "C"
+  }
+ ]
+}

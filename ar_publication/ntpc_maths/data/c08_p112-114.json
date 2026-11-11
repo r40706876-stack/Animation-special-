@@ -1,0 +1,254 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Discount",
+  "hi": "बट्टा / छूट",
+  "total": 101,
+  "gl": 23,
+  "ug": 78
+ },
+ "source_pages": "112-114",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "If on a sale, there is 40% discount on the marked price of ₹1,200, but the sale is done at ₹520 only, then how much additional discount did the customer get?",
+   "hi": "यदि किसी सेल में, ₹1,200 अंकित मूल्य पर 40% की छूट दी जाती है, लेकिन बिक्री केवल ₹520 में की जाती है, तो ग्राहक को कितनी अतिरिक्त छूट मिली?",
+   "opts": [
+    "26 7/9%",
+    "28 7/9%",
+    "25 7/9%",
+    "27 7/9%"
+   ],
+   "my_ans": "D",
+   "sol": "40% छूट के बाद मूल्य = 1200 × 60/100 = ₹720.<br>अतिरिक्त छूट = 720 - 520 = ₹200.<br>अतिरिक्त छूट % = (200/720) × 100 = 250/9 = 27 7/9%.",
+   "trick": "अतिरिक्त छूट = (अंतर / नया मूल्य) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "A trader marks his goods such that even after allowing a discount of 25%, he makes a profit of 10%. If he gives only 10% discount, then find the profit percentage.",
+   "hi": "एक व्यापारी अपने माल पर इस प्रकार मूल्य अंकित करता है कि 25% की छूट देने के बाद भी उसे 10% का लाभ होता है। यदि वह केवल 10% की छूट देता है, तो लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "30%",
+    "28%",
+    "32%",
+    "35%"
+   ],
+   "my_ans": "C",
+   "sol": "CP : MP = (100-D) : (100+P) = 75 : 110 = 15 : 22.<br>10% छूट पर SP = 22 × 0.9 = 19.8.<br>लाभ = 19.8 - 15 = 4.8. लाभ % = (4.8/15) × 100 = 32%.",
+   "trick": "CP:MP = (100-D):(100+P) का उपयोग करें",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "The price of a laptop was initially $1,200. During a sale, the price was first reduced by 20%, and then an additional discount of 15% was applied to the new price. What is the final price of the laptop?",
+   "hi": "प्रारंभ में एक लैपटॉप की कीमत $1,200 थी। एक सेल के दौरान, कीमत में पहले 20% की कमी की गई और फिर नई कीमत पर 15% की अतिरिक्त छूट दी गई। लैपटॉप की अंतिम कीमत ज्ञात कीजिए।",
+   "opts": [
+    "$816",
+    "$799",
+    "$899",
+    "$780"
+   ],
+   "my_ans": "A",
+   "sol": "अंतिम मूल्य = 1200 × (80/100) × (85/100) = 1200 × 0.8 × 0.85 = $816.",
+   "trick": "क्रमिक कमी के लिए: प्रारंभिक मूल्य × (100-d1)/100 × (100-d2)/100",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "A grocery store gives a Buy 5, Get 2 Free offer. The price of each item is ₹300. A customer needs a total of 21 items and procures the items under this scheme. What is the effective cost per item? (Round off your answer to two decimal places.)",
+   "hi": "किराने की एक दुकान '5 खरीदें 2 मुफ्त पाएं' का ऑफर देती है। प्रत्येक वस्तु की कीमत ₹300 है। किसी ग्राहक को कुल 21 वस्तुओं की आवश्यकता है और वह इस योजना के अंतर्गत वस्तुओं की खरीदारी करता है। प्रति वस्तु प्रभावी लागत कितनी है? (अपने उत्तर को दो दशमलव स्थानों तक पूर्णांकित कीजिए।)",
+   "opts": [
+    "₹214.29",
+    "₹114.29",
+    "₹214.45",
+    "₹241.29"
+   ],
+   "my_ans": "A",
+   "sol": "5+2=7 वस्तुओं का सेट ₹1500 में मिलता है। 21 वस्तुओं के लिए 3 सेट लेने होंगे (3 × 7 = 21).<br>कुल मूल्य = 3 × 1500 = ₹4500. प्रभावी लागत = 4500/21 = ₹214.285 ≈ 214.29.",
+   "trick": "प्रभावी लागत = (भुगतान की गई वस्तुएं × मूल्य) / कुल प्राप्त वस्तुएं",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "A jacket with a marked price of ₹2,000 is sold for ₹1,530 after two successive discounts. If the first discount is 15%, what is the second discount percentage?",
+   "hi": "₹2,000 के अंकित मूल्य वाली एक जैकेट को दो क्रमिक छूट देने के बाद ₹1,530 में बेचा जाता है। यदि पहली छूट 15% है, तो दूसरी छूट प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "10%",
+    "12%",
+    "5%",
+    "8%"
+   ],
+   "my_ans": "A",
+   "sol": "पहली छूट के बाद मूल्य = 2000 × 0.85 = ₹1700.<br>दूसरी छूट = 1700 - 1530 = ₹170.<br>छूट % = (170/1700) × 100 = 10%.",
+   "trick": "क्रमिक छूट के लिए एक-एक करके घटाएं",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "A dealer buys an article marked at ₹1800 after successive discounts of 25% and 6⅔%. Find the cost price of the article to the dealer.",
+   "hi": "एक डीलर 25% और 6⅔% की क्रमिक छूट के बाद ₹1800 अंकित मूल्य वाली एक वस्तु खरीदता है। डीलर के लिए वस्तु का क्रय मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹1250",
+    "₹1275",
+    "₹1260",
+    "₹1290"
+   ],
+   "my_ans": "C",
+   "sol": "25% = 1/4, 6⅔% = 1/15.<br>CP = 1800 × (3/4) × (14/15) = 1800 × 0.75 × 0.9333 = ₹1260.",
+   "trick": "CP = MP × (1-d1) × (1-d2)",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "A shopkeeper purchases rice at ₹60 per kg. While selling, he uses a weighing scale that shows 1 kg when only 900 g is actually weighed. He marks the price 20% above the cost price. Later, he gives a 10% discount on the marked price but continues using the same faulty scale. Find his profit (in ₹) on each transaction where the buyer pays for 1 kg.",
+   "hi": "एक दुकानदार ₹60 प्रति kg की दर से चावल खरीदता है। बेचते समय, वह एक ऐसे तराजू का उपयोग करता है जो वास्तव में केवल 900 g वजन को 1 kg दर्शाता है। वह लागत मूल्य से 20% अधिक मूल्य अंकित करता है। बाद में, वह अंकित मूल्य पर 10% की छूट देता है लेकिन वह उसी दोषपूर्ण तराजू का उपयोग करना जारी रखता है। प्रत्येक लेन-देन पर उसका लाभ (₹ में) ज्ञात कीजिए, जहाँ खरीदार 1 kg चावल के लिए भुगतान करता है।",
+   "opts": [
+    "₹10.80",
+    "₹9.20",
+    "₹9.80",
+    "₹10.20"
+   ],
+   "my_ans": "A",
+   "sol": "MP = 60 × 1.2 = ₹72. SP = 72 × 0.9 = ₹64.8.<br>खरीदार 1kg के लिए ₹64.8 देता है, लेकिन दुकानदार केवल 900g (लागत 60 × 0.9 = ₹54) देता है.<br>लाभ = 64.8 - 54 = ₹10.80.",
+   "trick": "लाभ = विक्रय मूल्य - वास्तविक लागत",
+   "ans": "A"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "A jacket has a marked price of ₹5,000. The shopkeeper offers two successive discounts of 20% and 30%. What is the final selling price?",
+   "hi": "एक जैकेट का अंकित मूल्य ₹5,000 है। दुकानदार 20% और 30% की दो क्रमिक छूट देता है। अंतिम विक्रय मूल्य कितना होगा?",
+   "opts": [
+    "₹2,850",
+    "₹2,600",
+    "₹2,800",
+    "₹2,650"
+   ],
+   "my_ans": "C",
+   "sol": "SP = 5000 × (80/100) × (70/100) = 5000 × 0.8 × 0.7 = ₹2800.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "C"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "A shopkeeper offers the following schemes on toys of the same marked price. (A) Successive discounts of 45% and 44% on any number of toys bought. (B) Successive discounts of 36%, 41% and 45% on any number of toys bought. (C) 49% discount on the first 4 toys and 19% discount on each toy thereon. (D) 7 toys free of cost on buying 10 toys. A customer wants to buy 10 toys. Which of the above schemes is the least beneficial to her?",
+   "hi": "एक दुकानदार एक ही अंकित मूल्य वाले खिलौनों पर निम्नलिखित स्कीमें प्रदान करता है-(A) कितनी भी संख्या में खरीदे गए खिलौनों पर 45% और 44% की क्रमिक छूट(B) कितनी भी संख्या में खरीदे गए खिलौनों पर 36%, 41% और 45% की क्रमिक छूट(C) पहले 4 खिलौनों पर 49% की छूट और उसके बाद प्रत्येक खिलौने पर 19% की छूट(D) 10 खिलौने खरीदने पर 7 खिलौने मुफ्त। एक ग्राहक 10 खिलौने खरीदना चाहती है। ऊपर दी गई स्कीमों में से कौन-सी स्कीम उसके लिए सबसे कम लाभप्रद है?",
+   "opts": [
+    "D",
+    "A",
+    "B",
+    "C"
+   ],
+   "my_ans": "D",
+   "sol": "A: 1-0.55×0.56 = 69.2%. B: 1-0.64×0.59×0.55 = 79.2%. C: (4×0.51 + 6×0.81)/10 = 69%. D: 7/17 = 41.1%. D सबसे कम है।",
+   "trick": "कुल प्रभावी छूट % की गणना करें, जो कम है वही कम लाभप्रद है",
+   "ans": "D"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "A shopkeeper offers the following schemes on toys of the same marked price. (A) Successive discounts of 50% and 16% on any number of toys bought. (B) Successive discounts of 49%, 8% and 13% on any number of toys bought. (C) 35% discount on the first 6 toys and 45% discount on each toy thereon. (D) On buying eight items, the customer is billed for only four items. A customer wants to buy 8 toys. Which of the above schemes is the least beneficial to her?",
+   "hi": "एक दुकानदार एक ही अंकित मूल्य वाले खिलौनों पर निम्नलिखित स्कीमें प्रदान करता है-(A) कितनी भी संख्या में खरीदे गए खिलौनों पर 50% और 16% की क्रमिक छूट(B) कितनी भी संख्या में खरीदे गए खिलौनों पर 49%, 8% और 13% की क्रमिक छूट(C) पहले 6 खिलौनों पर 35% की छूट और उसके बाद प्रत्येक खिलौने पर 45% की छूट(D) 8 खिलौने खरीदने पर ग्राहक को केवल चार खिलौनों के मूल्य का ही भुगतान करना होता है। एक ग्राहक 8 खिलौने खरीदना चाहती है। ऊपर दी गई स्कीमों में से कौन-सी स्कीम उसके लिए सबसे कम लाभप्रद है?",
+   "opts": [
+    "D",
+    "B",
+    "C",
+    "A"
+   ],
+   "my_ans": "C",
+   "sol": "A: 1-0.5×0.84 = 58%. B: 1-0.51×0.92×0.87 = 59.2%. C: (6×0.65 + 2×0.55)/8 = 62.5%. D: 4/8 = 50% भुगतान (50% छूट). C सबसे कम लाभप्रद है।",
+   "trick": "छूट प्रतिशत की तुलना करें",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "A shopkeeper offers the following schemes on toys of the same marked price. (A) Successive discounts of 44% and 12% on any number of toys bought. (B) Successive discounts of 18%, 43% and 23% on any number of toys bought. (C) 8% discount on the first 4 toys and 38% discount on each toy thereon. (D) On buying ten items, the customer is billed for only seven items. A customer wants to buy 10 toys. Which of the above schemes is the least beneficial to her?",
+   "hi": "एक दुकानदार एक ही अंकित मूल्य वाले खिलौनों पर निम्नलिखित स्कीमें प्रदान करता है-(A) कितनी भी संख्या में खरीदे गए खिलौनों पर 44% और 12% की क्रमिक छूट(B) कितनी भी संख्या में खरीदे गए खिलौनों पर 18%, 43% और 23% की क्रमिक छूट(C) पहले 4 खिलौनों पर 8% की छूट और उसके बाद प्रत्येक खिलौने पर 38% की छूट(D) 10 खिलौने खरीदने पर ग्राहक को केवल सात खिलौनों के मूल्य का भुगतान करना होता है। एक ग्राहक 10 खिलौने खरीदना चाहती है। ऊपर दी गई स्कीमों में से कौन-सी स्कीम उसके लिए सबसे कम लाभप्रद है?",
+   "opts": [
+    "D",
+    "A",
+    "C",
+    "B"
+   ],
+   "my_ans": "C",
+   "sol": "A: 1-0.56×0.88 = 50.7%. B: 1-0.82×0.57×0.77 = 64%. C: (4×0.92 + 6×0.62)/10 = 74% भुगतान (26% छूट). D: 7/10 = 30% छूट. C सबसे कम लाभप्रद है।",
+   "trick": "छूट प्रतिशत की तुलना करें",
+   "ans": "C"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "The marked price of a refrigerator is ₹4,884. The shopkeeper allows a discount of 10% and gains 8%. If no discount is allowed, his gain percentage would be:",
+   "hi": "एक रेफ्रिजरेटर का अंकित मूल्य ₹4,884 है। दुकानदार 10% की छूट प्रदान करता है और 8% का लाभ अर्जित करता है। यदि कोई छूट नहीं दी जाती है, तो उसका लाभ प्रतिशत कितना होगा?",
+   "opts": [
+    "10%",
+    "20%",
+    "30%",
+    "40%"
+   ],
+   "my_ans": "B",
+   "sol": "CP : MP = (100-10) : (100+8) = 90 : 108 = 5 : 6.<br>छूट न देने पर SP = MP = 6. लाभ = 6-5 = 1.<br>लाभ % = (1/5) × 100 = 20%.",
+   "trick": "CP:MP = (100-D):(100+P) का उपयोग करें",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "A shopkeeper offers the following schemes on toys of the same marked price. (A) Successive discounts of 27% and 39% on any number of toys bought. (B) Successive discounts of 39%, 7% and 40% on any number of toys bought. (C) 26% discount on the first 9 toys and 13% discount on each toy thereon. (D) 7 toys free of cost on buying 9 toys. A customer wants to buy 9 toys. Which of the above schemes is the least beneficial to her?",
+   "hi": "एक दुकानदार एक ही अंकित मूल्य वाले खिलौनों पर निम्नलिखित स्कीमें प्रदान करता है-(A) कितनी भी संख्या में खरीदे गए खिलौनों पर 27% और 39% की क्रमिक छूट(B) कितनी भी संख्या में खरीदे गए खिलौनों पर 39%, 7% और 40% की क्रमिक छूट(C) पहले 9 खिलौनों पर 26% की छूट और उसके बाद प्रत्येक खिलौने पर 13% की छूट(D) 9 खिलौने खरीदने पर 7 खिलौने मुफ्त। एक ग्राहक 9 खिलौने खरीदना चाहती है। ऊपर दी गई स्कीमों में से कौन-सी स्कीम उसके लिए सबसे कम लाभप्रद है?",
+   "opts": [
+    "C",
+    "D",
+    "B",
+    "A"
+   ],
+   "my_ans": "A",
+   "sol": "A: 1-0.73×0.61 = 55.4%. B: 1-0.61×0.93×0.6 = 65.9%. C: 26% छूट. D: 7/16 = 43.75% छूट. C सबसे कम लाभप्रद है।",
+   "trick": "छूट प्रतिशत की तुलना करें",
+   "ans": "A"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "A shopkeeper fixes the marked price of an item 120% above its cost price. What percentage of discount on marked price should be allowed to gain 43%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 120% अधिक निर्धारित करता है। 43% का लाभ प्राप्त के लिए उसे अंकित मूल्य पर कितने प्रतिशत की छूट देनी चाहिए?",
+   "opts": [
+    "38%",
+    "33%",
+    "32%",
+    "35%"
+   ],
+   "my_ans": "D",
+   "sol": "CP = 100, MP = 220. वांछित SP = 143.<br>छूट = 220 - 143 = 77.<br>छूट % = (77/220) × 100 = 35%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Find the single discount equivalent to three successive discounts of 10% on a commodity.",
+   "hi": "किसी वस्तु पर 10% की तीन क्रमिक छूटों के तुल्य एकल छूट ज्ञात कीजिए।",
+   "opts": [
+    "28.2%",
+    "25.8%",
+    "27.1%",
+    "26.9%"
+   ],
+   "my_ans": "C",
+   "sol": "100 × 0.9 × 0.9 × 0.9 = 72.9.<br>एकल छूट = 100 - 72.9 = 27.1%.",
+   "trick": "क्रमिक छूट = 100 - (100 × (1-d1) × (1-d2) × (1-d3))",
+   "ans": "C"
+  }
+ ]
+}

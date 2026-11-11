@@ -1,0 +1,302 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Discount",
+  "hi": "बट्टा / छूट",
+  "total": 101,
+  "gl": 23,
+  "ug": 78
+ },
+ "source_pages": "109-111",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "A dealer buys two articles X and Y for ₹3,500 each. He marks each of them at the same price. He sells X by giving two successive discounts of 45% and 60% and still earns ₹889 as profit. If he sells Y at a single discount of 69%, then what is the profit percentage on Y?",
+   "hi": "एक व्यापारी दो वस्तुओं, X और Y, प्रत्येक को ₹3,500 की दर से खरीदता है। वह दोनों वस्तुओं पर समान मूल्य अंकित करता है। वह X को, 45% और 60% की दो क्रमिक छूटें देकर बेचता है और लाभ के रूप में ₹889 अर्जित करता है। यदि वह Y को 69% की एकल छूट पर बेचता है, तो Y पर लाभ प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "75%",
+    "76%",
+    "76.7%",
+    "75.7%"
+   ],
+   "my_ans": "C",
+   "sol": "X का विक्रय मूल्य = 3500 × 0.55 × 0.40 = 770. क्रय मूल्य 3500 है, लाभ 889 है, तो विक्रय मूल्य 4389 है। अंकित मूल्य = 4389 / (0.55 × 0.40) = 19950.<br>Y का विक्रय मूल्य = 19950 × 0.31 = 6184.5. लाभ = 6184.5 - 3500 = 2684.5.<br>लाभ % = (2684.5 / 3500) × 100 = 76.7%.",
+   "trick": "विक्रय मूल्य = अंकित मूल्य × (1 - d1/100) × (1 - d2/100)",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 110% above its cost price. What percentage of discount on marked price should be allowed to gain 26%?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य उसके क्रय मूल्य से 110% अधिक अंकित करता है। 26% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "40%",
+    "39%",
+    "43%",
+    "38%"
+   ],
+   "my_ans": "A",
+   "sol": "माना CP = 100, तो MP = 210. लाभ 26% चाहिए, तो SP = 126.<br>छूट = 210 - 126 = 84. छूट % = (84 / 210) × 100 = 40%.",
+   "trick": "छूट % = (अंकित मूल्य - विक्रय मूल्य) / अंकित मूल्य × 100",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 100% above its cost price. What percentage of discount on marked price should be allowed to gain 2%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 100% अधिक निर्धारित करता है। 2% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट दी जानी चाहिए?",
+   "opts": [
+    "47%",
+    "49%",
+    "50%",
+    "48%"
+   ],
+   "my_ans": "B",
+   "sol": "माना CP = 100, तो MP = 200. SP = 102.<br>छूट = 200 - 102 = 98. छूट % = (98 / 200) × 100 = 49%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "A man sold an article for ₹132 by first giving a d% discount on its marked price, and then another discount having the same nominal value (in ₹). If the marked price of the article is ₹880, then what is the value of d?",
+   "hi": "एक व्यक्ति ने पहले वस्तु के अंकित मूल्य पर d% की छूट देकर और फिर पहली छूट के बराबर छूट (₹ में) की एक और छूट देकर किसी वस्तु को ₹132 में बेचा। यदि वस्तु का अंकित मूल्य ₹880 है, तो d का मान ज्ञात कीजिए।",
+   "opts": [
+    "37.3",
+    "46",
+    "42.5",
+    "39.5"
+   ],
+   "my_ans": "C",
+   "sol": "माना छूट x है। 880 - 2x = 132 → 2x = 748 → x = 374.<br>d% = (374 / 880) × 100 = 42.5%.",
+   "trick": "अंकित मूल्य - 2 × छूट = विक्रय मूल्य",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 180% above its cost price. What percentage of discount on marked price should be allowed to gain 12%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 180% अधिक निर्धारित करता है। 12% का लाभ प्राप्त करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट दी जानी चाहिए?",
+   "opts": [
+    "58%",
+    "57%",
+    "60%",
+    "62%"
+   ],
+   "my_ans": "C",
+   "sol": "माना CP = 100, तो MP = 280. SP = 112.<br>छूट = 280 - 112 = 168. छूट % = (168 / 280) × 100 = 60%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 100% above its cost price. What percentage of discount on marked price should be allowed to gain 88%?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य उसके क्रय मूल्य से 100% अधिक अंकित करता है। 88% लाभ प्राप्त करने के लिए उसके द्वारा अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "6%",
+    "5%",
+    "4%",
+    "3%"
+   ],
+   "my_ans": "A",
+   "sol": "माना CP = 100, तो MP = 200. SP = 188.<br>छूट = 200 - 188 = 12. छूट % = (12 / 200) × 100 = 6%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "A shopkeeper fixes the marked price of an item 150% above its cost price. What percentage of discount on marked price should be allowed to gain 130%?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 150% अधिक निर्धारित करता है। 130% का लाभ प्राप्त करने के लिए अंकित मूल्य पर कितने प्रतिशत की छूट प्रदान की जानी चाहिए?",
+   "opts": [
+    "10%",
+    "8%",
+    "7%",
+    "5%"
+   ],
+   "my_ans": "B",
+   "sol": "माना CP = 100, तो MP = 250. SP = 230.<br>छूट = 250 - 230 = 20. छूट % = (20 / 250) × 100 = 8%.",
+   "trick": "छूट % = (MP - SP) / MP × 100",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "UG",
+   "en": "The marked price of a machine is ₹16,000. The shopkeeper gives two successive discounts of 15% and N% to the customer. If the customer paid ₹12,240 for the machine, the value of N is:",
+   "hi": "एक मशीन का अंकित मूल्य ₹16,000 है। दुकानदार ग्राहक को 15% और N% की दो क्रमिक छूट प्रदान करता है। यदि ग्राहक ने मशीन के लिए ₹12,240 का भुगतान किया, तो N का मान ज्ञात कीजिए।",
+   "opts": [
+    "13.5%",
+    "15%",
+    "10%",
+    "12.5%"
+   ],
+   "my_ans": "C",
+   "sol": "16000 × 0.85 × (1 - N/100) = 12240<br>13600 × (1 - N/100) = 12240<br>1 - N/100 = 0.9 → N = 10%.",
+   "trick": "SP = MP × (1-d1) × (1-d2)",
+   "ans": "C"
+  },
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "A shopkeeper marks an item at ₹4,000. During a festival, he first offers a discount of 25% on the marked price. After a week, he increases the discounted price by 20% to earn more profit. What is the final selling price of the item after these successive changes?",
+   "hi": "एक दुकानदार किसी वस्तु का मूल्य ₹4,000 अंकित करता है। एक त्योहार के दौरान, वह पहले अंकित मूल्य पर 25% की छूट देता है। एक सप्ताह बाद, अधिक लाभ अर्जित करने के लिए वह छूट प्राप्त मूल्य में 20% की वृद्धि कर देता है। इन क्रमिक परिवर्तनों के बाद वस्तु का अंतिम विक्रय मूल्य कितना होगा?",
+   "opts": [
+    "₹3,600",
+    "₹3,700",
+    "₹3,400",
+    "₹3,500"
+   ],
+   "my_ans": "A",
+   "sol": "4000 × 0.75 = 3000. फिर 3000 × 1.20 = 3600.",
+   "trick": "अंतिम मूल्य = MP × (1-d) × (1+r)",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "A shopkeeper offers a fixed discount of 15% on rice and 100 gm rice free with every purchase of 1.9 kg rice. Find the overall discount percent offered by him on rice.",
+   "hi": "एक दुकानदार चावल पर 15% की निश्चित छूट प्रदान करता है और प्रत्येक 1.9 kg चावल की खरीद पर 100 g चावल मुफ़्त देता है। उसके द्वारा चावल पर दी गई कुल छूट प्रतिशत ज्ञात कीजिए।",
+   "opts": [
+    "19.10%",
+    "19.50%",
+    "20.00%",
+    "19.25%"
+   ],
+   "my_ans": "D",
+   "sol": "1.9kg + 0.1kg = 2kg कुल मात्रा। 15% छूट के बाद मूल्य = 0.85. मुफ्त वस्तु का लाभ = 0.1/2 = 5% छूट।<br>कुल छूट = 15 + 5 - (15×5)/100 = 20 - 0.75 = 19.25%.",
+   "trick": "कुल छूट = d1 + d2 - (d1×d2)/100",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "The marked price of a cooker is the same at four shops I, II, III and IV. Shop I allows two successive discounts of 87% and 37%, shop II allows successive discounts of 81% and 37%, shop III allows successive discounts of 57% and 54% and shop IV allows successive discounts of 91%, 25%, and 59% on the marked price of the cooker. Which shop is selling the cooker at the lowest price?",
+   "hi": "चार दुकानों I, II, III और IV पर एक कुकर का अंकित मूल्य समान है। कुकर के अंकित मूल्य पर दुकान I, 87% और 37% की दो क्रमिक छूट देती है; दुकान II, 81% और 37% की क्रमिक छूट देती है; दुकान III, 57% और 54% की क्रमिक छूट देती है तथा दुकान IV, 91%, 25% और 59% की क्रमिक छूट देती है। कौन-सी दुकान कुकर को न्यूनतम मूल्य पर बेच रही है?",
+   "opts": [
+    "IV",
+    "III",
+    "I",
+    "II"
+   ],
+   "my_ans": "A",
+   "sol": "छूट जितनी अधिक होगी, विक्रय मूल्य उतना कम होगा।<br>I: 1 - (0.13×0.63) = 91.81% छूट<br>II: 1 - (0.19×0.63) = 88.03% छूट<br>III: 1 - (0.43×0.46) = 80.22% छूट<br>IV: 1 - (0.09×0.75×0.41) = 97.23% छूट. IV की छूट सबसे अधिक है।",
+   "trick": "अधिक छूट = कम विक्रय मूल्य",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "A wholesaler offers two options for a sofa set marked at ₹80,000: either a flat discount of 30% or two successive discounts of 20% and 12%. What is the difference in the selling price between the two options?",
+   "hi": "एक थोक विक्रेता ₹80,000 अंकित मूल्य वाले सोफा सेट के लिए दो विकल्प प्रदान करता है: या तो 30% की फ्लैट छूट, या 20% और 12% की दो क्रमिक छूट। दोनों विकल्पों के बीच विक्रय मूल्य में कितना अंतर है?",
+   "opts": [
+    "₹480",
+    "₹320",
+    "₹240",
+    "₹400"
+   ],
+   "my_ans": "B",
+   "sol": "विकल्प 1: 30% छूट. विकल्प 2: 20% + 12% = 32 - 2.4 = 29.6% छूट.<br>अंतर = 30% - 29.6% = 0.4%.<br>80000 का 0.4% = 320.",
+   "trick": "अंतर = MP × (d1+d2 - (d1×d2)/100 - Flat_d)",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "A wholesaler offers a trade discount of 30% on the marked price of an electric kettle to retailers. A retailer then announces a scheme discount of 12% on the price after receiving the trade discount. If the retailer sells the kettle to a customer for ₹2,464, what is the marked price of the kettle?",
+   "hi": "एक थोक विक्रेता, खुदरा विक्रेताओं को एक इलेक्ट्रिक केतली के अंकित मूल्य पर 30% की व्यापारिक छूट प्रदान करता है। फिर एक खुदरा विक्रेता, व्यापारिक छूट प्राप्त मूल्य पर 12% की स्कीम छूट देने की घोषणा करता है। यदि खुदरा विक्रेता, उस केतली को किसी ग्राहक को ₹2,464 में बेचता है, तो केतली का अंकित मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹4,000",
+    "₹4,400",
+    "₹3,800",
+    "₹4,200"
+   ],
+   "my_ans": "A",
+   "sol": "MP × 0.70 × 0.88 = 2464<br>MP × 0.616 = 2464<br>MP = 2464 / 0.616 = 4000.",
+   "trick": "MP = SP / ((1-d1) × (1-d2))",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "A shopkeeper marks a washing machine at ₹24,000. During a festival, he offers a 20% discount and sells it for an additional ₹800 less. What is the final selling price of the washing machine?",
+   "hi": "एक दुकानदार ने एक वाशिंग मशीन का मूल्य ₹24,000 अंकित किया। एक त्योहार के दौरान, उसने 20% की छूट दी तथा उसके बाद ₹800 और कम करके बेच दिया। वाशिंग मशीन का अंतिम विक्रय मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹17,600",
+    "₹19,200",
+    "₹18,800",
+    "₹18,400"
+   ],
+   "my_ans": "D",
+   "sol": "24000 का 20% = 4800. छूट के बाद मूल्य = 24000 - 4800 = 19200.<br>अंतिम मूल्य = 19200 - 800 = 18400.",
+   "trick": "अंतिम SP = (MP × (1-d)) - अतिरिक्त छूट",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "A streaming service charges ₹150 per month. If you buy an annual plan (12 months) with a 15% discount, what is your total savings (in ₹) compared to paying monthly for a year?",
+   "hi": "एक स्ट्रीमिंग सेवा ₹150 प्रति माह चार्ज करती है। यदि आप 15% छूट के साथ एक वार्षिक प्लान (12 महीने वाला) खरीदते हैं, तो एक वर्ष के लिए मासिक भुगतान की तुलना में आपकी कुल बचत (₹ में) कितनी होगी?",
+   "opts": [
+    "180",
+    "240",
+    "270",
+    "300"
+   ],
+   "my_ans": "C",
+   "sol": "12 महीने का कुल खर्च = 150 × 12 = 1800.<br>बचत = 1800 का 15% = 270.",
+   "trick": "बचत = कुल वार्षिक मूल्य × छूट %",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "The marked price of a sweater is ₹600. The wholesaler offers a 20% discount to a retailer for up to 20 sweaters and a 25% discount if the order exceeds 20 sweaters. Find the amount paid by the retailer if he orders 22 such sweaters.",
+   "hi": "एक स्वेटर का अंकित मूल्य ₹600 है। थोक विक्रेता, खुदरा विक्रेता को 20 स्वेटर तक 20% की छूट देता है, और यदि 20 स्वेटर से अधिक का ऑर्डर हो, तो 25% की छूट देता है। यदि खुदरा विक्रेता ऐसे 22 स्वेटर का ऑर्डर देता है, तो उसके द्वारा भुगतान की गई धनराशि ज्ञात कीजिए।",
+   "opts": [
+    "₹9,900",
+    "₹9,250",
+    "₹9,500",
+    "₹9,850"
+   ],
+   "my_ans": "A",
+   "sol": "22 स्वेटर का अंकित मूल्य = 22 × 600 = 13200.<br>छूट 25% (क्योंकि 20 से अधिक है) = 13200 × 0.75 = 9900.",
+   "trick": "कुल भुगतान = (संख्या × MP) × (1 - छूट %)",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "After successive discounts of 15% and 10%, a customer pays ₹3,672. What was the marked price?",
+   "hi": "15% और 10% की क्रमिक छूट के बाद, एक ग्राहक ₹3,672 का भुगतान करता है। अंकित मूल्य कितना था?",
+   "opts": [
+    "₹4,700",
+    "₹4,800",
+    "₹4,750",
+    "₹4,850"
+   ],
+   "my_ans": "B",
+   "sol": "MP × 0.85 × 0.90 = 3672<br>MP × 0.765 = 3672<br>MP = 3672 / 0.765 = 4800.",
+   "trick": "MP = SP / ((1-d1) × (1-d2))",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "An article marked at ₹1,250 is sold at two successive discounts such that the selling price becomes ₹900. If the first discount is 20%, what is the second discount?",
+   "hi": "एक वस्तु जिसका अंकित मूल्य ₹1,250 है, दो क्रमिक छूटों पर बेची जाती है जिससे विक्रय मूल्य ₹900 हो जाता है। यदि पहली छूट 20% है, तो दूसरी छूट क्या है?",
+   "opts": [
+    "10%",
+    "15%",
+    "12%",
+    "8%"
+   ],
+   "my_ans": "A",
+   "sol": "1250 × 0.80 × (1 - d2) = 900<br>1000 × (1 - d2) = 900<br>1 - d2 = 0.9 → d2 = 10%.",
+   "trick": "दूसरी छूट = 1 - (SP / (MP × (1-d1)))",
+   "ans": "A"
+  }
+ ]
+}

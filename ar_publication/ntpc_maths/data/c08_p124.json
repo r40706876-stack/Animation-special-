@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Discount",
+  "hi": "बट्टा / छूट",
+  "total": 101,
+  "gl": 23,
+  "ug": 78
+ },
+ "source_pages": "124-124",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "Ravi buys an article with a discount of 25% on its marked price. He makes a profit of 10% by selling it at ₹1,320. The marked price of the article was:",
+   "hi": "रवि एक वस्तु को उसके अंकित मूल्य पर 25% की छूट पर खरीदता है। वह उस वस्तु को ₹1,320 में बेचकर 10% का लाभ अर्जित करता है। वस्तु का अंकित मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹1550",
+    "₹1650",
+    "₹1400",
+    "₹1600"
+   ],
+   "my_ans": "D",
+   "sol": "विक्रय मूल्य = 1320, लाभ = 10% → क्रय मूल्य = 1320 × 100/110 = 1200<br>अंकित मूल्य का 75% = 1200 → अंकित मूल्य = 1200 × 100/75 = 1600",
+   "trick": "क्रय मूल्य = विक्रय मूल्य × 100/(100+लाभ%) और अंकित मूल्य = क्रय मूल्य × 100/(100-छूट%)",
+   "ans": "D"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "A wholesaler allows a scheme discount of 25% on an article whose marked price is ₹2,400. The retailer is required to pay the remaining amount in full. What is the net price paid by the retailer?",
+   "hi": "एक थोक विक्रेता उस वस्तु पर 25% की स्कीम छूट प्रदान करता है जिसका अंकित मूल्य ₹2,400 है। खुदरा विक्रेता को शेष राशि का पूर्ण भुगतान करना होता है। खुदरा विक्रेता द्वारा भुगतान किया गया नेट (net) मूल्य कितना है?",
+   "opts": [
+    "₹1,750",
+    "₹1,800",
+    "₹1,700",
+    "₹1,900"
+   ],
+   "my_ans": "B",
+   "sol": "नेट मूल्य = अंकित मूल्य का (100 - छूट)%<br>नेट मूल्य = 2400 का 75% = 2400 × 75/100 = 1800",
+   "trick": "नेट मूल्य = अंकित मूल्य × (1 - छूट/100)",
+   "ans": "B"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "A shopkeeper marks an article at 40% above the cost price and allows a discount of 25%. What is the percentage profit or loss?",
+   "hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य उसके क्रय मूल्य से 40% अधिक निर्धारित करता है और 25% की छूट देता है। प्रतिशत लाभ या हानि कितना है?",
+   "opts": [
+    "5% profit<br>5% लाभ",
+    "5% loss<br>5% हानि",
+    "15% loss<br>15% हानि",
+    "15% profit<br>15% लाभ"
+   ],
+   "my_ans": "A",
+   "sol": "माना क्रय मूल्य = 100, अंकित मूल्य = 140<br>विक्रय मूल्य = 140 का 75% = 105<br>लाभ = 105 - 100 = 5%",
+   "trick": "सफल प्रतिशत परिवर्तन = x - y - (xy/100) = 40 - 25 - (40×25/100) = 15 - 10 = 5%",
+   "ans": "A"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "A shopkeeper marks a jacket at ₹2,000. He gives a 20% discount, but charges 5% GST on the discounted price. What is the final price the customer pays?",
+   "hi": "एक दुकानदार एक जैकेट पर ₹2,000 का मूल्य अंकित करता है। वह 20% की छूट प्रदान करता है, लेकिन छूट-प्राप्त मूल्य पर 5% GST शुल्क लेता है। ग्राहक द्वारा भुगतान किया गया अंतिम मूल्य कितना होगा?",
+   "opts": [
+    "₹1,680",
+    "₹1,700",
+    "₹1,596",
+    "₹1,880"
+   ],
+   "my_ans": "A",
+   "sol": "छूट के बाद मूल्य = 2000 का 80% = 1600<br>GST के साथ अंतिम मूल्य = 1600 का 105% = 1600 × 1.05 = 1680",
+   "trick": "अंतिम मूल्य = अंकित मूल्य × (1 - छूट/100) × (1 + GST/100)",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "A shopkeeper offers a single discount of 30% on a shirt priced at ₹800. Alternatively, he offers two successive discounts of 25% and 5% on the same shirt. What is the difference in the total discount amount between the two offers?",
+   "hi": "कोई दुकानदार, ₹800 कीमत वाली एक कमीज पर 30% की एकल छूट देता है, अथवा उसी कमीज पर 25% और 5% की दो क्रमिक छूट देता है। दोनों ऑफर के बीच कुल छूट राशि में अंतर कितना है?",
+   "opts": [
+    "₹16",
+    "₹20",
+    "₹14",
+    "₹10"
+   ],
+   "my_ans": "D",
+   "sol": "एकल छूट = 30%<br>क्रमिक छूट = 25 + 5 - (25×5/100) = 30 - 1.25 = 28.75%<br>अंतर = 30% - 28.75% = 1.25%<br>800 का 1.25% = 800 × 1.25/100 = 10",
+   "trick": "क्रमिक छूट का अंतर = (x × y)/100 प्रतिशत",
+   "ans": "D"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "A shopkeeper offers the following schemes on toys of the same marked price. (A) Successive discounts of 6% and 39% on any number of toys bought. (B) Successive discounts of 48%, 16% and 11% on any number of toys bought. (C) 37% discount on the first 2 toys and 29% discount on each toy thereon. (D) 2 toys free of cost on buying 4 toys. A customer wants to buy 4 toys. Which of the above schemes is the least beneficial to her?",
+   "hi": "एक दुकानदार एक ही अंकित मूल्य वाले खिलौनों पर निम्नलिखित स्कीमें प्रदान करता है-(A) कितनी भी संख्या में खरीदे गए खिलौनों पर 6% और 39% की क्रमिक छूट(B) कितनी भी संख्या में खरीदे गए खिलौनों पर 48%, 16% और 11% की क्रमिक छूट(C) पहले 2 खिलौनों पर 37% की छूट और उसके बाद प्रत्येक खिलौने पर 29% की छूट(D) 4 खिलौने खरीदने पर 2 खिलौने मुफ्त। एक ग्राहक 4 खिलौने खरीदना चाहती है। ऊपर दी गई स्कीमों में से कौन-सी स्कीम उसके लिए सबसे कम लाभप्रद है?",
+   "opts": [
+    "B",
+    "D",
+    "C",
+    "A"
+   ],
+   "my_ans": "C",
+   "sol": "माना 1 खिलौने का अंकित मूल्य = 100, कुल अंकित मूल्य = 400<br>(A) प्रभावी छूट = 6+39-(6×39/100) = 42.66%<br>(B) प्रभावी छूट = 100 - (0.52×0.84×0.89)×100 = 61.13%<br>(C) छूट = (2×37+2×29)/4 = 33%<br>(D) छूट = 2/6 = 33.33%<br>सबसे कम लाभप्रद (C) है।",
+   "trick": "कुल छूट प्रतिशत की तुलना करें, जिसका प्रतिशत सबसे कम वह सबसे कम लाभप्रद।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "166-168",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "A total of money is split among E, F, G and H in the ratio 9:7:5:3. If G gets ₹4000 less than F, how much does E receive?",
+   "hi": "कुल धनराशि को E, F, G और H के बीच 9:7:5:3 के अनुपात में विभाजित किया जाता है। यदि G को F से ₹4000 कम मिलते हैं, तो E को कितनी धनराशि प्राप्त होगी?",
+   "opts": [
+    "₹18000",
+    "₹20000",
+    "₹16000",
+    "₹17000"
+   ],
+   "my_ans": "A",
+   "sol": "F और G का अनुपात 7:5 है, अंतर 2 यूनिट = 4000, तो 1 यूनिट = 2000।<br>E का हिस्सा 9 यूनिट = 9 × 2000 = 18000।",
+   "trick": "अनुपात के अंतर को वास्तविक मान के बराबर रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "Three bags A, B, and C contain only red and blue marbles. In Bag A, the ratio of red to blue marbles is 2 : 3. In Bag B, the ratio of red to blue marbles is 4 : 1. In Bag C, the ratio of red to blue marbles is 3 : 2. Which bag has the highest proportion of red marbles?",
+   "hi": "तीन बैग A, B और C में केवल लाल और नीले कंचे हैं। बैग A में, लाल और नीले कंचों का अनुपात 2 : 3 है। बैग B में, लाल और नीले कंचों का अनुपात 4 : 1 है। बैग C में, लाल और नीले कंचों का अनुपात 3 : 2 है। किस बैग में लाल कंचों का अनुपात सबसे अधिक है?",
+   "opts": [
+    "Bag A<br>बैग A",
+    "All bags have the same proportion.<br>सभी बैगों में कंचों का अनुपात समान है।",
+    "Bag B<br>बैग B",
+    "Bag C<br>बैग C"
+   ],
+   "my_ans": "C",
+   "sol": "लाल कंचों का अनुपात: A=2/5=0.4, B=4/5=0.8, C=3/5=0.6।<br>सबसे अधिक 0.8 है जो बैग B में है।",
+   "trick": "लाल कंचों का कुल कंचों से भाग देकर तुलना करें।",
+   "ans": "C"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "A company has two departments, 'A' and 'B', with employees in the ratio 5:7, respectively. If 28 employees are transferred from department 'B' to 'A', the ratio becomes 1:1. How many employees does each department have originally?",
+   "hi": "किसी कंपनी में दो विभाग 'A' और 'B' हैं, जिनमें कर्मचारियों का अनुपात क्रमशः 5 : 7 है। यदि 28 कर्मचारियों को विभाग 'B' से 'A' में स्थानांतरित किया जाता है, तो अनुपात 1 : 1 हो जाता है। मूल रूप से प्रत्येक विभाग में कितने कर्मचारी थे?",
+   "opts": [
+    "140 in A, 84 in B<br>A में 140, B में 84",
+    "150 in A, 84 in B<br>A में 150, B में 84",
+    "140 in A, 96 in B<br>A में 140 और B में 96",
+    "140 in A, 196 in B<br>A में 140, B में 196"
+   ],
+   "my_ans": "D",
+   "sol": "माना कर्मचारी 5x और 7x हैं। (5x+28)/(7x-28) = 1/1 → 5x+28 = 7x-28 → 2x = 56 → x = 28।<br>A = 5×28 = 140, B = 7×28 = 196।",
+   "trick": "अनुपात को x मानकर समीकरण हल करें।",
+   "ans": "D"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "Saumya has ₹ 24,800 in denominations of ₹500 and ₹100 notes. The number of ₹500 notes is 4 more than the number of ₹100 notes. Find the number of ₹100 notes.",
+   "hi": "सौम्या के पास ₹500 और ₹100 के मूल्यवर्ग में ₹24,800 हैं। ₹500 के नोटों की संख्या ₹100 के नोटों की संख्या से 4 अधिक है। ₹100 के नोटों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "36",
+    "40",
+    "38",
+    "42"
+   ],
+   "my_ans": "C",
+   "sol": "माना ₹100 के नोट x हैं, तो ₹500 के नोट x+4 हैं।<br>100x + 500(x+4) = 24800 → 600x + 2000 = 24800 → 600x = 22800 → x = 38।",
+   "trick": "कुल मूल्य = (नोटों की संख्या × मूल्य) का योग।",
+   "ans": "C"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "An amount of ₹120 is paid using ₹10, ₹5 and ₹2 coins. If the number of coins of ₹10 and ₹2 are interchanged, then the amount becomes ₹304. If the number of ₹5 and ₹2 coins are interchanged, then the amount is ₹165. How many ₹2 coins are used in the payment of ₹120?",
+   "hi": "₹10, ₹5 और ₹2 के सिक्कों का उपयोग करके ₹120 की राशि का भुगतान किया जाता है। यदि ₹10 और ₹2 के सिक्कों की संख्या को आपस में बदल दिया जाए, तो राशि ₹304 हो जाती है। यदि ₹5 और ₹2 के सिक्के की संख्या को आपस में बदल दिया जाए, तो राशि ₹165 हो जाती है। ₹120 के भुगतान में ₹2 के कितने सिक्के उपयोग किए जाएंगे?",
+   "opts": [
+    "15",
+    "20",
+    "10",
+    "25"
+   ],
+   "my_ans": "D",
+   "sol": "माना सिक्के x, y, z हैं। 10x+5y+2z=120 और 2x+5y+10z=304।<br>घटाने पर 8x-8z = -184 → z-x=23। विकल्प D (z=25) रखने पर x=2 मिलता है।",
+   "trick": "समीकरण बनाकर विकल्पों से जाँच करें।",
+   "ans": "D"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "A number is divided into two sections such that one part is 10 more than the other. If their ratio is 6:4, what are the two parts of the number?",
+   "hi": "किसी संख्या को दो भागों में इस प्रकार विभाजित किया जाता है कि एक भाग, दूसरे भाग से 10 अधिक है। यदि उनका अनुपात 6 : 4 है, तो संख्या के दोनों भाग ज्ञात कीजिए।",
+   "opts": [
+    "32 and 22",
+    "32 and 20",
+    "34 and 24",
+    "30 and 20"
+   ],
+   "my_ans": "D",
+   "sol": "अनुपात 6:4 है, अंतर 2 यूनिट = 10, तो 1 यूनिट = 5।<br>भाग: 6×5=30 और 4×5=20।",
+   "trick": "अनुपात के अंतर को वास्तविक अंतर के बराबर रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "Chetan’s salary is ₹16000 per month. He spends ₹6000 on house rent, ₹1500 on bills and the rest of the amount is his monthly savings. Find his savings(in ₹) in a year, if in the month of his birthday he spent his complete monthly saving for birthday celebration.",
+   "hi": "चेतन का मासिक वेतन ₹16000 है। वह ₹6000 मकान के किराए पर, ₹1500 बिलों पर खर्च करता है और शेष राशि की वह मासिक बचत करता है। यदि उसने अपने जन्मदिन वाले महीने में अपनी पूरी मासिक बचत जन्मदिन मनाने में खर्च कर दी, तो एक वर्ष में उसकी बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "93500",
+    "102000",
+    "85000",
+    "76500"
+   ],
+   "my_ans": "A",
+   "sol": "मासिक बचत = 16000 - (6000+1500) = 8500।<br>11 महीने की बचत = 11 × 8500 = 93500।",
+   "trick": "12 महीने के बजाय 11 महीने की बचत निकालें।",
+   "ans": "A"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "Ram has ₹1000 in the denomination of ₹10, ₹20 and ₹5 notes. If the number of ₹10 notes is 16 more than that of ₹20 notes and the number of ₹5 notes is twice the number of ₹20 notes, find the total number of notes that Ram has.",
+   "hi": "राम के पास ₹10, ₹20 और ₹5 के नोटों के रूप में कुल ₹1000 हैं। यदि ₹10 के नोटों की संख्या, ₹20 के नोटों की संख्या से 16 अधिक है और ₹5 के नोटों की संख्या, ₹20 के नोटों की संख्या की दोगुनी है, तो राम के पास मौजूद नोटों की कुल संख्या ज्ञात कीजिए।",
+   "opts": [
+    "90",
+    "100",
+    "120",
+    "80"
+   ],
+   "my_ans": "B",
+   "sol": "माना ₹20 के नोट x हैं। ₹10 के नोट x+16, ₹5 के नोट 2x।<br>10(x+16) + 20x + 5(2x) = 1000 → 40x + 160 = 1000 → 40x = 840 → x = 21।<br>कुल नोट = x + x+16 + 2x = 4x+16 = 4(21)+16 = 100।",
+   "trick": "नोटों की संख्या को x के पदों में लिखकर समीकरण हल करें।",
+   "ans": "B"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "The ratio of the heights of Shyam and Manish is 7 : 8. If Shyam’s height is 140 cm, who is taller and by how much?",
+   "hi": "श्याम और मनीष की लंबाई का अनुपात 7 : 8 है। यदि श्याम की लंबाई 140 cm है, तो सबसे लंबा कौन है और उसकी लंबाई कितनी है?",
+   "opts": [
+    "Manish is taller by 20 cm<br>मनीष, 20 cm लंबा है।",
+    "Shyam is taller by 20 cm<br>श्याम, 20 cm लंबा है।",
+    "Shyam is taller by 10 cm<br>श्याम, 10 cm लंबा है।",
+    "Manish is taller by 10 cm<br>मनीष, 10 cm लंबा है।"
+   ],
+   "my_ans": "A",
+   "sol": "7 यूनिट = 140 cm, तो 1 यूनिट = 20 cm।<br>मनीष की लंबाई 8 यूनिट = 160 cm। अंतर = 160 - 140 = 20 cm।",
+   "trick": "अनुपात के अंतर को यूनिट मानकर हल करें।",
+   "ans": "A"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "If 1.2x = 0.5y, find the value of (x+y)/(x-y).",
+   "hi": "यदि 1.2x = 0.5y है, तो (x+y)/(x-y) का मान ज्ञात कीजिए।",
+   "opts": [
+    "14/3",
+    "-17/7",
+    "12/5",
+    "-21/4"
+   ],
+   "my_ans": "B",
+   "sol": "x/y = 0.5/1.2 = 5/12।<br>(x+y)/(x-y) = (5+12)/(5-12) = 17/-7 = -17/7।",
+   "trick": "x और y का अनुपात निकालकर मान रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "₹5,278 is divided among X, Y, and Z in such a way that if ₹67, ₹61, and ₹68 are deducted from their respective shares, they have money in the ratio 8 : 20 : 5. Find X’s share after deduction.",
+   "hi": "₹5,278 को X, Y और Z में इस प्रकार विभाजित किया जाता है कि यदि उनके संबंधित हिस्सों में से ₹67, ₹61 और ₹68 घटा दिए जाएं, तो उनके पास शेष राशि का अनुपात 8 : 20 : 5 होता है। कटौती के बाद X का हिस्सा ज्ञात कीजिए।",
+   "opts": [
+    "₹1,232",
+    "₹1,132",
+    "₹1,332",
+    "₹1,082"
+   ],
+   "my_ans": "A",
+   "sol": "कुल कटौती = 67+61+68 = 196। शेष राशि = 5278 - 196 = 5082।<br>अनुपात योग = 8+20+5 = 33। 1 यूनिट = 5082/33 = 154।<br>X का हिस्सा = 8 × 154 = 1232।",
+   "trick": "कुल राशि से कटौती घटाकर अनुपात में बाँटें।",
+   "ans": "A"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "The sum of the digits of a two digit number is 11. If 27 is added to the number its digits are reversed. Find the ratio between the original number to the number obtained on reversing the digits.",
+   "hi": "दो-अंकीय संख्या के अंकों का योगफल 11 है। यदि संख्या में 27 जोड़ा जाता है, तो उसके अंक उलट जाते हैं। मूल संख्या और अंकों को उलटने के बाद प्राप्त संख्या के बीच का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "23:29",
+    "47:74",
+    "13:17",
+    "36:59"
+   ],
+   "my_ans": "B",
+   "sol": "संख्या 47 है (4+7=11), 47+27=74।<br>अनुपात = 47:74।",
+   "trick": "विकल्पों से संख्या का अनुमान लगाएं।",
+   "ans": "B"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "A, B and C are three batsmen. The ratio of runs scored by them in a certain match was A : B = 15 : 17 and B : C = 14 : 19. At the end of the match, they scored 1542 runs. Find the number of runs scored by A.",
+   "hi": "A, B और C तीन बल्लेबाज हैं। एक मैच में उनके द्वारा बनाए गए रनों का अनुपात A : B = 15 : 17 और B : C = 14 : 19 था। मैच के अंत में, उन्होंने 1542 रन बनाए। A द्वारा बनाए गए रनों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "420",
+    "540",
+    "520",
+    "480"
+   ],
+   "my_ans": "A",
+   "sol": "A:B=15:17, B:C=14:19। B को समान करने पर: A:B:C = 210:238:323।<br>योग = 771 यूनिट = 1542, तो 1 यूनिट = 2। A = 210 × 2 = 420।",
+   "trick": "B को समान करके तीनों का संयुक्त अनुपात निकालें।",
+   "ans": "A"
+  }
+ ]
+}

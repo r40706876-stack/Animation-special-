@@ -1,0 +1,270 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Partnership",
+  "hi": "साझेदारी",
+  "total": 32,
+  "gl": 15,
+  "ug": 17
+ },
+ "source_pages": "170-172",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 4 : 2 : 5. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹23,000, then out of a total annual profit of ₹37,000, what is the difference between X's and Y's profit?",
+   "hi": "तीन दोस्तों X, Y और Z ने 4 : 2 : 5 के अनुपात में निवेश करके एक व्यवसाय शुरू किया। 6 माह बाद, X ने अपनी पूंजी का आधा हिस्सा निकाल लिया। यदि Z द्वारा निवेश की गई राशि ₹23,000 है, तो ₹37,000 के कुल वार्षिक लाभ में से X और Y के बीच लाभ का अंतर क्या है?",
+   "opts": [
+    "₹3700",
+    "₹5015",
+    "₹3065",
+    "₹4255"
+   ],
+   "my_ans": "A",
+   "sol": "निवेश अनुपात: X(4×6+2×6)=36, Y(2×12)=24, Z(5×12)=60. अनुपात 36:24:60 = 3:2:5.<br>कुल लाभ 37000, योग 10 भाग. 1 भाग = 3700. अंतर (X-Y) = 3-2 = 1 भाग = 3700.",
+   "trick": "लाभ का अनुपात = निवेश × समय",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "In a business, A, B, and C invest in the ratio 3 : 5 : 4. Out of the total profit, B gives ₹15,000 to A such that A’s share of the profit becomes equal to C’s share. What is the total profit (in ₹) of the business?",
+   "hi": "एक व्यवसाय में A, B और C के निवेश का अनुपात 3 : 5 : 4 हैं। कुल लाभ में से, B, A को ₹15,000 देता है, जिससे A का लाभ का हिस्सा C के लाभ के हिस्से के बराबर हो जाता है। व्यवसाय का कुल लाभ (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "2,40,000",
+    "1,50,000",
+    "1,80,000",
+    "1,20,000"
+   ],
+   "my_ans": "C",
+   "sol": "लाभ अनुपात 3:5:4. माना कुल लाभ 12x. A=3x, B=5x, C=4x.<br>B ने A को 15000 दिए, तो A=3x+15000, C=4x. 3x+15000=4x → x=15000.<br>कुल लाभ = 12 × 15000 = 1,80,000.",
+   "trick": "लाभ का अनुपात निवेश के अनुपात में होता है",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Suman, Kunal, and Pooja invest ₹1050, ₹1510, and ₹1280 respectively to start a business. If the profit at the end of the year is ₹1650, then what is the share of Pooja in the profit?",
+   "hi": "सुमन, कुणाल और पूजा ने क्रमशः ₹1050, ₹1510 और ₹1280 का निवेश करके एक व्यवसाय शुरू किया। यदि वर्ष के अंत में लाभ ₹1650 है, तो लाभ में पूजा का शेयर कितना है?",
+   "opts": [
+    "₹551",
+    "₹550",
+    "₹549",
+    "₹548"
+   ],
+   "my_ans": "B",
+   "sol": "निवेश अनुपात 1050:1510:1280 = 105:151:128. योग = 384.<br>पूजा का हिस्सा = (128/384) × 1650 = (1/3) × 1650 = 550.",
+   "trick": "लाभ का वितरण निवेश के अनुपात में करें",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 9 : 4 : 8. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹23,000, then out of a total annual profit of ₹33,000, what is the difference between X's and Y's profit?",
+   "hi": "तीन दोस्तों X, Y और Z ने 9 : 4 : 8 के अनुपात में निवेश करके एक व्यवसाय शुरू किया। 6 माह बाद, X ने अपनी पूंजी का आधा हिस्सा निकाल लिया। यदि Z द्वारा निवेश की गई राशि ₹23,000 है, तो ₹33,000 के कुल वार्षिक लाभ में से X और Y के बीच लाभ का अंतर क्या है?",
+   "opts": [
+    "₹4840",
+    "₹3880",
+    "₹5845",
+    "₹4660"
+   ],
+   "my_ans": "A",
+   "sol": "निवेश अनुपात: X(9×6+4.5×6)=81, Y(4×12)=48, Z(8×12)=96. अनुपात 81:48:96 = 27:16:32.<br>कुल योग 75 भाग = 33000. 1 भाग = 440. अंतर (X-Y) = 27-16 = 11 भाग = 11 × 440 = 4840.",
+   "trick": "समय के साथ निवेश में बदलाव का ध्यान रखें",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 9 : 5 : 2. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹83,000, then out of a total annual profit of ₹88,000, what is the difference between X's and Y's profit?",
+   "hi": "तीन दोस्तों X, Y और Z ने 9 : 5 : 2 के अनुपात में निवेश करके एक व्यवसाय शुरू किया। 6 माह बाद, X ने अपनी पूंजी का आधा हिस्सा निकाल लिया। यदि Z द्वारा निवेश की गई राशि ₹83,000 है, तो ₹88,000 के कुल वार्षिक लाभ में से X और Y के बीच लाभ का अंतर क्या है?",
+   "opts": [
+    "₹10,945",
+    "₹12,710",
+    "₹11,200",
+    "₹10,550"
+   ],
+   "my_ans": "C",
+   "sol": "निवेश अनुपात: X(9×6+4.5×6)=81, Y(5×12)=60, Z(2×12)=24. अनुपात 81:60:24 = 27:20:8.<br>योग 55 भाग = 88000. 1 भाग = 1600. अंतर (X-Y) = 27-20 = 7 भाग = 7 × 1600 = 11200.",
+   "trick": "लाभ का अनुपात = (निवेश × समय) का योग",
+   "ans": "C"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Ramesh, Seema, and Shanaya invest ₹1230, ₹1710, and ₹ 1010 respectively to start a business. If the profit at the end of the year is ₹1580, then what is the share of Shanaya in the profit?",
+   "hi": "रमेश, सीमा और शनाया ने क्रमशः ₹1230, ₹1710 और ₹1010 का निवेश करके एक व्यवसाय शुरू किया। यदि वर्ष के अंत में लाभ ₹1580 है, तो लाभ में शनाया का हिस्सा कितना है?",
+   "opts": [
+    "₹407",
+    "₹403",
+    "₹405",
+    "₹404"
+   ],
+   "my_ans": "D",
+   "sol": "निवेश अनुपात 123:171:101. योग = 395.<br>शनाया का हिस्सा = (101/395) × 1580 = 101 × 4 = 404.",
+   "trick": "कुल लाभ को निवेश के अनुपात में बांटें",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Mansi and Neha started a partnership business, investing some amount in the ratio of 7 : 9. Utsavi joined then after six months with an amount equal to that of Neha. In what ratio should the profit at the end of one year be distributed among Mansi, Neha and Utsavi?",
+   "hi": "मानसी और नेहा ने 7 : 9 के अनुपात में कुछ धनराशि का निवेश करके साझेदारी में एक व्यवसाय शुरू किया। छह महीने बाद उत्सवी, नेहा के बराबर धनराशि के साथ व्यवसाय में शामिल हुई। एक वर्ष के अंत में प्राप्त लाभ को मानसी, नेहा और उत्सवी के बीच किस अनुपात में वितरित किया जाना चाहिए?",
+   "opts": [
+    "14 : 18 : 9",
+    "18 : 19 : 10",
+    "13 : 14 : 8",
+    "12 : 17 : 8"
+   ],
+   "my_ans": "A",
+   "sol": "मानसी: 7×12=84, नेहा: 9×12=108, उत्सवी: 9×6=54.<br>अनुपात 84:108:54 = 14:18:9.",
+   "trick": "समय का गुणा करना न भूलें",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "A and B invest in a business in the ratio 3 : 2. If they earn a total profit of ₹25,000, then how much profit does B receive?",
+   "hi": "A और B एक व्यवसाय में 3 : 2 के अनुपात में निवेश करते हैं। यदि उन्हें कुल ₹25,000 का लाभ होता है, तो B द्वारा अर्जित लाभ ज्ञात कीजिए।",
+   "opts": [
+    "₹15,000",
+    "₹5,000",
+    "₹10,000",
+    "₹12,000"
+   ],
+   "my_ans": "C",
+   "sol": "कुल भाग = 3+2=5. 5 भाग = 25000. 1 भाग = 5000.<br>B का हिस्सा = 2 भाग = 2 × 5000 = 10000.",
+   "trick": "लाभ को निवेश के अनुपात में बांटें",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Madhu and Madhuri start a business by investing in the ratio 31 : 34. If total profit is ₹44,850, then what is the difference between the shares of profit (in ₹) of Madhu and Madhuri?",
+   "hi": "मधु और माधुरी 31 : 34 के अनुपात में निवेश करके एक व्यवसाय शुरू करते हैं। यदि कुल लाभ ₹44,850 है, तो मधु और माधुरी के लाभ के हिस्से (₹ में) के बीच का अंतर कितना है?",
+   "opts": [
+    "₹2,070",
+    "₹1,570",
+    "₹570",
+    "₹3,570"
+   ],
+   "my_ans": "A",
+   "sol": "कुल भाग = 31+34=65. 65 भाग = 44850. 1 भाग = 690.<br>अंतर = 34-31 = 3 भाग = 3 × 690 = 2070.",
+   "trick": "अनुपात का अंतर निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Trisha and Riya started a partnership business, investing some amount in the ratio of 8 : 5. Poorva joined then after six months with an amount equal to that of Riya. In what ratio should the profit at the end of one year be distributed among Trisha, Riya and Poorva?",
+   "hi": "त्रिशा और रिया ने 8 : 5 के अनुपात में कुछ धनराशि का निवेश करके साझेदारी में एक व्यवसाय शुरू किया। छह महीने बाद पूर्वा, रिया के बराबर धनराशि के साथ व्यवसाय में शामिल हो गई। एक वर्ष के अंत में प्राप्त लाभ को त्रिशा, रिया और पूर्वा के बीच किस अनुपात में वितरित किया जाना चाहिए?",
+   "opts": [
+    "17 : 7 : 3",
+    "16 : 10 : 5",
+    "15 : 5 : 2",
+    "19 : 15 : 8"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिशा: 8×12=96, रिया: 5×12=60, पूर्वा: 5×6=30.<br>अनुपात 96:60:30 = 16:10:5.",
+   "trick": "समय का गुणा करें",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "A and B start a business by investing capitals in the ratio 5:7. After 4 months, C joins the business with a capital equal to half of B’s capital. After 8 months from the start, A withdraws 40% of his capital, while B continues with the same investment. At the end of one year, the total profit is ₹27,675. The share of profit of B (in ₹) is:",
+   "hi": "A और B, 5 : 7 के अनुपात में पूंजी निवेश करके एक व्यवसाय शुरू करते हैं। 4 महीने बाद, C, B की पूंजी के आधे के बराबर पूंजी के साथ व्यवसाय में सम्मिलित हो जाता है। व्यवसाय शुरू होने के 8 महीने बाद, A अपनी पूंजी का 40% निकाल लेता है, जबकि B उसी निवेश के साथ व्यवसाय जारी रखता है। यदि एक वर्ष के अंत में, कुल अर्जित लाभ ₹27,675 है, तो B द्वारा अर्जित लाभ का भाग (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "14,175",
+    "17,175",
+    "15,175",
+    "16,175"
+   ],
+   "my_ans": "A",
+   "sol": "A: 5×8 + 3×4 = 52. B: 7×12 = 84. C: 3.5×8 = 28.<br>अनुपात 52:84:28 = 13:21:7. योग = 41 भाग = 27675. 1 भाग = 675.<br>B का हिस्सा = 21 × 675 = 14175.",
+   "trick": "समय के अनुसार निवेश का योग करें",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 6 : 3 : 5. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹12,000, then out of a total annual profit of ₹ 69,000, what is the difference between X's and Y's profit?",
+   "hi": "तीन दोस्तों X, Y और Z ने 6 : 3 : 5 के अनुपात में निवेश करके एक व्यवसाय शुरू किया। 6 माह बाद, X ने अपनी पूंजी का आधा हिस्सा निकाल लिया। यदि Z द्वारा निवेश की गई राशि ₹12,000 है, तो ₹69,000 के कुल वार्षिक लाभ में से X और Y के बीच लाभ का अंतर क्या है?",
+   "opts": [
+    "₹8120",
+    "₹7290",
+    "₹8280",
+    "₹9910"
+   ],
+   "my_ans": "C",
+   "sol": "निवेश अनुपात: X(6×6+3×6)=54, Y(3×12)=36, Z(5×12)=60. अनुपात 54:36:60 = 9:6:10.<br>योग 25 भाग = 69000. 1 भाग = 2760. अंतर (X-Y) = 9-6 = 3 भाग = 3 × 2760 = 8280.",
+   "trick": "लाभ का अनुपात = निवेश × समय",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 5 : 3 : 7. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹14,000, then out of a total annual profit of ₹55,000, what is the difference between X's and Y's profit?",
+   "hi": "तीन मित्रों - X, Y और Z ने 5 : 3 : 7 के अनुपात में धनराशि का निवेश करके एक व्यवसाय शुरू किया। 6 महीने बाद, X ने अपनी पूँजी का आधा हिस्सा निकाल लिया। यदि Z द्वारा निवेश की गई धनराशि ₹14,000 है, तो ₹55,000 के कुल वार्षिक लाभ में से X और Y के लाभ के बीच का अंतर ज्ञात कीजिए।",
+   "opts": [
+    "₹4465",
+    "₹3000",
+    "₹1910",
+    "₹3440"
+   ],
+   "my_ans": "B",
+   "sol": "निवेश अनुपात: X(5×6+2.5×6)=45, Y(3×12)=36, Z(7×12)=84. अनुपात 45:36:84 = 15:12:28.<br>योग 55 भाग = 55000. 1 भाग = 1000. अंतर (X-Y) = 15-12 = 3 भाग = 3000.",
+   "trick": "समय का ध्यान रखें",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Meenakshi and Meena invest in a business in the ratio 12 : 32. If total profit is ₹2,904, then what is difference between the profit (in ₹) of Meenakshi and Meena?",
+   "hi": "मीनाक्षी और मीना एक व्यवसाय में 12 : 32 के अनुपात में निवेश करती हैं। यदि कुल लाभ ₹2,904 है, तो मीनाक्षी और मीना के बीच लाभ में अंतर (₹ में) कितना होगा?",
+   "opts": [
+    "₹1,320",
+    "₹1,220",
+    "₹1,270",
+    "₹1,470"
+   ],
+   "my_ans": "A",
+   "sol": "कुल भाग = 12+32=44. 44 भाग = 2904. 1 भाग = 66.<br>अंतर = 32-12 = 20 भाग = 20 × 66 = 1320.",
+   "trick": "अनुपात का अंतर निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Siddharth, Lata, and Vivek invest ₹1570, ₹1760, and ₹1620 respectively to start a business. If the profit at the end of the year is ₹1540, then what is the share of Vivek in the profit?",
+   "hi": "सिद्धार्थ, लता और विवेक ने क्रमशः ₹1570, ₹1760 और ₹1620 का निवेश करके एक व्यवसाय शुरू किया। यदि वर्ष के अंत में लाभ ₹1540 है, तो लाभ में विवेक का शेयर कितना है?",
+   "opts": [
+    "₹503",
+    "₹504",
+    "₹506",
+    "₹501"
+   ],
+   "my_ans": "B",
+   "sol": "निवेश अनुपात 157:176:162. योग = 495.<br>विवेक का हिस्सा = (162/495) × 1540 = 162 × (1540/495) = 162 × 3.11... = 504.",
+   "trick": "लाभ को निवेश के अनुपात में बांटें",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "UG",
+   "en": "An investor’s portfolio value decreases by 30% in the first quarter but then increases by 50% in the next quarter. What is the overall percentage change in the portfolio value?",
+   "hi": "एक निवेशक के पोर्टफोलियो मूल्य (portfolio value) में पहली तिमाही में 30% की कमी हो जाती है, लेकिन अगली तिमाही में 50% की वृद्धि हो जाती है। पोर्टफोलियो के मूल्य में कुल कितने प्रतिशत का परिवर्तन हुआ?",
+   "opts": [
+    "20% increase<br>20% की वृद्धि",
+    "5% increase<br>5% की वृद्धि",
+    "15% decrease<br>15% की कमी",
+    "10% increase<br>10% की वृद्धि"
+   ],
+   "my_ans": "B",
+   "sol": "माना मूल्य 100. पहली तिमाही: 100 - 30% = 70.<br>दूसरी तिमाही: 70 + 50% = 70 + 35 = 105.<br>कुल परिवर्तन = 105 - 100 = 5% वृद्धि.",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन = a + b + (ab/100) → -30 + 50 + (-30×50/100) = 20 - 15 = 5%",
+   "ans": "B"
+  }
+ ]
+}

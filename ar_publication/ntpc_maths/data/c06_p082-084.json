@@ -1,0 +1,318 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Percentage",
+  "hi": "प्रतिशत",
+  "total": 100,
+  "gl": 43,
+  "ug": 57
+ },
+ "source_pages": "82-84",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "Girish scored 448 marks in an examination and was 64 marks short of 16% of maximum marks. In the same examination, his friend scored 672 marks. What is the percentage of marks scored by his friend?",
+   "hi": "गिरीश ने एक परीक्षा में 448 अंक प्राप्त किए, जो अधिकतम अंकों के 16% से 64 अंक कम थे। उसी परीक्षा में उसके मित्र ने 672 अंक प्राप्त किए। उसके मित्र द्वारा प्राप्त अंकों का प्रतिशत कितना है?",
+   "opts": [
+    "24%",
+    "22%",
+    "19%",
+    "21%"
+   ],
+   "my_ans": "D",
+   "sol": "16% of Max = 448 + 64 = 512.<br>Max = 512 / 0.16 = 3200.<br>Friend's % = (672 / 3200) × 100 = 21%.",
+   "trick": "पहले अधिकतम अंक (Max) निकालें, फिर मित्र के अंकों का प्रतिशत ज्ञात करें।",
+   "ans": "D"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Suppose the ratio of income to expenditure is 8 : 5. If income rises by 40% and expenditure falls by 10%, and the initial expenditure is ₹10,000, what is the amount (in ₹) of saving after these changes?",
+   "hi": "मान लीजिए कि आय और व्यय का अनुपात 8 : 5 है। यदि आय में 40% की वृद्धि होती है और व्यय में 10% की कमी होती है, और प्रारंभिक व्यय ₹10,000 है, तो इन परिवर्तनों के बाद बचत की राशि (₹ में) कितनी होगी?",
+   "opts": [
+    "13,300",
+    "13,200",
+    "13,400",
+    "13,500"
+   ],
+   "my_ans": "C",
+   "sol": "Exp = 5 units = 10000, so 1 unit = 2000. Income = 8 units = 16000.<br>New Income = 16000 × 1.4 = 22400. New Exp = 10000 × 0.9 = 9000.<br>Saving = 22400 - 9000 = 13400.",
+   "trick": "अनुपात से वास्तविक मान निकालें, फिर नई आय और व्यय से बचत ज्ञात करें।",
+   "ans": "C"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "A company’s revenue increases by 20% in the first year, decreases by 10% in the second year, and increases by 15% in the third year. What is the overall percentage change in revenue over the three years?",
+   "hi": "एक कंपनी का राजस्व पहले वर्ष में 20% बढ़ जाता है, दूसरे वर्ष में 10% घट जाता है और तीसरे वर्ष में 15% बढ़ जाता है। तीन वर्षों में राजस्व में समग्र प्रतिशत परिवर्तन ज्ञात कीजिए।",
+   "opts": [
+    "25.2% increase<br>25.2% की वृद्धि",
+    "26.2% increase<br>26.2% की वृद्धि",
+    "24.2% increase<br>24.2% की वृद्धि",
+    "23.2% increase<br>23.2% की वृद्धि"
+   ],
+   "my_ans": "C",
+   "sol": "100 × 1.20 × 0.90 × 1.15 = 124.2.<br>Change = 124.2 - 100 = 24.2%.",
+   "trick": "क्रमिक प्रतिशत परिवर्तन के लिए (1+a/100)(1+b/100)(1+c/100) का उपयोग करें।",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "The marked price of an article is ₹500. During a sale, its price is reduced to ₹450. What is the percentage decrease in price?",
+   "hi": "एक वस्तु का अंकित मूल्य ₹500 है। सेल के दौरान, इसकी कीमत घटाकर ₹450 कर दी जाती है। कीमत में प्रतिशत कमी क्या है?",
+   "opts": [
+    "12%",
+    "5%",
+    "10%",
+    "8%"
+   ],
+   "my_ans": "C",
+   "sol": "कमी = 500 - 450 = 50.<br>प्रतिशत कमी = (50 / 500) × 100 = 10%.",
+   "trick": "प्रतिशत कमी = (कमी / प्रारंभिक मान) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "The expenditures of R are 65% of his salary. If his salary increased by 10% and his savings are ₹3,150 more than previous savings, his expenditures are now 60% of his salary. His present salary is ₹______.",
+   "hi": "R का व्यय, उसके वेतन का 65% है। यदि उसका वेतन 10% बढ़ जाता है और उसकी बचत पिछली बचत से ₹3,150 अधिक हो जाती है, तो अब उसका व्यय, उसके वेतन का 60% हो जाता है। उसका वर्तमान वेतन ₹______ है।",
+   "opts": [
+    "35,000",
+    "38,500",
+    "39,000",
+    "37,500"
+   ],
+   "my_ans": "B",
+   "sol": "माना वेतन 100x. बचत = 35x. नया वेतन = 110x, नई बचत = 40% of 110x = 44x.<br>44x - 35x = 9x = 3150 → x = 350.<br>वर्तमान वेतन = 110 × 350 = 38500.",
+   "trick": "वेतन और बचत के अंतर को समीकरण में रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "A shirt originally costing ₹800 is first decreased by 30% and then increased by 15%. What is its new price?",
+   "hi": "एक शर्ट जिसकी मूल कीमत ₹800 है, पहले 30% कम की जाती है और फिर 15% बढ़ाई जाती है। इसकी नई कीमत क्या है?",
+   "opts": [
+    "₹714",
+    "₹680",
+    "₹750",
+    "₹644"
+   ],
+   "my_ans": "D",
+   "sol": "800 × 0.70 × 1.15 = 560 × 1.15 = 644.",
+   "trick": "मूल्य × (1 - कमी/100) × (1 + वृद्धि/100)",
+   "ans": "D"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "The price of sugar is increased by 3%. How much percent the consumption of sugar must be reduced so as not to increase the expenditure on sugar? (correct your answer to one decimal place)",
+   "hi": "चीनी की कीमत में 3% की वृद्धि होती है। चीनी की खपत में कितने प्रतिशत की कमी की जानी चाहिए जिससे कि चीनी पर होने वाले व्यय में वृद्धि न हो पाए? (अपने उत्तर को दशमलव के एक स्थान तक पूर्णांकित कीजिए)",
+   "opts": [
+    "1.7%",
+    "1.9%",
+    "2.9%",
+    "2.6%"
+   ],
+   "my_ans": "C",
+   "sol": "कमी % = [r / (100 + r)] × 100 = [3 / 103] × 100 ≈ 2.91%.",
+   "trick": "खपत में कमी = (वृद्धि / (100 + वृद्धि)) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "There are 400 multiple choice questions in a test. 4 marks are allotted for a correct answer and 1 mark is deducted for a wrong answer or unattempted question from total score of correct answers. If a candidate has scored 1280 marks in the test, how many questions did the candidate answer correctly?",
+   "hi": "एक परीक्षा में 400 बहुविकल्पीय प्रश्न हैं। सही उत्तर के लिए 4 अंक दिए जाते हैं, और गलत उत्तर या अनुत्तरित प्रश्न के लिए कुल सही उत्तरों के अंकों में से 1 अंक काट लिया जाता है। यदि किसी अभ्यर्थी ने परीक्षा में 1280 अंक प्राप्त किए हैं, तो उसने कितने प्रश्नों का सही उत्तर दिया?",
+   "opts": [
+    "322",
+    "336",
+    "315",
+    "346"
+   ],
+   "my_ans": "B",
+   "sol": "माना सही उत्तर x. गलत = 400 - x.<br>4x - 1(400 - x) = 1280<br>5x = 1680 → x = 336.",
+   "trick": "सही उत्तरों के अंक - गलत उत्तरों के अंक = कुल अंक",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "The price of a book is increased from ₹200 to ₹220. What is the percentage increase in the price?",
+   "hi": "एक पुस्तक की कीमत ₹200 से बढ़ाकर ₹220 कर दी गई है। कीमत में कितने प्रतिशत की वृद्धि हुई?",
+   "opts": [
+    "10%",
+    "8%",
+    "5%",
+    "12%"
+   ],
+   "my_ans": "A",
+   "sol": "वृद्धि = 220 - 200 = 20.<br>प्रतिशत वृद्धि = (20 / 200) × 100 = 10%.",
+   "trick": "प्रतिशत वृद्धि = (वृद्धि / प्रारंभिक मान) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "The price of an article is decreased by 24%, but the daily sale of the article is increased by 33%. Find the net effect on the daily sale receipts.",
+   "hi": "किसी वस्तु के मूल्य में 24% की कमी की जाती है लेकिन उस वस्तु की दैनिक बिक्री में 33% की वृद्धि होती है। दैनिक बिक्री प्राप्तियों पर शुद्ध प्रभाव ज्ञात कीजिए।",
+   "opts": [
+    "1.08% decrease<br>1.08% कमी",
+    "1.08% increase<br>1.08% वृद्धि",
+    "2.16% increase<br>2.16% वृद्धि",
+    "2.16% decrease<br>2.16% कमी"
+   ],
+   "my_ans": "B",
+   "sol": "नेट प्रभाव = -24 + 33 + (-24 × 33 / 100) = 9 - 7.92 = 1.08% (वृद्धि).",
+   "trick": "सक्सेसिव फॉर्मूला: a + b + (ab/100)",
+   "ans": "B"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "A tech firm's revenue decreased from ₹2,50,000 to ₹2,12,500. What is the percentage decrease in the revenue?",
+   "hi": "एक प्रौद्योगिकी फर्म की संप्राप्ति ₹2,50,000 से घटकर ₹2,12,500 हो जाती है। संप्राप्ति में प्रतिशत कमी ज्ञात कीजिए।",
+   "opts": [
+    "15%",
+    "12%",
+    "10%",
+    "20%"
+   ],
+   "my_ans": "A",
+   "sol": "कमी = 250000 - 212500 = 37500.<br>प्रतिशत कमी = (37500 / 250000) × 100 = 15%.",
+   "trick": "प्रतिशत कमी = (कमी / प्रारंभिक मान) × 100",
+   "ans": "A"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "A family increases its monthly income by 10% but their monthly expenditure rises by 20%. If their original monthly income was ₹45,000 and monthly expenditure was ₹36,000, what is the new monthly savings after the increase?",
+   "hi": "किसी परिवार के मासिक आय में 10% की वृद्धि होती है लेकिन उनके मासिक व्यय में 20% की वृद्धि होती है। यदि उनकी मूल मासिक आय ₹45,000 थी और मासिक व्यय ₹36,000 था, तो वृद्धि के बाद नई मासिक बचत कितनी होगी?",
+   "opts": [
+    "₹6,500",
+    "₹6,400",
+    "₹6,300",
+    "₹6,200"
+   ],
+   "my_ans": "C",
+   "sol": "नई आय = 45000 × 1.1 = 49500. नया व्यय = 36000 × 1.2 = 43200.<br>बचत = 49500 - 43200 = 6300.",
+   "trick": "नई आय और नए व्यय का अंतर ही नई बचत है।",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "The cost of an article is increased by 20% in the first year. In the second year the increased cost is decreased by 24%. If the final cost of the article is ₹1,938, find the original cost of the article.",
+   "hi": "एक वस्तु की कीमत में प्रथम वर्ष में 20% की वृद्धि होती है। द्वितीय वर्ष में इस वृद्धि के बाद वाली कीमत में 24% की कमी होती है। यदि वस्तु का अंतिम मूल्य ₹1,938 है, तो वस्तु की मूल कीमत ज्ञात कीजिए।",
+   "opts": [
+    "₹2,196",
+    "₹2,125",
+    "₹2,148",
+    "₹2,160"
+   ],
+   "my_ans": "B",
+   "sol": "माना मूल कीमत x. x × 1.20 × 0.76 = 1938.<br>x = 1938 / 0.912 = 2125.",
+   "trick": "मूल्य × (1+a/100) × (1-b/100) = अंतिम मूल्य",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "The price of a machine is increased by 20%. Due to a fall in demand, the increased price is then decreased by 25%. Finally, the price is again increased by 10%. The overall percentage change in the price of the machine is:",
+   "hi": "एक मशीन की कीमत में 20% की वृद्धि की जाती है। मांग में गिरावट के कारण, वर्धित कीमत में 25% की कमी की जाती है। अंत में, कीमत में पुनः 10% की वृद्धि की जाती है। मशीन की कीमत में समग्र प्रतिशत परिवर्तन कितना है?",
+   "opts": [
+    "1% decrease<br>1% की कमी",
+    "1.1% increase<br>1.1% की वृद्धि",
+    "1% increase<br>1% की वृद्धि",
+    "1.1% decrease<br>1.1% की कमी"
+   ],
+   "my_ans": "A",
+   "sol": "100 × 1.20 × 0.75 × 1.10 = 99.<br>100 से 99 हुआ, यानी 1% की कमी।",
+   "trick": "क्रमिक प्रतिशत परिवर्तन का गुणा करें।",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "The population of a town decreased from 8,000 to 7,200 in one year. What is the percentage decrease?",
+   "hi": "एक शहर की जनसंख्या एक वर्ष में 8,000 से घटकर 7,200 हो गई। जनसंख्या में प्रतिशत कमी कितनी हुई?",
+   "opts": [
+    "12%",
+    "15%",
+    "10%",
+    "8%"
+   ],
+   "my_ans": "C",
+   "sol": "कमी = 8000 - 7200 = 800.<br>प्रतिशत कमी = (800 / 8000) × 100 = 10%.",
+   "trick": "प्रतिशत कमी = (कमी / प्रारंभिक मान) × 100",
+   "ans": "C"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "The price of fuel decreases by 55%, 35% and 45% in three successive months, but increases by 40% in the fourth month. What is the percentage decrease in the price of fuel in the fourth month as compared to its original price? (Round off to 2 decimal places.)",
+   "hi": "ईंधन की कीमत में क्रमिक तीन महीनों में 55%, 35% और 45% की कमी होती है, लेकिन चौथे महीने में 40% की वृद्धि हो जाती है। मूल कीमत की तुलना में चौथे महीने में ईंधन की कीमत में प्रतिशत कमी (दशमलव के दो स्थानों तक पूर्णांकित) कितनी है?",
+   "opts": [
+    "73.05%",
+    "81.67%",
+    "76.52%",
+    "77.48%"
+   ],
+   "my_ans": "D",
+   "sol": "100 × 0.45 × 0.65 × 0.55 × 1.40 = 22.5225.<br>कमी = 100 - 22.5225 = 77.4775 ≈ 77.48%.",
+   "trick": "क्रमिक परिवर्तनों का गुणा करें और 100 से घटाएं।",
+   "ans": "D"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "Kavita's monthly salary increased by 25%, and then decreased by 20%. If her initial salary is ₹58,000, what was her final salary?",
+   "hi": "कविता के मासिक वेतन में पहले 25% की वृद्धि हुई और फिर 20% की कमी हुई। यदि उसका प्रारंभिक वेतन ₹58,000 है, तो उसका अंतिम वेतन कितना था?",
+   "opts": [
+    "₹55,000",
+    "₹58,000",
+    "₹60,000",
+    "₹64,000"
+   ],
+   "my_ans": "B",
+   "sol": "58000 × 1.25 × 0.80 = 58000 × 1 = 58000.",
+   "trick": "25% वृद्धि और 20% कमी का नेट प्रभाव 0% होता है।",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "The enrolment of students in an institution increased by 10% in April compared to the number of students in March and then decreased by 5%, resulting in 1045 students in June. Find the number of students in March.",
+   "hi": "एक संस्थान में अप्रैल में छात्रों के नामांकन में मार्च की तुलना में 10% की वृद्धि हुई और फिर जून में 5% की कमी आई, जिसके परिणामस्वरूप जून में छात्रों की संख्या 1045 हो गई। मार्च में छात्रों की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "1085",
+    "1050",
+    "900",
+    "1000"
+   ],
+   "my_ans": "D",
+   "sol": "माना मार्च में x. x × 1.10 × 0.95 = 1045.<br>x = 1045 / 1.045 = 1000.",
+   "trick": "x × (1+a/100) × (1-b/100) = अंतिम संख्या",
+   "ans": "D"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "The price of an article is first increased by 30% and then decreased by 20%. Due to these successive changes, the final price becomes ₹40 more than the original price. What is the original price of the article?",
+   "hi": "एक वस्तु के मूल्य में पहले 30% की वृद्धि होती है और फिर 20% की कमी होती है। इन क्रमिक परिवर्तनों के कारण, अंतिम मूल्य, प्रारंभिक मूल्य से ₹40 अधिक हो जाता है। वस्तु का प्रारंभिक मूल्य ज्ञात कीजिए।",
+   "opts": [
+    "₹1,200",
+    "₹900",
+    "₹1,100",
+    "₹1,000"
+   ],
+   "my_ans": "D",
+   "sol": "नेट प्रभाव = 30 - 20 - (30 × 20 / 100) = 10 - 6 = 4% वृद्धि.<br>4% = 40, तो 100% = 1000.",
+   "trick": "सक्सेसिव प्रतिशत परिवर्तन का अंतर = दिया गया अंतर",
+   "ans": "D"
+  }
+ ]
+}

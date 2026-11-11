@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 26,
+  "en": "Venn Diagram",
+  "hi": "वेन आरेख",
+  "total": 5,
+  "gl": 0,
+  "ug": 5
+ },
+ "source_pages": "323-324",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. The numbers in different sections indicate the number of persons in a room. How many such engineers are there who are also athletes but not teachers?",
+   "hi": "दिए गए चित्र का ध्यानपूर्वक अध्ययन करें और प्रश्न का उत्तर दें। विभिन्न खंडों में दी गई संख्याएँ कमरे में मौजूद व्यक्तियों की संख्या दर्शाती हैं। ऐसे कितने इंजीनियर हैं जो एथलीट तो हैं लेकिन शिक्षक नहीं हैं?",
+   "opts": [
+    "24",
+    "35",
+    "23",
+    "28"
+   ],
+   "my_ans": "A",
+   "sol": "इंजीनियर और एथलीट के उभयनिष्ठ भाग को देखें जो शिक्षक वाले वृत्त से बाहर है।<br>यह संख्या 24 है।",
+   "trick": "तीनों वृत्तों के प्रतिच्छेदन को ध्यान से देखें और 'नहीं' वाले भाग को हटा दें।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Study the given diagram carefully and answer the question. The numbers in different sections indicate the number of persons. How many such Consultants are there who are Bankers as well as Advocates?",
+   "hi": "निम्नांकित आरेख का ध्यानपूर्वक अध्ययन कीजिए और दिए गए प्रश्न का उत्तर दीजिए। विभिन्न खंडों में दी गई संख्याएँ, व्यक्तियों की संख्या को इंगित करती हैं। ऐसे कितने सलाहकार हैं, जो बैंकर होने के साथ-साथ वकील भी हैं?",
+   "opts": [
+    "17",
+    "25",
+    "11",
+    "32"
+   ],
+   "my_ans": "D",
+   "sol": "हमें वह संख्या चाहिए जो बैंकर, वकील और सलाहकार तीनों वृत्तों के उभयनिष्ठ (common) भाग में हो।<br>यह संख्या 32 है।",
+   "trick": "तीनों वृत्तों के बीच का उभयनिष्ठ भाग ही सही उत्तर है।",
+   "ans": "D"
+  }
+ ]
+}

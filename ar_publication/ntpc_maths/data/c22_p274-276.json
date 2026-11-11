@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 22,
+  "en": "Geometry",
+  "hi": "ज्यामिति",
+  "total": 103,
+  "gl": 50,
+  "ug": 53
+ },
+ "source_pages": "274-276",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Two parallel lines AB ∥ CD are cut by a transversal line PQ, as shown in the figure. If the angle ∠PMB=55° then find the angle ∠CNM.",
+   "hi": "चित्र में दर्शाए अनुसार, दो समांतर रेखाओं, AB ∥ CD को एक तिर्यक रेखा PQ द्वारा काटा जाता है। यदि कोण ∠PMB = 55° है, तो कोण ∠CNM का मान ज्ञात कीजिए।",
+   "opts": [
+    "125°",
+    "75°",
+    "60°",
+    "55°"
+   ],
+   "my_ans": "A",
+   "sol": "∠PMB और ∠AMQ शीर्षाभिमुख कोण हैं, इसलिए ∠AMQ = 55°।<br>AB ∥ CD, इसलिए संगत कोण (Corresponding angles) ∠AMQ = ∠CNM = 55°? नहीं, यहाँ ∠CNM और ∠AMQ एकांतर कोण (Alternate interior) या संगत कोण के संबंध से 55° होने चाहिए।<br>चित्रानुसार ∠PMB = 55°, तो संगत कोण ∠QND = 55°। अतः ∠CNM = 180° - 55° = 125°।",
+   "trick": "संगत कोण बराबर होते हैं और एक रेखा पर बने कोणों का योग 180° होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "The areas of similar triangles △ABC and △PQR are 432 cm² and 588 cm², respectively. If the longest side PR of △PQR is 56 cm, then find the longest side AC of △ABC.",
+   "hi": "समरूप त्रिभुजों ΔABC और ΔPQR का क्षेत्रफल क्रमशः 432 cm² और 588 cm² है। यदि ΔPQR की सबसे लंबी भुजा PR, 56 cm है, तो ΔABC की सबसे लंबी भुजा AC ज्ञात कीजिए।",
+   "opts": [
+    "52 cm",
+    "35 cm",
+    "24 cm",
+    "48 cm"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रफलों का अनुपात = (भुजाओं का अनुपात)²<br>432/588 = (AC/56)² → 36/49 = (AC/56)²<br>6/7 = AC/56 → AC = (6 × 56) / 7 = 48 cm.",
+   "trick": "समरूप त्रिभुजों के क्षेत्रफलों का अनुपात उनकी संगत भुजाओं के वर्गों के अनुपात के बराबर होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "What is the volume (in cm³) of a hemispherical cauldron with diameter 14 cm? (correct up to two decimal places) (Use π = 22/7)",
+   "hi": "14 cm व्यास वाले अर्धगोलाकार पात्र का आयतन (cm³ में) ज्ञात कीजिए। (दशमलव के दो स्थान तक पूर्णांकित करें) (π = 22/7 का उपयोग कीजिए)",
+   "opts": [
+    "781.33",
+    "718.67",
+    "681.33",
+    "618.67"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिज्या r = 14/2 = 7 cm।<br>अर्धगोले का आयतन = (2/3)πr³ = (2/3) × (22/7) × 7 × 7 × 7<br>= (2 × 22 × 49) / 3 = 2156 / 3 = 718.666... ≈ 718.67 cm³.",
+   "trick": "अर्धगोले का आयतन = 2/3 πr³",
+   "ans": "B"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "In the given figure, lines AO and DE are parallel. What is the value of x?",
+   "hi": "दी गई आकृति में, रेखाएँ AO और DE समांतर हैं। x का मान ज्ञात कीजिए।",
+   "opts": [
+    "35 °",
+    "100 °",
+    "145 °",
+    "45 °"
+   ],
+   "my_ans": "A",
+   "sol": "AO ∥ DE, अतः एकांतर कोण बराबर होंगे।<br>∠AOB = 180° - 135° = 45° (रैखिक युग्म)।<br>∠ODE = 80°। त्रिभुज के बाह्य कोण गुण से, x + 45° = 80° → x = 35°।",
+   "trick": "समांतर रेखाओं के बीच एकांतर कोण और त्रिभुज के बाह्य कोण का नियम लगाएं।",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "What is the diameter of a circle if the numerical value of its area is equal to twice the numerical value of its perimeter?",
+   "hi": "यदि किसी वृत्त के क्षेत्रफल का संख्यात्मक मान उसकी परिधि के संख्यात्मक मान के दोगुने के बराबर है, तो उस वृत्त का व्यास कितना होगा?",
+   "opts": [
+    "6 units<br>6 इकाई",
+    "8 units<br>8 इकाई",
+    "2 units<br>2 इकाई",
+    "4 units<br>4 इकाई"
+   ],
+   "my_ans": "B",
+   "sol": "πr² = 2 × (2πr)<br>r = 4<br>व्यास = 2r = 2 × 4 = 8 units.",
+   "trick": "क्षेत्रफल πr² और परिधि 2πr का उपयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "The sum of the interior angles of a regular polygon is 1620°. What is the difference (in degrees) between the measures of an interior angle and an exterior angle of the polygon?",
+   "hi": "एक सम बहुभुज के आंतरिक कोणों का योगफल 1620° है। बहुभुज के एक आंतरिक कोण और एक बाह्य कोण के माप के बीच का अंतर (डिग्री में) ज्ञात कीजिए।",
+   "opts": [
+    "213 2/11",
+    "114 6/11",
+    "151 3/11",
+    "182 5/11"
+   ],
+   "my_ans": "B",
+   "sol": "(n-2) × 180 = 1620 → n-2 = 9 → n = 11.<br>आंतरिक कोण = 1620/11, बाह्य कोण = 360/11.<br>अंतर = (1620-360)/11 = 1260/11 = 114 6/11°.",
+   "trick": "आंतरिक कोण + बाह्य कोण = 180° का उपयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "If the sum of all the external angles of a regular polygon is two-thirds of all its interior angles, then the number of sides of the polygon is equal to:",
+   "hi": "यदि किसी सम बहुभुज के सभी बाह्य कोणों का योग, उसके सभी आंतरिक कोणों के योग का दो-तिहाई है, तो बहुभुज में भुजाओं की संख्या ज्ञात कीजिए।",
+   "opts": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "my_ans": "A",
+   "sol": "360° = (2/3) × (n-2) × 180°<br>360 = 120(n-2) → 3 = n-2 → n = 5.",
+   "trick": "बाह्य कोणों का योग हमेशा 360° होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "The area of a square is 3969 cm². Its perimeter is equal to the perimeter of a regular hexagon. What is the area (in cm²) of the hexagon?",
+   "hi": "एक वर्ग का क्षेत्रफल 3969 cm² है। इसका परिमाप एक सम षट्भुज के परिमाप के बराबर है। षट्भुज का क्षेत्रफल (cm² में) ज्ञात कीजिए।",
+   "opts": [
+    "2646 √ 3",
+    "2600",
+    "2608",
+    "2662 √ 3"
+   ],
+   "my_ans": "A",
+   "sol": "वर्ग की भुजा = √3969 = 63 cm. परिमाप = 4 × 63 = 252 cm.<br>षट्भुज की भुजा a = 252/6 = 42 cm.<br>क्षेत्रफल = (3√3/2) × a² = (3√3/2) × 42 × 42 = 3√3 × 882 = 2646√3 cm².",
+   "trick": "वर्ग का परिमाप = 4 × भुजा, षट्भुज का क्षेत्रफल = (3√3/2)a²",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Let C₁ and C₂ be two concentric circles with centre O. Let AB be a chord on C₁ the larger circle such that AB touches C₂ at the point P. Then which of the following is true?",
+   "hi": "मान लीजिए C₁ और C₂ केंद्र O वाले दो संकेंद्रित वृत्त हैं। मान लीजिए AB, C₁ (बड़े वृत्त) की एक जीवा है जो C₂ को बिंदु P पर स्पर्श करती है। तो निम्नलिखित में से कौन सा सत्य है?",
+   "opts": [
+    "OP = AP",
+    "OP = 2PB",
+    "OP = AB",
+    "AP = PB"
+   ],
+   "my_ans": "D",
+   "sol": "केंद्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है। यहाँ OP, C₂ की त्रिज्या है जो AB पर लंब है, अतः AP = PB.",
+   "trick": "केंद्र से स्पर्श बिंदु पर त्रिज्या स्पर्श रेखा पर लंब होती है।",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "AB is a chord of a circle with center P. C is a point on the minor arc AB. The tangents to the circle at points A and B intersect at an external point M. If ∠ACB = 124°, then find the measure of ∠AMB.",
+   "hi": "AB एक वृत्त की जीवा है जिसका केंद्र P पर है। A और B के बीच लघु चाप AB पर C एक बिंदु है। बिंदुओं A और B पर वृत्त की स्पर्श रेखाएँ एक बाह्य बिंदु M पर प्रतिच्छेदित करती हैं। यदि ∠ACB = 124°, तो ∠AMB का माप ज्ञात कीजिए।",
+   "opts": [
+    "63°",
+    "58°",
+    "68°",
+    "72°"
+   ],
+   "my_ans": "C",
+   "sol": "चक्रीय चतुर्भुज ACBM में, ∠AMB + ∠ACB = 180° (यदि M, A, C, B चक्रीय हों, लेकिन यहाँ M बाह्य बिंदु है)।<br>केंद्र पर कोण ∠APB = 2 × (180° - 124°) = 112° (दीर्घ चाप के कोण से)।<br>चतुर्भुज APBM में, ∠AMB = 180° - 112° = 68°.",
+   "trick": "केंद्र पर बना कोण बाह्य बिंदु पर बने कोण का संपूरक होता है (180 - θ)।",
+   "ans": "C"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "In this question, a question is followed by two statements numbered (I) and (II). You have to decide whether the data provided in the statements are sufficient to answer the question. Among 5 trees, L, M, N, T and V each having a different height, which tree is the tallest?",
+   "hi": "इस प्रश्न में, एक प्रश्न के बाद (I) और (II) के रूप में क्रमांकित दो कथन दिए गए हैं। आपको यह तय करना है कि कथनों में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है या नहीं। 5 वृक्षों L, M, N, T और V में से प्रत्येक की लंबाई अलग-अलग है, तो कौन-सा वृक्ष सबसे लंबा है?",
+   "opts": [
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not<br>अकेले कथन II में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together are NOT sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।",
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not<br>अकेले कथन I में दी गई जानकारी प्रश्न का उत्तर देने के लिए पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together (and not statement 1 alone or statement II alone) are sufficient to answer the question<br>दोनों कथन I और II संयुक्त रूप से (अकेले कथन I या अकेले कथन II नहीं) प्रश्न का उत्तर देने के लिए पर्याप्त हैं।"
+   ],
+   "my_ans": "B",
+   "sol": "कथन I: M केवल दो से लंबा है (क्रम: _ > _ > M > _ > _)। T, N से ठीक लंबा है।<br>कथन II: V, N से लंबा है।<br>दोनों को मिलाने पर भी सबसे लंबा वृक्ष कौन है, यह निश्चित नहीं हो पा रहा है (L या V हो सकते हैं)।",
+   "trick": "सभी संभावनाओं को क्रम में लिखकर देखें कि क्या केवल एक ही उत्तर आता है।",
+   "ans": "B"
+  }
+ ]
+}

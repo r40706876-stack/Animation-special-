@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 23,
+  "en": "Trigonometry",
+  "hi": "त्रिकोणमिति",
+  "total": 35,
+  "gl": 23,
+  "ug": 12
+ },
+ "source_pages": "295-295",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Given that tan θ = 2 and θ is in the first quadrant, what is the value of sec θ?",
+   "hi": "यदि tan θ = 2 और θ प्रथम चतुर्थांश में है, तो sec θ का मान कितना होगा?",
+   "opts": [
+    "√3",
+    "2",
+    "√2",
+    "√5"
+   ],
+   "my_ans": "D",
+   "sol": "tan θ = लंब/आधार = 2/1, तो कर्ण = √(2² + 1²) = √5<br>sec θ = कर्ण/आधार = √5/1 = √5.",
+   "trick": "sec² θ = 1 + tan² θ का प्रयोग करें।",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "The value of (cos² 67° – sin² 23°) + 4 Cos30° is:",
+   "hi": "(cos² 67° – sin² 23°) + 4 Cos30° का मान ज्ञात कीजिए।",
+   "opts": [
+    "2√3",
+    "3√2",
+    "√3",
+    "5√2"
+   ],
+   "my_ans": "A",
+   "sol": "cos 67° = sin(90°-67°) = sin 23°, अतः (sin² 23° - sin² 23°) = 0<br>मान = 0 + 4 × (√3/2) = 2√3.",
+   "trick": "cos θ = sin(90°-θ) का उपयोग करके मान शून्य हो जाता है।",
+   "ans": "A"
+  }
+ ]
+}

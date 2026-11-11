@@ -1,0 +1,286 @@
+{
+ "chapter": {
+  "no": 18,
+  "en": "Time, Speed & Distance",
+  "hi": "समय, चाल एवं दूरी",
+  "total": 89,
+  "gl": 24,
+  "ug": 65
+ },
+ "source_pages": "227-229",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Walking at 4/7 of his normal speed from his home, Lakshya is 15 minutes late in reaching his office. The usual time taken by him to cover the distance between his home and his office is:",
+   "hi": "अपने घर से सामान्य चाल की चाल से चलते हुए, लक्ष्य अपने कार्यालय पहुँचने में 15 मिनट विलंबित हो जाता है। घर और कार्यालय के बीच की दूरी तय करने में उसे सामान्यतः कितना समय लगता है?",
+   "opts": [
+    "29 minutes<br>29 मिनट",
+    "23 minutes<br>23 मिनट",
+    "16 minutes<br>16 मिनट",
+    "20 minutes<br>20 मिनट"
+   ],
+   "my_ans": "D",
+   "sol": "समय का अनुपात = 7:4 (चाल के व्युत्क्रमानुपाती).<br>अंतर = 3 यूनिट = 15 मिनट. 1 यूनिट = 5 मिनट.<br>सामान्य समय = 4 यूनिट = 4 × 5 = 20 मिनट.",
+   "trick": "समय = (a/b-a) × देरी, जहाँ चाल a/b है।",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Ankur jogs on a circular track X at 1 2/3m/s and Mahima jogs on track Y at 2 ( 1/12 ) m/s. The total length of Tracks X and Y is 0.325 km. Ankur makes 9 rounds of track X in the same time Mahima makes 5 rounds of track Y. The time taken (in seconds) by Mahima to complete one round of track X is:",
+   "hi": "अंकुर वृत्ताकार ट्रैक X पर 1 2/3 m/s की गति से दौड़ता है और महिमा ट्रैक Y पर 2 1/12 m/s की गति से दौड़ती है। ट्रैक X और Y की कुल लंबाई 0.325 किमी है। जितने समय में महिमा ट्रैक Y के 5 चक्कर लगाती है, उतने ही समय में अंकुर ट्रैक X के 9 चक्कर लगाता है। महिमा द्वारा ट्रैक X का एक चक्कर पूरा करने में लगा समय (सेकंड में) है:",
+   "opts": [
+    "42",
+    "48",
+    "35",
+    "39"
+   ],
+   "my_ans": "B",
+   "sol": "अंकुर की चाल = 5/3 m/s, महिमा की चाल = 25/12 m/s.<br>9X / (5/3) = 5Y / (25/12) → 27X/5 = 60Y/25 → 27X/5 = 12Y/5 → 9X = 4Y.<br>X+Y = 325m → X + 9X/4 = 325 → 13X/4 = 325 → X = 100m.<br>समय = दूरी/चाल = 100 / (25/12) = 48 सेकंड.",
+   "trick": "समय = दूरी / चाल का उपयोग करें।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A woman travelled at a speed of 20 m/min for 90 min, and at a speed of 65 m/min for 60 min. Her average speed (in m/min) for the entire journey is:",
+   "hi": "एक महिला ने 90 मिनट तक 20 मीटर / मिनट की चाल से और फिर 60 मिनट तक 65 मीटर / मिनट की चाल से यात्रा की। संपूर्ण यात्रा के लिए उसकी औसत चाल (मीटर / मिनट में) ज्ञात कीजिए।",
+   "opts": [
+    "31",
+    "42",
+    "38",
+    "44"
+   ],
+   "my_ans": "C",
+   "sol": "कुल दूरी = (20 × 90) + (65 × 60) = 1800 + 3900 = 5700 मीटर.<br>कुल समय = 90 + 60 = 150 मिनट.<br>औसत चाल = 5700 / 150 = 38 m/min.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Two trains running in opposite directions at 40 km/hr and 52 km/hr cross each other in 18 seconds . If one train is 250 m long, then find the length of the other train.",
+   "hi": "विपरीत दिशाओं में 40 km/hr और 52 km/hr की चाल से चल रही दो ट्रेनें, एक-दूसरे को 18 सेकंड में पार करती हैं। यदि एक ट्रेन की लंबाई 250 m है, तो दूसरी ट्रेन की लंबाई ज्ञात कीजिए।",
+   "opts": [
+    "200 m",
+    "210 m",
+    "220 m",
+    "190 m"
+   ],
+   "my_ans": "B",
+   "sol": "सापेक्ष चाल = 40 + 52 = 92 km/hr = 92 × 5/18 m/s.<br>कुल दूरी = 92 × 5/18 × 18 = 460 m.<br>दूसरी ट्रेन = 460 - 250 = 210 m.",
+   "trick": "विपरीत दिशा में चालें जुड़ती हैं (S1+S2).",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Two trains are moving in opposite directions at speeds of 110 km/ hr and 120 km/hr. The length of one train is 450 m. The time taken by them to cross each other is 12 seconds. The length (in m) of the other train (rounded off to 2 decimal places) is:",
+   "hi": "दो ट्रेनें 110 km/hr और 120 km/hr की चाल से विपरीत दिशाओं में चल रही हैं। एक ट्रेन की लंबाई 450 m है। दोनों ट्रेनों को एक-दूसरे को पार करने में 12 सेकंड का समय लगता है। दूसरी ट्रेन की लंबाई (m में) (2 दशमलव स्थानों तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "314.28",
+    "317.34",
+    "318.7",
+    "316.67"
+   ],
+   "my_ans": "D",
+   "sol": "सापेक्ष चाल = 110 + 120 = 230 km/hr = 230 × 5/18 = 63.888 m/s.<br>कुल लंबाई = 63.888 × 12 = 766.66 m.<br>दूसरी ट्रेन = 766.66 - 450 = 316.666... ≈ 316.67 m.",
+   "trick": "कुल दूरी = सापेक्ष चाल × समय",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Two trains are moving in opposite directions at speeds of 140 km/ hr and 70 km/hr. The length of one train is 350 m. The time taken by them to cross each other is 11 seconds. The length (in m, rounded off to 2 decimal places) of the other train is:",
+   "hi": "दो ट्रेनें 140 km/hr और 70 km/hr की चाल से विपरीत दिशाओं में चल रही हैं। एक ट्रेन की लंबाई 350 m है। दोनों ट्रेनों को एक-दूसरे को पार करने में 11 सेकंड का समय लगता है। दूसरी ट्रेन की लंबाई (m में, 2 दशमलव स्थानों तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "293.51",
+    "289.34",
+    "291.67",
+    "288.08"
+   ],
+   "my_ans": "C",
+   "sol": "सापेक्ष चाल = 140 + 70 = 210 km/hr = 210 × 5/18 = 58.333 m/s.<br>कुल लंबाई = 58.333 × 11 = 641.666 m.<br>दूसरी ट्रेन = 641.666 - 350 = 291.666... ≈ 291.67 m.",
+   "trick": "सापेक्ष चाल (विपरीत) = S1 + S2",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Two trains are running with the speed of 49 km/hr and 59 km/hr towards each other on parallel tracks. Their lengths are 349 m and 371 m, respectively. In how much time (in seconds) will they completely pass each other?",
+   "hi": "दो ट्रेनें समांतर पटरियों पर एक-दूसरे की ओर क्रमशः 49 km/hr और 59 km/hr की चाल से चल रही हैं। उनकी लंबाई क्रमशः 349 m और 371 m है। वे एक-दूसरे को पूरी तरह से कितने समय (सेकंड में) में पार कर लेंगी?",
+   "opts": [
+    "30",
+    "42",
+    "34",
+    "24"
+   ],
+   "my_ans": "D",
+   "sol": "सापेक्ष चाल = 49 + 59 = 108 km/hr = 108 × 5/18 = 30 m/s.<br>कुल लंबाई = 349 + 371 = 720 m.<br>समय = 720 / 30 = 24 सेकंड.",
+   "trick": "समय = कुल लंबाई / सापेक्ष चाल",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Two trains are moving in opposite directions at speeds of 130 km/hr and 70 km/hr. The length of one train is 130 m. The time taken by them to cross each other is 14 seconds. The length (in m) of the other train (rounded off to 2 decimal places) is:",
+   "hi": "दो ट्रेनें 130 km/hr और 70 km/hr की चाल से विपरीत दिशाओं में चल रही हैं। एक ट्रेन की लंबाई 130 m है। दोनों ट्रेनों को एक-दूसरे को पार करने में 14 सेकंड का समय लगता है। दूसरी ट्रेन की लंबाई (m में) (2 दशमलव स्थानों तक पूर्णांकित) ज्ञात कीजिए।",
+   "opts": [
+    "647.78",
+    "649.6",
+    "650.67",
+    "646.47"
+   ],
+   "my_ans": "A",
+   "sol": "सापेक्ष चाल = 130 + 70 = 200 km/hr = 200 × 5/18 = 55.555 m/s.<br>कुल लंबाई = 55.555 × 14 = 777.777 m.<br>दूसरी ट्रेन = 777.777 - 130 = 647.777... ≈ 647.78 m.",
+   "trick": "कुल दूरी = सापेक्ष चाल × समय",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "A car leaves place Z at 2 PM and moves towards place T which is at a distance of D km at a uniform speed. A bus leaves place T at 3 PM and moves towards place Z at a uniform speed. The speed of car is half of bus. If they meet 04:40 PM at a point which is 184 km away from Z. The value of D is:",
+   "hi": "एक कार स्थान Z से 2 PM पर, D km दूर स्थित स्थान T की ओर पर एकसमान चाल से जाती है। एक बस स्थान T से 3 PM पर, स्थान Z की ओर एकसमान चाल से जाती है। कार की चाल बस की चाल की आधी है। यदि वे 04:40 PM पर Z से 184 km दूर एक बिंदु पर मिलती हैं, तो D का मान कितना है?",
+   "opts": [
+    "420",
+    "423",
+    "405",
+    "414"
+   ],
+   "my_ans": "D",
+   "sol": "कार का समय = 2:40 घंटे (160 मिनट), दूरी = 184 km. चाल = 184 / (8/3) = 69 km/h.<br>बस की चाल = 69 × 2 = 138 km/h. बस का समय = 1:40 घंटे (100 मिनट).<br>बस द्वारा तय दूरी = 138 × (5/3) = 230 km.<br>D = 184 + 230 = 414 km.",
+   "trick": "कुल दूरी = कार की दूरी + बस की दूरी",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "A car covers one-fifth of the distance from A to B at the speed of 8 km/h, one-tenth of the distance at 25 km/h and the remaining at the speed of 20 km/h. Find the average speed of the whole journey.",
+   "hi": "एक कार, A से B तक की दूरी का भाग 8 km/h की चाल से, भाग 25 km/h की चाल से और शेष भाग 20 km/h की चाल से तय करती है। संपूर्ण यात्रा की औसत चाल ज्ञात कीजिए।",
+   "opts": [
+    "12.625 km/h",
+    "15.625 km/h",
+    "14.225 km/h",
+    "17.225 km/h"
+   ],
+   "my_ans": "B",
+   "sol": "माना कुल दूरी = 100 km. भाग 1 = 20 km (8 km/h), भाग 2 = 10 km (25 km/h), शेष = 70 km (20 km/h).<br>कुल समय = 20/8 + 10/25 + 70/20 = 2.5 + 0.4 + 3.5 = 6.4 घंटे.<br>औसत चाल = 100 / 6.4 = 15.625 km/h.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Two runners A and B start simultaneously from the same point on a circular track of length 840 m and run in the clockwise direction. The speed of A is 7 m/s and the speed of B is 5 m/s. At what distance from the starting point in the clockwise direction and after how many complete rounds by A, does A meet with B again the first time?",
+   "hi": "दो धावक A और B समान बिंदु से 840 m लंबे एक वृत्तीय ट्रैक पर एक साथ दौड़ना शुरू करते हैं और दक्षिणावर्त दिशा में दौड़ते हैं। A की चाल 7 m/s और B की चाल 5 m/s है। दक्षिणावर्त दिशा में शुरुआती बिंदु से कितनी दूरी पर और A द्वारा कितने पूरे चक्कर लगाने के बाद, A पहली बार B से पुनः मिलता है?",
+   "opts": [
+    "420 m after completing 2 rounds<br>420 m; 2 चक्कर पूरा करने के बाद",
+    "210 m after completing 3 rounds<br>210 m; 3 चक्कर पूरे करने के बाद",
+    "210 m after completing 2 rounds<br>210 m; 2 चक्कर पूरा करने के बाद",
+    "420 m after completing 3 rounds<br>420 m; 3 चक्कर पूरा करने के बाद"
+   ],
+   "my_ans": "D",
+   "sol": "सापेक्ष चाल = 7 - 5 = 2 m/s. मिलने का समय = 840 / 2 = 420 सेकंड.<br>A द्वारा तय दूरी = 7 × 420 = 2940 m.<br>चक्कर = 2940 / 840 = 3.5 चक्कर. (3 पूरे चक्कर और 420 m).",
+   "trick": "समय = ट्रैक लंबाई / सापेक्ष चाल",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "A woman travelled at a speed of 20 m/min for 90 min, and at a speed of 72 m/min for 66 min. Her average speed (in m/min) for the entire journey is:",
+   "hi": "एक महिला ने 90 min के लिए 20 m/min की चाल से और 66 min के लिए 72 m/min की चाल से यात्रा की। पूरी यात्रा के लिए उसकी औसत चाल (m/min में) कितनी है?",
+   "opts": [
+    "35",
+    "42",
+    "48",
+    "46"
+   ],
+   "my_ans": "B",
+   "sol": "कुल दूरी = (20 × 90) + (72 × 66) = 1800 + 4752 = 6552 m.<br>कुल समय = 90 + 66 = 156 min.<br>औसत चाल = 6552 / 156 = 42 m/min.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Anirudh travels 48 km at 12 km/h, 52 km at 13 km/h, and 120 km at 15 km/h. What is his average speed (in km/h)?",
+   "hi": "अनिरुद्ध 48 km की दूरी 12 km/h की चाल से, 52 km की दूरी 13 km/h की चाल से और 120 km की दूरी 15 km/h की चाल से तय करता है। उसकी औसत चाल (km/h में) ज्ञात कीजिए।",
+   "opts": [
+    "13.75",
+    "15",
+    "12.5",
+    "14.5"
+   ],
+   "my_ans": "A",
+   "sol": "कुल दूरी = 48 + 52 + 120 = 220 km.<br>कुल समय = 48/12 + 52/13 + 120/15 = 4 + 4 + 8 = 16 घंटे.<br>औसत चाल = 220 / 16 = 13.75 km/h.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "A train travelling at 60 km/ hr crosses another train travelling in the opposite direction at 84 km/ hr in 30 seconds. What is the combined length (in m) of both the trains?",
+   "hi": "60 km/hr की चाल से चल रही एक ट्रेन, विपरीत दिशा में 84 km/hr की चाल से चल रही दूसरी ट्रेन को 30 सेकंड में पार करती है। दोनों ट्रेनों की संयुक्त लंबाई (m में) कितनी होगी?",
+   "opts": [
+    "1200",
+    "1100",
+    "1300",
+    "1000"
+   ],
+   "my_ans": "A",
+   "sol": "सापेक्ष चाल = 60 + 84 = 144 km/hr = 144 × 5/18 = 40 m/s.<br>कुल लंबाई = 40 × 30 = 1200 m.",
+   "trick": "दूरी = सापेक्ष चाल × समय",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "A woman travelled at a speed of 20 m/min for 90 min, and at a speed of 55 m/min for 60 min. Her average speed (in m/min) for the entire journey is:",
+   "hi": "एक महिला ने 90 min तक 20 m/min की चाल से और फिर 60 मिनट तक 55 m/min की चाल से यात्रा की। पूरी यात्रा के लिए उसकी औसत चाल (m/min में) कितनी है?",
+   "opts": [
+    "27",
+    "38",
+    "40",
+    "34"
+   ],
+   "my_ans": "D",
+   "sol": "कुल दूरी = (20 × 90) + (55 × 60) = 1800 + 3300 = 5100 m.<br>कुल समय = 90 + 60 = 150 min.<br>औसत चाल = 5100 / 150 = 34 m/min.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "A woman travelled at a speed of 20 m/min for 90 min, and at a speed of 70 m/min for 60 min. Her average speed (in m/min) for the entire journey is:",
+   "hi": "एक महिला ने 90 min तक 20 m/min की चाल से और फिर 60 मिनट तक 70 m/min की चाल से यात्रा की। पूरी यात्रा के लिए उसकी औसत चाल (m/min में) कितनी है?",
+   "opts": [
+    "40",
+    "46",
+    "33",
+    "44"
+   ],
+   "my_ans": "A",
+   "sol": "कुल दूरी = (20 × 90) + (70 × 60) = 1800 + 4200 = 6000 m.<br>कुल समय = 90 + 60 = 150 min.<br>औसत चाल = 6000 / 150 = 40 m/min.",
+   "trick": "औसत चाल = कुल दूरी / कुल समय",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Ansh walks to his school at a certain speed from his home in the morning and returns in the afternoon at a speed, which is 2 km/h slower than his speed in the morning. If the average speed of Ansh of going to and coming back from the school is 4.8 km/h, find the sum of the speeds (in km/h) of Ansh in the morning and afternoon.",
+   "hi": "अंश सुबह अपने घर से एक निश्चित चाल से अपने स्कूल जाता है और दोपहर में, सुबह की चाल से 2 km/h धीमी चाल से वापस लौटता है। यदि अंश की स्कूल जाने और वापस लौटने की चाल का औसत 4.8 km/h है, तो सुबह और दोपहर में अंश की चाल (km/h में) का योग ज्ञात कीजिए।",
+   "opts": [
+    "9",
+    "8",
+    "11",
+    "10"
+   ],
+   "my_ans": "D",
+   "sol": "औसत चाल = 2xy / (x+y) = 4.8. माना सुबह की चाल x, दोपहर की x-2.<br>2x(x-2) / (2x-2) = 4.8 → x(x-2) / (x-1) = 4.8 → x²-2x = 4.8x - 4.8.<br>x² - 6.8x + 4.8 = 0. हल करने पर x = 6. दोपहर की चाल = 4.<br>योग = 6 + 4 = 10 km/h.",
+   "trick": "औसत चाल = 2xy/(x+y)",
+   "ans": "D"
+  }
+ ]
+}

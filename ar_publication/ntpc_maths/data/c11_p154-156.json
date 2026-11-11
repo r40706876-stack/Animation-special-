@@ -1,0 +1,366 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Ratio & Proportion",
+  "hi": "अनुपात एवं समानुपात",
+  "total": 140,
+  "gl": 59,
+  "ug": 81
+ },
+ "source_pages": "154-156",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "If 4 : 12 :: 2.1 : x and 9 : 36 :: 8 : y, what is the ratio of x to y?",
+   "hi": "यदि 4 : 12 :: 2.1 : x और 9 : 36 :: 8 : y है, तो x और y का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "61 : 520",
+    "67 : 420",
+    "63 : 320",
+    "64 : 220"
+   ],
+   "my_ans": "C",
+   "sol": "4/12 = 2.1/x => x = (12×2.1)/4 = 6.3<br>9/36 = 8/y => y = (36×8)/9 = 32<br>x:y = 6.3:32 = 63:320",
+   "trick": "a:b :: c:d का अर्थ है a/b = c/d",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "The price of each article of type P, Q, and R is ₹280, ₹180 and ₹115, respectively. Ranu buys articles of each type in the ratio 4 : 4 : 3 for ₹6,555. How many articles of type Q did he purchase?",
+   "hi": "P, Q और R प्रकार की प्रत्येक वस्तु की कीमत क्रमशः ₹280, ₹180 और ₹115 है। रानू प्रत्येक प्रकार की वस्तुएँ 4 : 4 : 3 के अनुपात में ₹6,555 में खरीदता है। उसने Q प्रकार की कितनी वस्तुएँ खरीदीं?",
+   "opts": [
+    "20",
+    "9",
+    "12",
+    "18"
+   ],
+   "my_ans": "C",
+   "sol": "माना वस्तुएँ 4k, 4k, 3k हैं।<br>कुल मूल्य = 280(4k) + 180(4k) + 115(3k) = 1120k + 720k + 345k = 2185k<br>2185k = 6555 => k = 3. Q की वस्तुएँ = 4k = 4×3 = 12",
+   "trick": "कुल मूल्य = (कीमत × अनुपात) का योग",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "If x is inversely proportional to y, and y = 30 when x = 28, find the value of x, when y = 20.",
+   "hi": "यदि x, y के व्युत्क्रमानुपाती है, और जब x = 28 हो, तो y = 30 है, तो y = 20 होने पर x का मान ज्ञात कीजिए।",
+   "opts": [
+    "33",
+    "38",
+    "52",
+    "42"
+   ],
+   "my_ans": "D",
+   "sol": "x ∝ 1/y => xy = constant<br>28 × 30 = x × 20<br>x = (28 × 30) / 20 = 42",
+   "trick": "व्युत्क्रमानुपाती में x₁y₁ = x₂y₂ होता है",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "A recipe calls for 3 parts of sugar for every 4 parts of flour. If a baker uses 12 cups of sugar, how many cups of flour does he need to use to maintain the same ratio?",
+   "hi": "एक रेसिपी में 4 भाग आटे के लिए 3 भाग चीनी की आवश्यकता होती है। अगर एक बेकर 12 कप चीनी का उपयोग करता है, तो उसे समान अनुपात बनाए रखने के लिए कितने कप आटे की आवश्यकता होगी?",
+   "opts": [
+    "16",
+    "15",
+    "14",
+    "18"
+   ],
+   "my_ans": "A",
+   "sol": "चीनी : आटा = 3 : 4<br>3 भाग = 12 कप => 1 भाग = 4 कप<br>4 भाग = 4 × 4 = 16 कप",
+   "trick": "अनुपात को बराबर रखें: चीनी/आटा = 3/4",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "The mean proportional of 18 and 128 is:",
+   "hi": "18 और 128 का माध्य्यानुपात कितना है?",
+   "opts": [
+    "51",
+    "48",
+    "49",
+    "50"
+   ],
+   "my_ans": "B",
+   "sol": "माध्य्यानुपात = √(a × b) = √(18 × 128)<br>= √(9 × 2 × 64 × 2) = √(9 × 64 × 4) = 3 × 8 × 2 = 48",
+   "trick": "माध्य्यानुपात = √(a × b)",
+   "ans": "B"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "What is the mode of the data given below? [Given your answer correct to 3 decimal places.]",
+   "hi": "नीचे दिए गए आँकड़ों का बहुलक क्या है? [अपना उत्तर 3 दशमलव स्थान तक सही दें.]",
+   "opts": [
+    "74.25",
+    "72.25",
+    "78.25",
+    "76.25"
+   ],
+   "my_ans": "D",
+   "sol": "बहुलक वर्ग 70-80 है (f1=38, f0=18, f2=26).<br>Mode = L + [(f1-f0)/(2f1-f0-f2)] × h<br>= 70 + [(38-18)/(76-18-26)] × 10 = 70 + [20/32] × 10 = 70 + 6.25 = 76.25",
+   "trick": "बहुलक वर्ग वह है जिसकी बारंबारता सबसे अधिक है",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "If the ratio of the ages of A and B is 3 : 5, the ratio of the ages of B and C is 2 : 3, and the ratio of the ages of C and D is 3 : 4, what is the ratio of the ages of A and D?",
+   "hi": "यदि A और B की आयु का अनुपात 3 : 5 है, B और C की आयु का अनुपात 2 : 3 है, तथा C और D की आयु का अनुपात 3 : 4 है, तो A और D की आयु का अनुपात ज्ञात कीजिए।",
+   "opts": [
+    "3 : 13",
+    "7 : 10",
+    "5 : 11",
+    "3 : 10"
+   ],
+   "my_ans": "D",
+   "sol": "A/D = (A/B) × (B/C) × (C/D) = (3/5) × (2/3) × (3/4)<br>= (3×2×3) / (5×3×4) = 18 / 60 = 3 / 10",
+   "trick": "A/D = (A/B) × (B/C) × (C/D)",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Find the mean proportional between 7.2 and 20.",
+   "hi": "7.2 और 20 के बीच माध्यामुपाती ज्ञात कीजिए।",
+   "opts": [
+    "12",
+    "8",
+    "11",
+    "10"
+   ],
+   "my_ans": "A",
+   "sol": "माध्यामुपाती = √(7.2 × 20) = √(144) = 12",
+   "trick": "माध्यामुपाती = √(a × b)",
+   "ans": "A"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "Which ratio is the largest among 5 : 12, 14 : 31, 8 : 33 and 17 : 39?",
+   "hi": "5 : 12, 14 : 31, 8 : 33 और 17 : 39 में सबसे बड़ा अनुपात कौन-सा है?",
+   "opts": [
+    "8 : 33",
+    "5 : 12",
+    "14 : 31",
+    "17 : 39"
+   ],
+   "my_ans": "C",
+   "sol": "5/12 ≈ 0.416, 14/31 ≈ 0.451, 8/33 ≈ 0.242, 17/39 ≈ 0.435.<br>सबसे बड़ा 14/31 है।",
+   "trick": "दशमलव में बदलकर तुलना करें",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "What is the ratio between fourth proportional of 10, 80, 30 and fourth proportional of 7, 28, 19?",
+   "hi": "10, 80, 30 के चतुर्थानुपाती और 7, 28, 19 के चतुर्थानुपाती का अनुपात कितना होगा?",
+   "opts": [
+    "60:19",
+    "10:7",
+    "30:19",
+    "29:26"
+   ],
+   "my_ans": "A",
+   "sol": "10/80 = 30/x => x = 240<br>7/28 = 19/y => y = 76<br>240 : 76 = 60 : 19",
+   "trick": "चतुर्थानुपाती d = (b×c)/a",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "₹7770 is divided among A, B, C, and D in such a way that the shares of A and B, B and C, and C and D are in the ratios of 2 : 3, 4 : 5, and 6 : 7, respectively. The share of A (in ₹) is:",
+   "hi": "₹ 7770 को A, B, C और D में इस प्रकार विभाजित किया जाता है कि A और B, B और C, तथा C और D के हिस्से क्रमशः 2 : 3, 4 : 5, और 6 : 7 के अनुपात में हैं। A का हिस्सा (₹ में) कितना है?",
+   "opts": [
+    "1124",
+    "1224",
+    "1184",
+    "1154"
+   ],
+   "my_ans": "C",
+   "sol": "A:B=16:24, B:C=24:30, C:D=30:35<br>A:B:C:D = 16:24:30:35. कुल = 105 भाग<br>105 भाग = 7770 => 1 भाग = 74<br>A = 16 × 74 = 1184",
+   "trick": "अनुपात को एक साथ जोड़ें (A:B:C:D)",
+   "ans": "C"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which of the given ratios is the greatest? 3 : 17, 13 : 67, 10 : 37 and 5 : 9",
+   "hi": "दिए गए अनुपातों में से कौन-सा अनुपात, सबसे बड़ा है? 3 : 17, 13 : 67, 10 : 37 और 5 : 9",
+   "opts": [
+    "5 : 9",
+    "10 : 37",
+    "13 : 67",
+    "3 : 17"
+   ],
+   "my_ans": "A",
+   "sol": "3/17 ≈ 0.176, 13/67 ≈ 0.194, 10/37 ≈ 0.27, 5/9 ≈ 0.555.<br>सबसे बड़ा 5/9 है।",
+   "trick": "दशमलव मान निकालें",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "The ratio of boys to girls in two sections A and B of a class is the same. Section A comprises of 36 boys and 24 girls. If there are 28 girls in section B, how many boys are there in that section?",
+   "hi": "एक कक्षा के दो सेक्शन A और B में लड़कों तथा लड़कियों का अनुपात समान है। सेक्शन A में 36 लड़के और 24 लड़कियाँ हैं। यदि सेक्शन B में 28 लड़कियाँ हैं, तो उस सेक्शन में कितने लड़के हैं?",
+   "opts": [
+    "45",
+    "42",
+    "48",
+    "40"
+   ],
+   "my_ans": "B",
+   "sol": "अनुपात = 36/24 = 3/2<br>सेक्शन B में: लड़के/28 = 3/2<br>लड़के = (3 × 28) / 2 = 42",
+   "trick": "दोनों सेक्शन का अनुपात बराबर रखें",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "If the mean proportional of two numbers is 14 and their proportional is 112, then the numbers are:",
+   "hi": "यदि दो संख्याओं का मध्य समानुपाती 14 है और उनका तृतीय समानुपाती 112 है, तो वे संख्याएँ हैं:",
+   "opts": [
+    "14,14",
+    "4,44",
+    "7,28",
+    "4,49"
+   ],
+   "my_ans": "C",
+   "sol": "√ab = 14 => ab = 196<br>b²/a = 112 => b² = 112a<br>a(112a) = 196² (नहीं), विकल्प C: 7, 28 => √7×28 = √196 = 14, 28²/7 = 784/7 = 112",
+   "trick": "विकल्पों से जाँचें",
+   "ans": "C"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "The monthly incomes of two friends Mohan and David, are in the ratio 6 : 7 respectively and each of them saves ₹69,000 every month. If the ratio of their monthly expenditure is 2 : 3, find the monthly income of Mohan (in ₹).",
+   "hi": "दो मित्रों मोहन और डेविड की मासिक आय का अनुपात क्रमशः 6 : 7 है और दोनों प्रत्येक माह ₹69,000 (प्रत्येक) की बचत करते हैं। यदि उनके मासिक व्यय का अनुपात 2 : 3 है, तो मोहन की मासिक आय (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,44,900",
+    "1,04,500",
+    "1,03,500",
+    "1,02,500"
+   ],
+   "my_ans": "C",
+   "sol": "आय 6x, 7x. बचत = आय - व्यय<br>6x - 2k = 69000, 7x - 3k = 69000<br>हल करने पर x = 17250. मोहन की आय = 6x = 103500",
+   "trick": "आय - बचत = व्यय",
+   "ans": "C"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "The monthly incomes of two friends Tushar and Salil, are in the ratio 6 : 7 respectively and each of them saves ₹66,000 every month. If the ratio of their monthly expenditure is 2 : 4, find the monthly income of Tushar (in ₹).",
+   "hi": "दो मित्रों, तुषार और सलील, की मासिक आय का अनुपात क्रमशः 6 : 7 है और उनमें से प्रत्येक प्रति माह ₹66,000 की बचत करता है। यदि उनके मासिक व्यय का अनुपात 2 : 4 है, तो तुषार की मासिक आय (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "1,10,880",
+    "80,200",
+    "78,200",
+    "79,200"
+   ],
+   "my_ans": "D",
+   "sol": "आय 6x, 7x. व्यय 2y, 4y.<br>6x - 2y = 66000, 7x - 4y = 66000<br>समीकरण हल करने पर x = 13200. तुषार की आय = 6x = 79200",
+   "trick": "आय - बचत = व्यय",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "A bag contains coins of ₹1, ₹2, and ₹5 in the ratio 8 : 4 : 3. If the total value of the coins is ₹930, what is the total number of coins in the bag?",
+   "hi": "एक बैग में ₹1, ₹2, और ₹5 के सिक्के 8 : 4 : 3 के अनुपात में हैं। यदि सिक्कों की कुल कीमत ₹930 है, तो बैग में सिक्कों की कुल संख्या कितनी है?",
+   "opts": [
+    "480",
+    "400",
+    "450",
+    "420"
+   ],
+   "my_ans": "C",
+   "sol": "सिक्के 8k, 4k, 3k. मूल्य = 1(8k) + 2(4k) + 5(3k) = 8k+8k+15k = 31k<br>31k = 930 => k = 30. कुल सिक्के = 15k = 15×30 = 450",
+   "trick": "कुल मूल्य = (सिक्कों की संख्या × मूल्य) का योग",
+   "ans": "C"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "A school employs trained and untrained teachers in the ratio 5 : 3. The salaries of a trained and an untrained teachers are in the ratio 4 : 1. If the total salary paid to all teachers in a month is ₹4,60,000, how much total salary is paid to the untrained teachers?",
+   "hi": "एक विद्यालय में प्रशिक्षित और अप्रशिक्षित शिक्षकों को 5 : 3 के अनुपात में नियुक्त किया जाता है। प्रशिक्षित और अप्रशिक्षित शिक्षकों का वेतन 4 : 1 के अनुपात में है। यदि एक महीने में सभी शिक्षकों को भुगतान किया गया कुल वेतन ₹4,60,000 है, तो अप्रशिक्षित शिक्षकों को कुल कितना वेतन भुगतान किया गया है?",
+   "opts": [
+    "₹60,000",
+    "₹45,000",
+    "₹75,000",
+    "₹1,20,000"
+   ],
+   "my_ans": "A",
+   "sol": "वेतन का अनुपात = (5×4) : (3×1) = 20 : 3. कुल = 23 भाग<br>23 भाग = 460000 => 1 भाग = 20000<br>अप्रशिक्षित वेतन = 3 भाग = 3 × 20000 = 60000",
+   "trick": "कुल वेतन = (शिक्षकों की संख्या × वेतन) का अनुपात",
+   "ans": "A"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "The monthly incomes of two friends Vipul and Vijay, are in the ratio 6 : 7 respectively and each of them saves ₹66,000 every month. If the ratio of their monthly expenditure is 1 : 3, find the monthly income of Vipul (in ₹).",
+   "hi": "दो मित्रों, विपुल और विजय, की मासिक आय का अनुपात क्रमशः 6 : 7 है और उनमें से प्रत्येक प्रति माह ₹66,000 की बचत करता है। यदि उनके मासिक व्यय का अनुपात 1 : 3 है, तो विपुल की मासिक आय (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "72,000",
+    "1,00,800",
+    "71,000",
+    "73,000"
+   ],
+   "my_ans": "A",
+   "sol": "आय 6x, 7x. व्यय 1y, 3y.<br>6x - y = 66000, 7x - 3y = 66000<br>हल करने पर x = 12000. विपुल की आय = 6x = 72000",
+   "trick": "आय - बचत = व्यय",
+   "ans": "A"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "If (x + y) : (y + z) : (z + x) = 6 : 7 : 8 and x + y + z = 14, then find the value of z.",
+   "hi": "यदि (x + y) : (y + z) : (z + x) = 6 : 7 : 8 तथा x + y + z = 14, तो z का मान ज्ञात कीजिए।",
+   "opts": [
+    "7",
+    "6",
+    "8",
+    "5"
+   ],
+   "my_ans": "B",
+   "sol": "2(x+y+z) = 6k+7k+8k = 21k<br>2(14) = 21k => 28 = 21k => k = 4/3<br>x+y = 6k = 8. z = (x+y+z) - (x+y) = 14 - 8 = 6",
+   "trick": "तीनों को जोड़कर 2(x+y+z) निकालें",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "The lengths of two rods are 4 cm and 6 cm. A third rod is made such that the three rods are in continued proportion. What will be the length of the third rod?",
+   "hi": "दो छड़ों की लंबाई 4 cm और 6 cm है। एक तीसरी छड़ इस प्रकार बनाई जाती है कि तीनों छड़ें वितत समानुपात में हों। तीसरी छड़ की लंबाई कितनी होगी?",
+   "opts": [
+    "8 cm",
+    "12 cm",
+    "10 cm",
+    "9 cm"
+   ],
+   "my_ans": "D",
+   "sol": "4, 6, x वितत समानुपात में हैं => 4/6 = 6/x<br>4x = 36 => x = 9",
+   "trick": "वितत समानुपात: a/b = b/c",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "If the mean proportional between x and 36 is 12, find x.",
+   "hi": "यदि x और 36 के बीच मध्यानुपाती 12 है, तो x का मान ज्ञात कीजिए।",
+   "opts": [
+    "7",
+    "6",
+    "5",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "√x×36 = 12<br>x × 36 = 144<br>x = 144 / 36 = 4",
+   "trick": "मध्यानुपाती = √(a×b)",
+   "ans": "D"
+  }
+ ]
+}
