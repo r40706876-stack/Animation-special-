@@ -1,0 +1,119 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "20",
+ "model": "gemini-3.5-flash",
+ "questions": [
+  {
+   "n": 8,
+   "lvl": "UG",
+   "en": "Three automatic doors in a metro station undergo system checks at regular intervals of 14 minutes, 18 minutes, and 21 minutes, respectively. If all three doors are checked together at the start, after how many minutes will they be checked together again for the first time?",
+   "hi": "एक मेट्रो स्टेशन में तीन स्वचालित दरवाजों की सिस्टम जांच क्रमशः 14 मिनट, 18 मिनट और 21 मिनट के नियमित अंतराल पर की जाती है। यदि तीनों दरवाजों की जांच शुरुआत में एक साथ की जाती है, तो कितने मिनट बाद उनकी पहली बार एक साथ पुनः जांच की जाएगी?",
+   "opts": [
+    "132 minutes<br>132 मिनट",
+    "136 minutes<br>136 मिनट",
+    "142 minutes<br>142 मिनट",
+    "126 minutes<br>126 मिनट"
+   ],
+   "my_ans": "D",
+   "sol": "पुनः एक साथ जांच का समय = 14, 18 और 21 का LCM<br>LCM(14, 18, 21) = 126 मिनट।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "UG",
+   "en": "The HCF and LCM of two numbers are 15 and 225, respectively. Which of the following pairs can be the numbers?",
+   "hi": "दो संख्याओं का महत्तम समापवर्तक (HCF) और लघुत्तम समापवर्त्य (LCM) क्रमशः 15 और 225 हैं। निम्नलिखित में से कौन-सा युग्म वे संख्याएँ हो सकते हैं?",
+   "opts": [
+    "25 and 135<br>25 और 135",
+    "45 and 75<br>45 और 75",
+    "25 and 65<br>25 और 65",
+    "15 and 75<br>15 और 75"
+   ],
+   "my_ans": "B",
+   "sol": "विकल्प B देखें: 45 और 75 का HCF = 15 तथा LCM = 225 है।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "UG",
+   "en": "If the ratio of two numbers is 8 : 3, and their HCF is 8, then their LCM is:",
+   "hi": "यदि दो संख्याओं का अनुपात 8 : 3 है, और उनका HCF 8 है, तो उनका LCM क्या होगा?",
+   "opts": [
+    "192",
+    "186",
+    "229",
+    "200"
+   ],
+   "my_ans": "A",
+   "sol": "संख्याएँ = 8 × 8 = 64 और 3 × 8 = 24<br>LCM = 8 × 8 × 3 = 192.",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 4 : 13 : 9, and their LCM is 6084. Their HCF is:",
+   "hi": "तीन संख्याएँ 4 : 13 : 9 के अनुपात में हैं, और उनका LCM 6084 है। उनका HCF कितना है?",
+   "opts": [
+    "23",
+    "48",
+    "13",
+    "12"
+   ],
+   "my_ans": "C",
+   "sol": "माना HCF = <i>x</i><br>4, 13, 9 का LCM = 468<br>LCM = 468<i>x</i> = 6084 ⇒ <i>x</i> = 6084 / 468 = 13.",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "UG",
+   "en": "A school drum beats every 12 minutes, and the school bell rings every 18 minutes. If both sounded together at 9:00 AM, how many times will they sound together again before 11:00 AM?",
+   "hi": "स्कूल ड्रम प्रत्येक 12 मिनट में बजता है और स्कूल बेल प्रत्येक 18 मिनट में बजती है। यदि दोनों 9:00 AM पर एक साथ बजते हैं, तो 11:00 AM से पहले वे कितनी बार पुनः एक साथ बजेंगे?",
+   "opts": [
+    "4",
+    "5",
+    "6",
+    "3"
+   ],
+   "my_ans": "D",
+   "sol": "एक साथ बजने का अंतराल = LCM(12, 18) = 36 मिनट<br>9:00 AM से 11:00 AM के बीच समय: 9:36, 10:12, 10:48 (कुल 3 बार)।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 3 : 2 : 13, and their LCM is 2574. Their HCF is:",
+   "hi": "तीन संख्याएँ 3 : 2 : 13 के अनुपात में हैं, और उनका LCM 2574 है। उनका HCF कितना है?",
+   "opts": [
+    "76",
+    "33",
+    "23",
+    "43"
+   ],
+   "my_ans": "B",
+   "sol": "माना HCF = <i>x</i><br>3, 2, 13 का LCM = 78<br>78<i>x</i> = 2574 ⇒ <i>x</i> = 2574 / 78 = 33.",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 6, 14 and 7 leaves remainder 5 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 6, 14 और 7 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 5 प्राप्त हो।",
+   "opts": [
+    "9973",
+    "9959",
+    "9998",
+    "9946"
+   ],
+   "my_ans": "B",
+   "sol": "LCM(6, 14, 7) = 42<br>9999 को 42 से भाग देने पर शेषफल = 3<br>42 से विभाज्य सबसे बड़ी 4-अंकीय संख्या = 9996<br>9996 + 5 = 10001 (5-अंकीय), इसलिए 9996 - 42 + 5 = 9959.",
+   "ans": "B"
+  }
+ ]
+}

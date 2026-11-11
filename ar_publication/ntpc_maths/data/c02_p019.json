@@ -1,0 +1,119 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "LCM & HCF",
+  "hi": "लघुत्तम एवं महत्तम समापवर्तक",
+  "total": 50,
+  "gl": 0,
+  "ug": 50
+ },
+ "source_pages": "19",
+ "model": "gemini-3.5-flash",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "UG",
+   "en": "Find the greatest number that divides 75, 105 and 150 exactly.",
+   "hi": "वह सबसे बड़ी संख्या ज्ञात कीजिए जो 75, 105 और 150 को पूर्णतः विभाजित करती है।",
+   "opts": [
+    "10",
+    "15",
+    "5",
+    "25"
+   ],
+   "my_ans": "B",
+   "sol": "अभीष्ट संख्या = HCF(75, 105, 150)<br>75 = 15 × 5<br>105 = 15 × 7<br>150 = 15 × 10<br>HCF = 15.",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "UG",
+   "en": "A number leaves a remainder of 2 when divided by 5 and a remainder of 3 when divided by 7. What is the smallest positive integer that satisfies both conditions?",
+   "hi": "किसी संख्या को 5 से विभाजित करने पर शेषफल 2 प्राप्त होता है और 7 से विभाजित करने पर शेषफल 3 प्राप्त होता है। वह न्यूनतम धनात्मक पूर्णांक संख्या ज्ञात कीजिए जो इन दोनों शर्तों को संतुष्ट करती है?",
+   "opts": [
+    "23",
+    "38",
+    "17",
+    "24"
+   ],
+   "my_ans": "C",
+   "sol": "विकल्पों से जाँचने पर:<br>17 ÷ 5 = शेषफल 2<br>17 ÷ 7 = शेषफल 3<br>अतः न्यूनतम संख्या = 17.",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "UG",
+   "en": "The LCM of the numbers 15, 10 and 0.4 is:",
+   "hi": "संख्याओं 15, 10 और 0.4 का LCM कितना है?",
+   "opts": [
+    "32",
+    "30",
+    "34",
+    "36"
+   ],
+   "my_ans": "B",
+   "sol": "0.4 = 4/10 = 2/5<br>LCM(15, 10, 2/5) = LCM(15, 10, 2) / HCF(1, 1, 5)<br>15, 10, 2 का LCM = 30.",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 10, 11 and 8 leaves remainder 7 in each case is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या जिसे 10, 11 और 8 से विभाजित करने पर प्रत्येक स्थिति में शेषफल 7 बचता है:",
+   "opts": [
+    "9398",
+    "9687",
+    "9557",
+    "9978"
+   ],
+   "my_ans": "B",
+   "sol": "LCM(10, 11, 8) = 440<br>4 अंकों की सबसे बड़ी संख्या = 9999<br>9999 ÷ 440 = शेषफल 319<br>संख्या = (9999 - 319) + 7 = 9680 + 7 = 9687.",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "UG",
+   "en": "Three numbers are in the ratio 17 : 5 : 11, and their LCM is 3740. Their HCF is:",
+   "hi": "तीन संख्याएँ 17 : 5 : 11 के अनुपात में हैं, और उनका LCM 3740 है। उनका HCF कितना है?",
+   "opts": [
+    "14",
+    "4",
+    "2",
+    "47"
+   ],
+   "my_ans": "B",
+   "sol": "माना HCF = <i>x</i><br>संख्याएँ = 17<i>x</i>, 5<i>x</i>, 11<i>x</i><br>LCM = 17 × 5 × 11 × <i>x</i> = 935<i>x</i> = 3740<br><i>x</i> = 3740 ÷ 935 = 4.",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "UG",
+   "en": "What is the greatest length of a measuring rod that can exactly measure three fabric pieces of lengths 7 m 35 cm, 9 m 45 cm, and 10 m 50 cm?",
+   "hi": "एक मापक छड़ की अधिकतम लंबाई क्या हो सकती है जिससे 7 m 35 cm, 9 m 45 cm और 10 m 50 cm लंबाई के कपड़े के तीन टुकड़ों को पूर्णतः मापा जा सके?",
+   "opts": [
+    "1 m 5 cm",
+    "1 m 25 cm",
+    "1 m 15 cm",
+    "1 m 35 cm"
+   ],
+   "my_ans": "A",
+   "sol": "लंबाई = 735 cm, 945 cm, 1050 cm<br>मापक छड़ की अधिकतम लंबाई = HCF(735, 945, 1050)<br>HCF = 105 cm = 1 m 5 cm.",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "UG",
+   "en": "Two numbers are in the ratio 4 : 5. If their LCM is 240, what is the sum of the two numbers?",
+   "hi": "दो संख्याएँ 4 : 5 के अनुपात में हैं। यदि उनका लघुत्तम समापवर्त्य 240 है, तो दोनों संख्याओं का योग कितना है?",
+   "opts": [
+    "100",
+    "120",
+    "96",
+    "108"
+   ],
+   "my_ans": "D",
+   "sol": "माना HCF = <i>x</i><br>LCM = 4 × 5 × <i>x</i> = 20<i>x</i> = 240 → <i>x</i> = 12<br>संख्याओं का योग = (4 + 5) × 12 = 9 × 12 = 108.",
+   "ans": "D"
+  }
+ ]
+}

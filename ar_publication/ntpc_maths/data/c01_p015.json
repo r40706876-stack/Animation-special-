@@ -1,0 +1,134 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Number System",
+  "hi": "संख्या पद्धति",
+  "total": 87,
+  "gl": 38,
+  "ug": 49
+ },
+ "source_pages": "15",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Which of the following numbers is divisible by 7?",
+   "hi": "निम्नलिखित में से कौन-सी संख्या, 7 से विभाज्य है?",
+   "opts": [
+    "24017",
+    "24019",
+    "23452",
+    "21234"
+   ],
+   "my_ans": "A",
+   "sol": "7 से विभाज्यता की जाँच करने पर:<br>24017 ÷ 7 = 3431 (पूर्णतः विभाज्य है)।",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The numerator of a fraction is 8 less than the denominator. If the denominator is increased by 5 and the numerator is increased by 3, we get the fraction 3/4. Find the original fraction.",
+   "hi": "एक भिन्न का अंश हर से 8 कम है। यदि हर को 5 बढ़ाया जाता है और अंश को 3 बढ़ाया जाता है, तो हमें भिन्न 3/4 प्राप्त होता है। मूल भिन्न ज्ञात कीजिए।",
+   "opts": [
+    "3/5",
+    "19/23",
+    "11/14",
+    "27/35"
+   ],
+   "my_ans": "D",
+   "sol": "माना भिन्न (x-8)/x है।<br>(x-8+3)/(x+5) = 3/4 → (x-5)/(x+5) = 3/4<br>4x - 20 = 3x + 15 → x = 35. मूल भिन्न = (35-8)/35 = 27/35.",
+   "ans": "D"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "What is the digit y if the number 6y512 is exactly divisible by both 8 and 9?",
+   "hi": "यदि 6y512 संख्या, 8 और 9 दोनों से पूर्णतः विभाज्य है, तो अंक y का मान ज्ञात कीजिए।",
+   "opts": [
+    "2",
+    "8",
+    "6",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "9 से विभाज्यता के लिए: 6+y+5+1+2 = 14+y, 9 से विभाज्य होना चाहिए।<br>y = 4 रखने पर 14+4 = 18 (9 से विभाज्य)।<br>अंतिम तीन अंक 512, 8 से विभाज्य हैं (512/8 = 64)। अतः y = 4.",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "Find the smallest natural number x, for which 2x + 1 is not a prime number.",
+   "hi": "वह सबसे छोटी प्राकृतिक संख्या x ज्ञात कीजिए, जिसके लिए 2x + 1 एक अभाज्य संख्या नहीं है।",
+   "opts": [
+    "3",
+    "5",
+    "2",
+    "4"
+   ],
+   "my_ans": "D",
+   "sol": "विकल्पों की जाँच करें:<br>x=2 → 2(2)+1=5 (अभाज्य)<br>x=3 → 2(3)+1=7 (अभाज्य)<br>x=4 → 2(4)+1=9 (अभाज्य नहीं है)।",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "Which of the following options is the nearest number to 95061 that is divisible by 9?",
+   "hi": "निम्नलिखित विकल्पों में से कौन-सा विकल्प 95061 की निकटतम संख्या है, जो 9 से विभाज्य है?",
+   "opts": [
+    "95058",
+    "95060",
+    "95059",
+    "95057"
+   ],
+   "my_ans": "A",
+   "sol": "95061 के अंकों का योग = 9+5+0+6+1 = 21.<br>निकटतम 9 से विभाज्य योग 18 या 27 है।<br>21 - 3 = 18, अतः 95061 - 3 = 95058 विभाज्य है।",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "The 7-digit number 77A444B is divisible by 24. What is the maximum value of (A + B)?",
+   "hi": "7-अंकों की संख्या 77A444B, 24 से विभाज्य है। (A + B) का अधिकतम मान कितना है?",
+   "opts": [
+    "12",
+    "13",
+    "15",
+    "16"
+   ],
+   "my_ans": "D",
+   "sol": "24 = 3 × 8. 8 से विभाज्यता के लिए 44B, 8 से विभाज्य हो → B = 0 या 8. अधिकतम B = 8.<br>3 से विभाज्यता के लिए: 7+7+A+4+4+4+8 = 34+A, 3 से विभाज्य हो।<br>A का अधिकतम मान 8 होगा (34+8=42). अतः A+B = 8+8 = 16.",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "Four prime numbers are listed in order. If the product of the first three is 105 and the product of the last three is 385, what is the largest prime number?",
+   "hi": "चार अभाज्य संख्याएं क्रम में दी गई हैं। यदि पहली तीन संख्याओं का गुणनफल 105 है और अंतिम तीन संख्याओं का गुणनफल 385 है, तो सबसे बड़ी अभाज्य संख्या कौन-सी है?",
+   "opts": [
+    "11",
+    "7",
+    "13",
+    "17"
+   ],
+   "my_ans": "A",
+   "sol": "माना संख्याएं a, b, c, d हैं। abc = 105, bcd = 385.<br>bcd/abc = 385/105 = 11/3.<br>अतः a = 3, d = 11. सबसे बड़ी संख्या 11 है।",
+   "ans": "A"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Which of the following digits should replace X so that the three-digit number 2X2 is divisible by 4?",
+   "hi": "निम्नलिखित में से कौन-सा अंक X के स्थान पर रखा जाए ताकि तीन-अंकों की संख्या 2X2, 4 से विभाज्य हो जाए?",
+   "opts": [
+    "1",
+    "0",
+    "2",
+    "4"
+   ],
+   "my_ans": "A",
+   "sol": "4 से विभाज्यता के लिए अंतिम दो अंक X2, 4 से विभाज्य होने चाहिए।<br>विकल्प A: 12 (विभाज्य है), B: 02 (नहीं), C: 22 (नहीं), D: 42 (नहीं)।<br>अतः X = 1.",
+   "ans": "A"
+  }
+ ]
+}

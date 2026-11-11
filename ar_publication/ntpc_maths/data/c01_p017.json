@@ -1,0 +1,13 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Number System",
+  "hi": "संख्या पद्धति",
+  "total": 87,
+  "gl": 38,
+  "ug": 49
+ },
+ "source_pages": "17",
+ "model": "gemini-3.5-flash",
+ "questions": []
+}

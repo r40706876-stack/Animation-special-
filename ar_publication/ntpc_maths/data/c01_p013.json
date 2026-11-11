@@ -1,0 +1,119 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Number System",
+  "hi": "संख्या पद्धति",
+  "total": 87,
+  "gl": 38,
+  "ug": 49
+ },
+ "source_pages": "13",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "If a two-digit number has a digit sum of 9 and adding 27 reverses its digits, determine the unit digit of the number.",
+   "hi": "यदि किसी दो अंकों की संख्या के अंकों का योग 9 है और उसमें 27 जोड़ने पर उसके अंक उत्क्रम हो जाते हैं, तो उस संख्या का इकाई अंक ज्ञात कीजिए।",
+   "opts": [
+    "5",
+    "3",
+    "4",
+    "6"
+   ],
+   "my_ans": "D",
+   "sol": "माना संख्या 10x + y है। x + y = 9 और 9(y - x) = 27 → y - x = 3<br>समीकरणों को हल करने पर: y = 6, x = 3। इकाई अंक = 6।",
+   "ans": "D"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "If a and b are two coprime numbers such that a + b = 41, then what is the maximum possible value of a × b?",
+   "hi": "यदि a और b, दो सह-अभाज्य संख्याएँ इस प्रकार हैं कि a + b = 41 है, तो a × b का अधिकतम संभावित मान ज्ञात कीजिए।",
+   "opts": [
+    "540",
+    "420",
+    "360",
+    "210"
+   ],
+   "my_ans": "B",
+   "sol": "अधिकतम गुणनफल के लिए संख्याएँ पास होनी चाहिए। 41/2 ≈ 20.5<br>जोड़े: (20, 21)। 20 और 21 सह-अभाज्य हैं।<br>अधिकतम मान = 20 × 21 = 420।",
+   "ans": "B"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "Find the value of k for which the expression x³ − 3x² − 7x – k is divisible by (x − 5) .",
+   "hi": "k का वह मान ज्ञात कीजिए जिसके लिए व्यंजक x³ − 3x² − 7x – k, (x − 5) से पूर्णतः विभाज्य हो।",
+   "opts": [
+    "-5",
+    "15",
+    "5",
+    "-15"
+   ],
+   "my_ans": "B",
+   "sol": "शेषफल प्रमेय से, x = 5 रखने पर व्यंजक 0 होना चाहिए।<br>5³ − 3(5)² − 7(5) − k = 0 → 125 − 75 − 35 − k = 0<br>15 − k = 0 → k = 15।",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "The sum of two digits of a 2-digit number is 9. If the number obtained by interchanging the digits exceeds the original number by 27, find the number.",
+   "hi": "एक दो-अंकीय संख्या के दोनों अंकों का योगफल 9 है। यदि अंकों को परस्पर बदलने पर प्राप्त संख्या मूल संख्या से 27 अधिक है, तो वह संख्या ज्ञात कीजिए।",
+   "opts": [
+    "27",
+    "63",
+    "45",
+    "36"
+   ],
+   "my_ans": "D",
+   "sol": "माना संख्या 10x + y है। x + y = 9 और 9(y - x) = 27 → y - x = 3<br>हल करने पर: y = 6, x = 3। संख्या = 36।",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Which of the following numbers is not divisible by 88?",
+   "hi": "निम्नलिखित में से कौन-सी संख्या 88 से विभाज्य नहीं है?",
+   "opts": [
+    "1232",
+    "1058",
+    "1144",
+    "968"
+   ],
+   "my_ans": "B",
+   "sol": "88 से विभाज्यता के लिए संख्या 8 और 11 दोनों से विभाज्य होनी चाहिए।<br>1058, 8 से विभाज्य नहीं है (अंतिम 3 अंक 058, 8 से नहीं कटते)।",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "The 7-digit number 46A484B is divisible by 24. What is the minimum value of (A + B)?",
+   "hi": "7-अंकों की संख्या 46A484B, 24 से विभाज्य है। (A + B) का न्यूनतम मान कितना है?",
+   "opts": [
+    "4",
+    "3",
+    "6",
+    "1"
+   ],
+   "my_ans": "D",
+   "sol": "24 से विभाज्यता के लिए 3 और 8 से विभाज्य होना चाहिए।<br>8 के लिए: 84B, 8 से विभाज्य हो → B = 0 या 8। न्यूनतम B = 0<br>3 के लिए: 4+6+A+4+8+4+0 = 26+A, 3 से विभाज्य हो → A = 1। A+B = 1+0 = 1।",
+   "ans": "D"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "The sum of the digits of a two-digit number is 11. If the digits are reversed, the new number is 27 more than the original number. What is the original number?",
+   "hi": "दो अंकों की एक संख्या के अंकों का योग 11 है। यदि अंकों को उत्क्रमित कर दिया जाए, तो नई संख्या वास्तविक संख्या से 27 अधिक होती है। वास्तविक संख्या ज्ञात कीजिए।",
+   "opts": [
+    "38",
+    "47",
+    "65",
+    "56"
+   ],
+   "my_ans": "B",
+   "sol": "माना संख्या 10x + y है। x + y = 11 और 9(y - x) = 27 → y - x = 3<br>हल करने पर: y = 7, x = 4। संख्या = 47।",
+   "ans": "B"
+  }
+ ]
+}

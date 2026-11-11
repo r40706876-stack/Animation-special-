@@ -1,0 +1,149 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Number System",
+  "hi": "संख्या पद्धति",
+  "total": 87,
+  "gl": 38,
+  "ug": 49
+ },
+ "source_pages": "12",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "What is the smallest number that must be added to 45873 so that the sum is divisible by 11?",
+   "hi": "45873 में वह कौन-सी सबसे छोटी संख्या जोड़ी जानी चाहिए ताकि प्राप्त योगफल, 11 से विभाज्य हो?",
+   "opts": [
+    "4",
+    "9",
+    "8",
+    "6"
+   ],
+   "my_ans": "C",
+   "sol": "45873 ÷ 11 करने पर शेषफल 3 प्राप्त होता है।<br>जोड़ी जाने वाली संख्या = 11 - 3 = 8.",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "What is the smallest 5-digit number that is exactly divisible by 12, 15 and 20?",
+   "hi": "5-अंको की वह छोटी से छोटी संख्या ज्ञात कीजिए, जो 12, 15 और 20 से पूर्णतः विभाज्य हो।",
+   "opts": [
+    "10080",
+    "10320",
+    "10200",
+    "10020"
+   ],
+   "my_ans": "D",
+   "sol": "12, 15, 20 का LCM = 60.<br>सबसे छोटी 5-अंकीय संख्या 10000 है। 10000 ÷ 60 करने पर शेष 40 आता है।<br>संख्या = 10000 + (60 - 40) = 10020.",
+   "ans": "D"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Which of the following is a pair of co-primes?",
+   "hi": "निम्नलिखित में से कौन-सा सह-अभाज्य (co-primes) का युग्म है?",
+   "opts": [
+    "44 and 99",
+    "25 and 36",
+    "42 and 56",
+    "27 and 36"
+   ],
+   "my_ans": "B",
+   "sol": "सह-अभाज्य संख्याओं का HCF 1 होता है।<br>25 और 36 का HCF 1 है, इसलिए ये सह-अभाज्य हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Find the least value of (4K²+2M) for which the five digits number 7KM93 is divisible by 9.",
+   "hi": "(4K²+2M) का न्यूनतम मान ज्ञात कीजिए जिसके लिए पांच अंकों की संख्या 7KM93, 9 से विभाज्य है।",
+   "opts": [
+    "27",
+    "14",
+    "12",
+    "16"
+   ],
+   "my_ans": "D",
+   "sol": "9 से विभाज्यता के लिए: 7+K+M+9+3 = 19+K+M, 9 का गुणज होना चाहिए।<br>न्यूनतम K+M = 8. न्यूनतम मान के लिए K=0, M=8 लें।<br>4(0)² + 2(8) = 16.",
+   "ans": "D"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "What is the smallest number that must be added to 4583 so that the resulting number is divisible by 9?",
+   "hi": "4583 में जोड़ी जाने वाली वह सबसे छोटी संख्या कौन-सी है ताकि प्राप्त परिणामी संख्या 9 से विभाज्य हो?",
+   "opts": [
+    "3",
+    "7",
+    "5",
+    "1"
+   ],
+   "my_ans": "B",
+   "sol": "4583 के अंकों का योग = 4+5+8+3 = 20.<br>20 के बाद 9 का अगला गुणज 27 है।<br>जोड़ी जाने वाली संख्या = 27 - 20 = 7.",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "A two-digit number is such that four times the sum of its digits is equal to the number formed by reversing its digits. If the difference between the digits is 3, find the original number.",
+   "hi": "दो अंकों वाली एक संख्या इस प्रकार है कि उसके अंकों के योगफल का चार गुना, उसके अंकों को उलट कर बनाई गई संख्या के बराबर है। यदि अंकों के बीच का अंतर 3 है, तो मूल संख्या ज्ञात कीजिए।",
+   "opts": [
+    "96",
+    "36",
+    "63",
+    "69"
+   ],
+   "my_ans": "C",
+   "sol": "विकल्प (C) 63 लें: अंकों का योग = 9, अंतर = 3.<br>उलटने पर संख्या = 36. योग का 4 गुना = 9 × 4 = 36.<br>अतः मूल संख्या 63 है।",
+   "ans": "C"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "The largest four-digit number which when divided by 7, 6 and 10 leaves the remainder 5 in each case, is:",
+   "hi": "चार अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 7, 6 और 10 से विभाजित किए जाने पर प्रत्येक स्थिति में शेषफल 5 प्राप्त हो।",
+   "opts": [
+    "9793",
+    "9964",
+    "9875",
+    "9909"
+   ],
+   "my_ans": "C",
+   "sol": "7, 6, 10 का LCM = 210.<br>9999 ÷ 210 करने पर शेषफल 129 आता है।<br>संख्या = (9999 - 129) + 5 = 9870 + 5 = 9875.",
+   "ans": "C"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Which single digit should replace the blank in the number 1_36 so that the number is divisible by 9?",
+   "hi": "संख्या 1_36 में रिक्त स्थान पर कौन-सा एक अंक रखा जाए, ताकि यह संख्या 9 से विभाज्य हो जाए?",
+   "opts": [
+    "5",
+    "1",
+    "3",
+    "8"
+   ],
+   "my_ans": "D",
+   "sol": "9 से विभाज्यता के लिए अंकों का योग 9 से कटना चाहिए।<br>1 + x + 3 + 6 = 10 + x.<br>x = 8 रखने पर योग 18 होगा, जो 9 से विभाज्य है।",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "In a division sum, the divisor is 5 times the quotient and 4 times the remainder. If the remainder is 15, what is the dividend?",
+   "hi": "भाग के एक प्रश्न में भाजक, भागफल का 5 गुना और शेषफल का 4 गुना है। यदि शेषफल 15 है, तो भाज्य कितना होगा?",
+   "opts": [
+    "734",
+    "739",
+    "740",
+    "735"
+   ],
+   "my_ans": "D",
+   "sol": "भाजक = 4 × 15 = 60; भागफल = 60 ÷ 5 = 12.<br>भाज्य = (भाजक × भागफल) + शेषफल<br>भाज्य = (60 × 12) + 15 = 720 + 15 = 735.",
+   "ans": "D"
+  }
+ ]
+}
