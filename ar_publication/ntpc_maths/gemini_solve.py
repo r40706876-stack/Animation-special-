@@ -241,6 +241,39 @@ def fix_bad():
         MODELS = keep
 
 
+def fill_missing():
+    """Bane hue page-files mein jo sawaal chhoot gaye, sirf unhe dobara banwa kar jodna."""
+    for f in sorted(glob.glob(os.path.join(DATA, "c*_p*.json"))):
+        d = json.load(open(f, encoding="utf-8"))
+        m = re.search(r"_p(\d+)(?:-(\d+))?\.json$", f)
+        pages = list(range(int(m.group(1)), int(m.group(2) or m.group(1)) + 1))
+        texts = {p: page_text(p) for p in pages}
+        want = [int(x) for p in pages for x in re.findall(r"Q\.(\d+)\s+(?:GL|UG)", texts[p].split("Answer Key")[0])]
+        miss = sorted(set(want) - {q["n"] for q in d["questions"]})
+        if not miss:
+            continue
+        ch = next(c for c in CHAPTERS if c[0] == d["chapter"]["no"])
+        key = answer_key(ch)
+        text = "\n".join(f"----- page {p} -----\n{texts[p]}" for p in pages)
+        try:
+            qs, model = ask_gemini(pages, f"ONLY these question numbers are needed: {miss}\n" + text, {n: key.get(n, "?") for n in miss})
+        except RuntimeError as e:
+            print(f"fill: {os.path.basename(f)} abhi nahi bana ({str(e)[:80]})")
+            if "HTTP 429" in str(e):
+                return
+            continue
+        if isinstance(qs, dict):
+            qs = qs.get("questions", [])
+        new = [q for q in qs if isinstance(q, dict) and q.get("n") in miss]
+        for q in new:
+            save_fig(q, pages, ch)
+            q["ans"] = key.get(q["n"], q.get("my_ans", "?"))
+        d["questions"] = sorted(d["questions"] + list({q["n"]: q for q in new}.values()), key=lambda q: q["n"])
+        json.dump(d, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"fill: {os.path.basename(f)} me {len(new)} chhoote sawaal jode ({model})")
+        time.sleep(5)
+
+
 def main():
     if not KEYS:
         sys.exit("GEMINI_API_KEY secret nahi mila")
@@ -307,6 +340,7 @@ def main():
         json.dump(d, open(os.path.join(DATA, f"c{ch[0]:02d}_{rng}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(f"pages {pages}: {len(qs)} sawaal ({model})")
         time.sleep(5)
+    fill_missing()
     add_tricks()
     fix_bad()
     if review:
