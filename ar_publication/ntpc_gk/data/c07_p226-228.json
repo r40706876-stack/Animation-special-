@@ -137,6 +137,22 @@
    "sol": "VB-GRAM बिल, 2025 के तहत ग्रामीण रोजगार गारंटी को MGNREGA के 100 दिनों से बढ़ाकर 125 दिन कर दिया गया है।",
    "trick": "VB-GRAM = 125 दिन का रोजगार",
    "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "How do Centre-State financial relations impact the governance in India?",
+   "hi": "केंद्र-राज्य वित्तीय संबंध भारत में शासन को कैसे प्रभावित करते हैं?",
+   "opts": [
+    "They give complete financial autonomy to States<br>वे राज्यों को पूर्ण वित्तीय स्वायत्तता प्रदान करते हैं",
+    "They allow the Centre to abolish state taxes completely<br>वे केंद्र को राज्य के करों को पूरी तरह समाप्त करने की अनुमति देते हैं",
+    "They determine the distribution of financial resources between the Centre and States<br>वे केंद्र और राज्यों के बीच वित्तीय संसाधनों के वितरण को निर्धारित करते हैं",
+    "They do not affect developmental policies<br>वे विकासात्मक नीतियों को बिल्कुल प्रभावित नहीं करते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान के भाग XII (अनुच्छेद 268-293) में केंद्र और राज्यों के बीच वित्तीय संसाधनों के वितरण का प्रावधान है, जो देश के संतुलित विकास और शासन संचालन को प्रभावित करता है।",
+   "trick": "वित्त आयोग (अनुच्छेद 280) केंद्र और राज्यों में कर संसाधनों का बंटवारा करता है।",
+   "ans": "C"
   }
  ]
 }

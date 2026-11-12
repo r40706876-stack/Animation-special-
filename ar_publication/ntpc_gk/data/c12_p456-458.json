@@ -137,6 +137,22 @@
    "sol": "रक्षा, विदेशी मामले और नागरिकता संघ सूची (Union List) के विषय हैं जिन पर केवल संसद कानून बना सकती है।",
    "trick": "संघ सूची = रक्षा, विदेश, नागरिकता",
    "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which major technological advancement characterizes the fourth generation of computers?",
+   "hi": "कंप्यूटर की चौथी पीढ़ी की मुख्य तकनीकी प्रगति कौन-सी है?",
+   "opts": [
+    "Vacuum tubes<br>वैक्यूम ट्यूब",
+    "Transistors<br>ट्रांजिस्टर",
+    "Microprocessors (VLSI)<br>माइक्रोप्रोसेसर (VLSI)",
+    "Integrated Circuits (ICs)<br>इंटीग्रेटेड सर्किट (IC)"
+   ],
+   "my_ans": "C",
+   "sol": "कंप्यूटर की चौथी पीढ़ी (1971-1980) में VLSI (Very Large Scale Integration) तकनीक पर आधारित माइक्रोप्रोसेसर का उपयोग शुरू हुआ।",
+   "trick": "1st: वैक्यूम ट्यूब, 2nd: ट्रांजिस्टर, 3rd: IC, 4th: माइक्रोप्रोसेसर",
+   "ans": "C"
   }
  ]
 }
