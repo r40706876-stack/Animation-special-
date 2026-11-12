@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "489-491",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "Which of the following keyboard shortcuts is used to paste copied content?",
+   "hi": "निम्नलिखित में से किस कीबोर्ड शॉर्टकट का उपयोग कॉपी की गई सामग्री को पेस्ट करने के लिए किया जाता है?",
+   "opts": [
+    "Ctrl + V",
+    "Ctrl + C",
+    "Ctrl + S",
+    "Ctrl + F"
+   ],
+   "my_ans": "A",
+   "sol": "Ctrl + V का उपयोग कॉपी या कट की गई सामग्री को पेस्ट करने के लिए किया जाता है।",
+   "trick": "V (Paste) - V को पेस्ट के लिए याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Which of the following is the correct full form of LAN?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प LAN का सही पूर्णरूप है?",
+   "opts": [
+    "Low Area Net<br>लो एरिया नेट",
+    "Large Access Node<br>लार्ज एक्सेस नोड",
+    "Local Area Network<br>लोकल एरिया नेटवर्क",
+    "Line Access Network<br>लाइन एक्सेस नेटवर्क"
+   ],
+   "my_ans": "C",
+   "sol": "LAN का पूर्ण रूप Local Area Network है, जो सीमित क्षेत्र में कंप्यूटरों को जोड़ता है।",
+   "trick": "LAN = Local Area Network",
+   "ans": "C"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "Consider the following statements regarding Input and Output devices and select the correct option. (i) A microphone is an input device that can capture sound, but it cannot output any sound. (ii) The CPU's processing speed is much faster than the data transfer rate of external devices like printers.",
+   "hi": "इनपुट और आउटपुट डिवाइसों के बारे में दिए गए कथनों पर विचार करें और सही विकल्प का चयन करें। (i) माइक्रोफोन एक इनपुट डिवाइस है जो ध्वनि को कैप्चर कर सकता है, लेकिन यह कोई ध्वनि निर्गत नहीं कर सकता है। (ii) CPU की प्रोसेसिंग स्पीड, प्रिंटर जैसे बाह्य डिवाइसों की डेटा स्थानांतरण दर की तुलना में बहुत तीव्र है।",
+   "opts": [
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य"
+   ],
+   "my_ans": "C",
+   "sol": "माइक्रोफोन केवल इनपुट डिवाइस है। CPU की गति प्रिंटर जैसे बाहरी उपकरणों से बहुत अधिक होती है, इसलिए दोनों कथन सत्य हैं।",
+   "trick": "CPU तेज है, माइक्रोफोन केवल इनपुट है।",
+   "ans": "C"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "A Local Area Network (LAN) enables resource sharing by connecting devices to the network medium through a specialized adapter called the __________.",
+   "hi": "लोकल एरिया नेटवर्क (LAN) ____________ नामक एक विशेष एडेप्टर, जिसे नेटवर्क एडेप्टर भी कहा जाता है, के माध्यम से उपकरणों को जोड़कर रिसोर्स शेयरिंग को इनेबल करता है।",
+   "opts": [
+    "Read-Only Memory<br>रीड-ओनली मेमोरी",
+    "Graphics Processing Unit<br>ग्राफिक्स प्रोसेसिंग यूनिट",
+    "Network Interface Card<br>नेटवर्क इंटरफ़ेस कार्ड",
+    "Central Processing Unit<br>सेंट्रल प्रोसेसिंग यूनिट"
+   ],
+   "my_ans": "C",
+   "sol": "Network Interface Card (NIC) वह हार्डवेयर है जो कंप्यूटर को नेटवर्क से जोड़ता है।",
+   "trick": "NIC = नेटवर्क से जुड़ने का कार्ड।",
+   "ans": "C"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "What does CD stand for in computer terminology?",
+   "hi": "कंप्यूटर शब्दावली में CD का पूर्ण रूप क्या है?",
+   "opts": [
+    "Control Datamine<br>कंट्रोल डेटामाइन",
+    "Compact Disc<br>कॉम्पैक्ट डिस्क",
+    "Color Display<br>कलर डिस्प्ले",
+    "Current Directories<br>करेंट डायरेक्टरी"
+   ],
+   "my_ans": "B",
+   "sol": "CD का पूर्ण रूप Compact Disc है, जो एक ऑप्टिकल स्टोरेज माध्यम है।",
+   "trick": "CD = Compact Disc",
+   "ans": "B"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "A computer’s characteristic of Accuracy means it can produce precise and correct results as long as the ___________________________ is/are correct.",
+   "hi": "किसी कंप्यूटर की सटीकता की विशेषता का अर्थ है कि यह तब तक सटीक और सही परिणाम दे सकता है जब तक कि __________।",
+   "opts": [
+    "speed of the processor<br>प्रोसेसर की स्पीड सही हो",
+    "input data and instructions<br>इनपुट डेटा और अनुदेश सही हों",
+    "size of the system’s RAM<br>सिस्टम की RAM का साइज़ सही हो",
+    "resolution of the display screen<br>डिस्प्ले स्क्रीन का रिज़ॉल्यूशन सही हो"
+   ],
+   "my_ans": "B",
+   "sol": "कंप्यूटर की सटीकता GIGO (Garbage In, Garbage Out) सिद्धांत पर आधारित है, यानी इनपुट सही होने पर ही आउटपुट सही होगा।",
+   "trick": "GIGO: गलत इनपुट = गलत आउटपुट।",
+   "ans": "B"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "The CPU retrieves the upcoming instruction for execution from which system component?",
+   "hi": "CPU एग्जीक्यूशन के लिए आगामी अनुदेश को किस सिस्टम कंपोनेंट (system component) से पुनः प्राप्त (retrieve) करता है?",
+   "opts": [
+    "System input buffer unit<br>सिस्टम इनपुट बफर यूनिट",
+    "System secondary memory<br>सिस्टम सेकेंडरी मेमोरी",
+    "System program counter<br>सिस्टम प्रोग्राम काउंटर",
+    "System output register<br>सिस्टम आउटपुट रजिस्टर"
+   ],
+   "my_ans": "C",
+   "sol": "Program Counter (PC) वह रजिस्टर है जो निष्पादित होने वाले अगले निर्देश का पता रखता है।",
+   "trick": "PC = अगला निर्देश पता।",
+   "ans": "C"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "RAM and ROM belong to which broader category?",
+   "hi": "RAM और ROM किस व्यापक श्रेणी (broader category) से संबंधित हैं?",
+   "opts": [
+    "Input devices<br>इनपुट डिवाइस",
+    "Output devices<br>आउटपुट डिवाइस",
+    "Processing units<br>प्रोसेसिंग यूनिट",
+    "Primary memory<br>प्राइमरी मेमोरी"
+   ],
+   "my_ans": "D",
+   "sol": "RAM और ROM दोनों सीधे CPU से जुड़े होते हैं और कंप्यूटर की प्राइमरी मेमोरी का हिस्सा हैं।",
+   "trick": "RAM/ROM = प्राइमरी मेमोरी।",
+   "ans": "D"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "Which statement is True or False about the first and second generations of computers? (i) The First Generation used Vacuum Tubes, which were bulky and heat-generating. (ii) The Transistor, which defined the Second Generation, made computers larger, slower, and more expensive.",
+   "hi": "कंप्यूटर की पहली और दूसरी पीढ़ी के संबंध में कौन-सा कथन सत्य या असत्य है? (i) पहली पीढ़ी में वैक्यूम ट्यूब (Vacuum Tubes) का उपयोग किया गया था, जो भारी और ऊष्मा उत्पन्न करने वाली थीं। (ii) ट्रांजिस्टर, जिसने दूसरी पीढ़ी को परिभाषित किया, ने कंप्यूटरों को अधिक बड़ा, धीमा और अधिक महंगा बना दिया।",
+   "opts": [
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य",
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य"
+   ],
+   "my_ans": "D",
+   "sol": "पहली पीढ़ी में वैक्यूम ट्यूब का उपयोग हुआ था (सत्य)। ट्रांजिस्टर ने कंप्यूटर को छोटा, तेज और सस्ता बनाया था, न कि बड़ा और धीमा (असत्य)।",
+   "trick": "ट्रांजिस्टर = छोटा और तेज।",
+   "ans": "D"
+  }
+ ]
+}

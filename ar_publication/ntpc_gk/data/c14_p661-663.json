@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "661-663",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 322,
+   "lvl": "UG",
+   "en": "Which launch vehicle will be used for Chandrayaan-5?",
+   "hi": "चंद्रयान-5 के लिए किस प्रक्षेपण यान (launch vehicle) का उपयोग किया जाएगा?",
+   "opts": [
+    "H3-24L",
+    "GSLV Mk III",
+    "GSLV Mk II",
+    "PSLV-C45"
+   ],
+   "my_ans": "A",
+   "sol": "चंद्रयान-5 भारत (ISRO) और जापान (JAXA) का संयुक्त मिशन है, जिसके लिए जापान द्वारा विकसित H3-24L रॉकेट का उपयोग किया जाएगा।",
+   "trick": "चंद्रयान-5 = ISRO + JAXA (जापान) = H3-24L",
+   "ans": "A"
+  },
+  {
+   "n": 323,
+   "lvl": "UG",
+   "en": "India has secured which rank in the Asia Power Index 2025?",
+   "hi": "एशिया पावर इंडेक्स 2025 में भारत ने कौन-सा स्थान प्राप्त किया है?",
+   "opts": [
+    "Second<br>दूसरा",
+    "Fourth<br>चौथा",
+    "Third<br>तीसरा",
+    "First<br>पहला"
+   ],
+   "my_ans": "C",
+   "sol": "एशिया पावर इंडेक्स 2025 में भारत ने अपना तीसरा स्थान बरकरार रखा है।",
+   "trick": "एशिया पावर इंडेक्स: 1. अमेरिका, 2. चीन, 3. भारत",
+   "ans": "C"
+  },
+  {
+   "n": 324,
+   "lvl": "UG",
+   "en": "According to the research study by the State Bank of India (SBI) in 2024, what is the level of poverty in India?",
+   "hi": "वर्ष 2024 में भारतीय स्टेट बैंक (SBI) द्वारा किए गए शोध अध्ययन के अनुसार, भारत में गरीबी का स्तर क्या है?",
+   "opts": [
+    "less than 18% but more than 10%<br>18% से कम लेकिन 10% से अधिक",
+    "above 15%<br>15% से अधिक",
+    "above 5% and below 10%<br>5% से अधिक और 10% से कम",
+    "below 5%<br>5% से कम"
+   ],
+   "my_ans": "D",
+   "sol": "SBI के 2024 के शोध अध्ययन के अनुसार, भारत में गरीबी का स्तर 5% से नीचे आ गया है।",
+   "trick": "SBI रिपोर्ट 2024: गरीबी 5% से कम",
+   "ans": "D"
+  },
+  {
+   "n": 325,
+   "lvl": "UG",
+   "en": "According to the Women, Peace and Security (WPS) Index 2025/26, what is India's rank out of 181 countries?",
+   "hi": "महिला, शांति और सुरक्षा (WPS) सूचकांक 2025/26 के अनुसार, 181 देशों में भारत की रैंक कितनी है?",
+   "opts": [
+    "131st<br>131वीं",
+    "121st<br>121वीं",
+    "111th<br>111वीं",
+    "141st<br>141वीं"
+   ],
+   "my_ans": "A",
+   "sol": "महिला, शांति और सुरक्षा (WPS) सूचकांक 2025/26 में 181 देशों की सूची में भारत 131वें स्थान पर है।",
+   "trick": "WPS इंडेक्स 2025/26: भारत 131वीं रैंक",
+   "ans": "A"
+  },
+  {
+   "n": 326,
+   "lvl": "UG",
+   "en": "Which government department launched the 5G Innovation Hackathon 2025, a six-month initiative aimed at accelerating the development of innovative 5G-powered solutions to address societal and industrial challenges?",
+   "hi": "किस सरकारी विभाग ने 5G इनोवेशन हैकाथॉन 2025 की शुरुआत की, जो छह माह की एक पहल है जिसका उद्देश्य सामाजिक और औद्योगिक चुनौतियों का समाधान करने के लिए अभिनव 5G-संचालित समाधानों के विकास में तेजी लाना है?",
+   "opts": [
+    "NITI Aayog<br>NITI आयोग",
+    "Department of Science and Technology (DST)<br>विज्ञान एवं प्रौद्योगिकी विभाग (DST)",
+    "Ministry of Electronics and Information Technology (MeitY)<br>इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY)",
+    "Department of Telecommunications (DoT)<br>दूरसंचार विभाग (DoT)"
+   ],
+   "my_ans": "D",
+   "sol": "5G इनोवेशन हैकाथॉन 2025 दूरसंचार विभाग (DoT) द्वारा शुरू की गई एक पहल है।",
+   "trick": "5G = दूरसंचार विभाग (DoT)",
+   "ans": "D"
+  },
+  {
+   "n": 327,
+   "lvl": "UG",
+   "en": "Which ministry released the fourth issue of the publication titled “Children in India 2025” on 25 September 2025?",
+   "hi": "किस मंत्रालय ने 25 सितंबर 2025 को “चिल्ड्रन इन इंडिया 2025” शीर्षक से प्रकाशन का चौथा अंक जारी किया?",
+   "opts": [
+    "Ministry of Women and Child Development<br>महिला और बाल विकास मंत्रालय",
+    "Ministry of Education<br>शिक्षा मंत्रालय",
+    "Ministry of Statistics and Programme Implementation<br>सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय",
+    "Ministry of Health and Family Welfare<br>स्वास्थ्य एवं परिवार कल्याण मंत्रालय"
+   ],
+   "my_ans": "C",
+   "sol": "सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) ने 'चिल्ड्रन इन इंडिया 2025' रिपोर्ट का चौथा अंक जारी किया।",
+   "trick": "सांख्यिकी रिपोर्ट = MoSPI",
+   "ans": "C"
+  },
+  {
+   "n": 328,
+   "lvl": "UG",
+   "en": "Who among the following won the Laureus World Sportsman of the Year Award in 2025?",
+   "hi": "निम्नलिखित में से किसने 2025 में लॉरियस वर्ल्ड स्पोर्ट्समैन ऑफ द ईयर पुरस्कार जीता?",
+   "opts": [
+    "Mondo Duplantis<br>मोंडो डुप्लांटिस",
+    "Novak Djokovic<br>नोवाक जोकोविच",
+    "Serena Williams<br>सेरेना विलियम्स",
+    "Tom Pidcock<br>टॉम पिडकॉक"
+   ],
+   "my_ans": "A",
+   "sol": "स्वीडन के ओलंपिक पोल वॉल्ट चैंपियन मोंडो डुप्लांटिस ने 2025 का लॉरियस वर्ल्ड स्पोर्ट्समैन ऑफ द ईयर पुरस्कार जीता।",
+   "trick": "2025 लॉरियस: मोंडो डुप्लांटिस",
+   "ans": "A"
+  },
+  {
+   "n": 329,
+   "lvl": "UG",
+   "en": "Which of the following scores has India secured in the SDG Index 2025?",
+   "hi": "SDG सूचकांक 2025 में, भारत ने निम्नलिखित स्कोर में से कौन-सा स्कोर प्राप्त किया है?",
+   "opts": [
+    "61.5",
+    "67.0",
+    "72.3",
+    "57.0"
+   ],
+   "my_ans": "B",
+   "sol": "SDG सूचकांक 2025 में भारत का स्कोर 67.0 है, जो मध्यम प्रगति को दर्शाता है।",
+   "trick": "SDG 2025 भारत स्कोर: 67.0",
+   "ans": "B"
+  },
+  {
+   "n": 330,
+   "lvl": "UG",
+   "en": "Which Indian launch vehicle successfully launched the CMS-03 communication satellite on 2nd November 2025?",
+   "hi": "किस भारतीय प्रक्षेपण यान ने 2 नवंबर 2025 को CMS-03 संचार उपग्रह को सफलतापूर्वक प्रक्षेपित किया?",
+   "opts": [
+    "LVM3",
+    "Agni<br>अग्नि",
+    "PSLV",
+    "GSLV"
+   ],
+   "my_ans": "A",
+   "sol": "CMS-03 संचार उपग्रह को भारत के सबसे भारी प्रक्षेपण यान LVM3 (पूर्व में GSLV Mk III) द्वारा प्रक्षेपित किया गया।",
+   "trick": "भारी उपग्रह = LVM3",
+   "ans": "A"
+  },
+  {
+   "n": 331,
+   "lvl": "UG",
+   "en": "In 2025, the AGILE Index was introduced to measure which of the following areas globally?",
+   "hi": "2025 में, एजाइल (AGILE) इंडेक्स को वैश्विक स्तर पर निम्नलिखित में से किस क्षेत्र को मापने के लिए शुरू किया गया था?",
+   "opts": [
+    "Environmental policy performance<br>पर्यावरणीय नीति निष्पादन",
+    "AI governance evaluation across countries<br>विभिन्न देशों में AI गवर्नेंस मूल्यांकन",
+    "Global economic competitiveness<br>वैश्विक आर्थिक प्रतिस्पर्धात्मकता",
+    "Digital infrastructure readiness<br>डिजिटल अवसंरचना तत्परता"
+   ],
+   "my_ans": "B",
+   "sol": "AGILE (AI Governance and Leadership Evaluation) इंडेक्स का उद्देश्य देशों में AI शासन और नीतियों का मूल्यांकन करना है।",
+   "trick": "AGILE = AI Governance",
+   "ans": "B"
+  },
+  {
+   "n": 332,
+   "lvl": "UG",
+   "en": "Shi Yuqi, who won the men’s singles final at the BWF World Championships held at Paris in August 2025, belongs to which country?",
+   "hi": "शी युकी (Shi Yuqi), जिन्होंने अगस्त 2025 में पेरिस में आयोजित BWF विश्व चैंपियनशिप के पुरुष एकल फाइनल में जीत हासिल की, किस देश से संबंधित हैं?",
+   "opts": [
+    "Japan<br>जापान",
+    "Indonesia<br>इंडोनेशिया",
+    "China<br>चीन",
+    "Malaysia<br>मलेशिया"
+   ],
+   "my_ans": "C",
+   "sol": "शी युकी एक प्रसिद्ध चीनी बैडमिंटन खिलाड़ी हैं जिन्होंने 2025 BWF विश्व चैंपियनशिप जीती।",
+   "trick": "शी युकी = चीन",
+   "ans": "C"
+  },
+  {
+   "n": 333,
+   "lvl": "UG",
+   "en": "Which institute helped carry out the cloud seeding trial in Delhi in October 2025?",
+   "hi": "अक्टूबर 2025 में दिल्ली में क्लाउड सीडिंग परीक्षण करने में किस संस्थान ने मदद की?",
+   "opts": [
+    "IIT Delhi",
+    "IIT Bombay",
+    "IIT Madras",
+    "IIT Kanpur"
+   ],
+   "my_ans": "D",
+   "sol": "दिल्ली में क्लाउड सीडिंग परीक्षण के लिए IIT कानपुर ने तकनीकी सहायता प्रदान की थी।",
+   "trick": "क्लाउड सीडिंग = IIT कानपुर",
+   "ans": "D"
+  }
+ ]
+}

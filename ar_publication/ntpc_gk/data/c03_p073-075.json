@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "73-75",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which administrative change was directly implemented by the British in response to the mutiny of 1857, signifying a shift in governance structure?",
+   "hi": "1857 के सैन्य विद्रोह के प्रत्युत्तर में अंग्रेजों द्वारा प्रत्यक्ष रूप से कौन-सा प्रशासनिक परिवर्तन लागू किया गया था, जो शासन संरचना में बदलाव का प्रतीक था?",
+   "opts": [
+    "Transfer of authority from Company to Crown<br>सत्ता का कंपनी से क्राउन को हस्तांतरण",
+    "Introduction of the Permanent Settlement in Bengal<br>बंगाल में स्थायी बंदोबस्त की शुरुआत",
+    "Issue of Queen Victoria’s Proclamation<br>क्वीन विक्टोरिया की उद्घोषणा जारी करना",
+    "Enactment of the Indian Councils Act, 1861<br>भारतीय परिषद अधिनियम, 1861 का अधिनियमन"
+   ],
+   "my_ans": "A",
+   "sol": "1858 के भारत सरकार अधिनियम द्वारा ईस्ट इंडिया कंपनी का शासन समाप्त कर दिया गया और भारत का नियंत्रण सीधे ब्रिटिश क्राउन (ब्रिटिश सरकार) के हाथों में आ गया।",
+   "trick": "1858 का अधिनियम = कंपनी से क्राउन को सत्ता का हस्तांतरण।",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which action connected with the new rifle system offended the religious beliefs of Indian sepoys and became a major cause of discontent in 1857?",
+   "hi": "नई राइफल प्रणाली से संबंधित किस कार्रवाई ने भारतीय सिपाहियों की धार्मिक भावनाओं को आहत किया और 1857 में असंतोष का एक प्रमुख कारण बनी?",
+   "opts": [
+    "Forcing sepoys to bite cartridges greased with animal fat<br>सिपाहियों को पशु की चर्बी लगे कारतूसों को मुँह से काटने के लिए मजबूर करना",
+    "Prohibiting religious processions in army cantonments<br>सैन्य छावनियों में धार्मिक जुलूसों पर रोक लगाना",
+    "Imposing a ban on temple entry<br>मंदिर प्रवेश पर प्रतिबंध लगाना",
+    "Mandating Sunday church attendance for all soldiers<br>सभी सैनिकों के लिए रविवार को चर्च जाना अनिवार्य करना"
+   ],
+   "my_ans": "A",
+   "sol": "एनफील्ड राइफल के कारतूसों में गाय और सूअर की चर्बी का उपयोग किया गया था, जिसे दांतों से काटना पड़ता था। यह हिंदू और मुस्लिम दोनों सैनिकों की धार्मिक आस्था के विरुद्ध था।",
+   "trick": "कारतूस की चर्बी = 1857 के विद्रोह का तात्कालिक कारण।",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following theories was propounded in Dadabhai Naoroji’s 1901 book Poverty and Un-British Rule in India?",
+   "hi": "निम्नलिखित में से कौन-सा सिद्धांत, दादाभाई नौरोजी की 1901 में प्रकाशित पुस्तक 'पावर्टी एंड अन-ब्रिटिश रूल इन इंडिया' में प्रतिपादित किया गया था?",
+   "opts": [
+    "Two Nation Theory<br>दो राष्ट्र सिद्धांत",
+    "Doctrine of Lapse Theory<br>व्यपगत सिद्धांत",
+    "Subsidiary Alliance Theory<br>सहायक गठबंधन सिद्धांत",
+    "Drain of Wealth Theory<br>धन-निष्कासन सिद्धांत"
+   ],
+   "my_ans": "D",
+   "sol": "दादाभाई नौरोजी ने अपनी पुस्तक में यह तर्क दिया कि ब्रिटिश शासन भारत की संपत्ति को व्यवस्थित रूप से ब्रिटेन ले जा रहे हैं, जिसे 'धन का निष्कासन' कहा गया।",
+   "trick": "दादाभाई नौरोजी = धन का निष्कासन (Drain of Wealth)।",
+   "ans": "D"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "In which of the following years was the School of Minerals, Metallurgical and Materials Engineering (SMMME) established at Bhubaneswar?",
+   "hi": "भुवनेश्वर में स्कूल ऑफ मिनरल्स, मेटलर्जिकल एंड मैटेरियल्स इंजीनियरिंग (SMMME) की स्थापना निम्नलिखित में से किस वर्ष हुई थी?",
+   "opts": [
+    "1995",
+    "1984",
+    "2002",
+    "2012"
+   ],
+   "my_ans": "D",
+   "sol": "IIT भुवनेश्वर के शैक्षणिक संचालन के शुरुआती दौर में 2012 में स्कूल ऑफ मिनरल्स, मेटलर्जिकल एंड मैटेरियल्स इंजीनियरिंग (SMMME) की स्थापना की गई थी।",
+   "trick": "IIT भुवनेश्वर SMMME = 2012।",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "With reference to Harappan architecture, consider the following statements: I. Streets and roads were straight and intersected each other at right angles. II. Street drains were covered with stone slabs. Which of the statements given above is/are correct?",
+   "hi": "हड़प्पा वास्तुकला के संदर्भ में, निम्नलिखित में से कौन-सा/से कथन सही है/हैं? I. गलियाँ और रास्ते सीधे थे तथा एक दूसरे को समकोण पर काटते थे। II. गली की नालियाँ, पत्थर की पट्टियों से ढकी होती थीं।",
+   "opts": [
+    "Only I<br>केवल I",
+    "Both I and II<br>I और II दोनों",
+    "Neither I nor II<br>न तो I और न ही II",
+    "Only II<br>केवल II"
+   ],
+   "my_ans": "B",
+   "sol": "हड़प्पा सभ्यता अपनी ग्रिड-आधारित नगर नियोजन प्रणाली के लिए प्रसिद्ध थी, जिसमें सड़कें समकोण पर काटती थीं और जल निकासी के लिए नालियाँ ढकी हुई होती थीं।",
+   "trick": "हड़प्पा = ग्रिड पैटर्न और ढकी हुई नालियाँ।",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "In which of the following Articles of the Constitution of India is it stated that Union Territories are to be administered by the President, who may appoint an administrator to oversee them?",
+   "hi": "भारतीय संविधान के किस अनुच्छेद में यह निर्दिष्ट किया गया है कि केंद्र शासित प्रदेशों को राष्ट्रपति द्वारा प्रशासित किया जाएगा, जो उनकी देखरेख के लिए एक प्रशासक नियुक्त कर सकता है?",
+   "opts": [
+    "Article 241<br>अनुच्छेद 241",
+    "Article 240<br>अनुच्छेद 240",
+    "Article 239<br>अनुच्छेद 239",
+    "Article 242<br>अनुच्छेद 242"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान का अनुच्छेद 239 केंद्र शासित प्रदेशों के प्रशासन से संबंधित है, जिसके तहत राष्ट्रपति एक प्रशासक के माध्यम से शासन करते हैं।",
+   "trick": "अनुच्छेद 239 = केंद्र शासित प्रदेशों का प्रशासन।",
+   "ans": "C"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "Which of the following is INCORRECT about the Rampa Rebellion?",
+   "hi": "निम्नलिखित में से कौन-सा कथन, रम्पा विद्रोह के संबंध में गलत है?",
+   "opts": [
+    "It was against forest laws and moneylenders<br>यह वन विधियों और साहूकारों के खिलाफ था",
+    "It was led by Alluri Sitarama Raju<br>इसका नेतृत्व अल्लूरी सीताराम राजू ने किया था",
+    "It took place in present day Maharashtra<br>यह घटना वर्तमान महाराष्ट्र में घटी थी",
+    "It involved the use of guerrilla warfare tactics<br>इसमें गुरिल्ला युद्ध रणनीति का उपयोग शामिल था"
+   ],
+   "my_ans": "C",
+   "sol": "रम्पा विद्रोह (1922-1924) वर्तमान आंध्र प्रदेश (गोदावरी एजेंसी) में हुआ था, न कि महाराष्ट्र में।",
+   "trick": "रम्पा विद्रोह = आंध्र प्रदेश (अल्लूरी सीताराम राजू)।",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "Majnu Shah is associated with which of the following rebellions?",
+   "hi": "मजनू शाह का संबंध निम्नलिखित में से किस विद्रोह से है?",
+   "opts": [
+    "Indigo Revolt<br>नील विद्रोह",
+    "Fakir–Sannyasi Rebellion<br>फकीर-संन्यासी विद्रोह",
+    "Kol Rebellion<br>कोल विद्रोह",
+    "Santhal Rebellion<br>संथाल विद्रोह"
+   ],
+   "my_ans": "B",
+   "sol": "मजनू शाह 18वीं सदी के अंत में बंगाल में हुए फकीर-संन्यासी विद्रोह के प्रमुख नेता थे।",
+   "trick": "मजनू शाह = फकीर-संन्यासी विद्रोह।",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Who was popularly known as the ‘Lion of Punjab’ during the Extremist phase?",
+   "hi": "चरमपंथी चरण के दौरान किसे 'पंजाब के शेर' के रूप में जाना जाता था?",
+   "opts": [
+    "Rajguru<br>राजगुरु",
+    "Lala Lajpat Rai<br>लाला लाजपत राय",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Bhagat Singh<br>भगत सिंह"
+   ],
+   "my_ans": "B",
+   "sol": "लाला लाजपत राय को उनके राष्ट्रवादी कार्यों और पंजाब में प्रभाव के कारण 'पंजाब केसरी' या 'पंजाब का शेर' कहा जाता था।",
+   "trick": "पंजाब का शेर = लाला लाजपत राय।",
+   "ans": "B"
+  }
+ ]
+}

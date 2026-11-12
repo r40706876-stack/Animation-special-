@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "370-372",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "Which of the following services is a core component of the tourism industry?",
+   "hi": "निम्नलिखित में से कौन-सी सेवा पर्यटन उद्योग का एक मुख्य घटक है?",
+   "opts": [
+    "Banking<br>बैंकिंग",
+    "Hospitality<br>आतिथ्य",
+    "Teaching<br>शिक्षण",
+    "Insurance<br>बीमा"
+   ],
+   "my_ans": "B",
+   "sol": "पर्यटन उद्योग में आतिथ्य (होटल, आवास, भोजन) प्राथमिक सेवा है जो पर्यटकों को सीधे सहायता प्रदान करती है।",
+   "trick": "पर्यटन = आतिथ्य (Hospitality) सेवा।",
+   "ans": "B"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "In which of the following years was the Technology Mission on Oilseeds launched due to which oilseeds production increased to a record level of 18 million tonnes in 1988-89?",
+   "hi": "निम्नलिखित में से किस वर्ष तिलहन पर प्रौद्योगिकी मिशन प्रारंभ किया गया जिसके कारण 1988-89 में तिलहन उत्पादन बढ़कर 18 मिलियन टन के रिकॉर्ड स्तर पर पहुँच गया?",
+   "opts": [
+    "1984-85",
+    "1983-84",
+    "1985-86",
+    "1987-88"
+   ],
+   "my_ans": "C",
+   "sol": "तिलहन पर प्रौद्योगिकी मिशन (TMO) की शुरुआत 1986 में हुई थी, जो 1985-86 के दौरान शुरू किया गया था।",
+   "trick": "तिलहन मिशन = 1986 (1985-86).",
+   "ans": "C"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "What is the aim of the Indian Government initiative Pradhan Mantri Gram Sadak Yojana (PMGSY)?",
+   "hi": "भारत सरकार की पहल प्रधानमंत्री ग्राम सड़क योजना (PMGSY) का लक्ष्य क्या है?",
+   "opts": [
+    "Provide rural road connectivity<br>ग्रामीण सड़क संपर्क प्रदान करना",
+    "Connect Waterways<br>जलमार्गों को जोड़ना",
+    "Build national highways<br>राष्ट्रीय राजमार्गों का निर्माण",
+    "Promote bullet trains<br>बुलेट ट्रेनों को बढ़ावा देना"
+   ],
+   "my_ans": "A",
+   "sol": "प्रधानमंत्री ग्राम सड़क योजना (दिसंबर 2000) का मुख्य उद्देश्य ग्रामीण क्षेत्रों में असंबद्ध बस्तियों को सभी मौसम में सड़क संपर्क प्रदान करना है।",
+   "trick": "PMGSY = ग्रामीण सड़क संपर्क।",
+   "ans": "A"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "Rashtriya Avishkar Abhiyan, introduced in 2015, focuses on encouraging school students to develop interest in:",
+   "hi": "2015 में शुरू किया गया 'राष्ट्रीय आविष्कार अभियान', स्कूली विद्यार्थियों की ___________ में रुचि विकसित करने के लिए उन्हें प्रोत्साहित करने पर केंद्रित है।",
+   "opts": [
+    "Arts and cultural activities<br>कला और सांस्कृतिक गतिविधियों",
+    "Sports and physical education<br>खेल और शारीरिक शिक्षा",
+    "Science and mathematics learning<br>विज्ञान और गणित अधिगम",
+    "Environmental awareness programmes<br>पर्यावरण जागरूकता कार्यक्रम"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय आविष्कार अभियान (2015) का उद्देश्य कक्षा VI से XII के छात्रों में विज्ञान, गणित और प्रौद्योगिकी के प्रति रुचि और नवाचार को बढ़ावा देना है।",
+   "trick": "आविष्कार = विज्ञान और गणित।",
+   "ans": "C"
+  },
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "The balance of payments crisis that India faced in 1991 occurred mainly due to:",
+   "hi": "भारत ने 1991 में जिस भुगतान संतुलन संकट का सामना किया था, वह मुख्य रूप से किसके कारण हुआ था?",
+   "opts": [
+    "Excess industrial production<br>अत्यधिक औद्योगिक उत्पादन",
+    "Large fiscal and current account deficits<br>भारी राजकोषीय और चालू खाता घाटा",
+    "Rapid growth in service exports<br>सेवा निर्यात में तीव्र वृद्धि",
+    "Sudden surge in foreign remittances<br>विदेशी प्रेषण में सहसा वृद्धि"
+   ],
+   "my_ans": "B",
+   "sol": "1991 का संकट भारी राजकोषीय घाटे और चालू खाता घाटे के कारण हुआ था, जिससे विदेशी मुद्रा भंडार बहुत कम हो गया था।",
+   "trick": "1991 संकट = राजकोषीय और चालू खाता घाटा।",
+   "ans": "B"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "Globalisation of the Indian economy has NOT resulted in which of the following?",
+   "hi": "भारतीय अर्थव्यवस्था के वैश्वीकरण के परिणामस्वरूप निम्नलिखित में से क्या नहीं हुआ है?",
+   "opts": [
+    "Global Integration<br>वैश्विक एकीकरण",
+    "Technological Advancement<br>तकनीकी प्रगति",
+    "Increased Consumer Choice<br>उपभोक्ता विकल्प में वृद्धि",
+    "Negative Cultural Impact<br>नकारात्मक सांस्कृतिक प्रभाव"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण ने वैश्विक एकीकरण, तकनीकी प्रगति और उपभोक्ता विकल्पों में वृद्धि की है, लेकिन नकारात्मक सांस्कृतिक प्रभाव इसका अनिवार्य परिणाम नहीं है।",
+   "trick": "वैश्वीकरण = विकास और एकीकरण (नकारात्मक नहीं)।",
+   "ans": "D"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "What was a significant objective of the fiscal and monetary policy reforms initiated in India post 1991?",
+   "hi": "1991 के बाद भारत में शुरू किए गए राजकोषीय और मौद्रिक नीति सुधारों का एक महत्वपूर्ण उद्देश्य क्या था?",
+   "opts": [
+    "To decrease foreign investment in the financial sector<br>वित्तीय क्षेत्रक में विदेशी निवेश को कम करना",
+    "To maintain fixed interest rates across all financial products<br>सभी वित्तीय उत्पादों पर नियत ब्याज दरें बनाए रखना",
+    "To increase government control over the banking sector<br>बैंकिंग क्षेत्रक पर सरकारी नियंत्रण बढ़ाना",
+    "To stabilise the economy by liberalising interest rates and enhancing financial sector efficiency<br>ब्याज दरों को उदार बनाकर और वित्तीय क्षेत्रक की दक्षता बढ़ाकर अर्थव्यवस्था को स्थिर करना"
+   ],
+   "my_ans": "D",
+   "sol": "1991 के सुधारों का उद्देश्य ब्याज दरों को उदार बनाना और प्रतिस्पर्धा के माध्यम से वित्तीय क्षेत्र की दक्षता बढ़ाकर अर्थव्यवस्था को स्थिर करना था।",
+   "trick": "सुधार = उदारीकरण और दक्षता।",
+   "ans": "D"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "What effect did reforms have on India's GDP growth rate?",
+   "hi": "सुधारों का भारत की GDP वृद्धि दर पर क्या प्रभाव पड़ा?",
+   "opts": [
+    "Decreased slowly<br>धीरे-धीरे कम हुई",
+    "Fluctuated unpredictably<br>अनिश्चित रूप से उतार-चढ़ाव",
+    "Increased significantly<br>काफी वृद्धि हुई",
+    "No change<br>कोई बदलाव नहीं"
+   ],
+   "my_ans": "C",
+   "sol": "1991 के आर्थिक सुधारों (LPG) के बाद भारत की GDP वृद्धि दर 3-3.5% से बढ़कर 5-6% और बाद में 7-9% तक पहुँच गई।",
+   "trick": "सुधार = GDP में महत्वपूर्ण वृद्धि।",
+   "ans": "C"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "How can developing countries like India reduce inter-regional disparities in human development within the education and healthcare sectors in the 21st century?",
+   "hi": "भारत जैसे विकासशील देश 21वीं सदी में शिक्षा और स्वास्थ्य देखभाल क्षेत्रकों में मानव विकास की अंतर-क्षेत्रीय असमानताओं को कैसे कम कर सकते हैं?",
+   "opts": [
+    "By centralising economic activities in urban areas<br>आर्थिक गतिविधियों को शहरी क्षेत्रों में केंद्रीकृत करके",
+    "By focusing all development efforts on capital cities<br>सभी विकास प्रयासों को राजधानी शहरों पर केंद्रित करके",
+    "By reducing investments in rural education and health<br>ग्रामीण शिक्षा और स्वास्थ्य में निवेश कम करके",
+    "By implementing region-specific policies and resource allocation<br>क्षेत्र-विशिष्ट नीतियों और संसाधन आवंटन को लागू करके"
+   ],
+   "my_ans": "D",
+   "sol": "क्षेत्रीय असमानताओं को कम करने के लिए क्षेत्र-विशिष्ट नीतियां बनाना और संसाधनों का समान आवंटन करना सबसे प्रभावी तरीका है।",
+   "trick": "असमानता कम करना = क्षेत्र-विशिष्ट नीतियां।",
+   "ans": "D"
+  }
+ ]
+}

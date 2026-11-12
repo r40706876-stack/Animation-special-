@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "536-538",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "Ustad Amjad Ali Khan is world-renowned for playing which of the following instruments?",
+   "hi": "उस्ताद अमजद अली खान, निम्नलिखित में से किस वाद्य यंत्र को बजाने के लिए विश्व प्रसिद्ध हैं?",
+   "opts": [
+    "Violin<br>वायलिन",
+    "Sarod<br>सरोद",
+    "Santoor<br>संतूर",
+    "Bansuri<br>बांसुरी"
+   ],
+   "my_ans": "B",
+   "sol": "उस्ताद अमजद अली खान सरोद वादन के लिए विश्व प्रसिद्ध हैं और वे बंगश घराने से संबंधित हैं।",
+   "trick": "अमजद अली खान = सरोद",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "Which of the following classical dance forms of India originated among the Kathakars (storytellers) of northern India, later incorporating elements of Bhakti traditions as well as Persian and Central Asian influences during the Mughal period?",
+   "hi": "भारत के निम्नलिखित में से किस शास्त्रीय नृत्य रूप की उत्पत्ति उत्तर भारत के कथाकारों (कहानीकारों) के बीच हुई, जिसने बाद में भक्ति परंपराओं के तत्वों के साथ-साथ मुगल काल के दौरान फारसी एवं मध्य एशियाई प्रभावों को भी समाहित किया?",
+   "opts": [
+    "Kathak<br>कथक",
+    "Mohiniyattam<br>मोहिनीअट्टम",
+    "Bharatanatyam<br>भरतनाट्यम",
+    "Kuchipudi<br>कुचीपुड़ी"
+   ],
+   "my_ans": "A",
+   "sol": "कथक की उत्पत्ति उत्तर भारत के कथाकारों से हुई, जो मुगल काल में दरबारी नृत्य के रूप में विकसित हुआ।",
+   "trick": "कथक = कथाकार (उत्तर भारत)",
+   "ans": "A"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "Who is traditionally regarded as the author of the classical Tamil work 'Tirukkural'?",
+   "hi": "परंपरागत रूप से शास्त्रीय तमिल कृति 'तिरुक्कुरल (Tirukkural)' के लेखक के रूप में किसे माना जाता है?",
+   "opts": [
+    "Kambar<br>कंबर",
+    "Thiruvalluvar<br>तिरुवल्लुवर",
+    "Ilango Adigal<br>इलंगो अडिगल",
+    "Avvaiyar<br>आवैय्यार"
+   ],
+   "my_ans": "B",
+   "sol": "तिरुक्कुरल की रचना महान तमिल कवि तिरुवल्लुवर ने की थी, इसे तमिल साहित्य का 'सार्वभौमिक वेद' माना जाता है।",
+   "trick": "तिरुक्कुरल = तिरुवल्लुवर",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Padmashri Elam Endira Devi is associated with which classical dance form?",
+   "hi": "पद्मश्री एलम इंदिरा देवी (Elam Endira Devi) किस शास्त्रीय नृत्य शैली से संबंधित हैं?",
+   "opts": [
+    "Kathak<br>कथक",
+    "Manipuri<br>मणिपुरी",
+    "Odissi<br>ओडिसी",
+    "Bharatanatyam<br>भरतनाट्यम"
+   ],
+   "my_ans": "B",
+   "sol": "एलम इंदिरा देवी मणिपुर के शास्त्रीय नृत्य 'मणिपुरी' की प्रसिद्ध कलाकार हैं।",
+   "trick": "एलम इंदिरा = मणिपुरी",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "In the context of Indian classical music, the term 'Khayal' literally signifies which of the following?",
+   "hi": "भारतीय शास्त्रीय संगीत के संदर्भ में, 'खयाल' शब्द का शाब्दिक अर्थ निम्नलिखित में से क्या है?",
+   "opts": [
+    "A melodic framework<br>एक मधुर ढांचा",
+    "A structured rhythmic pattern<br>एक संरचित लयबद्ध प्रतिरूप",
+    "Imagination or reflective thought<br>कल्पना या चिंतनशील विचार",
+    "An expression of devotional sentiment<br>भक्ति भावना की अभिव्यक्ति"
+   ],
+   "my_ans": "C",
+   "sol": "खयाल शब्द फारसी/अरबी भाषा से आया है जिसका अर्थ 'कल्पना' या 'विचार' होता है।",
+   "trick": "खयाल = कल्पना",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "Which of the following is a traditional folk music form from the state of Rajasthan, known for its high-energy rhythms and lively melodies?",
+   "hi": "निम्नलिखित में से कौन-सी, राजस्थान राज्य की एक पारंपरिक लोक संगीत शैली है जो अपनी ऊर्जावान ताल और जीवंत धुन के लिए जानी जाती है?",
+   "opts": [
+    "Maand<br>मांड",
+    "Baul<br>बाउल",
+    "Lavani<br>लावणी",
+    "Bhatiali<br>भटियाली"
+   ],
+   "my_ans": "A",
+   "sol": "मांड राजस्थान की एक शास्त्रीय लोक संगीत शैली है जो शाही दरबारों में काफी लोकप्रिय थी।",
+   "trick": "मांड = राजस्थान",
+   "ans": "A"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "'The Argumentative Indian,' a book discussing Indian history and culture, is authored by:",
+   "hi": "पुस्तक 'द आर्गुमेंटेटिव इंडियन (The Argumentative Indian)', जिसमें भारतीय इतिहास और संस्कृति पर चर्चा की गई है, किसने लिखी है?",
+   "opts": [
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू",
+    "Shashi Tharoor<br>शशि थरूर",
+    "Amartya Sen<br>अमर्त्य सेन",
+    "Ramachandra Guha<br>रामचंद्र गुहा"
+   ],
+   "my_ans": "C",
+   "sol": "यह पुस्तक अर्थशास्त्र में नोबेल पुरस्कार विजेता अमर्त्य सेन द्वारा लिखी गई है।",
+   "trick": "आर्गुमेंटेटिव इंडियन = अमर्त्य सेन",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Chhau, a celebrated dance tradition from Eastern India, has been acknowledged by UNESCO under which cultural recognition category?",
+   "hi": "पूर्वी भारत की एक प्रसिद्ध नृत्य परंपरा, छऊ को यूनेस्को (UNESCO) द्वारा किस सांस्कृतिक मान्यता श्रेणी के तहत मान्यता दी गई है?",
+   "opts": [
+    "Cultural Landscape Heritage<br>सांस्कृतिक परिदृश्य विरासत",
+    "World Heritage Sites<br>विश्व धरोहर स्थल",
+    "Oral and Literary Heritage<br>मौखिक और साहित्यिक विरासत",
+    "Intangible Cultural Heritage<br>अमूर्त सांस्कृतिक विरासत"
+   ],
+   "my_ans": "D",
+   "sol": "छऊ नृत्य को 2010 में यूनेस्को द्वारा 'अमूर्त सांस्कृतिक विरासत' (Intangible Cultural Heritage) की सूची में शामिल किया गया था।",
+   "trick": "छऊ = अमूर्त विरासत",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "Rangabati is a famous folk dance from which of the following states of India?",
+   "hi": "रंगाबती भारत के निम्नलिखित में से किस राज्य का प्रसिद्ध लोक नृत्य है?",
+   "opts": [
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Gujarat<br>गुजरात",
+    "Odisha<br>ओडिशा"
+   ],
+   "my_ans": "D",
+   "sol": "रंगाबती ओडिशा के संबलपुर क्षेत्र का एक पारंपरिक लोक नृत्य और गीत है।",
+   "trick": "रंगाबती = ओडिशा",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "Which of the following musical genres was considered formal and divine in ancient India?",
+   "hi": "प्राचीन भारत में निम्नलिखित में से किस संगीत शैली को औपचारिक और दिव्य माना जाता था?",
+   "opts": [
+    "Dhrupad<br>ध्रुपद",
+    "Prabandh<br>प्रबंध",
+    "Gandharva<br>गंधर्व",
+    "Gana<br>गान"
+   ],
+   "my_ans": "C",
+   "sol": "प्राचीन भारत में 'गंधर्व संगीत' को सबसे औपचारिक और दिव्य माना जाता था, जो देवताओं से जुड़ा था।",
+   "trick": "दिव्य संगीत = गंधर्व",
+   "ans": "C"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "Who among the following won the 2024 Nobel Prize in literature?",
+   "hi": "साहित्य के लिए 2024 का नोबेल पुरस्कार, निम्नलिखित में से किसने जीता?",
+   "opts": [
+    "Haruki Murakami<br>हारुकी मुराकामी",
+    "Can Xue<br>कैन ज़ू",
+    "Gerald Murnane<br>जेराल्ड मुर्नेन",
+    "Han Kang<br>हान कांग"
+   ],
+   "my_ans": "D",
+   "sol": "साहित्य के लिए 2024 का नोबेल पुरस्कार दक्षिण कोरियाई लेखिका हान कांग को दिया गया।",
+   "trick": "2024 साहित्य नोबेल = हान कांग",
+   "ans": "D"
+  }
+ ]
+}

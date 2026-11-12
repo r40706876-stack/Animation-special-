@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "247-249",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "Which of the following correctly represents the three-tier structure of the Council of Ministers?",
+   "hi": "निम्नलिखित में से कौन-सा, मंत्रिपरिषद की त्रि-स्तरीय संरचना को सटीक रूप से निरूपित करता है?",
+   "opts": [
+    "Chief Ministers – State Ministers – Deputy Chief Ministers<br>मुख्यमंत्री – राज्य मंत्री – उप-मुख्यमंत्री",
+    "Prime Minister – Ministers of State – Cabinet Ministers<br>प्रधानमंत्री – राज्य मंत्री – कैबिनेट मंत्री",
+    "Cabinet Ministers – Ministers of State – Deputy Ministers<br>कैबिनेट मंत्री – राज्य मंत्री – उप-मंत्री",
+    "Cabinet Ministers – Deputy Ministers – Governors<br>कैबिनेट मंत्री – उप-मंत्री – राज्यपाल"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय मंत्रिपरिषद तीन स्तरों में विभाजित है: शीर्ष पर कैबिनेट मंत्री, मध्य में राज्य मंत्री और निचले स्तर पर उप-मंत्री होते हैं।",
+   "trick": "कैबिनेट > राज्य मंत्री > उप-मंत्री (क्रम याद रखें)",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "GL",
+   "en": "What is the legal consequence if an Indian citizen voluntarily acquires the citizenship of a foreign country after the commencement of the Constitution?",
+   "hi": "यदि कोई भारतीय नागरिक संविधान के प्रारंभ के पश्चात स्वेच्छा से किसी विदेशी देश की नागरिकता प्राप्त कर लेता है, तो इसका विधिक परिणाम क्या होता है?",
+   "opts": [
+    "He/She ceases to be an Indian citizen<br>वह भारतीय नागरिक नहीं रहेगा/रहेगी",
+    "Citizenship is retained subject to conditions<br>शर्तों के अधीन नागरिकता बरकरार रहती है",
+    "Dual citizenship is permitted<br>दोहरी नागरिकता की अनुमति है",
+    "Indian citizenship is suspended for three years<br>भारतीय नागरिकता तीन वर्षों के लिए निलंबित कर दी जाती है"
+   ],
+   "my_ans": "A",
+   "sol": "संविधान के अनुच्छेद 9 के अनुसार, यदि कोई भारतीय नागरिक स्वेच्छा से किसी अन्य देश की नागरिकता लेता है, तो उसकी भारतीय नागरिकता स्वतः समाप्त हो जाती है।",
+   "trick": "विदेशी नागरिकता = भारतीय नागरिकता की समाप्ति",
+   "ans": "A"
+  },
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "What law, as of December 2025, requires intermediaries to act against unlawful and harmful online content affecting children in India?",
+   "hi": "दिसंबर 2025 तक प्राप्त जानकारी के अनुसार, कौन-सी विधि मध्यवर्तियों को भारत में बच्चों को प्रभावित करने वाले अवैध और हानिकारक ऑनलाइन कंटेंट के विरुद्ध कार्रवाई करने के लिए बाध्य करता है?",
+   "opts": [
+    "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021<br>सूचना प्रौद्योगिकी (मध्यवर्ती दिशानिर्देश और डिजिटल मीडिया आचार संहिता) नियम, 2021",
+    "Digital Services Regulation Act, 2024<br>डिजिटल सेवा विनियमन अधिनियम, 2024",
+    "National Child Safety Protocol, 2022<br>राष्ट्रीय बाल सुरक्षा प्रोटोकॉल, 2022",
+    "Child Protection Online Policy, 2020<br>बाल संरक्षण ऑनलाइन नीति, 2020"
+   ],
+   "my_ans": "A",
+   "sol": "आईटी नियम 2021 के तहत सोशल मीडिया और डिजिटल मध्यवर्तियों के लिए बच्चों की सुरक्षा और अवैध सामग्री को हटाना अनिवार्य है।",
+   "trick": "आईटी नियम 2021 = ऑनलाइन सुरक्षा और मध्यवर्ती उत्तरदायित्व",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "Which Article, added by the 97th Amendment Act, 2011, promotes the professional management of co-operative societies?",
+   "hi": "97वें संशोधन अधिनियम, 2011 द्वारा जोड़ा गया कौन-सा अनुच्छेद सहकारी समितियों के पेशेवर प्रबंधन को बढ़ावा देता है?",
+   "opts": [
+    "Article 43B<br>अनुच्छेद 43B",
+    "Article 43A<br>अनुच्छेद 43A",
+    "Article 48A<br>अनुच्छेद 48A",
+    "Article 38<br>अनुच्छेद 38"
+   ],
+   "my_ans": "A",
+   "sol": "97वें संविधान संशोधन द्वारा अनुच्छेद 43B को राज्य के नीति निदेशक तत्वों में जोड़ा गया, जो सहकारी समितियों के पेशेवर प्रबंधन को बढ़ावा देता है।",
+   "trick": "43B = सहकारी समितियों का पेशेवर प्रबंधन",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "Which of the following is NOT correctly matched with respect to the Directive Principles of State Policy?",
+   "hi": "निम्नलिखित में से कौन-सा, राज्य के नीति निदेशक सिद्धांतों के संदर्भ में सुमेलित नहीं है?",
+   "opts": [
+    "Article 41 - Provision for just and humane conditions of work and maternity relief<br>अनुच्छेद 41 - न्यायसंगत और मानवीय कार्य परिस्थितियों तथा मातृत्व अवकाश के लिए प्रावधान",
+    "Article 39A - Equal justice and free legal aid<br>अनुच्छेद 39A - समान न्याय और निःशुल्क कानूनी सहायता",
+    "Article 43A - Participation of workers in management of industries<br>अनुच्छेद 43A - उद्योगों के प्रबंधन में श्रमिकों की भागीदारी",
+    "Article 40 - Organisation of village panchayats<br>अनुच्छेद 40 - ग्राम पंचायतों का संगठन"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 42 में कार्य की मानवीय दशाओं और मातृत्व सहायता का प्रावधान है, जबकि अनुच्छेद 41 काम, शिक्षा और सार्वजनिक सहायता के अधिकार से संबंधित है।",
+   "trick": "अनुच्छेद 42 = मातृत्व सहायता और मानवीय कार्य दशाएं",
+   "ans": "A"
+  },
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "Article 25 of the Indian Constitution primarily guarantees which of the following rights?",
+   "hi": "भारतीय संविधान का अनुच्छेद 25 मुख्यतः निम्नलिखित में से किस अधिकार की गारंटी देता है?",
+   "opts": [
+    "Cultural and educational rights<br>सांस्कृतिक और शैक्षिक अधिकार",
+    "Freedom of religion<br>धर्म की स्वतंत्रता",
+    "Right to constitutional remedies<br>संवैधानिक उपायों का अधिकार",
+    "Right to equality before law<br>कानून के समक्ष समानता का अधिकार"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 25 के तहत सभी नागरिकों को अंतःकरण की स्वतंत्रता और धर्म को अबाध रूप से मानने, आचरण करने और प्रचार करने का अधिकार प्राप्त है।",
+   "trick": "अनुच्छेद 25 = धर्म की स्वतंत्रता",
+   "ans": "B"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "The Preamble primarily serves as which of the following?",
+   "hi": "उद्देशिका, मुख्यतः निम्नलिखित में से किस रूप में कार्य करती है?",
+   "opts": [
+    "A financial guideline<br>एक वित्तीय दिशानिर्देश",
+    "A schedule to the Constitution<br>संविधान की एक अनुसूची",
+    "A guiding principle for interpretation<br>निर्वचन के लिए एक निर्देशक सिद्धांत",
+    "An enforceable part of law<br>विधि का प्रवर्तनीय भाग"
+   ],
+   "my_ans": "C",
+   "sol": "प्रस्तावना संविधान का अभिन्न अंग है और यह संवैधानिक प्रावधानों की व्याख्या करने के लिए एक मार्गदर्शक सिद्धांत के रूप में कार्य करती है।",
+   "trick": "प्रस्तावना = संविधान की व्याख्या का मार्गदर्शक",
+   "ans": "C"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "What kind of justice do the Directive Principles of State Policy of the Indian Constitution mainly aim to achieve?",
+   "hi": "भारतीय संविधान के राज्य के नीति निदेशक सिद्धांत मुख्यतः किस प्रकार के न्याय को प्राप्त करने का लक्ष्य रखते हैं?",
+   "opts": [
+    "All legal justice<br>सभी कानूनी न्याय",
+    "Religious justice<br>धार्मिक न्याय",
+    "Economic and social justice<br>आर्थिक और सामाजिक न्याय",
+    "Political justice<br>राजनीतिक न्याय"
+   ],
+   "my_ans": "C",
+   "sol": "नीति निदेशक तत्वों का मुख्य उद्देश्य आर्थिक और सामाजिक न्याय सुनिश्चित करके एक कल्याणकारी राज्य की स्थापना करना है।",
+   "trick": "DPSP = आर्थिक और सामाजिक न्याय",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "Which of the following states/UT in India had the literacy rate above 80% as per Census 2011?",
+   "hi": "2011 की जनगणना के अनुसार भारत के किस राज्य/UT में साक्षरता दर 80% से अधिक थी?",
+   "opts": [
+    "Sikkim and Odisha<br>सिक्किम और ओडिशा",
+    "Goa and Tripura<br>गोवा और त्रिपुरा",
+    "Tamil Nadu and Assam<br>तमिलनाडु और असम",
+    "Himachal Pradesh and Haryana<br>हिमाचल प्रदेश और हरियाणा"
+   ],
+   "my_ans": "B",
+   "sol": "2011 की जनगणना के अनुसार गोवा और त्रिपुरा दोनों राज्यों की साक्षरता दर 80% से अधिक दर्ज की गई थी।",
+   "trick": "गोवा और त्रिपुरा = 80% से अधिक साक्षरता",
+   "ans": "B"
+  }
+ ]
+}

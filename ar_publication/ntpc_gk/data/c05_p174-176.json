@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "174-176",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "In a population pyramid, a narrow base and a wider top are most likely to indicate which of the following?",
+   "hi": "जनसंख्या पिरामिड में, संकीर्ण आधार और चौड़ा शीर्ष सबसे अधिक क्या दर्शाता है?",
+   "opts": [
+    "High birth rates and low death rates<br>उच्च जन्म दर और निम्न मृत्यु दर",
+    "Low birth rates and high life expectancy<br>कम जन्म दर और उच्च जीवन प्रत्याशा",
+    "High birth rates and high death rates<br>उच्च जन्म दर और उच्च मृत्यु दर",
+    "Low birth rates and low life expectancy<br>कम जन्म दर और कम जीवन प्रत्याशा"
+   ],
+   "my_ans": "B",
+   "sol": "संकीर्ण आधार कम जन्म दर को दर्शाता है और चौड़ा शीर्ष अधिक बुजुर्ग आबादी यानी उच्च जीवन प्रत्याशा को दर्शाता है।",
+   "trick": "आधार = जन्म दर, शीर्ष = जीवन प्रत्याशा।",
+   "ans": "B"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "Which of the following Union Territories had the lowest density of population according to Census 2011?",
+   "hi": "2011 की जनगणना के अनुसार निम्नलिखित में से किस केंद्र शासित प्रदेश में जनसंख्या घनत्व सबसे कम था?",
+   "opts": [
+    "Puducherry<br>पुदुचेरी",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह",
+    "Chandigarh<br>चंडीगढ़",
+    "Lakshadweep<br>लक्षद्वीप"
+   ],
+   "my_ans": "B",
+   "sol": "अंडमान और निकोबार द्वीप समूह का क्षेत्रफल अधिक है लेकिन जनसंख्या बहुत कम है, जिससे इसका घनत्व सबसे कम (46 व्यक्ति/किमी²) है।",
+   "trick": "अंडमान = सबसे कम घनत्व।",
+   "ans": "B"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Which of the following is NOT included in the four official meteorological seasons of India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत के चार आधिकारिक मौसम-विज्ञान संबंधी ऋतुओं में सम्मिलित नहीं है?",
+   "opts": [
+    "Rainy season<br>वर्षा ऋतु",
+    "Summer season<br>ग्रीष्म ऋतु",
+    "Spring season<br>वसंत ऋतु",
+    "Winter season<br>शीत ऋतु"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय मौसम विभाग (IMD) चार ऋतुएं मानता है: शीत, ग्रीष्म, मानसून (वर्षा), और मानसून-पश्चात। वसंत आधिकारिक ऋतु नहीं है।",
+   "trick": "वसंत ऋतु IMD की सूची में नहीं है।",
+   "ans": "C"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "The Census 2011 of India is officially recognised as which number in the sequence of the continuous series of censuses reckoned from 1872?",
+   "hi": "भारत की जनगणना 2011 को आधिकारिक तौर पर 1872 से चली आ रही जनगणनाओं की निरंतर श्रृंखला में किस क्रम के रूप में मान्यता प्राप्त है?",
+   "opts": [
+    "16th National Census<br>16वीं राष्ट्रीय जनगणना",
+    "13th National Census<br>13वीं राष्ट्रीय जनगणना",
+    "14th National Census<br>14वीं राष्ट्रीय जनगणना",
+    "15th National Census<br>15वीं राष्ट्रीय जनगणना"
+   ],
+   "my_ans": "D",
+   "sol": "1872 से शुरू होकर 2011 तक कुल 15 दशकीय जनगणनाएं आयोजित की गई हैं।",
+   "trick": "1872 से 2011 = 15 जनगणना।",
+   "ans": "D"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Which river system supports Bangladesh’s extreme population density?",
+   "hi": "कौन-सा नदी तंत्र, बांग्लादेश के अत्यधिक जनसंख्या घनत्व को सहायता प्रदान करता है?",
+   "opts": [
+    "Ganges-Brahmaputra Delta<br>गंगा-ब्रह्मपुत्र डेल्टा",
+    "Mississippi River Plain<br>मिसिसिपी नदी का मैदान",
+    "Nile River Valley<br>नील नदी घाटी",
+    "Amazon River Basin<br>अमेज़न नदी बेसिन"
+   ],
+   "my_ans": "A",
+   "sol": "गंगा और ब्रह्मपुत्र नदियों द्वारा निर्मित डेल्टा विश्व का सबसे उपजाऊ क्षेत्र है, जो सघन कृषि और बड़ी आबादी का समर्थन करता है।",
+   "trick": "गंगा-ब्रह्मपुत्र डेल्टा = विश्व का सबसे बड़ा डेल्टा।",
+   "ans": "A"
+  },
+  {
+   "n": 156,
+   "lvl": "UG",
+   "en": "Nagarjuna Sagar Dam is constructed across which of the following rivers?",
+   "hi": "नागार्जुन सागर बांध का निर्माण निम्नलिखित में से किस नदी पर किया गया है?",
+   "opts": [
+    "Godavari<br>गोदावरी",
+    "Krishna<br>कृष्णा",
+    "Tungabhadra<br>तुंगभद्रा",
+    "Bhima<br>भीमा"
+   ],
+   "my_ans": "B",
+   "sol": "नागार्जुन सागर बांध तेलंगाना और आंध्र प्रदेश की सीमा पर कृष्णा नदी पर स्थित है।",
+   "trick": "नागार्जुन = कृष्णा नदी।",
+   "ans": "B"
+  },
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "Which of the following rivers helps define a portion of the India–Bangladesh border?",
+   "hi": "निम्नलिखित में से कौन-सी नदी भारत-बांग्लादेश सीमा के एक हिस्से को निर्धारित करने में सहायक है?",
+   "opts": [
+    "Mahanadi<br>महानदी",
+    "Narmada<br>नर्मदा",
+    "Brahmaputra<br>ब्रह्मपुत्र",
+    "Ganga<br>गंगा"
+   ],
+   "my_ans": "D",
+   "sol": "गंगा नदी भारत से बांग्लादेश में प्रवेश करती है और कुछ हिस्सों में प्राकृतिक सीमा बनाती है, जहाँ इसे पद्मा कहा जाता है।",
+   "trick": "गंगा = भारत-बांग्लादेश सीमा।",
+   "ans": "D"
+  },
+  {
+   "n": 158,
+   "lvl": "UG",
+   "en": "According to World Population Prospects, 2024, what is the estimated peak of the world’s population in the mid-2080s?",
+   "hi": "विश्व जनसंख्या परिदृश्यों, 2024 के अनुसार, 2080 के दशक के मध्य में विश्व की अनुमानित अधिकतम जनसंख्या कितनी होगी?",
+   "opts": [
+    "8.2 billion<br>8.2 बिलियन",
+    "9.5 billion<br>9.5 बिलियन",
+    "11.1 billion<br>11.1 बिलियन",
+    "10.3 billion<br>10.3 बिलियन"
+   ],
+   "my_ans": "D",
+   "sol": "संयुक्त राष्ट्र की रिपोर्ट के अनुसार, 2080 के दशक के मध्य में वैश्विक जनसंख्या लगभग 10.3 बिलियन के शिखर पर पहुंचने का अनुमान है।",
+   "trick": "2080 के दशक का शिखर = 10.3 बिलियन।",
+   "ans": "D"
+  },
+  {
+   "n": 159,
+   "lvl": "UG",
+   "en": "Which of the following densities measures the pressure of population on net cultivated area in India?",
+   "hi": "निम्नलिखित में से कौन-सा घनत्व, भारत में निवल कृषि क्षेत्र पर जनसंख्या के दाब को मापता है?",
+   "opts": [
+    "Nutritional density<br>पोषणज घनत्व",
+    "Economic density<br>आर्थिक घनत्व",
+    "Physiological density<br>शरीरक्रियात्मक घनत्व",
+    "Agricultural density<br>कृषि घनत्व"
+   ],
+   "my_ans": "C",
+   "sol": "शरीरक्रियात्मक घनत्व (Physiological density) कुल जनसंख्या और शुद्ध कृषि क्षेत्र का अनुपात है, जो कृषि भूमि पर जनसंख्या के दबाव को दर्शाता है।",
+   "trick": "शरीरक्रियात्मक = जनसंख्या / कृषि भूमि।",
+   "ans": "C"
+  },
+  {
+   "n": 160,
+   "lvl": "UG",
+   "en": "According to Census 2011, which Union Territory had the lowest literacy rate?",
+   "hi": "जनगणना 2011 के अनुसार, किस केंद्र शासित प्रदेश की साक्षरता दर सबसे कम थी?",
+   "opts": [
+    "Lakshadweep<br>लक्षद्वीप",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह",
+    "Chandigarh<br>चंडीगढ़",
+    "Dadra and Nagar Haveli<br>दादरा और नगर हवेली"
+   ],
+   "my_ans": "D",
+   "sol": "2011 की जनगणना के अनुसार, दादरा और नगर हवेली की साक्षरता दर (77.65%) केंद्र शासित प्रदेशों में सबसे कम थी।",
+   "trick": "दादरा और नगर हवेली = न्यूनतम साक्षरता (UT).",
+   "ans": "D"
+  },
+  {
+   "n": 161,
+   "lvl": "UG",
+   "en": "What was India’s literacy rate according to the Census 2011 data?",
+   "hi": "वर्ष 2011 की जनगणना के आंकड़ों के अनुसार, भारत की साक्षरता दर कितनी थी?",
+   "opts": [
+    "74.04%",
+    "64.83%",
+    "79.40%",
+    "70.00%"
+   ],
+   "my_ans": "A",
+   "sol": "2011 की जनगणना के अनुसार भारत की कुल साक्षरता दर 74.04% दर्ज की गई थी।",
+   "trick": "भारत साक्षरता = 74.04% याद रखें।",
+   "ans": "A"
+  }
+ ]
+}

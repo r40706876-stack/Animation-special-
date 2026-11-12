@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "47-49",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Who implemented the “Blue Water Policy” in India?",
+   "hi": "भारत में “ब्लू वाटर पॉलिसी (Blue Water Policy)” को किसने लागू किया?",
+   "opts": [
+    "Albuquerque<br>अल्बुकर्क",
+    "Henry the Navigator<br>हेनरी द नेविगेटर",
+    "Joao de Castro<br>जोआओ डी कास्त्रो",
+    "Francisco de Almeida<br>फ्रांसिस्को डी अल्मेडा"
+   ],
+   "my_ans": "D",
+   "sol": "फ्रांसिस्को डी अल्मेडा भारत में पहले पुर्तगाली वायसराय थे, जिन्होंने हिंद महासागर में नौसैनिक वर्चस्व स्थापित करने के लिए 'ब्लू वाटर पॉलिसी' लागू की थी।",
+   "trick": "अल्मेडा = ब्लू वाटर (समुद्री शक्ति)",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Match the administrative terms with their descriptions.",
+   "hi": "प्रशासनिक शब्दों को उनके विवरणों से सुमेलित कीजिए।",
+   "opts": [
+    "A-3, B-4, C-1, D-2",
+    "A-4, B-2, C-1, D-3",
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-1, C-4, D-3"
+   ],
+   "my_ans": "C",
+   "sol": "न्याय चक्र शासकों और किसानों की परस्पर निर्भरता है, इक्ता भूमि अनुदान प्रणाली है, रज़िया सुल्तान इल्तुतमिश की पुत्री थी, और मिन्हाज-उस-सिराज एक इतिहासकार था।",
+   "trick": "इक्ता = भूमि, रज़िया = इल्तुतमिश की बेटी",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The Pallava dynasty had its capital at which of the following places?",
+   "hi": "पल्लव राजवंश की राजधानी निम्नलिखित में से किस स्थान पर थी?",
+   "opts": [
+    "Vatapi<br>वातापी",
+    "Madurai<br>मदुरै",
+    "Badami<br>बादामी",
+    "Kanchipuram<br>कांचीपुरम"
+   ],
+   "my_ans": "D",
+   "sol": "पल्लव राजवंश की राजधानी कांचीपुरम (तमिलनाडु) थी, जो उस समय का एक प्रमुख सांस्कृतिक केंद्र भी था।",
+   "trick": "पल्लव = कांचीपुरम",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Which of the following is/are famous Sun temples of India?",
+   "hi": "निम्नलिखित में से कौन-से भारत के प्रसिद्ध सूर्य मंदिर हैं?",
+   "opts": [
+    "I Only<br>केवल I",
+    "I and III Only<br>केवल I और III",
+    "I and II Only<br>केवल I और II",
+    "I, II and III<br>I, II और III"
+   ],
+   "my_ans": "D",
+   "sol": "कोणार्क (ओडिशा), मोढेरा (गुजरात) और मार्तंड (कश्मीर) तीनों ही भारत के अत्यंत प्रसिद्ध और ऐतिहासिक सूर्य मंदिर हैं।",
+   "trick": "सूर्य मंदिर: कोणार्क, मोढेरा, मार्तंड",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Who among the following was the court poet of the Vardhana ruler, Harsha?",
+   "hi": "निम्नलिखित में से कौन, वर्धन शासक हर्ष का राज-कवि था?",
+   "opts": [
+    "Harishena<br>हरिषेण",
+    "Kalashoka<br>कलाशोक",
+    "Banabhatta<br>बाणभट्ट",
+    "Vasumitra<br>वसुमित्र"
+   ],
+   "my_ans": "C",
+   "sol": "बाणभट्ट सम्राट हर्ष के दरबारी कवि थे, जिन्होंने 'हर्षचरित' और 'कादम्बरी' नामक प्रसिद्ध ग्रंथों की रचना की थी।",
+   "trick": "हर्ष = बाणभट्ट",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Who among the following introduced the Blue Water Policy to strengthen Portuguese naval power in the Indian Ocean?",
+   "hi": "निम्नलिखित में से किसने हिंद महासागर में पुर्तगाली नौसैनिक शक्ति को मजबूत करने के लिए ब्लू वाटर पॉलिसी की शुरुआत की थी?",
+   "opts": [
+    "Nuno da Cunha<br>नूनो डा कुन्हा",
+    "Francisco De Almeida<br>फ्रांसिस्को-डी-अल्मेडा",
+    "Bartholomew Diaz<br>बारटोलोमियु डियाज",
+    "Afonso de Albuquerque<br>अफोंसो डी अल्बुकर्क"
+   ],
+   "my_ans": "B",
+   "sol": "फ्रांसिस्को डी अल्मेडा ने 1505-1509 के दौरान भारत में पुर्तगाली नौसेना को मजबूत करने के लिए ब्लू वाटर पॉलिसी शुरू की थी।",
+   "trick": "अल्मेडा = ब्लू वाटर पॉलिसी",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "What is the dominant form of decoration employed in Sultanate buildings?",
+   "hi": "सल्तनत काल की इमारतों में उपयोग की जाने वाली सजावट का प्रमुख रूप क्या है?",
+   "opts": [
+    "Arabesque<br>बेलबूटाकारी",
+    "Kalasha<br>कलश",
+    "Amalaka<br>आमलक",
+    "Toranas<br>तोरण"
+   ],
+   "my_ans": "A",
+   "sol": "सल्तनत काल की वास्तुकला में ज्यामितीय और पुष्प पैटर्न वाली सजावट का उपयोग किया जाता था, जिसे 'अरबस्क' कहा जाता है।",
+   "trick": "इस्लामी सजावट = अरबस्क",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "The T-shaped pillar found in Türkiye in October 2025 is significant for which historical period?",
+   "hi": "अक्टूबर 2025 में तुर्की में प्राप्त T-आकार का स्तंभ किस ऐतिहासिक काल के लिए महत्वपूर्ण है?",
+   "opts": [
+    "Neolithic<br>नवपाषाण",
+    "Iron Age<br>लौह युग",
+    "Bronze Age<br>कांस्य युग",
+    "Medieval<br>मध्ययुगीन"
+   ],
+   "my_ans": "A",
+   "sol": "तुर्की में मिले T-आकार के विशाल स्तंभ नवपाषाण युग (Neolithic Era) की वास्तुकला और संस्कृति के प्रमाण हैं।",
+   "trick": "T-स्तंभ = नवपाषाण",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "Hampi, a UNESCO World Heritage Site, was the capital of which empire?",
+   "hi": "यूनेस्को की विश्व धरोहर स्थल, हम्पी किस साम्राज्य की राजधानी थी?",
+   "opts": [
+    "Vijayanagara Empire<br>विजयनगर साम्राज्य",
+    "Gupta Empire<br>गुप्त साम्राज्य",
+    "Maurya Empire<br>मौर्य साम्राज्य",
+    "Mughal Empire<br>मुगल साम्राज्य"
+   ],
+   "my_ans": "A",
+   "sol": "हम्पी कर्नाटक में स्थित विजयनगर साम्राज्य की राजधानी थी, जो तुंगभद्रा नदी के तट पर बसी थी।",
+   "trick": "हम्पी = विजयनगर",
+   "ans": "A"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "The Khajuraho group of temples was primarily built under which dynasty?",
+   "hi": "खजुराहो मंदिर समूह का निर्माण मुख्यतः किस राजवंश के शासनकाल में हुआ था?",
+   "opts": [
+    "Chandela<br>चंदेल",
+    "Solanki<br>सोलंकी",
+    "Gahadavala<br>गहड़वाल",
+    "Rashtrakuta<br>राष्ट्रकूट"
+   ],
+   "my_ans": "A",
+   "sol": "खजुराहो के प्रसिद्ध मंदिरों का निर्माण 950-1050 ईस्वी के बीच चंदेल राजवंश के शासकों द्वारा करवाया गया था।",
+   "trick": "खजुराहो = चंदेल",
+   "ans": "A"
+  }
+ ]
+}

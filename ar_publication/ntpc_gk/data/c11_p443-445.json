@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "443-445",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "Which molecule is primarily responsible for storing genetic information in most living organisms?",
+   "hi": "अधिकांश सजीवों में आनुवंशिक सूचना को संग्रहित करने के लिए मुख्य रूप से कौन-सा अणु उत्तरदायी होता है?",
+   "opts": [
+    "RNA<br>आरएनए (RNA)",
+    "Lipid<br>लिपिड (Lipid)",
+    "Protein<br>प्रोटीन (Protein)",
+    "DNA<br>डीएनए (DNA)"
+   ],
+   "my_ans": "D",
+   "sol": "DNA (डीऑक्सीराइबोन्यूक्लिक एसिड) अधिकांश जीवों में प्राथमिक आनुवंशिक पदार्थ है जो जीन के रूप में वंशानुगत जानकारी संग्रहीत करता है।",
+   "trick": "DNA = आनुवंशिक जानकारी का मुख्य भंडार",
+   "ans": "D"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "The phenotype short in pea plants is expressed by which allele combination?",
+   "hi": "मटर के पौधों में लक्षणप्ररूप बौना आकार किस युग्म विकल्पी (अलील) संयोजन द्वारा व्यक्त होता है?",
+   "opts": [
+    "tT",
+    "TT",
+    "tt",
+    "Tt"
+   ],
+   "my_ans": "C",
+   "sol": "मटर के पौधों में लंबापन (T) प्रभावी है और बौनापन (t) अप्रभावी है। बौना लक्षण केवल तभी प्रकट होता है जब दोनों अलील अप्रभावी (tt) हों।",
+   "trick": "बौनापन हमेशा समयुग्मजी अप्रभावी (tt) होता है",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "The fibrous root system, in which the primary root is short-lived and replaced by numerous adventitious roots, is a characteristic feature of which group of plants?",
+   "hi": "तंतुमय जड़ तंत्र, जिसमें प्राथमिक जड़ अल्पकालिक होती है और उसकी जगह अनेक अपस्थानिक जड़ें ले लेती हैं, पौधों के किस समूह की एक विशिष्ट विशेषता है?",
+   "opts": [
+    "Monocotyledonous<br>एकबीजपत्री",
+    "Dicotyledonous<br>द्विबीजपत्री",
+    "Gymnosperms<br>जिम्नोस्पर्म",
+    "Pteridophytes<br>टेरिडोफाइट"
+   ],
+   "my_ans": "A",
+   "sol": "एकबीजपत्री (Monocots) पौधों में रेशेदार जड़ तंत्र पाया जाता है, जहाँ प्राथमिक जड़ जल्दी नष्ट हो जाती है और तने के आधार से कई जड़ें निकलती हैं।",
+   "trick": "एकबीजपत्री = रेशेदार जड़ें",
+   "ans": "A"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "Which of the following is a fat-soluble vitamin that helps in promotion of calcium absorption in the gut for bone health?",
+   "hi": "निम्नलिखित में से कौन-सा, वसा में घुलनशील विटामिन है जो अस्थि स्वास्थ्य के लिए आंत्र में कैल्शियम के अवशोषण को बढ़ावा देने में सहायता करता है?",
+   "opts": [
+    "Vitamin A<br>विटामिन A",
+    "Vitamin D<br>विटामिन D",
+    "Vitamin B<br>विटामिन B",
+    "Vitamin C<br>विटामिन C"
+   ],
+   "my_ans": "B",
+   "sol": "विटामिन D वसा में घुलनशील है और यह आंतों में कैल्शियम के अवशोषण को बढ़ाकर हड्डियों को मजबूत बनाता है।",
+   "trick": "विटामिन D = हड्डियों की मजबूती",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "Which function is primarily regulated by the medulla?",
+   "hi": "कौन-सा कार्य मुख्य रूप से मैडुला (medulla) द्वारा नियंत्रित होता है?",
+   "opts": [
+    "Vision<br>दृष्टि",
+    "Thinking<br>चिंतन",
+    "Involuntary actions<br>अनैच्छिक क्रियाएँ",
+    "Memory<br>स्मृति"
+   ],
+   "my_ans": "C",
+   "sol": "मेडुला ऑब्लांगेटा मस्तिष्क का वह हिस्सा है जो हृदय गति, श्वसन और रक्तचाप जैसी अनैच्छिक क्रियाओं को नियंत्रित करता है।",
+   "trick": "मेडुला = अनैच्छिक क्रियाओं का केंद्र",
+   "ans": "C"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "The stomach secretes the enzyme pepsin to aid digestion. Pepsin mainly acts on which nutrient?",
+   "hi": "अमाशय पाचन क्रिया में सहायता के लिए पेप्सिन नामक एंजाइम स्रावित करता है। पेप्सिन मुख्य रूप से किस पोषक तत्व पर कार्य करता है?",
+   "opts": [
+    "Carbohydrates<br>कार्बोहाइड्रेट",
+    "Fats<br>वसा",
+    "Proteins<br>प्रोटीन",
+    "Vitamins<br>विटामिन"
+   ],
+   "my_ans": "C",
+   "sol": "पेप्सिन एक पाचक एंजाइम है जो अमाशय में अम्लीय माध्यम में प्रोटीन को छोटे पेप्टाइड्स में तोड़ता है।",
+   "trick": "पेप्सिन = प्रोटीन का पाचन",
+   "ans": "C"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "DNA and RNA are polymers made of long chains of ______.",
+   "hi": "DNA और RNA ______ की लंबी श्रृंखलाओं से बने बहुलक हैं।",
+   "opts": [
+    "Fatty acids<br>फैटी एसिड",
+    "Nucleotides<br>न्यूक्लियोटाइड",
+    "Monosaccharides<br>मोनोसैकेराइड",
+    "Amino acids<br>अमीनो एसिड"
+   ],
+   "my_ans": "B",
+   "sol": "DNA और RNA न्यूक्लिक एसिड हैं, जो न्यूक्लियोटाइड की लंबी श्रृंखलाओं से बने होते हैं।",
+   "trick": "DNA/RNA = न्यूक्लियोटाइड के बहुलक",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "A gastrointestinal disease caused by the protozoan Entamoeba histolytica leads to abdominal pain and stools with excess mucous and blood clots. It often spreads through contaminated food and water via houseflies acting as mechanical carriers. Which disease is described?",
+   "hi": "एंटअमीबा हिस्टोलिटिका प्रोटोजोआ के कारण होने वाला एक जठरांत्र रोग, जिससे पेट दर्द और मल में अत्यधिक बलगम और रक्त के थक्के आते हैं। यह अक्सर दूषित भोजन और पानी के माध्यम से फैलता है। कौन सा रोग वर्णित है?",
+   "opts": [
+    "Giardiasis<br>जिआर्डियासिस",
+    "Cholera<br>हैजा",
+    "Amoebiasis<br>अमीबायसिस",
+    "Ascariasis<br>एस्केरियासिस"
+   ],
+   "my_ans": "C",
+   "sol": "अमीबायसिस (अमीबिक पेचिश) एंटअमीबा हिस्टोलिटिका के कारण होता है, जो दूषित भोजन और पानी से फैलता है।",
+   "trick": "एंटअमीबा = अमीबायसिस",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "Which pigment is responsible for the green color of plants?",
+   "hi": "पादपों के हरे रंग के लिए कौन-सा वर्णक उत्तरदायी होता है?",
+   "opts": [
+    "Carotene<br>कैरोटीन",
+    "Anthocyanin<br>एंथोसायनिन",
+    "Chlorophyll<br>क्लोरोफिल",
+    "Xanthophyll<br>ज़ैंथोफिल"
+   ],
+   "my_ans": "C",
+   "sol": "क्लोरोफिल पौधों में पाया जाने वाला मुख्य वर्णक है जो प्रकाश संश्लेषण में मदद करता है और पौधों को हरा रंग प्रदान करता है।",
+   "trick": "क्लोरोफिल = हरा रंग",
+   "ans": "C"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Which of the following is included among the water-soluble vitamins collectively grouped together in a specific vitamin class known as vitamin B complex?",
+   "hi": "निम्नलिखित में से किसे उन जल-घुलनशील विटामिनों में शामिल किया गया है, जिन्हें सामूहिक रूप से 'विटामिन B कॉम्प्लेक्स' नामक एक विशिष्ट विटामिन वर्ग में रखा गया है?",
+   "opts": [
+    "Tocopherol<br>टोकोफेरोल",
+    "Retinol<br>रेटिनोल",
+    "Calciferol<br>कैल्सीफेरोल",
+    "Thiamin<br>थायमिन"
+   ],
+   "my_ans": "D",
+   "sol": "थायमिन (विटामिन B1) जल में घुलनशील है और विटामिन B कॉम्प्लेक्स का एक महत्वपूर्ण हिस्सा है।",
+   "trick": "B कॉम्प्लेक्स = जल में घुलनशील",
+   "ans": "D"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "The process of growth and healing in the body is supported by which food component?",
+   "hi": "शरीर में वृद्धि और उपचार की प्रक्रिया को कौन-सा खाद्य घटक सहायता प्रदान करता है?",
+   "opts": [
+    "Fats<br>वसा",
+    "Minerals<br>खनिज",
+    "Vitamins<br>विटामिन",
+    "Proteins<br>प्रोटीन"
+   ],
+   "my_ans": "D",
+   "sol": "प्रोटीन शरीर के निर्माण, ऊतकों की मरम्मत और वृद्धि के लिए आवश्यक होते हैं।",
+   "trick": "प्रोटीन = शरीर का निर्माण",
+   "ans": "D"
+  }
+ ]
+}

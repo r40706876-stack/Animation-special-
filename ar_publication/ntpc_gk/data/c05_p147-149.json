@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "147-149",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "Which of the following countries serves as India’s gateway to the ASEAN region by being the only ASEAN nation sharing a land boundary with India?",
+   "hi": "निम्नलिखित में से कौन-सा देश, भारत के साथ भूमि सीमा साझा करने वाला एकमात्र आसियान (ASEAN) राष्ट्र होने के नाते, आसियान क्षेत्र में भारत के प्रवेश द्वार के रूप में कार्य करता है?",
+   "opts": [
+    "Bhutan<br>भूटान",
+    "Myanmar<br>म्यांमार",
+    "Bangladesh<br>बांग्लादेश",
+    "Nepal<br>नेपाल"
+   ],
+   "my_ans": "B",
+   "sol": "म्यांमार एकमात्र आसियान सदस्य देश है जो भारत के साथ थलीय सीमा साझा करता है। यह भारत का दक्षिण-पूर्व एशिया के लिए प्रवेश द्वार है।",
+   "trick": "म्यांमार ही एकमात्र आसियान देश है जो भारत से जमीन से जुड़ा है।",
+   "ans": "B"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "Which of the following is an example of a minor industrial region of India?",
+   "hi": "निम्नलिखित में से कौन-सा भारत के लघु औद्योगिक क्षेत्र का उदाहरण है?",
+   "opts": [
+    "Brahmaputra valley<br>ब्रह्मपुत्र घाटी",
+    "Hugli region<br>हुगली क्षेत्र",
+    "Gujarat region<br>गुजरात क्षेत्र",
+    "Chota Nagpur region<br>छोटा नागपुर क्षेत्र"
+   ],
+   "my_ans": "A",
+   "sol": "ब्रह्मपुत्र घाटी भारत का एक लघु औद्योगिक क्षेत्र है, जहाँ मुख्य रूप से चाय प्रसंस्करण और तेल रिफाइनरी जैसे उद्योग स्थित हैं।",
+   "trick": "ब्रह्मपुत्र घाटी = लघु औद्योगिक क्षेत्र (चाय और तेल)।",
+   "ans": "A"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "Which glacier, located in the Karakoram range, is the longest in this range and the second longest in the world outside the polar regions?",
+   "hi": "काराकोरम पर्वत श्रृंखला में स्थित कौन-सा हिमनद, इस श्रृंखला का सबसे लंबा और ध्रुवीय क्षेत्रों के बाहर विश्व का दूसरा सबसे लंबा हिमनद है?",
+   "opts": [
+    "Baltoro Glacier<br>बाल्तोरो हिमनद",
+    "Gangotri Glacier<br>गंगोत्री हिमनद",
+    "Siachen Glacier<br>सियाचिन हिमनद",
+    "Pindari Glacier<br>पिंडारी हिमनद"
+   ],
+   "my_ans": "C",
+   "sol": "सियाचिन हिमनद काराकोरम श्रेणी का सबसे लंबा हिमनद है और ध्रुवीय क्षेत्रों के बाहर विश्व का दूसरा सबसे लंबा हिमनद है।",
+   "trick": "सियाचिन = काराकोरम का सबसे लंबा ग्लेशियर।",
+   "ans": "C"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "Which of the following factors causes Ooty to have cooler summers than Coimbatore, even though both are located at nearly the same latitude?",
+   "hi": "निम्नलिखित में से कौन-सा कारक ऊटी में कोयंबटूर की तुलना में गर्मियों में ठंड का कारण बनता है, जबकि दोनों लगभग समान अक्षांश पर स्थित हैं?",
+   "opts": [
+    "Coimbatore receives less solar radiation during the year<br>कोयंबटूर में वर्ष भर कम सौर विकिरण प्राप्त होता है",
+    "Ooty is located closer to the sea, while Coimbatore is inland<br>ऊटी समुद्र के निकट स्थित है, जबकि कोयंबटूर अंतर्देशीय है",
+    "Ooty is influenced by cold desert winds from the north<br>ऊटी उत्तर से आने वाली शीत मरूस्थल पवनों से प्रभावित होता है",
+    "Ooty is situated at a higher altitude, leading to lower temperatures<br>ऊटी अधिक ऊंचाई पर स्थित है, जिसके कारण वहां ताप कम रहता है"
+   ],
+   "my_ans": "D",
+   "sol": "ऊंचाई बढ़ने के साथ तापमान घटता है (सामान्य ह्रास दर)। ऊटी अधिक ऊंचाई पर स्थित है, इसलिए वहां का तापमान कोयंबटूर से कम रहता है।",
+   "trick": "ऊंचाई ज्यादा = तापमान कम।",
+   "ans": "D"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "Which of the following is the largest solar park in India as of 2025?",
+   "hi": "वर्ष 2025 तक की स्थिति के अनुसार, निम्नलिखित में से कौन-सा भारत का सबसे बड़ा सोलर पार्क है?",
+   "opts": [
+    "Rewa Solar Park<br>रीवा सोलर पार्क",
+    "Pavagada Solar Park<br>पावागढ़ सोलर पार्क",
+    "Bhadla Solar Park<br>भादला सोलर पार्क",
+    "Kurnool Ultra Mega Solar Park<br>कुरनूल अल्ट्रा मेगा सोलर पार्क"
+   ],
+   "my_ans": "C",
+   "sol": "राजस्थान के जोधपुर जिले में स्थित भादला सोलर पार्क भारत का सबसे बड़ा सोलर पार्क है, जिसकी क्षमता 2,245 मेगावाट है।",
+   "trick": "भादला = भारत का सबसे बड़ा सोलर पार्क।",
+   "ans": "C"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Which natural disaster involves mass movement of snow, ice, and rock down a mountain?",
+   "hi": "किस प्राकृतिक आपदा में पहाड़ से हिम, बर्फ और चट्टानों का बड़े पैमाने पर खिसकना शामिल होता है?",
+   "opts": [
+    "Avalanche<br>हिमसखलन (Avalanche)",
+    "Tsunami<br>सुनामी (Tsunami)",
+    "Landslide<br>भूस्खलन (Landslide)",
+    "Cyclone<br>चक्रवात (Cyclone)"
+   ],
+   "my_ans": "A",
+   "sol": "पहाड़ों से बर्फ, हिम और चट्टानों के तेजी से नीचे गिरने की घटना को हिमसखलन (Avalanche) कहा जाता है।",
+   "trick": "बर्फ का गिरना = हिमसखलन (Avalanche)।",
+   "ans": "A"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "Which factor has contributed most to the depletion of high-grade mineral ores in India over recent decades?",
+   "hi": "हाल के दशकों में भारत में उच्च-श्रेणी के खनिज अयस्कों की कमी में किस कारक ने सबसे अधिक योगदान दिया है?",
+   "opts": [
+    "Increased export of unprocessed minerals<br>अपरिष्कृत खनिजों का बढ़ा हुआ निर्यात",
+    "Limited foreign investment in mining<br>खनन में सीमित विदेशी निवेश",
+    "Overdependence on coal-based industries<br>कोयला-आधारित उद्योगों पर अत्यधिक निर्भरता",
+    "Selective mining of rich ores<br>समृद्ध अयस्कों का चयनात्मक खनन"
+   ],
+   "my_ans": "D",
+   "sol": "चयनात्मक खनन (Selective mining) का अर्थ है केवल उच्च गुणवत्ता वाले अयस्कों को निकालना, जिससे उच्च-श्रेणी के भंडार जल्दी समाप्त हो गए हैं।",
+   "trick": "सिर्फ मलाई निकालना = चयनात्मक खनन।",
+   "ans": "D"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "According to the Government of India, flash floods in July 2023 in which state severely disrupted the functioning of several power stations?",
+   "hi": "भारत सरकार के अनुसार, जुलाई 2023 में आकस्मिक बाढ़ ने किस राज्य में कई शक्ति स्टेशनों के कामकाज को बुरी तरह से बाधित किया था?",
+   "opts": [
+    "Sikkim<br>सिक्किम",
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "Arunachal Pradesh<br>अरुणाचल प्रदेश",
+    "Uttarakhand<br>उत्तराखंड"
+   ],
+   "my_ans": "B",
+   "sol": "जुलाई 2023 में हिमाचल प्रदेश में भारी बारिश और बाढ़ के कारण ब्यास और सतलुज नदियों पर स्थित कई जलविद्युत परियोजनाएं बुरी तरह प्रभावित हुई थीं।",
+   "trick": "जुलाई 2023 बाढ़ = हिमाचल प्रदेश।",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "Which forest type in India is known for its year-round green canopy due to no fixed period of leaf shedding?",
+   "hi": "भारत में किस प्रकार के वन अपने वर्ष भर हरित वितान (canopy) के लिए जाने जाते हैं, क्योंकि यहाँ पत्तियों के झड़ने की कोई निश्चित अवधि नहीं होती है?",
+   "opts": [
+    "Montane pine forests<br>मोंटेन पाइन वन",
+    "Tropical thorn forests<br>उष्णकटिबंधीय कंटक वन",
+    "Tropical evergreen forests<br>उष्णकटिबंधीय सदाबहार वन",
+    "Dry deciduous forests<br>शुष्क पर्णपाती वन"
+   ],
+   "my_ans": "C",
+   "sol": "उष्णकटिबंधीय सदाबहार वन 200 सेमी से अधिक वर्षा वाले क्षेत्रों में पाए जाते हैं। इनमें पत्तियां झड़ने का कोई निश्चित समय नहीं होता, इसलिए ये हमेशा हरे रहते हैं।",
+   "trick": "सदाबहार = हमेशा हरा।",
+   "ans": "C"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "According to GFRA 2025, what was India’s global rank in total forest area?",
+   "hi": "GFRA 2025 के अनुसार, कुल वन क्षेत्र में भारत की वैश्विक रैंक कितनी थी?",
+   "opts": [
+    "9th<br>9वीं",
+    "6th<br>छठवीं",
+    "15th<br>15वीं",
+    "12th<br>12वीं"
+   ],
+   "my_ans": "A",
+   "sol": "GFRA (ग्लोबल फॉरेस्ट रिसोर्सेज असेसमेंट) 2025 के अनुसार, भारत कुल वन क्षेत्र के मामले में विश्व में 9वें स्थान पर है।",
+   "trick": "भारत = 9वां स्थान (वन क्षेत्र)।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "298-300",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 239,
+   "lvl": "UG",
+   "en": "Article 141 of the Indian Constitution declares that the law laid down by the Supreme Court is binding on ____.",
+   "hi": "भारतीय संविधान का अनुच्छेद 141 यह घोषित करता है कि सर्वोच्च न्यायालय द्वारा निर्धारित कानून _______ बाध्यकारी है।",
+   "opts": [
+    "State governments<br>राज्य सरकारों पर",
+    "All tribunals except civil courts<br>दीवानी न्यायालयों को छोड़कर सभी न्यायाधिकरणों पर",
+    "Only High Courts<br>केवल उच्च न्यायालयों पर",
+    "All courts within the territory of India<br>भारत की सीमा के भीतर स्थित सभी न्यायालयों पर"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 141 के अनुसार, सर्वोच्च न्यायालय द्वारा घोषित कानून भारत के राज्यक्षेत्र के भीतर सभी न्यायालयों पर बाध्यकारी होता है।",
+   "trick": "अनुच्छेद 141 = सर्वोच्च न्यायालय का कानून सर्वोपरि",
+   "ans": "D"
+  },
+  {
+   "n": 240,
+   "lvl": "UG",
+   "en": "Which of the following is a Parliamentary committee?",
+   "hi": "निम्नलिखित में से कौन-सी एक संसदीय समिति है?",
+   "opts": [
+    "A panel of MPs selected by the House or Speaker<br>सदन या अध्यक्ष द्वारा चयनित सांसदों का एक पैनल",
+    "A committee formed by the President<br>राष्ट्रपति द्वारा गठित समिति",
+    "A panel of civil servants<br>सिविल सेवकों का एक पैनल",
+    "A judicial panel of judges<br>न्यायाधीशों का एक न्यायिक पैनल"
+   ],
+   "my_ans": "A",
+   "sol": "संसदीय समितियां संसद द्वारा विधेयकों और सरकारी कार्यों की जांच के लिए गठित की जाती हैं, जिसमें संसद सदस्य (MPs) शामिल होते हैं।",
+   "trick": "संसदीय समिति = संसद के सदस्यों (MPs) की समिति",
+   "ans": "A"
+  },
+  {
+   "n": 241,
+   "lvl": "UG",
+   "en": "What is the highest forum for discussion and debate on public issues and national policy in India?",
+   "hi": "भारत में सार्वजनिक मुद्दों और राष्ट्रीय नीति पर चर्चा एवं बहस के लिए सर्वोच्च मंच कौन-सा है?",
+   "opts": [
+    "Election Commission<br>निर्वाचन आयोग",
+    "President’s Office<br>राष्ट्रपति कार्यालय",
+    "Supreme Court<br>उच्चतम न्यायालय",
+    "Parliament<br>संसद"
+   ],
+   "my_ans": "D",
+   "sol": "संसद भारत की सर्वोच्च विधायी संस्था है, जहां सार्वजनिक मुद्दों, कानूनों और राष्ट्रीय नीतियों पर चर्चा और बहस होती है।",
+   "trick": "संसद = चर्चा और बहस का सर्वोच्च मंच",
+   "ans": "D"
+  },
+  {
+   "n": 242,
+   "lvl": "UG",
+   "en": "The Supreme Court of India can issue how many types of writs (orders)?",
+   "hi": "भारत का सर्वोच्च न्यायालय कितने प्रकार के रिट (आदेश) जारी कर सकता है?",
+   "opts": [
+    "6",
+    "3",
+    "5",
+    "2"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 32 के तहत सर्वोच्च न्यायालय 5 प्रकार की रिट जारी कर सकता है: बंदी प्रत्यक्षीकरण, परमादेश, प्रतिषेध, उत्प्रेषण और अधिकार पृच्छा।",
+   "trick": "रिट के 5 प्रकार (बंदी, परमा, प्रति, उत्प्रे, अधिकार)",
+   "ans": "C"
+  },
+  {
+   "n": 243,
+   "lvl": "UG",
+   "en": "\"Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters\" is provided in which of the following provisions of the Constitution of India?",
+   "hi": "\"उच्च न्यायालयों से सिविल विषयों से संबंधित अपीलों में उच्चतम न्यायालय की अपीलीय अधिकारिता\" भारत के संविधान के निम्नलिखित में से किस प्रावधान में प्रदान की गई है?",
+   "opts": [
+    "Article 134<br>अनुच्छेद 134",
+    "Article 132<br>अनुच्छेद 132",
+    "Article 133<br>अनुच्छेद 133",
+    "Article 131<br>अनुच्छेद 131"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान का अनुच्छेद 133 उच्च न्यायालयों से सिविल मामलों में सर्वोच्च न्यायालय में अपील करने की अधिकारिता प्रदान करता है।",
+   "trick": "अनुच्छेद 133 = सिविल मामलों में अपील",
+   "ans": "C"
+  },
+  {
+   "n": 244,
+   "lvl": "UG",
+   "en": "In India, the concept of judicial activism, as reflected through innovative interpretations of the Constitution and expansion of the scope of judicial review, was introduced during which of the following periods?",
+   "hi": "भारत में न्यायिक सक्रियता की अवधारणा, जो संविधान की नवीन व्याख्याओं और न्यायिक समीक्षा के दायरे के विस्तार के माध्यम से परिलक्षित होती है, किस अवधि के दौरान शुरू हुई थी?",
+   "opts": [
+    "Mid-1990s<br>मध्य-1990",
+    "Mid-1970s<br>मध्य-1970",
+    "Mid-1980s<br>मध्य-1980",
+    "Mid-1960s<br>मध्य-1960"
+   ],
+   "my_ans": "B",
+   "sol": "न्यायिक सक्रियता की शुरुआत आपातकाल (1975-77) के दौरान हुई, जब न्यायालयों ने मौलिक अधिकारों की रक्षा के लिए सक्रिय हस्तक्षेप शुरू किया।",
+   "trick": "न्यायिक सक्रियता = आपातकाल (1975-77) के बाद",
+   "ans": "B"
+  },
+  {
+   "n": 245,
+   "lvl": "UG",
+   "en": "Which of the following statements about Lok Adalat is correct?",
+   "hi": "लोक अदालत के संबंध में, निम्नलिखित में से कौन-सा कथन सही है?",
+   "opts": [
+    "Lok Adalat decisions are not binding on parties.<br>लोक अदालत के निर्णय पक्षों पर बाध्यकारी नहीं होते।",
+    "Lok Adalat has the power to enforce its decisions like a civil court.<br>लोक अदालत को दीवानी न्यायालयों की तरह अपने निर्णयों को लागू करने का अधिकार प्राप्त है।",
+    "Lok Adalat follows a lengthy and complex procedure similar to regular courts.<br>लोक अदालत नियमित अदालतों के समान ही एक लंबी और जटिल प्रक्रिया का पालन करती है।",
+    "Lok Adalat mainly resolves disputes through arbitration.<br>लोक अदालत मुख्य रूप से मध्यस्थता के माध्यम से विवादों का समाधान करती है।"
+   ],
+   "my_ans": "B",
+   "sol": "लोक अदालत का निर्णय अंतिम होता है और इसे दीवानी न्यायालय की डिक्री का दर्जा प्राप्त है, जिसे लागू कराया जा सकता है।",
+   "trick": "लोक अदालत = सिविल कोर्ट जैसी शक्ति",
+   "ans": "B"
+  },
+  {
+   "n": 246,
+   "lvl": "UG",
+   "en": "Under Article 226, High Courts can issue writs to which authorities within their territorial jurisdiction?",
+   "hi": "अनुच्छेद 226 के तहत, उच्च न्यायालय अपने क्षेत्रीय अधिकार क्षेत्र के भीतर किन अधिकारियों को रिट जारी कर सकते हैं?",
+   "opts": [
+    "Only Union Government<br>केवल केंद्र सरकार",
+    "Any person or authority or government<br>किसी भी व्यक्ति या प्राधिकरण या सरकार",
+    "Only private companies<br>केवल निजी कंपनियां",
+    "Only State Government<br>केवल राज्य सरकार"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 226 के तहत उच्च न्यायालय किसी भी व्यक्ति, प्राधिकरण या सरकार को रिट जारी कर सकते हैं, जो उनके अधिकार क्षेत्र में आते हैं।",
+   "trick": "अनुच्छेद 226 = व्यापक रिट अधिकारिता",
+   "ans": "B"
+  },
+  {
+   "n": 247,
+   "lvl": "UG",
+   "en": "Under which Article of the Indian Constitution may the President of India proclaim President’s Rule when Constitutional machinery fails in a state?",
+   "hi": "भारतीय संविधान के किस अनुच्छेद के अंतर्गत, भारत के राष्ट्रपति किसी राज्य में संवैधानिक तंत्र विफल होने की स्थिति में राष्ट्रपति शासन की घोषणा कर सकते हैं?",
+   "opts": [
+    "Article 350<br>अनुच्छेद 350",
+    "Article 249<br>अनुच्छेद 249",
+    "Article 355<br>अनुच्छेद 355",
+    "Article 356<br>अनुच्छेद 356"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 356 राष्ट्रपति को राज्य में संवैधानिक तंत्र विफल होने पर राष्ट्रपति शासन लगाने की शक्ति देता है।",
+   "trick": "अनुच्छेद 356 = राष्ट्रपति शासन",
+   "ans": "D"
+  },
+  {
+   "n": 248,
+   "lvl": "UG",
+   "en": "The Vidhan Sabha is also known as the:",
+   "hi": "विधान सभा को किस नाम से भी जाना जाता है?",
+   "opts": [
+    "State Parliament<br>राज्य संसद",
+    "Legislative Assembly<br>विधान सभा",
+    "Council of Ministers<br>मंत्रिपरिषद",
+    "Legislative Council<br>विधान परिषद"
+   ],
+   "my_ans": "B",
+   "sol": "विधान सभा राज्य विधानमंडल का निचला सदन है, जिसे आधिकारिक रूप से 'लेजिस्लेटिव असेंबली' (Legislative Assembly) कहा जाता है।",
+   "trick": "विधान सभा = निचला सदन (Legislative Assembly)",
+   "ans": "B"
+  },
+  {
+   "n": 249,
+   "lvl": "UG",
+   "en": "Which type(s) of Legislatures can a state have under the Indian Constitution?",
+   "hi": "भारतीय संविधान के तहत एक राज्य में किस प्रकार के विधानमंडल हो सकते हैं?",
+   "opts": [
+    "Unicameral or Bicameral<br>एकसदनीय या द्विसदनीय",
+    "Only Unicameral<br>केवल एकसदनीय",
+    "Only Bicameral<br>केवल द्विसदनीय",
+    "None of these<br>इनमें से कोई नहीं"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान के अनुसार, राज्य विधानमंडल एकसदनीय (केवल विधानसभा) या द्विसदनीय (विधानसभा और विधान परिषद) हो सकते हैं।",
+   "trick": "राज्य विधानमंडल = एकसदनीय या द्विसदनीय",
+   "ans": "A"
+  }
+ ]
+}

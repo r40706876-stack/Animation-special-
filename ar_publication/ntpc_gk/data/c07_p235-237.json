@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "235-237",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which amendment made it constitutionally mandatory for municipalities to prepare “District Planning Committees” and “Metropolitan Planning Committees”?",
+   "hi": "निम्नलिखित में से किस संशोधन ने नगरपालिकाओं के लिए \"जिला योजना समितियां (District Planning Committees)\" और \"महानगरीय योजना समितियां (Metropolitan Planning Committees)\" गठित करना संवैधानिक रूप से अनिवार्य बना दिया?",
+   "opts": [
+    "97th Amendment<br>97 वां संशोधन",
+    "74th Amendment<br>74 वां संशोधन",
+    "102nd Amendment<br>102 वां संशोधन",
+    "73rd Amendment<br>73 वां संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "74वें संविधान संशोधन अधिनियम, 1992 द्वारा शहरी स्थानीय निकायों (नगरपालिकाओं) को संवैधानिक दर्जा दिया गया और जिला व महानगर योजना समितियों का गठन अनिवार्य किया गया।",
+   "trick": "74 = शहरी (नगरपालिका), 73 = ग्रामीण (पंचायत)",
+   "ans": "B"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "The Indian Constitution empowers the Parliament to make laws on matters in the State List under which of the following circumstances? 1. When the Rajya Sabha passes a resolution to that effect 2. During a National Emergency 3. When states make a request 4. To implement international agreements 5. At the discretion of the Prime Minister",
+   "hi": "भारतीय संविधान निम्नलिखित में से किन परिस्थितियों में संसद को राज्य सूची में उल्लिखित मामलों पर कानून बनाने का अधिकार देता है? 1. राज्य सभा द्वारा उस आशय का प्रस्ताव पारित करने पर 2. राष्ट्रीय आपातकाल के दौरान 3. राज्य के अनुरोध पर 4. अंतर्राष्ट्रीय समझौतों को लागू करने के लिए 5. प्रधानमंत्री के विवेक पर",
+   "opts": [
+    "2, 3, 4, and 5 only<br>केवल 2, 3, 4 और 5",
+    "1, 2, 3, and 5 only<br>केवल 1, 2, 3 और 5",
+    "1, 2, 4, and 5 only<br>केवल 1, 2, 4 और 5",
+    "1, 2, 3, and 4 only<br>केवल 1, 2, 3 और 4"
+   ],
+   "my_ans": "D",
+   "sol": "संसद राज्य सूची के विषयों पर अनुच्छेद 249 (राज्यसभा संकल्प), 250 (आपातकाल), 252 (राज्यों का अनुरोध) और 253 (अंतर्राष्ट्रीय समझौते) के तहत कानून बना सकती है। प्रधानमंत्री का विवेक संवैधानिक आधार नहीं है।",
+   "trick": "249, 250, 252, 253 याद रखें",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "As per Article ___________ of the Indian Constitution, from the date of commencement of the Constitution (Sixty-ninth Amendment) Act, 1991, the Union territory of Delhi shall be called the National Capital Territory of Delhi.",
+   "hi": "भारतीय संविधान के अनुच्छेद _________ के अनुसार, संविधान (69 वाँ संशोधन) अधिनियम, 1991 के लागू होने की तिथि से दिल्ली केंद्र शासित प्रदेश को राष्ट्रीय राजधानी क्षेत्र दिल्ली कहा जाएगा।",
+   "opts": [
+    "239AB",
+    "239AA",
+    "239AD",
+    "239AC"
+   ],
+   "my_ans": "B",
+   "sol": "69वें संविधान संशोधन अधिनियम, 1991 द्वारा अनुच्छेद 239AA जोड़ा गया, जिसने दिल्ली को 'राष्ट्रीय राजधानी क्षेत्र' का विशेष दर्जा दिया।",
+   "trick": "69वां संशोधन = दिल्ली = 239AA",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "The power of High Courts to issue writs for purposes beyond Fundamental Rights is given under __________.",
+   "hi": "मौलिक अधिकारों के अतिरिक्त अन्य कानूनी अधिकारों के संबंध में रिट जारी करने की उच्च न्यायालयों की शक्ति _______ के अंतर्गत उल्लिखित है।",
+   "opts": [
+    "Article 245<br>अनुच्छेद 245",
+    "Article 227<br>अनुच्छेद 227",
+    "Article 226<br>अनुच्छेद 226",
+    "Article 32<br>अनुच्छेद 32"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 226 उच्च न्यायालयों को मौलिक अधिकारों के साथ-साथ अन्य कानूनी अधिकारों के प्रवर्तन के लिए भी रिट जारी करने की व्यापक शक्ति देता है।",
+   "trick": "अनुच्छेद 32 केवल मौलिक अधिकार, 226 व्यापक (अन्य अधिकार भी)",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which Article of the Directive Principles of State Policy enshrines the principle of equal pay for equal work for both men and women in India?",
+   "hi": "राज्य के नीति निर्देशक सिद्धांत का कौन-सा अनुच्छेद, भारत में पुरुषों और महिलाओं दोनों के लिए समान कार्य के लिए समान वेतन के सिद्धांत को प्रतिष्ठापित करता है?",
+   "opts": [
+    "Article 39<br>अनुच्छेद 39",
+    "Article 43<br>अनुच्छेद 43",
+    "Article 41<br>अनुच्छेद 41",
+    "Article 44<br>अनुच्छेद 44"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 39(d) राज्य को यह निर्देश देता है कि वह पुरुषों और महिलाओं दोनों के लिए समान कार्य के लिए समान वेतन सुनिश्चित करे।",
+   "trick": "39 = समान कार्य, समान वेतन",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which of the following languages is linked with the abhang devotional verses composed by Sant Tukaram in praise of the Divine?",
+   "hi": "निम्नलिखित में से कौन-सी भाषा संत तुकाराम द्वारा ईश्वर की स्तुति में रचित अभंग (abhang) भक्ति छंदों से संबंधित है?",
+   "opts": [
+    "Hindi<br>हिंदी",
+    "Marathi<br>मराठी",
+    "Gujarati<br>गुजराती",
+    "Kannada<br>कन्नड़"
+   ],
+   "my_ans": "B",
+   "sol": "संत तुकाराम महाराष्ट्र के एक महान संत थे और उन्होंने अपनी भक्ति रचनाएं 'अभंग' मराठी भाषा में लिखी थीं।",
+   "trick": "तुकाराम = महाराष्ट्र = मराठी",
+   "ans": "B"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "The first E-Lok Adalat was held in which year in India?",
+   "hi": "भारत में पहली ई - लोक अदालत किस वर्ष आयोजित की गई थी?",
+   "opts": [
+    "2014",
+    "2012",
+    "2020",
+    "2016"
+   ],
+   "my_ans": "C",
+   "sol": "पहली ई-लोक अदालत का आयोजन 2020 में कोविड-19 महामारी के दौरान लॉकडाउन में न्याय सुनिश्चित करने के लिए किया गया था।",
+   "trick": "कोविड काल = 2020 = पहली ई-लोक अदालत",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Which court is considered the highest judicial authority in a district?",
+   "hi": "किसी जिले में निम्नलिखित में से किस न्यायालय को सर्वोच्च न्यायिक प्राधिकरण माना जाता है?",
+   "opts": [
+    "Munsif Court<br>मुंसिफ न्यायालय",
+    "District Court<br>जिला न्यायालय",
+    "High Court<br>उच्च न्यायालय",
+    "Family Court<br>पारिवारिक न्यायालय"
+   ],
+   "my_ans": "B",
+   "sol": "जिला न्यायालय (District Court) जिले का सर्वोच्च न्यायिक प्राधिकरण होता है, जिसके अंतर्गत अधीनस्थ न्यायालय कार्य करते हैं।",
+   "trick": "जिला स्तर = जिला न्यायालय",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "Which legislation forms the legal basis for the creation and operation of the Central Administrative Tribunal (CAT)?",
+   "hi": "कौन-सा विधान, केंद्रीय प्रशासनिक अधिकरण (CAT) के सृजन और प्रचालन के लिए विधिक आधार बनाता है?",
+   "opts": [
+    "The Service Matters Act, 1990<br>सेवा विषयक अधिनियम, 1990",
+    "The Judiciary Act, 1971<br>न्यायपालिका अधिनियम, 1971",
+    "The Administrative Tribunals Act, 1985<br>प्रशासनिक अधिकरण अधिनियम, 1985",
+    "The Tribunals Reforms Act, 1980<br>अधिकरण सुधार अधिनियम, 1980"
+   ],
+   "my_ans": "C",
+   "sol": "केंद्रीय प्रशासनिक अधिकरण (CAT) की स्थापना प्रशासनिक अधिकरण अधिनियम, 1985 के तहत की गई थी, जो सरकारी कर्मचारियों के सेवा मामलों को देखता है।",
+   "trick": "CAT = 1985 का अधिनियम",
+   "ans": "C"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Which of the following statements is not correct?",
+   "hi": "निम्नलिखित में से कौन-सा कथन, सही नहीं है?",
+   "opts": [
+    "Article 282 empowers both the Centre and the states to make any grants for any public purpose, even if it is not within their respective legislative competence.<br>अनुच्छेद 282 केंद्र और राज्यों दोनों को किसी भी सार्वजनिक उद्देश्य के लिए अनुदान देने का अधिकार देता है, भले ही यह उनकी संबंधित विधायी क्षमता के दायरे में न हो।",
+    "A state legislature is prohibited from imposing a tax on the supply of goods or services or both where such supply takes place outside the state and where such supply takes place in the course of import or export.<br>किसी राज्य विधानमंडल को वस्तुओं या सेवाओं या दोनों की आपूर्ति पर कर लगाने से प्रतिबंधित किया गया है, यदि ऐसी आपूर्ति राज्य के बाहर होती है और यदि ऐसी आपूर्ति आयात या निर्यात के दौरान होती है।",
+    "A state legislature can impose taxes on professions, trades, callings and employments.<br>राज्य विधानमंडल व्यवसायों, व्यापारों, पेशों और रोजगारों पर कर लगा सकता है।",
+    "A state legislature can not impose tax on the consumption or sale of electricity.<br>राज्य विधानमंडल, विद्युत की खपत या बिक्री पर कर नहीं लगा सकता है।"
+   ],
+   "my_ans": "D",
+   "sol": "राज्य विधानमंडल को विद्युत की खपत या बिक्री पर कर लगाने का संवैधानिक अधिकार प्राप्त है, इसलिए विकल्प D गलत कथन है।",
+   "trick": "राज्य बिजली पर कर लगा सकते हैं",
+   "ans": "D"
+  }
+ ]
+}

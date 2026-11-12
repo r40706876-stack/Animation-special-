@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "468-470",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "Who is responsible for loading the operating system into memory during the booting process?",
+   "hi": "बूटिंग (booting) प्रक्रिया के दौरान ऑपरेटिंग सिस्टम को मेमोरी में लोड करने के लिए कौन उत्तरदायी होता है?",
+   "opts": [
+    "CPU",
+    "RAM",
+    "ROM",
+    "BIOS"
+   ],
+   "my_ans": "D",
+   "sol": "BIOS (बेसिक इनपुट/आउटपुट सिस्टम) एक फर्मवेयर है जो ROM में स्टोर होता है। यह बूटिंग के दौरान POST टेस्ट करता है और ऑपरेटिंग सिस्टम को मेमोरी में लोड करने की प्रक्रिया शुरू करता है।",
+   "trick": "BIOS = बूटिंग का बॉस",
+   "ans": "D"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "Under which of the following categories do headphones fall?",
+   "hi": "हेडफ़ोन निम्नलिखित में से किस श्रेणी के अंतर्गत आते हैं?",
+   "opts": [
+    "Output Device<br>आउटपुट डिवाइस",
+    "Storage Device<br>स्टोरेज डिवाइस",
+    "Input Device<br>इनपुट डिवाइस",
+    "Calculator Device<br>कैलकुलेटर डिवाइस"
+   ],
+   "my_ans": "A",
+   "sol": "हेडफ़ोन कंप्यूटर से ऑडियो सिग्नल प्राप्त करते हैं और उन्हें ध्वनि तरंगों में बदलकर उपयोगकर्ता तक आउटपुट पहुँचाते हैं।",
+   "trick": "जो डेटा बाहर दे, वह आउटपुट",
+   "ans": "A"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "In the field of e-commerce and financial trading, which application of computers is essential for analyzing massive volumes of rapidly changing market data and detecting complex patterns to inform investment decisions?",
+   "hi": "ई-कॉमर्स और वित्तीय व्यापार के क्षेत्र में, निवेश संबंधी निर्णयों को सूचित करने के लिए तीव्रता से बदलते मार्केट डेटा की बड़ी मात्रा का विश्लेषण करने तथा जटिल पैटर्न का पता लगाने के लिए कंप्यूटर का कौन-सा एप्लीकेशन आवश्यक है?",
+   "opts": [
+    "Inventory Management Systems<br>इन्वेंट्री मैनेजमेंट सिस्टम",
+    "Data Encryption and Security Software<br>डेटा एन्क्रिप्शन और सिक्योरिटी सॉफ्टवेयर",
+    "Real-time Predictive Analytics<br>रियल-टाइम प्रेडिक्टिव एनालिटिक्स",
+    "Word Processing and Desktop Publishing<br>वर्ड प्रोसेसिंग और डेस्कटॉप पब्लिशिंग"
+   ],
+   "my_ans": "C",
+   "sol": "रियल-टाइम प्रेडिक्टिव एनालिटिक्स मशीन लर्निंग और सांख्यिकीय मॉडल का उपयोग करके तेजी से बदलते डेटा का विश्लेषण करती है और भविष्य के रुझानों की भविष्यवाणी करती है।",
+   "trick": "Predictive = भविष्य की भविष्यवाणी",
+   "ans": "C"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "Which type of computer memory loses its stored data when the power supply is turned off?",
+   "hi": "किस प्रकार की कंप्यूटर मेमोरी बिजली बंद होने पर अपना संग्रहीत डेटा खो देती है?",
+   "opts": [
+    "Magnetic memory set",
+    "Optical memory form",
+    "Volatile memory type",
+    "Non-volatile memory type"
+   ],
+   "my_ans": "C",
+   "sol": "वोलेटाइल मेमोरी (जैसे RAM) को डेटा बनाए रखने के लिए निरंतर बिजली की आवश्यकता होती है। बिजली कटते ही इसमें मौजूद डेटा मिट जाता है।",
+   "trick": "Volatile = अस्थिर (बिजली गई, डेटा गया)",
+   "ans": "C"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "A student wants to locate a word inside a PDF. Which shortcut helps?",
+   "hi": "कोई विद्यार्थी PDF फाइल में एक शब्द खोजना चाहता है। उसके लिए कौन-सा शॉर्टकट मददगार होगा?",
+   "opts": [
+    "Ctrl + V",
+    "Ctrl + C",
+    "Ctrl + F",
+    "Ctrl + Tab"
+   ],
+   "my_ans": "C",
+   "sol": "Ctrl + F का उपयोग किसी भी डॉक्यूमेंट या PDF में 'Find' (खोजने) टूलबार को खोलने के लिए किया जाता है।",
+   "trick": "F = Find (खोजना)",
+   "ans": "C"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Which of the following demonstrates the use of computers in scientific research?",
+   "hi": "निम्नलिखित में से कौन-सा वैज्ञानिक अनुसंधान में कंप्यूटर के उपयोग को दर्शाता है?",
+   "opts": [
+    "Online shopping<br>ऑनलाइन शॉपिंग",
+    "Ticket reservation<br>टिकट रिजर्वेशन",
+    "Word processing<br>वर्ड प्रोसेसिंग",
+    "Simulation of experiments<br>प्रयोगों का अनुकरण"
+   ],
+   "my_ans": "D",
+   "sol": "सिमुलेशन (Simulation) वैज्ञानिकों को जटिल घटनाओं (जैसे परमाणु प्रतिक्रिया) का सुरक्षित वातावरण में मॉडल बनाकर परीक्षण करने में मदद करता है।",
+   "trick": "Simulation = आभासी परीक्षण",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "A file is selected on the desktop. Pressing the Delete key will mainly:",
+   "hi": "डेस्कटॉप पर एक फ़ाइल को सेलेक्ट किया गया है। डिलीट की दबाने से मुख्य रूप से क्या होगा?",
+   "opts": [
+    "Rename the file<br>फ़ाइल का नाम बदल जाएगा",
+    "Copy the file<br>फ़ाइल कॉपी हो जाएगी",
+    "Remove the file<br>फ़ाइल रिमूव हो जाएगी",
+    "Open the file<br>फ़ाइल ओपन हो जाएगी"
+   ],
+   "my_ans": "C",
+   "sol": "डेस्कटॉप पर किसी फाइल को सेलेक्ट करके 'Delete' बटन दबाने से वह फाइल वर्तमान स्थान से हटकर 'Recycle Bin' में चली जाती है।",
+   "trick": "Delete = हटाना",
+   "ans": "C"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "In Windows 11, which built-in tool opens immediately when a user presses the keyboard shortcut Ctrl + Shift + Esc?",
+   "hi": "विंडोज 11 में, निम्नलिखित में से कौन-सा बिल्ट-इन टूल, यूज़र के कीबोर्ड शॉर्टकट Ctrl + Shift + Esc दबाने पर तुरंत ओपन हो जाता है?",
+   "opts": [
+    "Task Manager<br>टास्क मैनेजर",
+    "File Explorer<br>फाइल एक्सप्लोरर",
+    "Control Panel<br>कंट्रोल पैनल",
+    "Settings<br>सेटिंग्स"
+   ],
+   "my_ans": "A",
+   "sol": "Ctrl + Shift + Esc शॉर्टकट सीधे 'Task Manager' को खोलता है, जहाँ से चल रहे प्रोग्राम्स और सिस्टम रिसोर्स की जानकारी मिलती है।",
+   "trick": "Task = काम का प्रबंधन",
+   "ans": "A"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "Which of the following best describes an operating system?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प ऑपरेटिंग सिस्टम का सर्वोत्तम वर्णन करता है?",
+   "opts": [
+    "A program used to access the internet<br>इंटरनेट एक्सेस करने के लिए उपयोग किया जाने वाला प्रोग्राम",
+    "A program used for data entry<br>डेटा एंट्री के लिए उपयोग किया जाने वाला प्रोग्राम",
+    "A program that manages memory, processes, and devices<br>मेमोरी, प्रोसेस और डिवाइस को मैनेज करने वाला प्रोग्राम",
+    "A program used to watch videos<br>वीडियो देखने के लिए उपयोग किया जाने वाला प्रोग्राम"
+   ],
+   "my_ans": "C",
+   "sol": "ऑपरेटिंग सिस्टम एक सिस्टम सॉफ्टवेयर है जो हार्डवेयर और यूजर के बीच इंटरफेस का काम करता है और मेमोरी, प्रोसेस व डिवाइस को नियंत्रित करता है।",
+   "trick": "OS = सिस्टम का मैनेजर",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "A user mistakenly turns on the overwrite mode and each new letter replaces the old one in a line. Which key is responsible for toggling between the insert mode and the overwrite mode?",
+   "hi": "एक उपयोगकर्ता गलती से ओवरराइट मोड ऑन कर देता है और प्रत्येक नया अक्षर पंक्ति में पुराने अक्षर को प्रतिस्थापित कर देता है। निम्न में से किस कुंजी के द्वारा इंसर्ट मोड और ओवरराइट मोड के बीच टॉगल किया जाता है?",
+   "opts": [
+    "F5",
+    "Ins",
+    "Del",
+    "Tab"
+   ],
+   "my_ans": "B",
+   "sol": "कीबोर्ड पर 'Insert' (Ins) की का उपयोग 'Insert Mode' और 'Overwrite Mode' के बीच स्विच करने के लिए किया जाता है।",
+   "trick": "Ins = Insert/Overwrite Toggle",
+   "ans": "B"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "A student double-clicks a file in Windows 11 and a program starts running immediately. The file is not a document or image but directly launches software. Which file type is most likely being opened?",
+   "hi": "एक विद्यार्थी विंडोज 11 (Windows 11) में किसी फ़ाइल पर डबल-क्लिक करता है और एक प्रोग्राम तुरंत रन करने लगता है। फ़ाइल कोई डॉक्यूमेंट या इमेज नहीं है, बल्कि प्रत्यक्ष रूप से सॉफ़्टवेयर लॉन्च करती है। निम्नलिखित में से किस फ़ाइल टाइप के ओपन होने की सबसे अधिक संभावना है?",
+   "opts": [
+    ".txt",
+    ".mp3",
+    ".exe",
+    ".jpg"
+   ],
+   "my_ans": "C",
+   "sol": ".exe फाइलें 'Executable' फाइलें होती हैं, जो सीधे किसी सॉफ्टवेयर या प्रोग्राम को चलाने के लिए उपयोग की जाती हैं।",
+   "trick": "EXE = Execute (चलाना)",
+   "ans": "C"
+  }
+ ]
+}

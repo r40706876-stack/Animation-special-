@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "501-503",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 168,
+   "lvl": "UG",
+   "en": "Which of the following correctly differentiates system software from application software?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प, सिस्टम सॉफ्टवेयर और एप्लीकेशन सॉफ्टवेयर के बीच सही अंतर दर्शाता है?",
+   "opts": [
+    "System software performs user tasks; application software controls hardware",
+    "Both perform the same functions",
+    "System software manages hardware; application software performs user tasks",
+    "Application software loads the operating system; system software performs user tasks"
+   ],
+   "my_ans": "C",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर संसाधनों का प्रबंधन और नियंत्रण करता है, जबकि एप्लीकेशन सॉफ्टवेयर विशिष्ट उपयोगकर्ता कार्यों को पूरा करने के लिए बनाया जाता है।",
+   "trick": "सिस्टम = हार्डवेयर प्रबंधन, एप्लीकेशन = यूजर कार्य",
+   "ans": "C"
+  },
+  {
+   "n": 169,
+   "lvl": "UG",
+   "en": "Which of the following is an example of application software used for creating documents?",
+   "hi": "निम्नलिखित में से कौन-सा, डॉक्यूमेंट बनाने के लिए उपयोग किए जाने वाले एप्लीकेशन सॉफ्टवेयर का एक उदाहरण है?",
+   "opts": [
+    "Linux",
+    "BIOS",
+    "MS Word",
+    "Windows"
+   ],
+   "my_ans": "C",
+   "sol": "MS Word एक वर्ड प्रोसेसर है जिसका उपयोग मुख्य रूप से टाइपिंग, फॉर्मेटिंग और डॉक्यूमेंट बनाने के लिए किया जाता है।",
+   "trick": "MS Word = डॉक्यूमेंट निर्माण",
+   "ans": "C"
+  },
+  {
+   "n": 170,
+   "lvl": "UG",
+   "en": "Which advanced Task Manager function allows users to analyze process dependencies to identify which background services a program relies on?",
+   "hi": "कौन-सा एडवांस्ड टास्क मैनेजर फंक्शन, यूजर को प्रक्रिया निर्भरताओं का विश्लेषण करने की सुविधा देता है ताकि यह पता लगाया जा सके कि कोई प्रोग्राम किन बैकग्राउंड सर्विसों पर निर्भर करता है?",
+   "opts": [
+    "Go to Details",
+    "Analyze Wait Chain",
+    "Open File Location",
+    "End Task"
+   ],
+   "my_ans": "B",
+   "sol": "Analyze Wait Chain एक उन्नत डायग्नोस्टिक टूल है जो यह दिखाता है कि कोई प्रोग्राम किन अन्य प्रक्रियाओं या सेवाओं के पूरा होने का इंतजार कर रहा है।",
+   "trick": "Wait Chain = निर्भरता विश्लेषण",
+   "ans": "B"
+  },
+  {
+   "n": 171,
+   "lvl": "UG",
+   "en": "In standard Windows Sleep mode on a laptop, where is the current session primarily stored while the machine is idle?",
+   "hi": "लैपटॉप के स्टैंडर्ड विंडोज स्लीप मोड में, जब मशीन अक्रिय होती है, तो वर्तमान सेशन मुख्यतः कहां स्टोर होता है?",
+   "opts": [
+    "On the system drive only",
+    "In RAM, which remains powered with a small amount of electricity",
+    "In the CPU cache only",
+    "Permanently in the BIOS chip"
+   ],
+   "my_ans": "B",
+   "sol": "स्लीप मोड में, कंप्यूटर का डेटा RAM में रहता है और RAM को न्यूनतम बिजली मिलती रहती है ताकि डेटा सुरक्षित रहे और जल्दी रिज्यूम हो सके।",
+   "trick": "Sleep = RAM में डेटा",
+   "ans": "B"
+  },
+  {
+   "n": 172,
+   "lvl": "UG",
+   "en": "When you choose 'Shut down' in Windows, what happens?",
+   "hi": "जब आप विंडोज में 'शट डाउन (Shut down)' का चयन करते हैं, तो क्या होता है?",
+   "opts": [
+    "The PC enters a low-power state but keeps apps in memory",
+    "The PC goes into stand-by mode",
+    "All apps and data are closed and the PC powers off completely",
+    "The PC saves the session to the disk and then powers off"
+   ],
+   "my_ans": "C",
+   "sol": "शट डाउन करने पर सभी चल रहे प्रोग्राम बंद हो जाते हैं, यूजर सेशन समाप्त हो जाता है और कंप्यूटर पूरी तरह से बंद हो जाता है।",
+   "trick": "Shut down = पूर्ण बंद",
+   "ans": "C"
+  },
+  {
+   "n": 173,
+   "lvl": "UG",
+   "en": "Which of the following is the main function of system software?",
+   "hi": "निम्नलिखित में से कौन-सा सिस्टम सॉफ्टवेयर का मुख्य कार्य है?",
+   "opts": [
+    "To browse the internet.",
+    "To create documents.",
+    "To edit images.",
+    "To manage computer hardware and run applications."
+   ],
+   "my_ans": "D",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर संसाधनों का प्रबंधन करता है और एप्लीकेशन सॉफ्टवेयर को चलने के लिए एक प्लेटफॉर्म प्रदान करता है।",
+   "trick": "सिस्टम सॉफ्टवेयर = हार्डवेयर + प्लेटफॉर्म",
+   "ans": "D"
+  },
+  {
+   "n": 174,
+   "lvl": "UG",
+   "en": "The Windows 11 Task Manager helps monitor system resources to identify applications that are ___________ system performance.",
+   "hi": "विंडोज 11 टास्क मैनेजर सिस्टम रिसोर्स को मॉनिटर करने में सहायता करता है ताकि उन एप्लीकेशन की पहचान की जा सके जो सिस्टम परफॉर्मेंस को ___________ हैं।",
+   "opts": [
+    "degrading",
+    "enhancing",
+    "simplifying",
+    "stabilizing"
+   ],
+   "my_ans": "A",
+   "sol": "टास्क मैनेजर का उपयोग उन भारी एप्लीकेशन को खोजने के लिए किया जाता है जो सिस्टम की गति को धीमा (degrading) कर रहे हैं।",
+   "trick": "Degrading = प्रदर्शन खराब करना",
+   "ans": "A"
+  },
+  {
+   "n": 175,
+   "lvl": "UG",
+   "en": "Which of the following is not an application software?",
+   "hi": "निम्नलिखित में से कौन-सा एप्लीकेशन सॉफ्टवेयर नहीं है?",
+   "opts": [
+    "Operating System",
+    "Microsoft Publisher",
+    "Adobe Photoshop",
+    "Microsoft Excel"
+   ],
+   "my_ans": "A",
+   "sol": "ऑपरेटिंग सिस्टम एक सिस्टम सॉफ्टवेयर है, जबकि अन्य सभी (MS Excel, Publisher, Photoshop) एप्लीकेशन सॉफ्टवेयर हैं।",
+   "trick": "OS = सिस्टम सॉफ्टवेयर",
+   "ans": "A"
+  },
+  {
+   "n": 176,
+   "lvl": "UG",
+   "en": "Which computer application category is most crucial for designing complex physical objects like cars, buildings, and machinery before they are built?",
+   "hi": "कारों, इमारतों और मशीनरी जैसी जटिल भौतिक वस्तुओं के निर्माण से पहले उन्हें डिजाइन करने के लिए कौन-सी कंप्यूटर एप्लीकेशन श्रेणी सबसे महत्वपूर्ण है?",
+   "opts": [
+    "Presentation Software",
+    "Data Management Systems",
+    "Simulation Software",
+    "Computer-Aided Design (CAD)"
+   ],
+   "my_ans": "D",
+   "sol": "CAD (Computer-Aided Design) का उपयोग इंजीनियरिंग और आर्किटेक्चर में जटिल वस्तुओं के सटीक डिजाइन और ब्लूप्रिंट बनाने के लिए किया जाता है।",
+   "trick": "CAD = डिजाइनिंग",
+   "ans": "D"
+  }
+ ]
+}

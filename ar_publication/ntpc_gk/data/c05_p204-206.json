@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "204-206",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 258,
+   "lvl": "UG",
+   "en": "Which of the following coastal plains contains irregular, indented coastlines with natural harbours?",
+   "hi": "निम्नलिखित में से किस तटीय मैदान में अनियमित, दंतुरित तटरेखाएँ (indented coastlines) और प्राकृतिक बंदरगाह हैं?",
+   "opts": [
+    "Konkan Region<br>कोंकण क्षेत्र",
+    "Rann of Kutch<br>कच्छ का रण",
+    "East Coastal Plain<br>पूर्वी तटीय मैदान",
+    "Kathiawar Plain<br>काठियावाड़ मैदान"
+   ],
+   "my_ans": "A",
+   "sol": "कोंकण तट दमन से गोवा तक फैला है, जिसकी तटरेखा कटी-फटी है, जिससे यहाँ मुंबई और रत्नागिरी जैसे प्राकृतिक बंदरगाह बने हैं।",
+   "trick": "कोंकण तट = कटी-फटी तटरेखा",
+   "ans": "A"
+  },
+  {
+   "n": 259,
+   "lvl": "UG",
+   "en": "Which of the following statements is true regarding the Marine West Coast Climate (Cfb) as per Koeppen's scheme of classification of climate?",
+   "hi": "कोपेन की जलवायु वर्गीकरण योजना के अनुसार, सामुद्रिक पश्चिमी तटीय जलवायु (Cfb) के संबंध में निम्नलिखित में से कौन-सा कथन सत्य है?",
+   "opts": [
+    "It receives less than 20 cm of rainfall annually.<br>यहाँ 20cm से कम वार्षिक वर्षा होती है।",
+    "It has a pronounced dry season in summer.<br>यहाँ ग्रीष्म ऋतु में शुष्क मौसम स्पष्ट दिखाई देता है।",
+    "It is found in the interiors of continents far from the coast.<br>यह महाद्वीपों के तटीय क्षेत्रों से दूर, आंतरिक हिस्सों में पाई जाती है।",
+    "It experiences small daily and annual temperature ranges due to oceanic influence.<br>महासागरीय प्रभाव के कारण इसमें दैनिक और वार्षिक तापमान में बहुत कम उतार-चढ़ाव होता है।"
+   ],
+   "my_ans": "D",
+   "sol": "समुद्री पश्चिमी तटीय जलवायु (Cfb) में महासागरीय प्रभाव के कारण तापमान में बहुत कम अंतर रहता है और यहाँ पूरे वर्ष वर्षा होती है।",
+   "trick": "Cfb = समुद्री प्रभाव = स्थिर तापमान",
+   "ans": "D"
+  },
+  {
+   "n": 260,
+   "lvl": "UG",
+   "en": "The zone on Earth where no S-waves are detected is known as:",
+   "hi": "पृथ्वी पर वह क्षेत्र जहाँ S-तरंगें नहीं पहुँचती हैं, उसे क्या कहा जाता है?",
+   "opts": [
+    "Active zone<br>सक्रिय क्षेत्र",
+    "Shadow zone<br>छाया क्षेत्र",
+    "Seismic belt<br>भूकंपीय बेल्ट",
+    "Epicentral gap<br>अधिकेंद्र अंतराल"
+   ],
+   "my_ans": "B",
+   "sol": "पृथ्वी का बाहरी क्रोड तरल अवस्था में है, जिससे S-तरंगें (जो केवल ठोस में चलती हैं) नहीं गुजर पातीं। इस क्षेत्र को छाया क्षेत्र कहते हैं।",
+   "trick": "S-तरंगें तरल में नहीं चलतीं = छाया क्षेत्र",
+   "ans": "B"
+  },
+  {
+   "n": 261,
+   "lvl": "UG",
+   "en": "Which of the following pairs of local names of Western Ghats and their respective states are correctly matched?",
+   "hi": "पश्चिमी घाटों का स्थानीय नाम और उनके संबंधित राज्यों के निम्नलिखित युग्मों में से कौन-से युग्म सुमेलित हैं?",
+   "opts": [
+    "Only 1 and 2<br>केवल 1 और 2",
+    "Only 2 and 3<br>केवल 2 और 3",
+    "1, 2 and 3<br>1, 2 और 3",
+    "Only 1<br>केवल 1"
+   ],
+   "my_ans": "C",
+   "sol": "पश्चिमी घाट को महाराष्ट्र में सह्याद्रि, नीलगिरी पहाड़ियाँ कर्नाटक-तमिलनाडु सीमा पर, और अन्नामलाई पहाड़ियाँ केरल-तमिलनाडु सीमा पर स्थित हैं।",
+   "trick": "सह्याद्रि = महाराष्ट्र, नीलगिरी = कर्नाटक/तमिलनाडु, अन्नामलाई = केरल",
+   "ans": "C"
+  },
+  {
+   "n": 262,
+   "lvl": "UG",
+   "en": "Which mode of transport is most suitable for transporting heavy, bulky goods over long distances in India?",
+   "hi": "भारत में भारी और बड़े आकार की वस्तुओं को लंबी दूरी तक ले जाने के लिए परिवहन का कौन-सा साधन सबसे उपयुक्त है?",
+   "opts": [
+    "Railways<br>रेलमार्ग",
+    "Airways<br>वायुमार्ग",
+    "Roadways<br>सड़क मार्ग",
+    "Waterways<br>जलमार्ग"
+   ],
+   "my_ans": "A",
+   "sol": "रेलवे लंबी दूरी के लिए सबसे किफायती है और इसमें भारी माल (कोयला, लोहा, अनाज) को एक साथ ले जाने की उच्च क्षमता होती है।",
+   "trick": "भारी माल = रेलमार्ग",
+   "ans": "A"
+  },
+  {
+   "n": 263,
+   "lvl": "UG",
+   "en": "Which mountain range in India is one of the oldest fold mountains in the world?",
+   "hi": "भारत की कौन-सी पर्वत श्रृंखला दुनिया की सबसे पुरानी वलित पर्वत श्रृंखलाओं में से एक है?",
+   "opts": [
+    "Eastern Ghats<br>पूर्वी घाट",
+    "Karakoram Range<br>काराकोरम पर्वतमाला",
+    "Aravalli Range<br>अरावली पर्वतमाला",
+    "Himalayas<br>हिमालय"
+   ],
+   "my_ans": "C",
+   "sol": "अरावली पर्वतमाला प्रोटेरोज़ोइक युग (1.8 अरब वर्ष से अधिक पुरानी) में बनी थी, जो इसे विश्व की सबसे प्राचीन वलित पर्वत श्रृंखलाओं में से एक बनाती है।",
+   "trick": "अरावली = सबसे पुरानी",
+   "ans": "C"
+  },
+  {
+   "n": 264,
+   "lvl": "UG",
+   "en": "Which of the following climatic regions has permafrost soil and low vegetation like mosses and lichens?",
+   "hi": "निम्नलिखित में से किस जलवायु क्षेत्र में स्थायी तुषार मृदा (permafrost soil) और काई और लाइकेन जैसी निम्न वनस्पति पाई जाती है?",
+   "opts": [
+    "Aw – Tropical wet and dry climate<br>Aw - उष्णकटिबंधीय आर्द्र और शुष्क जलवायु",
+    "Cfb – Marine west coast climate<br>Cfb - समुद्री पश्चिमी तट जलवायु",
+    "BSh – Subtropical steppe climate<br>BSh - उपोष्णकटिबंधीय स्टेपी जलवायु",
+    "ET – Tundra climate<br>ET - टुंड्रा जलवायु"
+   ],
+   "my_ans": "D",
+   "sol": "टुंड्रा जलवायु (ET) ध्रुवीय क्षेत्रों में पाई जाती है जहाँ तापमान बहुत कम रहता है, जिससे केवल काई और लाइकेन जैसी वनस्पति ही उग पाती है।",
+   "trick": "टुंड्रा = जमी हुई मिट्टी (Permafrost)",
+   "ans": "D"
+  },
+  {
+   "n": 265,
+   "lvl": "UG",
+   "en": "Which of the following is characterised as an interconnected chain of submerged mountains, with a central rift zone of intense volcanic activity?",
+   "hi": "निम्नलिखित में से किसे जलमग्न पर्वतों की एक परस्पर जुड़ी श्रृंखला के रूप में वर्णित किया गया है, जिसमें तीव्र ज्वालामुखी गतिविधि वाला एक केंद्रीय रिफ्ट ज़ोन होता है?",
+   "opts": [
+    "Deep-ocean trenches<br>गहरी समुद्र खाइयां",
+    "Abyssal plains<br>वितलीय मैदान",
+    "Continental slope<br>महाद्वीपीय ढाल",
+    "Mid-oceanic ridges<br>मध्य-महासागरीय कटक"
+   ],
+   "my_ans": "D",
+   "sol": "मध्य-महासागरीय कटक टेक्टोनिक प्लेटों के अलग होने से बनते हैं, जहाँ केंद्रीय दरार घाटी में ज्वालामुखी गतिविधि सक्रिय रहती है।",
+   "trick": "मध्य-महासागरीय कटक = जलमग्न पर्वत श्रृंखला",
+   "ans": "D"
+  },
+  {
+   "n": 266,
+   "lvl": "UG",
+   "en": "Which continent has the highest average elevation due to its thick ice sheets?",
+   "hi": "वह कौन-सा महाद्वीप है जिसकी विशाल बर्फ की चादरों के कारण औसत ऊँचाई सबसे अधिक है?",
+   "opts": [
+    "Antarctica<br>अंटार्कटिका",
+    "South America<br>दक्षिण अमेरिका",
+    "Europe<br>यूरोप",
+    "Africa<br>अफ्रीका"
+   ],
+   "my_ans": "A",
+   "sol": "अंटार्कटिका महाद्वीप पर 4 किमी तक मोटी बर्फ की चादर है, जो इसकी औसत ऊँचाई को लगभग 2,300 मीटर तक बढ़ा देती है।",
+   "trick": "बर्फ की चादर = अंटार्कटिका",
+   "ans": "A"
+  },
+  {
+   "n": 267,
+   "lvl": "UG",
+   "en": "The Atal Tunnel is built in which Himalayan range?",
+   "hi": "निम्नलिखित में से किस हिमालयी पर्वतमाला में अटल सुरंग बनाई गई है?",
+   "opts": [
+    "Dhauladhar Range<br>धौलाधार पर्वतमाला",
+    "Pir Panjal Range<br>पीर पंजाल पर्वतमाला",
+    "Karakoram Range<br>काराकोरम पर्वतमाला",
+    "Zaskar Range<br>जास्कर पर्वतमाला"
+   ],
+   "my_ans": "B",
+   "sol": "अटल सुरंग हिमाचल प्रदेश में रोहतांग दर्रे के नीचे स्थित है और यह हिमालय की पीर पंजाल पर्वत श्रृंखला से होकर गुजरती है।",
+   "trick": "अटल सुरंग = पीर पंजाल",
+   "ans": "B"
+  }
+ ]
+}

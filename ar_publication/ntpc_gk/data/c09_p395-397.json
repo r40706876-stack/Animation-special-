@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "395-397",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "In which of the following media does sound move the fastest at a particular temperature?",
+   "hi": "निम्नलिखित में से किस माध्यम में ध्वनि की चाल किसी विशेष तापमान पर सबसे अधिक होती है?",
+   "opts": [
+    "Water<br>जल",
+    "Air<br>वायु",
+    "Vaccum<br>निर्वात",
+    "Iron<br>लोहा"
+   ],
+   "my_ans": "D",
+   "sol": "ध्वनि की चाल ठोस माध्यमों में सबसे अधिक होती है क्योंकि उनके कण पास-पास होते हैं। लोहे में ध्वनि की गति हवा और पानी की तुलना में बहुत अधिक होती है।",
+   "trick": "ठोस > द्रव > गैस",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "Electrical energy can be calculated using which of the following formulas?",
+   "hi": "विद्युत ऊर्जा की गणना निम्नलिखित में से किस सूत्र का उपयोग करके की जा सकती है?",
+   "opts": [
+    "Energy = Power × Time<br>ऊर्जा = शक्ति × समय",
+    "Energy = Voltage × Current<br>ऊर्जा = वोल्टेज × धारा",
+    "Energy = Current × Resistance<br>ऊर्जा = धारा × प्रतिरोध",
+    "Energy = Power ÷ Time<br>ऊर्जा = शक्ति ÷ समय"
+   ],
+   "my_ans": "A",
+   "sol": "विद्युत ऊर्जा (E) का मानक सूत्र शक्ति (P) और समय (t) का गुणनफल है, यानी E = P × t।",
+   "trick": "ऊर्जा = शक्ति × समय",
+   "ans": "A"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "A doctor prescribes a lens with a power of P=−2.5 D to a patient. This lens is _____.",
+   "hi": "एक डॉक्टर एक रोगी को P=−2.5 D की क्षमता वाला लेंस प्रयुक्त करने की सलाह देता है। यह लेंस _____ है।",
+   "opts": [
+    "A convex lens, used to correct Myopia.<br>एक उत्तल लेंस, निकट-दृष्टि दोष के लिए",
+    "A concave lens, used to correct Myopia.<br>एक अवतल लेंस, निकट-दृष्टि दोष के लिए",
+    "A convex lens, used to correct Hypermetropia.<br>एक उत्तल लेंस, दीर्घ-दृष्टि दोष के लिए",
+    "A concave lens, used to correct Hypermetropia.<br>एक अवतल लेंस, दीर्घ-दृष्टि दोष के लिए"
+   ],
+   "my_ans": "B",
+   "sol": "ऋणात्मक शक्ति अवतल लेंस को दर्शाती है, जिसका उपयोग निकट-दृष्टि दोष (Myopia) को ठीक करने के लिए किया जाता है।",
+   "trick": "ऋणात्मक शक्ति = अवतल लेंस = निकट दृष्टि दोष",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "If you measure the amount of electric charge flowing in a circuit, which SI unit would you use to record the result?",
+   "hi": "यदि आप किसी परिपथ में प्रवाहित होने वाले विद्युत आवेश की मात्रा मापते हैं, तो परिणाम को रिकॉर्ड करने के लिए आप किस SI मात्रक का उपयोग करेंगे?",
+   "opts": [
+    "Ampere<br>एम्पियर",
+    "Coulomb<br>कूलॉम",
+    "Ohm<br>ओम",
+    "Volt<br>वोल्ट"
+   ],
+   "my_ans": "B",
+   "sol": "विद्युत आवेश (Electric Charge) की SI इकाई कूलॉम (Coulomb) होती है।",
+   "trick": "आवेश = कूलॉम",
+   "ans": "B"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "You can often hear a person speaking from behind a tall fence even if you cannot see them. Which property of sound waves explains this phenomenon?",
+   "hi": "आप अक्सर किसी ऊँची बाड़ के पीछे से बोलते हुए व्यक्ति की आवाज़ सुन सकते हैं, भले ही आप उसे देख न सकें। ध्वनि तरंगों का कौन-सा गुण इस घटना की व्याख्या करता है?",
+   "opts": [
+    "Diffraction<br>विवर्तन",
+    "Reflection<br>परावर्तन",
+    "Refraction<br>अपवर्तन",
+    "Polarization<br>ध्रुवण"
+   ],
+   "my_ans": "A",
+   "sol": "विवर्तन (Diffraction) वह गुण है जिसके कारण ध्वनि तरंगें बाधाओं के किनारों से मुड़कर दूसरी तरफ फैल जाती हैं।",
+   "trick": "बाधाओं से मुड़ना = विवर्तन",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "A physicist is designing an experiment where the result depends on the product of force and velocity. Which of the following physical quantities is directly measured by this product, considering units and dimensions?",
+   "hi": "एक भौतिकविद एक ऐसा प्रयोग डिजाइन कर रहा है, जिसका परिणाम बल और वेग के गुणनफल पर निर्भर करता है। मात्रकों और विमाओं को ध्यान में रखते हुए, निम्नलिखित में से कौन-सी भौतिक राशि इस गुणनफल द्वारा प्रत्यक्ष रूप से मापी जाती है?",
+   "opts": [
+    "Power<br>शक्ति",
+    "Impulse<br>आवेग",
+    "Energy<br>ऊर्जा",
+    "Pressure<br>दाब"
+   ],
+   "my_ans": "A",
+   "sol": "बल (F) और वेग (v) का गुणनफल शक्ति (Power) के बराबर होता है (P = F × v)।",
+   "trick": "शक्ति = बल × वेग",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Which of the following optical properties of light enables sunglasses to reduce glare from sunlight reflected off surfaces such as water or roads?",
+   "hi": "प्रकाश का निम्नलिखित में से कौन-सा प्रकाशीय गुण, धूप के चश्मे (sunglasses) को पानी या सड़कों जैसी सतहों से परावर्तित सूर्य के प्रकाश से होने वाली चकाचौंध को कम करने में सक्षम बनाता है?",
+   "opts": [
+    "Diffraction<br>विवर्तन",
+    "Polarization<br>ध्रुवण",
+    "Interference<br>व्यतिकरण",
+    "Refraction<br>अपवर्तन"
+   ],
+   "my_ans": "B",
+   "sol": "ध्रुवण (Polarization) के कारण परावर्तित प्रकाश की तीव्रता कम हो जाती है, जिससे चकाचौंध कम महसूस होती है।",
+   "trick": "चकाचौंध कम करना = ध्रुवण",
+   "ans": "B"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "Electrical conductors are materials that possess which of the following properties?",
+   "hi": "विद्युत चालक पदार्थों में निम्नलिखित में से कौन-सा गुण पाया जाता है?",
+   "opts": [
+    "No resistivity<br>कोई प्रतिरोधकता नहीं",
+    "High resistivity<br>उच्च प्रतिरोधकता",
+    "Low resistivity<br>निम्न प्रतिरोधकता",
+    "Constant resistivity<br>स्थिर प्रतिरोधकता"
+   ],
+   "my_ans": "C",
+   "sol": "विद्युत चालक वे पदार्थ होते हैं जिनमें विद्युत धारा आसानी से प्रवाहित हो सके, जिसके लिए उनकी प्रतिरोधकता (resistivity) बहुत कम होनी चाहिए।",
+   "trick": "चालक = कम प्रतिरोधकता",
+   "ans": "C"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "When a metal spoon is placed in a hot cup of tea, it soon becomes warm. Which mode of heat transfer is primarily responsible for this?",
+   "hi": "जब गर्म चाय के कप में धातु की चम्मच रखी जाती है, तो वह जल्द ही गर्म हो जाती है। इसके लिए मुख्य रूप से ऊष्मा अंतरण का कौन-सा माध्यम उत्तरदायी है?",
+   "opts": [
+    "Radiation<br>विकिरण",
+    "Insulation<br>रोधन",
+    "Conduction<br>चालन",
+    "Convection<br>संवहन"
+   ],
+   "my_ans": "C",
+   "sol": "ठोस पदार्थों में ऊष्मा का स्थानांतरण सीधे संपर्क द्वारा होता है, जिसे चालन (Conduction) कहते हैं।",
+   "trick": "ठोस में ऊष्मा = चालन",
+   "ans": "C"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "What is the value of one tonne in SI units?",
+   "hi": "SI मात्रकों में एक टन (one tonne) का मान कितना होता है?",
+   "opts": [
+    "10³ kg",
+    "10⁵ kg",
+    "10⁴ kg",
+    "10² kg"
+   ],
+   "my_ans": "A",
+   "sol": "एक मीट्रिक टन का मान 1000 किलोग्राम होता है, जिसे 10³ किलोग्राम लिखा जाता है।",
+   "trick": "1 टन = 1000 किग्रा",
+   "ans": "A"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "The quantity represented by the unit volt per ampere corresponds to which electrical unit?",
+   "hi": "वोल्ट प्रति एम्पीयर मात्रक द्वारा दर्शाई गई राशि किस विद्युत मात्रक के अनुरूप है?",
+   "opts": [
+    "Coulomb<br>कूलॉम",
+    "Ohm<br>ओम",
+    "Joule<br>जूल",
+    "Watt<br>वाट"
+   ],
+   "my_ans": "B",
+   "sol": "ओम के नियम (V = IR) के अनुसार, R = V/I होता है, इसलिए वोल्ट/एम्पीयर प्रतिरोध की इकाई 'ओम' है।",
+   "trick": "V/I = R (ओम)",
+   "ans": "B"
+  }
+ ]
+}

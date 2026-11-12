@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "376-378",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 156,
+   "lvl": "UG",
+   "en": "Service and trade fall under which type of economic activities?",
+   "hi": "सेवा और व्यापार निम्नलिखित में से किस प्रकार की आर्थिक गतिविधियों (economic activities) के अंतर्गत आते हैं?",
+   "opts": [
+    "Tertiary<br>तृतीयक",
+    "Primary<br>प्राथमिक",
+    "Secondary<br>द्वितीयक",
+    "Quaternary<br>चतुर्थक"
+   ],
+   "my_ans": "A",
+   "sol": "आर्थिक गतिविधियों के वर्गीकरण में सेवा, व्यापार, बैंकिंग और परिवहन को तृतीयक (Tertiary) क्षेत्र में रखा गया है।",
+   "trick": "प्राथमिक (प्राकृतिक), द्वितीयक (निर्माण), तृतीयक (सेवा)।",
+   "ans": "A"
+  },
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "After gaining Independence, what type of economic system did India implement as its development strategy?",
+   "hi": "स्वतंत्रता प्राप्त करने के बाद, भारत ने अपनी विकास रणनीति के रूप में किस तरह की आर्थिक व्यवस्था को लागू किया?",
+   "opts": [
+    "Free market capitalism with minimal state intervention<br>न्यूनतम राज्य हस्तक्षेप के साथ मुक्त बाजार पूंजीवाद",
+    "Socialist system eliminating private ownership<br>निजी स्वामित्व को समाप्त करने वाली समाजवादी व्यवस्था",
+    "Mixed economy combining public and private sectors<br>सार्वजनिक और निजी क्षेत्रों को मिलाकर बनी मिश्रित अर्थव्यवस्था",
+    "Traditional agrarian structure without structural reforms<br>संरचनात्मक सुधारों के बिना पारंपरिक कृषीय संरचना"
+   ],
+   "my_ans": "C",
+   "sol": "स्वतंत्रता के बाद भारत ने पूंजीवाद और समाजवाद के मिश्रण को अपनाते हुए 'मिश्रित अर्थव्यवस्था' (Mixed Economy) का मॉडल चुना।",
+   "trick": "भारत = सार्वजनिक + निजी = मिश्रित अर्थव्यवस्था।",
+   "ans": "C"
+  },
+  {
+   "n": 158,
+   "lvl": "UG",
+   "en": "What was the impact of the 1990s' reforms on India's economic growth?",
+   "hi": "1990 के सुधारों का भारत की आर्थिक वृद्धि पर क्या प्रभाव पड़ा?",
+   "opts": [
+    "They led to more sustainable growth.<br>इनसे अधिक संधारणीय वृद्धि हुई।",
+    "They caused economic instability.<br>इनसे आर्थिक अस्थिरता उत्पन्न हुई।",
+    "They resulted in economic stagnation.<br>इनके परिणामस्वरूप आर्थिक स्थिरता उत्पन्न हुई।",
+    "They had no significant impact.<br>इनका कोई खास प्रभाव नहीं पड़ा।"
+   ],
+   "my_ans": "A",
+   "sol": "1991 के LPG (उदारीकरण, निजीकरण, वैश्वीकरण) सुधारों के बाद भारत की GDP वृद्धि दर में सुधार हुआ और अर्थव्यवस्था अधिक टिकाऊ बनी।",
+   "trick": "LPG सुधार = विकास की रफ्तार।",
+   "ans": "A"
+  },
+  {
+   "n": 159,
+   "lvl": "UG",
+   "en": "Which of the following is a tertiary sector activity?",
+   "hi": "निम्नलिखित में से कौन-सी एक तृतीयक क्षेत्र गतिविधि है?",
+   "opts": [
+    "Farming<br>कृषि",
+    "Mining<br>खनन",
+    "Teaching<br>शिक्षण",
+    "Manufacturing<br>विनिर्माण"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयक क्षेत्र को सेवा क्षेत्र भी कहा जाता है, जिसमें शिक्षण, बैंकिंग, परिवहन और स्वास्थ्य जैसी सेवाएं शामिल हैं।",
+   "trick": "सेवा = तृतीयक क्षेत्र।",
+   "ans": "C"
+  },
+  {
+   "n": 160,
+   "lvl": "UG",
+   "en": "Which of the following is an example of structural unemployment?",
+   "hi": "निम्नलिखित में से कौन-सा संरचनात्मक बेरोजगारी का उदाहरण है?",
+   "opts": [
+    "A textile worker loses the job due to industry automation<br>उद्योग के स्वचालन के कारण एक कपड़ा श्रमिक अपनी नौकरी खो देता है।",
+    "A worker is laid off during a temporary dip in demand<br>मांग में अस्थायी कमी के दौरान एक श्रमिक की छंटनी कर दी जाती है।",
+    "A person quits a job to pursue higher education<br>एक व्यक्ति उच्च शिक्षा प्राप्त करने के लिए अपनी नौकरी छोड़ देता है।",
+    "A worker loses their job due to seasonal fluctuations in tourism<br>पर्यटन में मौसमी उतार-चढ़ाव के कारण एक श्रमिक अपनी नौकरी खो देता है।"
+   ],
+   "my_ans": "A",
+   "sol": "संरचनात्मक बेरोजगारी तब होती है जब तकनीक या उद्योग की संरचना में बदलाव के कारण पुराने कौशल वाले श्रमिकों की मांग खत्म हो जाती है।",
+   "trick": "तकनीक बदली = संरचनात्मक बेरोजगारी।",
+   "ans": "A"
+  },
+  {
+   "n": 161,
+   "lvl": "UG",
+   "en": "Which of the following was one of the primary objectives of India's 1991 economic reforms?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत के 1991 के आर्थिक सुधारों के प्राथमिक उद्देश्यों में से एक था?",
+   "opts": [
+    "Strengthening import barriers<br>आयात अवरोध को सुदृढ़ करना",
+    "Opening up the economy to global markets<br>अर्थव्यवस्था को वैश्विक बाजारों के लिए खोलना",
+    "Promoting public sector dominance<br>सार्वजनिक क्षेत्र की प्रभाविता को प्रोत्साहित करना",
+    "Achieving self-sufficiency in agriculture<br>कृषि में आत्मनिर्भरता प्राप्त करना"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के सुधारों का मुख्य उद्देश्य भारतीय अर्थव्यवस्था को वैश्विक प्रतिस्पर्धा के लिए खोलना और उदारीकरण को बढ़ावा देना था।",
+   "trick": "1991 = LPG = वैश्वीकरण (बाजार खोलना)।",
+   "ans": "B"
+  },
+  {
+   "n": 162,
+   "lvl": "UG",
+   "en": "The main aim of globalisation in India was to____.",
+   "hi": "भारत में वैश्वीकरण का मुख्य उद्देश्य क्या था?",
+   "opts": [
+    "Restrict and close foreign trade completely<br>विदेशी व्यापार को पूरी तरह से प्रतिबंधित और बंद करना",
+    "Promote only self-sufficiency within the nation<br>राष्ट्र के भीतर केवल आत्म-निर्भरता को बढ़ावा देना",
+    "Increase and maintain higher trade barriers<br>उच्च व्यापार बाधाओं को बढ़ाना और उन्हें बनाए रखना",
+    "Integrate Indian economy with global markets<br>भारतीय अर्थव्यवस्था को वैश्विक बाजारों से एकीकृत करना"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण का मुख्य उद्देश्य भारतीय अर्थव्यवस्था को विश्व अर्थव्यवस्था के साथ जोड़ना और व्यापार बाधाओं को कम करना था।",
+   "trick": "वैश्वीकरण = विश्व के साथ एकीकरण।",
+   "ans": "D"
+  },
+  {
+   "n": 163,
+   "lvl": "UG",
+   "en": "Which sector in India saw major growth due to globalisation?",
+   "hi": "भारत में वैश्वीकरण के कारण किस क्षेत्र में भारी वृद्धि हुई?",
+   "opts": [
+    "Mining<br>खनन",
+    "Handicrafts<br>हस्तशिल्प",
+    "IT and Services<br>IT और सेवाएं",
+    "Education<br>शिक्षा"
+   ],
+   "my_ans": "C",
+   "sol": "वैश्वीकरण के बाद भारत में IT और सेवा क्षेत्र का तेजी से विकास हुआ, क्योंकि विकसित देशों से आउटसोर्सिंग बढ़ी।",
+   "trick": "वैश्वीकरण = IT और सेवा क्षेत्र का उछाल।",
+   "ans": "C"
+  },
+  {
+   "n": 164,
+   "lvl": "UG",
+   "en": "What is the primary goal of India’s Fiscal Responsibility and Budget Management (FRBM) Act of 2003?",
+   "hi": "भारत के राजकोषीय उत्तरदायित्व एवं बजट प्रबंध (FRBM) अधिनियम 2003 का प्राथमिक लक्ष्य क्या है?",
+   "opts": [
+    "To raise taxes on petrol<br>पेट्रोल पर कर बढ़ाना",
+    "To boost GDP growth<br>GDP वृद्धि का वर्धन करना",
+    "To increase subsidies<br>सब्सिडी में वृद्धि करना",
+    "To control fiscal deficits<br>राजकोषीय घाटे को नियंत्रित करना"
+   ],
+   "my_ans": "D",
+   "sol": "FRBM अधिनियम का मुख्य उद्देश्य सरकार के राजकोषीय घाटे को कम करना और वित्तीय अनुशासन सुनिश्चित करना है।",
+   "trick": "FRBM = राजकोषीय घाटा नियंत्रण।",
+   "ans": "D"
+  },
+  {
+   "n": 165,
+   "lvl": "UG",
+   "en": "India followed which strategy to reduce dependence on foreign goods after independence?",
+   "hi": "स्वतंत्रता के बाद विदेशी वस्तुओं पर निर्भरता कम करने के लिए भारत ने कौन-सी रणनीति अपनाई?",
+   "opts": [
+    "Free trade<br>मुक्त व्यापार",
+    "Dollarisation<br>डॉलरीकरण",
+    "Import substitution<br>आयात प्रतिस्थापन",
+    "Export-led growth<br>निर्यात-आधारित वृद्धि"
+   ],
+   "my_ans": "C",
+   "sol": "स्वतंत्रता के बाद भारत ने 'आयात प्रतिस्थापन' (Import Substitution) की नीति अपनाई, जिसका अर्थ था विदेशी वस्तुओं के बजाय घरेलू उत्पादन को बढ़ावा देना।",
+   "trick": "विदेशी सामान कम = आयात प्रतिस्थापन।",
+   "ans": "C"
+  }
+ ]
+}

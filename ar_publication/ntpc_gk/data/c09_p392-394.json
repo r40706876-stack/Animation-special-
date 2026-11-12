@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "392-394",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Two isotopes of an element have 17 protons with 18 neutrons and 20 neutrons, respectively. Which of the following is the correct representation of these isotopes?",
+   "hi": "किसी तत्व के दो समस्थानिकों में क्रमशः 18 न्यूट्रॉन और 20 न्यूट्रॉन के साथ 17 प्रोटॉन होते हैं। निम्नलिखित में से कौन-सा इन समस्थानिकों का सही निरूपण है?",
+   "opts": [
+    "18Cl and 20Cl<br>17 और 35Cl 18",
+    "17Cl and 17Cl<br>18 20 और 37Cl 20",
+    "35Cl and 37Cl<br>17 और 35Cl 17",
+    "35Cl and 37Cl<br>17 और 37Cl 20"
+   ],
+   "my_ans": "C",
+   "sol": "समस्थानिकों में प्रोटॉन की संख्या समान (17) होती है। द्रव्यमान संख्या = प्रोटॉन + न्यूट्रॉन। पहले के लिए 17+18=35, दूसरे के लिए 17+20=37।",
+   "trick": "समस्थानिक = समान परमाणु क्रमांक (प्रोटॉन), भिन्न द्रव्यमान संख्या।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Action and reaction forces are exerted on which bodies during an interaction?",
+   "hi": "किसी अंतःक्रिया के दौरान किन निकायों पर क्रिया और प्रतिक्रिया बल लगते हैं?",
+   "opts": [
+    "The same body<br>समान निकाय पर",
+    "Only moving bodies<br>केवल गतिशील निकाय पर",
+    "Only bodies at rest<br>केवल विश्राम की अवस्था वाले निकाय पर",
+    "Two different bodies<br>दो अलग-अलग निकाय पर"
+   ],
+   "my_ans": "D",
+   "sol": "न्यूटन के तीसरे नियम के अनुसार, क्रिया और प्रतिक्रिया बल हमेशा दो अलग-अलग वस्तुओं पर कार्य करते हैं।",
+   "trick": "क्रिया-प्रतिक्रिया = दो अलग वस्तुएं।",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "What happens to the speed of sound as the temperature of the air increases?",
+   "hi": "वायु का तापमान बढ़ने पर ध्वनि की चाल पर क्या प्रभाव पड़ता है?",
+   "opts": [
+    "It decreases, because the air becomes less dense<br>यह घट जाती है, क्योंकि वायु कम सघन हो जाता है।",
+    "It decreases rapidly because the air molecules move extremely slower<br>यह तेजी से घट जाती है, क्योंकि वायु के अणु अत्यंत मंद गति से गमन करते हैं।",
+    "It remains the same, as the speed is constant in a given medium<br>यह अपरिवर्तित रहती है, क्योंकि किसी दिए गए माध्यम में चाल नियत होती है।",
+    "It increases, because the air molecules move faster<br>यह बढ़ जाती है, क्योंकि वायु के अणु तेजी से गमन करते हैं।"
+   ],
+   "my_ans": "D",
+   "sol": "तापमान बढ़ने पर वायु के अणुओं की गतिज ऊर्जा बढ़ जाती है, जिससे ध्वनि तरंगें तेजी से संचारित होती हैं।",
+   "trick": "तापमान बढ़ा → अणु तेज चले → ध्वनि की चाल बढ़ी।",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "When a book is pushed across a table surface, which type of friction mainly opposes its motion?",
+   "hi": "जब किसी किताब को मेज की सतह पर धकेला जाता है, तो किस प्रकार का घर्षण मुख्य रूप से उसकी गति का विरोध करता है?",
+   "opts": [
+    "Rolling friction<br>रोलिंग घर्षण",
+    "Sliding friction<br>स्लाइडिंग घर्षण",
+    "Fluid friction<br>तरल घर्षण",
+    "Magnetic friction<br>चुंबकीय घर्षण"
+   ],
+   "my_ans": "B",
+   "sol": "जब दो सतहें एक-दूसरे के ऊपर फिसलती हैं, तो उनके बीच लगने वाला घर्षण 'सर्पी' या 'स्लाइडिंग' घर्षण कहलाता है।",
+   "trick": "फिसलना = स्लाइडिंग घर्षण।",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "When a stretched rubber band is released, its stored potential energy is converted into which form of energy?",
+   "hi": "जब एक खींचे हुए रबर बैंड को छोड़ा जाता है, तो उसमें संचित स्थितिज ऊर्जा किस ऊर्जा के रूप में रूपांतरित होती है?",
+   "opts": [
+    "Kinetic Energy<br>गतिज ऊर्जा",
+    "Geothermal Energy<br>भू-तापीय ऊर्जा",
+    "Hydraulic Energy<br>जलीय ऊर्जा",
+    "Chemical Energy<br>रासायनिक ऊर्जा"
+   ],
+   "my_ans": "A",
+   "sol": "रबर बैंड में संचित प्रत्यास्थ स्थितिज ऊर्जा छोड़ने पर गतिज ऊर्जा में बदल जाती है, जिससे वह वापस अपनी मूल स्थिति में आता है।",
+   "trick": "स्थितिज ऊर्जा (रुकी हुई) → गतिज ऊर्जा (चलती हुई)।",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "Which heat transfer method enables the Sun to warm Earth, despite the vast empty space between them?",
+   "hi": "सूर्य और पृथ्वी के बीच विशाल रिक्त आकाश के बावजूद, ऊष्मा स्थानांतरण की कौन-सी पद्धति पृथ्वी को गर्म करने में सूर्य को सक्षम बनाती है?",
+   "opts": [
+    "Insulation<br>रोधन",
+    "Radiation<br>विकिरण",
+    "Conduction<br>चालन",
+    "Convection<br>संवहन"
+   ],
+   "my_ans": "B",
+   "sol": "विकिरण (Radiation) को ऊष्मा के संचरण के लिए किसी माध्यम की आवश्यकता नहीं होती, इसलिए यह निर्वात में भी यात्रा कर सकती है।",
+   "trick": "निर्वात में ऊष्मा = विकिरण।",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "If a scientist is comparing the energy output of two light bulbs and records their values in joules, which dimensional formula should be used to represent energy in the SI system?",
+   "hi": "यदि एक वैज्ञानिक दो प्रकाश बल्बों के ऊर्जा निर्गत की तुलना करता है और उनके मानों को जूल में रिकॉर्ड करता है, तो SI पद्धति में ऊर्जा को निरूपित करने के लिए किस विमीय सूत्र का उपयोग किया जाना चाहिए?",
+   "opts": [
+    "[M T²]",
+    "[L² T⁻²]",
+    "[M L² T⁻²]",
+    "[M L T⁻²]"
+   ],
+   "my_ans": "C",
+   "sol": "ऊर्जा = बल × विस्थापन = [MLT⁻²] × [L] = [ML²T⁻²]।",
+   "trick": "कार्य/ऊर्जा का विमीय सूत्र = [ML²T⁻²] याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "Which term describes sound energy received per second per unit area?",
+   "hi": "वह कौन सा शब्द है जो प्रति इकाई क्षेत्रफल में प्रति सेकंड प्राप्त ध्वनि ऊर्जा का वर्णन करता है?",
+   "opts": [
+    "Pitch<br>तारत्व",
+    "Frequency<br>आवृत्ति",
+    "Echo<br>प्रतिध्वनि",
+    "Intensity<br>तीव्रता"
+   ],
+   "my_ans": "D",
+   "sol": "ध्वनि की तीव्रता (Intensity) को प्रति इकाई क्षेत्रफल से प्रति सेकंड गुजरने वाली ध्वनि ऊर्जा के रूप में परिभाषित किया जाता है।",
+   "trick": "तीव्रता = ऊर्जा / (क्षेत्रफल × समय)।",
+   "ans": "D"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "What will be the resultant force if a body of mass 10 kg is moving with an acceleration of 5m/sec²?",
+   "hi": "यदि 10 kg द्रव्यमान का कोई पिंड 5 m/sec² के त्वरण से गतिमान है, तो परिणामी बल कितना होगा?",
+   "opts": [
+    "5 Newton<br>5 न्यूटन",
+    "2 Newton<br>2 न्यूटन",
+    "50 Newton<br>50 न्यूटन",
+    "2 Joule<br>2 जूल"
+   ],
+   "my_ans": "C",
+   "sol": "बल (F) = द्रव्यमान (m) × त्वरण (a) = 10 kg × 5 m/s² = 50 N.",
+   "trick": "F = ma",
+   "ans": "C"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "The S.I. derived unit for Force is the Newton (N). Which combination of S.I. base units is equivalent to the Newton?",
+   "hi": "बल के लिए S.I. व्युत्पन्न मात्रक न्यूटन (N) है। S.I. मूल मात्रक का कौन-सा संयोजन न्यूटन के तुल्य है?",
+   "opts": [
+    "kg⋅m²/s²",
+    "kg⋅m/s²",
+    "kg⋅m⋅s",
+    "kg⋅m/s"
+   ],
+   "my_ans": "B",
+   "sol": "बल = द्रव्यमान (kg) × त्वरण (m/s²), इसलिए 1 न्यूटन = 1 kg⋅m/s²।",
+   "trick": "F = ma मात्रक = kg⋅m/s²।",
+   "ans": "B"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "The conversion of chemical energy into electrical energy and then into light and thermal energy occurs in which of the following cases?",
+   "hi": "रासायनिक ऊर्जा का विद्युत ऊर्जा में और फिर प्रकाश और ऊष्मीय ऊर्जा में रूपांतरण निम्नलिखित में से किस मामले में होता है?",
+   "opts": [
+    "Electric motor<br>विद्युत मोटर",
+    "Electric heater<br>विद्युत हीटर",
+    "Solar cell<br>सौर सेल",
+    "Electric bulb connected to a battery<br>बैटरी से जुड़ा विद्युत बल्ब"
+   ],
+   "my_ans": "D",
+   "sol": "बैटरी में रासायनिक ऊर्जा होती है, जो विद्युत ऊर्जा में बदलती है और बल्ब में जाकर प्रकाश और ऊष्मा देती है।",
+   "trick": "बैटरी (रासायनिक) → तार (विद्युत) → बल्ब (प्रकाश/ऊष्मा)।",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "307-309",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 270,
+   "lvl": "UG",
+   "en": "Tribunals under Article 323A (Administrative tribunals) of the Constitution of India can be established by:",
+   "hi": "भारत के संविधान के अनुच्छेद 323A (प्रशासनिक अधिकरण) के तहत अधिकरणों की स्थापना ____________ द्वारा की जा सकती है।",
+   "opts": [
+    "Supreme Courts only<br>केवल उच्चतम न्यायालय",
+    "Parliament only<br>केवल संसद",
+    "High Courts only<br>केवल उच्च न्यायालय",
+    "State legislatures only<br>केवल राज्य विधानमंडल"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 323A संसद को लोक सेवकों की भर्ती और सेवा शर्तों से संबंधित विवादों के निर्णय के लिए प्रशासनिक अधिकरण स्थापित करने का अधिकार देता है।",
+   "trick": "323A = प्रशासनिक अधिकरण (संसद द्वारा स्थापित)",
+   "ans": "B"
+  },
+  {
+   "n": 271,
+   "lvl": "UG",
+   "en": "Which schedule contains the assigned functions of the Rural Local Self Government or the Panchayati Raj?",
+   "hi": "किस अनुसूची में ग्रामीण स्थानीय स्वशासन या पंचायती राज के निर्धारित कार्य शामिल हैं?",
+   "opts": [
+    "12th Schedule<br>12वीं अनुसूची",
+    "9th Schedule<br>9वीं अनुसूची",
+    "10th Schedule<br>10वीं अनुसूची",
+    "11th Schedule<br>11वीं अनुसूची"
+   ],
+   "my_ans": "D",
+   "sol": "73वें संविधान संशोधन अधिनियम, 1992 द्वारा जोड़ी गई 11वीं अनुसूची में पंचायती राज संस्थाओं के लिए 29 विषय निर्धारित हैं।",
+   "trick": "11वीं अनुसूची = पंचायत (ग्रामीण), 12वीं = नगरपालिका (शहरी)",
+   "ans": "D"
+  },
+  {
+   "n": 272,
+   "lvl": "UG",
+   "en": "The word \"Social Welfare\" is primarily mentioned in which of the following Directive Principle of state policy?",
+   "hi": "राज्य के नीति-निर्देशक सिद्धांतों में शब्द 'सामाजिक कल्याण' का उल्लेख प्राथमिक रूप से किस अनुच्छेद में किया गया है?",
+   "opts": [
+    "Article 42<br>अनुच्छेद 42",
+    "Article 41<br>अनुच्छेद 41",
+    "Article 40<br>अनुच्छेद 40",
+    "Article 38<br>अनुच्छेद 38"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 38 के अनुसार, राज्य ऐसी सामाजिक व्यवस्था की स्थापना करेगा जो लोगों के कल्याण को बढ़ावा दे।",
+   "trick": "अनुच्छेद 38 = सामाजिक, आर्थिक और राजनीतिक न्याय",
+   "ans": "D"
+  },
+  {
+   "n": 273,
+   "lvl": "UG",
+   "en": "When did the Balwant Rai Mehta Committee submit its report related to the Panchayati Raj System?",
+   "hi": "बलवंत राय मेहता समिति ने पंचायती राज व्यवस्था से संबंधित अपनी रिपोर्ट कब प्रस्तुत की थी?",
+   "opts": [
+    "1958",
+    "1956",
+    "1957",
+    "1962"
+   ],
+   "my_ans": "C",
+   "sol": "बलवंत राय मेहता समिति का गठन 1957 में हुआ था और इसने नवंबर 1957 में ही अपनी रिपोर्ट प्रस्तुत की थी।",
+   "trick": "1957 में गठन और रिपोर्ट",
+   "ans": "C"
+  },
+  {
+   "n": 274,
+   "lvl": "UG",
+   "en": "Identify the classical language(s) in India (as of December 2022) from among the following.1) Marathi2) Tamil3) Sanskrit4) Odia",
+   "hi": "निम्नलिखित में से भारत की शास्त्रीय भाषाओं (दिसंबर 2022 तक की स्थिति के अनुसार) की पहचान कीजिए। 1) मराठी 2) तमिल 3) संस्कृत 4) उड़िया",
+   "opts": [
+    "Only 1 and 2<br>केवल 1 और 2",
+    "Only 2<br>केवल 2",
+    "Only 2, 3 and 4<br>केवल 2, 3 और 4",
+    "Only 1, 2, 3<br>केवल 1, 2, 3"
+   ],
+   "my_ans": "C",
+   "sol": "दिसंबर 2022 तक तमिल, संस्कृत, तेलुगु, कन्नड़, मलयालम और ओड़िया को शास्त्रीय भाषा का दर्जा प्राप्त था। मराठी इसमें शामिल नहीं थी।",
+   "trick": "शास्त्रीय भाषाएं: तमिल, संस्कृत, तेलुगु, कन्नड़, मलयालम, ओड़िया",
+   "ans": "C"
+  },
+  {
+   "n": 275,
+   "lvl": "UG",
+   "en": "Which of the following languages was conferred Classical Language status in October 2024?",
+   "hi": "अक्टूबर 2024 में, निम्नलिखित में से किस भाषा को शास्त्रीय भाषा का दर्जा दिया गया था?",
+   "opts": [
+    "Kannada<br>कन्नड़",
+    "Odia<br>ओडिया",
+    "Tamil<br>तमिल",
+    "Marathi<br>मराठी"
+   ],
+   "my_ans": "D",
+   "sol": "अक्टूबर 2024 में भारत सरकार ने मराठी को शास्त्रीय भाषा का दर्जा दिया, जिससे यह भारत की 7वीं शास्त्रीय भाषा बन गई।",
+   "trick": "मराठी = 7वीं शास्त्रीय भाषा (2024)",
+   "ans": "D"
+  },
+  {
+   "n": 276,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution empowers the Parliament to make grants to the States which are in need of financial assistance?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद संसद को उन राज्यों को अनुदान देने का अधिकार देता है, जिन्हें वित्तीय सहायता की आवश्यकता है?",
+   "opts": [
+    "Article 255<br>अनुच्छेद 255",
+    "Article 265<br>अनुच्छेद 265",
+    "Article 275<br>अनुच्छेद 275",
+    "Article 285<br>अनुच्छेद 285"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 275 के तहत संसद उन राज्यों को सहायता अनुदान (grants-in-aid) दे सकती है जिन्हें वित्तीय सहायता की आवश्यकता होती है।",
+   "trick": "275 = राज्यों को वित्तीय सहायता",
+   "ans": "C"
+  },
+  {
+   "n": 277,
+   "lvl": "UG",
+   "en": "The State Election Commission is responsible for conducting elections to the:",
+   "hi": "राज्य निर्वाचन आयोग __________________ के चुनाव कराने के लिए उत्तरदायी होता है।",
+   "opts": [
+    "President and Vice-President<br>राष्ट्रपति और उपराष्ट्रपति",
+    "State Assemblies<br>राज्य विधानसभा",
+    "Lok Sabha and Rajya Sabha<br>लोकसभा और राज्यसभा",
+    "Panchayats and Municipalities<br>पंचायत और नगरपालिका"
+   ],
+   "my_ans": "D",
+   "sol": "राज्य निर्वाचन आयोग केवल पंचायतों और नगरपालिकाओं के चुनाव कराने के लिए जिम्मेदार है।",
+   "trick": "राज्य चुनाव आयोग = स्थानीय निकाय (पंचायत/नगरपालिका)",
+   "ans": "D"
+  },
+  {
+   "n": 278,
+   "lvl": "UG",
+   "en": "As of November 2025, Article 1 of the Indian Constitution classifies Indian territory into how many distinct categories under Constitutional provisions?",
+   "hi": "नवंबर 2025 तक प्राप्त जानकारी के अनुसार भारतीय संविधान का अनुच्छेद 1, भारतीय राज्यक्षेत्र को संवैधानिक प्रावधानों के तहत कितनी अलग-अलग श्रेणियों में वर्गीकृत करता है?",
+   "opts": [
+    "Four<br>चार",
+    "Two<br>दो",
+    "Three<br>तीन",
+    "Five<br>पाँच"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 1 के अनुसार भारतीय क्षेत्र को तीन श्रेणियों में बांटा गया है: 1. राज्य, 2. संघ राज्यक्षेत्र, 3. अर्जित किए जा सकने वाले क्षेत्र।",
+   "trick": "अनुच्छेद 1 = 3 श्रेणियां",
+   "ans": "C"
+  },
+  {
+   "n": 279,
+   "lvl": "UG",
+   "en": "Which of the following correctly pairs the provision and its subject as per the Indian Constitution?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प, भारतीय संविधान के अनुसार प्रावधान और उसके विषय को सही ढंग से सुमेलित करता है?",
+   "opts": [
+    "Article 9 – Citizenship by registration<br>अनुच्छेद 9 – पंजीकरण द्वारा नागरिकता",
+    "Article 7 – Power of Parliament to regulate citizenship<br>अनुच्छेद 7 – नागरिकता को विनियमित करने की संसद की शक्ति",
+    "Article 5 – Citizenship at commencement<br>अनुच्छेद 5 – प्रारंभ में नागरिकता",
+    "Article 11 – Citizenship by birth<br>अनुच्छेद 11 – जन्म द्वारा नागरिकता"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 5 संविधान के प्रारंभ (26 जनवरी 1950) पर नागरिकता के बारे में है। अन्य विकल्प गलत सुमेलित हैं।",
+   "trick": "अनुच्छेद 5 = संविधान लागू होने पर नागरिकता",
+   "ans": "C"
+  }
+ ]
+}

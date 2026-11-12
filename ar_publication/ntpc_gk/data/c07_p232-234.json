@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "232-234",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "In which year was Tamil given the status of classical language by the Constitution of India?",
+   "hi": "भारतीय संविधान द्वारा तमिल को शास्त्रीय भाषा का दर्जा किस वर्ष दिया गया था?",
+   "opts": [
+    "2003",
+    "2004",
+    "2005",
+    "2002"
+   ],
+   "my_ans": "B",
+   "sol": "भारत सरकार ने 2004 में तमिल को शास्त्रीय भाषा का दर्जा दिया था। यह भारत की पहली शास्त्रीय भाषा है।",
+   "trick": "तमिल सबसे पुरानी शास्त्रीय भाषा है, जिसे 2004 में दर्जा मिला।",
+   "ans": "B"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Consider the following statements regarding the 74th Amendment Act of 1992. 1. It has added a new Part IX-A to the Constitution of India. 2. The Act has also added a new 10th Schedule to the Constitution. 3. The Act provides for the constitution of three types of municipalities in every state. 4. It consists of provisions from Articles 243-P to 243-ZG. Which of the above statements are correct?",
+   "hi": "1992 के 74 वें संशोधन अधिनियम के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए। 1. इसके अंतर्गत भारत के संविधान में एक नया भाग IX-A जोड़ा गया। 2. इसके अंतर्गत संविधान में एक नई 10 वीं अनुसूची भी जोड़ी गई। 3. इस अधिनियम के अंतर्गत प्रत्येक राज्य में तीन प्रकार की नगरपालिकाओं के गठन का प्रावधान है। 4. इसमें अनुच्छेद 243-P से 243-ZG तक के प्रावधान शामिल हैं। उपरोक्त कथनों में से कौन-से कथन सही हैं?",
+   "opts": [
+    "2 and 3 only<br>केवल 2 और 3",
+    "1, 2, and 3 only<br>केवल 1, 2 और 3",
+    "1, 3, and 4 only<br>केवल 1, 3 और 4",
+    "2 and 4 only<br>केवल 2 और 4"
+   ],
+   "my_ans": "C",
+   "sol": "74वें संशोधन ने भाग IX-A और 12वीं अनुसूची जोड़ी, न कि 10वीं। 10वीं अनुसूची दल-बदल कानून से संबंधित है।",
+   "trick": "74वां संशोधन = शहरी निकाय (नगरपालिका), 12वीं अनुसूची।",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "What is the maximum total duration for which President’s Rule can continue in a State under Article 356, subject to parliamentary approvals and constitutional conditions?",
+   "hi": "संसदीय अनुमोदनों और संवैधानिक शर्तों के अधीन, अनुच्छेद 356 के अंतर्गत किसी राज्य में राष्ट्रपति शासन अधिकतम कुल कितनी अवधि तक जारी रह सकता है?",
+   "opts": [
+    "Up to two years<br>दो वर्ष तक",
+    "Up to four years<br>चार वर्ष तक",
+    "Up to one year<br>एक वर्ष तक",
+    "Up to three years<br>तीन वर्ष तक"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 356 के तहत राष्ट्रपति शासन को संसद की मंजूरी से हर 6 महीने में बढ़ाकर अधिकतम 3 साल तक जारी रखा जा सकता है।",
+   "trick": "राष्ट्रपति शासन = अधिकतम 3 वर्ष।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Consider the following statements regarding the Central Administrative Tribunal (CAT) and select which is/are correct. 1. It exercises original jurisdiction in matters related to recruitment and service conditions of public servants. 2. Members of the defence forces, Supreme Court officers, and Parliamentary staff are also covered. 3. Members of CAT are appointed based on the recommendation of a high-powered committee chaired by the Prime Minister.",
+   "hi": "केंद्रीय प्रशासनिक अधिकरण (CAT) के संबंध में निम्नलिखित कथनों पर विचार कीजिए और सही कथनों का चयन कीजिए। 1. यह लोक सेवकों की भर्ती और सेवा शर्तों से संबंधित मामलों में मूल अधिकार क्षेत्र का प्रयोग करता है। 2. रक्षा बलों के सदस्य, उच्चतम न्यायालय के अधिकारी और संसदीय कर्मचारी भी इसमें शामिल होते हैं। 3. CAT के सदस्यों की नियुक्ति प्रधानमंत्री की अध्यक्षता में एक उच्चाधिकार प्राप्त समिति की अनुशंसा के आधार पर की जाती है।",
+   "opts": [
+    "1 only<br>केवल 1",
+    "2 and 3 only<br>केवल 2 और 3",
+    "1 and 2 only<br>केवल 1 और 2",
+    "4 only<br>केवल 4"
+   ],
+   "my_ans": "A",
+   "sol": "CAT केवल सिविल सेवकों के लिए है। रक्षा बल, सुप्रीम कोर्ट स्टाफ और संसद कर्मचारी इसके दायरे से बाहर हैं। सदस्यों की नियुक्ति भारत के मुख्य न्यायाधीश की समिति करती है।",
+   "trick": "CAT = केवल सिविल सेवक, नियुक्ति = CJI की समिति।",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Under the Citizenship Act, 1955, which section governs the grant of citizenship when a new territory becomes part of India?",
+   "hi": "नागरिकता अधिनियम, 1955 के तहत, जब कोई नया क्षेत्र भारत का हिस्सा बनता है, तो कौन-सी धारा नागरिकता की स्वीकृति का प्रबंध करती है?",
+   "opts": [
+    "Section 6<br>धारा 6",
+    "Section 5<br>धारा 5",
+    "Section 7<br>धारा 7",
+    "Section 9<br>धारा 9"
+   ],
+   "my_ans": "C",
+   "sol": "नागरिकता अधिनियम की धारा 7 नए क्षेत्रों के भारत में विलय होने पर वहां के निवासियों को नागरिकता देने का प्रावधान करती है।",
+   "trick": "धारा 7 = नए क्षेत्र का विलय।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Administrators of the Andaman and Nicobar Islands and Puducherry are designated as _________.",
+   "hi": "अंडमान और निकोबार द्वीप समूह तथा पुदुचेरी के प्रशासकों को _________ के रूप में नामित किया गया है।",
+   "opts": [
+    "Lieutenant Governor<br>उपराज्यपाल",
+    "Chief Minister<br>मुख्यमंत्री",
+    "Administrator<br>प्रशासक",
+    "Governor<br>राज्यपाल"
+   ],
+   "my_ans": "A",
+   "sol": "अंडमान-निकोबार और पुदुचेरी जैसे केंद्र शासित प्रदेशों के मुख्य कार्यकारी अधिकारी को उपराज्यपाल (Lieutenant Governor) कहा जाता है।",
+   "trick": "UT के प्रमुख = उपराज्यपाल (LG)।",
+   "ans": "A"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Two trains, Train A and Train B, are running on parallel tracks in the same direction. Train A, which is 150 metres long, is moving at 72 km/hr, while Train B, which is 120 metres long, is moving at 54 km/hr. How long will it take for Train A to completely overtake Train B?",
+   "hi": "दो ट्रेनें, ट्रेन A और ट्रेन B, समानांतर पटरियों पर एक ही दिशा में चल रही हैं। ट्रेन A, जिसकी लंबाई 150 m है, 72 km/hr की चाल से चल रही है, जबकि ट्रेन B, जिसकी लंबाई 120 m है, 54 km/hr की चाल से चल रही है। ट्रेन A द्वारा ट्रेन B को पूरी तरह से ओवरटेक करने में कितना समय लगेगा?",
+   "opts": [
+    "52 seconds",
+    "58 seconds",
+    "54 seconds",
+    "50 seconds"
+   ],
+   "my_ans": "C",
+   "sol": "सापेक्ष चाल = 72 - 54 = 18 km/hr = 5 m/s. कुल दूरी = 150 + 120 = 270 m. समय = 270 / 5 = 54 सेकंड।",
+   "trick": "समय = (कुल लंबाई) / (सापेक्ष चाल)।",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which of the following reflects the Gandhian ideals incorporated as Directive Principles of State Policy in the Constitution of India?",
+   "hi": "निम्नलिखित में से कौन-सा कथन भारत के संविधान में राज्य के नीति निर्देशक सिद्धांतों के रूप में समाहित गांधीवादी आदर्शों को प्रतिबिंबित करता है?",
+   "opts": [
+    "Safeguarding children against exploitation<br>बच्चों को शोषण से बचाना",
+    "Raising the standard of living and public health<br>जीवन स्तर और सार्वजनिक स्वास्थ्य को बढ़ाना",
+    "Promoting cottage industries in rural areas<br>ग्रामीण क्षेत्रों में कुटीर उद्योगों को बढ़ावा देना",
+    "Securing suitable employment for all<br>सभी के लिए उपयुक्त रोजगार सुनिश्चित करना"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 43 के तहत ग्रामीण क्षेत्रों में कुटीर उद्योगों को बढ़ावा देना गांधीवादी नीति निर्देशक सिद्धांत है।",
+   "trick": "गांधीवादी DPSP = ग्राम पंचायत, कुटीर उद्योग, नशाबंदी।",
+   "ans": "C"
+  }
+ ]
+}

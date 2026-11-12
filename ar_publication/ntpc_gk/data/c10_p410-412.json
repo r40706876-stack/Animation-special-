@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "410-412",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "What is the chemical reaction responsible for the leavening of bread, where carbon dioxide is produced?",
+   "hi": "ब्रेड किण्वन के लिए कौन-सी रासायनिक अभिक्रिया उत्तरदायी होती है, जिसमें कार्बन डाइऑक्साइड का उत्पादन होता है?",
+   "opts": [
+    "Enzymatic reaction<br>एन्जाइमी अभिक्रिया",
+    "Oxidation-reduction reaction<br>ऑक्सीकरण-अपचयन अभिक्रिया",
+    "Fermentation<br>किण्वन",
+    "Acid-base reaction<br>अम्ल-क्षार अभिक्रिया"
+   ],
+   "my_ans": "C",
+   "sol": "ब्रेड बनाने में यीस्ट शर्करा को तोड़ता है, जिसे किण्वन (Fermentation) कहते हैं। इस प्रक्रिया में कार्बन डाइऑक्साइड गैस निकलती है जिससे ब्रेड फूलती है।",
+   "trick": "यीस्ट + शर्करा = किण्वन (CO2 गैस)",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which substance is the primary component of the reddish-brown coating formed on iron articles exposed to moist air?",
+   "hi": "आर्द्र वायु के संपर्क में आने वाली आयरन की वस्तुओं पर बनने वाले रक्ताभ-भूरे विलेपन का प्राथमिक घटक कौन-सा पदार्थ है?",
+   "opts": [
+    "Iron (II) Oxide (FeO)<br>आयरन (II) ऑक्साइड (FeO)",
+    "Iron (III) Hydroxide (Fe(OH)3)<br>आयरन (III) हाइड्रोक्साइड (Fe(OH)3)",
+    "Hydrated Iron (III) Oxide (Fe2O3·xH2O)<br>हाइड्रेटेड आयरन (III) ऑक्साइड (Fe2O3·xH2O)",
+    "Iron Sulfate (FeSO4)<br>आयरन सल्फेट (FeSO4)"
+   ],
+   "my_ans": "C",
+   "sol": "लोहे में जंग लगने की प्रक्रिया में नमी और ऑक्सीजन के साथ अभिक्रिया से हाइड्रेटेड आयरन (III) ऑक्साइड बनता है, जो लाल-भूरे रंग का होता है।",
+   "trick": "लोहा + नमी + ऑक्सीजन = जंग (Fe2O3·xH2O)",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "According to Joule’s law of heating, the heat produced in a resistor is _____________________.",
+   "hi": "जूल के तापन नियम के अनुसार, किसी प्रतिरोधक में उत्पन्न ऊष्मा _____________________ होती है।",
+   "opts": [
+    "inversely proportional to the square of resistance<br>प्रतिरोध के वर्ग के व्युत्क्रमानुपाती",
+    "inversely proportional to the square of current<br>धारा के वर्ग के व्युत्क्रमानुपाती",
+    "directly proportional to the square of resistance<br>प्रतिरोध के वर्ग के अनुक्रमानुपाती",
+    "directly proportional to the square of current<br>धारा के वर्ग के अनुक्रमानुपाती"
+   ],
+   "my_ans": "D",
+   "sol": "जूल के तापन नियम का सूत्र H = I²Rt है। यहाँ उत्पन्न ऊष्मा (H) धारा के वर्ग (I²) के सीधे समानुपाती होती है।",
+   "trick": "H = I²Rt (ऊष्मा धारा के वर्ग के समानुपाती)",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Mayonnaise is prepared by the process of:",
+   "hi": "मेओनेज (Mayonnaise) को निम्नलिखित में से किस प्रक्रिया द्वारा तैयार किया जाता है?",
+   "opts": [
+    "Oxidation<br>ऑक्सीकरण",
+    "Emulsification<br>पायसीकरण",
+    "Maillard reaction<br>मैलार्ड अभिक्रिया",
+    "Caramelisation<br>कैरामेलीकरण"
+   ],
+   "my_ans": "B",
+   "sol": "मेयोनेज तेल और पानी का एक स्थिर मिश्रण है। दो अमिश्रणीय तरल पदार्थों को मिलाकर स्थिर मिश्रण बनाने की प्रक्रिया को पायसीकरण (Emulsification) कहते हैं।",
+   "trick": "तेल + पानी = पायसीकरण (Emulsification)",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "The number of significant figures present in 0.00200 is ________.",
+   "hi": "0.00200 में उपस्थित सार्थक अंकों की संख्या ________ है।",
+   "opts": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "my_ans": "A",
+   "sol": "सार्थक अंकों के नियम के अनुसार, दशमलव के बाद आने वाले अंतिम शून्य सार्थक होते हैं, जबकि शुरुआती शून्य नहीं। यहाँ 2, 0, 0 सार्थक हैं।",
+   "trick": "दशमलव के बाद के अंतिम शून्य सार्थक होते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which of the following elements is a gas at room temperature and belongs to Group 17 of the periodic table?",
+   "hi": "निम्नलिखित में से कौन-सा तत्व, कक्ष ताप पर गैस अवस्था में होता है और आवर्त सारणी के ग्रुप 17 से संबंधित है?",
+   "opts": [
+    "Iodine<br>आयोडीन",
+    "Fluorine<br>फ्लुओरीन",
+    "Astatine<br>ऐस्टेटीन",
+    "Bromine<br>ब्रोमीन"
+   ],
+   "my_ans": "B",
+   "sol": "ग्रुप 17 (हैलोजन) में फ्लोरीन और क्लोरीन कमरे के तापमान पर गैस हैं। विकल्पों में फ्लोरीन सही उत्तर है।",
+   "trick": "हैलोजन समूह में फ्लोरीन और क्लोरीन गैस हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "What leads to rancidity in food products?",
+   "hi": "खाद्य उत्पादों में विकृतगंधिता (rancidity) का कारण क्या है?",
+   "opts": [
+    "Oxidation<br>ऑक्सीकरण",
+    "Evaporation<br>वाष्पीकरण",
+    "Fermentation<br>किण्वन",
+    "Reduction<br>अपचयन"
+   ],
+   "my_ans": "A",
+   "sol": "खाद्य पदार्थों में मौजूद वसा और तेल का वायुमंडलीय ऑक्सीजन द्वारा ऑक्सीकरण होने से उनमें अप्रिय गंध और स्वाद आने लगता है, जिसे विकृतगंधिता कहते हैं।",
+   "trick": "वसा का ऑक्सीकरण = विकृतगंधिता",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which of the following scientists proposed the nuclear model of the atom based on the results of the gold foil experiment?",
+   "hi": "निम्नलिखित में से किस वैज्ञानिक ने स्वर्ण पन्नी प्रयोग के परिणामों के आधार पर परमाणु के नाभिकीय मॉडल का प्रस्ताव रखा था?",
+   "opts": [
+    "J.J. Thomson<br>जे. जे. थॉमसन",
+    "John Dalton<br>जॉन डाल्टन",
+    "Ernest Rutherford<br>अर्नेस्ट रदरफोर्ड",
+    "Niels Bohr<br>नील्स बोहर"
+   ],
+   "my_ans": "C",
+   "sol": "अर्नेस्ट रदरफोर्ड ने 1911 में स्वर्ण पन्नी प्रयोग किया था, जिससे उन्होंने परमाणु के केंद्र में एक छोटे और सघन नाभिक के अस्तित्व का पता लगाया।",
+   "trick": "रदरफोर्ड = नाभिकीय मॉडल (स्वर्ण पन्नी प्रयोग)",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "What property do solids possess due to their closely packed particles?",
+   "hi": "ठोसों में उनके सुसंकुलित कणों के कारण कौन-सा गुण विद्यमान होता है?",
+   "opts": [
+    "Compressibility<br>संपीड्यता",
+    "Transparency<br>पारदर्शिता",
+    "Fluidity<br>तरलता",
+    "Rigidity<br>दृढ़ता"
+   ],
+   "my_ans": "D",
+   "sol": "ठोस पदार्थों में कण बहुत पास-पास और निश्चित व्यवस्था में होते हैं, जिससे उन्हें एक निश्चित आकार मिलता है और वे दृढ़ (Rigid) होते हैं।",
+   "trick": "कणों की घनिष्ठ व्यवस्था = दृढ़ता",
+   "ans": "D"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which ion is responsible for the acidic nature of solutions?",
+   "hi": "विलयनों की अम्लीय प्रकृति के लिए कौन-सा आयन उत्तरदायी है?",
+   "opts": [
+    "Hydrogen ion (H+)<br>हाइड्रोजन आयन (H+)",
+    "Chloride ion (Cl-)<br>क्लोराइड आयन (Cl-)",
+    "Hydroxide ion (OH-)<br>हाइड्रॉक्साइड आयन (OH-)",
+    "Sodium ion (Na+)<br>सोडियम आयन (Na+)"
+   ],
+   "my_ans": "A",
+   "sol": "अम्ल वे पदार्थ हैं जो जल में घुलने पर हाइड्रोजन आयन (H+) मुक्त करते हैं, जो अम्लीय गुणों के लिए जिम्मेदार होते हैं।",
+   "trick": "अम्ल = H+ आयन",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "What is the atomicity of a molecule of oxygen (O₂)?",
+   "hi": "ऑक्सीजन (O₂) के अणु की परमाणुकता क्या है?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "1"
+   ],
+   "my_ans": "B",
+   "sol": "परमाणुकता का अर्थ है एक अणु में मौजूद परमाणुओं की संख्या। ऑक्सीजन के एक अणु (O₂) में 2 परमाणु होते हैं।",
+   "trick": "O2 में 2 परमाणु = परमाणुकता 2",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which type of chemical reaction involves the breakdown of a compound into two or more simpler substances?",
+   "hi": "किस प्रकार की रासायनिक अभिक्रिया में एक यौगिक दो या दो से अधिक सरल पदार्थों में टूट जाता है?",
+   "opts": [
+    "Combination reaction<br>संयोजन अभिक्रिया",
+    "Displacement reaction<br>विस्थापन अभिक्रिया",
+    "Decomposition reaction<br>अपघटन अभिक्रिया",
+    "Double displacement reaction<br>द्वि-विस्थापन अभिक्रिया"
+   ],
+   "my_ans": "C",
+   "sol": "अपघटन (Decomposition) अभिक्रिया वह है जिसमें एक जटिल यौगिक ऊर्जा के प्रभाव में दो या अधिक सरल पदार्थों में विभाजित हो जाता है।",
+   "trick": "अपघटन = टूटना (एक से अनेक)",
+   "ans": "C"
+  }
+ ]
+}

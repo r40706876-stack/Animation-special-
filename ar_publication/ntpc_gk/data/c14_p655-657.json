@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "655-657",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 301,
+   "lvl": "UG",
+   "en": "Which European country declared its exit from the International Criminal Court in April 2025?",
+   "hi": "अप्रैल 2025 में, किस यूरोपीय देश ने अंतरराष्ट्रीय आपराधिक न्यायालय से बाहर निकलने की घोषणा की?",
+   "opts": [
+    "Czech Republic<br>चेक गणराज्य",
+    "Hungary<br>हंगरी",
+    "Slovakia<br>स्लोवाकिया",
+    "Bulgaria<br>बुल्गारिया"
+   ],
+   "my_ans": "B",
+   "sol": "हंगरी ने अप्रैल 2025 में अपनी विदेश नीति में बदलाव के तहत अंतरराष्ट्रीय आपराधिक न्यायालय (ICC) से बाहर निकलने की घोषणा की।",
+   "trick": "ICC से बाहर निकलने वाला पहला EU देश: हंगरी।",
+   "ans": "B"
+  },
+  {
+   "n": 302,
+   "lvl": "UG",
+   "en": "Who among the following announced the UN80 initiative in 2025?",
+   "hi": "निम्नलिखित में से किसने 2025 में UN80 पहल की घोषणा की थी?",
+   "opts": [
+    "Judge Yuji Iwasawa<br>न्यायाधीश युजी इवासावा",
+    "Bob Rae<br>बॉब रे",
+    "Dr. Tedros Adhanom Ghebreyesus<br>डॉ. टेड्रोस अदनोम घेब्रेयसस",
+    "António Guterres<br>एंटोनियो गुटेरेस"
+   ],
+   "my_ans": "D",
+   "sol": "संयुक्त राष्ट्र महासचिव एंटोनियो गुटेरेस ने संयुक्त राष्ट्र की 80वीं वर्षगांठ मनाने के लिए UN80 पहल की घोषणा की।",
+   "trick": "UN80 = संयुक्त राष्ट्र की 80वीं वर्षगांठ।",
+   "ans": "D"
+  },
+  {
+   "n": 303,
+   "lvl": "UG",
+   "en": "Where did NATO announce increased military presence on January 18, 2025, following suspected sabotage of undersea infrastructure?",
+   "hi": "समुद्र के नीचे की अवसंरचना में संदिग्ध अंतर्ध्वंस (sabotage) के बाद 18 जनवरी, 2025 को NATO ने कहां अपनी सैन्य उपस्थिति बढ़ाने की घोषणा की?",
+   "opts": [
+    "Mediterranean Sea<br>भूमध्य सागर",
+    "Black Sea<br>काला सागर",
+    "Baltic Sea<br>बाल्टिक सागर",
+    "North Sea<br>उत्तरी सागर"
+   ],
+   "my_ans": "C",
+   "sol": "समुद्र के नीचे केबल और पाइपलाइनों की संदिग्ध तोड़फोड़ के बाद नाटो ने बाल्टिक सागर क्षेत्र में सैन्य उपस्थिति बढ़ाई।",
+   "trick": "बाल्टिक सागर: महत्वपूर्ण केबल और पाइपलाइन क्षेत्र।",
+   "ans": "C"
+  },
+  {
+   "n": 304,
+   "lvl": "UG",
+   "en": "The International Monetary Fund AlUla Conference on Emerging Market Economies 2025 focuses on:",
+   "hi": "उभरती बाज़ार अर्थव्यवस्थाओं पर अंतरराष्ट्रीय मुद्रा कोष का AlUla सम्मेलन 2025 किस पर आधारित है?",
+   "opts": [
+    "Strategies for developed economies to combat inflation<br>मुद्रास्फीति से निपटने के लिए विकसित अर्थव्यवस्थाओं की रणनीतियां",
+    "The role of artificial intelligence in stock market predictions<br>स्टॉक मार्केट के पूर्वानुमान में आर्टिफिशियल इंटेलिजेंस की भूमिका",
+    "The impact of cryptocurrency on global trade<br>वैश्विक व्यापार पर क्रिप्टोकरेंसी का प्रभाव",
+    "Policy challenges and opportunities for emerging markets in a shifting economic landscape<br>बदलते आर्थिक परिदृश्य में उभरते बाज़ारों के लिए नीतिगत चुनौतियां और अवसर"
+   ],
+   "my_ans": "D",
+   "sol": "यह सम्मेलन सऊदी अरब के अल-उला में आयोजित हुआ, जिसका मुख्य उद्देश्य उभरती अर्थव्यवस्थाओं के सामने आने वाली चुनौतियों और अवसरों पर चर्चा करना था।",
+   "trick": "IMF AlUla = उभरते बाज़ार और आर्थिक चुनौतियां।",
+   "ans": "D"
+  },
+  {
+   "n": 305,
+   "lvl": "UG",
+   "en": "During PM Modi's visit to the USA in February 2025, what was the target set under 'Mission 500'?",
+   "hi": "फरवरी 2025 में, प्रधानमंत्री मोदी की अमेरिका यात्रा के दौरान 'मिशन 500' के तहत क्या लक्ष्य निर्धारित किया गया था?",
+   "opts": [
+    "500 Indian startups launched in the USA<br>USA में 500 भारतीय स्टार्टअप लॉन्च",
+    "500 defence agreements signed<br>500 रक्षा समझौते हस्ताक्षरित",
+    "500 joint military exercises<br>500 संयुक्त सैन्य अभ्यास",
+    "$500 billion in bilateral trade by 2030<br>2030 तक द्विपक्षीय व्यापार में $500 बिलियन"
+   ],
+   "my_ans": "D",
+   "sol": "मिशन 500 का लक्ष्य 2030 तक भारत और अमेरिका के बीच द्विपक्षीय व्यापार को 500 बिलियन डॉलर तक पहुंचाना है।",
+   "trick": "मिशन 500 = 500 बिलियन डॉलर व्यापार।",
+   "ans": "D"
+  },
+  {
+   "n": 306,
+   "lvl": "UG",
+   "en": "Which country hosted the 2025 BRICS Agriculture Ministers’ Summit?",
+   "hi": "2025 में, ब्रिक्स (BRICS) कृषि मंत्रियों के शिखर सम्मेलन की मेजबानी किस देश ने की थी?",
+   "opts": [
+    "Brazil<br>ब्राज़ील",
+    "Argentina<br>अर्जेंटीना",
+    "Egypt<br>इजिप्ट",
+    "Vietnam<br>वियतनाम"
+   ],
+   "my_ans": "A",
+   "sol": "ब्राज़ील के पास 2025 में ब्रिक्स की अध्यक्षता है, इसलिए उसने कृषि मंत्रियों के शिखर सम्मेलन की मेजबानी की।",
+   "trick": "2025 ब्रिक्स अध्यक्ष = ब्राज़ील।",
+   "ans": "A"
+  },
+  {
+   "n": 307,
+   "lvl": "UG",
+   "en": "Who among the following has been sworn in as the 24th Prime Minister of Canada in March 2025?",
+   "hi": "मार्च 2025 में निम्नलिखित में से किसने कनाडा के 24वें प्रधानमंत्री के रूप में शपथ ली?",
+   "opts": [
+    "Donald Tusk<br>डोनाल्ड टस्क",
+    "James David Vance<br>जेम्स डेविड वेंस",
+    "Mark Carney<br>मार्क कार्नी",
+    "Claudia Sheinbaum<br>क्लाउडिया शीनबाम"
+   ],
+   "my_ans": "C",
+   "sol": "मार्क कार्नी ने जस्टिन ट्रूडो के बाद मार्च 2025 में कनाडा के 24वें प्रधानमंत्री के रूप में शपथ ली।",
+   "trick": "कनाडा के नए PM 2025 = मार्क कार्नी।",
+   "ans": "C"
+  },
+  {
+   "n": 308,
+   "lvl": "UG",
+   "en": "In October 2025, which country awarded its highest decoration, the ‘Grand Order of Mugunghwa’, to U.S. President Donald Trump?",
+   "hi": "अक्टूबर 2025 में, किस देश ने अमेरिकी राष्ट्रपति डोनाल्ड ट्रंप को अपना सर्वोच्च सम्मान 'ग्रैंड ऑर्डर ऑफ मुगुंगवा' प्रदान किया?",
+   "opts": [
+    "China<br>चीन",
+    "Bhutan<br>भूटान",
+    "South Korea<br>दक्षिण कोरिया",
+    "Japan<br>जापान"
+   ],
+   "my_ans": "C",
+   "sol": "ग्रैंड ऑर्डर ऑफ मुगुंगवा दक्षिण कोरिया का सर्वोच्च नागरिक सम्मान है, जो ट्रंप को अमेरिका-दक्षिण कोरिया संबंधों के लिए दिया गया।",
+   "trick": "मुगुंगवा = दक्षिण कोरिया का राष्ट्रीय फूल और सर्वोच्च सम्मान।",
+   "ans": "C"
+  },
+  {
+   "n": 309,
+   "lvl": "UG",
+   "en": "Under whose chairmanship was a 12-member drafting committee recently constituted to frame a law under the High Seas Treaty 'BBNJ'?",
+   "hi": "हाल ही में 'BBNJ' उच्च समुद्र संधि के तहत कानून बनाने के लिए किसकी अध्यक्षता में 12 सदस्यीय प्रारूप समिति का गठन किया गया?",
+   "opts": [
+    "Sanjay Upadhyay<br>संजय उपाध्याय",
+    "Nitin Gadkari<br>नितिन गडकरी",
+    "Ravi Shankar Prasad<br>रवि शंकर प्रसाद",
+    "Ramesh Pokhriyal<br>रमेश पोखरियाल"
+   ],
+   "my_ans": "A",
+   "sol": "पर्यावरण वकील संजय उपाध्याय को BBNJ संधि के कार्यान्वयन के लिए घरेलू कानून बनाने हेतु गठित समिति का अध्यक्ष बनाया गया।",
+   "trick": "BBNJ समिति अध्यक्ष = संजय उपाध्याय।",
+   "ans": "A"
+  },
+  {
+   "n": 310,
+   "lvl": "UG",
+   "en": "Which city’s metro rail system’s first phase was inaugurated on 6 October 2025, making it the 24th Indian city with a functional metro?",
+   "hi": "6 अक्टूबर 2025 को किस शहर की मेट्रो रेल प्रणाली के पहले चरण का उद्घाटन हुआ, जिससे यह मेट्रो संचालित करने वाला 24वां भारतीय शहर बन गया?",
+   "opts": [
+    "Patna<br>पटना",
+    "Lucknow<br>लखनऊ",
+    "Kolkata<br>कोलकाता",
+    "Bhubaneswar<br>भुवनेश्वर"
+   ],
+   "my_ans": "A",
+   "sol": "पटना मेट्रो के पहले चरण का उद्घाटन 6 अक्टूबर 2025 को हुआ, जिससे पटना भारत का 24वां मेट्रो शहर बन गया।",
+   "trick": "24वां मेट्रो शहर = पटना।",
+   "ans": "A"
+  }
+ ]
+}

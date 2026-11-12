@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "477-479",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 92,
+   "lvl": "GL",
+   "en": "Which characteristic best differentiates Static RAM (SRAM) from Dynamic RAM (DRAM), leading to SRAM being used for CPU cache and DRAM for main system memory (RAM)?",
+   "hi": "कौन-सा अभिलक्षण स्टैटिक रैम (SRAM) को डायनेमिक रैम (DRAM) से सर्वोत्तम रूप से पृथक करता है, जिसके कारण SRAM का उपयोग CPU कैश के लिए और DRAM का उपयोग मुख्य सिस्टम मेमोरी (RAM) के लिए किया जाता है?",
+   "opts": [
+    "DRAM is located directly on the CPU die, while SRAM is located on the motherboard.<br>DRAM सीधे CPU डाई पर स्थित होती है, जबकि SRAM मदरबोर्ड पर स्थित होती है।",
+    "SRAM requires constant refreshing to hold data, while DRAM does not.<br>SRAM को डेटा बनाए रखने के लिए लगातार रिफ्रेश करने की आवश्यकता होती है, जबकि DRAM को नहीं होती है।",
+    "DRAM is non-volatile, while SRAM is volatile.<br>DRAM नॉन-वोलेटाइल होती है, जबकि SRAM वोलेटाइल होती है।",
+    "SRAM is significantly faster, more expensive, and consumes less power than DRAM.<br>SRAM, DRAM की तुलना में महत्वपूर्ण रूप से तेज, अधिक महंगी और कम विद्युत की खपत करती है।"
+   ],
+   "my_ans": "D",
+   "sol": "SRAM तेज और महंगी होती है, इसलिए इसे CPU कैश में उपयोग किया जाता है, जबकि DRAM सस्ती और उच्च घनत्व वाली होती है, इसलिए इसे मुख्य RAM के रूप में उपयोग करते हैं।",
+   "trick": "SRAM = तेज और महंगी, DRAM = सस्ती और धीमी",
+   "ans": "D"
+  },
+  {
+   "n": 93,
+   "lvl": "GL",
+   "en": "Which of the following wildcards is used for finding the files matching a pattern?",
+   "hi": "निम्नलिखित में से कौन-सा वाइल्डकार्ड पैटर्न से मेल खाने वाली फाइलों को खोजने के लिए उपयोग किया जाता है?",
+   "opts": [
+    "/.[file extension]",
+    "-.[file extension]",
+    "+.[file extension]",
+    "*.[file extension]"
+   ],
+   "my_ans": "D",
+   "sol": "तारंकन (*) एक सार्वभौमिक वाइल्डकार्ड है जो फाइलनाम में शून्य या अधिक अक्षरों का प्रतिनिधित्व करता है।",
+   "trick": "* का अर्थ है 'सब कुछ' या 'कोई भी अक्षर'",
+   "ans": "D"
+  },
+  {
+   "n": 94,
+   "lvl": "GL",
+   "en": "Which characteristic of computers enables them to perform various tasks such as calculations, graphics, and communication?",
+   "hi": "कंप्यूटरों का कौन-सा अभिलक्षण उन्हें गणना, ग्राफिक्स और संचार जैसे विभिन्न कार्यों को करने में सक्षम बनाता है?",
+   "opts": [
+    "Speed<br>गति (Speed)",
+    "Versatility<br>बहु उपयोगी (Versatility)",
+    "Automation<br>स्वचालन (Automation)",
+    "Accuracy<br>परिशुद्धता (Accuracy)"
+   ],
+   "my_ans": "B",
+   "sol": "बहुमुखी प्रतिभा (Versatility) कंप्यूटर की वह क्षमता है जो उसे गणना, ग्राफिक्स और संचार जैसे विविध कार्यों को एक साथ करने की अनुमति देती है।",
+   "trick": "Versatility = अनेक कार्य करने की क्षमता",
+   "ans": "B"
+  },
+  {
+   "n": 95,
+   "lvl": "GL",
+   "en": "Preparation of report cards, maintaining student records, and creating question papers are actions that are mainly related to which area of computer application?",
+   "hi": "रिपोर्ट कार्ड तैयार करना, छात्र रिकॉर्ड बनाए रखना और प्रश्न पत्र बनाना, ये सभी क्रियाएं मुख्यत: कंप्यूटर अनुप्रयोग के किस क्षेत्र से संबंधित हैं?",
+   "opts": [
+    "Space research<br>अंतरिक्ष अनुसंधान",
+    "Business marketing<br>व्यापार विपणन",
+    "Education administration<br>शिक्षा प्रशासन",
+    "Automobile control<br>ऑटोमोबाइल नियंत्रण"
+   ],
+   "my_ans": "C",
+   "sol": "रिपोर्ट कार्ड, छात्र डेटाबेस और प्रश्न पत्र प्रबंधन का कार्य शैक्षणिक संस्थानों में होता है, जो शिक्षा प्रशासन के अंतर्गत आता है।",
+   "trick": "छात्र और परीक्षा = शिक्षा प्रशासन",
+   "ans": "C"
+  },
+  {
+   "n": 96,
+   "lvl": "GL",
+   "en": "Which pair of keyboard shortcuts is used to quickly copy and paste text?",
+   "hi": "टेक्स्ट को शीघ्र कॉपी और पेस्ट करने के लिए कीबोर्ड शॉर्टकट के किस युग्म का उपयोग किया जाता है?",
+   "opts": [
+    "Ctrl + Tab and Ctrl + S<br>Ctrl + Tab और Ctrl + S",
+    "Ctrl + F and Ctrl + C<br>Ctrl + F और Ctrl + C",
+    "Ctrl + C and Ctrl + V<br>Ctrl + C और Ctrl + V",
+    "Ctrl + F and Ctrl + S<br>Ctrl + F और Ctrl + S"
+   ],
+   "my_ans": "C",
+   "sol": "Ctrl + C का उपयोग टेक्स्ट को कॉपी करने के लिए और Ctrl + V का उपयोग उसे पेस्ट करने के लिए किया जाता है।",
+   "trick": "C for Copy, V for Paste",
+   "ans": "C"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "Which of the following was the first electro-mechanical computer?",
+   "hi": "निम्नलिखित में से कौन-सा पहला विद्युत-यांत्रिक कंप्यूटर था?",
+   "opts": [
+    "EDVAC",
+    "Mark I",
+    "UNIVAC",
+    "ENIAC"
+   ],
+   "my_ans": "B",
+   "sol": "Mark I (IBM ASCC) को 1944 में हावर्ड आइकेन द्वारा विकसित किया गया था, जो पहला इलेक्ट्रो-मैकेनिकल कंप्यूटर था।",
+   "trick": "Mark I = पहला इलेक्ट्रो-मैकेनिकल",
+   "ans": "B"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "Consider the following statements regarding RAM and ROM and select the correct option. (i) ROM is faster than RAM because it stores permanent system instructions accessed less frequently by the CPU. (ii) RAM can be read from and written to by the CPU, but its contents are erased when the power is turned off.",
+   "hi": "RAM और ROM के संबंध में निम्नलिखित कथनों पर विचार करें और सही विकल्प का चयन करें। (i) ROM, RAM की तुलना में तेज़ होती है क्योंकि इसमें स्थायी सिस्टम अनुदेश संग्रहित होते हैं जिन्हें CPU द्वारा कम बार एक्सेस किया जाता है। (ii) CPU द्वारा RAM से डेटा पढ़ा और उस पर लिखा जा सकता है, लेकिन पावर बंद होने पर इसका डेटा इरेज़ (erase) हो जाता है।",
+   "opts": [
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य"
+   ],
+   "my_ans": "D",
+   "sol": "RAM, ROM से काफी तेज़ होती है, इसलिए कथन (i) गलत है। RAM वोलेटाइल मेमोरी है, पावर कटने पर डेटा मिट जाता है, इसलिए कथन (ii) सही है।",
+   "trick": "RAM = तेज़ और वोलेटाइल",
+   "ans": "D"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Which statement is True or False regarding a computer's characteristics? (i) Accuracy guarantees zero errors in output, even with flawed input. (ii) No IQ means a computer cannot perform tasks without explicit instructions from the user or programmer.",
+   "hi": "कंप्यूटर की विशेषताओं के संबंध में कौन-सा कथन सत्य या असत्य है? (i) सटीकता, त्रुटिपूर्ण इनपुट होने पर भी आउटपुट में शून्य त्रुटियों की गारंटी देती है। (ii) कोई IQ न होने का अर्थ है कि कंप्यूटर यूज़र या प्रोग्रामर के स्पष्ट अनुदेशों के बिना कार्य नहीं कर सकता है।",
+   "opts": [
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य",
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य"
+   ],
+   "my_ans": "A",
+   "sol": "गलत इनपुट से आउटपुट भी गलत होगा (GIGO सिद्धांत), इसलिए (i) गलत है। कंप्यूटर में स्वयं सोचने की क्षमता नहीं होती, इसलिए (ii) सही है।",
+   "trick": "GIGO = Garbage In, Garbage Out",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "Which device converts printed text into machine-encoded text using pattern recognition?",
+   "hi": "कौन-सा उपकरण पैटर्न पहचान का उपयोग करके मुद्रित टेक्स्ट को मशीन-एन्कोडेड टेक्स्ट में परिवर्तित करता है?",
+   "opts": [
+    "OCR",
+    "OMR",
+    "MICR",
+    "Scanner"
+   ],
+   "my_ans": "A",
+   "sol": "OCR (Optical Character Recognition) का उपयोग मुद्रित या हस्तलिखित टेक्स्ट को डिजिटल मशीन-पठनीय प्रारूप में बदलने के लिए किया जाता है।",
+   "trick": "OCR = मुद्रित टेक्स्ट को डिजिटल बनाना",
+   "ans": "A"
+  }
+ ]
+}

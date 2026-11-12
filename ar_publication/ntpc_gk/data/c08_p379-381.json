@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "379-381",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 166,
+   "lvl": "UG",
+   "en": "Which of the following was a major goal of liberalisation under the 1991 economic reforms?",
+   "hi": "1991 के आर्थिक सुधारों के अंतर्गत उदारीकरण का मुख्य लक्ष्य निम्नलिखित में से कौन-सा था?",
+   "opts": [
+    "Ban foreign companies<br>विदेशी कंपनियों पर प्रतिबंध लगाना",
+    "Remove barriers to trade and industry<br>व्यापार और उद्योग में आने वाली बाधाओं को दूर करना",
+    "Increase government control over industries<br>उद्योगों पर सरकारी नियंत्रण में वृद्धि करना",
+    "Promote public sector dominance<br>सार्वजनिक क्षेत्रक के प्रभुत्व को बढ़ावा देना"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के उदारीकरण का मुख्य उद्देश्य अर्थव्यवस्था पर सरकारी नियंत्रण कम करना और व्यापार बाधाओं को हटाकर निजी क्षेत्र को बढ़ावा देना था।",
+   "trick": "उदारीकरण = सरकारी नियंत्रण कम करना + व्यापार बाधाएं हटाना।",
+   "ans": "B"
+  },
+  {
+   "n": 167,
+   "lvl": "UG",
+   "en": "Which of the following is a large scale industry?",
+   "hi": "निम्नलिखित में से कौन सा बड़े पैमाने का उद्योग है?",
+   "opts": [
+    "Handloom<br>हथकरघा",
+    "Steel plants<br>इस्पात संयंत्र",
+    "Food processing<br>खाद्य प्रसंस्करण",
+    "Pottery<br>मिट्टी के बर्तन"
+   ],
+   "my_ans": "B",
+   "sol": "इस्पात संयंत्र (Steel plants) में भारी पूंजी निवेश, विशाल बुनियादी ढांचा और हजारों श्रमिकों की आवश्यकता होती है, इसलिए यह बड़े पैमाने का उद्योग है।",
+   "trick": "भारी पूंजी और विशाल ढांचा = बड़े पैमाने का उद्योग।",
+   "ans": "B"
+  },
+  {
+   "n": 168,
+   "lvl": "UG",
+   "en": "The Fiscal Responsibility and Budget Management (FRBM) Act was enacted in which year in India?",
+   "hi": "भारत में राजवित्तीय उत्तरदायित्व और बजट प्रबंध (FRBM) अधिनियम किस वर्ष अधिनियमित किया गया था?",
+   "opts": [
+    "2005",
+    "2003",
+    "2004",
+    "2001"
+   ],
+   "my_ans": "B",
+   "sol": "FRBM अधिनियम को भारतीय संसद द्वारा 2003 में अधिनियमित किया गया था ताकि राजकोषीय अनुशासन सुनिश्चित किया जा सके।",
+   "trick": "FRBM = 2003 (राजकोषीय अनुशासन के लिए)।",
+   "ans": "B"
+  },
+  {
+   "n": 169,
+   "lvl": "UG",
+   "en": "In which of the following ways has the private sector contributed to India's industrial growth and global expansion since the economic reforms of 1991?",
+   "hi": "1991 के आर्थिक सुधारों के बाद से निजी क्षेत्रक ने भारत की औद्योगिक संवृद्धि और वैश्विक विस्तार में निम्नलिखित में से किस प्रकार योगदान दिया है?",
+   "opts": [
+    "Limiting its activities to non-core industries<br>अपनी गतिविधियों को गैर-आधारभूत उद्योगों तक सीमित रखकर",
+    "Relying solely on government subsidies for expansion<br>विस्तार के लिए पूरी तरह से सरकारी सब्सिडी पर निर्भर रहकर",
+    "Restricting industrial growth to maintain a stable economy<br>स्थिर अर्थव्यवस्था बनाए रखने के लिए औद्योगिक संवृद्धि को प्रतिबंधित करके",
+    "Aggressively pursuing global acquisitions and enhancing industrial growth<br>वैश्विक अधिग्रहणों को आक्रामक रूप से आगे बढ़ाकर और औद्योगिक संवृद्धि को बढ़ावा देकर"
+   ],
+   "my_ans": "D",
+   "sol": "1991 के बाद निजी क्षेत्र ने वैश्विक स्तर पर कंपनियों का अधिग्रहण किया (जैसे टाटा द्वारा जगुआर-लैंड रोवर) और मुख्य उद्योगों में प्रवेश किया।",
+   "trick": "निजी क्षेत्र = वैश्विक अधिग्रहण + आक्रामक विस्तार।",
+   "ans": "D"
+  },
+  {
+   "n": 170,
+   "lvl": "UG",
+   "en": "The stabilisation measures introduced under India’s New Economic Policy (NEP) of 1991 were primarily aimed at achieving which of the following immediate objectives?",
+   "hi": "1991 की भारत की नई आर्थिक नीति (NEP) के तहत शुरू किए गए स्थिरीकरण उपायों का मुख्य उद्देश्य निम्नलिखित में से कौन-सा तात्कालिक लक्ष्य प्राप्त करना था?",
+   "opts": [
+    "Encouraging foreign direct investment inflows and improving capital availability<br>प्रत्यक्ष विदेशी निवेश के प्रवाह को प्रोत्साहित करना और पूंजी की उपलब्धता में सुधार करना",
+    "Promoting disinvestment of public sector enterprises and reducing state control<br>सार्वजनिक क्षेत्र के उद्यमों के विनिवेश को बढ़ावा देना और राज्य के नियंत्रण को कम करना",
+    "Generating rural employment opportunities and strengthening agrarian livelihoods<br>ग्रामीण रोजगार के अवसर सृजित करना और कृषि आधारित आजीविका को सुदृढ़ बनाना",
+    "Correcting balance of payment imbalances and controlling inflationary pressures<br>भुगतान संतुलन के असंतुलन को ठीक करना और मुद्रास्फीति के दबावों को नियंत्रित करना"
+   ],
+   "my_ans": "D",
+   "sol": "1991 में भारत भुगतान संतुलन (BoP) संकट और उच्च मुद्रास्फीति से जूझ रहा था, जिसे ठीक करना इन उपायों का तात्कालिक लक्ष्य था।",
+   "trick": "1991 संकट = भुगतान संतुलन ठीक करना + मुद्रास्फीति नियंत्रण।",
+   "ans": "D"
+  },
+  {
+   "n": 171,
+   "lvl": "UG",
+   "en": "Which of the following has NOT aided in Globalisation of the Indian economy?",
+   "hi": "निम्नलिखित में से किसने भारतीय अर्थव्यवस्था के वैश्वीकरण में योगदान नहीं दिया है?",
+   "opts": [
+    "Reduction of trade barriers<br>व्यापार अवरोधों में कमी",
+    "E-commerce<br>ई-वाणिज्य",
+    "Emergence of multinational companies in India<br>भारत में बहुराष्ट्रीय कंपनियों का उदय",
+    "Farm subsidies<br>कृषि सब्सिडी"
+   ],
+   "my_ans": "D",
+   "sol": "कृषि सब्सिडी एक घरेलू नीति है जो किसानों को समर्थन देती है, यह अंतरराष्ट्रीय व्यापार या वैश्वीकरण को बढ़ावा नहीं देती है।",
+   "trick": "सब्सिडी = घरेलू संरक्षण (वैश्वीकरण नहीं)।",
+   "ans": "D"
+  },
+  {
+   "n": 172,
+   "lvl": "UG",
+   "en": "In which year was the Planning Commission, later renamed as NITI Aayog, established?",
+   "hi": "योजना आयोग, जिसका बाद में नाम बदलकर नीति आयोग कर दिया गया, की स्थापना किस वर्ष की गई थी?",
+   "opts": [
+    "1950",
+    "1947",
+    "1965",
+    "1971"
+   ],
+   "my_ans": "A",
+   "sol": "योजना आयोग की स्थापना 15 मार्च 1950 को भारत सरकार के प्रस्ताव द्वारा की गई थी।",
+   "trick": "योजना आयोग = 1950 (पंचवर्षीय योजनाएं)।",
+   "ans": "A"
+  },
+  {
+   "n": 173,
+   "lvl": "UG",
+   "en": "In which year did the Indian Parliament enact the Fiscal Responsibility and Budget Management (FRBM) Act to promote fiscal prudence?",
+   "hi": "भारतीय संसद ने राजवित्तीय विवेक को बढ़ावा देने के लिए किस वर्ष में 'राजवित्तीय उत्तरदायित्व और बजट प्रबंध अधिनियम (FRBM)' अधिनियम अधिनियमित किया था?",
+   "opts": [
+    "1998",
+    "1991",
+    "2005",
+    "2003"
+   ],
+   "my_ans": "D",
+   "sol": "FRBM अधिनियम को राजकोषीय घाटे को नियंत्रित करने और अनुशासन लाने के लिए 2003 में पारित किया गया था।",
+   "trick": "FRBM = 2003 (राजकोषीय अनुशासन)।",
+   "ans": "D"
+  },
+  {
+   "n": 174,
+   "lvl": "UG",
+   "en": "Which of the following factors does NOT promote globalisation?",
+   "hi": "निम्नलिखित में से कौन-सा कारक वैश्वीकरण को बढ़ावा नहीं देता है?",
+   "opts": [
+    "Removal of trade barriers<br>व्यापार बाधाओं का निवारण",
+    "Subsidies and protectionism in domestic markets<br>घरेलू बाजारों में सब्सिडी और संरक्षणवाद",
+    "Foreign Direct Investment (FDI)<br>प्रत्यक्ष विदेशी निवेश (FDI)",
+    "Privatization of state-owned enterprises<br>राज्य के स्वामित्व वाले उद्यमों का निजीकरण"
+   ],
+   "my_ans": "B",
+   "sol": "संरक्षणवाद और सब्सिडी घरेलू उद्योगों को विदेशी प्रतिस्पर्धा से बचाते हैं, जो मुक्त व्यापार और वैश्वीकरण के सिद्धांतों के विपरीत है।",
+   "trick": "संरक्षणवाद = वैश्वीकरण का विरोध।",
+   "ans": "B"
+  }
+ ]
+}

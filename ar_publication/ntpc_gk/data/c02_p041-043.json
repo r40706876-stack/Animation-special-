@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "41-43",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "After visiting India and learning about Indian culture, Al-Biruni wrote which book?",
+   "hi": "भारत यात्रा करने और भारतीय संस्कृति के बारे में जानने के पश्चात, अल-बरूनी (Al-Biruni) ने कौन-सी पुस्तक लिखी?",
+   "opts": [
+    "Babarnama<br>बाबरनामा",
+    "Chahar Maqala<br>चाहर मक़ाला",
+    "Qiran us Sa'dain<br>किरान-उस-सादेन",
+    "Kitab-Ul-Hind<br>किताब-उल-हिंद"
+   ],
+   "my_ans": "D",
+   "sol": "अल-बरूनी महमूद गजनवी के साथ भारत आया था और उसने भारतीय समाज व संस्कृति पर 'किताब-उल-हिंद' नामक पुस्तक लिखी।",
+   "trick": "अल-बरूनी = किताब-उल-हिंद (भारत का विवरण)",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following rulers of the Gurjara-Pratihara dynasty is credited with resisting Arab invasions effectively?",
+   "hi": "गुर्जर-प्रतिहार राजवंश के निम्नलिखित में से किस शासक को अरब आक्रमणों का प्रभावी रूप से प्रतिरोध करने का श्रेय दिया जाता है?",
+   "opts": [
+    "Yasovarman I<br>यशोवर्मन प्रथम",
+    "Mihira Bhoja<br>मिहिर भोज",
+    "Nagabhata I<br>नागभट्ट प्रथम",
+    "Ramabhadra<br>रामभद्र"
+   ],
+   "my_ans": "C",
+   "sol": "नागभट्ट प्रथम ने सिंध से होने वाले अरब आक्रमणों को सफलतापूर्वक रोका और पश्चिमी भारत की रक्षा की।",
+   "trick": "नागभट्ट प्रथम = अरब आक्रमणों का सफल प्रतिरोध",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which of the following nationalists co-founded and became the president of the Congress-Khilafat Swarajya Party, after a fall off with the Indian National Congress?",
+   "hi": "निम्नलिखित में से किस राष्ट्रवादी ने भारतीय राष्ट्रीय कांग्रेस से मतभेद होने के बाद कांग्रेस-खिलाफत स्वराज पार्टी की सह-स्थापना की और उसके अध्यक्ष बने?",
+   "opts": [
+    "Ajmal Khan<br>अजमल खान",
+    "Mukhtar Ahmed Ansari<br>मुख्तार अहमद अंसारी",
+    "Chittaranjan Das<br>चित्तरंजन दास",
+    "Motilal Nehru<br>मोतीलाल नेहरू"
+   ],
+   "my_ans": "C",
+   "sol": "1923 में चित्तरंजन दास और मोतीलाल नेहरू ने स्वराज पार्टी बनाई, जिसके अध्यक्ष चित्तरंजन दास बने।",
+   "trick": "स्वराज पार्टी = सी.आर. दास (अध्यक्ष) + मोतीलाल नेहरू (सचिव)",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which 17th-century CE monument in Agra, built by Shah Jahan, is a UNESCO World Heritage Site?",
+   "hi": "आगरा में शाहजहाँ द्वारा निर्मित 17वीं शताब्दी ईस्वी का कौन-सा स्मारक यूनेस्को विश्व धरोहर स्थल है?",
+   "opts": [
+    "Sikandra Tomb<br>सिकंदरा मकबरा",
+    "Safdarjung Tomb<br>सफदरजंग मकबरा",
+    "Taj Mahal<br>ताजमहल",
+    "Jama Masjid<br>जामा मस्जिद"
+   ],
+   "my_ans": "C",
+   "sol": "शाहजहाँ ने अपनी पत्नी मुमताज महल की याद में आगरा में ताजमहल का निर्माण करवाया था।",
+   "trick": "ताजमहल = शाहजहाँ (आगरा)",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "The Group of Forty who advised and assisted the Sultan in administering the Delhi Sultanate was established by which of the following rulers?",
+   "hi": "दिल्ली सल्तनत के प्रशासन में सुल्तान को परामर्श देने और सहायता करने वाले चालीस लोगों के दल (Group of Forty) की स्थापना निम्नलिखित में से किस शासक ने की थी?",
+   "opts": [
+    "Iltutmish<br>इल्तुतमिश",
+    "Qutbuddin Aibak<br>कुतुबुद्दीन ऐबक",
+    "Alauddin Khalji<br>अलाउद्दीन खिलजी",
+    "Balban<br>बलबन"
+   ],
+   "my_ans": "A",
+   "sol": "इल्तुतमिश ने शासन में सहायता के लिए 'तुर्कान-ए-चहलगानी' या 'चालीस गुलामों का दल' बनाया था।",
+   "trick": "इल्तुतमिश = चालीसा दल (चहलगानी)",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Which of the following dynasties is associated with the Thousand Pillars Temple at Warangal built in the 12th century?",
+   "hi": "निम्नलिखित में से कौन-सा राजवंश, वारंगल में 12वीं शताब्दी में निर्मित हजार स्तंभ मंदिर (Thousand Pillars Temple) से संबंधित है?",
+   "opts": [
+    "Hoysala dynasty<br>होयसाल राजवंश",
+    "Rashtrakuta dynasty<br>राष्ट्रकूट राजवंश",
+    "Chalukya dynasty<br>चालुक्य राजवंश",
+    "Kakatiya dynasty<br>काकतीय राजवंश"
+   ],
+   "my_ans": "D",
+   "sol": "वारंगल का हजार स्तंभ मंदिर काकतीय राजा रुद्र देव द्वारा 1163 ईस्वी में बनवाया गया था।",
+   "trick": "हजार स्तंभ मंदिर = काकतीय राजवंश",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which language was predominantly used by Amir Khusrau in his literary compositions during the Delhi Sultanate period?",
+   "hi": "दिल्ली सल्तनत काल के दौरान अमीर खुसरो ने अपनी साहित्यिक रचनाओं में मुख्य रूप से किस भाषा का उपयोग किया था?",
+   "opts": [
+    "Apabhramsha<br>अपभ्रंश",
+    "Prakrit<br>प्राकृत",
+    "Sanskrit<br>संस्कृत",
+    "Persian<br>फारसी"
+   ],
+   "my_ans": "D",
+   "sol": "अमीर खुसरो दिल्ली सल्तनत के दरबारी कवि थे और उन्होंने अपनी अधिकांश रचनाएँ फारसी भाषा में लिखीं।",
+   "trick": "अमीर खुसरो = फारसी भाषा",
+   "ans": "D"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which Mughal court historian authored the Akbarnāma, the official chronicle of Emperor Akbar’s reign?",
+   "hi": "किस मुगल दरबार के इतिहासकार ने अकबरनामा लिखा था, जो सम्राट अकबर के शासनकाल का आधिकारिक इतिहास है?",
+   "opts": [
+    "Ferishta<br>फरिश्ता",
+    "Abul Fazl<br>अबुल फजल",
+    "Minhaj-i-Siraj<br>मिन्हाज-ए-सिराज",
+    "Ziauddin Barani<br>जियाउद्दीन बरनी"
+   ],
+   "my_ans": "B",
+   "sol": "अकबर के नवरत्नों में से एक, अबुल फजल ने अकबरनामा और आइन-ए-अकबरी की रचना की थी।",
+   "trick": "अकबरनामा = अबुल फजल",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Which of the following rulers built Tughlaqabad Fort in 1321?",
+   "hi": "निम्नलिखित में से किस शासक ने 1321 में तुगलकाबाद किले का निर्माण करवाया था?",
+   "opts": [
+    "Muhammad bin Tughlaq<br>मुहम्मद बिन तुगलक",
+    "Firoz Shah Tughlaq<br>फिरोज शाह तुगलक",
+    "Alauddin Khalji<br>अलाउद्दीन खिलजी",
+    "Ghiyasuddin Tughlaq<br>गियासुद्दीन तुगलक"
+   ],
+   "my_ans": "D",
+   "sol": "तुगलक वंश के संस्थापक गियासुद्दीन तुगलक ने 1321 में दिल्ली में तुगलकाबाद किला बनवाया था।",
+   "trick": "तुगलकाबाद = गियासुद्दीन तुगलक",
+   "ans": "D"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "The Poligar Rebellion took place in which part of India?",
+   "hi": "पोलिगर विद्रोह भारत के किस क्षेत्र में हुआ था?",
+   "opts": [
+    "Bengal<br>बंगाल",
+    "Punjab<br>पंजाब",
+    "Maharashtra<br>महाराष्ट्र",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "D",
+   "sol": "पोलिगर विद्रोह (1799-1805) मुख्य रूप से तमिलनाडु के तिरुनेलवेली और मदुरै क्षेत्रों में हुआ था।",
+   "trick": "पोलिगर विद्रोह = तमिलनाडु",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Which dynasty ruled over Kannauj during the Tripartite Struggle?",
+   "hi": "त्रिपक्षीय संघर्ष के दौरान कन्नौज पर किस राजवंश ने शासन किया?",
+   "opts": [
+    "Chalukyas<br>चालुक्य",
+    "Rashtrakutas<br>राष्ट्रकूट",
+    "Gurjara-Pratiharas<br>गुर्जर-प्रतिहार",
+    "Palas - Cholas<br>पाल - चोल"
+   ],
+   "my_ans": "C",
+   "sol": "कन्नौज के लिए हुए त्रिपक्षीय संघर्ष में अंततः गुर्जर-प्रतिहार राजवंश की जीत हुई और उन्होंने शासन किया।",
+   "trick": "त्रिपक्षीय संघर्ष = गुर्जर-प्रतिहार (विजेता)",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Ustad Ahmad Lahori is renowned as the chief architect of which UNESCO World Heritage Site?",
+   "hi": "उस्ताद अहमद लाहौरी किस यूनेस्को विश्व धरोहर स्थल के मुख्य वास्तुकार के रूप में प्रसिद्ध हैं?",
+   "opts": [
+    "Red Fort<br>लाल किला",
+    "Humayun's Tomb<br>हुमायूँ का मकबरा",
+    "Taj Mahal<br>ताजमहल",
+    "Qutub Minar<br>कुतुब मीनार"
+   ],
+   "my_ans": "C",
+   "sol": "उस्ताद अहमद लाहौरी शाहजहाँ द्वारा निर्मित ताजमहल के मुख्य वास्तुकार थे।",
+   "trick": "ताजमहल = अहमद लाहौरी",
+   "ans": "C"
+  }
+ ]
+}

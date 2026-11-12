@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "226-228",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Special address delivered by the President to both Houses of Parliament at the start of the first session after each general election and at the opening of the first session of every year is mentioned under which of the following Articles of the Constitution of India?",
+   "hi": "प्रत्येक सामान्य निर्वाचन के पश्चात् प्रथम सत्र के आरंभ में और प्रत्येक वर्ष के प्रथम सत्र के आरंभ में राष्ट्रपति द्वारा संसद के दोनों सदनों में दिया जाने वाला विशेष अभिभाषण, भारत के संविधान के निम्नलिखित में से किस अनुच्छेद के अंतर्गत उल्लिखित है?",
+   "opts": [
+    "Article 85<br>अनुच्छेद 85",
+    "Article 86<br>अनुच्छेद 86",
+    "Article 87<br>अनुच्छेद 87",
+    "Article 88<br>अनुच्छेद 88"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान का अनुच्छेद 87 राष्ट्रपति के विशेष अभिभाषण का प्रावधान करता है, जो प्रत्येक आम चुनाव के बाद और प्रत्येक वर्ष के प्रथम सत्र के आरंभ में होता है।",
+   "trick": "अनुच्छेद 87 = राष्ट्रपति का विशेष अभिभाषण",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Through which Constitutional Amendment were the Fundamental Duties incorporated into the Constitution?",
+   "hi": "किस संविधान संशोधन के माध्यम से मौलिक कर्तव्यों को संविधान में शामिल किया गया था?",
+   "opts": [
+    "42nd Amendment, 1976<br>42वां संशोधन, 1976",
+    "97th Amendment, 2011<br>97वां संशोधन, 2011",
+    "52nd Amendment, 1985<br>52वां संशोधन, 1985",
+    "61st Amendment, 1989<br>61वां संशोधन, 1989"
+   ],
+   "my_ans": "A",
+   "sol": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा स्वर्ण सिंह समिति की सिफारिशों पर संविधान में भाग IVA और अनुच्छेद 51A के तहत मौलिक कर्तव्यों को जोड़ा गया।",
+   "trick": "42वां संशोधन = मिनी संविधान, मौलिक कर्तव्य जोड़े गए",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which constitutional amendment reduced the Parliament’s approval period for National Emergency from two months to one month?",
+   "hi": "किस संविधान संशोधन के तहत राष्ट्रीय आपातकाल के लिए संसद द्वारा अनुमोदन की अवधि दो महीने से घटाकर एक महीने कर दी गई?",
+   "opts": [
+    "52nd Amendment Act, 1985<br>52वां संशोधन अधिनियम, 1985",
+    "44th Amendment Act, 1978<br>44वां संशोधन अधिनियम, 1978",
+    "38th Amendment Act, 1975<br>38वां संशोधन अधिनियम, 1975",
+    "42nd Amendment Act, 1976<br>42वां संशोधन अधिनियम, 1976"
+   ],
+   "my_ans": "B",
+   "sol": "44वें संविधान संशोधन, 1978 द्वारा आपातकाल के दुरुपयोग को रोकने के लिए संसद की अनुमोदन अवधि को 2 महीने से घटाकर 1 महीना कर दिया गया।",
+   "trick": "44वां संशोधन = आपातकाल के प्रावधानों में सुधार",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which among the following is NOT a document related to Good Governance?",
+   "hi": "निम्नलिखित में से कौन-सा डॉक्यूमेंट सुशासन से संबंधित नहीं है?",
+   "opts": [
+    "Sevottam Model<br>सेवोत्तम मॉडल",
+    "Citizen Charter<br>नागरिक चार्टर",
+    "National Forest Policy, 1988<br>राष्ट्रीय वन नीति, 1988",
+    "Second Administrative Reforms Commission<br>द्वितीय प्रशासनिक सुधार आयोग"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय वन नीति, 1988 एक पर्यावरण नीति है, जबकि सेवोत्तम मॉडल, नागरिक चार्टर और द्वितीय ARC सुशासन और प्रशासनिक सुधारों से संबंधित हैं।",
+   "trick": "वन नीति = पर्यावरण संरक्षण, सुशासन नहीं",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which among the following Articles of the Indian Constitution provides Municipalities with financial powers?",
+   "hi": "भारतीय संविधान का निम्नलिखित में से कौन-सा अनुच्छेद, नगरपालिकाओं को वित्तीय शक्तियां प्रदान करता है?",
+   "opts": [
+    "Article 243ZB<br>अनुच्छेद 243ZB",
+    "Article 243U<br>अनुच्छेद 243U",
+    "Article 243P<br>अनुच्छेद 243P",
+    "Article 243 X<br>अनुच्छेद 243X"
+   ],
+   "my_ans": "D",
+   "sol": "संविधान का अनुच्छेद 243X नगरपालिकाओं को कर लगाने और वित्तीय संसाधन जुटाने की शक्तियां प्रदान करता है।",
+   "trick": "243X = X-tra (अतिरिक्त) वित्तीय शक्तियां",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "After a Constitution Amendment Bill relating to the Directive Principles of State Policy is passed by the Parliament, what is the next mandatory constitutional step for it to become a law?",
+   "hi": "संसद द्वारा राज्य के नीति निर्देशक सिद्धांतों से संबंधित संविधान संशोधन विधेयक पारित करने के बाद, इसके कानून बनने के लिए अगला अनिवार्य संवैधानिक चरण क्या है?",
+   "opts": [
+    "Notification in the Gazette<br>राजपत्र में अधिसूचना",
+    "Ratification by State Legislatures<br>राज्य विधानमंडलों द्वारा अनुसमर्थन",
+    "Approval by the Supreme Court<br>सर्वोच्च न्यायालय द्वारा अनुमोदन",
+    "President’s Assent<br>राष्ट्रपति की सहमति"
+   ],
+   "my_ans": "D",
+   "sol": "संसद के दोनों सदनों से विशेष बहुमत से पारित होने के बाद, किसी भी संविधान संशोधन विधेयक को कानून बनने के लिए राष्ट्रपति की सहमति अनिवार्य है।",
+   "trick": "संशोधन = संसद + राष्ट्रपति की सहमति",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which of these Union Territories has a legislative assembly and council of ministers?",
+   "hi": "निम्नलिखित में से किस केंद्र शासित प्रदेश में विधानसभा और मंत्रिपरिषद है?",
+   "opts": [
+    "Puducherry<br>पुदुचेरी",
+    "Dadra and Nagar Haveli<br>दादरा और नगर हवेली",
+    "Daman and Diu<br>दमन और दीव",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह"
+   ],
+   "my_ans": "A",
+   "sol": "भारत के केवल तीन केंद्र शासित प्रदेशों - दिल्ली, पुदुचेरी और जम्मू-कश्मीर में विधानसभा और मंत्रिपरिषद का प्रावधान है।",
+   "trick": "DPJ (दिल्ली, पुदुचेरी, जम्मू-कश्मीर) = विधानसभा वाले UT",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "On 21 December 2025, President Droupadi Murmu approved the Viksit Bharat—Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB–G RAM G) Bill, 2025, enhancing rural wage employment guarantee to which of the following days in a financial year?",
+   "hi": "21 दिसंबर 2025 को, राष्ट्रपति द्रौपदी मुर्मू ने विकसित भारत — रोजगार और आजीविका के लिए गारंटी मिशन (ग्रामीण) (VB–G RAM G) विधेयक, 2025 को अपनी स्वीकृति प्रदान की, जिससे वित्तीय वर्ष में ग्रामीण मजदूरी रोजगार गारंटी बढ़कर निम्नलिखित में से कितने दिन की हो गई?",
+   "opts": [
+    "100 days<br>100 दिन",
+    "150 days<br>150 दिन",
+    "125 days<br>125 दिन",
+    "175 days<br>175 दिन"
+   ],
+   "my_ans": "C",
+   "sol": "VB-GRAM बिल, 2025 के तहत ग्रामीण रोजगार गारंटी को MGNREGA के 100 दिनों से बढ़ाकर 125 दिन कर दिया गया है।",
+   "trick": "VB-GRAM = 125 दिन का रोजगार",
+   "ans": "C"
+  }
+ ]
+}

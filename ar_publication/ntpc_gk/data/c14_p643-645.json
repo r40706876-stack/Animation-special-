@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "643-645",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 260,
+   "lvl": "UG",
+   "en": "Where did the Prime Minister of India chair the 7th National Board for Wildlife meeting in March 2025?",
+   "hi": "मार्च 2025 में भारत के प्रधान मंत्री ने 7वीं राष्ट्रीय वन्यजीव बोर्ड की बैठक की अध्यक्षता कहां की?",
+   "opts": [
+    "Satpura Tiger Reserve<br>सतपुड़ा टाइगर रिजर्व",
+    "Sariska Tiger Reserve<br>सरिस्का टाइगर रिजर्व",
+    "Gir National Park<br>गिर राष्ट्रीय उद्यान",
+    "Pench National Park<br>पेंच राष्ट्रीय उद्यान"
+   ],
+   "my_ans": "C",
+   "sol": "मार्च 2025 में प्रधानमंत्री ने गुजरात के गिर राष्ट्रीय उद्यान में 7वीं राष्ट्रीय वन्यजीव बोर्ड (NBWL) की बैठक की अध्यक्षता की।",
+   "trick": "गिर राष्ट्रीय उद्यान एशियाई शेरों के लिए प्रसिद्ध है।",
+   "ans": "C"
+  },
+  {
+   "n": 261,
+   "lvl": "UG",
+   "en": "Which wildlife sanctuary is set to host its inaugural female cheetah (Dheera) as part of a breeding/translocation initiative in 2025?",
+   "hi": "2025 में प्रजनन/स्थानांतरण पहल के हिस्से के रूप में कौन-सा वन्यजीव अभयारण्य अपनी पहली मादा चीता (धीरा) की मेजबानी करने के लिए तैयार है?",
+   "opts": [
+    "Gir Wildlife Sanctuary<br>गिर वन्यजीव अभयारण्य",
+    "Kuno National Park<br>कूनो राष्ट्रीय उद्यान",
+    "Gandhi Sagar Wildlife Sanctuary<br>गांधी सागर वन्यजीव अभयारण्य",
+    "Ranthambore National Park<br>रणथंभौर राष्ट्रीय उद्यान"
+   ],
+   "my_ans": "C",
+   "sol": "गांधी सागर वन्यजीव अभयारण्य (मध्य प्रदेश) को चीता परियोजना के विस्तार के लिए चुना गया है, जहाँ 'धीरा' नामक पहली मादा चीता को स्थानांतरित किया गया।",
+   "trick": "कूनो के बाद गांधी सागर चीता विस्तार का नया केंद्र है।",
+   "ans": "C"
+  },
+  {
+   "n": 262,
+   "lvl": "UG",
+   "en": "Mount Etna, Europe’s largest and most active volcano, known for its frequent and persistent eruptions, is located in _______, which reported a new eruption at a vent located in the west part of the Southeast Crater in February 2025.",
+   "hi": "माउंट एटना, यूरोप का सबसे बड़ा और सबसे सक्रिय ज्वालामुखी है, जो अपनी बहुधा और अपाती उद्गारों के लिए जाना जाता है, _______ में स्थित है। फरवरी 2025 में इसके दक्षिण-पूर्वी क्रेटर के पश्चिमी भाग में स्थित एक मुख पर एक नए उद्गार का पता लगा।",
+   "opts": [
+    "Italy<br>इटली",
+    "Estonia<br>एस्टोनिया",
+    "Luxembourg<br>लक्ज़मबर्ग",
+    "Serbia<br>सर्बिया"
+   ],
+   "my_ans": "A",
+   "sol": "माउंट एटना यूरोप का सबसे सक्रिय ज्वालामुखी है जो इटली के सिसिली द्वीप पर स्थित है।",
+   "trick": "एटना = इटली (दोनों 'इ' से शुरू होते हैं)।",
+   "ans": "A"
+  },
+  {
+   "n": 263,
+   "lvl": "UG",
+   "en": "Which of the following tunnels has been inaugurated in January 2026 to improve year-round connectivity between Sonamarg and Srinagar?",
+   "hi": "निम्नलिखित में से कौन-सी सुरंग का उद्घाटन जनवरी 2026 में सोनमर्ग और श्रीनगर के बीच वर्ष भर कनेक्टिविटी को बेहतर बनाने के लिए किया गया है?",
+   "opts": [
+    "Z-Morh tunnel<br>Z-मोड़ सुरंग",
+    "Nehru tunnel<br>नेहरू सुरंग",
+    "Atal tunnel<br>अटल सुरंग",
+    "Pir Panjal tunnel<br>पीर पंजाल सुरंग"
+   ],
+   "my_ans": "A",
+   "sol": "Z-मोड़ सुरंग सोनमर्ग और श्रीनगर को जोड़ती है, जो 6.5 किमी लंबी है और हर मौसम में कनेक्टिविटी सुनिश्चित करती है।",
+   "trick": "सोनमर्ग की कनेक्टिविटी के लिए Z-मोड़ सुरंग।",
+   "ans": "A"
+  },
+  {
+   "n": 264,
+   "lvl": "UG",
+   "en": "What is the primary goal of the Energy Conservation Act (EC Act) of 2001, enacted by the Government of India?",
+   "hi": "भारत सरकार द्वारा अधिनियमित, ऊर्जा संरक्षण अधिनियम (EC अधिनियम) 2001 का प्राथमिक लक्ष्य क्या है?",
+   "opts": [
+    "To increase CO2 emissions<br>CO2 उत्सर्जन में वृद्धि करना",
+    "To reduce energy intensity in the Indian economy<br>भारतीय अर्थव्यवस्था में ऊर्जा-तीव्रता को कम करना",
+    "To encourage the use of hydrocarbons<br>हाइड्रोकार्बन के उपयोग को प्रोत्साहित करना",
+    "To promote renewable energy sources<br>नवीकरणीय ऊर्जा स्रोतों को बढ़ावा देना"
+   ],
+   "my_ans": "B",
+   "sol": "ऊर्जा संरक्षण अधिनियम 2001 का मुख्य उद्देश्य भारतीय अर्थव्यवस्था में ऊर्जा की खपत की तीव्रता को कम करना है।",
+   "trick": "ऊर्जा संरक्षण = ऊर्जा की खपत में दक्षता।",
+   "ans": "B"
+  },
+  {
+   "n": 265,
+   "lvl": "UG",
+   "en": "Which organisation led the bladder cancer radiation therapy trial in November 2025?",
+   "hi": "किस संगठन ने नवंबर 2025 में मूत्राशय कैंसर विकिरण चिकित्सा परीक्षण का नेतृत्व किया?",
+   "opts": [
+    "All India Institute of Medical Sciences, Delhi<br>अखिल भारतीय आयुर्विज्ञान संस्थान, दिल्ली",
+    "Tata Memorial Centre, Mumbai<br>टाटा मेमोरियल सेंटर, मुंबई",
+    "Postgraduate Institute of Medical Education and Research, Chandigarh<br>स्नातकोत्तर चिकित्सा शिक्षा एवं अनुसंधान संस्थान, चंडीगढ़",
+    "National Institute of Mental Health and Neurosciences, Bengaluru<br>राष्ट्रीय मानसिक स्वास्थ्य एवं तंत्रिका विज्ञान संस्थान, बेंगलुरु"
+   ],
+   "my_ans": "B",
+   "sol": "टाटा मेमोरियल सेंटर, मुंबई ने नवंबर 2025 में भारत का पहला मूत्राशय कैंसर विकिरण चिकित्सा परीक्षण किया।",
+   "trick": "कैंसर अनुसंधान के लिए टाटा मेमोरियल प्रमुख संस्थान है।",
+   "ans": "B"
+  },
+  {
+   "n": 266,
+   "lvl": "UG",
+   "en": "Which high-altitude wildlife area was declared India’s first “cold desert biosphere reserve” under UNESCO in 2025?",
+   "hi": "किस उच्च-ऊंचाई वाले वन्यजीव क्षेत्र को 2025 में यूनेस्को के तहत भारत का पहला \"शीत मरुस्थल बायोस्फीयर रिजर्व\" घोषित किया गया?",
+   "opts": [
+    "Spiti Valley<br>स्पीति घाटी",
+    "Kargil Wildlife Sanctuary<br>कारगिल वन्यजीव अभयारण्य",
+    "Nubra Valley Reserve<br>नुब्रा घाटी रिजर्व",
+    "Ladakh Wildlife Division<br>लद्दाख वन्यजीव प्रभाग"
+   ],
+   "my_ans": "A",
+   "sol": "हिमाचल प्रदेश की स्पीति घाटी को 2025 में भारत का पहला शीत मरुस्थल बायोस्फीयर रिजर्व घोषित किया गया।",
+   "trick": "स्पीति = शीत मरुस्थल।",
+   "ans": "A"
+  },
+  {
+   "n": 267,
+   "lvl": "UG",
+   "en": "Which Indian ministry, in collaboration with the International Council for Circular Economy (ICCE), unveiled the ‘I Am Circular’ Coffee Table Book in April 2024?",
+   "hi": "किस भारतीय मंत्रालय ने इंटरनेशनल काउंसिल फॉर सर्कुलर इकोनॉमी (ICCE) के सहयोग से अप्रैल 2024 में 'आई एम सर्कुलर' कॉफी-टेबल बुक का अनावरण किया था?",
+   "opts": [
+    "Ministry of education<br>शिक्षा मंत्रालय",
+    "Ministry of Information and Broadcasting<br>सूचना एवं प्रसारण मंत्रालय",
+    "Ministry of Finance<br>वित्त मंत्रालय",
+    "Ministry of Electronics and Information Technology<br>इलेक्ट्रॉनिक्स एवं सूचना प्रौद्योगिकी मंत्रालय"
+   ],
+   "my_ans": "D",
+   "sol": "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY) ने ICCE के साथ मिलकर इलेक्ट्रॉनिक्स क्षेत्र में चक्रीय अर्थव्यवस्था को बढ़ावा देने के लिए यह बुक लॉन्च की।",
+   "trick": "इलेक्ट्रॉनिक्स क्षेत्र में चक्रीय अर्थव्यवस्था = MeitY।",
+   "ans": "D"
+  },
+  {
+   "n": 268,
+   "lvl": "UG",
+   "en": "What is the name of India’s first indigenous CRISPR-based gene therapy for Sickle Cell Disease, launched in November 2025?",
+   "hi": "सिकल सेल रोग (Sickle Cell Disease) के लिए नवंबर 2025 में लॉन्च की गई भारत की पहली स्वदेशी CRISPR-आधारित जीन थेरेपी का नाम क्या है?",
+   "opts": [
+    "Sickle Cure<br>सिकल क्योर",
+    "GENO-1",
+    "CRISPR-X",
+    "BIRSA 101"
+   ],
+   "my_ans": "D",
+   "sol": "BIRSA 101 भारत की पहली स्वदेशी CRISPR-आधारित जीन थेरेपी है, जिसे सिकल सेल रोग के इलाज के लिए विकसित किया गया है।",
+   "trick": "बिरसा मुंडा के नाम पर BIRSA 101।",
+   "ans": "D"
+  },
+  {
+   "n": 269,
+   "lvl": "UG",
+   "en": "In 2025, which stratovolcano in New Zealand was granted individual legal status, becoming the third natural entity in the country to receive personhood?",
+   "hi": "2025 में, न्यूजीलैंड में किस स्ट्रैटोवोल्कानो (Stratovolcano) को व्यक्तिगत कानूनी दर्जा दिया गया, जिससे यह देश में व्यक्तित्व (personhood) प्राप्त करने वाली तीसरी प्राकृतिक इकाई बन गयी है?",
+   "opts": [
+    "Taranaki Maunga<br>तारानाकी मौंगा",
+    "Mount Ruapehu<br>माउंट रुआपेहू",
+    "Mount Cook<br>माउंट कुक",
+    "Mount Tongariro<br>माउंट टोंगारिरो"
+   ],
+   "my_ans": "A",
+   "sol": "न्यूजीलैंड के तारानाकी मौंगा ज्वालामुखी को 2025 में कानूनी व्यक्तित्व का दर्जा दिया गया।",
+   "trick": "तारानाकी = कानूनी दर्जा प्राप्त ज्वालामुखी।",
+   "ans": "A"
+  }
+ ]
+}

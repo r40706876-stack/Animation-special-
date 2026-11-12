@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "International Affairs",
+  "hi": "अंतर्राष्ट्रीय मामले",
+  "total": 25,
+  "gl": 25,
+  "ug": 0
+ },
+ "source_pages": "688-690",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "In response to Cyclone Ditwah in 2025, India expanded which humanitarian mission to deliver aid to Sri Lanka by deploying additional Indian Navy warships?",
+   "hi": "2025 में चक्रवात दितवाह की अनुक्रिया में, भारत ने भारतीय नौसेना के अतिरिक्त युद्धपोतों को तैनात करके श्रीलंका को सहायता प्रदान करने के लिए किस मानवीय मिशन का विस्तार किया?",
+   "opts": [
+    "Operation Maitri<br>ऑपरेशन मैत्री",
+    "Operation Samudra Setu<br>ऑपरेशन समुद्र सेतु",
+    "Operation Sagar Bandhu<br>ऑपरेशन सागर बंधु",
+    "Operation Vanila<br>ऑपरेशन वनीला"
+   ],
+   "my_ans": "C",
+   "sol": "चक्रवात दितवाह (2025) से प्रभावित श्रीलंका को राहत सामग्री और चिकित्सा सहायता पहुँचाने के लिए भारत ने 'ऑपरेशन सागर बंधु' का विस्तार किया।",
+   "trick": "सागर बंधु = श्रीलंका राहत मिशन 2025।",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "What is the primary objective of the UN80 Initiative launched by the UN Secretary-General in 2025?",
+   "hi": "वर्ष 2025 में संयुक्त राष्ट्र महासचिव द्वारा शुरू की गई UN80 पहल का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To expand military presence in conflict zones<br>संघर्ष क्षेत्रों में सैन्य उपस्थिति का विस्तार करना",
+    "To improve efficiency and cost-effectiveness within the UN<br>संयुक्त राष्ट्र के भीतर दक्षता और लागत-प्रभावशीलता में सुधार करना",
+    "To create a new global currency<br>एक नई वैश्विक मुद्रा निर्मित करना",
+    "To promote global tourism<br>वैश्विक पर्यटन को बढ़ावा देना"
+   ],
+   "my_ans": "B",
+   "sol": "UN80 पहल का मुख्य उद्देश्य संयुक्त राष्ट्र के संचालन में दक्षता बढ़ाना और नौकरशाही को सुव्यवस्थित कर लागत कम करना है।",
+   "trick": "UN80 = 80वीं वर्षगांठ पर दक्षता सुधार।",
+   "ans": "B"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Space Summit 2026, a specially curated two-day elite conference held on 2–3 February 2026, took place in which of the following countries?",
+   "hi": "स्पेस समिट 2026, एक विशेष रूप से तैयार किया गया दो दिवसीय एलीट कॉन्फ्रेंस, 2-3 फरवरी 2026 को निम्नलिखित में से किस देश में आयोजित किया गया?",
+   "opts": [
+    "United States<br>संयुक्त राज्य अमेरिका",
+    "United Arab Emirates<br>संयुक्त अरब अमीरात",
+    "Singapore<br>सिंगापुर",
+    "India<br>भारत"
+   ],
+   "my_ans": "C",
+   "sol": "अंतरिक्ष उद्योग पर केंद्रित दो दिवसीय 'स्पेस समिट 2026' का आयोजन सिंगापुर में किया गया था।",
+   "trick": "स्पेस समिट 2026 = सिंगापुर।",
+   "ans": "C"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "In November 2025, India and Israel signed a Memorandum of Understanding (MoU) on Defence Cooperation during which meeting?",
+   "hi": "नवंबर 2025 में, भारत और इज़राइल ने किस बैठक के दौरान रक्षा सहयोग पर समझौता ज्ञापन (MoU) पर हस्ताक्षर किए?",
+   "opts": [
+    "20th Indo-Israel Defence Forum<br>20वां भारत-इजराइल रक्षा मंच",
+    "14th Strategic Defence Summit<br>14वां सामरिक रक्षा शिखर सम्मेलन",
+    "17th India–Israel Joint Working Group (JWG) meeting<br>17वीं भारत-इजराइल संयुक्त कार्य समूह (JWG) बैठक",
+    "10th India–Israel Defence Dialogue<br>10वीं भारत-इज़राइल रक्षा वार्ता"
+   ],
+   "my_ans": "C",
+   "sol": "भारत और इज़राइल के बीच रक्षा सहयोग पर समझौता ज्ञापन 17वीं भारत-इज़राइल संयुक्त कार्य समूह (JWG) बैठक के दौरान हस्ताक्षरित हुआ।",
+   "trick": "रक्षा MoU = 17वीं JWG बैठक।",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "When was the India European Free Trade Association (EFTA) Trade and Economic Partnership Agreement (TEPA) signed, which came into effect on 1 October 2025?",
+   "hi": "भारत - यूरोपीय मुक्त व्यापार संघ (EFTA) ने व्यापार और आर्थिक साझेदारी समझौता (TEPA) पर कब हस्ताक्षर किए गए थे, जो 1 अक्टूबर 2025 से प्रभावी हुआ?",
+   "opts": [
+    "March 2024<br>मार्च 2024",
+    "January 2025<br>जनवरी 2025",
+    "August 2024<br>अगस्त 2024",
+    "September 2025<br>सितंबर 2025"
+   ],
+   "my_ans": "A",
+   "sol": "भारत और EFTA देशों के बीच व्यापार और आर्थिक साझेदारी समझौते (TEPA) पर मार्च 2024 में हस्ताक्षर किए गए थे।",
+   "trick": "TEPA समझौता = मार्च 2024।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which country hosted the 68th Commonwealth Parliamentary Conference in October 2025?",
+   "hi": "अक्टूबर 2025 में 68 वें कॉमनवेल्थ पार्लियामेंट्री कॉन्फ्रेंस (Commonwealth Parliamentary Conference) की मेजबानी किस देश ने की थी?",
+   "opts": [
+    "Australia<br>ऑस्ट्रेलिया",
+    "Ghana<br>घाना",
+    "Barbados<br>बारबाडोस",
+    "Canada<br>कनाडा"
+   ],
+   "my_ans": "C",
+   "sol": "68वां राष्ट्रमंडल संसदीय सम्मेलन (CPC) अक्टूबर 2025 में ब्रिजटाउन, बारबाडोस में आयोजित किया गया था।",
+   "trick": "68वां संसदीय सम्मेलन = बारबाडोस।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which of the following was the primary objectives of the India-Liberia MoU signed in December 2025?",
+   "hi": "दिसंबर 2025 में हस्ताक्षरित भारत-लाइबेरिया समझौता-ज्ञापन का प्राथमिक उद्देश्य निम्नलिखित में से कौन-सा था?",
+   "opts": [
+    "Initiating joint space missions<br>संयुक्त अंतरिक्ष मिशन की शुरुआत करना",
+    "Enhancing co-operation on medicine quality standards<br>औषधि गुणवत्ता मानकों पर सहयोग बढ़ाना",
+    "Constructing new highways<br>नए राजमार्गों का निर्माण करना",
+    "Establishing defense manufacturing units<br>रक्षा विनिर्माण इकाइयाँ स्थापित करना"
+   ],
+   "my_ans": "B",
+   "sol": "भारत और लाइबेरिया के बीच यह समझौता औषधि गुणवत्ता मानकों को सुधारने और फार्मास्युटिकल गुणवत्ता सुनिश्चित करने के लिए किया गया था।",
+   "trick": "भारत-लाइबेरिया = दवा गुणवत्ता सहयोग।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "In January 2025, Algeria signed a memorandum of understanding with the United States that focuses on _____.",
+   "hi": "जनवरी 2025 में, अल्जीरिया ने संयुक्त राज्य अमेरिका के साथ एक समझौता ज्ञापन पर हस्ताक्षर किए, जो _____ पर केंद्रित है।",
+   "opts": [
+    "agricultural cooperation<br>कृषि सहयोग",
+    "military cooperation<br>सैन्य सहयोग",
+    "educational cooperation<br>शैक्षिक सहयोग",
+    "healthcare cooperation<br>स्वास्थ्य सेवा सहयोग"
+   ],
+   "my_ans": "B",
+   "sol": "अल्जीरिया और अमेरिका के बीच जनवरी 2025 में हुआ समझौता ज्ञापन मुख्य रूप से सैन्य सहयोग, रक्षा और रणनीतिक संबंधों पर केंद्रित है।",
+   "trick": "अल्जीरिया-अमेरिका = सैन्य सहयोग।",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which of the following international bodies oversaw the Treaty on Cybersecurity in October 2025?",
+   "hi": "निम्नलिखित में से किस अंतरराष्ट्रीय निकाय ने अक्टूबर 2025 में साइबर सुरक्षा संधि का निरीक्षण किया?",
+   "opts": [
+    "United Nations<br>संयुक्त राष्ट्र",
+    "UNESCO<br>यूनेस्को",
+    "NATO<br>नाटो",
+    "World Bank<br>विश्व बैंक"
+   ],
+   "my_ans": "A",
+   "sol": "अक्टूबर 2025 में साइबर सुरक्षा संधि की देखरेख संयुक्त राष्ट्र द्वारा की गई थी, जिसका उद्देश्य साइबर युद्ध और डेटा सुरक्षा के लिए वैश्विक मानदंड बनाना है।",
+   "trick": "साइबर सुरक्षा संधि = संयुक्त राष्ट्र।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "On November 20, 2025, India signed the Terms of Reference (ToR) to initiate negotiations for a comprehensive Free Trade Agreement with which country?",
+   "hi": "20 नवंबर, 2025 को भारत ने किस देश के साथ व्यापक मुक्त व्यापार समझौते के लिए वार्ता प्रारंभ करने हेतु टर्म्स ऑफ़ रेफरेंस (Terms of Reference-ToR) पर हस्ताक्षर किए?",
+   "opts": [
+    "Israel<br>इज़राइल",
+    "Australia<br>ऑस्ट्रेलिया",
+    "United Arab Emirates<br>संयुक्त अरब अमीरात",
+    "Canada<br>कनाडा"
+   ],
+   "my_ans": "A",
+   "sol": "भारत ने 20 नवंबर 2025 को इज़राइल के साथ व्यापक मुक्त व्यापार समझौते (FTA) के लिए वार्ता शुरू करने हेतु टर्म्स ऑफ रेफरेंस पर हस्ताक्षर किए।",
+   "trick": "FTA वार्ता (ToR) = इज़राइल।",
+   "ans": "A"
+  }
+ ]
+}

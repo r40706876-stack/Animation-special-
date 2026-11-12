@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "70-72",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "In which year did India officially join the Shanghai Cooperation Organization (SCO) as a full member?",
+   "hi": "भारत किस वर्ष आधिकारिक तौर पर शंघाई सहयोग संगठन (SCO) का पूर्ण सदस्य बना?",
+   "opts": [
+    "2008",
+    "2021",
+    "2012",
+    "2017"
+   ],
+   "my_ans": "D",
+   "sol": "भारत और पाकिस्तान 9 जून 2017 को कजाकिस्तान के अस्ताना शिखर सम्मेलन में SCO के पूर्ण सदस्य बने।",
+   "trick": "SCO में भारत 2017 में शामिल हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which among the following regions saw the Bundela's uprising in 1842?",
+   "hi": "निम्नलिखित में से किस क्षेत्र में 1842 में बुंदेला विद्रोह हुआ था?",
+   "opts": [
+    "Saurashtra<br>सौराष्ट्र",
+    "Ganjam<br>गंजम",
+    "Vizianagram<br>विजयनगरम",
+    "Jabalpur<br>जबलपुर"
+   ],
+   "my_ans": "D",
+   "sol": "1842 का बुंदेला विद्रोह बुंदेलखंड क्षेत्र में हुआ था, जो मुख्य रूप से जबलपुर और आसपास के क्षेत्रों में केंद्रित था।",
+   "trick": "बुंदेला विद्रोह = बुंदेलखंड (जबलपुर क्षेत्र)।",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which of the following regions was one of the major sources for copper for the Harappan civilisation?",
+   "hi": "निम्नलिखित में से कौन-सा क्षेत्र, हड़प्पा सभ्यता के लिए ताम्र के प्रमुख स्रोतों में से एक था?",
+   "opts": [
+    "Bihar<br>बिहार",
+    "Maharashtra<br>महाराष्ट्र",
+    "Rajasthan<br>राजस्थान",
+    "Afghanistan<br>अफगानिस्तान"
+   ],
+   "my_ans": "C",
+   "sol": "हड़प्पा सभ्यता के लिए तांबे का मुख्य स्रोत राजस्थान में स्थित खेतड़ी की खानें थीं।",
+   "trick": "हड़प्पा तांबा = राजस्थान (खेतड़ी)।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Which major mass movement did the Indian National Congress agree to withdraw, under the Gandhi–Irwin Pact of March 1931?",
+   "hi": "मार्च 1931 के गांधी-इरविन समझौते के तहत भारतीय राष्ट्रीय कांग्रेस किस प्रमुख जन आंदोलन से पीछे हटने पर सहमत हुई थी?",
+   "opts": [
+    "Swadeshi Movement<br>स्वदेशी आंदोलन",
+    "Civil Disobedience Movement<br>सविनय अवज्ञा आंदोलन",
+    "Non Cooperation Movement<br>असहयोग आंदोलन",
+    "Quit India Movement<br>भारत छोड़ो आंदोलन"
+   ],
+   "my_ans": "B",
+   "sol": "गांधी-इरविन समझौते (1931) के तहत कांग्रेस ने सविनय अवज्ञा आंदोलन को वापस लेने और दूसरे गोलमेज सम्मेलन में भाग लेने पर सहमति व्यक्त की थी।",
+   "trick": "गांधी-इरविन समझौता = सविनय अवज्ञा आंदोलन की समाप्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which battle in 1741 marked the defeat of the Dutch by an Indian ruler?",
+   "hi": "1741 में हुए किस युद्ध में एक भारतीय शासक ने डचों को पराजित किया था?",
+   "opts": [
+    "Carnatic Wars<br>कर्नाटक युद्ध",
+    "Battle of Buxar<br>बक्सर का युद्ध",
+    "Battle of Plassey<br>प्लासी का युद्ध",
+    "Battle of Colachel<br>कोलाचेल का युद्ध"
+   ],
+   "my_ans": "D",
+   "sol": "1741 में कोलाचेल के युद्ध में त्रावणकोर के राजा मार्तंड वर्मा ने डच ईस्ट इंडिया कंपनी को पराजित किया था।",
+   "trick": "कोलाचेल = डच की हार।",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Who were the \"Samantas\" in the post-Gupta period?",
+   "hi": "गुप्तोत्तर काल में \"सामंत\" (Samantas) कौन थे?",
+   "opts": [
+    "Architects<br>वास्तुकार",
+    "Feudal lords<br>सामंती स्वामी",
+    "Religious heads<br>धार्मिक प्रमुख",
+    "Farmers<br>किसान"
+   ],
+   "my_ans": "B",
+   "sol": "गुप्तोत्तर काल में सामंत वे अधीनस्थ सामंती प्रभु थे जो राजा को सैन्य सेवा और वफादारी के बदले भूमि अनुदान प्राप्त करते थे।",
+   "trick": "सामंत = सामंती स्वामी (Feudal lords)।",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which of the following statements is INCORRECT regarding the Atmiya Sabha?",
+   "hi": "आत्मीय सभा के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+   "opts": [
+    "The Atmiya Sabha laid the foundation for the Brahmo Samaj<br>आत्मीय सभा ने ब्रह्म समाज की नींव रखी",
+    "The Atmiya Sabha was established in 1824<br>आत्मीय सभा की स्थापना 1824 में हुई थी",
+    "The Atmiya Sabha was founded by Raja Ram Mohan Roy<br>आत्मीय सभा की स्थापना राजा राम मोहन राय ने की थी",
+    "The Atmiya Sabha was established at Calcutta<br>कलकत्ता में आत्मीय सभा की स्थापना की गई थी"
+   ],
+   "my_ans": "B",
+   "sol": "आत्मीय सभा की स्थापना राजा राम मोहन राय द्वारा 1815 में कलकत्ता में की गई थी, न कि 1824 में।",
+   "trick": "आत्मीय सभा = 1815 (राजा राम मोहन राय)।",
+   "ans": "B"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Why was the Ghadar Party’s revolutionary attempt during World War I largely unsuccessful?",
+   "hi": "प्रथम विश्व युद्ध के दौरान गदर पार्टी का क्रांतिकारी प्रयास काफी हद तक असफल क्यों रहा?",
+   "opts": [
+    "Public apathy towards armed revolution<br>सशस्त्र क्रांति के प्रति लोक उदासीनता",
+    "Lack of support from international allies<br>अंतर्राष्ट्रीय सहयोगियों से समर्थन का अभाव",
+    "Interception by British intelligence and internal betrayal<br>ब्रिटिश खुफिया तंत्र द्वारा पकड़े जाना और आंतरिक विश्वासघात",
+    "Strong opposition from the Indian National Congress<br>भारतीय राष्ट्रीय कांग्रेस का कड़ा विरोध"
+   ],
+   "my_ans": "A",
+   "sol": "गदर पार्टी की योजना ब्रिटिश खुफिया तंत्र द्वारा पकड़े जाने और आंतरिक विश्वासघात के कारण विफल रही थी।",
+   "trick": "गदर पार्टी की विफलता = खुफिया तंत्र और विश्वासघात।",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which of the following statements is INCORRECT in the context of the Indian National Congress (INC)?",
+   "hi": "भारतीय राष्ट्रीय कांग्रेस (INC) के संदर्भ में निम्नलिखित में से कौन-सा कथन गलत है?",
+   "opts": [
+    "George Yule was the first non-Indian President of the INC<br>जॉर्ज यूल INC के पहले गैर-भारतीय अध्यक्ष थे",
+    "Dadabhai Naoroji was the first Parsi President of the INC<br>दादाभाई नौरोजी INC के पहले पारसी अध्यक्ष थे",
+    "Badruddin Tyabji was the first Jainist President of the INC<br>बदरुद्दीन तैयबजी INC के पहले जैन अध्यक्ष थे",
+    "Womesh Chandra Bonnerjee was the first Hindu President of the INC<br>व्योमेश चंद्र बोनर्जी INC के पहले हिंदू अध्यक्ष थे"
+   ],
+   "my_ans": "C",
+   "sol": "बदरुद्दीन तैयबजी भारतीय राष्ट्रीय कांग्रेस के पहले मुस्लिम अध्यक्ष थे, न कि जैन अध्यक्ष।",
+   "trick": "बदरुद्दीन तैयबजी = पहले मुस्लिम अध्यक्ष।",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "The Battle of Wandiwash was fought between:",
+   "hi": "वांडीवाश की लड़ाई किनके बीच लड़ी गई थी?",
+   "opts": [
+    "Dutch and Portuguese<br>डच और पुर्तगाली",
+    "Portuguese and French<br>पुर्तगाली और फ्रांसीसी",
+    "British and Portuguese<br>ब्रिटिश और पुर्तगाली",
+    "British and French<br>ब्रिटिश और फ्रांसीसी"
+   ],
+   "my_ans": "D",
+   "sol": "वांडीवाश का युद्ध (1760) ब्रिटिश और फ्रांसीसी सेनाओं के बीच लड़ा गया था, जिसमें अंग्रेजों की जीत हुई थी।",
+   "trick": "वांडीवाश = ब्रिटिश बनाम फ्रांसीसी।",
+   "ans": "D"
+  }
+ ]
+}

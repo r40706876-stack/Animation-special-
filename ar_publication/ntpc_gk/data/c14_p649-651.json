@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "649-651",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 280,
+   "lvl": "UG",
+   "en": "In 2025, which Danish autonomous territory drew global attention due to strategic interest by major powers, echoing Trump’s 2019 acquisition bid?",
+   "hi": "2025 में, डेनमार्क के कौन-सा स्वायत्त क्षेत्र ने प्रमुख शक्तियों की रणनीतिक रुचि के कारण वैश्विक ध्यान आकर्षित किया, जो ट्रम्प के 2019 की अधिग्रहण बोली की याद दिलाता है?",
+   "opts": [
+    "Svalbard<br>स्वालबार्ड",
+    "Iceland<br>आइसलैंड",
+    "Faroe Islands<br>फरो द्वीप-समूह",
+    "Greenland<br>ग्रीनलैंड"
+   ],
+   "my_ans": "D",
+   "sol": "ग्रीनलैंड डेनमार्क का एक स्वायत्त क्षेत्र है जो आर्कटिक और अटलांटिक महासागरों के बीच स्थित है। अपने खनिज संसाधनों और आर्कटिक शिपिंग मार्गों के कारण यह रणनीतिक रूप से महत्वपूर्ण है।",
+   "trick": "ट्रम्प की 2019 की बोली ग्रीनलैंड को खरीदने के लिए थी।",
+   "ans": "D"
+  },
+  {
+   "n": 281,
+   "lvl": "UG",
+   "en": "Which of the following agreements signed between India and Uzbekistan officially came into effect in May 2025, having been signed in September 2024 in Tashkent?",
+   "hi": "भारत और उज़्बेकिस्तान के बीच निम्नलिखित में से कौन-सा समझौता आधिकारिक रूप से मई 2025 में लागू हुआ, जिस पर सितंबर 2024 में ताशकंद में हस्ताक्षर किए गए थे?",
+   "opts": [
+    "Comprehensive Economic Partnership Agreement (CEPA)<br>व्यापक आर्थिक भागीदारी समझौता",
+    "Bilateral Investment Treaty (BIT)<br>द्विपक्षीय निवेश संधि",
+    "Mutual Logistics Support Agreement (MLSA)<br>पारस्परिक लॉजिस्टिक्स सहायता समझौता",
+    "Double Taxation Avoidance Agreement (DTAA)<br>दोहरा कराधान परिहार समझौता"
+   ],
+   "my_ans": "B",
+   "sol": "भारत और उज़्बेकिस्तान के बीच द्विपक्षीय निवेश संधि (BIT) पर सितंबर 2024 में हस्ताक्षर किए गए थे और यह मई 2025 में प्रभावी हुई।",
+   "trick": "निवेश को बढ़ावा देने के लिए BIT संधि हुई।",
+   "ans": "B"
+  },
+  {
+   "n": 282,
+   "lvl": "UG",
+   "en": "In March 2026, Jose Antonio Kast took oath as the President of which of the following countries?",
+   "hi": "मार्च 2026 में, जोस एंटोनियो कास्ट ने निम्नलिखित में से किस देश के राष्ट्रपति के रूप में शपथ ली?",
+   "opts": [
+    "Brazil<br>ब्राजील",
+    "Peru<br>पेरू",
+    "Argentina<br>अर्जेंटीना",
+    "Chile<br>चिली"
+   ],
+   "my_ans": "D",
+   "sol": "जोस एंटोनियो कास्ट एक चिली के राजनेता हैं जिन्होंने मार्च 2026 में चिली के राष्ट्रपति के रूप में शपथ ली।",
+   "trick": "कास्ट = चिली के राष्ट्रपति।",
+   "ans": "D"
+  },
+  {
+   "n": 283,
+   "lvl": "UG",
+   "en": "Which of the following countries became a member of the BRICS’ New Development Bank in May 2025?",
+   "hi": "निम्नलिखित में से कौन-सा देश, मई 2025 में BRICS के न्यू डेवलपमेंट बैंक का सदस्य बना?",
+   "opts": [
+    "Algeria<br>अल्जीरिया",
+    "Tiawan<br>ताइवान",
+    "Luxumberg<br>लक्समबर्ग",
+    "Ethopia<br>इथियोपिया"
+   ],
+   "my_ans": "A",
+   "sol": "अल्जीरिया मई 2025 में ब्रिक्स न्यू डेवलपमेंट बैंक (NDB) का सदस्य बना, जो बैंक के विस्तार का हिस्सा है।",
+   "trick": "अल्जीरिया ब्रिक्स बैंक में शामिल हुआ।",
+   "ans": "A"
+  },
+  {
+   "n": 284,
+   "lvl": "UG",
+   "en": "At the age of 92, Paul Biya became the world’s oldest head of state after winning his eighth presidential term in October 2025. He is the president of which of the following countries?",
+   "hi": "92 वर्ष की आयु में, अक्टूबर 2025 में अपना आठवां राष्ट्रपति कार्यकाल जीतने के बाद पॉल बिया विश्व के सबसे उम्रदराज राष्ट्राध्यक्ष बन गए। वह निम्नलिखित में से किस देश के राष्ट्रपति हैं?",
+   "opts": [
+    "Cameroon<br>कैमरून",
+    "Chad<br>चाड",
+    "Sudan<br>सूडान",
+    "Nigeria<br>नाइजीरिया"
+   ],
+   "my_ans": "A",
+   "sol": "पॉल बिया 1982 से कैमरून के राष्ट्रपति हैं और 92 वर्ष की आयु में वे दुनिया के सबसे वृद्ध सेवारत राष्ट्राध्यक्ष हैं।",
+   "trick": "पॉल बिया = कैमरून के सबसे वृद्ध राष्ट्रपति।",
+   "ans": "A"
+  },
+  {
+   "n": 285,
+   "lvl": "UG",
+   "en": "Which two countries signed a peace accord known as the ‘Kuala Lumpur Peace Accord’ in October 2025?",
+   "hi": "अक्टूबर 2025 में किन दो देशों ने 'कुआला लंपुर शांति समझौता' के नाम से जाने जाने वाले शांति समझौते पर हस्ताक्षर किए थे?",
+   "opts": [
+    "Cambodia and Thailand<br>कंबोडिया और थाईलैंड",
+    "Malaysia and Indonesia<br>मलेशिया और इंडोनेशिया",
+    "Thailand and Myanmar<br>थाईलैंड और म्यांमार",
+    "Vietnam and Cambodia<br>वियतनाम और कंबोडिया"
+   ],
+   "my_ans": "A",
+   "sol": "कंबोडिया और थाईलैंड ने अपने सीमा विवादों को सुलझाने के लिए अक्टूबर 2025 में कुआला लंपुर में शांति समझौते पर हस्ताक्षर किए।",
+   "trick": "कंबोडिया-थाईलैंड शांति समझौता।",
+   "ans": "A"
+  },
+  {
+   "n": 286,
+   "lvl": "UG",
+   "en": "Which one of the following countries and India renewed their existing Kartarpur Corridor Agreement in October 2024?",
+   "hi": "निम्नलिखित में से किस देश ने और भारत ने अक्टूबर 2024 में अपने मौजूदा करतारपुर कॉरिडोर समझौते का नवीनीकरण किया?",
+   "opts": [
+    "Pakistan<br>पाकिस्तान",
+    "Bangladesh<br>बांग्लादेश",
+    "China<br>चीन",
+    "Nepal<br>नेपाल"
+   ],
+   "my_ans": "A",
+   "sol": "भारत और पाकिस्तान ने अक्टूबर 2024 में करतारपुर कॉरिडोर समझौते को अगले 5 वर्षों के लिए नवीनीकृत किया, जो तीर्थयात्रियों को वीजा-मुक्त पहुंच प्रदान करता है।",
+   "trick": "करतारपुर कॉरिडोर = भारत-पाकिस्तान।",
+   "ans": "A"
+  },
+  {
+   "n": 287,
+   "lvl": "UG",
+   "en": "In October 2025, India and Spain signed a Memorandum of Understanding (MoU) to develop a world-class convention center in which Indian state?",
+   "hi": "अक्टूबर 2025 में, भारत और स्पेन ने किस भारतीय राज्य में विश्व-स्तरीय कन्वेंशन सेंटर विकसित करने के लिए एक समझौता ज्ञापन पर हस्ताक्षर किए?",
+   "opts": [
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Gujarat<br>गुजरात",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Maharashtra<br>महाराष्ट्र"
+   ],
+   "my_ans": "D",
+   "sol": "भारत और स्पेन ने महाराष्ट्र में एक विश्व-स्तरीय कन्वेंशन सेंटर विकसित करने के लिए अक्टूबर 2025 में समझौता ज्ञापन पर हस्ताक्षर किए।",
+   "trick": "महाराष्ट्र में स्पेन के साथ कन्वेंशन सेंटर।",
+   "ans": "D"
+  },
+  {
+   "n": 288,
+   "lvl": "UG",
+   "en": "In September 2025, 26 nations vowed to provide postwar security guarantees to which country?",
+   "hi": "सितंबर 2025 में, 26 देशों ने किस देश को युद्ध के बाद सुरक्षा गारंटी प्रदान करने का वादा किया?",
+   "opts": [
+    "Iran<br>ईरान",
+    "Palestine<br>फिलिस्तीन",
+    "Ukraine<br>यूक्रेन",
+    "Poland<br>पोलैंड"
+   ],
+   "my_ans": "C",
+   "sol": "सितंबर 2025 में 26 देशों ने यूक्रेन को युद्ध के बाद सुरक्षा गारंटी देने का संकल्प लिया ताकि उसकी संप्रभुता और स्थिरता बनी रहे।",
+   "trick": "यूक्रेन को सुरक्षा गारंटी।",
+   "ans": "C"
+  },
+  {
+   "n": 289,
+   "lvl": "UG",
+   "en": "Who among the following was the Commonwealth Secretary-General having led the 25th Commonwealth Foreign Affairs Ministers Meeting (CFAMM) in New York in September 2025?",
+   "hi": "सितंबर 2025 में न्यूयॉर्क में आयोजित 25वीं राष्ट्रमंडल विदेश मामलों के मंत्रियों की बैठक का नेतृत्व करने वाले राष्ट्रमंडल महासचिव निम्नलिखित में से कौन थे?",
+   "opts": [
+    "Ngozi Okonjo-Iweala<br>नगोजी ओकोंजो-इवेला",
+    "Patricia Scotland<br>पेट्रिसिया स्कॉटलैंड",
+    "Kamalesh Sharma<br>कमलेश शर्मा",
+    "Shirley Botchwey<br>शर्ली बॉचवे"
+   ],
+   "my_ans": "D",
+   "sol": "शर्ली बॉचवे अक्टूबर 2024 में राष्ट्रमंडल महासचिव चुनी गईं और उन्होंने सितंबर 2025 में 25वीं CFAMM बैठक का नेतृत्व किया।",
+   "trick": "शर्ली बॉचवे = राष्ट्रमंडल महासचिव।",
+   "ans": "D"
+  },
+  {
+   "n": 290,
+   "lvl": "UG",
+   "en": "Which country topped the World Happiness Index 2025?",
+   "hi": "वर्ल्ड हैप्पीनेस इंडेक्स 2025 में कौन-सा देश शीर्ष स्थान पर है?",
+   "opts": [
+    "Denmark<br>डेनमार्क",
+    "Sweden<br>स्वीडन",
+    "Finland<br>फ़िनलैंड",
+    "Norway<br>नॉर्वे"
+   ],
+   "my_ans": "C",
+   "sol": "वर्ल्ड हैप्पीनेस इंडेक्स 2025 में फिनलैंड लगातार शीर्ष स्थान पर बना हुआ है।",
+   "trick": "हैप्पीनेस = फिनलैंड।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "195-197",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 225,
+   "lvl": "UG",
+   "en": "Which continent is known for being extremely cold and mostly covered in ice?",
+   "hi": "कौन-सा महाद्वीप अत्यधिक ठंड और अधिकांशतः बर्फ से ढका होने के लिए जाना जाता है?",
+   "opts": [
+    "North America<br>उत्तरी अमेरिका",
+    "Africa<br>अफ्रीका",
+    "Antarctica<br>अंटार्कटिका",
+    "South America<br>दक्षिण अमेरिका"
+   ],
+   "my_ans": "C",
+   "sol": "अंटार्कटिका पृथ्वी का सबसे दक्षिणी महाद्वीप है, जो लगभग 98% बर्फ की मोटी चादर से ढका हुआ है।",
+   "trick": "अंटार्कटिका = बर्फ का महाद्वीप",
+   "ans": "C"
+  },
+  {
+   "n": 226,
+   "lvl": "UG",
+   "en": "Which of the following water bodies separates the Andaman Islands from the Nicobar Islands?",
+   "hi": "निम्नलिखित में से कौन-सा जल निकाय अंडमान द्वीप समूह को निकोबार द्वीप समूह से अलग करता है?",
+   "opts": [
+    "Palk Strait<br>पाक जलडमरूमध्य",
+    "Ten Degree Channel<br>दस डिग्री चैनल",
+    "Duncan Passage<br>दक्कन मार्ग",
+    "Nine Degree Channel<br>नौ डिग्री चैनल"
+   ],
+   "my_ans": "B",
+   "sol": "टेन डिग्री चैनल (10°N अक्षांश) अंडमान द्वीप समूह को निकोबार द्वीप समूह से अलग करता है।",
+   "trick": "10 डिग्री = अंडमान-निकोबार का विभाजन",
+   "ans": "B"
+  },
+  {
+   "n": 227,
+   "lvl": "UG",
+   "en": "The Pitti Island in Lakshadweep is notable for which feature?",
+   "hi": "लक्षद्वीप में पिट्टी द्वीप किस विशेषता के लिए प्रसिद्ध है?",
+   "opts": [
+    "It hosts India’s largest military base<br>यहां भारत का सबसे बड़ा सैन्य अड्डा है।",
+    "It contains active volcanoes<br>यहां सक्रिय ज्वालामुखी हैं।",
+    "It is uninhabited and has a bird sanctuary<br>यह निर्जन क्षेत्र है और यहाँ एक पक्षी अभयारण्य है।",
+    "It is the gateway to the Andaman Sea<br>यह अंडमान सागर का प्रवेश द्वार है।"
+   ],
+   "my_ans": "C",
+   "sol": "पिट्टी द्वीप लक्षद्वीप का एक निर्जन द्वीप है जिसे समुद्री पक्षियों के लिए अभयारण्य घोषित किया गया है।",
+   "trick": "पिट्टी = पक्षी अभयारण्य",
+   "ans": "C"
+  },
+  {
+   "n": 228,
+   "lvl": "UG",
+   "en": "Which type of climate characterises the Great Indian Desert?",
+   "hi": "विशाल भारतीय रेगिस्तान में किस प्रकार की जलवायु पाई जाती है?",
+   "opts": [
+    "Humid subtropical climate<br>आर्द्र उपोष्णकटिबंधीय जलवायु",
+    "Arid and semi arid climate<br>शुष्क और अर्ध शुष्क जलवायु",
+    "Equatorial climate<br>भूमध्यरेखीय जलवायु",
+    "Tropical monsoon climate<br>उष्णकटिबंधीय मानसून जलवायु"
+   ],
+   "my_ans": "B",
+   "sol": "थार मरुस्थल में बहुत कम वर्षा (<250 मिमी) और उच्च तापमान भिन्नता के कारण शुष्क और अर्ध-शुष्क जलवायु पाई जाती है।",
+   "trick": "रेगिस्तान = शुष्क जलवायु",
+   "ans": "B"
+  },
+  {
+   "n": 229,
+   "lvl": "UG",
+   "en": "Which of the following Indian rivers is famous for its ‘badland topography’?",
+   "hi": "निम्नलिखित में से कौन-सी भारतीय नदी, अपनी 'उत्खात-भूमि स्थलाकृति' के लिए प्रसिद्ध है?",
+   "opts": [
+    "Chambal<br>चंबल",
+    "Ken<br>केन",
+    "Gandak<br>गंडक",
+    "Ramganga<br>रामगंगा"
+   ],
+   "my_ans": "A",
+   "sol": "चंबल नदी गंभीर मृदा अपरदन के कारण गहरी खाइयों और बीहड़ों (Badlands) के निर्माण के लिए जानी जाती है।",
+   "trick": "चंबल = बीहड़",
+   "ans": "A"
+  },
+  {
+   "n": 230,
+   "lvl": "UG",
+   "en": "The Western Ghats are highest in which region?",
+   "hi": "पश्चिमी घाट किस क्षेत्र में सबसे ऊँचे हैं?",
+   "opts": [
+    "Tamil Nadu<br>तमिलनाडु",
+    "Karnataka<br>कर्नाटक",
+    "Kerala<br>केरल",
+    "Goa<br>गोवा"
+   ],
+   "my_ans": "C",
+   "sol": "पश्चिमी घाट की सबसे ऊंची चोटी 'अनामुडी' (2,695 मीटर) केरल के इडुक्की जिले में स्थित है।",
+   "trick": "सबसे ऊंचे = केरल",
+   "ans": "C"
+  },
+  {
+   "n": 231,
+   "lvl": "UG",
+   "en": "Which of the following islands of India is closest to the Malabar Coast?",
+   "hi": "भारत का निम्नलिखित में से कौन-सा द्वीप, मालाबार तट के सबसे निकट है?",
+   "opts": [
+    "Nicobar Islands<br>निकोबार द्वीप समूह",
+    "Andaman Islands<br>अंडमान द्वीप समूह",
+    "Lakshadweep<br>लक्षद्वीप",
+    "Diu Island<br>दीव द्वीप"
+   ],
+   "my_ans": "C",
+   "sol": "लक्षद्वीप अरब सागर में केरल तट से लगभग 200-400 किमी की दूरी पर स्थित है, जो मालाबार तट के सबसे करीब है।",
+   "trick": "मालाबार तट = लक्षद्वीप",
+   "ans": "C"
+  },
+  {
+   "n": 232,
+   "lvl": "UG",
+   "en": "High sea waves triggered by an undersea earthquake are called:",
+   "hi": "समुद्र के नीचे भूकंप के कारण उत्पन्न होने वाली ऊंची समुद्री लहरों को क्या कहा जाता है?",
+   "opts": [
+    "Monsoon winds<br>मानसून हवाएं",
+    "Tsunamis<br>सुनामी",
+    "Land depressions<br>भूमि अवसाद",
+    "Glacial surges<br>हिमनद उछाल"
+   ],
+   "my_ans": "B",
+   "sol": "समुद्र के नीचे भूकंप या ज्वालामुखी विस्फोट से जल के अचानक विस्थापन के कारण सुनामी लहरें उत्पन्न होती हैं।",
+   "trick": "भूकंप + समुद्र = सुनामी",
+   "ans": "B"
+  },
+  {
+   "n": 233,
+   "lvl": "UG",
+   "en": "Which of the following statements about volcanism is most accurate in the context of geomorphic processes?",
+   "hi": "भू-आकृतिक प्रक्रियाओं के संदर्भ में ज्वालामुखी गतिविधि के बारे में निम्नलिखित में से कौन-सा कथन सर्वाधिक सही है?",
+   "opts": [
+    "It is controlled by rainfall and temperature<br>यह वर्षा और तापमान द्वारा नियंत्रित होता है",
+    "It mainly builds or elevates parts of the crust<br>यह मुख्य रूप से भू-पर्पटी के भागों का निर्माण करता है या उन्हें ऊपर उठाता है",
+    "It only lowers existing landforms<br>यह केवल मौजूदा भू-आकृतियों में कमी करता है",
+    "It requires running water to operate<br>इसे संचालित होने के लिए बहते जल की आवश्यकता होती है"
+   ],
+   "my_ans": "B",
+   "sol": "ज्वालामुखी एक अंतर्जात प्रक्रिया है जो मैग्मा के जमाव से नए पर्वत और पठार बनाकर पृथ्वी की सतह को ऊपर उठाती है।",
+   "trick": "ज्वालामुखी = रचनात्मक प्रक्रिया",
+   "ans": "B"
+  },
+  {
+   "n": 234,
+   "lvl": "UG",
+   "en": "Which neighbouring country is separated from India by the Palk Strait?",
+   "hi": "कौन-सा पड़ोसी देश, पाक जलसंधि द्वारा भारत से अलग है?",
+   "opts": [
+    "Afghanistan<br>अफ़ग़ानिस्तान",
+    "Myanmar<br>म्यांमार",
+    "Sri Lanka<br>श्रीलंका",
+    "Maldives<br>मालदीव"
+   ],
+   "my_ans": "C",
+   "sol": "पाक जलडमरूमध्य भारत (तमिलनाडु) और श्रीलंका के बीच स्थित एक संकीर्ण जल निकाय है।",
+   "trick": "पाक जलसंधि = भारत-श्रीलंका",
+   "ans": "C"
+  },
+  {
+   "n": 235,
+   "lvl": "UG",
+   "en": "Which of the following pairs is formed inside limestone caves by deposition?",
+   "hi": "निम्नलिखित में से कौन-सा युग्म, चूना पत्थर की गुफाओं के अंदर निक्षेपण द्वारा बनता है?",
+   "opts": [
+    "Levees and meanders<br>लीवीज़ और मिएंडर",
+    "Drumlins and eskers<br>ड्रमलिन और एस्कर",
+    "Cirques and horns<br>सर्क और हॉर्न",
+    "Stalactites and stalagmites<br>स्टैलैक्टाइट्स और स्टैलैग्माइट"
+   ],
+   "my_ans": "D",
+   "sol": "चूना पत्थर की गुफाओं में कैल्शियम कार्बोनेट के निक्षेपण से छत से लटकते स्टैलैक्टाइट्स और फर्श पर बनते स्टैलैग्माइट्स का निर्माण होता है।",
+   "trick": "गुफा = स्टैलैक्टाइट्स/स्टैलैग्माइट्स",
+   "ans": "D"
+  }
+ ]
+}

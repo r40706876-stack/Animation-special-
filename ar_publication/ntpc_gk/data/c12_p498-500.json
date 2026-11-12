@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "498-500",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 161,
+   "lvl": "UG",
+   "en": "Which statement about Application Software is True or False?(i) Application Software depends on System Software like the OS to be loaded and access hardware.(ii) The failure of one application always causes the OS to crash.",
+   "hi": "एप्लीकेशन सॉफ्टवेयर के संबंध में कौन-सा कथन सत्य या असत्य है?(i) एप्लीकेशन सॉफ्टवेयर सिस्टम सॉफ्टवेयर पर निर्भर करता है जैसे कि OS को लोड किया जाना और हार्डवेयर को एक्सेस करना।(ii) किसी एक एप्लीकेशन के विफल होने से OS सदैव क्रैश हो जाता है।",
+   "opts": [
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य",
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य"
+   ],
+   "my_ans": "B",
+   "sol": "एप्लीकेशन सॉफ्टवेयर को चलने के लिए OS की आवश्यकता होती है (सत्य)। आधुनिक OS में 'प्रोसेस आइसोलेशन' होता है, इसलिए एक ऐप क्रैश होने से पूरा OS क्रैश नहीं होता (असत्य)।",
+   "trick": "एप्लीकेशन OS पर निर्भर है, पर OS एप्लीकेशन पर नहीं।",
+   "ans": "B"
+  },
+  {
+   "n": 162,
+   "lvl": "UG",
+   "en": "Which action does pressing the F5 key usually perform in Windows?",
+   "hi": "विंडोज में F5 कुंजी को दबाने पर प्रायः कौन-सी क्रिया होती है?",
+   "opts": [
+    "Refreshes the current window or page<br>वर्तमान विंडो या पेज को रिफ्रेश करता है",
+    "Navigates to the next tab<br>अगले टैब में नेविगेट करता है",
+    "Opens help<br>हेल्प (help) खोलता है",
+    "Opens a new window<br>एक नई विंडो खोलता है"
+   ],
+   "my_ans": "A",
+   "sol": "विंडोज और वेब ब्राउज़र में F5 कुंजी का मुख्य कार्य वर्तमान पेज या विंडो को रिफ्रेश या रिलोड करना है।",
+   "trick": "F5 = Refresh (ताज़ा करना)",
+   "ans": "A"
+  },
+  {
+   "n": 163,
+   "lvl": "UG",
+   "en": "A window that covers the entire screen without showing the desktop behind it is said to be in:",
+   "hi": "वह विंडो, जो इसके पीछे डेस्कटॉप को शो किए बिना संपूर्ण स्क्रीन को कवर करता है, _________ कहलाता है।",
+   "opts": [
+    "Restored mode<br>रिस्टोर्ड मोड (Restored mode)",
+    "Full-screen mode<br>फुल-स्क्रीन मोड (Full-screen mode)",
+    "Minimized mode<br>मिनिमाइज्ड मोड (Minimized mode)",
+    "Hidden mode<br>हिडेन मोड (Hidden mode)"
+   ],
+   "my_ans": "B",
+   "sol": "फुल-स्क्रीन मोड में विंडो पूरी स्क्रीन को ढक लेती है और डेस्कटॉप या टास्कबार दिखाई नहीं देता है।",
+   "trick": "Full-screen = पूरी स्क्रीन कवर",
+   "ans": "B"
+  },
+  {
+   "n": 164,
+   "lvl": "UG",
+   "en": "For Windows operating system, choose the correct option that shows the primary difference between Sleep and Hibernate power-saving modes with respect to memory and system state?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम (Windows operating system) के लिए, निम्नलिखित में से सही विकल्प का चयन कीजिए, जो मेमोरी और सिस्टम स्टेट (system state) के संदर्भ में स्लीप (Sleep) और हाइबरनेट (Hibernate) पावर-सेविंग मोड के बीच मुख्य अंतर को निरूपित करता है।",
+   "opts": [
+    "Sleep saves system state to disk; Hibernate uses RAM<br>स्लीप, सिस्टम स्टेट को डिस्क पर सेव करता है; हाइबरनेट, रैम का उपयोग करता है",
+    "Hibernate keeps data in RAM; Sleep saves to disk<br>हाइबरनेट, डेटा को रैम में रखता है; स्लीप, डिस्क पर सेव करता है",
+    "Both save data to RAM<br>दोनों डेटा को रैम में सेव करते हैं",
+    "Sleep keeps data in RAM; Hibernate saves it to disk<br>स्लीप, डेटा को रैम में रखता है; हाइबरनेट इसे डिस्क पर सेव करता है"
+   ],
+   "my_ans": "D",
+   "sol": "स्लीप मोड में डेटा रैम (RAM) में रहता है, जबकि हाइबरनेट मोड में सिस्टम स्टेट को हार्ड डिस्क पर सेव कर दिया जाता है।",
+   "trick": "Sleep = RAM, Hibernate = Hard Disk",
+   "ans": "D"
+  },
+  {
+   "n": 165,
+   "lvl": "UG",
+   "en": "Which of the following is an example of General-Purpose Software?",
+   "hi": "निम्नलिखित में से कौन-सा, व्यापक उद्देश्य सॉफ्टवेयर का उदाहरण है?",
+   "opts": [
+    "School Management Software<br>स्कूल प्रबंधन सॉफ्टवेयर (School Management Software)",
+    "A Customized Website<br>एक स्वनुकूलित वेबसाइट (A Customized Website)",
+    "Accounting Software made for a company<br>एक कंपनी के लिए निर्मित लेखा सॉफ्टवेयर (Accounting Software made for a company)",
+    "LibreOffice Calc<br>लिब्रेऑफिस कैल्क (LibreOffice Calc)"
+   ],
+   "my_ans": "D",
+   "sol": "LibreOffice Calc एक स्प्रेडशीट सॉफ्टवेयर है जिसे कोई भी सामान्य कार्यों जैसे गणना या डेटा विश्लेषण के लिए उपयोग कर सकता है।",
+   "trick": "General-purpose = सभी के लिए उपयोगी",
+   "ans": "D"
+  },
+  {
+   "n": 166,
+   "lvl": "UG",
+   "en": "In the Windows 11 File System, a file named mydriver.sys is found in the C:\\Windows\\System32\\drivers folder. Based on its file extension and location, which of the following best describes the purpose and classification of this file?",
+   "hi": "विंडोज 11 फाइल सिस्टम में, C:\\Windows\\System32\\drivers फोल्डर में mydriver.sys नाम की एक फाइल पाई जाती है। इसके फाइल एक्सटेंशन और स्थान के आधार पर, निम्नलिखित में से कौन-सा, इस फाइल के उद्देश्य और वर्गीकरण का सबसे सटीक वर्णन करता है?",
+   "opts": [
+    "It is an Operating System Log File that records system events and is only read by the Task Manager.<br>यह एक ऑपरेटिंग सिस्टम लॉग फाइल है जो सिस्टम की घटनाओं को रिकॉर्ड करती है और इसे केवल टास्क मैनेजर द्वारा ही पढ़ा जाता है।",
+    "It is a System Driver File that allows the operating system to communicate with a specific hardware component.<br>यह एक सिस्टम ड्राइवर फाइल है जो ऑपरेटिंग सिस्टम को किसी विशिष्ट हार्डवेयर घटक के साथ संपर्क (communicate) करने देती है।",
+    "It is an Application Data File used for temporary user settings and can be safely deleted to free up disk space.<br>यह एक एप्लीकेशन डेटा फ़ाइल है जिसका उपयोग अस्थायी उपयोगकर्ता सेटिंग्स के लिए किया जाता है और डिस्क स्पेस (disk space) को खाली करने के लिए इसे सुरक्षित रूप से डिलीट किया जा सकता है।",
+    "It is a System Configuration File that holds graphical settings and can be edited with a standard text editor.<br>यह एक सिस्टम कॉन्फ़िगरेशन फ़ाइल है जिसमें ग्राफिकल सेटिंग्स होती हैं और इसे एक मानक टेक्स्ट एडिटर से एडिट किया जा सकता है।"
+   ],
+   "my_ans": "B",
+   "sol": ".sys एक्सटेंशन वाली फाइलें सिस्टम ड्राइवर फाइलें होती हैं, जो OS को हार्डवेयर से जुड़ने में मदद करती हैं।",
+   "trick": ".sys = System Driver",
+   "ans": "B"
+  },
+  {
+   "n": 167,
+   "lvl": "UG",
+   "en": "Which of the following tasks is exclusive to the role of System Software and cannot be performed by an Application Software program?",
+   "hi": "निम्नलिखित में से कौन-सा कार्य, सिस्टम सॉफ्टवेयर की भूमिका के लिए अनन्य है और इसका कार्य एप्लीकेशन सॉफ्टवेयर प्रोग्राम द्वारा नहीं किया जा सकता है?",
+   "opts": [
+    "Executing a pre-written script to automate a series of repetitive tasks.<br>दोहराए जाने वाले टास्क को ऑटोमेट करने के लिए प्री-रिटेन स्क्रिप्ट को एक्जीक्यूट करना",
+    "Accepting user input from a keyboard and displaying output on a monitor.<br>कीबोर्ड से यूजर इनपुट स्वीकार करना और मॉनिटर पर आउटपुट प्रदर्शित करना",
+    "Allocating a specific block of the CPU's processing time to a newly launched program.<br>CPU के प्रोसेसिंग समय के एक विशिष्ट ब्लॉक को एक नए लॉन्च किए गए प्रोग्राम को आवंटित करना",
+    "Managing data storage and retrieval on a hard disk drive.<br>हार्ड डिस्क ड्राइव पर डेटा स्टोरेज और पुनर्प्राप्ति (retrieval) को मैनेज करना"
+   ],
+   "my_ans": "C",
+   "sol": "CPU शेड्यूलिंग और संसाधनों का आवंटन OS (सिस्टम सॉफ्टवेयर) का मुख्य कार्य है, जिसे एप्लीकेशन सॉफ्टवेयर सीधे नहीं कर सकता।",
+   "trick": "CPU शेड्यूलिंग = OS का काम",
+   "ans": "C"
+  }
+ ]
+}

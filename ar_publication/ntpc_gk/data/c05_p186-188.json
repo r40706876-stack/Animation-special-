@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "186-188",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 195,
+   "lvl": "UG",
+   "en": "Which of the following northern state crops is an example of Rabi crops?",
+   "hi": "निम्नलिखित में से कौन-सी उत्तरी राज्य की फसल, रबी फसलों का एक उदाहरण है?",
+   "opts": [
+    "Bajra<br>बाजरा",
+    "Wheat<br>गेहूँ",
+    "Rice<br>चावल",
+    "Cotton<br>कपास"
+   ],
+   "my_ans": "B",
+   "sol": "रबी फसलें सर्दियों में बोई जाती हैं और वसंत में काटी जाती हैं। गेहूं एक प्रमुख रबी फसल है।",
+   "trick": "रबी = सर्दी (गेहूं, चना, सरसों)",
+   "ans": "B"
+  },
+  {
+   "n": 196,
+   "lvl": "UG",
+   "en": "In semi-arid north-western India, intensified canal irrigation leads to rising soil salinity and falling crop yields. What best explains this, and what correction is required?",
+   "hi": "अर्ध-शुष्क उत्तर-पश्चिमी भारत में, अत्यधिक नहर सिंचाई के कारण मृदा लवणता बढ़ती है और फसल की पैदावार घटती है। इसका सर्वोत्तम स्पष्टीकरण क्या है, और इसे ठीक करने के लिए कौन-सा उपाय आवश्यक है?",
+   "opts": [
+    "Prolonged irrigation causes waterlogging; priority is shifting to drought-resistant crop varieties.<br>लंबे समय तक सिंचाई करने से जल-आप्लावन होता है; प्राथमिकता सूखा-प्रतिरोधी फसल किस्मों की ओर स्थानांतरित होना है।",
+    "Raised water table causes salt rise; priority is drainage improvement and salt leaching.<br>भौम जलस्तर बढ़ने से नमक का स्तर बढ़ जाता है; प्राथमिकता जलनिकासी में सुधार और नमक के निक्षेपण को रोकना है।",
+    "Excess irrigation washes nutrients downward; priority is increasing chemical fertiliser use.<br>अतिरिक्त सिंचाई से पोषक तत्व नीचे की ओर बह जाते हैं; प्राथमिकता रासायनिक उर्वरकों के उपयोग को बढ़ाना है।",
+    "Cold canal water stresses crops physiologically; priority is regulating irrigation water temperature.<br>नहर का ठंडा जल फसलों पर शरीरक्रियात्मक रूप से दबाव डालता है; प्राथमिकता सिंचाई के जल के तापमान को नियंत्रित करना है।"
+   ],
+   "my_ans": "B",
+   "sol": "गहन सिंचाई से जलस्तर ऊपर आता है, जिससे मिट्टी के लवण सतह पर आ जाते हैं। इसके लिए जल निकासी में सुधार जरूरी है।",
+   "trick": "नहर सिंचाई = जलस्तर ऊपर = लवणता",
+   "ans": "B"
+  },
+  {
+   "n": 197,
+   "lvl": "UG",
+   "en": "Which Indian port situated at the entrance of the Zuari estuary gained significance after remodelling in 1961 to handle iron-ore exports to Japan?",
+   "hi": "जुआरी ज्वारनदमुख (Zuari estuary) के प्रवेश द्वार पर स्थित किस भारतीय बंदरगाह ने, जापान को लौह-अयस्क निर्यात का प्रहस्तन करने के लिए 1961 में किए गए पुनर्निर्माण के बाद महत्व प्राप्त किया?",
+   "opts": [
+    "Jawaharlal Nehru Port<br>जवाहरलाल नेहरू बंदरगाह",
+    "Kandla Port<br>कांडला बंदरगाह",
+    "Marmagao Port<br>मोरमुगाओ बंदरगाह",
+    "New Mangalore Port<br>न्यू मैंगलोर बंदरगाह"
+   ],
+   "my_ans": "C",
+   "sol": "गोवा में जुआरी नदी के मुहाने पर स्थित मारमुगाओ बंदरगाह लौह-अयस्क निर्यात के लिए प्रसिद्ध है।",
+   "trick": "मारमुगाओ = गोवा = लौह-अयस्क",
+   "ans": "C"
+  },
+  {
+   "n": 198,
+   "lvl": "UG",
+   "en": "Which of the following is a non-renewable resource?",
+   "hi": "निम्नलिखित में से कौन-सा एक अनवीकरणीय संसाधन है?",
+   "opts": [
+    "Wind Energy<br>पवन ऊर्जा",
+    "Petroleum<br>पेट्रोलियम",
+    "Solar Energy<br>सौर ऊर्जा",
+    "Biomass<br>बायोमास"
+   ],
+   "my_ans": "B",
+   "sol": "पेट्रोलियम एक जीवाश्म ईंधन है जो लाखों वर्षों में बनता है और एक बार खत्म होने पर दोबारा नहीं बनाया जा सकता।",
+   "trick": "जीवाश्म ईंधन = अनवीकरणीय",
+   "ans": "B"
+  },
+  {
+   "n": 199,
+   "lvl": "UG",
+   "en": "Which of the following is the most important port-based industrial region in India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत का सबसे महत्वपूर्ण बंदरगाह-आधारित औद्योगिक क्षेत्र है?",
+   "opts": [
+    "Hyderabad–Bengaluru corridor<br>हैदराबाद–बेंगलुरु कॉरिडोर",
+    "Hooghly industrial belt<br>हुगली औद्योगिक पट्टी",
+    "Ahmedabad–Vadodara region<br>अहमदाबाद–वडोदरा क्षेत्र",
+    "Chotanagpur plateau region<br>छोटानागपुर पठार क्षेत्र"
+   ],
+   "my_ans": "B",
+   "sol": "हुगली औद्योगिक पट्टी कोलकाता बंदरगाह के पास स्थित है और यह भारत का सबसे पुराना औद्योगिक क्षेत्र है।",
+   "trick": "हुगली = कोलकाता बंदरगाह",
+   "ans": "B"
+  },
+  {
+   "n": 200,
+   "lvl": "UG",
+   "en": "Which of the following is a hydroelectric power plant located on a Himalayan river?",
+   "hi": "निम्नलिखित में से कौन-सा जलविद्युत् शक्ति संयंत्र, हिमालय नदी पर स्थित है?",
+   "opts": [
+    "Krishnarajasagar Hydroelectric Power Plant<br>कृष्णराजसागर जलविद्युत् शक्ति संयंत्र",
+    "Tehri Dam and Hydroelectric Power Plant<br>टिहरी बांध और जलविद्युत् शक्ति संयंत्र",
+    "Mettur Hydroelectric Power Plant<br>मेट्टूर जलविद्युत् शक्ति संयंत्र",
+    "Srisailam Hydroelectric Power Plant<br>श्रीशैलम जलविद्युत् शक्ति संयंत्र"
+   ],
+   "my_ans": "B",
+   "sol": "टिहरी बांध उत्तराखंड में भागीरथी नदी (गंगा की सहायक) पर स्थित है, जो हिमालय क्षेत्र में आता है।",
+   "trick": "टिहरी = भागीरथी = हिमालय",
+   "ans": "B"
+  },
+  {
+   "n": 201,
+   "lvl": "UG",
+   "en": "Which of the following energy resource is considered exhaustible and polluting in India?",
+   "hi": "भारत में निम्नलिखित में से किस ऊर्जा संसाधन को क्षयशील और प्रदूषक माना जाता है?",
+   "opts": [
+    "Wind<br>पवन",
+    "Biogas<br>बायो-गैस",
+    "Solar<br>सौर",
+    "Coal<br>कोयला"
+   ],
+   "my_ans": "D",
+   "sol": "कोयला एक जीवाश्म ईंधन है जो सीमित है और जलने पर हानिकारक गैसें (CO2, SO2) उत्सर्जित करता है।",
+   "trick": "कोयला = प्रदूषण + समाप्त होने वाला",
+   "ans": "D"
+  },
+  {
+   "n": 202,
+   "lvl": "UG",
+   "en": "Which tree species is most commonly associated with India’s tropical deciduous forests?",
+   "hi": "भारत के उष्णकटिबंधीय पर्णपाती वनों में सबसे अधिक पाई जाने वाली वृक्ष प्रजाति कौन-सी है?",
+   "opts": [
+    "Oak<br>ओक",
+    "Fir<br>फर",
+    "Teak<br>सागौन",
+    "Pine<br>पाइन"
+   ],
+   "my_ans": "C",
+   "sol": "सागौन (Teak) भारत के उष्णकटिबंधीय पर्णपाती (मानसूनी) वनों का सबसे प्रमुख और व्यापक वृक्ष है।",
+   "trick": "पर्णपाती = सागौन",
+   "ans": "C"
+  },
+  {
+   "n": 203,
+   "lvl": "UG",
+   "en": "Which of the following trees is characteristic of the tropical deciduous forests of India?",
+   "hi": "निम्नलिखित में से कौन-सा वृक्ष, भारत के उष्णकटिबंधीय पर्णपाती वनों की विशेषता है?",
+   "opts": [
+    "Teak<br>सागौन",
+    "Fir<br>फर",
+    "Mangrove<br>मैंग्रोव",
+    "Deodar<br>देवदार"
+   ],
+   "my_ans": "A",
+   "sol": "सागौन भारत के उष्णकटिबंधीय पर्णपाती वनों का मुख्य वृक्ष है, जबकि फर और देवदार हिमालयी वनों में पाए जाते हैं।",
+   "trick": "पर्णपाती = सागौन",
+   "ans": "A"
+  }
+ ]
+}

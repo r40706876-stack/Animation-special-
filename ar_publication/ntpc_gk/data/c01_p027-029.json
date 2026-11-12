@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "27-29",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "Which of the following statements most accurately describes the social structure of Mauryan society in ancient India?",
+   "hi": "निम्नलिखित में से कौन-सा कथन प्राचीन भारत में मौर्य समाज की सामाजिक संरचना का सबसे सटीक वर्णन करता है?",
+   "opts": [
+    "An organised society with distinct social classes and a wide range of occupational groups<br>एक संगठित समाज, जिसमें स्पष्ट सामाजिक वर्ग और विविध व्यावसायिक समूह मौजूद हैं।",
+    "Society controlled only by mercantile guilds with no other social groups<br>एक ऐसा समाज, जिस पर केवल व्यापारिक गिल्डों का नियंत्रण हो और जिसमें कोई अन्य सामाजिक समूह न हों।",
+    "Exclusively tribal society with absence of settled agriculture<br>स्थायी कृषि का अभाव वाला विशुद्ध जनजातीय समाज",
+    "A completely egalitarian society without any form of social or occupational differentiation<br>एक पूर्णतः समतावादी समाज, जिसमें किसी भी प्रकार का सामाजिक या व्यावसायिक भेदभाव न हो।"
+   ],
+   "my_ans": "A",
+   "sol": "मौर्य समाज वर्ण व्यवस्था पर आधारित एक सुव्यवस्थित पदानुक्रमित समाज था, जिसमें किसानों, कारीगरों और व्यापारियों जैसे विविध व्यावसायिक समूह मौजूद थे।",
+   "trick": "मौर्य समाज = वर्ण व्यवस्था + व्यावसायिक विविधता",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "Which statement correctly describes the nature of Kumaragupta I’s rule?",
+   "hi": "कौन-सा कथन, कुमारगुप्त प्रथम के शासन की प्रकृति का सही वर्णन करता है?",
+   "opts": [
+    "His reign focused mainly on consolidation and prosperity of the Gupta realm.<br>उनका शासनकाल मुख्यत: गुप्त साम्राज्य के सुदृढ़ीकरण और समृद्धि पर केंद्रित था।",
+    "His reign faced the initial emergence of the Pushyabhutis, threats without major disruption.<br>उनके शासनकाल में पुष्यभूतियों का प्रारंभिक उदय हुआ—ये ऐसे खतरे थे जिनसे कोई बड़ा व्यवधान उत्पन्न नहीं हुआ।",
+    "His rule witnessed continuous territorial expansion across central India.<br>उनके शासन में मध्य भारत में सतत क्षेत्रीय विस्तार देखा गया।",
+    "His reign was marked by repeated internal rebellions, weakening Gupta authority.<br>उनके शासनकाल में बार-बार आंतरिक विद्रोह होते रहे, जिससे गुप्त सत्ता कमजोर हो गई।"
+   ],
+   "my_ans": "A",
+   "sol": "कुमारगुप्त प्रथम का शासनकाल गुप्त इतिहास में सबसे लंबा शांतिपूर्ण काल था, जो साम्राज्य के सुदृढ़ीकरण और नालंदा विश्वविद्यालय की स्थापना के लिए जाना जाता है।",
+   "trick": "कुमारगुप्त = शांतिपूर्ण शासन + नालंदा की स्थापना",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Which archaeological site revealed the earliest known public water tank of the ancient world, famously referred to as the Great Bath?",
+   "hi": "किस पुरातात्विक स्थल से प्राचीन विश्व के सबसे पुराने ज्ञात सार्वजनिक जल टैंक का पता चला है, जिसे प्रसिद्ध रूप से 'विशाल स्नानागार (Great Bath)' कहा जाता है?",
+   "opts": [
+    "Surkotada<br>सुरकोटदा",
+    "Dholavira<br>धोलावीरा",
+    "Lothal<br>लोथल",
+    "Mohenjo-daro<br>मोहनजोदड़ो"
+   ],
+   "my_ans": "D",
+   "sol": "मोहनजोदड़ो में स्थित 'विशाल स्नानागार' सिंधु घाटी सभ्यता का सबसे प्राचीन सार्वजनिक जलाशय है, जो धार्मिक स्नान के लिए उपयोग किया जाता था।",
+   "trick": "विशाल स्नानागार = मोहनजोदड़ो",
+   "ans": "D"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "The Vinaya Pitaka, one of the principal Buddhist texts, mainly focuses on which of the following?",
+   "hi": "प्रमुख बौद्ध ग्रंथों में से एक 'विनय पिटक' मुख्यत: निम्नलिखित में से किस पर केंद्रित है?",
+   "opts": [
+    "Cosmology and astrological systems<br>ब्रह्मांड विज्ञान और ज्योतिषीय प्रणालियों",
+    "Stories of the Buddha’s previous lives<br>बुद्ध के पूर्व जन्मों की कथाओं",
+    "Meditative techniques and philosophy<br>ध्यान संबंधी तकनीकों और दर्शन",
+    "Rules for monks and nuns<br>भिक्षुओं और भिक्षुणियों के लिए नियम"
+   ],
+   "my_ans": "D",
+   "sol": "विनय पिटक में बौद्ध संघ के भिक्षुओं और भिक्षुणियों के लिए आचार संहिता, अनुशासन और दैनिक जीवन के नियमों का वर्णन है।",
+   "trick": "विनय = नियम (संघ के लिए)",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Seleucus sent his ambassador Megasthenes to the court of which Mauryan ruler at Pataliputra?",
+   "hi": "सेल्यूकस ने अपने राजदूत मेगस्थनीज को पाटलिपुत्र में किस मौर्य शासक के दरबार में भेजा?",
+   "opts": [
+    "Chandragupta Maurya<br>चंद्रगुप्त मौर्य",
+    "Brihadratha<br>बृहद्रथ",
+    "Bindusara<br>बिंदुसार",
+    "Ashoka<br>अशोक"
+   ],
+   "my_ans": "A",
+   "sol": "305 ईसा पूर्व में चंद्रगुप्त मौर्य से पराजित होने के बाद, सेल्यूकस निकेटर ने मेगस्थनीज को चंद्रगुप्त के दरबार में राजदूत के रूप में भेजा था।",
+   "trick": "मेगस्थनीज = चंद्रगुप्त मौर्य का दरबार",
+   "ans": "A"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "Which unique architectural feature distinguishes the Harappan site of Dholavira?",
+   "hi": "धोलावीरा के हड़प्पा स्थल की कौन-सी अद्वितीय वास्तूपरक विशेषता इसे विशिष्ट बनाती है?",
+   "opts": [
+    "Step-wells for water conservation<br>जल संरक्षण के लिए बावड़ी",
+    "Large fortifications<br>व्यापक किलेबंदी",
+    "Complex drainage systems<br>जटिल जल निकासी निकाय",
+    "Pictorial murals on walls<br>दीवारों पर चित्रमय भित्ति चित्र"
+   ],
+   "my_ans": "A",
+   "sol": "धोलावीरा अपनी उन्नत जल प्रबंधन प्रणाली के लिए प्रसिद्ध है, जिसमें जल संरक्षण के लिए सीढ़ीदार कुएं और विशाल जलाशय बनाए गए थे।",
+   "trick": "धोलावीरा = जल संरक्षण (बावड़ी)",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Which Late Harappan and Chalcolithic site in Maharashtra has yielded excellent examples of metal-cast sculptures?",
+   "hi": "महाराष्ट्र में स्थित किस उत्तर हड़प्पा और ताम्रपाषाणकालीन स्थल से धातु-ढलाई वाली मूर्तियों के उत्कृष्ट उदाहरण प्राप्त हुए हैं?",
+   "opts": [
+    "Daimabad<br>दैमाबाद",
+    "Inamgaon<br>इनामगांव",
+    "Tekwada<br>तेकवाड़ा",
+    "Chandoli<br>चंदोली"
+   ],
+   "my_ans": "A",
+   "sol": "महाराष्ट्र के अहमदनगर जिले में स्थित दैमाबाद से कांसे की उत्कृष्ट मूर्तियां (रथ, हाथी, गैंडा) प्राप्त हुई हैं, जो ताम्रपाषाण काल की धातु ढलाई का बेहतरीन उदाहरण हैं।",
+   "trick": "दैमाबाद = कांसे की मूर्तियां",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "The Rigveda, the oldest of the Vedas, mainly consists of which of the following?",
+   "hi": "वेदों में सबसे प्राचीन ऋग्वेद में मुख्य रूप से निम्नलिखित में से क्या शामिल है?",
+   "opts": [
+    "Philosophical essays<br>दार्शनिक निबंध",
+    "Hymns<br>सूक्त",
+    "Epic narratives<br>महाकाव्य कथाएं",
+    "Ritual manuals<br>धार्मिक नियमावली"
+   ],
+   "my_ans": "B",
+   "sol": "ऋग्वेद सबसे प्राचीन वेद है, जिसमें 10 मंडलों में विभाजित 1,028 सूक्त (भजन) हैं, जो विभिन्न देवताओं की स्तुति में रचे गए हैं।",
+   "trick": "ऋग्वेद = सूक्त (भजन)",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Who were referred to as Uzhavar in Sangam literature?",
+   "hi": "संगम साहित्य में उझावर (Uzhavar) के रूप में किन्हें संदर्भित किया गया था?",
+   "opts": [
+    "Ploughmen<br>हलवाहा",
+    "Large landowners<br>बड़े ज़मींदार",
+    "Priests<br>पुजारी",
+    "Slaves<br>दास"
+   ],
+   "my_ans": "A",
+   "sol": "संगम साहित्य में 'उझावर' शब्द का प्रयोग उन किसानों या हलवाहों के लिए किया गया था जो कृषि कार्य करते थे।",
+   "trick": "उझावर = हल चलाने वाले (किसान)",
+   "ans": "A"
+  }
+ ]
+}

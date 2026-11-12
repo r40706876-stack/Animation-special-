@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "682-682",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 397,
+   "lvl": "UG",
+   "en": "Where was the annual World Economic Forum meeting held in January 2025?",
+   "hi": "जनवरी 2025 में विश्व आर्थिक मंच (World Economic Forum) की वार्षिक बैठक कहाँ आयोजित की गई?",
+   "opts": [
+    "Oslo, Norway<br>ओस्लो, नॉर्वे",
+    "Copenhagen, Denmark<br>कोपेनहेगन, डेनमार्क",
+    "Stockholm, Sweden<br>स्टॉकहोम, स्वीडन",
+    "Davos-Klosters, Switzerland<br>दावोस-क्लोस्टर्स, स्विट्ज़रलैंड"
+   ],
+   "my_ans": "D",
+   "sol": "विश्व आर्थिक मंच (WEF) की वार्षिक बैठक पारंपरिक रूप से स्विट्जरलैंड के दावोस-क्लोस्टर्स में आयोजित की जाती है।",
+   "trick": "WEF की बैठक हमेशा दावोस में ही होती है।",
+   "ans": "D"
+  },
+  {
+   "n": 398,
+   "lvl": "UG",
+   "en": "Who set a new record for the most sixes in the ICC Men's ODI events in March 2025?",
+   "hi": "मार्च 2025 में ICC पुरुष ODI (ICC Men's ODI) स्पर्धाओं में सर्वाधिक छक्के लगाने का नया रिकॉर्ड किसने बनाया?",
+   "opts": [
+    "Rohit Sharma<br>रोहित शर्मा",
+    "Ben Duckett<br>बेन डकेट",
+    "Chris Gayle<br>क्रिस गेल",
+    "Suryakumar Yadav<br>सूर्यकुमार यादव"
+   ],
+   "my_ans": "A",
+   "sol": "रोहित शर्मा ने अपनी आक्रामक बल्लेबाजी और पावर-हिटिंग के दम पर मार्च 2025 में ICC पुरुष ODI में सर्वाधिक छक्कों का रिकॉर्ड बनाया।",
+   "trick": "हिटमैन के नाम से मशहूर रोहित शर्मा छक्के मारने के लिए जाने जाते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 399,
+   "lvl": "UG",
+   "en": "In November 2025, which city hosted the Syed Modi India International Badminton Tournament?",
+   "hi": "नवंबर 2025 में, सैयद मोदी इंडिया इंटरनेशनल बैडमिंटन टूर्नामेंट की मेजबानी किस शहर ने की थी?",
+   "opts": [
+    "New Delhi<br>नई दिल्ली",
+    "Hyderabad<br>हैदराबाद",
+    "Lucknow<br>लखनऊ",
+    "Mumbai<br>मुंबई"
+   ],
+   "my_ans": "C",
+   "sol": "सैयद मोदी इंडिया इंटरनेशनल बैडमिंटन टूर्नामेंट का 2025 संस्करण लखनऊ में आयोजित किया गया था, जो इसका पारंपरिक मेजबान शहर है।",
+   "trick": "सैयद मोदी टूर्नामेंट हमेशा लखनऊ में ही आयोजित होता है।",
+   "ans": "C"
+  },
+  {
+   "n": 400,
+   "lvl": "UG",
+   "en": "Which of the following countries won the highest number of medals at the Summer Olympics 2024?",
+   "hi": "निम्नलिखित में से किस देश ने ग्रीष्मकालीन ओलंपिक 2024 में सर्वाधिक पदक जीते?",
+   "opts": [
+    "India<br>भारत",
+    "Australia<br>ऑस्ट्रेलिया",
+    "United States of America<br>संयुक्त राज्य अमेरिका",
+    "China<br>चीन"
+   ],
+   "my_ans": "C",
+   "sol": "पेरिस में आयोजित ग्रीष्मकालीन ओलंपिक 2024 में संयुक्त राज्य अमेरिका (USA) ने सबसे अधिक पदक जीते थे।",
+   "trick": "ओलंपिक में अमेरिका का दबदबा हमेशा शीर्ष पर रहता है।",
+   "ans": "C"
+  }
+ ]
+}

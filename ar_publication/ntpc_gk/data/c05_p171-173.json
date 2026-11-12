@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "171-173",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "According to the Census 2011, what was the approximate total literacy rate in India?",
+   "hi": "2011 की जनगणना के अनुसार, भारत में कुल साक्षरता दर लगभग कितनी थी?",
+   "opts": [
+    "78.21%",
+    "74.04%",
+    "70.50%",
+    "64.83%"
+   ],
+   "my_ans": "B",
+   "sol": "2011 की जनगणना के अनुसार भारत की कुल साक्षरता दर 74.04% थी।",
+   "trick": "2011 साक्षरता: 74.04% (पुरुष 82.14%, महिला 65.46%)",
+   "ans": "B"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "Which Indian state recorded the lowest child sex ratio (0–6 years) in the 2011 census?",
+   "hi": "2011 की जनगणना में किस भारतीय राज्य में बाल लिंग अनुपात (0-6 वर्ष) सबसे कम दर्ज किया गया?",
+   "opts": [
+    "Chandigarh<br>चंडीगढ़",
+    "Punjab<br>पंजाब",
+    "Haryana<br>हरियाणा",
+    "Jammu & Kashmir<br>जम्मू और कश्मीर"
+   ],
+   "my_ans": "C",
+   "sol": "2011 की जनगणना के अनुसार हरियाणा में बाल लिंग अनुपात (0-6 वर्ष) सबसे कम (830) था।",
+   "trick": "हरियाणा: सबसे कम बाल लिंग अनुपात",
+   "ans": "C"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "The Pin River constitutes the most important right bank tributary of __________.",
+   "hi": "पिन नदी, __________ की सबसे महत्वपूर्ण दाहिने तट की एक सहायक नदी है।",
+   "opts": [
+    "Bhaga River<br>भागा नदी",
+    "Chandra River<br>चंद्रा नदी",
+    "Tsarab River<br>त्सराब नदी",
+    "Spiti River<br>स्पीति नदी"
+   ],
+   "my_ans": "D",
+   "sol": "पिन नदी स्पीति नदी की एक प्रमुख दाहिने तट की सहायक नदी है, जो स्पीति घाटी में बहती है।",
+   "trick": "पिन नदी → स्पीति नदी",
+   "ans": "D"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "As of 1 March 2001, what was the population of India?",
+   "hi": "1 मार्च 2001 तक की स्थिति के अनुसार, भारत की जनसंख्या कितनी थी?",
+   "opts": [
+    "950 million<br>950 मिलियन",
+    "1,210 million<br>1,210 मिलियन",
+    "1,027 million<br>1,027 मिलियन",
+    "1,000 million<br>1,000 मिलियन"
+   ],
+   "my_ans": "C",
+   "sol": "2001 की जनगणना के अनुसार भारत की कुल जनसंख्या लगभग 1,027 मिलियन (102.7 करोड़) थी।",
+   "trick": "2001 जनगणना: 102.7 करोड़",
+   "ans": "C"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "Which of the following best explains the emergence of “megaregions” with extremely high population densities (e.g., Bos Wash, Tokyo-Osaka, Pearl River Delta)?",
+   "hi": "निम्नलिखित में से कौन-सा कथन, अत्यधिक उच्च जनसंख्या घनत्व (जैसे, बोस वॉश, टोक्यो-ओसाका, पर्ल रिवर डेल्टा) वाले \"मेगाक्षेत्रों (megaregions)\" के उद्भव की सर्वोत्तम व्याख्या करता है?",
+   "opts": [
+    "Governments intentionally relocate populations to form megaregions<br>सरकारें अभिप्रायपूर्वक मेगाक्षेत्रों का निर्माण करने के लिए जनसंख्या को स्थानांतरित करती हैं",
+    "Megaregions form primarily because of uniform physical geography<br>मेगाक्षेत्रों का निर्माण मुख्यतः एकसमान भौतिक भूगोल के कारण होता है",
+    "They exist because of high natural population growth in these regions<br>इनके अस्तित्व का कारण इन क्षेत्रों में प्राकृतिक जनसंख्या वृद्धि की उच्च दर होती है",
+    "They develop due to integrated economic corridors and high connectivity<br>इनका विकास एकीकृत आर्थिक गलियारों और उच्च कनेक्टिविटी के कारण होता है"
+   ],
+   "my_ans": "D",
+   "sol": "मेगाक्षेत्रों का विकास मुख्य रूप से एकीकृत आर्थिक गलियारों और बेहतर परिवहन कनेक्टिविटी के कारण होता है।",
+   "trick": "मेगाक्षेत्र = आर्थिक गलियारे + उच्च कनेक्टिविटी",
+   "ans": "D"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "A plateau that is surrounded by mountains on all sides is generally referred to as a:",
+   "hi": "चारों ओर से पहाड़ों से घिरे पठार को सामान्यतः किस रूप में संदर्भित किया जाता है?",
+   "opts": [
+    "Piedmont plateau<br>गिरिपद पठार",
+    "Dissected plateau<br>विच्छेदित पठार",
+    "Lava plateau<br>लावा पठार",
+    "Intermontane plateau<br>अंतरापर्वतीय पठार"
+   ],
+   "my_ans": "D",
+   "sol": "चारों ओर से पर्वतों से घिरे पठार को अंतरापर्वतीय (Intermontane) पठार कहा जाता है, जैसे तिब्बत का पठार।",
+   "trick": "पर्वतों के बीच = अंतरापर्वतीय",
+   "ans": "D"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "Which of the following features characterises Stage III of demographic transition?",
+   "hi": "निम्नलिखित में से कौन-सी विशेषता जनसांख्यिकीय संक्रमण के चरण III की विशेषता है?",
+   "opts": [
+    "Low fertility and low mortality<br>निम्न प्रजनन दर और निम्न मृत्यु दर",
+    "High mortality and high fertility<br>उच्च मृत्यु दर और उच्च प्रजनन दर",
+    "High migration and low death rate<br>उच्च प्रवासन और निम्न मृत्यु दर",
+    "Rapid death rate increase<br>मृत्यु दर में तेजी से वृद्धि"
+   ],
+   "my_ans": "A",
+   "sol": "जनसांख्यिकीय संक्रमण के तीसरे चरण में शहरीकरण और शिक्षा के कारण जन्म दर (प्रजनन दर) गिरती है और मृत्यु दर कम रहती है।",
+   "trick": "चरण III = घटती जन्म दर + कम मृत्यु दर",
+   "ans": "A"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "According to the Census 2011, which of the following States and Union Territories recorded the lowest sex ratio in India?",
+   "hi": "2011 की जनगणना के अनुसार, भारत में निम्नलिखित में से किस राज्य और केंद्र शासित प्रदेश का सबसे कम लिंग अनुपात दर्ज किया गया?",
+   "opts": [
+    "Delhi<br>दिल्ली",
+    "Daman & Diu<br>दमन और दीव",
+    "Haryana<br>हरियाणा",
+    "Chandigarh<br>चंडीगढ़"
+   ],
+   "my_ans": "B",
+   "sol": "2011 की जनगणना के अनुसार, दमन और दीव का लिंग अनुपात (618) भारत में सबसे कम था।",
+   "trick": "सबसे कम लिंग अनुपात: दमन और दीव",
+   "ans": "B"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "Which physical process creates the seasonal pressure difference between the Indian subcontinent and surrounding oceans that initiates the summer monsoon winds?",
+   "hi": "निम्नलिखित में से कौन-सा भौतिक प्रक्रम, भारतीय उपमहाद्वीप और आसपास के महासागरों के बीच ऋतुनिष्ठ दाबांतर उत्पन्न करता है जिससे ग्रीष्मकालीन मानसून पवनों की शुरुआत होती है?",
+   "opts": [
+    "Weak coriolis force<br>दुर्बल कोरिओलिस बल",
+    "Presence of the Himalayas<br>हिमालय की उपस्थिति",
+    "Variation in rainfall pattern<br>वर्षा पैटर्न में भिन्नता",
+    "Differential heating of land and sea<br>स्थल और समुद्र का विभेदी तापन"
+   ],
+   "my_ans": "D",
+   "sol": "स्थल और समुद्र के अलग-अलग गति से गर्म होने (विभेदी तापन) के कारण दाब में अंतर पैदा होता है, जिससे मानसून हवाएं चलती हैं।",
+   "trick": "मानसून = स्थल और समुद्र का विभेदी तापन",
+   "ans": "D"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "Which climatic phenomenon is responsible for sudden winter rainfall in North-West India?",
+   "hi": "उत्तर-पश्चिम भारत में अचानक शीतकालीन वर्षा के लिए कौन सी जलवायु घटना जिम्मेदार है?",
+   "opts": [
+    "Cyclonic depression<br>चक्रवाती अवसाद",
+    "Retreating monsoon<br>लौटता मानसून",
+    "South-west monsoon<br>दक्षिण-पश्चिम मानसून",
+    "Western disturbances<br>पश्चिमी विक्षोभ"
+   ],
+   "my_ans": "D",
+   "sol": "उत्तर-पश्चिम भारत में सर्दियों में होने वाली बारिश 'पश्चिमी विक्षोभ' (Western Disturbances) के कारण होती है।",
+   "trick": "सर्दियों की बारिश = पश्चिमी विक्षोभ",
+   "ans": "D"
+  }
+ ]
+}

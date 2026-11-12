@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "106-108",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "What was Raja Ram Mohan Roy's greatest social achievement?",
+   "hi": "राजा राम मोहन राय की सबसे बड़ी सामाजिक उपलब्धि क्या थी?",
+   "opts": [
+    "Founding the Indian National Congress<br>भारतीय राष्ट्रीय कांग्रेस की स्थापना",
+    "Abolition of child marriage<br>बाल विवाह का उन्मूलन",
+    "Promoting English education<br>अंग्रेजी शिक्षा को बढ़ावा देना",
+    "Abolition of Sati in 1829<br>1829 में सती प्रथा का उन्मूलन"
+   ],
+   "my_ans": "D",
+   "sol": "राजा राम मोहन राय ने लॉर्ड विलियम बेंटिक के साथ मिलकर 1829 में सती प्रथा को अवैध घोषित करवाया था।",
+   "trick": "सती प्रथा का अंत = राजा राम मोहन राय",
+   "ans": "D"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "The Kuki Rebellion (1917–19) took place in which region?",
+   "hi": "कुकी विद्रोह (1917-19) किस क्षेत्र में हुआ था?",
+   "opts": [
+    "Tripura<br>त्रिपुरा",
+    "Manipur<br>मणिपुर",
+    "Nagaland<br>नागालैंड",
+    "Assam<br>असम"
+   ],
+   "my_ans": "B",
+   "sol": "कुकी विद्रोह मुख्य रूप से मणिपुर की पहाड़ियों में ब्रिटिश जबरन श्रम भर्ती के खिलाफ हुआ था।",
+   "trick": "कुकी = मणिपुर",
+   "ans": "B"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "Which factor led to the Mysore rebellion of 1830–31 against the restored Wodeyar administration?",
+   "hi": "1830-31 में पुनः स्थापित वाडियार प्रशासन (Wodeyar administration) के विरुद्ध मैसूर विद्रोह का मुख्य कारण कौन-सा कारक था?",
+   "opts": [
+    "Increased revenue pressure that ultimately burdened cultivators.<br>राजस्व के बढ़ते दबाव के कारण अंततः कृषकों पर अत्यधिक बोझ पड़ना",
+    "Expansion of irrigation that reduced the cost of agricultural dues.<br>सिंचाई का प्रसार जिससे कृषि देय राशि की लागत कम हो गई",
+    "Reduction in policing that strengthened the power of local chiefs.<br>कानून-व्यवस्था में कमी जिससे स्थानीय प्रमुखों की शक्ति सुदृढ़ हुई",
+    "Protectionist policies designed to shield peasants from levies.<br>किसानों को लेवी से बचाने के लिए बनाई गई संरक्षणवादी नीतियां"
+   ],
+   "my_ans": "A",
+   "sol": "मैसूर में वाडियार प्रशासन द्वारा अत्यधिक राजस्व की मांग ने किसानों को विद्रोह के लिए मजबूर किया।",
+   "trick": "मैसूर विद्रोह = भारी राजस्व",
+   "ans": "A"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "Who started the Arya Samaj movement in 1875?",
+   "hi": "1875 में आर्य समाज आंदोलन की शुरुआत किसने की थी?",
+   "opts": [
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Ramakrishna Paramhansa<br>रामकृष्ण परमहंस",
+    "Raja Ram Mohan Roy<br>राजा राम मोहन राय",
+    "Dayanand Saraswati<br>दयानंद सरस्वती"
+   ],
+   "my_ans": "D",
+   "sol": "स्वामी दयानंद सरस्वती ने 1875 में मुंबई में आर्य समाज की स्थापना की थी।",
+   "trick": "आर्य समाज = दयानंद सरस्वती",
+   "ans": "D"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "What were the volunteer groups of the Prati Sarkar called?",
+   "hi": "प्रति सरकार के स्वयंसेवक समूहों को क्या कहा जाता था?",
+   "opts": [
+    "Seva dals and tufan dals<br>सेवा दल और तूफान दल",
+    "Swaraj dals and azad dals<br>स्वराज दल और आजाद दल",
+    "Lok dals and rajya dals<br>लोक दल और राज्य दल",
+    "Gram dals and satyagrah dals<br>ग्राम दल और सत्याग्रह दल"
+   ],
+   "my_ans": "A",
+   "sol": "सतारा में प्रति सरकार के दौरान सेवा दल और तूफान दल नामक स्वयंसेवी समूह बनाए गए थे।",
+   "trick": "प्रति सरकार = सेवा और तूफान",
+   "ans": "A"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "When was the Congress Socialist Party (CSP) formed within the Indian National Congress?",
+   "hi": "भारतीय राष्ट्रीय कांग्रेस के भीतर कांग्रेस सोशलिस्ट पार्टी (CSP) का गठन कब हुआ था?",
+   "opts": [
+    "1947",
+    "1942",
+    "1934",
+    "1952"
+   ],
+   "my_ans": "C",
+   "sol": "कांग्रेस सोशलिस्ट पार्टी का गठन मई 1934 में पटना में जयप्रकाश नारायण और अन्य नेताओं द्वारा किया गया था।",
+   "trick": "CSP = 1934",
+   "ans": "C"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "Which of the following movements, founded by Jyotirao Phule, was specifically aimed at the upliftment of lower castes in Maharashtra?",
+   "hi": "ज्योतिराव फुले द्वारा स्थापित निम्नलिखित में से कौन-सा आंदोलन विशेष रूप से महाराष्ट्र में निचली जातियों के उत्थान के उद्देश्य से शुरू किया गया था?",
+   "opts": [
+    "Brahmo Samaj<br>ब्रह्म समाज",
+    "Satyashodhak Samaj<br>सत्यशोधक समाज",
+    "Arya Samaj<br>आर्य समाज",
+    "Ramakrishna Mission<br>रामकृष्ण मिशन"
+   ],
+   "my_ans": "B",
+   "sol": "ज्योतिराव फुले ने 1873 में सत्यशोधक समाज की स्थापना निचली जातियों और महिलाओं के उत्थान के लिए की थी।",
+   "trick": "फुले = सत्यशोधक",
+   "ans": "B"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "What was the primary objective of Pandita Ramabai’s work?",
+   "hi": "पंडिता रमाबाई के कार्य का प्राथमिक उद्देश्य क्या था?",
+   "opts": [
+    "Women’s education and empowerment<br>महिला शिक्षा और सशक्तिकरण",
+    "Establishing a national army<br>एक राष्ट्रीय सेना की स्थापना",
+    "Promoting traditional religious practices<br>पारंपरिक धार्मिक प्रथाओं को बढ़ावा देना",
+    "Political independence for India<br>भारत के लिए राजनीतिक स्वतंत्रता"
+   ],
+   "my_ans": "A",
+   "sol": "पंडिता रमाबाई ने विधवाओं और निराश्रित महिलाओं के लिए शिक्षा और पुनर्वास के कार्य किए।",
+   "trick": "रमाबाई = महिला शिक्षा",
+   "ans": "A"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "The Munda Uprising (1899–1900) was associated with which leader?",
+   "hi": "मुंडा विद्रोह (1899-1900) किस नेता से जुड़ा था?",
+   "opts": [
+    "Tilka Majhi<br>तिलका मांझी",
+    "Birsa Munda<br>बिरसा मुंडा",
+    "Jatra Oraon<br>जात्रा उरांव",
+    "Budhu Bhagat<br>बुधु भगत"
+   ],
+   "my_ans": "B",
+   "sol": "मुंडा विद्रोह का नेतृत्व बिरसा मुंडा ने झारखंड क्षेत्र में ब्रिटिश भूमि नीतियों के खिलाफ किया था।",
+   "trick": "मुंडा = बिरसा मुंडा",
+   "ans": "B"
+  },
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "Which of the following British officials was responsible for the annexation of Awadh, a major cause of resentment before 1857?",
+   "hi": "निम्नलिखित में से कौन-सा ब्रिटिश अधिकारी अवध के विलय के लिए उत्तरदायी था, जो 1857 से पहले असंतोष का एक प्रमुख कारण बना?",
+   "opts": [
+    "Lord Canning<br>लॉर्ड कैनिंग",
+    "Charles Metcalfe<br>चार्ल्स मेटकाफ",
+    "Henry Lawrence<br>हेनरी लॉरेंस",
+    "Lord Dalhousie<br>लॉर्ड डलहौजी"
+   ],
+   "my_ans": "D",
+   "sol": "लॉर्ड डलहौजी ने कुशासन का आरोप लगाकर 1856 में अवध का विलय किया था।",
+   "trick": "अवध विलय = डलहौजी",
+   "ans": "D"
+  }
+ ]
+}

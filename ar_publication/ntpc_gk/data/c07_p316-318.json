@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "316-318",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 301,
+   "lvl": "UG",
+   "en": "Which of the following Amendments to the Constitution of India introduced Fundamental Duties in the form of Article 51A?",
+   "hi": "भारत के संविधान में निम्नलिखित में से किस संशोधन द्वारा अनुच्छेद 51A के रूप में मौलिक कर्तव्यों को शामिल किया गया था?",
+   "opts": [
+    "42nd Amendment, 1976<br>42वां संशोधन, 1976",
+    "24th Amendment, 1971<br>24वां संशोधन, 1971",
+    "44th Amendment, 1978<br>44वां संशोधन, 1978",
+    "52nd Amendment, 1985<br>52वां संशोधन, 1985"
+   ],
+   "my_ans": "A",
+   "sol": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा स्वर्ण सिंह समिति की सिफारिश पर संविधान में भाग IV-A और अनुच्छेद 51A जोड़ा गया।",
+   "trick": "42वां संशोधन = मिनी संविधान (मौलिक कर्तव्य जोड़े गए)",
+   "ans": "A"
+  },
+  {
+   "n": 302,
+   "lvl": "UG",
+   "en": "Which of the following statements about the Directive Principles of State Policy is correct?",
+   "hi": "राज्य के नीति-निर्देशक सिद्धांतों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+   "opts": [
+    "They are absolute and cannot be amended under any circumstance.<br>वे निरपेक्ष हैं और किसी भी परिस्थिति में उनमें संशोधन नहीं किया जा सकता है।",
+    "They are non-justiciable guidelines that aim to establish a just society.<br>वे न्यायसंगत समाज की स्थापना के उद्देश्य से बनाए गए गैर-न्यायसंगत दिशानिर्देश हैं।",
+    "They are enforceable by the courts as Fundamental Rights.<br>ये न्यायालयों द्वारा मौलिक अधिकारों के रूप में प्रवर्तनीय हैं।",
+    "They can be enforced by any citizen through writ petitions.<br>कोई भी नागरिक रिट याचिकाओं के माध्यम से उन्हें लागू करवा सकता है।"
+   ],
+   "my_ans": "B",
+   "sol": "राज्य के नीति-निर्देशक तत्व (DPSP) गैर-न्यायसंगत (non-justiciable) हैं, यानी इन्हें न्यायालय द्वारा लागू नहीं कराया जा सकता।",
+   "trick": "DPSP = कल्याणकारी राज्य के लिए गैर-न्यायसंगत दिशानिर्देश",
+   "ans": "B"
+  },
+  {
+   "n": 303,
+   "lvl": "UG",
+   "en": "If a new union territory is created, who will appoint its administrator?",
+   "hi": "यदि कोई नया केंद्र शासित प्रदेश बनाया जाता है, तो उसका प्रशासक कौन नियुक्त करेगा?",
+   "opts": [
+    "The Parliament of India<br>भारत की संसद",
+    "The Chief Minister of the nearest state<br>निकटतम राज्य के मुख्यमंत्री",
+    "The Prime Minister of India<br>भारत के प्रधानमंत्री",
+    "The President of India<br>भारत के राष्ट्रपति"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 239 के अनुसार, प्रत्येक केंद्र शासित प्रदेश का प्रशासन भारत के राष्ट्रपति द्वारा किया जाता है, जो प्रशासक या उपराज्यपाल नियुक्त करते हैं।",
+   "trick": "UT का प्रमुख = राष्ट्रपति का प्रतिनिधि",
+   "ans": "D"
+  },
+  {
+   "n": 304,
+   "lvl": "UG",
+   "en": "Which resolution is the Preamble of the Constitution based on, drafted by Pandit Jawaharlal Nehru?",
+   "hi": "पंडित जवाहरलाल नेहरू द्वारा प्रारूपित संविधान की उद्देशिका किस संकल्प पर आधारित है?",
+   "opts": [
+    "Directive Resolution<br>निर्देशक प्रस्ताव",
+    "Objectives Resolution<br>उद्देश्य प्रस्ताव",
+    "Fundamental Rights<br>मूल अधिकार",
+    "Directive Principles<br>निर्देशक सिद्धांत"
+   ],
+   "my_ans": "B",
+   "sol": "संविधान की प्रस्तावना पंडित जवाहरलाल नेहरू द्वारा 13 दिसंबर 1946 को संविधान सभा में प्रस्तुत 'उद्देश्य प्रस्ताव' (Objectives Resolution) पर आधारित है।",
+   "trick": "नेहरू जी का उद्देश्य = प्रस्तावना का आधार",
+   "ans": "B"
+  },
+  {
+   "n": 305,
+   "lvl": "UG",
+   "en": "Which of the following Union Territories has a Legislative Assembly?",
+   "hi": "निम्नलिखित में से किस केंद्र शासित प्रदेश में विधानसभा है?",
+   "opts": [
+    "Ladakh<br>लद्दाख",
+    "Lakshadweep<br>लक्षद्वीप",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह",
+    "National Capital Territory of Delhi<br>दिल्ली राष्ट्रीय राजधानी क्षेत्र"
+   ],
+   "my_ans": "D",
+   "sol": "वर्तमान में दिल्ली, पुडुचेरी और जम्मू-कश्मीर, इन तीन केंद्र शासित प्रदेशों में अपनी विधानसभा है।",
+   "trick": "दिल्ली, पुडुचेरी, जम्मू-कश्मीर = विधानसभा वाले UT",
+   "ans": "D"
+  },
+  {
+   "n": 306,
+   "lvl": "UG",
+   "en": "Which of the following Articles of the Indian Constitution deals with the Fundamental Duties?",
+   "hi": "भारतीय संविधान का निम्नलिखित में से कौन-सा अनुच्छेद मौलिक कर्तव्यों से संबंधित है?",
+   "opts": [
+    "Article 51<br>अनुच्छेद 51",
+    "Article 50<br>अनुच्छेद 50",
+    "Article 51 'A'<br>अनुच्छेद 51 'A'",
+    "Article 52<br>अनुच्छेद 52"
+   ],
+   "my_ans": "C",
+   "sol": "संविधान के भाग IV-A में अनुच्छेद 51A मौलिक कर्तव्यों से संबंधित है, जिसे 42वें संशोधन द्वारा जोड़ा गया था।",
+   "trick": "51A = मौलिक कर्तव्य",
+   "ans": "C"
+  },
+  {
+   "n": 307,
+   "lvl": "UG",
+   "en": "How many Fundamental Duties were finally included in the Constitution in 1976 (based on committee recommendations)?",
+   "hi": "1976 में (समिति की अनुशंसा के आधार पर) संविधान में अंततः कितने मौलिक कर्तव्यों को शामिल किया गया था?",
+   "opts": [
+    "Nine<br>नौ",
+    "Seven<br>सात",
+    "Six<br>छह",
+    "Ten<br>दस"
+   ],
+   "my_ans": "D",
+   "sol": "1976 में 42वें संविधान संशोधन द्वारा स्वर्ण सिंह समिति की सिफारिश पर मूल रूप से 10 मौलिक कर्तव्य जोड़े गए थे।",
+   "trick": "1976 में 10, बाद में 11 (86वां संशोधन)",
+   "ans": "D"
+  },
+  {
+   "n": 308,
+   "lvl": "UG",
+   "en": "According to the Constitution of India, Citizenship by incorporation of territory applies when _________________.",
+   "hi": "भारतीय संविधान के अनुसार, भूभाग के विलय द्वारा नागरिकता तब लागू होती है, जब _____________।",
+   "opts": [
+    "India acquires new territory<br>भारत नए क्षेत्र का अधिग्रहण करता है",
+    "A state is divided into two<br>एक राज्य को दो भागों में विभाजित किया जाता है",
+    "A foreigner resides for five years<br>एक विदेशी पाँच वर्ष तक निवास करता है",
+    "A citizen moves from one state to another<br>एक नागरिक एक राज्य से दूसरे राज्य में जाता है"
+   ],
+   "my_ans": "A",
+   "sol": "जब भारत किसी नए विदेशी क्षेत्र का अधिग्रहण या विलय करता है, तो उस क्षेत्र के निवासियों को भारतीय नागरिकता प्रदान की जाती है।",
+   "trick": "विलय = नया क्षेत्र जुड़ना",
+   "ans": "A"
+  },
+  {
+   "n": 309,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution places the most emphasis on reducing income and status disparities?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद आय और स्थिति की असमानताओं को कम करने पर सर्वाधिक बल देता है?",
+   "opts": [
+    "Article 38(1)<br>अनुच्छेद 38 (1)",
+    "Article 36<br>अनुच्छेद 36",
+    "Article 38(2)<br>अनुच्छेद 38 (2)",
+    "Article 39<br>अनुच्छेद 39"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 38(2) विशेष रूप से राज्य को निर्देश देता है कि वह व्यक्तियों और समूहों के बीच आय, स्थिति, सुविधाओं और अवसरों की असमानताओं को कम करे।",
+   "trick": "38(2) = आय और स्थिति में समानता",
+   "ans": "C"
+  },
+  {
+   "n": 310,
+   "lvl": "UG",
+   "en": "Which judicial doctrine allows laws promoting DPSPs to be protected from being struck down for violating certain Fundamental Rights, as long as they are interpreted harmoniously?",
+   "hi": "कौन सा न्यायिक सिद्धांत DPSP को बढ़ावा देने वाले कानूनों को कुछ मौलिक अधिकारों के उल्लंघन के लिए रद्द होने से बचाता है, जब तक कि उनकी व्याख्या सामंजस्यपूर्ण रूप से की जाती है?",
+   "opts": [
+    "Doctrine of Pith and Substance<br>सार और तत्व का सिद्धांत",
+    "Doctrine of Harmonious Construction<br>सामंजस्यपूर्ण व्याख्या का सिद्धांत",
+    "Doctrine of Severability<br>पृथक्करणीयता का सिद्धांत",
+    "Doctrine of Eclipse<br>ग्रहण का सिद्धांत"
+   ],
+   "my_ans": "B",
+   "sol": "सामंजस्यपूर्ण व्याख्या (Harmonious Construction) का सिद्धांत यह सुनिश्चित करता है कि मौलिक अधिकारों और नीति-निर्देशक तत्वों के बीच संतुलन बना रहे।",
+   "trick": "सामंजस्य = संतुलन बनाना",
+   "ans": "B"
+  }
+ ]
+}

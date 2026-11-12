@@ -1,0 +1,191 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Art & Culture",
+  "hi": "कला एवं संस्कृति",
+  "total": 46,
+  "gl": 46,
+  "ug": 0
+ },
+ "source_pages": "120-122",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which of the following is a Tibeto-Burman language included in the Eighth Schedule of the Indian Constitution?",
+   "hi": "निम्नलिखित में से कौन-सी तिब्बती-बर्मी भाषा है जिसे भारतीय संविधान की आठवीं अनुसूची में शामिल किया गया है?",
+   "opts": [
+    "Santhali<br>संथाली",
+    "Konkani<br>कोंकणी",
+    "Maithili<br>मैथिली",
+    "Bodo<br>बोडो"
+   ],
+   "my_ans": "D",
+   "sol": "बोडो भाषा तिब्बती-बर्मी भाषा परिवार से संबंधित है और इसे 2003 में 92वें संविधान संशोधन द्वारा आठवीं अनुसूची में जोड़ा गया था।",
+   "trick": "बोडो = तिब्बती-बर्मी (असम की भाषा)",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following is correct with respect to the theme of Yamuna Paryatam, the first novel in Marathi?",
+   "hi": "मराठी भाषा के प्रथम उपन्यास 'यमुना पर्यटन' की विषय-वस्तु के संबंध में निम्नलिखित में से कौन-सा विकल्प सही है?",
+   "opts": [
+    "Criticized Hindu practices regarding widows<br>विधवाओं के संबंध में हिंदू प्रथाओं की आलोचना की गई",
+    "Focused on Political life of Yamuna region<br>यमुना क्षेत्र के राजनीतिक जीवन पर केंद्रित",
+    "Praised Hindu customs<br>हिंदू रीति-रिवाजों की प्रशंसा की गई",
+    "Focused on adventure stories<br>साहसिक कहानियों पर केंद्रित"
+   ],
+   "my_ans": "A",
+   "sol": "बाबा पद्मजी द्वारा रचित 'यमुना पर्यटन' (1857) मराठी का पहला उपन्यास है, जो मुख्य रूप से विधवाओं की दयनीय स्थिति और सामाजिक कुरीतियों पर आधारित है।",
+   "trick": "यमुना पर्यटन = विधवा सुधार",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which of the following online festivals featured documentaries on Indian classical dance exponents in 2020?",
+   "hi": "2020 में, निम्नलिखित में से किस ऑनलाइन महोत्सव में भारतीय शास्त्रीय नृत्य कलाकारों पर वृत्तचित्र प्रदर्शित किए गए थे?",
+   "opts": [
+    "Nritya Mahotsav<br>नृत्य महोत्सव",
+    "Rangmanch<br>रंगमंच",
+    "Nrityanjali<br>नृत्यांजलि",
+    "Natya Utsav<br>नाट्य उत्सव"
+   ],
+   "my_ans": "C",
+   "sol": "नृत्यांजलि 2020 में आयोजित एक ऑनलाइन महोत्सव था, जिसमें भरतनाट्यम, कथक और ओडिसी जैसे शास्त्रीय नृत्यों के दिग्गजों पर वृत्तचित्र दिखाए गए थे।",
+   "trick": "नृत्यांजलि = 2020 ऑनलाइन नृत्य महोत्सव",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which of the following dance forms is from Uttar Pradesh?",
+   "hi": "निम्नलिखित में से कौन-सी नृत्य शैली का संबंध उत्तर प्रदेश से है?",
+   "opts": [
+    "Bharatnatyam<br>भरतनाट्यम",
+    "Manipuri<br>मणिपुरी",
+    "Odissi<br>ओडिसी",
+    "Kathak<br>कथक"
+   ],
+   "my_ans": "D",
+   "sol": "कथक उत्तर प्रदेश का प्रमुख शास्त्रीय नृत्य है, जिसका विकास मुख्य रूप से लखनऊ और वाराणसी के घरानों में हुआ।",
+   "trick": "कथक = उत्तर प्रदेश (लखनऊ)",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which famous Indian classical singer was awarded the Bharat Ratna in 1998 for her contribution to Carnatic music?",
+   "hi": "1998 में किस प्रसिद्ध भारतीय शास्त्रीय गायिका को कर्नाटक संगीत में उनके योगदान के लिए, भारत रत्न से सम्मानित किया गया था?",
+   "opts": [
+    "Kishori Amonkar<br>किशोरी अमोनकर",
+    "Aruna Sairam<br>अरुणा साईराम",
+    "M. S. Subbulakshmi<br>एम. एस. सुब्बुलक्ष्मी",
+    "Shubha Mudgal<br>शुभा मुद्गल"
+   ],
+   "my_ans": "C",
+   "sol": "एम. एस. सुब्बुलक्ष्मी कर्नाटक संगीत की महान गायिका थीं, जिन्हें 1998 में भारत रत्न मिला। वह यह सम्मान पाने वाली पहली संगीतकार थीं।",
+   "trick": "सुब्बुलक्ष्मी = भारत रत्न (1998)",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "In which year was Bal Gangadhar Tilak arrested by the British authorities for writing a seditious article in the newspaper ‘Kesari’?",
+   "hi": "बाल गंगाधर तिलक को ब्रिटिश अधिकारियों द्वारा अखबार 'केसरी' में राजद्रोहपूर्ण लेख लिखने के आरोप में किस वर्ष गिरफ्तार किया गया था?",
+   "opts": [
+    "1910",
+    "1907",
+    "1908",
+    "1909"
+   ],
+   "my_ans": "C",
+   "sol": "बाल गंगाधर तिलक को 1908 में 'केसरी' में क्रांतिकारी लेख लिखने के लिए गिरफ्तार किया गया और मांडले जेल (बर्मा) भेजा गया।",
+   "trick": "तिलक = 1908 राजद्रोह केस",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which institution formed by Pandit Birju Maharaj focuses on imparting training in the field of Kathak and related disciplines?",
+   "hi": "पंडित बिरजू महाराज द्वारा स्थापित कौन-सा संस्थान, कथक और संबंधित विद्याशाखाओं में प्रशिक्षण प्रदान करने पर केंद्रित है?",
+   "opts": [
+    "Kala Kendra<br>कला केंद्र",
+    "Natya Vriksha<br>नाट्य वृक्ष",
+    "Kalashram<br>कलाश्रम",
+    "Satrang Kala<br>सतरंग कला"
+   ],
+   "my_ans": "C",
+   "sol": "पंडित बिरजू महाराज ने नई दिल्ली में 'कलाश्रम' की स्थापना की थी, जो कथक नृत्य को संरक्षित और बढ़ावा देने का कार्य करता है।",
+   "trick": "बिरजू महाराज = कलाश्रम",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which temple's garbhagriha houses a Chaturmukha (four-faced) Vishnu image?",
+   "hi": "किस मंदिर के गर्भगृह में चतुर्मुख (चार मुखों वाले) विष्णु की प्रतिमा स्थापित है?",
+   "opts": [
+    "Lakshmana Temple, Khajuraho<br>लक्ष्मण मंदिर, खजुराहो",
+    "Dashavatara Temple, Deogarh<br>दशावतार मंदिर, देवगढ़",
+    "Brihadiswara Temple, Thanjavur<br>बृहदीश्वर मंदिर, तंजावुर",
+    "Meenakshi Temple, Madurai<br>मीनाक्षी मंदिर, मदुरै"
+   ],
+   "my_ans": "A",
+   "sol": "खजुराहो का लक्ष्मण मंदिर (चंदेल वंश) भगवान विष्णु को समर्पित है, जिसके गर्भगृह में दुर्लभ चतुर्मुख विष्णु की प्रतिमा स्थापित है।",
+   "trick": "लक्ष्मण मंदिर = चतुर्मुख विष्णु",
+   "img": "figs/c04_q018.png",
+   "ans": "A"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Who wrote the introductory essay to Sarojini Naidu’s 1905 poetry collection The Golden Threshold?",
+   "hi": "सरोजिनी नायडू के 1905 में प्रकाशित कविता संग्रह 'द गोल्डन थ्रेशहोल्ड' का परिचयात्मक निबंध किसने लिखा था?",
+   "opts": [
+    "Edmond Gosse<br>एडमंड गोसे",
+    "Arthur Symons<br>आर्थर साइमन्स",
+    "W. B. Yeats<br>डब्ल्यू. बी. येट्स",
+    "Rabindranath Tagore<br>रवींद्रनाथ टैगोर"
+   ],
+   "my_ans": "B",
+   "sol": "सरोजिनी नायडू के कविता संग्रह 'द गोल्डन थ्रेशहोल्ड' की प्रस्तावना ब्रिटिश कवि और आलोचक आर्थर साइमन्स ने लिखी थी।",
+   "trick": "गोल्डन थ्रेशहोल्ड = आर्थर साइमन्स",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which North Indian fair, held every 12 years, is a major Hindu pilgrimage event at Prayagraj?",
+   "hi": "प्रत्येक 12 वर्ष में आयोजित होने वाला कौन-सा उत्तर भारतीय मेला, प्रयागराज में एक प्रमुख हिंदू तीर्थयात्रा कार्यक्रम है?",
+   "opts": [
+    "Pushkar Mela<br>पुष्कर मेला",
+    "Surajkund Mela<br>सूरजकुंड मेला",
+    "Kumbh Mela<br>कुंभ मेला",
+    "Hemis Festival<br>हेमिस उत्सव"
+   ],
+   "my_ans": "C",
+   "sol": "कुंभ मेला दुनिया का सबसे बड़ा धार्मिक आयोजन है, जो प्रयागराज, हरिद्वार, उज्जैन और नासिक में हर 12 साल में बारी-बारी से आयोजित होता है।",
+   "trick": "कुंभ = 12 साल",
+   "ans": "C"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Which Classical Language underwent significant scriptural evolution from Grantha, Vatteluttu, Kolezhuthu, and finally to its current script used in modern writing?",
+   "hi": "किस शास्त्रीय भाषा का ग्रंथ, वट्टेलुट्टु, कोलेझुथु और अंततः आधुनिक लेखन में उपयोग की जाने वाली इसकी वर्तमान लिपि में महत्वपूर्ण लिपिगत विकास हुआ?",
+   "opts": [
+    "Odia<br>ओडिया",
+    "Tamil<br>तमिल",
+    "Malayalam<br>मलयालम",
+    "Kannada<br>कन्नड़"
+   ],
+   "my_ans": "C",
+   "sol": "मलयालम भाषा की लिपि का विकास प्राचीन ग्रंथ और वट्टेलुट्टु लिपियों से हुआ है, जो समय के साथ आधुनिक मलयालम लिपि में परिवर्तित हुई।",
+   "trick": "मलयालम = वट्टेलुट्टु से विकास",
+   "ans": "C"
+  }
+ ]
+}

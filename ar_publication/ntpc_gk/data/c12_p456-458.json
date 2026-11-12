@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "456-458",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Which statement is True or False regarding file management in Windows 11? ( i ) When a file is deleted and moved to the Recycle Bin, its contents are immediately and permanently erased from the storage disk. (ii) The file path (C: > Users > Documents > file.txt) is a strictly hierarchical structure, meaning each file has one unique path.",
+   "hi": "विंडोज 11 में फ़ाइल प्रबंधन के संबंध में कौन-सा कथन सत्य या असत्य है?(i) जब किसी फ़ाइल को डिलीट किया जाता है, और उसे रीसायकल बिन में मूव किया जाता है, तो उसका कंटेंट स्टोरेज डिस्क से तुरंत और स्थायी रूप से इरेज़ (erase) हो जाता है।(ii) फ़ाइल पथ (C: > Users > Documents > file.txt) एक सख्त पदानुक्रमित संरचना है, जिसका अर्थ है कि प्रत्येक फ़ाइल का एक अद्वितीय पथ होता है।",
+   "opts": [
+    "( i ) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "( i ) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "( i ) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "( i ) False, (ii) True<br>(i) असत्य, (ii) सत्य"
+   ],
+   "my_ans": "D",
+   "sol": "रीसायकल बिन में फाइल जाने पर वह तुरंत डिलीट नहीं होती, उसे रिस्टोर किया जा सकता है।<br>विंडोज NTFS फाइल सिस्टम एक पदानुक्रमित (hierarchical) संरचना का उपयोग करता है जहाँ हर फाइल का एक अद्वितीय पथ होता है।",
+   "trick": "रीसायकल बिन = अस्थायी डिलीट; NTFS = पदानुक्रमित संरचना",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which Windows component helps users to install, remove, or manage software?",
+   "hi": "विंडोज का कौन-सा घटक उपयोगकर्ताओं को सॉफ्टवेयर इंस्टॉल करने, रिमूव करने या प्रबंधित करने में सहायता करता है?",
+   "opts": [
+    "File Explorer<br>फाइल एक्सप्लोरर",
+    "Task Bar<br>टास्क बार",
+    "Recycle Bin<br>रीसायकल बिन",
+    "Control panel<br>कंट्रोल पैनल"
+   ],
+   "my_ans": "D",
+   "sol": "कंट्रोल पैनल विंडोज का वह घटक है जो सॉफ्टवेयर को इंस्टॉल, अनइंस्टॉल और सिस्टम सेटिंग्स को प्रबंधित करने की सुविधा देता है।",
+   "trick": "सॉफ्टवेयर प्रबंधन = कंट्रोल पैनल",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which of the following statements best represents system software?",
+   "hi": "निम्नलिखित में से कौन-सा कथन सिस्टम सॉफ्टवेयर का सर्वोत्तम प्रतिनिधित्व करता है?",
+   "opts": [
+    "Software that controls all internal computer functions<br>कंप्यूटर के सभी आंतरिक कार्यों को नियंत्रित करने वाला सॉफ्टवेयर",
+    "Software used to play games<br>गेम खेलने के लिए उपयोग किया जाने वाला सॉफ्टवेयर",
+    "Software used to design custom projects<br>कस्टम प्रोजेक्ट डिज़ाइन करने के लिए उपयोग किया जाने वाला सॉफ्टवेयर",
+    "Software used for preparing presentations<br>प्रेजेंटेशन तैयार करने के लिए उपयोग किया जाने वाला सॉफ्टवेयर"
+   ],
+   "my_ans": "A",
+   "sol": "सिस्टम सॉफ्टवेयर कंप्यूटर के हार्डवेयर और आंतरिक कार्यों (जैसे CPU, मेमोरी) को नियंत्रित करता है और अन्य सॉफ्टवेयर के लिए मंच प्रदान करता है।",
+   "trick": "सिस्टम सॉफ्टवेयर = कंप्यूटर का आधार/नियंत्रक",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which of the following is an example of Application Software?",
+   "hi": "निम्नलिखित में से एप्लीकेशन सॉफ्टवेयर का उदाहरण कौन-सा है?",
+   "opts": [
+    "BIOS",
+    "Windows<br>विंडोज",
+    "MS Excel<br>एमएस एक्सेल",
+    "Linux<br>लिनक्स"
+   ],
+   "my_ans": "C",
+   "sol": "MS Excel एक एप्लीकेशन सॉफ्टवेयर है जिसका उपयोग उपयोगकर्ता विशिष्ट कार्यों (जैसे स्प्रेडशीट) के लिए करते हैं। BIOS, Windows और Linux सिस्टम सॉफ्टवेयर हैं।",
+   "trick": "उपयोगकर्ता के विशिष्ट कार्य = एप्लीकेशन सॉफ्टवेयर",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Unlike humans, a computer does not feel tired or bored while repeating the same task all day. This shows which characteristic?",
+   "hi": "मनुष्यों के विपरीत, कंप्यूटर दिन भर एक ही कार्य को दोहराते हुए भी थकावट या अरुचि महसूस नहीं करता है। कंप्यूटर की यह विशेषता क्या कहलाती है?",
+   "opts": [
+    "Speed<br>गति",
+    "Versatility<br>बहुआयामिता",
+    "Intelligence<br>बुद्धिमत्ता",
+    "Diligence<br>अध्यवसाय"
+   ],
+   "my_ans": "D",
+   "sol": "डिलिजेंस (अध्यवसाय) कंप्यूटर की वह क्षमता है जिससे वह बिना थके या बोर हुए घंटों तक एक ही काम को सटीकता से कर सकता है।",
+   "trick": "बिना थके काम करना = डिलिजेंस",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "In the Windows Operating System, if a file named config.ini is located in the root directory of the main drive, what is the correct and complete absolute path to reference this file?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम में, यदि config.ini नामक एक फ़ाइल मुख्य ड्राइव के रूट डायरेक्टरी में है, तो इस फ़ाइल को संदर्भित करने के लिए सही और पूर्ण एब्सोल्यूट पाथ (absolute path) क्या है?",
+   "opts": [
+    "config.ini",
+    "\\config.ini",
+    "C:\\config.ini",
+    "C:\\Users\\config.ini"
+   ],
+   "my_ans": "C",
+   "sol": "विंडोज में मुख्य ड्राइव आमतौर पर C: होती है और रूट डायरेक्टरी को C:\\ से दर्शाया जाता है, इसलिए पूर्ण पथ C:\\config.ini होगा।",
+   "trick": "एब्सोल्यूट पाथ = ड्राइव लेटर + रूट + फाइल नाम",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which of the following operations specifically relies on system software instead of application software to function properly?",
+   "hi": "निम्नलिखित में से कौन-सा ऑपरेशन, सही तरीके से काम करने के लिए एप्लीकेशन सॉफ्टवेयर के स्थान पर सिस्टम सॉफ्टवेयर पर विशेष रूप से निर्भर करता है?",
+   "opts": [
+    "Playing an audio or video file on System<br>सिस्टम पर ऑडियो या वीडियो फाइल को प्ले करना",
+    "Allocating memory to programs<br>प्रोग्रामों को मेमोरी आवंटित (Allocate) करना",
+    "Modifying a digital photo file<br>डिजिटल फोटो फाइल को मॉडिफाई करना",
+    "Designing a presentation file<br>प्रेजेंटेशन फाइल को डिज़ाइन करना"
+   ],
+   "my_ans": "B",
+   "sol": "मेमोरी आवंटन (Memory allocation) ऑपरेटिंग सिस्टम का मुख्य कार्य है, जो कि एक सिस्टम सॉफ्टवेयर है।",
+   "trick": "संसाधन प्रबंधन (मेमोरी/प्रोसेस) = सिस्टम सॉफ्टवेयर",
+   "ans": "B"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Which of the following subjects are included in the Union List under the Seventh Schedule of the Indian Constitution?",
+   "hi": "भारतीय संविधान की सातवीं अनुसूची के अंतर्गत निम्नलिखित में से कौन-से विषय संघ सूची में शामिल हैं?",
+   "opts": [
+    "Local government, markets, and fairs<br>स्थानीय सरकार, बाजार और मेले",
+    "Education, forests, and marriage<br>शिक्षा, वन और विवाह",
+    "Defence , foreign affairs, and citizenship<br>रक्षा, विदेशी मामले और नागरिकता",
+    "Police, public health, and agriculture<br>पुलिस, जन स्वास्थ्य और कृषि"
+   ],
+   "my_ans": "C",
+   "sol": "रक्षा, विदेशी मामले और नागरिकता संघ सूची (Union List) के विषय हैं जिन पर केवल संसद कानून बना सकती है।",
+   "trick": "संघ सूची = रक्षा, विदेश, नागरिकता",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "616-618",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 169,
+   "lvl": "UG",
+   "en": "Who is the final appellate authority under the Right to Information Act?",
+   "hi": "सूचना अधिकार अधिनियम के तहत अंतिम अपीलीय प्राधिकरण कौन होता है?",
+   "opts": [
+    "Lokpal<br>लोकपाल",
+    "Supreme Court<br>उच्चतम न्यायालय",
+    "Central Information Commission<br>केंद्रीय सूचना आयोग",
+    "High Court<br>उच्च न्यायालय"
+   ],
+   "my_ans": "C",
+   "sol": "सूचना का अधिकार अधिनियम के तहत केंद्रीय सूचना आयोग (CIC) या राज्य सूचना आयोग (SIC) अंतिम अपीलीय प्राधिकरण है।",
+   "trick": "RTI में अंतिम अपील सूचना आयोग के पास होती है।",
+   "ans": "C"
+  },
+  {
+   "n": 170,
+   "lvl": "UG",
+   "en": "Who received the Chief of Army Staff Commendation Card from General Upendra Dwivedi on October 7, 2025?",
+   "hi": "7 अक्टूबर 2025 को जनरल उपेंद्र द्विवेदी से चीफ ऑफ आर्मी स्टाफ कमेंडेशन कार्ड किसने प्राप्त किया?",
+   "opts": [
+    "Akshay Kumar<br>अक्षय कुमार",
+    "Hrithik Roshan<br>ऋतिक रोशन",
+    "Mohanlal<br>मोहनलाल",
+    "Amitabh Bachchan<br>अमिताभ बच्चन"
+   ],
+   "my_ans": "C",
+   "sol": "प्रसिद्ध अभिनेता मोहनलाल को थल सेनाध्यक्ष जनरल उपेंद्र द्विवेदी द्वारा यह सम्मान प्रदान किया गया था।",
+   "trick": "मोहनलाल प्रादेशिक सेना में मानद लेफ्टिनेंट कर्नल भी हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 171,
+   "lvl": "UG",
+   "en": "According to the Union Budget 2025-26, what is the total estimated expenditure for the year?",
+   "hi": "केंद्रीय बजट 2025-26 के अनुसार, समान वित्त वर्ष के लिए कुल अनुमानित व्यय कितना है?",
+   "opts": [
+    "₹40 lakh crore<br>₹40 लाख करोड़",
+    "₹45 lakh crore<br>₹45 लाख करोड़",
+    "₹50.65 lakh crore<br>₹50.65 लाख करोड़",
+    "₹55 lakh crore<br>₹55 लाख करोड़"
+   ],
+   "my_ans": "C",
+   "sol": "वित्त वर्ष 2025-26 के लिए केंद्रीय बजट में कुल अनुमानित व्यय ₹50.65 लाख करोड़ घोषित किया गया था।",
+   "trick": "बजट 2025-26 का कुल व्यय 50.65 लाख करोड़ याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 172,
+   "lvl": "UG",
+   "en": "The Tri-Services Exercise (TSE-2025) “Trishul,” commencing in November 2025, is being led by which branch of the Indian Armed Forces?",
+   "hi": "नवंबर 2025 में शुरू होने वाले त्रि-सेवा अभ्यास (TSE-2025) \"त्रिशूल\" का नेतृत्व भारतीय सशस्त्र बलों की किस शाखा द्वारा किया गया है?",
+   "opts": [
+    "Indian Coast Guard<br>भारतीय तटरक्षक बल",
+    "Indian Navy<br>भारतीय नौसेना",
+    "Indian Army<br>भारतीय थल सेना",
+    "Indian Air Force<br>भारतीय वायु सेना"
+   ],
+   "my_ans": "B",
+   "sol": "त्रिशूल अभ्यास का नेतृत्व भारतीय नौसेना द्वारा समन्वयक सेवा के रूप में किया गया था।",
+   "trick": "त्रिशूल अभ्यास का नेतृत्व नौसेना ने किया।",
+   "ans": "B"
+  },
+  {
+   "n": 173,
+   "lvl": "UG",
+   "en": "Consider the following statements about Right to Information (RTI) and choose the correct option.",
+   "hi": "सूचना का अधिकार (RTI) के बारे में निम्नलिखित कथनों पर विचार करें और सही विकल्प चुनें।",
+   "opts": [
+    "Both I and II are correct<br>दोनों I और II सही हैं",
+    "Only I is correct<br>केवल I सही है",
+    "Neither I nor II is correct<br>न तो I और न ही II सही है",
+    "Only II is correct<br>केवल II सही है"
+   ],
+   "my_ans": "A",
+   "sol": "RTI पारदर्शिता और जवाबदेही सुनिश्चित करता है और इसका उपयोग उपभोक्ता फोरम की कार्यप्रणाली को ट्रैक करने के लिए भी किया जाता है।",
+   "trick": "RTI शासन में पारदर्शिता और जवाबदेही का मुख्य हथियार है।",
+   "ans": "A"
+  },
+  {
+   "n": 174,
+   "lvl": "UG",
+   "en": "What new laser-based weapon system did DRDO successfully field-test in April 2025, which is now being transferred for private sector production?",
+   "hi": "DRDO ने अप्रैल 2025 में किस नए लेजर-आधारित हथियार प्रणाली का सफलतापूर्वक फील्ड-परीक्षण किया, जिसे अब प्राइवेट क्षेत्र के उत्पादन के लिए स्थानांतरित किया जा रहा है?",
+   "opts": [
+    "2 kW Portable Laser<br>2 kW पोर्टेबल लेजर",
+    "100 kW Surya Laser System<br>100 kW सूर्य लेजर सिस्टम",
+    "Infrared Drone Interceptor<br>इन्फ्रारेड ड्रोन इंटरसेप्टर",
+    "30 kW IDD&IS Mk-IIA<br>30 kW IDD&IS Mk-IIA"
+   ],
+   "my_ans": "D",
+   "sol": "DRDO ने 30 kW क्षमता वाली IDD&IS Mk-IIA लेजर प्रणाली का परीक्षण किया, जो ड्रोन और हवाई खतरों को रोकने में सक्षम है।",
+   "trick": "30 kW IDD&IS Mk-IIA लेजर हथियार प्रणाली याद रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 175,
+   "lvl": "UG",
+   "en": "The Right to Information Act 2005 was extended to the whole of India except which of the following state/UT at the time of enactment in 2005?",
+   "hi": "सूचना का अधिकार अधिनियम, 2005, वर्ष 2005 में इसके अधिनियमन के समय निम्नलिखित में से किस राज्य/केंद्र शासित प्रदेश को छोड़कर पूरे भारत में विस्तारित किया गया था?",
+   "opts": [
+    "Tripura<br>त्रिपुरा",
+    "Mizoram<br>मिजोरम",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Jammu and Kashmir<br>जम्मू और कश्मीर"
+   ],
+   "my_ans": "D",
+   "sol": "2005 में अधिनियम के समय जम्मू और कश्मीर को विशेष दर्जा (अनुच्छेद 370) के कारण इससे बाहर रखा गया था।",
+   "trick": "2019 से पहले J&K पर केंद्रीय कानून लागू नहीं थे।",
+   "ans": "D"
+  },
+  {
+   "n": 176,
+   "lvl": "UG",
+   "en": "What was the main objective of the Samanvay Shakti exercise launched in August 2025 at Laipuli in Tinsukia district of Assam by Indian Army in collaboration with state officials of Assam and Manipur?",
+   "hi": "अगस्त 2025 में असम के तिनसुकिया जिले के लाइपुली में भारतीय सेना द्वारा असम और मणिपुर के राज्य अधिकारियों के सहयोग से शुरू किए गए समन्वय शक्ति (Samanvay Shakti) अभ्यास का मुख्य उद्देश्य क्या था?",
+   "opts": [
+    "Joint military training between India and friendly foreign countries for counter-terrorism operations<br>आतंकवाद विरोधी अभियानों के लिए भारत और मित्र विदेशी देशों के बीच संयुक्त सैन्य प्रशिक्षण",
+    "Strategic border defence drill aimed at strengthening Indo-Myanmar military cooperation<br>भारत-म्यांमार सैन्य सहयोग को मजबूत करने के उद्देश्य से रणनीतिक सीमा रक्षा अभ्यास",
+    "Large-scale disaster management rehearsal with focus on earthquake and flood preparedness<br>भूकंप और बाढ़ की तैयारियों पर विशेष ध्यान देने के साथ बड़े पैमाने पर आपदा प्रबंधन का पूर्वाभ्यास",
+    "Military-civil integration to foster synergy between security forces, government departments, and civil institutions<br>सुरक्षा बलों, सरकारी विभागों और नागरिक संस्थानों के बीच तालमेल को बढ़ावा देने के लिए सैन्य-नागरिक एकीकरण"
+   ],
+   "my_ans": "D",
+   "sol": "समन्वय शक्ति का मुख्य उद्देश्य सुरक्षा बलों, सरकारी विभागों और नागरिक संस्थानों के बीच बेहतर तालमेल और एकीकरण सुनिश्चित करना था।",
+   "trick": "समन्वय का अर्थ ही तालमेल और एकीकरण है।",
+   "ans": "D"
+  },
+  {
+   "n": 177,
+   "lvl": "UG",
+   "en": "According to the Supreme Court of India directives issued in November 2025, which animals must be removed and permanently relocated from institutional public spaces such as schools, hospitals, and railway stations?",
+   "hi": "नवंबर 2025 में, भारत के सर्वोच्च न्यायालय द्वारा जारी निर्देशों के अनुसार, स्कूलों, अस्पतालों और रेलवे स्टेशनों जैसे संस्थागत सार्वजनिक स्थानों से किन जानवरों को हटाकर स्थायी रूप से स्थानांतरित किया जाना चाहिए?",
+   "opts": [
+    "Stray cats<br>लावारिस बिल्लियों",
+    "Stray cows<br>लावारिस गायों",
+    "Stray donkeys<br>लावारिस गधों",
+    "Stray dogs<br>लावारिस कुत्तों"
+   ],
+   "my_ans": "D",
+   "sol": "सार्वजनिक सुरक्षा और स्वच्छता सुनिश्चित करने के लिए सर्वोच्च न्यायालय ने स्कूलों और अस्पतालों जैसे स्थानों से आवारा कुत्तों को हटाने का निर्देश दिया।",
+   "trick": "संस्थागत क्षेत्रों में सुरक्षा के लिए आवारा कुत्ते हटाए गए।",
+   "ans": "D"
+  },
+  {
+   "n": 178,
+   "lvl": "UG",
+   "en": "Which rules define the process of identification, determination, and remediation of contaminated sites?",
+   "hi": "कौन से नियम दूषित स्थलों की पहचान, निर्धारण और उपचार की प्रक्रिया को परिभाषित करते हैं?",
+   "opts": [
+    "Hazardous Waste Management Rules<br>खतरनाक अपशिष्ट प्रबंधन नियम",
+    "Environmental Protection Act Rules<br>पर्यावरण संरक्षण अधिनियम नियम",
+    "Hazardous and Other Wastes (Management and Transboundary Movement) Rules<br>खतरनाक और अन्य अपशिष्ट (प्रबंधन और सीमा पार संचलन) नियम",
+    "Polluted Site Remediation Rules<br>दूषित स्थल उपचार नियम"
+   ],
+   "my_ans": "C",
+   "sol": "खतरनाक और अन्य अपशिष्ट नियम दूषित स्थलों की पहचान और उनके उपचार की प्रक्रिया को परिभाषित करते हैं।",
+   "trick": "खतरनाक अपशिष्ट प्रबंधन नियम ही दूषित स्थलों का उपचार करते हैं।",
+   "ans": "C"
+  }
+ ]
+}

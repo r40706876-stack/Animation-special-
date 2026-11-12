@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "504-506",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 177,
+   "lvl": "UG",
+   "en": "In Google Docs, when you press Ctrl + S, what technical action occurs in the background?",
+   "hi": "गूगल डॉक्स (Google Docs) में, जब आप Ctrl + S प्रेस करते हैं, तो बैकग्राउंड में कौन-सा टेक्निकल एक्शन होता है?",
+   "opts": [
+    "An immediate sync to Drive is triggered<br>ड्राइव (Drive) में शीघ्र सिंक (sync) ट्रिगर हो जाता है",
+    "The keyboard shortcut is not recognized<br>कीबोर्ड शॉर्टकट को पहचाना नहीं जाता है",
+    "The Save As dialog box appears on screen<br>स्क्रीन पर Save As डायलॉग बॉक्स दिखाई देता है",
+    "The document is saved to local storage<br>डॉक्यूमेंट लोकल स्टोरेज (local storage) में सेव हो जाता है"
+   ],
+   "my_ans": "A",
+   "sol": "गूगल डॉक्स क्लाउड-आधारित है, इसलिए इसमें Ctrl + S दबाने पर फाइल तुरंत गूगल ड्राइव सर्वर के साथ सिंक हो जाती है।",
+   "trick": "Google Docs = Cloud, Ctrl+S = Sync to Drive.",
+   "ans": "A"
+  },
+  {
+   "n": 178,
+   "lvl": "UG",
+   "en": "Which part of Windows 10 OS settings can you use to change when the computer enters Power Saving Mode?",
+   "hi": "विंडोज 10 OS सेटिंग्स के किस भाग का उपयोग करके यह बदल सकते हैं कि कंप्यूटर कब पावर सेविंग मोड में जाएगा?",
+   "opts": [
+    "Updates & Security<br>अपडेट और सिक्योरिटी (Updates & Security)",
+    "Network & Internet<br>नेटवर्क और इंटरनेट (Network & Internet)",
+    "Display Settings<br>डिस्प्ले सेटिंग (Display Settings)",
+    "Power & Sleep Settings<br>पावर और स्लीप सेटिंग (Power & Sleep Settings)"
+   ],
+   "my_ans": "D",
+   "sol": "विंडोज 10 में पावर सेविंग मोड या स्लीप टाइमिंग को 'Settings > System > Power & Sleep' के माध्यम से नियंत्रित किया जाता है।",
+   "trick": "Power saving = Power & Sleep settings.",
+   "ans": "D"
+  },
+  {
+   "n": 179,
+   "lvl": "UG",
+   "en": "Which command-line tool is used in Windows to search for file names across directories without opening File Explorer?",
+   "hi": "विंडोज में फाइल एक्सप्लोरर ओपन किए बिना डायरेक्टरी में फाइल नामों को ढूंढने के लिए किस कमांड-लाइन टूल (command-line tool) का उपयोग किया जाता है?",
+   "opts": [
+    "dir /s",
+    "chkdsk",
+    "Ping",
+    "Tasklist"
+   ],
+   "my_ans": "A",
+   "sol": "कमांड प्रॉम्प्ट में 'dir /s' कमांड का उपयोग सभी सब-डायरेक्टरी में फाइलों को खोजने के लिए किया जाता है।",
+   "trick": "dir = directory, /s = subdirectories.",
+   "ans": "A"
+  },
+  {
+   "n": 180,
+   "lvl": "UG",
+   "en": "Which type of file is identified by the extension .exe in Windows 11?",
+   "hi": "विंडोज 11 में किस प्रकार की फाइल को .exe एक्सटेंशन द्वारा पहचाना जाता है?",
+   "opts": [
+    "Document file<br>डॉक्यूमेंट फाइल",
+    "Image file<br>इमेज फाइल",
+    "System text file<br>सिस्टम टेक्स्ट फाइल",
+    "Executable program file<br>एक्जीक्यूटेबल प्रोग्राम फाइल"
+   ],
+   "my_ans": "D",
+   "sol": ".exe का अर्थ 'executable' होता है, जो प्रोग्राम फाइलों को दर्शाता है जिन्हें कंप्यूटर पर चलाया जा सकता है।",
+   "trick": ".exe = Executable (चलने योग्य प्रोग्राम).",
+   "ans": "D"
+  },
+  {
+   "n": 181,
+   "lvl": "UG",
+   "en": "What is the purpose of using different file types with extensions in an operating system like MS Windows?",
+   "hi": "एमएस विंडोज (MS Windows) जैसे ऑपरेटिंग सिस्टम में एक्सटेंशन वाले अलग-अलग फाइल टाइप का उपयोग करने का क्या उद्देश्य है?",
+   "opts": [
+    "To allow the OS to determine which application should open the file<br>OS को यह निर्धारित करने की सुविधा देता है कि फाइल का कौन-सा एप्लीकेशन ओपन होगा।",
+    "To hide file content and remove the content from file<br>फाइल का कंटेंट छिपाना और फाइल से कंटेंट हटाना",
+    "To make file names longer and rename file<br>फाइल के नाम लंबे करना और फाइल का नाम बदलना",
+    "To increase file size and make changes in file<br>फाइल का साइज बढ़ाना और फाइल में बदलाव करना"
+   ],
+   "my_ans": "A",
+   "sol": "फाइल एक्सटेंशन ऑपरेटिंग सिस्टम को यह पहचानने में मदद करते हैं कि फाइल को खोलने के लिए किस सॉफ्टवेयर या एप्लीकेशन का उपयोग करना है।",
+   "trick": "Extension = Application association.",
+   "ans": "A"
+  },
+  {
+   "n": 182,
+   "lvl": "UG",
+   "en": "In modern Windows versions (Windows 10/11), which Task Manager tab allows users to monitor real-time graphics card utilization for individual applications?",
+   "hi": "विंडोज के आधुनिक संस्करणों (विंडोज 10/11) में, टास्क मैनेजर का कौन-सा टैब उपयोगकर्ताओं को अलग-अलग एप्लीकेशन के लिए रियल टाइम ग्राफिक्स कार्ड (real-time graphics card) के उपयोग को मॉनिटर करने की सुविधा देता है?",
+   "opts": [
+    "Processes",
+    "Performance",
+    "App History",
+    "Startup"
+   ],
+   "my_ans": "A",
+   "sol": "टास्क मैनेजर का 'Processes' टैब प्रत्येक चल रहे एप्लीकेशन के लिए CPU, मेमोरी और GPU उपयोग का विवरण दिखाता है।",
+   "trick": "Processes = Per-app resource usage.",
+   "ans": "A"
+  },
+  {
+   "n": 183,
+   "lvl": "UG",
+   "en": "In the Windows operating system, _________ is the first user-mode process that initializes system sessions and starts essential background services.",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम में, _________ पहला यूजर-मोड प्रोसेस है जो सिस्टम सेशन को प्रारंभ करता है और आवश्यक बैकग्राउंड सर्विस को शुरू करता है।",
+   "opts": [
+    "Windows Explorer<br>विंडोज एक्सप्लोरर",
+    "Task Manager<br>टास्क मैनेजर",
+    "Control Panel<br>कंट्रोल पैनल",
+    "Session Manager<br>सेशन मैनेजर"
+   ],
+   "my_ans": "D",
+   "sol": "Session Manager (smss.exe) विंडोज बूट प्रक्रिया के दौरान शुरू होने वाला पहला यूजर-मोड प्रोसेस है, जो सिस्टम सत्रों को प्रबंधित करता है।",
+   "trick": "smss.exe = Session Manager (First user-mode process).",
+   "ans": "D"
+  },
+  {
+   "n": 184,
+   "lvl": "UG",
+   "en": "An image-editing program and a video-editing program both use the same shared library for color correction. Which advantage of modular application software does this situation show?",
+   "hi": "एक इमेज एडिटिंग प्रोग्राम और एक वीडियो एडिटिंग प्रोग्राम, दोनों ही कलर करेक्शन के लिए एक ही शेयर्ड लाइब्रेरी का उपयोग करते हैं। यह स्थिति मॉड्यूलर एप्लीकेशन सॉफ्टवेयर का कौन-सा लाभ दर्शाती है?",
+   "opts": [
+    "Increased redundancy<br>बढ़ी हुई अतिरेकता",
+    "Removal of all dependencies<br>सभी निर्भरताओं का निष्कासन",
+    "Guaranteed offline operation<br>ऑफलाइन ऑपरेशन की गारंटी",
+    "Code reusability across different applications<br>विभिन्न एप्लीकेशन्स में कोड का पुनः उपयोग"
+   ],
+   "my_ans": "D",
+   "sol": "जब एक ही लाइब्रेरी का उपयोग कई प्रोग्राम करते हैं, तो इसे 'कोड पुन: प्रयोज्यता' (code reusability) कहा जाता है, जिससे डुप्लीकेट कोड लिखने की आवश्यकता नहीं होती।",
+   "trick": "Shared library = Code reusability.",
+   "ans": "D"
+  },
+  {
+   "n": 185,
+   "lvl": "UG",
+   "en": "Which aspect most clearly contrasts user interaction with system software versus application software?",
+   "hi": "कौन-सा पहलू सिस्टम सॉफ्टवेयर बनाम एप्लीकेशन सॉफ्टवेयर के साथ उपयोगकर्ता इंटरैक्शन को सबसे स्पष्ट रूप से विपरीत करता है?",
+   "opts": [
+    "System software typically has minimal direct interaction; applications are highly interactive.<br>सिस्टम सॉफ्टवेयर में न्यूनतम प्रत्यक्ष इंटरैक्शन होता है; एप्लीकेशन अत्यधिक इंटरैक्टिव होते हैं।",
+    "Application software never has a graphical interface.<br>एप्लीकेशन सॉफ्टवेयर में कभी ग्राफिकल इंटरफेस नहीं होता।",
+    "Users always configure system software for every action.<br>उपयोगकर्ता हमेशा हर क्रिया के लिए सिस्टम सॉफ्टवेयर को कॉन्फ़िगर करते हैं।",
+    "Both have identical interaction patterns.<br>दोनों के इंटरैक्शन पैटर्न समान होते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर को मैनेज करता है और बैकग्राउंड में चलता है, जबकि एप्लीकेशन सॉफ्टवेयर सीधे उपयोगकर्ता के कार्यों (जैसे MS Word) के लिए डिज़ाइन किए जाते हैं।",
+   "trick": "System = Background, Application = User-facing.",
+   "ans": "A"
+  }
+ ]
+}

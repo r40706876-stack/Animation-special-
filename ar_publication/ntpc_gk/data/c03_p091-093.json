@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "91-93",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Why was the Partition of Bengal (1905) widely opposed by Indian nationalists?",
+   "hi": "बंगाल विभाजन (1905) का भारतीय राष्ट्रवादियों द्वारा व्यापक रूप से विरोध क्यों किया गया था?",
+   "opts": [
+    "It was undertaken to promote regional trade expansion and economic integration of eastern Bengal.<br>क्योंकि यह पूर्वी बंगाल के क्षेत्रीय व्यापार प्रसार और आर्थिक एकीकरण को बढ़ावा देने के लिए किया गया था।",
+    "It was intended to divide people on communal lines and weaken the growing nationalist movement.<br>क्योंकि इसका उद्देश्य व्यक्तियों को सांप्रदायिक आधार पर विभाजित करना और बढ़ते राष्ट्रवादी आंदोलन को दुर्बल करना था।",
+    "It was proposed to relocate the colonial capital for better administrative coordination.<br>क्योंकि बेहतर प्रशासनिक समन्वय के लिए औपनिवेशिक राजधानी को स्थानांतरित करने का प्रस्ताव रखा गया था।",
+    "It was planned to improve agricultural administration and address recurring famine conditions.<br>क्योंकि इसकी योजना कृषि प्रशासन में सुधार करने और बार-बार आने वाले अकाल की स्थिति से निपटने के लिए बनाई गई थी।"
+   ],
+   "my_ans": "B",
+   "sol": "लॉर्ड कर्जन ने बंगाल को धार्मिक आधार पर विभाजित करने की कोशिश की ताकि हिंदू-मुस्लिम एकता को तोड़कर राष्ट्रवादी आंदोलन को कमजोर किया जा सके।",
+   "trick": "बांटो और राज करो की नीति",
+   "ans": "B"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "Who among the following founded the secret revolutionary society ‘Abhinav Bharat’ in 1904?",
+   "hi": "निम्नलिखित में से किसने 1904 में गुप्त क्रांतिकारी संगठन 'अभिनव भारत' की स्थापना की थी?",
+   "opts": [
+    "Khudiram Bose<br>खुदीराम बोस",
+    "V.D. Savarkar<br>वी. डी. सावरकर",
+    "Shyamji Krishna Varma<br>श्यामजी कृष्ण वर्मा",
+    "Lala Har Dayal<br>लाला हरदयाल"
+   ],
+   "my_ans": "B",
+   "sol": "अभिनव भारत सोसाइटी की स्थापना 1904 में विनायक दामोदर सावरकर (वी. डी. सावरकर) ने नासिक, महाराष्ट्र में की थी।",
+   "trick": "सावरकर का अभिनव भारत",
+   "ans": "B"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "Which of the following activities formed a central component of the extremist strategy of political mobilisation in the early nationalist phase of India's freedom struggle?",
+   "hi": "निम्नलिखित में से कौन सी गतिविधि भारत के स्वतंत्रता संग्राम के प्रारंभिक राष्ट्रवादी चरण में राजनीतिक लामबंदी की उग्रवादी रणनीति का एक केंद्रीय घटक थी?",
+   "opts": [
+    "Limiting participation to educated elites through controlled political forums<br>नियंत्रित राजनीतिक मंचों के माध्यम से भागीदारी को शिक्षित अभिजात वर्ग तक सीमित रखना",
+    "Adopting British constitutional practices as the primary model for reform<br>सुधार के प्राथमिक मॉडल के रूप में ब्रिटिश संवैधानिक प्रथाओं को अपनाना",
+    "Promoting swadeshi through the boycott of foreign goods and local production<br>स्वदेशी को विदेशी वस्तुओं के बहिष्कार और स्थानीय उत्पादन के माध्यम से बढ़ावा देना",
+    "Replacing mass meetings with secret organisations focused on covert action<br>जनसभाओं के स्थान पर गुप्त गतिविधियों पर केंद्रित गुप्त संगठनों को अपनाना"
+   ],
+   "my_ans": "C",
+   "sol": "उग्रवादी नेताओं (लाल-बाल-पाल) ने विदेशी वस्तुओं के बहिष्कार और स्वदेशी उत्पादों को बढ़ावा देकर जन-लामबंदी की रणनीति अपनाई थी।",
+   "trick": "स्वदेशी और बहिष्कार",
+   "ans": "C"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "Which event directly triggered the British–Bengal confrontation that culminated in the Battle of Plassey (1757)?",
+   "hi": "निम्नलिखित में से किस घटना ने प्रत्यक्ष रूप से ब्रिटिश बंगाल संघर्ष को जन्म दिया, जिसका समापन 1757 के प्लासी के युद्ध में हुआ?",
+   "opts": [
+    "Capture of Calcutta and attack on British factories by Siraj-ud-Daulah<br>सिराजुद्दौला द्वारा कलकत्ता पर अधिकार और ब्रिटिश फैक्टरियों पर आक्रमण",
+    "Abuse of duty-free trade privileges granted by imperial farmans<br>शाही फरमानों द्वारा प्रदान किए गए शुल्क-मुक्त व्यापार विशेषाधिकारों का दुरुपयोग",
+    "Refusal of the English Company to conduct inland trade in Bengal<br>अंग्रेजी कंपनी द्वारा बंगाल में आंतरिक व्यापार करने से इनकार",
+    "Expansion of Mughal administrative reforms affecting coastal trade<br>तटीय व्यापार को प्रभावित करने वाले मुगल प्रशासनिक सुधारों का प्रसार"
+   ],
+   "my_ans": "A",
+   "sol": "सिराजुद्दौला ने 1756 में कलकत्ता (फोर्ट विलियम) पर कब्जा कर लिया और ब्रिटिश कारखानों पर हमला किया, जो प्लासी के युद्ध का तात्कालिक कारण बना।",
+   "trick": "सिराज का कलकत्ता पर हमला",
+   "ans": "A"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "Which Charter Act ended the East India Company’s monopoly over trade with India?",
+   "hi": "निम्नलिखित में से किस चार्टर अधिनियम ने भारत के साथ व्यापार पर ईस्ट इंडिया कंपनी के एकाधिकार को समाप्त कर दिया था?",
+   "opts": [
+    "Charter Act of 1813<br>1813 का चार्टर अधिनियम",
+    "Charter Act of 1853<br>1853 का चार्टर अधिनियम",
+    "Charter Act of 1833<br>1833 का चार्टर अधिनियम",
+    "Charter Act of 1793<br>1793 का चार्टर अधिनियम"
+   ],
+   "my_ans": "A",
+   "sol": "1813 के चार्टर अधिनियम ने चाय और चीन के साथ व्यापार को छोड़कर ईस्ट इंडिया कंपनी के भारत के साथ व्यापारिक एकाधिकार को समाप्त कर दिया था।",
+   "trick": "1813: एकाधिकार का अंत",
+   "ans": "A"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "Vasco Da Gama reached Kappad near Calicut on which date to establish trade relations with Indian rulers?",
+   "hi": "वास्को डी गामा भारतीय शासकों के साथ व्यापारिक संबंध स्थापित करने के लिए किस तिथि को कालीकट के निकट कप्पड़ (Kappad) पहुँचा था?",
+   "opts": [
+    "14 April 1492<br>14 अप्रैल 1492",
+    "10 June 1495<br>10 जून 1495",
+    "20 November 1500<br>20 नवंबर 1500",
+    "20 May 1498<br>20 मई 1498"
+   ],
+   "my_ans": "D",
+   "sol": "पुर्तगाली खोजकर्ता वास्को डी गामा 20 मई 1498 को कालीकट के पास कप्पड़ तट पर पहुँचा था।",
+   "trick": "1498: वास्को डी गामा का आगमन",
+   "ans": "D"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "What was one main demand of the Muslim League that was accepted by the British government in 1909?",
+   "hi": "मुस्लिम लीग की वह एक मुख्य मांग क्या थी जिसे 1909 में ब्रिटिश सरकार द्वारा स्वीकार कर लिया गया?",
+   "opts": [
+    "Complete independence<br>पूर्ण स्वतंत्रता",
+    "Separate electorates for Muslims<br>मुसलमानों के लिए पृथक निर्वाचक मंडल",
+    "Universal adult franchise<br>सार्वभौमिक वयस्क मताधिकार",
+    "Partition of India<br>भारत का विभाजन"
+   ],
+   "my_ans": "B",
+   "sol": "1909 के मार्ले-मिंटो सुधारों के तहत ब्रिटिश सरकार ने मुसलमानों के लिए 'पृथक निर्वाचक मंडल' की मांग को स्वीकार कर लिया था।",
+   "trick": "1909: पृथक निर्वाचन",
+   "ans": "B"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "Which policy decision of Lord Curzon directly provoked strong nationalist opposition in the early 1900s?",
+   "hi": "1900 के दशक के आरंभ में लॉर्ड कर्ज़न के किस नीतिगत निर्णय ने प्रत्यक्ष रूप से तीव्र राष्ट्रवादी विरोध को भड़काया था?",
+   "opts": [
+    "Altering advisory council arrangements without increasing Indian representation.<br>भारतीय प्रतिनिधित्व बढ़ाए बिना सलाहकार परिषद की व्यवस्था में बदलाव करना।",
+    "Enacting the Universities Act of 1904, which tightened official control over Indian higher education.<br>1904 के यूनिवर्सिटी एक्ट को लागू करके भारतीय उच्च शिक्षा पर आधिकारिक नियंत्रण को और सख्त करना।",
+    "Issuing minor administrative regulations that changed routine procedures in provincial departments.<br>प्रांतीय विभागों में नियमित प्रक्रियाओं में परिवर्तन लाने वाले छोटे प्रशासनिक नियम जारी करना।",
+    "Revising local body finances by making small adjustments to grants and supervisory rules.<br>अनुदान और पर्यवेक्षी नियमों में छोटे-मोटे समायोजन करके स्थानीय निकायों के वित्त में संशोधन करना।"
+   ],
+   "my_ans": "B",
+   "sol": "1904 के विश्वविद्यालय अधिनियम ने उच्च शिक्षा पर सरकारी नियंत्रण बढ़ा दिया, जिससे भारतीयों में भारी आक्रोश पैदा हुआ।",
+   "trick": "1904: शिक्षा पर सरकारी नियंत्रण",
+   "ans": "B"
+  }
+ ]
+}

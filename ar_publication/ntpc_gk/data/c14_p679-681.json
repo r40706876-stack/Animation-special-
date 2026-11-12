@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "679-681",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 386,
+   "lvl": "UG",
+   "en": "What record did Smriti Mandhana break in the 2025 Women’s Cricket World Cup?",
+   "hi": "स्मृति मंधाना ने 2025 महिला क्रिकेट विश्व कप में कौन सा रिकॉर्ड तोड़ा?",
+   "opts": [
+    "Fastest century ever in WODIs<br>वनडे में सबसे तेज शतक",
+    "Highest individual score in a Women’s World Cup final<br>महिला विश्व कप फाइनल में सर्वोच्च व्यक्तिगत स्कोर",
+    "Most wickets by a batter<br>एक बल्लेबाज द्वारा सर्वाधिक विकेट",
+    "Most runs in a single edition of the Women’s World Cup<br>महिला विश्व कप के एक संस्करण में सर्वाधिक रन"
+   ],
+   "my_ans": "D",
+   "sol": "स्मृति मंधाना ने 2025 महिला क्रिकेट विश्व कप के एक ही संस्करण में सबसे अधिक रन बनाने का नया रिकॉर्ड बनाया।",
+   "trick": "स्मृति मंधाना = 2025 विश्व कप में सर्वाधिक रन का रिकॉर्ड।",
+   "ans": "D"
+  },
+  {
+   "n": 387,
+   "lvl": "UG",
+   "en": "Which of the following country will host the 2025 United Nations Ocean Conference?",
+   "hi": "निम्नलिखित में से किस देश ने 2025 में संयुक्त राष्ट्र महासागर सम्मेलन की मेजबानी की?",
+   "opts": [
+    "South Africa<br>दक्षिण अफ्रीका",
+    "Portugal<br>पुर्तगाल",
+    "France<br>फ्रांस",
+    "Barbados<br>बारबाडोस"
+   ],
+   "my_ans": "C",
+   "sol": "2025 का संयुक्त राष्ट्र महासागर सम्मेलन फ्रांस (नीस) में आयोजित किया गया, जिसमें कोस्टा रिका सह-मेजबान था।",
+   "trick": "UN महासागर सम्मेलन 2025 = फ्रांस (नीस)।",
+   "ans": "C"
+  },
+  {
+   "n": 388,
+   "lvl": "UG",
+   "en": "The International Telecommunication Union (ITU) Global Youth Summit 2025 (GYS-25), under the theme “Amplifying youth voices in ICT,” was held in which location from 11-13 March 2025?",
+   "hi": "\"ICT में युवाओं की आवाजों को बुलंद करना\" विषय वस्तु के तहत अंतर्राष्ट्रीय दूरसंचार संघ (ITU) वैश्विक युवा शिखर सम्मेलन 2025 (GYS-25), 11-13 मार्च 2025 तक किस स्थान पर आयोजित किया गया?",
+   "opts": [
+    "Havana, Cuba<br>हवाना, क्यूबा",
+    "Santo Domingo, Dominican Republic<br>सैंटो डोमिंगो, डोमिनिकन रिपब्लिक",
+    "Varadero, Cuba<br>वरादेरो, क्यूबा",
+    "Kingston, Jamaica<br>किंगस्टन, जमैका"
+   ],
+   "my_ans": "C",
+   "sol": "ITU वैश्विक युवा शिखर सम्मेलन 2025 का आयोजन 11-13 मार्च 2025 को वरादेरो, क्यूबा में किया गया था।",
+   "trick": "ITU युवा शिखर सम्मेलन 2025 = वरादेरो, क्यूबा।",
+   "ans": "C"
+  },
+  {
+   "n": 389,
+   "lvl": "UG",
+   "en": "Which Indian player set a new world record for most sixes in ODI cricket with 352 in November 2025?",
+   "hi": "नवंबर 2025 में, किस भारतीय खिलाड़ी ने वनडे क्रिकेट में 352 छक्कों के साथ सर्वाधिक छक्कों का नया विश्व रिकॉर्ड बनाया?",
+   "opts": [
+    "Rohit Sharma<br>रोहित शर्मा",
+    "Virat Kohli<br>विराट कोहली",
+    "Shubham Gill<br>शुभमन गिल",
+    "Suryakumar Yadav<br>सूर्यकुमार यादव"
+   ],
+   "my_ans": "A",
+   "sol": "रोहित शर्मा ने नवंबर 2025 में वनडे क्रिकेट में 352 छक्के लगाकर सर्वाधिक छक्कों का विश्व रिकॉर्ड अपने नाम किया।",
+   "trick": "वनडे में सर्वाधिक छक्के = रोहित शर्मा।",
+   "ans": "A"
+  },
+  {
+   "n": 390,
+   "lvl": "UG",
+   "en": "The sports event Bastar Olympics 2025 was launched in October 2025 in which Indian state?",
+   "hi": "बस्तर ओलंपिक 2025 में खेल आयोजन का शुभारंभ अक्टूबर 2025 में भारत के किस राज्य में हुआ था?",
+   "opts": [
+    "Chhattisgarh<br>छत्तीसगढ़",
+    "Odisha<br>ओडिशा",
+    "Jharkhand<br>झारखंड",
+    "Madhya Pradesh<br>मध्य प्रदेश"
+   ],
+   "my_ans": "A",
+   "sol": "बस्तर ओलंपिक छत्तीसगढ़ के आदिवासी बहुल बस्तर क्षेत्र में स्थानीय युवाओं के लिए शुरू की गई एक खेल पहल है।",
+   "trick": "बस्तर = छत्तीसगढ़।",
+   "ans": "A"
+  },
+  {
+   "n": 391,
+   "lvl": "UG",
+   "en": "Where was the 8th session of the Indian Ocean Conference held in February 2025?",
+   "hi": "फरवरी 2025 में हिंद महासागर सम्मेलन (Indian Ocean Conference) का 8वाँ सत्र कहाँ आयोजित किया गया था?",
+   "opts": [
+    "New Delhi, India<br>नई दिल्ली, भारत",
+    "Muscat, Oman<br>मस्कट, ओमान",
+    "Colombo, Sri Lanka<br>कोलंबो, श्रीलंका",
+    "Perth, Australia<br>पर्थ, ऑस्ट्रेलिया"
+   ],
+   "my_ans": "B",
+   "sol": "8वां हिंद महासागर सम्मेलन फरवरी 2025 में मस्कट, ओमान में आयोजित किया गया था।",
+   "trick": "8वां हिंद महासागर सम्मेलन = मस्कट, ओमान।",
+   "ans": "B"
+  },
+  {
+   "n": 392,
+   "lvl": "UG",
+   "en": "What was the venue of the first BIMSTEC Youth Summit held in February 2025?",
+   "hi": "फरवरी 2025 में आयोजित प्रथम BIMSTEC युवा शिखर सम्मेलन का आयोजन स्थल कहां था?",
+   "opts": [
+    "Bhopal, Madhya Pradesh<br>भोपाल, मध्य प्रदेश",
+    "Gandhinagar, Gujarat<br>गांधीनगर, गुजरात",
+    "New Delhi<br>नई दिल्ली",
+    "Hyderabad, Telangana<br>हैदराबाद, तेलंगाना"
+   ],
+   "my_ans": "B",
+   "sol": "पहला BIMSTEC युवा शिखर सम्मेलन फरवरी 2025 में गांधीनगर, गुजरात में आयोजित किया गया था।",
+   "trick": "प्रथम BIMSTEC युवा शिखर सम्मेलन = गांधीनगर।",
+   "ans": "B"
+  },
+  {
+   "n": 393,
+   "lvl": "UG",
+   "en": "What is the name of the mascot for the Khelo India Youth Games, 2025?",
+   "hi": "खेलो इंडिया यूथ गेम्स, 2025 के शुभंकर का नाम क्या था?",
+   "opts": [
+    "Simhal<br>सिम्हल",
+    "HathiSher<br>हाथीशेर",
+    "Yoddha<br>योद्धा",
+    "Gajasimha<br>गजसिंह"
+   ],
+   "my_ans": "D",
+   "sol": "खेलो इंडिया यूथ गेम्स 2025 का शुभंकर 'गजसिंह' है, जो हाथी और शेर का संयोजन है।",
+   "trick": "खेलो इंडिया 2025 शुभंकर = गजसिंह।",
+   "ans": "D"
+  },
+  {
+   "n": 394,
+   "lvl": "UG",
+   "en": "Which edition of the Khelo India University Games is being held in Rajasthan starting November 24, 2025?",
+   "hi": "24 नवंबर, 2025 से राजस्थान में खेलो इंडिया यूनिवर्सिटी गेम्स का कौन-सा संस्करण आयोजित किया गया था?",
+   "opts": [
+    "Sixth<br>छठा",
+    "Third<br>तीसरा",
+    "Fifth<br>पांचवां",
+    "Fourth<br>चौथा"
+   ],
+   "my_ans": "C",
+   "sol": "राजस्थान में आयोजित होने वाले खेलो इंडिया यूनिवर्सिटी गेम्स 2025 का यह 5वां संस्करण है।",
+   "trick": "खेलो इंडिया यूनिवर्सिटी गेम्स 2025 = 5वां संस्करण।",
+   "ans": "C"
+  },
+  {
+   "n": 395,
+   "lvl": "UG",
+   "en": "India’s fourth Asia Cup win in men’s hockey (2025) ended a drought of how many years?",
+   "hi": "पुरुषों की हॉकी में भारत की चौथी एशिया कप जीत (2025) कितने वर्षों के बाद मिली जीत है?",
+   "opts": [
+    "5 years<br>5 वर्ष",
+    "8 years<br>8 वर्ष",
+    "10 years<br>10 वर्ष",
+    "12 years<br>12 वर्ष"
+   ],
+   "my_ans": "B",
+   "sol": "भारत ने 2025 में एशिया कप जीता, पिछली जीत 2017 में थी। 2025 - 2017 = 8 वर्ष का अंतराल।",
+   "trick": "एशिया कप जीत अंतराल = 8 वर्ष।",
+   "ans": "B"
+  },
+  {
+   "n": 396,
+   "lvl": "UG",
+   "en": "Which of the following cricket players was awarded the Sir Garfield Sobers Award for ICC Men’s Cricketer of the Year 2024?",
+   "hi": "निम्नलिखित में से किस क्रिकेट खिलाड़ी को ICC पुरुष क्रिकेटर ऑफ द ईयर 2024 के लिए सर गारफील्ड सोबर्स पुरस्कार से सम्मानित किया गया था?",
+   "opts": [
+    "Joe Root<br>जो रूट",
+    "Jasprit Bumrah<br>जसप्रीत बुमराह",
+    "Travis Head<br>ट्रेविस हेड",
+    "Mitchell Starc<br>मिचेल स्टार्क"
+   ],
+   "my_ans": "B",
+   "sol": "ICC पुरुष क्रिकेटर ऑफ द ईयर 2024 के लिए सर गारफील्ड सोबर्स पुरस्कार भारतीय तेज गेंदबाज जसप्रीत बुमराह को दिया गया।",
+   "trick": "2024 सर गारफील्ड सोबर्स अवार्ड = जसप्रीत बुमराह।",
+   "ans": "B"
+  }
+ ]
+}

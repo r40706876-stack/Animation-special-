@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "437-439",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which combination of symptoms is the most common characteristic of influenza in humans?",
+   "hi": "लक्षणों का कौन-सा संयोजन, मनुष्यों में इन्फ्लूएंजा की सबसे सामान्य विशेषता है?",
+   "opts": [
+    "Rash, itching, and swelling<br>पित्तिका, खुजली और सूजन",
+    "Vomiting, diarrhea, and dehydration<br>वमन, अतिसार और निर्जलीकरण",
+    "Fever, cough, and body aches<br>बुखार, खाँसी और शरीर में दर्द",
+    "Chest pain, palpitations, and sweating<br>सीने में दर्द, धड़कन और स्वेदन"
+   ],
+   "my_ans": "C",
+   "sol": "इन्फ्लूएंजा (फ्लू) के मुख्य लक्षणों में तेज बुखार, सूखी खांसी, शरीर में दर्द और थकान शामिल हैं।",
+   "trick": "फ्लू = बुखार + खांसी + बदन दर्द",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "The intermediary that DNA molecules use to communicate with the rest of the cell is the:",
+   "hi": "DNA अणु, कोशिका के शेष भाग से संचार (communicate) करने के लिए जिस मध्यवर्ती का उपयोग करता है, वह निम्नलिखित में से कौन-सा है?",
+   "opts": [
+    "tRNA",
+    "miRNA",
+    "rRNA",
+    "mRNA"
+   ],
+   "my_ans": "D",
+   "sol": "DNA से प्रोटीन बनाने की प्रक्रिया में mRNA (मैसेंजर RNA) संदेशवाहक का कार्य करता है जो DNA की जानकारी राइबोसोम तक ले जाता है।",
+   "trick": "mRNA = संदेशवाहक (Messenger)",
+   "ans": "D"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "What is the primary pigment responsible for photosynthesis in plants?",
+   "hi": "पादपों में प्रकाश संश्लेषण के लिए उत्तरदायी प्राथमिक वर्णक कौन-सा है?",
+   "opts": [
+    "Anthocyanin<br>ऐन्थोसाएनि न",
+    "Carotenoid<br>वर्णपीतकाभ",
+    "Xanthophyll<br>जैन्थोफिल",
+    "Chlorophyll<br>पर्णहरित"
+   ],
+   "my_ans": "D",
+   "sol": "क्लोरोफिल पौधों में प्रकाश संश्लेषण के लिए मुख्य वर्णक है जो प्रकाश ऊर्जा को अवशोषित करता है।",
+   "trick": "क्लोरोफिल = प्रकाश संश्लेषण का मुख्य वर्णक",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "The Sattvic diet specifically includes which type of grain?",
+   "hi": "सात्विक आहार में विशेष रूप से किस प्रकार के अन्न को शामिल किया जाता है?",
+   "opts": [
+    "Highly refined flour<br>अत्यधिक परिष्कृत आटा",
+    "Sugary breakfast cereals<br>शर्करा युक्त ब्रेकफास्ट सीरियल",
+    "Polished white rice<br>पॉलिश किए हुए सफेद चावल",
+    "Red rice and unpolished rice<br>लाल चावल और बिना पॉलिश किए हुए चावल"
+   ],
+   "my_ans": "D",
+   "sol": "सात्विक आहार में प्राकृतिक और बिना पॉलिश किए हुए अनाज (जैसे लाल चावल) को प्राथमिकता दी जाती है क्योंकि इनमें पोषक तत्व बरकरार रहते हैं।",
+   "trick": "सात्विक = प्राकृतिक और बिना पॉलिश",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which cell organelle is responsible for maintaining cell shape and providing structural support?",
+   "hi": "निम्नलिखित में से कौन-सा कोशिका अंगक, कोशिका की आकृति को बनाए रखने और संरचनात्मक सहायता प्रदान करने के लिए उत्तरदायी है?",
+   "opts": [
+    "Peroxisome<br>परऑक्सिसोम",
+    "Nucleus<br>न्यूक्लियस",
+    "Golgi apparatus<br>गॉल्जी उपकरण",
+    "Cytoskeleton<br>कोशिका पंजर"
+   ],
+   "my_ans": "D",
+   "sol": "कोशिका कंकाल (Cytoskeleton) प्रोटीन तंतुओं का एक जाल है जो कोशिका को आकार और यांत्रिक सहारा देता है।",
+   "trick": "Cytoskeleton = कोशिका का ढांचा",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Many plants secrete a sticky milky fluid and use it for their defence mechanism. This fluid is known as ___________________.",
+   "hi": "कई पादप चिपचिपा दूधिया तरल स्रावित करते हैं और इसका उपयोग अपने रक्षा तंत्र के लिए करते हैं। इस तरल को ___________________ के रूप में जाना जाता है।",
+   "opts": [
+    "enzyme<br>एंजाइम",
+    "plant hormone<br>पादप हार्मोन",
+    "latex<br>लैटेक्स",
+    "cell sap<br>कोशिका रस"
+   ],
+   "my_ans": "C",
+   "sol": "पौधों द्वारा रक्षा के लिए स्रावित चिपचिपे दूधिया द्रव को लैटेक्स कहते हैं, जो कीड़ों और शाकाहारी जीवों से सुरक्षा करता है।",
+   "trick": "दूधिया तरल = लैटेक्स",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Which type of receptors in the human body are responsible for detecting taste?",
+   "hi": "मानव शरीर में किस प्रकार के ग्राही स्वाद का पता लगाने के लिए उत्तरदायी होते हैं?",
+   "opts": [
+    "Olfactory receptors<br>घ्राण ग्राही",
+    "Thermo receptors<br>थर्मो ग्राही",
+    "Auditory receptors<br>श्रवण ग्राही",
+    "Gustatory receptors<br>रससंवेदी ग्राही"
+   ],
+   "my_ans": "D",
+   "sol": "जीभ पर स्थित गस्टेटरी रिसेप्टर्स (रससंवेदी ग्राही) स्वाद का पता लगाने के लिए जिम्मेदार होते हैं।",
+   "trick": "Gustatory = स्वाद (Taste)",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "The incidence of oral cancer in India is strongly linked to the frequent consumption of which of the following harmful substances?",
+   "hi": "भारत में मुख कैंसर की घटनाओं का संबंध निम्नलिखित में से किस हानिकारक पदार्थ के बार-बार सेवन से प्रबल रूप से जुड़ा हुआ है?",
+   "opts": [
+    "Fried food<br>तला हुआ खाना",
+    "Soft drinks<br>शीतल पेय",
+    "Tobacco<br>तंबाकू",
+    "High-salt diet<br>उच्च नमक वाला आहार"
+   ],
+   "my_ans": "C",
+   "sol": "भारत में तंबाकू (धूम्रपान और चबाने वाले उत्पाद) का सेवन मुख कैंसर का सबसे प्रमुख कारण है।",
+   "trick": "तंबाकू = मुख कैंसर का मुख्य कारण",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "The structural and functional unit of nature is _________.",
+   "hi": "प्रकृति की संरचनात्मक और प्रकार्यात्मक इकाई _________ है।",
+   "opts": [
+    "Cell<br>कोशिका",
+    "Environment<br>पर्यावरण",
+    "Ecosystem<br>पारितंत्र",
+    "Ecology<br>पारिस्थितिकी"
+   ],
+   "my_ans": "C",
+   "sol": "पारितंत्र (Ecosystem) प्रकृति की वह इकाई है जहाँ जैविक और अजैविक घटक एक प्रणाली के रूप में कार्य करते हैं।",
+   "trick": "Ecosystem = प्रकृति की कार्यशील इकाई",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "If a person contracts malaria, which type of pathogen is responsible for the disease?",
+   "hi": "यदि किसी व्यक्ति को मलेरिया हो जाता है, तो किस प्रकार का रोगजनक इस रोग के लिए उत्तरदायी होता है?",
+   "opts": [
+    "Virus<br>विषाणु",
+    "Fungi<br>कवक",
+    "Bacteria<br>जीवाणु",
+    "Protozoan<br>प्रोटोओअन"
+   ],
+   "my_ans": "D",
+   "sol": "मलेरिया 'प्लाज्मोडियम' नामक परजीवी के कारण होता है, जो एक प्रोटोजोआ है।",
+   "trick": "मलेरिया = प्रोटोजोआ जनित रोग",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "Diabetes, cancer, and asthma are collectively known as which type of disorders?",
+   "hi": "मधुमेह, कैंसर और अस्थमा को सामूहिक रूप से किस प्रकार के विकार के रूप में जाना जाता है?",
+   "opts": [
+    "Infectious diseases<br>संक्रामक रोग",
+    "Communicable diseases<br>संचारी रोग",
+    "Acute diseases<br>तीव्र रोग",
+    "Non-communicable diseases<br>गैर-संचारी रोग"
+   ],
+   "my_ans": "D",
+   "sol": "ये बीमारियाँ एक व्यक्ति से दूसरे व्यक्ति में नहीं फैलतीं, इसलिए इन्हें गैर-संचारी (Non-communicable) रोग कहा जाता है।",
+   "trick": "गैर-संचारी = जो न फैले",
+   "ans": "D"
+  }
+ ]
+}

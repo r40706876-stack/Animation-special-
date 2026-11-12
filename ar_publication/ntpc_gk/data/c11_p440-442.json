@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "440-442",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "In dicotyledonous plants, which type of root system consists of a main primary root that gives rise to lateral branches?",
+   "hi": "द्विबीजपत्री पौधों में, किस प्रकार के जड़ तंत्र में एक मुख्य प्राथमिक जड़ होती है, जिससे पार्श्व शाखाएँ उत्पन्न होती हैं?",
+   "opts": [
+    "Prop root system<br>अवस्तंभ जड़ तंत्र",
+    "Fibrous root system<br>झकड़ा जड़ तंत्र",
+    "Tap root system<br>मूसला जड़ तंत्र",
+    "Adventitious root system<br>अपस्थानिक जड़ तंत्र"
+   ],
+   "my_ans": "C",
+   "sol": "द्विबीजपत्री पौधों में मूसला जड़ (Tap root) होती है, जिसमें एक मुख्य जड़ नीचे की ओर बढ़ती है और उससे शाखाएं निकलती हैं।",
+   "trick": "द्विबीजपत्री = मूसला जड़ (Tap root)।",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "What is the main characteristic of cells in the meristematic phase of growth in plants?",
+   "hi": "पौधों में वृद्धि की विभज्योतकीय अवस्था में कोशिकाओं की मुख्य विशेषता क्या होती है?",
+   "opts": [
+    "Active cell division<br>सक्रिय कोशिका विभाजन",
+    "Maximum cell size<br>अधिकतम कोशिका आकार",
+    "Large vacuoles<br>बृहत रसधानियां",
+    "Thick cell walls<br>मोटी कोशिका भित्तियां"
+   ],
+   "my_ans": "A",
+   "sol": "विभज्योतक (Meristematic) कोशिकाएं पौधों के बढ़ते भागों में पाई जाती हैं और इनमें लगातार सक्रिय कोशिका विभाजन होता रहता है।",
+   "trick": "विभज्योतक = विभाजन (Division)।",
+   "ans": "A"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "In a cross between true-breeding red-flowered and true breeding white-flowered plants, the Filial 1 (F1) progeny was pink. This is a case of which type of inheritance?",
+   "hi": "तद्रूप प्रजननी लाल-फूल वाले और तद्रूप प्रजननी सफेद-फूल वाले पौधों के बीच संकरण के परिणामस्वरूप, फिलियल 1 (F1) प्रोजेनी गुलाबी फूलों वाली प्राप्त हुई। यह किस प्रकार की वंशागति का उदाहरण है?",
+   "opts": [
+    "Complete Dominance<br>पूर्ण प्रभाविता",
+    "Incomplete Dominance<br>अपूर्ण प्रभाविता",
+    "Co-dominance<br>सह-प्रभाविता",
+    "Sex-linkage<br>लिंग-सहलग्नता"
+   ],
+   "my_ans": "B",
+   "sol": "जब कोई भी एलील पूरी तरह प्रभावी नहीं होता और दोनों का मिश्रण (गुलाबी) दिखाई देता है, तो उसे अपूर्ण प्रभाविता कहते हैं।",
+   "trick": "लाल + सफेद = गुलाबी (मिश्रण) मतलब अपूर्ण प्रभाविता।",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "In genetics, a gene refers to which of the following?",
+   "hi": "आनुवंशिकी में, जीन निम्नलिखित में से किसे संदर्भित करता है?",
+   "opts": [
+    "A unit of blood group<br>ब्लड ग्रुप की एक यूनिट",
+    "A sex chromosome<br>एक लिंग गुणसूत्र",
+    "A type of chromosome<br>गुणसूत्र के एक प्रकार",
+    "A section of DNA that codes for a protein<br>DNA का वह भाग जो प्रोटीन के लिए कोड करता है"
+   ],
+   "my_ans": "D",
+   "sol": "जीन DNA का वह विशिष्ट खंड है जिसमें प्रोटीन बनाने के लिए आवश्यक निर्देश होते हैं।",
+   "trick": "जीन = DNA का प्रोटीन बनाने वाला निर्देश।",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Which of the following is a common symptom of diabetes mellitus?",
+   "hi": "निम्नलिखित में से कौन-सा, डायबिटीज मेलिटस (diabetes mellitus) का एक सामान्य लक्षण है?",
+   "opts": [
+    "Increased hair growth<br>बालों का बढ़ना",
+    "Loss of hearing<br>श्रवण में कमी",
+    "Decreased thirst<br>प्यास कम लगना",
+    "Frequent urination<br>बार-बार मूत्रण"
+   ],
+   "my_ans": "D",
+   "sol": "उच्च रक्त शर्करा के कारण गुर्दे अतिरिक्त ग्लूकोज को बाहर निकालते हैं, जिससे बार-बार पेशाब आता है (पॉलीयूरिया)।",
+   "trick": "मधुमेह = बार-बार पेशाब और अधिक प्यास।",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Which of the following is an example of biomagnification in a food chain?",
+   "hi": "निम्नलिखित में से कौन-सा खाद्य श्रृंखला में जैव आवर्धन का एक उदाहरण है?",
+   "opts": [
+    "Rapid sedimentation of silt at the river bottom<br>नदी-तल में गाद का तीव्र अवसादन",
+    "Evaporation of pesticides from water bodies into the air<br>जल निकायों से पीड़कनाशी का वाष्पन होकर वायु में फैलना",
+    "Rising concentration of DDT from water to algae to fish to birds<br>जल से शैवाल तक, शैवाल से मछलियों तक और मछलियों से पक्षियों तक DDT की सांद्रता में वृद्धि",
+    "Increased nitrate levels causing algal blooms<br>नाइट्रेट के स्तर में वृद्धि के कारण शैवाल प्रस्फुटन"
+   ],
+   "my_ans": "C",
+   "sol": "जैव आवर्धन में हानिकारक पदार्थ (जैसे DDT) खाद्य श्रृंखला के उच्च स्तरों पर बढ़ते जाते हैं।",
+   "trick": "जैव आवर्धन = खाद्य श्रृंखला में विषैले पदार्थों का संचय।",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Which part of the musculoskeletal system is primarily responsible for protecting the brain?",
+   "hi": "पेशी-कंकाली तंत्र का कौन-सा भाग मुख्य रूप से मस्तिष्क के संरक्षण हेतु उत्तरदायी है?",
+   "opts": [
+    "Spine<br>मेरुदंड",
+    "Pelvic girdle<br>श्रोणि पट्टी",
+    "Rib cage<br>पसली पिंजर",
+    "Skull<br>स्कल"
+   ],
+   "my_ans": "D",
+   "sol": "खोपड़ी (Skull) एक कठोर हड्डी संरचना है जो मस्तिष्क को बाहरी चोटों से बचाती है।",
+   "trick": "मस्तिष्क की सुरक्षा = खोपड़ी (Skull)।",
+   "ans": "D"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Tallness in pea plants as identified by Mendel, represents which type of trait?",
+   "hi": "मटर के पौधों की ऊँचाई जिसकी पहचान मेंडल द्वारा की गई थी, किस प्रकार के लक्षण को दर्शाती है?",
+   "opts": [
+    "Recessive traits<br>अप्रभावी विशेषक",
+    "Dominant traits<br>प्रभावी विशेषक",
+    "Hidden traits<br>अप्रकट विशेषक",
+    "Acquired traits<br>उपार्जित विशेषक"
+   ],
+   "my_ans": "B",
+   "sol": "मेंडल के प्रयोग में, F1 पीढ़ी में सभी पौधे लंबे थे, जो दर्शाता है कि लंबापन बौनेपन पर प्रभावी (Dominant) है।",
+   "trick": "जो पहली पीढ़ी में दिखे, वह प्रभावी (Dominant) है।",
+   "ans": "B"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "In the process of ecological succession, the entire sequence of communities that successively change in a given area are called _________.",
+   "hi": "पारिस्थितिक अनुक्रम की प्रक्रिया में, किसी दिए गए क्षेत्र में क्रमिक रूप से परिवर्तित होने वाले समुदायों के संपूर्ण अनुक्रम को _________ कहा जाता है।",
+   "opts": [
+    "Invasion<br>आक्रमण",
+    "Climax<br>चरम",
+    "Ecesis<br>आस्थापन",
+    "Sere<br>क्रमक"
+   ],
+   "my_ans": "D",
+   "sol": "पारिस्थितिक अनुक्रम में अग्रगामी से चरम अवस्था तक के समुदायों के पूरे क्रम को 'सीयर' (Sere) कहते हैं।",
+   "trick": "समुदायों का पूरा क्रम = सीयर (Sere)।",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "The process by which water moves from the soil (high water concentration) into root cells (low water concentration) through a semi-permeable membrane is called ____.",
+   "hi": "वह प्रक्रिया जिसके द्वारा पानी मिट्टी (उच्च जल सांद्रता) से जड़ कोशिकाओं (कम जल सांद्रता) में अर्ध-पारगम्य झिल्ली के माध्यम से जाता है, उसे ____ कहा जाता है।",
+   "opts": [
+    "Diffusion<br>विसरण",
+    "Active transport<br>सक्रिय परिवहन",
+    "Osmosis<br>परासरण",
+    "Transpiration<br>वाष्पोत्सर्जन"
+   ],
+   "my_ans": "C",
+   "sol": "अर्ध-पारगम्य झिल्ली के माध्यम से पानी का उच्च सांद्रता से कम सांद्रता की ओर जाना परासरण (Osmosis) कहलाता है।",
+   "trick": "झिल्ली के आर-पार पानी = परासरण (Osmosis)।",
+   "ans": "C"
+  }
+ ]
+}

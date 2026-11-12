@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "292-294",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 219,
+   "lvl": "UG",
+   "en": "Which of the following Articles of the Constitution of India states that, until Parliament by law otherwise provides, the quorum to constitute a meeting of either House of Parliament shall be one-tenth of the total number of members of the House?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से किस अनुच्छेद में यह उल्लेख किया गया है कि जब तक संसद विधि द्वारा अन्यथा उपबंध न करे तब तक संसद के प्रत्येक सदन का अधिवेशन गठित करने के लिए गणपूर्ति सदन के सदस्यों की कुल संख्या का दसवां भाग होगी?",
+   "opts": [
+    "Article 96<br>अनुच्छेद 96",
+    "Article 99<br>अनुच्छेद 99",
+    "Article 102<br>अनुच्छेद 102",
+    "Article 100<br>अनुच्छेद 100"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान का अनुच्छेद 100 संसद के सदनों में गणपूर्ति (Quorum) से संबंधित है, जो कुल सदस्यों का 1/10वां भाग होता है।",
+   "trick": "अनुच्छेद 100 = 100% काम के लिए 1/10 गणपूर्ति।",
+   "ans": "D"
+  },
+  {
+   "n": 220,
+   "lvl": "UG",
+   "en": "Which of the following Schedules of the Indian Constitution contains provisions for administration of tribal areas in northeastern India?",
+   "hi": "भारतीय संविधान की निम्नलिखित में से किस अनुसूची में पूर्वोत्तर भारत के जनजातीय क्षेत्रों के प्रशासन के प्रावधान निहित हैं?",
+   "opts": [
+    "Eleventh Schedule<br>ग्यारहवीं अनुसूची",
+    "Third Schedule<br>तीसरी अनुसूची",
+    "Eighth Schedule<br>आठवीं अनुसूची",
+    "Sixth Schedule<br>छठी अनुसूची"
+   ],
+   "my_ans": "D",
+   "sol": "संविधान की छठी अनुसूची (अनुच्छेद 244) असम, मेघालय, त्रिपुरा और मिजोरम के जनजातीय क्षेत्रों के प्रशासन के लिए विशेष प्रावधान करती है।",
+   "trick": "छठी अनुसूची = पूर्वोत्तर के जनजातीय क्षेत्र (AMTM याद रखें)।",
+   "ans": "D"
+  },
+  {
+   "n": 221,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution empowers Parliament to form new states or alter their boundaries?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, संसद को नए राज्य का निर्माण या उनकी सीमाओं में परिवर्तन करने का अधिकार देता है?",
+   "opts": [
+    "Article 2<br>अनुच्छेद 2",
+    "Article 6<br>अनुच्छेद 6",
+    "Article 3<br>अनुच्छेद 3",
+    "Article 5<br>अनुच्छेद 5"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 3 संसद को किसी राज्य के क्षेत्र को बढ़ाने, घटाने, नाम बदलने या नए राज्य बनाने की शक्ति देता है।",
+   "trick": "अनुच्छेद 3 = राज्यों का निर्माण और सीमा परिवर्तन।",
+   "ans": "C"
+  },
+  {
+   "n": 222,
+   "lvl": "UG",
+   "en": "Which of the following statements about the Emergency provisions is true?",
+   "hi": "आपातकालीन प्रावधानों के संबंध में निम्नलिखित में से कौन-सा कथन सत्य है?",
+   "opts": [
+    "Make India a monarchy<br>भारत को राजतंत्र बनाना",
+    "Formalise a constitutional amendment<br>संवैधानिक संशोधन को औपचारिक रूप देना",
+    "Convert the federal system into a unitary one<br>संघीय व्यवस्था को एकात्मक व्यवस्था में परिवर्तित करना",
+    "Allow federalism to continue<br>संघवाद को जारी रखना"
+   ],
+   "my_ans": "C",
+   "sol": "आपातकाल के दौरान केंद्र सरकार को राज्यों पर सर्वोच्च शक्ति मिल जाती है, जिससे संघीय ढांचा अस्थायी रूप से एकात्मक बन जाता है।",
+   "trick": "आपातकाल = केंद्र शक्तिशाली, संघीय से एकात्मक।",
+   "ans": "C"
+  },
+  {
+   "n": 223,
+   "lvl": "UG",
+   "en": "The members of the Railway Convention Committee are nominated by which of the following authorities of India?",
+   "hi": "रेलवे कन्वेंशन कमेटी के सदस्यों को भारत के निम्नलिखित में से किस प्राधिकारी द्वारा मनोनीत किया जाता है?",
+   "opts": [
+    "The President of India<br>भारत के राष्ट्रपति",
+    "The Speaker of the Lok Sabha<br>लोक सभा के अध्यक्ष",
+    "The Prime Minister of India<br>भारत का प्रधानमंत्री",
+    "The Chairman of the Rajya Sabha<br>राज्य सभा का सभापति"
+   ],
+   "my_ans": "B",
+   "sol": "रेलवे कन्वेंशन कमेटी के सभी सदस्यों को लोकसभा अध्यक्ष द्वारा मनोनीत किया जाता है।",
+   "trick": "संसदीय समितियों का प्रमुख नामांकन अक्सर लोकसभा अध्यक्ष ही करते हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 224,
+   "lvl": "UG",
+   "en": "The Punchhi Commission (2007) was primarily constituted to examine and make recommendations regarding which provision of the Indian Constitution?",
+   "hi": "पुंछी आयोग (2007) का गठन मुख्य रूप से भारतीय संविधान के किस प्रावधान की जांच करने और उसके संबंध में सिफारिशें देने के लिए किया गया था?",
+   "opts": [
+    "Centre–State Relations<br>केंद्र-राज्य संबंध",
+    "Directive Principles of State Policy<br>राज्य नीति के निर्देशक सिद्धांत",
+    "Electoral Reforms in India<br>भारत में चुनावी सुधार",
+    "Fundamental Rights<br>मौलिक अधिकार"
+   ],
+   "my_ans": "A",
+   "sol": "पुंछी आयोग का गठन केंद्र-राज्य संबंधों की समीक्षा करने और संवैधानिक ढांचे के भीतर सुधारों की सिफारिश करने के लिए किया गया था।",
+   "trick": "पुंछी आयोग = केंद्र-राज्य संबंध।",
+   "ans": "A"
+  },
+  {
+   "n": 225,
+   "lvl": "UG",
+   "en": "Which of the following courts is empowered to impose the highest punishment among the subordinate courts in India?",
+   "hi": "भारत में अधीनस्थ न्यायालयों में से निम्नलिखित में से किस न्यायालय को सर्वाधिक दंड देने का अधिकार प्राप्त है?",
+   "opts": [
+    "Family Court<br>पारिवारिक न्यायालय",
+    "Consumer Court<br>उपभोक्ता न्यायालय",
+    "Civil Court<br>दीवानी न्यायालय",
+    "Sessions Court<br>सत्र न्यायालय"
+   ],
+   "my_ans": "D",
+   "sol": "सत्र न्यायालय (Sessions Court) जिला स्तर का सर्वोच्च आपराधिक न्यायालय है, जो मृत्युदंड सहित कोई भी दंड दे सकता है।",
+   "trick": "सत्र न्यायालय = सबसे अधिक दंड शक्ति।",
+   "ans": "D"
+  },
+  {
+   "n": 226,
+   "lvl": "UG",
+   "en": "From which year onward does PDL (Parliament Digital Library) have the digitized archives of legislative debates?",
+   "hi": "संसद डिजिटल पुस्तकालय (PDL) में किस वर्ष से विधायी बहसों के डिजिटल अभिलेख उपलब्ध हैं?",
+   "opts": [
+    "1900",
+    "1953",
+    "1854",
+    "1947"
+   ],
+   "my_ans": "C",
+   "sol": "संसद डिजिटल पुस्तकालय में 1854 से विधायी बहसों के डिजिटल अभिलेख मौजूद हैं।",
+   "trick": "1854 = विधायी बहसों के रिकॉर्ड की शुरुआत।",
+   "ans": "C"
+  },
+  {
+   "n": 227,
+   "lvl": "UG",
+   "en": "Articles 245 to 255 of Part XI of the Indian Constitution primarily deal with which aspect of Centre-State relations?",
+   "hi": "भारतीय संविधान के भाग XI के अनुच्छेद 245 से 255 मुख्य रूप से केंद्र-राज्य संबंधों के किस पहलू से संबंधित हैं?",
+   "opts": [
+    "Administrative relations<br>प्रशासनिक संबंध",
+    "Judicial relations<br>न्यायिक संबंध",
+    "Legislative relations<br>विधायी संबंध",
+    "Financial relations<br>वित्तीय संबंध"
+   ],
+   "my_ans": "C",
+   "sol": "संविधान के भाग XI में अनुच्छेद 245 से 255 केंद्र और राज्यों के बीच विधायी शक्तियों के वितरण से संबंधित हैं।",
+   "trick": "भाग 11 = विधायी संबंध (245-255)।",
+   "ans": "C"
+  },
+  {
+   "n": 228,
+   "lvl": "UG",
+   "en": "'Effect of Proclamation of Emergency' is explicitly provided in which of the following provisions of the Constitution of India?",
+   "hi": "'आपातकाल की उद्घोषणा का प्रभाव' भारतीय संविधान के निम्नलिखित में से किस प्रावधान में स्पष्ट रूप से दिया गया है?",
+   "opts": [
+    "Article 350",
+    "Article 353",
+    "Article 355",
+    "Article 358"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 353 आपातकाल की उद्घोषणा के प्रभाव का वर्णन करता है, जिसके तहत केंद्र की कार्यकारी शक्ति राज्यों तक विस्तृत हो जाती है।",
+   "trick": "352 = आपातकाल की घोषणा, 353 = उसका प्रभाव।",
+   "ans": "B"
+  }
+ ]
+}

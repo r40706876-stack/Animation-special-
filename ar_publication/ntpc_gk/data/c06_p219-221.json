@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Environment",
+  "hi": "पर्यावरण",
+  "total": 37,
+  "gl": 37,
+  "ug": 0
+ },
+ "source_pages": "219-221",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "In December 2025, at which international event did India deliver its National Statement highlighting clean energy progress and Mission LiFE?",
+   "hi": "दिसंबर 2025 में, किस अंतर्राष्ट्रीय कार्यक्रम में भारत ने स्वच्छ ऊर्जा प्रगति और मिशन लाइफ (clean energy progress and Mission LiFE) पर प्रकाश डालते हुए अपना राष्ट्रीय वक्तव्य दिया?",
+   "opts": [
+    "7th Session of the United Nations Environment Assembly (UNEA)<br>संयुक्त राष्ट्र पर्यावरण सभा (UNEA) का 7वां सत्र",
+    "COP26 Climate Summit<br>COP26 जलवायु शिखर सम्मेलन",
+    "G20 Summit<br>G20 शिखर सम्मेलन",
+    "World Environment Day 2024<br>विश्व पर्यावरण दिवस 2024"
+   ],
+   "my_ans": "A",
+   "sol": "भारत ने दिसंबर 2025 में नैरोबी, केन्या में आयोजित संयुक्त राष्ट्र पर्यावरण सभा (UNEA) के 7वें सत्र में अपना राष्ट्रीय वक्तव्य दिया था।",
+   "trick": "UNEA-7 (2025) में भारत ने मिशन LiFE और स्वच्छ ऊर्जा पर जोर दिया।",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following pollutants is most closely associated with the formation of acid rain?",
+   "hi": "निम्नलिखित में से कौन-सा प्रदूषक, अम्ल वर्षा के निर्माण से सबसे निकटता से जुड़ा हुआ है?",
+   "opts": [
+    "Ammonia<br>अमोनिया",
+    "Sulphur dioxide<br>सल्फर डाइऑक्साइड",
+    "Ozone<br>ओजोन",
+    "Methane<br>मीथेन"
+   ],
+   "my_ans": "B",
+   "sol": "सल्फर डाइऑक्साइड (SO₂) और नाइट्रोजन के ऑक्साइड वायुमंडल में जलवाष्प से क्रिया करके सल्फ्यूरिक और नाइट्रिक अम्ल बनाते हैं, जिससे अम्ल वर्षा होती है।",
+   "trick": "SO₂ + H₂O = अम्ल वर्षा (Acid Rain)",
+   "ans": "B"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "India maintained which position worldwide in net annual forest area gain according to GFRA 2025?",
+   "hi": "GFRA 2025 के अनुसार, नेट वार्षिक वन क्षेत्र वृद्धि में भारत ने विश्व भर में कौन-सा स्थान बनाए रखा?",
+   "opts": [
+    "5th<br>पांचवां",
+    "2nd<br>दूसरा",
+    "4th<br>चौथा",
+    "3rd<br>तीसरा"
+   ],
+   "my_ans": "D",
+   "sol": "GFRA 2025 (FAO द्वारा प्रकाशित) के अनुसार, भारत नेट वार्षिक वन क्षेत्र वृद्धि में विश्व में तीसरे स्थान पर है।",
+   "trick": "वन वृद्धि में शीर्ष: चीन (1), ऑस्ट्रेलिया (2), भारत (3)।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which significant milestone did the Ministry of Environment, Forest and Climate Change announce on World Environment Day 2025 regarding pollution?",
+   "hi": "पर्यावरण, वन एवं जलवायु परिवर्तन मंत्रालय ने विश्व पर्यावरण दिवस 2025 के अवसर पर प्रदूषण के संबंध में कौन-सी महत्वपूर्ण उपलब्धि की घोषणा की?",
+   "opts": [
+    "Ban on all single-use plastics nationwide<br>देश भर में सभी एकल उपयोग वाले प्लास्टिक पर प्रतिबंध",
+    "Launch of “One Nation, One Mission: End Plastic Pollution”<br>\"एक राष्ट्र, एक मिशन: प्लास्टिक प्रदूषण का अंत\" का शुभारंभ",
+    "Closure of coal plants<br>कोयला संयंत्रों की बंदी",
+    "Elimination of non-attainment cities<br>गैर-लाभ वाले शहरों का उन्मूलन"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व पर्यावरण दिवस 2025 पर मंत्रालय ने प्लास्टिक कचरे से निपटने के लिए 'एक राष्ट्र, एक मिशन: प्लास्टिक प्रदूषण का अंत' अभियान शुरू किया।",
+   "trick": "प्लास्टिक प्रदूषण के खिलाफ 'एक राष्ट्र, एक मिशन' शुरू हुआ।",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "What was the primary objective of the 'Blue Skies 2025' campaign launched in August 2025?",
+   "hi": "अगस्त 2025 में शुरू किए गए 'ब्लू स्काइज 2025' अभियान का प्राथमिक उद्देश्य क्या था?",
+   "opts": [
+    "Increase forest cover<br>वन क्षेत्र बढ़ाना",
+    "Promote solar energy<br>सौर ऊर्जा को बढ़ावा देना",
+    "Reduce urban air pollution<br>शहरी वायु प्रदूषण कम करना",
+    "Conserve wetlands<br>आर्द्रभूमि का संरक्षण"
+   ],
+   "my_ans": "C",
+   "sol": "अगस्त 2025 में शुरू हुए इस अभियान का मुख्य उद्देश्य प्रमुख शहरों में PM2.5 और PM10 कणों को कम करके शहरी वायु प्रदूषण को नियंत्रित करना था।",
+   "trick": "Blue Skies = स्वच्छ हवा (वायु प्रदूषण कम करना)।",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "What major climate agreement was discussed during the United Nations Climate Change Conference in November 2025?",
+   "hi": "नवंबर 2025 में, संयुक्त राष्ट्र जलवायु परिवर्तन सम्मेलन के दौरान किस प्रमुख जलवायु समझौते पर चर्चा हुई?",
+   "opts": [
+    "Paris Agreement<br>पेरिस समझौता",
+    "Kyoto Protocol<br>क्योटो प्रोटोकॉल",
+    "Glasgow Pact<br>ग्लासगो पैक्ट",
+    "Montreal Accord<br>मॉन्ट्रियल समझौता"
+   ],
+   "my_ans": "A",
+   "sol": "2025 के संयुक्त राष्ट्र जलवायु परिवर्तन सम्मेलन (COP) में पेरिस समझौते के तहत राष्ट्रीय निर्धारित योगदान (NDCs) को अद्यतन करने पर चर्चा की गई।",
+   "trick": "पेरिस समझौता (2015) वैश्विक जलवायु कार्रवाई का मुख्य आधार है।",
+   "ans": "A"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Thermal pollution primarily results from which action related to industrial processes?",
+   "hi": "ऊष्मीय प्रदूषण मुख्यतः औद्योगिक प्रक्रियाओं से संबंधित किस क्रिया के परिणामस्वरूप होता है?",
+   "opts": [
+    "Use of water as a coolant<br>शीतलक के रूप में जल का उपयोग",
+    "Release of heavy metals<br>भारी धातुओं का उत्सर्जन",
+    "Suspended solid accumulation<br>निलंबित ठोस का संचयन",
+    "Addition of detergents<br>डिटर्जेंट का मिश्रण"
+   ],
+   "my_ans": "A",
+   "sol": "उद्योग और बिजली संयंत्र मशीनों को ठंडा करने के लिए नदियों/झीलों के पानी का उपयोग करते हैं, जिससे गर्म पानी वापस जल निकायों में छोड़े जाने पर ऊष्मीय प्रदूषण होता है।",
+   "trick": "गर्म पानी का जल निकायों में मिलना = ऊष्मीय प्रदूषण।",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Why did the Supreme Court consider mining activities near national parks and sanctuaries hazardous according to the November 13, 2025 order?",
+   "hi": "13 नवंबर, 2025 के आदेश के अनुसार, सर्वोच्च न्यायालय ने राष्ट्रीय उद्यानों और अभयारण्यों के निकट खनन गतिविधियों को संकटकारी क्यों माना?",
+   "opts": [
+    "Because they create water sources<br>क्योंकि वे जल स्रोत बनाते हैं",
+    "Because they increase tourism<br>क्योंकि वे पर्यटन बढ़ाते हैं",
+    "Because they are dangerous to wildlife<br>क्योंकि वे वन्यजीवों के लिए खतरनाक हैं",
+    "Because they boost local economy<br>क्योंकि वे स्थानीय अर्थव्यवस्था को बढ़ावा देते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "खनन गतिविधियों से आवास विनाश, ध्वनि प्रदूषण और पर्यावरणीय क्षरण होता है, जो राष्ट्रीय उद्यानों और अभयारण्यों में वन्यजीवों के लिए गंभीर खतरा पैदा करता है।",
+   "trick": "खनन = वन्यजीवों के आवास का विनाश।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "18-20",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a true element of Harappan architecture?",
+   "hi": "निम्नलिखित में से कौन-सा, हड़प्पा वास्तुकला का वास्तविक घटक नहीं है?",
+   "opts": [
+    "Buildings in Harappan cities were made of standardized baked bricks<br>हड़प्पा शहरों में इमारतें मानकीकृत पकी हुई ईंटों से बनी थीं",
+    "Cities included public buildings and well-planned houses<br>शहरों में सार्वजनिक इमारतें और सुनियोजित घर शामिल थे",
+    "Cities had magnificent palaces, monuments and royal tombs<br>शहरों में भव्य महल, स्मारक और शाही मकबरे थे",
+    "Architecture focused on functional design rather than decoration<br>वास्तुकला, सजावट के बजाय कार्यात्मक डिजाइन पर केंद्रित थी"
+   ],
+   "my_ans": "C",
+   "sol": "हड़प्पा सभ्यता में भव्य महलों, मंदिरों या शाही मकबरों के कोई प्रमाण नहीं मिले हैं।",
+   "trick": "हड़प्पा = सादगी, भव्य महल नहीं",
+   "ans": "C"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "Which of the following celebrated Sanskrit poets and playwrights was one of the Navaratnas in the court of Chandragupta II?",
+   "hi": "निम्नलिखित में से कौन-सा प्रसिद्ध संस्कृत कवि और नाटककार चंद्रगुप्त द्वितीय के दरबार के नवरत्नों में से एक था?",
+   "opts": [
+    "Kalidasa<br>कालिदास",
+    "Bhasa<br>भास",
+    "Bana<br>बाण",
+    "Bhavabhuti<br>भवभूति"
+   ],
+   "my_ans": "A",
+   "sol": "कालिदास चंद्रगुप्त द्वितीय (विक्रमादित्य) के दरबार के नवरत्नों में से एक थे। उनकी प्रसिद्ध रचनाएँ अभिज्ञानशाकुंतलम और मेघदूत हैं।",
+   "trick": "चंद्रगुप्त द्वितीय = कालिदास",
+   "ans": "A"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "Which of the following sites contains prehistoric paintings ranging from the Mesolithic to the historic period?",
+   "hi": "निम्नलिखित में से किस स्थल में मध्यपाषाण काल से लेकर ऐतिहासिक काल तक की प्रागैतिहासिक चित्रकारी पाई जाती है?",
+   "opts": [
+    "Nalanda<br>नालंदा",
+    "Pattadakal<br>पट्टदकल",
+    "Bhimbetka<br>भीमबेटका",
+    "Hampi<br>हम्पी"
+   ],
+   "my_ans": "C",
+   "sol": "मध्य प्रदेश स्थित भीमबेटका की गुफाओं में मध्यपाषाण काल से लेकर ऐतिहासिक काल तक के प्राचीन शैलचित्र मिलते हैं।",
+   "trick": "भीमबेटका = गुफा चित्र",
+   "ans": "C"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "In Harappan Civilization, at Dholavira, ________ was/were used to build massive fortifications.",
+   "hi": "हड़प्पा सभ्यता में, धोलावीरा में, ________ का उपयोग विशाल किलेबंदी के निर्माण के लिए किया जाता था।",
+   "opts": [
+    "stone<br>पत्थर",
+    "bricks<br>ईंट",
+    "wood<br>काष्ठ",
+    "granite<br>ग्रेनाइट"
+   ],
+   "my_ans": "A",
+   "sol": "धोलावीरा एकमात्र प्रमुख हड़प्पा स्थल है जहाँ ईंटों के बजाय स्थानीय पत्थर का उपयोग करके विशाल किलेबंदी की गई थी।",
+   "trick": "धोलावीरा = पत्थर की किलेबंदी",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Which of the following features at Lothal provides the most convincing evidence of its role as a maritime trading centre in the Harappan Civilization?",
+   "hi": "लोथल की निम्नलिखित विशेषताओं में से कौन-सी विशेषता हड़प्पा सभ्यता में समुद्री व्यापार केंद्र के रूप में इसकी भूमिका का सबसे पुख्ता प्रमाण प्रदान करती है?",
+   "opts": [
+    "A large warehouse located near the dock structure<br>गोदी संरचना के निकट स्थित एक विशाल मालगोदाम",
+    "A brick-built basin connected to an ancient river channel<br>एक प्राचीन नदी मार्ग से जुड़ा हुआ ईंटों से निर्मित बेसिन",
+    "Evidence of bead-making workshops within the settlement<br>बस्ती के भीतर मनके बनाने की कार्यशालाओं के साक्ष्य",
+    "Discovery of seals indicating contacts with distant regions<br>दूरस्थ क्षेत्रों के साथ संपर्क दर्शाने वाली मुहरों की खोज"
+   ],
+   "my_ans": "B",
+   "sol": "लोथल में ईंटों से बना विशाल बेसिन (गोदीबाड़ा) प्राचीन साबरमती नदी से जुड़ा था, जो जहाजों के आने-जाने के लिए कृत्रिम बंदरगाह का काम करता था।",
+   "trick": "लोथल = ईंटों का बेसिन (गोदीबाड़ा)",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "In which of the following Buddhist literatures are the rules of conduct for the monastic life mentioned?",
+   "hi": "निम्नलिखित में से किस बौद्ध साहित्य में मठवासी जीवन के आचरण नियमावली का उल्लेख किया गया है?",
+   "opts": [
+    "Vinaya Pitaka<br>विनय पिटक",
+    "Abhidhamma Pitaka<br>अभिधम्म पिटक",
+    "Sutta Pitaka<br>सुत्त पिटक",
+    "Anguttara Nikaya<br>अंगुत्तर निकाय"
+   ],
+   "my_ans": "A",
+   "sol": "विनय पिटक में बौद्ध भिक्षुओं और भिक्षुणियों के लिए मठवासी अनुशासन और आचरण के नियम दिए गए हैं।",
+   "trick": "विनय = नियम",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Which of the following baskets of the Buddhist Tipitaka contains monastic rules?",
+   "hi": "बौद्ध त्रिपिटक के निम्नलिखित में से किस पिटक में संघों के नियम वर्णित हैं?",
+   "opts": [
+    "Jataka Pitaka<br>जातक पिटक",
+    "Abhidhamma Pitaka<br>अभिधम्म पिटक",
+    "Vinaya Pitaka<br>विनय पिटक",
+    "Sutta Pitaka<br>सुत्त पिटक"
+   ],
+   "my_ans": "C",
+   "sol": "विनय पिटक में संघ (मठ) के नियमों और अनुशासन का वर्णन है।",
+   "trick": "विनय = नियम",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "The early Iron Age in North India is most prominently associated with which pottery culture?",
+   "hi": "उत्तर भारत में प्रारंभिक लौह युग सबसे प्रमुख रूप से किस मृद्भांड संस्कृति से सम्बन्धित है?",
+   "opts": [
+    "Northern Black Polished Ware and Red Ware<br>उत्तरी काले पॉलिश किए गए भांड और लाल भांड",
+    "Painted Grey Ware and Black-and-Red Ware<br>चित्रित धूसर भांड और काले-और-लाल भांड",
+    "Ochre Coloured Pottery and Black Slipped Ware<br>गैरिक मृद्भांड और काली चिकनी मिट्टी के घोल वाले भांड",
+    "Painted Grey Ware and Northern Black Polished Ware<br>चित्रित धूसर भांड और उत्तरी काले पॉलिश किए गए भांड"
+   ],
+   "my_ans": "D",
+   "sol": "प्रारंभिक लौह युग चित्रित धूसर मृद्भांड (PGW) और बाद का लौह युग उत्तरी काले पॉलिश वाले मृद्भांड (NBPW) से संबंधित है।",
+   "trick": "लौह युग = PGW + NBPW",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "The ‘Mesolithic Age’ is regarded as a transitional phase because it represents the shift between which two prehistoric periods?",
+   "hi": "'मध्यपाषाण युग' को एक संक्रमणकालीन चरण माना जाता है क्योंकि यह किन दो प्रागैतिहासिक काल के बीच परिवर्तन को निरूपित करता है?",
+   "opts": [
+    "Neolithic Age and Chalcolithic Age<br>नवपाषाण युग और ताम्रपाषाणीय युग",
+    "Palaeolithic Age and Neolithic Age<br>पुरापाषाण युग और नवपाषाण युग",
+    "Chalcolithic Age and Iron Age<br>ताम्रपाषाणीय युग और लौह युग",
+    "Bronze Age and Iron Age<br>कांस्य युग और लौह युग"
+   ],
+   "my_ans": "B",
+   "sol": "मध्यपाषाण काल पुरापाषाण (शिकारी) और नवपाषाण (कृषि) युगों के बीच की संक्रमणकालीन अवस्था है।",
+   "trick": "मध्य = पुरा + नव के बीच",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "238-240",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "How do subordinate courts support the overall judicial system in India?",
+   "hi": "भारत में अधीनस्थ न्यायालय समग्र न्यायिक प्रणाली को किस प्रकार सहयोग प्रदान करते हैं?",
+   "opts": [
+    "By enacting new legislation<br>नए कानून अधिनियमित करके",
+    "By centralizing legal power in the higher judiciary<br>उच्च न्यायपालिका में कानूनी शक्ति को केंद्रीकृत करके",
+    "By exclusively handling appeals<br>विशेष रूप से अपीलों पर कार्रवाई करके",
+    "By providing accessible, prompt, and localized justice<br>सुगम, त्वरित और स्थानीय न्याय प्रदान करके"
+   ],
+   "my_ans": "D",
+   "sol": "अधीनस्थ न्यायालय जमीनी स्तर पर न्याय प्रदान करते हैं, जिससे नागरिकों को उच्च न्यायालय तक जाने की आवश्यकता कम होती है और न्याय प्रक्रिया सुलभ व त्वरित हो जाती है।",
+   "trick": "अधीनस्थ न्यायालय = जमीनी स्तर पर सुलभ न्याय।",
+   "ans": "D"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "If the Government of India revokes the citizenship of an individual for acting against the interests of the country, which constitutional or statutory provision empowers it to do so?",
+   "hi": "कौन-सा संवैधानिक या सांविधिक प्रावधान, भारत सरकार को देश के हितों के विरुद्ध कार्य करने वाले किसी व्यक्ति की नागरिकता का प्रतिसंहरण करने का अधिकार प्रदान करता है?",
+   "opts": [
+    "Section 6A of the Citizenship Act, 1955<br>नागरिकता अधिनियम, 1955 की धारा 6A",
+    "Section 10 of the Citizenship Act, 1955<br>नागरिकता अधिनियम, 1955 की धारा 10",
+    "Article 5 of the Constitution<br>संविधान का अनुच्छेद 5",
+    "Article 11 of the Constitution<br>संविधान का अनुच्छेद 11"
+   ],
+   "my_ans": "B",
+   "sol": "नागरिकता अधिनियम 1955 की धारा 10 सरकार को नागरिकता समाप्त करने का अधिकार देती है यदि व्यक्ति संविधान के प्रति निष्ठाहीन हो या देश की अखंडता के विरुद्ध कार्य करे।",
+   "trick": "धारा 10 = नागरिकता की समाप्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "What is the role of parental consent under the DPDP Act, 2023, as of December 2025?",
+   "hi": "दिसंबर 2025 तक प्राप्त जानकारी के अनुसार, DPDP एक्ट, 2023 के तहत माता-पिता की सहमति (parental consent) की क्या भूमिका है?",
+   "opts": [
+    "To allow schools to access children’s medical records<br>स्कूलों को बच्चों के चिकित्सा अभिलेखों तक पहुँच की अनुमति देना",
+    "To permit processing of a child’s personal data by data fiduciaries<br>डेटा न्यासियों द्वारा बच्चे के व्यक्तिगत डेटा के प्रसंस्करण की अनुमति देना",
+    "To grant children access to online exams<br>बच्चों को ऑनलाइन परीक्षाओं तक पहुंच स्वीकृत करना",
+    "To approve all digital device purchases<br>सभी डिजिटल डिवाइस की खरीद को मंजूरी देना"
+   ],
+   "my_ans": "B",
+   "sol": "DPDP अधिनियम 2023 की धारा 9 के अनुसार, 18 वर्ष से कम आयु के बच्चों का डेटा प्रोसेस करने से पहले माता-पिता या कानूनी अभिभावक की सहमति अनिवार्य है।",
+   "trick": "DPDP = बच्चों के डेटा के लिए माता-पिता की सहमति।",
+   "ans": "B"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "What condition must be fulfilled by a person born outside India after December 3, 2004, to be considered an Indian citizen by descent?",
+   "hi": "3 दिसंबर, 2004 के बाद भारत के बाहर जन्मे व्यक्ति को वंशज के आधार पर भारतीय नागरिक माने जाने के लिए कौन-सी शर्त पूरी होनी चाहिए?",
+   "opts": [
+    "They must reside in India for 10 years.<br>उन्हें 10 वर्षों तक भारत में रहना होगा",
+    "They must renounce any other nationality.<br>उन्हें किसी अन्य राष्ट्रीयता का त्याग करना होगा",
+    "Both parents must be Indian citizens.<br>उनके माता-पिता दोनों भारतीय नागरिक होने चाहिए",
+    "They must reside in India for at least 5 years.<br>उन्हें कम से कम 5 वर्ष तक भारत में रहना होगा"
+   ],
+   "my_ans": "C",
+   "sol": "नागरिकता संशोधन अधिनियम 2003 के अनुसार, 3 दिसंबर 2004 के बाद विदेश में जन्मे बच्चे के वंशज आधार पर नागरिकता के लिए दोनों माता-पिता का भारतीय होना अनिवार्य है।",
+   "trick": "2004 के बाद = दोनों माता-पिता भारतीय।",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Which of the following cabinet committees is NOT headed by the Prime Minister?",
+   "hi": "निम्नलिखित में से किस मंत्रिमंडल समिति की अध्यक्षता प्रधानमंत्री नहीं करते हैं?",
+   "opts": [
+    "Cabinet committee on investment and growth<br>निवेश और वृद्धि की मंत्रिमंडल समिति",
+    "Cabinet committee on employment and skill development<br>रोजगार और कौशल विकास की मंत्रिमंडल समिति",
+    "Cabinet committee on economic affairs<br>आर्थिक कार्यों की मंत्रिमंडल समिति",
+    "Cabinet committee on parliamentary affairs<br>संसदीय कार्यों की मंत्रिमंडल समिति"
+   ],
+   "my_ans": "D",
+   "sol": "संसदीय मामलों की मंत्रिमंडल समिति (CCPA) की अध्यक्षता प्रधानमंत्री नहीं, बल्कि गृह मंत्री करते हैं।",
+   "trick": "संसदीय कार्य = गृह मंत्री।",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "According to Article 243Q, the level of municipality for a transitional area will be designated as a _________.",
+   "hi": "अनुच्छेद 243Q के अनुसार, संक्रमणकालीन क्षेत्र के लिए नगरपालिका स्तर को _________ के रूप में नामित किया जाएगा।",
+   "opts": [
+    "Municipal Council<br>नगर परिषद",
+    "Municipal Corporation<br>नगर निगम",
+    "Nagar Panchayat<br>नगर पंचायत",
+    "Township<br>टाउनशिप"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 243Q के तहत, ग्रामीण से शहरी क्षेत्र में परिवर्तित हो रहे संक्रमणकालीन क्षेत्रों के लिए 'नगर पंचायत' का प्रावधान है।",
+   "trick": "संक्रमणकालीन = नगर पंचायत।",
+   "ans": "C"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "Consider the following statements. 1. As per Article 167, it is the duty of the Chief Minister to communicate to the Governor all decisions of the Council of Ministers. 2. Article 165 states that the Governor administers the oaths of office and secrecy to ministers. 3. Article 163 provides for a Council of Ministers headed by the Chief Minister to aid and advise the Governor, except in discretionary matters. Which of the above statements are correct?",
+   "hi": "निम्नलिखित कथनों पर विचार करें। 1. अनुच्छेद 167 के अनुसार, यह मुख्यमंत्री का कर्तव्य है कि वह राज्यपाल को मंत्रिपरिषद के सभी निर्णयों से अवगत कराए। 2. अनुच्छेद 165 के अंतर्गत राज्यपाल, मंत्रियों को पद और गोपनीयता की शपथ दिलाता है। 3. अनुच्छेद 163 के अंतर्गत विवेकाधीन मामलों को छोड़कर राज्यपाल की सहायता और सलाह देने के लिए मुख्यमंत्री की अध्यक्षता में एक मंत्रिपरिषद का प्रावधान है। उपरोक्त में से कौन-सा कथन सही है?",
+   "opts": [
+    "2 and 3 only<br>केवल 2 और 3",
+    "1, 2 and 3<br>1, 2 और 3",
+    "1 and 3 only<br>केवल 1 और 3",
+    "1 and 2 only<br>केवल 1 और 2"
+   ],
+   "my_ans": "B",
+   "sol": "तीनों कथन सही हैं: अनुच्छेद 167 मुख्यमंत्री के कर्तव्य, अनुच्छेद 165/164 शपथ प्रक्रिया, और अनुच्छेद 163 मंत्रिपरिषद की सलाह से संबंधित हैं।",
+   "trick": "167=CM कर्तव्य, 163=मंत्रिपरिषद सलाह।",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "The Citizenship Amendment Act, 2019, provides citizenship to individuals belonging to which communities if they entered India before 31st December 2014 from Pakistan or Afghanistan or Bangladesh?",
+   "hi": "नागरिकता संशोधन अधिनियम, 2019, पाकिस्तान या अफगानिस्तान या बांग्लादेश से 31 दिसंबर 2014 से पहले भारत आए किन समुदायों के व्यक्तियों को नागरिकता प्रदान करता है?",
+   "opts": [
+    "Muslims, Christians, and Sikhs<br>मुस्लिम, ईसाई और सिख",
+    "Hindus, Muslims, and Buddhists<br>हिंदू, मुस्लिम और बौद्ध",
+    "Jains, Parsis, and Muslims<br>जैन, पारसी और मुस्लिम",
+    "Hindus, Sikhs, Buddhists, Jains, Parsis, and Christians<br>हिंदू, सिख, बौद्ध, जैन, पारसी और ईसाई"
+   ],
+   "my_ans": "D",
+   "sol": "CAA 2019 इन छह अल्पसंख्यक समुदायों (हिंदू, सिख, बौद्ध, जैन, पारसी और ईसाई) को नागरिकता का मार्ग प्रदान करता है जो 31 दिसंबर 2014 से पहले भारत आए थे।",
+   "trick": "6 समुदाय = हिंदू, सिख, बौद्ध, जैन, पारसी, ईसाई।",
+   "ans": "D"
+  }
+ ]
+}

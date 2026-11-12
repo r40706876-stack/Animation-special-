@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "183-185",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 184,
+   "lvl": "UG",
+   "en": "Tank irrigation is mainly practiced in which of the following states of India due to uneven terrain and less rainfall?",
+   "hi": "भारत के निम्नलिखित में से किस राज्य में असमान भूभाग और कम वर्षा के कारण टैंक सिंचाई मुख्य रूप से की जाती है?",
+   "opts": [
+    "Haryana<br>हरियाणा",
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "D",
+   "sol": "कर्नाटक का दक्कन पठार असमान और पथरीला है, जहाँ नहरें बनाना कठिन है। यहाँ वर्षा कम होती है, इसलिए वर्षा जल को टैंकों में जमा करके सिंचाई की जाती है।",
+   "trick": "कर्नाटक = पथरीला पठार = टैंक सिंचाई",
+   "ans": "D"
+  },
+  {
+   "n": 185,
+   "lvl": "UG",
+   "en": "Which of the following industries uses cotton as its main raw material?",
+   "hi": "निम्नलिखित में से कौन-सा उद्योग, कपास को अपने मुख्य कच्चे माल के रूप में उपयोग करता है?",
+   "opts": [
+    "Textile Industry<br>वस्त्र उद्योग",
+    "Iron and Steel Industry<br>लोहा एवं इस्पात उद्योग",
+    "Mining Industry<br>खनन उद्योग",
+    "Cement Industry<br>सीमेंट उद्योग"
+   ],
+   "my_ans": "A",
+   "sol": "वस्त्र उद्योग (Textile Industry) कपास के रेशों का उपयोग करके धागे और कपड़े बनाता है।",
+   "trick": "कपास = वस्त्र उद्योग",
+   "ans": "A"
+  },
+  {
+   "n": 186,
+   "lvl": "UG",
+   "en": "Which wildlife conservation strategy protects entire ecosystems rather than a single species?",
+   "hi": "वन्यजीव संरक्षण की कौन-सी रणनीति किसी एक प्रजाति की रक्षा करने के बजाय संपूर्ण पारिस्थितिकी तंत्र की रक्षा करती है?",
+   "opts": [
+    "Seed banks<br>बीज बैंक",
+    "In-situ conservation<br>स्व-स्थाने संरक्षण",
+    "Captive breeding<br>बंदी प्रजनन",
+    "Biodiversity hotspots<br>जैव विविधता हॉटस्पॉट"
+   ],
+   "my_ans": "B",
+   "sol": "स्व-स्थाने (In-situ) संरक्षण में जीवों को उनके प्राकृतिक आवास (जैसे राष्ट्रीय उद्यान) में संरक्षित किया जाता है, जिससे पूरा पारिस्थितिकी तंत्र सुरक्षित रहता है।",
+   "trick": "स्व-स्थाने = प्राकृतिक आवास = पूरा तंत्र",
+   "ans": "B"
+  },
+  {
+   "n": 187,
+   "lvl": "UG",
+   "en": "Which practice supports sustainable agriculture by maintaining soil health?",
+   "hi": "निम्नलिखित में से कौन-सी पद्धति, मृदा स्वास्थ्य को बनाए रखते हुए संधारणीय कृषि में सहायता प्रदान करती है?",
+   "opts": [
+    "Excessive chemical fertilisers<br>रासायनिक उर्वरकों का अत्यधिक उपयोग",
+    "Crop rotation<br>फसल चक्र",
+    "Deforestation<br>वनोन्मूलन",
+    "Monoculture farming<br>एकल खेती"
+   ],
+   "my_ans": "B",
+   "sol": "फसल चक्र (Crop rotation) से मिट्टी की उर्वरता बनी रहती है और कीटों का चक्र टूटता है, जिससे रासायनिक उर्वरकों की जरूरत कम होती है।",
+   "trick": "फसल बदलो, मिट्टी बचाओ",
+   "ans": "B"
+  },
+  {
+   "n": 188,
+   "lvl": "UG",
+   "en": "Which of the following correctly describes eutrophication?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प, सुपोषण (eutrophication) का सही वर्णन करता है?",
+   "opts": [
+    "Enrichment of water with nutrients leading to excessive algal growth<br>पोषकों के साथ जल का संवर्धन जिससे अत्यधिक शैवाल वृद्धि होती है",
+    "Accumulation of non-biodegradable chemicals at higher trophic levels<br>उच्च पोषी स्तरों पर अजैव निम्नीकरणीय रसायनों का संचय",
+    "Neutralisation of acidic water by dissolved minerals<br>घुले हुए खनिजों द्वारा अम्लीय जल का उदासीनीकरण",
+    "Mixing of cold and warm water currents in oceans<br>महासागरों में ठंडी और गर्म जलधाराओं का मिश्रण"
+   ],
+   "my_ans": "A",
+   "sol": "जल में नाइट्रोजन और फास्फोरस जैसे पोषक तत्वों की अधिकता से शैवाल (algae) बहुत तेजी से बढ़ते हैं, जिससे ऑक्सीजन कम हो जाती है और जलीय जीव मर जाते हैं।",
+   "trick": "पोषक तत्व बढ़े = शैवाल बढ़े = ऑक्सीजन घटी",
+   "ans": "A"
+  },
+  {
+   "n": 189,
+   "lvl": "UG",
+   "en": "Which of the following tree species sustains the famous handicrafts of Kashmir and grows mainly in the Himalayan region?",
+   "hi": "निम्नलिखित में से कौन-सी वृक्ष प्रजाति कश्मीर के प्रसिद्ध हस्तशिल्प को प्रोत्साहित करती है और मुख्यत: हिमालयी क्षेत्र में उगती है?",
+   "opts": [
+    "Walnut<br>अखरोट",
+    "Chir Pine<br>चीड़",
+    "Sal<br>साल",
+    "Deodar<br>देवदार"
+   ],
+   "my_ans": "A",
+   "sol": "अखरोट (Walnut) की लकड़ी बहुत मजबूत और नक्काशी के लिए उपयुक्त होती है, जिसका उपयोग कश्मीर के प्रसिद्ध फर्नीचर और हस्तशिल्प में होता है।",
+   "trick": "कश्मीर हस्तशिल्प = अखरोट की लकड़ी",
+   "ans": "A"
+  },
+  {
+   "n": 190,
+   "lvl": "UG",
+   "en": "Which of the following is the largest multipurpose river valley project in India?",
+   "hi": "निम्नलिखित में से कौन-सी भारत की सबसे बड़ी बहुउद्देशीय नदी घाटी परियोजना है?",
+   "opts": [
+    "Bhakra Nangal<br>भाखड़ा नांगल",
+    "Sardar Sarovar<br>सरदार सरोवर",
+    "Hirakud<br>हीराकुड",
+    "Damodar Valley<br>दामोदर घाटी"
+   ],
+   "my_ans": "A",
+   "sol": "भाखड़ा नांगल परियोजना सतलुज नदी पर स्थित है और यह भारत की सबसे बड़ी बहुउद्देशीय परियोजना है।",
+   "trick": "भाखड़ा = सबसे बड़ी",
+   "ans": "A"
+  },
+  {
+   "n": 191,
+   "lvl": "UG",
+   "en": "Which type of natural vegetation is typically found in regions with high temperature, high humidity, and rainfall exceeding 200 cm annually?",
+   "hi": "उच्च तापमान, उच्च आर्द्रता और 200 cm से अधिक वार्षिक वर्षा वाले क्षेत्रों में आमतौर पर किस प्रकार की प्राकृतिक वनस्पति पाई जाती है?",
+   "opts": [
+    "Temperate grasslands<br>शीतोष्ण घासस्थल",
+    "Tropical evergreen forests<br>उष्णकटिबंधीय सदाबहार वन",
+    "Tropical deciduous forests<br>उष्णकटिबंधीय पर्णपाती वन",
+    "Thorn and scrub vegetation<br>कांटेदार और झाड़ियों वाली वनस्पति"
+   ],
+   "my_ans": "B",
+   "sol": "जहाँ साल भर उच्च तापमान और बहुत अधिक वर्षा होती है, वहाँ उष्णकटिबंधीय सदाबहार वन पाए जाते हैं क्योंकि यहाँ के पेड़ कभी पूरी तरह पत्ते नहीं गिराते।",
+   "trick": "अधिक गर्मी + अधिक वर्षा = सदाबहार वन",
+   "ans": "B"
+  },
+  {
+   "n": 192,
+   "lvl": "UG",
+   "en": "Which of the following is an animal that belongs to the Tundra type of natural vegetation?",
+   "hi": "निम्नलिखित में से कौन-सा जन्तु, टुंड्रा प्रकार की प्राकृतिक वनस्पति से संबंधित है?",
+   "opts": [
+    "Walrus<br>वालरस",
+    "Desert horned viper<br>रेगिस्तानी सींगदार वाइपर",
+    "Jackal<br>गीदड़",
+    "Iberian Lynx<br>इबेरियन लिंक्स"
+   ],
+   "my_ans": "A",
+   "sol": "वालरस एक आर्कटिक समुद्री स्तनपायी है जो टुंड्रा के ठंडे तटीय क्षेत्रों में पाया जाता है।",
+   "trick": "टुंड्रा = वालरस",
+   "ans": "A"
+  },
+  {
+   "n": 193,
+   "lvl": "UG",
+   "en": "Which of the following is the most widely used irrigation method in India?",
+   "hi": "निम्नलिखित में से कौन-सी सिंचाई पद्धति भारत में व्यापक रूप से उपयोग की जाती है?",
+   "opts": [
+    "Sprinkler irrigation<br>छिड़काव सिंचाई",
+    "Subsurface irrigation<br>उपसतही सिंचाई",
+    "Surface irrigation<br>सतही सिंचाई",
+    "Drip irrigation<br>ड्रिप सिंचाई"
+   ],
+   "my_ans": "C",
+   "sol": "सतही सिंचाई (Surface irrigation) भारत में सबसे आम है क्योंकि यह सस्ती है और इसमें कम तकनीक की आवश्यकता होती है।",
+   "trick": "भारत = सतही सिंचाई (95%)",
+   "ans": "C"
+  },
+  {
+   "n": 194,
+   "lvl": "UG",
+   "en": "In which of the following types of forest trees like spruce, fir and pine along with animals like lynx and moose are most likely to be found?",
+   "hi": "निम्नलिखित में से किस प्रकार के वन में स्प्रूस, फर और पाइन जैसे वृक्षों के साथ लिंक्स और मूस जैसे जानवर पाए जाने की सबसे अधिक संभावना है?",
+   "opts": [
+    "Tropical rainforests<br>उष्णकटिबंधीय वर्षावन",
+    "Taiga/Boreal forests<br>टैगा/बोरियल वन",
+    "Deciduous forests<br>पर्णपाती वन",
+    "Mangrove forests<br>मैंग्रोव वन"
+   ],
+   "my_ans": "B",
+   "sol": "टैगा या बोरियल वन ठंडे क्षेत्रों में होते हैं जहाँ शंकुधारी वृक्ष (जैसे पाइन, फर) और लिंक्स जैसे जानवर पाए जाते हैं।",
+   "trick": "शंकुधारी वन = टैगा",
+   "ans": "B"
+  }
+ ]
+}

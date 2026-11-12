@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "625-627",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 199,
+   "lvl": "UG",
+   "en": "The Carriage of Goods by Sea Act, 2025, enforced from 10 September 2025, is primarily intended to:",
+   "hi": "10 सितंबर 2025 से लागू किए गए समुद्र द्वारा माल वहन अधिनियम, 2025 का मुख्य उद्देश्य क्या है?",
+   "opts": [
+    "Control marine pollution<br>समुद्री प्रदूषण को नियंत्रित करना",
+    "Define carrier liability<br>वाहक देयता को परिभाषित करना",
+    "Develop port infrastructure<br>पत्तन अवसंरचना का विकास करना",
+    "Regulate vessel registration<br>पोत पंजीकरण को विनियमित करना"
+   ],
+   "my_ans": "B",
+   "sol": "यह अधिनियम समुद्री परिवहन के दौरान माल की हानि या क्षति के लिए वाहक (carrier) की जिम्मेदारी को स्पष्ट और आधुनिक बनाने के लिए लाया गया है।",
+   "trick": "समुद्री माल वहन = वाहक की जिम्मेदारी (Carrier Liability)",
+   "ans": "B"
+  },
+  {
+   "n": 200,
+   "lvl": "UG",
+   "en": "In December 2025, which of the following courts has declared 26 December 2025 as a holiday and advanced the commencement of its Winter Vacation to the same date?",
+   "hi": "दिसंबर 2025 में, निम्नलिखित में से किस न्यायालय ने 26 दिसंबर 2025 को अवकाश घोषित किया है और अपनी शीतकालीन छुट्टियों (Winter Vacation) की शुरुआत उसी तिथि से आगे बढ़ा दी है?",
+   "opts": [
+    "Madras High Court<br>मद्रास उच्च न्यायालय",
+    "Gauhati High Court<br>गुवाहाटी उच्च न्यायालय",
+    "Delhi High Court<br>दिल्ली उच्च न्यायालय",
+    "Allahabad High Court<br>इलाहाबाद उच्च न्यायालय"
+   ],
+   "my_ans": "C",
+   "sol": "दिल्ली उच्च न्यायालय ने प्रशासनिक निर्णय लेते हुए 26 दिसंबर 2025 को अवकाश घोषित किया और उसी दिन से शीतकालीन अवकाश शुरू करने का निर्णय लिया।",
+   "trick": "दिल्ली उच्च न्यायालय ने दिसंबर 2025 में शीतकालीन अवकाश जल्दी शुरू किया।",
+   "ans": "C"
+  },
+  {
+   "n": 201,
+   "lvl": "UG",
+   "en": "Which of the following countries participated in the 3rd edition of the Joint Special Forces Exercise 'CYCLONE' at Mahajan Field Firing Ranges in Rajasthan from 10th to 23rd February 2025?",
+   "hi": "10 से 23 फरवरी 2025 तक राजस्थान के महाजन फील्ड फायरिंग रेंज (Mahajan Field Firing Ranges) में आयोजित संयुक्त विशेष बल अभ्यास 'साइक्लोन (CYCLONE)' के तीसरे संस्करण में निम्नलिखित में से किन देशों ने भाग लिया था?",
+   "opts": [
+    "India and China<br>भारत और चीन",
+    "India and Iran<br>भारत और ईरान",
+    "India and Namibia<br>भारत और नामीबिया",
+    "India and Egypt<br>भारत और मिस्र"
+   ],
+   "my_ans": "D",
+   "sol": "अभ्यास 'साइक्लोन' भारत और मिस्र की सेनाओं के बीच एक संयुक्त विशेष बल अभ्यास है, जो आतंकवाद विरोधी अभियानों पर केंद्रित है।",
+   "trick": "साइक्लोन अभ्यास = भारत और मिस्र",
+   "ans": "D"
+  },
+  {
+   "n": 202,
+   "lvl": "UG",
+   "en": "India's Aeronautical Development Agency (ADA) successfully conducted the test launch of the Astra Beyond Visual Range Air-to-Air Missile (BVRAAM) from the LCA Tejas AF MK1 prototype in _____.",
+   "hi": "भारत के वैमानिकी विकास अभिकरण (ADA) ने ________ में LCA तेजस AF MK1 प्रोटोटाइप से अस्त्र बियॉन्ड विजुअल रेंज एयर-टू-एयर मिसाइल (BVRAAM) का सफल परीक्षण किया।",
+   "opts": [
+    "Kerala<br>केरल",
+    "Odisha<br>ओडिशा",
+    "Gujarat<br>गुजरात",
+    "Andhra Pradesh<br>आंध्र प्रदेश"
+   ],
+   "my_ans": "B",
+   "sol": "अस्त्र मिसाइल का परीक्षण ओडिशा के चांदीपुर स्थित एकीकृत परीक्षण रेंज (ITR) से किया गया था।",
+   "trick": "अस्त्र मिसाइल परीक्षण = चांदीपुर, ओडिशा",
+   "ans": "B"
+  },
+  {
+   "n": 203,
+   "lvl": "UG",
+   "en": "After months of deadlock and implementation refusal, which State Government in November 2025 mandated the digitization of Waqf properties on the UMEED portal?",
+   "hi": "महीनों के गतिरोध और कार्यान्वयन से इनकार के बाद, किस राज्य सरकार ने नवंबर 2025 में उम्मीद (UMEED) पोर्टल पर वक्फ संपत्तियों के डिजिटलीकरण को अनिवार्य कर दिया?",
+   "opts": [
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Kerala<br>केरल",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "B",
+   "sol": "पश्चिम बंगाल सरकार ने शुरू में विरोध के बाद नवंबर 2025 में वक्फ संपत्तियों को UMEED पोर्टल पर डिजिटाइज़ करने के निर्देश का पालन किया।",
+   "trick": "UMEED पोर्टल डिजिटलीकरण = पश्चिम बंगाल",
+   "ans": "B"
+  },
+  {
+   "n": 204,
+   "lvl": "UG",
+   "en": "In 2025, how much permanent monthly alimony did the Supreme Court set for a divorced but unmarried wife?",
+   "hi": "2025 में, उच्चतम न्यायालय ने तलाकशुदा लेकिन अविवाहित पत्नी के लिए कितना स्थायी मासिक गुजारा भत्ता निर्धारित किया था?",
+   "opts": [
+    "₹30,000",
+    "₹75,000",
+    "₹50,000",
+    "₹20,000"
+   ],
+   "my_ans": "C",
+   "sol": "सर्वोच्च न्यायालय ने 2025 में एक महत्वपूर्ण फैसले में तलाकशुदा महिलाओं के लिए ₹50,000 प्रति माह का स्थायी मासिक गुजारा भत्ता निर्धारित किया।",
+   "trick": "तलाकशुदा गुजारा भत्ता = ₹50,000",
+   "ans": "C"
+  },
+  {
+   "n": 205,
+   "lvl": "UG",
+   "en": "Which one of the following is NOT true in regard to The Waqf (Amendment) Bill, 2025 passed by the Indian government?",
+   "hi": "भारतीय सरकार द्वारा पारित वक्फ (संशोधन) विधेयक, 2025 के संबंध में निम्नलिखित में से कौन-सा कथन सत्य नहीं है?",
+   "opts": [
+    "Female heirs are not guaranteed their rightful share in family waqf.<br>परिवार वक्फ में महिला उत्तराधिकारियों को उनके उचित हिस्से की गारंटी नहीं दी गई है।",
+    "The bill also seeks to improve the economic and social status of Muslim women.<br>इस विधेयक का उद्देश्य मुस्लिम महिलाओं की आर्थिक और सामाजिक स्थिति में सुधार करना भी है।",
+    "The bill retains two Muslim women members in central Waqf council.<br>इस विधेयक में केंद्रीय वक्फ परिषद में भी दो मुस्लिम महिला सदस्यों को रखा गया है।",
+    "The bill retains two Muslim women members in state Waqf board.<br>इस विधेयक में राज्य वक्फ बोर्ड में दो मुस्लिम महिला सदस्यों को रखा गया है।"
+   ],
+   "my_ans": "A",
+   "sol": "विधेयक में महिला उत्तराधिकारियों को परिवार वक्फ में हिस्सा सुनिश्चित किया गया है, इसलिए विकल्प A गलत है।",
+   "trick": "वक्फ संशोधन विधेयक = महिलाओं को अधिकार सुनिश्चित",
+   "ans": "A"
+  },
+  {
+   "n": 206,
+   "lvl": "UG",
+   "en": "The Union Territories Laws (Amendment) Bill, 2024, does NOT propose to amend which of the following Acts?",
+   "hi": "संघ राज्यक्षेत्र विधि (संशोधन) विधेयक, 2024, निम्नलिखित में से किस अधिनियम में संशोधन का प्रस्ताव नहीं करता है?",
+   "opts": [
+    "Government of National Capital Territory of Delhi Act, 1991<br>दिल्ली राष्ट्रीय राजधानी राज्यक्षेत्र शासन अधिनियम, 1991",
+    "Representation of the People Act, 1951<br>लोक प्रतिनिधित्व अधिनियम, 1951",
+    "Government of Union Territories Act, 1963<br>संघ राज्यक्षेत्र शासन अधिनियम, 1963",
+    "Jammu and Kashmir Reorganisation Act, 2019<br>जम्मू-कश्मीर पुनर्गठन अधिनियम, 2019"
+   ],
+   "my_ans": "B",
+   "sol": "यह विधेयक दिल्ली, केंद्र शासित प्रदेशों और जम्मू-कश्मीर से संबंधित अधिनियमों में संशोधन करता है, लेकिन लोक प्रतिनिधित्व अधिनियम, 1951 इसमें शामिल नहीं है।",
+   "trick": "UT संशोधन विधेयक = लोक प्रतिनिधित्व अधिनियम को नहीं छूता",
+   "ans": "B"
+  },
+  {
+   "n": 207,
+   "lvl": "UG",
+   "en": "Who is the author of the book titled ‘Modi’s Mission’?",
+   "hi": "'मोदीज मिशन (Modi’s Mission)' नामक पुस्तक किसने लिखी है?",
+   "opts": [
+    "Arundhati Roy<br>अरुंधति रॉय",
+    "Berjis Desai<br>बर्जिस देसाई",
+    "Amish Tripathi<br>अमीश त्रिपाठी",
+    "B.K. Harinarayanan<br>बी.के. हरिनारायणन"
+   ],
+   "my_ans": "B",
+   "sol": "'Modi's Mission' पुस्तक के लेखक वरिष्ठ अधिवक्ता बर्जिस देसाई हैं, जो प्रधानमंत्री मोदी की नीतियों का विश्लेषण करती है।",
+   "trick": "Modi's Mission = बर्जिस देसाई",
+   "ans": "B"
+  },
+  {
+   "n": 208,
+   "lvl": "UG",
+   "en": "Under the proposed Budget, what is the fiscal deficit target for FY 2025-26?",
+   "hi": "प्रस्तावित बजट के अंतर्गत, वित्त वर्ष 2025-26 के लिए राजकोषीय घाटे का लक्ष्य क्या है?",
+   "opts": [
+    "5.0% of GDP<br>GDP का 5.0%",
+    "3.8% of GDP<br>GDP का 3.8%",
+    "4.4% of GDP<br>GDP का 4.4%",
+    "6.2% of GDP<br>GDP का 6.2%"
+   ],
+   "my_ans": "C",
+   "sol": "प्रस्तावित बजट 2025-26 में राजकोषीय घाटे (fiscal deficit) का लक्ष्य GDP का 4.4% रखा गया है।",
+   "trick": "राजकोषीय घाटा 2025-26 = 4.4%",
+   "ans": "C"
+  }
+ ]
+}

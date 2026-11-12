@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "580-582",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "What was the theme of the Emerging Science, Technology, and Innovation Conclave (ESTIC) held in November 2025?",
+   "hi": "नवंबर 2025 में आयोजित इमर्जिंग साइंस, टेक्नोलॉजी एंड इनोवेशन कॉन्क्लेव (ESTIC) की थीम क्या थी?",
+   "opts": [
+    "Science and Technology for Inclusive Growth<br>समावेशी विकास के लिए विज्ञान और प्रौद्योगिकी",
+    "Emerging Technologies for a Better Tomorrow<br>बेहतर भविष्य के लिए उभरती प्रौद्योगिकियां",
+    "Innovating for Sustainable Development<br>सतत विकास के लिए नवाचार",
+    "Imagine, Innovate, Inspire for Viksit Bharat 2047<br>विकसित भारत 2047 के लिए कल्पना करें, नवप्रवर्तन करें और प्रेरित करें"
+   ],
+   "my_ans": "A",
+   "sol": "नवंबर 2025 में आयोजित इस सम्मेलन का मुख्य उद्देश्य समाज के सभी वर्गों के समावेशी विकास के लिए विज्ञान और प्रौद्योगिकी के उपयोग को बढ़ावा देना था।",
+   "trick": "समावेशी विकास = विज्ञान और प्रौद्योगिकी का लक्ष्य",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "What was the official theme of National Voters' Day 2026, observed on 25 January across India to recognise voters and promote democratic engagement?",
+   "hi": "मतदाताओं को सम्मान देने और लोकतांत्रिक भागीदारी को बढ़ावा देने के लिए संपूर्ण भारत में 25 जनवरी को मनाए गए राष्ट्रीय मतदाता दिवस, 2026 की आधिकारिक थीम क्या थी?",
+   "opts": [
+    "My India, My Vote<br>मेरा भारत, मेरा वोट",
+    "Power to the People<br>जनता की शक्ति",
+    "Vote for Democracy<br>लोकतंत्र के लिए वोट",
+    "Citizen First, Nation Always<br>नागरिक प्रथम, राष्ट्र सर्वोपरि"
+   ],
+   "my_ans": "A",
+   "sol": "राष्ट्रीय मतदाता दिवस 2026 की थीम 'मेरा भारत, मेरा वोट' थी, जो सक्रिय मतदान के माध्यम से लोकतंत्र को मजबूत करने पर जोर देती है।",
+   "trick": "मतदाता दिवस 2026 = मेरा भारत, मेरा वोट",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Which award is recognized as the highest honour in Indian cinema, presented to Mohanlal in September 2025?",
+   "hi": "भारतीय सिनेमा में सर्वोच्च सम्मान के रूप में मान्यता प्राप्त पुरस्कार कौन-सा है, जिसे सितंबर 2025 में मोहनलाल को प्रदान किया गया था?",
+   "opts": [
+    "Dadasaheb Phalke Award<br>दादासाहेब फाल्के पुरस्कार",
+    "Filmfare Lifetime Achievement Award<br>फिल्मफेयर लाइफटाइम अचीवमेंट अवार्ड",
+    "National Award for Best Actor<br>सर्वश्रेष्ठ अभिनेता का राष्ट्रीय पुरस्कार",
+    "Padma Bhushan<br>पद्म भूषण"
+   ],
+   "my_ans": "A",
+   "sol": "दादासाहेब फाल्के पुरस्कार भारतीय सिनेमा का सर्वोच्च सम्मान है, जो 1969 से सिनेमा में उत्कृष्ट योगदान के लिए दिया जाता है।",
+   "trick": "सिनेमा का सर्वोच्च सम्मान = दादासाहेब फाल्के",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which city hosted the 7th Future Food Forum 2025 focused on food security and sustainability?",
+   "hi": "खाद्य सुरक्षा और संधारणीयता पर केंद्रित 7 वें फ्यूचर फूड फोरम 2025 की मेजबानी किस शहर ने की?",
+   "opts": [
+    "Riyadh<br>रियाद",
+    "Dubai<br>दुबई",
+    "Singapore<br>सिंगापुर",
+    "New Delhi<br>नई दिल्ली"
+   ],
+   "my_ans": "B",
+   "sol": "7वें फ्यूचर फूड फोरम 2025 का आयोजन दुबई, संयुक्त अरब अमीरात (UAE) में किया गया था, जिसमें खाद्य प्रणालियों में नवाचार पर चर्चा हुई।",
+   "trick": "फ्यूचर फूड फोरम 2025 = दुबई",
+   "ans": "B"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "How many nations became signatories to the United Nations Convention against Cybercrime in December 2025?",
+   "hi": "दिसंबर 2025 में, कितने देशों ने साइबर अपराध के विरुद्ध यूनाइटेड नेशन्स कन्वेंशन पर हस्ताक्षर किए?",
+   "opts": [
+    "190",
+    "151",
+    "122",
+    "72"
+   ],
+   "my_ans": "D",
+   "sol": "दिसंबर 2025 में अपनाए गए संयुक्त राष्ट्र साइबर अपराध सम्मेलन के लिए 72 देशों ने प्रारंभिक हस्ताक्षरकर्ता के रूप में भाग लिया।",
+   "trick": "साइबर अपराध सम्मेलन = 72 देश",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "In 2025, which province of the Democratic Republic of the Congo reported a new Ebola outbreak caused by the Zaire Ebola virus strain?",
+   "hi": "2025 में, कांगो लोकतांत्रिक गणराज्य के किस प्रांत में ज़ैरे इबोला (Zaire Ebola) वायरस स्ट्रेन के कारण इबोला का एक नया प्रकोप रिपोर्ट किया गया?",
+   "opts": [
+    "Kasai Province<br>कसाई प्रांत",
+    "North Kivu Province<br>उत्तरी किवु प्रांत",
+    "Ituri Province<br>इतुरी प्रांत",
+    "Kinshasa Province<br>किंशासा प्रांत"
+   ],
+   "my_ans": "A",
+   "sol": "फरवरी 2025 में कांगो लोकतांत्रिक गणराज्य के कसाई प्रांत में ज़ैरे इबोला वायरस के कारण प्रकोप दर्ज किया गया था।",
+   "trick": "इबोला 2025 = कसाई प्रांत",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "As of December 2025, under the Pradhan Mantri Jan-Dhan Yojana (PMJDY), eligible account holders can access an overdraft facility of up to:",
+   "hi": "दिसंबर 2025 तक प्राप्त जानकारी के अनुसार, प्रधानमंत्री जन-धन योजना (PMJDY) के तहत, पात्र खाताधारक _____________ तक ओवरड्राफ्ट सुविधा प्राप्त कर सकते हैं।",
+   "opts": [
+    "₹15,000",
+    "₹8,000",
+    "₹5,000",
+    "₹10,000"
+   ],
+   "my_ans": "D",
+   "sol": "प्रधानमंत्री जन-धन योजना के तहत ओवरड्राफ्ट सुविधा को वित्तीय समावेशन बढ़ाने के लिए ₹5,000 से बढ़ाकर ₹10,000 कर दिया गया है।",
+   "trick": "जन-धन ओवरड्राफ्ट = ₹10,000",
+   "ans": "D"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "In 2025, which multilateral development bank signed five loan agreements with India, including a US$ 650 million loan to support the Pradhan Mantri Surya Ghar: Muft Bijli Yojana?",
+   "hi": "2025 में, किस बहुपक्षीय विकास बैंक ने भारत के साथ पांच ऋण समझौतों पर हस्ताक्षर किए, जिनमें प्रधानमंत्री सूर्य घर: मुफ्त बिजली योजना की सहायता के लिए 650 मिलियन अमेरिकी डॉलर का ऋण भी शामिल है?",
+   "opts": [
+    "World Bank<br>वर्ल्ड बैंक",
+    "New Development Bank (NDB)<br>न्यू डेवलपमेंट बैंक (NDB)",
+    "Asian Development Bank (ADB)<br>एशियन डेवलपमेंट बैंक (ADB)",
+    "Asian Infrastructure Investment Bank (AIIB)<br>एशियन इंफ्रास्ट्रक्चर इन्वेस्टमेंट बैंक (AIIB)"
+   ],
+   "my_ans": "C",
+   "sol": "एशियन डेवलपमेंट बैंक (ADB) ने 2025 में भारत के साथ पांच समझौते किए, जिसमें प्रधानमंत्री सूर्य घर योजना के लिए 650 मिलियन डॉलर का ऋण प्रमुख है।",
+   "trick": "सूर्य घर योजना = ADB ऋण",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "Which cultural and musical group celebrated its 10th anniversary in December 2025?",
+   "hi": "किस सांस्कृतिक एवं संगीत मंडली ने दिसंबर 2025 में अपनी 10 वीं वर्षगांठ मनाई?",
+   "opts": [
+    "India Panorama<br>इंडिया पैनोरमा",
+    "Satyajit Ray Society<br>सत्यजीत रे सोसायटी",
+    "Kala Mandir<br>कला मंदिर",
+    "Robir Kiran<br>रोबिर किरण"
+   ],
+   "my_ans": "D",
+   "sol": "रोबिर किरण एक सांस्कृतिक और संगीत समूह है जिसने दिसंबर 2025 में अपनी स्थापना के 10 वर्ष पूरे किए।",
+   "trick": "10वीं वर्षगांठ = रोबिर किरण",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "In 2025, the Global AI Conclave, reinforcing India’s role as a thought leader in responsible artificial intelligence, was hosted in which city?",
+   "hi": "2025 में, भारत को उत्तरदायी कृत्रिम बुद्धिमत्ता के क्षेत्र में एक अग्रणी विचारक के रूप में स्थापित करने के उद्देश्य से ग्लोबल AI कॉन्क्लेव का आयोजन किस शहर में किया गया था?",
+   "opts": [
+    "New Delhi<br>नई दिल्ली",
+    "Hyderabad<br>हैदराबाद",
+    "Chennai<br>चेन्नई",
+    "Bengaluru<br>बेंगलुरु"
+   ],
+   "my_ans": "C",
+   "sol": "ग्लोबल AI कॉन्क्लेव 2025 का आयोजन चेन्नई में किया गया था, जिसका उद्देश्य जिम्मेदार AI विकास में भारत की भूमिका को मजबूत करना था।",
+   "trick": "ग्लोबल AI कॉन्क्लेव = चेन्नई",
+   "ans": "C"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "With which State did the Department of Biotechnology sign the first Centre–State Memorandum of Understanding under the BioE3 Policy in 2025 to promote high-performance biomanufacturing?",
+   "hi": "बायोटेक्नोलॉजी विभाग ने उच्च-प्रदर्शन वाले जैव-विनिर्माण को बढ़ावा देने के लिए 2025 में BioE3 नीति के अंतर्गत किस राज्य के साथ प्रथम केंद्र-राज्य समझौता ज्ञापन (MoU) पर हस्ताक्षर किए?",
+   "opts": [
+    "Assam<br>असम",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Karnataka<br>कर्नाटक",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "A",
+   "sol": "बायोटेक्नोलॉजी विभाग ने BioE3 नीति के तहत जैव-विनिर्माण को बढ़ावा देने के लिए असम के साथ अपना पहला केंद्र-राज्य समझौता ज्ञापन हस्ताक्षरित किया।",
+   "trick": "BioE3 नीति MoU = असम",
+   "ans": "A"
+  }
+ ]
+}

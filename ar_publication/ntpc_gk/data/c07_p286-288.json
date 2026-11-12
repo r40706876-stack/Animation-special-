@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "286-288",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 199,
+   "lvl": "UG",
+   "en": "What modification was made to Article 171(1) of the Indian Constitution by the seventh amendment?",
+   "hi": "सातवें संशोधन द्वारा भारतीय संविधान के अनुच्छेद 171(1) में क्या संशोधन किया गया था?",
+   "opts": [
+    "Term 'one-fourth' was replaced with 'one-half'<br>पद 'एक-चौथाई' को 'आधा' से प्रतिस्थापित किया गया",
+    "Term 'one-half' was replaced with 'one-fourth'<br>पद 'आधा' को 'एक-चौथाई' से प्रतिस्थापित किया गया",
+    "Term 'one-fourth' was replaced with 'one-third'<br>पद 'एक-चौथाई' को 'एक-तिहाई' से प्रतिस्थापित किया गया",
+    "Term 'one-third' was replaced with 'one-fourth'<br>पद 'एक-तिहाई' को 'एक-चौथाई' से प्रतिस्थापित किया गया"
+   ],
+   "my_ans": "C",
+   "sol": "सातवें संशोधन अधिनियम, 1956 के तहत विधान परिषद के सदस्यों की अधिकतम संख्या विधानसभा के एक-चौथाई से बढ़ाकर एक-तिहाई कर दी गई।",
+   "trick": "विधान परिषद का आकार: 1/4 से बढ़कर 1/3 हुआ।",
+   "ans": "C"
+  },
+  {
+   "n": 200,
+   "lvl": "UG",
+   "en": "Who among the following administers oath of Pro Tem Speaker during initial sitting of newly elected Lok Sabha?",
+   "hi": "निम्नलिखित में से कौन, नवनिर्वाचित लोकसभा के प्रथम सत्र के दौरान प्रो टेम स्पीकर को शपथ दिलाते हैं?",
+   "opts": [
+    "Cabinet Secretary<br>कैबिनेट सचिव",
+    "Chief Justice of India<br>भारत के मुख्य न्यायाधीश",
+    "President of India<br>भारत के राष्ट्रपति",
+    "Vice President of India<br>भारत के उपराष्ट्रपति"
+   ],
+   "my_ans": "C",
+   "sol": "नवनिर्वाचित लोकसभा की पहली बैठक के लिए राष्ट्रपति प्रो टेम स्पीकर को शपथ दिलाते हैं।",
+   "trick": "प्रो टेम स्पीकर को राष्ट्रपति नियुक्त करते हैं और शपथ भी दिलाते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 201,
+   "lvl": "UG",
+   "en": "Control over district and subordinate courts’ posting, promotion and leaves of judges vests primarily in which authority?",
+   "hi": "जिला और अधीनस्थ न्यायालयों में न्यायाधीशों की नियुक्ति, पदोन्नति और अवकाश पर नियंत्रण मुख्य रूप से किस प्राधिकरण/प्राधिकारी में निहित होता है?",
+   "opts": [
+    "Parliament<br>संसद",
+    "President of India<br>भारत के राष्ट्रपति",
+    "High Court<br>उच्च न्यायालय",
+    "Law Ministry of India<br>भारत का विधि मंत्रालय"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान के अनुच्छेद 235 के तहत जिला और अधीनस्थ न्यायालयों पर प्रशासनिक नियंत्रण उच्च न्यायालय का होता है।",
+   "trick": "अनुच्छेद 235 = अधीनस्थ न्यायालयों पर उच्च न्यायालय का नियंत्रण।",
+   "ans": "C"
+  },
+  {
+   "n": 202,
+   "lvl": "UG",
+   "en": "Public Interest Litigation is an example of which doctrine?",
+   "hi": "लोकहितवाद किस सिद्धांत का एक उदाहरण है?",
+   "opts": [
+    "Judicial Review<br>न्यायिक पुनरावलोकन",
+    "Executive Action<br>कार्यकारी कार्रवाई",
+    "Judicial Neutrality<br>न्यायिक तटस्थता",
+    "Judicial Activism<br>न्यायिक सक्रियता"
+   ],
+   "my_ans": "D",
+   "sol": "जनहित याचिका (PIL) न्यायिक सक्रियता का एक उपकरण है, जिसके माध्यम से न्यायालय सामाजिक न्याय सुनिश्चित करने के लिए हस्तक्षेप करते हैं।",
+   "trick": "PIL = न्यायिक सक्रियता (न्यायालय का सक्रिय हस्तक्षेप)।",
+   "ans": "D"
+  },
+  {
+   "n": 203,
+   "lvl": "UG",
+   "en": "After proclamation, Financial Emergency must be approved within how many months by Parliament?",
+   "hi": "उद्घोषणा के बाद, संसद द्वारा कितने माह के भीतर वित्तीय आपातकाल को अनुमोदित किया जाना चाहिए?",
+   "opts": [
+    "Approved by both Houses of Parliament within Six months<br>संसद के दोनों सदनों द्वारा छह माह के भीतर",
+    "Approved by both Houses of Parliament within One months<br>संसद के दोनों सदनों द्वारा एक माह के भीतर",
+    "Approved by both Houses of Parliament within Three months<br>संसद के दोनों सदनों द्वारा तीन माह के भीतर",
+    "Approved by both Houses of Parliament within Two months<br>संसद के दोनों सदनों द्वारा दो माह के भीतर"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 360 के तहत वित्तीय आपातकाल को संसद के दोनों सदनों द्वारा 2 महीने के भीतर अनुमोदित करना आवश्यक है।",
+   "trick": "वित्तीय आपातकाल = 2 महीने का समय।",
+   "ans": "D"
+  },
+  {
+   "n": 204,
+   "lvl": "UG",
+   "en": "What factors have caused the number of Rajya Sabha seats assigned to States and Union Territories to fluctuate since 1952?",
+   "hi": "वर्ष 1952 से राज्यों और केंद्र शासित प्रदेशों को आवंटित राज्य सभा सीटों की संख्या में उतार-चढ़ाव के लिए कौन-से कारक उत्तरदायी रहे हैं?",
+   "opts": [
+    "Decisions of the Supreme Court<br>सर्वोच्च न्यायालय के निर्णय",
+    "Reorganization and formation of new States<br>राज्यों का पुनर्गठन और नए राज्यों का गठन",
+    "Change in the President’s powers<br>राष्ट्रपति की शक्तियों में परिवर्तन",
+    "Economic reforms<br>आर्थिक सुधार"
+   ],
+   "my_ans": "B",
+   "sol": "1956 के राज्य पुनर्गठन अधिनियम और बाद में नए राज्यों के गठन (जैसे तेलंगाना, जम्मू-कश्मीर) के कारण सीटों का पुनर्वितरण आवश्यक हुआ।",
+   "trick": "राज्यों का पुनर्गठन = सीटों का पुनर्वितरण।",
+   "ans": "B"
+  },
+  {
+   "n": 205,
+   "lvl": "UG",
+   "en": "A national emergency must be approved by Parliament within ______.",
+   "hi": "राष्ट्रीय आपातकाल को संसद द्वारा ______ में अनुमोदित किया जाना चाहिए।",
+   "opts": [
+    "90 Days<br>90 दिनों",
+    "45 Days<br>45 दिनों",
+    "30 Days<br>30 दिनों",
+    "60 Days<br>60 दिनों"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 352 के तहत राष्ट्रीय आपातकाल की घोषणा को संसद के दोनों सदनों द्वारा 1 माह (30 दिन) के भीतर अनुमोदित करना अनिवार्य है।",
+   "trick": "राष्ट्रीय आपातकाल = 30 दिन (1 माह)।",
+   "ans": "C"
+  },
+  {
+   "n": 206,
+   "lvl": "UG",
+   "en": "Which of the following judicial approaches is best exemplified by the practice of Public Interest Litigation (PIL) in India?",
+   "hi": "भारत में जनहित याचिका (PIL) की प्रथा द्वारा निम्नलिखित में से किस न्यायिक उपागम का सर्वोत्तम उदाहरण प्रस्तुत किया जाता है?",
+   "opts": [
+    "Judicial Activism<br>न्यायिक सक्रियता",
+    "Judicial Restraint<br>न्यायिक संयम",
+    "Judicial Absolutism<br>न्यायिक निरंकुशता",
+    "Judicial Passivism<br>न्यायिक निष्क्रियता"
+   ],
+   "my_ans": "A",
+   "sol": "जनहित याचिका न्यायिक सक्रियता का उदाहरण है, जहाँ न्यायालय सामाजिक मुद्दों पर स्वयं संज्ञान लेकर जनहित की रक्षा करते हैं।",
+   "trick": "PIL = न्यायिक सक्रियता।",
+   "ans": "A"
+  },
+  {
+   "n": 207,
+   "lvl": "UG",
+   "en": "Which of the following Articles of the Indian Constitution provides for the suspension of enforcement of the rights conferred by Part III during emergencies?",
+   "hi": "भारतीय संविधान का निम्नलिखित में से कौन-सा अनुच्छेद, आपात स्थिति के दौरान भाग III द्वारा प्रदत्त अधिकारों के प्रवर्तन के निलंबन का प्रावधान करता है?",
+   "opts": [
+    "Article 356<br>अनुच्छेद 356",
+    "Article 359<br>अनुच्छेद 359",
+    "Article 358<br>अनुच्छेद 358",
+    "Article 357<br>अनुच्छेद 357"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 359 राष्ट्रपति को आपातकाल के दौरान मौलिक अधिकारों (भाग III) के प्रवर्तन को निलंबित करने का अधिकार देता है।",
+   "trick": "अनुच्छेद 359 = मौलिक अधिकारों का निलंबन।",
+   "ans": "B"
+  }
+ ]
+}

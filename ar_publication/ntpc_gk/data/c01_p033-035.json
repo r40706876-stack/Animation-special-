@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "33-35",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "The Ikshvakus ruled Krishna-Godavari delta in Eastern Deccan after the decline of which dynasty?",
+   "hi": "निम्नलिखित में से किस राजवंश के पतन के बाद इक्ष्वाकुओं ने पूर्वी दक्कन में कृष्णा-गोदावरी डेल्टा पर शासन किया?",
+   "opts": [
+    "Guptas Dynasty<br>गुप्त राजवंश",
+    "Satavahanas Dynasty<br>सातवाहन राजवंश",
+    "Kadambas Dynasty<br>कदंब राजवंश",
+    "Mauryas Dynasty<br>मौर्य राजवंश"
+   ],
+   "my_ans": "B",
+   "sol": "इक्ष्वाकुओं ने सातवाहन वंश के पतन के बाद पूर्वी दक्कन में अपना शासन स्थापित किया था।",
+   "trick": "सातवाहन के बाद इक्ष्वाकु आए।",
+   "ans": "B"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "Which of the following statements correctly explains the decline of metallic coins in the post-Gupta period?",
+   "hi": "निम्नलिखित में से कौन-सा कथन, गुप्त काल के बाद धात्विक सिक्कों के प्रचलन में गिरावट की सही व्याख्या करता है?",
+   "opts": [
+    "It occurred due to abundant commerce that reduced dependence on minted currency.<br>ऐसा प्रचुर वाणिज्य के कारण हुआ जिससे ढलाई द्वारा जारी मुद्रा पर निर्भरता कम हो गई।",
+    "It emerged because gold supplies increased and made minting coins unnecessary.<br>इसका कारण यह था कि सोने की आपूर्ति बढ़ गई और सिक्कों की ढलाई को अनावश्यक बना दिया।",
+    "It happened because rulers preferred using older coins rather than minting new ones.<br>ऐसा इसलिए हुआ क्योंकि शासकों ने नए सिक्कों को बनाने के स्थान पर पुराने सिक्कों का उपयोग करना पसंद किया।",
+    "It resulted from reduced trade and rising land grants replacing cash payments.<br>यह व्यापार में कमी और नकद भुगतान के स्थान पर बढ़ते भूमि अनुदान के परिणामस्वरूप हुआ।"
+   ],
+   "my_ans": "D",
+   "sol": "गुप्तोत्तर काल में व्यापार में गिरावट आई और राजाओं ने नकद वेतन के बजाय अधिकारियों को भूमि अनुदान देना शुरू किया, जिससे सिक्कों का चलन कम हो गया।",
+   "trick": "व्यापार में कमी = सिक्कों का पतन।",
+   "ans": "D"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "The Chinese pilgrim Xuanzang (Hiuen Tsang) visited Kashmir during the reign of:",
+   "hi": "चीनी तीर्थयात्री ह्वेनसांग (Hiuen Tsang) ने कश्मीर की यात्रा किसके शासनकाल में की थी?",
+   "opts": [
+    "Harshavardhana<br>हर्षवर्धन",
+    "Durlabhavardhana<br>दुर्लभवर्धन",
+    "Pulakeshin II<br>पुलकेशिन II",
+    "Yashodharman<br>यशोवर्मन"
+   ],
+   "my_ans": "B",
+   "sol": "ह्वेनसांग ने 629-645 ईस्वी के बीच भारत की यात्रा की और कश्मीर में कर्कोट वंश के राजा दुर्लभवर्धन के शासनकाल में रहा।",
+   "trick": "ह्वेनसांग = दुर्लभवर्धन (कश्मीर)।",
+   "ans": "B"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "Who among the following was the most celebrated Indo-Greek ruler in ancient India?",
+   "hi": "निम्नलिखित में से कौन, प्राचीन भारत में सबसे प्रसिद्ध इंडो-ग्रीक शासक था?",
+   "opts": [
+    "Pushyamitra<br>पुष्यमित्र",
+    "Rudradaman<br>रुद्रदामन",
+    "Alexander<br>सिकंदर",
+    "Menander<br>मिनांडर"
+   ],
+   "my_ans": "D",
+   "sol": "मिनांडर (मिलिंद) सबसे प्रसिद्ध इंडो-ग्रीक शासक था, जो बौद्ध भिक्षु नागसेन के साथ अपने संवाद 'मिलिंद पन्हो' के लिए जाना जाता है।",
+   "trick": "मिनांडर = मिलिंद पन्हो।",
+   "ans": "D"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Who among the following was a ruler of the Chedi (Mahameghavahana) dynasty of Kalinga?",
+   "hi": "निम्नलिखित में से कौन कलिंग के चेदि (महामेघवाहन) वंश का शासक था?",
+   "opts": [
+    "Kharavela<br>खारवेल",
+    "Gautamiputra Satakarni<br>गौतमीपुत्र सातकर्णी",
+    "Kanishka<br>कनिष्क",
+    "Pushyamitra Shunga<br>पुष्यमित्र शुंग"
+   ],
+   "my_ans": "A",
+   "sol": "खारवेल कलिंग के चेदि वंश का सबसे महान शासक था, जिसके बारे में जानकारी उदयगिरि के हाथीगुम्फा शिलालेख से मिलती है।",
+   "trick": "खारवेल = हाथीगुम्फा शिलालेख।",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "The historical chronicle Rajatarangini, which presents a detailed account of the kings of Kashmir, was composed by:",
+   "hi": "कश्मीर के राजाओं का विस्तृत विवरण प्रस्तुत करने वाले ऐतिहासिक इतिवृत्त राजतरंगिणी की रचना किसने की थी?",
+   "opts": [
+    "Kalhana<br>कल्हण",
+    "Kshemendra<br>क्षेमेन्द्र",
+    "Bilhana<br>बिल्हण",
+    "Somadeva<br>सोमदेव"
+   ],
+   "my_ans": "A",
+   "sol": "राजतरंगिणी की रचना 12वीं शताब्दी में कल्हण द्वारा की गई थी, जो कश्मीर के इतिहास का सबसे महत्वपूर्ण ग्रंथ है।",
+   "trick": "राजतरंगिणी = कल्हण।",
+   "ans": "A"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "Which of the following Pushyabhuti rulers strengthened his position by defeating the Hunas?",
+   "hi": "निम्नलिखित में से किस पुष्यभूति शासक ने हूणों को परास्त करके अपनी स्थिति को सुदृढ़ किया था?",
+   "opts": [
+    "Rajyavardhana<br>राज्यवर्धन",
+    "Harshavardhana<br>हर्षवर्धन",
+    "Naravardhana<br>नरवर्धन",
+    "Prabhakarvardhana<br>प्रभाकरवर्धन"
+   ],
+   "my_ans": "D",
+   "sol": "प्रभाकरवर्धन ने हूणों को हराकर उत्तर भारत में पुष्यभूति वंश की स्थिति मजबूत की थी।",
+   "trick": "हूणों का विजेता = प्रभाकरवर्धन।",
+   "ans": "D"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "Which of the following regions, ruled by the Maukharis, gradually replaced Pataliputra as a political centre of North India?",
+   "hi": "मौखरियों द्वारा शासित निम्नलिखित में से किस क्षेत्र ने धीरे-धीरे उत्तरी भारत के राजनीतिक केंद्र के रूप में पाटलिपुत्र को प्रतिस्थापित किया?",
+   "opts": [
+    "Patna<br>पटना",
+    "Thanesar<br>थानेसर",
+    "Allahabad<br>इलाहाबाद",
+    "Kannauj<br>कन्नौज"
+   ],
+   "my_ans": "D",
+   "sol": "मौखरियों की राजधानी कन्नौज थी, जो गुप्तोत्तर काल में पाटलिपुत्र के स्थान पर उत्तर भारत का प्रमुख राजनीतिक केंद्र बन गई।",
+   "trick": "पाटलिपुत्र का उत्तराधिकारी = कन्नौज।",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "Harshavardhana’s sister, Rajyashri, was married to whom among the following?",
+   "hi": "हर्षवर्धन की बहन राज्यश्री का विवाह निम्नलिखित में से किसके साथ हुआ था?",
+   "opts": [
+    "Grahavarman<br>ग्रहवर्मन",
+    "Devgupta<br>देवगुप्त",
+    "Rudrasena II<br>रुद्रसेन द्वितीय",
+    "Shashanka<br>शशांक"
+   ],
+   "my_ans": "A",
+   "sol": "हर्षवर्धन की बहन राज्यश्री का विवाह कन्नौज के मौखरि राजा ग्रहवर्मन से हुआ था।",
+   "trick": "राज्यश्री = ग्रहवर्मन।",
+   "ans": "A"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "Which of the following Deccan rulers defeated Harshavardhana and assumed the title “Dakshinapatheshvara” (Lord of the Deccan)?",
+   "hi": "निम्नलिखित में से किस दक्कन शासक ने हर्षवर्धन को पराजित किया और 'दक्षिणपथेश्वर' (दक्कन के स्वामी) की उपाधि धारण की?",
+   "opts": [
+    "Pulakeshin II<br>पुलकेशिन द्वितीय",
+    "Narasimhavarman I<br>नरसिंहवर्मन प्रथम",
+    "Dhruva Dharavarsha<br>ध्रुव धारवर्ष",
+    "Vikramaditya I<br>विक्रमादित्य प्रथम"
+   ],
+   "my_ans": "A",
+   "sol": "चालुक्य राजा पुलकेशिन द्वितीय ने नर्मदा नदी के तट पर हर्षवर्धन को पराजित किया था।",
+   "trick": "हर्षवर्धन का विजेता = पुलकेशिन द्वितीय।",
+   "ans": "A"
+  }
+ ]
+}

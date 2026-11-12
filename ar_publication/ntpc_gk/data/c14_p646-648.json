@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "646-648",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 270,
+   "lvl": "UG",
+   "en": "Selected for the International Space Station mission in 2025, John McFall, the first disabled astronaut, is associated with which of the following countries?",
+   "hi": "2025 में, अंतर्राष्ट्रीय अंतरिक्ष स्टेशन मिशन के लिए चयनित, पहले दिव्यांग अंतरिक्ष यात्री जॉन मैकफॉल (John McFall), निम्नलिखित में से किस देश से संबंधित हैं?",
+   "opts": [
+    "United States of America<br>संयुक्त राज्य अमेरिका",
+    "Canada<br>कनाडा",
+    "United Kingdom<br>यूनाइटेड किंगडम",
+    "Australia<br>ऑस्ट्रेलिया"
+   ],
+   "my_ans": "C",
+   "sol": "जॉन मैकफॉल एक ब्रिटिश पैरालंपिक धावक और सर्जन हैं, जिन्हें यूरोपीय अंतरिक्ष एजेंसी (ESA) द्वारा दुनिया के पहले 'पैरास्ट्रोनॉट' के रूप में चुना गया है।",
+   "trick": "जॉन मैकफॉल = पहले पैरास्ट्रोनॉट = यूनाइटेड किंगडम",
+   "ans": "C"
+  },
+  {
+   "n": 271,
+   "lvl": "UG",
+   "en": "In November 2025, PM Modi chaired the 60th All India Conference of Directors General and Inspectors General of Police in which city of Chhattisgarh?",
+   "hi": "नवंबर 2025 में, प्रधानमंत्री मोदी ने छत्तीसगढ़ के किस शहर में पुलिस महानिदेशकों और महानिरीक्षकों के 60वें अखिल भारतीय सम्मेलन की अध्यक्षता की?",
+   "opts": [
+    "Bilaspur<br>बिलासपुर",
+    "Korba<br>कोरबा",
+    "Bhilai<br>भिलाई",
+    "Raipur<br>रायपुर"
+   ],
+   "my_ans": "D",
+   "sol": "60वां अखिल भारतीय DGP/IGP सम्मेलन नवंबर 2025 में छत्तीसगढ़ की राजधानी रायपुर में आयोजित किया गया था।",
+   "trick": "DGP/IGP सम्मेलन = रायपुर (छत्तीसगढ़ की राजधानी)",
+   "ans": "D"
+  },
+  {
+   "n": 272,
+   "lvl": "UG",
+   "en": "V.S. Achuthanandan, who passed away in July 2025, was a prominent leader of which political party in India?",
+   "hi": "जुलाई 2025 में दिवंगत हुए वी. एस. अच्युतानंदन भारत में किस राजनीतिक दल के प्रमुख नेता थे?",
+   "opts": [
+    "Communist Party of India (Marxist)<br>भारतीय कम्युनिस्ट पार्टी (मार्क्सवादी)",
+    "Indian National Congress<br>भारतीय राष्ट्रीय कांग्रेस",
+    "Bharatiya Janata Party<br>भारतीय जनता पार्टी",
+    "All India Trinamool Congress<br>अखिल भारतीय तृणमूल कांग्रेस"
+   ],
+   "my_ans": "A",
+   "sol": "वी.एस. अच्युतानंदन केरल के पूर्व मुख्यमंत्री और CPI(M) पोलित ब्यूरो के वरिष्ठ नेता थे।",
+   "trick": "अच्युतानंदन = केरल के दिग्गज कम्युनिस्ट नेता",
+   "ans": "A"
+  },
+  {
+   "n": 273,
+   "lvl": "UG",
+   "en": "Which of the following countries signed the OECD Multilateral Convention in October 2025 to Implement BEPS (Base Erosion and Profit Shifting)?",
+   "hi": "निम्नलिखित में से किस देश ने अक्टूबर 2025 में BEPS (बेस इरो जन एंड प्रॉफिट शिफ्टिंग) को लागू करने के लिए OECD मल्टीलेटरल कन्वेंशन पर हस्ताक्षर किए?",
+   "opts": [
+    "Russia<br>रूस",
+    "Japan<br>जापान",
+    "Brazil<br>ब्राजील",
+    "India<br>भारत"
+   ],
+   "my_ans": "C",
+   "sol": "ब्राजील ने अक्टूबर 2025 में बहुराष्ट्रीय कंपनियों द्वारा कर चोरी को रोकने के लिए OECD के BEPS कन्वेंशन पर हस्ताक्षर किए।",
+   "trick": "BEPS = कर चोरी रोकना = ब्राजील (2025)",
+   "ans": "C"
+  },
+  {
+   "n": 274,
+   "lvl": "UG",
+   "en": "When did Ladakh become a union territory of India?",
+   "hi": "लद्दाख, भारत का केंद्र शासित प्रदेश कब बना?",
+   "opts": [
+    "2017",
+    "2019",
+    "2020",
+    "2021"
+   ],
+   "my_ans": "B",
+   "sol": "जम्मू और कश्मीर पुनर्गठन अधिनियम, 2019 के तहत 31 अक्टूबर 2019 को लद्दाख एक अलग केंद्र शासित प्रदेश बना।",
+   "trick": "J&K पुनर्गठन अधिनियम = 2019",
+   "ans": "B"
+  },
+  {
+   "n": 275,
+   "lvl": "UG",
+   "en": "In October 2025, India's Society of Association Executives (SAE) officially launched in which of the following cities?",
+   "hi": "अक्टूबर 2025 में, भारत की सोसाइटी ऑफ एसोसिएशन एग्जीक्यूटिव्स (SAE) का आधिकारिक शुभारंभ निम्नलिखित में से किस शहर में हुआ?",
+   "opts": [
+    "New Delhi<br>नई दिल्ली",
+    "Patna<br>पटना",
+    "Bengaluru<br>बेंगलुरु",
+    "Ahmedabad<br>अहमदाबाद"
+   ],
+   "my_ans": "C",
+   "sol": "भारत की सोसाइटी ऑफ एसोसिएशन एग्जीक्यूटिव्स (SAE) का शुभारंभ अक्टूबर 2025 में बेंगलुरु में किया गया।",
+   "trick": "SAE लॉन्च = बेंगलुरु (टेक हब)",
+   "ans": "C"
+  },
+  {
+   "n": 276,
+   "lvl": "UG",
+   "en": "Which of the following organizations launched the 'Frontier Seed' initiative to boost private sector growth and ocean impact in the Pacific in 2025?",
+   "hi": "निम्नलिखित में से किस संगठन ने 2025 में प्रशांत क्षेत्र में निजी क्षेत्र के विकास और महासागर पर प्रभाव को बढ़ावा देने के लिए 'फ्रंटियर सीड (Frontier Seed)' पहल की शुरुआत की?",
+   "opts": [
+    "World Bank<br>विश्व बैंक (World Bank)",
+    "European Investment Bank<br>यूरोपीय निवेश बैंक (European Investment Bank)",
+    "Asian Development Bank<br>एशियाई विकास बैंक (Asian Development Bank)",
+    "Bank of International Settlement<br>बैंक ऑफ इंटरनेशनल सेटलमेंट (Bank of International Settlement)"
+   ],
+   "my_ans": "C",
+   "sol": "एशियाई विकास बैंक (ADB) ने 2025 में प्रशांत क्षेत्र में नीली अर्थव्यवस्था और निजी क्षेत्र को बढ़ावा देने के लिए 'फ्रंटियर सीड' पहल शुरू की।",
+   "trick": "फ्रंटियर सीड = ADB = प्रशांत क्षेत्र",
+   "ans": "C"
+  },
+  {
+   "n": 277,
+   "lvl": "UG",
+   "en": "Annalena Baerbock, who served as the President of the 80th session of the UN General Assembly in 2025, belongs to which country?",
+   "hi": "एना लेना बेरबॉ क (Annalena Baerbock), जिन्होंने 2025 में संयुक्त राष्ट्र महासभा के 80वें सत्र की अध्यक्ष के रूप में कार्य किया, किस देश से संबंधित हैं?",
+   "opts": [
+    "Czech Republic<br>चेक रिपब्लिक",
+    "Denmark<br>डेनमार्क",
+    "Germany<br>जर्मनी",
+    "Austria<br>ऑस्ट्रिया"
+   ],
+   "my_ans": "C",
+   "sol": "अन्ना लेना बेयरबॉ क जर्मनी की विदेश मंत्री हैं, जिन्हें 2025 में संयुक्त राष्ट्र महासभा के 80वें सत्र का अध्यक्ष चुना गया।",
+   "trick": "अन्ना लेना बेयरबॉ क = जर्मनी",
+   "ans": "C"
+  },
+  {
+   "n": 278,
+   "lvl": "UG",
+   "en": "In February 2025, which one of the following countries and India signed a declaration to establish a partnership focused on advanced and small modular nuclear reactors?",
+   "hi": "फरवरी 2025 में, निम्नलिखित में से किस देश और भारत ने उन्नत एवं लघु मॉड्यूलर परमाणु रिएक्टरों पर केंद्रित साझेदारी स्थापित करने के लिए एक घोषणा पत्र पर हस्ताक्षर किए?",
+   "opts": [
+    "Japan<br>जापान (Japan)",
+    "Russia<br>रूस (Russia)",
+    "France<br>फ्रांस (France)",
+    "United States<br>संयुक्त राज्य (United States)"
+   ],
+   "my_ans": "C",
+   "sol": "भारत और फ्रांस ने फरवरी 2025 में उन्नत और छोटे मॉड्यूलर परमाणु रिएक्टरों (SMRs) के विकास के लिए साझेदारी की घोषणा की।",
+   "trick": "परमाणु रिएक्टर साझेदारी = भारत + फ्रांस",
+   "ans": "C"
+  },
+  {
+   "n": 279,
+   "lvl": "UG",
+   "en": "What is the theme of the 18ᵗʰ Pravasi Bharatiya Divas 2025?",
+   "hi": "18वें प्रवासी भारतीय दिवस, 2025 का विषय क्या था?",
+   "opts": [
+    "Diaspora's contribution to a Viksit Bharat<br>विकसित भारत में प्रवासी समुदाय का योगदान",
+    "Connecting the Indian Diaspora<br>भारतीय प्रवासी समुदाय को जोड़ना",
+    "Diaspora and Digital India<br>प्रवासी और डिजिटल भारत",
+    "Global Indians for Atmanirbhar Bharat<br>आत्मनिर्भर भारत के लिए वैश्विक भारतीय"
+   ],
+   "my_ans": "A",
+   "sol": "18वां प्रवासी भारतीय दिवस 2025 भुवनेश्वर में आयोजित हुआ, जिसका विषय 'विकसित भारत में प्रवासी समुदाय का योगदान' था।",
+   "trick": "प्रवासी दिवस 2025 = विकसित भारत में योगदान",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "283-285",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 188,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution mentions the Power of Parliament to amend the Constitution?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, संविधान में संशोधन करने की संसद की शक्ति का उल्लेख करता है?",
+   "opts": [
+    "Article 361<br>अनुच्छेद 361",
+    "Article 368<br>अनुच्छेद 368",
+    "Article 359<br>अनुच्छेद 359",
+    "Article 360<br>अनुच्छेद 360"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय संविधान का अनुच्छेद 368 संसद को संविधान में संशोधन करने की शक्ति और प्रक्रिया प्रदान करता है।",
+   "trick": "368 में संविधान संशोधन की शक्ति निहित है।",
+   "ans": "B"
+  },
+  {
+   "n": 189,
+   "lvl": "UG",
+   "en": "Who among the following is the head of the Union Council of Ministers?",
+   "hi": "निम्नलिखित में से कौन, केंद्रीय मंत्रिपरिषद का प्रमुख होता है?",
+   "opts": [
+    "Prime Minister<br>प्रधानमंत्री",
+    "Union Home Minister<br>केंद्रीय गृह मंत्री",
+    "President<br>राष्ट्रपति",
+    "Attorney General of India<br>भारत के महान्यायवादी"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 74 और 75 के अनुसार, प्रधानमंत्री केंद्रीय मंत्रिपरिषद के प्रमुख होते हैं।",
+   "trick": "मंत्रिपरिषद का मुखिया प्रधानमंत्री होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 190,
+   "lvl": "UG",
+   "en": "Which community lost its constitutional provision of nominated representation in legislatures through the 104th Amendment Act?",
+   "hi": "104वें संविधान संशोधन अधिनियम द्वारा किस समुदाय ने विधानमंडलों में मनोनीत प्रतिनिधित्व के अपने संवैधानिक प्रावधान को खो दिया?",
+   "opts": [
+    "Jains<br>जैन",
+    "Anglo-Indians<br>आंग्ल-भारतीय",
+    "Scheduled Tribes<br>अनुसूचित जनजाति",
+    "Scheduled Castes<br>अनुसूचित जाति"
+   ],
+   "my_ans": "B",
+   "sol": "104वें संविधान संशोधन (2019) ने लोकसभा और राज्य विधानसभाओं में एंग्लो-इंडियन समुदाय के नामांकन के विशेष प्रावधान को समाप्त कर दिया।",
+   "trick": "104वां संशोधन = एंग्लो-इंडियन का नामांकन समाप्त।",
+   "ans": "B"
+  },
+  {
+   "n": 191,
+   "lvl": "UG",
+   "en": "Which Amendment added Konkani, Manipuri, and Nepali to the Eighth Schedule?",
+   "hi": "निम्नलिखित में से किस संशोधन के अंतर्गत कोंकणी, मणिपुरी और नेपाली भाषाओं को आठवीं अनुसूची में शामिल किया गया था?",
+   "opts": [
+    "42nd Amendment<br>42वां संशोधन",
+    "71st Amendment<br>71वां संशोधन",
+    "63rd Amendment<br>63वां संशोधन",
+    "52nd Amendment<br>52वां संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "71वें संविधान संशोधन अधिनियम, 1992 द्वारा कोंकणी, मणिपुरी और नेपाली भाषाओं को आठवीं अनुसूची में जोड़ा गया था।",
+   "trick": "71वें संशोधन से 'नमक' (नेपाली, मणिपुरी, कोंकणी) जुड़ा।",
+   "ans": "B"
+  },
+  {
+   "n": 192,
+   "lvl": "UG",
+   "en": "Which of the following executive powers is exercised by the President of India?",
+   "hi": "निम्नलिखित में से कौन-सी कार्यकारी शक्तियाँ भारत के राष्ट्रपति द्वारा प्रयोग की जाती हैं?",
+   "opts": [
+    "Conducting elections to Parliament<br>संसद के लिए चुनाव आयोजित करना",
+    "Appointing the Prime Minister and, on his advice, other Union Ministers<br>प्रधानमंत्री की नियुक्ति करना और उसकी सलाह पर अन्य केंद्रीय मंत्रियों की नियुक्ति करना",
+    "Deciding the tenure of the Governors<br>राज्यपालों का कार्यकाल निर्धारित करना",
+    "Appointing judges of High Courts and framing the rules of procedure of the Supreme Court<br>उच्च न्यायालयों के न्यायाधीशों की नियुक्ति करना और सर्वोच्च न्यायालय की प्रक्रिया के नियम बनाना"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रपति प्रधानमंत्री की नियुक्ति करते हैं और उनकी सलाह पर अन्य केंद्रीय मंत्रियों की नियुक्ति करते हैं।",
+   "trick": "राष्ट्रपति PM और अन्य मंत्रियों को नियुक्त करते हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 193,
+   "lvl": "UG",
+   "en": "Which Amendment restored the primacy of Fundamental Rights over Directive Principles?",
+   "hi": "किस संशोधन ने निर्देशक सिद्धांतों पर मूल अधिकारों की प्रधानता को पुनःस्थापित किया?",
+   "opts": [
+    "42nd Amendment<br>42वां संशोधन",
+    "44th Amendment<br>44वां संशोधन",
+    "84th Amendment<br>84वां संशोधन",
+    "74th Amendment<br>74वां संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "44वें संविधान संशोधन (1978) ने 42वें संशोधन द्वारा किए गए परिवर्तनों को उलटते हुए मूल अधिकारों की प्रधानता को पुनः बहाल किया।",
+   "trick": "44वां संशोधन = मौलिक अधिकारों की बहाली।",
+   "ans": "B"
+  },
+  {
+   "n": 194,
+   "lvl": "UG",
+   "en": "Which of the following provisions of the Constitution of India specifies the power of Parliament to amend the Constitution?",
+   "hi": "भारत के संविधान का निम्नलिखित में से कौन-सा प्रावधान, संविधान का संशोधन करने की संसद की शक्ति को निर्दिष्ट करता है?",
+   "opts": [
+    "Article 352<br>अनुच्छेद 352",
+    "Article 370<br>अनुच्छेद 370",
+    "Article 356<br>अनुच्छेद 356",
+    "Article 368<br>अनुच्छेद 368"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 368 संसद को संविधान में संशोधन करने की शक्ति और प्रक्रिया प्रदान करता है।",
+   "trick": "368 = संविधान संशोधन।",
+   "ans": "D"
+  },
+  {
+   "n": 195,
+   "lvl": "UG",
+   "en": "Which of the following provisions of the Constitution of India provides the President with the power to grant pardons, reprieves or remissions?",
+   "hi": "भारत के संविधान का निम्नलिखित में से कौन-सा प्रावधान, राष्ट्रपति को क्षमा, प्रविलंबन या परिहार करने की शक्ति प्रदान करता है?",
+   "opts": [
+    "Article 75<br>अनुच्छेद 75",
+    "Article 72<br>अनुच्छेद 72",
+    "Article 74<br>अनुच्छेद 74",
+    "Article 71<br>अनुच्छेद 71"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 72 के तहत राष्ट्रपति को किसी भी अपराध के लिए दोषी ठहराए गए व्यक्ति को क्षमादान देने की शक्ति प्राप्त है।",
+   "trick": "72 = राष्ट्रपति की क्षमादान शक्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 196,
+   "lvl": "UG",
+   "en": "By which Amendment Act were the words ‘socialist’, ‘secular’, and ‘integrity’ added to the Preamble of the Indian Constitution?",
+   "hi": "किस संशोधन अधिनियम द्वारा भारतीय संविधान की प्रस्तावना में ‘समाजवादी’, ‘धर्मनिरपेक्ष’ और ‘अखंडता’ शब्द जोड़े गए थे?",
+   "opts": [
+    "52nd Amendment Act<br>52वां संशोधन अधिनियम",
+    "62nd Amendment Act<br>62वां संशोधन अधिनियम",
+    "42nd Amendment Act<br>42वां संशोधन अधिनियम",
+    "32nd Amendment Act<br>32वां संशोधन अधिनियम"
+   ],
+   "my_ans": "C",
+   "sol": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा प्रस्तावना में समाजवादी, धर्मनिरपेक्ष और अखंडता शब्द जोड़े गए थे।",
+   "trick": "42वां संशोधन = प्रस्तावना में तीन नए शब्द।",
+   "ans": "C"
+  },
+  {
+   "n": 197,
+   "lvl": "UG",
+   "en": "In which year was the Ninth Amendment to the Constitution passed in India?",
+   "hi": "भारत में संविधान का नौवां संशोधन किस वर्ष पारित हुआ था?",
+   "opts": [
+    "1962",
+    "1950",
+    "1964",
+    "1960"
+   ],
+   "my_ans": "D",
+   "sol": "नौवां संविधान संशोधन अधिनियम 1960 में पारित हुआ था, जिसके तहत बेरुबारी क्षेत्र पाकिस्तान को हस्तांतरित किया गया था।",
+   "trick": "1960 = नौवां संशोधन (बेरुबारी मामला)।",
+   "ans": "D"
+  },
+  {
+   "n": 198,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a function of the President?",
+   "hi": "निम्नलिखित में से कौन सा राष्ट्रपति का कार्य नहीं है?",
+   "opts": [
+    "Appointing the Prime Minister<br>प्रधानमंत्री की नियुक्ति",
+    "Summoning the Parliament<br>संसद का सत्र बुलाना",
+    "Dissolving the Lok Sabha<br>लोकसभा का विघटन",
+    "Directly managing the daily administration of states<br>राज्यों के दैनिक प्रशासन का प्रत्यक्ष प्रबंधन"
+   ],
+   "my_ans": "D",
+   "sol": "राज्यों का दैनिक प्रशासन राज्यपाल और मुख्यमंत्री के अधीन होता है, राष्ट्रपति सीधे इसका प्रबंधन नहीं करते हैं।",
+   "trick": "राष्ट्रपति राज्यों के दैनिक प्रशासन के प्रमुख नहीं होते।",
+   "ans": "D"
+  }
+ ]
+}

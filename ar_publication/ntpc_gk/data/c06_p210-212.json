@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Environment",
+  "hi": "पर्यावरण",
+  "total": 37,
+  "gl": 37,
+  "ug": 0
+ },
+ "source_pages": "210-212",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Under the Greenhouse Gases Emission Intensity Target Rules, 2025, if an obligated entity fails to meet targets, then environmental compensation is linked to carbon credit prices. The compensation for shortfall is:",
+   "hi": "ग्रीनहाउस गैस उत्सर्जन तीव्रता लक्ष्य नियम, 2025 के अंतर्गत, यदि कोई बाध्यकारी संस्था लक्ष्यों को पूरा करने में विफल रहती है, तो पर्यावरणीय क्षतिपूर्ति कार्बन क्रेडिट की कीमतों से संबद्ध होती है। कमी के लिए क्षतिपूर्ति _________ ।",
+   "opts": [
+    "Twice the average traded price of carbon credit certificates<br>कार्बन क्रेडिट प्रमाण पत्रों के औसत व्यापार मूल्य से दोगुनी होती है",
+    "A fixed penalty per tonne decided by SPCBs<br>SPCB द्वारा तय किया गया प्रति टन एक निश्चित जुर्माना है",
+    "Three times the average traded price of carbon credit certificates<br>कार्बन क्रेडिट प्रमाणपत्रों के औसत व्यापार मूल्य का तीन गुना होती है",
+    "Equal to the average traded price of carbon credit certificates<br>कार्बन क्रेडिट प्रमाणपत्रों के औसत व्यापार मूल्य के बराबर होती है"
+   ],
+   "my_ans": "A",
+   "sol": "नियमों के अनुसार, यदि कोई संस्था उत्सर्जन लक्ष्य पूरा नहीं करती है, तो उसे कार्बन क्रेडिट के औसत व्यापार मूल्य का दोगुना जुर्माना (पर्यावरणीय क्षतिपूर्ति) देना होगा।",
+   "trick": "जुर्माना = 2 × औसत कार्बन क्रेडिट मूल्य",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "The revised methodology from 2025 for calculating Green_Credit for tree plantation requires certain thresholds before a claim can be submitted. Which is the correct_eligibility_pair?",
+   "hi": "वृक्षारोपण के लिए ग्रीन क्रेडिट की गणना करने हेतु 2025 से संशोधित क्रियापद्धति के अनुसार, दावा प्रस्तुत करने से पहले कुछ प्रभावसीमाएं आवश्यक होती हैं। पात्रता का सही युग्म कौन-सा है?",
+   "opts": [
+    "5 years of restoration + 60% canopy density<br>5 वर्ष का जीर्णोद्धार + 60% वितान सघनता",
+    "7 years of restoration + 40% canopy density<br>7 वर्ष का जीर्णोद्धार + 40% वितान सघनता",
+    "5 years of restoration + 40% canopy density<br>5 वर्ष का जीर्णोद्धार + 40% वितान सघनता",
+    "3 years of restoration + 30% canopy density<br>3 वर्ष का जीर्णोद्धार + 30% वितान सघनता"
+   ],
+   "my_ans": "C",
+   "sol": "ग्रीन क्रेडिट के दावे के लिए न्यूनतम 5 वर्ष का रखरखाव और कम से कम 40% कैनोपी (वितान) घनत्व होना अनिवार्य है।",
+   "trick": "5 वर्ष की बहाली + 40% घनत्व",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which report, released at the COP30 summit in 2025, highlights the rapid increase in global methane emissions and the need for urgent action to address climate change?",
+   "hi": "2025 में COP30 शिखर सम्मेलन में जारी की गई कौन-सी रिपोर्ट वैश्विक मेथेन उत्सर्जन में तेजी से वृद्धि और जलवायु परिवर्तन पर ध्यान देने के लिए तत्काल कार्रवाई की आवश्यकता पर प्रकाश डालती है?",
+   "opts": [
+    "Global Methane Status Report 2025<br>वैश्विक मेथेन स्टेटस रिपोर्ट 2025",
+    "International Greenhouse Gas Assessment Report 2025<br>इंटरनेशनल ग्रीनहाउस गैस असेसमेंट रिपोर्ट 2025",
+    "Global Climate Mitigation Outlook Report 2025<br>ग्लोबल क्लाइमेट मिटिगेशन आउटलुक रिपोर्ट 2025",
+    "Worldwide Atmospheric Pollution Trends Report 2025<br>वर्ल्डवाइड एटमॉस्फेरिक पोल्यूशन ट्रेंड्स रिपोर्ट 2025"
+   ],
+   "my_ans": "A",
+   "sol": "COP30 शिखर सम्मेलन में 'ग्लोबल मेथेन स्टेटस रिपोर्ट 2025' जारी की गई, जो वैश्विक मेथेन उत्सर्जन में वृद्धि और जलवायु कार्रवाई की आवश्यकता को रेखांकित करती है।",
+   "trick": "COP30 = ग्लोबल मेथेन स्टेटस रिपोर्ट",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "India adopted the United Nations Sustainable Development Goals (SDGs) in which year?",
+   "hi": "भारत ने संयुक्त राष्ट्र के सतत विकास लक्ष्यों (SDG) को किस वर्ष अपनाया था?",
+   "opts": [
+    "1992",
+    "2015",
+    "2011",
+    "2012"
+   ],
+   "my_ans": "B",
+   "sol": "संयुक्त राष्ट्र के सभी सदस्य देशों ने सितंबर 2015 में सतत विकास लक्ष्यों (SDGs) को अपनाया था, जिन्हें भारत ने भी उसी वर्ष स्वीकार किया।",
+   "trick": "SDG = 2015 (सहस्राब्दी लक्ष्यों का स्थान लिया)",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "According to the World Health Organization (WHO) in 2025, which pollutant was identified as the primary cause of increased respiratory illnesses due to air pollution?",
+   "hi": "विश्व स्वास्थ्य संगठन (WHO) के अनुसार, 2025 में वायु प्रदूषण के कारण श्वसन संबंधी बीमारियों में वृद्धि का प्राथमिक कारण कौन-सा प्रदूषक था?",
+   "opts": [
+    "Particulate matter (PM2.5)<br>कण पदार्थ (PM2.5)",
+    "Sulphur dioxide (SO2)<br>सल्फर डाइऑक्साइड (SO2)",
+    "Ozone (O3)<br>ओजोन (O3)",
+    "Carbon monoxide (CO)<br>कार्बन मोनोऑक्साइड (CO)"
+   ],
+   "my_ans": "A",
+   "sol": "WHO के अनुसार, PM2.5 कण फेफड़ों और रक्त में गहराई तक प्रवेश कर जाते हैं, जो वैश्विक स्तर पर श्वसन संबंधी बीमारियों का मुख्य कारण हैं।",
+   "trick": "PM2.5 = सबसे हानिकारक वायु प्रदूषक",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "In November 2025, Oman enhanced its global environmental leadership by joining which international council?",
+   "hi": "नवंबर 2025 में, ओमान ने किस अंतरराष्ट्रीय परिषद में शामिल होकर वैश्विक पर्यावरण नेतृत्व में अपनी भूमिका को और मजबूत किया?",
+   "opts": [
+    "IUCN Council<br>IUCN परिषद",
+    "UNEP Governing Council<br>UNEP शासी परिषद",
+    "UNESCO World Heritage Committee<br>UNESCO विश्व धरोहर समिति",
+    "UNESCO Man and the Biosphere Council<br>UNESCO मानव और जीवमंडल परिषद"
+   ],
+   "my_ans": "D",
+   "sol": "नवंबर 2025 में ओमान 'यूनेस्को मैन एंड द बायोस्फीयर (MAB) काउंसिल' में शामिल हुआ, जो जैव विविधता संरक्षण को बढ़ावा देती है।",
+   "trick": "ओमान = MAB काउंसिल (2025)",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Which of the following statements is INCORRECT about functions of the Natural environment?",
+   "hi": "प्राकृतिक पर्यावरण के कार्यों के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+   "opts": [
+    "Environment supplies resources.<br>पर्यावरण संसाधनों की आपूर्ति करता है।",
+    "The environment sustains life by providing genetics and biodiversity.<br>पर्यावरण आनुवंशिकी और जैव विविधता प्रदान करके जीवन को बनाए रखता है।",
+    "Environment does not provide aesthetic services.<br>पर्यावरण सौंदर्य सेवाएं प्रदान नहीं करता है।",
+    "Environment assimilates waste.<br>पर्यावरण अपशिष्ट को स्वांगीकृत करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "प्राकृतिक पर्यावरण सौंदर्य सेवाएं (जैसे सुंदर दृश्य, पर्यटन) प्रदान करता है, इसलिए यह कथन कि 'पर्यावरण सौंदर्य सेवाएं प्रदान नहीं करता' गलत है।",
+   "trick": "पर्यावरण = संसाधन + जीवन समर्थन + सौंदर्य + अपशिष्ट निपटान",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following reports of the Brundtland Commission (1987) defined the concept of sustainable development?",
+   "hi": "ब्रंटलैंड (Brundtland) आयोग (1987) की निम्नलिखित में से किस रिपोर्ट ने सतत विकास की अवधारणा को परिभाषित किया था?",
+   "opts": [
+    "Limits to Growth<br>लिमिट्स टू ग्रोथ",
+    "Silent Spring<br>साइलेंट स्प्रिंग",
+    "Agenda 21<br>एजेंडा 21",
+    "Our Common Future<br>अवर कॉमन फ्यूचर"
+   ],
+   "my_ans": "D",
+   "sol": "ब्रंटलैंड आयोग ने 1987 में 'अवर कॉमन फ्यूचर' रिपोर्ट प्रकाशित की, जिसमें पहली बार सतत विकास को परिभाषित किया गया था।",
+   "trick": "सतत विकास = अवर कॉमन फ्यूचर (1987)",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "How often does India submit its Biennial Update Reports (BURs) to the UNFCCC?",
+   "hi": "भारत कितनी बार UNFCCC को अपनी बाइएनियल अपडेट रिपोर्ट (BURs) प्रस्तुत करता है?",
+   "opts": [
+    "Every five years<br>प्रत्येक पाँच वर्ष में",
+    "Every year<br>प्रत्येक वर्ष में",
+    "Every two years<br>प्रत्येक दो वर्ष में",
+    "Every three years<br>प्रत्येक तीन वर्ष में"
+   ],
+   "my_ans": "C",
+   "sol": "विकासशील देश UNFCCC को अपनी ग्रीनहाउस गैस सूची को अपडेट करने के लिए हर दो साल में 'बाइनियल अपडेट रिपोर्ट' (BUR) प्रस्तुत करते हैं।",
+   "trick": "BUR = हर 2 साल",
+   "ans": "C"
+  }
+ ]
+}

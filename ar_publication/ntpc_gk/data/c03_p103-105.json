@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "103-105",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Which of the following was a unique feature of Arya Samaj meetings, as seen during Dayanand Saraswati’s time?",
+   "hi": "दयानंद सरस्वती की अवधि के दौरान, आर्य समाज की सभाओं की एक अद्वितीय विशेषता निम्नलिखित में से कौन-सी थी?",
+   "opts": [
+    "They were held only in temples<br>ये आयोजन केवल मंदिरों में ही होते थे",
+    "Only Brahmins could attend<br>केवल ब्राह्मण ही शामिल हो सकते थे",
+    "They involved animal sacrifices<br>इनमें जन्तु बलि शामिल थी",
+    "Women participated equally<br>महिलाओं ने समान रूप से भाग लिया"
+   ],
+   "my_ans": "D",
+   "sol": "आर्य समाज (1875) ने जाति भेदभाव और मूर्ति पूजा का विरोध किया और महिलाओं की शिक्षा व सभाओं में उनकी समान भागीदारी को बढ़ावा दिया।",
+   "trick": "आर्य समाज = समानता और सुधार",
+   "ans": "D"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "Which organisation was founded by Raja Ram Mohan Roy in 1828?",
+   "hi": "1828 में राजा राम मोहन रॉय द्वारा किस संगठन की स्थापना की गई थी?",
+   "opts": [
+    "Prarthana Samaj<br>प्रार्थना समाज",
+    "Brahmo Samaj<br>ब्रह्म समाज",
+    "Ramakrishna Mission<br>रामकृष्ण मिशन",
+    "Arya Samaj<br>आर्य समाज"
+   ],
+   "my_ans": "B",
+   "sol": "राजा राम मोहन राय ने 1828 में कलकत्ता में ब्रह्म समाज की स्थापना की थी।",
+   "trick": "राजा राम मोहन राय = ब्रह्म समाज",
+   "ans": "B"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "Which of the following portrays the movement led by Baba Ramchandra?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प बाबा रामचंद्र के नेतृत्व में हुए आंदोलन का चित्रण करता है?",
+   "opts": [
+    "A religious reform movement<br>एक धार्मिक सुधार आंदोलन",
+    "A protest against British education policy<br>ब्रिटिश शिक्षा नीति के विरुद्ध एक विरोध प्रदर्शन",
+    "A rural uprising against exploitative landlords<br>शोषणकारी ज़मींदारों के विरुद्ध एक ग्रामीण विद्रोह",
+    "A workers' strike in factories<br>कारखानों में श्रमिकों की हड़ताल"
+   ],
+   "my_ans": "C",
+   "sol": "बाबा रामचंद्र ने 1920-21 में अवध में किसानों को संगठित कर ज़मींदारों और तालुकदारों के शोषण के विरुद्ध आंदोलन किया था।",
+   "trick": "बाबा रामचंद्र = किसान आंदोलन (अवध)",
+   "ans": "C"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "Which concern of the British government directly influenced the reorganisation of the Indian army after the Revolt of 1857?",
+   "hi": "1857 के विद्रोह के बाद ब्रिटिश सरकार की किस चिंता ने भारतीय सेना के पुनर्गठन को प्रत्यक्ष रूप से प्रभावित किया?",
+   "opts": [
+    "Avoiding financial strain caused by the overseas deployment of Indian troops.<br>भारतीय सैनिकों की विदेशी तैनाती के कारण उत्पन्न होने वाले वित्तीय तनाव से बचना",
+    "Limiting the political awareness of Indian soldiers through restricted education.<br>प्रतिबंधित शिक्षा के माध्यम से भारतीय सैनिकों की राजनीतिक जागरूकता को सीमित करना",
+    "Preventing a future unified military uprising by Indian soldiers against British rule.<br>भारतीय सैनिकों द्वारा ब्रिटिश शासन के विरुद्ध भविष्य में होने वाले एकीकृत सैन्य विद्रोह को रोकना",
+    "Reducing the influence of Indian cavalry units in strategic military decisions.<br>रणनीतिक सैन्य निर्णयों में भारतीय घुड़सवार इकाइयों के प्रभाव को कम करना"
+   ],
+   "my_ans": "C",
+   "sol": "1857 के विद्रोह में भारतीय सैनिकों की एकजुटता से डरे अंग्रेजों ने सेना में 'फूट डालो और राज करो' की नीति अपनाई ताकि भविष्य में ऐसा विद्रोह न हो।",
+   "trick": "1857 के बाद सेना का पुनर्गठन = विद्रोह रोकना",
+   "ans": "C"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "Which factor most directly contributed to the emergence of the Sanyasi–Fakir rebellion in Bengal?",
+   "hi": "बंगाल में संन्यासी-फ़कीर विद्रोह के उदय में किस कारक ने सबसे प्रत्यक्ष रूप से योगदान दिया था?",
+   "opts": [
+    "Increased protection from British officials improved rural living conditions.<br>ब्रिटिश अधिकारियों द्वारा दी जाने वाली बढ़ी हुई सुरक्षा से ग्रामीण जीवन स्थितियों में सुधार हुआ।",
+    "Expansion of irrigated farming reduced dependence on religious leaders.<br>सिंचित खेती के प्रसार ने धार्मिक नेताओं पर निर्भरता कम कर दी।",
+    "Stable land rights allowed peasants to negotiate with revenue contractors.<br>स्थिर भूमि अधिकारों ने किसानों को राजस्व ठेकेदारों के साथ बातचीत करने की अनुमति दी।",
+    "Forced taxation and famine pushed dispossessed peasants into rebel groups.<br>जबरन कर वसूली और अकाल ने विस्थापित किसानों को विद्रोही समूहों में शामिल होने के लिए बाध्य किया।"
+   ],
+   "my_ans": "D",
+   "sol": "1770 के भीषण अकाल और भारी करों के कारण बेदखल हुए किसानों और साधुओं ने मिलकर ब्रिटिश शासन के विरुद्ध विद्रोह किया था।",
+   "trick": "संन्यासी-फकीर विद्रोह = अकाल + कर का बोझ",
+   "ans": "D"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "The Paika Rebellion (1817), considered one of the earliest anti-colonial uprisings, took place in which region?",
+   "hi": "पाइका विद्रोह (1817), जिसे सबसे प्रारंभिक उपनिवेश-विरोधी विद्रोहों में से एक माना जाता है, किस क्षेत्र में हुआ था?",
+   "opts": [
+    "Odisha<br>ओडिशा",
+    "Maharashtra<br>महाराष्ट्र",
+    "Assam<br>असम",
+    "Bengal<br>बंगाल"
+   ],
+   "my_ans": "A",
+   "sol": "पाइका विद्रोह 1817 में ओडिशा में बख्शी जगबंधु के नेतृत्व में हुआ था, जो ब्रिटिश भू-राजस्व नीतियों के विरुद्ध था।",
+   "trick": "पाइका = ओडिशा",
+   "ans": "A"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "What was the primary objective of the Vernacular Press Act (1878)?",
+   "hi": "वर्नाक्यूलर प्रेस एक्ट (1878) का प्राथमिक उद्देश्य क्या था?",
+   "opts": [
+    "Restricting non-English publications to prevent criticism of British political actions.<br>ब्रिटिश राजनीतिक कार्रवाइयों की आलोचना को रोकने के लिए गैर-अंग्रेजी प्रकाशनों पर प्रतिबंध लगाना।",
+    "Encouraging regional newspapers to defend imperial policies against opponents.<br>क्षेत्रीय समाचार पत्रों को विरोधियों के विरुद्ध साम्राज्यवादी नीतियों का बचाव करने के लिए प्रोत्साहित करना।",
+    "Removing censorship rules to allow free expression in vernacular print outlets.<br>सेंसरशिप के नियमों को हटाकर वर्नाक्यूलर प्रिंट आउटलेट्स में स्वतंत्र अभिव्यक्ति की अनुमति देना।",
+    "Promoting bilingual journalism to support cultural unity in colonial territories.<br>औपनिवेशिक क्षेत्रों में सांस्कृतिक एकता को बढ़ावा देने के लिए द्विभाषी पत्रकारिता को प्रोत्साहित करना।"
+   ],
+   "my_ans": "A",
+   "sol": "लॉर्ड लिटन द्वारा लाया गया यह कानून भारतीय भाषाओं के समाचार पत्रों को नियंत्रित करने के लिए था ताकि वे ब्रिटिश शासन की आलोचना न कर सकें।",
+   "trick": "वर्नाक्यूलर प्रेस एक्ट = देशी प्रेस पर प्रतिबंध",
+   "ans": "A"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "The Wahabi Movement primarily originated in which region of India?",
+   "hi": "वहाबी आंदोलन की उत्पत्ति मुख्य रूप से भारत के किस क्षेत्र में हुई थी?",
+   "opts": [
+    "Bengal<br>बंगाल",
+    "Delhi<br>दिल्ली",
+    "Punjab<br>पंजाब",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "D",
+   "sol": "वहाबी आंदोलन की शुरुआत 1820 के दशक में सैयद अहमद बरेलवी द्वारा बिहार (पटना) से हुई थी।",
+   "trick": "वहाबी = बिहार (पटना)",
+   "ans": "D"
+  },
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "Which book written by Jyotirao Phule was dedicated to those who fought against slavery in America?",
+   "hi": "ज्योतिराव फुले द्वारा लिखी गई कौन-सी पुस्तक उन लोगों को समर्पित थी, जिन्होंने अमेरिका में दास-प्रथा के विरुद्ध संघर्ष किया था?",
+   "opts": [
+    "Satyarth Prakash<br>सत्यार्थ प्रकाश",
+    "Gulamgiri<br>गुलामगिरी",
+    "The Cultivator's Whipcord<br>द कल्टीवेटर्स व्हिपकॉर्ड",
+    "Stripurushtulna<br>स्त्री-पुरुष तुलना"
+   ],
+   "my_ans": "B",
+   "sol": "ज्योतिराव फुले ने 1873 में 'गुलामगिरी' पुस्तक लिखी थी, जो अमेरिका में दास प्रथा के विरुद्ध लड़ने वालों को समर्पित थी।",
+   "trick": "गुलामगिरी = फुले",
+   "ans": "B"
+  }
+ ]
+}

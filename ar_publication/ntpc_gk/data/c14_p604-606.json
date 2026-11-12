@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "604-606",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "Which of the following was NOT a key objective of the demonetisation initiative implemented in November 2016?",
+   "hi": "निम्नलिखित में से क्या, नवंबर 2016 में लागू की गई विमुद्रीकरण पहल का मुख्य उद्देश्य नहीं था?",
+   "opts": [
+    "Reducing counterfeit currency and terror financing<br>जाली मुद्रा और आतंकी वित्तपोषण को कम करना",
+    "Increasing reliance on cash transactions<br>नकदी लेनदेन पर निर्भरता बढ़ाना",
+    "Promoting digital payments and a cashless economy<br>डिजिटल भुगतान और कैशलेस अर्थव्यवस्था को बढ़ावा देना",
+    "Curbing corruption and black money<br>भ्रष्टाचार और काले धन पर अंकुश लगाना"
+   ],
+   "my_ans": "B",
+   "sol": "नोटबंदी का उद्देश्य नकदी पर निर्भरता कम करना था, न कि इसे बढ़ाना।",
+   "trick": "नोटबंदी = कम नकदी, ज्यादा डिजिटल।",
+   "ans": "B"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "According to the Equirus Capital report on India’s Green Building Market, India’s green building sector is projected to grow at a CAGR of 10.5% and reach an estimated size of $85 billion by which year?",
+   "hi": "इक्विरस कैपिटल की भारत के ग्रीन बिल्डिंग मार्केट पर रिपोर्ट के अनुसार, भारत के ग्रीन बिल्डिंग सेक्टर में 10.5% की CAGR से वृद्धि होने का अनुमान है और यह किस वर्ष तक लगभग $85 बिलियन के प्राक्कलित आकार तक पहुंच जाएगा?",
+   "opts": [
+    "2032",
+    "2031",
+    "2030",
+    "2033"
+   ],
+   "my_ans": "A",
+   "sol": "इक्विरस कैपिटल की रिपोर्ट के अनुसार, भारत का ग्रीन बिल्डिंग मार्केट 2032 तक $85 बिलियन तक पहुंचने का अनुमान है।",
+   "trick": "ग्रीन बिल्डिंग लक्ष्य = 2032।",
+   "ans": "A"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "One of the winners of the Goldman Environmental Prize 2025, Semia Gharbi, belongs to which place?",
+   "hi": "'गोल्डमैन पर्यावरण पुरस्कार 2025' के विजेताओं में से एक, सेमिया घरबी (Semia Gharbi), किस स्थान/देश से संबंधित है?",
+   "opts": [
+    "Tunisia<br>ट्यूनीशिया",
+    "Albania<br>अल्बानिया",
+    "Peru<br>पेरू",
+    "Mongolia<br>मंगोलिया"
+   ],
+   "my_ans": "A",
+   "sol": "सेमिया घरबी ट्यूनीशिया की एक पर्यावरण कार्यकर्ता हैं, जिन्हें 2025 का गोल्डमैन पर्यावरण पुरस्कार मिला।",
+   "trick": "सेमिया घरबी = ट्यूनीशिया।",
+   "ans": "A"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "Which among the following sector contributed 26.67% of India’s overall merchandise export in 2024-25?",
+   "hi": "निम्नलिखित में से किस क्षेत्र ने 2024-25 में, भारत के समग्र व्यापारिक निर्यात में 26.67% का योगदान दिया?",
+   "opts": [
+    "Edible oil<br>खाद्य तेल",
+    "Gold<br>सोना",
+    "Engineering goods<br>इंजीनियरिंग सामान",
+    "Crude petroleum<br>कच्चा पेट्रोलियम"
+   ],
+   "my_ans": "C",
+   "sol": "इंजीनियरिंग सामान भारत के कुल व्यापारिक निर्यात का सबसे बड़ा हिस्सा (26.67%) है।",
+   "trick": "निर्यात में नंबर 1 = इंजीनियरिंग सामान।",
+   "ans": "C"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "In November 2025, the first-ever auction of seven limestone mineral blocks was launched in which Union Territory?",
+   "hi": "नवंबर 2025 में, किस केंद्र शासित प्रदेश में सात चूना पत्थर खनिज ब्लॉकों (limestone mineral blocks) की पहली बार नीलामी शुरू की गई थी?",
+   "opts": [
+    "Jammu & Kashmir<br>जम्मू और कश्मीर",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीपसमूह",
+    "Puducherry<br>पुदुचेरी",
+    "Chandigarh<br>चंडीगढ़"
+   ],
+   "my_ans": "A",
+   "sol": "नवंबर 2025 में जम्मू और कश्मीर ने पहली बार सात चूना पत्थर खनिज ब्लॉकों की नीलामी शुरू की।",
+   "trick": "खनिज नीलामी = जम्मू और कश्मीर।",
+   "ans": "A"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Which of the following statements about the National Industrial Corridor Development Programme is INCORRECT?",
+   "hi": "राष्ट्रीय औद्योगिक गलियारा विकास कार्यक्रम के विषय में निम्नलिखित में से कौन-सा कथन गलत है?",
+   "opts": [
+    "It aims at providing complete “plug and play” infrastructure till the plot level along with building sustainable future ready cities<br>इसका उद्देश्य भूखंड स्तर तक पूर्ण \"प्लग एंड प्ले\" अवसंरचना उपलब्ध कराना और साथ ही भविष्य के लिए तैयार टिकाऊ शहरों का निर्माण करना है",
+    "It seeks to develop new industrial cities as smart cities by integrating next-generation technologies across infrastructure sectors<br>इसका उद्देश्य अवसंरचना क्षेत्रों में अगली पीढ़ी की प्रौद्योगिकियों को समेकित करके नए औद्योगिक शहरों को स्मार्ट शहरों के रूप में विकसित करना है",
+    "It is an infrastructure initiative that aims to shape the future of urban and industrial development<br>यह एक अवसंरचना पहल है जिसका उद्देश्य शहरी और औद्योगिक विकास के भविष्य को आकार प्रदान करना है",
+    "The program started with the launch of Palakkad-Bangalore-Mumbai-Ahmedabad Industrial Corridor in 2010<br>कार्यक्रम की शुरुआत 2010 में पलक्कड़-बेंगलुरु-मुंबई-अहमदाबाद औद्योगिक गलियारे के शुभारंभ के साथ हुई"
+   ],
+   "my_ans": "D",
+   "sol": "यह कार्यक्रम 2007-08 में दिल्ली-मुंबई औद्योगिक गलियारे (DMIC) से शुरू हुआ था, न कि पलक्कड़-बेंगलुरु-मुंबई-अहमदाबाद गलियारे से।",
+   "trick": "पहला गलियारा = DMIC (2007-08)।",
+   "ans": "D"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "The Confederation of Indian Industry (CII) successfully concluded the 13th edition of EXCON 2025 in which of the following cities?",
+   "hi": "भारतीय उद्योग परिसंघ (CII) ने EXCON 2025 के 13वें संस्करण का सफलतापूर्वक समापन किस शहर में किया?",
+   "opts": [
+    "Jaipur",
+    "New Delhi",
+    "Chandigarh",
+    "Bengaluru"
+   ],
+   "my_ans": "D",
+   "sol": "EXCON 2025 का आयोजन बेंगलुरु में किया गया, जो भारत का सबसे बड़ा निर्माण उपकरण व्यापार मेला है।",
+   "trick": "EXCON = बेंगलुरु।",
+   "ans": "D"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "On April 9, 2025, the Reserve Bank of India's Monetary Policy Committee (MPC) announced a cut in the repo rate by:",
+   "hi": "9 अप्रैल, 2025 को भारतीय रिजर्व बैंक की मौद्रिक नीति समिति (MPC) ने रेपो दर में _______ की कटौती की घोषणा की।",
+   "opts": [
+    "50 basis points<br>50 आधार अंकों",
+    "75 basis points<br>75 आधार अंकों",
+    "100 basis points<br>100 आधार अंकों",
+    "25 basis points<br>25 आधार अंकों"
+   ],
+   "my_ans": "D",
+   "sol": "अप्रैल 2025 में RBI की MPC ने आर्थिक विकास को बढ़ावा देने के लिए रेपो दर में 25 आधार अंकों (0.25%) की कटौती की।",
+   "trick": "रेपो दर कटौती = 25 आधार अंक।",
+   "ans": "D"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "According to the World Bank's Travel and Tourism Economic Impact Research (EIR) of 2025, what was the contribution of the global tourism industry to the total Global Gross Domestic Product (GDP) in 2024?",
+   "hi": "विश्व बैंक के 2025 के यात्रा और पर्यटन आर्थिक प्रभाव अनुसंधान (EIR) के अनुसार, 2024 में कुल वैश्विक सकल घरेलू उत्पाद (GDP) में वैश्विक पर्यटन उद्योग का योगदान कितना था?",
+   "opts": [
+    "20%",
+    "10%",
+    "12%",
+    "15%"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व बैंक की रिपोर्ट के अनुसार, 2024 में वैश्विक पर्यटन उद्योग का वैश्विक GDP में 10% योगदान था।",
+   "trick": "पर्यटन योगदान = 10%।",
+   "ans": "B"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "Who became the Chief Minister of Delhi in February 2025, marking the Bharatiya Janata Party's return to power in the capital after 27 years?",
+   "hi": "फरवरी 2025 में दिल्ली का मुख्यमंत्री कौन बना, जिसके साथ ही 27 वर्षों के बाद राजधानी में भारतीय जनता पार्टी की सत्ता में वापसी हुई?",
+   "opts": [
+    "Atishi Marlena<br>आतिशी मार्लेना",
+    "Manish Sisodia<br>मनीष सिसोदिया",
+    "Parvesh Verma<br>प्रवेश वर्मा",
+    "Rekha Gupta<br>रेखा गुप्ता"
+   ],
+   "my_ans": "D",
+   "sol": "फरवरी 2025 में रेखा गुप्ता दिल्ली की मुख्यमंत्री बनीं, जिससे 27 साल बाद भाजपा सत्ता में लौटी।",
+   "trick": "दिल्ली CM 2025 = रेखा गुप्ता।",
+   "ans": "D"
+  }
+ ]
+}

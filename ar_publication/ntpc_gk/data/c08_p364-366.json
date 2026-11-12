@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "364-366",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "What was the installed cement capacity and production of cement, respectively, in the Indian cement industry by 2022-23?",
+   "hi": "2022-23 में भारतीय सीमेंट उद्योग में स्थापित सीमेंट क्षमता और उत्पादन क्रमशः कितना था?",
+   "opts": [
+    "600 MT and 391 MT",
+    "500 MT and 231 MT",
+    "300 MT and 181 MT",
+    "250 MT and 151 MT"
+   ],
+   "my_ans": "A",
+   "sol": "भारत विश्व का दूसरा सबसे बड़ा सीमेंट उत्पादक है। 2022-23 में स्थापित क्षमता 600 मिलियन टन और वास्तविक उत्पादन 391 मिलियन टन था।",
+   "trick": "भारत: 600 क्षमता, 391 उत्पादन (मिलियन टन में)।",
+   "ans": "A"
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "The primary focus of tertiary activities is:",
+   "hi": "तृतीयक गतिविधियों का प्राथमिक केंद्र क्या है?",
+   "opts": [
+    "Wealth creation through agriculture",
+    "Extraction of natural resources",
+    "Transformation of raw materials",
+    "Production of intangible goods"
+   ],
+   "my_ans": "D",
+   "sol": "तृतीयक क्षेत्र को सेवा क्षेत्र भी कहा जाता है, जिसमें व्यापार, परिवहन और शिक्षा जैसी अमूर्त सेवाएं शामिल हैं।",
+   "trick": "प्राथमिक=प्राकृतिक, द्वितीयक=निर्माण, तृतीयक=सेवा।",
+   "ans": "D"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "Which of the following Government of India schemes was launched in 2017 to achieve universal household electrification by providing electricity connections to all un-electrified households in rural areas and all poor households in urban areas in the country?",
+   "hi": "भारत सरकार की कौन सी योजना 2017 में ग्रामीण क्षेत्रों के सभी गैर-विद्युतीकृत घरों और शहरी क्षेत्रों के सभी गरीब घरों को बिजली कनेक्शन प्रदान करके सार्वभौमिक घरेलू विद्युतीकरण प्राप्त करने के लिए शुरू की गई थी?",
+   "opts": [
+    "Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY)",
+    "Saubhagya Scheme (Pradhan Mantri Sahaj Bijli Har Ghar Yojana)",
+    "Power for All Scheme",
+    "Pradhan Mantri Ghar Ghar Bijili Yojana (PMGGBY)"
+   ],
+   "my_ans": "B",
+   "sol": "सौभाग्य योजना (सितंबर 2017) का मुख्य उद्देश्य देश के सभी घरों में बिजली पहुँचाना था।",
+   "trick": "सौभाग्य = हर घर बिजली।",
+   "ans": "B"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which of the following initiatives is primarily focused on enhancing road connectivity through expressways and economic corridors?",
+   "hi": "निम्नलिखित में से कौन सी पहल मुख्य रूप से एक्सप्रेसवे और आर्थिक गलियारों के माध्यम से सड़क संपर्क बढ़ाने पर केंद्रित है?",
+   "opts": [
+    "Smart Cities Mission",
+    "PM Gati Shakti",
+    "Sagarmala Programme",
+    "Bharatmala Pariyojana"
+   ],
+   "my_ans": "D",
+   "sol": "भारतमाला परियोजना (2017) का मुख्य उद्देश्य एक्सप्रेसवे, आर्थिक गलियारों और सीमावर्ती सड़कों का विकास करना है।",
+   "trick": "भारतमाला = सड़क और राजमार्ग।",
+   "ans": "D"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "What is the maximum loan amount available under PMMY for entrepreneurs who have successfully repaid previous ‘Tarun’ category loans?",
+   "hi": "उन उद्यमियों के लिए PMMY के तहत उपलब्ध अधिकतम ऋण राशि कितनी है, जिन्होंने पिछली ‘तरुण’ श्रेणी के ऋणों को सफलतापूर्वक चुका दिया है?",
+   "opts": [
+    "₹10 lakh",
+    "₹20 lakh",
+    "₹50 lakh",
+    "₹5 lakh"
+   ],
+   "my_ans": "B",
+   "sol": "मुद्रा योजना में तरुण श्रेणी के बाद, सफल पुनर्भुगतान पर अगले चक्र में ₹20 लाख तक का ऋण मिल सकता है।",
+   "trick": "तरुण के बाद = 20 लाख।",
+   "ans": "B"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "Which of the following committees has focused on tax reforms in India?",
+   "hi": "निम्नलिखित में से किस समिति ने भारत में कर सुधारों पर ध्यान केंद्रित किया है?",
+   "opts": [
+    "Vijay L Kelkar Committee",
+    "Rangarajan Committee",
+    "Malhotra Committee",
+    "Narasimham Committee"
+   ],
+   "my_ans": "A",
+   "sol": "विजय केलकर समिति (2002) प्रत्यक्ष और अप्रत्यक्ष कर सुधारों के लिए जानी जाती है।",
+   "trick": "केलकर = कर सुधार।",
+   "ans": "A"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "What was the initial corpus of the Rural Infrastructure Development Fund (RIDF) when it was established in 1995-96?",
+   "hi": "जब 1995-96 में ग्रामीण अवसंरचना विकास निधि (RIDF) की स्थापना की गई थी, तब इसकी प्रारंभिक समग्र निधि (initial corpus) कितनी थी?",
+   "opts": [
+    "₹10,000 crore",
+    "₹2,000 crore",
+    "₹1,000 crore",
+    "₹5,000 crore"
+   ],
+   "my_ans": "B",
+   "sol": "नाबार्ड द्वारा 1995-96 में स्थापित RIDF का प्रारंभिक कोष ₹2,000 करोड़ था।",
+   "trick": "RIDF 1995 = 2000 करोड़।",
+   "ans": "B"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "Which of the following is the funding ratio shared by the Central and State Governments under the 'Paramparagat Krishi Vikas Yojana' in the North-eastern and Himalayan States?",
+   "hi": "'परंपरागत कृषि विकास योजना' के अंतर्गत, पूर्वोत्तर और हिमालयी राज्यों में केंद्र तथा राज्य सरकारों के बीच सहभाजित निधियन अनुपात निम्नलिखित में से कितना है?",
+   "opts": [
+    "50 : 50",
+    "80 : 20",
+    "60 : 40",
+    "90 : 10"
+   ],
+   "my_ans": "D",
+   "sol": "परंपरागत कृषि विकास योजना में पूर्वोत्तर और हिमालयी राज्यों के लिए केंद्र-राज्य का अनुपात 90:10 है।",
+   "trick": "पूर्वोत्तर/हिमालयी = 90:10।",
+   "ans": "D"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "Which type of unemployment is caused by a decline in aggregate demand during economic downturns?",
+   "hi": "आर्थिक मंदी के दौरान कुल मांग में गिरावट के कारण किस प्रकार की बेरोजगारी उत्पन्न होती है?",
+   "opts": [
+    "Structural",
+    "Voluntary",
+    "Cyclical",
+    "Seasonal"
+   ],
+   "my_ans": "C",
+   "sol": "चक्रीय बेरोजगारी आर्थिक चक्र में उतार-चढ़ाव और मांग में कमी के कारण होती है।",
+   "trick": "मंदी = चक्रीय बेरोजगारी।",
+   "ans": "C"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "Which of the following best describes ‘disguised unemployment’ in the Indian context?",
+   "hi": "निम्नलिखित में से कौन-सा, भारतीय संदर्भ में ‘प्रच्छन्न बेरोजगारी’ का सर्वोत्तम रूप से वर्णन करता है?",
+   "opts": [
+    "Workers shift from one job to another frequently.",
+    "Workers are temporarily unemployed during economic slowdown.",
+    "Workers are not willing to work.",
+    "More people are employed than actually needed, with marginal productivity being zero."
+   ],
+   "my_ans": "D",
+   "sol": "प्रच्छन्न बेरोजगारी वह स्थिति है जहाँ आवश्यकता से अधिक लोग काम में लगे होते हैं और उनकी सीमांत उत्पादकता शून्य होती है।",
+   "trick": "जरूरत से ज्यादा लोग = प्रच्छन्न बेरोजगारी।",
+   "ans": "D"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "When was national Agriculture policy launched in India?",
+   "hi": "भारत में राष्ट्रीय कृषि नीति कब शुरू की गई थी?",
+   "opts": [
+    "2007",
+    "2005",
+    "2002",
+    "2000"
+   ],
+   "my_ans": "D",
+   "sol": "भारत की पहली राष्ट्रीय कृषि नीति वर्ष 2000 में घोषित की गई थी।",
+   "trick": "कृषि नीति = 2000।",
+   "ans": "D"
+  }
+ ]
+}

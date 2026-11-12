@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "373-375",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "Policy on disinvestment gathered steam when a new Department of Disinvestment was created in _____, which became a full Ministry in 2001.",
+   "hi": "विनिवेश नीति को तब गति मिली, जब _____ में एक नए विनिवेश विभाग का गठन किया गया, जो 2001 में एक पूर्ण मंत्रालय बन गया।",
+   "opts": [
+    "2000",
+    "1991",
+    "1999",
+    "1992"
+   ],
+   "my_ans": "C",
+   "sol": "भारत सरकार ने विनिवेश प्रक्रिया को सुव्यवस्थित करने के लिए 1999 में विनिवेश विभाग की स्थापना की थी।",
+   "trick": "विनिवेश विभाग 1999 में बना, 2001 में मंत्रालय बना।",
+   "ans": "C"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "What is the meaning of globalisation?",
+   "hi": "वैश्वीकरण का क्या अर्थ है?",
+   "opts": [
+    "Economic isolation of countries from global markets<br>देशों का वैश्विक बाजारों से आर्थिक अलगाव",
+    "Reduction in the volume of international trade<br>अंतर्राष्ट्रीय व्यापार की मात्रा में कमी",
+    "Expansion of state ownership across major industries<br>प्रमुख उद्योगों में राज्य के स्वामित्व का विस्तार",
+    "Integration of a country’s economy with the world economy<br>विश्व अर्थव्यवस्था के साथ देश की अर्थव्यवस्था का एकीकरण"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण का अर्थ है दुनिया भर के देशों की अर्थव्यवस्थाओं का आपस में जुड़ना और मुक्त व्यापार को बढ़ावा देना।",
+   "trick": "वैश्वीकरण = विश्व के साथ जुड़ाव।",
+   "ans": "D"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "What was the main aim of the 1991 economic reforms in India regarding industries?",
+   "hi": "उद्योगों के संबंध में भारत में 1991 के आर्थिक सुधारों का मुख्य उद्देश्य क्या था?",
+   "opts": [
+    "To increase government control<br>सरकारी नियंत्रण बढ़ाना",
+    "To reduce agricultural output<br>कृषि उत्पादन कम करना",
+    "To decrease foreign investment<br>विदेशी निवेश घटाना",
+    "To promote privatization and competition<br>निजीकरण और प्रतिस्पर्धा को बढ़ावा देना"
+   ],
+   "my_ans": "D",
+   "sol": "1991 के सुधारों (LPG) का उद्देश्य अर्थव्यवस्था को नियंत्रित करने के बजाय निजी क्षेत्र की भागीदारी और प्रतिस्पर्धा को बढ़ाना था।",
+   "trick": "1991 सुधार = उदारीकरण, निजीकरण, वैश्वीकरण।",
+   "ans": "D"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "What is the main objective of India's fiscal policy?",
+   "hi": "भारत की राजकोषीय नीति का मुख्य उद्देश्य क्या है?",
+   "opts": [
+    "Reducing foreign trade<br>विदेशी व्यापार कम करना",
+    "Increasing inflation<br>मुद्रास्फीति बढ़ाना",
+    "Economic growth and stability<br>आर्थिक वृद्धि और स्थिरता",
+    "Increasing fiscal deficit<br>राजकोषीय घाटा बढ़ाना"
+   ],
+   "my_ans": "C",
+   "sol": "राजकोषीय नीति का मुख्य उद्देश्य देश में आर्थिक विकास को बढ़ावा देना और कीमतों में स्थिरता बनाए रखना है।",
+   "trick": "राजकोषीय नीति = विकास + स्थिरता।",
+   "ans": "C"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "In which year did the Indian Parliament enact the Fiscal Responsibility and Budget Management Act to institutionalise financial discipline and ensure long-term macroeconomic stability?",
+   "hi": "भारतीय संसद ने वित्तीय अनुशासन को संस्थागत रूप देने और दीर्घकालिक व्यापक आर्थिक स्थिरता सुनिश्चित करने के लिए, राजकोषीय उत्तरदायित्व और बजट प्रबंधन अधिनियम किस वर्ष में पारित किया था?",
+   "opts": [
+    "2003",
+    "2006",
+    "2000",
+    "2009"
+   ],
+   "my_ans": "A",
+   "sol": "FRBM अधिनियम 2003 में पारित किया गया था ताकि सरकार के राजकोषीय घाटे को नियंत्रित किया जा सके।",
+   "trick": "FRBM = 2003 (वित्तीय अनुशासन)।",
+   "ans": "A"
+  },
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "Which of the following economic models formed the basis of the Second Five-Year Plan?",
+   "hi": "निम्नलिखित में से कौन-सा आर्थिक मॉडल द्वितीय पंचवर्षीय योजना का आधार बना?",
+   "opts": [
+    "Neo-classical minimal-state model<br>नव-शास्त्रीय अल्पतम-राज्य मॉडल",
+    "Agrarian cooperative model<br>कृषि सहकारी मॉडल",
+    "Mahalanobis heavy-industry model<br>महालनोबिस भारी-उद्योग मॉडल",
+    "Market-led export model<br>बाजार-आधारित निर्यात मॉडल"
+   ],
+   "my_ans": "C",
+   "sol": "द्वितीय पंचवर्षीय योजना (1956-61) पी.सी. महालनोबिस मॉडल पर आधारित थी, जिसमें भारी उद्योगों पर जोर दिया गया था।",
+   "trick": "दूसरी योजना = महालनोबिस = भारी उद्योग।",
+   "ans": "C"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "The Capability Approach, which defines development as expanding individuals’ freedoms, was first proposed by which economist?",
+   "hi": "क्षमता दृष्टिकोण (Capability Approach), जो विकास को व्यक्तियों की स्वतंत्रता के विस्तार के रूप में परिभाषित करता है, पहली बार किस अर्थशास्त्री द्वारा प्रस्तावित किया गया था?",
+   "opts": [
+    "Martha Nussbaum",
+    "Amartya Sen",
+    "Adam Smith",
+    "John Rawls"
+   ],
+   "my_ans": "B",
+   "sol": "क्षमता दृष्टिकोण का प्रतिपादन नोबेल पुरस्कार विजेता अर्थशास्त्री अमर्त्य सेन ने 1980 के दशक में किया था।",
+   "trick": "क्षमता दृष्टिकोण = अमर्त्य सेन।",
+   "ans": "B"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Which new industries grew after 1991 due to economic reforms?",
+   "hi": "1991 के बाद आर्थिक सुधारों के कारण कौन-से नए उद्योग विकसित हुए?",
+   "opts": [
+    "Railways and Defence<br>रेलवे और रक्षा",
+    "Banking and Information Technology<br>बैंकिंग और सूचना प्रौद्योगिकी",
+    "Oil and Gas only<br>केवल तेल और गैस",
+    "Space and Nuclear<br>अंतरिक्ष और परमाणु"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के उदारीकरण के बाद बैंकिंग क्षेत्र में निजी बैंकों का प्रवेश हुआ और आईटी क्षेत्र में सॉफ्टवेयर निर्यात में तेजी आई।",
+   "trick": "1991 सुधार = बैंकिंग और IT का विस्तार।",
+   "ans": "B"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "The NITI Aayog, created in 2015, replaced the Planning Commission as part of India’s development restructuring. What is the correct full form of NITI?",
+   "hi": "वर्ष 2015 में गठित नीति (NITI) आयोग ने भारत के विकासात्मक पुनर्गठन के एक भाग के रूप में योजना आयोग को प्रतिस्थापित किया। NITI का सही पूर्ण रूप क्या है?",
+   "opts": [
+    "National Interface for Technological Innovation<br>नेशनल इंटरफेस फॉर टेक्नोलॉजिकल इनोवेशन",
+    "National Institution for Transforming India<br>नेशनल इंस्टीट्यूशन फॉर ट्रांसफॉर्मिंग इंडिया",
+    "National Initiative for Traditional Industries<br>नेशनल इनीशिएटिव फॉर ट्रेडिशनल इंडस्ट्रीज",
+    "National Independent Think-tank of India<br>नेशनल इंडिपेंडेंट थिंक-टैंक ऑफ इंडिया"
+   ],
+   "my_ans": "B",
+   "sol": "NITI का पूर्ण रूप 'National Institution for Transforming India' है, जिसने 2015 में योजना आयोग का स्थान लिया।",
+   "trick": "NITI = National Institution for Transforming India.",
+   "ans": "B"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Why were tax incentives provided to foreign investors during the 1991 economic reform period in India?",
+   "hi": "भारत में 1991 के आर्थिक सुधार अवधि के दौरान विदेशी निवेशकों को कर प्रोत्साहन क्यों प्रदान किए गए थे?",
+   "opts": [
+    "To increase tax revenue for the government<br>सरकार के लिए कर राजस्व बढ़ाने के लिए",
+    "To promote domestic monopolies<br>घरेलू एकाधिकार को बढ़ावा देने के लिए",
+    "To discourage foreign investment<br>विदेशी निवेश को हतोत्साहित करने के लिए",
+    "To attract foreign investment<br>विदेशी निवेश को आकर्षित करने के लिए"
+   ],
+   "my_ans": "D",
+   "sol": "1991 के आर्थिक संकट के बाद विदेशी पूंजी और तकनीक लाने के लिए विदेशी निवेशकों को करों में छूट दी गई थी।",
+   "trick": "कर प्रोत्साहन = विदेशी निवेश को आकर्षित करना।",
+   "ans": "D"
+  }
+ ]
+}

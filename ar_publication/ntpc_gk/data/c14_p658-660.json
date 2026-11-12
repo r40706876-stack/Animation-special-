@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "658-660",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 312,
+   "lvl": "UG",
+   "en": "In 2025, who among the following became the first female Prime Minister of Japan?",
+   "hi": "2025 में, निम्नलिखित में से कौन जापान की प्रथम महिला प्रधानमंत्री बनीं?",
+   "opts": [
+    "Satsuki Katayama<br>सत्सुकी कात्यामा",
+    "Yōko Kamikawa<br>योको कामिकावा",
+    "Kimi Onoda<br>किमी ओनोडा",
+    "Sanae Takaichi<br>साने ताकाइची"
+   ],
+   "my_ans": "D",
+   "sol": "सनाए ताकाइची 2025 में जापान की पहली महिला प्रधानमंत्री बनीं। वह लिबरल डेमोक्रेटिक पार्टी (LDP) की सदस्य हैं।",
+   "trick": "जापान की पहली महिला PM: सनाए ताकाइची।",
+   "ans": "D"
+  },
+  {
+   "n": 313,
+   "lvl": "UG",
+   "en": "The new classification system for economic activities in India termed National Industrial Classification 2025 (NIC-2025) was prepared by which national body?",
+   "hi": "भारत में आर्थिक गतिविधियों के लिए नई वर्गीकरण प्रणाली जिसे राष्ट्रीय औद्योगिक वर्गीकरण 2025 (NIC-2025) कहा गया, किस राष्ट्रीय निकाय द्वारा तैयार की गई थी?",
+   "opts": [
+    "NITI Aayog<br>नीति आयोग",
+    "Reserve Bank of India (RBI)<br>भारतीय रिज़र्व बैंक (RBI)",
+    "Ministry of Statistics and Programme Implementation (MoSPI)<br>सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI)",
+    "National Statistical Commission (NSC)<br>राष्ट्रीय सांख्यिकी आयोग (NSC)"
+   ],
+   "my_ans": "C",
+   "sol": "NIC-2025 को सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) द्वारा तैयार और अनुरक्षित किया गया है।",
+   "trick": "सांख्यिकी का काम MoSPI मंत्रालय का है।",
+   "ans": "C"
+  },
+  {
+   "n": 314,
+   "lvl": "UG",
+   "en": "Where was the 353rd International Labor Organization Governing body meeting held in March 2025?",
+   "hi": "मार्च 2025 में 353वीं अंतर्राष्ट्रीय श्रम संगठन शासी निकाय की बैठक कहाँ आयोजित की गई?",
+   "opts": [
+    "Oslo, Norway<br>ओस्लो, नॉर्वे",
+    "Geneva, Switzerland<br>जिनेवा, स्विट्ज़रलैंड",
+    "Copenhagen, Denmark<br>कोपेनहेगन, डेनमार्क",
+    "Milan, Italy<br>मिलान, इटली"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर्राष्ट्रीय श्रम संगठन (ILO) का मुख्यालय जिनेवा, स्विट्ज़रलैंड में है, जहाँ इसकी 353वीं बैठक आयोजित हुई।",
+   "trick": "ILO का मुख्यालय = जिनेवा।",
+   "ans": "B"
+  },
+  {
+   "n": 315,
+   "lvl": "UG",
+   "en": "On March 6, 2025, EU leaders convened an extraordinary summit in which city to discuss Ukraine and European security?",
+   "hi": "6 मार्च 2025 को, यूरोपीय संघ के नेताओं ने यूक्रेन और यूरोपीय सुरक्षा पर चर्चा करने के लिए किस शहर में एक असाधारण शिखर सम्मेलन आयोजित किया?",
+   "opts": [
+    "Vienna<br>वियना",
+    "Paris<br>पेरिस",
+    "Brussels<br>ब्रुसेल्स",
+    "Berlin<br>बर्लिन"
+   ],
+   "my_ans": "C",
+   "sol": "यूरोपीय संघ का मुख्यालय ब्रुसेल्स में है, जहाँ यूक्रेन और सुरक्षा मुद्दों पर चर्चा के लिए शिखर सम्मेलन हुआ।",
+   "trick": "EU का मुख्य केंद्र = ब्रुसेल्स।",
+   "ans": "C"
+  },
+  {
+   "n": 316,
+   "lvl": "UG",
+   "en": "Which of the following tunnels was recognised as the Longest Highway Tunnel above 10,000 feet by the World Book of Records in February 2022?",
+   "hi": "निम्नलिखित में से किस सुरंग को फरवरी 2022 में वर्ल्ड बुक ऑफ रिकॉर्ड्स द्वारा 10,000 फीट से अधिक की ऊंचाई पर स्थित सबसे लंबी राजमार्ग सुरंग के रूप में मान्यता दी गई थी?",
+   "opts": [
+    "Chenani-Nashri Tunnel<br>चेनानी-नाशरी सुरंग",
+    "Zojila Tunnel<br>जोजिला सुरंग",
+    "Atal Tunnel<br>अटल सुरंग",
+    "Pir Panjal Tunnel<br>पीर पंजाल सुरंग"
+   ],
+   "my_ans": "C",
+   "sol": "अटल सुरंग (हिमाचल प्रदेश) 10,040 फीट की ऊंचाई पर स्थित है और इसे सबसे लंबी राजमार्ग सुरंग का रिकॉर्ड मिला है।",
+   "trick": "10,000 फीट से ऊपर = अटल सुरंग।",
+   "ans": "C"
+  },
+  {
+   "n": 317,
+   "lvl": "UG",
+   "en": "With which country did the United Kingdom (UK) sign the Kensington Treaty, the first treaty between the two countries since the Second World War, in July 2025?",
+   "hi": "यूनाइटेड किंगडम (UK) ने जुलाई 2025 में किस देश के साथ केंसिंग्टन संधि पर हस्ताक्षर किए, जो द्वितीय विश्व युद्ध के बाद दोनों देशों के बीच पहली संधि है?",
+   "opts": [
+    "United States<br>संयुक्त राज्य अमेरिका",
+    "France<br>फ्रांस",
+    "Japan<br>जापान",
+    "Germany<br>जर्मनी"
+   ],
+   "my_ans": "D",
+   "sol": "केंसिंग्टन संधि जुलाई 2025 में यूके और जर्मनी के बीच रक्षा और आर्थिक सहयोग को मजबूत करने के लिए हस्ताक्षरित की गई थी।",
+   "trick": "केंसिंग्टन संधि = यूके + जर्मनी।",
+   "ans": "D"
+  },
+  {
+   "n": 318,
+   "lvl": "UG",
+   "en": "Which country joined as the 9th member of New Development Bank by BRICS in 2025?",
+   "hi": "2025 में, BRICS द्वारा न्यू डेवलपमेंट बैंक के 9वें सदस्य के रूप में कौन-सा देश शामिल हुआ?",
+   "opts": [
+    "Myanmar<br>म्यांमार",
+    "Algeria<br>अल्जीरिया",
+    "Brunei<br>ब्रुनेई",
+    "Vietnam<br>वियतनाम"
+   ],
+   "my_ans": "B",
+   "sol": "अल्जीरिया 2025 में न्यू डेवलपमेंट बैंक (NDB) का 9वां सदस्य बना।",
+   "trick": "NDB का 9वां सदस्य = अल्जीरिया।",
+   "ans": "B"
+  },
+  {
+   "n": 319,
+   "lvl": "UG",
+   "en": "In December 2025, which of the following companies introduced “Aantriva”, an AI-enabled platform to improve agri-food supply-chain visibility?",
+   "hi": "दिसंबर 2025 में, किस कंपनी ने कृषि-खाद्य आपूर्ति श्रृंखला की दृश्यता में सुधार लाने के लिए AI-सक्षम प्लेटफॉर्म 'आंट्रिवा' की शुरुआत की थी?",
+   "opts": [
+    "Tech Mahindra<br>टेक महिंद्रा",
+    "Syngenta<br>सिंजेंटा",
+    "Ayekart<br>आयकार्ट",
+    "Alliance Broadband Services Pvt. Ltd.<br>एलायंस ब्रॉडबैंड सर्विसेज प्राइवेट लिमिटेड"
+   ],
+   "my_ans": "C",
+   "sol": "आयकार्ट (Ayekart) ने दिसंबर 2025 में कृषि आपूर्ति श्रृंखला में पारदर्शिता के लिए 'आंट्रिवा' प्लेटफॉर्म लॉन्च किया।",
+   "trick": "आंट्रिवा = आयकार्ट।",
+   "ans": "C"
+  },
+  {
+   "n": 320,
+   "lvl": "UG",
+   "en": "In March 2025, ISRO developed Vikram 3201 and Kalpana 3201. These are example of which of the following?",
+   "hi": "मार्च 2025 में, ISRO ने विक्रम 3201 और कल्पना 3201 विकसित किए। ये निम्नलिखित में से किसके उदाहरण हैं?",
+   "opts": [
+    "Space telescopes<br>अंतरिक्ष टेलीस्कोप",
+    "New launch vehicles<br>नए प्रक्षेपण यान",
+    "32-bit microprocessors<br>32-बिट माइक्रोप्रोसेसर",
+    "Navigation satellites<br>नौवहन उपग्रह"
+   ],
+   "my_ans": "C",
+   "sol": "विक्रम 3201 और कल्पना 3201 इसरो द्वारा विकसित भारत के पहले स्वदेशी 32-बिट माइक्रोप्रोसेसर हैं।",
+   "trick": "विक्रम/कल्पना = 32-बिट माइक्रोप्रोसेसर।",
+   "ans": "C"
+  },
+  {
+   "n": 321,
+   "lvl": "UG",
+   "en": "By what percentage did rural poverty decline in India between 2005 and 2015 as a result of inclusive growth policies, according to the World Bank?",
+   "hi": "विश्व बैंक के अनुसार, समावेशी विकास नीतियों के परिणामस्वरूप 2005 और 2015 के बीच भारत में ग्रामीण गरीबी में कितने प्रतिशत की गिरावट आई?",
+   "opts": [
+    "8%",
+    "12%",
+    "16%",
+    "20%"
+   ],
+   "my_ans": "C",
+   "sol": "विश्व बैंक के आंकड़ों के अनुसार, 2005-2015 के दौरान भारत में ग्रामीण गरीबी में 16% की कमी आई।",
+   "trick": "ग्रामीण गरीबी में गिरावट = 16%।",
+   "ans": "C"
+  }
+ ]
+}

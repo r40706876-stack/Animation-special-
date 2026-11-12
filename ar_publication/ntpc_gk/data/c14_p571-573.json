@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "571-573",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "In 2025, which city topped the National Air Quality Index released for major Indian cities?",
+   "hi": "2025 में, प्रमुख भारतीय शहरों के लिए जारी राष्ट्रीय वायु गुणवत्ता सूचकांक में कौन-सा शहर शीर्ष पर रहा?",
+   "opts": [
+    "Mumbai<br>मुंबई",
+    "Kolkata<br>कोलकाता",
+    "Shillong<br>शिलांग",
+    "Ranchi<br>रांची"
+   ],
+   "my_ans": "C",
+   "sol": "2025 में शिलांग अपनी पहाड़ी स्थिति, वनावरण और कम औद्योगीकरण के कारण सबसे स्वच्छ हवा वाला शहर रहा।",
+   "trick": "पहाड़ी और कम प्रदूषण वाले शहर अक्सर AQI में शीर्ष पर होते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which launch vehicle was announced in 2025 as having been built entirely by the private sector for the first time in India and was set to place the Oceansat satellite into orbit?",
+   "hi": "2025 में किस प्रक्षेपण यान के बारे में यह घोषणा की गई कि वह भारत में पहली बार पूरी तरह से निजी क्षेत्र द्वारा निर्मित किया गया है और उसे ओशनसैट (Oceansat) उपग्रह को कक्षा में स्थापित करने के लिए निर्धारित किया गया था?",
+   "opts": [
+    "Small Satellite Launch Vehicle (SSLV)<br>लघु उपग्रह प्रक्षेपण यान (SSLV)",
+    "Launch Vehicle Mark-3 (LVM3)<br>प्रक्षेपण यान मार्क-3 (LVM3)",
+    "Geosynchronous Satellite Launch Vehicle (GSLV)<br>भू-तुल्यकालिक उपग्रह प्रक्षेपण यान (GSLV)",
+    "Polar Satellite Launch Vehicle (PSLV)<br>ध्रुवीय उपग्रह प्रक्षेपण यान (PSLV)"
+   ],
+   "my_ans": "D",
+   "sol": "PSLV को भारत में पहली बार पूरी तरह से निजी कंपनियों द्वारा इसरो के प्रौद्योगिकी हस्तांतरण कार्यक्रम के तहत बनाया गया था।",
+   "trick": "PSLV भारत का सबसे भरोसेमंद और अब निजी क्षेत्र द्वारा निर्मित पहला यान है।",
+   "ans": "D"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "As of February 1, 2025, what percentage of rural households in India had been provided tap water connections under the Jal Jeevan Mission?",
+   "hi": "1 फरवरी, 2025 तक की स्थिति के अनुसार, भारत में कितने प्रतिशत ग्रामीण घरों को जल जीवन मिशन के अंतर्गत नल से जल के कनेक्शन उपलब्ध कराए गए थे?",
+   "opts": [
+    "84.15%",
+    "79.74%",
+    "69.34%",
+    "92.67%"
+   ],
+   "my_ans": "B",
+   "sol": "जल जीवन मिशन (2019 में शुरू) के तहत 1 फरवरी 2025 तक 79.74% ग्रामीण घरों को नल से जल कनेक्शन मिल चुका था।",
+   "trick": "जल जीवन मिशन का लक्ष्य 'हर घर जल' है।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which of the following teams secured the table tennis ITTF Mixed Team World Cup title in December 2025 after emerging victorious in the final at Chengdu?",
+   "hi": "निम्नलिखित में से किस टीम ने चेंगदू (Chengdu) में फाइनल में विजयी होने के बाद दिसंबर 2025 में टेबल टेनिस ITTF मिक्स्ड टीम विश्व कप का खिताब प्राप्त किया?",
+   "opts": [
+    "Japan<br>जापान (Japan)",
+    "Germany<br>जर्मनी (Germany)",
+    "Republic of Korea<br>रिपब्लिक ऑफ कोरिया (Republic of Korea)",
+    "People’s Republic of China<br>पीपुल्स रिपब्लिक ऑफ चाइना (People’s Republic of China)"
+   ],
+   "my_ans": "D",
+   "sol": "दिसंबर 2025 में चेंगदू में आयोजित ITTF मिक्स्ड टीम विश्व कप का खिताब चीन ने जीता।",
+   "trick": "टेबल टेनिस में चीन का दबदबा रहता है।",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "In 2025, which country secured the third rank in the Asia Power Index, after the United States and China?",
+   "hi": "2025 में, अमेरिका और चीन के बाद कौन-सा देश एशिया पावर इंडेक्स में तीसरे स्थान पर था?",
+   "opts": [
+    "South Korea<br>दक्षिण कोरिया",
+    "Australia<br>ऑस्ट्रेलिया",
+    "Japan<br>जापान",
+    "India<br>भारत"
+   ],
+   "my_ans": "D",
+   "sol": "लोवी इंस्टीट्यूट द्वारा जारी 2025 एशिया पावर इंडेक्स में अमेरिका पहले, चीन दूसरे और भारत तीसरे स्थान पर रहा।",
+   "trick": "भारत की बढ़ती आर्थिक और सैन्य शक्ति उसे तीसरे स्थान पर लाती है।",
+   "ans": "D"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "In November 2025, which of the following organizations collaborated with UNICEF to secure a new deal for affordable malaria vaccines?",
+   "hi": "नवंबर 2025 में, निम्नलिखित में से किस संगठन ने किफायती मलेरिया टीकों के लिए एक नई डील प्राप्त करने के लिए UNICEF के साथ साझेदारी की?",
+   "opts": [
+    "Red Cross<br>रेड क्रॉस (Red Cross)",
+    "Gavi<br>गावी (Gavi)",
+    "Oxfam<br>ऑक्सफैम (Oxfam)",
+    "Doctors Without Borders<br>डॉक्टर्स विदाउट बॉर्डर्स (Doctors Without Borders)"
+   ],
+   "my_ans": "B",
+   "sol": "गावी (Gavi, the Vaccine Alliance) ने नवंबर 2025 में यूनिसेफ के साथ मिलकर किफायती मलेरिया टीकों के लिए समझौता किया।",
+   "trick": "गावी का मुख्य कार्य विकासशील देशों में टीकों की पहुंच बढ़ाना है।",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Which Indian organization signed a memorandum of understanding with Russia's UAC to produce the SJ-100 in October 2025?",
+   "hi": "किस भारतीय संगठन ने अक्टूबर 2025 में SJ-100 के उत्पादन के लिए रूस के UAC के साथ समझौता ज्ञापन पर हस्ताक्षर किए?",
+   "opts": [
+    "ISRO<br>इसरो",
+    "Hindustan Aeronautics Limited<br>हिंदुस्तान एयरोनॉटिक्स लिमिटेड",
+    "DRDO<br>डीआरडीओ",
+    "Bharat Electronics Limited<br>भारत इलेक्ट्रॉनिक्स लिमिटेड"
+   ],
+   "my_ans": "B",
+   "sol": "हिंदुस्तान एयरोनॉटिक्स लिमिटेड (HAL) ने रूस की यूनाइटेड एयरक्राफ्ट कॉरपोरेशन (UAC) के साथ सुखोई सुपरजेट 100 के उत्पादन के लिए समझौता किया।",
+   "trick": "विमान निर्माण के लिए भारत की प्रमुख कंपनी HAL है।",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "During PM Narendra Modi’s State Visit to Bhutan (11–12 Nov 2025), which hydroelectric project was jointly inaugurated?",
+   "hi": "प्रधानमंत्री नरेंद्र मोदी की भूटान की राजकीय यात्रा (11–12 नवंबर 2025) के दौरान, किस जलविद्युत परियोजना का संयुक्त रूप से उद्घाटन किया गया था?",
+   "opts": [
+    "1200 MW Punatsangchhu -I HEP<br>1200 MW पुनात्सांगछू-I HEP",
+    "720 MW Mangdechhu HEP<br>720 MW मंगदेछु HEP",
+    "1020 MW Punatsangchhu -II HEP<br>1020 MW पुनात्सांगछू-II HEP",
+    "336 MW Chukha HEP<br>336 MW चूखा HEP"
+   ],
+   "my_ans": "C",
+   "sol": "नवंबर 2025 में भूटान यात्रा के दौरान 1020 मेगावाट की पुनात्सांगछू-II जलविद्युत परियोजना का उद्घाटन किया गया।",
+   "trick": "पुनात्सांगछू-II भारत-भूटान सहयोग की एक प्रमुख परियोजना है।",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which ISRO centre will host the newly approved Third Launch Pad by Union cabinet in December 2025?",
+   "hi": "केंद्रीय मंत्रिमंडल द्वारा दिसंबर 2025 में अनुमोदित तीसरे लॉन्च पैड की मेजबानी कौन-सा ISRO केंद्र करेगा?",
+   "opts": [
+    "Space Applications Centre<br>अंतरिक्ष अनुप्रयोग केंद्र",
+    "National Remote Sensing Centre<br>राष्ट्रीय रिमोट सेंसिंग केंद्र",
+    "Satish Dhawan Space Centre<br>सतीश धवन अंतरिक्ष केंद्र",
+    "Vikram Sarabhai Space Centre<br>विक्रम साराभाई अंतरिक्ष केंद्र"
+   ],
+   "my_ans": "C",
+   "sol": "तीसरा लॉन्च पैड श्रीहरिकोटा स्थित सतीश धवन अंतरिक्ष केंद्र (SDSC) में बनाया जाएगा।",
+   "trick": "भारत के अधिकांश लॉन्च श्रीहरिकोटा (SDSC) से ही होते हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "At the 2025 Asia-Pacific Economic Cooperation (APEC) meeting, Chinese President Xi Jinping proposed the establishment of a global AI governance body. What is the name of this proposed organization?",
+   "hi": "2025 की एशिया-प्रशांत आर्थिक सहयोग (APEC) बैठक में, चीनी राष्ट्रपति शी जिनपिंग ने एक वैश्विक AI शासन निकाय की स्थापना का प्रस्ताव रखा। इस प्रस्तावित संगठन का नाम क्या है?",
+   "opts": [
+    "Global AI Alliance",
+    "International AI Council",
+    "Global AI Governance Organization",
+    "World AI Regulatory Body"
+   ],
+   "my_ans": "C",
+   "sol": "चीनी राष्ट्रपति ने APEC 2025 में वैश्विक AI शासन निकाय (Global AI Governance Organization) का प्रस्ताव रखा।",
+   "trick": "AI के नियमन के लिए वैश्विक स्तर पर सहयोग की मांग बढ़ रही है।",
+   "ans": "C"
+  }
+ ]
+}

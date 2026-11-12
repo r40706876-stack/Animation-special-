@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "652-654",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 291,
+   "lvl": "UG",
+   "en": "What was the theme of the 10th National Consultation conducted on 11-12 October 2025?",
+   "hi": "11-12 अक्टूबर 2025 को आयोजित 10वीं राष्ट्रीय परामर्श (10th National Consultation) की थीम क्या थी?",
+   "opts": [
+    "Education for All<br>सभी के लिए शिक्षा",
+    "Safeguarding the Girl Child<br>बालिकाओं की सुरक्षा",
+    "Digital Future for Children<br>बच्चों के लिए डिजिटल भविष्य",
+    "Protecting Child Labourers<br>बाल श्रमिकों की रक्षा"
+   ],
+   "my_ans": "B",
+   "sol": "10वीं राष्ट्रीय परामर्श का आयोजन राष्ट्रीय बाल अधिकार संरक्षण आयोग (NCPCR) द्वारा किया गया था, जिसका मुख्य विषय 'बालिकाओं की सुरक्षा' था।",
+   "trick": "NCPCR का मुख्य फोकस बाल अधिकार और सुरक्षा है।",
+   "ans": "B"
+  },
+  {
+   "n": 292,
+   "lvl": "UG",
+   "en": "Which organisation’s leaders gathered in Tianjin for a summit in late August–early September, 2025?",
+   "hi": "किस संगठन के लीडर अगस्त के अंत या शुरुआती सितंबर, 2025 में तियानजिन में आयोजित शिखर सम्मेलन में एकत्रित हुए थे?",
+   "opts": [
+    "Group of Twenty (G20)<br>ग्रुप ऑफ ट्वेंटी (G20)",
+    "Shanghai Cooperation Organization (SCO)<br>शंघाई कोऑपरेशन ऑर्गनाइजेशन (SCO)",
+    "Association of Southeast Asian Nations (ASEAN)<br>एसोसिएशन ऑफ साउथईस्ट एशियन नेशंस (ASEAN)",
+    "Commonwealth (CW)<br>कॉमनवेल्थ (CW)"
+   ],
+   "my_ans": "B",
+   "sol": "शंघाई सहयोग संगठन (SCO) का शिखर सम्मेलन 2025 में चीन के तियानजिन शहर में आयोजित किया गया था।",
+   "trick": "SCO का मुख्यालय चीन में है, इसलिए चीन में शिखर सम्मेलन होना सामान्य है।",
+   "ans": "B"
+  },
+  {
+   "n": 293,
+   "lvl": "UG",
+   "en": "Which union ministry primarily organized the national-level celebration for the 150th anniversary of ‘Vande Mataram’?",
+   "hi": "किस केंद्रीय मंत्रालय ने मुख्य रूप से 'वंदे मातरम' की 150वीं वर्षगांठ के लिए राष्ट्रीय स्तर के समारोह का आयोजन किया था?",
+   "opts": [
+    "Ministry of Youth Affairs and Sports<br>युवा कार्यक्रम और खेल मंत्रालय",
+    "Ministry of Education<br>शिक्षा मंत्रालय",
+    "Ministry of Home Affairs<br>गृह मंत्रालय",
+    "Ministry of Culture<br>संस्कृति मंत्रालय"
+   ],
+   "my_ans": "D",
+   "sol": "भारत में विरासत, कला और सांस्कृतिक कार्यक्रमों का आयोजन मुख्य रूप से संस्कृति मंत्रालय द्वारा किया जाता है।",
+   "trick": "सांस्कृतिक विरासत = संस्कृति मंत्रालय।",
+   "ans": "D"
+  },
+  {
+   "n": 294,
+   "lvl": "UG",
+   "en": "What was the theme of World Consumer Rights Day 2025?",
+   "hi": "विश्व उपभोक्ता अधिकार दिवस 2025 की थीम क्या थी?",
+   "opts": [
+    "Empowering Consumers Through Clean Energy Transitions<br>स्वच्छ ऊर्जा संक्रमण के माध्यम से उपभोक्ताओं को सशक्त बनाना",
+    "A Just Transition to Sustainable Lifestyles<br>संधारणीय जीवन शैली के लिये एक उचित बदलाव",
+    "Fair and Responsible AI for Consumers<br>उपभोक्ताओं के लिए निष्पक्ष और जिम्मेदार एआई",
+    "Fair Digital Finance<br>निष्पक्ष डिजिटल वित्त"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व उपभोक्ता अधिकार दिवस 2025 की थीम 'संधारणीय जीवन शैली के लिए एक उचित बदलाव' (A Just Transition to Sustainable Lifestyles) थी।",
+   "trick": "उपभोक्ता अधिकार = सतत जीवन शैली।",
+   "ans": "B"
+  },
+  {
+   "n": 295,
+   "lvl": "UG",
+   "en": "The 3rd Trilateral Consultations between India, Iran and Armenia was held at which place in September 2025?",
+   "hi": "भारत, ईरान और आर्मेनिया के बीच तीसरी त्रिपक्षीय परामर्श बैठक सितंबर 2025 में किस स्थान पर आयोजित की गई थी?",
+   "opts": [
+    "Yerevan<br>येरेवान",
+    "Mumbai<br>मुंबई",
+    "Tehran<br>तेहरान",
+    "New Delhi<br>नई दिल्ली"
+   ],
+   "my_ans": "C",
+   "sol": "भारत, ईरान और आर्मेनिया के बीच तीसरी त्रिपक्षीय बैठक ईरान की राजधानी तेहरान में आयोजित की गई थी।",
+   "trick": "ईरान में बैठक = तेहरान।",
+   "ans": "C"
+  },
+  {
+   "n": 296,
+   "lvl": "UG",
+   "en": "Which declaration was NOT signed during PM Modi's visit to France in February 2025?",
+   "hi": "फरवरी 2025 में PM मोदी की फ्रांस यात्रा के दौरान निम्नलिखित में से किस घोषणा पर हस्ताक्षर नहीं किए गए थे?",
+   "opts": [
+    "India-France Declaration on Artificial Intelligence<br>आर्टिफिशियल इंटेलिजेंस पर भारत-फ्रांस घोषणापत्र",
+    "India-France Innovation Treaty<br>भारत-फ्रांस नवाचार संधि",
+    "India-France Infrastructure Pact<br>भारत-फ्रांस अवसंरचना पैक्ट",
+    "India-France Cybersecurity Agreement<br>भारत-फ्रांस साइबर सुरक्षा समझौता"
+   ],
+   "my_ans": "C",
+   "sol": "प्रधानमंत्री मोदी की फ्रांस यात्रा के दौरान एआई, नवाचार और साइबर सुरक्षा पर समझौते हुए थे, लेकिन 'भारत-फ्रांस अवसंरचना पैक्ट' इसमें शामिल नहीं था।",
+   "trick": "अवसंरचना पैक्ट इस यात्रा का हिस्सा नहीं था।",
+   "ans": "C"
+  },
+  {
+   "n": 297,
+   "lvl": "UG",
+   "en": "How much funding did ADB pledge for India’s urban infrastructure over the next five years from 2025 to 2030?",
+   "hi": "एडीबी (ADB) ने अगले पांच वर्षों (2025 से 2030) में भारत के शहरी बुनियादी ढांचे के लिए कितनी धनराशि देने का वादा किया है?",
+   "opts": [
+    "USD 12 billion<br>12 बिलियन अमेरिकी डॉलर",
+    "USD 5 billion<br>5 बिलियन अमेरिकी डॉलर",
+    "USD 10 billion<br>10 बिलियन अमेरिकी डॉलर",
+    "USD 8 billion<br>8 बिलियन अमेरिकी डॉलर"
+   ],
+   "my_ans": "C",
+   "sol": "एशियाई विकास बैंक (ADB) ने भारत के शहरी विकास के लिए 2025-2030 की अवधि के लिए 10 बिलियन अमेरिकी डॉलर की प्रतिबद्धता जताई है।",
+   "trick": "ADB का 5 साल का वादा = 10 बिलियन डॉलर।",
+   "ans": "C"
+  },
+  {
+   "n": 298,
+   "lvl": "UG",
+   "en": "India signed a Memorandum of Understanding (MoU) on 25 February 2026 to strengthen cooperation in forests, wildlife, environment, biodiversity conservation, and climate change with which country?",
+   "hi": "25 फरवरी 2026 को, भारत ने किस देश के साथ वन, वन्यजीव, पर्यावरण, जैव विविधता संरक्षण और जलवायु परिवर्तन के क्षेत्र में सहयोग को मजबूत करने के लिए समझौता ज्ञापन (MoU) पर हस्ताक्षर किए?",
+   "opts": [
+    "Bangladesh<br>बांग्लादेश",
+    "Sri Lanka<br>श्रीलंका",
+    "Nepal<br>नेपाल",
+    "Bhutan<br>भूटान"
+   ],
+   "my_ans": "C",
+   "sol": "भारत और नेपाल ने हिमालयी क्षेत्र में पर्यावरण संरक्षण और सतत विकास के लिए फरवरी 2026 में समझौता ज्ञापन पर हस्ताक्षर किए।",
+   "trick": "हिमालयी पर्यावरण सहयोग = नेपाल।",
+   "ans": "C"
+  },
+  {
+   "n": 299,
+   "lvl": "UG",
+   "en": "Who among the following has been sworn in as the President of Uruguay on 1 March 2025?",
+   "hi": "निम्नलिखित में से किसने 1 मार्च 2025 को उरुग्वे के राष्ट्रपति के रूप में शपथ ली?",
+   "opts": [
+    "Masoud Pezeshkian<br>मसूद पेज़ेशकियन",
+    "Jair Bolsonaro<br>जैयर बोल्सोनारो",
+    "Claudia Sheinbaum<br>क्लाउडिया शीनबाम",
+    "Yamandu Orsi<br>यामांडू ओरसी"
+   ],
+   "my_ans": "D",
+   "sol": "यामांडू ओरसी ने नवंबर 2024 का चुनाव जीतने के बाद 1 मार्च 2025 को उरुग्वे के राष्ट्रपति के रूप में शपथ ली।",
+   "trick": "उरुग्वे के नए राष्ट्रपति = यामांडू ओरसी।",
+   "ans": "D"
+  },
+  {
+   "n": 300,
+   "lvl": "UG",
+   "en": "During the 17th BRICS Summit held in 2025, which country officially joined the bloc as a full member?",
+   "hi": "2025 में आयोजित 17वें ब्रिक्स शिखर सम्मेलन के दौरान, किस देश ने आधिकारिक तौर पर पूर्ण सदस्य के रूप में समूह में प्रवेश किया?",
+   "opts": [
+    "Not provided in image",
+    "Not provided in image",
+    "Not provided in image",
+    "Not provided in image"
+   ],
+   "my_ans": "A",
+   "sol": "प्रश्न में विकल्प नहीं दिए गए हैं, लेकिन आधिकारिक उत्तर कुंजी के अनुसार विकल्प A सही है।",
+   "trick": "ब्रिक्स विस्तार एक निरंतर प्रक्रिया है।",
+   "ans": "A"
+  }
+ ]
+}

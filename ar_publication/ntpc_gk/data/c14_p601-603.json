@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "601-603",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 118,
+   "lvl": "GL",
+   "en": "Which missile system successfully completed User Evaluation Trials conducted by the Defence Research and Development Organisation in 2025, marking a major boost to India’s defence preparedness?",
+   "hi": "रक्षा अनुसंधान एवं विकास संगठन द्वारा 2025 में आयोजित उपयोगकर्ता मूल्यांकन परीक्षणों को सफलतापूर्वक पूरा करने वाली मिसाइल प्रणाली कौन-सी थी, जिससे भारत की रक्षा तैयारियों को एक बड़ा बढ़ावा प्राप्त हुआ?",
+   "opts": [
+    "Astra beyond-visual-range air-to-air missile system<br>अस्त्र (Astra) दृश्य-दूरी से परे वायु-से-वायु में मार करने वाली मिसाइल प्रणाली",
+    "Akash Next Generation (Akash-NG) missile system<br>आकाश अगली पीढ़ी (Akash-NG) मिसाइल प्रणाली",
+    "Prithvi-II short-range ballistic missile system<br>पृथ्वी-II (Prithvi-II) अल्प दूरी की बैलिस्टिक मिसाइल प्रणाली",
+    "BrahMos extended-range cruise missile system<br>ब्रह्मोस (BrahMos) विस्तारित दूरी की क्रूज मिसाइल प्रणाली"
+   ],
+   "my_ans": "B",
+   "sol": "DRDO द्वारा 2025 में आकाश-NG (Akash Next Generation) मिसाइल प्रणाली के उपयोगकर्ता मूल्यांकन परीक्षण सफलतापूर्वक पूरे किए गए। यह एक उन्नत सतह से हवा में मार करने वाली मिसाइल है।",
+   "trick": "आकाश-NG: DRDO की 2025 की प्रमुख वायु रक्षा उपलब्धि।",
+   "ans": "B"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "In 2025, which Caribbean Island nation conferred the Honorary Order of Freedom on Indian Prime Minister Narendra Modi?",
+   "hi": "2025 में, निम्नलिखित में से किस कैरेबियाई द्वीप राष्ट्र ने भारतीय प्रधान मंत्री नरेंद्र मोदी को ऑनरेरी ऑर्डर ऑफ फ्रीडम (Honorary Order of Freedom) पुरस्कार से सम्मानित किया?",
+   "opts": [
+    "Jamaica<br>जमैका (Jamaica)",
+    "Trinidad and Tobago<br>त्रिनिदाद और टोबैगो (Trinidad and Tobago)",
+    "Barbados<br>बारबाडोस (Barbados)",
+    "Saint Lucia<br>सेंट लूसिया (Saint Lucia)"
+   ],
+   "my_ans": "C",
+   "sol": "बारबाडोस ने 2025 में अपनी यात्रा के दौरान प्रधानमंत्री नरेंद्र मोदी को अपने सर्वोच्च नागरिक सम्मान 'ऑनरेरी ऑर्डर ऑफ फ्रीडम' से सम्मानित किया।",
+   "trick": "बारबाडोस = मोदी जी का 2025 का सर्वोच्च कैरेबियाई सम्मान।",
+   "ans": "C"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "Which category of beneficiaries is eligible for ₹1 lakh under Telangana’s Revanth Anna ka Sahara-Miskeen la Kosam scheme launched in September 2025?",
+   "hi": "सितंबर 2025 में शुरू की गई तेलंगाना की 'रेवंत अन्ना का सहारा-मिस्कीन ला कोसम' योजना के तहत किस श्रेणी के लाभार्थी ₹1 लाख प्राप्त करने के लिए पात्र हैं?",
+   "opts": [
+    "Overseas migrant workers from Telangana<br>तेलंगाना के प्रवासी श्रमिक",
+    "Minority teachers in private institutions<br>निजी संस्थानों में अल्पसंख्यक शिक्षक",
+    "Tribal self-help groups<br>आदिवासी स्वयं-सहायता समूह",
+    "Economically weak Muslim families<br>आर्थिक रूप से कमजोर मुस्लिम परिवार"
+   ],
+   "my_ans": "D",
+   "sol": "यह योजना तेलंगाना में सितंबर 2025 में शुरू की गई थी, जिसका उद्देश्य आर्थिक रूप से कमजोर मुस्लिम परिवारों को ₹1 लाख की वित्तीय सहायता प्रदान करना है।",
+   "trick": "मिस्कीन (गरीब) मुस्लिम परिवारों के लिए रेवंत अन्ना की योजना।",
+   "ans": "D"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "Who was appointed as the 26th Governor of the Reserve Bank of India in December 2024?",
+   "hi": "दिसंबर 2024 में भारतीय रिज़र्व बैंक के 26वें गवर्नर के रूप में किसे नियुक्त किया गया था?",
+   "opts": [
+    "Poonam Gupta<br>पूनम गुप्ता",
+    "Sanjay Malhotra<br>संजय मल्होत्रा",
+    "Raghuram Rajan<br>रघुराम राजन",
+    "Michael Patra<br>माइकल पात्रा"
+   ],
+   "my_ans": "B",
+   "sol": "संजय मल्होत्रा को दिसंबर 2024 में शक्तिकांत दास के स्थान पर भारतीय रिज़र्व बैंक का 26वां गवर्नर नियुक्त किया गया।",
+   "trick": "26वें गवर्नर = संजय मल्होत्रा (पूर्व राजस्व सचिव)।",
+   "ans": "B"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "As per the RBI’s announcement on December 5, 2025, what is the revised GDP growth projection for India for FY 2025–26?",
+   "hi": "5 दिसंबर, 2025 को RBI द्वारा की गई घोषणा के अनुसार, वित्त वर्ष 2025-26 के लिए भारत के GDP विकास का संशोधित अनुमान कितना है?",
+   "opts": [
+    "7.2%",
+    "7%",
+    "7.3%",
+    "7.1%"
+   ],
+   "my_ans": "C",
+   "sol": "RBI ने 5 दिसंबर 2025 को अपनी मौद्रिक नीति समीक्षा में वित्त वर्ष 2025-26 के लिए भारत की GDP वृद्धि का अनुमान संशोधित कर 7.3% कर दिया।",
+   "trick": "RBI 2025-26 GDP अनुमान = 7.3%।",
+   "ans": "C"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "Who won the Holberg Prize in 2025?",
+   "hi": "निम्नलिखित में से किसने, 2025 में होलबर्ग (Holberg) पुरस्कार जीता?",
+   "opts": [
+    "Urmila Satyanarayana<br>उर्मिला सत्यनारायण (Urmila Satyanarayana)",
+    "Maithili Mrinalini<br>मैथिली मृणालिनी (Maithili Mrinalini)",
+    "Gayatri Chakravorty Spivak<br>गायत्री चक्रवर्ती स्पिवक (Gayatri Chakravorty Spivak)",
+    "Vidya Balan<br>विद्या बालन (Vidya Balan)"
+   ],
+   "my_ans": "C",
+   "sol": "प्रसिद्ध दार्शनिक और साहित्यिक सिद्धांतकार गायत्री चक्रवर्ती स्पिवक को 2025 में मानविकी और सामाजिक विज्ञान के लिए प्रतिष्ठित होलबर्ग पुरस्कार से सम्मानित किया गया।",
+   "trick": "होलबर्ग पुरस्कार 2025 = गायत्री चक्रवर्ती स्पिवक।",
+   "ans": "C"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "In Uttar Pradesh, which city’s police in December 2025 launched dedicated Closed User Group (CUG) phone numbers, enabling women to directly contact Mission Shakti Centre in-charges at police stations?",
+   "hi": "दिसंबर 2025 में, उत्तर प्रदेश में किस शहर की पुलिस ने समर्पित क्लोज्ड यूजर ग्रुप (CUG) फोन नंबर लॉन्च किए, जिससे महिलाएँ पुलिस स्टेशनों में मिशन शक्ति केंद्र प्रभारियों से सीधे संपर्क कर सकें?",
+   "opts": [
+    "Patna<br>पटना",
+    "Lucknow<br>लखनऊ",
+    "Chandigarh<br>चंडीगढ़",
+    "Delhi<br>दिल्ली"
+   ],
+   "my_ans": "B",
+   "sol": "उत्तर प्रदेश की राजधानी लखनऊ पुलिस ने दिसंबर 2025 में महिलाओं की सुरक्षा के लिए मिशन शक्ति केंद्रों के प्रभारियों से सीधे संपर्क हेतु CUG नंबर लॉन्च किए।",
+   "trick": "मिशन शक्ति CUG नंबर = लखनऊ पुलिस।",
+   "ans": "B"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "Which Indian non-profit organization became the first Indian to win the Ramon Magsaysay Award in 2025?",
+   "hi": "2025 में रेमन मैग्सेसे पुरस्कार (Ramon Magsaysay Award) जीतने वाला पहला भारतीय गैर-लाभकारी संगठन (non-profit organization) कौन बना?",
+   "opts": [
+    "Pratham<br>प्रथम (Pratham)",
+    "Educate Girls<br>एजुकेट गर्ल्स (Educate Girls)",
+    "Akshaya Patra<br>अक्षय पात्र (Akshaya Patra)",
+    "Teach For India<br>टीच फॉर इंडिया (Teach For India)"
+   ],
+   "my_ans": "B",
+   "sol": "2025 में 'एजुकेट गर्ल्स' (Educate Girls) रेमन मैग्सेसे पुरस्कार जीतने वाला पहला भारतीय गैर-लाभकारी संगठन बना, जो ग्रामीण भारत में लड़कियों की शिक्षा के लिए कार्य करता है।",
+   "trick": "मैग्सेसे 2025 = एजुकेट गर्ल्स।",
+   "ans": "B"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "By what percentage did rural road connectivity improve under the Pradhan Mantri Gram Sadak Yojana (PMGSY) between 2000 and 2020, according to the Ministry of Rural Development?",
+   "hi": "ग्रामीण विकास मंत्रालय के अनुसार, 2000 से 2020 के बीच प्रधानमंत्री ग्राम सड़क योजना (PMGSY) के अंतर्गत ग्रामीण सड़क संपर्क में कितने प्रतिशत का सुधार हुआ?",
+   "opts": [
+    "80%",
+    "65%",
+    "55%",
+    "40%"
+   ],
+   "my_ans": "A",
+   "sol": "ग्रामीण विकास मंत्रालय के आंकड़ों के अनुसार, 2000 से 2020 के बीच PMGSY के तहत ग्रामीण सड़क संपर्क में 80% का महत्वपूर्ण सुधार हुआ है।",
+   "trick": "PMGSY 2000-2020 = 80% सुधार।",
+   "ans": "A"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "Which body’s Chairperson was appointed on 1 September 2025, with Ajay Seth taking over the role?",
+   "hi": "1 सितंबर 2025 को किस संस्था के अध्यक्ष की नियुक्ति हुई, और अजय सेठ ने यह पदभार ग्रहण किया?",
+   "opts": [
+    "NITI Aayog<br>NITI आयोग",
+    "Securities and Exchange Board of India (SEBI)<br>भारतीय प्रतिभूति और विनिमय बोर्ड (SEBI)",
+    "Insurance Regulatory and Development Authority of India (IRDAI)<br>भारतीय बीमा नियामक एवं विकास प्राधिकरण (IRDAI)",
+    "Reserve Bank of India (RBI)<br>भारतीय रिज़र्व बैंक (RBI)"
+   ],
+   "my_ans": "C",
+   "sol": "1 सितंबर 2025 को अजय सेठ ने भारतीय बीमा नियामक एवं विकास प्राधिकरण (IRDAI) के अध्यक्ष के रूप में पदभार ग्रहण किया।",
+   "trick": "अजय सेठ = IRDAI अध्यक्ष (सितंबर 2025)।",
+   "ans": "C"
+  }
+ ]
+}

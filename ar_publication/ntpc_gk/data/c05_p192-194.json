@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "192-194",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 215,
+   "lvl": "UG",
+   "en": "Canal irrigation in India is most extensively developed in areas with:",
+   "hi": "भारत में नहर सिंचाई का सर्वाधिक व्यापक विस्तार किन क्षेत्रों में हुआ?",
+   "opts": [
+    "Desert regions with rocky terrain<br>पथरीले भूभाग वाले मरुस्थलीय क्षेत्रों",
+    "Coastal sandy soil<br>तटीय बलुई मृदा वाले क्षेत्रों",
+    "Alluvial plains with perennial rivers<br>बारहमासी नदियों वाले जलोढ़ मैदानों",
+    "High rainfall and steep slope<br>अत्यधिक वर्षा और तीव्र ढाल वाले क्षेत्रों"
+   ],
+   "my_ans": "C",
+   "sol": "जलोढ़ मैदान समतल होते हैं और यहाँ बारहमासी नदियाँ उपलब्ध होती हैं, जो नहर सिंचाई के लिए सबसे उपयुक्त परिस्थितियाँ प्रदान करती हैं।",
+   "trick": "जलोढ़ मैदान = समतल भूमि + बारहमासी नदियाँ",
+   "ans": "C"
+  },
+  {
+   "n": 216,
+   "lvl": "UG",
+   "en": "Wasteland refers to:",
+   "hi": "बंजर भूमि (Wasteland) से क्या तात्पर्य है?",
+   "opts": [
+    "Urban green areas<br>शहरी हरित क्षेत्र",
+    "River valley fertile land<br>नदी घाटी की उपजाऊ भूमि",
+    "Land covered by forests<br>वनों से आच्छादित भूमि",
+    "Land not suitable for cultivation due to natural or human causes<br>प्राकृतिक या मानवीय कारणों से कृषि के लिए अनुपयुक्त भूमि"
+   ],
+   "my_ans": "D",
+   "sol": "बंजर भूमि वह भूमि है जो प्राकृतिक (जैसे लवणता, कटाव) या मानवीय कारणों से खेती के लिए अनुपयुक्त या अनुत्पादक हो गई है।",
+   "trick": "बंजर = अनुपयोगी/अनुत्पादक भूमि",
+   "ans": "D"
+  },
+  {
+   "n": 217,
+   "lvl": "UG",
+   "en": "The excessive presence of ________ mainly causes eutrophication in lakes.",
+   "hi": "________ की अत्यधिक उपस्थिति मुख्य रूप से झीलों में सुपोषण (eutrophication) का कारण बनती है।",
+   "opts": [
+    "Silica<br>सिलिका",
+    "Nitrogen and phosphorus<br>नाइट्रोजन और फॉस्फोरस",
+    "Iron and copper<br>आयरन और कॉपर",
+    "Calcium carbonate<br>कैल्शियम कार्बोनेट"
+   ],
+   "my_ans": "B",
+   "sol": "उर्वरकों और सीवेज से आने वाले नाइट्रोजन और फॉस्फोरस पोषक तत्वों की अधिकता से शैवाल की तीव्र वृद्धि होती है, जिसे सुपोषण कहते हैं।",
+   "trick": "सुपोषण = नाइट्रोजन + फॉस्फोरस की अधिकता",
+   "ans": "B"
+  },
+  {
+   "n": 218,
+   "lvl": "UG",
+   "en": "What was the all-India coal production in the year 2023-24?",
+   "hi": "वर्ष 2023-24 में अखिल भारतीय कोयला उत्पादन कितना था?",
+   "opts": [
+    "1435.32 Million Tonne (MT)<br>1435.32 मिलियन टन (MT)",
+    "697.82 Million Tonne (MT)<br>697.82 मिलियन टन (MT)",
+    "997.826 Million Tonne (MT)<br>997.826 मिलियन टन (MT)",
+    "1200.17 Million Tonne (MT)<br>1200.17 मिलियन टन (MT)"
+   ],
+   "my_ans": "C",
+   "sol": "भारत का कोयला उत्पादन लगातार बढ़ रहा है और 2023-24 में यह 997.826 मिलियन टन दर्ज किया गया था।",
+   "trick": "2023-24 कोयला उत्पादन = 997.826 MT",
+   "ans": "C"
+  },
+  {
+   "n": 219,
+   "lvl": "UG",
+   "en": "The largest freshwater lake in India is:",
+   "hi": "भारत की सबसे बड़ी मीठे पानी की झील कौन-सी है?",
+   "opts": [
+    "Wular Lake<br>वुलर झील",
+    "Loktak Lake<br>लोकटक झील",
+    "Dal Lake<br>डल झील",
+    "Chilika Lake<br>चिल्का झील"
+   ],
+   "my_ans": "A",
+   "sol": "जम्मू-कश्मीर में स्थित वुलर झील भारत की सबसे बड़ी मीठे पानी की झील है।",
+   "trick": "वुलर = सबसे बड़ी मीठे पानी की झील",
+   "ans": "A"
+  },
+  {
+   "n": 220,
+   "lvl": "UG",
+   "en": "The peeling of curved sheets from massive rocks due to temperature changes is known as:",
+   "hi": "तापमान परिवर्तन के कारण विशाल चट्टानों से घुमावदार परतों के छिलके के रूप में अलग होने की प्रक्रिया को किस नाम से जाना जाता है?",
+   "opts": [
+    "Exfoliation<br>अपशल्कन (Exfoliation)",
+    "Salt crystallisation<br>लवण क्रिस्टलीकरण (Salt crystallisation)",
+    "Abrasion<br>अपघर्षण (Abrasion)",
+    "Carbonation<br>कार्बोनीकरण (Carbonation)"
+   ],
+   "my_ans": "A",
+   "sol": "तापमान के बार-बार घटने-बढ़ने से चट्टानों की ऊपरी परतें प्याज के छिलकों की तरह अलग होने लगती हैं, इसे अपशल्कन कहते हैं।",
+   "trick": "अपशल्कन = प्याज के छिलके जैसी परतें",
+   "ans": "A"
+  },
+  {
+   "n": 221,
+   "lvl": "UG",
+   "en": "The asthenosphere plays an important role in plate movements because:",
+   "hi": "दुर्बलता मंडल (asthenosphere) प्लेट विवर्तनिकी में एक महत्वपूर्ण भूमिका निभाता है क्योंकि ______________।",
+   "opts": [
+    "It is partially molten and allows plates to move<br>यह आंशिक रूप से पिघला हुआ है और प्लेटों को संचलन की सुविधा देता है",
+    "It forms the Earth’s magnetic field<br>यह पृथ्वी का चुंबकीय क्षेत्र बनाता है",
+    "It is made of water bodies<br>यह जल निकायों से बना है",
+    "It is perfectly solid and rigid<br>यह पूरी तरह से ठोस और कठोर है"
+   ],
+   "my_ans": "A",
+   "sol": "एस्थेनोस्फीयर ऊपरी मेंटल की एक अर्ध-तरल और लचीली परत है, जिस पर कठोर लिथोस्फेरिक प्लेटें धीरे-धीरे खिसकती हैं।",
+   "trick": "एस्थेनोस्फीयर = अर्ध-तरल परत = प्लेटों की गति",
+   "ans": "A"
+  },
+  {
+   "n": 222,
+   "lvl": "UG",
+   "en": "Which process is responsible for the rising of warm air over a heated surface?",
+   "hi": "तप्त पृष्ठ से गर्म वायु के ऊपर उठने के लिए कौन-सी प्रक्रिया उत्तरदायी है?",
+   "opts": [
+    "Convection<br>संवहन",
+    "Radiation<br>विकिरण",
+    "Conduction<br>चालन",
+    "Insulation<br>रोधन"
+   ],
+   "my_ans": "A",
+   "sol": "गर्म होने पर हवा के अणु कम घने होकर ऊपर उठते हैं और ठंडी हवा नीचे आती है, इस चक्र को संवहन कहते हैं।",
+   "trick": "संवहन = गर्म हवा का ऊपर उठना",
+   "ans": "A"
+  },
+  {
+   "n": 223,
+   "lvl": "UG",
+   "en": "Which continent is known as the ‘Island Continent’?",
+   "hi": "किस महाद्वीप को 'द्वीप महाद्वीप' कहा जाता है?",
+   "opts": [
+    "Africa<br>अफ्रीका",
+    "Europe<br>यूरोप",
+    "Australia<br>ऑस्ट्रेलिया",
+    "South America<br>दक्षिण अमेरिका"
+   ],
+   "my_ans": "C",
+   "sol": "ऑस्ट्रेलिया को 'द्वीप महाद्वीप' कहा जाता है क्योंकि यह चारों ओर से पानी से घिरा हुआ है और एक ही देश का महाद्वीप है।",
+   "trick": "ऑस्ट्रेलिया = द्वीप महाद्वीप",
+   "ans": "C"
+  },
+  {
+   "n": 224,
+   "lvl": "UG",
+   "en": "Which of the following provides evidence that the Great Indian Desert was once under the sea during the Mesozoic era?",
+   "hi": "निम्नलिखित में से कौन-सा प्रमाण यह दर्शाता है कि मध्यजीवी युग (Mesozoic era) के दौरान महान भारतीय रेगिस्तान कभी समुद्र के नीचे था?",
+   "opts": [
+    "Marine deposits and wood fossils<br>समुद्री निक्षेप और लकड़ी के जीवाश्म",
+    "Glacial deposits<br>हिमनदीय निक्षेप",
+    "Presence of black soil<br>काली मृदा की उपस्थिति",
+    "Volcanic ash layers<br>ज्वालामुखीय राख की परतें"
+   ],
+   "my_ans": "A",
+   "sol": "थार रेगिस्तान में पाए गए समुद्री निक्षेप और लकड़ी के जीवाश्म इस बात का प्रमाण हैं कि यह क्षेत्र कभी समुद्र के नीचे था।",
+   "trick": "समुद्री निक्षेप = प्राचीन समुद्र का प्रमाण",
+   "ans": "A"
+  }
+ ]
+}

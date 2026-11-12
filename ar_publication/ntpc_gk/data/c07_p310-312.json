@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "310-312",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 280,
+   "lvl": "UG",
+   "en": "Which Constitutional Article provides for establishment of Finance Commission of India every five years Constitutionally?",
+   "hi": "संविधान का कौन-सा अनुच्छेद, प्रत्येक पांच वर्ष में भारत के वित्त आयोग की स्थापना का प्रावधान करता है?",
+   "opts": [
+    "Article 280<br>अनुच्छेद 280",
+    "Article 299<br>अनुच्छेद 299",
+    "Article 291<br>अनुच्छेद 291",
+    "Article 270<br>अनुच्छेद 270"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान का अनुच्छेद 280 वित्त आयोग के गठन का प्रावधान करता है। राष्ट्रपति हर पांच साल में या आवश्यकतानुसार इसका गठन करते हैं।",
+   "trick": "280 = वित्त आयोग (Finance Commission)",
+   "ans": "A"
+  },
+  {
+   "n": 281,
+   "lvl": "UG",
+   "en": "Which Article allows constitutional remedies for enforcement of Fundamental Rights by courts?",
+   "hi": "कौन-सा अनुच्छेद न्यायालयों द्वारा मौलिक अधिकारों के प्रवर्तन के लिए संवैधानिक उपचारों की अनुमति प्रदान करता है?",
+   "opts": [
+    "Article 32<br>अनुच्छेद 32",
+    "Article 300<br>अनुच्छेद 300",
+    "Article 44<br>अनुच्छेद 44",
+    "Article 226<br>अनुच्छेद 226"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 32 के तहत नागरिक मौलिक अधिकारों के प्रवर्तन के लिए सीधे सर्वोच्च न्यायालय जा सकते हैं। डॉ. अंबेडकर ने इसे संविधान की 'आत्मा' कहा है।",
+   "trick": "32 = संवैधानिक उपचारों का अधिकार",
+   "ans": "A"
+  },
+  {
+   "n": 282,
+   "lvl": "UG",
+   "en": "Article 22 provides safeguards to arrested or detained individuals under which two detention categories?",
+   "hi": "अनुच्छेद 22 गिरफ्तारी और निरोध से संरक्षण प्रदान करता है, यह किन दो श्रेणियों में है?",
+   "opts": [
+    "Temporary and permanent<br>अस्थायी और स्थायी",
+    "Judicial and executive<br>न्यायिक और कार्यकारी",
+    "Civil and military<br>नागरिक और सैन्य",
+    "Punitive and preventive<br>दंडात्मक और निवारक"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 22 दो प्रकार के निरोध की बात करता है: दंडात्मक (अपराध के बाद) और निवारक (अपराध रोकने के लिए बिना मुकदमे के)।",
+   "trick": "22 = दंडात्मक और निवारक निरोध",
+   "ans": "D"
+  },
+  {
+   "n": 283,
+   "lvl": "UG",
+   "en": "What was the Untouchability (Offences) Act, 1955, renamed as in 1976?",
+   "hi": "वर्ष 1976 में 'अस्पृश्यता (अपराध) अधिनियम, 1955' का नाम बदलकर क्या कर दिया गया था?",
+   "opts": [
+    "Civil Rights Enforcement Act<br>सिविल अधिकार प्रवर्तन अधिनियम",
+    "Protection of Civil Rights Act, 1955<br>सिविल अधिकार संरक्षण अधिनियम, 1955",
+    "Fundamental Rights Protection Act<br>मौलिक अधिकार संरक्षण अधिनियम",
+    "Social Justice Act<br>सामाजिक न्याय अधिनियम"
+   ],
+   "my_ans": "B",
+   "sol": "1976 में अस्पृश्यता (अपराध) अधिनियम, 1955 का दायरा बढ़ाकर इसका नाम 'नागरिक अधिकार संरक्षण अधिनियम, 1955' कर दिया गया।",
+   "trick": "1976 = नाम बदलकर नागरिक अधिकार संरक्षण अधिनियम",
+   "ans": "B"
+  },
+  {
+   "n": 284,
+   "lvl": "UG",
+   "en": "Which of the following are the official languages of India?",
+   "hi": "निम्नलिखित में से कौन-सी भारत की राजभाषाएँ हैं?",
+   "opts": [
+    "Hindi and English<br>हिंदी और अंग्रेजी",
+    "Hindi and Marathi<br>हिंदी और मराठी",
+    "English and Urdu<br>अंग्रेजी और उर्दू",
+    "Hindi and Urdu<br>हिंदी और उर्दू"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 343 के अनुसार, संघ की राजभाषा हिंदी (देवनागरी लिपि) है और अंग्रेजी को सहायक राजभाषा के रूप में रखा गया है।",
+   "trick": "343 = हिंदी और अंग्रेजी",
+   "ans": "A"
+  },
+  {
+   "n": 285,
+   "lvl": "UG",
+   "en": "“Equality before law” and “equal protection of the laws” under fundamental rights are provided in which of the following provisions of the Constitution of India?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से किस प्रावधान में मौलिक अधिकारों के तहत 'विधि के समक्ष समता' और 'विधियों का समान संरक्षण' प्रदान किया गया है?",
+   "opts": [
+    "Article 16<br>अनुच्छेद 16",
+    "Article 13<br>अनुच्छेद 13",
+    "Article 14<br>अनुच्छेद 14",
+    "Article 15<br>अनुच्छेद 15"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 14 कानून के समक्ष समानता और कानूनों के समान संरक्षण की गारंटी देता है।",
+   "trick": "14 = समानता का अधिकार",
+   "ans": "C"
+  },
+  {
+   "n": 286,
+   "lvl": "UG",
+   "en": "Which Article gives religious denominations the authority to conduct their religious affairs?",
+   "hi": "कौन-सा अनुच्छेद धार्मिक संप्रदायों को अपने धार्मिक कार्यों के प्रबंधन का अधिकार देता है?",
+   "opts": [
+    "Article 27<br>अनुच्छेद 27",
+    "Article 26<br>अनुच्छेद 26",
+    "Article 24<br>अनुच्छेद 24",
+    "Article 23<br>अनुच्छेद 23"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 26 प्रत्येक धार्मिक संप्रदाय को अपने धार्मिक मामलों के प्रबंधन, संस्थाओं की स्थापना और संपत्ति के प्रशासन का अधिकार देता है।",
+   "trick": "26 = धार्मिक प्रबंधन की स्वतंत्रता",
+   "ans": "B"
+  },
+  {
+   "n": 287,
+   "lvl": "UG",
+   "en": "Under how many broad categories are the Fundamental Rights guaranteed by the Constitution of India?",
+   "hi": "भारत के संविधान द्वारा मौलिक अधिकारों को कितनी व्यापक श्रेणियों के अंतर्गत गारंटीकृत किया गया है?",
+   "opts": [
+    "Nine<br>नौ",
+    "Eleven<br>ग्यारह",
+    "Six<br>छह",
+    "Five<br>पांच"
+   ],
+   "my_ans": "C",
+   "sol": "मूल संविधान में 7 मौलिक अधिकार थे, लेकिन संपत्ति के अधिकार (अनुच्छेद 31) को हटाने के बाद अब 6 श्रेणियां बची हैं।",
+   "trick": "6 = वर्तमान मौलिक अधिकार श्रेणियां",
+   "ans": "C"
+  },
+  {
+   "n": 288,
+   "lvl": "UG",
+   "en": "The People’s Plan Campaign, introduced nationwide in 2018, aimed to strengthen rural governance through which of the following approaches?",
+   "hi": "निम्नलिखित में से किस उपागम के माध्यम से 2018 में राष्ट्रव्यापी रूप से आरंभ किए गए जन योजना अभियान (People’s Plan Campaign) का उद्देश्य ग्रामीण शासन को सुदृढ़ करना था?",
+   "opts": [
+    "Uniform national budgeting templates<br>एकसमान राष्ट्रीय बजटन प्रारूप",
+    "Centralized expenditure control<br>केंद्रीकृत व्यय नियंत्रण",
+    "Participatory Gram Sabha-based planning<br>सहभागी ग्राम सभा-आधारित योजना",
+    "Corporate-led rural investments<br>कॉर्पोरेट-नेतृत्व वाले ग्रामीण निवेश"
+   ],
+   "my_ans": "C",
+   "sol": "जन योजना अभियान का मुख्य उद्देश्य ग्राम सभा की भागीदारी के माध्यम से विकेंद्रीकृत योजना बनाना और ग्रामीण शासन को मजबूत करना है।",
+   "trick": "जन योजना = सहभागी ग्राम सभा",
+   "ans": "C"
+  },
+  {
+   "n": 289,
+   "lvl": "UG",
+   "en": "The provision for organising village panchayats is mentioned under which Article of the Indian Constitution?",
+   "hi": "ग्राम पंचायतों के गठन का प्रावधान भारतीय संविधान के किस अनुच्छेद के अंतर्गत वर्णित है?",
+   "opts": [
+    "Article 50<br>अनुच्छेद 50",
+    "Article 40<br>अनुच्छेद 40",
+    "Article 13<br>अनुच्छेद 13",
+    "Article 37<br>अनुच्छेद 37"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 40 राज्य के नीति निदेशक तत्वों के अंतर्गत ग्राम पंचायतों के गठन का निर्देश देता है।",
+   "trick": "40 = ग्राम पंचायत",
+   "ans": "B"
+  }
+ ]
+}

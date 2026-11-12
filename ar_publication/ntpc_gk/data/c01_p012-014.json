@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "12-14",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "The founder of the Chola empire, Vijayalaya, was the feudatory of which of the following South Indian powers?",
+   "hi": "चोल साम्राज्य का संस्थापक विजयालय, निम्नलिखित में से किस दक्षिण भारतीय शक्ति का सामंत था?",
+   "opts": [
+    "Vakatakas<br>वाकाटक",
+    "Chalukyas<br>चालुक्य",
+    "Gangas<br>गंगा",
+    "Pallavas<br>पल्लव"
+   ],
+   "my_ans": "D",
+   "sol": "विजयालय (848-871 ई.) ने मध्यकालीन चोल वंश की स्थापना की। वह शुरुआत में पल्लवों के अधीन एक सामंत सरदार था।",
+   "trick": "विजयालय पल्लवों का सामंत था।",
+   "ans": "D"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Harshavardhana’s biography Harshacharita was composed in Sanskrit by which of the following court poets?",
+   "hi": "हर्षवर्धन की जीवनी हर्षचरित की रचना निम्नलिखित में से किस दरबारी कवि ने संस्कृत में की थी?",
+   "opts": [
+    "Vishnu Sharma<br>विष्णु शर्मा",
+    "Ravikirti<br>रविकीर्ति",
+    "Surasena<br>सुरसेना",
+    "Banabhatta<br>बाणभट्ट"
+   ],
+   "my_ans": "D",
+   "sol": "बाणभट्ट राजा हर्षवर्धन के दरबारी कवि थे। उन्होंने 'हर्षचरित' (जीवनी) और 'कादम्बरी' (उपन्यास) की रचना संस्कृत में की।",
+   "trick": "हर्ष के बाण से हर्षचरित लिखी गई।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which Vedic text, composed around 1000 BCE, contains 1028 hymns dedicated to various deities?",
+   "hi": "लगभग 1000 BCE में संकलित किस वैदिक ग्रंथ में विभिन्न देवी-देवताओं को समर्पित 1028 सूक्त सम्मिलित हैं?",
+   "opts": [
+    "Sama Veda<br>सामवेद",
+    "Yajur Veda<br>यजुर्वेद",
+    "Atharva Veda<br>अथर्व वेद",
+    "Rig Veda<br>ऋग्वेद"
+   ],
+   "my_ans": "D",
+   "sol": "ऋग्वेद सबसे प्राचीन वेद है। इसमें 10 मंडल और 1028 सूक्त (भजन) हैं, जो विभिन्न देवताओं को समर्पित हैं।",
+   "trick": "ऋग्वेद = सबसे पुराना + 1028 सूक्त",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which Harappan city, flourishing around 2500 BCE, is especially known for its Great Bath and advanced grid-pattern streets?",
+   "hi": "लगभग 2500 ईसा पूर्व समृद्ध हड़प्पा सभ्यता के किस शहर को विशेष रूप से अपने विशाल स्नानघर और उन्नत ग्रिड-पैटर्न वाली सड़कों के लिए जाना जाता है?",
+   "opts": [
+    "Dholavira<br>धोलावीरा",
+    "Mohenjodaro<br>मोहनजोदड़ो",
+    "Lothal<br>लोथल",
+    "Kalibangan<br>कालीबंगन"
+   ],
+   "my_ans": "B",
+   "sol": "मोहनजोदड़ो (सिंध, पाकिस्तान) अपने 'विशाल स्नानागार' (Great Bath) और सुनियोजित ग्रिड-पैटर्न वाली सड़कों के लिए प्रसिद्ध है।",
+   "trick": "मोहन का बड़ा स्नानघर।",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which technique was primarily used to produce flake tools in India during the Middle Palaeolithic culture?",
+   "hi": "मध्य पुरापाषाण काल के दौरान भारत में शल्क उपकरण (flake tools) बनाने के लिए मुख्य रूप से किस तकनीक का उपयोग किया जाता था?",
+   "opts": [
+    "Pressure flaking<br>दाब शल्कन (Pressure flaking)",
+    "Percussion method<br>आघात विधि (Percussion method)",
+    "Levallois technique<br>लेवलोइस तकनीक (Levallois technique)",
+    "Blade-tool technology<br>ब्लेड-टूल प्रौद्योगिकी (Blade-tool technology)"
+   ],
+   "my_ans": "C",
+   "sol": "लेवलॉइस तकनीक मध्य पुरापाषाण काल की प्रमुख विशेषता थी। इसमें पत्थर के कोर को कछुए के खोल जैसा आकार देकर फ्लेक निकाले जाते थे।",
+   "trick": "मध्य पुरापाषाण = लेवलॉइस तकनीक",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "What was the Diwan- i -Riyasat under Alauddin Khilji?",
+   "hi": "अलाउद्दीन खिलजी के शासनकाल में दीवान-ए-रियासत क्या थी?",
+   "opts": [
+    "Department of religious endowments<br>धार्मिक धर्मदाय विभाग",
+    "Department of agriculture<br>कृषि विभाग",
+    "Department controlling markets and prices<br>बाजार और मूल्य नियंत्रण विभाग",
+    "Department of royal correspondence<br>शाही पत्राचार विभाग"
+   ],
+   "my_ans": "C",
+   "sol": "अलाउद्दीन खिलजी ने बाजार नियंत्रण और कीमतों को विनियमित करने के लिए 'दीवान-ए-रियासत' विभाग की स्थापना की थी।",
+   "trick": "रियासत = बाजार नियंत्रण",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Ashoka was the viceroy of which region under his father Bindusara’s reign?",
+   "hi": "अपने पिता बिंदुसार के शासन काल में अशोक किस क्षेत्र के राज्यपाल (वायसराय) थे?",
+   "opts": [
+    "Tosali<br>तोशाली",
+    "Ujjain<br>उज्जैन",
+    "Saurashtra<br>सौराष्ट्र",
+    "Patliputra<br>पाटलिपुत्र"
+   ],
+   "my_ans": "B",
+   "sol": "सम्राट बनने से पहले, अशोक अपने पिता बिंदुसार के अधीन उज्जैन (अवंति) के राज्यपाल के रूप में कार्यरत थे।",
+   "trick": "अशोक पहले उज्जैन के राज्यपाल थे।",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Who initiated a major archaeological or scientific study related to the Harappan site of Rakhigarhi in 2013?",
+   "hi": "2013 में राखीगढ़ी के हड़प्पा स्थल से संबंधित एक मुख्य पुरातात्विक या वैज्ञानिक अध्ययन की शुरुआत किसने की थी?",
+   "opts": [
+    "Amrendra Nath<br>अमरेंद्र नाथ",
+    "B.B. Lal<br>B.B. लाल",
+    "Vasant Shinde<br>वसंत शिंदे",
+    "R.S. Bisht<br>R.S. बिष्ट"
+   ],
+   "my_ans": "C",
+   "sol": "2013 में वसंत शिंदे (डेक्कन कॉलेज, पुणे) ने राखीगढ़ी में खुदाई और प्राचीन DNA अध्ययन की शुरुआत की थी।",
+   "trick": "राखीगढ़ी में शिंदे ने DNA खोजा।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Which Chalukya ruler defeated Harshavardhana on the banks of the Narmada?",
+   "hi": "निम्नलिखित में से किस चालुक्य शासक ने नर्मदा के किनारे पर हर्षवर्धन को परास्त किया था?",
+   "opts": [
+    "Kirttivarman I<br>कीर्तिवर्मन I (Kirttivarman I)",
+    "Mangalesha<br>मंगलेश (Mangalesha)",
+    "Pulakesin II<br>पुलकेशिन II (Pulakesin II)",
+    "Vikramaditya I<br>विक्रमादित्या I (Vikramaditya I)"
+   ],
+   "my_ans": "C",
+   "sol": "चालुक्य राजा पुलकेशिन द्वितीय ने 618-620 ई. के आसपास नर्मदा नदी के तट पर हर्षवर्धन को हराकर उनके दक्षिण विस्तार को रोका था।",
+   "trick": "पुलकेशिन ने हर्ष को नर्मदा पर रोका।",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following was NOT an excavated site of the Banas culture?",
+   "hi": "निम्नलिखित में से कौन-सा, बनास संस्कृति का उत्खनित स्थल नहीं था?",
+   "opts": [
+    "Bagor<br>बागोर (Bagor)",
+    "Nagda<br>नागदा (Nagda)",
+    "Gilund<br>गिलुंड (Gilund)",
+    "Ahar<br>आहड़ (Ahar)"
+   ],
+   "my_ans": "B",
+   "sol": "बनास संस्कृति (ताम्रपाषाण काल) के प्रमुख स्थल आहड़, गिलुंड और बागोर हैं। नागदा इस संस्कृति का हिस्सा नहीं है।",
+   "trick": "बनास = आहड़, गिलुंड, बागोर",
+   "ans": "B"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Which Buddhist text, from the 1st century BCE, records the dialogues of the Buddha?",
+   "hi": "पहली शताब्दी ईसा पूर्व के किस बौद्ध ग्रंथ में बुद्ध के संवादों को दर्ज किया गया है?",
+   "opts": [
+    "Sutta Pitaka<br>सुत्त पिटक",
+    "Abhidhamma Pitaka<br>अभिधम्म पिटक",
+    "Vinaya Pitaka<br>विनय पिटक",
+    "Jataka Tales<br>जातक कथाएँ"
+   ],
+   "my_ans": "A",
+   "sol": "सुत्त पिटक में महात्मा बुद्ध के उपदेशों और संवादों का संग्रह है। यह त्रिपिटक का सबसे महत्वपूर्ण और बड़ा भाग है।",
+   "trick": "सुत्त = बुद्ध के संवाद",
+   "ans": "A"
+  }
+ ]
+}

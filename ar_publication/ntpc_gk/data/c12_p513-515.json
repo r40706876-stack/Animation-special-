@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "513-515",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 204,
+   "lvl": "UG",
+   "en": "To prevent losing your current progress due to a system crash or power failure, which essential shortcut key combination should you press regularly to quickly save the document you are working on?",
+   "hi": "सिस्टम क्रैश या विद्युत विफलता के कारण अपने वर्तमान कार्य (current progress) को बचाने के लिए, आप जिस डॉक्यूमेंट पर कार्य कर रहे हैं उसे जल्दी से सेव करने के लिए आपको नियमित रूप से कौन-से शॉर्टकट कुंजी संयोजन का प्रयोग करते रहना चाहिए?",
+   "opts": [
+    "Ctrl + X",
+    "Ctrl + S",
+    "Ctrl + C",
+    "Ctrl + V"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl + S का उपयोग किसी भी डॉक्यूमेंट को सेव करने के लिए किया जाता है ताकि डेटा सुरक्षित रहे।",
+   "trick": "S for Save - Ctrl + S याद रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 205,
+   "lvl": "UG",
+   "en": "A user is leaving their laptop unattended for the entire weekend and wants to ensure zero battery consumption while still being able to resume their exact work session (all open applications and files) quickly when they return on Monday. Which power-saving mode in Windows should they choose?",
+   "hi": "एक उपयोगकर्ता पूरे सप्ताहांत के लिए अपना लैपटॉप बिना किसी की निगरानी के छोड़ रहा है और चाहता है कि बैटरी की खपत शून्य हो और सोमवार को वापस लौटने पर वह अपने सेशन (सभी ओपन एप्लीकेशन और फाइलें) को तुरंत फिर से शुरू कर सके। उसे विंडोज में कौन-सा पावर-सेविंग मोड चुनना चाहिए?",
+   "opts": [
+    "Shut Down, because it is the only way to achieve zero power consumption.<br>शट डाउन, क्योंकि पावर खपत शून्य करने का यही एकमात्र तरीका है",
+    "Hibernate, because it saves the entire system state to the hard disk and powers down completely.<br>हाइबरनेट, क्योंकि यह सिस्टम की संपूर्ण अवस्था को हार्ड डिस्क पर सेव करता है और पावर को पूरी तरह से बंद कर देता है",
+    "Sleep (Standby), because it maintains the session in RAM for a very quick resume.<br>स्लीप (स्टैंडबाय), क्योंकि यह सेशन को RAM में बनाए रखता है ताकि इसे बहुत जल्दी फिर से शुरू किया जा सके",
+    "Hybrid Sleep, because it uses both RAM and the hard drive to store the session.<br>हाइब्रिड स्लीप, क्योंकि यह सेशन को स्टोर करने के लिए RAM और हार्ड ड्राइव दोनों का उपयोग करता है"
+   ],
+   "my_ans": "B",
+   "sol": "हाइबरनेट मोड में सिस्टम की पूरी स्थिति हार्ड डिस्क पर सेव हो जाती है और कंप्यूटर पूरी तरह बंद हो जाता है, जिससे बैटरी की खपत शून्य हो जाती है।",
+   "trick": "Hibernate = Hard disk में सेव + Zero power.",
+   "ans": "B"
+  },
+  {
+   "n": 206,
+   "lvl": "UG",
+   "en": "Which power mode is required for systems using Instant-on / Always-Connected experiences in Windows 10 and 11?",
+   "hi": "विंडोज 10 और 11 में इंस्टेंट-ऑन / ऑलवेज-कनेक्टेड (Instant-on / Always-Connected) अनुभव का उपयोग करने वाले सिस्टम के लिए किस पावर मोड की आवश्यकता होती है?",
+   "opts": [
+    "Modern Standby<br>मॉडर्न स्टैंडबाय",
+    "Hybrid Sleep<br>हाइब्रिड स्लीप",
+    "S3 Sleep<br>S3 स्लीप",
+    "Legacy Hibernate<br>लिगेसी हाइबरनेट"
+   ],
+   "my_ans": "A",
+   "sol": "मॉडर्न स्टैंडबाय (Modern Standby) विंडोज 10 और 11 में इंस्टेंट-ऑन और हमेशा कनेक्टेड रहने की सुविधा प्रदान करता है।",
+   "trick": "Instant-on = Modern Standby.",
+   "ans": "A"
+  },
+  {
+   "n": 207,
+   "lvl": "UG",
+   "en": "Which of the following statements is/are true or false regarding Sleep and Hibernate modes in Windows 11?(i) Hibernate saves the session to the hard disk before shutting down, allowing full recovery upon restart.(ii) Sleep consumes more power than Hibernate because it keeps the RAM powered.",
+   "hi": "विंडोज 11 में स्लीप और हाइबरनेट मोड के संबंध में निम्नलिखित में से कौन-से कथन सत्य या असत्य हैं?(i) हाइबरनेट शटडाउन से पहले सेशन को हार्ड डिस्क में सेव कर लेता है, जिससे रीस्टार्ट होने पर पूरी तरह से रिकवरी हो जाती है।(ii) स्लीप मोड हाइबरनेट की तुलना में अधिक पॉवर की खपत करता है क्योंकि यह RAM को चालू रखता है।",
+   "opts": [
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य",
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य"
+   ],
+   "my_ans": "D",
+   "sol": "हाइबरनेट डेटा को डिस्क पर लिखता है और स्लीप मोड RAM को चालू रखता है, इसलिए दोनों कथन सत्य हैं।",
+   "trick": "Sleep = RAM powered, Hibernate = Disk saved.",
+   "ans": "D"
+  },
+  {
+   "n": 208,
+   "lvl": "UG",
+   "en": "When using the search term Invoice* in Windows 11 File Explorer, which files will be found?",
+   "hi": "विंडोज 11 फाइल एक्सप्लोरर (Windows 11 File Explorer) में सर्च टर्म Invoice* का उपयोग करने पर कौन-सी फाइलें मिलेंगी?",
+   "opts": [
+    "Files that contain exactly the word “Invoice”<br>वे फाइलें जिनमें ठीक “Invoice” शब्द होता है",
+    "Files that have “Invoice” anywhere in the name<br>वे फाइलें जिनके नाम में कहीं भी “Invoice” होता है",
+    "Files that end with the word “Invoice”<br>वे फाइलें जो “Invoice” शब्द पर समाप्त होती हैं",
+    "Files that begin with the word “Invoice”<br>वे फाइलें जो “Invoice” शब्द से शुरू होती हैं"
+   ],
+   "my_ans": "D",
+   "sol": "वाइल्डकार्ड (*) का उपयोग करने पर, Invoice* का अर्थ है कि फाइल का नाम 'Invoice' से शुरू होना चाहिए।",
+   "trick": "Invoice* = Start with Invoice.",
+   "ans": "D"
+  },
+  {
+   "n": 209,
+   "lvl": "UG",
+   "en": "In Windows 11 File Explorer, which feature is used to quickly locate a file by typing its name?",
+   "hi": "विंडोज 11 फाइल एक्सप्लोरर में, किस फीचर का उपयोग करके किसी फाइल का नाम टाइप करके उसे तुरंत ढूंढा जा सकता है?",
+   "opts": [
+    "Search box",
+    "Properties",
+    "View",
+    "Sort"
+   ],
+   "my_ans": "A",
+   "sol": "फाइल एक्सप्लोरर के ऊपर दाईं ओर स्थित 'सर्च बॉक्स' का उपयोग फाइल या फोल्डर को नाम से खोजने के लिए किया जाता है।",
+   "trick": "Search box = Find files.",
+   "ans": "A"
+  },
+  {
+   "n": 210,
+   "lvl": "UG",
+   "en": "What is the primary purpose of Task Manager in Windows?",
+   "hi": "विंडोज में टास्क मैनेजर का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To edit text documents<br>टेक्स्ट डॉक्यूमेंट को एडिट करना",
+    "To manage user passwords<br>यूजर पासवर्ड मैनेज करना",
+    "To install new applications<br>नए एप्लीकेशनों को इंस्टॉल करना",
+    "To monitor and manage running applications, processes and system performance<br>रन कर रहे एप्लीकेशनों, प्रोसेस और सिस्टम परफॉर्मेंस को मॉनिटर और मैनेज करना"
+   ],
+   "my_ans": "D",
+   "sol": "टास्क मैनेजर का उपयोग चल रहे प्रोग्राम्स, सिस्टम परफॉर्मेंस और CPU/मेमोरी उपयोग को देखने और प्रबंधित करने के लिए किया जाता है।",
+   "trick": "Task Manager = Monitor running tasks.",
+   "ans": "D"
+  },
+  {
+   "n": 211,
+   "lvl": "UG",
+   "en": "In Microsoft Word 2016 and later versions, when text spanning multiple paragraphs is highlighted and the user presses Ctrl + C, what operation is performed?",
+   "hi": "माइक्रोसॉफ्ट वर्ड 2016 और उसके बाद के संस्करणों में, जब कई पैराग्राफ में विस्तारित टेक्स्ट को हाइलाइट किया जाता है और उपयोगकर्ता Ctrl + C प्रेस करता है, तो कौन-सा ऑपरेशन किया जाता है?",
+   "opts": [
+    "Automatically saves the entire document with paragraphs updated<br>पूरे डॉक्यूमेंट को अपडेट किए गए पैराग्राफ के साथ ऑटोमैटिक रूप से सेव कर देता है",
+    "Transfers the highlighted paragraphs to clipboard for duplication elsewhere<br>हाइलाइट किए गए पैराग्राफ को क्लिपबोर्ड में स्थानांतरित करता है ताकि डुप्लिकेशन (duplication) कहीं और हो सके",
+    "Immediately inserts the paragraphs at the document's beginning<br>पैराग्राफों को तुरंत डॉक्यूमेंट के प्रारंभ में इन्सर्ट कर देता है",
+    "Permanently erases the highlighted paragraphs from existence<br>हाइलाइट किए गए पैराग्राफों को स्थायी रूप से इरेज़ (erase) कर देता है"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl + C कमांड चयनित टेक्स्ट को क्लिपबोर्ड पर कॉपी करता है ताकि उसे कहीं और पेस्ट किया जा सके।",
+   "trick": "Ctrl + C = Copy to clipboard.",
+   "ans": "B"
+  },
+  {
+   "n": 212,
+   "lvl": "UG",
+   "en": "In Windows 11, what is the purpose of using dir /s /b \"syllabus.pdf\" inside Command Prompt?",
+   "hi": "विंडोज 11 में, कमांड प्रॉम्प्ट के अंदर dir /s /b \"syllabus.pdf\" का उपयोग करने का उद्देश्य क्या है?",
+   "opts": [
+    "To open “syllabus.pdf” using the default PDF viewer",
+    "To show the file size and attributes of “report.pdf”",
+    "To copy “syllabus.pdf” into a new destination folder",
+    "To list full file paths of “syllabus.pdf” from all nested folders"
+   ],
+   "my_ans": "D",
+   "sol": "dir /s /b कमांड का उपयोग सभी सब-फोल्डर्स में फाइल को खोजने और उसका पूरा पाथ (path) दिखाने के लिए किया जाता है।",
+   "trick": "/s = subfolders, /b = bare format (path).",
+   "ans": "D"
+  }
+ ]
+}

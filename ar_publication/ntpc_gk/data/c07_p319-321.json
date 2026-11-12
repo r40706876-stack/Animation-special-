@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "319-321",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 311,
+   "lvl": "UG",
+   "en": "Fundamental Duties of the citizens were enumerated by the 42nd Amendment of the Constitution, adopted in the year:",
+   "hi": "नागरिकों के मूल कर्तव्यों को संविधान के 42वें संशोधन द्वारा सूचीबद्ध किया गया था, जिसे वर्ष __________ में अपनाया गया था।",
+   "opts": [
+    "1986",
+    "1966",
+    "1976",
+    "1988"
+   ],
+   "my_ans": "C",
+   "sol": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा संविधान में भाग IV-A और अनुच्छेद 51-A जोड़कर 10 मौलिक कर्तव्य शामिल किए गए थे।",
+   "trick": "42वां संशोधन = 1976 (लघु संविधान)",
+   "ans": "C"
+  },
+  {
+   "n": 312,
+   "lvl": "UG",
+   "en": "Which resolution from 1931 significantly inspired India’s Directive Principles promoting social and economic justice aims?",
+   "hi": "1931 के किस संकल्प ने सामाजिक और आर्थिक न्याय के लक्ष्यों को बढ़ावा देने वाले भारत के निदेशक तत्वों को महत्वपूर्ण रूप से प्रेरित किया था?",
+   "opts": [
+    "Karachi Resolution<br>कराची संकल्प",
+    "Delhi Resolution<br>दिल्ली संकल्प",
+    "Lucknow Resolution<br>लखनऊ संकल्प",
+    "Lahore Resolution<br>लाहौर संकल्प"
+   ],
+   "my_ans": "A",
+   "sol": "1931 के कराची अधिवेशन (अध्यक्ष सरदार पटेल) में मौलिक अधिकारों और आर्थिक न्याय का प्रस्ताव पारित हुआ, जिसने DPSP की नींव रखी।",
+   "trick": "कराची अधिवेशन = मौलिक अधिकार और आर्थिक न्याय",
+   "ans": "A"
+  },
+  {
+   "n": 313,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a directive mentioned in Article 39 of the Indian Constitution?",
+   "hi": "निम्नलिखित में से कौन-सा निर्देश भारतीय संविधान के अनुच्छेद 39 में उल्लिखित नहीं है?",
+   "opts": [
+    "Prevention of exploitation of childhood and youth<br>बचपन और युवावस्था के शोषण की रोकथाम",
+    "Equal pay for equal work for both men and women<br>पुरुषों और महिलाओं दोनों के लिए समान कार्य के लिए समान वेतन",
+    "Promotion of international trade relations<br>अंतर्राष्ट्रीय व्यापार संबंधों को बढ़ावा देना",
+    "Protection of the strength and health of workers<br>श्रमिकों की शक्ति और स्वास्थ्य की सुरक्षा"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 39 में समान कार्य के लिए समान वेतन, श्रमिकों का स्वास्थ्य और बच्चों का शोषण रोकना शामिल है, जबकि अंतर्राष्ट्रीय व्यापार अनुच्छेद 51 (विदेश नीति) का हिस्सा है।",
+   "trick": "अनुच्छेद 39 = कल्याणकारी राज्य के आर्थिक निर्देश",
+   "ans": "C"
+  },
+  {
+   "n": 314,
+   "lvl": "UG",
+   "en": "The President of India can make regulations for peace, progress, and good governance of which Union Territories without Legislative Assemblies?",
+   "hi": "भारत का राष्ट्रपति किन केंद्र शासित प्रदेशों के लिए शांति, प्रगति और सुशासन के विनियम बना सकता है, जहाँ विधानसभाएँ नहीं हैं?",
+   "opts": [
+    "Andaman & Nicobar Islands, Lakshadweep, Dadra & Nagar Haveli and Daman & Diu<br>अंडमान और निकोबार द्वीप समूह, लक्षद्वीप, दादरा और नगर हवेली एवं दमन और दीव",
+    "Jammu & Kashmir and Ladakh<br>जम्मू और कश्मीर एवं लद्दाख",
+    "Chandigarh and Puducherry<br>चंडीगढ़ एवं पुडुचेरी",
+    "Puducherry and Delhi<br>पुडुचेरी एवं दिल्ली"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 240 के तहत राष्ट्रपति उन केंद्र शासित प्रदेशों के लिए नियम बना सकते हैं जिनमें अपनी विधानसभा नहीं है, जैसे अंडमान-निकोबार, लक्षद्वीप, दादरा-नगर हवेली और दमन-दीव।",
+   "trick": "अनुच्छेद 240 = राष्ट्रपति की नियम बनाने की शक्ति",
+   "ans": "A"
+  },
+  {
+   "n": 315,
+   "lvl": "UG",
+   "en": "Children of Indian citizens born abroad become Indian citizens by descent only if the birth is registered at an Indian consulate within what time period?",
+   "hi": "विदेश में जन्मे भारतीय नागरिकों के बच्चे वंश के आधार पर भारतीय नागरिक तभी बनते हैं जब उनका जन्म भारतीय वाणिज्य दूतावास में _______ के भीतर पंजीकृत कराया जाता है।",
+   "opts": [
+    "One year<br>एक वर्ष",
+    "Four years<br>चार वर्ष",
+    "Six months<br>छह माह",
+    "Three years<br>तीन वर्ष"
+   ],
+   "my_ans": "A",
+   "sol": "नागरिकता अधिनियम 1955 के अनुसार, विदेश में जन्मे बच्चों को वंश के आधार पर नागरिकता पाने के लिए एक वर्ष के भीतर भारतीय दूतावास में पंजीकरण कराना अनिवार्य है।",
+   "trick": "वंश द्वारा नागरिकता = 1 वर्ष की समय सीमा",
+   "ans": "A"
+  },
+  {
+   "n": 316,
+   "lvl": "UG",
+   "en": "The Fundamental Duties suggested by the Swaran Singh Committee were incorporated through which Constitutional Amendment?",
+   "hi": "स्वर्ण सिंह समिति द्वारा सुझाए गए मौलिक कर्तव्यों को किस संवैधानिक संशोधन के माध्यम से सम्मिलित किया गया था?",
+   "opts": [
+    "40th Amendment<br>40वां संशोधन",
+    "44th Amendment<br>44वां संशोधन",
+    "42nd Amendment<br>42वां संशोधन",
+    "48th Amendment<br>48वां संशोधन"
+   ],
+   "my_ans": "C",
+   "sol": "स्वर्ण सिंह समिति की सिफारिश पर 42वें संविधान संशोधन, 1976 द्वारा संविधान में मौलिक कर्तव्यों को जोड़ा गया।",
+   "trick": "स्वर्ण सिंह समिति = 42वां संशोधन",
+   "ans": "C"
+  },
+  {
+   "n": 317,
+   "lvl": "UG",
+   "en": "“Social, Economic and Political Justice” are borrowed from which revolution?",
+   "hi": "सामाजिक, आर्थिक और राजनीतिक न्याय किस क्रांति से लिया गया है?",
+   "opts": [
+    "French Revolution<br>फ्रांसीसी क्रांति",
+    "Glorious Revolution<br>गौरवपूर्ण क्रांति",
+    "American Revolution<br>अमेरिकी क्रांति",
+    "Russian Revolution<br>रूसी क्रांति"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान की प्रस्तावना में 'सामाजिक, आर्थिक और राजनीतिक न्याय' का आदर्श 1917 की रूसी क्रांति से प्रेरित है।",
+   "trick": "न्याय (सामाजिक/आर्थिक/राजनीतिक) = रूसी क्रांति",
+   "ans": "D"
+  },
+  {
+   "n": 318,
+   "lvl": "UG",
+   "en": "When was the Verma Committee Report on Fundamental Duties submitted to the Union Government?",
+   "hi": "मौलिक कर्तव्यों पर वर्मा समिति की रिपोर्ट केंद्र सरकार को कब सौंपी गई थी?",
+   "opts": [
+    "1998",
+    "2000",
+    "2001",
+    "1999"
+   ],
+   "my_ans": "D",
+   "sol": "न्यायमूर्ति जे.एस. वर्मा की अध्यक्षता में गठित समिति ने मौलिक कर्तव्यों के कार्यान्वयन पर अपनी रिपोर्ट फरवरी 1999 में सौंपी थी।",
+   "trick": "वर्मा समिति = 1999",
+   "ans": "D"
+  },
+  {
+   "n": 319,
+   "lvl": "UG",
+   "en": "According to Article 39A, the State shall:",
+   "hi": "अनुच्छेद 39A के अनुसार, राज्य क्या सुनिश्चित करेगा?",
+   "opts": [
+    "provide religious freedom<br>धार्मिक स्वतंत्रता प्रदान करना",
+    "provide free legal aid<br>निःशुल्क विधिक सहायता प्रदान करना",
+    "promote international peace and security<br>अंतर्राष्ट्रीय शांति और सुरक्षा को बढ़ावा देना",
+    "provide clean drinking water<br>स्वच्छ पेयजल उपलब्ध कराना"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 39A (42वें संशोधन द्वारा जोड़ा गया) राज्य को यह निर्देश देता है कि वह समान अवसर के आधार पर नागरिकों को निःशुल्क विधिक सहायता प्रदान करे।",
+   "trick": "39A = मुफ्त कानूनी सहायता",
+   "ans": "B"
+  }
+ ]
+}

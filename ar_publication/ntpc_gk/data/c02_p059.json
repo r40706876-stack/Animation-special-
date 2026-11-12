@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "59-59",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "The Cholas came to power after overthrowing the authority of which of the following dynasties in South India?",
+   "hi": "चोल, दक्षिण भारत में निम्नलिखित में से किस राजवंश की सत्ता को उखाड़ फेंकने के बाद सत्ता में आए?",
+   "opts": [
+    "Chera<br>चेर",
+    "Satavahana<br>सातवाहन",
+    "Pallavas<br>पल्लव",
+    "Rashtrakuta<br>राष्ट्रकूट"
+   ],
+   "my_ans": "C",
+   "sol": "विजयालय चोल ने 9वीं शताब्दी में पल्लव वंश को पराजित कर चोल साम्राज्य की स्थापना की थी।",
+   "trick": "विजयालय चोल ने पल्लवों को हराकर तंजावुर पर अधिकार किया।",
+   "ans": "C"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "Before becoming Sultan, Alauddin Khalji held which important post under Jalaluddin?",
+   "hi": "सुल्तान बनने से पूर्व अलाउद्दीन खिलजी, जलालुद्दीन के अधीन किस महत्वपूर्ण पद पर था?",
+   "opts": [
+    "Wazir<br>वज़ीर",
+    "Sadr-us-Sudur<br>सद्र-उस-सुदुर",
+    "Amir-i-Tuzuk<br>अमीर-ए-तुज़ुक",
+    "Diwan-i-Arz<br>दीवान-ए-अर्ज़"
+   ],
+   "my_ans": "C",
+   "sol": "अलाउद्दीन खिलजी सुल्तान बनने से पहले जलालुद्दीन खिलजी के दरबार में 'अमीर-ए-तुज़ुक' (समारोह प्रमुख) के पद पर कार्यरत था।",
+   "trick": "अलाउद्दीन जलालुद्दीन का भतीजा और दामाद था, जो बाद में कड़ा का गवर्नर बना।",
+   "ans": "C"
+  }
+ ]
+}

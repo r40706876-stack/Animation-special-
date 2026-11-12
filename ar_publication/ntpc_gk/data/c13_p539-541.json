@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "539-541",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Tholpavakoothu, the traditional shadow puppetry performance, originates from which Indian state?",
+   "hi": "एक पारंपरिक छाया कठपुतली प्रदर्शन 'थोल्पावकुथु (Tholpavakoothu)' की उत्पत्ति किस भारतीय राज्य से हुई है?",
+   "opts": [
+    "West Bengal<br>पश्चिम बंगाल",
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "Kerala<br>केरल",
+    "Odisha<br>ओडिशा"
+   ],
+   "my_ans": "C",
+   "sol": "थोल्पावकुथु केरल की एक प्राचीन छाया कठपुतली कला है, जो मुख्य रूप से काली मंदिरों में रामायण की कहानियों को प्रदर्शित करने के लिए की जाती है।",
+   "trick": "केरल = छाया कठपुतली (थोल्पावकुथु)",
+   "ans": "C"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Select the correct match of the musician with their musical instrument.",
+   "hi": "संगीतकार का उसके वाद्य यंत्र के साथ सही सुमेलन का चयन कीजिए।",
+   "opts": [
+    "Ravi Shankar – Bansuri<br>रवि शंकर – बांसुरी",
+    "Zakir Hussain – Sitar<br>जाकिर हुसैन – सितार",
+    "Shiv Kumar Sharma – Sarod<br>शिव कुमार शर्मा – सरोद",
+    "Bismillah Khan – Shehnai<br>बिस्मिल्ला खान – शहनाई"
+   ],
+   "my_ans": "D",
+   "sol": "बिस्मिल्ला खान एक प्रसिद्ध शहनाई वादक थे। रवि शंकर सितार, जाकिर हुसैन तबला और शिव कुमार शर्मा संतूर के लिए जाने जाते हैं।",
+   "trick": "बिस्मिल्ला खान = शहनाई के जादूगर",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "Which of the following traditional art forms originated in the Mithila region of Bihar?",
+   "hi": "बिहार के मिथिला क्षेत्र में निम्नलिखित में से किस पारंपरिक कला शैली की उत्पत्ति हुई थी?",
+   "opts": [
+    "Kalamkari paintings<br>कलमकारी चित्रकला",
+    "Pattachitra paintings<br>पट्टचित्र चित्रकला",
+    "Madhubani paintings<br>मधुबनी चित्रकला",
+    "Warli paintings<br>वारली चित्रकला"
+   ],
+   "my_ans": "C",
+   "sol": "मधुबनी चित्रकला, जिसे मिथिला पेंटिंग भी कहा जाता है, बिहार के मिथिला क्षेत्र की एक प्रसिद्ध पारंपरिक कला है जिसे मुख्य रूप से महिलाओं द्वारा बनाया जाता है।",
+   "trick": "मिथिला = मधुबनी पेंटिंग",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Baryi and Nyioga are folk music forms from which of the following states?",
+   "hi": "बारी (Baryi) और न्योगा (Nyioga) निम्नलिखित में से किस राज्य के लोक संगीत रूप हैं?",
+   "opts": [
+    "Tripura<br>त्रिपुरा",
+    "Manipur<br>मणिपुर",
+    "Arunachal Pradesh<br>अरुणाचल प्रदेश",
+    "Mizoram<br>मिजोरम"
+   ],
+   "my_ans": "C",
+   "sol": "बारी और न्योगा अरुणाचल प्रदेश की जनजातीय समुदायों द्वारा प्रचलित पारंपरिक लोक संगीत की शैलियाँ हैं।",
+   "trick": "अरुणाचल = बारी और न्योगा",
+   "ans": "C"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Which of the following folk music styles belongs to Sikkim?",
+   "hi": "निम्नलिखित में से कौन-सी लोक संगीत शैली, सिक्किम से संबंधित है?",
+   "opts": [
+    "Baul<br>बाउल",
+    "Bihu songs<br>बिहू गीत",
+    "Lavani<br>लावणी",
+    "Lepcha<br>लेप्चा"
+   ],
+   "my_ans": "D",
+   "sol": "लेप्चा सिक्किम की एक स्वदेशी जनजाति है और उनका पारंपरिक संगीत सिक्किम की प्रमुख लोक संगीत शैली है।",
+   "trick": "सिक्किम = लेप्चा जनजाति",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "Which of the following is a percussion instrument commonly used in Indian classical music?",
+   "hi": "निम्नलिखित में से कौन-सा एक ताल वाद्य है, जिसका उपयोग सामान्यतः भारतीय शास्त्रीय संगीत में किया जाता है?",
+   "opts": [
+    "Flute<br>बाँसुरी",
+    "Mridangam<br>मृदंगम",
+    "Santoor<br>संतूर",
+    "Veena<br>वीणा"
+   ],
+   "my_ans": "B",
+   "sol": "मृदंगम एक ताल वाद्य (percussion instrument) है जिसे हाथों से थपथपाकर बजाया जाता है, यह विशेष रूप से कर्नाटक शास्त्रीय संगीत में प्रयुक्त होता है।",
+   "trick": "ताल वाद्य = मृदंगम (हाथों से बजने वाला)",
+   "ans": "B"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "Who among the following dancers received the ‘Abhinandan Saroja National Award, 2021’ from the National Institute of Indian Classical Dance?",
+   "hi": "निम्नलिखित में से किस नर्तकी को 'नेशनल इंस्टीट्यूट ऑफ इंडियन क्लासिकल डांस' द्वारा 'अभिनंदन सरोजा राष्ट्रीय पुरस्कार, 2021' से सम्मानित किया गया?",
+   "opts": [
+    "Geetanjali Lal<br>गीतांजलि लाल",
+    "Aparna Satheesan<br>अपर्णा सतीसन",
+    "Saswati Sen<br>शाश्वती सेन",
+    "Yamini Krishnamurthy<br>यामिनी कृष्णमूर्ति"
+   ],
+   "my_ans": "B",
+   "sol": "अपर्णा सतीसन केरल की एक प्रसिद्ध मोहिनीअट्टम नर्तकी हैं, जिन्हें 2021 में इस पुरस्कार से सम्मानित किया गया था।",
+   "trick": "अभिनंदन सरोजा 2021 = अपर्णा सतीसन",
+   "ans": "B"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The Banarasi, Patiala and Lucknow Gharanas are associated with which of the following musical styles?",
+   "hi": "बनारसी, पटियाला और लखनऊ घराने निम्नलिखित में से किस संगीत शैली से संबंधित हैं?",
+   "opts": [
+    "Chaiti<br>चैती",
+    "Tappa<br>टप्पा",
+    "Kajari<br>कजरी",
+    "Thumri<br>ठुमरी"
+   ],
+   "my_ans": "D",
+   "sol": "ठुमरी एक अर्ध-शास्त्रीय गायन शैली है जिसके प्रमुख घरानों में बनारस, पटियाला और लखनऊ शामिल हैं।",
+   "trick": "ठुमरी = बनारस, पटियाला, लखनऊ घराने",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "Which Padma Shri awardee was given the title of Nritya Samragini by Rabindranath Tagore?",
+   "hi": "किस पद्म श्री पुरस्कार विजेता को रवीन्द्रनाथ टैगोर ने नृत्य सम्राज्ञी की उपाधि दी थी?",
+   "opts": [
+    "Balasaraswati<br>बालासरस्वती",
+    "Sobha Naidu<br>शोभा नायडू",
+    "Kanak Rele<br>कनक रेले",
+    "Sitara Devi<br>सितारा देवी"
+   ],
+   "my_ans": "D",
+   "sol": "सितारा देवी एक महान कथक नर्तकी थीं, जिन्हें रवीन्द्रनाथ टैगोर ने कम उम्र में उनके प्रदर्शन से प्रभावित होकर 'नृत्य सम्राज्ञी' की उपाधि दी थी।",
+   "trick": "नृत्य सम्राज्ञी = सितारा देवी",
+   "ans": "D"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Which dancer given below, honoured with the Nritya Natak Sangeet Drishya Kala Akademy Award from the Government of West Bengal, is known for expertise in both Bharatanatyam and Mohiniyattam?",
+   "hi": "निम्नलिखित में से कौन-सी नर्तकी, पश्चिम बंगाल सरकार द्वारा नृत्य नाटक संगीत दृश्य कला अकादमी पुरस्कार से सम्मानित हैं तथा भरतनाट्यम और मोहिनीअट्टम दोनों में अपनी विशेषज्ञता के लिए जानी जाती हैं?",
+   "opts": [
+    "Aruna Mohanty<br>अरुणा मोहंती",
+    "Thankamani Kutty<br>थंकमणि कुट्टी",
+    "Radha Reddy<br>राधा रेड्डी",
+    "Elam Endira Devi<br>एलम एंडिरा देवी"
+   ],
+   "my_ans": "B",
+   "sol": "थंकमणि कुट्टी केरल की एक प्रसिद्ध नर्तकी हैं जो भरतनाट्यम और मोहिनीअट्टम दोनों में निपुण हैं और उन्हें पश्चिम बंगाल सरकार द्वारा सम्मानित किया गया था।",
+   "trick": "थंकमणि कुट्टी = भरतनाट्यम + मोहिनीअट्टम",
+   "ans": "B"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "The term 'Kriti' in Carnatic music refers to:",
+   "hi": "कर्नाटक संगीत में 'कृति (Kriti)' शब्द से क्या तात्पर्य है?",
+   "opts": [
+    "a compositional lyric form<br>एक रचनात्मक गीतात्मक रूप",
+    "a type of musical ornamentation<br>एक प्रकार का संगीत अलंकरण",
+    "a rhythmic pattern<br>एक लयबद्ध प्रतिरूप",
+    "a melodic scale in music<br>संगीत में एक रागात्मक मेल"
+   ],
+   "my_ans": "A",
+   "sol": "कृति कर्नाटक संगीत का सबसे महत्वपूर्ण रचना रूप है, जो तीन भागों (पल्लवी, अनुपल्लवी, चरणम) में संरचित एक गीतात्मक रचना है।",
+   "trick": "कृति = कर्नाटक संगीत की रचना",
+   "ans": "A"
+  }
+ ]
+}

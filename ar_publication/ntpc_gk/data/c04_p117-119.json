@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Art & Culture",
+  "hi": "कला एवं संस्कृति",
+  "total": 46,
+  "gl": 46,
+  "ug": 0
+ },
+ "source_pages": "117-119",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "What is the main objective of granting classical language status to certain Indian languages?",
+   "hi": "कुछ भारतीय भाषाओं को शास्त्रीय भाषा का दर्जा देने का मुख्य उद्देश्य क्या है?",
+   "opts": [
+    "To make them compulsory official languages<br>उन्हें अनिवार्य आधिकारिक भाषाएँ बनाना",
+    "To reduce the use of regional languages<br>क्षेत्रीय भाषाओं के उपयोग को कम करना",
+    "To promote research and preservation of ancient linguistic heritage<br>प्राचीन भाषाई विरासत के अनुसंधान और संरक्षण को बढ़ावा देना",
+    "To replace modern languages in education<br>शिक्षा में आधुनिक भाषाओं का स्थान लेना"
+   ],
+   "my_ans": "C",
+   "sol": "शास्त्रीय भाषा का दर्जा उन भाषाओं को दिया जाता है जिनका प्राचीन साहित्य समृद्ध और स्वतंत्र हो, ताकि उनके संरक्षण और अनुसंधान को बढ़ावा मिल सके।",
+   "trick": "शास्त्रीय भाषा = प्राचीन विरासत का संरक्षण।",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Which award did Pandit Hariprasad Chaurasia receive in 1992 for his contribution to Indian music?",
+   "hi": "पंडित हरिप्रसाद चौरसिया को भारतीय संगीत में उनके योगदान के लिए 1992 में कौन-सा पुरस्कार प्राप्त हुआ था?",
+   "opts": [
+    "Maharashtra Gaurav Puraskar<br>महाराष्ट्र गौरव पुरस्कार",
+    "Padma Vibhushan<br>पद्म विभूषण",
+    "Padma Shri<br>पद्मश्री",
+    "Padma Bhushan<br>पद्म भूषण"
+   ],
+   "my_ans": "D",
+   "sol": "प्रसिद्ध बांसुरी वादक पंडित हरिप्रसाद चौरसिया को 1992 में पद्म भूषण से सम्मानित किया गया था।",
+   "trick": "हरिप्रसाद चौरसिया = बांसुरी = 1992 पद्म भूषण।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which of the following does NOT belong to the Tibeto-Burman language family?",
+   "hi": "निम्नलिखित में से कौन-सी भाषा, तिब्बती-बर्मी भाषा परिवार से संबंधित नहीं है?",
+   "opts": [
+    "Assamese<br>असमिया",
+    "Lepcha<br>लेप्चा",
+    "Bodo<br>बोडो",
+    "Garo<br>गारो"
+   ],
+   "my_ans": "A",
+   "sol": "असमिया भाषा इंडो-आर्यन परिवार का हिस्सा है, न कि तिब्बती-बर्मी परिवार का।",
+   "trick": "असमिया = इंडो-आर्यन।",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Who among the following established the famous Nrityagram institution in Bengaluru?",
+   "hi": "बेंगलुरु में प्रसिद्ध नृत्यग्राम संस्थान की स्थापना निम्नलिखित में से किसने की थी?",
+   "opts": [
+    "Surupa Sen<br>सुरुपा सेन",
+    "Bijayini Satpathy<br>बिजयिनी सतपथी",
+    "Pavithra Reddy<br>पवित्रा रेड्डी",
+    "Protima Gauri<br>प्रतिमा गौरी"
+   ],
+   "my_ans": "D",
+   "sol": "नृत्यग्राम की स्थापना 1990 में प्रसिद्ध ओडिसी नृत्यांगना प्रतिमा गौरी (प्रतिमा बेदी) द्वारा की गई थी।",
+   "trick": "नृत्यग्राम = प्रतिमा गौरी।",
+   "ans": "D"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Ms. N. Rajam, who was announced as the Padma Vibhushan awardee in the Padma Awards 2026 for her outstanding contribution to Indian art and culture, is primarily associated with which of the following musical instruments?",
+   "hi": "भारतीय कला और संस्कृति में अपने उत्कृष्ट योगदान के लिए पद्म पुरस्कार 2026 में पद्म विभूषण से सम्मानित की जाने वाली सुश्री एन. राजम मुख्य रूप से निम्नलिखित में से किस संगीत वाद्ययंत्र से संबंधित है?",
+   "opts": [
+    "Sitar<br>सितार",
+    "Flute<br>बांसुरी",
+    "Sarod<br>सरोद",
+    "Violin<br>वायलिन"
+   ],
+   "my_ans": "D",
+   "sol": "सुश्री एन. राजम एक प्रसिद्ध हिंदुस्तानी शास्त्रीय संगीतकार और वायलिन वादक हैं।",
+   "trick": "एन. राजम = वायलिन।",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "In which year were the Telugu and Kannada languages given the status of Classical Languages by the Indian Government?",
+   "hi": "भारत सरकार द्वारा तेलुगु और कन्नड़ भाषाओं को शास्त्रीय भाषाओं का दर्जा किस वर्ष दिया गया?",
+   "opts": [
+    "2008",
+    "2004",
+    "2006",
+    "2014"
+   ],
+   "my_ans": "A",
+   "sol": "तेलुगु और कन्नड़ को वर्ष 2008 में एक साथ शास्त्रीय भाषा का दर्जा दिया गया था।",
+   "trick": "तेलुगु-कन्नड़ = 2008।",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "In which Indian state is the Cold Desert Biosphere Reserve, added to UNESCO’s World Network in 2025, located?",
+   "hi": "यूनेस्को (UNESCO) के विश्व नेटवर्क में 2025 में शामिल किया गया 'शीत मरुस्थल जीवमंडल रिजर्व (Cold Desert Biosphere Reserve)' भारत के किस राज्य में स्थित है?",
+   "opts": [
+    "Uttarakhand adjoining the Nanda Devi Biosphere Zone<br>नंदा देवी जीवमंडल क्षेत्र से सटे उत्तराखंड में",
+    "Jammu & Kashmir along the upper Indus valley basin<br>ऊपरी सिंधु घाटी बेसिन के साथ जम्मू और कश्मीर में",
+    "Himachal Pradesh in the Western Himalayan region<br>पश्चिमी हिमालय क्षेत्र में हिमाचल प्रदेश में",
+    "Sikkim near the Kangchenjunga Biosphere landscape<br>कंचनजंगा जीवमंडल परिदृश्य के निकट सिक्किम में"
+   ],
+   "my_ans": "C",
+   "sol": "शीत मरुस्थल (Cold Desert) बायोस्फीयर रिजर्व हिमाचल प्रदेश की स्पीति और लाहौल घाटियों में स्थित है।",
+   "trick": "शीत मरुस्थल = हिमाचल प्रदेश।",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Kalamkari painting involves the use of which instrument for drawing outlines?",
+   "hi": "कलमकारी चित्रकला में रूपरेखा बनाने के लिए किस उपकरण का उपयोग किया जाता है?",
+   "opts": [
+    "Paintbrush<br>पेंटब्रश",
+    "Needle<br>सुई",
+    "Stylus<br>कंटिका",
+    "Bamboo pen<br>बांस की कलम"
+   ],
+   "my_ans": "D",
+   "sol": "कलमकारी कला में जटिल रूपरेखा और पैटर्न बनाने के लिए बांस की कलम का उपयोग किया जाता है।",
+   "trick": "कलमकारी = बांस की कलम।",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the following folk songs is specifically associated with Haryana?",
+   "hi": "निम्नलिखित में से कौन-से लोकगीत मुख्यतः हरियाणा से संबंधित हैं?",
+   "opts": [
+    "Mand<br>मांड",
+    "Ragini<br>रागनी",
+    "Bhatiali<br>भटियाली",
+    "Gulraj<br>गुलराज"
+   ],
+   "my_ans": "B",
+   "sol": "रागनी हरियाणा का एक अत्यंत लोकप्रिय लोकगीत रूप है।",
+   "trick": "हरियाणा = रागनी।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Who among the following is famous for composing kritis known for their contemplative nature and emphasis on capturing the essence of the raga through a slow, richly ornamented style?",
+   "hi": "निम्नलिखित में से कौन अपनी उन कृतियों की रचना के लिए प्रसिद्ध है जो अपनी मननशील/चिंतनशील प्रकृति और धीमी, समृद्ध एवं अलंकृत शैली के माध्यम से राग के सार को ग्रहण करने पर बल देने के लिए जानी जाती हैं?",
+   "opts": [
+    "Kumarswami Kutti<br>कुमारस्वामी कुट्टी",
+    "Ramanuja Srinivasani<br>रामानुज श्रीनिवासनी",
+    "Mutthuswami Dikshitar<br>मुत्तुस्वामी दीक्षितर",
+    "Thyagaraja Iyengar<br>त्यागराज अयंगर"
+   ],
+   "my_ans": "C",
+   "sol": "मुत्तुस्वामी दीक्षितर अपनी धीमी गति और समृद्ध अलंकृत शैली वाली कृतियों के लिए प्रसिद्ध हैं।",
+   "trick": "दीक्षितर = धीमी और अलंकृत शैली।",
+   "ans": "C"
+  }
+ ]
+}

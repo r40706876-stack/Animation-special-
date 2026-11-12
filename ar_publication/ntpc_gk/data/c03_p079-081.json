@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "79-81",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "The book “Poverty and Un-British Rule in India”, which compiled evidence from British official sources to explain India’s economic drain, was authored by whom?",
+   "hi": "“ पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया (Poverty and Un-British Rule in India)” पुस्तक, जिसमें भारत के आर्थिक अपवाह (economic drain) को स्पष्ट करने के लिए ब्रिटिश आधिकारिक स्रोतों से साक्ष्य संकलित किए गए थे, किसके द्वारा लिखी गई थी?",
+   "opts": [
+    "Gopal Krishna Gokhale<br>गोपाल कृष्ण गोखले",
+    "M. G. Ranade<br>एम. जी. रानाडे",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी",
+    "R. C. Dutt<br>आर. सी. दत्त"
+   ],
+   "my_ans": "C",
+   "sol": "यह पुस्तक दादाभाई नौरोजी द्वारा लिखी गई थी, जिन्हें 'ग्रैंड ओल्ड मैन ऑफ इंडिया' कहा जाता है। इसमें उन्होंने धन के निष्कासन (Drain of Wealth) के सिद्धांत को समझाया था।",
+   "trick": "दादाभाई नौरोजी = धन का निष्कासन सिद्धांत",
+   "ans": "C"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Which event best signalled the decline of Portuguese power in India and the emergence of British and Dutch influence?",
+   "hi": "किस घटना ने भारत में पुर्तगाली शक्ति के पतन और ब्रिटिश और डच प्रभाव के उदय को सर्वोत्तम रूप में चिह्नित किया?",
+   "opts": [
+    "Treaty of Aix-la-Chapelle (1748)<br>ऐक्स-ला-चैपल की संधि (1748)",
+    "Establishment of Madras by the English (1639)<br>अंग्रेजों द्वारा मद्रास की स्थापना (1639)",
+    "Anglo-Persian capture of Hormuz (1622)<br>एंग्लो-फ़ारसी द्वारा होर्मुज़ पर कब्ज़ा (1622)",
+    "Battle of Plassey (1757)<br>प्लासी का युद्ध (1757)"
+   ],
+   "my_ans": "C",
+   "sol": "1622 में अंग्रेजों और फारसियों द्वारा होर्मुज़ पर कब्जा करने से पुर्तगाली व्यापारिक एकाधिकार और शक्ति का पतन शुरू हो गया।",
+   "trick": "होर्मुज़ का पतन = पुर्तगाली शक्ति का पतन",
+   "ans": "C"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "Which of the following laws stipulated the establishment of Supreme Court in 1774 in Calcutta in India?",
+   "hi": "निम्नलिखित में से किस कानून के अंतर्गत, 1774 में भारत के कलकत्ता में सर्वोच्च न्यायालय की स्थापना को निर्दिष्ट किया गया था?",
+   "opts": [
+    "Government of India Act, 1858<br>भारत सरकार अधिनियम, 1858",
+    "Regulating Act of 1773<br>1773 का रेगुलेटिंग अधिनियम",
+    "Pitt’s India Act, 1784<br>पिट्स इंडिया अधिनियम, 1784",
+    "Charter Act of 1813<br>1813 का चार्टर अधिनियम"
+   ],
+   "my_ans": "B",
+   "sol": "1773 के रेगुलेटिंग एक्ट के तहत 1774 में कलकत्ता में सर्वोच्च न्यायालय की स्थापना की गई थी, जिसके पहले मुख्य न्यायाधीश सर एलिजा इम्पे थे।",
+   "trick": "रेगुलेटिंग एक्ट 1773 = कलकत्ता सुप्रीम कोर्ट",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "Which European power was the first to establish trading settlements in India during the early modern period?",
+   "hi": "प्रारंभिक आधुनिक काल में भारत में व्यापारिक बस्तियाँ स्थापित करने वाली पहली यूरोपीय शक्ति कौन-सी थी?",
+   "opts": [
+    "French<br>फ़्रांसीसी",
+    "Portuguese<br>पुर्तगाली",
+    "Dutch<br>डच",
+    "English<br>अंग्रेज़ी"
+   ],
+   "my_ans": "B",
+   "sol": "वास्को डी गामा के 1498 में कालीकट पहुँचने के बाद पुर्तगाली भारत में व्यापारिक बस्तियाँ स्थापित करने वाली पहली यूरोपीय शक्ति बने।",
+   "trick": "सबसे पहले आए पुर्तगाली",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "Which of the following statements is INCORRECT with respect to Indian socio-political movements and their leaders?",
+   "hi": "भारतीय सामाजिक-राजनीतिक आंदोलनों और उनके नेताओं के संदर्भ में निम्नलिखित में से कौन-सा कथन गलत है?",
+   "opts": [
+    "The Self-Respect Movement was launched by E. V. Ramasamy.<br>आत्मसम्मान आंदोलन की शुरुआत ई. वी. रामासामी ने की थी।",
+    "The Home Rule League was founded by Aurobindo Ghosh.<br>होम रूल लीग की स्थापना अरबिंदो घोष ने की थी।",
+    "The Abhinav Bharat Society was founded by Vinayak Damodar Savarkar.<br>अभिनव भारत सोसाइटी की स्थापना विनायक दामोदर सावरकर ने की थी।",
+    "The Poona Sarvajanik Sabha was associated with Mahadev Govind Ranade.<br>पूना सार्वजनिक सभा महादेव गोविंद रानाडे से संबंधित थी।"
+   ],
+   "my_ans": "B",
+   "sol": "होम रूल लीग की स्थापना एनी बेसेंट और बाल गंगाधर तिलक ने की थी, न कि अरबिंदो घोष ने।",
+   "trick": "होम रूल = तिलक और एनी बेसेंट",
+   "ans": "B"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "Which of the following social reformers established the ‘ Bahishkrit Hitakarini Sabha’ in 1924?",
+   "hi": "निम्नलिखित में से किस समाज सुधारक ने वर्ष 1924 में ‘ बहिष्कृत हितकारिणी सभा’ की स्थापना की थी?",
+   "opts": [
+    "B R Ambedkar<br>बी. आर. अंबेडकर",
+    "Jyotirao Phule<br>ज्योतिराव फुले",
+    "Baba Amte<br>बाबा आमटे",
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू"
+   ],
+   "my_ans": "A",
+   "sol": "डॉ. बी. आर. अंबेडकर ने 1924 में मुंबई में दलित वर्गों के उत्थान और शिक्षा के प्रसार के लिए बहिष्कृत हितकारिणी सभा की स्थापना की थी।",
+   "trick": "अंबेडकर = बहिष्कृत हितकारिणी सभा",
+   "ans": "A"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "Who led the Khasi resistance against British interference in the 1830s?",
+   "hi": "1830 के दशक में ब्रिटिश हस्तक्षेप के विरुद्ध खासी प्रतिरोध का नेतृत्व किसने किया था?",
+   "opts": [
+    "Alluri Sitarama Raju<br>अल्लूरी सीताराम राजू",
+    "Tirot Sing<br>तिरोत सिंह",
+    "Sidhu Murmu<br>सिधू मुर्मू",
+    "Rani Gaidinliu<br>रानी गाइदिनल्यू"
+   ],
+   "my_ans": "B",
+   "sol": "खासी प्रतिरोध (1829-1833) का नेतृत्व तिरोत सिंह ने किया था, जो ब्रिटिशों द्वारा खासी पहाड़ियों में सड़क बनाने के प्रयास के खिलाफ था।",
+   "trick": "खासी = तिरोत सिंह",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Which new weapon led to Mangal Pandey’s agitation as a sepoy of the 34th Bengal Native Infantry?",
+   "hi": "34वीं बंगाल नेटिव इन्फैंट्री के सिपाही के रूप में मंगल पांडे के आंदोलन का कारण कौन-सा नया हथियार था?",
+   "opts": [
+    "Brown Bess musket<br>ब्राउन बेस मस्केट",
+    "Enfield rifle<br>एनफील्ड राइफल",
+    "Snider rifle<br>स्नाइडर राइफल",
+    "Matchlock gun<br>मैचलॉक गन"
+   ],
+   "my_ans": "B",
+   "sol": "एनफील्ड राइफल के कारतूसों में गाय और सूअर की चर्बी का उपयोग किया गया था, जिससे सैनिकों की धार्मिक भावनाएं आहत हुईं और 1857 का विद्रोह शुरू हुआ।",
+   "trick": "एनफील्ड राइफल = चर्बी वाले कारतूस",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "Which Indian nationalist leader emerged as a prominent figure of the extremist phase of the freedom movement, emphasizing direct action and mass mobilisation ?",
+   "hi": "स्वतंत्रता आंदोलन के उग्रवादी चरण के दौरान कौन-सा भारतीय राष्ट्रवादी नेता एक प्रमुख व्यक्ति के रूप में उभरा, जिसने प्रत्यक्ष कार्रवाई और जन लामबंदी पर बल दिया?",
+   "opts": [
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Surendranath Banerjee<br>सुरेंद्रनाथ बनर्जी",
+    "Gopal Krishna Gokhale<br>गोपाल कृष्ण गोखले",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी"
+   ],
+   "my_ans": "A",
+   "sol": "बाल गंगाधर तिलक उग्रवादी चरण के प्रमुख नेता थे, जिन्होंने 'स्वराज मेरा जन्मसिद्ध अधिकार है' का नारा दिया और जन आंदोलन पर जोर दिया।",
+   "trick": "तिलक = उग्रवादी नेता",
+   "ans": "A"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "Which of the following languages is NOT included in the Eighth Schedule of the Indian Constitution?",
+   "hi": "निम्नलिखित में से कौन-सी भाषा भारतीय संविधान की आठवीं अनुसूची में शामिल नहीं है?",
+   "opts": [
+    "English<br>अंग्रेज़ी",
+    "Sanskrit<br>संस्कृत",
+    "Sindhi<br>सिंधी",
+    "Nepali<br>नेपाली"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान की आठवीं अनुसूची में 22 भाषाएं हैं, जिनमें अंग्रेजी शामिल नहीं है।",
+   "trick": "आठवीं अनुसूची में अंग्रेजी नहीं है",
+   "ans": "A"
+  }
+ ]
+}

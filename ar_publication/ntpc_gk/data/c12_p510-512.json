@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "510-512",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 195,
+   "lvl": "UG",
+   "en": "Which of the following correctly describes the role of the Windows operating system?",
+   "hi": "निम्नलिखित में से कौन-सा, विंडोज ऑपरेटिंग सिस्टम की भूमिका का सही ढंग से वर्णन करता है?",
+   "opts": [
+    "Designing multimedia presentations<br>मल्टीमीडिया प्रेजेंटेशन की डिजाइनिंग",
+    "Managing files and folders<br>फ़ाइलों और फ़ोल्डरों का प्रबंधन",
+    "Playing games<br>गेम्स खेलना",
+    "Editing audio files<br>ऑडियो फ़ाइलों की एडिटिंग"
+   ],
+   "my_ans": "B",
+   "sol": "ऑपरेटिंग सिस्टम (OS) कंप्यूटर के हार्डवेयर और सॉफ्टवेयर संसाधनों का प्रबंधन करता है। फ़ाइल और फ़ोल्डर प्रबंधन इसका एक मुख्य कार्य है।",
+   "trick": "OS = हार्डवेयर और फ़ाइल प्रबंधन का मैनेजर।",
+   "ans": "B"
+  },
+  {
+   "n": 196,
+   "lvl": "UG",
+   "en": "Which function is primarily handled by system software in a computer system?",
+   "hi": "कंप्यूटर सिस्टम में सिस्टम सॉफ्टवेयर द्वारा मुख्य रूप से कौन-सा कार्य नियंत्रित किया जाता है?",
+   "opts": [
+    "Playing audio and video files<br>ऑडियो और वीडियो फ़ाइल प्ले करना",
+    "Designing presentations and spreadsheets<br>प्रेजेंटेशन और स्प्रेडशीट डिजाइन करना",
+    "Managing user-created documents<br>यूजर द्वारा बनाए गए डॉक्यूमेंट को मैनेज करना",
+    "Coordinating hardware and running core system processes<br>हार्डवेयर को कोऑर्डिनेट करना और कोर सिस्टम प्रोसेसेस को रन करना"
+   ],
+   "my_ans": "D",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर और एप्लीकेशन सॉफ्टवेयर के बीच इंटरफेस का काम करता है, जैसे हार्डवेयर घटकों को नियंत्रित करना और कोर प्रोसेसेस चलाना।",
+   "trick": "सिस्टम सॉफ्टवेयर = हार्डवेयर का कंट्रोलर।",
+   "ans": "D"
+  },
+  {
+   "n": 197,
+   "lvl": "UG",
+   "en": "A \".xlsx\" file is created for:",
+   "hi": "एक \".xlsx\" फ़ाइल किसके लिए बनाई जाती है?",
+   "opts": [
+    "Sound editing<br>साउंड एडिटिंग",
+    "Spreadsheet data<br>स्प्रेडशीट डेटा",
+    "Booting the computer<br>कंप्यूटर को बूट करना",
+    "Text paragraphs<br>टेक्स्ट पैराग्राफ"
+   ],
+   "my_ans": "B",
+   "sol": ".xlsx माइक्रोसॉफ्ट एक्सेल फ़ाइलों का एक्सटेंशन है, जिसका उपयोग स्प्रेडशीट डेटा (रो, कॉलम, फॉर्मूला) को मैनेज करने के लिए किया जाता है।",
+   "trick": "XLSX = Excel Spreadsheet.",
+   "ans": "B"
+  },
+  {
+   "n": 198,
+   "lvl": "UG",
+   "en": "Which function of the Operating System deals with allocation of CPU time among different running processes?",
+   "hi": "ऑपरेटिंग सिस्टम का कौन-सा कार्य, रन कर रहे विभिन्न प्रोसेसेस के बीच CPU समय के आवंटन (allocation of CPU time) से संबंधित है?",
+   "opts": [
+    "Device Management<br>डिवाइस मैनेजमेंट",
+    "Memory Management<br>मेमोरी मैनेजमेंट",
+    "Process Management<br>प्रोसेस मैनेजमेंट",
+    "File Management<br>फ़ाइल मैनेजमेंट"
+   ],
+   "my_ans": "C",
+   "sol": "प्रोसेस मैनेजमेंट का कार्य CPU शेड्यूलिंग और विभिन्न प्रोसेसेस के बीच CPU समय का आवंटन करना है।",
+   "trick": "प्रोसेस मैनेजमेंट = CPU समय का आवंटन।",
+   "ans": "C"
+  },
+  {
+   "n": 199,
+   "lvl": "UG",
+   "en": "A user wants to quickly pause work and resume in few minutes without waiting for the computer to reboot. The best option is:",
+   "hi": "कोई यूजर, कंप्यूटर के रीबूट होने की प्रतीक्षा किए बिना कार्य को शीघ्रता से रोककर कुछ मिनटों के बाद पुनः शुरू करना चाहता है। इसके लिए सर्वोत्तम विकल्प कौन-सा है?",
+   "opts": [
+    "Format disk<br>फॉर्मेट डिस्क",
+    "Sleep mode<br>स्लीप मोड",
+    "Reinstall OS<br>OS को पुनः इंस्टॉल करना",
+    "Complete shutdown<br>पूर्ण शटडाउन"
+   ],
+   "my_ans": "B",
+   "sol": "स्लीप मोड वर्तमान स्थिति को RAM में सुरक्षित रखता है, जिससे कंप्यूटर को बिना रीबूट किए तुरंत काम फिर से शुरू किया जा सकता है।",
+   "trick": "स्लीप मोड = तुरंत काम शुरू करने के लिए।",
+   "ans": "B"
+  },
+  {
+   "n": 200,
+   "lvl": "UG",
+   "en": "What is the primary function of the keyboard shortcut Ctrl + H in applications like MS Word?",
+   "hi": "MS वर्ड जैसे एप्लीकेशन में कीबोर्ड शॉर्टकट Ctrl + H का प्राथमिक कार्य क्या है?",
+   "opts": [
+    "Displays document history<br>डॉक्यूमेंट हिस्ट्री प्रदर्शित करना",
+    "Highlights selected text<br>चयनित टेक्स्ट को हाईलाइट करना",
+    "Opens the Help window<br>हेल्प विंडो ओपन करना",
+    "Opens the Find and Replace dialog box<br>फाइंड एंड रिप्लेस डायलॉग बॉक्स ओपन करना"
+   ],
+   "my_ans": "D",
+   "sol": "Ctrl + H का उपयोग MS वर्ड में 'फाइंड एंड रिप्लेस' डायलॉग बॉक्स खोलने के लिए किया जाता है ताकि टेक्स्ट को खोजा और बदला जा सके।",
+   "trick": "H = Help (Replace) to find and change.",
+   "ans": "D"
+  },
+  {
+   "n": 201,
+   "lvl": "UG",
+   "en": "Which statement is True or False about System Software?(i) The Operating System runs in privileged mode, giving it unrestricted access to hardware.(ii) Core System Software like device drivers is essential for the computer to start and function.",
+   "hi": "सिस्टम सॉफ्टवेयर के संबंध में कौन-सा कथन सत्य या असत्य है?(i) ऑपरेटिंग सिस्टम प्रिविलेज्ड मोड (privileged mod) में रन करता है, जिससे इसे हार्डवेयर तक अप्रतिबंधित एक्सेस प्राप्त होता है।(ii) कंप्यूटर को शुरू करने और कार्य करने के लिए डिवाइस ड्राइवर जैसे कोर सिस्टम सॉफ्टवेयर (Core System Software) आवश्यक हैं।",
+   "opts": [
+    "(i) False, (ii) True<br>(i) असत्य, (ii) सत्य",
+    "(i) False, (ii) False<br>(i) असत्य, (ii) असत्य",
+    "(i) True, (ii) True<br>(i) सत्य, (ii) सत्य",
+    "(i) True, (ii) False<br>(i) सत्य, (ii) असत्य"
+   ],
+   "my_ans": "C",
+   "sol": "ऑपरेटिंग सिस्टम कर्नल मोड (प्रिविलेज्ड मोड) में चलता है और डिवाइस ड्राइवर हार्डवेयर संचार के लिए अनिवार्य हैं, इसलिए दोनों कथन सत्य हैं।",
+   "trick": "OS = प्रिविलेज्ड मोड, ड्राइवर = अनिवार्य।",
+   "ans": "C"
+  },
+  {
+   "n": 202,
+   "lvl": "UG",
+   "en": "Which key is used to open the Start Menu in Windows 11?",
+   "hi": "Windows 11 में स्टार्ट मेनू खोलने के लिए किस कुंजी का उपयोग किया जाता है?",
+   "opts": [
+    "Windows Key<br>विंडोज की",
+    "Ctrl",
+    "Enter",
+    "Shift"
+   ],
+   "my_ans": "A",
+   "sol": "Windows कीबोर्ड पर स्थित 'Windows Key' (⊞) का उपयोग विंडोज के सभी संस्करणों में स्टार्ट मेनू खोलने के लिए किया जाता है।",
+   "trick": "Windows Key = Start Menu.",
+   "ans": "A"
+  },
+  {
+   "n": 203,
+   "lvl": "UG",
+   "en": "In the architecture of the Windows Operating System, which crucial component acts as the bridge between the application programs and the core hardware, operating in a protected mode to manage process scheduling, memory allocation, and interrupt handling?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम के आर्किटेक्चर में, कौन-सा महत्वपूर्ण घटक एप्लीकेशन प्रोग्राम और कोर हार्डवेयर के बीच ब्रिज के रूप में कार्य करता है, जो प्रोसेस शेड्यूलिंग, मेमोरी एलोकेशन तथा इंटरप्ट हैंडलिंग को मैनेज करने के लिए प्रोटेक्टेड मोड में काम करता है?",
+   "opts": [
+    "Win32 Subsystem<br>Win32 सबसिस्टम",
+    "Kernel<br>कर्नेल",
+    "Windows Shell (Explorer)<br>विंडोज शेल (एक्सप्लोरर)",
+    "Hardware Abstraction Layer (HAL)<br>हार्डवेयर एब्स्ट्रैक्शन लेयर (HAL)"
+   ],
+   "my_ans": "B",
+   "sol": "कर्नेल (Kernel) विंडोज का मुख्य घटक है जो प्रोटेक्टेड मोड में रहकर प्रोसेस शेड्यूलिंग और मेमोरी प्रबंधन जैसे महत्वपूर्ण कार्य करता है।",
+   "trick": "कर्नेल = OS का मुख्य मैनेजर।",
+   "ans": "B"
+  }
+ ]
+}

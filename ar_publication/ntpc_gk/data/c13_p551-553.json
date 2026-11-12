@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "551-553",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 113,
+   "lvl": "UG",
+   "en": "In which year was the Rashtriya Sanskrit Sansthan established for the development and promotion of Sanskrit?",
+   "hi": "संस्कृत के विकास और संवर्धन के लिए राष्ट्रीय संस्कृत संस्थान की स्थापना किस वर्ष की गई थी?",
+   "opts": [
+    "1990",
+    "1970",
+    "1960",
+    "1980"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रीय संस्कृत संस्थान की स्थापना 1970 में शिक्षा मंत्रालय के अंतर्गत की गई थी।",
+   "trick": "संस्कृत का विकास, 1970 का प्रयास।",
+   "ans": "B"
+  },
+  {
+   "n": 114,
+   "lvl": "UG",
+   "en": "Which Sustainable Development Goal (SDG) specifically aims to ensure universal access to affordable, reliable, sustainable and modern energy for all?",
+   "hi": "निम्नलिखित में से कौन-सा सतत विकास लक्ष्य (Sustainable Development Goal - SDG) विशेष रूप से सभी के लिए सस्ती, विश्वसनीय, संधारणीय और आधुनिक ऊर्जा तक सार्वभौमिक पहुंच सुनिश्चित करने का लक्ष्य रखता है?",
+   "opts": [
+    "Goal 7<br>लक्ष्य 7",
+    "Goal 5<br>लक्ष्य 5",
+    "Goal 13<br>लक्ष्य 13",
+    "Goal 9<br>लक्ष्य 9"
+   ],
+   "my_ans": "A",
+   "sol": "सतत विकास लक्ष्य 7 (SDG 7) का उद्देश्य 2030 तक सभी के लिए सस्ती और स्वच्छ ऊर्जा सुनिश्चित करना है।",
+   "trick": "7 दिन ऊर्जा, SDG 7 का दर्जा।",
+   "ans": "A"
+  },
+  {
+   "n": 115,
+   "lvl": "UG",
+   "en": "Which of the following organisations releases the National Multidimensional Poverty Index (MPI) in India?",
+   "hi": "निम्नलिखित में से कौन-सा संगठन भारत में राष्ट्रीय बहुआयामी गरीबी सूचकांक (MPI) जारी करता है?",
+   "opts": [
+    "Union Public Service Commission<br>संघ लोक सेवा आयोग",
+    "Reserve Bank of India<br>भारतीय रिज़र्व बैंक",
+    "Bureau of Indian Standards<br>भारतीय मानक ब्यूरो",
+    "NITI Aayog<br>नीति (NITI) आयोग"
+   ],
+   "my_ans": "D",
+   "sol": "नीति आयोग UNDP और OPHI के सहयोग से राष्ट्रीय बहुआयामी गरीबी सूचकांक जारी करता है।",
+   "trick": "गरीबी का मापन, नीति आयोग का काम।",
+   "ans": "D"
+  },
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "Metro trains in India are built and operated mainly in partnership with which Ministry of the Government of India?",
+   "hi": "भारत में मेट्रो ट्रेनें मुख्यतः भारत सरकार के किस मंत्रालय के साथ साझेदारी में निर्मित और संचालित की जाती हैं?",
+   "opts": [
+    "Ministry of Civil Aviation<br>नागर विमानन मंत्रालय",
+    "Ministry of Urban Development<br>शहरी विकास मंत्रालय",
+    "Ministry of Railways<br>रेल मंत्रालय",
+    "Ministry of Road Transport<br>सड़क परिवहन मंत्रालय"
+   ],
+   "my_ans": "B",
+   "sol": "मेट्रो रेल परियोजनाएं शहरी परिवहन अवसंरचना के अंतर्गत आती हैं, जिसके लिए आवास और शहरी कार्य मंत्रालय नोडल मंत्रालय है।",
+   "trick": "मेट्रो शहर की शान, शहरी विकास मंत्रालय का काम।",
+   "ans": "B"
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "The International Day for the Elimination of Violence against Women marks the beginning of which global campaign?",
+   "hi": "महिलाओं के खिलाफ हिंसा उन्मूलन के लिए अंतर्राष्ट्रीय दिवस किस वैश्विक अभियान की शुरुआत का प्रतीक है?",
+   "opts": [
+    "10 Days of Equality<br>समानता के 10 दिन",
+    "30 Days of Human Rights Protection<br>मानवाधिकार संरक्षण के 30 दिन",
+    "7 Days for Women<br>महिलाओं के लिए 7 दिन",
+    "16 Days of Activism against Gender-Based Violence<br>लैंगिक आधारित हिंसा के विरुद्ध 16 दिन का सक्रियतावाद"
+   ],
+   "my_ans": "D",
+   "sol": "25 नवंबर को मनाए जाने वाले इस दिवस से 'लैंगिक आधारित हिंसा के विरुद्ध 16 दिन का सक्रियतावाद' अभियान शुरू होता है।",
+   "trick": "25 नवंबर से 16 दिन की सक्रियता।",
+   "ans": "D"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "In which of the following states is the Ambubachi Mela held every year during the monsoon?",
+   "hi": "निम्नलिखित में से किस राज्य में, मानसून के दौरान प्रति वर्ष अंबुबाची मेला (Ambubachi Mela) आयोजित किया जाता है?",
+   "opts": [
+    "Chhattisgarh<br>छत्तीसगढ़",
+    "Bihar<br>बिहार",
+    "Jharkhand<br>झारखंड",
+    "Assam<br>असम"
+   ],
+   "my_ans": "D",
+   "sol": "अंबुबाची मेला असम के गुवाहाटी में स्थित कामाख्या मंदिर में मानसून के दौरान आयोजित किया जाता है।",
+   "trick": "कामाख्या का मेला, असम में अकेला।",
+   "ans": "D"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which country’s human rights practices report was criticised by Human Rights Watch for omitting categories like LGBT people, persons with disabilities, and freedom of assembly in August 2025?",
+   "hi": "अगस्त 2025 में ह्यूमन राइट्स वॉच द्वारा किस देश की मानवाधिकार प्रथाओं की रिपोर्ट की आलोचना की गई थी, जिसमें LGBT जनता, अशक्त व्यक्तियों और सभा करने की स्वतंत्रता (freedom of assembly) जैसी श्रेणियों को शामिल नहीं किया गया था?",
+   "opts": [
+    "China<br>चीन",
+    "United States<br>संयुक्त राज्य अमेरिका",
+    "Russia<br>रूस",
+    "India<br>भारत"
+   ],
+   "my_ans": "B",
+   "sol": "ह्यूमन राइट्स वॉच ने संयुक्त राज्य अमेरिका के विदेश विभाग की मानवाधिकार रिपोर्ट में महत्वपूर्ण श्रेणियों को छोड़ने के लिए आलोचना की थी।",
+   "trick": "अमेरिका की रिपोर्ट में कमी, मानवाधिकार वॉच की चेतावनी।",
+   "ans": "B"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "Which institution handles the promotion of Classical Languages under the Ministry of Education?",
+   "hi": "शिक्षा मंत्रालय के अंतर्गत शास्त्रीय भाषाओं के संवर्धन का कार्य कौन-सा संस्थान संभालता है?",
+   "opts": [
+    "Archaeological Survey of India<br>भारतीय पुरातत्व सर्वेक्षण",
+    "Indira Gandhi National Centre for the Arts<br>इंदिरा गांधी राष्ट्रीय कला केंद्र",
+    "Sahitya Akademi of India<br>भारतीय साहित्य अकादमी",
+    "Central Institute of Indian Languages<br>केंद्रीय भारतीय भाषा संस्थान"
+   ],
+   "my_ans": "D",
+   "sol": "केंद्रीय भारतीय भाषा संस्थान (CIIL), मैसूर, शिक्षा मंत्रालय के तहत शास्त्रीय भाषाओं के प्रचार और विकास का कार्य करता है।",
+   "trick": "शास्त्रीय भाषा का ज्ञान, CIIL का काम।",
+   "ans": "D"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "When was Oil India Limited (OIL) incorporated as a company?",
+   "hi": "ऑयल इंडिया लिमिटेड (OIL) को एक कंपनी के रूप में कब निगमित किया गया था?",
+   "opts": [
+    "1962",
+    "1959",
+    "1965",
+    "1956"
+   ],
+   "my_ans": "B",
+   "sol": "ऑयल इंडिया लिमिटेड की स्थापना 18 फरवरी, 1959 को एक कंपनी के रूप में हुई थी।",
+   "trick": "1959 में ऑयल का उदय।",
+   "ans": "B"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "Which of the following temples is described as a monumental representation of Surya’s chariot with 24 wheels?",
+   "hi": "निम्नलिखित में से किस मंदिर को सूर्य के 24 पहियों वाले रथ की एक भव्य प्रतिमा के रूप में वर्णित किया गया है?",
+   "opts": [
+    "Airavatesvara Temple<br>ऐरावतेश्वर मंदिर",
+    "Sun Temple, Konark<br>सूर्य मंदिर, कोणार्क",
+    "Mahabodhi Temple<br>महाबोधि मंदिर",
+    "Virupaksha Temple<br>विरूपाक्ष मंदिर"
+   ],
+   "my_ans": "B",
+   "sol": "कोणार्क का सूर्य मंदिर भगवान सूर्य के विशाल रथ के रूप में निर्मित है, जिसमें 24 नक्काशीदार पहिए हैं।",
+   "trick": "कोणार्क का रथ, सूर्य का पथ।",
+   "ans": "B"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "In which Indian state are the renowned Bagh Caves, famous for their ancient murals, located?",
+   "hi": "प्रसिद्ध बाघ गुफाएं, जो अपनी प्राचीन भित्ति चित्रों के लिए जानी जाती हैं, किस भारतीय राज्य में स्थित हैं?",
+   "opts": [
+    "Maharashtra<br>महाराष्ट्र",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Rajasthan<br>राजस्थान",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "B",
+   "sol": "बाघ गुफाएं मध्य प्रदेश के धार जिले में स्थित हैं, जो अपनी प्राचीन चित्रकारी के लिए प्रसिद्ध हैं।",
+   "trick": "बाघ की गुफा, मध्य प्रदेश में छुपा।",
+   "ans": "B"
+  }
+ ]
+}

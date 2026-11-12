@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "189-191",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 204,
+   "lvl": "UG",
+   "en": "Kudremukh in Karnataka is famous for which mineral?",
+   "hi": "कर्नाटक में कुद्रेमुख किस खनिज के लिए प्रसिद्ध है?",
+   "opts": [
+    "Manganese<br>मैंगनीज",
+    "Iron Ore<br>लौह अयस्क",
+    "Copper<br>कॉपर",
+    "Bauxite<br>बॉक्साइट"
+   ],
+   "my_ans": "B",
+   "sol": "कुद्रेमुख कर्नाटक के चिकमगलूर जिले में स्थित है और यह भारत के सबसे बड़े लौह अयस्क खनन क्षेत्रों में से एक है।",
+   "trick": "कुद्रेमुख = लौह अयस्क (Iron Ore)",
+   "ans": "B"
+  },
+  {
+   "n": 205,
+   "lvl": "UG",
+   "en": "The Sardar Sarovar Project is built on which river?",
+   "hi": "सरदार सरोवर परियोजना किस नदी पर निर्मित है?",
+   "opts": [
+    "Sabarmati<br>साबरमती",
+    "Narmada<br>नर्मदा",
+    "Mahi<br>माही",
+    "Tapi<br>तापी"
+   ],
+   "my_ans": "B",
+   "sol": "सरदार सरोवर परियोजना गुजरात में नर्मदा नदी पर स्थित है, जो भारत की सबसे बड़ी बांध परियोजनाओं में से एक है।",
+   "trick": "सरदार सरोवर = नर्मदा नदी",
+   "ans": "B"
+  },
+  {
+   "n": 206,
+   "lvl": "UG",
+   "en": "Which region of Maharashtra is known for iron ore production?",
+   "hi": "महाराष्ट्र का कौन-सा क्षेत्र, लौह अयस्क उत्पादन के लिए जाना जाता है?",
+   "opts": [
+    "Pune and Thane<br>पुणे और ठाणे",
+    "Aurangabad and Jalna<br>औरंगाबाद और जालना",
+    "Chandrapur and Bhandara<br>चंद्रपुर और भंडारा",
+    "Nagpur and Wardha<br>नागपुर और वर्धा"
+   ],
+   "my_ans": "C",
+   "sol": "महाराष्ट्र के चंद्रपुर और भंडारा जिले पूर्वी महाराष्ट्र के विदर्भ क्षेत्र में स्थित हैं और लौह अयस्क के प्रमुख उत्पादक हैं।",
+   "trick": "महाराष्ट्र लौह अयस्क = चंद्रपुर और भंडारा",
+   "ans": "C"
+  },
+  {
+   "n": 207,
+   "lvl": "UG",
+   "en": "Which type of agriculture is commonly practised in the wheat-producing regions of the USA and Canada?",
+   "hi": "संयुक्त राज्य अमेरिका और कनाडा के गेहूं उत्पादक क्षेत्रों में आमतौर पर किस प्रकार की कृषि पद्धति अपनाई जाती है?",
+   "opts": [
+    "Shifting cultivation<br>स्थानांतरित कृषि",
+    "Commercial grain farming<br>वाणिज्यिक अनाज कृषि",
+    "Intensive subsistence farming<br>गहन निर्वाह कृषि",
+    "Plantation agriculture<br>रोपण कृषि"
+   ],
+   "my_ans": "B",
+   "sol": "अमेरिका और कनाडा के गेहूं क्षेत्रों में बड़े पैमाने पर मशीनीकृत 'वाणिज्यिक अनाज कृषि' की जाती है।",
+   "trick": "USA/Canada गेहूं = वाणिज्यिक अनाज कृषि",
+   "ans": "B"
+  },
+  {
+   "n": 208,
+   "lvl": "UG",
+   "en": "According to the Forest Survey of India (FSI) 2021, which state/UT had the highest percentage of forest cover relative to its geographical area?",
+   "hi": "भारतीय वन सर्वेक्षण (FSI) 2021 के अनुसार, किस राज्य/केंद्र शासित प्रदेश में उसके भौगोलिक क्षेत्र के सापेक्ष वन आवरण का प्रतिशत सबसे अधिक था?",
+   "opts": [
+    "Assam<br>असम",
+    "Chhattisgarh<br>छत्तीसगढ़",
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "Mizoram<br>मिजोरम"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय वन सर्वेक्षण 2021 के अनुसार, मिजोरम में उसके कुल भौगोलिक क्षेत्र का 84.53% वन आवरण है, जो भारत में सर्वाधिक है।",
+   "trick": "सर्वाधिक वन % = मिजोरम",
+   "ans": "D"
+  },
+  {
+   "n": 209,
+   "lvl": "UG",
+   "en": "The Damodar Valley of the Indian sub-continent is mostly rich in which mineral deposit?",
+   "hi": "भारतीय उपमहाद्वीप की दामोदर घाटी में मुख्य रूप से कौन-सा खनिज निक्षेप प्रचुर मात्रा में पाया जाता है?",
+   "opts": [
+    "Magnesium<br>मैग्नीशियम",
+    "Coal<br>कोयला",
+    "Limestone<br>चूना पत्थर",
+    "Iron<br>लोहा"
+   ],
+   "my_ans": "B",
+   "sol": "दामोदर घाटी (झारखंड और पश्चिम बंगाल) अपने विशाल कोयला भंडारों के कारण 'भारत का रूर' कहलाती है।",
+   "trick": "दामोदर घाटी = कोयला",
+   "ans": "B"
+  },
+  {
+   "n": 210,
+   "lvl": "UG",
+   "en": "Which of the following natural regions is dominated by xerophytic or drought-resisting scrub with long roots, few or no leaves, and waxy or needle-shaped foliage?",
+   "hi": "निम्नलिखित में से किस प्राकृतिक क्षेत्र में मरुद्भिदी (xerophytic) या सूखा-प्रतिरोधी झाड़ियों की प्रधानता होती है, जिनकी जड़ें लंबी, पत्तियां कम या अनुपस्थित और मोमी या सुई की आकृति के पर्ण होते हैं?",
+   "opts": [
+    "Mediterranean woodland<br>भूमध्यसागरीय अरण्यभूमि",
+    "Steppe grasslands<br>स्टेपी घास के मैदान",
+    "British type cool temperate region<br>ब्रिटिश प्रकार का शीत शीतोष्ण क्षेत्र",
+    "Hot desert (Sahara type) region<br>उष्ण मरुस्थलीय (सहारा प्रकार) क्षेत्र"
+   ],
+   "my_ans": "D",
+   "sol": "गर्म मरुस्थलों (जैसे सहारा) में अत्यधिक शुष्कता होती है, इसलिए वहां की वनस्पति में लंबी जड़ें और कांटेदार पत्तियां होती हैं ताकि पानी की हानि कम हो।",
+   "trick": "मरुद्भिदी = गर्म मरुस्थल",
+   "ans": "D"
+  },
+  {
+   "n": 211,
+   "lvl": "UG",
+   "en": "According to the Ministry of Coal Annual Report 2024–25, which state held the highest proportion of lignite reserves in India as of April 2024?",
+   "hi": "कोयला मंत्रालय की वार्षिक रिपोर्ट 2024-25 के अनुसार, अप्रैल 2024 तक भारत में लिग्नाइट भंडार का उच्चतम अनुपात किस राज्य में पाया गया?",
+   "opts": [
+    "Tamil Nadu<br>तमिलनाडु",
+    "Jharkhand<br>झारखंड",
+    "Rajasthan<br>राजस्थान",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "A",
+   "sol": "तमिलनाडु में भारत के कुल लिग्नाइट भंडार का लगभग 90% हिस्सा पाया जाता है, विशेषकर नेवेली क्षेत्र में।",
+   "trick": "लिग्नाइट = तमिलनाडु",
+   "ans": "A"
+  },
+  {
+   "n": 212,
+   "lvl": "UG",
+   "en": "The Vindhyachal Super Thermal Power Station is located in __________.",
+   "hi": "विंध्याचल सुपर थर्मल पावर स्टेशन _________ में स्थित है।",
+   "opts": [
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Chhattisgarh<br>छत्तीसगढ़",
+    "Rajasthan<br>राजस्थान",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "A",
+   "sol": "विंध्याचल सुपर थर्मल पावर स्टेशन मध्य प्रदेश के सिंगरौली जिले में स्थित है और यह भारत के सबसे बड़े थर्मल पावर स्टेशनों में से एक है।",
+   "trick": "विंध्याचल = मध्य प्रदेश",
+   "ans": "A"
+  },
+  {
+   "n": 213,
+   "lvl": "UG",
+   "en": "Which soil type, known for retaining moisture, is ideal for cotton cultivation?",
+   "hi": "मृदा का कौन-सा प्रकार, जो आर्द्रता धारण के लिए जाना जाता है, कपास कृषि के लिए आदर्श है?",
+   "opts": [
+    "Red soil<br>लाल मृदा",
+    "Black soil<br>काली मृदा",
+    "Laterite soil<br>लैटेराइट मृदा",
+    "Sandy soil<br>बलुई मृदा"
+   ],
+   "my_ans": "B",
+   "sol": "काली मिट्टी (रेगुर मिट्टी) में नमी धारण करने की क्षमता बहुत अधिक होती है, जो कपास की खेती के लिए सबसे उपयुक्त है।",
+   "trick": "कपास = काली मिट्टी",
+   "ans": "B"
+  },
+  {
+   "n": 214,
+   "lvl": "UG",
+   "en": "The Tibetan Plateau, often referred to as the Roof of the World, represents which type of natural vegetation region?",
+   "hi": "तिब्बती पठार, जिसे प्रायः रूफ ऑफ द वर्ल्ड (Roof of the World) कहा जाता है, निम्नलिखित में से किस प्रकार के प्राकृतिक वनस्पति क्षेत्र को निरूपित करता है?",
+   "opts": [
+    "Polar Desert<br>ध्रुवीय मरुस्थल",
+    "Temperate Grassland<br>शीतोष्ण घासस्थल",
+    "Alpine Tundra<br>अल्पाइन टुंड्रा",
+    "Arctic Tundra<br>आर्कटिक टुंड्रा"
+   ],
+   "my_ans": "C",
+   "sol": "तिब्बती पठार अपनी अत्यधिक ऊंचाई और ठंडी जलवायु के कारण 'अल्पाइन टुंड्रा' वनस्पति क्षेत्र का प्रतिनिधित्व करता है।",
+   "trick": "तिब्बती पठार = अल्पाइन टुंड्रा",
+   "ans": "C"
+  }
+ ]
+}

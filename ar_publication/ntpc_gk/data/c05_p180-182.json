@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "180-182",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 173,
+   "lvl": "UG",
+   "en": "Which type of agriculture is commonly practiced in densely populated monsoon regions of Asia?",
+   "hi": "एशिया के घनी आबादी वाले मानसूनी क्षेत्रों में आमतौर पर किस प्रकार की कृषि की जाती है?",
+   "opts": [
+    "Intensive subsistence farming<br>गहन निर्वाह कृषि",
+    "Mediterranean agriculture<br>भूमध्यसागरीय कृषि",
+    "Nomadic herding<br>चलवासी पशुचारण",
+    "Shifting cultivation<br>स्थानांतरित कृषि"
+   ],
+   "my_ans": "A",
+   "sol": "एशिया के घनी आबादी वाले क्षेत्रों में सीमित भूमि पर अधिक उत्पादन के लिए गहन निर्वाह कृषि की जाती है।",
+   "trick": "अधिक जनसंख्या = गहन कृषि।",
+   "ans": "A"
+  },
+  {
+   "n": 174,
+   "lvl": "UG",
+   "en": "Which of the following types of natural vegetation is also called 'taiga'?",
+   "hi": "निम्नलिखित में से किस प्रकार की प्राकृतिक वनस्पति को 'टैगा (taiga)' भी कहा जाता है?",
+   "opts": [
+    "Coniferous Forests<br>शंकुधारी वन",
+    "Mediterranean Vegetation<br>भूमध्यसागरीय वनस्पति",
+    "Temperate Deciduous Forests<br>शीतोष्ण पर्णपाती वन",
+    "Tropical Grasslands<br>उष्णकटिबंधीय घासस्थल"
+   ],
+   "my_ans": "A",
+   "sol": "टैगा रूसी शब्द है जो उच्च उत्तरी अक्षांशों के विशाल शंकुधारी वन क्षेत्र के लिए उपयोग किया जाता है।",
+   "trick": "टैगा = शंकुधारी (Coniferous) वन।",
+   "ans": "A"
+  },
+  {
+   "n": 175,
+   "lvl": "UG",
+   "en": "Kudremukh in Karnataka is famous for the mining of:",
+   "hi": "कर्नाटक का कुद्रेमुख किसके खनन के लिए प्रसिद्ध है?",
+   "opts": [
+    "Iron Ore<br>लौह अयस्क",
+    "Limestone<br>चूना पत्थर",
+    "Manganese<br>मैंगनीज",
+    "Copper<br>ताम्र"
+   ],
+   "my_ans": "A",
+   "sol": "कर्नाटक का कुद्रेमुख क्षेत्र उच्च श्रेणी के लौह अयस्क (मैग्नेटाइट) के भंडार के लिए प्रसिद्ध है।",
+   "trick": "कुद्रेमुख = लोहा (Iron Ore)।",
+   "ans": "A"
+  },
+  {
+   "n": 176,
+   "lvl": "UG",
+   "en": "Which of the following is an example of a fibre crop in India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत की रेशेदार फसल (fibre crop) का एक उदाहरण है?",
+   "opts": [
+    "Turnip<br>शलजम",
+    "Radish<br>मूली",
+    "Cucumber<br>खीरा",
+    "Jute<br>जूट"
+   ],
+   "my_ans": "D",
+   "sol": "जूट एक प्रमुख रेशेदार फसल है जिसका उपयोग बोरी, रस्सी और वस्त्र बनाने में किया जाता है।",
+   "trick": "जूट = गोल्डन फाइबर (रेशेदार फसल)।",
+   "ans": "D"
+  },
+  {
+   "n": 177,
+   "lvl": "UG",
+   "en": "In which state of India are the three crops of rice — called 'aus,' 'aman,' and 'boro' — grown?",
+   "hi": "भारत के किस राज्य में धान की तीन फसलें उगाई जाती हैं — जिन्हें 'औस', 'अमन' और 'बोरो' कहा जाता है?",
+   "opts": [
+    "Bihar<br>बिहार",
+    "Manipur<br>मणिपुर",
+    "Nagaland<br>नागालैंड",
+    "West Bengal<br>पश्चिम बंगाल"
+   ],
+   "my_ans": "D",
+   "sol": "पश्चिम बंगाल में अनुकूल जलवायु और जल उपलब्धता के कारण धान की तीनों फसलें (औस, अमन, बोरो) उगाई जाती हैं।",
+   "trick": "पश्चिम बंगाल = धान की तीन फसलें।",
+   "ans": "D"
+  },
+  {
+   "n": 178,
+   "lvl": "UG",
+   "en": "Which type of soil is most suitable for cotton cultivation in India?",
+   "hi": "भारत में कपास की खेती के लिए किस प्रकार की मृदा सबसे उपयुक्त है?",
+   "opts": [
+    "Black Soil<br>काली मृदा",
+    "Alluvial Soil<br>जलोढ़ मृदा",
+    "Red Soil<br>लाल मृदा",
+    "Laterite Soil<br>लैटेराइट मृदा"
+   ],
+   "my_ans": "A",
+   "sol": "काली मिट्टी (रेगुर मिट्टी) में नमी धारण करने की उच्च क्षमता होती है, जो कपास के लिए सबसे उपयुक्त है।",
+   "trick": "कपास = काली मिट्टी (Regur)।",
+   "ans": "A"
+  },
+  {
+   "n": 179,
+   "lvl": "UG",
+   "en": "The Bhadla Solar Park, one of the largest in the world, is located in which Indian state?",
+   "hi": "विश्व के सबसे बड़े सौर पार्कों में से एक, भड़ला सोलर पार्क किस भारतीय राज्य में स्थित है?",
+   "opts": [
+    "Gujarat<br>गुजरात",
+    "Maharashtra<br>महाराष्ट्र",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Rajasthan<br>राजस्थान"
+   ],
+   "my_ans": "D",
+   "sol": "भड़ला सोलर पार्क राजस्थान के जोधपुर जिले में थार रेगिस्तान में स्थित है।",
+   "trick": "भड़ला = राजस्थान (जोधपुर)।",
+   "ans": "D"
+  },
+  {
+   "n": 180,
+   "lvl": "UG",
+   "en": "In which kind of forest do the plants remain leafless for most of the year?",
+   "hi": "किस प्रकार के वनों में पौधे वर्ष के अधिकांश समय पर्णरहित रहते हैं?",
+   "opts": [
+    "Littoral and swamp forest<br>वेलांचली व अनूप वन",
+    "Montane forest<br>पर्वतीय वन",
+    "Tropical thorn forest<br>उष्णकटिबंधीय कांटेदार वन",
+    "Evergreen forests<br>सदाबहार वन"
+   ],
+   "my_ans": "C",
+   "sol": "उष्णकटिबंधीय कांटेदार वनों में जल संरक्षण के लिए पेड़ वर्ष के अधिकांश समय पत्तीहीन रहते हैं।",
+   "trick": "कांटेदार वन = कम पानी = पत्तीहीन।",
+   "ans": "C"
+  },
+  {
+   "n": 181,
+   "lvl": "UG",
+   "en": "Which irrigation technique is considered most efficient for conserving water?",
+   "hi": "जल संरक्षण के लिए किस सिंचाई तकनीक को सबसे कुशल माना जाता है?",
+   "opts": [
+    "Canal irrigation<br>नहर सिंचाई",
+    "Sprinkler irrigation<br>स्प्रिंकलर सिंचाई",
+    "Drip irrigation<br>ड्रिप सिंचाई",
+    "Flood irrigation<br>आप्लाव सिंचाई"
+   ],
+   "my_ans": "C",
+   "sol": "ड्रिप सिंचाई में पानी सीधे पौधों की जड़ों तक पहुंचता है, जिससे वाष्पीकरण और बर्बादी न्यूनतम होती है।",
+   "trick": "ड्रिप = बूंद-बूंद सिंचाई = सबसे कुशल।",
+   "ans": "C"
+  },
+  {
+   "n": 182,
+   "lvl": "UG",
+   "en": "Which region in India is best known for slash-and-burn agriculture (jhum)?",
+   "hi": "भारत का कौन-सा क्षेत्र कर्तन-दहन कृषि (झूम कृषि) के लिए सबसे प्रसिद्ध है?",
+   "opts": [
+    "Western Ghats<br>पश्चिमी घाट",
+    "North-Eastern Hills<br>उत्तर-पूर्वी पहाड़ियाँ",
+    "Deccan Plateau<br>दक्कन के पठार",
+    "Indo-Gangetic Plain<br>सिंधु-गंगा के मैदान"
+   ],
+   "my_ans": "B",
+   "sol": "भारत के उत्तर-पूर्वी राज्यों में वनों को जलाकर खेती करने की 'झूम' कृषि पद्धति प्रचलित है।",
+   "trick": "झूम = उत्तर-पूर्वी भारत।",
+   "ans": "B"
+  },
+  {
+   "n": 183,
+   "lvl": "UG",
+   "en": "Which of the following statements is INCORRECT regarding organic farming?",
+   "hi": "जैविक खेती के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+   "opts": [
+    "Organic farming is environment-friendly.<br>जैविक खेती पर्यावरण के अनुकूल है।",
+    "Organic farming is beneficial for soil biota.<br>जैविक खेती मृदा जीवों के लिए फायदेमंद है।",
+    "Organic farming relies heavily on high technology.<br>जैविक खेती उच्च तकनीक पर बहुत अधिक निर्भर करती है।",
+    "Organic farming does not use synthetic chemicals.<br>जैविक खेती में सिंथेटिक रसायनों का उपयोग नहीं होता है।"
+   ],
+   "my_ans": "C",
+   "sol": "जैविक खेती पारंपरिक और कम तकनीक वाली पद्धतियों पर आधारित है, न कि उच्च तकनीक पर।",
+   "trick": "जैविक = पारंपरिक/प्राकृतिक (न कि हाई-टेक)।",
+   "ans": "C"
+  }
+ ]
+}

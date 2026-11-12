@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "301-303",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 250,
+   "lvl": "UG",
+   "en": "Which of the following features of the Constitution of India is NOT borrowed from the United Kingdom?",
+   "hi": "भारत के संविधान की निम्नलिखित में से कौन-सी विशेषता यूनाइटेड किंगडम के संविधान से नहीं ली गई है?",
+   "opts": [
+    "Bicameral Parliament<br>द्विसदनीय संसद",
+    "Speaker of Lok Sabha<br>लोकसभा अध्यक्ष",
+    "Single citizenship<br>एकल नागरिकता",
+    "Appointment of state governors by the Centre<br>केंद्र द्वारा राज्यों के राज्यपालों की नियुक्ति"
+   ],
+   "my_ans": "D",
+   "sol": "राज्यपालों की नियुक्ति राष्ट्रपति द्वारा की जाती है, जो भारत की संघीय व्यवस्था की विशेषता है। यूके में एकात्मक शासन प्रणाली है, इसलिए वहां ऐसा प्रावधान नहीं है।",
+   "trick": "राज्यपाल की नियुक्ति केंद्र द्वारा = भारतीय संघीय विशेषता (UK से नहीं)",
+   "ans": "D"
+  },
+  {
+   "n": 251,
+   "lvl": "UG",
+   "en": "What does Article 13 of the Indian Constitution primarily deal with?",
+   "hi": "भारतीय संविधान का अनुच्छेद 13 मुख्यत: किससे संबंधित है?",
+   "opts": [
+    "Freedom of Speech<br>अभिव्यक्ति की स्वतंत्रता",
+    "Right to Equality<br>समता का अधिकार",
+    "Judicial Review<br>न्यायिक समीक्षा",
+    "Reservation Policy<br>आरक्षण नीति"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 13 यह घोषित करता है कि मूल अधिकारों से असंगत कानून शून्य होंगे, जो भारत में न्यायिक समीक्षा का आधार बनाता है।",
+   "trick": "अनुच्छेद 13 = न्यायिक समीक्षा (न्यायालय द्वारा कानूनों की जांच)",
+   "ans": "C"
+  },
+  {
+   "n": 252,
+   "lvl": "UG",
+   "en": "According to the Constitution of India, the ‘Right to Equality’ is guaranteed under which exact set of five consecutive Articles?",
+   "hi": "भारत के संविधान के अनुसार, 'समानता का अधिकार' किन सटीक पांच क्रमिक अनुच्छेद समूह के तहत गारंटीकृत है?",
+   "opts": [
+    "Articles 12, 13, 14, 15 and 16<br>अनुच्छेद 12, 13, 14, 15 और 16",
+    "Articles 23, 24, 25, 26 and 27<br>अनुच्छेद 23, 24, 25, 26 और 27",
+    "Articles 14, 15, 16, 17 and 18<br>अनुच्छेद 14, 15, 16, 17 और 18",
+    "Articles 19, 20, 21, 22 and 23<br>अनुच्छेद 19, 20, 21, 22 और 23"
+   ],
+   "my_ans": "C",
+   "sol": "समानता का अधिकार अनुच्छेद 14 से 18 तक वर्णित है, जिसमें कानून के समक्ष समानता, भेदभाव का निषेध और अस्पृश्यता का अंत शामिल है।",
+   "trick": "समानता = 14-18 (5 अनुच्छेद)",
+   "ans": "C"
+  },
+  {
+   "n": 253,
+   "lvl": "UG",
+   "en": "Which of the following provisions of the Constitution of India has a specific mention for the appointment of the Attorney General of India?",
+   "hi": "भारत के संविधान के निम्नलिखित में से किस प्रावधान में भारत के महान्यायवादी की नियुक्ति के लिए एक विशिष्ट उल्लेख है?",
+   "opts": [
+    "Article 76<br>अनुच्छेद 76",
+    "Article 211<br>अनुच्छेद 211",
+    "Article 165<br>अनुच्छेद 165",
+    "Article 240<br>अनुच्छेद 240"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 76 के तहत भारत के राष्ट्रपति द्वारा महान्यायवादी (Attorney General) की नियुक्ति की जाती है, जो देश के सर्वोच्च विधि अधिकारी होते हैं।",
+   "trick": "AG = अनुच्छेद 76",
+   "ans": "A"
+  },
+  {
+   "n": 254,
+   "lvl": "UG",
+   "en": "As per the Indian Constitution, the Directive Principles of State Policy are ___________.",
+   "hi": "भारतीय संविधान के अनुसार, राज्य नीति के निर्देशक सिद्धांत _________ हैं।",
+   "opts": [
+    "Justiciable only during emergencies<br>केवल आपात स्थिति के दौरान वादयोग्य",
+    "Justiciable and legally enforceable<br>वादयोग्य और कानूनी रूप से प्रवर्तनीय",
+    "Non-justiciable but fundamental in governance<br>अवादयोग्य लेकिन शासन में मौलिक",
+    "Purely administrative rules<br>विशुद्ध रूप से प्रशासनिक नियम"
+   ],
+   "my_ans": "C",
+   "sol": "राज्य के नीति निर्देशक तत्व (DPSP) न्यायालय द्वारा प्रवर्तनीय नहीं हैं, लेकिन देश के शासन और नीति निर्माण में इनका पालन करना मौलिक कर्तव्य है।",
+   "trick": "DPSP = अवादयोग्य (Non-justiciable) पर शासन में मौलिक",
+   "ans": "C"
+  },
+  {
+   "n": 255,
+   "lvl": "UG",
+   "en": "When was the Telugu language declared as a classical language of India?",
+   "hi": "तेलुगु भाषा को भारत की शास्त्रीय भाषा कब घोषित किया गया था?",
+   "opts": [
+    "2008",
+    "2005",
+    "2006",
+    "2007"
+   ],
+   "my_ans": "A",
+   "sol": "तेलुगु और कन्नड़ दोनों को वर्ष 2008 में भारत की शास्त्रीय भाषा (Classical Language) का दर्जा दिया गया था।",
+   "trick": "तेलुगु/कन्नड़ = 2008",
+   "ans": "A"
+  },
+  {
+   "n": 256,
+   "lvl": "UG",
+   "en": "State Public Service Commissions’ members are appointed by the governor and removed by whom?",
+   "hi": "राज्य लोक सेवा आयोग के सदस्यों की नियुक्ति राज्यपाल द्वारा की जाती है और उन्हें किसके द्वारा हटाया जाता है?",
+   "opts": [
+    "Governor of the state<br>राज्य के राज्यपाल",
+    "President of India<br>भारत के राष्ट्रपति",
+    "Chief Minister of the state<br>राज्य के मुख्यमंत्री",
+    "Indian Parliament<br>भारतीय संसद"
+   ],
+   "my_ans": "B",
+   "sol": "राज्य लोक सेवा आयोग के सदस्यों की नियुक्ति राज्यपाल करते हैं, लेकिन उन्हें हटाने का अधिकार केवल भारत के राष्ट्रपति के पास है।",
+   "trick": "नियुक्ति = राज्यपाल, हटाना = राष्ट्रपति",
+   "ans": "B"
+  },
+  {
+   "n": 257,
+   "lvl": "UG",
+   "en": "Which Article prevents the state from making laws inconsistent with Fundamental Rights, forming the base of judicial review?",
+   "hi": "निम्नलिखित में से कौन-सा अनुच्छेद, राज्य को मौलिक अधिकारों के साथ असंगत कानून बनाने से रोकता है, जो न्यायिक समीक्षा का आधार बनता है?",
+   "opts": [
+    "Article 13<br>अनुच्छेद 13",
+    "Article 17<br>अनुच्छेद 17",
+    "Article 5<br>अनुच्छेद 5",
+    "Article 9<br>अनुच्छेद 9"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 13 न्यायालय को यह शक्ति देता है कि वह मौलिक अधिकारों का उल्लंघन करने वाले किसी भी कानून को असंवैधानिक घोषित कर सके।",
+   "trick": "अनुच्छेद 13 = न्यायिक समीक्षा का आधार",
+   "ans": "A"
+  },
+  {
+   "n": 258,
+   "lvl": "UG",
+   "en": "According to the Constitution of India, freedom of the press is implicitly protected as part of which specific Article guaranteeing freedom of speech and expression?",
+   "hi": "भारत के संविधान के अनुसार, प्रेस की स्वतंत्रता को किस विशिष्ट अनुच्छेद के एक भाग के रूप में अंतर्निहित रूप से संरक्षित किया गया है, जो वाक् और अभिव्यक्ति की स्वतंत्रता की गारंटी देता है?",
+   "opts": [
+    "Article 19(1)(a)<br>अनुच्छेद 19(1)(a)",
+    "Article 22<br>अनुच्छेद 22",
+    "Article 21<br>अनुच्छेद 21",
+    "Article 32<br>अनुच्छेद 32"
+   ],
+   "my_ans": "A",
+   "sol": "सर्वोच्च न्यायालय ने माना है कि प्रेस की स्वतंत्रता अनुच्छेद 19(1)(a) के तहत 'वाक् और अभिव्यक्ति की स्वतंत्रता' का ही एक हिस्सा है।",
+   "trick": "प्रेस की स्वतंत्रता = 19(1)(a)",
+   "ans": "A"
+  },
+  {
+   "n": 259,
+   "lvl": "UG",
+   "en": "Provision for “just and humane conditions of work and maternity relief” under the Directive Principle of State Policy (DPSP) is contained in:",
+   "hi": "राज्य के नीति निर्देशक सिद्धांत (DPSP) के तहत 'काम की न्यायसंगत और मानवीय स्थितियों तथा मातृत्व राहत' का प्रावधान किसमें निहित है?",
+   "opts": [
+    "Article 47<br>अनुच्छेद 47",
+    "Article 41<br>अनुच्छेद 41",
+    "Article 43<br>अनुच्छेद 43",
+    "Article 42<br>अनुच्छेद 42"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान का अनुच्छेद 42 कार्यस्थल पर मानवीय स्थितियों और मातृत्व सहायता (maternity relief) सुनिश्चित करने का निर्देश देता है।",
+   "trick": "अनुच्छेद 42 = काम की मानवीय स्थिति और मातृत्व राहत",
+   "ans": "D"
+  }
+ ]
+}

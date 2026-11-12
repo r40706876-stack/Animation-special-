@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "262-264",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 119,
+   "lvl": "GL",
+   "en": "Which Indian Prime Minister among the following was never the Chief Minister of any state of India?",
+   "hi": "निम्नलिखित में से कौन-से भारतीय प्रधानमंत्री कभी भी भारत के किसी भी राज्य के मुख्यमंत्री नहीं रहे?",
+   "opts": [
+    "Morarji Desai<br>मोरारजी देसाई",
+    "Chandrashekhar<br>चंद्रशेखर",
+    "VP Singh<br>वी.पी. सिंह",
+    "PV Narasimha Rao<br>पी.वी. नरसिंह राव"
+   ],
+   "my_ans": "B",
+   "sol": "चंद्रशेखर भारत के एकमात्र ऐसे प्रधानमंत्री थे जो प्रधानमंत्री बनने से पहले किसी भी राज्य के मुख्यमंत्री नहीं रहे थे।",
+   "trick": "चंद्रशेखर: कभी मुख्यमंत्री नहीं बने।",
+   "ans": "B"
+  },
+  {
+   "n": 120,
+   "lvl": "GL",
+   "en": "Which of the following Articles of the Constitution empowers the administrator to promulgate ordinances during recess of the Legislature in Union Territories?",
+   "hi": "संविधान का निम्नलिखित में से कौन-सा अनुच्छेद प्रशासक को केंद्र शासित प्रदेशों में विधानमंडल के अवकाश के दौरान अध्यादेश जारी करने का अधिकार देता है?",
+   "opts": [
+    "241",
+    "239AA",
+    "239B",
+    "239"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 239B केंद्र शासित प्रदेशों के प्रशासक को विधानमंडल के सत्र में न होने पर अध्यादेश जारी करने की शक्ति प्रदान करता है।",
+   "trick": "239B = केंद्र शासित प्रदेशों में अध्यादेश।",
+   "ans": "C"
+  },
+  {
+   "n": 121,
+   "lvl": "GL",
+   "en": "Which of the following Acts provides statutory status to Lok Adalats in India?",
+   "hi": "निम्नलिखित में से कौन-सा अधिनियम, भारत में लोक अदालतों को वैधानिक दर्जा प्रदान करता है?",
+   "opts": [
+    "The Legal Services Authorities Act, 1987<br>विधिक सेवा प्राधिकरण अधिनियम, 1987",
+    "The Arbitration and Conciliation Act, 1996<br>माध्यस्थम् और सुलह अधिनियम, 1996",
+    "The Indian Constitution<br>भारतीय संविधान",
+    "The Civil Procedure Code, 1908<br>सिविल प्रक्रिया संहिता, 1908"
+   ],
+   "my_ans": "A",
+   "sol": "विधिक सेवा प्राधिकरण अधिनियम, 1987 के तहत लोक अदालतों को वैधानिक दर्जा दिया गया है, जो विवादों को सुलह से निपटाती हैं।",
+   "trick": "लोक अदालत = विधिक सेवा अधिनियम 1987।",
+   "ans": "A"
+  },
+  {
+   "n": 122,
+   "lvl": "GL",
+   "en": "According to L. M. Singhvi, what are the Directive Principles of State Policy considered as?",
+   "hi": "एल. एम. सिंघवी (L. M. Singhvi) के अनुसार, राज्य के नीति निर्देशक सिद्धांतों को क्या माना जाता है?",
+   "opts": [
+    "Fundamental Rights<br>मौलिक अधिकार",
+    "Moral Rights<br>नैतिक अधिकार",
+    "Legal Rights<br>कानूनी अधिकार",
+    "Life-giving provisions of the Constitution<br>संविधान के जीवनदायी प्रावधान"
+   ],
+   "my_ans": "D",
+   "sol": "एल. एम. सिंघवी ने राज्य के नीति निर्देशक तत्वों (DPSP) को 'संविधान के जीवनदायी प्रावधान' कहा है क्योंकि ये सामाजिक-आर्थिक न्याय सुनिश्चित करते हैं।",
+   "trick": "सिंघवी = जीवनदायी प्रावधान।",
+   "ans": "D"
+  },
+  {
+   "n": 123,
+   "lvl": "GL",
+   "en": "The Land Boundary Agreement with Bangladesh was constitutionalized through which Constitutional Amendment?",
+   "hi": "बांग्लादेश के साथ भूमि सीमा समझौते को किस संवैधानिक संशोधन के माध्यम से संवैधानिक दर्जा दिया गया था?",
+   "opts": [
+    "Ninety-Seventh Amendment<br>97वां संशोधन",
+    "One Hundredth Amendment<br>100वां संशोधन",
+    "Ninety-Eighth Amendment<br>98वां संशोधन",
+    "One Hundred and First Amendment<br>101वां संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "100वां संवैधानिक संशोधन अधिनियम, 2015 के द्वारा भारत और बांग्लादेश के बीच भूमि सीमा समझौते को लागू किया गया था।",
+   "trick": "100वां संशोधन = बांग्लादेश सीमा समझौता।",
+   "ans": "B"
+  },
+  {
+   "n": 124,
+   "lvl": "GL",
+   "en": "Article 23 specifically prohibits which practice?",
+   "hi": "अनुच्छेद 23 विशेषतः किसको प्रतिबंधित करता है?",
+   "opts": [
+    "Trafficking in human beings<br>मानव तस्करी",
+    "Compulsory service in the armed forces<br>सशस्त्र बलों में अनिवार्य सेवा",
+    "Child employment in hazardous industries<br>जोखिम वाले उद्योगों में बाल श्रमिक नियोजन",
+    "Conferring of titles<br>उपाधि प्रदान करना"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 23 मानव दुर्व्यापार (तस्करी) और बेगार (जबरन श्रम) को प्रतिबंधित करता है।",
+   "trick": "23 = मानव तस्करी का निषेध।",
+   "ans": "A"
+  },
+  {
+   "n": 125,
+   "lvl": "GL",
+   "en": "Consider the following statements. 1. Article 13 provides for judicial review of both pre-constitutional and post-constitutional laws. 2. Article 13 declares that all laws inconsistent with or in derogation of the Fundamental Rights shall be null and void. Which of the above statements is/are correct?",
+   "hi": "निम्नलिखित कथनों पर विचार करें। 1. अनुच्छेद 13 संविधान-पूर्व और संविधान-पश्चात दोनों कानूनों की न्यायिक समीक्षा का प्रावधान करता है। 2. अनुच्छेद 13 यह घोषित करता है कि मौलिक अधिकारों के विपरीत या उनका उल्लंघन करने वाले सभी कानून अकृत और शून्य होंगे। उपरोक्त कथनों में से कौन-सा/से सही कथन है/हैं?",
+   "opts": [
+    "1 only<br>केवल 1",
+    "Neither 1 nor 2<br>न तो 1 और न ही 2",
+    "2 only<br>केवल 2",
+    "Both 1 and 2<br>1 और 2 दोनों"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 13 न्यायिक समीक्षा का आधार है और यह स्पष्ट करता है कि मौलिक अधिकारों का उल्लंघन करने वाले सभी कानून शून्य होंगे।",
+   "trick": "अनुच्छेद 13 = न्यायिक समीक्षा।",
+   "ans": "D"
+  },
+  {
+   "n": 126,
+   "lvl": "GL",
+   "en": "Article 47 deals with which of the following?",
+   "hi": "अनुच्छेद 47, निम्नलिखित में से किससे संबंधित है?",
+   "opts": [
+    "Participation of workers in management<br>प्रबंधन में श्रमिकों की भागीदारी",
+    "Organization of agriculture<br>कृषि संगठन",
+    "Protection of environment<br>पर्यावरण संरक्षण",
+    "Raising the level of nutrition and public health<br>पोषण और सार्वजनिक स्वास्थ्य स्तर को बढ़ाना"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 47 राज्य का कर्तव्य बताता है कि वह लोगों के पोषण स्तर और जीवन स्तर को ऊपर उठाए और सार्वजनिक स्वास्थ्य में सुधार करे।",
+   "trick": "47 = पोषण और स्वास्थ्य।",
+   "ans": "D"
+  },
+  {
+   "n": 127,
+   "lvl": "GL",
+   "en": "In accordance with Article 239AA of the Constitution of India, after the enforcement of the Constitution (Sixty-ninth Amendment) Act, 1991, the Union Territory of Delhi is designated by which of the following titles?",
+   "hi": "भारतीय संविधान के अनुच्छेद 239AA के अनुसार, संविधान (69वां संशोधन) अधिनियम, 1991 के लागू होने के बाद, दिल्ली केंद्र शासित प्रदेश को निम्नलिखित में से किस नाम से जाना जाता है?",
+   "opts": [
+    "Administrative Capital of India<br>एडमिनिस्ट्रेटिव कैपिटल ऑफ इंडिया",
+    "National Capital Region of Delhi<br>नेशनल कैपिटल रीजन ऑफ दिल्ली",
+    "Union State of Delhi<br>यूनियन स्टेट ऑफ दिल्ली",
+    "National Capital Territory of Delhi<br>नेशनल कैपिटल टेरिटरी ऑफ दिल्ली"
+   ],
+   "my_ans": "D",
+   "sol": "69वें संविधान संशोधन द्वारा दिल्ली को 'राष्ट्रीय राजधानी क्षेत्र दिल्ली' (NCT) का विशेष दर्जा दिया गया।",
+   "trick": "239AA = दिल्ली (NCT)।",
+   "ans": "D"
+  },
+  {
+   "n": 128,
+   "lvl": "GL",
+   "en": "Which among the following commissions in India has submitted a report titled 'Right to Information: Master Key to Good Governance'?",
+   "hi": "भारत में निम्नलिखित में से किस आयोग ने 'राइट टू इंफॉर्मेशन: मास्टर की टू गुड गवर्नेंस' शीर्षक से एक रिपोर्ट प्रस्तुत की है?",
+   "opts": [
+    "Second Administrative Reforms Commission<br>द्वितीय प्रशासनिक सुधार आयोग",
+    "Sarkaria Commission<br>सरकारिया आयोग",
+    "Punchhi Commission<br>पुंछी आयोग",
+    "Kothari Commission<br>कोठारी आयोग"
+   ],
+   "my_ans": "A",
+   "sol": "द्वितीय प्रशासनिक सुधार आयोग (2nd ARC) ने सूचना के अधिकार पर अपनी रिपोर्ट में इसे सुशासन की मास्टर चाबी बताया था।",
+   "trick": "2nd ARC = सुशासन की मास्टर चाबी।",
+   "ans": "A"
+  }
+ ]
+}

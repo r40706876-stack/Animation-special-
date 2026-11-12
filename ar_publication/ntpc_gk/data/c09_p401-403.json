@@ -1,0 +1,222 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "401-403",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "Mirage is an optical illusion which can be explained based on which of the following phenomena of light?",
+   "hi": "मरीचिका (Mirage) एक दृष्टिभ्रम है जिसे प्रकाश की निम्नलिखित में से किस परिघटना के आधार पर समझाया जा सकता है?",
+   "opts": [
+    "Diffraction<br>विवर्तन",
+    "Interference<br>व्यतिकरण",
+    "Photoelectric Effect<br>प्रकाश-विद्युत प्रभाव",
+    "Total Internal Reflection<br>पूर्ण आंतरिक परावर्तन"
+   ],
+   "my_ans": "D",
+   "sol": "गर्म दिनों में जमीन के पास की हवा विरल और ऊपर की हवा सघन होती है। प्रकाश सघन से विरल माध्यम में जाते समय पूर्ण आंतरिक परावर्तन करता है जिससे भ्रम पैदा होता है।",
+   "trick": "सघन से विरल माध्यम में प्रकाश का पूर्ण परावर्तन = मृगतृष्णा",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "A physics lab experiment requires the measurement of temperature using the correct SI unit. Which unit should the student use to record temperature readings according to the SI system?",
+   "hi": "भौतिकी के एक प्रयोगशाला प्रयोग में तापमान को सही SI मात्रक का उपयोग करके मापना आवश्यक है। SI प्रणाली के अनुसार, तापमान की रीडिंग दर्ज करने के लिए छात्र को किस मात्रक का उपयोग करना चाहिए?",
+   "opts": [
+    "Joule<br>जूल",
+    "Kelvin<br>केल्विन",
+    "Fahrenheit<br>फारेनहाइट",
+    "Celsius<br>सेल्सियस"
+   ],
+   "my_ans": "B",
+   "sol": "SI प्रणाली में तापमान की मानक मूल इकाई केल्विन (K) है।",
+   "trick": "तापमान की SI इकाई = केल्विन",
+   "ans": "B"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Which of these is NOT an example of fundamental quantity?",
+   "hi": "इनमें से कौन सा मूल राशि का उदाहरण नहीं है?",
+   "opts": [
+    "Time<br>समय",
+    "Electric Current<br>विद्युत धारा",
+    "Luminous Intensity<br>ज्योति तीव्रता",
+    "Velocity<br>वेग"
+   ],
+   "my_ans": "D",
+   "sol": "वेग एक व्युत्पन्न राशि है क्योंकि यह दूरी और समय के संयोजन से बनती है।",
+   "trick": "7 मूल राशियाँ: लंबाई, द्रव्यमान, समय, धारा, तापमान, पदार्थ की मात्रा, ज्योति तीव्रता",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "What is the approximate speed of sound in air at room temperature (approximately 20°C)?",
+   "hi": "कमरे के तापमान (लगभग 20°C) पर हवा में ध्वनि की अनुमानित गति क्या है?",
+   "opts": [
+    "5000 m/s",
+    "1500 m/s",
+    "343 m/s",
+    "300 m/s"
+   ],
+   "my_ans": "C",
+   "sol": "सामान्य कमरे के तापमान (20°C) पर हवा में ध्वनि की गति लगभग 343 मीटर प्रति सेकंड होती है।",
+   "trick": "ध्वनि की गति 20°C पर ≈ 343 m/s",
+   "ans": "C"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "What change occurs in the amount of heat produced when the electric current in a conductor is doubled?",
+   "hi": "किसी चालक में विद्युत धारा को दोगुना करने पर उत्पन्न ऊष्मा की मात्रा में क्या परिवर्तन होता है?",
+   "opts": [
+    "Half<br>आधी रह जाती है",
+    "Same as before<br>समान बनी रहती है",
+    "Double<br>दोगुनी हो जाती है",
+    "Four times<br>चार गुना हो जाती है"
+   ],
+   "my_ans": "D",
+   "sol": "जूल के ऊष्मीय नियम के अनुसार H = I²Rt होता है। यदि धारा (I) दोगुनी की जाए, तो ऊष्मा (2I)² = 4 गुना हो जाएगी।",
+   "trick": "ऊष्मा धारा के वर्ग (I²) के समानुपाती होती है",
+   "ans": "D"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Which of the following SI prefixes has a multiplicative factor of 10⁻⁹?",
+   "hi": "निम्नलिखित में से किस SI उपसर्ग का गुणात्मक गुणक (multiplicative factor) 10⁻⁹ है?",
+   "opts": [
+    "Nano<br>नैनो",
+    "Centi<br>सेंटी",
+    "Milli<br>मिली",
+    "Micro<br>माइक्रो"
+   ],
+   "my_ans": "A",
+   "sol": "नैनो (Nano) का मान 10⁻⁹ होता है।",
+   "trick": "नैनो = 10⁻⁹, माइक्रो = 10⁻⁶, मिली = 10⁻³",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "A quantity is measured in meters per second squared (m/s²). What is this quantity?",
+   "hi": "वह राशि निम्नलिखित में से कौन-सी है जिसे मीटर प्रति सेकंड वर्ग (m/s²) में मापा जाता है?",
+   "opts": [
+    "force<br>बल",
+    "velocity<br>वेग",
+    "acceleration<br>त्वरण",
+    "energy<br>ऊर्जा"
+   ],
+   "my_ans": "C",
+   "sol": "त्वरण वेग में परिवर्तन की दर है, जिसकी इकाई मीटर प्रति सेकंड वर्ग (m/s²) होती है।",
+   "trick": "त्वरण = वेग/समय = m/s²",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "If a ball is thrown vertically upward, which of the following describes its velocity at the highest point?",
+   "hi": "यदि किसी गेंद को ऊर्ध्वाधर ऊपर की ओर फेंका जाता है, तो निम्नलिखित में से कौन-सा, उच्चतम बिंदु पर इसके वेग का वर्णन करता है?",
+   "opts": [
+    "Positive<br>धनात्मक",
+    "Negative<br>ऋणात्मक",
+    "Zero<br>शून्य",
+    "Equal to acceleration due to gravity<br>गुरुत्वाकर्षण के कारण त्वरण के बराबर"
+   ],
+   "my_ans": "C",
+   "sol": "उच्चतम बिंदु पर गेंद क्षण भर के लिए रुकती है, इसलिए उसका वेग शून्य हो जाता है।",
+   "trick": "उच्चतम बिंदु = वेग शून्य",
+   "ans": "C"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The transverse nature of light can be demonstrated using ______.",
+   "hi": "प्रकाश की अनुप्रस्थ प्रकृति को ______ का उपयोग करके प्रदर्शित किया जा सकता है।",
+   "opts": [
+    "Prism<br>प्रिज्म",
+    "Polaroid<br>पोलेरॉइड",
+    "Lens<br>लेंस",
+    "Mirror<br>दर्पण"
+   ],
+   "my_ans": "B",
+   "sol": "पोलेरॉइड का उपयोग प्रकाश के ध्रुवीकरण के लिए किया जाता है, जो यह सिद्ध करता है कि प्रकाश एक अनुप्रस्थ तरंग है।",
+   "trick": "अनुप्रस्थ प्रकृति = ध्रुवीकरण (पोलेरॉइड)",
+   "ans": "B"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "If an object having a mass of 10 kg is moving with a velocity of 50 m/s, find the correct momentum of the object.",
+   "hi": "यदि 10 kg द्रव्यमान की कोई वस्तु 50 m/s के वेग से गतिमान है, तो उस वस्तु का सही संवेग ज्ञात कीजिए।",
+   "opts": [
+    "40 kg m/s",
+    "500 kg m/s",
+    "5 kg m/s",
+    "60 kg m/s"
+   ],
+   "my_ans": "B",
+   "sol": "संवेग (p) = द्रव्यमान (m) × वेग (v) = 10 × 50 = 500 kg m/s.",
+   "trick": "संवेग = m × v",
+   "ans": "B"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "The commercial unit of electrical energy is kilowatt hour (kWh) and 1 kWh is equal to __________.",
+   "hi": "विद्युत ऊर्जा की व्यावसायिक इकाई किलोवाट घंटा (kWh) है और 1 kWh __________ के बराबर होता है।",
+   "opts": [
+    "3.6 × 10⁶ watt second",
+    "3.6 × 10⁹ watt second",
+    "3.6 × 10⁷ watt second",
+    "3.6 × 10⁸ watt second"
+   ],
+   "my_ans": "A",
+   "sol": "1 kWh = 1000 वाट × 3600 सेकंड = 3.6 × 10⁶ वाट सेकंड।",
+   "trick": "1 kWh = 3.6 × 10⁶ J",
+   "ans": "A"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "Solar energy is globally measured in the unit of KWh. The physical quantity corresponding to the unit KWh is _____________.",
+   "hi": "सौर ऊर्जा को वैश्विक स्तर पर kWh इकाई में मापा जाता है। इकाई kWh के संगत भौतिक राशि _____________ है।",
+   "opts": [
+    "Force<br>बल",
+    "Electric energy<br>विद्युत ऊर्जा",
+    "Current<br>धारा",
+    "Electric charge<br>विद्युत आवेश"
+   ],
+   "my_ans": "B",
+   "sol": "kWh विद्युत ऊर्जा को मापने की एक व्यावसायिक इकाई है।",
+   "trick": "kWh = ऊर्जा की इकाई",
+   "ans": "B"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Which of the following properties is responsible for the bending of light when it moves from air into water?",
+   "hi": "प्रकाश का वायु से जल में प्रवेश करने पर उसके मुड़ने के लिए उत्तरदायी गुणधर्म निम्नलिखित में से क्या है?",
+   "opts": [
+    "Change in direction due to gravity<br>गुरुत्व के कारण दिशा में परिवर्तन",
+    "Change in speed of light<br>प्रकाश की चाल में परिवर्तन",
+    "Change in color of light<br>प्रकाश के रंग में परिवर्तन",
+    "Change in temperature<br>तापमान में परिवर्तन"
+   ],
+   "my_ans": "B",
+   "sol": "प्रकाश का अपवर्तन (मुड़ना) अलग-अलग माध्यमों में प्रकाश की चाल में परिवर्तन के कारण होता है।",
+   "trick": "अपवर्तन = चाल में बदलाव",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "250-252",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "Mr. ABCD wants to become a member of the Legislative Assembly. What is the minimum age prescribed in the Constitution of India so that he becomes a member of the Legislative Assembly?",
+   "hi": "मिस्टर ABCD विधानसभा सदस्य बनना चाहते हैं। विधानसभा सदस्य बनने के लिए भारत के संविधान में न्यूनतम आयु कितनी निर्धारित है?",
+   "opts": [
+    "25 years<br>25 वर्ष",
+    "21 years<br>21 वर्ष",
+    "35 years<br>35 वर्ष",
+    "No Minimum age is prescribed in the Constitution<br>संविधान में न्यूनतम आयु का कोई प्रावधान नहीं है।"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान के अनुच्छेद 173 के अनुसार, विधानसभा का सदस्य बनने के लिए न्यूनतम आयु 25 वर्ष निर्धारित है।",
+   "trick": "विधानसभा और लोकसभा के लिए न्यूनतम आयु 25 वर्ष है।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "GL",
+   "en": "The 101st Constitutional Amendment Act of 2016 was related to which of the following?",
+   "hi": "2016 का 101वां संवैधानिक संशोधन अधिनियम निम्नलिखित में से किससे संबंधित था?",
+   "opts": [
+    "Introducing the Goods and Services Tax (GST) in India<br>भारत में वस्तु एवं सेवा कर (GST) की शुरुआत",
+    "Exchanging enclaves and making other territorial adjustments between India and Bangladesh<br>भारत और बांग्लादेश के बीच विदेशी अन्तःक्षेत्र का आदान-प्रदान और अन्य क्षेत्रीय समायोजन",
+    "Appointing a Minister in charge of tribal welfare in the states of Chhattisgarh and Jharkhand<br>छत्तीसगढ़ और झारखंड राज्यों में जनजातीय कल्याण के प्रभारी मंत्री की नियुक्ति",
+    "Introducing the National Judicial Appointments Commission (NJAC)<br>राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) की शुरुआत"
+   ],
+   "my_ans": "A",
+   "sol": "101वां संविधान संशोधन अधिनियम 2016 भारत में वस्तु एवं सेवा कर (GST) को लागू करने से संबंधित है।",
+   "trick": "101वां संशोधन = GST (एक राष्ट्र, एक कर)।",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "GL",
+   "en": "Which Constitutional Amendment Act added Bodo, Dogri, Maithili, and Santhali to the Eighth Schedule of the Indian Constitution?",
+   "hi": "किस संवैधानिक संशोधन अधिनियम के अंतर्गत बोडो, डोगरी, मैथिली और संथाली भाषाओं को भारतीय संविधान की आठवीं अनुसूची में जोड़ा गया?",
+   "opts": [
+    "92nd Amendment Act, 2003<br>92वां संशोधन अधिनियम, 2003",
+    "91st Amendment Act, 2003<br>91वां संशोधन अधिनियम, 2003",
+    "86th Amendment Act, 2002<br>86वां संशोधन अधिनियम, 2002",
+    "93rd Amendment Act, 2005<br>93वां संशोधन अधिनियम, 2005"
+   ],
+   "my_ans": "A",
+   "sol": "92वें संविधान संशोधन अधिनियम, 2003 द्वारा आठवीं अनुसूची में बोडो, डोगरी, मैथिली और संथाली भाषाओं को जोड़ा गया।",
+   "trick": "याद रखें BD-MS (बोडो, डोगरी, मैथिली, संथाली) = 92वां संशोधन।",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "GL",
+   "en": "In December 2025, enforcement of a statewide prohibition on physical and emotional punishment in schools, in accordance with the provisions of the Right to Education Act, 2009, was carried out by which of the following states?",
+   "hi": "दिसंबर 2025 में, शिक्षा का अधिकार अधिनियम, 2009 के उपबंधों के अनुसार, विद्यालयों में शारीरिक और भावनात्मक दंड पर राज्यव्यापी निषेध का प्रवर्तन निम्नलिखित में से किस राज्य द्वारा किया गया था?",
+   "opts": [
+    "Manipur<br>मणिपुर",
+    "Punjab<br>पंजाब",
+    "Kerala<br>केरल",
+    "Maharashtra<br>महाराष्ट्र"
+   ],
+   "my_ans": "D",
+   "sol": "दिसंबर 2025 में महाराष्ट्र सरकार ने शिक्षा का अधिकार अधिनियम के तहत स्कूलों में शारीरिक और भावनात्मक दंड पर पूर्ण प्रतिबंध लागू किया।",
+   "trick": "RTE अधिनियम के तहत बच्चों के उत्पीड़न पर रोक है।",
+   "ans": "D"
+  },
+  {
+   "n": 86,
+   "lvl": "GL",
+   "en": "Which provision in Part II of the Constitution defines one basis for citizenship at the commencement, specifically that the person’s either parent was born in India?",
+   "hi": "संविधान के भाग II में कौन-सा प्रावधान, संविधान के प्रारंभ पर नागरिकता के एक आधार को परिभाषित करता है, विशेष रूप से यह कि व्यक्ति के माता या पिता में से किसी एक का जन्म भारत में हुआ था?",
+   "opts": [
+    "Article 5<br>अनुच्छेद 5",
+    "Article 6<br>अनुच्छेद 6",
+    "Article 8<br>अनुच्छेद 8",
+    "Article 9<br>अनुच्छेद 9"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 5 संविधान के प्रारंभ (26 जनवरी 1950) पर भारत में अधिवासित व्यक्तियों की नागरिकता को परिभाषित करता है।",
+   "trick": "अनुच्छेद 5 = संविधान लागू होने के समय नागरिकता।",
+   "ans": "A"
+  },
+  {
+   "n": 87,
+   "lvl": "GL",
+   "en": "Article _________ describes the procedure for joint sitting of both Houses of the Parliament in certain cases.",
+   "hi": "अनुच्छेद _________ कुछ मामलों में संसद के दोनों सदनों की संयुक्त बैठक की प्रक्रिया का वर्णन करता है।",
+   "opts": [
+    "Article 115<br>अनुच्छेद 115",
+    "Article 104<br>अनुच्छेद 104",
+    "Article 108<br>अनुच्छेद 108",
+    "Article 94<br>अनुच्छेद 94"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 108 के तहत राष्ट्रपति संसद के दोनों सदनों की संयुक्त बैठक बुला सकते हैं जब किसी साधारण विधेयक पर गतिरोध हो।",
+   "trick": "108 = संयुक्त बैठक (Joint Sitting)।",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "A person born in India between 26 January 1950 and 1 July 1987 is automatically considered a citizen of India by:",
+   "hi": "26 जनवरी 1950 और 1 जुलाई 1987 के बीच भारत में जन्मा व्यक्ति _______ से ही स्वतः भारत का नागरिक माना जाता है।",
+   "opts": [
+    "naturalisation<br>नागरीकरण",
+    "descent<br>वंश",
+    "registration<br>पंजीकरण",
+    "birth<br>जन्म"
+   ],
+   "my_ans": "D",
+   "sol": "इस अवधि के दौरान भारत में जन्मे व्यक्तियों को 'जन्म के आधार पर' (Jus Soli) स्वतः नागरिकता प्राप्त हुई थी।",
+   "trick": "1987 से पहले भारत में जन्म लेने वाले सभी स्वतः नागरिक थे।",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "GL",
+   "en": "What is the main difference between a Cabinet Minister and a Minister of State with independent charge?",
+   "hi": "कैबिनेट मंत्री और स्वतंत्र प्रभार वाले राज्य मंत्री में मुख्य अंतर क्या होता है?",
+   "opts": [
+    "A Minister of State with independent charge may head a ministry without being under a Cabinet Minister.<br>स्वतंत्र प्रभार वाला राज्य मंत्री, कैबिनेट मंत्री के अधीन हुए बिना किसी मंत्रालय का नेतृत्व कर सकता है।",
+    "A Ministry of State is included in Cabinet meetings but does not exercise any significant powers.<br>राज्य मंत्रालय को मंत्रिमंडल की बैठकों में शामिल किया जाता है लेकिन यह किसी भी महत्वपूर्ण शक्तियों का प्रयोग नहीं करता है।",
+    "A Minister of State with independent charge does not exercise any significant powers.<br>स्वतंत्र प्रभार वाला राज्य मंत्री किसी भी महत्वपूर्ण शक्तियों का प्रयोग नहीं करता है।",
+    "A Minister of State with independent charge does not hold any specific responsibilities.<br>स्वतंत्र प्रभार वाले राज्य मंत्री के पास कोई विशिष्ट जिम्मेदारी नहीं होती है।"
+   ],
+   "my_ans": "A",
+   "sol": "स्वतंत्र प्रभार वाले राज्य मंत्री अपने मंत्रालय के प्रमुख होते हैं और उन्हें किसी कैबिनेट मंत्री को रिपोर्ट नहीं करना पड़ता है।",
+   "trick": "स्वतंत्र प्रभार = बिना किसी वरिष्ठ मंत्री के स्वतंत्र कार्य।",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "GL",
+   "en": "Which Constitutional provision empowers the Government of India to give directions to a State in certain matters?",
+   "hi": "निम्न में से कौन-सा संवैधानिक प्रावधान भारत सरकार को कुछ मामलों में किसी राज्य को निर्देश देने का अधिकार देता है?",
+   "opts": [
+    "Article 262<br>अनुच्छेद 262",
+    "Article 265<br>अनुच्छेद 265",
+    "Article 248<br>अनुच्छेद 248",
+    "Article 256<br>अनुच्छेद 256"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 256 के तहत केंद्र सरकार राज्यों को निर्देश दे सकती है ताकि राज्य की कार्यकारी शक्ति का प्रयोग संसद के कानूनों के अनुपालन में हो।",
+   "trick": "अनुच्छेद 256 = केंद्र द्वारा राज्यों को निर्देश।",
+   "ans": "D"
+  }
+ ]
+}

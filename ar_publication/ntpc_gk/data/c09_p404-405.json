@@ -1,0 +1,110 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "404-405",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "When considering the dimensions of electric charge, which fundamental units must be combined to express it in terms of SI base quantities?",
+   "hi": "जब विद्युत आवेश की विमाओं पर विचार किया जाता है, तो SI आधार राशियों के पदों रूप में इसे व्यक्त करने के लिए किन मूल मात्रकों को संयोजित किया जाना चाहिए?",
+   "opts": [
+    "current and time<br>धारा और समय",
+    "current and length<br>धारा और लंबाई",
+    "mass and current<br>द्रव्यमान और धारा",
+    "length and time<br>लंबाई और समय"
+   ],
+   "my_ans": "A",
+   "sol": "विद्युत आवेश (Q) का सूत्र Q = I × t होता है, जहाँ I विद्युत धारा (एम्पियर) है और t समय (सेकंड) है। इसलिए, इसे धारा और समय के मूल मात्रकों से व्यक्त किया जाता है।",
+   "trick": "Q = I × t (आवेश = धारा × समय)",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "The energy of light (photon) is a form of ______.",
+   "hi": "प्रकाश की ऊर्जा (फोटॉन) ______ का एक रूप है।",
+   "opts": [
+    "Electromagnetic Energy<br>विद्युतचुंबकीय ऊर्जा",
+    "Mechanical Energy<br>यांत्रिक ऊर्जा",
+    "Nuclear Energy<br>नाभिकीय ऊर्जा",
+    "Gravitational Potential Energy<br>गुरुत्वीय स्थितिज ऊर्जा"
+   ],
+   "my_ans": "A",
+   "sol": "प्रकाश फोटॉन से बना होता है, जो विद्युत चुंबकीय विकिरण के छोटे पैकेट होते हैं। प्रकाश तरंगें विद्युत चुंबकीय स्पेक्ट्रम का हिस्सा हैं।",
+   "trick": "प्रकाश = विद्युत चुंबकीय तरंग",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Which combination of SI base units correctly represents the unit of density based on its dimensional formula?",
+   "hi": "SI मूल मात्रकों का कौन-सा संयोजन घनत्व के मात्रक को इसके विमीय सूत्र के आधार पर सही रूप से निरूपित करता है?",
+   "opts": [
+    "Kilogram per litre<br>किलोग्राम प्रति लीटर",
+    "Kilogram per metre cubed<br>किलोग्राम प्रति घन मीटर",
+    "Gram per litre<br>ग्राम प्रति लीटर",
+    "Milligram per cubic centimetre<br>मिलीग्राम प्रति घन सेंटीमीटर"
+   ],
+   "my_ans": "B",
+   "sol": "घनत्व = द्रव्यमान / आयतन। द्रव्यमान का SI मात्रक किलोग्राम (kg) है और आयतन का SI मात्रक घन मीटर (m³) है, इसलिए घनत्व का मात्रक kg/m³ होता है।",
+   "trick": "घनत्व = kg/m³ (द्रव्यमान/आयतन)",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Which type of surface absorbs more heat and is therefore preferred during winters?",
+   "hi": "किस प्रकार की सतह अधिक ऊष्मा अवशोषित करती है और इसलिए सर्दियों के दौरान पसंद की जाती है?",
+   "opts": [
+    "Shiny surface<br>चमकदार सतह",
+    "Dark-coloured surface<br>गहरे रंग की सतह",
+    "Light-coloured surface<br>हल्के रंग की सतह",
+    "White surface<br>सफेद सतह"
+   ],
+   "my_ans": "B",
+   "sol": "गहरे रंग की सतहें प्रकाश और ऊष्मा विकिरण को हल्के रंगों की तुलना में अधिक अवशोषित करती हैं, जिससे वे सर्दियों में गर्म रहने में मदद करती हैं।",
+   "trick": "गहरा रंग = अधिक ऊष्मा अवशोषण",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Frequencies higher than the human audible limit of 20,000 Hz are classified as _____.",
+   "hi": "20,000 Hz की मानव श्रव्य सीमा से अधिक की आवृत्तियों को _________ के रूप में वर्गीकृत किया जाता है।",
+   "opts": [
+    "Infrasound<br>इन्फ्रासाउंड",
+    "Supersonic<br>सुपरसोनिक",
+    "Tones<br>टोन",
+    "Ultrasound<br>अल्ट्रासाउंड"
+   ],
+   "my_ans": "D",
+   "sol": "मानव कान 20 Hz से 20,000 Hz तक की ध्वनि सुन सकते हैं। 20,000 Hz से अधिक आवृत्ति वाली ध्वनि को अल्ट्रासाउंड (पराश्रव्य) कहा जाता है।",
+   "trick": "20,000 Hz से ऊपर = अल्ट्रासाउंड",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Modern telecommunication systems use optical fibres to transmit data efficiently. Which optical phenomenon enables this high-speed data transmission?",
+   "hi": "आधुनिक दूरसंचार प्रणालियों में डेटा को कुशलतापूर्वक संचारित करने के लिए प्रकाशिक तंतु (optical fibres) का उपयोग किया जाता है। कौन-सी प्रकाशिक परिघटना इस उच्च-चाल वाले डेटा संचरण को सक्षम बनाती है?",
+   "opts": [
+    "Interference of light<br>प्रकाश का व्यतिकरण",
+    "Refraction of light<br>प्रकाश का अपवर्तन",
+    "Total Internal Reflection<br>पूर्ण आंतरिक परावर्तन",
+    "Dispersion of light<br>प्रकाश का विक्षेपण"
+   ],
+   "my_ans": "C",
+   "sol": "ऑप्टिकल फाइबर पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर काम करते हैं, जिससे प्रकाश बिना किसी नुकसान के फाइबर के अंदर परावर्तित होकर लंबी दूरी तक यात्रा करता है।",
+   "trick": "ऑप्टिकल फाइबर = पूर्ण आंतरिक परावर्तन",
+   "ans": "C"
+  }
+ ]
+}

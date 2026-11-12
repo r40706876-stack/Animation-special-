@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "676-678",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 374,
+   "lvl": "UG",
+   "en": "Which leader in their keynote address at the World Sustainable Development Summit 2025 exemplified \"Guyana’s growth without compromising environmental sustainability\"?",
+   "hi": "विश्व सतत विकास शिखर सम्मेलन 2025 में किस नेता ने अपने मुख्य भाषण में \"पर्यावरणीय संधारणीयता से समझौता किए बिना गुयाना के विकास\" का उदाहरण प्रस्तुत किया?",
+   "opts": [
+    "Mark Phillips<br>मार्क फिलिप्स",
+    "Marina Silva<br>मरीना सिल्वा",
+    "Bharrat Jagdeo<br>भरत जगदेव",
+    "Vibha Dhawan<br>विभा धवन"
+   ],
+   "my_ans": "A",
+   "sol": "गुयाना के प्रधानमंत्री मार्क फिलिप्स ने विश्व सतत विकास शिखर सम्मेलन 2025 में पर्यावरण संरक्षण के साथ आर्थिक विकास पर जोर दिया।",
+   "trick": "गुयाना के प्रधानमंत्री मार्क फिलिप्स ने सतत विकास का उदाहरण प्रस्तुत किया।",
+   "ans": "A"
+  },
+  {
+   "n": 375,
+   "lvl": "UG",
+   "en": "Which of the following editions of the Seatrade Maritime Logistics Middle East (SMLME) conference opened on May 6, 2025 at the Dubai World Trade Centre?",
+   "hi": "सीट्रेड मैरीटाइम लॉजिस्टिक्स मिडिल ईस्ट (SMLME) सम्मेलन का निम्नलिखित में से कौन-सा संस्करण 6 मई, 2025 को दुबई वर्ल्ड ट्रेड सेंटर में आयोजित किया गया था?",
+   "opts": [
+    "9th<br>9वां",
+    "11th<br>11वां",
+    "12th<br>12वां",
+    "7th<br>7वां"
+   ],
+   "my_ans": "B",
+   "sol": "सीट्रेड मैरीटाइम लॉजिस्टिक्स मिडिल ईस्ट (SMLME) 2025 का 11वां संस्करण 6 मई, 2025 को दुबई वर्ल्ड ट्रेड सेंटर में आयोजित हुआ।",
+   "trick": "SMLME 2025 का 11वां संस्करण दुबई में हुआ।",
+   "ans": "B"
+  },
+  {
+   "n": 376,
+   "lvl": "UG",
+   "en": "Who among the following won the Australian Open in 2025?",
+   "hi": "निम्नलिखित में से किसने 2025 में ऑस्ट्रेलियन ओपन जीता?",
+   "opts": [
+    "Taylor Fritz<br>टेलर फ्रिट्ज़",
+    "Jannik Sinner<br>जैनिक सिनर",
+    "Alexander Zverev<br>अलेक्ज़ेंडर ज़्वेरेव",
+    "Jack Draper<br>जैक ड्रेपर"
+   ],
+   "my_ans": "B",
+   "sol": "इटली के जैनिक सिनर ने 2025 ऑस्ट्रेलियन ओपन के फाइनल में अलेक्जेंडर ज्वेरेव को हराकर अपना लगातार दूसरा खिताब जीता।",
+   "trick": "जैनिक सिनर ने 2025 में लगातार दूसरा ऑस्ट्रेलियन ओपन जीता।",
+   "ans": "B"
+  },
+  {
+   "n": 377,
+   "lvl": "UG",
+   "en": "In which country was the International Conference on 'Reimagining Existence: Emerging Perspectives in World Literature and Language' held in March 2025?",
+   "hi": "मार्च 2025 में 'अस्तित्व की पुनर्कल्पना: विश्व साहित्य और भाषा में उभरते परिप्रेक्ष्य' विषय पर अंतर्राष्ट्रीय सम्मेलन किस देश में आयोजित किया गया?",
+   "opts": [
+    "India<br>भारत",
+    "China<br>चीन",
+    "Italy<br>इटली",
+    "Russia<br>रूस"
+   ],
+   "my_ans": "A",
+   "sol": "मार्च 2025 में 'Reimagining Existence' विषय पर अंतर्राष्ट्रीय सम्मेलन की मेजबानी भारत ने की थी।",
+   "trick": "विश्व साहित्य सम्मेलन 2025 भारत में आयोजित हुआ।",
+   "ans": "A"
+  },
+  {
+   "n": 378,
+   "lvl": "UG",
+   "en": "In early July 2025, the 17th BRICS Leaders’ Summit convened in which city?",
+   "hi": "जुलाई 2025 की शुरुआत में, 17वां ब्रिक्स (BRICS) नेताओं का शिखर सम्मेलन किस शहर में आयोजित किया गया?",
+   "opts": [
+    "Rio de Janeiro<br>रियो डी जनेरियो",
+    "Shanghai<br>शंघाई",
+    "Johannesburg<br>जोहानसबर्ग",
+    "New Delhi<br>नई दिल्ली"
+   ],
+   "my_ans": "A",
+   "sol": "17वां ब्रिक्स शिखर सम्मेलन जुलाई 2025 में ब्राजील के रियो डी जनेरियो शहर में आयोजित हुआ।",
+   "trick": "ब्रिक्स 2025 की अध्यक्षता ब्राजील ने की।",
+   "ans": "A"
+  },
+  {
+   "n": 379,
+   "lvl": "UG",
+   "en": "In October 2025, Max Verstappen won the United States Grand Prix representing which of the following teams?",
+   "hi": "अक्टूबर 2025 में, मैक्स वर्स्टाप्पेन (Max Verstappen) ने निम्नलिखित में से किस टीम का प्रतिनिधित्व करते हुए 'यूनाइटेड स्टेट्स ग्रैंड प्रिक्स' जीती?",
+   "opts": [
+    "Racing Bulls<br>रेसिंग बुल्स",
+    "Red Bull Racing<br>रेड बुल रेसिंग",
+    "McLaren<br>मैकलारेन",
+    "Ferrari<br>फेरारी"
+   ],
+   "my_ans": "B",
+   "sol": "मैक्स वर्स्टाप्पेन रेड बुल रेसिंग टीम के ड्राइवर हैं और उन्होंने अक्टूबर 2025 में यूनाइटेड स्टेट्स ग्रैंड प्रिक्स जीती।",
+   "trick": "वर्स्टाप्पेन रेड बुल रेसिंग के लिए ड्राइव करते हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 380,
+   "lvl": "UG",
+   "en": "Which of the following swimmers won gold in the 200 m breaststroke at the 2025 World Aquatics Championships, setting a championship record and an American record?",
+   "hi": "निम्नलिखित में से किस तैराक ने 2025 विश्व एक्वाटिक्स चैंपियनशिप में 200 मीटर ब्रेस्टस्ट्रोक में स्वर्ण पदक जीता और चैंपियनशिप रिकॉर्ड तथा अमेरिकी रिकॉर्ड बनाया?",
+   "opts": [
+    "Claire Curzan<br>क्लेयर कर्ज़न",
+    "Torri Huske<br>टोरी हस्क",
+    "Kate Douglass<br>केट डगलस",
+    "Evgeniia Chikunova<br>एवगेनिया चिकुनोवा"
+   ],
+   "my_ans": "C",
+   "sol": "केट डगलस ने 2025 विश्व एक्वाटिक्स चैंपियनशिप में 200 मीटर ब्रेस्टस्ट्रोक में स्वर्ण पदक जीतकर नया रिकॉर्ड बनाया।",
+   "trick": "केट डगलस ने 200 मीटर ब्रेस्टस्ट्रोक में स्वर्ण और रिकॉर्ड जीता।",
+   "ans": "C"
+  },
+  {
+   "n": 381,
+   "lvl": "UG",
+   "en": "In which state were the 77th Senior and 54th Junior National Track Cycling Championships held from 19 to 24 December 2025?",
+   "hi": "19 से 24 दिसंबर 2025 तक आयोजित 77वीं सीनियर और 54वीं जूनियर राष्ट्रीय ट्रैक साइकिलिंग चैंपियनशिप किस राज्य में हुई थी?",
+   "opts": [
+    "West Bengal<br>पश्चिम बंगाल",
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "Uttarakhand<br>उत्तराखंड",
+    "Punjab<br>पंजाब"
+   ],
+   "my_ans": "C",
+   "sol": "77वीं सीनियर और 54वीं जूनियर राष्ट्रीय ट्रैक साइकिलिंग चैंपियनशिप का आयोजन दिसंबर 2025 में उत्तराखंड में किया गया था।",
+   "trick": "साइकिलिंग चैंपियनशिप 2025 उत्तराखंड में हुई।",
+   "ans": "C"
+  },
+  {
+   "n": 382,
+   "lvl": "UG",
+   "en": "In June 2025, which major summit was hosted for the first time by the Netherlands in The Hague (24–25 June)?",
+   "hi": "जून 2025 में, हेग (24–25 जून) में नीदरलैंड्स द्वारा पहली बार किस प्रमुख शिखर सम्मेलन की मेजबानी की गई थी?",
+   "opts": [
+    "ASEAN Summit<br>ASEAN शिखर सम्मेलन",
+    "EU-27 Summit<br>EU-27 शिखर सम्मेलन",
+    "NATO Summit<br>NATO शिखर सम्मेलन",
+    "G7 Summit<br>G7 शिखर सम्मेलन"
+   ],
+   "my_ans": "C",
+   "sol": "नीदरलैंड ने जून 2025 में पहली बार द हेग में नाटो (NATO) शिखर सम्मेलन की मेजबानी की।",
+   "trick": "नीदरलैंड ने पहली बार नाटो शिखर सम्मेलन आयोजित किया।",
+   "ans": "C"
+  },
+  {
+   "n": 383,
+   "lvl": "UG",
+   "en": "At the 2025 World Aquatics Championships, which male swimmer set a new world record in the 200 m individual medley (IM) during semifinals?",
+   "hi": "2025 वर्ल्ड एक्वाटिक्स चैंपियनशिप में, किस पुरुष तैराक ने सेमीफाइनल के दौरान 200 m इंडिविजुअल मेडले (IM) में नया विश्व रिकॉर्ड बनाया?",
+   "opts": [
+    "Leon Marchand<br>लियोन मार्चैंड",
+    "Michael Phelps<br>माइकल फेल्प्स",
+    "Shaine Casas<br>शाइन कैसास",
+    "Luca Urlando<br>लूका उरलैंडो"
+   ],
+   "my_ans": "A",
+   "sol": "फ्रांस के लियोन मार्चैंड ने 2025 विश्व एक्वाटिक्स चैंपियनशिप के सेमीफाइनल में 200 मीटर इंडिविजुअल मेडले में विश्व रिकॉर्ड बनाया।",
+   "trick": "लियोन मार्चैंड ने 200m IM में विश्व रिकॉर्ड बनाया।",
+   "ans": "A"
+  },
+  {
+   "n": 384,
+   "lvl": "UG",
+   "en": "Which city hosted the Global Justice, Love and Peace Summit in April 2025?",
+   "hi": "अप्रैल 2025 में वैश्विक न्याय, प्रेम और शांति शिखर सम्मेलन (Global Justice, Love and Peace Summit) की मेजबानी किस शहर ने की?",
+   "opts": [
+    "Oslo<br>ओस्लो",
+    "Dubai<br>दुबई",
+    "Milan<br>मिलान",
+    "New Delhi<br>नई दिल्ली"
+   ],
+   "my_ans": "B",
+   "sol": "वैश्विक न्याय, प्रेम और शांति शिखर सम्मेलन अप्रैल 2025 में दुबई, संयुक्त अरब अमीरात में आयोजित किया गया था।",
+   "trick": "न्याय और शांति शिखर सम्मेलन दुबई में हुआ।",
+   "ans": "B"
+  },
+  {
+   "n": 385,
+   "lvl": "UG",
+   "en": "In November 2025, which of the following brands partnered with the Board of Control for Cricket in India (BCCI) as Team India's official colour partner for a period of three years?",
+   "hi": "नवंबर 2025 में, निम्नलिखित में से किस ब्रांड ने तीन साल की अवधि के लिए टीम इंडिया के आधिकारिक कलर पार्टनर के रूप में भारतीय क्रिकेट कंट्रोल बोर्ड (BCCI) के साथ साझेदारी की?",
+   "opts": [
+    "Asian Paints<br>एशियन पेंट्स",
+    "Berger Paints<br>बर्जर पेंट्स",
+    "Kansai Nerolac<br>कंसाई नेरोलैक",
+    "Dulux<br>डुलक्स"
+   ],
+   "my_ans": "B",
+   "sol": "नवंबर 2025 में बर्जर पेंट्स ने बीसीसीआई के साथ टीम इंडिया के आधिकारिक कलर पार्टनर के रूप में तीन साल का करार किया।",
+   "trick": "बर्जर पेंट्स बीसीसीआई का आधिकारिक कलर पार्टनर बना।",
+   "ans": "B"
+  }
+ ]
+}

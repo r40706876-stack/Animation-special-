@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "667-669",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 344,
+   "lvl": "UG",
+   "en": "Which football player was named the Professional Footballers’ Association (PFA) Player of the Year in August 2025, becoming the first player to win the award three times?",
+   "hi": "अगस्त 2025 में किस फुटबॉल खिलाड़ी को प्रोफेशनल फुटबॉलर्स एसोसिएशन (PFA) प्लेयर ऑफ द ईयर नामित किया गया, जिससे वह यह पुरस्कार तीन बार जीतने वाला प्रथम खिलाड़ी बन गया?",
+   "opts": [
+    "Lionel Messi<br>लियोनेल मेसी",
+    "Neymar<br>नेमार",
+    "Casemiro<br>कासेमिरो",
+    "Mohamed Salah<br>मोहम्मद सलाह"
+   ],
+   "my_ans": "D",
+   "sol": "मोहम्मद सलाह ने अगस्त 2025 में PFA प्लेयर ऑफ द ईयर पुरस्कार जीता। वह इस प्रतिष्ठित पुरस्कार को तीन बार जीतने वाले इतिहास के पहले खिलाड़ी बने।",
+   "trick": "सलाह ने तीन बार PFA पुरस्कार जीतकर इतिहास रचा।",
+   "ans": "D"
+  },
+  {
+   "n": 345,
+   "lvl": "UG",
+   "en": "What percentage of all detected trafficking victims in 2022 were children, as per the Global Report on Trafficking in Persons 2024?",
+   "hi": "मानव दुर्व्यापार पर वैश्विक रिपोर्ट 2024 के अनुसार, वर्ष 2022 में मानव दुर्व्यापार के जितने भी मामले सामने आए, उनमें से कितने प्रतिशत बच्चे थे?",
+   "opts": [
+    "20%",
+    "31%",
+    "45%",
+    "38%"
+   ],
+   "my_ans": "D",
+   "sol": "UNODC द्वारा प्रकाशित रिपोर्ट के अनुसार, 2022 में पहचाने गए कुल मानव तस्करी पीड़ितों में से 38% बच्चे थे।",
+   "trick": "तस्करी पीड़ितों में 38% बच्चे शामिल थे।",
+   "ans": "D"
+  },
+  {
+   "n": 346,
+   "lvl": "UG",
+   "en": "In January 2025, India became the fourth nation to achieve autonomous satellite docking in orbit. What was the name of this mission?",
+   "hi": "जनवरी 2025 में, भारत अंतरिक्ष कक्षा में स्वायत्त उपग्रह डॉकिंग प्राप्त करने वाला चौथा राष्ट्र बन गया। इस मिशन का नाम क्या था?",
+   "opts": [
+    "Chandrayaan-4<br>चंद्रयान-4",
+    "SpaDeX",
+    "NISAR",
+    "Gaganyaan-1<br>गगनयान-1"
+   ],
+   "my_ans": "B",
+   "sol": "इसरो के SpaDeX (स्पेस डॉकिंग एक्सपेरिमेंट) मिशन ने जनवरी 2025 में कक्षा में स्वायत्त डॉकिंग तकनीक का सफल प्रदर्शन किया।",
+   "trick": "SpaDeX = Space Docking Experiment.",
+   "ans": "B"
+  },
+  {
+   "n": 347,
+   "lvl": "UG",
+   "en": "According to the Sustainable Development Report, 2025, what was India’s standing in the SDG Index?",
+   "hi": "सतत विकास रिपोर्ट, 2025 के अनुसार, SDG सूचकांक में भारत का स्थान कौन-सा था?",
+   "opts": [
+    "85th<br>85वां",
+    "99th<br>99वां",
+    "110th<br>110वां",
+    "120th<br>120वां"
+   ],
+   "my_ans": "B",
+   "sol": "सतत विकास रिपोर्ट 2025 के अनुसार, भारत 193 देशों में से 99वें स्थान पर रहा।",
+   "trick": "SDG 2025 में भारत की रैंक 99 है।",
+   "ans": "B"
+  },
+  {
+   "n": 348,
+   "lvl": "UG",
+   "en": "According to the Sustainable Development Goals National Indicator Framework (SDG NIF) Progress Report of 2025, social protection coverage rose from 22% in 2016 to what percentage in 2025?",
+   "hi": "सतत विकास लक्ष्य - राष्ट्रीय संकेतक रूपरेखा (SDG NIF) की 2025 की प्रगति रिपोर्ट के अनुसार, 2016 में सामाजिक सुरक्षा कवरेज 22% से बढ़कर 2025 में कितने प्रतिशत हो गया?",
+   "opts": [
+    "78%",
+    "55%",
+    "64.3%",
+    "40%"
+   ],
+   "my_ans": "C",
+   "sol": "SDG NIF रिपोर्ट के अनुसार, भारत में सामाजिक सुरक्षा कवरेज 2016 में 22% से बढ़कर 2025 में 64.3% हो गया है।",
+   "trick": "सामाजिक सुरक्षा कवरेज 22% से 64.3% हुआ।",
+   "ans": "C"
+  },
+  {
+   "n": 349,
+   "lvl": "UG",
+   "en": "Susumu Kitagawa, Richard Robson and Omar M. Yaghi were awarded with Nobel Prize in 2025 for their contributions in which field?",
+   "hi": "सुसुमु कितागावा, रिचर्ड रॉबसन और उमर एम. याघी को किस क्षेत्र में उनके योगदान के लिए 2025 में नोबेल पुरस्कार से सम्मानित किया गया?",
+   "opts": [
+    "Economic Sciences<br>अर्थशास्त्र",
+    "Medicine<br>चिकित्सा",
+    "Chemistry<br>रसायन विज्ञान",
+    "Physics<br>भौतिक विज्ञान"
+   ],
+   "my_ans": "C",
+   "sol": "इन वैज्ञानिकों को मेटल-ऑर्गेनिक फ्रेमवर्क्स (MOFs) के विकास के लिए रसायन विज्ञान (Chemistry) में नोबेल पुरस्कार दिया गया।",
+   "trick": "MOFs का विकास = रसायन विज्ञान नोबेल।",
+   "ans": "C"
+  },
+  {
+   "n": 350,
+   "lvl": "UG",
+   "en": "Cricket player Suzie Bates, who became the first woman to play 350 international matches during the 2025 Women’s ODI World Cup, belongs to which country?",
+   "hi": "2025 महिला ODI विश्व कप के दौरान 350 अंतरराष्ट्रीय मैच खेलने वाली प्रथम महिला बनी क्रिकेट खिलाड़ी सूजी बेट्स (Suzie Bates) का संबंध किस देश से है?",
+   "opts": [
+    "England<br>इंग्लैंड",
+    "New Zealand<br>न्यूजीलैंड",
+    "South Africa<br>दक्षिण अफ्रीका",
+    "Australia<br>ऑस्ट्रेलिया"
+   ],
+   "my_ans": "B",
+   "sol": "सूजी बेट्स न्यूजीलैंड की प्रसिद्ध क्रिकेटर हैं, जिन्होंने 2025 महिला वनडे विश्व कप के दौरान यह उपलब्धि हासिल की।",
+   "trick": "सूजी बेट्स = न्यूजीलैंड की दिग्गज खिलाड़ी।",
+   "ans": "B"
+  },
+  {
+   "n": 351,
+   "lvl": "UG",
+   "en": "Which of the following vehicles was used to launch the SpaDex mission by the Indian Space Research Organisation?",
+   "hi": "भारतीय अंतरिक्ष अनुसंधान संगठन द्वारा SpaDex मिशन को लॉन्च करने के लिए निम्नलिखित में से किस यान का उपयोग किया गया था?",
+   "opts": [
+    "GSLV Mk II",
+    "GSLV Mk III",
+    "SSLV-D2",
+    "PSLV-C60"
+   ],
+   "my_ans": "D",
+   "sol": "इसरो ने 30 दिसंबर 2024 को SpaDex मिशन को PSLV-C60 रॉकेट के माध्यम से लॉन्च किया था।",
+   "trick": "SpaDex मिशन PSLV-C60 से लॉन्च हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 352,
+   "lvl": "UG",
+   "en": "As highlighted in late September–October 2025 coverage of the Sustainable Development Report 2025, what was India’s position and score in the UN SDG Index 2025?",
+   "hi": "सतत विकास रिपोर्ट 2025 के सितंबर-अक्टूबर 2025 के कवरेज में रेखांकित किए गए तथ्यों के अनुसार, UN SDG सूचकांक 2025 में भारत का स्थान और स्कोर क्या था?",
+   "opts": [
+    "Rank 79 with an overall SDG index score close to 71 points<br>79वां स्थान और लगभग 71 अंकों का समग्र SDG सूचकांक स्कोर",
+    "Rank 99 with an overall SDG index score close to 67 points<br>99वां स्थान और लगभग 67 अंकों का समग्र SDG सूचकांक स्कोर",
+    "Rank 89 with an overall SDG index score close to 69 points<br>89वां स्थान और लगभग 69 अंकों का समग्र SDG सूचकांक स्कोर",
+    "Rank 109 with an overall SDG index score close to 65 points<br>109वां स्थान और लगभग 65 अंकों का समग्र SDG सूचकांक स्कोर"
+   ],
+   "my_ans": "B",
+   "sol": "सतत विकास रिपोर्ट 2025 में भारत 99वें स्थान पर रहा और उसका स्कोर लगभग 67 अंक था।",
+   "trick": "99वीं रैंक और 67 स्कोर याद रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 353,
+   "lvl": "UG",
+   "en": "What is the primary goal of the Bharatiya Antariksha Station (BAS) initiative announced by ISRO?",
+   "hi": "इसरो (ISRO) द्वारा घोषित भारतीय अंतराक्ष स्टेशन (BAS) पहल का मुख्य लक्ष्य क्या है?",
+   "opts": [
+    "To build India’s first space telescope<br>भारत का पहला अंतरिक्ष टेलीस्कोप बनाना",
+    "To privatize satellite launches in India<br>भारत में उपग्रह प्रक्षेपणों का निजीकरण करना",
+    "To launch India’s first human mission to Mars<br>मंगल ग्रह के लिए भारत का पहला मानव मिशन लॉन्च करना",
+    "To establish an indigenous space station<br>एक स्वदेशी अंतरिक्ष स्टेशन स्थापित करना"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय अंतरिक्ष स्टेशन (BAS) का मुख्य उद्देश्य पृथ्वी की निचली कक्षा में भारत का अपना स्वदेशी अंतरिक्ष स्टेशन स्थापित करना है।",
+   "trick": "BAS = Bharatiya Antariksha Station (स्वदेशी स्टेशन)।",
+   "ans": "D"
+  },
+  {
+   "n": 354,
+   "lvl": "UG",
+   "en": "What major engine milestone did ISRO achieve in March 2025?",
+   "hi": "मार्च 2025 में इसरो ने इंजन से जुड़ी कौन सी बड़ी उपलब्धि हासिल की?",
+   "opts": [
+    "Successful test of cryogenic engine for Gaganyaan",
+    "Development of a new reusable rocket engine",
+    "Successful long-duration hot test of the semi-cryogenic engine",
+    "First successful launch using a nuclear-powered engine"
+   ],
+   "my_ans": "C",
+   "sol": "मार्च 2025 में इसरो ने अपने सेमी-क्रायोजेनिक इंजन का सफल लंबी अवधि का हॉट टेस्ट पूरा किया, जो भविष्य के भारी मिशनों के लिए महत्वपूर्ण है।",
+   "trick": "मार्च 2025 = सेमी-क्रायोजेनिक इंजन हॉट टेस्ट।",
+   "ans": "C"
+  }
+ ]
+}

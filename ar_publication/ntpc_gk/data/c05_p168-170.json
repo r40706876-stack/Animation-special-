@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "168-170",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "Which of the following rivers is primarily responsible for the formation of badland topography in India?",
+   "hi": "निम्नलिखित में से कौन-सी नदी मुख्य रूप से भारत में उत्खात-भूमि स्थलाकृति के गठन के लिए उत्तरदायी है?",
+   "opts": [
+    "Brahmaputra<br>ब्रह्मपुत्र",
+    "Chambal<br>चंबल",
+    "Ganga<br>गंगा",
+    "Yamuna<br>यमुना"
+   ],
+   "my_ans": "B",
+   "sol": "चंबल नदी के तीव्र कटाव से मध्य प्रदेश, राजस्थान और उत्तर प्रदेश में गहरे नालों का निर्माण होता है, जिसे 'चंबल बीहड़' कहते हैं।",
+   "trick": "चंबल = बीहड़ (Badlands)",
+   "ans": "B"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "As per the Census of India, which of the following states recorded the highest overall literacy rate in 2011?",
+   "hi": "भारत की जनगणना के अनुसार, वर्ष 2011 में निम्नलिखित में से किस राज्य में सर्वाधिक समग्र साक्षरता दर दर्ज की गई?",
+   "opts": [
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "Maharashtra<br>महाराष्ट्र",
+    "Kerala<br>केरल",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "C",
+   "sol": "2011 की जनगणना के अनुसार केरल राज्य की साक्षरता दर 93.91% थी, जो भारत में सबसे अधिक है।",
+   "trick": "साक्षरता में केरल हमेशा नंबर 1",
+   "ans": "C"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "The river Kosi frequently shifts its channel in the plains mainly because:",
+   "hi": "मैदानी क्षेत्रों में कोसी नदी प्रायः अपना चैनल बदलती रहती है, इसका मुख्य कारण क्या है?",
+   "opts": [
+    "Large upstream dams constantly modify their natural flow<br>ऊपरी धारा क्षेत्र में स्थित बड़े बाँध इसके प्राकृतिक प्रवाह को निरंतर संशोधित करते हैं।",
+    "It traverses a long stretch of tectonic rifted lowland<br>यह विवर्तनिक दरारों वाली निचली भूमि के एक लंबे हिस्से से होकर गुज़रती है।",
+    "Its flow is sustained only by seasonal monsoon rain<br>इसका प्रवाह केवल मौसमी मानसूनी वर्षा द्वारा बना रहता है।",
+    "It carries huge quantities of sediment from the Himalayas<br>यह हिमालय से भारी मात्रा में अवसाद लेकर आती है।"
+   ],
+   "my_ans": "D",
+   "sol": "कोसी नदी हिमालय से भारी मात्रा में अवसाद (sediment) लाती है, जिससे नदी तल ऊँचा हो जाता है और नदी अपना मार्ग बदल लेती है।",
+   "trick": "कोसी = बिहार का शोक = भारी अवसाद",
+   "ans": "D"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Which of the following belts of the Northern Plains consists of porous rocky soil where stream water seeps underground?",
+   "hi": "उत्तरी मैदानों की निम्नलिखित में से किस पट्टी में सरंध्र पथरीली मृदा होती है, जहाँ सरिताओं (streams) का जल भूमिगत हो जाता है?",
+   "opts": [
+    "Delta belt<br>डेल्टा पट्टी",
+    "Khadar belt<br>खादर पट्टी",
+    "Terai belt<br>तराई पट्टी",
+    "Bhabar belt<br>भाबर पट्टी"
+   ],
+   "my_ans": "D",
+   "sol": "भाबर पट्टी हिमालय की तलहटी में स्थित है, जहाँ कंकड़-पत्थरों के कारण नदियाँ भूमिगत हो जाती हैं।",
+   "trick": "भाबर = भा (भूमि) + भर (अंदर) = नदियाँ गायब",
+   "ans": "D"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "Which of the following countries has one of the highest population densities?",
+   "hi": "निम्नलिखित में से किस देश में जनसंख्या घनत्व सबसे अधिक है?",
+   "opts": [
+    "Russia<br>रूस",
+    "India<br>भारत",
+    "Australia<br>ऑस्ट्रेलिया",
+    "Canada<br>कनाडा"
+   ],
+   "my_ans": "B",
+   "sol": "दिए गए विकल्पों में भारत का जनसंख्या घनत्व (~464 व्यक्ति/किमी²) अन्य देशों की तुलना में काफी अधिक है।",
+   "trick": "भारत = सघन आबादी",
+   "ans": "B"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "What demographic shift characterizes Brazil’s transition since the 1980s?",
+   "hi": "1980 के दशक से ब्राज़ील के बदलाव की विशेषता कौन-सा जनसांख्यिकीय परिवर्तन है?",
+   "opts": [
+    "Rising urban mortality<br>शहरी मृत्यु दर में वृद्धि",
+    "Falling birth and death rates<br>जन्म और मृत्यु दर में गिरावट",
+    "Stable fertility with immigration<br>आप्रवासन के साथ स्थिर जननक्षमता",
+    "High births with low longevity<br>कम दीर्घायु वाले अधिक जन्म"
+   ],
+   "my_ans": "B",
+   "sol": "ब्राज़ील में शहरीकरण और बेहतर स्वास्थ्य सुविधाओं के कारण जन्म दर और मृत्यु दर दोनों में गिरावट आई है।",
+   "trick": "ब्राज़ील = जनसांख्यिकीय संक्रमण (जन्म-मृत्यु में कमी)",
+   "ans": "B"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a pull factor of migration?",
+   "hi": "निम्नलिखित में से कौन-सा कारक प्रवासन का कर्षण कारक (pull factor) नहीं है?",
+   "opts": [
+    "Peace and stability<br>शांति एवं स्थिरता",
+    "Better job opportunities<br>बेहतर जॉब के अवसर",
+    "Socio-economic backwardness<br>सामाजिक-आर्थिक पिछड़ापन",
+    "Security of life<br>जीवन की सुरक्षा"
+   ],
+   "my_ans": "C",
+   "sol": "सामाजिक-आर्थिक पिछड़ापन लोगों को पलायन के लिए मजबूर करता है, इसलिए यह 'पुश' (धक्का) कारक है, 'पुल' (कर्षण) नहीं।",
+   "trick": "पिछड़ापन = धक्का (Push) कारक",
+   "ans": "C"
+  },
+  {
+   "n": 137,
+   "lvl": "UG",
+   "en": "Which one of the following combinations contributes to low population density?",
+   "hi": "निम्नलिखित में से कौन-सा संयोजन, निम्न जनसंख्या घनत्व में योगदान देता है?",
+   "opts": [
+    "River valleys, floodplains, health clinics<br>नदी घाटियाँ, बाढ़कृत मैदान, स्वास्थ्य केंद्र",
+    "Flat terrain, fertile soil, urban jobs<br>सपाट भूभाग, उर्वर मृदा, शहरी रोज़गार",
+    "Mild winters, abundant water, schools<br>सौम्य शीत ऋतु, जल की प्रचुरता, विद्यालयों की उपलब्धता",
+    "Harsh climate, poor soil, few roads<br>कठोर जलवायु, अनुर्वर मृदा, सड़क मार्गों की कमी"
+   ],
+   "my_ans": "D",
+   "sol": "कठोर जलवायु और खराब मिट्टी वाले क्षेत्रों में जीवन कठिन होता है, जिससे वहाँ जनसंख्या घनत्व कम रहता है।",
+   "trick": "कठोर जलवायु = कम आबादी",
+   "ans": "D"
+  },
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "In which of the following Indian states does the maximum portion of the Upper Ganga Plain extend?",
+   "hi": "निम्नलिखित में से किस भारतीय राज्य में ऊपरी गंगा मैदान का अधिकतम भाग फैला हुआ है?",
+   "opts": [
+    "West Bengal<br>पश्चिम बंगाल",
+    "Bihar<br>बिहार",
+    "Haryana<br>हरियाणा",
+    "Uttar Pradesh<br>उत्तर प्रदेश"
+   ],
+   "my_ans": "D",
+   "sol": "ऊपरी गंगा का मैदान हरिद्वार से प्रयागराज तक फैला है, जिसका सबसे बड़ा हिस्सा उत्तर प्रदेश में आता है।",
+   "trick": "ऊपरी गंगा = उत्तर प्रदेश",
+   "ans": "D"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "According to the Census 2011, which state remained the most populous in India?",
+   "hi": "2011 की जनगणना के अनुसार कौन-सा राज्य, भारत में सबसे अधिक जनसंख्या वाला राज्य था?",
+   "opts": [
+    "West Bengal<br>पश्चिम बंगाल",
+    "Bihar<br>बिहार",
+    "Maharashtra<br>महाराष्ट्र",
+    "Uttar Pradesh<br>उत्तर प्रदेश"
+   ],
+   "my_ans": "D",
+   "sol": "2011 की जनगणना के अनुसार उत्तर प्रदेश भारत का सबसे अधिक जनसंख्या वाला राज्य है।",
+   "trick": "UP = सबसे अधिक जनसंख्या",
+   "ans": "D"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "Which one of the following represents the correct formula for crude birth rate (CBR), where B = live births during the year; P= Estimated mid year population of the area?",
+   "hi": "निम्नलिखित में से कौन-सा अशोधित जन्म दर (CBR) के लिए सही सूत्र है, जहाँ B = वर्ष के दौरान जीवित जन्म; P = क्षेत्र की अनुमानित मध्य-वर्ष जनसंख्या?",
+   "opts": [
+    "(B/P) × 10",
+    "(B/P) × 1000",
+    "(P/B) × 1000",
+    "(B/P) × 100"
+   ],
+   "my_ans": "B",
+   "sol": "अशोधित जन्म दर (CBR) = (वर्ष के दौरान जीवित जन्म / अनुमानित मध्य-वर्ष जनसंख्या) × 1000",
+   "trick": "CBR = (B/P) × 1000",
+   "ans": "B"
+  }
+ ]
+}

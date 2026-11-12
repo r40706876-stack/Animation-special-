@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "474-476",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "Which classification best describes a compiler based on its role in program translation?",
+   "hi": "प्रोग्राम अनुवाद में अपनी भूमिका के आधार पर कौन सा वर्गीकरण कंपाइलर का सबसे अच्छा वर्णन करता है?",
+   "opts": [
+    "It is a hardware abstraction layer<br>यह एक हार्डवेयर एब्स्ट्रैक्शन लेयर है",
+    "System software because it converts code for OS execution<br>सिस्टम सॉफ्टवेयर क्योंकि यह OS निष्पादन के लिए कोड को परिवर्तित करता है",
+    "Application software because users launch it manually<br>एप्लिकेशन सॉफ्टवेयर क्योंकि उपयोगकर्ता इसे मैन्युअल रूप से लॉन्च करते हैं",
+    "Application software because it edits documents<br>एप्लिकेशन सॉफ्टवेयर क्योंकि यह दस्तावेजों को संपादित करता है"
+   ],
+   "my_ans": "B",
+   "sol": "कंपाइलर एक सिस्टम सॉफ्टवेयर है जो उच्च-स्तरीय प्रोग्रामिंग भाषा को मशीन कोड में बदलता है ताकि कंप्यूटर उसे निष्पादित (execute) कर सके।",
+   "trick": "कंपाइलर = अनुवादक (सिस्टम सॉफ्टवेयर)",
+   "ans": "B"
+  },
+  {
+   "n": 83,
+   "lvl": "GL",
+   "en": "Which core component of Windows OS is responsible for handling low-level operations such as memory management and process scheduling?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम (Windows OS) का कौन-सा मुख्य घटक मेमोरी प्रबंधन और प्रोसेस शेड्यूलिंग जैसे निम्न-स्तरीय कार्यों को संभालने के लिए उत्तरदायी है?",
+   "opts": [
+    "Windows Kernel<br>विंडोज कर्नेल (Windows Kernel)",
+    "Service Control Manager<br>सर्विस कंट्रोल मैनेजर (Service Control Manager)",
+    "Windows Explorer<br>विंडोज एक्सप्लोरर (Windows Explorer)",
+    "Task Scheduler<br>टास्क शेड्यूलर (Task Scheduler)"
+   ],
+   "my_ans": "A",
+   "sol": "विंडोज कर्नेल ऑपरेटिंग सिस्टम का मुख्य हिस्सा है जो हार्डवेयर और सॉफ्टवेयर के बीच संचार करता है और मेमोरी व प्रोसेस को नियंत्रित करता है।",
+   "trick": "कर्नेल = OS का हृदय/मुख्य नियंत्रक",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "GL",
+   "en": "A major characteristic of computer systems is Diligence. Which of the following scenarios primarily highlights a limitation of the computer system that is not overcome by its diligence?",
+   "hi": "कंप्यूटर सिस्टम का एक प्रमुख अभिलक्षण 'डिलिजेंस' (परिश्रम) है। निम्नलिखित में से कौन-सा परिदृश्य कंप्यूटर सिस्टम की एक ऐसी सीमा को उजागर करता है जिसे उसके डिलिजेंस द्वारा दूर नहीं किया जा सकता है?",
+   "opts": [
+    "A computer is used to book flights in the morning and write code in the afternoon.<br>कंप्यूटर का उपयोग सुबह उड़ानें बुक करने और दोपहर में कोड लिखने के लिए किया जाता है।",
+    "A computer continues processing data for 72 hours straight without any loss of attention.<br>कंप्यूटर बिना किसी अवधान-ह्रास के लगातार 72 घंटों तक डेटा संसाधित करना जारी रखता है।",
+    "A computer generates incorrect output because the initial data entered was flawed.<br>कंप्यूटर गलत आउटपुट उत्पन्न करता है क्योंकि दर्ज किया गया प्रारंभिक डेटा त्रुटिपूर्ण था।",
+    "A computer performs trillions of calculations a second, much faster than any human.<br>कंप्यूटर प्रति सेकंड ट्रिलियन गणनाएँ करता है, जो किसी भी मानव की तुलना में बहुत तेज़ है।"
+   ],
+   "my_ans": "C",
+   "sol": "कंप्यूटर 'Garbage In, Garbage Out' (GIGO) सिद्धांत पर काम करता है। यदि इनपुट गलत होगा, तो आउटपुट भी गलत ही होगा, चाहे कंप्यूटर कितना भी परिश्रमी क्यों न हो।",
+   "trick": "गलत इनपुट = गलत आउटपुट (GIGO)",
+   "ans": "C"
+  },
+  {
+   "n": 85,
+   "lvl": "GL",
+   "en": "Which component of System Software is directly responsible for managing the flow of data between the Central Processing Unit (CPU) and a peripheral device like a printer or a mouse?",
+   "hi": "सिस्टम सॉफ्टवेयर का कौन-सा घटक सेंट्रल प्रोसेसिंग यूनिट (CPU) और प्रिंटर या माउस जैसी पेरिफेरल डिवाइसों के बीच डेटा प्रवाह को प्रबंधित करने के लिए प्रत्यक्ष रूप से उत्तरदायी है?",
+   "opts": [
+    "Device Driver<br>डिवाइस ड्राइवर (Device Driver)",
+    "Utility Software<br>यूटिलिटी सॉफ्टवेयर (Utility Software)",
+    "Application Programming Interface (API)<br>एप्लिकेशन प्रोग्रामिंग इंटरफेस (API)",
+    "Operating System Kernel<br>ऑपरेटिंग सिस्टम कर्नेल (Operating System Kernel)"
+   ],
+   "my_ans": "A",
+   "sol": "डिवाइस ड्राइवर एक विशेष सॉफ्टवेयर है जो ऑपरेटिंग सिस्टम और हार्डवेयर के बीच अनुवादक का काम करता है, जिससे डेटा का आदान-प्रदान संभव होता है।",
+   "trick": "ड्राइवर = हार्डवेयर का अनुवादक",
+   "ans": "A"
+  },
+  {
+   "n": 86,
+   "lvl": "GL",
+   "en": "What is the primary function of the Alt + Tab keyboard shortcut in Windows?",
+   "hi": "विंडोज में, Alt + Tab कीबोर्ड शॉर्टकट का प्राथमिक कार्य क्या है?",
+   "opts": [
+    "To close the currently active window<br>वर्तमान में सक्रिय विंडो को बंद करना",
+    "To open Task Manager<br>टास्क मैनेजर ओपन करना",
+    "To switch between open windows<br>खुली विंडोज़ के बीच स्विच करना",
+    "To minimize all open applications<br>सभी खुले एप्लीकेशंस को मिनिमाइज़ करना"
+   ],
+   "my_ans": "C",
+   "sol": "Alt + Tab का उपयोग विंडोज में खुले हुए विभिन्न प्रोग्रामों या विंडोज़ के बीच जल्दी से स्विच करने के लिए किया जाता है।",
+   "trick": "Alt+Tab = स्विच करना",
+   "ans": "C"
+  },
+  {
+   "n": 87,
+   "lvl": "GL",
+   "en": "Which of the following locations stores recently opened files in Windows for quick access?",
+   "hi": "विंडोज में निम्नलिखित से कौन-सी लोकेशन हाल ही में खोली गई फ़ाइलों को त्वरित एक्सेस के लिए स्टोर करती है?",
+   "opts": [
+    "Desktop<br>डेस्कटॉप (Desktop)",
+    "Control Panel<br>कंट्रोल पैनल (Control Panel)",
+    "Quick Access<br>क्विक एक्सेस (Quick Access)",
+    "Recycle Bin<br>रीसायकल बिन (Recycle Bin)"
+   ],
+   "my_ans": "C",
+   "sol": "विंडोज फाइल एक्सप्लोरर में 'क्विक एक्सेस' फीचर हाल ही में खोली गई फाइलों और अक्सर उपयोग किए जाने वाले फोल्डर्स को दिखाता है।",
+   "trick": "Quick Access = त्वरित पहुँच",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "Which of these examples best represents a category of utility software?",
+   "hi": "निम्न में से कौन-सा उदाहरण, यूटिलिटी सॉफ्टवेयर की श्रेणी को सर्वोत्तम रूप में निरूपित करता है?",
+   "opts": [
+    "MS Word<br>एमएस वर्ड",
+    "Disk Clean up<br>डिस्क क्लीन अप",
+    "MS PowerPoint<br>एमएस पावरपॉइंट",
+    "MS Excel<br>एमएस एक्सेल"
+   ],
+   "my_ans": "B",
+   "sol": "यूटिलिटी सॉफ्टवेयर सिस्टम के रखरखाव और अनुकूलन (optimization) के लिए होते हैं। डिस्क क्लीनअप अनावश्यक फाइलों को हटाकर जगह खाली करता है।",
+   "trick": "यूटिलिटी = रखरखाव (Maintenance)",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "GL",
+   "en": "LAN is often used in schools and offices. This abbreviation expands to:",
+   "hi": "LAN का उपयोग प्रायः विद्यालयों और कार्यालयों में किया जाता है। LAN का पूर्ण रूप क्या है?",
+   "opts": [
+    "Linked Access Node<br>लिंक्ड एक्सेस नोड",
+    "Large Area Network<br>लार्ज एरिया नेटवर्क",
+    "Local Area Network<br>लोकल एरिया नेटवर्क",
+    "Long Access Network<br>लॉन्ग एक्सेस नेटवर्क"
+   ],
+   "my_ans": "C",
+   "sol": "LAN का अर्थ 'Local Area Network' है, जो एक सीमित भौगोलिक क्षेत्र जैसे घर, स्कूल या ऑफिस में कंप्यूटरों को आपस में जोड़ता है।",
+   "trick": "LAN = Local (सीमित क्षेत्र)",
+   "ans": "C"
+  },
+  {
+   "n": 90,
+   "lvl": "GL",
+   "en": "A computer performs millions of calculations in a fraction of a second. Which characteristic is primarily demonstrated here?",
+   "hi": "एक कंप्यूटर एक सेकंड के कुछ अंश में मिलियन गणनाएँ करता है। यहाँ मुख्यतः कौन-सी विशेषता प्रदर्शित होती है?",
+   "opts": [
+    "Storage<br>स्टोरेज (Storage)",
+    "Speed<br>स्पीड (Speed)",
+    "Versatility<br>वर्सटैलिटी (Versatility)",
+    "Accuracy<br>एक्यूरेसी (Accuracy)"
+   ],
+   "my_ans": "B",
+   "sol": "कंप्यूटर की गणना करने की क्षमता को उसकी 'गति' (Speed) कहा जाता है। आधुनिक कंप्यूटर प्रति सेकंड लाखों-अरबों निर्देश निष्पादित कर सकते हैं।",
+   "trick": "तेज गणना = गति (Speed)",
+   "ans": "B"
+  },
+  {
+   "n": 91,
+   "lvl": "GL",
+   "en": "What do you mean by .wma file on the computer?",
+   "hi": "कंप्यूटर पर .wma फाइल से आप क्या समझते हैं?",
+   "opts": [
+    "Video file<br>वीडियो फाइल",
+    "Audio file<br>ऑडियो फाइल",
+    "Image file<br>इमेज फाइल",
+    "Document file<br>डॉक्यूमेंट फाइल"
+   ],
+   "my_ans": "B",
+   "sol": ".wma का पूर्ण रूप 'Windows Media Audio' है, जो माइक्रोसॉफ्ट द्वारा विकसित एक ऑडियो फाइल फॉर्मेट है।",
+   "trick": "WMA = Windows Media Audio",
+   "ans": "B"
+  }
+ ]
+}

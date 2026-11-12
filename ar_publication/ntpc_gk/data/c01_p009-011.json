@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "9-11",
+ "model": "gemini-3-flash-preview",
+ "questions": [
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "The administration of the Mauryan Empire is described in which ancient text?",
+   "hi": "निम्नलिखित में से किस प्राचीन ग्रंथ में मौर्य साम्राज्य के प्रशासन का वर्णन किया गया है?",
+   "opts": [
+    "Manusmriti<br>मनुस्मृति",
+    "Mahabharata<br>महाभारत",
+    "Arthashastra<br>अर्थशास्त्र",
+    "Rigveda<br>ऋग्वेद"
+   ],
+   "my_ans": "C",
+   "sol": "कौटिल्य (चाणक्य) द्वारा लिखित 'अर्थशास्त्र' मौर्य प्रशासन, राजनीति और अर्थव्यवस्था पर आधारित मुख्य ग्रंथ है।",
+   "trick": "मौर्य प्रशासन = कौटिल्य का अर्थशास्त्र",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which Shaka ruler is credited with repairing the Sudarshana Lake without imposing any tax?",
+   "hi": "निम्नलिखित में से किस शक शासक को बिना कोई कर लगाए सुदर्शन झील की मरम्मत कराने का श्रेय दिया जाता है?",
+   "opts": [
+    "Harsha<br>हर्ष (Harsha)",
+    "Kanishka<br>कनिष्क (Kanishka)",
+    "Rudradaman<br>रुद्रदामन (Rudradaman)",
+    "Nahapana<br>नहपान (Nahapana)"
+   ],
+   "my_ans": "C",
+   "sol": "शक शासक रुद्रदामन प्रथम ने प्रजा पर बिना कोई अतिरिक्त कर लगाए गुजरात की सुदर्शन झील की मरम्मत करवाई थी।",
+   "trick": "रुद्रदामन = सुदर्शन झील (बिना टैक्स)",
+   "ans": "C"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "The Tamil literary work Iraiyanar Ahapporul is dated to which century?",
+   "hi": "तमिल साहित्यिक कृति 'इरैयनार अहप्पोरुल (Iraiyanar Ahapporul)' किस शताब्दी की है?",
+   "opts": [
+    "7th century CE<br>7वीं शताब्दी ईस्वी",
+    "11th century CE<br>11वीं शताब्दी ईस्वी",
+    "5th century CE<br>5वीं शताब्दी ईस्वी",
+    "8th century CE<br>8वीं शताब्दी ईस्वी"
+   ],
+   "my_ans": "D",
+   "sol": "इरैयनार अहप्पोरुल एक प्राचीन तमिल व्याकरण ग्रंथ है, जिसे विद्वान 8वीं शताब्दी ईस्वी का मानते हैं।",
+   "trick": "इरैयनार अहप्पोरुल = 8वीं शताब्दी",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "What is the primary material used in the 8th-century CE Kailasanatha Temple at Kanchipuram?",
+   "hi": "कांचीपुरम में स्थित 8वीं शताब्दी ईस्वी के कैलाशनाथ मंदिर में मुख्य रूप से किस सामग्री का उपयोग किया गया है?",
+   "opts": [
+    "Marble<br>संगमरमर",
+    "Brick<br>ईंट",
+    "Sandstone<br>बलुआ पत्थर",
+    "Granite<br>ग्रेनाइट"
+   ],
+   "my_ans": "C",
+   "sol": "कांचीपुरम का कैलाशनाथ मंदिर पल्लव राजा नरसिंहवर्मन II द्वारा बलुआ पत्थर (Sandstone) से बनवाया गया था।",
+   "trick": "कांची कैलाशनाथ = बलुआ पत्थर (पल्लव)",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Which Sangam text, from the 2nd century CE, is an epic about a chaste wife’s devotion?",
+   "hi": "दूसरी सदी CE का कौन-सा संगम ग्रंथ, एक पवित्र पत्नी की भक्ति के बारे में एक महाकाव्य है?",
+   "opts": [
+    "Silappatikaram<br>शिल्प्पादिकारम (Silappatikaram)",
+    "Pattuppattu<br>पत्तुप्पाट्टु (Pattuppattu)",
+    "Manimekalai<br>मणिमेकलै (Manimekalai)",
+    "Tolkappiyam<br>तोल्काप्पियम (Tolkappiyam)"
+   ],
+   "my_ans": "A",
+   "sol": "शिल्प्पादिकारम (इलगों अडिगल द्वारा रचित) कण्णगी नामक एक पतिव्रता पत्नी की कहानी और उसके न्याय की मांग पर आधारित है।",
+   "trick": "कण्णगी की भक्ति = शिल्प्पादिकारम",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which of the following pairs of leaders were closely associated with the signing of the Lucknow Pact of 1916?",
+   "hi": "निम्नलिखित में से नेताओं का कौन-सा युग्म, 1916 के लखनऊ समझौते पर हस्ताक्षर करने से घनिष्ठ रूप से संबंधित था?",
+   "opts": [
+    "Dadabhai Naoroji and Surendranath Banerjee<br>दादाभाई नौरोजी और सुरेंद्रनाथ बनर्जी",
+    "Bal Gangadhar Tilak and Muhammad Ali Jinnah<br>बाल गंगाधर तिलक और मुहम्मद अली जिन्ना",
+    "Gopal Krishna Gokhale and Annie Besant<br>गोपाल कृष्ण गोखले और एनी बेसेंट",
+    "Lala Lajpat Rai and Bipin Chandra Pal<br>लाला लाजपत राय और बिपिन चंद्र पाल"
+   ],
+   "my_ans": "B",
+   "sol": "1916 का लखनऊ समझौता कांग्रेस (तिलक) और मुस्लिम लीग (जिन्ना) के बीच हिंदू-मुस्लिम एकता के लिए हुआ था।",
+   "trick": "लखनऊ पैक्ट = तिलक + जिन्ना",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "What administrative change characterized the political structure of post-Gupta India?",
+   "hi": "गुप्तकाल के बाद (post-Gupta) भारत की राजनीतिक संरचना में कौन-सा प्रशासनिक परिवर्तन आया?",
+   "opts": [
+    "Formation of a central bureaucracy under one emperor<br>एक सम्राट के अधीन केंद्रीय नौकरशाही का गठन",
+    "Introduction of democratic village assemblies across India<br>संपूर्ण भारत में लोकतांत्रिक ग्राम सभाओं की शुरुआत",
+    "Replacement of kingship with religious councils<br>राजपद को धार्मिक परिषदों से बदलना",
+    "Rise of smaller kingdoms under hereditary rulers<br>वंशानुगत शासकों के अधीन छोटे राज्यों का उदय"
+   ],
+   "my_ans": "D",
+   "sol": "गुप्त साम्राज्य के पतन के बाद केंद्रीय सत्ता कमजोर हुई और कई छोटे क्षेत्रीय वंशानुगत राज्यों का उदय हुआ।",
+   "trick": "गुप्तोत्तर काल = राजनीतिक विखंडन और छोटे राज्य",
+   "ans": "D"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Who composed the ‘Prayag Prashasti’ (Allahabad Pillar Inscription), detailing the conquests of Samudragupta?",
+   "hi": "समुद्रगुप्त की विजयों का विस्तृत वर्णन करने वाले ‘प्रयाग प्रशस्ति’ (इलाहाबाद स्तंभ शिलालेख) की रचना किसने की थी?",
+   "opts": [
+    "Banabhatta<br>बाणभट्ट (Banabhatta)",
+    "Kalidasa<br>कालिदास (Kalidasa)",
+    "Harisena<br>हरिषेण (Harisena)",
+    "Vishakhadatta<br>विशाखदत्त (Vishakhadatta)"
+   ],
+   "my_ans": "C",
+   "sol": "हरिषेण समुद्रगुप्त के दरबारी कवि थे, जिन्होंने संस्कृत में प्रयाग प्रशस्ति की रचना कर उनकी विजयों का गुणगान किया।",
+   "trick": "प्रयाग प्रशस्ति = हरिषेण (समुद्रगुप्त)",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which of the following was a function of the Vaishya class in later Vedic society?",
+   "hi": "निम्नलिखित में से कौन-सा, उत्तर वैदिक समाज में वैश्य वर्ग का कार्य था?",
+   "opts": [
+    "Ruling class<br>शासक वर्ग (Ruling class)",
+    "Producing class<br>उत्पादक वर्ग (Producing class)",
+    "Ritual specialists<br>अनुष्ठान विशेषज्ञ (Ritual specialists)",
+    "Subordinated class<br>अधीनस्थ वर्ग (Subordinated class)"
+   ],
+   "my_ans": "B",
+   "sol": "उत्तर वैदिक काल में वैश्य वर्ग मुख्य रूप से कृषि, पशुपालन और व्यापार में संलग्न था, इसलिए उन्हें उत्पादक वर्ग कहा जाता था।",
+   "trick": "वैश्य = उत्पादक (व्यापार और खेती)",
+   "ans": "B"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "What contributed to the height of the Citadel in the Harappan civilisation?",
+   "hi": "हड़प्पा सभ्यता में गढ़ की ऊँचाई में किन कारकों का योगदान था?",
+   "opts": [
+    "Adobe walls<br>एडोब की दीवारों का",
+    "Mud brick platforms<br>कच्ची ईंटों के चबूतरे का",
+    "Stone construction<br>स्टोन के निर्माण का",
+    "Wooden pillars<br>लकड़ी के स्तंभों का"
+   ],
+   "my_ans": "B",
+   "sol": "हड़प्पा के शहरों में 'गढ़' (Citadel) को ऊँचाई देने के लिए उसे कच्ची ईंटों के बड़े चबूतरों पर बनाया जाता था।",
+   "trick": "हड़प्पा गढ़ = कच्ची ईंटों का चबूतरा",
+   "ans": "B"
+  }
+ ]
+}

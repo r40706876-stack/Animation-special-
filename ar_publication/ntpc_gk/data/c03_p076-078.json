@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "76-78",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which of the following best describes the Mahar Movement in Maharashtra?",
+   "hi": "निम्नलिखित में से कौन-सा, महाराष्ट्र में महार आंदोलन (Mahar Movement) का सटीक वर्णन करता है?",
+   "opts": [
+    "A peasant movement against zamindari exploitation<br>जमींदारी शोषण के खिलाफ एक किसान आंदोलन",
+    "A tribal uprising against British forest laws<br>ब्रिटिश वन कानूनों के खिलाफ एक आदिवासी विद्रोह",
+    "A socio-political movement for Dalit rights and social equality<br>दलित अधिकारों और सामाजिक समानता के लिए एक सामाजिक-राजनीतिक आंदोलन",
+    "A religious reform movement aimed at purifying Hindu rituals<br>हिंदू अनुष्ठानों को शुद्ध करने के उद्देश्य से चलाया गया एक धार्मिक सुधार आंदोलन"
+   ],
+   "my_ans": "C",
+   "sol": "यह आंदोलन डॉ. बी.आर. अंबेडकर के नेतृत्व में दलितों के समान अधिकारों, मंदिर प्रवेश और सामाजिक समानता के लिए चलाया गया था।",
+   "trick": "महार आंदोलन = दलित अधिकार और सामाजिक समानता।",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Which of the following officials in the Mauryan administration was primarily responsible for supervising state agriculture and cultivation on crown lands?",
+   "hi": "मौर्य प्रशासन में निम्नलिखित में से कौन-सा अधिकारी मुख्यतः राजकीय कृषि और राजभूमि पर कृषि के अधीक्षण के लिए उत्तरदायी था?",
+   "opts": [
+    "Panyadhyaksha<br>पण्याध्यक्ष",
+    "Sitadhyaksha<br>सीताध्यक्ष",
+    "Aksapataladhyaksha<br>अक्षपटलाध्यक्ष",
+    "Samaharta<br>समाहर्ता"
+   ],
+   "my_ans": "B",
+   "sol": "मौर्य साम्राज्य में 'सीता' राजकीय भूमि को कहा जाता था, और इसके कृषि कार्यों की देखरेख करने वाले अधिकारी को सीताध्यक्ष कहा जाता था।",
+   "trick": "सीता (भूमि) = सीताध्यक्ष।",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "Who deciphered a Brahmi inscription referring king Ashoka as Devanampiya Piyadasi?",
+   "hi": "किसने उस ब्राह्मी शिलालेख का गूढ़ अर्थ निकाला जिसमें राजा अशोक को देवनांप्रिय प्रियदसी (Devanampiya Piyadasi) के रूप में संदर्भित किया गया था?",
+   "opts": [
+    "R C Majumdar<br>आर. सी. मजूमदार",
+    "Susan Bayly<br>सुसान बेली",
+    "Romila Thapar<br>रोमिला थापर",
+    "James Princep<br>जेम्स प्रिंसेप"
+   ],
+   "my_ans": "D",
+   "sol": "1837 में ब्रिटिश विद्वान जेम्स प्रिंसेप ने ब्राह्मी लिपि को सफलतापूर्वक पढ़ा और अशोक के अभिलेखों की पहचान की।",
+   "trick": "ब्राह्मी लिपि का डिकोडर = जेम्स प्रिंसेप।",
+   "ans": "D"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "Who was exiled to Rangoon after the First War of Independence in India?",
+   "hi": "भारत में प्रथम स्वतंत्रता संग्राम के बाद किसे रंगून निर्वासित किया गया था?",
+   "opts": [
+    "Nana Sahib<br>नाना साहब",
+    "Rani Lakshmibai<br>रानी लक्ष्मीबाई",
+    "Ahmadullah Shah<br>अहमदुल्लाह शाह",
+    "Bahadur Shah Zafar<br>बहादुर शाह जफर"
+   ],
+   "my_ans": "D",
+   "sol": "1857 के विद्रोह के बाद अंतिम मुगल सम्राट बहादुर शाह जफर को अंग्रेजों ने बंदी बनाकर रंगून (बर्मा) भेज दिया था।",
+   "trick": "1857 का अंतिम मुगल = बहादुर शाह जफर (रंगून)।",
+   "ans": "D"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "Which of the following freedom fighters led the Mahad Satyagraha in 1927?",
+   "hi": "निम्नलिखित में से किस स्वतंत्रता सेनानी ने वर्ष 1927 में महाड़ सत्याग्रह का नेतृत्व किया था?",
+   "opts": [
+    "K Kelappan<br>के. केलप्पन",
+    "Jyotirao Phule<br>ज्योतिराव फुले",
+    "E V Ramaswamy Naicker<br>ई.वी. रामास्वामी नायकर",
+    "B R Ambedkar<br>बी.आर. अंबेडकर"
+   ],
+   "my_ans": "D",
+   "sol": "डॉ. बी.आर. अंबेडकर ने 1927 में महाराष्ट्र के महाड़ में चवदार तालाब से पानी पीने के अधिकार के लिए यह सत्याग्रह किया था।",
+   "trick": "महाड़ सत्याग्रह = डॉ. अंबेडकर (1927)।",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "Which of the following best explains the Indian National Congress’s stance on communal politics during the Moderate phase?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प उदारवादी चरण के दौरान सांप्रदायिक राजनीति पर भारतीय राष्ट्रीय कांग्रेस के रुख की सर्वोत्तम व्याख्या करता है?",
+   "opts": [
+    "Maintained a secular approach in its programmes and demands<br>अपने कार्यक्रमों और मांगों में एक पंथनिरपेक्ष दृष्टिकोण बनाए रखा",
+    "Limited organisational participation to a single religious group<br>संगठनात्मक भागीदारी को एक ही धार्मिक समुदाय तक सीमित रखा",
+    "Accepted political demands based on religious identities<br>धार्मिक पहचान के आधार पर राजनीतिक मांगों को स्वीकार किया",
+    "Aligned itself with leaders of specific religious communities<br>स्वयं को विशिष्ट धार्मिक समुदायों के नेताओं के साथ संरेखित किया"
+   ],
+   "my_ans": "A",
+   "sol": "उदारवादी चरण (1885-1905) के दौरान कांग्रेस ने सभी भारतीयों के लिए समान राजनीतिक सुधारों पर जोर दिया और धर्मनिरपेक्षता अपनाई।",
+   "trick": "उदारवादी कांग्रेस = धर्मनिरपेक्ष दृष्टिकोण।",
+   "ans": "A"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "Who was the first Portuguese Governor to implement the \"Blue Water Policy\" in India?",
+   "hi": "भारत में \"ब्लू वाटर पॉलिसी (Blue Water Policy)\" लागू करने वाले पहले पुर्तगाली गवर्नर कौन थे?",
+   "opts": [
+    "Vasco da Gama<br>वास्को डी गामा",
+    "Alfonso de Albuquerque<br>अल्फोंसो डी अल्बुकर्क",
+    "Francisco de Almeida<br>फ्रांसिस्को डी अल्मेडा",
+    "Pedro Álvares Cabral<br>पेड्रो अल्वारेस कैब्रल"
+   ],
+   "my_ans": "C",
+   "sol": "फ्रांसिस्को डी अल्मेडा ने हिंद महासागर में पुर्तगाली नौसैनिक वर्चस्व स्थापित करने के लिए ब्लू वाटर पॉलिसी लागू की थी।",
+   "trick": "ब्लू वाटर पॉलिसी = फ्रांसिस्को डी अल्मेडा।",
+   "ans": "C"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "The widespread use of which architectural features distinguishes Mughal architecture from earlier trabeate temple construction?",
+   "hi": "किन वास्तुकला विशेषताओं का व्यापक उपयोग मुगल वास्तुकला को प्रारंभिक धरणिक (trabeate) मंदिर निर्माण से पृथक करता है?",
+   "opts": [
+    "Wooden beams and flat ceilings<br>लकड़ी के बीम और सपाट छतें",
+    "Circular stupas and railings<br>वृत्ताकार स्तूप और रेलिंग",
+    "Arches and domes<br>मेहराब और गुंबद",
+    "Corbelled roofs and stepped pyramids<br>तोड़ादार छतें और सोपानी पिरामिड"
+   ],
+   "my_ans": "C",
+   "sol": "मुगल वास्तुकला में इस्लामी प्रभाव के कारण मेहराब (Arches) और गुंबदों (Domes) का प्रयोग प्रमुखता से किया गया, जो पहले की मंदिर शैली से अलग था।",
+   "trick": "मुगल वास्तुकला = मेहराब और गुंबद।",
+   "ans": "C"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "Who jointly led the first ever no-tax campaign against the British Government in Bengal during the 1838-1848 Farazi Movement?",
+   "hi": "1838-1848 के फ़राज़ी आंदोलन के दौरान बंगाल में ब्रिटिश सरकार के विरुद्ध पहले कर-बंदी आंदोलन (no-tax campaign) का संयुक्त नेतृत्व किसने किया था?",
+   "opts": [
+    "Sidhu Murmu and Kanhu Murmu<br>सिधू मुर्मू और कान्हू मुर्मू",
+    "Titu Mir and Syed Ahmad Barelvi<br>टीटू मीर और सैयद अहमद बरेलवी",
+    "Shariatullah Khan and Dadu Mian<br>शरियतुल्ला खान और दादू मियां",
+    "Kunwar Singh and Amar Singh<br>कुंवर सिंह और अमर सिंह"
+   ],
+   "my_ans": "C",
+   "sol": "फ़राज़ी आंदोलन की शुरुआत हाजी शरियतुल्ला ने की थी और बाद में उनके पुत्र दादू मियां ने इसे कर-बंदी आंदोलन के रूप में आगे बढ़ाया।",
+   "trick": "फ़राज़ी आंदोलन = शरियतुल्ला और दादू मियां।",
+   "ans": "C"
+  }
+ ]
+}

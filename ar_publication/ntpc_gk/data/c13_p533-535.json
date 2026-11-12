@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "533-535",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "Karagattam, a popular folk dance of Tamil Nadu performed mainly by women balancing decorated pots, is dedicated to which deity?",
+   "hi": "तमिलनाडु का लोकप्रिय लोक नृत्य करागट्टम, जिसमें मुख्य रूप से महिलाएं सजावटी बर्तनों को संतुलित करते हुए नृत्य करती हैं, किस देवता को समर्पित है?",
+   "opts": [
+    "Goddess Kamakshi<br>देवी कामाक्षी",
+    "Goddess Mariamman<br>देवी मरियम्मन",
+    "Goddess Meenakshi<br>देवी मीनाक्षी",
+    "Goddess Andal<br>देवी अंडाल"
+   ],
+   "my_ans": "B",
+   "sol": "करागट्टम तमिलनाडु का एक पारंपरिक लोक नृत्य है। इसे वर्षा और स्वास्थ्य की देवी, देवी मरियम्मन को प्रसन्न करने के लिए किया जाता है।",
+   "trick": "करागट्टम = मरियम्मन (वर्षा की देवी)",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "What is the term used for the first matra in Hindustani music’s tala system?",
+   "hi": "हिंदुस्तानी संगीत की ताल प्रणाली में प्रथम मात्रा के लिए प्रयुक्त शब्द क्या है?",
+   "opts": [
+    "Khali<br>खाली",
+    "Sam<br>सम",
+    "Tali<br>ताली",
+    "Laya<br>लय"
+   ],
+   "my_ans": "B",
+   "sol": "हिंदुस्तानी शास्त्रीय संगीत में 'सम' ताल चक्र की पहली और सबसे महत्वपूर्ण मात्रा होती है। यह लयबद्ध चक्र के आरंभ और अंत बिंदु को चिह्नित करती है।",
+   "trick": "सम = शुरुआत (पहली मात्रा)",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "Who among the following is NOT associated with Carnatic music?",
+   "hi": "निम्नलिखित में से कौन, कर्नाटक संगीत से संबंधित नहीं हैं?",
+   "opts": [
+    "Nithyasree Mahadevan<br>नित्याश्री महादेवन",
+    "Vijayalakshmy Subramaniam<br>विजयलक्ष्मी सुब्रमण्यम",
+    "DK Pattammal<br>डी. के. पट्टम्मल",
+    "Ravi Shankar<br>रवि शंकर"
+   ],
+   "my_ans": "D",
+   "sol": "पंडित रवि शंकर एक विश्व प्रसिद्ध सितार वादक थे जो उत्तर भारतीय हिंदुस्तानी शास्त्रीय संगीत से संबंधित थे, न कि कर्नाटक संगीत से।",
+   "trick": "रवि शंकर = हिंदुस्तानी संगीत (सितार)",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Western Scholar Pishel associated the terms Sutradhar and Sthapak in Sanskrit plays with:",
+   "hi": "पश्चिमी विद्वान पिशेल (Pishel) ने संस्कृत नाटकों में 'सूत्रधार' और 'स्थापक' शब्दों को किससे जोड़ा है?",
+   "opts": [
+    "Ancient musical instruments<br>प्राचीन संगीत वाद्ययंत्र",
+    "Classical dance performances<br>शास्त्रीय नृत्य प्रदर्शन",
+    "Puppet dance tradition<br>कठपुतली नृत्य परंपरा",
+    "Ritual ceremonies<br>धार्मिक अनुष्ठान"
+   ],
+   "my_ans": "C",
+   "sol": "विद्वान पिशेल ने संस्कृत नाटकों के 'सूत्रधार' और 'स्थापक' शब्दों का संबंध कठपुतली नचाने वाले (जो धागों को नियंत्रित करता है) से जोड़ा है।",
+   "trick": "सूत्रधार = धागों का धारक (कठपुतली)",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Who authored the book ‘Das Paise ka Postcard’, released in 2025?",
+   "hi": "2025 में विमोचित पुस्तक 'दस पैसे का पोस्टकार्ड' के लेखक कौन हैं?",
+   "opts": [
+    "Capt. S.N. Ahmed<br>कैप्टन एस.एन. अहमद",
+    "V.S. Ravi<br>वी.एस. रवि",
+    "Bidyut Chakrabarty<br>विद्युत चक्रवर्ती",
+    "Prakash Chand Kandpal<br>प्रकाश चंद कांडपाल"
+   ],
+   "my_ans": "A",
+   "sol": "'दस पैसे का पोस्टकार्ड' पुस्तक 2025 में प्रकाशित हुई है और इसके लेखक कैप्टन एस.एन. अहमद हैं।",
+   "trick": "दस पैसे = कैप्टन अहमद",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Which of the following dance forms originated in the temples of Odisha and often depicts the divine love of Radha and Krishna?",
+   "hi": "निम्नलिखित में से किस नृत्य रूप की उत्पत्ति ओडिशा के मंदिरों में हुई और यह प्रायः राधा और कृष्ण के दिव्य प्रेम को दर्शाता है?",
+   "opts": [
+    "Karam<br>कर्म",
+    "Ghumura dance<br>घुमुरा नृत्य",
+    "Dalkhai<br>डलखाई",
+    "Odissi<br>ओड़िसी"
+   ],
+   "my_ans": "D",
+   "sol": "ओड़िसी भारत के आठ शास्त्रीय नृत्यों में से एक है। इसकी उत्पत्ति ओडिशा के मंदिरों में हुई थी और यह राधा-कृष्ण के प्रेम को दर्शाता है।",
+   "trick": "ओड़िसी = ओडिशा का शास्त्रीय नृत्य",
+   "ans": "D"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Saang dance is a ritualistic popular traditional folk dance of _____________, reflecting its culture in the true sense.",
+   "hi": "सांग नृत्य, __________ का एक अनुष्ठानिक, लोकप्रिय और पारंपरिक लोक नृत्य है, जो सही अर्थों में वहाँ की संस्कृति को दर्शाता है।",
+   "opts": [
+    "Haryana<br>हरियाणा",
+    "Kerala<br>केरल",
+    "Punjab<br>पंजाब",
+    "Sikkim<br>सिक्किम"
+   ],
+   "my_ans": "A",
+   "sol": "सांग (स्वांग) हरियाणा का एक पारंपरिक लोक नाट्य और नृत्य रूप है, जो पौराणिक कथाओं और सामाजिक विषयों पर आधारित होता है।",
+   "trick": "सांग = हरियाणा का लोक नाट्य",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "Raja and Radha Reddy, who founded the Natya Tarangini Institute in New Delhi, are renowned exponents of which classical dance form?",
+   "hi": "राजा और राधा रेड्डी, जिन्होंने नई दिल्ली में नाट्य तरंगिनी संस्थान की स्थापना की, किस शास्त्रीय नृत्य रूप के प्रसिद्ध प्रतिपादक हैं?",
+   "opts": [
+    "Mohiniyattam<br>मोहिनीअट्टम",
+    "Sattriya<br>सत्रिया",
+    "Kathak<br>कथक",
+    "Kuchipudi<br>कुचीपुड़ी"
+   ],
+   "my_ans": "D",
+   "sol": "राजा और राधा रेड्डी प्रसिद्ध कुचीपुड़ी नर्तक हैं। उन्होंने 1963 में नई दिल्ली में 'नाट्य तरंगिनी' संस्थान की स्थापना की थी।",
+   "trick": "रेड्डी = कुचीपुड़ी",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "Uday Shankar, the pioneer of modern dance form, was conferred with which of the following National Awards in 1971?",
+   "hi": "आधुनिक नृत्य रूप के अग्रदूत उदय शंकर को 1971 में निम्नलिखित में से किस राष्ट्रीय पुरस्कार से सम्मानित किया गया था?",
+   "opts": [
+    "Padma Shri<br>पद्म श्री",
+    "Padma Vibhushan<br>पद्म विभूषण",
+    "Padma Bhushan<br>पद्म भूषण",
+    "Jnanpith Award<br>ज्ञानपीठ पुरस्कार"
+   ],
+   "my_ans": "B",
+   "sol": "उदय शंकर आधुनिक भारतीय नृत्य के जनक माने जाते हैं। उन्हें 1971 में भारत सरकार द्वारा पद्म विभूषण से सम्मानित किया गया था।",
+   "trick": "उदय शंकर = 1971 पद्म विभूषण",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "In which region of Gujarat are Duha, Sorathaa, Chaand, Belaads, etc. traditionally performed in folk music?",
+   "hi": "गुजरात के किस क्षेत्र में पारंपरिक रूप से लोक संगीत में दुहा (Duha), सोरठा (Soratha), चाँद (Chhand), बेलाड (Belaad) आदि प्रस्तुत किए जाते हैं?",
+   "opts": [
+    "Kutch<br>कच्छ",
+    "Saurashtra<br>सौराष्ट्र",
+    "Central Gujarat<br>मध्य गुजरात",
+    "North Gujarat<br>उत्तरी गुजरात"
+   ],
+   "my_ans": "B",
+   "sol": "सौराष्ट्र क्षेत्र अपनी समृद्ध लोक संगीत विरासत के लिए जाना जाता है, जहाँ दुहा, सोरठा और बेलाड जैसे लोक संगीत रूप प्रचलित हैं।",
+   "trick": "सौराष्ट्र = लोक संगीत का केंद्र",
+   "ans": "B"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Ravi Shankar is famous for his expertise in playing which classical music instrument?",
+   "hi": "रवि शंकर किस शास्त्रीय वाद्य यंत्र को बजाने में अपनी विशेषज्ञता के लिए प्रसिद्ध हैं?",
+   "opts": [
+    "Flute<br>बांसुरी",
+    "Tabla<br>तबला",
+    "Sarod<br>सरोद",
+    "Sitar<br>सितार"
+   ],
+   "my_ans": "D",
+   "sol": "पंडित रवि शंकर विश्व प्रसिद्ध सितार वादक थे, जिन्होंने भारतीय शास्त्रीय संगीत को वैश्विक स्तर पर लोकप्रिय बनाया।",
+   "trick": "रवि शंकर = सितार",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "According to the Natyashastra, which of the following is characterised by body movements to music without expressions (Abhinay)?",
+   "hi": "नाट्यशास्त्र के अनुसार, निम्नलिखित में से किसे बिना भाव (अभिनय) के संगीत पर शारीरिक गतिविधियों द्वारा पहचाना जाता है?",
+   "opts": [
+    "Nritya<br>नृत्य",
+    "Natya<br>नाट्य",
+    "Abhinaya<br>अभिनय",
+    "Nritta<br>नृत्त"
+   ],
+   "my_ans": "D",
+   "sol": "नाट्यशास्त्र के अनुसार, 'नृत्त' वह नृत्य है जिसमें केवल शारीरिक गति और लय होती है, इसमें कोई भाव या अभिनय नहीं होता।",
+   "trick": "नृत्त = बिना भाव (केवल गति)",
+   "ans": "D"
+  }
+ ]
+}

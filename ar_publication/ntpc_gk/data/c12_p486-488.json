@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "486-488",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "The basic unit of memory used by a computer to store binary data is called a:",
+   "hi": "कंप्यूटर में बाइनरी डेटा स्टोर करने के लिए उपयोग की जाने वाली मेमोरी की मूल इकाई क्या कहलाती है?",
+   "opts": [
+    "Byte",
+    "Bit",
+    "Word",
+    "Nibble"
+   ],
+   "my_ans": "B",
+   "sol": "बिट (Bit) मेमोरी की सबसे छोटी इकाई है, जो 0 या 1 का मान संग्रहित करती है।",
+   "trick": "Bit = Binary Digit",
+   "ans": "B"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "Which standard is commonly used for wired LANs?",
+   "hi": "वायर्ड LAN के लिए आमतौर पर कौन-सा स्टैंडर्ड उपयोग किया जाता है?",
+   "opts": [
+    "IEEE 802.3",
+    "IEEE 802.11",
+    "IEEE 802.16",
+    "IEEE 802.15"
+   ],
+   "my_ans": "A",
+   "sol": "IEEE 802.3 ईथरनेट के लिए मानक है, जिसका उपयोग वायर्ड LAN में किया जाता है।",
+   "trick": "802.3 = Wired LAN",
+   "ans": "A"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "Which computer application enables real-time inventory tracking using automated identification?",
+   "hi": "कौन-सा कंप्यूटर एप्लीकेशन ऑटोमेटेड आइडेंटिफिकेशन का उपयोग करके रियल-टाइम में इन्वेंट्री ट्रैकिंग को सक्षम बनाता है?",
+   "opts": [
+    "OCR-based text editing",
+    "Presentation software",
+    "RFID-driven supply chain systems",
+    "Email-based notification"
+   ],
+   "my_ans": "C",
+   "sol": "RFID (रेडियो फ्रीक्वेंसी आइडेंटिफिकेशन) का उपयोग वस्तुओं को स्वचालित रूप से ट्रैक करने के लिए किया जाता है।",
+   "trick": "RFID = Tracking",
+   "ans": "C"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "What is the function of the keyboard shortcut Alt + F10?",
+   "hi": "Alt + F10 कीबोर्ड शॉर्टकट का क्या कार्य है?",
+   "opts": [
+    "Selects the active tab on the Ribbon and shows access keys",
+    "Closes the document",
+    "Maximizes the current window",
+    "Opens the Help menu"
+   ],
+   "my_ans": "A",
+   "sol": "Alt + F10 रिबन पर सक्रिय टैब को चुनता है और एक्सेस कुंजियाँ (KeyTips) दिखाता है।",
+   "trick": "Alt+F10 = Ribbon Access",
+   "ans": "A"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "Which rewritable optical disc format allows users to erase and update data multiple times?",
+   "hi": "कौन-सा रीराइटेबल ऑप्टिकल डिस्क फॉर्मेट उपयोगकर्ताओं को डेटा को एकाधिक बार मिटाने और अपडेट करने की सुविधा देता है?",
+   "opts": [
+    "Central Directory-ReWritable",
+    "Computer Disc-ReadWrite",
+    "Compact Disc-ReWritable",
+    "Controlled Disc-ReWriter"
+   ],
+   "my_ans": "C",
+   "sol": "CD-RW (कॉम्पैक्ट डिस्क-रीराइटेबल) एक ऐसी डिस्क है जिसे कई बार मिटाकर फिर से लिखा जा सकता है।",
+   "trick": "RW = ReWritable",
+   "ans": "C"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "In which field are computers used for tasks like weather forecasting, simulation, and research?",
+   "hi": "मौसम पूर्वानुमान, अनुकरण और अनुसंधान जैसे कार्यों के लिए कंप्यूटर का उपयोग किस क्षेत्र में किया जाता है?",
+   "opts": [
+    "Entertainment",
+    "Agriculture",
+    "Sports Training",
+    "Space and Meteorology"
+   ],
+   "my_ans": "D",
+   "sol": "मौसम विज्ञान और अंतरिक्ष अनुसंधान में जटिल डेटा विश्लेषण के लिए सुपरकंप्यूटर का उपयोग होता है।",
+   "trick": "Weather = Meteorology",
+   "ans": "D"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "Which of the following devices can act as both an input as well as an output device?",
+   "hi": "निम्नलिखित में से कौन-सा डिवाइस, इनपुट और आउटपुट दोनों प्रकार से कार्य कर सकता है?",
+   "opts": [
+    "Digital Camera",
+    "Plotter",
+    "Touchscreen",
+    "Barcode Reader"
+   ],
+   "my_ans": "C",
+   "sol": "टचस्क्रीन इनपुट (स्पर्श पहचान) और आउटपुट (दृश्य प्रदर्शन) दोनों का कार्य करती है।",
+   "trick": "Touchscreen = Input + Output",
+   "ans": "C"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "The term ROM is an abbreviation for:",
+   "hi": "पद ROM निम्न में से किसका संक्षिप्त रूप है?",
+   "opts": [
+    "Rapid Optical Media",
+    "Random Output Module",
+    "Read Only Memory",
+    "Reusable Operating Machine"
+   ],
+   "my_ans": "C",
+   "sol": "ROM का पूर्ण रूप Read Only Memory है, यह एक नॉन-वोलेटाइल मेमोरी है।",
+   "trick": "ROM = Read Only",
+   "ans": "C"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "Which computing pioneer is credited with the concept of the 'stored program architecture'?",
+   "hi": "किस कम्प्यूटिंग पायनियर को 'स्टोर्ड प्रोग्राम आर्किटेक्चर' के कॉन्सेप्ट का श्रेय दिया जाता है?",
+   "opts": [
+    "Alan Turing",
+    "Charles Babbage",
+    "John von Neumann",
+    "Blaise Pascal"
+   ],
+   "my_ans": "C",
+   "sol": "जॉन वॉन न्यूमैन ने 1945 में स्टोर्ड प्रोग्राम आर्किटेक्चर का प्रस्ताव दिया था।",
+   "trick": "Von Neumann = Stored Program",
+   "ans": "C"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "As computer generations progressed, which of the following has been a trend that is generally true?",
+   "hi": "कंप्यूटर की पीढ़ियों के विकास के साथ, निम्नलिखित में से कौन-सा रुझान आम तौर पर सही साबित हुआ है?",
+   "opts": [
+    "Computers stopped using electricity",
+    "Computers became smaller and faster",
+    "Computers became larger and slower",
+    "Computers lost memory capacity"
+   ],
+   "my_ans": "B",
+   "sol": "कंप्यूटर की पीढ़ियों के साथ उनका आकार छोटा और गति तेज होती गई है।",
+   "trick": "Size down, Speed up",
+   "ans": "B"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "Which of the following is the correct full form of CD?",
+   "hi": "निम्नलिखित में से CD का सही पूर्ण रूप क्या है?",
+   "opts": [
+    "Computer Disc",
+    "Central Data",
+    "Compact Disc",
+    "Core Device"
+   ],
+   "my_ans": "C",
+   "sol": "CD का पूर्ण रूप Compact Disc है।",
+   "trick": "CD = Compact Disc",
+   "ans": "C"
+  }
+ ]
+}

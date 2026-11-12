@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "545-547",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "Where does the Indian Prime Minister hoist the national flag on the occasion of Independence Day?",
+   "hi": "स्वतंत्रता दिवस के अवसर पर भारतीय प्रधानमंत्री राष्ट्रीय ध्वज कहाँ फहराते हैं?",
+   "opts": [
+    "Jantar Mantar<br>जंतर-मंतर",
+    "Red Fort<br>लाल किला",
+    "India Gate<br>इंडिया गेट",
+    "Qutb Minar<br>कुतुब मीनार"
+   ],
+   "my_ans": "B",
+   "sol": "स्वतंत्रता दिवस (15 अगस्त) पर प्रधानमंत्री दिल्ली के लाल किले पर राष्ट्रीय ध्वज फहराते हैं।",
+   "trick": "15 अगस्त = लाल किला, 26 जनवरी = कर्तव्य पथ (राजपथ)",
+   "ans": "B"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "The 26th of January is celebrated every year in India as which of the following?",
+   "hi": "भारत में प्रतिवर्ष 26 जनवरी को निम्नलिखित में से कौन-सा दिवस मनाया जाता है?",
+   "opts": [
+    "National Girl Child Day<br>राष्ट्रीय बालिका दिवस",
+    "Republic Day<br>गणतंत्र दिवस",
+    "Constitution Day<br>संविधान दिवस",
+    "National Consumer Day<br>राष्ट्रीय उपभोक्ता दिवस"
+   ],
+   "my_ans": "B",
+   "sol": "26 जनवरी 1950 को भारत का संविधान लागू हुआ था, इसलिए इस दिन को गणतंत्र दिवस के रूप में मनाया जाता है।",
+   "trick": "26 जनवरी 1950 = संविधान लागू = गणतंत्र दिवस",
+   "ans": "B"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "The Hornbill Festival, celebrated to showcase tribal culture, music, dance, and sports, is associated with which Indian state?",
+   "hi": "हॉर्नबिल महोत्सव, जो आदिवासी संस्कृति, संगीत, नृत्य और खेलों को प्रदर्शित करने के लिए मनाया जाता है, किस भारतीय राज्य से संबंधित है?",
+   "opts": [
+    "Meghalaya<br>मेघालय",
+    "Assam<br>असम",
+    "Manipur<br>मणिपुर",
+    "Nagaland<br>नागालैंड"
+   ],
+   "my_ans": "D",
+   "sol": "हॉर्नबिल महोत्सव नागालैंड में मनाया जाता है। इसे 'त्योहारों का त्योहार' भी कहा जाता है।",
+   "trick": "हॉर्नबिल = नागालैंड (नागा जनजातियों का प्रमुख उत्सव)",
+   "ans": "D"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "In which state of India did Pattachitra paintings originate?",
+   "hi": "पट्टचित्र चित्रकला की उत्पत्ति भारत के किस राज्य में हुई थी?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Bihar<br>बिहार",
+    "Odisha<br>ओडिशा",
+    "Punjab<br>पंजाब"
+   ],
+   "my_ans": "C",
+   "sol": "पट्टचित्र एक पारंपरिक कपड़ा आधारित स्क्रॉल पेंटिंग है, जिसकी उत्पत्ति ओडिशा (और पश्चिम बंगाल) में हुई थी।",
+   "trick": "पट्टचित्र = ओडिशा (जगन्नाथ मंदिर से संबंधित)",
+   "ans": "C"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "The architectural style of the Jagannath Temple is primarily associated with which of the following traditions?",
+   "hi": "जगन्नाथ मंदिर की वास्तुकला शैली मुख्य रूप से निम्नलिखित में से किस परंपरा से संबंधित है?",
+   "opts": [
+    "Kalinga style<br>कलिंग शैली",
+    "Dravidian style<br>द्रविड़ शैली",
+    "Hoysala Style<br>होयसल शैली",
+    "Vesara style<br>वेसर शैली"
+   ],
+   "my_ans": "A",
+   "sol": "पुरी का जगन्नाथ मंदिर ओडिशा की कलिंग वास्तुकला शैली का एक उत्कृष्ट उदाहरण है।",
+   "trick": "ओडिशा के मंदिर = कलिंग शैली",
+   "ans": "A"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "Where is the headquarters of the South Western Railway Zone located?",
+   "hi": "दक्षिण-पश्चिम रेलवे जोन का मुख्यालय कहाँ स्थित है?",
+   "opts": [
+    "Mumbai<br>मुंबई",
+    "Jabalpur<br>जबलपुर",
+    "Jaipur<br>जयपुर",
+    "Hubballi<br>हुबली"
+   ],
+   "my_ans": "D",
+   "sol": "दक्षिण-पश्चिम रेलवे (SWR) का मुख्यालय हुबली (कर्नाटक) में स्थित है।",
+   "trick": "SWR = हुबली",
+   "ans": "D"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "What is the primary function of the Sahitya Akademi?",
+   "hi": "साहित्य अकादमी का प्राथमिक कार्य क्या है?",
+   "opts": [
+    "To promote literature in Indian languages<br>भारतीय भाषाओं में साहित्य को बढ़ावा देना",
+    "To promote classical languages<br>शास्त्रीय भाषाओं को बढ़ावा देना",
+    "To conduct language proficiency tests<br>भाषा प्रवीणता परीक्षाएं आयोजित करना",
+    "To provide translation services<br>अनुवाद सेवाएं प्रदान करना"
+   ],
+   "my_ans": "A",
+   "sol": "साहित्य अकादमी (स्थापना 1954) का मुख्य कार्य 22 अनुसूचित भारतीय भाषाओं में साहित्य को बढ़ावा देना है।",
+   "trick": "साहित्य अकादमी = भारतीय भाषाओं में साहित्य का संवर्धन",
+   "ans": "A"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "In which year was the Taj Mahal of India inscribed as a UNESCO World Heritage Site?",
+   "hi": "भारत के ताजमहल को किस वर्ष में यूनेस्को विश्व धरोहर स्थल के रूप में घोषित किया गया था?",
+   "opts": [
+    "1983",
+    "1981",
+    "1980",
+    "1984"
+   ],
+   "my_ans": "A",
+   "sol": "ताजमहल को 1983 में यूनेस्को विश्व धरोहर स्थल के रूप में शामिल किया गया था।",
+   "trick": "ताजमहल = 1983 (यूनेस्को)",
+   "ans": "A"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "The Gateway of India was built to commemorate the visit of:",
+   "hi": "गेटवे ऑफ इंडिया का निर्माण किसके आगमन की स्मृति में किया गया था?",
+   "opts": [
+    "Queen Victoria<br>क्वीन विक्टोरिया",
+    "Prince Charles<br>प्रिंस चार्ल्स",
+    "Queen Elizabeth II<br>महारानी एलिजाबेथ द्वितीय",
+    "George V and Queen Mary<br>जॉर्ज पंचम और क्वीन मैरी"
+   ],
+   "my_ans": "D",
+   "sol": "गेटवे ऑफ इंडिया का निर्माण दिसंबर 1911 में किंग जॉर्ज पंचम और रानी मैरी की भारत यात्रा की याद में किया गया था।",
+   "trick": "गेटवे ऑफ इंडिया = जॉर्ज पंचम + रानी मैरी (1911)",
+   "ans": "D"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "Which of the following temple complexes is known for its 24-metre-high vimana and stone image of Shiva?",
+   "hi": "निम्नलिखित में से कौन-सा मंदिर परिसर अपने 24 मीटर ऊंचे विमान (vimana) और शिव की पत्थर की प्रतिमा के लिए प्रसिद्ध है?",
+   "opts": [
+    "Airavatesvara Temple<br>ऐरावतेश्वर मंदिर",
+    "Gangaikondacholisvaram<br>गंगैकोंडाचोलिश्वरम",
+    "Kandariya Mahadeva Temple<br>कंदारिया महादेव मंदिर",
+    "Mahabodhi Temple<br>महाबोधि मंदिर"
+   ],
+   "my_ans": "A",
+   "sol": "ऐरावतेश्वर मंदिर (दारासुरम) अपने 24 मीटर ऊंचे विमान और शिव की प्रतिमा के लिए जाना जाता है, जो चोल वास्तुकला का हिस्सा है।",
+   "trick": "ऐरावतेश्वर = 24 मीटर विमान + शिव प्रतिमा",
+   "ans": "A"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "Which of the following was the first international agreement to establish legally binding emission reduction targets specifically for developed countries?",
+   "hi": "निम्नलिखित में से कौन-सा पहला अंतरराष्ट्रीय समझौता था, जिसने विशेष रूप से विकसित देशों के लिए विधिक रूप से बाध्यकारी उत्सर्जन कटौती लक्ष्य स्थापित किए थे?",
+   "opts": [
+    "Basel Convention<br>बेसल कन्वेंशन",
+    "Kyoto Protocol<br>क्योटो प्रोटोकॉल",
+    "Rio Declaration<br>रियो घोषणा",
+    "Paris Agreement<br>पेरिस समझौता"
+   ],
+   "my_ans": "B",
+   "sol": "क्योटो प्रोटोकॉल (1997) पहला अंतरराष्ट्रीय समझौता था जिसने विकसित देशों के लिए कानूनी रूप से बाध्यकारी उत्सर्जन लक्ष्य तय किए थे।",
+   "trick": "क्योटो प्रोटोकॉल = विकसित देशों के लिए बाध्यकारी उत्सर्जन लक्ष्य",
+   "ans": "B"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "The Goa Carnival is primarily associated with which of the following cultural or religious traditions?",
+   "hi": "गोवा कार्निवल मुख्य रूप से निम्नलिखित में से किस सांस्कृतिक या धार्मिक परंपरा से संबंधित है?",
+   "opts": [
+    "Christian tradition<br>ईसाई परंपरा",
+    "Persian traditions<br>फारसी परंपरा",
+    "Buddhist tradition<br>बौद्ध परंपरा",
+    "Jewish traditions<br>यहूदी परंपरा"
+   ],
+   "my_ans": "A",
+   "sol": "गोवा कार्निवल मुख्य रूप से ईसाई परंपरा (कैथोलिक) से जुड़ा है, जो लेंट (Lent) के उपवास काल से पहले मनाया जाता है।",
+   "trick": "गोवा कार्निवल = ईसाई परंपरा",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "459-461",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Which shortcut opens the system menu of an active window?",
+   "hi": "निम्नलिखित में से कौन-सा शॉर्टकट सक्रिय विंडो का सिस्टम मेनू (system menu) ओपन करता है?",
+   "opts": [
+    "Alt+Space",
+    "Alt+F4",
+    "Alt+Enter",
+    "Alt+Tab"
+   ],
+   "my_ans": "A",
+   "sol": "Alt+Space सक्रिय विंडो के सिस्टम मेनू (Restore, Move, Size, Minimize, Maximize, Close) को खोलता है।",
+   "trick": "Alt+Space = System Menu",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "A student finishes typing a paragraph and wants to make a copy of a sentence to use later in the document. She first selects the sentence. Which shortcut should she press next?",
+   "hi": "एक छात्रा ने एक पैराग्राफ टाइप कर लिया है और वह डॉक्यूमेंट में बाद में उपयोग करने के लिए एक वाक्य की कॉपी बनाना चाहती है। वह सबसे पहले वाक्य को सेलेक्ट करती है। उसे अगला कौन-सा शॉर्टकट दबाना चाहिए?",
+   "opts": [
+    "Ctrl + S",
+    "Ctrl + V",
+    "Ctrl + F",
+    "Ctrl + C"
+   ],
+   "my_ans": "D",
+   "sol": "किसी चयनित टेक्स्ट को कॉपी करने के लिए Ctrl + C का उपयोग किया जाता है।",
+   "trick": "C for Copy",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "In Windows 11, a file with the .msi file extension is primarily designed for which specific function?",
+   "hi": "विंडोज़ 11 में, .msi फाइल एक्सटेंशन वाली फाइल मुख्यतः किस विशेष फंक्शन के लिए डिज़ाइन की गई है?",
+   "opts": [
+    "Encoding multimedia audio and video streams<br>मल्टीमीडिया ऑडियो और वीडियो स्ट्रीम को एन्कोड करना",
+    "Executing the installation of software applications<br>सॉफ्टवेयर एप्लिकेशन का इंस्टॉलेशन करना",
+    "Storing formatted Text, Image and Document content<br>फॉर्मेटेड टेक्स्ट, इमेज और डॉक्यूमेंट कंटेंट को स्टोर करना",
+    "Editing raster and vector images<br>रास्टर और वेक्टर इमेज को एडिट करना"
+   ],
+   "my_ans": "B",
+   "sol": ".msi का अर्थ Microsoft Installer है, जिसका उपयोग सॉफ्टवेयर एप्लिकेशन को इंस्टॉल, मेंटेन और रिमूव करने के लिए किया जाता है।",
+   "trick": "MSI = Microsoft Installer",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Which type of touchscreen functions by pressing two flexible layers together, allowing it to detect input from a non-conductive object like a fingernail or plastic stylus?",
+   "hi": "दो लचीली परतों (flexible layers) को एक साथ प्रेस करके किस प्रकार की टचस्क्रीन काम करती है, जिससे यह नाखून या प्लास्टिक स्टाइलस जैसी अचालकीय वस्तु से इनपुट को डिटेक्ट कर सकती है?",
+   "opts": [
+    "Capacitive touch<br>कैपेसिटिव टच",
+    "Surface acoustic wave<br>सरफेस अकूस्टिक वेव",
+    "Resistive touch<br>रेसिस्टिव टच",
+    "Infrared grid touch<br>इन्फ्रारेड ग्रिड टच"
+   ],
+   "my_ans": "C",
+   "sol": "रेसिस्टिव टचस्क्रीन में दो लचीली परतें होती हैं जो दबाव पड़ने पर आपस में जुड़कर इनपुट दर्ज करती हैं।",
+   "trick": "Resistive = Pressure based",
+   "ans": "C"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "______________ is the sophisticated technology used by high-speed scanners (like those in commercial settings or advanced libraries) to capture a very accurate and detailed digital image from a physical document, often used for archival purposes.",
+   "hi": "______________ वह परिष्कृत तकनीक है जिसका उपयोग हाई-स्पीड स्कैनर (जैसे व्यावसायिक परिवेशों या उन्नत पुस्तकालयों में) द्वारा भौतिक दस्तावेज़ से बहुत सटीक और विस्तृत डिजिटल इमेज कैप्चर करने के लिए किया जाता है, जिसका उपयोग प्रायः पुरालेखी (archival) प्रयोजनों के लिए किया जाता है।",
+   "opts": [
+    "Thermal Printing<br>थर्मल प्रिंटिंग",
+    "Magnetic Ink Character Recognition (MICR)<br>मैग्नेटिक इंक कैरेक्टर रिकग्निशन (MICR)",
+    "Optical Character Recognition (OCR)<br>ऑप्टिकल कैरेक्टर रिकग्निशन (OCR)",
+    "Electrostatic Plotting<br>इलेक्ट्रोस्टैटिक प्लॉटिंग"
+   ],
+   "my_ans": "C",
+   "sol": "OCR तकनीक स्कैन की गई टेक्स्ट छवियों को संपादन योग्य डिजिटल प्रारूप में बदल देती है।",
+   "trick": "OCR = Image to Text",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "How do you search for files with partial names in Windows 11?",
+   "hi": "विंडोज 11 में आंशिक नामों वाली फाइलों को खोजने के लिए आप किसका उपयोग करते हैं?",
+   "opts": [
+    "dollar $",
+    "at the rate @",
+    "ampersand &",
+    "asterisk *"
+   ],
+   "my_ans": "D",
+   "sol": "Windows 11 में आंशिक नामों वाली फाइलों को खोजने के लिए वाइल्डकार्ड वर्ण के रूप में एस्टरिस्क (*) का उपयोग किया जाता है।",
+   "trick": "* = Wildcard search",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which computer application is mainly used for booking railway tickets and flight reservations?",
+   "hi": "रेलवे टिकट और उड़ानों (फ्लाइट) की बुकिंग (reservation) के लिए मुख्य रूप से किस कंप्यूटर एप्लिकेशन का उपयोग किया जाता है?",
+   "opts": [
+    "Reservation System<br>रिज़र्वेशन सिस्टम",
+    "Communication<br>कम्युनिकेशन",
+    "Banking<br>बैंकिंग",
+    "Education<br>एजुकेशन"
+   ],
+   "my_ans": "A",
+   "sol": "रेलवे और एयरलाइन टिकट बुकिंग के लिए विशेष रूप से रिज़र्वेशन सिस्टम (जैसे IRCTC) का उपयोग किया जाता है।",
+   "trick": "Booking = Reservation System",
+   "ans": "A"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Which shortcut saves the current file?",
+   "hi": "निम्नलिखित में से कौन-सा शॉर्टकट मौजूदा फाइल को सेव करता है?",
+   "opts": [
+    "Ctrl+L",
+    "Ctrl+S",
+    "Ctrl+P",
+    "Ctrl+R"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl+S वर्तमान फाइल को सेव करने का सार्वभौमिक शॉर्टकट है।",
+   "trick": "S = Save",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which of the following is correct about Hibernation mode in computers?",
+   "hi": "कंप्यूटर में हाइबरनेशन मोड के बारे में निम्न में से कौन-सा कथन सही है?",
+   "opts": [
+    "Uses extreme power<br>इस मोड में बिजली का अति उपयोग होता है",
+    "Uses minimum power<br>इस मोड में बिजली का न्यूनतम उपयोग होता है",
+    "Uses maximum power<br>इस मोड में बिजली का अधिकतम उपयोग होता है",
+    "Uses supreme power<br>इस मोड में बिजली का सबसे अधिक उपयोग होता है"
+   ],
+   "my_ans": "B",
+   "sol": "हाइबरनेशन में सिस्टम RAM की स्थिति को हार्ड डिस्क में सेव करके पूरी तरह बंद हो जाता है, जिससे बिजली की खपत लगभग शून्य होती है।",
+   "trick": "Hibernation = Power Off",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "In MS-Excel, if cells A1, A2 and A3 contain the values 2, 3 and 2 respectively, what is the result of the formula =A1*A2 + A2/A3?",
+   "hi": "MS-एक्सेल में, यदि सेल A1, A2 और A3 में क्रमशः 2, 3 और 2 मान हैं, तो सूत्र =A1*A2 + A2/A3 का परिणाम क्या होगा?",
+   "opts": [
+    "6",
+    "8",
+    "9",
+    "7.5"
+   ],
+   "my_ans": "D",
+   "sol": "सूत्र: (2*3) + (3/2) = 6 + 1.5 = 7.5",
+   "trick": "BODMAS नियम का पालन करें",
+   "ans": "D"
+  }
+ ]
+}

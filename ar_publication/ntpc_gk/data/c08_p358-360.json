@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "358-360",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "The Constitution (88th) Amendment Act, 2003, is related to which tax?",
+   "hi": "संविधान (88वां) संशोधन अधिनियम, 2003, किस कर से संबंधित है?",
+   "opts": [
+    "Service Tax<br>सेवा कर",
+    "Wealth Tax<br>संपत्ति कर",
+    "Property Tax<br>भूमि भवन कर",
+    "Goods and Services Tax<br>वस्तु एवं सेवा कर"
+   ],
+   "my_ans": "A",
+   "sol": "इस संशोधन द्वारा संविधान में अनुच्छेद 268A जोड़ा गया, जिसने केंद्र सरकार को सेवाओं पर सेवा कर लगाने का अधिकार दिया।",
+   "trick": "88वां संशोधन = सेवा कर (Service Tax)",
+   "ans": "A"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "Which of the following strategies is crucial for fostering infrastructure development in developing countries?",
+   "hi": "विकासशील देशों में अवसंरचना विकास को बढ़ावा देने के लिए निम्नलिखित में से कौन-सी रणनीति महत्वपूर्ण है?",
+   "opts": [
+    "Promotion of public-private partnerships<br>सार्वजनिक-निजी भागीदारी को प्रोत्साहन",
+    "Focusing only on urban areas<br>केवल शहरी क्षेत्रों पर फोकस",
+    "Sole reliance on government funding<br>सरकारी वित्तपोषण पर पूर्ण निर्भरता",
+    "Restricting foreign investment<br>विदेशी निवेश पर प्रतिबंध"
+   ],
+   "my_ans": "A",
+   "sol": "सार्वजनिक-निजी भागीदारी (PPP) सरकारी संसाधनों के साथ निजी क्षेत्र की दक्षता और पूंजी को जोड़ती है, जिससे बुनियादी ढांचे का विकास तेजी से होता है।",
+   "trick": "PPP = सार्वजनिक + निजी भागीदारी",
+   "ans": "A"
+  },
+  {
+   "n": 99,
+   "lvl": "UG",
+   "en": "In which year was the National seeds policy launched?",
+   "hi": "राष्ट्रीय बीज नीति किस वर्ष शुरू की गई थी?",
+   "opts": [
+    "2005",
+    "2002",
+    "2000",
+    "2007"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रीय बीज नीति भारत सरकार द्वारा 2002 में शुरू की गई थी, जिसका उद्देश्य बीज उत्पादन में आत्मनिर्भरता और गुणवत्तापूर्ण बीजों की उपलब्धता सुनिश्चित करना था।",
+   "trick": "राष्ट्रीय बीज नीति = 2002",
+   "ans": "B"
+  },
+  {
+   "n": 100,
+   "lvl": "UG",
+   "en": "Which institution is primarily responsible for providing and regulating credit for the promotion of agriculture and rural development in India?",
+   "hi": "भारत में कृषि और ग्रामीण विकास के संवर्धन के लिए ऋण उपलब्ध कराने और उसे विनियमन करने के लिए प्राथमिक रूप से कौन-सी संस्था उत्तरदायी है?",
+   "opts": [
+    "Ministry of Finance<br>वित्त मंत्रालय",
+    "National Bank for Agriculture and Rural Development (NABARD)<br>राष्ट्रीय कृषि और ग्रामीण विकास बैंक (NABARD)",
+    "Reserve Bank of India (RBI)<br>भारतीय रिज़र्व बैंक (RBI)",
+    "State Bank of India (SBI)<br>भारतीय स्टेट बैंक (SBI)"
+   ],
+   "my_ans": "B",
+   "sol": "नाबार्ड (NABARD) की स्थापना 1982 में कृषि और ग्रामीण विकास के लिए ऋण प्रदान करने और बैंकों के विनियमन के लिए की गई थी।",
+   "trick": "कृषि ऋण = नाबार्ड (NABARD)",
+   "ans": "B"
+  },
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "What do we call the lasting of sound caused by repeated reflections?",
+   "hi": "बार-बार परावर्तन के कारण ध्वनि के बने रहने को क्या कहते हैं?",
+   "opts": [
+    "Resonance<br>अनुनाद",
+    "Quality<br>गुणता",
+    "Reverberation<br>अनुरणन",
+    "Echo<br>प्रतिध्वनि"
+   ],
+   "my_ans": "C",
+   "sol": "दीवारों या छत से बार-बार परावर्तन के कारण ध्वनि स्रोत बंद होने के बाद भी ध्वनि का बने रहना अनुरणन (Reverberation) कहलाता है।",
+   "trick": "बार-बार परावर्तन = अनुरणन",
+   "ans": "C"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "When was the Rangarajan Committee constituted to review the Methodology for Measurement of Poverty in India?",
+   "hi": "भारत में गरीबी-मापन की कार्यप्रणाली की समीक्षा के लिए रंगराजन समिति का गठन कब किया गया था?",
+   "opts": [
+    "2012",
+    "2010",
+    "2014",
+    "2008"
+   ],
+   "my_ans": "A",
+   "sol": "गरीबी मापन की समीक्षा के लिए डॉ. सी. रंगराजन की अध्यक्षता में योजना आयोग द्वारा जून 2012 में समिति का गठन किया गया था।",
+   "trick": "रंगराजन समिति = 2012",
+   "ans": "A"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "In India, which of the following institutions conducts Open Market Operations (OMOs) to manage money supply effectively?",
+   "hi": "भारत में निम्नलिखित में से कौन-सी संस्था, मुद्रा आपूर्ति को प्रभावी रूप से प्रबंधित करने के लिए ओपन मार्केट ऑपरेशंस (OMO) का संचालन करती है?",
+   "opts": [
+    "Every state-owned govt. bank<br>प्रत्येक राज्य-स्वामित्व वाले सरकारी बैंक",
+    "National Bank For Agriculture And Rural Development (NABARD)<br>राष्ट्रीय कृषि एवं ग्रामीण विकास बैंक (NABARD)",
+    "Securities and Exchange Board of India (SEBI)<br>भारतीय प्रतिभूति एवं विनिमय बोर्ड (SEBI)",
+    "Reserve Bank of India (RBI)<br>भारतीय रिज़र्व बैंक (RBI)"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय रिज़र्व बैंक (RBI) केंद्रीय बैंक के रूप में खुले बाजार में सरकारी प्रतिभूतियों की खरीद-बिक्री (OMO) के माध्यम से मुद्रा आपूर्ति को नियंत्रित करता है।",
+   "trick": "OMO = RBI का मौद्रिक उपकरण",
+   "ans": "D"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "In which year was the PM Gati Shakti National Master Plan (NMP) launched in India to ensure integrated planning and coordinated execution of infrastructure projects?",
+   "hi": "भारत में, अवसंरचना परियोजनाओं के समेकित नियोजन और समन्वित निष्पादन को सुनिश्चित करने के लिए PM गति शक्ति नेशनल मास्टर प्लान (NMP) किस वर्ष शुरू किया गया था?",
+   "opts": [
+    "2023",
+    "2021",
+    "2024",
+    "2022"
+   ],
+   "my_ans": "B",
+   "sol": "PM गति शक्ति नेशनल मास्टर प्लान 13 अक्टूबर 2021 को प्रधानमंत्री नरेंद्र मोदी द्वारा लॉन्च किया गया था।",
+   "trick": "गति शक्ति = 2021",
+   "ans": "B"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "During which of the following revolutions in India did planned investment in horticulture become highly productive, leading to the emergence of the sector as a sustainable livelihood option?",
+   "hi": "भारत में निम्नलिखित में से किस क्रांति के दौरान बागवानी में नियोजित निवेश अत्यधिक उत्पादक सिद्ध हुआ, जिससे यह क्षेत्र एक संधारणीय आजीविका विकल्प के रूप में उभरा?",
+   "opts": [
+    "Golden revolution<br>स्वर्णिम क्रांति",
+    "Blue revolution<br>नीली क्रांति",
+    "White revolution<br>श्वेत क्रांति",
+    "Green revolution<br>हरित क्रांति"
+   ],
+   "my_ans": "A",
+   "sol": "स्वर्णिम क्रांति (1991-2003) का मुख्य फोकस बागवानी (फल, सब्जी, फूल) के विकास पर था।",
+   "trick": "बागवानी = स्वर्णिम क्रांति",
+   "ans": "A"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "In the Balance of Payments, an increase in foreign exchange reserves appears under which category?",
+   "hi": "भुगतान संतुलन में, विदेशी मुद्रा भंडार में वृद्धि किस श्रेणी के अंतर्गत आती है?",
+   "opts": [
+    "Capital Account – Debit<br>पूंजी खाता - नामे",
+    "Current Account – Credit<br>चालू खाता - जमा",
+    "Capital Account – Credit<br>पूंजी खाता - जमा",
+    "Current Account – Debit<br>चालू खाता - नामे"
+   ],
+   "my_ans": "A",
+   "sol": "विदेशी मुद्रा भंडार में वृद्धि पूंजी खाते में डेबिट (आवक) के रूप में दर्ज की जाती है क्योंकि यह देश की संपत्ति में वृद्धि को दर्शाता है।",
+   "trick": "विदेशी मुद्रा भंडार = पूंजी खाता",
+   "ans": "A"
+  }
+ ]
+}

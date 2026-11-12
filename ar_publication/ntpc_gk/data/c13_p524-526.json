@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "524-526",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "The 68th annual Grammy Awards conducted on 1 February 2026, in Los Angeles, honoured which of the following performers as Best New Artist?",
+   "hi": "लॉस एंजिल्स में 1 फरवरी 2026 को आयोजित 68 वें वार्षिक ग्रैमी अवॉर्ड्स में निम्नलिखित में से किस कलाकार को बेस्ट न्यू आर्टिस्ट (Best New Artist) के रूप में सम्मानित किया गया?",
+   "opts": [
+    "Leon Thomas<br>लियोन थॉमस",
+    "Olivia Dean<br>ओलिविया डीन",
+    "Addison Rae<br>एडिसन रे",
+    "Lola Young<br>लोला यंग"
+   ],
+   "my_ans": "B",
+   "sol": "1 फरवरी 2026 को लॉस एंजिल्स में आयोजित 68वें ग्रैमी अवॉर्ड्स में ब्रिटिश गायिका-गीतकार ओलिविया डीन को 'बेस्ट न्यू आर्टिस्ट' का पुरस्कार दिया गया।",
+   "trick": "ग्रैमी 2026 बेस्ट न्यू आर्टिस्ट: ओलिविया डीन।",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Stand Up India Scheme was launched in which of the following years?",
+   "hi": "स्टैंड अप इंडिया योजना, निम्नलिखित में से किस वर्ष शुरू की गई थी?",
+   "opts": [
+    "2016",
+    "2015",
+    "2019",
+    "2014"
+   ],
+   "my_ans": "A",
+   "sol": "स्टैंड अप इंडिया योजना की शुरुआत प्रधानमंत्री नरेंद्र मोदी द्वारा 5 अप्रैल 2016 को की गई थी। इसका उद्देश्य SC/ST और महिला उद्यमियों को बैंक ऋण उपलब्ध कराना है।",
+   "trick": "स्टैंड अप इंडिया: 5 अप्रैल 2016।",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "India signed a 10-year Defence Framework Agreement in 2025 with which country during a meeting held on the sidelines of the ASEAN–India Defence Ministers’ Informal Meeting in Kuala Lumpur?",
+   "hi": "कुआलालंपुर में आसियान - भारत (ASEAN–India) रक्षा मंत्रियों की अनौपचारिक बैठक के दौरान आयोजित एक बैठक में, 2025 में भारत ने किस देश के साथ 10 वर्ष के डिफेंस फ्रेमवर्क समझौते पर हस्ताक्षर किए?",
+   "opts": [
+    "Japan<br>जापान",
+    "Malaysia<br>मलेशिया",
+    "Australia<br>ऑस्ट्रेलिया",
+    "United States of America<br>संयुक्त राज्य अमेरिका"
+   ],
+   "my_ans": "D",
+   "sol": "2025 में कुआलालंपुर में आसियान-भारत रक्षा मंत्रियों की बैठक के दौरान भारत ने संयुक्त राज्य अमेरिका के साथ 10 वर्षीय रक्षा फ्रेमवर्क समझौते पर हस्ताक्षर किए।",
+   "trick": "भारत-अमेरिका 10 वर्षीय रक्षा समझौता 2025।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "‘Odia’ was given classical language status in which of the following years?",
+   "hi": "'ओड़िया' को शास्त्रीय भाषा का दर्जा निम्नलिखित में से किस वर्ष में दिया गया था?",
+   "opts": [
+    "2010",
+    "2014",
+    "2005",
+    "2012"
+   ],
+   "my_ans": "B",
+   "sol": "ओड़िया (ओरिया) को भारत सरकार द्वारा 2014 में शास्त्रीय भाषा का दर्जा दिया गया था। यह भारत की छठी शास्त्रीय भाषा बनी।",
+   "trick": "ओड़िया शास्त्रीय भाषा: 2014 (छठी भाषा)।",
+   "ans": "B"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "The biography Sivam Subham: The Biography of a Couple, highlighted in October 2025 current-affairs notes, chronicles the life of which legendary couple?",
+   "hi": "अक्टूबर 2025 की समसामयिक चर्चा (current-affairs) के नोट्स में रेखांकित जीवनी 'शिवम शुभम: द बायोग्राफी ऑफ अ कपल (Sivam Subham: The Biography of a Couple)', किस प्रसिद्ध दंपति के जीवन का वृत्तांत है?",
+   "opts": [
+    "Lata Mangeshkar and Hridaynath Mangeshkar<br>लता मंगेशकर और हृदयनाथ मंगेशकर",
+    "Ravi Shankar and Annapurna Devi<br>रवि शंकर और अन्नपूर्णा देवी",
+    "M.S. Subbulakshmi and T. Sadasivam<br>एम. एस. सुब्बुलक्ष्मी और टी. सदाशिवम",
+    "Kishore Kumar and Ruma Guha Thakurta<br>किशोर कुमार और रूमा गुहा ठाकुरता"
+   ],
+   "my_ans": "C",
+   "sol": "यह जीवनी महान कर्नाटक गायिका एम.एस. सुब्बुलक्ष्मी और उनके पति टी. सदाशिवम के जीवन पर आधारित है।",
+   "trick": "शिवम शुभम: सुब्बुलक्ष्मी और सदाशिवम।",
+   "ans": "C"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which defensive strategy assigns each defender to guard a specific offensive player based on size and ability in a basketball game?",
+   "hi": "बास्केटबॉल खेल में कौन-सी डिफेंसिव रणनीति प्रत्येक डिफेंडर (defender) को आकार और क्षमता के आधार पर एक विशिष्ट आक्रामक खिलाड़ी (offensive player) को गार्ड (guard) करने का कार्य सौंपती है?",
+   "opts": [
+    "Full court press<br>फुल कोर्ट प्रेस",
+    "Zone defence<br>ज़ोन डिफेंस",
+    "Man to man defence<br>मैन-टू-मैन डिफेंस",
+    "Combined defence<br>कंबाइंड डिफेंस"
+   ],
+   "my_ans": "C",
+   "sol": "मैन-टू-मैन डिफेंस में प्रत्येक रक्षक को एक विशिष्ट आक्रामक खिलाड़ी को गार्ड करने के लिए नियुक्त किया जाता है, जो आकार और गति के आधार पर तय होता है।",
+   "trick": "मैन-टू-मैन: एक रक्षक, एक खिलाड़ी।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Who was the first Indian badminton player to win an Olympic medal?",
+   "hi": "ओलंपिक पदक जीतने वाले प्रथम भारतीय बैडमिंटन खिलाड़ी कौन थे?",
+   "opts": [
+    "Sania Mirza<br>सानिया मिर्जा",
+    "PV Sindhu<br>पी. वी. सिंधु",
+    "Saina Nehwal<br>साइना नेहवाल",
+    "PT Usha<br>पी. टी. उषा"
+   ],
+   "my_ans": "C",
+   "sol": "साइना नेहवाल ने 2012 के लंदन ओलंपिक में कांस्य पदक जीतकर बैडमिंटन में ओलंपिक पदक जीतने वाली पहली भारतीय खिलाड़ी बनीं।",
+   "trick": "बैडमिंटन ओलंपिक पदक: साइना नेहवाल (2012)।",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "In August 2025, which paramilitary force launched Operation Alert along the Rajasthan border?",
+   "hi": "अगस्त 2025 में, किस अर्धसैनिक बल ने राजस्थान की सीमा पर ऑपरेशन अलर्ट का समारंभ किया था?",
+   "opts": [
+    "Central Industrial Security Force (CISF)<br>केंद्रीय औद्योगिक सुरक्षा बल (CISF)",
+    "Border Security Force (BSF)<br>सीमा सुरक्षा बल (BSF)",
+    "Indian Navy<br>भारतीय नौसेना",
+    "Indian Coast Guard<br>भारतीय तटरक्षक बल"
+   ],
+   "my_ans": "B",
+   "sol": "अगस्त 2025 में सीमा सुरक्षा बल (BSF) ने राजस्थान सीमा पर निगरानी बढ़ाने के लिए 'ऑपरेशन अलर्ट' शुरू किया था।",
+   "trick": "ऑपरेशन अलर्ट: BSF (राजस्थान सीमा)।",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Folk songs of Haryana are commonly known by which of the following names?",
+   "hi": "हरियाणा के लोकगीतों को सामान्यतः निम्नलिखित में से किस नाम से जाना जाता है?",
+   "opts": [
+    "Raganis<br>रागनी",
+    "Bhand<br>भांड",
+    "Baul<br>बाउल",
+    "Bihu<br>बिहू"
+   ],
+   "my_ans": "A",
+   "sol": "हरियाणा के पारंपरिक लोकगीतों को 'रागनी' या 'रागनियाँ' कहा जाता है, जो स्थानीय बोलियों में गाए जाते हैं।",
+   "trick": "हरियाणा लोकगीत: रागनी।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "The Indian men’s hockey team clinched the Asia Cup 2025 title by overcoming which of the following teams 4 - 1 in the final held at the Rajgir Sports Complex in Bihar?",
+   "hi": "बिहार के राजगीर स्पोर्ट्स कॉम्प्लेक्स में आयोजित फाइनल में, भारतीय पुरुष हॉकी टीम ने निम्नलिखित में से किस टीम को 4-1 से हराकर एशिया कप 2025 का खिताब जीता?",
+   "opts": [
+    "Japan<br>जापान",
+    "Malaysia<br>मलेशिया",
+    "Republic of Korea<br>रिपब्लिक ऑफ कोरिया",
+    "Pakistan<br>पाकिस्तान"
+   ],
+   "my_ans": "C",
+   "sol": "एशिया कप 2025 के फाइनल में भारत ने दक्षिण कोरिया (Republic of Korea) को 4-1 से हराकर अपना 5वां खिताब जीता।",
+   "trick": "एशिया कप 2025 विजेता: भारत (उपविजेता: दक्षिण कोरिया)।",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Who was popularly known as the ' Payyoli Express' in Indian sports history?",
+   "hi": "भारतीय खेल इतिहास में 'पय्योली एक्सप्रेस (Payyoli Express)' के नाम से किसे जाना जाता था?",
+   "opts": [
+    "Leander Paes<br>लिएंडर पेस",
+    "PT Usha<br>पी.टी. उषा",
+    "Shoaib Akhtar<br>शोएब अख्तर",
+    "Sania Mirza<br>सानिया मिर्जा"
+   ],
+   "my_ans": "B",
+   "sol": "पी.टी. उषा को 'पय्योली एक्सप्रेस' के नाम से जाना जाता है। वह केरल के पय्योली गांव की रहने वाली एक प्रसिद्ध एथलीट हैं।",
+   "trick": "पय्योली एक्सप्रेस: पी.टी. उषा।",
+   "ans": "B"
+  }
+ ]
+}

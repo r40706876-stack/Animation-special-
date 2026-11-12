@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "322-324",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 320,
+   "lvl": "UG",
+   "en": "Which term in the Preamble indicates that India has an elected head of state, NOT hereditary?",
+   "hi": "उद्देशिका में कौन-सा पद यह इंगित करता है कि भारत में राष्ट्राध्यक्ष वंशानुगत नहीं, बल्कि निर्वाचित होता है?",
+   "opts": [
+    "Sovereign<br>संप्रभु",
+    "Republic<br>गणतंत्र",
+    "Socialist<br>समाजवादी",
+    "Secular<br>पंथनिरपेक्ष"
+   ],
+   "my_ans": "B",
+   "sol": "गणतंत्र का अर्थ है कि देश का प्रमुख (राष्ट्रपति) जनता द्वारा प्रत्यक्ष या अप्रत्यक्ष रूप से एक निश्चित अवधि के लिए चुना जाता है, न कि वंशानुगत राजा।",
+   "trick": "गणतंत्र = निर्वाचित प्रमुख (वंशानुगत नहीं)",
+   "ans": "B"
+  },
+  {
+   "n": 321,
+   "lvl": "UG",
+   "en": "Provision for 'living wage' and 'decent standard of life' for workers under the Directive Principle of State Policy (DPSP) is contained in which of the following Articles of the Indian Constitution?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से किस अनुच्छेद में राज्य नीति के निर्देशक सिद्धांतों (DPSP) के अंतर्गत श्रमिकों के लिए 'जीवन निर्वाह वेतन' और 'सम्मानजनक जीवन स्तर' का प्रावधान निहित है?",
+   "opts": [
+    "Article 43<br>अनुच्छेद 43",
+    "Article 47<br>अनुच्छेद 47",
+    "Article 42<br>अनुच्छेद 42",
+    "Article 41<br>अनुच्छेद 41"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 43 राज्य को यह निर्देश देता है कि वह सभी श्रमिकों के लिए निर्वाह मजदूरी और जीवन का उचित स्तर सुनिश्चित करने का प्रयास करे।",
+   "trick": "अनुच्छेद 43 = श्रमिकों के लिए जीवन निर्वाह वेतन",
+   "ans": "A"
+  },
+  {
+   "n": 322,
+   "lvl": "UG",
+   "en": "Which of the following Fundamental Duties was added in the Constitution by the 86th Constitution Amendment Act, 2002?",
+   "hi": "86वें संविधान संशोधन अधिनियम, 2002 द्वारा संविधान में निम्नलिखित में से कौन-सा मौलिक कर्तव्य जोड़ा गया था?",
+   "opts": [
+    "To value and preserve the rich heritage of the country's composite culture<br>देश की सामासिक संस्कृति की गौरवशाली परंपरा का महत्व समझना और उसका परिरक्षण करना",
+    "To develop scientific temper<br>वैज्ञानिक दृष्टिकोण का विकास करना",
+    "To protect and improve the natural environment<br>प्राकृतिक पर्यावरण की रक्षा करना और उसका संवर्धन करना",
+    "To provide opportunities for education to a child or ward between ages six and fourteen<br>छह वर्ष से चौदह वर्ष तक की आयु के बच्चे या प्रतिपाल्य को शिक्षा के अवसर प्रदान करना"
+   ],
+   "my_ans": "D",
+   "sol": "86वें संविधान संशोधन द्वारा अनुच्छेद 51A(k) जोड़ा गया, जिसके तहत माता-पिता या अभिभावक का कर्तव्य है कि वे 6 से 14 वर्ष के बच्चों को शिक्षा के अवसर प्रदान करें।",
+   "trick": "86वां संशोधन = 11वां मौलिक कर्तव्य (शिक्षा)",
+   "ans": "D"
+  },
+  {
+   "n": 323,
+   "lvl": "UG",
+   "en": "Overseas Citizenship of India cardholders receive lifelong visa facilities, but they cannot obtain which of the following rights in India?",
+   "hi": "विदेशी नागरिकता कार्डधारकों को आजीवन वीजा सुविधा प्राप्त होती है, लेकिन वे भारत में निम्नलिखित में से कौन-सा अधिकार प्राप्त नहीं कर सकते हैं?",
+   "opts": [
+    "Pay taxes<br>करों का भुगतान करना",
+    "Study in India<br>भारत में अध्ययन करना",
+    "Voting or holding a government job<br>मतदान करना या सरकारी नौकरी करना",
+    "Own property in India<br>भारत में संपत्ति का स्वामी बनना"
+   ],
+   "my_ans": "C",
+   "sol": "OCI कार्डधारकों को भारत में मतदान करने, चुनाव लड़ने या सरकारी नौकरी प्राप्त करने का अधिकार नहीं है।",
+   "trick": "OCI = वीजा सुविधा है, पर राजनीतिक अधिकार नहीं",
+   "ans": "C"
+  },
+  {
+   "n": 324,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution directs the State to protect and improve the environment?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद राज्य को पर्यावरण के संरक्षण और संवर्धन का निर्देश देता है?",
+   "opts": [
+    "Article 39A<br>अनुच्छेद 39A",
+    "Article 48A<br>अनुच्छेद 48A",
+    "Article 37A<br>अनुच्छेद 37A",
+    "Article 43A<br>अनुच्छेद 43A"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 48A राज्य को पर्यावरण की रक्षा और सुधार करने तथा देश के वनों और वन्यजीवों की रक्षा करने का निर्देश देता है।",
+   "trick": "48A = पर्यावरण का संरक्षण",
+   "ans": "B"
+  },
+  {
+   "n": 325,
+   "lvl": "UG",
+   "en": "Directive Principles collectively aim to achieve which ideals prominently declared in the Constitution’s Preamble?",
+   "hi": "निर्देशक तत्वों का सामूहिक उद्देश्य, संविधान की उद्देशिका में प्रधान रूप से घोषित किन आदर्शों को प्राप्त करना है?",
+   "opts": [
+    "Justice, liberty, equality, fraternity<br>न्याय, स्वतंत्रता, समता, बंधुता",
+    "Property, privilege, hierarchy<br>संपत्ति, विशेषाधिकार, पदानुक्रम",
+    "Unity, diversity and fraternity<br>एकता, विविधता और बंधुता",
+    "Sovereignty, security and hierarchy<br>संप्रभुता, सुरक्षा और पदानुक्रम"
+   ],
+   "my_ans": "A",
+   "sol": "राज्य के नीति निर्देशक तत्व (DPSP) संविधान की प्रस्तावना में वर्णित न्याय, स्वतंत्रता, समानता और बंधुत्व के आदर्शों को स्थापित करने का प्रयास करते हैं।",
+   "trick": "DPSP = प्रस्तावना के आदर्शों का क्रियान्वयन",
+   "ans": "A"
+  },
+  {
+   "n": 326,
+   "lvl": "UG",
+   "en": "The Preamble to the Constitution of India is primarily based on which resolution drafted and introduced by Pandit Jawaharlal Nehru?",
+   "hi": "भारत के संविधान की उद्देशिका मुख्य रूप से पंडित जवाहरलाल नेहरू द्वारा प्रारूपित और प्रस्तुत किए गए किस संकल्प पर आधारित है?",
+   "opts": [
+    "Objectives Resolution<br>उद्देश्य संकल्प",
+    "Directive Principles Resolution<br>निर्देशक सिद्धांत संकल्प",
+    "Fundamental Rights Resolution<br>मौलिक अधिकार संकल्प",
+    "Fundamental Duties Resolution<br>मौलिक कर्तव्य संकल्प"
+   ],
+   "my_ans": "A",
+   "sol": "संविधान की प्रस्तावना पंडित नेहरू द्वारा 13 दिसंबर 1946 को संविधान सभा में पेश किए गए 'उद्देश्य प्रस्ताव' (Objectives Resolution) पर आधारित है।",
+   "trick": "प्रस्तावना = उद्देश्य प्रस्ताव (नेहरू)",
+   "ans": "A"
+  },
+  {
+   "n": 327,
+   "lvl": "UG",
+   "en": "Which four objectives of the Constitution are explicitly mentioned in the Preamble of India?",
+   "hi": "भारत के संविधान की उद्देशिका में किन चार उद्देश्यों का स्पष्ट रूप से उल्लेख किया गया है?",
+   "opts": [
+    "Sovereign, Republic, Secular, Monarchy<br>संप्रभु, गणतंत्र, पंथनिरपेक्ष, राजतंत्र",
+    "Parliament, President, Judiciary, Election<br>संसद, राष्ट्रपति, न्यायपालिका, निर्वाचन",
+    "Rights, Duties, Laws, Governance<br>अधिकार, कर्तव्य, विधि, शासन",
+    "Justice, Liberty, Equality, Fraternity<br>न्याय, स्वतंत्रता, समता, बंधुता"
+   ],
+   "my_ans": "D",
+   "sol": "संविधान की प्रस्तावना में नागरिकों के लिए चार मुख्य उद्देश्यों: न्याय, स्वतंत्रता, समानता और बंधुता को स्पष्ट रूप से उल्लेखित किया गया है।",
+   "trick": "न्याय, स्वतंत्रता, समानता, बंधुता",
+   "ans": "D"
+  },
+  {
+   "n": 328,
+   "lvl": "UG",
+   "en": "Hindu, Sikh, Buddhist, Jain, Parsi, and Christian citizens of which of the following nations are eligible to receive Indian citizenship under the CAA, 2019, if they entered India on or before December 31, 2014?",
+   "hi": "CAA, 2019 के अंतर्गत, यदि हिंदू, सिख, बौद्ध, जैन, पारसी और ईसाई नागरिकों ने 31 दिसंबर, 2014 को या उससे पहले भारत में प्रवेश किया है, तो वे निम्नलिखित में से किन देशों से होने पर भारतीय नागरिकता प्राप्त करने के पात्र हैं?",
+   "opts": [
+    "Afghanistan, Sri Lanka, and Bangladesh<br>अफगानिस्तान, श्रीलंका और बांग्लादेश",
+    "Pakistan, Myanmar, and Nepal<br>पाकिस्तान, म्यांमार और नेपाल",
+    "Afghanistan, Bangladesh, and Pakistan<br>अफगानिस्तान, बांग्लादेश और पाकिस्तान",
+    "Bhutan, Bangladesh, and Maldives<br>भूटान, बांग्लादेश और मालदीव"
+   ],
+   "my_ans": "C",
+   "sol": "CAA 2019 के तहत अफगानिस्तान, बांग्लादेश और पाकिस्तान से आए धार्मिक अल्पसंख्यकों (हिंदू, सिख, बौद्ध, जैन, पारसी और ईसाई) को नागरिकता देने का प्रावधान है।",
+   "trick": "CAA = अफगानिस्तान, बांग्लादेश, पाकिस्तान (अल्पसंख्यक)",
+   "ans": "C"
+  }
+ ]
+}

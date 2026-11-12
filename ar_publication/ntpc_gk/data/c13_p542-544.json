@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "542-544",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "AR Rahman won the Academy Award for Best Original Score for which film?",
+   "hi": "ए.आर. रहमान ने किस फिल्म के लिए बेस्ट ओरिजिनल स्कोर के लिए अकादमी पुरस्कार जीता?",
+   "opts": [
+    "Rockstar<br>रॉकस्टार",
+    "Slumdog Millionaire<br>स्लमडॉग मिलियनेयर",
+    "Dil Se<br>दिल से",
+    "Lagaan<br>लगान"
+   ],
+   "my_ans": "B",
+   "sol": "ए.आर. रहमान ने 2009 में फिल्म 'स्लमडॉग मिलियनेयर' (2008) के लिए दो ऑस्कर पुरस्कार जीते थे।",
+   "trick": "रहमान = स्लमडॉग ऑस्कर",
+   "ans": "B"
+  },
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a style of Hindustani classical music?",
+   "hi": "निम्नलिखित में से कौन-सी, हिंदुस्तानी शास्त्रीय संगीत की एक शैली नहीं है?",
+   "opts": [
+    "Varnam<br>वर्णम",
+    "Khyal<br>ख्याल",
+    "Dhrupad<br>ध्रुपद",
+    "Tappa<br>टप्पा"
+   ],
+   "my_ans": "A",
+   "sol": "वर्णम कर्नाटक संगीत (दक्षिण भारतीय शास्त्रीय संगीत) की एक शैली है, न कि हिंदुस्तानी शास्त्रीय संगीत की।",
+   "trick": "वर्णम = कर्नाटक संगीत",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Which of the following traditional Indian percussion instruments is regarded as the predecessor of the modern Tabla?",
+   "hi": "निम्नलिखित में से कौन-सा पारंपरिक भारतीय ताल वाद्य यंत्र आधुनिक तबला का पूर्वज माना जाता है?",
+   "opts": [
+    "Pakhawaj<br>पखावज",
+    "Thavil<br>थविल",
+    "Dhol<br>ढोल",
+    "Kanjira<br>कंजीरा"
+   ],
+   "my_ans": "A",
+   "sol": "पखावज को आधुनिक तबले का पूर्वज माना जाता है, जिसे मुगल काल में दो भागों में विभाजित करके तबला बनाया गया था।",
+   "trick": "पखावज = तबले का पूर्वज",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "The Pallava temples at Mahabalipuram are made mainly from:",
+   "hi": "महाबलीपुरम के पल्लव मंदिर मुख्य रूप से किससे बने हैं?",
+   "opts": [
+    "Granite<br>ग्रेनाइट",
+    "Sandstone alone<br>केवल बलुआ पत्थर",
+    "Laterite<br>लैटेराइट",
+    "Marble<br>संगमरमर"
+   ],
+   "my_ans": "A",
+   "sol": "महाबलीपुरम के पल्लव मंदिर मुख्य रूप से ग्रेनाइट चट्टानों को काटकर बनाए गए हैं।",
+   "trick": "पल्लव = ग्रेनाइट",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "Which temple in Odisha is renowned for its chariot-shaped structure and is a prime example of Kalinga architecture?",
+   "hi": "ओडिशा का कौन-सा मंदिर अपनी रथनुमा संरचना के लिए प्रसिद्ध है और कलिंग वास्तुकला का एक उत्कृष्ट उदाहरण है?",
+   "opts": [
+    "Sun Temple<br>सूर्य मंदिर",
+    "Lingaraja Temple<br>लिंगराज मंदिर",
+    "Mukteshvara Temple<br>मुक्तेश्वर मंदिर",
+    "Jagannath Temple<br>जगन्नाथ मंदिर"
+   ],
+   "my_ans": "A",
+   "sol": "कोणार्क का सूर्य मंदिर अपनी विशाल रथनुमा संरचना के लिए प्रसिद्ध है, जिसे 13वीं शताब्दी में राजा नरसिंहदेव प्रथम ने बनवाया था।",
+   "trick": "कोणार्क = रथ मंदिर",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "India became a founding member of which global organization promoting peace and cooperation?",
+   "hi": "भारत किस वैश्विक संगठन का संस्थापक सदस्य बना, जो शांति और सहयोग को बढ़ावा देता है?",
+   "opts": [
+    "United Nations<br>संयुक्त राष्ट्र",
+    "ASEAN",
+    "OPEC",
+    "NATO"
+   ],
+   "my_ans": "A",
+   "sol": "भारत 30 अक्टूबर 1945 को संयुक्त राष्ट्र (UN) का संस्थापक सदस्य बना था।",
+   "trick": "UN = 1945 संस्थापक भारत",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Which of the following international agreements aims to phase out ozone-depleting substances?",
+   "hi": "निम्नलिखित में से किस अंतरराष्ट्रीय समझौते का उद्देश्य ओजोन-क्षयकारी पदार्थों को चरणबद्ध तरीके से समाप्त करना है?",
+   "opts": [
+    "Montreal Protocol<br>मॉन्ट्रियल प्रोटोकॉल",
+    "Ramsar Convention<br>रामसर कन्वेंशन",
+    "Paris Agreement<br>पेरिस समझौता",
+    "Kyoto Protocol<br>क्योतो प्रोटोकॉल"
+   ],
+   "my_ans": "A",
+   "sol": "मॉन्ट्रियल प्रोटोकॉल (1987) का मुख्य उद्देश्य ओजोन परत को नुकसान पहुँचाने वाले पदार्थों (ODS) के उत्पादन और उपयोग को कम करना है।",
+   "trick": "मॉन्ट्रियल = ओजोन सुरक्षा",
+   "ans": "A"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "National Unity Day, observed in India on 31 October 2025, commemorates the birth anniversary of which national leader?",
+   "hi": "भारत में 31 अक्टूबर 2025 को मनाया जाने वाला राष्ट्रीय एकता दिवस किस राष्ट्रीय नेता की जयंती के स्मरण में मनाया जाता है?",
+   "opts": [
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू",
+    "Sardar Vallabhbhai Patel<br>सरदार वल्लभभाई पटेल",
+    "Lal Bahadur Shastri<br>लाल बहादुर शास्त्री"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय एकता दिवस सरदार वल्लभभाई पटेल की जयंती के उपलक्ष्य में मनाया जाता है, जिन्हें 'भारत का लौह पुरुष' कहा जाता है।",
+   "trick": "31 अक्टूबर = एकता दिवस = पटेल",
+   "ans": "C"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "To which Hindu deity is the Sun Temple at Konark dedicated?",
+   "hi": "कोणार्क स्थित सूर्य मंदिर किस हिंदू देवता को समर्पित है?",
+   "opts": [
+    "Shiva<br>शिव",
+    "Brahma<br>ब्रह्मा",
+    "Surya<br>सूर्य",
+    "Vishnu<br>विष्णु"
+   ],
+   "my_ans": "C",
+   "sol": "कोणार्क का सूर्य मंदिर भगवान सूर्य को समर्पित है।",
+   "trick": "सूर्य मंदिर = सूर्य देवता",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "'Bihu' is considered the festival of the ____________ state/UT.",
+   "hi": "'बिहू' को ____________ राज्य/केंद्र शासित प्रदेश का त्योहार माना जाता है।",
+   "opts": [
+    "Lakshadweep<br>लक्षद्वीप",
+    "Assam<br>असम",
+    "Andaman Nicobar Islands<br>अंडमान निकोबार द्वीप समूह",
+    "Chattisgarh<br>छत्तीसगढ़"
+   ],
+   "my_ans": "B",
+   "sol": "बिहू असम का सबसे महत्वपूर्ण त्योहार है, जो साल में तीन बार मनाया जाता है।",
+   "trick": "बिहू = असम",
+   "ans": "B"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "The Pattachitra paintings, known for intricate detailing and mythological themes, originate from which Indian state?",
+   "hi": "जटिल नक्काशी और पौराणिक थीम के लिए प्रसिद्ध पट्टचित्र पेंटिंग्स की उत्पत्ति किस भारतीय राज्य से हुई है?",
+   "opts": [
+    "Assam<br>असम",
+    "Odisha<br>ओडिशा",
+    "Rajasthan<br>राजस्थान",
+    "Madhya Pradesh<br>मध्य प्रदेश"
+   ],
+   "my_ans": "B",
+   "sol": "पट्टचित्र ओडिशा की एक पारंपरिक कपड़ा-आधारित चित्रकला शैली है।",
+   "trick": "पट्टचित्र = ओडिशा",
+   "ans": "B"
+  }
+ ]
+}

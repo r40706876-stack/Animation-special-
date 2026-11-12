@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "349-351",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "In December 2025, the Finance Minister called on states to manage their debt within the limits prescribed under which fiscal framework?",
+   "hi": "दिसंबर 2025 में, वित्त मंत्री ने राज्यों से किस राजकोषीय ढांचे के अधीन निर्धारित सीमाओं के भीतर अपने ऋण का प्रबंधन करने की अपील की है?",
+   "opts": [
+    "Monetary Policy<br>मौद्रिक नीति",
+    "FRBM",
+    "NITI Aayog<br>नीति (NITI) आयोग",
+    "GST"
+   ],
+   "my_ans": "B",
+   "sol": "FRBM (राजकोषीय उत्तरदायित्व और बजट प्रबंधन) अधिनियम सरकार के उधार और घाटे की सीमा निर्धारित करता है, जिसका राज्यों को पालन करना होता है।",
+   "trick": "FRBM = ऋण और घाटे की सीमा",
+   "ans": "B"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "Which of the following is NOT an impact of globalisation on Indian economy?",
+   "hi": "निम्नलिखित में से कौन-सा, भारतीय अर्थव्यवस्था पर वैश्वीकरण का प्रभाव नहीं है?",
+   "opts": [
+    "Foreign direct investment (FDI) has been liberalised<br>प्रत्यक्ष विदेशी निवेश (FDI) को उदार बनाया गया",
+    "Introduction of a system of partial convertibility of the rupee<br>रुपये की आंशिक संपरिवर्तनीयता प्रणाली की शुरुआत",
+    "Two stage devaluation of the rupee by about twenty percent in July, 1991<br>जुलाई, 1991 में रुपये का दो चरणों में लगभग बीस प्रतिशत अवमूल्यन",
+    "Foreign institutional investments are made more restrictive for stability of the economy<br>अर्थव्यवस्था की स्थिरता के लिए विदेशी संस्थागत निवेशों को अधिक प्रतिबंधित करना"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण के तहत विदेशी संस्थागत निवेश (FII) को उदार बनाया गया था, न कि प्रतिबंधित।",
+   "trick": "वैश्वीकरण = उदारीकरण (प्रतिबंध हटाना)",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "In developed countries, which of the following sectors has become the most important in terms of total production?",
+   "hi": "विकसित देशों में, कुल उत्पादन के संदर्भ में निम्नलिखित में से कौन-सा क्षेत्र सर्वाधिक महत्वपूर्ण हो गया है?",
+   "opts": [
+    "Quinary Activity<br>पंचम क्रियाकलाप",
+    "Tertiary Activity<br>तृतीयक क्रियाकलाप",
+    "Secondary Activity<br>द्वितीयक क्रियाकलाप",
+    "Primary Activity<br>प्राथमिक क्रियाकलाप"
+   ],
+   "my_ans": "B",
+   "sol": "विकसित देशों की अर्थव्यवस्था में सेवा क्षेत्र (तृतीयक क्षेत्र) का वर्चस्व होता है, जो GDP में सबसे अधिक योगदान देता है।",
+   "trick": "विकसित = सेवा क्षेत्र (तृतीयक)",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "Who among the following was the first Union Finance Minister of Independent India?",
+   "hi": "निम्नलिखित में से कौन स्वतंत्र भारत के पहले केंद्रीय वित्त मंत्री थे?",
+   "opts": [
+    "Rajkumari Amrit Kaur<br>राजकुमारी अमृत कौर",
+    "Sardar Baldev Singh<br>सरदार बलदेव सिंह",
+    "Dr. CH Bhabha<br>डॉ. सी.एच. भाभा",
+    "RK Shanmukham Chetty<br>आर.के. षण्मुखम चेट्टी"
+   ],
+   "my_ans": "D",
+   "sol": "आर.के. षण्मुखम चेट्टी स्वतंत्र भारत के पहले केंद्रीय वित्त मंत्री थे, जिन्होंने 26 नवंबर 1947 को पहला बजट पेश किया था।",
+   "trick": "पहले वित्त मंत्री = आर.के. षण्मुखम चेट्टी",
+   "ans": "D"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "Which Act introduced uniform reporting standards for banks to the Reserve Bank of India in 2025?",
+   "hi": "2025 में किस अधिनियम ने भारतीय रिज़र्व बैंक की बैंकों के लिए एकसमान रिपोर्टिंग मानक लागू किए?",
+   "opts": [
+    "The Banking Laws (Amendment) Act, 2025<br>बैंकिंग कानून (संशोधन) अधिनियम, 2025",
+    "The State Bank of India Act, 1955<br>भारतीय स्टेट बैंक अधिनियम, 1955",
+    "The Banking Regulation Act, 1949<br>बैंकिंग विनियमन अधिनियम, 1949",
+    "The Reserve Bank of India Act, 1934<br>भारतीय रिज़र्व बैंक अधिनियम, 1934"
+   ],
+   "my_ans": "A",
+   "sol": "बैंकिंग कानून (संशोधन) अधिनियम, 2025 के माध्यम से सभी बैंकों के लिए RBI को एकसमान रिपोर्टिंग मानक अनिवार्य किए गए।",
+   "trick": "2025 बैंकिंग सुधार = बैंकिंग कानून संशोधन अधिनियम",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "Which of the following is the primary objective to promote the \"Ultra Mega Power Projects\" (UMPP) initiative in India?",
+   "hi": "निम्नलिखित में से कौन-सा भारत में \"अल्ट्रा मेगा पावर प्रोजेक्ट्स\" (UMPP) पहल को बढ़ावा देने का प्राथमिक उद्देश्य है?",
+   "opts": [
+    "Rooftop solar systems in rural areas<br>ग्रामीण क्षेत्रों में रूफटॉप सौर प्रणालियाँ",
+    "Wind farms in rural areas<br>ग्रामीण क्षेत्रों में पवन फार्म",
+    "High-capacity coal-based power plants<br>उच्च क्षमता वाले कोयला आधारित विद्युत संयंत्र",
+    "Small-scale solar plants<br>लघु सौर संयंत्र"
+   ],
+   "my_ans": "C",
+   "sol": "अल्ट्रा मेगा पावर प्रोजेक्ट्स (UMPP) का मुख्य उद्देश्य 4000 मेगावाट से अधिक क्षमता वाले बड़े कोयला आधारित थर्मल पावर प्लांट विकसित करना है।",
+   "trick": "UMPP = बड़े कोयला आधारित संयंत्र",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "GL",
+   "en": "The liberalization of the Indian economy in 1991 led to which of the following fiscal outcomes?",
+   "hi": "1991 में भारतीय अर्थव्यवस्था के उदारीकरण के परिणामस्वरूप निम्नलिखित में से कौन-सा राजकोषीय परिणाम सामने आया?",
+   "opts": [
+    "Lowering of direct and indirect tax rates<br>प्रत्यक्ष और अप्रत्यक्ष कर दरों में कमी",
+    "Elimination of all public debt<br>सभी सार्वजनिक ऋणों का उन्मूलन",
+    "Sharp increase in Government control over pricing<br>मूल्य निर्धारण पर सरकारी नियंत्रण में तीव्र वृद्धि",
+    "Higher import duties<br>उच्च आयात शुल्क"
+   ],
+   "my_ans": "A",
+   "sol": "1991 के आर्थिक सुधारों के तहत व्यापार को बढ़ावा देने के लिए प्रत्यक्ष और अप्रत्यक्ष करों की दरों को कम किया गया था।",
+   "trick": "उदारीकरण = करों में कमी",
+   "ans": "A"
+  },
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "Which of the following was the capital expenditure (capex) announced for FY 2025-26 in the Union Budget of India?",
+   "hi": "निम्नलिखित में से कौन-सा पूंजीगत व्यय (कैपेक्स) भारत के केंद्रीय बजट में वित्त वर्ष 2025-26 के लिए घोषित किया गया था?",
+   "opts": [
+    "₹11.21 lakh crore<br>₹11.21 लाख करोड़",
+    "₹8 lakh crore<br>₹8 लाख करोड़",
+    "₹10.0 lakh crore<br>₹10.0 लाख करोड़",
+    "₹13.5 lakh crore<br>₹13.5 लाख करोड़"
+   ],
+   "my_ans": "A",
+   "sol": "केंद्रीय बजट 2025-26 में बुनियादी ढांचे और विकास परियोजनाओं के लिए पूंजीगत व्यय (Capex) ₹11.21 लाख करोड़ निर्धारित किया गया था।",
+   "trick": "2025-26 कैपेक्स = 11.21 लाख करोड़",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "Which of the following statements best describes the role of Self-Help Groups (SHGs) in India?",
+   "hi": "निम्नलिखित में से कौन-सा कथन भारत में स्वयं सहायता समूहों (SHGs) की भूमिका का सर्वोत्तम वर्णन करता है?",
+   "opts": [
+    "They encourage thrift and extend micro-credit facilities to poor rural women<br>वे मितव्यय को प्रोत्साहित करते हैं और गरीब ग्रामीण महिलाओं को सूक्ष्म-ऋण सुविधाएं प्रदान करते हैं।",
+    "They provide large-scale industrial loans to farmers<br>वे किसानों को बड़े पैमाने पर औद्योगिक ऋण प्रदान करते हैं।",
+    "They operate as regional offices of the Reserve Bank of India<br>वे भारतीय रिज़र्व बैंक के क्षेत्रीय कार्यालयों के रूप में कार्य करते हैं।",
+    "They function as government-owned cooperative banks<br>वे सरकारी स्वामित्व वाले सहकारी बैंकों के रूप में कार्य करते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "स्वयं सहायता समूह (SHG) मुख्य रूप से ग्रामीण महिलाओं को बचत करने के लिए प्रोत्साहित करते हैं और उन्हें छोटे ऋण (माइक्रो-क्रेडिट) उपलब्ध कराते हैं।",
+   "trick": "SHG = बचत और सूक्ष्म-ऋण",
+   "ans": "A"
+  }
+ ]
+}

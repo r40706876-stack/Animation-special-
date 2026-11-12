@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "21-23",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "According to references in the Rigveda, the early Vedic Aryans inhabited a region known as:",
+   "hi": "ऋग्वेद में दिए गए संदर्भों के अनुसार, प्रारंभिक वैदिक आर्य ऐसे क्षेत्र में रहते थे जिसे _______ कहा जाता है।",
+   "opts": [
+    "Brahmavarta<br>ब्रह्मवर्त",
+    "Aryavarta<br>आर्यवर्त",
+    "Sapta-Sindhu<br>सप्त-सिंधु",
+    "Madhyadesha<br>मध्यदेश"
+   ],
+   "my_ans": "C",
+   "sol": "ऋग्वेद में प्रारंभिक वैदिक आर्यों के निवास क्षेत्र को 'सप्त-सिंधु' कहा गया है, जो सात नदियों (सिंधु, झेलम, चिनाब, रावी, व्यास, सतलज और सरस्वती) की भूमि है।",
+   "trick": "सप्त-सिंधु = सात नदियों की भूमि",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "Microlithic tools became a characteristic feature during which phase of prehistory in India?",
+   "hi": "भारत में प्रागैतिहासिक काल के किस चरण के दौरान लघुपाषाणिक उपकरण एक विशिष्ट अभिलक्षण बन गए?",
+   "opts": [
+    "Lower Palaeolithic<br>निम्न पुरापाषाण काल",
+    "Middle Palaeolithic<br>मध्य पुरापाषाण काल",
+    "Early Iron Age<br>प्रारंभिक लौह युग",
+    "Mesolithic<br>मध्यपाषाण"
+   ],
+   "my_ans": "D",
+   "sol": "मध्यपाषाण युग (10,000-6,000 ईसा पूर्व) में छोटे पत्थर के औजारों (1-5 सेमी) का उपयोग शुरू हुआ, जिन्हें 'लघुपाषाण' (Microliths) कहा जाता है।",
+   "trick": "मध्यपाषाण = सूक्ष्म/लघु पत्थर के औजार",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "The earliest evidence of stone tools in India has been found at:",
+   "hi": "भारत में पत्थर के औजारों का सबसे पहला प्रमाण कहाँ पाया गया था?",
+   "opts": [
+    "Hunsgi Valley<br>हुंसगी घाटी",
+    "Mehrgarh<br>मेहरगढ़",
+    "Attirampakkam<br>अत्तिरम्पक्कम",
+    "Lothal<br>लोथल"
+   ],
+   "my_ans": "C",
+   "sol": "तमिलनाडु स्थित अत्तिरम्पक्कम से भारत में पत्थर के औजारों के सबसे प्राचीन साक्ष्य (लगभग 15 लाख वर्ष पुराने) मिले हैं।",
+   "trick": "अत्तिरम्पक्कम = सबसे प्राचीन पत्थर के औजार",
+   "ans": "C"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "In Arthashastra, which two types of courts dealt with disputes among citizens and between the state and citizens?",
+   "hi": "अर्थशास्त्र में, नागरिकों के बीच तथा राज्य एवं नागरिकों के बीच विवादों का निपटारा करने वाले दो प्रकार के न्यायालय कौन-से थे?",
+   "opts": [
+    "Dharmasthiya and Kantakashodhana<br>धर्मस्थीय और कंटकशोधन",
+    "Mantriparishad and Parishad<br>मंत्रीपरिषद और परिषद",
+    "Sangha and Gana<br>संघ और गण",
+    "Sabha and Samiti<br>सभा और समिति"
+   ],
+   "my_ans": "A",
+   "sol": "कौटिल्य के अर्थशास्त्र में 'धर्मस्थीय' दीवानी अदालत (नागरिक विवाद) थी और 'कंटकशोधन' फौजदारी अदालत (राज्य और नागरिक विवाद) थी।",
+   "trick": "धर्मस्थीय = दीवानी, कंटकशोधन = फौजदारी",
+   "ans": "A"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "Which of the following inscriptions is the main source of information of Samudragupta’s military achievements?",
+   "hi": "निम्नलिखित में से कौन-सा अभिलेख, समुद्रगुप्त की सैन्य उपलब्धियों की सूचना का मुख्य स्रोत है?",
+   "opts": [
+    "Allahabad Pillar Inscription<br>इलाहाबाद स्तंभ अभिलेख",
+    "Nasik Cave Inscription<br>नासिक गुहा अभिलेख",
+    "Junagadh Rock Inscription<br>जूनागढ़ शिलालेख",
+    "Mehrauli Iron Pillar Inscription<br>महरौली लौह स्तंभ अभिलेख"
+   ],
+   "my_ans": "A",
+   "sol": "इलाहाबाद स्तंभ अभिलेख (प्रयाग प्रशस्ति) समुद्रगुप्त के दरबारी कवि हरिषेण द्वारा रचित है, जिसमें उसकी विजयों का वर्णन है।",
+   "trick": "प्रयाग प्रशस्ति = समुद्रगुप्त की विजय",
+   "ans": "A"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Which of the following best describes the authorship of the Rigveda?",
+   "hi": "निम्नलिखित में से कौन-सा, ऋग्वेद के कृतित्व का सर्वोत्तम वर्णन करता है?",
+   "opts": [
+    "It was composed entirely by Sage Vyasa and compiled during the Mahabharata period.<br>इसकी रचना पूर्ण रूप से ऋषि व्यास ने की थी और महाभारत काल में इसे संकलित किया गया था।",
+    "It is a collection of hymns composed by various sages over generations.<br>यह पीढ़ियों से विभिन्न ऋषियों द्वारा रचित भजनों का संग्रह है।",
+    "It was written by a single philosopher-king in ancient India.<br>इसे प्राचीन भारत में एक ही दार्शनिक-राजा ने लिखा था।",
+    "It was dictated by Valmiki as a poetic epic for oral transmission.<br>इसे वाल्मीकि ने मौखिक प्रसारण के लिए एक काव्य महाकाव्य के रूप में लिखवाया था।"
+   ],
+   "my_ans": "B",
+   "sol": "ऋग्वेद किसी एक व्यक्ति की रचना नहीं है, बल्कि यह कई पीढ़ियों तक विभिन्न ऋषियों द्वारा रचित सूक्तों का संकलन है।",
+   "trick": "ऋग्वेद = ऋषियों द्वारा रचित सूक्तों का संग्रह",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Which of the following sites is known for its paintings and sculptures, considered masterpieces of Buddhist art?",
+   "hi": "निम्नलिखित में से कौन-सा स्थल अपने चित्र-कलाओं और मूर्तियों के लिए जाना जाता है, जिन्हें बौद्ध कला की उत्कृष्ट कृतियाँ माना जाता है?",
+   "opts": [
+    "Elephanta Caves<br>एलिफेंटा गुफाएं",
+    "Ajanta Caves<br>अजंता की गुफाएं",
+    "Bhimbetka Caves<br>भीमबेटका गुफाएं",
+    "Mawsmai Cave<br>मावस्माई गुफा"
+   ],
+   "my_ans": "B",
+   "sol": "महाराष्ट्र स्थित अजंता की गुफाएं अपनी बौद्ध भित्ति चित्रों और मूर्तियों के लिए विश्व प्रसिद्ध हैं।",
+   "trick": "अजंता = बौद्ध कला का उत्कृष्ट केंद्र",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "Which of the following was a characteristic feature of Harappan street planning?",
+   "hi": "निम्नलिखित में से कौन-सी विशेषता हड़प्पाकालीन सड़क नियोजन (Harappan street planning) की एक विशिष्ट विशेषता थी?",
+   "opts": [
+    "Elevated stone causeways replacing ordinary streets<br>साधारण सड़कों की जगह ऊंचे पत्थर के पुल बनाए जा रहे हैं।",
+    "Streets intersecting at right angles forming a criss-cross pattern<br>सड़कें समकोण पर एक दूसरे को काटती हैं जिससे एक आड़ी-तिरछी आकृति बनती है।",
+    "Broad circular roads radiating out from a central square<br>एक केंद्रीय चौक से बाहर की ओर फैली चौड़ी गोलाकार सड़कें",
+    "Narrow zig-zag streets designed to control traffic flow<br>यातायात प्रवाह को नियंत्रित करने के लिए डिज़ाइन की गई संकरी, टेढ़ी-मेढ़ी सड़कें"
+   ],
+   "my_ans": "B",
+   "sol": "हड़प्पा सभ्यता की सड़कें ग्रिड पैटर्न पर आधारित थीं, जहाँ मुख्य सड़कें एक-दूसरे को 90 डिग्री (समकोण) पर काटती थीं।",
+   "trick": "हड़प्पा = ग्रिड/समकोण सड़क प्रणाली",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "The work ‘Panchasiddhantika’, which deals with astronomy, was written in the sixth century by:",
+   "hi": "खगोल विज्ञान से संबंधित ग्रंथ ‘पंचसिद्धांतिका’ की रचना छठी शताब्दी में किसके द्वारा की गई थी?",
+   "opts": [
+    "Kalidasa<br>कालिदास",
+    "Brahmagupta<br>ब्रह्मगुप्त",
+    "Varahamihira<br>वराहमिहिर",
+    "Aryabhata<br>आर्यभट्ट"
+   ],
+   "my_ans": "C",
+   "sol": "पंचसिद्धांतिका छठी शताब्दी का प्रसिद्ध खगोलीय ग्रंथ है, जिसे महान खगोलशास्त्री वराहमिहिर ने लिखा था।",
+   "trick": "वराहमिहिर = पंचसिद्धांतिका",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "After defeating the Shakas and annexing their territories in western India, which Gupta ruler assumed the imperial title “Vikramaditya” to mark his supremacy?",
+   "hi": "पश्चिमी भारत में शकों को पराजित करने और उनके क्षेत्रों पर कब्जा करने के बाद, किस गुप्त शासक ने अपनी सर्वोच्चता को दर्शाने के लिए \"विक्रमादित्य\" की शाही उपाधि धारण की?",
+   "opts": [
+    "Samudragupta<br>समुद्रगुप्त",
+    "Kumaragupta I<br>कुमारगुप्त प्रथम",
+    "Chandragupta II<br>चंद्रगुप्त द्वितीय",
+    "Skandagupta<br>स्कंदगुप्त"
+   ],
+   "my_ans": "C",
+   "sol": "चंद्रगुप्त द्वितीय ने पश्चिमी भारत के शक शासकों को हराकर 'विक्रमादित्य' की उपाधि धारण की थी।",
+   "trick": "शकों का विजेता = चंद्रगुप्त द्वितीय (विक्रमादित्य)",
+   "ans": "C"
+  }
+ ]
+}

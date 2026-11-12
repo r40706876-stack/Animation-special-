@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "428-430",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "The process of fixing inorganic CO₂ into an organic form (sugar) is carried out in which of the following phases during photosynthesis?",
+   "hi": "प्रकाश संश्लेषण के दौरान अकार्बनिक CO₂ को कार्बनिक रूप (शर्करा) में स्थिरीकरण की प्रक्रिया निम्नलिखित में से किस चरण में की जाती है?",
+   "opts": [
+    "Calvin-Benson cycle<br>केल्विन-बेंसन चक्र",
+    "Kreb's cycle<br>क्रेब्स चक्र",
+    "Glycolysis<br>ग्लाइकोलिसिस",
+    "Light-dependent phase<br>प्रकाश-निर्भर चरण"
+   ],
+   "my_ans": "A",
+   "sol": "प्रकाश संश्लेषण के केल्विन-बेंसन चक्र (अंधकार अभिक्रिया) में क्लोरोप्लास्ट के स्ट्रोमा में CO₂ का स्थिरीकरण करके शर्करा बनाई जाती है।",
+   "trick": "केल्विन चक्र = कार्बन फिक्सेशन (अंधकार अभिक्रिया)",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Which plant tissue is responsible for transporting water from the roots to the leaves?",
+   "hi": "कौन-सा पादप ऊतक, जड़ों से पत्तियों तक जल का परिवहन करने के लिए उत्तरदायी होता है?",
+   "opts": [
+    "Phloem<br>फ्लोएम",
+    "Cortex<br>कोर्टेक्स",
+    "Epidermis<br>एपिडर्मिस",
+    "Xylem<br>ज़ाइलम"
+   ],
+   "my_ans": "D",
+   "sol": "ज़ाइलम (Xylem) ऊतक पौधों में जड़ों से पत्तियों तक जल और खनिजों को ऊपर की ओर पहुँचाने का कार्य करता है।",
+   "trick": "Xylem = जल (Water), Phloem = भोजन (Food)",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "The part of the pomegranate that is consumed is known as:",
+   "hi": "अनार के जिस भाग का उपभोग किया जाता है, उसे किस नाम से जाना जाता है?",
+   "opts": [
+    "Endocarp<br>अंतः फलभित्ति",
+    "Seed Coat<br>बीजावरण",
+    "Pericarp<br>फलभित्ति",
+    "Placenta<br>बीजांडासन"
+   ],
+   "my_ans": "B",
+   "sol": "अनार एक कूट फल है, इसका खाने योग्य रसीला भाग बीजों के चारों ओर का आवरण यानी बीजावरण (Seed coat) होता है।",
+   "trick": "अनार = रसीला बीजावरण",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Consider a hypothetical population of rabbits experiencing logistic growth. If the carrying capacity of their environment is 1000 individuals and the current population is 500, what would you expect to happen to the population?",
+   "hi": "एक परिकल्पित खरगोशों की आबादी पर विचार कीजिए, जो वृद्धिघाती वृद्धि से गुजर रही है। यदि उनके पर्यावरण की वहन क्षमता 1000 व्यष्टि है तथा वर्तमान आबादी 500 है, तो आबादी में कौन-सा परिवर्तन होना अपेक्षित है?",
+   "opts": [
+    "The population will continue to grow exponentially without any constraints.<br>आबादी बिना किसी बाधा के चरघातांकीय रूप से बढ़ती रहेगी।",
+    "The population growth will slow down and eventually stabilize near the carrying capacity.<br>आबादी की वृद्धि धीमी हो जाएगी और अंततः वहन क्षमता के निकट स्थिर हो जाएगी।",
+    "The population will experience a sudden crash followed by a rapid rebound.<br>आबादी में अचानक गिरावट आएगी और फिर शीघ्रता से वृद्धि होगी।",
+    "The population will decline rapidly due to resource depletion.<br>संसाधनों की कमी के कारण आबादी शीघ्रता से घटेगी।"
+   ],
+   "my_ans": "B",
+   "sol": "लॉजिस्टिक वृद्धि मॉडल के अनुसार, जैसे-जैसे आबादी वहन क्षमता (K) के करीब पहुँचती है, संसाधनों की प्रतिस्पर्धा के कारण वृद्धि दर धीमी होकर स्थिर हो जाती है।",
+   "trick": "आबादी + सीमित संसाधन = स्थिर वृद्धि",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "What is the primary function of the water vascular system in echinoderms, such as starfish?",
+   "hi": "स्टारफिश जैसे एकाइनोडर्म में जल वाहिकीय प्रणाली (water vascular system) का प्राथमिक कार्य क्या है?",
+   "opts": [
+    "Reproduction<br>जनन",
+    "Locomotion and feeding<br>गमन और भोजन",
+    "Sensory perception<br>इंद्रिय प्रत्यक्षीकरण",
+    "Gas exchange<br>गैस विनिमय"
+   ],
+   "my_ans": "B",
+   "sol": "एकाइनोडर्म में जल वाहिकीय प्रणाली ट्यूब फीट के माध्यम से चलने (गमन) और भोजन पकड़ने में मदद करती है।",
+   "trick": "जल तंत्र = चलना + खाना",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "When the kidneys are not able to reabsorb the glucose, then the glucose will be excreted through the urine. This condition is known as:",
+   "hi": "जब वृक्क, ग्लूकोस को पुनः अवशोषित करने में सक्षम नहीं होते हैं, तो ग्लूकोस मूत्र के माध्यम से उत्सर्जित हो जाता है। इस स्थिति को _________ कहा जाता है।",
+   "opts": [
+    "Lupus nephritis<br>ल्यूपस नेफ्राइटिस",
+    "Cystinosis<br>सिस्टिनोसिस",
+    "Ascites<br>एसाइट",
+    "Glycosuria<br>ग्लाइकोसुरिया"
+   ],
+   "my_ans": "D",
+   "sol": "जब रक्त में शर्करा का स्तर बहुत अधिक हो जाता है और किडनी उसे पुनः अवशोषित नहीं कर पाती, तो मूत्र में ग्लूकोस आने लगता है, जिसे ग्लाइकोसुरिया कहते हैं।",
+   "trick": "Glyco (ग्लूकोस) + Uria (मूत्र) = ग्लाइकोसुरिया",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Which ions help chlorophyll to absorb light?",
+   "hi": "निम्नलिखित में से कौन-से आयन, पर्णहरित (chlorophyll) की प्रकाश अवशोषित करने में सहायता करते हैं?",
+   "opts": [
+    "C",
+    "Na",
+    "Ca",
+    "Mg"
+   ],
+   "my_ans": "D",
+   "sol": "मैग्नीशियम (Mg²⁺) क्लोरोफिल अणु के केंद्र में स्थित होता है, जो प्रकाश ऊर्जा को अवशोषित करने में मुख्य भूमिका निभाता है।",
+   "trick": "क्लोरोफिल का केंद्र = Mg",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following statements differentiates bryophytes from algae?",
+   "hi": "निम्नलिखित में से कौन-सा कथन, ब्रायोफाइट्स को शैवाल से अलग करता है?",
+   "opts": [
+    "Bryophytes possess chlorophyll<br>ब्रायोफाइट्स में पर्णहरित होता है",
+    "Bryophytes are cryptogams<br>ब्रायोफाइट्स, क्रिप्टोगैम होते हैं",
+    "Bryophytes exhibit the formation of an embryo from the zygote<br>ब्रायोफाइट्स, युग्मज से भ्रूण के निर्माण का प्रदर्शन करते हैं",
+    "Bryophytes can prepare their own food<br>ब्रायोफाइट्स अपना भोजन स्वयं बना सकते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "ब्रायोफाइट्स में युग्मज (zygote) से बहुकोशिकीय भ्रूण का निर्माण होता है, जबकि शैवाल में भ्रूण नहीं बनता है।",
+   "trick": "ब्रायोफाइट्स = भ्रूण बनाने वाले पौधे",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "The stem that undergoes modification, becomes flattened and carries chlorophyll to bear the responsibility of photosynthesis instead of leaf, is termed as ______________.",
+   "hi": "तना जो रूपांतरित होकर चपटा हो जाता है और पत्ती के बजाय प्रकाश संश्लेषण का कार्य करने के लिए क्लोरोफिल धारण करता है, उसे ______________ कहा जाता है।",
+   "opts": [
+    "stolon<br>देहांकुर",
+    "cladode<br>पर्णाभपर्व",
+    "thorn<br>कंटक",
+    "rhizome<br>प्रकंद"
+   ],
+   "my_ans": "B",
+   "sol": "क्लैडोडे (Cladode) तने का एक रूपांतरण है जो चपटा और हरा हो जाता है, जिससे यह पत्ती की तरह प्रकाश संश्लेषण का कार्य करता है।",
+   "trick": "चपटा तना = क्लैडोडे",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "What is the primary role of decomposers in an ecosystem?",
+   "hi": "किसी पारिस्थितिक तंत्र में अपघटकों की प्राथमिक भूमिका क्या है?",
+   "opts": [
+    "Break down organic matter<br>कार्बनिक पदार्थों को विघटित करना",
+    "Capture sunlight for energy<br>ऊर्जा के लिए सूर्य के प्रकाश का प्रग्रहण करना",
+    "Produce oxygen<br>ऑक्सीजन का उत्पादन करना",
+    "Act as primary consumers<br>प्राथमिक उपभोक्ता के रूप में कार्य करना"
+   ],
+   "my_ans": "A",
+   "sol": "अपघटक (Decomposers) मृत कार्बनिक पदार्थों को सरल पदार्थों में तोड़कर पोषक तत्वों को पुनः प्रकृति में लौटाते हैं।",
+   "trick": "अपघटक = सफाईकर्मी (विघटनकर्ता)",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "112-114",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 162,
+   "lvl": "UG",
+   "en": "Which measure formed a central part of Gandhi’s non-cooperation strategy adopted at the Calcutta Session of 1920?",
+   "hi": "1920 के कलकत्ता अधिवेशन में गांधीजी द्वारा अपनाई गई असहयोग नीति का मुख्य भाग कौन-सा उपाय था?",
+   "opts": [
+    "Acceptance of legislative seats to negotiate reforms within councils.<br>परिषदों में सुधारों के लिए बातचीत करने हेतु विधायी सीटों को स्वीकार करना",
+    "Boycott of schools, courts, and councils alongside the adoption of khadi.<br>खादी को अपनाने के साथ-साथ स्कूलों, अदालतों और परिषदों का बहिष्कार",
+    "Participation in trade negotiations to influence imperial economic policies.<br>साम्राज्यवादी आर्थिक नीतियों को प्रभावित करने के लिए व्यापारिक वार्ताओं में भागीदारी",
+    "Establishment of armed village guards to resist colonial recruitment.<br>औपनिवेशिक भर्ती का विरोध करने के लिए सशस्त्र ग्राम रक्षकों की स्थापना"
+   ],
+   "my_ans": "B",
+   "sol": "1920 के असहयोग आंदोलन में सरकारी संस्थानों (स्कूल, अदालत, परिषद) का बहिष्कार और स्वदेशी (खादी) को बढ़ावा देना मुख्य था।",
+   "trick": "असहयोग = सरकारी संस्थानों का बहिष्कार + स्वदेशी अपनाना",
+   "ans": "B"
+  },
+  {
+   "n": 163,
+   "lvl": "UG",
+   "en": "What was the central aim of Raja Rammohan Roy’s Atmiya Sabha in early nineteenth-century Bengal?",
+   "hi": "उन्नीसवीं शताब्दी की शुरुआत में बंगाल में राजा राममोहन राय की आत्मीय सभा का मुख्य उद्देश्य क्या था?",
+   "opts": [
+    "Defending polytheistic worship and resisting all intellectual reform efforts<br>बहुदेववादी उपासना की रक्षा करना और सभी बौद्धिक सुधार प्रयासों का विरोध करना",
+    "Supporting caste exclusiveness and encouraging ritualistic social customs<br>जातिगत विशिष्टता का समर्थन करना और कर्मकांडीय सामाजिक रीति को बढ़ावा देना",
+    "Opposing idolatry and promoting rational interpretation of Vedantic doctrine<br>मूर्तिपूजा का विरोध करना और वेदांत सिद्धांत की तर्कसंगत व्याख्या को बढ़ावा देना",
+    "Propagating occult traditions and discouraging scientific modes of thinking<br>गूढ़ परंपराओं का प्रचार करना और वैज्ञानिक चिंतन विधियों को हतोत्साहित करना"
+   ],
+   "my_ans": "C",
+   "sol": "आत्मीय सभा (1815) का मुख्य उद्देश्य मूर्तिपूजा का विरोध करना और एकेश्वरवाद तथा तर्कसंगत धार्मिक विचारों को बढ़ावा देना था।",
+   "trick": "आत्मीय सभा = मूर्तिपूजा विरोध + तर्कसंगत वेदांत",
+   "ans": "C"
+  },
+  {
+   "n": 164,
+   "lvl": "UG",
+   "en": "The First War of Independence (1857) began at which place?",
+   "hi": "प्रथम स्वतंत्रता संग्राम (1857) किस स्थान से आरंभ हुआ था?",
+   "opts": [
+    "Lucknow<br>लखनऊ",
+    "Meerut<br>मेरठ",
+    "Kanpur<br>कानपुर",
+    "Delhi<br>दिल्ली"
+   ],
+   "my_ans": "B",
+   "sol": "1857 की क्रांति की शुरुआत 10 मई 1857 को मेरठ छावनी से हुई थी।",
+   "trick": "1857 की शुरुआत = मेरठ",
+   "ans": "B"
+  },
+  {
+   "n": 165,
+   "lvl": "UG",
+   "en": "Which socio-economic condition contributed to the prolonged Mappila uprisings?",
+   "hi": "किस सामाजिक-आर्थिक स्थिति ने माप्पिला विद्रोह के लंबे समय तक चलने में योगदान दिया?",
+   "opts": [
+    "Disruption of caravan trade routes linking Mysore and Malabar.<br>मैसूर और मालाबार को जोड़ने वाले कारवां व्यापार मार्गों का व्यवधान",
+    "Taxation of pepper exports restricting maritime activities.<br>काली मिर्च के निर्यात पर कराधान जिसने समुद्री गतिविधियों को प्रतिबंधित कर दिया",
+    "Enforcement of new fishing bans affecting coastal settlements.<br>तटीय बस्तियों को प्रभावित करने वाले नए मछली पकड़ने के प्रतिबंधों का प्रवर्तन",
+    "Harsh land laws and landlord oppression in the Malabar region.<br>मालाबार क्षेत्र में कठोर भूमि कानून और ज़मींदारों द्वारा उत्पीड़न"
+   ],
+   "my_ans": "D",
+   "sol": "मालाबार में जमींदारों द्वारा शोषण, उच्च लगान और मनमानी बेदखली माप्पिला विद्रोह के मुख्य कारण थे।",
+   "trick": "माप्पिला विद्रोह = जमींदारी शोषण + भूमि कानून",
+   "ans": "D"
+  },
+  {
+   "n": 166,
+   "lvl": "UG",
+   "en": "Which pact between Gandhi and the British government marked the suspension of the Civil Disobedience Movement in 1931?",
+   "hi": "गांधी और ब्रिटिश सरकार के बीच हुए किस समझौते के परिणामस्वरूप 1931 में सविनय अवज्ञा आंदोलन स्थगित कर दिया गया था?",
+   "opts": [
+    "Gandhi-Irwin Pact<br>गांधी-इरविन समझौता",
+    "Lucknow Pact<br>लखनऊ समझौता",
+    "Poona Pact<br>पूना समझौता",
+    "Lahore Pact<br>लाहौर समझौता"
+   ],
+   "my_ans": "A",
+   "sol": "1931 में गांधी-इरविन समझौते के तहत सविनय अवज्ञा आंदोलन को स्थगित किया गया था।",
+   "trick": "गांधी-इरविन समझौता = सविनय अवज्ञा का निलंबन",
+   "ans": "A"
+  },
+  {
+   "n": 167,
+   "lvl": "UG",
+   "en": "The leader of the Rampa Revolt (1922–24) in Andhra Pradesh was:",
+   "hi": "आंध्र प्रदेश में रम्पा विद्रोह (1922-24) के नेता कौन थे?",
+   "opts": [
+    "Ram Chandra Reddy<br>राम चंद्र रेड्डी",
+    "Alluri Seetharama Raju<br>अल्लूरी सीताराम राजू",
+    "Chittu Pandey<br>चित्तू पांडे",
+    "Durgawati Devi<br>दुर्गावती देवी"
+   ],
+   "my_ans": "B",
+   "sol": "रम्पा विद्रोह (1922-24) का नेतृत्व अल्लूरी सीताराम राजू ने किया था, जो आदिवासियों के अधिकारों के लिए लड़े थे।",
+   "trick": "रम्पा विद्रोह = अल्लूरी सीताराम राजू",
+   "ans": "B"
+  },
+  {
+   "n": 168,
+   "lvl": "UG",
+   "en": "The Vernacular Press Act (1878) targeted _____________.",
+   "hi": "स्थानीय भाषा प्रेस अधिनियम (1878), किनको लक्षित करने के लिए लागू किया गया था?",
+   "opts": [
+    "Trade publications against British rule<br>ब्रिटिश शासन के विरुद्ध व्यापारिक प्रकाशनों",
+    "Hindi educational journals during British rule<br>ब्रिटिश शासनकाल के दौरान हिंदी की शैक्षणिक पत्रिकाओं",
+    "English newspapers only<br>केवल अंग्रेजी समाचार पत्रों",
+    "Indian-language newspapers critical of British rule<br>ब्रिटिश शासन की आलोचना करने वाले भारतीय भाषा के समाचार पत्रों"
+   ],
+   "my_ans": "D",
+   "sol": "वर्नाक्युलर प्रेस एक्ट (1878) का उद्देश्य भारतीय भाषाओं के उन समाचार पत्रों को दबाना था जो ब्रिटिश नीतियों की आलोचना करते थे।",
+   "trick": "वर्नाक्युलर प्रेस एक्ट = देशी भाषाओं के अखबारों पर नियंत्रण",
+   "ans": "D"
+  },
+  {
+   "n": 169,
+   "lvl": "UG",
+   "en": "Which feature of the Brahmo Samaj best reflects its reformist interpretation of Hindu religious practices?",
+   "hi": "ब्रह्म समाज की कौन सी विशेषता हिंदू धार्मिक प्रथाओं की उसकी सुधारवादी व्याख्या को सबसे अच्छी तरह से दर्शाती है?",
+   "opts": [
+    "Promoting monotheistic worship and completely rejecting ritual sacrifices.<br>एकेश्वरवादी पूजा को बढ़ावा देना और अनुष्ठानिक बलिदानों को पूर्णतः अस्वीकार करना",
+    "Reviving Vedic polytheism and encouraging ritual offerings across India.<br>वैदिक बहुदेववाद को पुनर्जीवित करना और पूरे भारत में अनुष्ठानिक चढ़ावों को प्रोत्साहित करना",
+    "Upholding hereditary priesthood and strengthening caste divisions everywhere.<br>वंशानुगत पुरोहितवाद को कायम रखना और प्रत्येक जगह जातिगत विभाजन को सुदृढ़ करना",
+    "Protecting priestly authority and supporting elaborate temple ceremonies.<br>पुरोहितों के अधिकार की रक्षा करना और विस्तृत मंदिर समारोहों का समर्थन करना"
+   ],
+   "my_ans": "A",
+   "sol": "ब्रह्म समाज एकेश्वरवाद का समर्थक था और मूर्तिपूजा तथा कर्मकांडों (बलिदान) का घोर विरोधी था।",
+   "trick": "ब्रह्म समाज = एकेश्वरवाद + मूर्तिपूजा विरोध",
+   "ans": "A"
+  }
+ ]
+}

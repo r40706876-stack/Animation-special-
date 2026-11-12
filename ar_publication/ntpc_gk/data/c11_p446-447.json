@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "446-447",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "Which of the following is the specialized kind of cell division that reduces the chromosome number by half, resulting in the production of haploid daughter cells?",
+   "hi": "निम्नलिखित में से कौन-सा, विशेष प्रकार का कोशिका विभाजन है जो गुणसूत्रों की संख्या को आधा कर देता है और परिणामस्वरूप अगुणित संतति कोशिकाओं का उत्पादन करता है?",
+   "opts": [
+    "Meiosis<br>अर्धसूत्रण (Meiosis)",
+    "Mitosis<br>समसूत्रण (Mitosis)",
+    "Fertilization<br>निषेचन (Fertilization)",
+    "Translocation<br>स्थानांतरण (Translocation)"
+   ],
+   "my_ans": "A",
+   "sol": "अर्धसूत्रण (Meiosis) एक विशेष कोशिका विभाजन है जो जनन कोशिकाओं में होता है और गुणसूत्रों की संख्या को आधा करके अगुणित (haploid) संतति कोशिकाएं बनाता है।",
+   "trick": "Meiosis = Half (आधा) chromosome number",
+   "ans": "A"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "Which pancreatic hormone regulates blood glucose levels by stimulating the uptake of glucose by body cells?",
+   "hi": "कौन-सा अग्न्याशयी हार्मोन शरीर की कोशिकाओं द्वारा ग्लूकोज़ के अवशोषण को उद्दीपित (stimulate) करके रक्त में ग्लूकोज़ के स्तर को नियंत्रित करता है?",
+   "opts": [
+    "Cortisol<br>कोर्टिसोल (Cortisol)",
+    "Glucagon<br>ग्लूकागॉन (Glucagon)",
+    "Thyroxine<br>थायरोक्सिन (Thyroxine)",
+    "Insulin<br>इंसुलिन (Insulin)"
+   ],
+   "my_ans": "D",
+   "sol": "इंसुलिन अग्न्याशय की बीटा कोशिकाओं द्वारा स्रावित होता है, जो कोशिकाओं में ग्लूकोज़ के अवशोषण को बढ़ाकर रक्त शर्करा के स्तर को कम करता है।",
+   "trick": "Insulin = In (कोशिकाओं के अंदर) glucose",
+   "ans": "D"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "In human beings, the complete digestion of proteins results in the formation of which substances?",
+   "hi": "मनुष्यों में, प्रोटीन के पूर्ण पाचन से किन पदार्थों का निर्माण होता है?",
+   "opts": [
+    "Fatty acids<br>वसा अम्ल",
+    "Glucose<br>शर्करा",
+    "Glycerol<br>ग्लिसरॉल",
+    "Amino acids<br>ऐमीनो अम्ल"
+   ],
+   "my_ans": "D",
+   "sol": "प्रोटीन जटिल अणु होते हैं जो पेप्टाइड बंधों से जुड़े अमीनो अम्लों से बने होते हैं। पाचन के बाद ये अंततः अमीनो अम्लों में टूट जाते हैं।",
+   "trick": "Protein = Amino Acid chain",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Why are lipids important in the cell membrane structure of living organisms?",
+   "hi": "जीवित जीवों की कोशिका झिल्ली संरचना में लिपिड क्यों महत्वपूर्ण हैं?",
+   "opts": [
+    "They store genetic information.<br>वे आनुवंशिक जानकारी संग्रहित करते हैं।",
+    "They provide instructions for protein synthesis.<br>वे प्रोटीन संश्लेषण के लिए निर्देश प्रदान करते हैं।",
+    "They catalyze biochemical reactions.<br>वे जैव-रासायनिक अभिक्रिया को उत्प्रेरित करते हैं।",
+    "They form a barrier that controls what enters and leaves the cell.<br>वे एक अवरोध बनाते हैं जो कोशिका में प्रवेश करने और बाहर निकलने वाली चीजों को नियंत्रित करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "कोशिका झिल्ली में लिपिड (फॉस्फोलिपिड) एक द्वि-स्तरीय संरचना बनाते हैं, जो एक चयनात्मक पारगम्य अवरोध के रूप में कार्य करता है और पदार्थों के आवागमन को नियंत्रित करता है।",
+   "trick": "Lipid bilayer = Cell gatekeeper",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Which part of the small intestine in the human digestive system receives bile from the gall bladder and pancreatic juice from the pancreas through a common bile duct?",
+   "hi": "मानव पाचन तंत्र में छोटी आंत का कौन-सा भाग, पित्ताशय से पित्त और अग्न्याशय से अग्न्याशयी रस मूल पित्त वाहिनी द्वारा प्राप्त करता है?",
+   "opts": [
+    "Ileum<br>शेषांत्र (Ileum)",
+    "Colon<br>बृहदांत्र (Colon)",
+    "Duodenum<br>ग्रहणी (Duodenum)",
+    "Jejunum<br>अग्रक्षुद्रांत्र (Jejunum)"
+   ],
+   "my_ans": "C",
+   "sol": "ग्रहणी (Duodenum) छोटी आंत का पहला और सबसे छोटा भाग है, जहाँ पित्त और अग्न्याशयी रस आकर मिलते हैं और पाचन में मदद करते हैं।",
+   "trick": "Duodenum = Digestion start point",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "The deficiency of which vitamin can lead to night blindness?",
+   "hi": "किस विटामिन की कमी से रतौंधी हो सकता है?",
+   "opts": [
+    "Vitamin A<br>विटामिन A",
+    "Vitamin C<br>विटामिन C",
+    "Vitamin B12<br>विटामिन B12",
+    "Vitamin D<br>विटामिन D"
+   ],
+   "my_ans": "A",
+   "sol": "विटामिन A (रेटिनॉल) दृष्टि के लिए आवश्यक है। इसकी कमी से रेटिना में रोडोप्सिन नहीं बन पाता, जिससे कम रोशनी में देखने में कठिनाई (रतौंधी) होती है।",
+   "trick": "Vitamin A = Eyes/Vision",
+   "ans": "A"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "What type of joint allows the widest range of movement, including medial and lateral rotation, as in the shoulder and hip?",
+   "hi": "निम्नलिखित में से किस प्रकार की संधि, कंधे और नितम्ब की तरह मध्य और पार्श्व घूर्णन सहित व्यापकतम गति प्रदान करती है?",
+   "opts": [
+    "Pivot Joint<br>कीलक संधि (Pivot Joint)",
+    "Ball and Socket Joint<br>बॉल और खल्लिका संधि (Ball and Socket Joint)",
+    "Hinge Joint<br>हिंज संधि (Hinge Joint)",
+    "Gliding Joint<br>विसर्पी संधि (Gliding Joint)"
+   ],
+   "my_ans": "B",
+   "sol": "बॉल और सॉकेट संधि में एक हड्डी का गोल सिरा दूसरी हड्डी के कप जैसे गड्ढे में फिट होता है, जो सभी दिशाओं में घूमने की अनुमति देता है।",
+   "trick": "Ball & Socket = 360 degree rotation",
+   "ans": "B"
+  }
+ ]
+}

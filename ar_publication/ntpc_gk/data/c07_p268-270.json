@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "268-270",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 137,
+   "lvl": "GL",
+   "en": "In which year was the 52nd Amendment Act of the Indian Constitution, which introduced the Anti-Defection Law to prevent elected representatives from switching political parties, passed?",
+   "hi": "भारतीय संविधान का 52वां संशोधन अधिनियम, जिसके अंतर्गत निर्वाचित प्रतिनिधियों को राजनीतिक दल बदलने से रोकने के लिए दल-बदल विरोधी कानून लागू किया गया था, किस वर्ष पारित हुआ था?",
+   "opts": [
+    "1975",
+    "1980",
+    "1990",
+    "1985"
+   ],
+   "my_ans": "D",
+   "sol": "52वां संविधान संशोधन अधिनियम 1985 में राजीव गांधी के कार्यकाल में पारित हुआ था, जिसने संविधान में 10वीं अनुसूची जोड़ी।",
+   "trick": "52वां संशोधन = 1985 = दल-बदल विरोधी कानून (10वीं अनुसूची)",
+   "ans": "D"
+  },
+  {
+   "n": 138,
+   "lvl": "GL",
+   "en": "In what duration (in years) will ₹9,000 fetch a simple interest of ₹720 at 4% per annum rate of interest?",
+   "hi": "कितने वर्षों में ₹9,000 पर 4% वार्षिक ब्याज दर से ₹720 साधारण ब्याज प्राप्त होगा?",
+   "opts": [
+    "1",
+    "4",
+    "2",
+    "3"
+   ],
+   "my_ans": "C",
+   "sol": "साधारण ब्याज = (मूलधन × दर × समय) / 100<br>720 = (9000 × 4 × समय) / 100<br>720 = 360 × समय → समय = 2 वर्ष।",
+   "trick": "SI = (P×R×T)/100",
+   "ans": "C"
+  },
+  {
+   "n": 139,
+   "lvl": "GL",
+   "en": "According to the Constitution (One Hundred and Sixth Amendment) Act, 2023, what proportion of seats to be filled by direct election in the House of the People (Lok Sabha) is to be reserved for women?",
+   "hi": "संविधान (106वाँ संशोधन) अधिनियम, 2023 के अनुसार, लोकसभा में प्रत्यक्ष निर्वाचन द्वारा भरी जाने वाली सीटों का कितना अनुपात महिलाओं के लिए आरक्षित किया जाना है?",
+   "opts": [
+    "One-quarter of the seats<br>एक-चौथाई सीटें",
+    "One-half of the seats<br>आधी सीटें",
+    "One-third of the seats<br>एक-तिहाई सीटें",
+    "Two-thirds of the seats<br>दो-तिहाई सीटें"
+   ],
+   "my_ans": "C",
+   "sol": "106वां संविधान संशोधन (नारी शक्ति वंदन अधिनियम) लोकसभा और राज्य विधानसभाओं में महिलाओं के लिए एक-तिहाई (33%) सीटें आरक्षित करता है।",
+   "trick": "106वां संशोधन = नारी शक्ति वंदन = 1/3 आरक्षण",
+   "ans": "C"
+  },
+  {
+   "n": 140,
+   "lvl": "GL",
+   "en": "What is the main role of the Finance Commission in Centre-State relations in India?",
+   "hi": "भारत में, केंद्र-राज्य संबंधों में वित्त आयोग की मुख्य भूमिका क्या है?",
+   "opts": [
+    "Approving state budgets<br>राज्य के बजट को स्वीकृति देना",
+    "Recommending distribution between the Union and the States of the net proceeds of taxes<br>केंद्र और राज्यों के बीच करों से प्राप्त शुद्ध आगमों के वितरण की अनुशंसा करना",
+    "Planning economic development funds<br>आर्थिक विकास निधियों की योजना बनाना",
+    "Allocating state shares of GST<br>GST में राज्यों के हिस्से का आवंटन करना"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 280 के तहत गठित वित्त आयोग का मुख्य कार्य केंद्र और राज्यों के बीच करों की शुद्ध आय के वितरण की सिफारिश करना है।",
+   "trick": "वित्त आयोग = अनुच्छेद 280 = करों का बंटवारा",
+   "ans": "B"
+  },
+  {
+   "n": 141,
+   "lvl": "GL",
+   "en": "The impeachment of President due to violation of the the Constitution is preferred by _____________.",
+   "hi": "संविधान के उल्लंघन के कारण राष्ट्रपति पर महाभियोग का आरोप _____________ द्वारा लगाया जा सकता है।",
+   "opts": [
+    "Only Speaker of Lok Sabha<br>केवल लोकसभा अध्यक्ष",
+    "Either House of the Parliament<br>संसद के किसी भी सदन",
+    "Only Lok Sabha<br>केवल लोकसभा",
+    "Only Rajya Sabha<br>केवल राज्यसभा"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रपति पर महाभियोग (अनुच्छेद 61) संसद के किसी भी सदन द्वारा शुरू किया जा सकता है।",
+   "trick": "महाभियोग = अनुच्छेद 61 = संसद का कोई भी सदन",
+   "ans": "B"
+  },
+  {
+   "n": 142,
+   "lvl": "GL",
+   "en": "According to the Finance Commission (Miscellaneous Provisions) Act, 1951, the Finance Commission shall consist of:",
+   "hi": "वित्त आयोग (प्रकीर्ण उपबंध) अधिनियम, 1951 के अनुसार, वित्त आयोग में कौन शामिल होंगे?",
+   "opts": [
+    "A Chairman and six other members<br>एक अध्यक्ष और छह अन्य सदस्य",
+    "A Chairman and two other members<br>एक अध्यक्ष और दो अन्य सदस्य",
+    "A Chairman and four other members<br>एक अध्यक्ष और चार अन्य सदस्य",
+    "A Chairman and eight other members<br>एक अध्यक्ष और आठ अन्य सदस्य"
+   ],
+   "my_ans": "C",
+   "sol": "वित्त आयोग अधिनियम, 1951 के अनुसार, आयोग में एक अध्यक्ष और चार अन्य सदस्य होते हैं।",
+   "trick": "वित्त आयोग = 1 अध्यक्ष + 4 सदस्य = 5 कुल",
+   "ans": "C"
+  },
+  {
+   "n": 143,
+   "lvl": "GL",
+   "en": "Which among the following statements is INCORRECT related to the Right to Information Act, 2005?",
+   "hi": "निम्नलिखित में से कौन-सा कथन सूचना का अधिकार अधिनियम, 2005 के संबंध में गलत है?",
+   "opts": [
+    "It covers all constitutional authorities, including the President and the Supreme Court.<br>इसमें राष्ट्रपति और सर्वोच्च न्यायालय सहित सभी संवैधानिक प्राधिकरण शामिल हैं।",
+    "The Act mandates that the information be provided within 30 days of the request in normal cases.<br>अधिनियम यह आदेश देता है कि सामान्य मामलों में अनुरोध के 30 दिनों के भीतर सूचना प्रदान की जानी चाहिए।",
+    "All the non-governmental organizations (NGOs) that are financed by the government come under the purview of RTI Act.<br>सरकार द्वारा वित्तपोषित सभी गैर-सरकारी संगठन (NGO) सूचना का अधिकार अधिनियम के अंतर्गत आते हैं।",
+    "The Central Information Commission is a constitutional body.<br>केंद्रीय सूचना आयोग एक संवैधानिक निकाय है।"
+   ],
+   "my_ans": "D",
+   "sol": "केंद्रीय सूचना आयोग एक वैधानिक निकाय (statutory body) है, न कि संवैधानिक निकाय, क्योंकि यह RTI अधिनियम के तहत बनाया गया है।",
+   "trick": "CIC = वैधानिक निकाय (RTI अधिनियम से बना)",
+   "ans": "D"
+  },
+  {
+   "n": 144,
+   "lvl": "GL",
+   "en": "The 74th Constitutional Amendment Act, 1992, entrusted the Municipalities with ______ functional domains under the Twelfth Schedule of the Constitution.",
+   "hi": "74वें संवैधानिक संशोधन अधिनियम, 1992 ने संविधान की बारहवीं अनुसूची के अंतर्गत नगरपालिकाओं को _______ कार्यात्मक डोमेन सौंपे।",
+   "opts": [
+    "9",
+    "10",
+    "20",
+    "18"
+   ],
+   "my_ans": "D",
+   "sol": "74वें संशोधन द्वारा जोड़ी गई 12वीं अनुसूची में नगरपालिकाओं के लिए 18 कार्यात्मक विषय दिए गए हैं।",
+   "trick": "74वां संशोधन = 12वीं अनुसूची = 18 विषय",
+   "ans": "D"
+  },
+  {
+   "n": 145,
+   "lvl": "GL",
+   "en": "Which Article of the Indian Constitution obligates the State to secure equal pay for men and women doing comparable work?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, राज्य को समान कार्य करने वाले पुरुषों और महिलाओं के लिए समान वेतन सुनिश्चित करने के लिए बाध्य करता है?",
+   "opts": [
+    "Article 39(d)<br>अनुच्छेद 39(d)",
+    "Article 47(a)<br>अनुच्छेद 47(a)",
+    "Article 38(1)<br>अनुच्छेद 38(1)",
+    "Article 42<br>अनुच्छेद 42"
+   ],
+   "my_ans": "A",
+   "sol": "राज्य के नीति निर्देशक तत्व के अनुच्छेद 39(d) में समान कार्य के लिए समान वेतन का प्रावधान है।",
+   "trick": "39(d) = समान कार्य, समान वेतन",
+   "ans": "A"
+  },
+  {
+   "n": 146,
+   "lvl": "GL",
+   "en": "The Constitution (Ninety-Fifth Amendment) Act of 2009 extended the reservation of seats in the Lok Sabha and State Legislative Assemblies for Scheduled Castes, Scheduled Tribes, and Anglo-Indians for how many years?",
+   "hi": "संविधान (95वाँ संशोधन) अधिनियम, 2009 के अंतर्गत लोकसभा और राज्य विधानसभाओं में अनुसूचित जाति, अनुसूचित जनजाति और आंग्ल-भारतीय के लिए सीटों के आरक्षण को कितने वर्षों के लिए बढ़ाया गया है?",
+   "opts": [
+    "Fifteen Years<br>पंद्रह वर्ष",
+    "Twenty Years<br>बीस वर्ष",
+    "Five Years<br>पाँच वर्ष",
+    "Ten Years<br>दस वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "95वें संविधान संशोधन अधिनियम, 2009 द्वारा आरक्षण की अवधि को 10 वर्षों के लिए और बढ़ाया गया था।",
+   "trick": "आरक्षण विस्तार = प्रायः 10 वर्ष",
+   "ans": "D"
+  }
+ ]
+}

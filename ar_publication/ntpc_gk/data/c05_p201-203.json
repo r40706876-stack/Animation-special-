@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "201-203",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 247,
+   "lvl": "UG",
+   "en": "Which process mainly helps in the formation of V-shaped valleys in mountainous regions?",
+   "hi": "पर्वतीय क्षेत्रों में V-आकार की घाटियों के निर्माण में मुख्य रूप से कौन-सी प्रक्रिया मदद करती है?",
+   "opts": [
+    "Glacier movement<br>ग्लेशियर संचलन",
+    "Wave action<br>तरंग क्रिया",
+    "River erosion<br>नदी अपरदन",
+    "Wind erosion<br>वातीय अपरदन"
+   ],
+   "my_ans": "C",
+   "sol": "पर्वतों में नदियाँ लंबवत कटाव करती हैं, जिससे संकरी और गहरी V-आकार की घाटियाँ बनती हैं।",
+   "trick": "नदी = V-आकार, ग्लेशियर = U-आकार",
+   "ans": "C"
+  },
+  {
+   "n": 248,
+   "lvl": "UG",
+   "en": "Which of the following does NOT influence the horizontal distribution of air pressure?",
+   "hi": "निम्नलिखित में से कौन-सा कारक, वायु दाब के क्षैतिज वितरण को प्रभावित नहीं करता है?",
+   "opts": [
+    "Presence of water vapour<br>जल वाष्प की उपस्थिति",
+    "Air temperature<br>वायु तापमान",
+    "Ocean salinity<br>महासागर लवणता",
+    "Earth's rotation<br>पृथ्वी का घूर्णन"
+   ],
+   "my_ans": "C",
+   "sol": "महासागरीय लवणता जल का गुण है, यह वायुमंडलीय दाब को सीधे प्रभावित नहीं करती है।",
+   "trick": "वायु दाब = तापमान, जलवाष्प और पृथ्वी का घूर्णन",
+   "ans": "C"
+  },
+  {
+   "n": 249,
+   "lvl": "UG",
+   "en": "Which of the following coastal regions of India is characterized by extensive lagoons and backwater systems along the western coastal plain?",
+   "hi": "भारत के निम्नलिखित में से किस तटीय क्षेत्र की पहचान पश्चिमी तटीय मैदान के साथ व्यापक लैगून और पश्चजल प्रणालियों द्वारा की जाती है?",
+   "opts": [
+    "The Andhra Coast<br>आंध्र तट",
+    "The Coromandel Coast<br>कोरोमंडल तट",
+    "The Malabar Coast<br>मालाबार तट",
+    "The Northern Circars<br>उत्तरी सरकार"
+   ],
+   "my_ans": "C",
+   "sol": "केरल का मालाबार तट अपनी लैगून और बैकवाटर प्रणालियों (जैसे वेम्बनाड झील) के लिए प्रसिद्ध है।",
+   "trick": "मालाबार = बैकवाटर (केरल)",
+   "ans": "C"
+  },
+  {
+   "n": 250,
+   "lvl": "UG",
+   "en": "Which of the following desert features forms due to parallel retreat of slopes through backwasting?",
+   "hi": "निम्नलिखित में से कौन-सी रेगिस्तानी विशेषता, पश्चरदन (backwasting) के माध्यम से ढलानों के समानांतर पीछे हटने (parallel retreat) के कारण बनती है?",
+   "opts": [
+    "Stalagmite<br>निलंबी निक्षेप",
+    "Playa<br>प्लाया",
+    "Pediplain<br>पदस्थली",
+    "Blowout<br>वातगर्त"
+   ],
+   "my_ans": "C",
+   "sol": "मरुस्थलों में ढलानों के लगातार पीछे हटने से जो विस्तृत समतल सतह बनती है, उसे पेडीप्लेन कहते हैं।",
+   "trick": "बैकवेस्टिंग = पेडीप्लेन",
+   "ans": "C"
+  },
+  {
+   "n": 251,
+   "lvl": "UG",
+   "en": "Which of the following is classified as a longitudinal valley located between the Lesser Himalaya and the Shiwaliks?",
+   "hi": "निम्नलिखित में से किसे लघु हिमालय और शिवालिक के बीच स्थित अनुदैर्ध्य घाटी के रूप में वर्गीकृत किया गया है?",
+   "opts": [
+    "Kangra Valley<br>कांगड़ा घाटी",
+    "Patkai Hill Valley<br>पटकाई पहाड़ी घाटी",
+    "Dehra Dun<br>देहरादून",
+    "Kullu Valley<br>कुल्लू घाटी"
+   ],
+   "my_ans": "C",
+   "sol": "लघु हिमालय और शिवालिक के बीच की घाटियों को 'दून' कहा जाता है, जिसमें देहरादून सबसे प्रसिद्ध है।",
+   "trick": "दून = लघु हिमालय + शिवालिक",
+   "ans": "C"
+  },
+  {
+   "n": 252,
+   "lvl": "UG",
+   "en": "Which latitude experiences the longest daylight during the June solstice?",
+   "hi": "जून संक्रांति (June solstice) के दौरान किस अक्षांश पर सबसे लंबा दिन होता है?",
+   "opts": [
+    "Equator<br>भूमध्य रेखा",
+    "23½° S",
+    "23½° N",
+    "66½° N"
+   ],
+   "my_ans": "D",
+   "sol": "जून में सूर्य कर्क रेखा पर होता है, जिससे उत्तरी ध्रुव की ओर दिन की अवधि बढ़ती है; 66½° N पर 24 घंटे का दिन होता है।",
+   "trick": "जून = उत्तर की ओर झुकाव",
+   "ans": "D"
+  },
+  {
+   "n": 253,
+   "lvl": "UG",
+   "en": "Which of the following is a correct match of a climate type with its vegetation or features as per Koeppen's scheme of classification of climate?",
+   "hi": "कोपेन की जलवायु वर्गीकरण योजना के अनुसार, निम्नलिखित में से कौन-सा विकल्प जलवायु के प्रकार और उसकी वनस्पति या विशेषताओं का सही मिलान है?",
+   "opts": [
+    "Aw – Deciduous forests and tree-shredded grasslands<br>Aw – पर्णपाती वन और पेड़ों से ढकी घासभूमियां",
+    "BWh – Dense evergreen canopy<br>BWh- सघन सदाबहार वितान",
+    "Cfa – Cold desert and permafrost<br>Cfa- शीत मरुस्थल और स्थायी तुषार भूमि",
+    "ET – Tropical rainforest<br>ET-उष्णकटिबंधीय वर्षा वन"
+   ],
+   "my_ans": "A",
+   "sol": "Aw जलवायु उष्णकटिबंधीय सवाना को दर्शाती है, जहाँ पर्णपाती वन और घास के मैदान पाए जाते हैं।",
+   "trick": "Aw = सवाना (घास)",
+   "ans": "A"
+  },
+  {
+   "n": 254,
+   "lvl": "UG",
+   "en": "Which river forms a fertile region within parts of the Great Indian Desert?",
+   "hi": "कौन-सी नदी विशाल भारतीय रेगिस्तान के कुछ हिस्सों में एक उपजाऊ क्षेत्र का निर्माण करती है?",
+   "opts": [
+    "Beas River<br>ब्यास नदी",
+    "Narmada River<br>नर्मदा नदी",
+    "Sabarmati River<br>साबरमती नदी",
+    "Ghaggar River<br>घग्गर नदी"
+   ],
+   "my_ans": "D",
+   "sol": "घग्गर नदी राजस्थान और हरियाणा में बहती है और मानसून के दौरान अपने बेसिन में उपजाऊ जलोढ़ मिट्टी जमा करती है।",
+   "trick": "थार का उपजाऊ क्षेत्र = घग्गर",
+   "ans": "D"
+  },
+  {
+   "n": 255,
+   "lvl": "UG",
+   "en": "Which of the following landforms develops when a river cuts through a ridge, forming a narrow and steep-sided passage?",
+   "hi": "इनमें से कौन-सी स्थलाकृति तब विकसित होती है जब एक नदी किसी कटक को काटकर एक संकीर्ण और खड़ी ढलानों वाला मार्ग बनाती है?",
+   "opts": [
+    "Dune<br>टिब्बा",
+    "Gorge<br>महाखड्ड",
+    "Moraines<br>हिमोढ़",
+    "Plain<br>समभूमि"
+   ],
+   "my_ans": "B",
+   "sol": "जब नदी किसी कठोर चट्टान को काटकर गहरी और संकरी घाटी बनाती है, तो उसे गॉर्ज (महाखड्ड) कहते हैं।",
+   "trick": "गॉर्ज = गहरी संकरी घाटी",
+   "ans": "B"
+  },
+  {
+   "n": 256,
+   "lvl": "UG",
+   "en": "Tropical cyclones form mainly due to:",
+   "hi": "उष्णकटिबंधीय चक्रवात मुख्यतः निम्नलिखित में से किस कारण से बनते हैं?",
+   "opts": [
+    "Rising continental winds<br>ऊपर उठती महाद्वीपीय पवनों से",
+    "Low-pressure systems over warm ocean water<br>गर्म महासागरीय जल पर निम्न वायुदाब प्रणालियों से",
+    "Fast-moving cold fronts<br>तेजी से आगे बढ़ने वाले ठंडे वाताग्रों से",
+    "High-pressure systems over land<br>भूमि पर उच्च वायुदाब प्रणालियों से"
+   ],
+   "my_ans": "B",
+   "sol": "उष्णकटिबंधीय चक्रवातों के लिए गर्म समुद्री जल (26°C से अधिक) और निम्न वायुदाब का होना अनिवार्य है।",
+   "trick": "चक्रवात = गर्म पानी + निम्न दाब",
+   "ans": "B"
+  },
+  {
+   "n": 257,
+   "lvl": "UG",
+   "en": "Which of the following Indian states is NOT crossed by the Tropic of Cancer?",
+   "hi": "भारत के निम्नलिखित में से किस राज्य से होकर कर्क रेखा नहीं गुजरती है?",
+   "opts": [
+    "Gujarat<br>गुजरात",
+    "Odisha<br>ओडिशा",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "West Bengal<br>पश्चिम बंगाल"
+   ],
+   "my_ans": "B",
+   "sol": "कर्क रेखा भारत के 8 राज्यों से गुजरती है, ओडिशा उनमें शामिल नहीं है क्योंकि यह रेखा के दक्षिण में स्थित है।",
+   "trick": "8 राज्य: गुजरात, राजस्थान, मप्र, छत्तीसगढ़, झारखंड, प. बंगाल, त्रिपुरा, मिजोरम",
+   "ans": "B"
+  }
+ ]
+}

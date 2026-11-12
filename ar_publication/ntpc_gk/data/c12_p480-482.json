@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "480-482",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 101,
+   "lvl": "UG",
+   "en": "Which memory is fastest and located inside the CPU?",
+   "hi": "कौन-सी मेमोरी सबसे तेज़ होती है और CPU के अंदर स्थित होती है?",
+   "opts": [
+    "Cache L3<br>कैश L3",
+    "Hard disk<br>हार्ड डिस्क",
+    "Registers<br>रजिस्टर",
+    "RAM<br>रैम"
+   ],
+   "my_ans": "C",
+   "sol": "रजिस्टर CPU के अंदर स्थित सबसे तेज़ मेमोरी है, जो डेटा प्रोसेसिंग के लिए तत्काल उपयोग की जाती है।",
+   "trick": "रजिस्टर = CPU का सबसे तेज़ और करीबी साथी",
+   "ans": "C"
+  },
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "How many control characters are included in the original 7-bit ASCII standard?",
+   "hi": "मूल 7-बिट ASCII मानक में कितने कंट्रोल करैक्टर शामिल हैं?",
+   "opts": [
+    "64",
+    "33",
+    "16",
+    "32"
+   ],
+   "my_ans": "D",
+   "sol": "7-बिट ASCII में कुल 128 वर्ण होते हैं, जिनमें 0-31 तक के 32 वर्ण कंट्रोल कैरेक्टर के रूप में आरक्षित होते हैं।",
+   "trick": "ASCII 7-बिट = 128 कुल, 32 कंट्रोल",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "In the context of computer hardware, what does the abbreviation 'PCB' stand for?",
+   "hi": "कंप्यूटर हार्डवेयर के संदर्भ में, संक्षिप्त रूप 'PCB' का पूर्ण रूप क्या है?",
+   "opts": [
+    "Primary Cache Buffer<br>प्राइमरी कैश बफर",
+    "Printed Circuit Board<br>प्रिंटेड सर्किट बोर्ड",
+    "Peripheral Communication Bus<br>पेरिफेरल कम्युनिकेशन बस",
+    "Processor Control Base<br>प्रोसेसर कंट्रोल बेस"
+   ],
+   "my_ans": "B",
+   "sol": "PCB का अर्थ 'प्रिंटेड सर्किट बोर्ड' है, यह एक बोर्ड होता है जिस पर इलेक्ट्रॉनिक घटकों को जोड़ने के लिए तांबे के पथ बने होते हैं।",
+   "trick": "PCB = Printed Circuit Board (इलेक्ट्रॉनिक बोर्ड)",
+   "ans": "B"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "What does PCB stand for in a Computer System?",
+   "hi": "कंप्यूटर सिस्टम में PCB का पूर्ण रूप क्या है?",
+   "opts": [
+    "Programmed Control Board<br>प्रोग्राम्ड कंट्रोल बोर्ड",
+    "Physical Circuit Block<br>फिजिकल सर्किट ब्लॉक",
+    "Printed Circuit Board<br>प्रिंटेड सर्किट बोर्ड",
+    "Peripheral Circuit Board<br>पेरिफेरल सर्किट बोर्ड"
+   ],
+   "my_ans": "C",
+   "sol": "PCB का पूर्ण रूप 'प्रिंटेड सर्किट बोर्ड' है, जो कंप्यूटर के विभिन्न घटकों जैसे CPU और RAM को आपस में जोड़ता है।",
+   "trick": "PCB = Printed Circuit Board",
+   "ans": "C"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "Which of the following memory types is non-volatile?",
+   "hi": "निम्नलिखित में से कौन-सा मेमोरी प्रकार, नॉन-वोलेटाइल (non-volatile) है?",
+   "opts": [
+    "PCB",
+    "RAM",
+    "CPU",
+    "ROM"
+   ],
+   "my_ans": "D",
+   "sol": "ROM (रीड-ओनली मेमोरी) नॉन-वोलेटाइल है क्योंकि बिजली बंद होने पर भी इसमें संग्रहीत डेटा सुरक्षित रहता है।",
+   "trick": "ROM = Read Only (स्थायी), RAM = Random (अस्थायी)",
+   "ans": "D"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "Which of the following keyboard shortcuts is used to copy selected text or objects?",
+   "hi": "इनमें से कौन-सा कीबोर्ड शॉर्टकट चयनित टेक्स्ट या ऑब्जेक्ट को कॉपी करने के लिए उपयोग किया जाता है?",
+   "opts": [
+    "Ctrl + S",
+    "Ctrl + V",
+    "Ctrl + C",
+    "Ctrl + F"
+   ],
+   "my_ans": "C",
+   "sol": "Ctrl + C का उपयोग चयनित टेक्स्ट या फाइल को कॉपी करने के लिए किया जाता है।",
+   "trick": "C = Copy",
+   "ans": "C"
+  },
+  {
+   "n": 107,
+   "lvl": "UG",
+   "en": "Extended ASCII, an 8-bit evolution of the original 7-bit ASCII standard, supports international text by expanding the character set. How many total codes does it provide?",
+   "hi": "एक्सटेंडेड ASCII, जो मूल 7-बिट ASCII मानक का 8-बिट विकसित रूप है, वर्ण सेट (character set) का विस्तार करके इंटरनेशनल टेक्स्ट को सपोर्ट करता है। यह कुल कितने कोड प्रदान करता है?",
+   "opts": [
+    "512 codes for voice recordings<br>वॉइस रिकॉर्डिंग के लिए 512 कोड",
+    "128 codes limited to English letters<br>अंग्रेजी अक्षरों के लिए 128 कोड तक सीमित",
+    "256 codes including accented characters<br>उच्चारण वाले वर्णों सहित 256 कोड",
+    "1024 codes for video compression<br>वीडियो कम्प्रेशन के लिए 1024 कोड"
+   ],
+   "my_ans": "C",
+   "sol": "8-बिट ASCII (एक्सटेंडेड) में 2⁸ = 256 कोड होते हैं, जो विभिन्न भाषाओं के विशेष वर्णों को शामिल करने में मदद करते हैं।",
+   "trick": "8-बिट = 2 की घात 8 = 256",
+   "ans": "C"
+  },
+  {
+   "n": 108,
+   "lvl": "UG",
+   "en": "Which of the following is an example of computers in the service industry?",
+   "hi": "निम्नलिखित में से कौन-सा सेवा उद्योग में कंप्यूटर का एक उदाहरण है?",
+   "opts": [
+    "Heart surgery monitoring<br>हृदय शल्य चिकित्सा निगरानी",
+    "Spacecraft navigation<br>अंतरिक्ष यान नेविगेशन",
+    "Automated car manufacturing<br>स्वचालित कार निर्माण",
+    "Automated ticket booking<br>स्वचालित टिकट बुकिंग"
+   ],
+   "my_ans": "D",
+   "sol": "स्वचालित टिकट बुकिंग (रेलवे, एयरलाइंस) सेवा उद्योग का हिस्सा है क्योंकि यह सीधे ग्राहकों को सेवा प्रदान करता है।",
+   "trick": "सेवा उद्योग = ग्राहकों को सीधे सेवा देना",
+   "ans": "D"
+  },
+  {
+   "n": 109,
+   "lvl": "UG",
+   "en": "The speed at which a Central Processing Unit (CPU) executes instructions is primarily determined by its clock rate, which is typically measured in gigahertz (GHz). If a CPU has a clock rate of 3.5 GHz, approximately how many clock cycles occur every second?",
+   "hi": "सेंट्रल प्रोसेसिंग यूनिट (CPU) द्वारा अनुदेशों को निष्पादित करने की स्पीड मुख्यतः उसके क्लॉक रेट द्वारा निर्धारित होती है, जिसे प्रायः गीगाहर्ट्ज़ (GHz) में मापा जाता है। यदि किसी CPU की क्लॉक रेट 3.5 GHz है, तो प्रति सेकंड लगभग कितने क्लॉक साइकिल घटित होंगे?",
+   "opts": [
+    "3.5 billion cycles per second<br>3.5 बिलियन साइकिल प्रति सेकंड",
+    "350 cycles per second<br>350 साइकिल प्रति सेकंड",
+    "3.5 million cycles per second<br>3.5 मिलियन साइकिल प्रति सेकंड",
+    "3.5 thousand cycles per second<br>3.5 हजार साइकिल प्रति सेकंड"
+   ],
+   "my_ans": "A",
+   "sol": "1 GHz का अर्थ है 1 बिलियन साइकिल प्रति सेकंड, इसलिए 3.5 GHz = 3.5 बिलियन साइकिल प्रति सेकंड।",
+   "trick": "Giga (G) = 10⁹ = बिलियन",
+   "ans": "A"
+  },
+  {
+   "n": 110,
+   "lvl": "UG",
+   "en": "What is the full form of UNDP?",
+   "hi": "UNDP का पूर्ण रूप क्या है?",
+   "opts": [
+    "United Nations Deployment Programme<br>यूनाइटेड नेशंस डिप्लॉयमेंट प्रोग्राम",
+    "Union of Nations Deployment Programme<br>यूनियन ऑफ नेशंस डिप्लॉयमेंट प्रोग्राम",
+    "United Nations Development Programme<br>यूनाइटेड नेशंस डेवलपमेंट प्रोग्राम",
+    "Union of Nations Development Programme<br>यूनियन ऑफ नेशंस डेवलपमेंट प्रोग्राम"
+   ],
+   "my_ans": "C",
+   "sol": "UNDP का पूर्ण रूप 'यूनाइटेड नेशंस डेवलपमेंट प्रोग्राम' (संयुक्त राष्ट्र विकास कार्यक्रम) है।",
+   "trick": "UNDP = United Nations Development Programme",
+   "ans": "C"
+  }
+ ]
+}

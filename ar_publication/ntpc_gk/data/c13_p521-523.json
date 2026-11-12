@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "521-523",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "The 'Make in India' initiative was launched in which of the following years?",
+   "hi": "मेक इन इंडिया पहल निम्नलिखित में से किस वर्ष शुरू की गई थी?",
+   "opts": [
+    "2014",
+    "2015",
+    "2012",
+    "2013"
+   ],
+   "my_ans": "A",
+   "sol": "मेक इन इंडिया पहल की शुरुआत प्रधानमंत्री नरेंद्र मोदी द्वारा 25 सितंबर 2014 को विनिर्माण को बढ़ावा देने के लिए की गई थी।",
+   "trick": "मेक इन इंडिया = 2014 (मोदी सरकार के पहले वर्ष में)",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "By which of the following names is the National Institute of Kathak Dance commonly known as?",
+   "hi": "राष्ट्रीय कथक नृत्य संस्थान को सामान्यतः निम्नलिखित में से किस नाम से जाना जाता है?",
+   "opts": [
+    "Kathak Kendra<br>कथक केंद्र",
+    "Lucknow Dance University<br>लखनऊ नृत्य विश्वविद्यालय",
+    "Natya Institute of Kathak and Choreography<br>नाट्य इंस्टीट्यूट ऑफ कथक एंड कोरियोग्राफी",
+    "Kathakali Kendra<br>कथकली केंद्र"
+   ],
+   "my_ans": "A",
+   "sol": "राष्ट्रीय कथक नृत्य संस्थान, जो नई दिल्ली में स्थित है, को आमतौर पर 'कथक केंद्र' के नाम से जाना जाता है।",
+   "trick": "कथक का प्रमुख केंद्र = कथक केंद्र",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "On which occasion in 2024 did Prime Minister Narendra Modi launch the Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DAJGUA)?",
+   "hi": "2024 में किस अवसर पर, प्रधानमंत्री नरेंद्र मोदी ने धरती आबा जनजातीय ग्राम उत्कर्ष अभियान (DAJGUA) की शुरुआत की?",
+   "opts": [
+    "Birth Anniversary of Mahatma Gandhi<br>गांधी जयंती",
+    "World Environment Day<br>विश्व पर्यावरण दिवस",
+    "Republic Day<br>गणतंत्र दिवस",
+    "Independence Day<br>स्वतंत्रता दिवस"
+   ],
+   "my_ans": "A",
+   "sol": "यह अभियान 2 अक्टूबर 2024 को महात्मा गांधी की जयंती के अवसर पर आदिवासी गांवों के समग्र विकास के लिए शुरू किया गया था।",
+   "trick": "धरती आबा (बिरसा मुंडा) का सम्मान = गांधी जयंती 2024",
+   "ans": "A"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following countries emerged as mixed team Squash World Cup champions in December 2025 following a dominant 3–0 triumph over top-seeded Hong Kong?",
+   "hi": "निम्नलिखित में से कौन-सा देश, दिसंबर 2025 में टॉप-सीडेड हांगकांग पर 3-0 की प्रभावी जीत के बाद मिश्रित टीम स्क्वैश विश्व कप चैंपियन के रूप में उभरा?",
+   "opts": [
+    "Australia<br>ऑस्ट्रेलिया",
+    "India<br>भारत",
+    "England<br>इंग्लैंड",
+    "Egypt<br>मिस्र"
+   ],
+   "my_ans": "B",
+   "sol": "दिसंबर 2025 में हुए मिश्रित टीम स्क्वैश विश्व कप के फाइनल में भारत ने हांगकांग को 3-0 से हराकर खिताब जीता।",
+   "trick": "स्क्वैश विश्व कप 2025 = भारत की जीत",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "In which year was the Ranji Trophy first held?",
+   "hi": "रणजी ट्रॉफी सर्वप्रथम किस वर्ष आयोजित की गई थी?",
+   "opts": [
+    "1934–35",
+    "1947–48",
+    "1926–27",
+    "1950–51"
+   ],
+   "my_ans": "A",
+   "sol": "रणजी ट्रॉफी की शुरुआत 1934-35 के सत्र में हुई थी और इसका पहला संस्करण बॉम्बे ने जीता था।",
+   "trick": "रणजी = 1934-35 (भारत की पहली घरेलू क्रिकेट प्रतियोगिता)",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Classical dancers Nalini Asthana and Kamalini Asthana received the prestigious Sangeet Natak Akademi Award for the year 2022 for their contribution to which dance form?",
+   "hi": "शास्त्रीय नृत्यांगना नलिनी अस्थाना और कमलिनी अस्थाना को किस नृत्य शैली में उनके योगदान के लिए वर्ष 2022 के प्रतिष्ठित संगीत नाटक अकादमी पुरस्कार से सम्मानित किया गया?",
+   "opts": [
+    "Bharat anatyam<br>भरतनाट्यम",
+    "Odissi<br>ओडिसी",
+    "Kathak<br>कथक",
+    "Kuchipudi<br>कुचिपुड़ी"
+   ],
+   "my_ans": "C",
+   "sol": "अस्थाना बहनें कथक नृत्य के लखनऊ घराने की प्रसिद्ध कलाकार हैं, जिन्हें 2022 में संगीत नाटक अकादमी पुरस्कार मिला।",
+   "trick": "अस्थाना बहनें = कथक",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Who was awarded the Player of the Match in the ICC Women's ODI World Cup final in 2025?",
+   "hi": "2025 में ICC महिला ODI वर्ल्ड कप के फाइनल में प्लेयर ऑफ द मैच का पुरस्कार किसे दिया गया?",
+   "opts": [
+    "Harmanpreet Kaur<br>हरमनप्रीत कौर",
+    "Smriti Mandhana<br>स्मृति मंधाना",
+    "Deepti Sharma<br>दीप्ति शर्मा",
+    "Shafali Verma<br>शेफाली वर्मा"
+   ],
+   "my_ans": "D",
+   "sol": "2025 ICC महिला विश्व कप फाइनल में शानदार पारी खेलने के लिए शेफाली वर्मा को प्लेयर ऑफ द मैच चुना गया।",
+   "trick": "2025 महिला विश्व कप फाइनल = शेफाली वर्मा",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following statements with respect to operation twist is/are correct?",
+   "hi": "ऑपरेशन ट्विस्ट (operation twist) के संबंध में निम्नलिखित में से कौन-सा/से कथन सही है/हैं?",
+   "opts": [
+    "2 and 3 only<br>केवल 2 और 3",
+    "1 and 3 only<br>केवल 1 और 3",
+    "1 and 2 only<br>केवल 1 और 2",
+    "1, 2 and 3<br>1, 2 और 3"
+   ],
+   "my_ans": "D",
+   "sol": "ऑपरेशन ट्विस्ट के तहत RBI लंबी अवधि की प्रतिभूतियां खरीदकर और छोटी अवधि की बेचकर यील्ड कर्व को नियंत्रित करता है, जो तीनों कथनों में सही वर्णित है।",
+   "trick": "ऑपरेशन ट्विस्ट = यील्ड कर्व को समतल करना",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "The Digital India programme was launched in which year to enable digital delivery of services to citizens?",
+   "hi": "नागरिकों को डिजिटल माध्यम से सेवाएं प्रदान करने के लिए डिजिटल इंडिया कार्यक्रम किस वर्ष में शुरू किया गया था?",
+   "opts": [
+    "2015",
+    "2019",
+    "2017",
+    "2020"
+   ],
+   "my_ans": "A",
+   "sol": "डिजिटल इंडिया कार्यक्रम की शुरुआत 1 जुलाई 2015 को भारत को डिजिटल रूप से सशक्त समाज बनाने के उद्देश्य से की गई थी।",
+   "trick": "डिजिटल इंडिया = 2015",
+   "ans": "A"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Cheriyal scroll painting belongs to which State of India?",
+   "hi": "चेरियल स्क्रॉल पेंटिंग (Cheriyal scroll painting) भारत के किस राज्य से संबंधित है?",
+   "opts": [
+    "Telangana<br>तेलंगाना",
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "A",
+   "sol": "चेरियल स्क्रॉल पेंटिंग तेलंगाना राज्य की एक पारंपरिक कला है, जो सिद्दीपेट के पास चेरियल गांव से उत्पन्न हुई है।",
+   "trick": "चेरियल = तेलंगाना",
+   "ans": "A"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "In which year was the Pradhan Mantri Kaushal Vikas Yojana (PMKVY) launched?",
+   "hi": "प्रधानमंत्री कौशल विकास योजना (PMKVY) किस वर्ष शुरू की गई थी?",
+   "opts": [
+    "2025",
+    "2010",
+    "2020",
+    "2015"
+   ],
+   "my_ans": "D",
+   "sol": "प्रधानमंत्री कौशल विकास योजना 15 जुलाई 2015 को कौशल विकास और उद्यमिता मंत्रालय द्वारा शुरू की गई थी।",
+   "trick": "PMKVY = 2015 (कौशल विकास)",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "259-261",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 110,
+   "lvl": "GL",
+   "en": "Which of the following parts of the Indian Constitution deals with the Official Languages of the Indian Union?",
+   "hi": "भारतीय संविधान का निम्नलिखित में से कौन-सा भाग, भारतीय संघ की राजभाषाओं से संबंधित है?",
+   "opts": [
+    "Part XVI<br>भाग XVI",
+    "Part XX<br>भाग XX",
+    "Part XVII<br>भाग XVII",
+    "Part XV<br>भाग XV"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय संविधान का भाग XVII (अनुच्छेद 343-351) आधिकारिक भाषाओं से संबंधित है।",
+   "trick": "भाग 17 में 17 भाषाएं (याद रखने हेतु) - राजभाषा।",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "GL",
+   "en": "Which Article of the Indian Constitution mandates the provision of humane working conditions and maternity relief?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, मानवीय कार्य परिस्थितियों और मातृत्व अवकाश के प्रावधान को अनिवार्य बनाता है?",
+   "opts": [
+    "Article 42<br>अनुच्छेद 42",
+    "Article 48<br>अनुच्छेद 48",
+    "Article 41<br>अनुच्छेद 41",
+    "Article 44<br>अनुच्छेद 44"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 42 राज्य को काम की न्यायसंगत और मानवीय दशाओं तथा मातृत्व सहायता सुनिश्चित करने का निर्देश देता है।",
+   "trick": "42 = काम की दशा और मातृत्व सहायता।",
+   "ans": "A"
+  },
+  {
+   "n": 112,
+   "lvl": "GL",
+   "en": "Which of the following Articles was inserted into the Directive Principles of State Policy of the Indian Constitution by the Constitution (Ninety-seventh Amendment) Act of 2011?",
+   "hi": "निम्नलिखित में से कौन-सा अनुच्छेद, भारतीय संविधान के राज्य के नीति निर्देशक सिद्धांतों में वर्ष 2011 के संविधान (97वें संशोधन) अधिनियम द्वारा जोड़ा गया था?",
+   "opts": [
+    "Article 43B - Promotion of co-operative societies<br>अनुच्छेद 43B - सहकारी समितियों को प्रोत्साहन",
+    "Article 43A - Participation of workers in management of industries<br>अनुच्छेद 43A - उद्योगों के प्रबंधन में श्रमिकों की भागीदारी",
+    "Article 48A - Protection and improvement of environment and safeguarding of forests and wild life<br>अनुच्छेद 48A - पर्यावरण संरक्षण एवं सुधार तथा वनों और वन्य जीव की सुरक्षा",
+    "Article 39A - Equal justice and free legal aid<br>अनुच्छेद 39A - समान न्याय और निःशुल्क कानूनी सहायता"
+   ],
+   "my_ans": "A",
+   "sol": "97वें संविधान संशोधन अधिनियम, 2011 द्वारा अनुच्छेद 43B जोड़ा गया, जो सहकारी समितियों के गठन और प्रबंधन को बढ़ावा देता है।",
+   "trick": "97वां संशोधन = सहकारी समिति (Co-operative).",
+   "ans": "A"
+  },
+  {
+   "n": 113,
+   "lvl": "GL",
+   "en": "The Preamble declares India to be which of the following?",
+   "hi": "उद्देशिका भारत को निम्नलिखित में से क्या घोषित करती है?",
+   "opts": [
+    "Sovereign, Socialist, Federal, Democratic, Republic<br>प्रभुत्व संपन्न, समाजवादी, संघीय, लोकतांत्रिक, गणराज्य",
+    "Sovereign, Federal, Secular, Democratic, Republic<br>प्रभुत्व संपन्न, संघीय, पंथनिरपेक्ष, लोकतांत्रिक, गणराज्य",
+    "Sovereign, Socialist, Secular, Democratic, Union<br>प्रभुत्व संपन्न, समाजवादी, पंथनिरपेक्ष, लोकतांत्रिक, संघ",
+    "Sovereign, Socialist, Secular, Democratic, Republic<br>प्रभुत्व संपन्न, समाजवादी, पंथनिरपेक्ष, लोकतांत्रिक, गणराज्य"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान की प्रस्तावना भारत को एक 'संप्रभु, समाजवादी, पंथनिरपेक्ष, लोकतांत्रिक गणराज्य' घोषित करती है।",
+   "trick": "3S-DR (Sovereign, Socialist, Secular, Democratic, Republic).",
+   "ans": "D"
+  },
+  {
+   "n": 114,
+   "lvl": "GL",
+   "en": "The National Legal Services Authority (NALSA) was established under the:",
+   "hi": "राष्ट्रीय विधिक सेवा प्राधिकरण (NALSA) की स्थापना _________ के तहत की गई थी।",
+   "opts": [
+    "Advocates Act, 1961<br>अधिवक्ता अधिनियम, 1961",
+    "Legal Aid and Advice Act, 1972<br>कानूनी सहायता और सलाह अधिनियम, 1972",
+    "Legal Services Authorities Act, 1987<br>विधिक सेवा प्राधिकरण अधिनियम, 1987",
+    "Code of Criminal Procedure, 1973<br>दंड प्रक्रिया संहिता, 1973"
+   ],
+   "my_ans": "C",
+   "sol": "NALSA की स्थापना विधिक सेवा प्राधिकरण अधिनियम, 1987 के तहत समाज के कमजोर वर्गों को मुफ्त कानूनी सहायता देने के लिए की गई थी।",
+   "trick": "NALSA = 1987 का कानून।",
+   "ans": "C"
+  },
+  {
+   "n": 115,
+   "lvl": "GL",
+   "en": "Which of the following statements about the Directive Principles of State Policy of the Indian Constitution is NOT correct?",
+   "hi": "भारतीय संविधान के राज्य के नीति निर्देशक सिद्धांतों के संदर्भ में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+   "opts": [
+    "They represent the aspirations of the people<br>ये जनता की आकांक्षाओं का प्रतिनिधित्व करते हैं।",
+    "They embody ideals of socio-economic justice<br>ये सामाजिक-आर्थिक न्याय के आदर्शों का प्रतीक होते हैं।",
+    "They are legally enforceable by courts<br>ये न्यायालयों द्वारा कानूनी रूप से प्रवर्तनीय होते हैं।",
+    "They guide the legislature and executive<br>ये विधायिका और कार्यपालिका का मार्गदर्शन करते हैं।"
+   ],
+   "my_ans": "C",
+   "sol": "नीति निर्देशक तत्व (DPSP) न्यायालय द्वारा प्रवर्तनीय (justiciable) नहीं हैं, अर्थात इन्हें लागू कराने के लिए अदालत नहीं जाया जा सकता।",
+   "trick": "DPSP = गैर-न्यायसंगत (Non-justiciable).",
+   "ans": "C"
+  },
+  {
+   "n": 116,
+   "lvl": "GL",
+   "en": "Which of the following Articles of the Constitution of India authorises Parliament to alter the applicability of Fundamental Rights with respect to members of the Armed Forces and the forces entrusted with the maintenance of public order?",
+   "hi": "भारत के संविधान का निम्नलिखित में से कौन-सा अनुच्छेद, संसद को सशस्त्र बलों के सदस्यों और लोक व्यवस्था बनाए रखने के लिए उत्तरदायी बलों के संबंध में मौलिक अधिकारों की प्रयोज्यता को बदलने का अधिकार प्रदान करता है?",
+   "opts": [
+    "Article 35<br>अनुच्छेद 35",
+    "Article 45<br>अनुच्छेद 45",
+    "Article 33<br>अनुच्छेद 33",
+    "Article 42<br>अनुच्छेद 42"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 33 संसद को सशस्त्र बलों और खुफिया एजेंसियों के मौलिक अधिकारों को सीमित या संशोधित करने की शक्ति देता है।",
+   "trick": "33 = Armed Forces (सशस्त्र बल).",
+   "ans": "C"
+  },
+  {
+   "n": 117,
+   "lvl": "GL",
+   "en": "Which of the following is not a feature of the 73rd Constitutional Amendment Act, 1992?",
+   "hi": "निम्नलिखित में से कौन-सा, 73वें संवैधानिक संशोधन अधिनियम, 1992 की विशेषता नहीं है?",
+   "opts": [
+    "Mandatory elections to Panchayats every five years<br>पंचायतों के लिए हर पांच साल में अनिवार्य चुनाव",
+    "Establishment of Lokpal at the village level<br>ग्राम स्तर पर लोकपाल की स्थापना",
+    "Provision for reservation of seats for Scheduled Castes, Scheduled Tribes, and women<br>अनुसूचित जाति, अनुसूचित जनजाति और महिलाओं के लिए सीटों के आरक्षण का प्रावधान",
+    "Establishment of Panchayats as institutions of self-government<br>स्वशासन की संस्थाओं के रूप में पंचायतों की स्थापना"
+   ],
+   "my_ans": "B",
+   "sol": "73वां संशोधन पंचायती राज से संबंधित है। लोकपाल की स्थापना ग्राम स्तर पर नहीं, बल्कि केंद्रीय स्तर पर होती है।",
+   "trick": "73वां संशोधन = पंचायत (लोकपाल नहीं)।",
+   "ans": "B"
+  },
+  {
+   "n": 118,
+   "lvl": "GL",
+   "en": "Which among the following changes were made in the Indian Constitution by the 42nd Constitutional Amendment Act?",
+   "hi": "42वें संविधान संशोधन अधिनियम द्वारा भारतीय संविधान में निम्नलिखित में से कौन-सा परिवर्तन किया गया था?",
+   "opts": [
+    "Increased Lok Sabha seats from 525 to 545.<br>लोकसभा सीटों की संख्या 525 से बढ़ाकर 545 करना",
+    "Introduction of Fundamental Duties under Article 51A.<br>अनुच्छेद 51A के अंतर्गत मौलिक कर्तव्यों को शामिल करना",
+    "Nationalization of Land Ceiling Laws.<br>भूमि सीमा कानूनों का राष्ट्रीयकरण करना",
+    "Inserted Right to Privacy in the Article 21 of Indian Constitution.<br>भारतीय संविधान के अनुच्छेद 21 में निजता का अधिकार सम्मिलित करना"
+   ],
+   "my_ans": "B",
+   "sol": "42वें संविधान संशोधन (1976) द्वारा संविधान में भाग IV-A और अनुच्छेद 51A जोड़कर मौलिक कर्तव्यों को शामिल किया गया था।",
+   "trick": "42वां संशोधन = मौलिक कर्तव्य (Fundamental Duties).",
+   "ans": "B"
+  }
+ ]
+}

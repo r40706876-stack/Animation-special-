@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "135-137",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "The Trans-Siberian Railways major rail route of Russia runs from St. Petersburg in the west to _______ on the Pacific Coast in the east.",
+   "hi": "ट्रांस-साइबेरियन रेलवे, रूस का प्रमुख रेल मार्ग है, जो पश्चिम में सेंट पीटर्सबर्ग से पूर्व में प्रशांत महासागरीय तट पर स्थित __________ तक जाता है।",
+   "opts": [
+    "Novosibirsk<br>नोवोसिबिर्स्क",
+    "Moscow<br>मास्को",
+    "Irkutask<br>इरकुत्स्क",
+    "Vladivostok<br>व्लादिवोस्तोक"
+   ],
+   "my_ans": "D",
+   "sol": "ट्रांस-साइबेरियन रेलवे दुनिया की सबसे लंबी रेल लाइन है जो मॉस्को को प्रशांत तट पर स्थित व्लादिवोस्तोक से जोड़ती है।",
+   "trick": "ट्रांस-साइबेरियन: मॉस्को से व्लादिवोस्तोक तक।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which of the following processes is/are primarily responsible for the formation of fold mountains such as the Himalayas?",
+   "hi": "निम्नलिखित में से कौन-सी प्रक्रिया/प्रक्रियाएं मुख्य रूप से हिमालय जैसे वलित पर्वतों के निर्माण के लिए उत्तरदायी हैं?",
+   "opts": [
+    "Erosion by rivers<br>नदियों द्वारा अपरदन",
+    "Wind deposition<br>वायु निक्षेपण",
+    "Volcanic eruptions<br>ज्वालामुखी उद्गार",
+    "Plate collision<br>प्लेटों की टक्कर"
+   ],
+   "my_ans": "D",
+   "sol": "वलित पर्वत तब बनते हैं जब टेक्टोनिक प्लेटें आपस में टकराती हैं और पृथ्वी की परतों को मोड़कर ऊपर उठा देती हैं।",
+   "trick": "प्लेटों की टक्कर = वलित पर्वत (जैसे हिमालय)।",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which of the following is a correct definition of the word 'tributary'?",
+   "hi": "निम्नलिखित में से कौन-सा, शब्द 'सहायक नदी' की सही परिभाषा है?",
+   "opts": [
+    "A body of salty water mixing with river water<br>नदी के पानी के साथ मिश्रित होने वाले खारे पानी का एक निकाय",
+    "A river flowing into a larger river<br>एक नदी जो एक बृहत नदी में जाकर मिलती है",
+    "A river branching away from another<br>एक नदी दूसरी नदी से अलग होकर शाखाओं में बंट जाती है",
+    "A lake at the rivers mouth<br>नदी के मुहाने पर स्थित एक झील"
+   ],
+   "my_ans": "B",
+   "sol": "सहायक नदी (Tributary) वह छोटी नदी या जलधारा है जो किसी बड़ी मुख्य नदी में आकर मिलती है।",
+   "trick": "सहायक नदी = बड़ी नदी में मिलने वाली छोटी नदी।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which of the following is NOT a component of the actual population growth?",
+   "hi": "निम्नलिखित में से कौन-सा, वास्तविक जनसंख्या वृद्धि का घटक नहीं है?",
+   "opts": [
+    "Urbanisation rate<br>शहरीकरण दर",
+    "Death rate<br>मृत्यु दर",
+    "In-migration<br>आप्रवासन",
+    "Birth rate<br>जन्म दर"
+   ],
+   "my_ans": "A",
+   "sol": "जनसंख्या वृद्धि जन्म दर, मृत्यु दर और प्रवास (आप्रवासन/उत्प्रवासन) पर निर्भर करती है, शहरीकरण दर इसका घटक नहीं है।",
+   "trick": "जनसंख्या वृद्धि = (जन्म-मृत्यु) + (आप्रवास-उत्प्रवास)।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "According to Census 2011, which of the following states showed a negative decadal population growth rate between 2001 and 2011?",
+   "hi": "2011 की जनगणना के अनुसार, निम्नलिखित में से किस राज्य ने 2001 और 2011 के बीच ऋणात्मक दशकीय जनसंख्या वृद्धि दर दर्शाई?",
+   "opts": [
+    "Gujrat<br>गुजरात",
+    "Punjab<br>पंजाब",
+    "Kerela<br>केरल",
+    "Nagaland<br>नागालैंड"
+   ],
+   "my_ans": "D",
+   "sol": "2011 की जनगणना के अनुसार नागालैंड एकमात्र ऐसा राज्य था जिसकी दशकीय जनसंख्या वृद्धि दर ऋणात्मक (-0.47%) रही थी।",
+   "trick": "नागालैंड = ऋणात्मक वृद्धि (2011 जनगणना)।",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "The Taj Mahal, a UNESCO World Heritage Site, is located in which Indian State/UT?",
+   "hi": "यूनेस्को (UNESCO) विश्व धरोहर स्थल ताजमहल भारत के किस राज्य/केंद्र शासित प्रदेश में स्थित है?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Delhi<br>दिल्ली"
+   ],
+   "my_ans": "B",
+   "sol": "ताजमहल उत्तर प्रदेश के आगरा शहर में स्थित है, जिसे मुगल सम्राट शाहजहाँ ने बनवाया था।",
+   "trick": "ताजमहल = आगरा, उत्तर प्रदेश।",
+   "ans": "B"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "The statement \"Most of the major Peninsular rivers flow from west to east\" is an EXCEPTION for:",
+   "hi": "कथन \"अधिकांश प्रमुख प्रायद्वीपीय नदियाँ पश्चिम से पूर्व की ओर बहती हैं।\", निम्नलिखित में से किसके लिए एक अपवाद है?",
+   "opts": [
+    "Godavari and Krishna<br>गोदावरी और कृष्णा",
+    "Mahanadi and Kaveri<br>महानदी और कावेरी",
+    "Narmada and Tapi<br>नर्मदा और तापी",
+    "Kaveri and Krishna<br>कावेरी और कृष्णा"
+   ],
+   "my_ans": "C",
+   "sol": "नर्मदा और तापी नदियाँ भ्रंश घाटी से होकर पूर्व से पश्चिम की ओर बहती हैं और अरब सागर में गिरती हैं।",
+   "trick": "नर्मदा और तापी = पश्चिम की ओर बहने वाली नदियाँ।",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "The cold and chilly winds that are blocked by the Himalayas originate from Central Asia and regions close to which of the following?",
+   "hi": "हिमालय पर्वत द्वारा अवरुद्ध शीत और सर्द पवनें, मध्य एशिया और निम्नलिखित में से किसके निकट के क्षेत्रों से उत्पन्न होती हैं?",
+   "opts": [
+    "Pacific Ocean<br>प्रशांत महासागर",
+    "Arctic Circle<br>उत्तर-ध्रुवीय वृत्त",
+    "Mediterranean Region<br>भूमध्यसागरीय क्षेत्र",
+    "Central Africa<br>मध्य अफ्रीका"
+   ],
+   "my_ans": "B",
+   "sol": "हिमालय उत्तर से आने वाली आर्कटिक वृत्त और मध्य एशिया की बर्फीली हवाओं को रोककर भारत को अत्यधिक ठंड से बचाता है।",
+   "trick": "हिमालय = आर्कटिक हवाओं का अवरोधक।",
+   "ans": "B"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which type of irrigation in India involves delivering water drop by drop at the root zone of plants?",
+   "hi": "भारत में किस प्रकार की सिंचाई में पौधों के जड़ क्षेत्र में बूंद-बूंद जल पहुंचाया जाता है?",
+   "opts": [
+    "Drip irrigation<br>बूंद बूंद सिंचाई",
+    "Surface irrigation<br>सतही सिंचाई",
+    "Sub-irrigation<br>अधोभूमि सिंचाई",
+    "Sprinkler irrigation<br>फुहारी सिंचाई"
+   ],
+   "my_ans": "A",
+   "sol": "ड्रिप सिंचाई में पानी को सीधे पौधों की जड़ों तक बूंद-बूंद करके पहुँचाया जाता है, जिससे पानी की बर्बादी कम होती है।",
+   "trick": "ड्रिप = बूंद-बूंद सिंचाई।",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Which two neighbors combined have a land border with India longer than China’s border?",
+   "hi": "किन दो पड़ोसी देशों की संयुक्त स्थल सीमा, चीन की स्थल सीमा से लंबी है?",
+   "opts": [
+    "Bangladesh and Pakistan<br>बांग्लादेश और पाकिस्तान",
+    "Pakistan and Nepal<br>पाकिस्तान और नेपाल",
+    "Bhutan and Afghanistan<br>भूटान और अफगानिस्तान",
+    "Nepal and Myanmar<br>नेपाल और म्यांमार"
+   ],
+   "my_ans": "A",
+   "sol": "बांग्लादेश (4,096 किमी) और पाकिस्तान (3,323 किमी) की संयुक्त सीमा चीन (3,488 किमी) की सीमा से काफी अधिक है।",
+   "trick": "बांग्लादेश + पाकिस्तान > चीन।",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which of the following states ranks number one in the production of natural rubber in India in 2023-24?",
+   "hi": "2023-24 में निम्नलिखित में से कौन-सा राज्य, भारत में प्राकृतिक रबर के उत्पादन में प्रथम स्थान पर रहा?",
+   "opts": [
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Karnataka<br>कर्नाटक",
+    "Kerala<br>केरल"
+   ],
+   "my_ans": "D",
+   "sol": "केरल भारत का सबसे बड़ा प्राकृतिक रबर उत्पादक राज्य है, जो देश के कुल उत्पादन का लगभग 90% से अधिक हिस्सा देता है।",
+   "trick": "रबर = केरल (प्रथम)।",
+   "ans": "D"
+  }
+ ]
+}

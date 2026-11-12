@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "386-388",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "What happens to light energy in interference and diffraction?",
+   "hi": "व्यतिकरण (interference) और विवर्तन (diffraction) में प्रकाश ऊर्जा का क्या होता है?",
+   "opts": [
+    "It decreases<br>यह घटती है",
+    "It is redistributed<br>यह पुनर्वितरित हो जाती है",
+    "It reduces<br>इसका अपचयन हो जाता है",
+    "It increases<br>यह बढ़ती है"
+   ],
+   "my_ans": "B",
+   "sol": "व्यतिकरण और विवर्तन में ऊर्जा न तो उत्पन्न होती है और न ही नष्ट, बल्कि यह केवल एक स्थान से दूसरे स्थान पर पुनर्वितरित (redistribute) हो जाती है।",
+   "trick": "ऊर्जा संरक्षण का नियम: ऊर्जा केवल पुनर्वितरित होती है।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "_______ is measured using the unit 'quintal'.",
+   "hi": "_______ को मात्रक 'क्विंटल' का उपयोग करके मापा जाता है।",
+   "opts": [
+    "Temperature<br>तापमान",
+    "Weight<br>वजन",
+    "Length<br>लंबाई",
+    "Volume<br>आयतन"
+   ],
+   "my_ans": "B",
+   "sol": "क्विंटल द्रव्यमान या भार मापने की एक इकाई है। 1 क्विंटल में 100 किलोग्राम होते हैं।",
+   "trick": "1 क्विंटल = 100 किलोग्राम (भार)",
+   "ans": "B"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "At time t = 0, a body of mass 1 Kg starts to fall freely from rest from a height of 100 m. Compared to the kinetic energy at 3 seconds, the kinetic energy at 4 seconds ________.",
+   "hi": "समय t=0 पर, 1 Kg द्रव्यमान का एक पिंड 100 m की ऊंचाई से विराम अवस्था से मुक्त रूप से पतन शुरू करता है। 3 सेकंड पर गतिज ऊर्जा की तुलना में, 4 सेकंड पर गतिज ऊर्जा ________ ।",
+   "opts": [
+    "Is larger<br>अधिक होती है",
+    "Is smaller<br>कम होती है",
+    "Remains same<br>समान रहती है",
+    "Is not determinable<br>निर्धारित नहीं की जा सकती"
+   ],
+   "my_ans": "A",
+   "sol": "मुक्त पतन में वेग समय के साथ बढ़ता है (v=gt)। चूंकि 4 सेकंड पर वेग 3 सेकंड से अधिक है, इसलिए गतिज ऊर्जा (KE=1/2mv²) भी अधिक होगी।",
+   "trick": "वेग बढ़ता है तो गतिज ऊर्जा भी बढ़ती है।",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "The phenomenon called ________ occurs when light passes from one transparent medium to another.",
+   "hi": "________ नामक घटना तब होती है जब प्रकाश एक पारदर्शी माध्यम से दूसरे पारदर्शी माध्यम में जाता है।",
+   "opts": [
+    "refraction<br>अपवर्तन",
+    "scattering<br>प्रकीर्णन",
+    "reflection<br>परावर्तन",
+    "diffraction<br>विवर्तन"
+   ],
+   "my_ans": "A",
+   "sol": "जब प्रकाश एक माध्यम से दूसरे माध्यम में जाता है, तो उसकी गति में परिवर्तन के कारण वह अपने पथ से मुड़ जाता है, जिसे अपवर्तन कहते हैं।",
+   "trick": "माध्यम बदला तो प्रकाश मुड़ा (अपवर्तन)।",
+   "ans": "A"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "The discovery of the atomic nucleus was made through which experiment?",
+   "hi": "परमाणु-नाभिक की खोज किस प्रयोग के माध्यम से की गई थी?",
+   "opts": [
+    "Gold foil experiment<br>स्वर्ण-झिल्ली प्रयोग",
+    "Cathode ray experiment<br>कैथोड किरण प्रयोग",
+    "Oil drop experiment<br>तेल-बूंद प्रयोग",
+    "Canal ray experiment<br>कैनाल किरण प्रयोग"
+   ],
+   "my_ans": "A",
+   "sol": "अर्नेस्ट रदरफोर्ड ने 1911 में स्वर्ण पन्नी (Gold foil) प्रयोग के माध्यम से परमाणु के नाभिक की खोज की थी।",
+   "trick": "रदरफोर्ड = स्वर्ण पन्नी प्रयोग",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "__________ is primarily used to focus parallel rays of light.",
+   "hi": "प्रकाश की समानांतर किरणों को फोकस करने के लिए मुख्यतः __________ का उपयोग किया जाता है।",
+   "opts": [
+    "Cylindrical lens<br>बेलनाकार लेंस",
+    "Concave lens<br>अवतल लेंस",
+    "Bifocal lens<br>द्विफोकसी लेंस",
+    "Convex lens<br>उत्तल लेंस"
+   ],
+   "my_ans": "D",
+   "sol": "उत्तल लेंस (Convex lens) एक अभिसारी लेंस है जो समानांतर प्रकाश किरणों को एक बिंदु (फोकस) पर केंद्रित करता है।",
+   "trick": "उत्तल = अभिसारी (एकत्र करना)",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which of the following options is closest to the speed of sound in air?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प, वायु में ध्वनि की चाल के सबसे निकट है?",
+   "opts": [
+    "340 m/s",
+    "3 x 10^8 m/s",
+    "3400 km/s",
+    "12000 m/s"
+   ],
+   "my_ans": "A",
+   "sol": "सामान्य तापमान (20°C) पर हवा में ध्वनि की गति लगभग 343 m/s होती है, जो 340 m/s के सबसे निकट है।",
+   "trick": "ध्वनि की चाल हवा में ~340 m/s याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which of the following is a clear example of potential energy?",
+   "hi": "इनमें से कौन-सा स्थितिज ऊर्जा का एक स्पष्ट उदाहरण है?",
+   "opts": [
+    "A falling rock<br>गिरती चट्टान",
+    "A burning candle<br>जलती मोमबत्ती",
+    "A stretched rubber band<br>खिंचा हुआ रबर बैंड",
+    "A moving car<br>चलती कार"
+   ],
+   "my_ans": "C",
+   "sol": "स्थितिज ऊर्जा किसी वस्तु की स्थिति या अवस्था के कारण संचित ऊर्जा है। खिंचा हुआ रबर बैंड प्रत्यास्थ स्थितिज ऊर्जा का उदाहरण है।",
+   "trick": "रुकी हुई अवस्था = स्थितिज ऊर्जा",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "The e/m ratio for electron was determined by:",
+   "hi": "इलेक्ट्रॉन के लिए e/m अनुपात, किसके द्वारा निर्धारित किया गया?",
+   "opts": [
+    "J.J. Thomson<br>जे. जे. थॉमसन",
+    "Issac Newton<br>आइज़ैक न्यूटन",
+    "Niels Bohr<br>नील्स बोहर",
+    "Albert Einstein<br>अल्बर्ट आइंस्टीन"
+   ],
+   "my_ans": "A",
+   "sol": "जे. जे. थॉमसन ने 1897 में कैथोड किरण प्रयोगों के माध्यम से इलेक्ट्रॉन का आवेश-द्रव्यमान अनुपात (e/m) निर्धारित किया था।",
+   "trick": "थॉमसन = इलेक्ट्रॉन का e/m अनुपात",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Which type of lens is used in a simple microscope?",
+   "hi": "साधारण सूक्ष्मदर्शी में किस प्रकार के लेंस का उपयोग किया जाता है?",
+   "opts": [
+    "Plano-concave<br>समतल-अवतल",
+    "Biconcave<br>अभयावतल",
+    "Cylindrical<br>बेलनाकार",
+    "Biconvex<br>उभयोत्तल"
+   ],
+   "my_ans": "D",
+   "sol": "साधारण सूक्ष्मदर्शी (आवर्धक लेंस) में एक एकल उभयोत्तल (Biconvex) लेंस का उपयोग किया जाता है जो वस्तु को बड़ा दिखाता है।",
+   "trick": "सूक्ष्मदर्शी = उत्तल लेंस",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "What causes the flow of water to lose its smoothness when a tap is opened wider?",
+   "hi": "जब नल को ज़्यादा खोला जाता है, तो पानी के बहाव का स्मूदपन क्यों खत्म हो जाता है?",
+   "opts": [
+    "The density of water changes.<br>पानी का घनत्व बदलता है।",
+    "The outflow speed increases, causing turbulence.<br>बहिर्वाह की गति बढ़ जाती है, जिससे अशांति उत्पन्न होती है।",
+    "The water pressure decreases.<br>पानी का दबाव कम हो जाता है।",
+    "The water temperature changes.<br>पानी का तापमान बदलता है।"
+   ],
+   "my_ans": "B",
+   "sol": "नल अधिक खोलने पर पानी का वेग बढ़ जाता है, जिससे रेनॉल्ड्स संख्या बढ़ती है और प्रवाह 'अशांत' (turbulent) हो जाता है।",
+   "trick": "अधिक वेग = अशांत प्रवाह (Turbulence)",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which of the following will be the pressure of water at the base of a lake of height 20 metres ? (g = 9.8m/s² and Density of water = 1 kg/ litre )",
+   "hi": "20 मीटर ऊंची झील के तल पर जल दाब कितना होगा? (g = 9.8m/s² और जल का घनत्व = 1 kg/litre)",
+   "opts": [
+    "19,600 Pa",
+    "1,96,000 Pa",
+    "1960 Pa",
+    "196 Pa"
+   ],
+   "my_ans": "B",
+   "sol": "दाब (P) = hρg। यहाँ h=20m, ρ=1000 kg/m³, g=9.8 m/s²। P = 20 × 1000 × 9.8 = 196,000 Pa.",
+   "trick": "P = hρg (घनत्व को kg/m³ में बदलें: 1 kg/L = 1000 kg/m³)",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "527-529",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Who won a silver medal in shooting at the 2004 Athens Olympics, India's first individual Olympic silver?",
+   "hi": "2004 के एथेंस ओलंपिक में निशानेबाजी (shooting) में रजत पदक किसने जीता था, जो भारत का पहला व्यक्तिगत ओलंपिक रजत पदक था?",
+   "opts": [
+    "Sushil Kumar Panady<br>सुशील कुमार पनाडी",
+    "Abhinav Bindra<br>अभिनव बिंद्रा",
+    "Rajyavardhan Singh Rathore<br>राज्यवर्धन सिंह राठौर",
+    "Rajendra Singh Shekhawat<br>राजेंद्र सिंह शेखावत"
+   ],
+   "my_ans": "C",
+   "sol": "राज्यवर्धन सिंह राठौर ने 2004 एथेंस ओलंपिक में डबल ट्रैप शूटिंग में रजत पदक जीता था। यह भारत का पहला व्यक्तिगत ओलंपिक रजत पदक था।",
+   "trick": "2004 एथेंस = राज्यवर्धन सिंह राठौर (रजत)",
+   "ans": "C"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Select the correct option.",
+   "hi": "सही विकल्प का चयन कीजिए।",
+   "opts": [
+    "The diagonals of a square are equal and bisect each other.<br>एक वर्ग के विकर्ण बराबर होते हैं और एक दूसरे को द्विभाजित करते हैं।",
+    "The diagonals of a square are equal and do not bisect each other.<br>एक वर्ग के विकर्ण बराबर होते हैं और एक दूसरे को द्विभाजित नहीं करते हैं।",
+    "The diagonals of a square are not equal and do not bisect each other.<br>एक वर्ग के विकर्ण बराबर नहीं होते हैं और एक दूसरे को द्विभाजित नहीं करते हैं।",
+    "The diagonals of a square are not equal and bisect each other.<br>एक वर्ग के विकर्ण बराबर नहीं होते हैं और एक दूसरे को द्विभाजित करते हैं।"
+   ],
+   "my_ans": "A",
+   "sol": "वर्ग के दोनों विकर्ण लंबाई में बराबर होते हैं और वे एक-दूसरे को केंद्र पर समद्विभाजित (bisect) करते हैं।",
+   "trick": "वर्ग के विकर्ण = बराबर + समद्विभाजित",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "'Rathwa Ni Gher' is a tribal dance of the Rathwa tribal community of ______________.",
+   "hi": "'राठवा नी घेर (Rathwa Ni Gher)' ___________ के राठवा जनजातीय समुदाय का एक जनजातीय नृत्य है।",
+   "opts": [
+    "Kerala<br>केरल",
+    "Gujarat<br>गुजरात",
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "Tripura<br>त्रिपुरा"
+   ],
+   "my_ans": "B",
+   "sol": "राठवा नी घेर गुजरात के राठवा आदिवासी समुदाय का एक पारंपरिक लोक नृत्य है, जो मुख्य रूप से छोटा उदयपुर और पंचमहल जिलों में किया जाता है।",
+   "trick": "राठवा = गुजरात",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "In October 2025, Morocco’s U-20 World Cup victory over Argentina was significant for what reason?",
+   "hi": "अक्टूबर 2025 में, अर्जेंटीना पर मोरक्को की U-20 वर्ल्ड कप जीत किस कारण से महत्वपूर्ण थी?",
+   "opts": [
+    "It was Argentina’s first defeat in tournament history.<br>यह टूर्नामेंट के इतिहास में अर्जेंटीना की पहली हार थी।",
+    "Morocco won after a penalty shootout.<br>मोरक्को ने पेनल्टी शूटआउट में जीत हासिल की थी।",
+    "It marked Morocco’s first-ever U-20 World Cup title.<br>यह मोरक्को का पहला U-20 वर्ल्ड कप खिताब था।",
+    "Morocco hosted the U-20 World Cup for the first time.<br>मोरक्को ने पहली बार U-20 वर्ल्ड कप की मेजबानी की थी।"
+   ],
+   "my_ans": "C",
+   "sol": "यह जीत मोरक्को के फुटबॉल इतिहास में पहली बार U-20 विश्व कप खिताब जीतने के कारण महत्वपूर्ण थी।",
+   "trick": "मोरक्को = पहला U-20 खिताब",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Ghana Vadya or idiophone instruments are those non-drum percussion musical instruments that do not require any tuning. _________ is an example of a Ghana Vadya.",
+   "hi": "घन वाद्य (Ghana Vadya) या इडियोफोन वाद्य यंत्र वे गैर-ड्रम आघात वाद्य यंत्र हैं जिन्हें समस्वरण की आवश्यकता नहीं होती है। _________, घन वाद्य का एक उदाहरण है।",
+   "opts": [
+    "Pungi<br>पुंगी",
+    "Shehnai<br>शहनाई",
+    "Ghatam<br>घटम",
+    "Sarangi<br>सारंगी"
+   ],
+   "my_ans": "C",
+   "sol": "घटम मिट्टी का एक घड़ा होता है जिसे हाथों से बजाया जाता है, यह एक घन वाद्य (इडियोफोन) है क्योंकि इसमें ट्यूनिंग की जरूरत नहीं होती।",
+   "trick": "घन वाद्य = बिना ट्यूनिंग वाले (जैसे घटम)",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Which of the following athletes clinched the women’s 100m hurdles gold at the World Athletics Championships Tokyo 2025 on 15 September?",
+   "hi": "निम्नलिखित में से किस एथलीट ने, 15 सितंबर को वर्ल्ड एथलेटिक्स चैंपियनशिप टोक्यो 2025 में महिलाओं की 100 m बाधा-दौड़ (hurdles) में स्वर्ण पदक प्राप्त किया?",
+   "opts": [
+    "Grace Stark<br>ग्रेस स्टार्क",
+    "Tobi Amusan<br>टोबी अमूसन",
+    "Ditaji Kambundji<br>दिताजी कांबुंडजी",
+    "Masai Russell<br>मसाई रसेल"
+   ],
+   "my_ans": "C",
+   "sol": "15 सितंबर 2025 को टोक्यो में आयोजित वर्ल्ड एथलेटिक्स चैंपियनशिप में स्विट्जरलैंड की दिताजी कांबुंडजी ने 100 मीटर बाधा दौड़ में स्वर्ण पदक जीता।",
+   "trick": "100m बाधा (2025) = दिताजी कांबुंडजी",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which city hosted the National Games after India's independence in 1948?",
+   "hi": "भारत की स्वतंत्रता के बाद वर्ष 1948 में राष्ट्रीय खेलों की मेजबानी किस शहर ने की थी?",
+   "opts": [
+    "Delhi<br>दिल्ली",
+    "Chennai<br>चेन्नई",
+    "Lucknow<br>लखनऊ",
+    "Kolkata<br>कोलकाता"
+   ],
+   "my_ans": "C",
+   "sol": "स्वतंत्र भारत के बाद पहले राष्ट्रीय खेलों का आयोजन 1948 में उत्तर प्रदेश के लखनऊ शहर में किया गया था।",
+   "trick": "स्वतंत्र भारत के पहले खेल = लखनऊ (1948)",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "_________ or ‘Dance of an Enchantress’ is a solo dance, performed primarily by women, in the state of Kerala.",
+   "hi": "_________ या 'जादूगरनी का नृत्य (Dance of an Enchantress)' केरल राज्य में किया जाने वाला एक एकल नृत्य है, जो मुख्य रूप से महिलाओं द्वारा किया जाता है।",
+   "opts": [
+    "Bharatanatyam<br>भरतनाट्यम",
+    "Thiruvathirakali<br>तिरुवातिराकली",
+    "Kathakali<br>कथकली",
+    "Mohiniyaattam<br>मोहिनीअट्टम"
+   ],
+   "my_ans": "D",
+   "sol": "मोहिनीअट्टम का अर्थ है 'जादूगरनी का नृत्य' (मोहिनी = जादूगरनी)। यह केरल का एक शास्त्रीय एकल नृत्य है जो महिलाओं द्वारा किया जाता है।",
+   "trick": "मोहिनीअट्टम = केरल का एकल नृत्य",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following tabs in Task Manager shows CPU and memory usage graphs?",
+   "hi": "टास्क मैनेजर में निम्नलिखित में से कौन-सा टैब CPU और मेमोरी उपयोग के ग्राफ़ दर्शाता है?",
+   "opts": [
+    "Details<br>Details",
+    "Users<br>Users",
+    "Performance<br>Performance",
+    "Startup<br>Startup"
+   ],
+   "my_ans": "C",
+   "sol": "टास्क मैनेजर का 'Performance' टैब CPU, मेमोरी, डिस्क और नेटवर्क के उपयोग का रियल-टाइम ग्राफ़ दिखाता है।",
+   "trick": "ग्राफ़ = Performance टैब",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "Who is known for popularising the Santoor, an Indian classical instrument, globally?",
+   "hi": "भारतीय शास्त्रीय वाद्य-यंत्र संतूर को विश्व स्तर पर लोकप्रिय बनाने के लिए किसे जाना जाता है?",
+   "opts": [
+    "Pandit Shivkumar Sharma<br>पंडित शिवकुमार शर्मा",
+    "Pandit Ravi Shankar<br>पंडित रविशंकर",
+    "Ustad Amjad Ali Khan<br>उस्ताद अमजद अली खान",
+    "Pandit Hariprasad Chaurasia<br>पंडित हरिप्रसाद चौरसिया"
+   ],
+   "my_ans": "A",
+   "sol": "पंडित शिवकुमार शर्मा ने संतूर को लोक वाद्य से शास्त्रीय वाद्य यंत्र के रूप में स्थापित किया और इसे विश्व स्तर पर लोकप्रिय बनाया।",
+   "trick": "संतूर = शिवकुमार शर्मा",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "The 'Saila' dance is associated with which of the following states?",
+   "hi": "'सैला (Saila)' नृत्य निम्नलिखित में से किस राज्य से संबंधित है?",
+   "opts": [
+    "Chhattisgarh<br>छत्तीसगढ़",
+    "Goa<br>गोवा",
+    "Haryana<br>हरियाणा",
+    "Jharkhand<br>झारखंड"
+   ],
+   "my_ans": "A",
+   "sol": "सैला नृत्य मुख्य रूप से छत्तीसगढ़ राज्य की जनजातियों द्वारा किया जाने वाला एक पारंपरिक नृत्य है।",
+   "trick": "सैला = छत्तीसगढ़",
+   "ans": "A"
+  }
+ ]
+}

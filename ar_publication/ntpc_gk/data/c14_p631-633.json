@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "631-633",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 220,
+   "lvl": "UG",
+   "en": "According to the International Renewable Energy Agency (IRENA) RE Statistics 2025, India holds the 3rd global rank in the installed capacity of which renewable energy category?",
+   "hi": "इंटरनेशनल रिन्यूएबल एनर्जी एजेंसी (IRENA) के RE सांख्यिकी 2025 के अनुसार, भारत किस नवीकरणीय ऊर्जा श्रेणी की स्थापित क्षमता में वैश्विक स्तर पर तीसरे स्थान पर है?",
+   "opts": [
+    "Bio Power<br>बायो ऊर्जा",
+    "Wind Power<br>पवन ऊर्जा",
+    "Solar Power<br>सौर ऊर्जा",
+    "Hydropower<br>जलशक्ति"
+   ],
+   "my_ans": "C",
+   "sol": "IRENA 2025 के आंकड़ों के अनुसार, भारत सौर ऊर्जा की स्थापित क्षमता में विश्व में तीसरे स्थान पर है।",
+   "trick": "सौर ऊर्जा में भारत का विश्व में तीसरा स्थान है।",
+   "ans": "C"
+  },
+  {
+   "n": 221,
+   "lvl": "UG",
+   "en": "Which session of the UN Climate Change Conference was held in Baku, Azerbaijan, in November 2024?",
+   "hi": "नवंबर 2024 में बाकू, अज़रबैजान में संयुक्त राष्ट्र जलवायु परिवर्तन सम्मेलन का कौन-सा सत्र आयोजित किया गया था?",
+   "opts": [
+    "COP28",
+    "COP26",
+    "COP29",
+    "COP27"
+   ],
+   "my_ans": "C",
+   "sol": "नवंबर 2024 में अज़रबैजान के बाकू में संयुक्त राष्ट्र जलवायु परिवर्तन सम्मेलन का 29वां सत्र (COP29) आयोजित किया गया था।",
+   "trick": "COP29 = बाकू, अज़रबैजान (2024)",
+   "ans": "C"
+  },
+  {
+   "n": 222,
+   "lvl": "UG",
+   "en": "Which national organisation jointly launched the “Earth Summit 2025-26” along with Internet and Mobile Association of India (IAMAI) to empower rural innovation?",
+   "hi": "किस राष्ट्रीय संगठन ने इंटरनेट एंड मोबाइल एसोसिएशन ऑफ इंडिया (IAMAI) के साथ मिलकर ग्रामीण नवाचार को सशक्त बनाने के लिए 'अर्थ समिट 2025-26' का शुभारंभ किया?",
+   "opts": [
+    "Small Industries Development Bank of India (SIDBI)<br>भारतीय लघु उद्योग विकास बैंक (SIDBI)",
+    "Export-Import Bank of India (EXIM)<br>भारत का निर्यात-आयात बैंक (EXIM)",
+    "National Bank for Agriculture and Rural Development (NABARD)<br>राष्ट्रीय कृषि एवं ग्रामीण विकास बैंक (NABARD)",
+    "National Rural Livelihood Mission (NRLM)<br>राष्ट्रीय ग्रामीण आजीविका मिशन (NRLM)"
+   ],
+   "my_ans": "C",
+   "sol": "नाबार्ड (NABARD) ने ग्रामीण नवाचार और डिजिटल परिवर्तन को बढ़ावा देने के लिए IAMAI के साथ मिलकर 'अर्थ समिट 2025-26' लॉन्च किया।",
+   "trick": "ग्रामीण विकास = नाबार्ड (NABARD)",
+   "ans": "C"
+  },
+  {
+   "n": 223,
+   "lvl": "UG",
+   "en": "In December 2025, which country officially extended an offer to India for the localised production of the fifth-generation Su-57 stealth fighter jets?",
+   "hi": "दिसंबर 2025 में, किस देश ने आधिकारिक तौर पर भारत को पांचवीं-पीढ़ी के Su-57 स्टील्थ फाइटर जेट के स्थानीय उत्पादन के लिए प्रस्ताव दिया?",
+   "opts": [
+    "America<br>अमेरिका",
+    "Japan<br>जापान",
+    "France<br>फ्रांस",
+    "Russia<br>रूस"
+   ],
+   "my_ans": "D",
+   "sol": "रूस ने दिसंबर 2025 में भारत को अपने पांचवीं पीढ़ी के Su-57 स्टील्थ फाइटर जेट के स्थानीय उत्पादन का प्रस्ताव दिया।",
+   "trick": "Su-57 फाइटर जेट रूस का है।",
+   "ans": "D"
+  },
+  {
+   "n": 224,
+   "lvl": "UG",
+   "en": "What target does India claim to have met by July 2025, as stated in the COP30 statement?",
+   "hi": "COP30 के बयान के अनुसार, भारत ने जुलाई 2025 तक किस लक्ष्य को पूरा करने का दावा किया है?",
+   "opts": [
+    "25% of electricity from non-fossil sources<br>25% विद्युत गैर-जीवाश्म स्रोतों से",
+    "Zero coal-based power plants<br>कोयला आधारित विद्युत संयंत्रों की शून्य संख्या",
+    "50% of installed power generation capacity from non-fossil sources<br>कुल स्थापित विद्युत क्षमता का 50% हिस्सा गैर-जीवाश्म ईंधन से",
+    "100% renewable energy by 2030<br>2030 तक 100% नवीकरणीय ऊर्जा"
+   ],
+   "my_ans": "C",
+   "sol": "भारत ने COP30 में घोषणा की कि उसने जुलाई 2025 तक अपनी कुल स्थापित विद्युत क्षमता का 50% गैर-जीवाश्म स्रोतों से प्राप्त कर लिया है।",
+   "trick": "50% गैर-जीवाश्म क्षमता = 2025 का लक्ष्य",
+   "ans": "C"
+  },
+  {
+   "n": 225,
+   "lvl": "UG",
+   "en": "In December 2025, which state government announced that the Veerangana Durgavati Tiger Reserve will be developed as a cheetah habitat before the onset of the next monsoon?",
+   "hi": "दिसंबर 2025 में, किस राज्य सरकार ने घोषणा की कि अगले मानसून के आगमन से पहले वीरांगना दुर्गावती टाइगर रिज़र्व को चीता आवास के रूप में विकसित किया जाएगा?",
+   "opts": [
+    "Bihar<br>बिहार",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Nagaland<br>नागालैंड",
+    "Uttar Pradesh<br>उत्तर प्रदेश"
+   ],
+   "my_ans": "B",
+   "sol": "वीरांगना दुर्गावती टाइगर रिज़र्व मध्य प्रदेश में स्थित है, जिसे राज्य सरकार ने चीता आवास के रूप में विकसित करने की घोषणा की।",
+   "trick": "चीता पुनर्स्थापन = मध्य प्रदेश (कूनो और दुर्गावती)",
+   "ans": "B"
+  },
+  {
+   "n": 226,
+   "lvl": "UG",
+   "en": "India, in October 2025, developed its first indigenously discovered antibiotic, effective against resistant respiratory infections. What is its name?",
+   "hi": "भारत ने अक्टूबर 2025 में, स्वदेशी रूप से खोजी गई अपनी पहली एंटीबायोटिक विकसित की, जो प्रतिरोधी श्वसन संक्रमणों के प्रति प्रभावी है। इसका नाम क्या है?",
+   "opts": [
+    "Nafithromycin<br>नैफिथ्रोमाइसिन",
+    "Penicillin-G<br>पेनिसिलिन-G",
+    "Cefixime<br>सेफिक्साइम",
+    "Azithromycin<br>एज़िथ्रोमाइसिन"
+   ],
+   "my_ans": "A",
+   "sol": "नैफिथ्रोमाइसिन भारत द्वारा स्वदेशी रूप से खोजी गई पहली एंटीबायोटिक है, जो श्वसन संक्रमणों के लिए प्रभावी है।",
+   "trick": "भारत की पहली स्वदेशी एंटीबायोटिक = नैफिथ्रोमाइसिन",
+   "ans": "A"
+  },
+  {
+   "n": 227,
+   "lvl": "UG",
+   "en": "Which international health day was celebrated on November 14, 2025?",
+   "hi": "14 नवंबर, 2025 को कौन-सा अंतर्राष्ट्रीय स्वास्थ्य दिवस मनाया गया था?",
+   "opts": [
+    "World Hypertension Day<br>विश्व उच्च रक्तचाप दिवस",
+    "World Malaria Day<br>विश्व मलेरिया दिवस",
+    "World Health Day<br>विश्व स्वास्थ्य दिवस",
+    "World Diabetes Day<br>विश्व मधुमेह दिवस"
+   ],
+   "my_ans": "D",
+   "sol": "विश्व मधुमेह दिवस प्रतिवर्ष 14 नवंबर को सर फ्रेडरिक बैंटिंग के जन्मदिन पर मनाया जाता है।",
+   "trick": "14 नवंबर = विश्व मधुमेह दिवस",
+   "ans": "D"
+  },
+  {
+   "n": 228,
+   "lvl": "UG",
+   "en": "In the CCPI (Climate Change Performance Index) 2025, how is a country's climate performance assessed?",
+   "hi": "CCPI (जलवायु परिवर्तन प्रदर्शन सूचकांक) 2025 में, किसी देश के जलवायु प्रदर्शन का आकलन कैसे किया जाता है?",
+   "opts": [
+    "Solely based on renewable energy production statistics<br>केवल नवीकरणीय ऊर्जा उत्पादन सांख्यिकी के आधार पर",
+    "Through public opinion surveys and industrial growth trends<br>जनमत सर्वेक्षणों और औद्योगिक विकास के रुझानों के माध्यम से",
+    "Only by analyzing national emissions targets and forest cover data<br>केवल राष्ट्रीय उत्सर्जन लक्ष्यों और वनावरण आंकड़ों का विश्लेषण करके",
+    "By combining emissions, energy use, and expert-reviewed climate policy data<br>उत्सर्जन, ऊर्जा उपयोग और विशेषज्ञों द्वारा समीक्षा किए गए जलवायु नीति आंकड़ों को मिलाकर"
+   ],
+   "my_ans": "D",
+   "sol": "CCPI का आकलन उत्सर्जन, ऊर्जा उपयोग, नवीकरणीय ऊर्जा और जलवायु नीति जैसे कई संकेतकों के आधार पर किया जाता है।",
+   "trick": "CCPI = उत्सर्जन + ऊर्जा + नीति",
+   "ans": "D"
+  },
+  {
+   "n": 229,
+   "lvl": "UG",
+   "en": "In 2025, India’s ranking in the Climate Change Performance Index (CCPI) was:",
+   "hi": "2025 में, जलवायु परिवर्तन प्रदर्शन सूचकांक (CCPI) में भारत की रैंकिंग ______ थी।",
+   "opts": [
+    "15th<br>15वीं",
+    "18th<br>18वीं",
+    "10th<br>10वीं",
+    "12th<br>12वीं"
+   ],
+   "my_ans": "C",
+   "sol": "जलवायु परिवर्तन प्रदर्शन सूचकांक (CCPI) 2025 में भारत 10वें स्थान पर रहा।",
+   "trick": "CCPI 2025 में भारत = 10वां स्थान",
+   "ans": "C"
+  }
+ ]
+}

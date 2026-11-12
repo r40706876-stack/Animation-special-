@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "229-231",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Restarting a computer means:",
+   "hi": "कंप्यूटर को रीस्टार्ट करने का अर्थ है , ___________ है।",
+   "opts": [
+    "Turning it off permanently<br>उसे स्थायी रूप से ऑफ (off) करना",
+    "Only refreshing the desktop<br>केवल डेस्कटॉप को रिफ्रेश करना",
+    "Installing a new OS<br>नया OS इंस्टॉल करना",
+    "Turning it off and on again automatically<br>उसे स्वचालित रूप से ऑफ (off) करके फिर से ऑन (on) करना"
+   ],
+   "my_ans": "D",
+   "sol": "कंप्यूटर को रीस्टार्ट करने का अर्थ है सभी प्रोग्राम बंद करना, OS को शटडाउन करना और बिना मानवीय हस्तक्षेप के उसे पुनः चालू करना।",
+   "trick": "रीस्टार्ट = ऑटोमैटिक शटडाउन + रीबूट",
+   "ans": "D"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Under which Article does the Supreme Court have the power of judicial review?",
+   "hi": "उच्चतम न्यायालय को किस अनुच्छेद के तहत न्यायिक समीक्षा का अधिकार प्राप्त है ?",
+   "opts": [
+    "Article 124<br>अनुच्छेद 124",
+    "Article 30<br>अनुच्छेद 30",
+    "Article 32<br>अनुच्छेद 32",
+    "Article 72<br>अनुच्छेद 72"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 32 सर्वोच्च न्यायालय को मौलिक अधिकारों के प्रवर्तन के लिए रिट जारी करने और न्यायिक समीक्षा की शक्ति प्रदान करता है।",
+   "trick": "अनुच्छेद 32 = संवैधानिक उपचारों का अधिकार",
+   "ans": "C"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Consider the following statements about Thawar Chand Gehlot. He is the first person from Madhya Pradesh to serve as the Governor of Karnataka. He is the 19th Governor of Karnataka. Which of the above statements is/are correct?",
+   "hi": "थावर चंद गहलोत के संबंध में निम्नलिखित कथनों पर विचार कीजिए। 1. वह कर्नाटक के राज्यपाल के रूप में अपनी सेवाएं देने वाले मध्य प्रदेश के पहले व्यक्ति हैं। 2. वह कर्नाटक के 19 वें राज्यपाल हैं। उपरोक्त कथनों में से कौन-सा / से सही है / हैं ?",
+   "opts": [
+    "Only 2<br>केवल 2",
+    "Neither 1 nor 2<br>न तो 1 और न ही 2",
+    "Both 1 and 2<br>1 और 2 दोनों",
+    "Only 1<br>केवल 1"
+   ],
+   "my_ans": "C",
+   "sol": "थावर चंद गहलोत मध्य प्रदेश से आने वाले कर्नाटक के पहले राज्यपाल हैं और वे कर्नाटक के 19वें राज्यपाल के रूप में नियुक्त हुए थे।",
+   "trick": "गहलोत = MP से पहले कर्नाटक राज्यपाल",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "As per Article 80 of the Constitution of India, which of the following indicates the number of members appointed by the President to the Council of States?",
+   "hi": "भारत के संविधान के अनुच्छेद 80 के अनुसार, निम्नलिखित में से कौन-सा, राष्ट्रपति द्वारा राज्य-सभा में नियुक्त सदस्यों की संख्या को इंगित करता है?",
+   "opts": [
+    "Ten<br>दस",
+    "Fourteen<br>चौदह",
+    "Twenty<br>बीस",
+    "Twelve<br>बारह"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 80 के तहत राष्ट्रपति राज्यसभा में साहित्य, विज्ञान, कला और समाज सेवा के क्षेत्र से 12 सदस्यों को मनोनीत करते हैं।",
+   "trick": "राज्यसभा में 12 मनोनीत सदस्य",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which Article authorizes the State to make special provisions for the welfare of women and children?",
+   "hi": "कौन-सा अनुच्छेद राज्य को महिलाओं और बच्चों के कल्याण के लिए विशेष प्रावधान करने का अधिकार देता है ?",
+   "opts": [
+    "Article 23(2)<br>अनुच्छेद 23(2)",
+    "Article 15(3)<br>अनुच्छेद 15(3)",
+    "Article 16(2)<br>अनुच्छेद 16(2)",
+    "Article 19(5)<br>अनुच्छेद 19(5)"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 15(3) राज्य को महिलाओं और बच्चों के लिए विशेष प्रावधान करने की अनुमति देता है, जो समानता के अधिकार का एक अपवाद है।",
+   "trick": "15(3) = महिला और बच्चे",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "As per Article 243Y of the Indian Constitution, to whom does the Finance Commission submit its recommendations regarding Municipalities?",
+   "hi": "भारतीय संविधान के अनुच्छेद 243Y के अनुसार , वित्त आयोग , नगर पालिकाओं के संबंध में अपनी अनुशंसाएं किसे प्रस्तुत करता है ?",
+   "opts": [
+    "Governor of the State<br>राज्य के राज्यपाल",
+    "State Finance Minister<br>राज्य के वित्त मंत्री",
+    "President of India<br>भारत के राष्ट्रपति",
+    "Chief Secretary of the State<br>राज्य के मुख्य सचिव"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 243Y के तहत राज्य वित्त आयोग अपनी सिफारिशें राज्य के राज्यपाल को सौंपता है, जो उन्हें विधानमंडल के समक्ष रखते हैं।",
+   "trick": "243Y = नगर पालिका वित्त आयोग",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which Articles in the Constitution of India deal with citizenship at the time of its commencement?",
+   "hi": "भारत के संविधान के प्रारम्भ में कौन-से अनुच्छेद नागरिकता से संबंधित थे ?",
+   "opts": [
+    "Articles 1 to 4<br>अनुच्छेद 1 से 4",
+    "Articles 14 to 24<br>अनुच्छेद 14 से 24",
+    "Articles 12 to 18<br>अनुच्छेद 12 से 18",
+    "Articles 5 to 11<br>अनुच्छेद 5 से 11"
+   ],
+   "my_ans": "D",
+   "sol": "संविधान के भाग II में अनुच्छेद 5 से 11 तक नागरिकता से संबंधित प्रावधान दिए गए हैं जो संविधान लागू होने के समय प्रभावी थे।",
+   "trick": "भाग 2 = नागरिकता (5-11)",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Which action attracts disqualification of an independent MP under the Anti-Defection Law introduced by the 52nd Constitutional Amendment Act, 1985?",
+   "hi": "52 वें संवैधानिक संशोधन अधिनियम, 1985 द्वारा लागू दल-बदल विरोधी कानून के अंतर्गत किस कार्रवाई से स्वतंत्र सांसद अयोग्य घोषित हो सकते हैं ?",
+   "opts": [
+    "Joining any political party after their election<br>अपने निर्वाचन के बाद किसी भी राजनीतिक दल में शामिल होना",
+    "Remaining neutral during debates<br>बहस के दौरान तटस्थ रहना",
+    "Supporting a coalition government<br>गठबंधन सरकार का समर्थन करना",
+    "Voting differently from party whip<br>दल सचेतक से अलग मतदान करना"
+   ],
+   "my_ans": "A",
+   "sol": "दल-बदल विरोधी कानून (10वीं अनुसूची) के अनुसार, यदि कोई निर्दलीय सांसद चुनाव जीतने के बाद किसी राजनीतिक दल में शामिल होता है, तो वह अयोग्य हो जाता है।",
+   "trick": "निर्दलीय + दल में शामिल = अयोग्यता",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "The census in India is conducted once in ten years under the legal authority of the Census Act ____________.",
+   "hi": "भारत में जनगणना , जनगणना अधिनियम ______ के कानूनी अधिकार के अंतर्गत दस वर्षों में एक बार की जाती है।",
+   "opts": [
+    "1947",
+    "2010",
+    "1948",
+    "1872"
+   ],
+   "my_ans": "C",
+   "sol": "भारत में जनगणना का कार्य जनगणना अधिनियम, 1948 के तहत हर 10 साल में एक बार किया जाता है।",
+   "trick": "जनगणना अधिनियम = 1948",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "In December 2025, which existing Act does the Viksit Bharat—Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB—G RAM G) Bill, 2025 seek to replace?",
+   "hi": "दिसंबर 2025 में, विकसित भारत—गारंटी फॉर रोजगार और आजीविका मिशन (ग्रामीण) (VB—G RAM G) विधेयक, 2025 किस मौजूदा अधिनियम को प्रतिस्थापित करने का प्रयास करता है?",
+   "opts": [
+    "MGNREGA 2005<br>मनरेगा 2005",
+    "MGNREGA 2005<br>मनरेगा 2005",
+    "Panchayati Raj Act 1992<br>पंचायती राज अधिनियम 1992",
+    "Minimum Wages Act 1948<br>न्यूनतम मजदूरी अधिनियम 1948"
+   ],
+   "my_ans": "B",
+   "sol": "यह विधेयक महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी अधिनियम (MGNREGA), 2005 को प्रतिस्थापित करने के लिए प्रस्तावित है।",
+   "trick": "VB-G RAM G = मनरेगा का नया रूप",
+   "ans": "B"
+  }
+ ]
+}

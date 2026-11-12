@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "International Affairs",
+  "hi": "अंतर्राष्ट्रीय मामले",
+  "total": 25,
+  "gl": 25,
+  "ug": 0
+ },
+ "source_pages": "685-687",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "In October 2025, the broad-daylight heist involving the theft of royal jewellery from the Louvre Museum occurred in which country?",
+   "hi": "अक्टूबर 2025 में, लूव्र संग्रहालय (Louvre Museum) से दिनदहाड़े शाही आभूषणों की चोरी की घटना किस देश में घटी थी?",
+   "opts": [
+    "Belgium<br>बेल्जियम",
+    "Spain<br>स्पेन",
+    "Italy<br>इटली",
+    "France<br>फ्रांस"
+   ],
+   "my_ans": "D",
+   "sol": "लूव्र संग्रहालय पेरिस, फ्रांस में स्थित है। अक्टूबर 2025 में शाही आभूषणों की चोरी इसी प्रसिद्ध फ्रांसीसी संग्रहालय में हुई थी।",
+   "trick": "लूव्र संग्रहालय = फ्रांस",
+   "ans": "D"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "The Senkaku Islands, recently in the news after a China Coast Guard “rights enforcement patrol,” are administered by which country?",
+   "hi": "हाल ही में, चीन के तटरक्षक बल द्वारा किए गए 'अधिकार प्रवर्तन गश्त' के बाद सुर्खियों में आए सेनकाकू द्वीप (Senkaku Islands) समूह का प्रशासन किस देश द्वारा किया जाता है?",
+   "opts": [
+    "South Korea<br>दक्षिण कोरिया",
+    "China<br>चीन",
+    "Japan<br>जापान",
+    "Taiwan<br>ताइवान"
+   ],
+   "my_ans": "C",
+   "sol": "सेनकाकू द्वीप पूर्वी चीन सागर में स्थित हैं और 1895 से जापान के प्रशासनिक नियंत्रण में हैं।",
+   "trick": "सेनकाकू = जापान का नियंत्रण",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which 2025 event by the United Nations highlights that member states continue to ratify a variety of multilateral treaties across human rights, the environment, penal law, and the law of the sea, among others?",
+   "hi": "संयुक्त राष्ट्र द्वारा 2025 में आयोजित कौन-सा कार्यक्रम इस बात पर प्रकाश डालता है कि सदस्य देश मानवाधिकार, पर्यावरण, दंड कानून और समुद्री कानून सहित अन्य क्षेत्रों में विभिन्न बहुपक्षीय संधियों की पुष्टि करना जारी रखे हुए हैं?",
+   "opts": [
+    "UN Ocean Conference<br>संयुक्त राष्ट्र महासागर सम्मेलन",
+    "Paris Climate Summit<br>पेरिस जलवायु शिखर सम्मेलन",
+    "2025 Treaty Event<br>2025 संधि कार्यक्रम",
+    "UN Biodiversity Summit<br>संयुक्त राष्ट्र जैव विविधता शिखर सम्मेलन"
+   ],
+   "my_ans": "C",
+   "sol": "संयुक्त राष्ट्र का '2025 संधि कार्यक्रम' (2025 Treaty Event) सदस्य देशों को मानवाधिकार, पर्यावरण और समुद्री कानून जैसी अंतरराष्ट्रीय संधियों की पुष्टि करने के लिए प्रोत्साहित करता है।",
+   "trick": "संधि पुष्टि = 2025 संधि कार्यक्रम",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which treaty was signed on 17 July 2025 between the United Kingdom and Germany, marking their first bilateral treaty since the Second World War?",
+   "hi": "17 जुलाई 2025 को यूनाइटेड किंगडम और जर्मनी के बीच किस संधि पर हस्ताक्षर किए गए, जो द्वितीय विश्व युद्ध के बाद उनकी पहली द्विपक्षीय संधि थी?",
+   "opts": [
+    "Lancaster House 2.0<br>लैंकास्टर हाउस 2.0",
+    "Northwood Declaration<br>नॉर्थवुड घोषणा",
+    "Kensington Treaty<br>केन्सिंग्टन संधि",
+    "Maastricht Treaty<br>मास्ट्रिच संधि"
+   ],
+   "my_ans": "C",
+   "sol": "17 जुलाई 2025 को हस्ताक्षरित 'केन्सिंग्टन संधि' द्वितीय विश्व युद्ध के बाद यूके और जर्मनी के बीच पहली द्विपक्षीय संधि है, जो रक्षा और व्यापार पर केंद्रित है।",
+   "trick": "यूके-जर्मनी = केन्सिंग्टन संधि",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "The 47th ASEAN Summit in October 2025 primarily focused on which of the following issues?",
+   "hi": "47वां आसियान शिखर सम्मेलन, अक्टूबर 2025 मुख्य रूप से निम्नलिखित में से किस मुद्दे पर केंद्रित था?",
+   "opts": [
+    "Trade tariffs<br>व्यापार शुल्क",
+    "Inclusivity & Sustainability<br>समावेशिता और स्थिरता",
+    "Digital transformation<br>डिजिटल परिवर्तन",
+    "Food safety<br>खाद्य सुरक्षा"
+   ],
+   "my_ans": "B",
+   "sol": "लाओस में आयोजित 47वें आसियान शिखर सम्मेलन का मुख्य फोकस समावेशी विकास और सतत विकास (Inclusivity & Sustainability) था।",
+   "trick": "47वां आसियान = समावेशिता और स्थिरता",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Recently appointed as CEO of Qatar Airways (December 2025), who is the new head of this major global airline?",
+   "hi": "हाल ही में (दिसंबर 2025), क़तर एयरवेज के CEO के रूप में नियुक्त, इस प्रमुख वैश्विक एयरलाइन के नए प्रमुख कौन हैं?",
+   "opts": [
+    "Mohamed bin Rashid Al Maktoum<br>मोहम्मद बिन राशिद अल मकतूम",
+    "Engr. Badr Mohammed Al-Meer<br>इंजीनियर बद्र मोहम्मद अल-मीर",
+    "Hamad Ali Al-Khater<br>हमाद अली अल-खातर",
+    "Sheikh Mohammed bin Abdulrahman Al Thani<br>शेख मोहम्मद बिन अब्दुलरहमान अल थानी"
+   ],
+   "my_ans": "C",
+   "sol": "दिसंबर 2025 में हमाद अली अल-खातर को कतर एयरवेज का नया CEO नियुक्त किया गया है।",
+   "trick": "कतर एयरवेज CEO = हमाद अली अल-खातर",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "In December 2025, which country officially transferred the BRICS presidency to India during the concluding session of the 4th BRICS Sherpas Meeting?",
+   "hi": "दिसंबर 2025 में, किस देश ने चौथी ब्रिक्स शेरपा मीटिंग के समापन सत्र के दौरान आधिकारिक तौर पर BRICS की अध्यक्षता भारत को हस्तांतरित कर दी?",
+   "opts": [
+    "Brazil<br>ब्राज़ील",
+    "South Africa<br>दक्षिण अफ्रीका",
+    "Russia<br>रूस",
+    "China<br>चीन"
+   ],
+   "my_ans": "A",
+   "sol": "2025 में ब्रिक्स की अध्यक्षता ब्राज़ील के पास थी, जिसने दिसंबर 2025 में इसे भारत को हस्तांतरित किया।",
+   "trick": "2025 अध्यक्ष = ब्राज़ील",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "In which type of wave do particles of the medium move parallel to the direction of wave propagation?",
+   "hi": "निम्नलिखित में से किस प्रकार की तरंग में, माध्यम के कण तरंग संचरण की दिशा के समानांतर गति करते हैं?",
+   "opts": [
+    "Longitudinal wave<br>अनुदैर्घ्य तरंग",
+    "Electromagnetic wave<br>वैद्युतचुंबकीय तरंग",
+    "Transverse wave<br>अनुप्रस्थ तरंग",
+    "Surface wave<br>पृष्ठीय तरंग"
+   ],
+   "my_ans": "A",
+   "sol": "अनुदैर्घ्य तरंगों (Longitudinal waves) में माध्यम के कण तरंग की दिशा के समानांतर दोलन करते हैं, जैसे ध्वनि तरंगें।",
+   "trick": "समानांतर = अनुदैर्घ्य",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the following countries is NOT a member of the Association of Southeast Asian Nations (ASEAN)?",
+   "hi": "निम्नलिखित में से कौन-सा देश, दक्षिण-पूर्व एशियाई देशों के संगठन (ASEAN) का सदस्य नहीं है?",
+   "opts": [
+    "Thailand<br>थाईलैंड",
+    "Indonesia<br>इंडोनेशिया",
+    "Myanmar<br>म्यांमार",
+    "India<br>भारत"
+   ],
+   "my_ans": "D",
+   "sol": "भारत आसियान का सदस्य नहीं है, यह केवल एक संवाद भागीदार (dialogue partner) है।",
+   "trick": "भारत आसियान सदस्य नहीं",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which country led the Talisman Sabre, 2025, military exercise in which India participated?",
+   "hi": "भारत ने जिस सैन्य अभ्यास 'तालिसमान सेबर, 2025' में भाग लिया, उसका नेतृत्व किस देश ने किया था?",
+   "opts": [
+    "Canada<br>कनाडा",
+    "Russia<br>रूस",
+    "United Kingdom<br>यूनाइटेड किंगडम",
+    "Australia<br>ऑस्ट्रेलिया"
+   ],
+   "my_ans": "D",
+   "sol": "तालिसमान सेबर सैन्य अभ्यास का नेतृत्व ऑस्ट्रेलिया और संयुक्त राज्य अमेरिका द्वारा किया जाता है।",
+   "trick": "तालिसमान सेबर = ऑस्ट्रेलिया",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which city hosted the signing of the first universal legal framework to combat the escalating threat of cybercrime worldwide, when 72 nations signed the United Nations Convention against Cybercrime?",
+   "hi": "दुनिया भर में साइबर अपराध के बढ़ते खतरे से निपटने के लिए पहले सार्वभौमिक कानूनी ढांचे पर हस्ताक्षर करने की मेजबानी किस शहर ने की, जब 72 देशों ने साइबर अपराध के खिलाफ संयुक्त राष्ट्र कन्वेंशन पर हस्ताक्षर किए?",
+   "opts": [
+    "New York<br>न्यूयॉर्क",
+    "Geneva<br>जिनेवा",
+    "Vienna<br>वियना",
+    "Paris<br>पेरिस"
+   ],
+   "my_ans": "A",
+   "sol": "साइबर अपराध के खिलाफ संयुक्त राष्ट्र कन्वेंशन पर हस्ताक्षर समारोह न्यूयॉर्क में आयोजित किया गया था।",
+   "trick": "साइबर कन्वेंशन = न्यूयॉर्क",
+   "ans": "A"
+  }
+ ]
+}

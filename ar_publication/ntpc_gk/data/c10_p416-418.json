@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "416-418",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Considering the periodic trends, which property explains why noble gases are chemically inert under standard conditions?",
+   "hi": "आवर्त प्रवृत्तियों को ध्यान में रखते हुए, कौन-सा गुणधर्म यह व्याख्या करता है कि मानक परिस्थितियों में उत्कृष्ट गैसें रासायनिक रूप से अक्रिय क्यों होती हैं?",
+   "opts": [
+    "Low ionization energy<br>निम्न आयनन ऊर्जा",
+    "High atomic mass<br>उच्च परमाणु द्रव्यमान",
+    "High electronegativity<br>उच्च विद्युतऋणात्मकता",
+    "Completely filled valence shell<br>पूर्णतः भरा हुआ संयोजकता कोश"
+   ],
+   "my_ans": "D",
+   "sol": "उत्कृष्ट गैसों का संयोजकता कोश (valence shell) पूर्णतः भरा होता है (ns²np⁶ विन्यास), जिससे वे अत्यधिक स्थिर होती हैं और किसी अन्य तत्व के साथ अभिक्रिया नहीं करतीं।",
+   "trick": "पूर्ण कोश = पूर्ण स्थिरता = अक्रिय",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "During the electrolysis of water, hydrogen and oxygen are released in which ratio?",
+   "hi": "जल के विद्युत अपघटन के दौरान हाइड्रोजन और ऑक्सीजन किस अनुपात में मुक्त होते हैं?",
+   "opts": [
+    "3:1",
+    "2:1",
+    "4:1",
+    "1:1"
+   ],
+   "my_ans": "B",
+   "sol": "जल का रासायनिक सूत्र H₂O है, जिसमें हाइड्रोजन और ऑक्सीजन परमाणुओं का अनुपात 2:1 होता है। विद्युत अपघटन में भी यही अनुपात बना रहता है।",
+   "trick": "H₂O में 2 हाइड्रोजन और 1 ऑक्सीजन",
+   "ans": "B"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "In a laboratory, copper sulphate solution reacts with iron filings, causing a colour change and the deposition of a new metal. Which statement correctly explains the reason for this reaction?",
+   "hi": "प्रयोगशाला में, कॉपर सल्फेट विलयन, लोह रेतन के साथ अभिक्रिया करता है, जिससे रंग में परिवर्तन होता है और एक नई धातु का निक्षेपण होता है। निम्नलिखित में से कौन-सा कथन इस अभिक्रिया के कारण की सही व्याख्या करता है?",
+   "opts": [
+    "Iron and copper sulphate have similar reactivity<br>लोहे और कॉपर सल्फेट की अभिक्रियाशीलता समान होती है",
+    "Iron and copper belong to the same group<br>लोहा और कॉपर एक ही समूह से संबंधित होते हैं",
+    "Iron is more reactive than copper<br>लोहा, कॉपर की तुलना में अधिक अभिक्रियाशील होता है",
+    "Copper is more reactive than iron<br>कॉपर, लोहे की तुलना में अधिक अभिक्रियाशील होता है"
+   ],
+   "my_ans": "C",
+   "sol": "लोहा (Fe) कॉपर (Cu) से अधिक अभिक्रियाशील है, इसलिए यह कॉपर सल्फेट के विलयन से कॉपर को विस्थापित कर देता है।",
+   "trick": "अधिक सक्रिय धातु कम सक्रिय को हटाती है",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "In the reaction Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(*) + 2NaCl(aq), what will be the actual physical state that can replace (*)?",
+   "hi": "अभिक्रिया Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(*) + 2NaCl(aq) में, (*) को प्रतिस्थापित करने वाली वास्तविक भौतिक अवस्था क्या होगी?",
+   "opts": [
+    "(g)",
+    "(aq)",
+    "(s)",
+    "(l)"
+   ],
+   "my_ans": "C",
+   "sol": "बेरियम सल्फेट (BaSO₄) जल में अघुलनशील होता है और सफेद अवक्षेप (precipitate) के रूप में नीचे बैठ जाता है, जिसे ठोस (s) अवस्था से दर्शाते हैं।",
+   "trick": "अवक्षेप हमेशा ठोस (s) होता है",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "When dilute Hydrochloric acid (HCl) reacts with Sodium Hydrogen Carbonate (NaHCO₃), which is the product formed along with Sodium chloride(NaCl) and Water(H₂O)?",
+   "hi": "जब तनु हाइड्रोक्लोरिक अम्ल (HCl) की सोडियम हाइड्रोजन कार्बोनेट (NaHCO₃) के साथ अभिक्रिया होती है, तो सोडियम क्लोराइड (NaCl) और जल (H₂O) के साथ कौन-सा उत्पाद बनता है?",
+   "opts": [
+    "Chloroform (CHCl3)<br>क्लोरोफॉर्म (CHCl3)",
+    "Carbon Dioxide(CO₂)<br>कार्बन डाइऑक्साइड (CO₂)",
+    "Ammonium Chloride (NH4Cl)<br>अमोनियम क्लोराइड (NH4Cl)",
+    "Hydrogen gas(H₂)<br>हाइड्रोजन गैस (H₂)"
+   ],
+   "my_ans": "B",
+   "sol": "अम्ल जब कार्बोनेट या बाइकार्बोनेट के साथ अभिक्रिया करते हैं, तो लवण और जल के साथ कार्बन डाइऑक्साइड (CO₂) गैस निकलती है।",
+   "trick": "कार्बोनेट + अम्ल = CO₂ गैस",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "Which metal reacts violently with cold water, producing a metal hydroxide, hydrogen gas, and enough heat for the hydrogen to catch fire?",
+   "hi": "कौन-सी धातु, ठंडे जल के साथ तीव्र अभिक्रिया करके धातु हाइड्रॉक्साइड, हाइड्रोजन गैस और इतनी ऊष्मा उत्पन्न करती है कि उत्सर्जित हाइड्रोजन तत्काल प्रज्ज्वलित हो जाती है?",
+   "opts": [
+    "Potassium<br>पोटैशियम",
+    "Aluminium<br>ऐलुमिनियम",
+    "Calcium<br>कैल्शियम",
+    "Magnesium<br>मैग्नीशियम"
+   ],
+   "my_ans": "A",
+   "sol": "पोटैशियम (K) एक अत्यधिक सक्रिय क्षार धातु है जो ठंडे पानी के साथ इतनी तीव्र अभिक्रिया करती है कि उत्पन्न हाइड्रोजन गैस तुरंत आग पकड़ लेती है।",
+   "trick": "पोटैशियम = सबसे सक्रिय धातु",
+   "ans": "A"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "During an experiment, iron nails are placed in copper sulphate solution, and a reddish-brown deposit forms on the nails. What does this observation demonstrate about the type of chemical reaction and the substances involved?",
+   "hi": "एक प्रयोग के दौरान, लोहे की कीलों को कॉपर सल्फेट के विलयन में रखा जाता है और कीलों पर एक लालिमायुक्त भूरे रंग की परत जम जाती है। यह प्रेक्षण रासायनिक अभिक्रिया के प्रकार और उसमें शामिल पदार्थों के संबंध में क्या प्रदर्शित करता है?",
+   "opts": [
+    "A decomposition reaction occurs, breaking copper sulphate into SO₂ and copper<br>एक अपघटन अभिक्रिया होती है, जिससे कॉपर सल्फेट, SO₂ और कॉपर में टूट जाता है",
+    "A double displacement reaction forms iron sulphate and copper sulphate<br>एक द्वि-विस्थापन अभिक्रिया होती है, जिससे आयरन सल्फेट और कॉपर सल्फेट का निर्माण होता है",
+    "A displacement reaction occurs, forming copper metal on the iron nails<br>एक विस्थापन अभिक्रिया होती है, जिससे लोहे की कीलों पर कॉपर धातु का निर्माण होता है",
+    "A combination reaction occurs, creating iron sulphate crystals<br>एक संयोजन अभिक्रिया होती है, जिससे आयरन सल्फेट के क्रिस्टल बनते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "यह एक विस्थापन अभिक्रिया है जहाँ लोहा (Fe) कॉपर (Cu) को विस्थापित कर देता है, जिससे कॉपर धातु की परत कील पर जमा हो जाती है।",
+   "trick": "विस्थापन = अधिक सक्रिय धातु का प्रतिस्थापन",
+   "ans": "C"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "Which of the following substances is considered neutral according to the pH scale?",
+   "hi": "pH स्केल के अनुसार निम्नलिखित में से किस पदार्थ को उदासीन माना जाता है?",
+   "opts": [
+    "Sea water<br>समुद्र जल",
+    "Stomach acid<br>आमाशय अम्ल",
+    "Lime juice<br>नींबू का रस",
+    "Pure water<br>शुद्ध जल"
+   ],
+   "my_ans": "D",
+   "sol": "pH स्केल पर 7 मान उदासीन (neutral) होता है। शुद्ध जल का pH मान 7 होता है, इसलिए यह उदासीन है।",
+   "trick": "pH 7 = उदासीन",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "Which information is essential to perform stoichiometric calculations for a chemical reaction?",
+   "hi": "रासायनिक अभिक्रिया के लिए स्टोइकिओमेट्रिक गणना करने हेतु कौन-सी जानकारी आवश्यक है?",
+   "opts": [
+    "A balanced chemical equation<br>संतुलित रासायनिक समीकरण",
+    "The color of the reactants<br>अभिकारकों का रंग",
+    "Temperature of the reaction<br>अभिक्रिया का तापमान",
+    "Type of apparatus used<br>उपकरण का प्रकार"
+   ],
+   "my_ans": "A",
+   "sol": "स्टोइकिओमेट्रिक गणना के लिए संतुलित रासायनिक समीकरण अनिवार्य है क्योंकि यह अभिकारकों और उत्पादों के बीच मोल अनुपात को दर्शाता है।",
+   "trick": "संतुलित समीकरण = सही गणना",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "When moving down a group in the Modern Periodic Table, what happens to the number of valence electrons?",
+   "hi": "आधुनिक आवर्त सारणी में एक समूह में नीचे जाने पर, संयोजकता इलेक्ट्रॉनों की संख्या का क्या होता है?",
+   "opts": [
+    "Increases<br>बढ़ती है",
+    "Decreases<br>घटती है",
+    "First increases then decreases<br>पहले बढ़ती है फिर घटती है",
+    "Remains the same<br>समान रहती है"
+   ],
+   "my_ans": "D",
+   "sol": "आधुनिक आवर्त सारणी में एक ही समूह के सभी तत्वों के संयोजकता कोश में इलेक्ट्रॉनों की संख्या समान रहती है।",
+   "trick": "समूह = समान संयोजकता इलेक्ट्रॉन",
+   "ans": "D"
+  }
+ ]
+}

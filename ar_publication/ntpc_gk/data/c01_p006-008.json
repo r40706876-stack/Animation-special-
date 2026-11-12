@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "6-8",
+ "model": "gemini-3.5-flash",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Vikramshila University located in the Bhagalpur district of Bihar was founded by which of the following rulers?",
+   "hi": "बिहार के भागलपुर जिले में स्थित विक्रमशिला विश्वविद्यालय की स्थापना निम्नलिखित में से किस शासक ने की थी?",
+   "opts": [
+    "King Gopala<br>राजा गोपाल",
+    "King Dharampala<br>राजा धर्मपाल",
+    "King Mahipala<br>राजा महिपाल",
+    "King Devapala<br>राजा देवपाल"
+   ],
+   "my_ans": "B",
+   "sol": "विक्रमशिला विश्वविद्यालय (भागलपुर, बिहार) की स्थापना पाल वंश के राजा धर्मपाल ने 8वीं शताब्दी के अंत में की थी। यह तांत्रिक बौद्ध धर्म की शिक्षा का प्रमुख केंद्र था।",
+   "trick": "पाल शासक धर्मपाल ने विक्रमशिला विश्वविद्यालय की स्थापना की।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Akhaj Mesolithic site is found in which state of India?",
+   "hi": "अखज मध्यपाषाणी स्थल (Akhaj Mesolithic site) भारत के किस राज्य में स्थित है?",
+   "opts": [
+    "Meghalaya<br>मेघालय",
+    "Gujarat<br>गुजरात",
+    "Bihar<br>बिहार",
+    "Assam<br>असम"
+   ],
+   "my_ans": "B",
+   "sol": "अखज मध्यपाषाणकालीन पुरातात्विक स्थल गुजरात के मेहसाणा जिले में स्थित है।",
+   "trick": "अखज मध्यपाषाण स्थल गुजरात के मेहसाणा जिले में स्थित है।",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "The archaeological site of Langhnaj in Gujarat, known for microlithic tools and evidence of hunting-gathering communities, is associated with which prehistoric cultural phase in India?",
+   "hi": "गुजरात में स्थित पुरातात्विक स्थल 'लंघनाज', जो सूक्ष्म पाषाण औजारों और आखेट-संग्रहक समुदायों के साक्ष्यों के लिए जाना जाता है, भारत के किस प्रागैतिहासिक सांस्कृतिक प्रावस्था से संबंधित है?",
+   "opts": [
+    "Palaeolithic culture<br>पुरापाषाण संस्कृति",
+    "Mesolithic culture<br>मध्यपाषाण संस्कृति",
+    "Chalcolithic culture<br>ताम्रपाषाण संस्कृति",
+    "Neolithic culture<br>नवपाषाण संस्कृति"
+   ],
+   "my_ans": "B",
+   "sol": "लंघनाज (गुजरात) एक प्रमुख मध्यपाषाणकालीन (Mesolithic) स्थल है, जहाँ सूक्ष्म पाषाण उपकरण (Microliths) और आखेट-संग्रहक जीवनशैली के साक्ष्य मिले हैं।",
+   "trick": "लंघनाज सूक्ष्म पाषाण उपकरणों के लिए प्रसिद्ध मध्यपाषाण स्थल है।",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which material was mainly used for making beads and seals in Harappan civilization?",
+   "hi": "हड़प्पा सभ्यता में मणिका (beads) और मुहरें (seals) बनाने के लिए मुख्यतः किस सामग्री का उपयोग किया जाता था?",
+   "opts": [
+    "Gold<br>सोना (Gold)",
+    "Steatite<br>स्टीएटाइट (Steatite)",
+    "Ivory<br>गजदंत (Ivory)",
+    "Terracotta<br>टेराकोटा (Terracotta)"
+   ],
+   "my_ans": "B",
+   "sol": "हड़प्पा सभ्यता में अधिकांश मुहरें और मनके स्टीएटाइट (सेलखड़ी/सोपस्टोन) नामक मुलायम पत्थर से बनाए जाते थे।",
+   "trick": "हड़प्पा मुहरें व मनके मुख्य रूप से स्टीएटाइट से बनते थे।",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "According to early Buddhist literature, how many gāmas (villages) were said to exist in the kingdom of Magadha during the reign of King Bimbisāra ?",
+   "hi": "प्रारंभिक बौद्ध साहित्य के अनुसार, राजा बिम्बिसार के शासनकाल के दौरान मगध राज्य में कितने गामा (गाँव) विद्यमान थे?",
+   "opts": [
+    "1,00,000",
+    "80,000",
+    "60,000",
+    "40,000"
+   ],
+   "my_ans": "B",
+   "sol": "प्रारंभिक बौद्ध और जैन साहित्य के अनुसार, राजा बिम्बिसार के शासनकाल में मगध साम्राज्य के अंतर्गत 80,000 गाँव (गामा) आते थे।",
+   "trick": "बिम्बिसार के समय मगध में 80,000 गाँव माने जाते थे।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "What was a major administrative feature in the military governance system of early South Indian kingdoms, such as the Chalukyas and Rashtrakutas?",
+   "hi": "चालुक्य और राष्ट्रकूट जैसे प्रारंभिक दक्षिण भारतीय राज्यों की सैन्य शासन प्रणाली की एक प्रमुख प्रशासनिक विशेषता क्या थी?",
+   "opts": [
+    "Temple authorities directly recruited soldiers for village defence<br>मंदिर के अधिकारी प्रत्यक्ष रूप से ग्राम रक्षा के लिए सैनिकों की भर्ती करते थे।",
+    "Military governance was entirely centralised under the royal council<br>शाही परिषद के अधीन सैन्य शासन पूरी तरह से केंद्रित था।",
+    "Feudatory chiefs were assigned military and administrative duties<br>सामंती प्रमुखों को सैन्य और प्रशासनिक कर्तव्य सौंपे गए थे।",
+    "District leaders were rotated annually by royal decree<br>शाही फरमान के अनुसार जिला लीडरों का वार्षिक रूप से पदान्तरण होता था।"
+   ],
+   "my_ans": "C",
+   "sol": "चालुक्य और राष्ट्रकूट साम्राज्य में विकेंद्रीकृत सामंती व्यवस्था थी, जिसमें सामंतों (Feudatories) को सैन्य और प्रशासनिक अधिकार सौंपे गए थे।",
+   "trick": "चालुक्य व राष्ट्रकूट राज्यों में सैन्य व प्रशासनिक कार्य सामंतों को सौंपे गए थे।",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Bhimbetka Paleolithic site is located near which river valley of India?",
+   "hi": "भीमबेटका पुरापाषाणकालीन स्थल भारत की किस नदी घाटी के निकट स्थित है?",
+   "opts": [
+    "Satluj<br>सतलुज",
+    "Narmada<br>नर्मदा",
+    "Ganga<br>गंगा",
+    "Yamuna<br>यमुना"
+   ],
+   "my_ans": "B",
+   "sol": "भीमबेटका (रायसेन, मध्य प्रदेश) विंध्य पर्वत श्रृंखला की तलहटी में नर्मदा नदी घाटी के निकट स्थित एक प्रसिद्ध पुरापाषाणकालीन स्थल है।",
+   "trick": "भीमबेटका पुरापाषाण स्थल नर्मदा नदी घाटी के पास स्थित है।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "In the Chola empire, the tax-free lands donated to Brahmins where they settled were known as ___________.",
+   "hi": "चोल साम्राज्य में, ब्राह्मणों को दान में दी गई कर-मुक्त भूमि, जहाँ वे बस गए थे, __________ के नाम से जानी जाती थी।",
+   "opts": [
+    "Mahasabha<br>महासभा",
+    "Agraharam<br>अग्रहारम",
+    "Valanadu<br>वलनाडु",
+    "Garbhagriha<br>गर्भगृह"
+   ],
+   "my_ans": "B",
+   "sol": "चोल साम्राज्य में ब्राह्मणों को दान में दी गई कर-मुक्त भूमि को 'अग्रहारम' (या ब्रह्मदेय) कहा जाता था, जहाँ वे अपने गाँव बसाते थे।",
+   "trick": "चोल काल में ब्राह्मणों को दी गई कर-मुक्त भूमि 'अग्रहारम' कहलाती थी।",
+   "ans": "B"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the following is a distinctive feature found in Harappan cities?",
+   "hi": "निम्नलिखित में से कौन-सी विशिष्ट विशेषता हड़प्पा नगरों में पाई जाती है?",
+   "opts": [
+    "Efficient transportation<br>कुशल परिवहन (Efficient transportation)",
+    "Trade routes<br>व्यापार मार्ग (Trade routes)",
+    "Religious processions<br>धार्मिक जलूस (Religious processions)",
+    "Drainage system<br>अपवाह तंत्र (Drainage system)"
+   ],
+   "my_ans": "D",
+   "sol": "हड़प्पा सभ्यता अपनी उन्नत नगर नियोजन और सुव्यवस्थित ढकी हुई भूमिगत जल निकासी प्रणाली (Drainage system) के लिए जानी जाती है।",
+   "trick": "हड़प्पा नगर योजना की मुख्य विशेषता ढकी हुई जल निकासी प्रणाली थी।",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "What material was commonly used for Harappan sculptures, such as the Dancing Girl, around 2500 BCE?",
+   "hi": "लगभग 2500 ईसा पूर्व की हड़प्पाकालीन मूर्तियों, जैसे कि नर्तकी की मूर्ति, के लिए सामान्यतः किस सामग्री का उपयोग किया गया था?",
+   "opts": [
+    "Silver<br>रजत",
+    "Granite<br>ग्रेनाइट",
+    "Bronze<br>कांस्य",
+    "Marble<br>संगमरमर"
+   ],
+   "my_ans": "C",
+   "sol": "मोहनजोदड़ो से प्राप्त प्रसिद्ध 'नर्तकी की मूर्ति' (Dancing Girl) कांस्य (Bronze) से बनी है, जिसे लुप्त-मोम विधि (Lost-wax casting) से बनाया गया था।",
+   "trick": "हड़प्पा नर्तकी की मूर्ति कांस्य (Bronze) धातु से बनी थी।",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "What was the role of guilds ( shrenis ) in post-Gupta India?",
+   "hi": "गुप्तोत्तर काल के बाद के भारत में श्रेणियों (संघों) की क्या भूमिका थी?",
+   "opts": [
+    "Administration<br>प्रशासन",
+    "Religious reforms<br>धार्मिक सुधार",
+    "Regulated trade and crafts<br>विनिमयित व्यापार और शिल्प",
+    "Military service<br>सैन्य सेवा"
+   ],
+   "my_ans": "C",
+   "sol": "गुप्तोत्तर भारत में श्रेणियाँ (Shrenis) व्यापारियों और शिल्पकारों के व्यावसायिक संगठन थे, जो व्यापार नियमों, मूल्यों और शिल्प गुणवत्ता को नियंत्रित करते थे।",
+   "trick": "श्रेणी (Shreni) का मुख्य कार्य व्यापार व शिल्प को विनियमित करना था।",
+   "ans": "C"
+  }
+ ]
+}

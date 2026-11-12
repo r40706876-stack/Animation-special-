@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Environment",
+  "hi": "पर्यावरण",
+  "total": 37,
+  "gl": 37,
+  "ug": 0
+ },
+ "source_pages": "213-215",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which of the following is the most significant source of nutrient pollution leading to eutrophication in freshwater bodies?",
+   "hi": "निम्नलिखित में से कौन-सा, ताजे पानी के जलाशय (Freshwater bodies) में सुपोषण के कारण बनने वाले पोषक प्रदूषण (nutrient pollution) का सबसे महत्वपूर्ण स्रोत है?",
+   "opts": [
+    "Industrial effluents<br>औद्योगिक बहिःस्त्राव",
+    "Sewage discharge<br>सीवेज का प्रवाह",
+    "Agricultural runoff<br>कृषि अपवाह",
+    "Urban stormwater<br>शहरी तूफानी जल"
+   ],
+   "my_ans": "C",
+   "sol": "कृषि अपवाह (Agricultural runoff) में उर्वरकों (नाइट्रेट, फॉस्फेट) की अधिकता होती है, जो जल निकायों में शैवाल वृद्धि (सुपोषण) का प्रमुख कारण है।",
+   "trick": "कृषि अपवाह = सबसे बड़ा गैर-बिंदु स्रोत (non-point source) प्रदूषण।",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "On which of the following days was World Wetlands Day observed in 2026, focusing on the theme “Wetlands and traditional knowledge: Celebrating cultural heritage”?",
+   "hi": "2026 में निम्नलिखित में से किस दिन विश्व आर्द्रभूमि (वेटलैंड्स) दिवस मनाया गया था, जिसकी थीम 'आर्द्रभूमि और पारंपरिक ज्ञान: सांस्कृतिक विरासत का उत्सव' था?",
+   "opts": [
+    "February 3<br>3 फरवरी",
+    "February 2<br>2 फरवरी",
+    "February 4<br>4 फरवरी",
+    "February 1<br>1 फरवरी"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व आर्द्रभूमि दिवस प्रतिवर्ष 2 फरवरी को मनाया जाता है, क्योंकि 2 फरवरी 1971 को ईरान के रामसर में आर्द्रभूमि पर कन्वेंशन हुआ था।",
+   "trick": "रामसर कन्वेंशन की याद में 2 फरवरी को आर्द्रभूमि दिवस।",
+   "ans": "B"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following is a direct consequence of increased particulate matter (PM2.5) in urban air?",
+   "hi": "निम्नलिखित में से कौन-सा शहरी वायु में बढ़े हुए कणिका द्रव्य (PM2.5) का एक प्रत्यक्ष परिणाम है?",
+   "opts": [
+    "Ocean acidification<br>महासागरीय अम्लीकरण",
+    "Increased soil fertility<br>मृदा की उर्वरता में वृद्धि",
+    "Stratospheric ozone depletion<br>समतापमंडलीय ओजोन परत का क्षरण",
+    "Respiratory health issues<br>श्वसन संबंधी स्वास्थ्य समस्याएँ"
+   ],
+   "my_ans": "D",
+   "sol": "PM2.5 के कण बहुत सूक्ष्म होते हैं जो फेफड़ों और रक्तप्रवाह में गहराई तक प्रवेश कर जाते हैं, जिससे अस्थमा और ब्रोंकाइटिस जैसी श्वसन संबंधी बीमारियाँ होती हैं।",
+   "trick": "PM2.5 = फेफड़ों के लिए घातक।",
+   "ans": "D"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which international agreement did India reaffirm its commitment to during the 2025 climate summit?",
+   "hi": "भारत ने 2025 के जलवायु शिखर सम्मेलन (climate summit) के दौरान किस अंतरराष्ट्रीय समझौते के प्रति अपनी प्रतिबद्धता की पुष्टि की?",
+   "opts": [
+    "Kyoto Protocol<br>क्योटो प्रोटोकॉल",
+    "Montreal Protocol<br>मॉन्ट्रियल प्रोटोकॉल",
+    "Basel Convention<br>बेसल कन्वेंशन",
+    "Paris Agreement<br>पेरिस एग्रीमेंट"
+   ],
+   "my_ans": "D",
+   "sol": "पेरिस समझौता (2015) जलवायु कार्रवाई के लिए वर्तमान वैश्विक ढांचा है, जिसके तहत भारत ने 2070 तक नेट-जीरो उत्सर्जन का लक्ष्य रखा है।",
+   "trick": "पेरिस समझौता = जलवायु कार्रवाई का वैश्विक आधार।",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Which global event in 1992 popularized sustainable development?",
+   "hi": "1992 में किस वैश्विक आयोजन ने सतत विकास को लोकप्रिय बनाया?",
+   "opts": [
+    "Paris Agreement<br>पेरिस समझौता",
+    "Montreal Protocol<br>मॉन्ट्रियल प्रोटोकॉल",
+    "Kyoto Protocol<br>क्योटो प्रोटोकॉल",
+    "Rio Earth Summit<br>रियो अर्थ समिट"
+   ],
+   "my_ans": "D",
+   "sol": "1992 का रियो पृथ्वी शिखर सम्मेलन (UNCED) सतत विकास के लिए एजेंडा 21 को अपनाने के लिए प्रसिद्ध है।",
+   "trick": "1992 रियो = सतत विकास की शुरुआत।",
+   "ans": "D"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which pollutant(s) contribute(s) to both ozone and peroxyacetyl nitrate formation in urban atmospheres under sunlight?",
+   "hi": "सूर्य के प्रकाश में शहरी वायुमंडल में ओजोन और परॉक्सीएसिटिल नाइट्रेट (peroxyacetyl nitrate) दोनों के निर्माण में कौन-से प्रदूषक योगदान करते हैं?",
+   "opts": [
+    "Nitrogen dioxide<br>नाइट्रोजन डाइऑक्साइड",
+    "Sulphur dioxide<br>सल्फर डाइऑक्साइड",
+    "Hydrocarbons<br>हाइड्रोकार्बन",
+    "Carbon monoxide<br>कार्बन मोनोऑक्साइड"
+   ],
+   "my_ans": "A",
+   "sol": "नाइट्रोजन डाइऑक्साइड (NO₂) सूर्य के प्रकाश में हाइड्रोकार्बन के साथ मिलकर ओजोन और PAN (पेरोक्सीएसिटिल नाइट्रेट) का निर्माण करता है।",
+   "trick": "NO₂ + सूर्य का प्रकाश = ओजोन और PAN।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "In December 2025, which organization hosted the national stakeholder consultation on the High Seas Treaty (BBNJ) in Kochi, India?",
+   "hi": "दिसंबर 2025 में, किस संगठन ने भारत के कोच्चि में उच्च समुद्र संधि (High Seas Treaty - BBNJ) पर राष्ट्रीय हितधारक परामर्श की मेजबानी की थी?",
+   "opts": [
+    "Ministry of Environment, Forest and Climate Change<br>पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय",
+    "Central Marine Fisheries Research Institute<br>केन्द्रीय समुद्री मात्स्यिकी अनुसंधान संस्थान",
+    "Indian Council of Agricultural Research<br>भारतीय कृषि अनुसंधान परिषद",
+    "Food and Agriculture Organization<br>खाद्य एवं कृषि संगठन"
+   ],
+   "my_ans": "B",
+   "sol": "कोच्चि स्थित केंद्रीय समुद्री मात्स्यिकी अनुसंधान संस्थान (CMFRI) ने दिसंबर 2025 में BBNJ संधि पर परामर्श की मेजबानी की।",
+   "trick": "कोच्चि = CMFRI का मुख्यालय।",
+   "ans": "B"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "Which new mission was launched by the Government of India in 2025 to restore degraded forest landscapes?",
+   "hi": "भारत सरकार द्वारा 2025 में खराब हो चुके वन क्षेत्रों को पुनर्स्थापित करने के लिए कौन सा नया मिशन शुरू किया गया था?",
+   "opts": [
+    "Urban Biodiversity Scheme<br>शहरी जैव विविधता योजना",
+    "River Rejuvenation Project<br>नदी पुनर्जीवन परियोजना",
+    "Green India Mission<br>हरित भारत मिशन",
+    "Clean Air Initiative<br>स्वच्छ वायु पहल"
+   ],
+   "my_ans": "C",
+   "sol": "ग्रीन इंडिया मिशन का मुख्य उद्देश्य भारत में खराब हो चुके वन क्षेत्रों का वनीकरण और पारिस्थितिकी तंत्र की बहाली करना है।",
+   "trick": "ग्रीन इंडिया = वनीकरण और वन बहाली।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which gases act as the main greenhouse gases with rising atmospheric concentrations?",
+   "hi": "वायुमंडल में अपनी सांद्रता बढ़ने के साथ कौन-सी गैसें मुख्य ग्रीनहाउस गैसों के रूप में कार्य करती हैं?",
+   "opts": [
+    "Hydrochlorofluorocarbons, argon, oxygen<br>हाइड्रोक्लोरोफ्लोरोकार्बन, आर्गन, ऑक्सीजन",
+    "Carbon dioxide, methane, nitrous oxide<br>कार्बन डाइऑक्साइड, मेथेन, नाइट्रस ऑक्साइड",
+    "Argon, oxygen, nitrogen<br>आर्गन, ऑक्सीजन, नाइट्रोजन",
+    "Hydrofluorocarbons, oxygen, nitrogen<br>हाइड्रोफ्लोरोकार्बन, ऑक्सीजन, नाइट्रोजन"
+   ],
+   "my_ans": "B",
+   "sol": "कार्बन डाइऑक्साइड, मीथेन और नाइट्रस ऑक्साइड प्रमुख ग्रीनहाउस गैसें हैं जो वायुमंडल में गर्मी को रोकती हैं।",
+   "trick": "CO₂, CH₄, N₂O = मुख्य ग्रीनहाउस गैसें।",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "Which of the following is/are example(s) of an abiotic factor in an ecosystem?",
+   "hi": "निम्नलिखित में से कौन-सा पारिस्थितिकी तंत्र में एक अजैविक कारक का उदाहरण है?",
+   "opts": [
+    "Insects<br>कीट",
+    "Bacteria<br>जीवाणु",
+    "Soil<br>मृदा",
+    "Trees<br>वृक्ष"
+   ],
+   "my_ans": "C",
+   "sol": "अजैविक कारक वे निर्जीव घटक हैं जो पारिस्थितिकी तंत्र को प्रभावित करते हैं, जैसे मृदा, जल, प्रकाश और तापमान।",
+   "trick": "अजैविक = निर्जीव (Non-living).",
+   "ans": "C"
+  }
+ ]
+}

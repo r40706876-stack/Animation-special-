@@ -1,0 +1,126 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "425-426",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "When fats react with sodium hydroxide to produce soap and glycerol, the reaction is classified as:",
+   "hi": "जब वसा, सोडियम हाइड्रोक्साइड के साथ अभिक्रिया करके साबुन और ग्लिसरॉल बनाती है, तो इस अभिक्रिया को किस रूप में वर्गीकृत किया जाता है?",
+   "opts": [
+    "Fermentation reaction<br>किण्वन अभिक्रिया",
+    "Combustion reaction<br>दहन अभिक्रिया",
+    "Precipitation reaction<br>अवक्षेपण अभिक्रिया",
+    "Saponification reaction<br>साबुनीकरण अभिक्रिया"
+   ],
+   "my_ans": "D",
+   "sol": "वसा और सोडियम हाइड्रोक्साइड (क्षार) की अभिक्रिया से साबुन और ग्लिसरॉल बनने की प्रक्रिया को साबुनीकरण (Saponification) कहा जाता है।",
+   "trick": "वसा + क्षार = साबुन (साबुनीकरण)",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "Oxidation in a redox reaction involves which of the following?",
+   "hi": "अपचयोपचय अभिक्रिया में ऑक्सीकरण में निम्नलिखित में से क्या शामिल होता है?",
+   "opts": [
+    "Electrons lost<br>इलेक्ट्रॉनों का निष्कासन",
+    "Protons gained<br>प्रोटॉनों की प्राप्ति",
+    "Protons lost<br>प्रोटॉनों का निष्कासन",
+    "Electrons gained<br>इलेक्ट्रॉनों की प्राप्ति"
+   ],
+   "my_ans": "A",
+   "sol": "ऑक्सीकरण (Oxidation) वह प्रक्रिया है जिसमें कोई परमाणु या अणु इलेक्ट्रॉन खोता है (इलेक्ट्रॉनों का निष्कासन)।",
+   "trick": "OIL RIG: Oxidation Is Loss (of electrons)",
+   "ans": "A"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "A solution is prepared by dissolving 15 g of salt in 585 g of water. Calculate the mass percent (w/w) of the solution.",
+   "hi": "एक विलयन 15 ग्राम नमक को 585 ग्राम पानी में घोलकर तैयार किया जाता है। विलयन का द्रव्यमान प्रतिशत (w/w) ज्ञात कीजिए।",
+   "opts": [
+    "0.5%",
+    "1.5%",
+    "2.1%",
+    "2.5%"
+   ],
+   "my_ans": "D",
+   "sol": "कुल द्रव्यमान = 15 + 585 = 600 ग्राम। द्रव्यमान प्रतिशत = (15 / 600) × 100 = 2.5%。",
+   "trick": "द्रव्यमान % = (विलेय / कुल विलयन) × 100",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Starch, a major component of flour and potatoes, is a polysaccharide. What chemical process occurs when starch is heated with water?",
+   "hi": "स्टार्च, जो आटा और आलू का एक प्रमुख घटक है, एक पॉलीसैकेराइड है। जब स्टार्च को पानी के साथ गर्म किया जाता है तो कौन सी रासायनिक प्रक्रिया होती है?",
+   "opts": [
+    "Gelatinization<br>जिलेटिनाइजेशन",
+    "Fermentation<br>किण्वन",
+    "Saponification<br>साबुनीकरण",
+    "Caramelization<br>कैरामेलिज़ेशन"
+   ],
+   "my_ans": "A",
+   "sol": "जब स्टार्च को पानी के साथ गर्म किया जाता है, तो स्टार्च के कण पानी सोखकर फूल जाते हैं और एक गाढ़ा जेल जैसा मिश्रण बनाते हैं, जिसे जिलेटिनाइजेशन कहते हैं।",
+   "trick": "स्टार्च + पानी + गर्मी = जिलेटिनाइजेशन",
+   "ans": "A"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Why do noble gases exist as gases at room temperature, while halogens exist as solids, liquids, or gases down the group?",
+   "hi": "उत्कृष्ट गैसें कक्ष ताप पर गैसों के रूप में क्यों विद्यमान होती हैं जबकि हैलोजन, वर्ग में नीचे जाने पर ठोस, द्रव या गैस के रूप में विद्यमान होते हैं?",
+   "opts": [
+    "Weak intermolecular forces in noble gases<br>उत्कृष्ट गैसों में दुर्बल अंतरा-अणुक बल होते हैं",
+    "Strong chemical bonds in noble gases<br>उत्कृष्ट गैसों में प्रबल रासायनिक आबंध होते हैं",
+    "Larger atomic size of noble gases<br>उत्कृष्ट गैसों का परमाणु आकार बड़ा होता है",
+    "High reactivity of noble gases<br>उत्कृष्ट गैसों की अभिक्रियाशीलता उच्च होती है"
+   ],
+   "my_ans": "A",
+   "sol": "उत्कृष्ट गैसों के परमाणुओं के बीच बहुत ही कमजोर 'वैन डेर वाल्स' बल होते हैं, जिसके कारण वे कमरे के तापमान पर गैस अवस्था में रहती हैं।",
+   "trick": "दुर्बल बल = गैस अवस्था",
+   "ans": "A"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "The discovery of the atomic nucleus by bombarding a thin gold foil with alpha particles is associated with which of the following scientists?",
+   "hi": "अल्फा कणों से एक पतली स्वर्ण की पन्नी पर बमबारी करके परमाणु नाभिक की खोज निम्नलिखित में से किस वैज्ञानिक से संबंधित है?",
+   "opts": [
+    "Robert Boyle<br>रॉबर्ट बॉयल",
+    "Ernest Rutherford<br>अर्नेस्ट रदरफोर्ड",
+    "Dmitri Mendeleev<br>दिमित्री मेंडेलीव",
+    "John Dalton<br>जॉन डाल्टन"
+   ],
+   "my_ans": "B",
+   "sol": "1911 में अर्नेस्ट रदरफोर्ड ने स्वर्ण पन्नी प्रयोग (Gold Foil Experiment) के माध्यम से परमाणु के नाभिक की खोज की थी।",
+   "trick": "रदरफोर्ड = नाभिक की खोज",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Which of the following elements is malleable and a good conductor of heat and electricity?",
+   "hi": "निम्नलिखित में से कौन-सा तत्व आघातवर्ध्य है तथा ऊष्मा एवं विद्युत का सुचालक है?",
+   "opts": [
+    "Sulfur (S)<br>सल्फर (S)",
+    "Barium (Ba)<br>बेरियम (Ba)",
+    "Iodine (I)<br>आयोडीन (I)",
+    "Neon (Ne)<br>नियॉन (Ne)"
+   ],
+   "my_ans": "B",
+   "sol": "बेरियम (Ba) एक धातु है, और धातुओं का गुण होता है कि वे आघातवर्ध्य (malleable) होती हैं और ऊष्मा व विद्युत की सुचालक होती हैं।",
+   "trick": "धातु = आघातवर्ध्य + सुचालक",
+   "ans": "B"
+  }
+ ]
+}

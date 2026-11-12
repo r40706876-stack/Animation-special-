@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "548-550",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 102,
+   "lvl": "UG",
+   "en": "In which of the following states of India is the Dilwara Temple, which exhibits a distinct architectural style that fuses elements of Jain, Hindu, and even Mughal craftsmanship, located?",
+   "hi": "भारत के निम्नलिखित में से किस राज्य में दिलवाड़ा मंदिर स्थित है, जो एक विशिष्ट स्थापत्य शैली को प्रदर्शित करता है जिसमें जैन, हिंदू और यहाँ तक कि मुगल शिल्प कौशल के तत्वों का भी मिश्रण है?",
+   "opts": [
+    "Punjab<br>पंजाब",
+    "Gujarat<br>गुजरात",
+    "Kerala<br>केरल",
+    "Rajasthan<br>राजस्थान"
+   ],
+   "my_ans": "D",
+   "sol": "दिलवाड़ा मंदिर राजस्थान के माउंट आबू में स्थित है। यह अपनी जटिल संगमरमर की नक्काशी और जैन वास्तुकला के लिए प्रसिद्ध है।",
+   "trick": "दिलवाड़ा = राजस्थान का माउंट आबू (संगमरमर की नक्काशी)",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "UG",
+   "en": "The Dashavatar Temple-Deogarh is important because it is an early example of which temple style?",
+   "hi": "दशावतार मंदिर-देवगढ़ किस मंदिर शैली का प्रारंभिक उदाहरण होने के कारण महत्वपूर्ण है?",
+   "opts": [
+    "Dravida style<br>द्रविड़ शैली",
+    "Panchayatana Nagara temple<br>पंचायतन नागर मंदिर",
+    "Rock-cut architecture<br>शैलकृत वास्तुकला",
+    "Vesara style<br>वेसर शैली"
+   ],
+   "my_ans": "B",
+   "sol": "दशावतार मंदिर (उत्तर प्रदेश) गुप्त काल का है और यह पंचायतन शैली के नागर मंदिरों का सबसे शुरुआती उदाहरण माना जाता है।",
+   "trick": "दशावतार = पंचायतन नागर शैली (गुप्त काल)",
+   "ans": "B"
+  },
+  {
+   "n": 104,
+   "lvl": "UG",
+   "en": "Which of the following institutions was founded by Mahadev Govind Ranade?",
+   "hi": "महादेव गोविंद रानाडे ने निम्नलिखित में से किस संस्थान की स्थापना की थी?",
+   "opts": [
+    "Widow Remarriage Association<br>विधवा पुनर्विवाह संघ",
+    "Brahmo Samaj<br>ब्रह्म समाज",
+    "Indian National Congress<br>भारतीय राष्ट्रीय कांग्रेस",
+    "Arya Samaj<br>आर्य समाज"
+   ],
+   "my_ans": "A",
+   "sol": "महादेव गोविंद रानाडे ने 1861 में पुणे में विधवा पुनर्विवाह संघ की स्थापना की थी।",
+   "trick": "रानाडे = विधवा पुनर्विवाह संघ",
+   "ans": "A"
+  },
+  {
+   "n": 105,
+   "lvl": "UG",
+   "en": "'Agenda 21' — a comprehensive action plan for sustainable development — was adopted at which international conference?",
+   "hi": "'एजेंडा 21' — सतत विकास के लिए व्यापक कार्य योजना — किस अंतर्राष्ट्रीय सम्मेलन में अपनाया गया था?",
+   "opts": [
+    "1992 – Earth Summit, Rio de Janeiro<br>1992 – अर्थ समिट, रियो डी जनेरियो",
+    "1972 – Stockholm Conference<br>1972 – स्टॉकहोम सम्मेलन",
+    "2016 – Kigali Agreement<br>2016 – किगाली समझौता",
+    "1961 – Vienna Convention<br>1961 – वियना कन्वेंशन"
+   ],
+   "my_ans": "A",
+   "sol": "एजेंडा 21 को 1992 के रियो डी जनेरियो में आयोजित पृथ्वी शिखर सम्मेलन (Earth Summit) में अपनाया गया था।",
+   "trick": "एजेंडा 21 = 1992 पृथ्वी शिखर सम्मेलन",
+   "ans": "A"
+  },
+  {
+   "n": 106,
+   "lvl": "UG",
+   "en": "India became a full member of the Shanghai Cooperation Organisation (SCO) in which of the following years?",
+   "hi": "भारत निम्नलिखित में से किस वर्ष शंघाई सहयोग संगठन (SCO) का पूर्णकालिक सदस्य बना था?",
+   "opts": [
+    "2017",
+    "2005",
+    "2001",
+    "2015"
+   ],
+   "my_ans": "A",
+   "sol": "भारत और पाकिस्तान जून 2017 में अस्ताना शिखर सम्मेलन के दौरान शंघाई सहयोग संगठन (SCO) के पूर्ण सदस्य बने।",
+   "trick": "SCO में भारत = 2017",
+   "ans": "A"
+  },
+  {
+   "n": 107,
+   "lvl": "UG",
+   "en": "Which of the following organizations publishes the annual World Report 2025 reviewing global human rights practices?",
+   "hi": "निम्नलिखित में से कौन सा संगठन वैश्विक मानवाधिकार प्रथाओं की समीक्षा करने वाली वार्षिक विश्व रिपोर्ट 2025 प्रकाशित करता है?",
+   "opts": [
+    "United Nations Human Rights Council<br>संयुक्त राष्ट्र मानवाधिकार परिषद",
+    "Amnesty International<br>एमनेस्टी इंटरनेशनल",
+    "Human Rights Watch<br>ह्यूमन राइट्स वॉच",
+    "International Criminal Court<br>अन्तर्राष्ट्रीय आपराधिक न्यायालय"
+   ],
+   "my_ans": "C",
+   "sol": "ह्यूमन राइट्स वॉच (HRW) एक अंतरराष्ट्रीय गैर-सरकारी संगठन है जो प्रतिवर्ष 'वर्ल्ड रिपोर्ट' प्रकाशित करता है।",
+   "trick": "वर्ल्ड रिपोर्ट = ह्यूमन राइट्स वॉच",
+   "ans": "C"
+  },
+  {
+   "n": 108,
+   "lvl": "UG",
+   "en": "Where is the head office of the National Institute of Rural Development and Panchayati Raj in India?",
+   "hi": "भारत में राष्ट्रीय ग्रामीण विकास एवं पंचायती राज संस्थान का मुख्यालय कहाँ स्थित है?",
+   "opts": [
+    "Patna<br>पटना",
+    "Lucknow<br>लखनऊ",
+    "Hyderabad<br>हैदराबाद",
+    "Delhi<br>दिल्ली"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय ग्रामीण विकास एवं पंचायती राज संस्थान (NIRDPR) का मुख्यालय हैदराबाद, तेलंगाना में स्थित है।",
+   "trick": "NIRDPR = हैदराबाद",
+   "ans": "C"
+  },
+  {
+   "n": 109,
+   "lvl": "UG",
+   "en": "Which of the following temples is NOT a prime example of the Dravidian style of temple architecture?",
+   "hi": "निम्नलिखित में से कौन-सा मंदिर, द्रविड़ शैली की मंदिर वास्तुकला का प्रमुख उदाहरण नहीं है?",
+   "opts": [
+    "Gangaikondacholapuram Temple<br>गंगईकोंडाचोलपुरम मंदिर",
+    "Brihadeeswara Temple<br>बृहदेश्वर मंदिर",
+    "Shore Temple<br>शोर मंदिर",
+    "Siddhesvara Mahadeva Temple<br>सिद्धेश्वर महादेव मंदिर"
+   ],
+   "my_ans": "D",
+   "sol": "सिद्धेश्वर महादेव मंदिर (कर्नाटक) चालुक्य/वेसर शैली में निर्मित है, न कि शुद्ध द्रविड़ शैली में।",
+   "trick": "सिद्धेश्वर = वेसर शैली (द्रविड़ नहीं)",
+   "ans": "D"
+  },
+  {
+   "n": 110,
+   "lvl": "UG",
+   "en": "Which of the following goddesses is primarily worshipped during the Gangaur festival of Rajasthan?",
+   "hi": "निम्नलिखित में से किस देवी की पूजा मुख्य रूप से राजस्थान के गणगौर उत्सव के दौरान की जाती है?",
+   "opts": [
+    "Goddess Saraswati<br>देवी सरस्वती",
+    "Goddess Lakshmi<br>देवी लक्ष्मी",
+    "Goddess Parvati<br>देवी पार्वती",
+    "Goddess Durga<br>देवी दुर्गा"
+   ],
+   "my_ans": "C",
+   "sol": "गणगौर उत्सव राजस्थान का पारंपरिक त्योहार है जो देवी गौरी (पार्वती) और भगवान शिव को समर्पित है।",
+   "trick": "गणगौर = देवी पार्वती",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "UG",
+   "en": "All India Rural Financial Inclusion Survey (NAFIS) is conducted by which organisation?",
+   "hi": "अखिल भारतीय ग्रामीण वित्तीय समावेशन सर्वेक्षण (NAFIS) किस संगठन द्वारा आयोजित किया जाता है?",
+   "opts": [
+    "RBI",
+    "NABARD",
+    "FICCI",
+    "CII"
+   ],
+   "my_ans": "B",
+   "sol": "अखिल भारतीय ग्रामीण वित्तीय समावेशन सर्वेक्षण (NAFIS) नाबार्ड (NABARD) द्वारा आयोजित किया जाता है।",
+   "trick": "NAFIS = नाबार्ड",
+   "ans": "B"
+  },
+  {
+   "n": 112,
+   "lvl": "UG",
+   "en": "During which edition of the BIMSTEC Summit was the “Bangkok Vision 2030” approved?",
+   "hi": "BIMSTEC शिखर सम्मेलन के किस संस्करण के दौरान \"बैंकॉक विजन 2030\" को मंजूरी दी गई थी?",
+   "opts": [
+    "Third<br>तीसरे",
+    "Eighth<br>आठवें",
+    "Sixth<br>छठे",
+    "Fifth<br>पाँचवें"
+   ],
+   "my_ans": "C",
+   "sol": "बैंकॉक विजन 2030 को छठे बिम्सटेक (BIMSTEC) शिखर सम्मेलन के दौरान मंजूरी दी गई थी।",
+   "trick": "बैंकॉक विजन = छठा बिम्सटेक",
+   "ans": "C"
+  }
+ ]
+}

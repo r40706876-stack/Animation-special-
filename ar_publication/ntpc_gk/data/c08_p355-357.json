@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "355-357",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 87,
+   "lvl": "GL",
+   "en": "What method does the Hill Areas Development Programme (HADP) use to increase productivity of the land?",
+   "hi": "हिल एरिया डेवलपमेंट प्रोग्राम (HADP) भूमि की उत्पादकता बढ़ाने के लिए किस विधि का उपयोग करता है?",
+   "opts": [
+    "Application of advanced mechanized technologies<br>उन्नत यंत्रीकृत प्रौद्योगिकियों का अनुप्रयोग",
+    "Use of chemical fertilizers and pesticide inputs<br>रासायनिक उर्वरकों और पीड़कनाशक इनपुट का उपयोग",
+    "Vegetative methods and changing cropping pattern<br>वानस्पतिक पद्धतियाँ और परिवर्ती सस्य पैटर्न",
+    "Importing high-yielding crops from plain regions<br>मैदानी क्षेत्रों से उच्च उपज देने वाली फसलों का आयात करना"
+   ],
+   "my_ans": "C",
+   "sol": "HADP पहाड़ी क्षेत्रों में सतत विकास के लिए वानस्पतिक विधियों (जैसे वृक्षारोपण) और फसल पैटर्न में बदलाव पर जोर देता है।",
+   "trick": "पहाड़ी क्षेत्रों में भारी मशीनरी के बजाय पर्यावरण-अनुकूल वानस्पतिक विधियाँ अपनाई जाती हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "When was the National Rural Economic Transformation Project (NRETP) launched?",
+   "hi": "राष्ट्रीय ग्रामीण आर्थिक परिवर्तन परियोजना (NRETP) कब शुरू की गई थी?",
+   "opts": [
+    "24th April 2019<br>24 अप्रैल 2019",
+    "24th April 2020<br>24 अप्रैल 2020",
+    "24th April 2022<br>24 अप्रैल 2022",
+    "24th April 2021<br>24 अप्रैल 2021"
+   ],
+   "my_ans": "A",
+   "sol": "NRETP, जिसे START के नाम से भी जाना जाता है, ग्रामीण विकास मंत्रालय द्वारा 24 अप्रैल 2019 को शुरू किया गया था।",
+   "trick": "NRETP = 24 अप्रैल 2019 (ग्रामीण महिला उद्यमिता हेतु)।",
+   "ans": "A"
+  },
+  {
+   "n": 89,
+   "lvl": "GL",
+   "en": "What trend is noted in the share of agriculture in GDP from 1950–51 to 2016–17?",
+   "hi": "वर्ष 1950-51 से वर्ष 2016-17 तक सकल घरेलू उत्पाद (GDP) में कृषि की हिस्सेदारी में क्या रुझान देखा गया है?",
+   "opts": [
+    "Moderate growth with fluctuations<br>उतार-चढ़ाव के साथ मध्यम वृद्धि",
+    "Sharp rise and quick fall<br>तीव्र वृद्धि और त्वरित गिरावट",
+    "Significant reduction<br>उल्लेखनीय कमी",
+    "Continuous decline with rebounds<br>उछाल के साथ निरंतर गिरावट"
+   ],
+   "my_ans": "C",
+   "sol": "1950-51 में कृषि का योगदान 50% से अधिक था, जो 2016-17 तक घटकर 15-17% रह गया, जो एक बड़ी कमी है।",
+   "trick": "सेवा और उद्योग क्षेत्र के तेजी से बढ़ने के कारण कृषि का हिस्सा कम हुआ।",
+   "ans": "C"
+  },
+  {
+   "n": 90,
+   "lvl": "GL",
+   "en": "The FAO Food Price Index (FFPI), which monitors monthly fluctuations in the global prices of a basket of internationally traded food commodities, averaged how many points in December 2025?",
+   "hi": "FAO खाद्य मूल्य सूचकांक (FFPI), जो अंतरराष्ट्रीय स्तर पर व्यापारित खाद्य पदार्थों की बास्केट की वैश्विक कीमतों में मासिक उच्चावच की निगरानी करता है, दिसंबर 2025 में औसतन कितने अंक पर था?",
+   "opts": [
+    "124.3 points<br>124.3 अंक",
+    "120.5 points<br>120.5 अंक",
+    "130.1 points<br>130.1 अंक",
+    "128.6 points<br>128.6 अंक"
+   ],
+   "my_ans": "A",
+   "sol": "दिसंबर 2025 में FAO खाद्य मूल्य सूचकांक का औसत 124.3 अंक दर्ज किया गया था।",
+   "trick": "FAO सूचकांक वैश्विक खाद्य कीमतों के मासिक बदलाव को मापता है।",
+   "ans": "A"
+  },
+  {
+   "n": 91,
+   "lvl": "GL",
+   "en": "Under the Pradhan Mantri Fasal Bima Yojana (PMFBY), what is the premium rate paid by farmers for annual commercial and horticultural crops?",
+   "hi": "प्रधानमंत्री फसल बीमा योजना (PMFBY) के अंतर्गत, वार्षिक वाणिज्यिक और बागवानी फसलों के लिए किसानों द्वारा भुगतान की जाने वाली प्रीमियम दर कितनी है?",
+   "opts": [
+    "2% of the sum insured<br>बीमित राशि का 2%",
+    "7% of the sum insured<br>बीमित राशि का 7%",
+    "5% of the sum insured<br>बीमित राशि का 5%",
+    "3% of the sum insured<br>बीमित राशि का 3%"
+   ],
+   "my_ans": "C",
+   "sol": "PMFBY के तहत खरीफ के लिए 2%, रबी के लिए 1.5% और वार्षिक वाणिज्यिक/बागवानी फसलों के लिए 5% प्रीमियम दर निर्धारित है।",
+   "trick": "वाणिज्यिक/बागवानी = 5%, खरीफ = 2%, रबी = 1.5%।",
+   "ans": "C"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "The Industrial Policy of 1991 led to:",
+   "hi": "वर्ष 1991 की औद्योगिक नीति के कारण क्या परिणाम प्राप्त हुए?",
+   "opts": [
+    "Decrease in private sector participation<br>निजी क्षेत्र की भागीदारी में कमी",
+    "Abolishing industrial licensing for most industries<br>अधिकांश उद्योगों के लिए औद्योगिक लाइसेंसिंग का उन्मूलन",
+    "Nationalization of key industries<br>प्रमुख उद्योगों का राष्ट्रीयकरण",
+    "Establishment of public sector monopolies<br>सार्वजनिक क्षेत्र के एकाधिकारों की स्थापना"
+   ],
+   "my_ans": "B",
+   "sol": "1991 की औद्योगिक नीति ने 'लाइसेंस राज' को समाप्त कर अधिकांश उद्योगों को लाइसेंस मुक्त कर दिया और निजी क्षेत्र को बढ़ावा दिया।",
+   "trick": "1991 की नीति = उदारीकरण (Liberalization) और लाइसेंसिंग का अंत।",
+   "ans": "B"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "The Government of India set up the Price Stabilisation Fund (PSF) to regulate the prices of agri-horticultural commodities in which financial year?",
+   "hi": "भारत सरकार ने किस वित्तीय वर्ष में कृषि-बागवानी जिंसों (agri-horticultural commodities) की कीमतों को विनियमित करने के लिए मूल्य स्थिरीकरण कोष (PSF) की स्थापना की थी?",
+   "opts": [
+    "2016-17",
+    "2019-20",
+    "2012-13",
+    "2014-15"
+   ],
+   "my_ans": "D",
+   "sol": "मूल्य स्थिरीकरण कोष (PSF) की स्थापना भारत सरकार द्वारा 2014-15 में की गई थी ताकि प्याज, आलू जैसी वस्तुओं की कीमतों को नियंत्रित किया जा सके।",
+   "trick": "PSF = 2014-15 (नाशवान कृषि वस्तुओं की कीमतों में स्थिरता के लिए)।",
+   "ans": "D"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "Which tool is most commonly used by the Reserve Bank of India to regulate liquidity in the economy?",
+   "hi": "अर्थव्यवस्था में तरलता को विनियमित करने के लिए भारतीय रिज़र्व बैंक द्वारा किस उपकरण का सर्वाधिक उपयोग किया जाता है?",
+   "opts": [
+    "Government subsidies<br>सरकारी सब्सिडी",
+    "Tariff imposition<br>टैरिफ अधिरोपण",
+    "Repo rate adjustment<br>रेपो दर समायोजन",
+    "Fiscal stimulus<br>राजकोषीय उद्दीपन"
+   ],
+   "my_ans": "C",
+   "sol": "RBI तरलता को नियंत्रित करने के लिए रेपो दर का उपयोग करता है। रेपो दर बढ़ने से तरलता कम होती है और घटने से बढ़ती है।",
+   "trick": "रेपो दर = RBI का मुख्य मौद्रिक नीति उपकरण।",
+   "ans": "C"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "Which of the following sectors includes activities like trade, transport, and communication in India?",
+   "hi": "भारत में निम्नलिखित में से किस क्षेत्रक में व्यापार, परिवहन और संचार जैसी गतिविधियां शामिल हैं?",
+   "opts": [
+    "Primary<br>प्राथमिक",
+    "Secondary<br>द्वितीयक",
+    "Tertiary<br>तृतीयक",
+    "Quinary<br>पंचभागी"
+   ],
+   "my_ans": "C",
+   "sol": "व्यापार, परिवहन, संचार और बैंकिंग जैसी सेवा गतिविधियां तृतीयक (सेवा) क्षेत्र के अंतर्गत आती हैं।",
+   "trick": "सेवा क्षेत्र = तृतीयक क्षेत्र।",
+   "ans": "C"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "The economic crisis of 1991 acted as a trigger for reforms. What was the key reason for India’s 1991 economic crisis?",
+   "hi": "1991 के आर्थिक संकट ने सुधारों के लिए एक उत्प्रेरक के रूप में कार्य किया। भारत के 1991 के आर्थिक संकट का मुख्य कारण क्या था?",
+   "opts": [
+    "Oil price drop<br>तेल की कीमतों में गिरावट",
+    "Increase in gold reserves<br>स्वर्ण भंडार में वृद्धि",
+    "High fiscal and current account deficits<br>उच्च राजकोषीय और चालू खाता घाटा",
+    "Agricultural surplus<br>कृषि अधिशेष"
+   ],
+   "my_ans": "C",
+   "sol": "1991 के संकट का मुख्य कारण उच्च राजकोषीय घाटा और विदेशी मुद्रा भंडार की कमी (चालू खाता घाटा) थी।",
+   "trick": "1991 संकट = राजकोषीय घाटा + विदेशी मुद्रा की भारी कमी।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "383-385",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which physical quantity can be zero even when a body is in motion?",
+   "hi": "जब कोई पिंड गति में हो तब भी कौन-सी भौतिक राशि शून्य हो सकती है?",
+   "opts": [
+    "Distance<br>दूरी",
+    "Speed<br>चाल",
+    "Displacement<br>विस्थापन",
+    "Velocity<br>वेग"
+   ],
+   "my_ans": "C",
+   "sol": "विस्थापन प्रारंभिक और अंतिम स्थिति के बीच की न्यूनतम दूरी है। यदि कोई वस्तु गति करके वापस अपने प्रारंभिक बिंदु पर आ जाती है, तो विस्थापन शून्य हो जाता है।",
+   "trick": "विस्थापन = अंतिम स्थिति - प्रारंभिक स्थिति",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "The waves which can propagate in gases are:",
+   "hi": "गैसों में संचरण करने वाली तरंगें निम्नलिखित में से कौन-सी हैं?",
+   "opts": [
+    "Stationary Waves<br>अप्रगामी तरंगें",
+    "Gravity Waves<br>गुरुत्वीय तरंगें",
+    "Transverse Waves<br>अनुप्रस्थ तरंगें",
+    "Longitudinal Waves<br>अनुदैर्ध्य तरंगें"
+   ],
+   "my_ans": "D",
+   "sol": "गैसों में केवल अनुदैर्ध्य (Longitudinal) तरंगें संचरित हो सकती हैं क्योंकि गैसों में संपीड़न और विरलन की प्रक्रिया होती है।",
+   "trick": "ध्वनि तरंगें अनुदैर्ध्य होती हैं और हवा (गैस) में चलती हैं।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which type of thermodynamic system does not allow any exchange of energy or matter between the system and its surroundings?",
+   "hi": "थर्मोडायनामिक्स के किस सिस्टम में, सिस्टम और उसके आस-पास के माहौल के बीच ऊर्जा या पदार्थ का कोई आदान-प्रदान नहीं होता है?",
+   "opts": [
+    "Partially closed<br>आंशिक रूप से बंद",
+    "Open<br>खुला",
+    "Isolated<br>अलग-थलग",
+    "Closed<br>बंद"
+   ],
+   "my_ans": "C",
+   "sol": "विलगित (Isolated) निकाय वह है जो अपने परिवेश के साथ न तो ऊर्जा का और न ही द्रव्यमान का आदान-प्रदान करता है।",
+   "trick": "Isolated = पूरी तरह अलग (नो ऊर्जा, नो पदार्थ)",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following statements is correct about the open system of thermodynamics?",
+   "hi": "ऊष्मागतिकी के खुले निकाय के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+   "opts": [
+    "No exchange of matter, but exchange of energy is possible between system and the surroundings.<br>निकाय एवं परिवेश के बीच द्रव्य का विनिमय नहीं होता, लेकिन ऊर्जा का विनिमय संभव है।",
+    "No exchange of energy, but exchange of matter is possible between system and the surroundings.<br>निकाय एवं परिवेश के बीच ऊर्जा का विनिमय नहीं होता, लेकिन द्रव्य का विनिमय संभव है।",
+    "Exchange of energy and matter between system and surroundings.<br>निकाय एवं परिवेश के बीच ऊर्जा और द्रव्य का विनिमय होता है।",
+    "No exchange of energy or matter between the system and the surroundings.<br>निकाय एवं परिवेश के बीच ऊर्जा या द्रव्य का विनिमय नहीं होता है।"
+   ],
+   "my_ans": "C",
+   "sol": "खुला निकाय (Open System) वह है जिसमें निकाय और परिवेश के बीच द्रव्य (mass) और ऊर्जा (energy) दोनों का आदान-प्रदान हो सकता है।",
+   "trick": "Open = सब कुछ आदान-प्रदान (द्रव्य + ऊर्जा)",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Identify an example of a curved mirror.",
+   "hi": "वक्र दर्पण का एक उदाहरण बताइए।",
+   "opts": [
+    "Ladle<br>करछुल",
+    "Prism<br>प्रिज्म",
+    "Wooden spatula<br>लकड़ी का स्पैचुला",
+    "Shining spoon<br>चमकती चम्मच"
+   ],
+   "my_ans": "D",
+   "sol": "चमकती चम्मच की सतह वक्रीय होती है, जो अवतल (concave) और उत्तल (convex) दर्पण दोनों की तरह कार्य कर सकती है।",
+   "trick": "चम्मच = वक्र दर्पण का सबसे सरल उदाहरण",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "_______ is the SI unit used for measuring thermodynamic temperature.",
+   "hi": "ऊष्मागतिक ताप को मापने के लिए प्रयुक्त SI मात्रक ___________ है।",
+   "opts": [
+    "Rankine<br>रैंकिन",
+    "Kelvin<br>केल्विन",
+    "Celsius<br>सेल्सियस",
+    "Fahrenheit<br>फ़ारेनहाइट"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर्राष्ट्रीय मानक प्रणाली (SI) में ऊष्मागतिक तापमान की मूल इकाई केल्विन (K) है।",
+   "trick": "SI मात्रक = केल्विन",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Hans Geiger and Ernest Marsden performed the famous α–particle scattering experiment under the supervision of _________.",
+   "hi": "हंस गीगर और अर्नेस्ट मार्सडेन ने _________ के पर्यवेक्षण में प्रसिद्ध α-कण प्रकीर्णन प्रयोग किया।",
+   "opts": [
+    "Niels Bohr<br>नील्स बोहर",
+    "Ernest Rutherford<br>अर्नेस्ट रदरफोर्ड",
+    "William Henry<br>विलियम हेनरी",
+    "John Dalton<br>जॉन डाल्टन"
+   ],
+   "my_ans": "B",
+   "sol": "यह प्रसिद्ध प्रयोग 1909 में अर्नेस्ट रदरफोर्ड के निर्देशन में किया गया था, जिससे परमाणु के नाभिक की खोज हुई।",
+   "trick": "रदरफोर्ड का स्वर्ण पन्नी प्रयोग (Gold Foil Experiment)",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following best describes the tendency of undisturbed objects to remain at rest or to keep moving with the same velocity?",
+   "hi": "इनमें से कौन-सा विकल्प बिना किसी बाहरी बल के वस्तुओं की स्थिर रहने या एक ही वेग से गति करते रहने की प्रवृत्ति का सबसे अच्छा वर्णन करता है?",
+   "opts": [
+    "Momentum<br>संवेग",
+    "Acceleration<br>त्वरण",
+    "Force<br>बल",
+    "Inertia<br>जड़त्व"
+   ],
+   "my_ans": "D",
+   "sol": "जड़त्व (Inertia) पदार्थ का वह गुण है जिसके कारण वस्तु अपनी विरामावस्था या एकसमान गति की अवस्था में परिवर्तन का विरोध करती है।",
+   "trick": "जड़त्व = परिवर्तन का विरोध",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which two forms of energy together make up the total mechanical energy of an object?",
+   "hi": "किसी वस्तु की कुल यांत्रिक ऊर्जा किन दो प्रकार की ऊर्जाओं से मिलकर बनती है?",
+   "opts": [
+    "Light and heat energy<br>प्रकाश और ऊष्मा ऊर्जा",
+    "Potential and kinetic energy<br>स्थितिज और गतिज ऊर्जा",
+    "Heat and sound energy<br>ऊष्मा और ध्वनि ऊर्जा",
+    "Electrical and chemical energy<br>विद्युत और रासायनिक ऊर्जा"
+   ],
+   "my_ans": "B",
+   "sol": "यांत्रिक ऊर्जा किसी वस्तु की स्थितिज ऊर्जा (PE) और गतिज ऊर्जा (KE) का योग होती है।",
+   "trick": "यांत्रिक ऊर्जा = PE + KE",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "When a spring is compressed from its equilibrium position, its potential energy will ___________________.",
+   "hi": "जब एक स्प्रिंग को उसकी साम्यावस्था से संपीडित किया जाता है, तो इसकी स्थितिज ऊर्जा ___________________ ।",
+   "opts": [
+    "first decrease then increase<br>पहले घटती है, फिर बढ़ती है",
+    "decrease<br>घट जाती है",
+    "increase<br>बढ़ जाती है",
+    "remain unchanged<br>अपरिवर्तित रहती है"
+   ],
+   "my_ans": "C",
+   "sol": "स्प्रिंग की स्थितिज ऊर्जा का सूत्र PE = ½kx² है। जैसे ही स्प्रिंग को संपीडित या खींचा जाता है, विस्थापन (x) बढ़ता है, जिससे ऊर्जा बढ़ती है।",
+   "trick": "PE ∝ x² (विस्थापन बढ़ने पर ऊर्जा बढ़ेगी)",
+   "ans": "C"
+  }
+ ]
+}

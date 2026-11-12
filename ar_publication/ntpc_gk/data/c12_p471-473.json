@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "471-473",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "Which of the following statements about ASCII is correct?",
+   "hi": "ASCII के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+   "opts": [
+    "ASCII is a type of local area network<br>ASCII एक प्रकार का लोकल एरिया नेटवर्क है",
+    "ASCII is used to store audio on a CD<br>ASCII का उपयोग CD पर ऑडियो स्टोर करने के लिए किया जाता है",
+    "ASCII represents characters using numeric codes<br>ASCII संख्यात्मक कोड का उपयोग करके वर्णों को दर्शाता है",
+    "ASCII is a high-capacity optical disk format<br>ASCII एक उच्च क्षमता वाला ऑप्टिकल डिस्क फॉर्मेट है"
+   ],
+   "my_ans": "C",
+   "sol": "ASCII (अमेरिकन स्टैंडर्ड कोड फॉर इंफॉर्मेशन इंटरचेंज) एक कैरेक्टर एन्कोडिंग मानक है जो अक्षरों, अंकों और प्रतीकों को विशिष्ट संख्यात्मक कोड प्रदान करता है।",
+   "trick": "ASCII = अक्षरों के लिए संख्यात्मक कोड",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "GL",
+   "en": "Data stored on a hard disk must be transferred to which memory unit before the CPU can access it?",
+   "hi": "हार्ड डिस्क पर स्टोर डेटा को CPU द्वारा एक्सेस करने से पहले किस मेमोरी यूनिट में ट्रांसफर किया जाना चाहिए?",
+   "opts": [
+    "Primary memory<br>प्राइमरी मेमोरी",
+    "Secondary memory<br>सेकेंडरी मेमोरी",
+    "BIOS memory<br>BIOS मेमोरी",
+    "CD-ROM storage<br>CD-ROM स्टोरेज"
+   ],
+   "my_ans": "A",
+   "sol": "CPU केवल प्राइमरी मेमोरी (RAM) को सीधे एक्सेस कर सकता है। हार्ड डिस्क से डेटा पहले RAM में आता है, फिर CPU उसे प्रोसेस करता है।",
+   "trick": "CPU सीधे RAM से बात करता है",
+   "ans": "A"
+  },
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "What is the primary function of the keyboard shortcut Alt + F4 in Windows?",
+   "hi": "विंडोज में कीबोर्ड शॉर्टकट Alt + F4 का प्राथमिक कार्य क्या होता है?",
+   "opts": [
+    "To open File Explorer<br>फाइल एक्सप्लोरर को ओपन करना",
+    "To switch between open applications<br>खुले एप्लिकेशनो के बीच स्विच करना",
+    "To close the active window<br>एक्टिव विंडो को बंद करना",
+    "To minimize the active window<br>एक्टिव विंडो को मिनिमाइज़ करना"
+   ],
+   "my_ans": "C",
+   "sol": "Alt + F4 एक यूनिवर्सल विंडोज शॉर्टकट है जिसका उपयोग वर्तमान में खुली हुई सक्रिय विंडो या एप्लिकेशन को बंद करने के लिए किया जाता है।",
+   "trick": "Alt + F4 = बंद (Close)",
+   "ans": "C"
+  },
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "Which of the following is an example of System Software?",
+   "hi": "निम्नलिखित में से कौन-सा सिस्टम सॉफ्टवेयर का एक उदाहरण है?",
+   "opts": [
+    "Windows<br>विंडोज (Windows)",
+    "Power Point<br>पावर पॉइंट (Power Point)",
+    "Paint<br>पेंट (Paint)",
+    "MS Word<br>एमएस वर्ड (MS Word)"
+   ],
+   "my_ans": "A",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर को प्रबंधित करता है। विंडोज एक ऑपरेटिंग सिस्टम है, जो सिस्टम सॉफ्टवेयर का मुख्य उदाहरण है।",
+   "trick": "OS = सिस्टम सॉफ्टवेयर",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "The abbreviation BIOS stands for:",
+   "hi": "संक्षिप्त रूप BIOS का पूर्ण रूप क्या है?",
+   "opts": [
+    "Board Information Operating Setup<br>बोर्ड इंफॉर्मेशन ऑपरेटिंग सेटअप",
+    "Binary Input/Output Storage<br>बाइनरी इनपुट/आउटपुट स्टोरेज",
+    "Basic Input/Output System<br>बेसिक इनपुट/आउटपुट सिस्टम",
+    "Basic Internal Output Software<br>बेसिक इंटरनल आउटपुट सॉफ्टवेयर"
+   ],
+   "my_ans": "C",
+   "sol": "BIOS का पूर्ण रूप 'Basic Input/Output System' है। यह मदरबोर्ड पर स्थित एक फर्मवेयर है जो कंप्यूटर बूटिंग के समय हार्डवेयर को टेस्ट करता है।",
+   "trick": "BIOS = Basic Input/Output System",
+   "ans": "C"
+  },
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "Which of the following is an example of Customized Software?",
+   "hi": "निम्नलिखित में से कौन-सा कस्टमाइज सॉफ्टवेयर का उदाहरण है?",
+   "opts": [
+    "Mozilla Firefox Application<br>मोज़िला फ़ायरफ़ॉक्स एप्लिकेशन",
+    "Adobe Photoshop Software<br>एडोब फ़ोटोशॉप सॉफ्टवेयर",
+    "School Management Software<br>स्कूल मैनेजमेंट सॉफ्टवेयर",
+    "LibreOffice Calc<br>लिब्रेऑफ़िस कैल्क"
+   ],
+   "my_ans": "C",
+   "sol": "कस्टमाइज्ड सॉफ्टवेयर किसी विशिष्ट उपयोगकर्ता या संस्था की जरूरतों के लिए बनाया जाता है, जैसे स्कूल मैनेजमेंट सॉफ्टवेयर।",
+   "trick": "Customized = विशेष जरूरत के लिए",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "Which of the following best describes a LAN?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प LAN को सर्वोत्तम रूप में वर्णित करता है?",
+   "opts": [
+    "A network covering a small geographical area like an office or school<br>कार्यालय या विद्यालय जैसे छोटे भौगोलिक क्षेत्र को कवर करने वाला नेटवर्क",
+    "A code used to represent characters in numbers<br>अक्षरों को संख्याओं में दर्शाने के लिए प्रयुक्त कोड",
+    "A high-capacity compact disc format<br>उच्च क्षमता वाला कॉम्पैक्ट डिस्क फॉर्मेट",
+    "A storage device used to read optical discs<br>ऑप्टिकल डिस्क को रीड करने के लिए प्रयुक्त स्टोरेज डिवाइस"
+   ],
+   "my_ans": "A",
+   "sol": "LAN का अर्थ 'Local Area Network' है। यह एक सीमित भौगोलिक क्षेत्र जैसे घर, कार्यालय या स्कूल के भीतर उपकरणों को जोड़ता है।",
+   "trick": "LAN = Local (छोटा क्षेत्र)",
+   "ans": "A"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "Refer to the given letter, symbol series and answer the question that follows. How many such symbols are there, each of which is immediately preceded by a symbol and also immediately followed by a letter?",
+   "hi": "दी गई अक्षर, प्रतीक श्रृंखला का संदर्भ लें। ऐसे कितने प्रतीक हैं, जिनके ठीक पहले एक प्रतीक और ठीक बाद एक अक्षर है?",
+   "opts": [
+    "Three<br>तीन",
+    "Four<br>चार",
+    "One<br>एक",
+    "Two<br>दो"
+   ],
+   "my_ans": "C",
+   "sol": "श्रृंखला: K Y C K & A A C P N P Y M R B # + J $ & ^. शर्त: (प्रतीक) + (प्रतीक) + (अक्षर)। केवल '+', जिसके पहले '#' (प्रतीक) और बाद में 'J' (अक्षर) है, यह शर्त पूरी करता है।",
+   "trick": "क्रम देखें: प्रतीक-प्रतीक-अक्षर",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "The fourth generation of computers marked the use of integrated circuits and compact computing. This generation began with the invention of which key component?",
+   "hi": "कंप्यूटर की चौथी पीढ़ी में इंटीग्रेटेड सर्किट और कॉम्पैक्ट कंप्यूटिंग का उपयोग हुआ है। इस पीढ़ी की शुरुआत किस प्रमुख घटक के आविष्कार से हुई?",
+   "opts": [
+    "Transistor Device Unit<br>ट्रांजिस्टर डिवाइस यूनिट",
+    "Microprocessor Chip<br>माइक्रोप्रोसेसर चिप",
+    "Tabulating Machine Device<br>टैब्यूलेटिंग मशीन डिवाइस",
+    "ENIAC Computer System<br>ईएनआईएसी कंप्यूटर सिस्टम"
+   ],
+   "my_ans": "B",
+   "sol": "कंप्यूटर की चौथी पीढ़ी (1971 से) माइक्रोप्रोसेसर चिप के आविष्कार से शुरू हुई, जिसने VLSI तकनीक का उपयोग किया।",
+   "trick": "4th Gen = माइक्रोप्रोसेसर",
+   "ans": "B"
+  }
+ ]
+}

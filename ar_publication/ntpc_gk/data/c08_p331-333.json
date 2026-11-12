@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "331-333",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which of the following programmes aims to increase soil fertility and thereby helps in production of healthy food through organic practices without the use of agro-chemicals?",
+   "hi": "निम्नलिखित में से कौन-सी योजना, कृषि रसायनों के उपयोग के बिना जैविक पद्धतियों के माध्यम से मृदा उर्वरता बढ़ाने और इस प्रकार स्वस्थ भोजन के उत्पादन में सहायता करने का लक्ष्य रखती है?",
+   "opts": [
+    "Rastriya Krishi Vikas Yojana<br>राष्ट्रीय कृषि विकास योजना",
+    "Pradhan Mantri Kisan MaanDhan Yojana<br>प्रधानमंत्री किसान मानधन योजना",
+    "Paramparagat Krishi Vikas Yojana<br>परम्परागत कृषि विकास योजना",
+    "Pradhan Mantri Fasal Bima Yojana<br>प्रधानमंत्री फसल बीमा योजना"
+   ],
+   "my_ans": "C",
+   "sol": "परम्परागत कृषि विकास योजना (PKVY) 2015 में शुरू की गई थी, जिसका उद्देश्य रसायनों के बिना जैविक खेती को बढ़ावा देकर मिट्टी की उर्वरता सुधारना है।",
+   "trick": "परम्परागत = जैविक खेती (रसायन मुक्त)",
+   "ans": "C"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which method of measuring unemployment includes people who are in the reference year? Who were unemployed and which basically indicates chronic unemployment?",
+   "hi": "कौन-सी मापन विधि संदर्भ वर्ष में बेरोजगार पाए गए सभी व्यक्तियों को शामिल करती है और दीर्घकालिक बेरोजगारी को दर्शाती है?",
+   "opts": [
+    "Usual Subsidiary Status Employment<br>सामान्य सहायक स्थिति बेरोजगारी",
+    "Current Weekly Statistics employment<br>वर्तमान साप्ताहिक स्थिति बेरोजगारी",
+    "Current Daily Statistics on Employment<br>वर्तमान दैनिक स्थिति बेरोजगारी",
+    "Usual Principal Status employment<br>सामान्य प्रमुख स्थिति बेरोजगारी"
+   ],
+   "my_ans": "D",
+   "sol": "सामान्य प्रमुख स्थिति (UPS) बेरोजगारी को 365 दिनों के संदर्भ वर्ष में मापती है, जो दीर्घकालिक या संरचनात्मक बेरोजगारी को दर्शाती है।",
+   "trick": "UPS = 365 दिन = दीर्घकालिक बेरोजगारी",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "The primary objective of monetary policy is _____________.",
+   "hi": "मौद्रिक नीति का प्राथमिक उद्देश्य _____________ है।",
+   "opts": [
+    "To fund elections<br>चुनावों को निधि देना",
+    "To maintain price stability<br>मूल्य स्थिरता बनाए रखना",
+    "To maximize employment<br>रोजगार को अधिकतम करना",
+    "To evade taxes<br>कर चोरी करना"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय रिजर्व बैंक (RBI) द्वारा संचालित मौद्रिक नीति का मुख्य उद्देश्य मुद्रास्फीति को नियंत्रित करके मूल्य स्थिरता बनाए रखना है।",
+   "trick": "मौद्रिक नीति = मूल्य स्थिरता",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which centrally sponsored scheme aims to create community infrastructure in Minority Concentration Areas (MCAs) to address development deficits, as stated by Minister of MINORITY AFFAIRS in July 2025?",
+   "hi": "जुलाई 2025 में अल्पसंख्यक कार्य मंत्री के वक्तव्य अनुसार, किस केंद्र प्रायोजित योजना का उद्देश्य विकास संबंधी कमी को दूर करने के लिए अल्पसंख्यक केंद्रित क्षेत्रों (MCAs) में सामुदायिक अवसंरचना का निर्माण करना है?",
+   "opts": [
+    "Seekho Aur Kamao<br>सीखो और कमाओ",
+    "Pradhan Mantri Virasat Ka Samvardhan (PM VIKAS)<br>प्रधानमंत्री विरासत का संवर्धन (PM VIKAS)",
+    "Pradhan Mantri Jan Vikas Karyakram (PMJVK)<br>प्रधानमंत्री जन विकास कार्यक्रम (PMJVK)",
+    "Padho Pardesh<br>पढ़ो परदेश"
+   ],
+   "my_ans": "C",
+   "sol": "प्रधानमंत्री जन विकास कार्यक्रम (PMJVK) का उद्देश्य अल्पसंख्यक बहुल क्षेत्रों में शिक्षा, स्वास्थ्य और बुनियादी ढांचे का विकास करना है।",
+   "trick": "जन विकास = अल्पसंख्यक क्षेत्रों का विकास",
+   "ans": "C"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "According to the Second Five Year Plan (1956), which sectors of the economy did the Indian government decide to develop and manage directly?",
+   "hi": "दूसरी पंचवर्षीय योजना (1956) के अनुसार, भारतीय सरकार ने अर्थव्यवस्था के किन क्षेत्रों को सीधे विकसित और प्रबंधित करने का निर्णय लिया?",
+   "opts": [
+    "Service sector<br>सेवा क्षेत्र",
+    "Agricultural sector<br>कृषि क्षेत्र",
+    "Small businesses<br>छोटे व्यवसाय",
+    "Heavy industries<br>भारी उद्योग"
+   ],
+   "my_ans": "D",
+   "sol": "दूसरी पंचवर्षीय योजना (महालानोबिस मॉडल) ने भारी उद्योगों और पूंजीगत वस्तुओं के तीव्र औद्योगीकरण पर जोर दिया था।",
+   "trick": "दूसरी योजना = भारी उद्योग",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "According to the March 1997 agreement between the RBI and the Central Government, which practice was discontinued with effect from April 1, 1997?",
+   "hi": "मार्च 1997 के RBI और केंद्र सरकार के समझौते के अनुसार, 1 अप्रैल 1997 से किस प्रथा को बंद कर दिया गया था?",
+   "opts": [
+    "Practice of issuing ad hoc Treasury Bills<br>अनियत ट्रेजरी बिल जारी करने की प्रथा",
+    "Issuance of 91-day Treasury Bills<br>91-दिवसीय ट्रेजरी बिल जारी करना",
+    "Market borrowing through dated securities<br>दिनांकित प्रतिभूतियों के माध्यम से बाजार उधार",
+    "Automatic monetisation of fiscal deficit<br>राजकोषीय घाटे का स्वचालित मुद्रीकरण"
+   ],
+   "my_ans": "A",
+   "sol": "1997 के समझौते के तहत सरकार द्वारा RBI से सीधे उधार लेने के लिए 'एड हॉक ट्रेजरी बिल' जारी करने की प्रथा को समाप्त कर दिया गया।",
+   "trick": "1997 समझौता = एड हॉक बिल बंद",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "What did the Tax Reforms Committee recommend for Wealth Tax in 1991?",
+   "hi": "1991 में कर सुधार समिति ने धन कर के संबंध में क्या अनुशंसा की थीं?",
+   "opts": [
+    "restructuring of estate duty<br>संपदा शुल्क का पुनर्गठन",
+    "abolition of wealth tax<br>धन कर का उन्मूलन",
+    "rationalisation of property tax<br>संपत्ति कर का युक्तिकरण",
+    "removal of gift tax<br>उपहार कर को हटाना"
+   ],
+   "my_ans": "B",
+   "sol": "राजा चेल्लैया की अध्यक्षता वाली कर सुधार समिति (1991) ने उच्च अनुपालन लागत और कम राजस्व के कारण धन कर को समाप्त करने की सिफारिश की थी।",
+   "trick": "चेल्लैया समिति = धन कर उन्मूलन",
+   "ans": "B"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "What is the term used for rural self-help group (SHG) women earning ₹1 lakh or more annually?",
+   "hi": "₹1 लाख या उससे अधिक वार्षिक आय वाली ग्रामीण स्वयं सहायता समूह (SHG) की महिलाओं के लिए किस शब्द का उपयोग किया जाता है?",
+   "opts": [
+    "Sahyogi Didis<br>सहयोगी दीदी",
+    "Aatmanirbhar Didis<br>आत्मनिर्भर दीदी",
+    "Lakhpati Didis<br>लखपति दीदी",
+    "Crorepati Didis<br>करोड़पति दीदी"
+   ],
+   "my_ans": "C",
+   "sol": "दीनदयाल अंत्योदय योजना के तहत, जो ग्रामीण स्वयं सहायता समूह की महिलाएं सालाना ₹1 लाख से अधिक कमाती हैं, उन्हें 'लखपति दीदी' कहा जाता है।",
+   "trick": "1 लाख आय = लखपति दीदी",
+   "ans": "C"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "When was the Pradhan Mantri Janjatiya Unnat Gram Abhiyaan (PMJUGA) started?",
+   "hi": "प्रधानमंत्री जनजातीय उन्नत ग्राम अभियान (PMJUGA) कब शुरू किया गया था?",
+   "opts": [
+    "2024",
+    "2022",
+    "2023",
+    "2025"
+   ],
+   "my_ans": "A",
+   "sol": "प्रधानमंत्री जनजातीय उन्नत ग्राम अभियान की शुरुआत 2 अक्टूबर 2024 को गांधी जयंती के अवसर पर प्रधानमंत्री मोदी द्वारा की गई थी।",
+   "trick": "PMJUGA = 2 अक्टूबर 2024",
+   "ans": "A"
+  }
+ ]
+}

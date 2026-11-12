@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "30-32",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Which of the following Harappan sites is famous for its dockyard?",
+   "hi": "निम्नलिखित में से कौन-सा हड़प्पा स्थल अपने डॉकयार्ड के लिए प्रसिद्ध है?",
+   "opts": [
+    "Nal<br>नल",
+    "Kalibangan<br>कालीबंगा",
+    "Lothal<br>लोथल",
+    "Rakhigarhi<br>राखीगढ़ी"
+   ],
+   "my_ans": "C",
+   "sol": "लोथल (गुजरात) सिंधु घाटी सभ्यता का एक प्रमुख बंदरगाह था, जहाँ से प्राचीन गोदीबाड़ा (dockyard) के अवशेष मिले हैं।",
+   "trick": "लोथल = लोहे जैसा मजबूत बंदरगाह",
+   "ans": "C"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Which deity was worshipped as the chief female deity in Harappan culture?",
+   "hi": "हड़प्पा संस्कृति में किस देवी की पूजा कुल देवी के रूप में की जाती थी?",
+   "opts": [
+    "Durga<br>दुर्गा",
+    "Saraswati<br>सरस्वती",
+    "Lakshmi<br>लक्ष्मी",
+    "Mother Goddess<br>मातृ देवी"
+   ],
+   "my_ans": "D",
+   "sol": "हड़प्पा स्थलों से प्राप्त बड़ी संख्या में टेराकोटा की महिला मूर्तियों से पता चलता है कि वे मातृ देवी (Mother Goddess) की पूजा करते थे।",
+   "trick": "हड़प्पा = मातृ शक्ति",
+   "ans": "D"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "The Harappan Civilization flourished mainly during which of the following archaeological eras?",
+   "hi": "निम्नलिखित में से किस पुरातात्विक युग के दौरान हड़प्पा सभ्यता मुख्य रूप से विकसित हुई?",
+   "opts": [
+    "Bronze Age<br>कांस्य युग",
+    "Neolithic Age<br>नवपाषाण युग",
+    "Iron Age<br>लौह युग",
+    "Chalcolithic Age<br>ताम्रपाषाण युग"
+   ],
+   "my_ans": "A",
+   "sol": "हड़प्पा सभ्यता को कांस्य युग (Bronze Age) की सभ्यता कहा जाता है क्योंकि यहाँ तांबा और टिन मिलाकर कांसा बनाने की तकनीक का व्यापक उपयोग होता था।",
+   "trick": "हड़प्पा = कांसा (Bronze)",
+   "ans": "A"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "Chandragupta I strengthened his political position by marrying Princess Kumaradevi of which tribal lineages?",
+   "hi": "चंद्रगुप्त प्रथम ने किस जनजाति वंश की राजकुमारी कुमारदेवी से विवाह करके अपनी राजनीतिक स्थिति को सुदृढ़ किया?",
+   "opts": [
+    "Avanti<br>अवंती",
+    "Gandhara<br>गांधार",
+    "Panchala<br>पांचाल",
+    "Lichchhavi<br>लिच्छवी"
+   ],
+   "my_ans": "D",
+   "sol": "चंद्रगुप्त प्रथम ने वैशाली के शक्तिशाली लिच्छवी कुल की राजकुमारी कुमारदेवी से विवाह करके गुप्त साम्राज्य की नींव मजबूत की थी।",
+   "trick": "चंद्रगुप्त + लिच्छवी = मजबूत गठबंधन",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "Which human species is associated with the Upper Paleolithic cultural phase?",
+   "hi": "कौन-सी मानव प्रजाति उच्च पुरापाषाणकालीन (Upper Paleolithic) सांस्कृतिक चरण से संबंधित है?",
+   "opts": [
+    "Homo neanderthalensis in European and Asian regions<br>यूरोपीय और एशियाई क्षेत्रों में होमो निएंडरथलेंसिस",
+    "Homo erectus populations moving out of Africa<br>अफ्रीका से बाहर जाने वाली होमो इरेक्टस की जनसंख्या",
+    "Anatomically Modern Homo sapiens across the Old World<br>प्राचीन विश्व भर में शारीरिक रूप से आधुनिक होमो सेपियन्स",
+    "Denisovan groups settled in mountain environments<br>पर्वतीय वातावरण में बस गया डेनिसोवन समूह"
+   ],
+   "my_ans": "C",
+   "sol": "उच्च पुरापाषाण काल (50,000-10,000 वर्ष पूर्व) का संबंध शारीरिक रूप से आधुनिक मानव 'होमो सेपियन्स' से है।",
+   "trick": "उच्च पुरापाषाण = आधुनिक मानव (होमो सेपियन्स)",
+   "ans": "C"
+  },
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Which inscription expresses Ashoka’s remorse after the Kalinga war?",
+   "hi": "किस शिलालेख में कलिंग युद्ध के बाद अशोक के पश्चाताप को व्यक्त किया गया है?",
+   "opts": [
+    "Rock Edict XIII<br>शिलालेख XIII",
+    "Rock Edict I<br>शिलालेख I",
+    "Pillar Edict V<br>शिलालेख V",
+    "Rock Edict VII<br>शिलालेख VII"
+   ],
+   "my_ans": "A",
+   "sol": "अशोक के 13वें शिलालेख में कलिंग युद्ध की भयावहता और उसके बाद हुए पश्चाताप का विस्तृत वर्णन मिलता है।",
+   "trick": "13 = कलिंग का दुख",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "Which of the following rulers of the Maitraka dynasty attended Harshavardhana’s assembly at Prayaga?",
+   "hi": "मैत्रक राजवंश के निम्नलिखित में से किस शासक ने प्रयाग में हर्षवर्धन की सभा में भाग लिया था?",
+   "opts": [
+    "Dhruvasena II<br>ध्रुवसेन द्वितीय",
+    "Rudrasena II<br>रुद्रसेना द्वितीय",
+    "Grihavarman<br>गृहवर्मन",
+    "Prabhakarvardhana<br>प्रभाकरवर्धन"
+   ],
+   "my_ans": "A",
+   "sol": "मैत्रक शासक ध्रुवसेन द्वितीय ने सम्राट हर्षवर्धन द्वारा प्रयाग में आयोजित प्रसिद्ध धार्मिक सभा में भाग लिया था।",
+   "trick": "हर्ष की सभा = ध्रुवसेन",
+   "ans": "A"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "Kalidasa, the celebrated Sanskrit poet and dramatist, flourished in the court of which Gupta ruler?",
+   "hi": "प्रसिद्ध संस्कृत कवि और नाटककार कालिदास किस गुप्त शासक के दरबार में थे?",
+   "opts": [
+    "Chandragupta I<br>चंद्रगुप्त प्रथम",
+    "Skandagupta<br>स्कंदगुप्त",
+    "Chandragupta II<br>चंद्रगुप्त द्वितीय",
+    "Samudragupta<br>समुद्रगुप्त"
+   ],
+   "my_ans": "C",
+   "sol": "कालिदास गुप्त सम्राट चंद्रगुप्त द्वितीय (विक्रमादित्य) के दरबार के नवरत्नों में से एक थे।",
+   "trick": "विक्रमादित्य = कालिदास",
+   "ans": "C"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "Which of the following sites has yielded Acheulian, Middle and Upper Palaeolithic and Mesolithic levels?",
+   "hi": "निम्नलिखित में से किस स्थल से निम्न पुरापाषाण, मध्य और उत्तर पुरापाषाण तथा मध्यपाषाण स्तर के अवशेष प्राप्त हुए हैं?",
+   "opts": [
+    "Bhimbetka Rock Shelters in Madya Pradesh<br>मध्य प्रदेश में भीमबेटका शैलाश्रय",
+    "Chirki-Nevasa in Maharashtra<br>महाराष्ट्र में चिरकी-नेवासा",
+    "Paisra in Munger district, Bihar<br>बिहार के मुंगेर जिले में पैसरा",
+    "Adamgarh in Madhya Pradesh<br>मध्य प्रदेश में आदमगढ़"
+   ],
+   "my_ans": "A",
+   "sol": "मध्य प्रदेश स्थित भीमबेटका की गुफाओं में पुरापाषाण काल के सभी चरणों और मध्यपाषाण काल के निरंतर साक्ष्य मिलते हैं।",
+   "trick": "भीमबेटका = सभी काल",
+   "ans": "A"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "The Rigveda mentions the terms arya varna and dasa varna. In the Early Vedic context, these terms indicate:",
+   "hi": "ऋग्वेद में आर्य वर्ण और दास वर्ण शब्दों का उल्लेख है। प्रारंभिक वैदिक संदर्भ में, ये शब्द निम्नलिखित में से किसे इंगित करते हैं?",
+   "opts": [
+    "Occupational guilds based on trade specialization<br>व्यापार विशेषज्ञता पर आधारित व्यावसायिक श्रेणी",
+    "Political offices within tribal administration<br>जनजातीय प्रशासन के अंतर्गत राजनीतिक पद",
+    "Distinction between Vedic people and non-Vedic groups<br>वैदिक व्यक्तियों और गैर-वैदिक समूहों के बीच अंतर",
+    "Fourfold caste hierarchy based strictly on birth<br>जन्म पर आधारित चतुर्विध जाति पदानुक्रम"
+   ],
+   "my_ans": "C",
+   "sol": "ऋग्वेद में 'आर्य वर्ण' और 'दास वर्ण' का प्रयोग जातीय-सांस्कृतिक भेद को दर्शाने के लिए किया गया था, न कि जन्म आधारित जाति के लिए।",
+   "trick": "आर्य बनाम दास = सांस्कृतिक भेद",
+   "ans": "C"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "Which of the following rulers issued the famous Junagarh inscription?",
+   "hi": "निम्नलिखित में से किस शासक ने प्रसिद्ध जूनागढ़ शिलालेख जारी किया था?",
+   "opts": [
+    "Rudradaman I<br>रुद्रदामन प्रथम",
+    "Kanishka<br>कनिष्क",
+    "Ashoka<br>अशोक",
+    "Chandragupta Maurya<br>चंद्रगुप्त मौर्य"
+   ],
+   "my_ans": "B",
+   "sol": "जूनागढ़ (गिरनार) शिलालेख शक शासक रुद्रदामन प्रथम द्वारा जारी किया गया था, जो संस्कृत भाषा का पहला बड़ा शिलालेख है।",
+   "trick": "जूनागढ़ = रुद्रदामन",
+   "ans": "B"
+  }
+ ]
+}

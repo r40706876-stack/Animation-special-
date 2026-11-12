@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "628-630",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 209,
+   "lvl": "UG",
+   "en": "In which year did Junagadh district gain recognition for organizing the country’s first-ever Lok Adalat at Una?",
+   "hi": "जूनागढ़ जिले को ऊना में देश की पहली लोक अदालत आयोजित करने के लिए किस वर्ष मान्यता प्राप्त हुई?",
+   "opts": [
+    "1983",
+    "1985",
+    "1984",
+    "1982"
+   ],
+   "my_ans": "D",
+   "sol": "भारत की पहली लोक अदालत 1982 में गुजरात के जूनागढ़ जिले के ऊना में आयोजित की गई थी।",
+   "trick": "लोक अदालत की शुरुआत 1982 में हुई थी।",
+   "ans": "D"
+  },
+  {
+   "n": 210,
+   "lvl": "UG",
+   "en": "The Gram Nyayalayas Act was enacted in which of the following years?",
+   "hi": "ग्राम न्यायालय अधिनियम निम्नलिखित में से किस वर्ष में अधिनियमित किया गया था?",
+   "opts": [
+    "2008",
+    "2002",
+    "2006",
+    "2005"
+   ],
+   "my_ans": "A",
+   "sol": "ग्राम न्यायालय अधिनियम को भारतीय संसद द्वारा 2008 में अधिनियमित किया गया था।",
+   "trick": "ग्राम न्यायालय 2008 में आए।",
+   "ans": "A"
+  },
+  {
+   "n": 211,
+   "lvl": "UG",
+   "en": "Under the Legal Services Authorities Act of which year, every State / District Authority or the Supreme Court / High Court Legal Services Committee or Taluk Legal Services Committee may organise Lok Adalats, as the case may be?",
+   "hi": "किस वर्ष के विधिक सेवा प्राधिकरण अधिनियम के अंतर्गत, प्रत्येक राज्य/जिला प्राधिकरण या सर्वोच्च न्यायालय/उच्च न्यायालय विधिक सेवा समिति अथवा तालुक विधिक सेवा समिति, यथास्थिति, लोक अदालतों का आयोजन कर सकती है?",
+   "opts": [
+    "1987",
+    "1957",
+    "1967",
+    "1977"
+   ],
+   "my_ans": "A",
+   "sol": "विधिक सेवा प्राधिकरण अधिनियम, 1987 के तहत लोक अदालतों के आयोजन का प्रावधान किया गया है।",
+   "trick": "लोक अदालत का कानूनी आधार 1987 का अधिनियम है।",
+   "ans": "A"
+  },
+  {
+   "n": 212,
+   "lvl": "UG",
+   "en": "According to the Union Budget 2025-26, how many districts will be initially covered under the 'Prime Minister Dhan-Dhaanya Krishi Yojana-Developing Agri Districts Programme'?",
+   "hi": "केंद्रीय बजट 2025-26 के अनुसार, 'प्रधानमंत्री धन-धान्य कृषि योजना-विकासशील कृषि जिला कार्यक्रम' के तहत प्रारंभ में कितने जिलों को शामिल किया जाएगा?",
+   "opts": [
+    "51",
+    "75",
+    "100",
+    "111"
+   ],
+   "my_ans": "C",
+   "sol": "केंद्रीय बजट 2025-26 में इस योजना के तहत भारत भर के 100 जिलों को शामिल करने का लक्ष्य रखा गया है।",
+   "trick": "धन-धान्य योजना में 100 जिले शामिल हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 213,
+   "lvl": "UG",
+   "en": "Which national statistical organization is being changed by the Indian government's September 2025 draft bill ahead of its centenary?",
+   "hi": "भारत सरकार द्वारा सितंबर 2025 में प्रस्तावित मसौदा विधेयक के तहत शताब्दी वर्ष से पहले किस राष्ट्रीय सांख्यिकी संगठन में बदलाव किए गए हैं?",
+   "opts": [
+    "Indian Statistical Institute (ISI)<br>भारतीय सांख्यिकी संस्थान (ISI)",
+    "National Sample Survey Office (NSSO)<br>राष्ट्रीय नमूना सर्वेक्षण कार्यालय (NSSO)",
+    "Ministry of Statistics & Programme Implementation (MoSPI)<br>सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI)",
+    "Central Statistics Office (CSO)<br>केंद्रीय सांख्यिकी कार्यालय (CSO)"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय सांख्यिकी संस्थान (ISI) की स्थापना 1931 में हुई थी और 2031 में इसकी शताब्दी है, जिसके लिए सरकार ने पुनर्गठन विधेयक पेश किया है।",
+   "trick": "ISI का शताब्दी वर्ष 2031 है।",
+   "ans": "A"
+  },
+  {
+   "n": 214,
+   "lvl": "UG",
+   "en": "Which Indian author was shortlisted for the 2025 Booker Prize for the novel 'The Loneliness of Sonia and Sunny'?",
+   "hi": "किस भारतीय लेखक को उनके उपन्यास 'द लोनलीनेस ऑफ सोनिया एंड सनी (The Loneliness of Sonia and Sunny)' के लिए 2025 के बुकर पुरस्कार के लिए शॉर्टलिस्ट किया गया था?",
+   "opts": [
+    "Amish Tripathi<br>अमीश त्रिपाठी",
+    "Vikram Sampath<br>विक्रम संपत",
+    "Kiran Desai<br>किरण देसाई",
+    "Arundhati Roy<br>अरुंधति रॉय"
+   ],
+   "my_ans": "C",
+   "sol": "किरण देसाई को उनके उपन्यास 'द लोनलीनेस ऑफ सोनिया एंड सनी' के लिए 2025 बुकर पुरस्कार हेतु शॉर्टलिस्ट किया गया है।",
+   "trick": "किरण देसाई 2025 बुकर शॉर्टलिस्ट।",
+   "ans": "C"
+  },
+  {
+   "n": 215,
+   "lvl": "UG",
+   "en": "As of September 2025, according to the structure of the Central Administrative Tribunal, how many benches are there across India?",
+   "hi": "सितंबर 2025 तक की स्थिति के अनुसार, केंद्रीय प्रशासनिक अधिकरण की संरचना के तहत, पूरे भारत में कुल कितनी न्यायपीठें हैं?",
+   "opts": [
+    "15",
+    "10",
+    "19",
+    "22"
+   ],
+   "my_ans": "C",
+   "sol": "केंद्रीय प्रशासनिक अधिकरण (CAT) के पास सितंबर 2025 तक पूरे भारत में कुल 19 न्यायपीठें (बेंच) हैं।",
+   "trick": "CAT की कुल 19 बेंच हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 216,
+   "lvl": "UG",
+   "en": "India and Russia conducted 14th Edition of Maritime Bilateral Exercise INDRA 2025 on which of the following coasts?",
+   "hi": "भारत और रूस ने निम्नलिखित में से किस तट पर समुद्री द्विपक्षीय अभ्यास INDRA 2025 का 14वां संस्करण आयोजित किया?",
+   "opts": [
+    "Vishakhapatnam<br>विशाखापत्तनम",
+    "Kochi<br>कोच्चि",
+    "Mangaluru<br>मंगलुरु",
+    "Chennai<br>चेन्नई"
+   ],
+   "my_ans": "D",
+   "sol": "भारत और रूस के बीच INDRA 2025 नौसैनिक अभ्यास का 14वां संस्करण चेन्नई तट पर आयोजित किया गया था।",
+   "trick": "INDRA 2025 चेन्नई तट पर हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 217,
+   "lvl": "UG",
+   "en": "Who among the following wrote the book 'The World After Gaza'?",
+   "hi": "निम्नलिखित में से किसने 'द वर्ल्ड आफ्टर गाजा (The World After Gaza)' पुस्तक लिखी?",
+   "opts": [
+    "Amitabh Kant<br>अमिताभ कांत",
+    "Pankaj Mishra<br>पंकज मिश्रा",
+    "Dr. S Jaishankar<br>डॉ. एस जयशंकर",
+    "Dr. Aishwarya Pandit<br>डॉ. ऐश्वर्या पंडित"
+   ],
+   "my_ans": "B",
+   "sol": "पुस्तक 'द वर्ल्ड आफ्टर गाजा' भारतीय लेखक पंकज मिश्रा द्वारा लिखी गई है।",
+   "trick": "गाजा के बाद की दुनिया पंकज मिश्रा की किताब है।",
+   "ans": "B"
+  },
+  {
+   "n": 218,
+   "lvl": "UG",
+   "en": "As of Union Budget 2025-26, what is the proposed size of the new Fund of Funds for Startups?",
+   "hi": "केंद्रीय बजट 2025-26 के अनुसार, स्टार्टअप्स के लिए नए फंड ऑफ फंड्स (Fund of Funds) का प्रस्तावित आकार क्या है?",
+   "opts": [
+    "₹10,000 crore<br>₹10,000 करोड़",
+    "₹5,000 crore<br>₹5,000 करोड़",
+    "₹12,000 crore<br>₹12,000 करोड़",
+    "₹7,500 crore<br>₹7,500 करोड़"
+   ],
+   "my_ans": "A",
+   "sol": "केंद्रीय बजट 2025-26 में स्टार्टअप इकोसिस्टम को बढ़ावा देने के लिए 10,000 करोड़ रुपये का नया फंड ऑफ फंड्स घोषित किया गया है।",
+   "trick": "स्टार्टअप फंड 10,000 करोड़।",
+   "ans": "A"
+  },
+  {
+   "n": 219,
+   "lvl": "UG",
+   "en": "In which city did the World Health Summit 2024 take place?",
+   "hi": "विश्व स्वास्थ्य शिखर सम्मेलन 2024 किस शहर में आयोजित हुआ?",
+   "opts": [
+    "Paris<br>पेरिस",
+    "Geneva<br>जिनेवा",
+    "Berlin<br>बर्लिन",
+    "London<br>लंदन"
+   ],
+   "my_ans": "C",
+   "sol": "विश्व स्वास्थ्य शिखर सम्मेलन 2024 का आयोजन बर्लिन, जर्मनी में किया गया था।",
+   "trick": "विश्व स्वास्थ्य शिखर सम्मेलन हमेशा बर्लिन में होता है।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "419-421",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "Which of the following is a characteristic feature of the gaseous state of matter?",
+   "hi": "निम्नलिखित में से कौन-सा, द्रव्य की गैसीय अवस्था का एक विशिष्ट अभिलक्षण है?",
+   "opts": [
+    "High rigidity and fixed volume<br>उच्च कठोरता और निश्चित आयतन",
+    "Strong intermolecular forces and fixed shape<br>प्रबल अंतर-आणविक बल और स्थायी आकृति",
+    "Definite volume but no definite shape<br>निश्चित आयतन, परंतु कोई निश्चित आकृति नहीं",
+    "Negligible intermolecular forces and high compressibility<br>नगण्य अंतर-आणविक बल और उच्च संपीड्यता"
+   ],
+   "my_ans": "D",
+   "sol": "गैसों में कणों के बीच अंतर-आणविक बल नगण्य होता है, जिससे वे अत्यधिक संपीडनीय (compressible) होती हैं और उनका कोई निश्चित आकार या आयतन नहीं होता।",
+   "trick": "गैस = नगण्य बल + उच्च संपीड्यता",
+   "ans": "D"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "What was proven to exist in an atom, by Rutherford's gold foil experiment?",
+   "hi": "रदरफोर्ड के स्वर्ण झिल्ली प्रयोग द्वारा परमाणु में किस भाग के अस्तित्व को सिद्ध किया गया था?",
+   "opts": [
+    "Proton<br>प्रोटॉन",
+    "Neutron<br>न्यूट्रॉन",
+    "Electron<br>इलेक्ट्रॉन",
+    "Nucleus<br>नाभिक"
+   ],
+   "my_ans": "D",
+   "sol": "रदरफोर्ड के प्रयोग में अधिकांश अल्फा कण सीधे निकल गए, लेकिन कुछ विक्षेपित हुए, जिससे परमाणु के केंद्र में एक छोटे, सघन और धनावेशित 'नाभिक' की पुष्टि हुई।",
+   "trick": "रदरफोर्ड = नाभिक की खोज",
+   "ans": "D"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "Select the correct formula of Aluminium Sulphate.",
+   "hi": "ऐलुमिनियम सल्फेट के सही सूत्र का चयन कीजिए।",
+   "opts": [
+    "Al3SO4",
+    "Al2SO4",
+    "Al(SO4)3",
+    "Al2(SO4)3"
+   ],
+   "my_ans": "D",
+   "sol": "एल्युमिनियम (Al) की संयोजकता +3 है और सल्फेट (SO₄) की -2 है। क्रॉस-गुणा करने पर सूत्र Al₂(SO₄)₃ बनता है।",
+   "trick": "संयोजकता का क्रॉस-गुणा करें",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Which of the following is a physical change only?",
+   "hi": "निम्नलिखित में से कौन-सा केवल भौतिक परिवर्तन है?",
+   "opts": [
+    "Crystallization<br>क्रिस्टलीकरण",
+    "Combustion<br>दहन",
+    "Oxidation<br>ऑक्सीकरण",
+    "Reduction<br>अपचयन"
+   ],
+   "my_ans": "A",
+   "sol": "क्रिस्टलीकरण में केवल पदार्थ की अवस्था बदलती है और कोई नया रासायनिक पदार्थ नहीं बनता, जबकि दहन, ऑक्सीकरण और अपचयन रासायनिक परिवर्तन हैं।",
+   "trick": "भौतिक परिवर्तन = अवस्था में बदलाव, नया पदार्थ नहीं",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Which of the following substances should be added to acidic soil to neutralize it effectively?",
+   "hi": "अम्लीय मृदा को प्रभावी रूप से उदासीन करने के लिए निम्नलिखित में से किस पदार्थ को मिलाना चाहिए?",
+   "opts": [
+    "Vinegar (lime)<br>सिरका (चूना)",
+    "Table salt<br>साधारण नमक",
+    "Quicklime (calcium oxide)<br>बिना बुझा चूना (कैल्शियम ऑक्साइड)",
+    "Baking soda (Sodium bicarbonate)<br>बेकिंग सोडा (सोडियम बाइकार्बोनेट)"
+   ],
+   "my_ans": "C",
+   "sol": "अम्लीय मिट्टी को उदासीन करने के लिए एक प्रबल क्षार की आवश्यकता होती है। बिना बुझा चूना (CaO) एक प्रभावी क्षार है जो मिट्टी की अम्लता को कम करता है।",
+   "trick": "अम्ल + क्षार = उदासीन",
+   "ans": "C"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "What is/are the element(s) or compound(s) that can be used in black and white photography?",
+   "hi": "वे कौन-से तत्व या यौगिक हैं जिनका उपयोग श्वेत-श्याम फोटोग्राफी में किया जा सकता है?",
+   "opts": [
+    "Only AgCl<br>केवल AgCl",
+    "Only AgBr<br>केवल AgBr",
+    "Only Ag<br>केवल Ag",
+    "AgCl and AgBr<br>AgCl और AgBr"
+   ],
+   "my_ans": "D",
+   "sol": "श्वेत-श्याम फोटोग्राफी में सिल्वर क्लोराइड (AgCl) और सिल्वर ब्रोमाइड (AgBr) का उपयोग किया जाता है क्योंकि ये प्रकाश के संपर्क में आने पर विघटित हो जाते हैं।",
+   "trick": "सिल्वर हैलाइड = फोटो-सेंसिटिव",
+   "ans": "D"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "When Barium Chloride (BaCl₂) solution is mixed with Sodium Sulfate (Na₂SO₄) solution, a white product Barium Sulfate (BaSO₄) is formed. This product is known as a ______.",
+   "hi": "जब बेरियम क्लोराइड (BaCl₂) विलयन को सोडियम सल्फेट (Na₂SO₄) विलयन के साथ मिलाया जाता है, तो एक सफेद उत्पाद बेरियम सल्फेट (BaSO₄) बनता है। इस उत्पाद को ______ कहा जाता है।",
+   "opts": [
+    "Isotope<br>समस्थानिक",
+    "Emulsion<br>इमल्शन",
+    "Isomer<br>समावयवी",
+    "Precipitate<br>अवक्षेप"
+   ],
+   "my_ans": "D",
+   "sol": "रासायनिक अभिक्रिया में बनने वाला अघुलनशील ठोस पदार्थ जो विलयन में नीचे बैठ जाता है, उसे अवक्षेप (Precipitate) कहते हैं।",
+   "trick": "अघुलनशील ठोस = अवक्षेप",
+   "ans": "D"
+  },
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "When electricity is passed through an aqueous solution of sodium chloride (called brine), it decomposes to form sodium hydroxide. This process is called:",
+   "hi": "जब सोडियम क्लोराइड के जलीय विलयन (जिसे लवण जल कहते हैं) में विद्युत प्रवाहित की जाती है, तो यह अपघटित होकर सोडियम हाइड्रॉक्साइड बनाता है। इस प्रक्रम को क्या कहते हैं?",
+   "opts": [
+    "Polymerisation process<br>बहुलकन प्रक्रम",
+    "Sublimation process<br>उर्ध्वपातन प्रक्रम",
+    "Chlor-alkali process<br>क्लोर-क्षार प्रक्रम",
+    "Filtration process<br>निस्यंदन प्रक्रम"
+   ],
+   "my_ans": "C",
+   "sol": "NaCl के विद्युत अपघटन से क्लोरीन गैस और सोडियम हाइड्रॉक्साइड (क्षार) बनता है, इसलिए इसे क्लोर-क्षार प्रक्रिया कहा जाता है।",
+   "trick": "क्लोर (Cl₂) + क्षार (NaOH) = क्लोर-क्षार",
+   "ans": "C"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "In the production of crystal sugar from sugarcane juice, the sugar is separated from the liquid through the growth of solid particles (sugar crystals) from a concentrated solution (syrup). This separation technique is called _____.",
+   "hi": "गन्ने के रस से क्रिस्टल शर्करा के उत्पादन में, शर्करा को सांद्रित विलयन (सिरप) से ठोस कणों (शर्करा के क्रिस्टल) के रूप में निर्मित करके द्रव से पृथक किया जाता है। इस पृथक्करण तकनीक को क्या कहा जाता है?",
+   "opts": [
+    "Chromatography<br>क्रोमैटोग्राफी",
+    "Crystallization<br>क्रिस्टलीकरण",
+    "Distillation<br>आसवन",
+    "Filtration<br>निस्यंदन"
+   ],
+   "my_ans": "B",
+   "sol": "सांद्रित विलयन से शुद्ध ठोस क्रिस्टल प्राप्त करने की विधि को क्रिस्टलीकरण कहते हैं।",
+   "trick": "क्रिस्टल बनाना = क्रिस्टलीकरण",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "Which of the following is a method specifically used to control particulate air pollution?",
+   "hi": "निम्नलिखित में से किस विधि का उपयोग विशेष रूप से कणिकीय वायु प्रदूषण को नियंत्रित करने के लिए किया जाता है?",
+   "opts": [
+    "Catalytic combustion in open furnaces<br>खुली भट्टियों में उत्प्रेरक दहन",
+    "Absorption of gases using liquid scrubbers<br>तरल मार्जक का उपयोग करके गैसों का अवशोषण",
+    "Increasing chimney height without any treatment<br>बिना किसी उपचार के चिमनी की ऊंचाई में वृद्धि करना",
+    "Use of fabric filters to trap dust and fly ash<br>धूल और फ्लाई ऐश को रोकने के लिए वस्त्र निस्यंदक का उपयोग"
+   ],
+   "my_ans": "D",
+   "sol": "फैब्रिक फिल्टर (वस्त्र निस्यंदक) का उपयोग हवा से धूल और फ्लाई ऐश जैसे कणों को छानकर अलग करने के लिए किया जाता है।",
+   "trick": "कणिकीय प्रदूषण = फिल्टर का उपयोग",
+   "ans": "D"
+  }
+ ]
+}

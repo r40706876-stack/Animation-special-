@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "289-291",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 208,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution provides for the Constitution of municipalities?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद नगरपालिकाओं के गठन का प्रावधान करता है?",
+   "opts": [
+    "Article 243R<br>अनुच्छेद 243R",
+    "Article 243Q<br>अनुच्छेद 243Q",
+    "Article 243S<br>अनुच्छेद 243S",
+    "Article 243P<br>अनुच्छेद 243P"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय संविधान के भाग IX-A में नगरपालिकाओं का उल्लेख है। अनुच्छेद 243Q विशेष रूप से नगरपालिकाओं के गठन का प्रावधान करता है।",
+   "trick": "नगरपालिका गठन = 243Q",
+   "ans": "B"
+  },
+  {
+   "n": 209,
+   "lvl": "UG",
+   "en": "Which Part of the Indian Constitution deals with Panchayats?",
+   "hi": "भारतीय संविधान का कौन-सा भाग पंचायतों से संबंधित है?",
+   "opts": [
+    "Part VII<br>भाग VII",
+    "Part V<br>भाग V",
+    "Part IX<br>भाग IX",
+    "Part XI<br>भाग XI"
+   ],
+   "my_ans": "C",
+   "sol": "संविधान के भाग IX में पंचायतों का प्रावधान है, जिसे 73वें संविधान संशोधन अधिनियम, 1992 द्वारा जोड़ा गया था।",
+   "trick": "पंचायत = भाग 9",
+   "ans": "C"
+  },
+  {
+   "n": 210,
+   "lvl": "UG",
+   "en": "Which landmark case is credited with relaxing the rule of locus standi and establishing the foundation for Public Interest Litigation (PIL) in India?",
+   "hi": "किस ऐतिहासिक मामले को अधि स्थिति (locus standi) के नियम को शिथिल करने और भारत में जनहित याचिका (PIL) की नींव स्थापित करने का श्रेय दिया जाता है?",
+   "opts": [
+    "Maneka Gandhi vs. Union of India<br>मेनका गांधी बनाम भारत संघ",
+    "Golaknath vs. State of Punjab<br>गोलकनाथ बनाम पंजाब राज्य",
+    "S.P. Gupta vs. Union of India<br>एस.पी. गुप्ता बनाम भारत संघ",
+    "Minerva Mills vs. Union of India<br>मिनर्वा मिल्स बनाम भारत संघ"
+   ],
+   "my_ans": "C",
+   "sol": "एस.पी. गुप्ता बनाम भारत संघ (1981) मामले में 'लोकस स्टैंडी' के नियम को शिथिल किया गया, जिससे भारत में जनहित याचिका (PIL) की शुरुआत हुई।",
+   "trick": "PIL = S.P. गुप्ता",
+   "ans": "C"
+  },
+  {
+   "n": 211,
+   "lvl": "UG",
+   "en": "In the context of Lok Adalats, which statement is correct?",
+   "hi": "लोक अदालतों के संदर्भ में, कौन-सा कथन सही है?",
+   "opts": [
+    "Lawyers are mandatory in every case presented to Lok Adalat<br>लोक अदालत में प्रस्तुत प्रत्येक मामले में वकीलों का होना अनिवार्य है।",
+    "Only Supreme Court judges can preside over Lok Adalat sessions<br>लोक अदालत सत्रों की अध्यक्षता केवल सर्वोच्च न्यायालय के न्यायाधीश ही कर सकते हैं।",
+    "Formal procedures and strict rules of evidence are followed<br>औपचारिक प्रक्रियाओं और साक्ष्य के कड़े नियमों का पालन किया जाता है।",
+    "Proceedings are informal, flexible, and less technical<br>कार्यवाही अनौपचारिक, लचीली और कम तकनीकी होती है।"
+   ],
+   "my_ans": "D",
+   "sol": "लोक अदालतों का मुख्य उद्देश्य सुलह और समझौते के माध्यम से विवादों का निपटारा करना है, इसलिए इनकी कार्यवाही अनौपचारिक और लचीली होती है।",
+   "trick": "लोक अदालत = अनौपचारिक और लचीली",
+   "ans": "D"
+  },
+  {
+   "n": 212,
+   "lvl": "UG",
+   "en": "Provisions for the 'Control over subordinate courts' are provided in which of the following Articles of the Constitution of India?",
+   "hi": "भारत के संविधान के निम्नलिखित में से किस अनुच्छेद में 'अधीनस्थ न्यायालयों पर नियंत्रण' का प्रावधान दिया गया है?",
+   "opts": [
+    "Article 245<br>अनुच्छेद 245",
+    "Article 235<br>अनुच्छेद 235",
+    "Article 255<br>अनुच्छेद 255",
+    "Article 225<br>अनुच्छेद 225"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय संविधान का अनुच्छेद 235 उच्च न्यायालयों को अधीनस्थ न्यायालयों पर प्रशासनिक नियंत्रण प्रदान करता है।",
+   "trick": "अधीनस्थ नियंत्रण = 235",
+   "ans": "B"
+  },
+  {
+   "n": 213,
+   "lvl": "UG",
+   "en": "The Committee on Government Assurances primarily deals with ______ .",
+   "hi": "सरकारी आश्वासनों पर समिति मुख्य रूप से ______ से संबंधित है।",
+   "opts": [
+    "Monitoring of government expenditure in Parliament<br>संसद में सरकारी व्यय की निगरानी",
+    "Examining Rules under Article 312<br>अनुच्छेद 312 के तहत नियमों की जांच",
+    "Promises and undertakings made by Ministers in Parliament<br>संसद में मंत्रियों द्वारा किए गए वादे और प्रतिबद्धताएं",
+    "Policy review of public enterprises<br>सार्वजनिक उद्यमों की नीति समीक्षा"
+   ],
+   "my_ans": "C",
+   "sol": "यह समिति संसद में मंत्रियों द्वारा दिए गए आश्वासनों, वादों और प्रतिबद्धताओं की जांच करती है और उनके कार्यान्वयन की रिपोर्ट देती है।",
+   "trick": "आश्वासन = मंत्रियों के वादे",
+   "ans": "C"
+  },
+  {
+   "n": 214,
+   "lvl": "UG",
+   "en": "The phrase “internal disturbance” in the Emergency provisions of the Constitution of India was replaced with which term?",
+   "hi": "भारतीय संविधान के आपातकालीन प्रावधानों में प्रयुक्त वाक्यांश 'आंतरिक अशांति' को किस पद से प्रतिस्थापित किया गया था?",
+   "opts": [
+    "Civil unrest<br>नागरिक असंतोष",
+    "National instability<br>राष्ट्रीय अस्थिरता",
+    "Armed rebellion<br>सशस्त्र विद्रोह",
+    "Internal security threat<br>आंतरिक सुरक्षा खतरा"
+   ],
+   "my_ans": "C",
+   "sol": "44वें संविधान संशोधन अधिनियम, 1978 द्वारा अनुच्छेद 352 में 'आंतरिक अशांति' शब्द को हटाकर 'सशस्त्र विद्रोह' शब्द जोड़ा गया।",
+   "trick": "44वां संशोधन = सशस्त्र विद्रोह",
+   "ans": "C"
+  },
+  {
+   "n": 215,
+   "lvl": "UG",
+   "en": "In which of the following ways is the Speaker of the Vidhan Sabha elected?",
+   "hi": "विधान सभा के अध्यक्ष का चुनाव निम्नलिखित में से किस प्रकार किया जाता है?",
+   "opts": [
+    "By the Governor<br>राज्यपाल द्वारा",
+    "By the Chief Minister<br>मुख्यमंत्री द्वारा",
+    "Directly by the public<br>प्रत्यक्ष रूप से जनता द्वारा",
+    "By the members of the Vidhan Sabha<br>विधानसभा के सदस्यों द्वारा"
+   ],
+   "my_ans": "D",
+   "sol": "विधानसभा अध्यक्ष का चुनाव विधानसभा के सदस्यों द्वारा अपने में से ही किया जाता है।",
+   "trick": "अध्यक्ष = सदस्यों द्वारा चुनाव",
+   "ans": "D"
+  },
+  {
+   "n": 216,
+   "lvl": "UG",
+   "en": "The Balwantrai Mehta Committee recommended how many tiers of Panchayati Raj system in India?",
+   "hi": "बलवंतराय मेहता समिति ने भारत में पंचायती राज व्यवस्था के कितने स्तरों की सिफारिश की?",
+   "opts": [
+    "Three-tier<br>त्रि-स्तरीय",
+    "Two-tier<br>दो-स्तरीय",
+    "One-tier<br>एक-स्तरीय",
+    "Four-tier<br>चार-स्तरीय"
+   ],
+   "my_ans": "A",
+   "sol": "बलवंतराय मेहता समिति (1957) ने त्रि-स्तरीय पंचायती राज व्यवस्था (ग्राम, ब्लॉक और जिला स्तर) की सिफारिश की थी।",
+   "trick": "बलवंतराय = 3 स्तर",
+   "ans": "A"
+  },
+  {
+   "n": 217,
+   "lvl": "UG",
+   "en": "How many Departmentally Related Standing Committees (DRSCs) are there in the Indian Parliament?",
+   "hi": "भारतीय संसद में कितनी विभाग-संबंधी स्थायी समितियां (DRSCs) हैं?",
+   "opts": [
+    "24",
+    "31",
+    "15",
+    "21"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संसद में कुल 24 विभागीय स्थायी समितियां हैं, जिनमें से 8 राज्यसभा की और 16 लोकसभा की समितियां हैं।",
+   "trick": "DRSC = 24",
+   "ans": "A"
+  },
+  {
+   "n": 218,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution deals with the control of High Courts over subordinate courts?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद उच्च न्यायालयों के अधीनस्थ न्यायालयों पर नियंत्रण से संबंधित है?",
+   "opts": [
+    "Article 233<br>अनुच्छेद 233",
+    "Article 235<br>अनुच्छेद 235",
+    "Article 237<br>अनुच्छेद 237",
+    "Article 239<br>अनुच्छेद 239"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 235 के तहत अधीनस्थ न्यायालयों पर प्रशासनिक नियंत्रण उच्च न्यायालय में निहित होता है।",
+   "trick": "नियंत्रण = 235",
+   "ans": "B"
+  }
+ ]
+}

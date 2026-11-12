@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "434-436",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which of the following plant tissues is NOT a type of simple tissue?",
+   "hi": "निम्नलिखित में से कौन-सा पादप ऊतक सरल ऊतक का एक प्रकार नहीं है?",
+   "opts": [
+    "Xylem<br>जाइलम",
+    "Sclerenchyma<br>दृढ़ ऊतक",
+    "Collenchyma<br>स्थूलकोण ऊतक",
+    "Parenchyma<br>मृदूतक"
+   ],
+   "my_ans": "A",
+   "sol": "जाइलम एक जटिल ऊतक है क्योंकि यह कई प्रकार की कोशिकाओं (वाहिकाओं, वाहिनिकाओं, तंतुओं और मृदूतक) से मिलकर बना होता है।",
+   "trick": "जाइलम और फ्लोएम जटिल ऊतक हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Which of the following is a characteristic of all living things?",
+   "hi": "निम्नलिखित में से कौन-सी सभी जीवित चीजों की एक विशेषता है?",
+   "opts": [
+    "The ability to move<br>गति करने की क्षमता",
+    "The ability to reproduce<br>प्रजनन करने की क्षमता",
+    "The ability to fly<br>उड़ने की क्षमता",
+    "The ability to speak<br>बोलने की क्षमता"
+   ],
+   "my_ans": "B",
+   "sol": "प्रजनन सभी जीवित जीवों का एक मौलिक गुण है, जिसके द्वारा वे अपनी संतति उत्पन्न करते हैं।",
+   "trick": "प्रजनन जीवन की निरंतरता के लिए अनिवार्य है।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "The modified petiole of Acacia species that resembles a leaf blade is termed as __________________.",
+   "hi": "ऐकेशिया प्रजाति के पादप का वह रूपांतरित पर्णवृंत जो पर्ण-फलक जैसा दिखता है, उसे __________________ कहा जाता है।",
+   "opts": [
+    "phyllode<br>पर्णाभ वृंत",
+    "bracts<br>सहपत्र",
+    "spine<br>कंटक",
+    "tendril<br>प्रतान"
+   ],
+   "my_ans": "A",
+   "sol": "बबूल (Acacia) में पर्णवृंत चपटा होकर पत्ती जैसा हो जाता है और प्रकाश संश्लेषण करता है, इसे पर्णाभ वृंत (Phyllode) कहते हैं।",
+   "trick": "Phyllode = चपटा पर्णवृंत।",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which nutrient is primarily responsible for building and repairing tissues in the human body?",
+   "hi": "मानव शरीर में ऊतकों के निर्माण और मरम्मत के लिए मुख्य रूप से कौन-सा पोषक उत्तरदायी है?",
+   "opts": [
+    "Carbohydrates<br>कार्बोहाइड्रेट",
+    "Fats<br>वसा",
+    "Proteins<br>प्रोटीन",
+    "Vitamins<br>विटामिन"
+   ],
+   "my_ans": "C",
+   "sol": "प्रोटीन शरीर के निर्माण खंड (building blocks) कहलाते हैं, जो ऊतकों की मरम्मत और वृद्धि के लिए आवश्यक हैं।",
+   "trick": "प्रोटीन = शरीर का निर्माण।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "In the light-independent or dark phase of photosynthesis, apart from CO ₂, which of the following components act as essential starting materials?",
+   "hi": "प्रकाश संश्लेषण के प्रकाश-स्वतंत्र या अंधकार चरण में, CO₂ के अलावा, निम्नलिखित में से कौन से घटक आवश्यक प्रारंभिक सामग्री के रूप में कार्य करते हैं?",
+   "opts": [
+    "CO₂ and H₂O<br>CO₂ और H₂O",
+    "CO₂ and glucose<br>CO₂ और ग्लूकोज",
+    "Hydrolase and H₂O<br>हाइड्रोलेज और H₂O",
+    "ATP and NADPH<br>ATP और NADPH"
+   ],
+   "my_ans": "D",
+   "sol": "प्रकाश संश्लेषण के अंधकार चरण (केल्विन चक्र) में ग्लूकोज बनाने के लिए CO₂ के साथ प्रकाश अभिक्रिया से प्राप्त ATP और NADPH की आवश्यकता होती है।",
+   "trick": "अंधकार चरण = CO₂ + ATP + NADPH।",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "What is the process by which plants make their food using sunlight?",
+   "hi": "पादप सूर्य के प्रकाश का उपयोग करके अपना खाद्य किस प्रक्रिया द्वारा बनाते हैं?",
+   "opts": [
+    "Transpiration<br>वाष्पोत्सर्जन",
+    "Photosynthesis<br>प्रकाश संश्लेषण",
+    "Respiration<br>श्वसन",
+    "Fermentation<br>किण्वन"
+   ],
+   "my_ans": "B",
+   "sol": "प्रकाश संश्लेषण वह प्रक्रिया है जिसमें पौधे सूर्य के प्रकाश, जल और CO₂ का उपयोग करके ग्लूकोज (भोजन) बनाते हैं।",
+   "trick": "प्रकाश संश्लेषण = भोजन निर्माण।",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Which disease is caused specifically by a deficiency of Vitamin B1?",
+   "hi": "विटामिन B1 की कमी से विशेष रूप से कौन-सा रोग होता है?",
+   "opts": [
+    "Beri-beri<br>बेरी-बेरी",
+    "Rickets<br>रिकेट्स",
+    "Scurvy<br>स्कर्वी",
+    "Night blindness<br>रतौंधी"
+   ],
+   "my_ans": "A",
+   "sol": "विटामिन B1 (थायमिन) की कमी से बेरी-बेरी रोग होता है।",
+   "trick": "B1 = बेरी-बेरी।",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which crop variety, highlighted by the National Agri-food Biotechnology Institute (NABI), can withstand flash floods, showcasing climate-resilient biotechnology?",
+   "hi": "राष्ट्रीय कृषि-खाद्य जैव प्रौद्योगिकी संस्थान (NABI) द्वारा हाईलाइट की गई कौन-सी फसल किस्म आकस्मिक बाढ़ को सहन कर सकती है, जो जलवायु-लचीली जैव प्रौद्योगिकी को दर्शाती है?",
+   "opts": [
+    "DRR Rice 100 (Kamla)<br>DRR राइस 100 (कमला)",
+    "Pusa DST Rice 1<br>पूसा DST राइस 1",
+    "IR8 Rice<br>IR8 राइस",
+    "Swarna-Sub1 rice<br>स्वर्ण-Sub1 राइस"
+   ],
+   "my_ans": "D",
+   "sol": "स्वर्ण-Sub1 चावल की किस्म में Sub1 जीन होता है, जो इसे 14-17 दिनों तक बाढ़ के पानी में जीवित रहने में मदद करता है।",
+   "trick": "Sub1 = बाढ़ सहिष्णु।",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "What are the different forms of a gene called?",
+   "hi": "जीन के विभिन्न रूपों को क्या कहा जाता है?",
+   "opts": [
+    "Genotypes<br>जीनोटाइप",
+    "Chromosomes<br>गुणसूत्र",
+    "Phenotypes<br>फीनोटाइप",
+    "Alleles<br>युग्म विकल्पी (अलील)"
+   ],
+   "my_ans": "D",
+   "sol": "एक ही जीन के वैकल्पिक रूपों को एलील (Alleles) कहा जाता है, जो गुणसूत्रों पर समान स्थान पर स्थित होते हैं।",
+   "trick": "जीन के रूप = एलील।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following groups of organisms exhibit the phenomenon of haploid-dominant life cycle?",
+   "hi": "निम्नलिखित में से जीवों का कौन-सा समूह, अगुणित-प्रभावी जीवन चक्र की घटना को प्रदर्शित करता है?",
+   "opts": [
+    "The amphibians<br>उभयचर",
+    "The fungi<br>कवक",
+    "The angiosperms<br>आवृतबीजी",
+    "The mammals<br>स्तनधारी"
+   ],
+   "my_ans": "B",
+   "sol": "कवक (Fungi) में जीवन चक्र का अधिकांश भाग अगुणित (haploid) होता है, केवल युग्मनज (zygote) द्विगुणित होता है।",
+   "trick": "कवक = अगुणित-प्रमुख।",
+   "ans": "B"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Which law of Mendel explains the separation of alleles during gamete formation?",
+   "hi": "मेंडल का कौन-सा नियम, युग्मक निर्माण के दौरान युग्मविकल्पी (allele) के पृथक्करण की व्याख्या करता है?",
+   "opts": [
+    "Law of Assortment<br>अपव्यूहन का नियम",
+    "Law of Variation<br>विविधता का नियम",
+    "Law of Dominance<br>प्रभाविता नियम",
+    "Law of Segregation<br>विसंयोजन नियम"
+   ],
+   "my_ans": "D",
+   "sol": "मेंडल का विसंयोजन नियम (Law of Segregation) बताता है कि युग्मक बनते समय एलील एक-दूसरे से अलग हो जाते हैं।",
+   "trick": "पृथक्करण = विसंयोजन नियम।",
+   "ans": "D"
+  }
+ ]
+}

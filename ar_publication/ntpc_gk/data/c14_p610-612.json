@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "610-612",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "By what percentage did the union government ask the states to cut down cooking oil use in mid-day meals in government and aided schools in March 2025?",
+   "hi": "मार्च 2025 में केंद्र सरकार ने राज्यों से सरकारी और सहायता प्राप्त विद्यालयों में मध्याह्न भोजन (mid-day meal) में उपयोग होने वाले खाना पकाने के तेल (cooking oil) को कितने प्रतिशत तक कम करने के लिए कहा था?",
+   "opts": [
+    "25%",
+    "20%",
+    "10%",
+    "15%"
+   ],
+   "my_ans": "C",
+   "sol": "केंद्र सरकार ने लागत को अनुकूलित करने और पोषण मानकों को बनाए रखने के लिए मध्याह्न भोजन में खाना पकाने के तेल के उपयोग में 10% की कटौती करने का निर्देश दिया था।",
+   "trick": "मध्याह्न भोजन लागत युक्तीकरण: 10% तेल कटौती।",
+   "ans": "C"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "According to the Ministry of Statistics and Programme Implementation (MoSPI), the Unemployment Rate (UR) for persons aged 15 years and above declined to ______ in November 2025.",
+   "hi": "सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) के अनुसार, 15 वर्ष और उससे अधिक आयु के व्यक्तियों के लिए बेरोजगारी दर (UR) नवंबर 2025 में घटकर ______ हो गई।",
+   "opts": [
+    "4.6%",
+    "4.4%",
+    "4.5%",
+    "4.7%"
+   ],
+   "my_ans": "D",
+   "sol": "सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) के आंकड़ों के अनुसार, नवंबर 2025 में 15 वर्ष और उससे अधिक आयु के व्यक्तियों के लिए बेरोजगारी दर घटकर 4.7% हो गई।",
+   "trick": "नवंबर 2025 बेरोजगारी दर: 4.7%।",
+   "ans": "D"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "The Indian Medical Association (IMA) recently appointed a new President. Who assumed charge as the IMA National President in December 2025?",
+   "hi": "इंडियन मेडिकल एसोसिएशन (IMA) ने हाल ही में एक नए अध्यक्ष की नियुक्ति की है। दिसंबर 2025 में IMA के राष्ट्रीय अध्यक्ष के रूप में किसने कार्यभार संभाला?",
+   "opts": [
+    "Dr. Anil Nayak<br>डॉ. अनिल नायक",
+    "Dr. Amit Chakrabarty<br>डॉ. अमित चक्रवर्ती",
+    "Dr. Ketan Desai<br>डॉ. केतन देसाई",
+    "Dr. Dilip Bhanushali<br>डॉ. दिलीप भानुशाली"
+   ],
+   "my_ans": "A",
+   "sol": "दिसंबर 2025 में डॉ. अनिल नायक ने इंडियन मेडिकल एसोसिएशन (IMA) के राष्ट्रीय अध्यक्ष के रूप में कार्यभार संभाला।",
+   "trick": "IMA अध्यक्ष (दिसंबर 2025): डॉ. अनिल नायक।",
+   "ans": "A"
+  },
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "At the 57th meeting of the Monetary Policy Committee (MPC) of the RBI held from 29 September to 1 October 2025, what decision was taken on the policy repo rate and stance?",
+   "hi": "RBI की 29 सितंबर से 1 अक्टूबर 2025 तक आयोजित मौद्रिक नीति समिति (MPC) की 57वीं बैठक में, नीतिगत रेपो दर और रुख पर क्या निर्णय लिया गया?",
+   "opts": [
+    "Repo rate kept at 5.50% with a neutral monetary policy stance<br>रेपो दर को 5.50% पर अपरिवर्तित रखा गया और साथ ही तटस्थ मौद्रिक नीति का रुख अपनाया गया",
+    "Repo rate hiked to 6.00% with a hawkish monetary policy stance<br>रेपो दर बढ़ाकर 6.00% की गई, साथ ही सख्त मौद्रिक नीति का रुख अपनाया गया",
+    "Repo rate kept at 5.00% with a calibrated tightening stance<br>रेपो दर को 5.00% पर अपरिवर्तित रखा गया और साथ ही संतुलित सख्ती का रुख अपनाया गया",
+    "Repo rate cut to 4.50% with an accommodative stance<br>रेपो दर घटाकर 4.50% की गई, नरम रुख अपनाया गया"
+   ],
+   "my_ans": "A",
+   "sol": "RBI की 57वीं MPC बैठक में रेपो दर को तटस्थ रुख के साथ बनाए रखने का निर्णय लिया गया।",
+   "trick": "57वीं MPC बैठक: तटस्थ रुख।",
+   "ans": "A"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "In October 2025, the Ministry of Minority Affairs announced support to universities to set up Centres of Excellence to promote heritage and classical languages. This initiative was taken under which scheme?",
+   "hi": "अक्टूबर 2025 में, अल्पसंख्यक कार्य मंत्रालय ने विरासत और शास्त्रीय भाषाओं को बढ़ावा देने के लिए विश्वविद्यालयों में 'उत्कृष्टता केंद्र (Centres of Excellence)' स्थापित करने हेतु सहायता की घोषणा की। यह पहल किस योजना के अंतर्गत की गई थी?",
+   "opts": [
+    "National Minorities Development Finance Corporation (NMDFC)<br>राष्ट्रीय अल्पसंख्यक विकास एवं वित्त निगम (NMDFC)",
+    "Pradhan Mantri Virasat Ka Samvardhan (PM VIKAS)<br>प्रधानमंत्री विरासत का संवर्धन (PM VIKAS)",
+    "Pradhan Mantri Jan Vikas Karyakram (PMJVK)<br>प्रधानमंत्री जन विकास कार्यक्रम (PMJVK)",
+    "Maulana Azad National Fellowship (MANF)<br>मौलाना आज़ाद नेशनल फेलोशिप (MANF)"
+   ],
+   "my_ans": "C",
+   "sol": "अल्पसंख्यक कार्य मंत्रालय ने प्रधानमंत्री जन विकास कार्यक्रम (PMJVK) के तहत विश्वविद्यालयों में उत्कृष्टता केंद्र स्थापित करने की घोषणा की।",
+   "trick": "PMJVK: अल्पसंख्यक समुदायों का सामाजिक-आर्थिक विकास।",
+   "ans": "C"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Who amongst the following won CNN-News18’s Indian of the Year 2025 in sports?",
+   "hi": "खेल के क्षेत्र में CNN-न्यूज़18 का वर्ष 2025 का इंडियन ऑफ द ईयर पुरस्कार किसे दिया गया?",
+   "opts": [
+    "Gautam Gambhir<br>गौतम गंभीर",
+    "Jay Shah<br>जय शाह",
+    "Rahul Dravid<br>राहुल द्रविड़",
+    "Mahendra Singh Dhoni<br>महेंद्र सिंह धोनी"
+   ],
+   "my_ans": "B",
+   "sol": "जय शाह को भारतीय क्रिकेट प्रशासन में उनके योगदान के लिए CNN-News18 इंडियन ऑफ द ईयर 2025 (खेल श्रेणी) से सम्मानित किया गया।",
+   "trick": "खेल में इंडियन ऑफ द ईयर 2025: जय शाह।",
+   "ans": "B"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "In collaboration with UNICEF, the Government of Telangana developed the city-level action plan “CLAP for Children” for which city?",
+   "hi": "यूनिसेफ (UNICEF) के सहयोग से, तेलंगाना सरकार ने किस शहर के लिए शहर-स्तरीय कार्य योजना \"क्लैप फॉर चिल्ड्रन (CLAP for Children)\" विकसित की?",
+   "opts": [
+    "Karimnagar<br>करीमनगर",
+    "Nalgonda<br>नलगोंडा",
+    "Ranga Reddy<br>रंगा रेड्डी",
+    "Hyderabad<br>हैदराबाद"
+   ],
+   "my_ans": "D",
+   "sol": "तेलंगाना सरकार ने यूनिसेफ के साथ मिलकर हैदराबाद के लिए 'CLAP for Children' योजना विकसित की, जो बाल-अनुकूल शहर विकास पर केंद्रित है।",
+   "trick": "CLAP for Children: हैदराबाद।",
+   "ans": "D"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Which company announced in 2025 that it plans to invest US$15 billion for the expansion of airports in India by 2030?",
+   "hi": "2025 में, किस कंपनी ने घोषणा की कि वह 2030 तक भारत में हवाई अड्डों के विस्तार के लिए US$15 बिलियन का निवेश करने की योजना बना रही है?",
+   "opts": [
+    "Reliance Group<br>रिलायंस ग्रुप",
+    "Tata Group<br>टाटा ग्रुप",
+    "Jindal Group<br>जिंदल ग्रुप",
+    "Adani Group<br>अडानी ग्रुप"
+   ],
+   "my_ans": "D",
+   "sol": "अडानी ग्रुप ने 2030 तक भारत में अपने हवाई अड्डा नेटवर्क के विस्तार के लिए 15 बिलियन अमेरिकी डॉलर के निवेश की घोषणा की है।",
+   "trick": "अडानी ग्रुप: हवाई अड्डा विस्तार निवेश।",
+   "ans": "D"
+  },
+  {
+   "n": 156,
+   "lvl": "UG",
+   "en": "Who presided over the National Level Conclave of Ministers of States/UTs for Minority Welfare held on 13 September 2025, at Vanijya Bhawan, New Delhi?",
+   "hi": "13 सितंबर 2025 को नई दिल्ली के वाणिज्य भवन में आयोजित अल्पसंख्यक कल्याण के लिए राज्य/केंद्र शासित प्रदेशों के मंत्रियों के राष्ट्रीय स्तरीय सम्मेलन की अध्यक्षता किसने की थी?",
+   "opts": [
+    "George Kurian<br>जॉर्ज कुरियन",
+    "Om Prakash Rajbhar<br>ओम प्रकाश राजभर",
+    "Kiren Rijiju<br>किरेन रिजिजू",
+    "Md. Zama Khan<br>मोहम्मद ज़मा खान"
+   ],
+   "my_ans": "C",
+   "sol": "केंद्रीय अल्पसंख्यक कार्य मंत्री किरेन रिजिजू ने नई दिल्ली में आयोजित अल्पसंख्यक कल्याण पर मंत्रियों के राष्ट्रीय सम्मेलन की अध्यक्षता की।",
+   "trick": "अल्पसंख्यक कल्याण सम्मेलन: किरेन रिजिजू।",
+   "ans": "C"
+  },
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "The overall Labour Force Participation Rate (LFPR) for persons aged 15 years and above increased to what percentage in October 2025?",
+   "hi": "अक्टूबर 2025 में, 15 वर्ष और उससे अधिक आयु के व्यक्तियों के लिए समग्र श्रम बल सहभागिता दर (LFPR) बढ़कर कितने प्रतिशत हो गई?",
+   "opts": [
+    "55.4%",
+    "55.0%",
+    "54.2%",
+    "56.1%"
+   ],
+   "my_ans": "A",
+   "sol": "अक्टूबर 2025 में 15 वर्ष और उससे अधिक आयु के व्यक्तियों के लिए श्रम बल सहभागिता दर (LFPR) बढ़कर 55.4% हो गई।",
+   "trick": "अक्टूबर 2025 LFPR: 55.4%।",
+   "ans": "A"
+  }
+ ]
+}

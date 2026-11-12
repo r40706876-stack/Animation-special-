@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "465-467",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "What is the function of the keyboard shortcut Ctrl + Tab?",
+   "hi": "कीबोर्ड शॉर्टकट Ctrl + Tab का कार्य क्या है?",
+   "opts": [
+    "Switch between open tabs<br>खुले टैब के बीच स्विच करना",
+    "Close a tab<br>टैब बंद करना",
+    "Copy content<br>कंटेंट कॉपी करना",
+    "Save content<br>कंटेंट सेव करना"
+   ],
+   "my_ans": "A",
+   "sol": "Ctrl + Tab का उपयोग ब्राउज़र या अन्य एप्लिकेशन में खुले हुए टैब के बीच आगे की ओर स्विच करने के लिए किया जाता है।",
+   "trick": "Ctrl + Tab = आगे के टैब पर जाना",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "The abbreviation ASCII is a critical computer standard used worldwide. The letter C in ASCII stands for Code, indicating that ASCII is a standard system for assigning a unique numerical value to every single character, which is known as a character _________________.",
+   "hi": "संक्षिप्त नाम ASCII दुनिया भर में इस्तेमाल होने वाला एक ज़रूरी कंप्यूटर मानक है। ASCII में C का मतलब कोड है, जो बताता है कि ASCII हर एक कैरेक्टर को एक यूनिक न्यूमेरिकल वैल्यू देने की एक मानक प्रणाली है, जिसे कैरेक्टर _____________ कहते हैं।",
+   "opts": [
+    "encoding scheme<br>एनकोडिंग स्कीम",
+    "memory component<br>मेमोरी कंपोनेंट",
+    "input device<br>इनपुट डिवाइस",
+    "processing chip<br>प्रोसेसिंग चिप"
+   ],
+   "my_ans": "A",
+   "sol": "ASCII (American Standard Code for Information Interchange) एक मानक प्रणाली है जो अक्षरों और प्रतीकों को विशिष्ट संख्यात्मक मान प्रदान करती है, इसे एनकोडिंग स्कीम कहा जाता है।",
+   "trick": "ASCII = कैरेक्टर को कोड में बदलना (Encoding)",
+   "ans": "A"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "What is the primary role of the Control Unit (CU) within the Central Processing Unit (CPU)?",
+   "hi": "सेंट्रल प्रोसेसिंग यूनिट (CPU) के भीतर कंट्रोल यूनिट (CU) की प्राथमिक भूमिका क्या है?",
+   "opts": [
+    "It provides the system's primary volatile storage for active programs.<br>यह सक्रिय प्रोग्रामों के लिए सिस्टम का प्राथमिक अस्थिर भंडारण प्रदान करता है।",
+    "It permanently stores the operating system and basic boot instructions.<br>यह ऑपरेटिंग सिस्टम और आधारभूत बूट अनुदेशों को स्थायी रूप से संग्रहीत करता है।",
+    "It manages and coordinates the flow of instructions and data throughout the computer system.<br>यह पूरे कंप्यूटर सिस्टम में अनुदेशों और डेटा के प्रवाह का प्रबंधन और समन्वय करता है।",
+    "It performs all the arithmetic and logical calculations on data.<br>यह डेटा पर सभी अंकगणितीय और तार्किक गणनाएँ करता है।"
+   ],
+   "my_ans": "C",
+   "sol": "कंट्रोल यूनिट (CU) कंप्यूटर का 'ट्रैफिक कंट्रोलर' है, जो डेटा और निर्देशों के प्रवाह को नियंत्रित और समन्वित करता है।",
+   "trick": "CU = ट्रैफिक कंट्रोलर (प्रबंधन और समन्वय)",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "Where is Recycle Bin located?",
+   "hi": "रिसाइकिल बिन (Recycle Bin) कहां स्थित होता है?",
+   "opts": [
+    "Desktop<br>डेस्कटॉप",
+    "Start Menu<br>स्टार्ट मेन्यू",
+    "Control Panel<br>कंट्रोल पैनल",
+    "Taskbar<br>टास्कबार"
+   ],
+   "my_ans": "A",
+   "sol": "रिसाइकिल बिन एक सिस्टम फोल्डर है जो डिलीट की गई फाइलों को अस्थायी रूप से रखता है, यह डिफ़ॉल्ट रूप से डेस्कटॉप पर दिखाई देता है।",
+   "trick": "डिलीट की गई फाइलें = रिसाइकिल बिन (डेस्कटॉप)",
+   "ans": "A"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "System Software such as the Operating System is primarily designed to manage and coordinate the flow of data and instructions between the hardware and software, acting as the system's core ______________________.",
+   "hi": "ऑपरेटिंग सिस्टम जैसे सिस्टम सॉफ्टवेयर को मुख्य रूप से हार्डवेयर और सॉफ्टवेयर के बीच डेटा और अनुदेशों के प्रवाह को प्रबंधित करने और समन्वित करने के लिए डिज़ाइन किया जाता है, जो सिस्टम के कोर _____________ के रूप में कार्य करता है।",
+   "opts": [
+    "utility service<br>यूटिलिटी सर्विस",
+    "peripheral device<br>पेरिफेरल डिवाइस",
+    "resource manager<br>रिसोर्स मैनेजर",
+    "application logic<br>एप्लिकेशन लॉजिक"
+   ],
+   "my_ans": "C",
+   "sol": "ऑपरेटिंग सिस्टम हार्डवेयर संसाधनों (CPU, मेमोरी) का प्रबंधन करता है, इसलिए इसे रिसोर्स मैनेजर कहा जाता है।",
+   "trick": "OS = रिसोर्स मैनेजर (संसाधन प्रबंधन)",
+   "ans": "C"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "What is the primary function of Ctrl + Y in most Windows applications?",
+   "hi": "अधिकांश विंडोज एप्लिकेशन में Ctrl + Y का प्राथमिक कार्य क्या है?",
+   "opts": [
+    "Copy the selected text<br>सेलेक्ट किए गए टेक्स्ट को कॉपी करना",
+    "Redo the last undone action<br>पिछली अनडू की गई क्रिया को रीडू करना",
+    "Undo the last action<br>पिछली क्रिया को अनडू करना",
+    "Paste the previous item<br>पिछला आइटम पेस्ट करना"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl + Y का उपयोग 'रीडू' (Redo) करने के लिए किया जाता है, जो Ctrl + Z (Undo) के प्रभाव को उलट देता है।",
+   "trick": "Ctrl + Y = Redo (वापस करना)",
+   "ans": "B"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "Which of the following characteristics represents the ability of a computer to work continuously without fatigue?",
+   "hi": "निम्नलिखित में से कौन-सा अभिलक्षण कंप्यूटर की बिना क्लांति के निरंतर कार्य करने की क्षमता का प्रतिनिधित्व करती है?",
+   "opts": [
+    "Diligence<br>डिलिजेंस (परिश्रमशीलता)",
+    "Accuracy<br>एक्यूरेसी (सटीकता)",
+    "Versatility<br>वर्सेटिलिटी (बहुमुखी प्रतिभा)",
+    "Speed<br>स्पीड (गति)"
+   ],
+   "my_ans": "A",
+   "sol": "कंप्यूटर बिना थके या बोर हुए लगातार काम कर सकता है, इस विशेषता को 'डिलिजेंस' (परिश्रमशीलता) कहते हैं।",
+   "trick": "बिना थके काम = डिलिजेंस",
+   "ans": "A"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "Which of the following best represents a customized application software?",
+   "hi": "निम्नलिखित में से कौन-सा कस्टमाइज्ड एप्लिकेशन सॉफ्टवेयर का सर्वोत्तम रूप से प्रतिनिधित्व करता है?",
+   "opts": [
+    "Spreadsheet software<br>स्प्रेडशीट सॉफ्टवेयर",
+    "Payroll management system for a company<br>किसी कंपनी के लिए पेरोल मैनेजमेंट सिस्टम",
+    "Image viewer<br>इमेज व्यूअर",
+    "Media player<br>मीडिया प्लेयर"
+   ],
+   "my_ans": "B",
+   "sol": "कस्टमाइज्ड सॉफ्टवेयर किसी विशेष संगठन की जरूरतों के अनुसार बनाया जाता है, जैसे किसी कंपनी का पेरोल सिस्टम।",
+   "trick": "Customized = विशेष जरूरत के लिए बना",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Which characteristic of a computer ensures that identical input and instructions always produce the same output?",
+   "hi": "कंप्यूटर की कौन-सी विशेषता यह सुनिश्चित करती है कि समान इनपुट और अनुदेश हमेशा समान आउटपुट उत्पन्न करते हैं?",
+   "opts": [
+    "Mobility<br>गतिशीलता",
+    "Flexibility<br>लचीलापन",
+    "Consistency<br>संगतता",
+    "Expansion<br>प्रसार"
+   ],
+   "my_ans": "C",
+   "sol": "कंप्यूटर की 'कंसिस्टेंसी' (संगतता) विशेषता यह सुनिश्चित करती है कि एक ही इनपुट पर हमेशा एक जैसा परिणाम मिले।",
+   "trick": "समान इनपुट = समान आउटपुट (Consistency)",
+   "ans": "C"
+  }
+ ]
+}

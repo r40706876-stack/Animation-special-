@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "664-666",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 334,
+   "lvl": "UG",
+   "en": "Which policy, approved in August 2024, aims to accelerate innovation-driven research and entrepreneurship in high-performance biomanufacturing in India?",
+   "hi": "अगस्त 2024 में अनुमोदित किस नीति का उद्देश्य भारत में उच्च प्रदर्शन वाले जैव-विनिर्माण में नवाचार-संचालित अनुसंधान और उद्यमिता को बढ़ावा देना है?",
+   "opts": [
+    "GenTech Initiative<br>जेनटेक पहल",
+    "Bio-India 2025<br>बायो-इंडिया 2025",
+    "BioGrowth Scheme<br>बायोग्रोथ स्कीम",
+    "BioE3<br>बायोई3"
+   ],
+   "my_ans": "D",
+   "sol": "BioE3 (Biotechnology for Economy, Environment and Employment) नीति को अगस्त 2024 में केंद्रीय मंत्रिमंडल द्वारा मंजूरी दी गई थी।",
+   "trick": "BioE3 = जैव-विनिर्माण (Biomanufacturing) के लिए प्रमुख नीति।",
+   "ans": "D"
+  },
+  {
+   "n": 335,
+   "lvl": "UG",
+   "en": "In December 2025, which of the following cybersecurity solutions providers introduced an advanced tenant control feature for ChatGPT?",
+   "hi": "दिसंबर 2025 में, निम्नलिखित में से किस साइबर सुरक्षा समाधान प्रदाता ने चैटजीपीटी (ChatGPT) के लिए एडवांस्ड टेनेंट कंट्रोल फीचर पेश किया?",
+   "opts": [
+    "Quick Heal<br>क्विक हील",
+    "eScan<br>ईस्कैन",
+    "Kaspersky<br>कैस्पर्सकी",
+    "Bitdefender<br>बिटडिफेंडर"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय साइबर सुरक्षा कंपनी eScan ने दिसंबर 2025 में ChatGPT के उपयोग को नियंत्रित करने के लिए यह फीचर पेश किया।",
+   "trick": "eScan = ChatGPT सुरक्षा फीचर।",
+   "ans": "B"
+  },
+  {
+   "n": 336,
+   "lvl": "UG",
+   "en": "Which academic institution was responsible for designing the IRIS chip based on the SHAKTI microprocessor, India's push for self-reliance in semiconductor technology, in February 2025?",
+   "hi": "फरवरी 2025 में, अर्धचालक प्रौद्योगिकी (semiconductor technology) में आत्मनिर्भरता के लिए भारत के महत्वाकांक्षी कार्यक्रम SHAKTI माइक्रोप्रोसेसर पर आधारित IRIS चिप को डिजाइन करने के लिए कौन-सा शैक्षणिक संस्थान उत्तरदायी था?",
+   "opts": [
+    "IISc Bangalore<br>IISc बैंगलोर",
+    "NIT Trichy<br>NIT त्रिची",
+    "IIT Madras<br>IIT मद्रास",
+    "IIT Delhi<br>IIT दिल्ली"
+   ],
+   "my_ans": "C",
+   "sol": "IRIS चिप को IIT मद्रास द्वारा SHAKTI माइक्रोप्रोसेसर आर्किटेक्चर का उपयोग करके विकसित किया गया था।",
+   "trick": "SHAKTI और IRIS चिप = IIT मद्रास।",
+   "ans": "C"
+  },
+  {
+   "n": 337,
+   "lvl": "UG",
+   "en": "What is the name of the quantum computing hub announced in Andhra Pradesh in April 2025, marking India’s first major quantum valley?",
+   "hi": "अप्रैल 2025 में आंध्र प्रदेश में घोषित भारत की पहली प्रमुख क्वांटम वैली के रूप में चिह्नित क्वांटम कंप्यूटिंग हब का नाम क्या है?",
+   "opts": [
+    "Nellor Quantum Hub<br>नेल्लोर क्वांटम हब",
+    "Vijayawada Quantum Park<br>विजयवाड़ा क्वांटम पार्क",
+    "Bengaluru Quantum Valley<br>बेंगलुरु क्वांटम वैली",
+    "Amaravati Quantum Valley<br>अमरावती क्वांटम वैली"
+   ],
+   "my_ans": "D",
+   "sol": "आंध्र प्रदेश की राजधानी अमरावती में भारत का पहला प्रमुख क्वांटम कंप्यूटिंग हब 'अमरावती क्वांटम वैली' स्थापित किया गया।",
+   "trick": "अमरावती = भारत की पहली क्वांटम वैली।",
+   "ans": "D"
+  },
+  {
+   "n": 338,
+   "lvl": "UG",
+   "en": "Which first-of-its-kind propellant-production device did ISRO unveil in February 2025?",
+   "hi": "फरवरी 2025 में ISRO ने कौन-सा, अपने प्रकार का प्रथम प्रोपेलेंट-प्रोडक्शन डिवाइस का अनावरण किया?",
+   "opts": [
+    "10-tonne Vertical Planetary Mixer<br>10 टन का वर्टिकल प्लैनेटरी मिक्सर",
+    "3D-printed fuel injector assembly<br>3D प्रिंटेड फ्यूल इंजेक्टर असेंबली",
+    "Automated liquid oxygen plant<br>ऑटोमेटेड लिक्विड ऑक्सीजन प्लांट",
+    "Horizontal mixing facility<br>हॉरिजॉन्टल मिक्सिंग फैसिलिटी"
+   ],
+   "my_ans": "A",
+   "sol": "ISRO ने तिरुवनंतपुरम में भारत का पहला 10-टन वर्टिकल प्लैनेटरी मिक्सर लॉन्च किया, जो ठोस रॉकेट ईंधन बनाने की क्षमता बढ़ाता है।",
+   "trick": "10-टन वर्टिकल मिक्सर = ISRO का नया प्रणोदक उपकरण।",
+   "ans": "A"
+  },
+  {
+   "n": 339,
+   "lvl": "UG",
+   "en": "Which report, released in 2025, gives a perception-based safety score of urban women across 31 Indian cities?",
+   "hi": "2025 में जारी की गई वह कौन-सी रिपोर्ट है जो भारत के 31 शहरों में शहरी महिलाओं की सुरक्षा के संबंध में उनकी धारणाओं पर आधारित स्कोर प्रदान करती है?",
+   "opts": [
+    "Urban Women Index 2025<br>शहरी महिला सूचकांक 2025",
+    "NARI 2025 Index<br>NARI 2025 सूचकांक",
+    "Women Safety Report 2025<br>महिला सुरक्षा रिपोर्ट 2025",
+    "Safe City Report 2025<br>सेफ सिटी रिपोर्ट 2025"
+   ],
+   "my_ans": "B",
+   "sol": "प्रजा फाउंडेशन द्वारा जारी NARI (Navigating Areas for Resident Inclusion) इंडेक्स 31 शहरों में महिलाओं की सुरक्षा धारणा को मापता है।",
+   "trick": "NARI इंडेक्स = महिलाओं की सुरक्षा धारणा।",
+   "ans": "B"
+  },
+  {
+   "n": 340,
+   "lvl": "UG",
+   "en": "According to a 2025 release by the Department of Science and Technology, the new sodium-ion battery developed at Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR) can be fast-charged to about 80% in roughly:",
+   "hi": "विज्ञान एवं प्रौद्योगिकी विभाग द्वारा 2025 में जारी एक विज्ञप्ति के अनुसार, जवाहरलाल नेहरू सेंटर फॉर एडवांस्ड साइंटिफिक रिसर्च (JNCASR) में विकसित नई सोडियम-आयन बैटरी को लगभग कितने समय में 80% तक तेज़ी से चार्ज किया जा सकता है?",
+   "opts": [
+    "16 minutes<br>16 मिनट",
+    "26 minutes<br>26 मिनट",
+    "6 minutes<br>6 मिनट",
+    "36 minutes<br>36 मिनट"
+   ],
+   "my_ans": "C",
+   "sol": "JNCASR द्वारा विकसित नई सोडियम-आयन बैटरी अपनी अल्ट्रा-फास्ट चार्जिंग क्षमता के कारण केवल 6 मिनट में 80% चार्ज हो सकती है।",
+   "trick": "सोडियम-आयन बैटरी = 6 मिनट में 80% चार्ज।",
+   "ans": "C"
+  },
+  {
+   "n": 341,
+   "lvl": "UG",
+   "en": "Which of the following teams won the Vijay Hazare Trophy in 2024-25?",
+   "hi": "2024-25 में, निम्नलिखित में से किस टीम ने विजय हजारे ट्रॉफी जीती?",
+   "opts": [
+    "Mumbai<br>मुंबई",
+    "Karnataka<br>कर्नाटक",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Saurashtra<br>सौराष्ट्र"
+   ],
+   "my_ans": "B",
+   "sol": "जनवरी 2025 में खेले गए विजय हजारे ट्रॉफी के फाइनल में कर्नाटक ने विदर्भ को हराकर खिताब जीता।",
+   "trick": "2024-25 विजय हजारे = कर्नाटक विजेता।",
+   "ans": "B"
+  },
+  {
+   "n": 342,
+   "lvl": "UG",
+   "en": "The Gaganyaan mission was expected to boost Safran India's revenue by ~70% in 2025, aligning with which initiative?",
+   "hi": "गगनयान मिशन से 2025 में सैफरान इंडिया (Safran India) के राजस्व में ~70% की वृद्धि होने की अपेक्षा थी, जो किस पहल के अनुरूप है?",
+   "opts": [
+    "Make in India<br>मेक इन इंडिया",
+    "Digital India<br>डिजिटल इंडिया",
+    "Skilling Bharat<br>स्किलिंग भारत",
+    "Clean energy push<br>क्लीन एनर्जी पुश"
+   ],
+   "my_ans": "A",
+   "sol": "सैफरान इंडिया द्वारा एयरोस्पेस घटकों का घरेलू निर्माण 'मेक इन इंडिया' पहल को बढ़ावा देता है, जिससे राजस्व में वृद्धि हुई।",
+   "trick": "घरेलू निर्माण = मेक इन इंडिया।",
+   "ans": "A"
+  },
+  {
+   "n": 343,
+   "lvl": "UG",
+   "en": "Which of the following is NOT one of the merged schemes under Vigyan Dhara?",
+   "hi": "निम्नलिखित में से कौन-सी योजना विज्ञान धारा के अंतर्गत विलय की गई योजनाओं में से एक नहीं है?",
+   "opts": [
+    "National Education Policy Implementation<br>राष्ट्रीय शिक्षा नीति कार्यान्वयन",
+    "Science and Technology Institutional and Human Capacity Building<br>विज्ञान और प्रौद्योगिकी संस्थागत और मानव क्षमता निर्माण",
+    "Innovation, Technology Development and Deployment<br>नवाचार, प्रौद्योगिकी विकास और परिनियोजन",
+    "Research and Development<br>अनुसंधान एवं विकास"
+   ],
+   "my_ans": "A",
+   "sol": "विज्ञान धारा योजना में मुख्य रूप से अनुसंधान, नवाचार और क्षमता निर्माण से संबंधित योजनाएं शामिल हैं; शिक्षा नीति कार्यान्वयन इसमें शामिल नहीं है।",
+   "trick": "विज्ञान धारा = R&D और नवाचार पर केंद्रित।",
+   "ans": "A"
+  }
+ ]
+}

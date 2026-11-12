@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Art & Culture",
+  "hi": "कला एवं संस्कृति",
+  "total": 46,
+  "gl": 46,
+  "ug": 0
+ },
+ "source_pages": "123-125",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which of the following is a similarity between Hindustani and Carnatic music systems?",
+   "hi": "हिंदुस्तानी और कर्नाटक संगीत पद्धतियों के बीच निम्नलिखित में से कौन-सी समानता है?",
+   "opts": [
+    "Rejection of Shruti concept<br>श्रुति अवधारणा का अस्वीकरण",
+    "Foundation on Raga and Tala<br>राग और ताल पर आधारित आधारशिला",
+    "Exclusive focus on instrumental music<br>केवल वाद्य संगीत पर ध्यान केंद्रित करना",
+    "Use of identical compositions<br>समान रचनाओं का उपयोग"
+   ],
+   "my_ans": "B",
+   "sol": "हिंदुस्तानी और कर्नाटक दोनों संगीत प्रणालियाँ राग (स्वर संरचना) और ताल (लय चक्र) पर आधारित हैं।",
+   "trick": "दोनों का आधार राग और ताल है।",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Which painting form is known for its monochromatic style using white pigment on mud walls?",
+   "hi": "कौन-सी चित्रकला शैली, मिट्टी की दीवारों पर सफेद रंग का उपयोग करके अपनी एकवर्णी शैली के लिए जानी जाती है?",
+   "opts": [
+    "Madhubani<br>मधुबनी",
+    "Pahari<br>पहाड़ी",
+    "Gond<br>गोंड",
+    "Warli<br>वर्ली"
+   ],
+   "my_ans": "D",
+   "sol": "वर्ली चित्रकला महाराष्ट्र की जनजाति द्वारा मिट्टी की दीवारों पर चावल के पेस्ट (सफेद रंग) से बनाई जाती है।",
+   "trick": "वर्ली = मिट्टी की दीवार + सफेद रंग।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Laman, in which a group of girls sing a stanza and a group of boys reply in the song which continues for hours, is a popular folk music of which state?",
+   "hi": "लामन, जिसमें लड़कियों का एक समूह एक छंद (stanza) गाता है और लड़कों का एक समूह गीत में उसका उत्तर देता है, जो घंटों तक चलता रहता है, किस राज्य का लोकप्रिय लोक संगीत है?",
+   "opts": [
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "Rajasthan<br>राजस्थान",
+    "Haryana<br>हरियाणा",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "A",
+   "sol": "लमन हिमाचल प्रदेश का एक पारंपरिक लोक संगीत है जो प्रश्न-उत्तर शैली में घंटों तक चलता है।",
+   "trick": "लमन = हिमाचल का लोक संगीत।",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Who among the following is NOT directly associated with the Prarthana Samaj?",
+   "hi": "निम्नलिखित में से कौन प्रत्यक्ष रूप से प्रार्थना समाज से संबंधित नहीं है?",
+   "opts": [
+    "Debendranath Tagore<br>देवेन्द्रनाथ टैगोर",
+    "Atmaram Pandurang<br>आत्माराम पांडुरंग",
+    "Mahadev Govind Ranade<br>महादेव गोविंद रानाडे",
+    "R.C. Bhandarkar<br>आर.सी. भंडारकर"
+   ],
+   "my_ans": "A",
+   "sol": "देवेन्द्रनाथ टैगोर ब्रह्म समाज से जुड़े थे, जबकि प्रार्थना समाज की स्थापना आत्माराम पांडुरंग ने की थी।",
+   "trick": "देवेन्द्रनाथ = ब्रह्म समाज।",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which folk music form of Uttar Pradesh is traditionally sung during the monsoon season by women?",
+   "hi": "उत्तर प्रदेश का कौन-सा लोक संगीत रूप पारंपरिक रूप से मानसून ऋतु के दौरान महिलाओं द्वारा गाया जाता है?",
+   "opts": [
+    "Bhatiali<br>भाटियाली",
+    "Maang<br>मांग",
+    "Kajri<br>कजरी",
+    "Lavani<br>लावणी"
+   ],
+   "my_ans": "C",
+   "sol": "कजरी उत्तर प्रदेश का एक अर्ध-शास्त्रीय लोक संगीत है जिसे मानसून (सावन) के दौरान गाया जाता है।",
+   "trick": "कजरी = सावन/मानसून का गीत।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Whom among the following deities is the traditional dance of Karnataka Dollu Kunitha associated with?",
+   "hi": "निम्नलिखित में से किस देवता से कर्नाटक का पारंपरिक नृत्य डोलू कुनिथा (Dollu Kunitha) संबंधित है?",
+   "opts": [
+    "Lord Ganesha<br>भगवान गणेश",
+    "Lord Vishnu<br>भगवान विष्णु",
+    "Lord Shiva<br>भगवान शिव",
+    "Lord Brahma<br>भगवान ब्रह्मा"
+   ],
+   "my_ans": "C",
+   "sol": "डोलू कुनिथा कर्नाटक का एक लोकप्रिय ढोल नृत्य है जो भगवान शिव को समर्पित है।",
+   "trick": "डोलू कुनिथा = भगवान शिव।",
+   "ans": "C"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Koli is the dance form of the Koli fishermen community of:",
+   "hi": "कोली __________ के कोली मछुआरा समुदाय की नृत्य शैली है।",
+   "opts": [
+    "Maharashtra<br>महाराष्ट्र",
+    "Rajasthan<br>राजस्थान",
+    "Bihar<br>बिहार",
+    "Odisha<br>ओडिशा"
+   ],
+   "my_ans": "A",
+   "sol": "कोली नृत्य महाराष्ट्र के तटीय क्षेत्रों में रहने वाले कोली मछुआरा समुदाय द्वारा किया जाता है।",
+   "trick": "कोली = महाराष्ट्र के मछुआरे।",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Who among the following received the Padma Vibhushan award for his contribution to Indian classical dance?",
+   "hi": "निम्नलिखित में से किसे भारतीय शास्त्रीय नृत्य में उनके योगदान के लिए पद्म विभूषण पुरस्कार से सम्मानित किया गया?",
+   "opts": [
+    "Birju Maharaj<br>बिरजू महाराज",
+    "Shovana Narayan<br>शोवाना नारायण",
+    "Sonal Mansingh<br>सोनल मानसिंह",
+    "Mallika Sarabhai<br>मल्लिका साराभाई"
+   ],
+   "my_ans": "A",
+   "sol": "बिरजू महाराज एक प्रसिद्ध कथक नर्तक थे जिन्हें 1986 में पद्म विभूषण मिला था।",
+   "trick": "बिरजू महाराज = कथक के दिग्गज।",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "In which of the following present-day places did Jyotiba Phule founded the Satyashodhak Samaj in 1873?",
+   "hi": "ज्योतिबा फुले ने 1873 में, निम्नलिखित में से किस वर्तमान स्थल पर सत्यशोधक समाज की स्थापना की थी?",
+   "opts": [
+    "Nagpur<br>नागपुर",
+    "Nashik<br>नासिक",
+    "Satara<br>सतारा",
+    "Pune<br>पुणे"
+   ],
+   "my_ans": "D",
+   "sol": "ज्योतिबा फुले ने 1873 में पुणे, महाराष्ट्र में सत्यशोधक समाज की स्थापना की थी।",
+   "trick": "सत्यशोधक = 1873, पुणे।",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Mayilattam is the traditional religious dance performed by the female dancers in Kerala and ________.",
+   "hi": "'मयिलाट्टम' केरल और ________ में महिला नर्तकियों द्वारा किया जाने वाला पारंपरिक धार्मिक नृत्य है।",
+   "opts": [
+    "Maharashtra<br>महाराष्ट्र",
+    "Karnataka<br>कर्नाटक",
+    "Telangana<br>तेलंगाना",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "D",
+   "sol": "मयिलाट्टम (मयिल = मोर) एक लोक नृत्य है जो केरल और तमिलनाडु में महिला नर्तकियों द्वारा किया जाता है।",
+   "trick": "मयिलाट्टम = मोर नृत्य (केरल/तमिलनाडु)।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Who among the following is known for his collaboration with international artists and is/was a renowned tabla maestro?",
+   "hi": "निम्नलिखित में से कौन-सा प्रसिद्ध तबला वादक अंतरराष्ट्रीय कलाकारों के साथ अपने सहयोग के लिए जाना जाता है/था?",
+   "opts": [
+    "Zakir Hussain<br>ज़ाकिर हुसैन",
+    "Sajjad Hussain<br>सज्जाद हुसैन",
+    "Hari Prasad Chaurasia<br>हरि प्रसाद चौरसिया",
+    "EM Subramaniam<br>ई. एम. सुब्रमण्यम"
+   ],
+   "my_ans": "A",
+   "sol": "ज़ाकिर हुसैन एक विश्व प्रसिद्ध तबला वादक हैं जो अंतरराष्ट्रीय स्तर पर अपने सहयोग के लिए जाने जाते हैं।",
+   "trick": "तबला = ज़ाकिर हुसैन।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "67-69",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "Which battle is regarded as the turning point that led to British political control in Bengal and opened the path for British expansion in India?",
+   "hi": "किस युद्ध को वह निर्णायक मोड़ माना जाता है जिसके कारण बंगाल में अंग्रेजों का राजनीतिक नियंत्रण स्थापित हुआ और भारत में ब्रिटिश विस्तार का मार्ग प्रशस्त हुआ?",
+   "opts": [
+    "Battle of Buxar<br>बक्सर का युद्ध",
+    "Battle of Wandiwash<br>वांडीवाश का युद्ध",
+    "Battle of Plassey<br>प्लासी का युद्ध",
+    "Third Carnatic War<br>तीसरा कर्नाटक युद्ध"
+   ],
+   "my_ans": "C",
+   "sol": "1757 के प्लासी के युद्ध में ब्रिटिश जीत ने बंगाल पर कंपनी का राजनीतिक नियंत्रण स्थापित किया और भारत में ब्रिटिश साम्राज्य की नींव रखी।",
+   "trick": "प्लासी = बंगाल की चाबी",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Which of the following samitis was founded by Ashwini Kumar Dutt in Barisal?",
+   "hi": "निम्नलिखित में से किस समिति की स्थापना अश्विनी कुमार दत्त ने बरिशाल में की थी?",
+   "opts": [
+    "Bharat Mata Samiti<br>भारत माता समिति",
+    "Swadesh Bandhab Samiti<br>स्वदेश बांधव समिति",
+    "Jugantar Samiti<br>युगांतर समिति",
+    "Anushilan Samiti<br>अनुशीलन समिति"
+   ],
+   "my_ans": "B",
+   "sol": "अश्विनी कुमार दत्त ने 1905 में बंगाल विभाजन के विरोध में बरिशाल में 'स्वदेश बांधव समिति' की स्थापना की थी।",
+   "trick": "अश्विनी = स्वदेश बांधव",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Who among the following is credited with establishing the 'Servants of India Society' to promote education and social reforms during the Indian National Movement?",
+   "hi": "निम्नलिखित में से किसे भारतीय राष्ट्रीय आंदोलन के दौरान शिक्षा और सामाजिक सुधारों को बढ़ावा देने के लिए 'सर्वेन्ट्स ऑफ इंडिया सोसायटी' की स्थापना का श्रेय दिया जाता है?",
+   "opts": [
+    "Lala Lajpat Rai<br>लाला लाजपत राय",
+    "Gopal Krishna Gokhale<br>गोपाल कृष्ण गोखले",
+    "Bipin Chandra Pal<br>बिपिन चंद्र पाल",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी"
+   ],
+   "my_ans": "B",
+   "sol": "गोपाल कृष्ण गोखले ने 1905 में पुणे में 'सर्वेन्ट्स ऑफ इंडिया सोसायटी' की स्थापना की थी।",
+   "trick": "गोखले = सर्वेंट्स ऑफ इंडिया",
+   "ans": "B"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Who authored 'The Indian War of Independence 1857'?",
+   "hi": "'1857 का स्वातंत्र्य समर (The Indian War of Independence 1857)' किसके द्वारा लिखी गई थी?",
+   "opts": [
+    "Vinayak Damodar Savarkar<br>विनायक दामोदर सावरकर",
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू",
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक"
+   ],
+   "my_ans": "A",
+   "sol": "यह पुस्तक विनायक दामोदर सावरकर द्वारा 1909 में लिखी गई थी, जिसमें 1857 के विद्रोह को प्रथम स्वतंत्रता संग्राम बताया गया।",
+   "trick": "सावरकर = 1857 का स्वातंत्र्य समर",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Which leader was a close associate of Mahatma Gandhi and carried out a salt protest in the Madras Presidency during the Civil Disobedience Movement?",
+   "hi": "कौन-सा नेता, महात्मा गांधी का करीबी सहयोगी था जिसने सविनय अवज्ञा आंदोलन के दौरान मद्रास प्रेसीडेंसी में नमक सत्याग्रह किया था?",
+   "opts": [
+    "Sarojini Naidu<br>सरोजिनी नायडू",
+    "K. Kamaraj<br>के. कामराज",
+    "Sardar Vallabhbhai Patel<br>सरदार वल्लभभाई पटेल",
+    "C. Rajagopalachari<br>सी. राजगोपालाचारी"
+   ],
+   "my_ans": "D",
+   "sol": "सी. राजगोपालाचारी ने अप्रैल 1930 में मद्रास प्रेसीडेंसी में त्रिचिनोपली से वेदारण्यम तक नमक मार्च का नेतृत्व किया था।",
+   "trick": "मद्रास = राजगोपालाचारी",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Which of the following prominent leaders led the Bardoli Satyagraha (1928)?",
+   "hi": "निम्नलिखित में से किस प्रमुख नेता ने बारदोली सत्याग्रह (1928) का नेतृत्व किया था?",
+   "opts": [
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Gopalakrishna Gokhale<br>गोपालकृष्ण गोखले",
+    "C. Rajagopalachari<br>सी. राजगोपालाचारी",
+    "Sardar Vallabhbhai Patel<br>सरदार वल्लभभाई पटेल"
+   ],
+   "my_ans": "D",
+   "sol": "बारदोली सत्याग्रह (1928) का नेतृत्व सरदार वल्लभभाई पटेल ने किया था, जिसके बाद उन्हें 'सरदार' की उपाधि मिली।",
+   "trick": "बारदोली = सरदार पटेल",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Who among the following was NOT sentenced to death in the Kakori Conspiracy Case (1925)?",
+   "hi": "निम्नलिखित में से किसे काकोरी षड्यंत्र मामले (1925) में मृत्युदंड नहीं दिया गया था?",
+   "opts": [
+    "Roshan Singh<br>रोशन सिंह",
+    "Ashfaqulla Khan<br>अशफ़ाक़ उल्लाह ख़ाँ",
+    "Rajendra Lahiri<br>राजेंद्र लाहिड़ी",
+    "Sachindra Nath Bakshi<br>शचीन्द्र नाथ बख्शी"
+   ],
+   "my_ans": "D",
+   "sol": "काकोरी कांड में शचीन्द्र नाथ बख्शी को आजीवन कारावास की सजा हुई थी, जबकि अन्य तीन को फांसी दी गई थी।",
+   "trick": "बख्शी = आजीवन कारावास",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which provision of the Indian Council Act of 1909 was most criticised for weakening the unity of the Indian nationalist movement?",
+   "hi": "1909 के भारतीय परिषद अधिनियम के किस प्रावधान की सबसे अधिक आलोचना की गई, क्योंकि इसने भारतीय राष्ट्रवादी आंदोलन की एकता को कमजोर किया था?",
+   "opts": [
+    "Expansion of legislative councils<br>विधान परिषदों का विस्तार",
+    "Introduction of executive councils in presidencies<br>प्रेसीडेंसियों में कार्यकारी परिषदों की शुरुआत",
+    "Inclusion of Indians in the Governor-General’s Council<br>गवर्नर-जनरल की परिषद में भारतीयों का समावेश",
+    "Creation of separate electorates<br>अलग-अलग निर्वाचन क्षेत्रों का निर्माण"
+   ],
+   "my_ans": "D",
+   "sol": "1909 के अधिनियम में मुसलमानों के लिए 'पृथक निर्वाचन मंडल' की व्यवस्था की गई, जिसने फूट डालो और राज करो की नीति को बढ़ावा दिया।",
+   "trick": "1909 = पृथक निर्वाचन",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Which of the following institutions was set up during the Swadeshi movement?",
+   "hi": "निम्नलिखित में से किस संस्थान की स्थापना स्वदेशी आंदोलन के दौरान की गई थी?",
+   "opts": [
+    "Bethune School<br>बेथुन स्कूल",
+    "Banaras Hindu University<br>बनारस हिंदू विश्वविद्यालय",
+    "Shantiniketan<br>शांतिनिकेतन",
+    "Bengal National College<br>बंगाल नेशनल कॉलेज"
+   ],
+   "my_ans": "D",
+   "sol": "बंगाल नेशनल कॉलेज की स्थापना 1906 में स्वदेशी आंदोलन के दौरान राष्ट्रीय शिक्षा को बढ़ावा देने के लिए की गई थी।",
+   "trick": "स्वदेशी = बंगाल नेशनल कॉलेज",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which of the following incidents prompted Mahatma Gandhi to withdraw the Non-Cooperation Movement?",
+   "hi": "निम्नलिखित में से किस घटना ने महात्मा गांधी को असहयोग आंदोलन वापस लेने के लिए प्रेरित किया?",
+   "opts": [
+    "Jallianwala Bagh Massacre<br>जलियांवाला बाग हत्याकांड",
+    "Rowlatt Act<br>रौलट एक्ट",
+    "Chauri Chaura incident<br>चौरी-चौरा घटना",
+    "Dandi March<br>दांडी मार्च"
+   ],
+   "my_ans": "C",
+   "sol": "फरवरी 1922 में चौरी-चौरा में हुई हिंसक घटना के कारण गांधीजी ने असहयोग आंदोलन को वापस ले लिया था।",
+   "trick": "चौरी-चौरा = आंदोलन वापसी",
+   "ans": "C"
+  }
+ ]
+}

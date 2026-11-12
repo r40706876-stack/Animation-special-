@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "223-225",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "27% reservation for OBCs in educational institutions was provided through which Constitutional Amendment of the Indian Constitution?",
+   "hi": "भारतीय संविधान के किस संवैधानिक संशोधन के माध्यम से शिक्षण संस्थानों में ओबीसी (OBC) के लिए 27% आरक्षण प्रदान किया गया था?",
+   "opts": [
+    "Ninety-Fourth Amendment<br>94वां संशोधन",
+    "Eighty-Sixth Amendment<br>86वां संशोधन",
+    "Ninety-Third Amendment<br>93वां संशोधन",
+    "Ninety-Seventh Amendment<br>97वां संशोधन"
+   ],
+   "my_ans": "C",
+   "sol": "93वें संविधान संशोधन अधिनियम, 2005 द्वारा अनुच्छेद 15(5) जोड़कर केंद्रीय शिक्षण संस्थानों में ओबीसी के लिए 27% आरक्षण का प्रावधान किया गया।",
+   "trick": "93वां संशोधन = ओबीसी आरक्षण (शिक्षण संस्थान)",
+   "ans": "C"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "The Twelfth Schedule of the Indian Constitution defines how many new tasks in the functional domain of the Urban Local Bodies as of March 2025?",
+   "hi": "मार्च 2025 तक की स्थिति के अनुसार, भारतीय संविधान की बारहवीं अनुसूची शहरी स्थानीय निकायों के कार्यात्मक क्षेत्र में कितने नए कार्यों को परिभाषित करती है?",
+   "opts": [
+    "19",
+    "18",
+    "21",
+    "20"
+   ],
+   "my_ans": "B",
+   "sol": "74वें संविधान संशोधन अधिनियम, 1992 द्वारा जोड़ी गई 12वीं अनुसूची में शहरी स्थानीय निकायों (नगरपालिकाओं) के लिए 18 कार्यात्मक मदें दी गई हैं।",
+   "trick": "12वीं अनुसूची = 18 कार्य (नगरपालिका)",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "When a law passed by a State Legislature clashes with a Parliamentary law on a Concurrent List subject, what is the legal outcome?",
+   "hi": "समवर्ती सूची के विषय पर जब किसी राज्य विधानमंडल द्वारा पारित विधि संसदीय विधि से वैषम्य (clash) है, तो विधिक परिणाम क्या होता है?",
+   "opts": [
+    "The Parliament is obligated to annul the state law<br>संसद, राज्य विधि को निष्प्रभावी करने के लिए बाध्य हो जाती है",
+    "The state legislation automatically overrides the central law<br>राज्य विधान स्वतः केंद्रीय विधि पर अधिभावी हो जाता है",
+    "The central law overrides the state law unless the state law has Presidential assent<br>राज्य विधि पर केंद्रीय विधि तब तक अधिभावी रहती है जब तक कि राज्य विधि को राष्ट्रपति की स्वीकृति प्राप्त नहीं हो जाती",
+    "The matter is settled through a ruling by the Supreme Court<br>इस मामले का निपटारा सर्वोच्च न्यायालय के विनिर्णय के माध्यम से किया जाता है"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 254 के अनुसार, समवर्ती सूची पर टकराव होने पर केंद्रीय कानून प्रभावी होता है, जब तक कि राज्य के कानून को राष्ट्रपति की स्वीकृति न मिली हो।",
+   "trick": "समवर्ती सूची = केंद्र का कानून प्रभावी (अपवाद: राष्ट्रपति की स्वीकृति)",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which authority is empowered under the Constitution to define the powers, privileges, and immunities of the members of each House of Parliament and their committees?",
+   "hi": "संविधान के अंतर्गत किस प्राधिकारी को संसद के प्रत्येक सदन के सदस्यों और उनकी समितियों की शक्तियों, विशेषाधिकारों और उन्मुक्तियों को परिभाषित करने की शक्ति दी गई है?",
+   "opts": [
+    "President of India<br>भारत के राष्ट्रपति",
+    "Parliament itself<br>स्वयं संसद",
+    "Supreme Court<br>सर्वोच्च न्यायालय",
+    "Speaker of the Lok Sabha<br>लोकसभा अध्यक्ष"
+   ],
+   "my_ans": "B",
+   "sol": "संविधान के अनुच्छेद 105(3) के तहत संसद को कानून बनाकर अपने सदस्यों और समितियों की शक्तियों व विशेषाधिकारों को परिभाषित करने का अधिकार है।",
+   "trick": "अनुच्छेद 105 = संसद के विशेषाधिकार",
+   "ans": "B"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Providing free legal aid under Article 39A indirectly promotes which Preamble objective?",
+   "hi": "अनुच्छेद 39A के अंतर्गत निःशुल्क विधिक सहायता प्रदान करना अप्रत्यक्ष रूप से उद्देशिका के किस उद्देश्य को बढ़ावा देता है?",
+   "opts": [
+    "Republic<br>गणराज्य",
+    "Secularism<br>धर्मनिरपेक्षता",
+    "Sovereignty<br>संप्रभुता",
+    "Justice<br>न्याय"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 39A का उद्देश्य गरीब नागरिकों को निःशुल्क कानूनी सहायता देकर न्याय तक समान पहुंच सुनिश्चित करना है, जो प्रस्तावना के 'न्याय' उद्देश्य को पूरा करता है।",
+   "trick": "39A = निःशुल्क कानूनी सहायता = न्याय",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "What does the term 'Sovereign' in the Indian Constitution's Preamble signify for India?",
+   "hi": "भारतीय संविधान की उद्देशिका में प्रयुक्त 'संप्रभु (Sovereign)' शब्द का भारत के लिए क्या अर्थ है?",
+   "opts": [
+    "Independence from external control<br>बाह्य नियंत्रण से स्वतंत्र",
+    "Religious freedom for all citizens<br>सभी नागरिकों के लिए धार्मिक स्वतंत्रता",
+    "Policy of non-alignment<br>गुटनिरपेक्षता की नीति",
+    "Power to appoint President<br>राष्ट्रपति नियुक्त करने की शक्ति"
+   ],
+   "my_ans": "A",
+   "sol": "संप्रभुता का अर्थ है कि भारत एक स्वतंत्र राष्ट्र है और वह किसी भी बाहरी शक्ति या नियंत्रण के अधीन नहीं है।",
+   "trick": "संप्रभु = बाहरी नियंत्रण से पूर्ण स्वतंत्रता",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "'Oriya’ was replaced with ‘Odia’ in the Eighth Schedule by which Constitutional Amendment?",
+   "hi": "किस संवैधानिक संशोधन द्वारा आठवीं अनुसूची में 'ओरिया' को 'ओडिया' से प्रतिस्थापित किया गया था?",
+   "opts": [
+    "95th Amendment<br>95वां संशोधन",
+    "94th Amendment<br>94वां संशोधन",
+    "96th Amendment<br>96वां संशोधन",
+    "97th Amendment<br>97वां संशोधन"
+   ],
+   "my_ans": "C",
+   "sol": "96वें संविधान संशोधन अधिनियम, 2011 के द्वारा आठवीं अनुसूची में भाषा का नाम 'ओरिया' से बदलकर 'ओडिया' किया गया।",
+   "trick": "96वां संशोधन = ओडिया नाम परिवर्तन",
+   "ans": "C"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "When did the Legal Services Authorities Act come into force?",
+   "hi": "विधिक सेवा प्राधिकरण अधिनियम कब लागू हुआ?",
+   "opts": [
+    "15 August 1947",
+    "26 January 1950",
+    "1 April 1988",
+    "9 November 1995"
+   ],
+   "my_ans": "D",
+   "sol": "विधिक सेवा प्राधिकरण अधिनियम 1987 में पारित हुआ था, लेकिन यह 9 नवंबर 1995 को प्रभावी हुआ।",
+   "trick": "9 नवंबर = विधिक सेवा दिवस",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which Article of the Indian Constitution was given practical effect through the 73rd Constitutional Amendment Act, 1992, leading to the establishment of the Panchayati Raj System in India?",
+   "hi": "भारतीय संविधान के किस अनुच्छेद को 73वें संवैधानिक संशोधन अधिनियम, 1992 के माध्यम से व्यावहारिक प्रभाव दिया गया था, जिससे भारत में पंचायती राज प्रणाली की स्थापना हुई?",
+   "opts": [
+    "Article 56<br>अनुच्छेद 56",
+    "Article 48<br>अनुच्छेद 48",
+    "Article 38<br>अनुच्छेद 38",
+    "Article 40<br>अनुच्छेद 40"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 40 राज्य को ग्राम पंचायतों के गठन का निर्देश देता है, जिसे 73वें संशोधन द्वारा संवैधानिक दर्जा देकर व्यावहारिक रूप दिया गया।",
+   "trick": "अनुच्छेद 40 = ग्राम पंचायत",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "According to the Gandhian principles incorporated in the Directive Principles of State Policy, the State shall endeavor to promote:",
+   "hi": "राज्य के नीति निदेशक तत्वों में शामिल गांधीवादी सिद्धांतों के अनुसार, राज्य को निम्नलिखित में से किसे बढ़ावा देने का प्रयास करना चाहिए?",
+   "opts": [
+    "Uniform Civil Code<br>समान नागरिक संहिता",
+    "International peace<br>अंतर्राष्ट्रीय शांति",
+    "Separation of judiciary<br>न्यायपालिका का पृथक्करण",
+    "Cottage industries<br>कुटीर उद्योग"
+   ],
+   "my_ans": "D",
+   "sol": "गांधीवादी सिद्धांतों के तहत अनुच्छेद 43 में राज्य को ग्रामीण क्षेत्रों में व्यक्तिगत या सहकारी आधार पर कुटीर उद्योगों को बढ़ावा देने का निर्देश दिया गया है।",
+   "trick": "गांधीवादी सिद्धांत = कुटीर उद्योग, पंचायत, मद्य निषेध",
+   "ans": "D"
+  }
+ ]
+}

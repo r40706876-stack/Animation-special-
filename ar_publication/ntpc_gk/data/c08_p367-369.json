@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "367-369",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "The Foreign Exchange Management Act (FEMA) was enacted in 1999 to replace the earlier FERA law. In which year did FEMA officially come into force?",
+   "hi": "विदेशी मुद्रा प्रबंध अधिनियम (FEMA) को पूर्ववर्ती फेरा (FERA) कानून को प्रतिस्थापित करने के लिए 1999 में अधिनियमित किया गया था। FEMA आधिकारिक रूप से किस वर्ष लागू हुआ?",
+   "opts": [
+    "2000",
+    "1999",
+    "1997",
+    "2002"
+   ],
+   "my_ans": "A",
+   "sol": "FEMA अधिनियम 1999 में पारित हुआ था, लेकिन यह आधिकारिक रूप से 1 जून 2000 को लागू हुआ।",
+   "trick": "FEMA 1999 में बना, 2000 में लागू हुआ।",
+   "ans": "A"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "Which statement best explains why transport and communication infrastructure are vital for India’s economic growth?",
+   "hi": "कौन-सा कथन सबसे अच्छी तरह से यह दर्शाता है कि भारत की आर्थिक वृद्धि के लिए परिवहन और संचार अवसंरचना क्यों महत्वपूर्ण है?",
+   "opts": [
+    "It primarily serves elite passenger travel without influencing economic output<br>यह मुख्य रूप से विशिष्ट यात्रियों की यात्रा को सेवा प्रदान करता है, लेकिन आर्थिक उत्पादन को प्रभावित नहीं करता है।",
+    "It links production centres with markets, enhancing trade and economic activity<br>यह उत्पादन केंद्रों को बाजारों से जोड़ता है, जिससे व्यापार और आर्थिक गतिविधि को बढ़ावा मिलता है।",
+    "It limits industrial expansion by diverting funds from core economic sectors<br>यह प्रमुख आर्थिक क्षेत्रों से धन को दूसरी जगह लगाकर औद्योगिक विस्तार को सीमित करता है।",
+    "It increases regional isolation by reducing interaction among different areas<br>यह विभिन्न क्षेत्रों के बीच संपर्क को कम करके क्षेत्रीय अलगाव को बढ़ाता है।"
+   ],
+   "my_ans": "B",
+   "sol": "परिवहन और संचार बुनियादी ढांचा उत्पादन केंद्रों को बाजारों से जोड़ता है, जिससे वस्तुओं और सेवाओं का आदान-प्रदान सुगम होता है और आर्थिक विकास को गति मिलती है।",
+   "trick": "कनेक्टिविटी = व्यापार और विकास।",
+   "ans": "B"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "Which approach is crucial for empowering rural women, leading to community development?",
+   "hi": "ग्रामीण महिलाओं को सशक्त बनाने, सामुदायिक विकास की ओर ले जाने के लिए कौन-सा दृष्टिकोण महत्वपूर्ण है?",
+   "opts": [
+    "Focussing solely on men's employment programmes<br>केवल पुरुषों के रोजगार कार्यक्रमों पर ध्यान केंद्रित करना",
+    "Promoting gender-specific vocational training and education<br>लिंग-विशिष्ट व्यावसायिक प्रशिक्षण और शिक्षा को बढ़ावा देना",
+    "Restricting women's roles to traditional household duties<br>महिलाओं की भूमिका को पारंपरिक घरेलू कर्तव्यों तक सीमित रखना",
+    "Limiting educational opportunities to urban centres<br>शैक्षणिक अवसरों को शहरी केंद्रों तक सीमित करना"
+   ],
+   "my_ans": "B",
+   "sol": "महिलाओं को कौशल और शिक्षा प्रदान करने से वे आर्थिक रूप से स्वतंत्र होती हैं, जिससे उनके परिवार और समुदाय का विकास होता है।",
+   "trick": "कौशल और शिक्षा = महिला सशक्तिकरण।",
+   "ans": "B"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "India became a member of the World Trade Organization (WTO) to boost global trade participation. In which year did India join the WTO?",
+   "hi": "वैश्विक व्यापार सहभागिता को बढ़ावा देने के लिए भारत, विश्व व्यापार संगठन (WTO) का सदस्य बना। भारत किस वर्ष WTO में शामिल हुआ था?",
+   "opts": [
+    "1993",
+    "2001",
+    "1995",
+    "1991"
+   ],
+   "my_ans": "C",
+   "sol": "विश्व व्यापार संगठन (WTO) की स्थापना 1 जनवरी 1995 को हुई थी और भारत इसके संस्थापक सदस्यों में से एक है।",
+   "trick": "WTO = 1995 (GATT का उत्तराधिकारी)।",
+   "ans": "C"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "The Atal Pension Yojana, introduced as a social security measure in the post-1991 reform period, is available for individuals in which age group?",
+   "hi": "1991 के बाद की सुधार अवधि में सामाजिक सुरक्षा उपाय के रूप में शुरू की गई अटल पेंशन योजना किस आयु वर्ग के व्यक्तियों के लिए उपलब्ध है?",
+   "opts": [
+    "18-60 years<br>18-60 वर्ष",
+    "21-60 years<br>21-60 वर्ष",
+    "21-50 years<br>21-50 वर्ष",
+    "18-40 years<br>18-40 वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "अटल पेंशन योजना (APY) में शामिल होने के लिए न्यूनतम आयु 18 वर्ष और अधिकतम आयु 40 वर्ष निर्धारित की गई है।",
+   "trick": "APY = 18 से 40 वर्ष।",
+   "ans": "D"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "Which of the following is NOT an objective of the Pradhan Mantri Fasal Bima Yojana (PMFBY)?",
+   "hi": "निम्नलिखित में से कौन-सा, प्रधानमंत्री फसल बीमा योजना (PMFBY) का एक उद्देश्य नहीं है?",
+   "opts": [
+    "Stabilising farmers’ income and ensuring continuation in farming activities<br>किसानों की आय को स्थिर करना और कृषि गतिविधियों की निरंतरता सुनिश्चित करना",
+    "Providing minimum support price for agricultural produce to farmers<br>किसानों को कृषि उत्पादों के लिए न्यूनतम समर्थन मूल्य प्रदान करना",
+    "Providing financial support to farmers facing crop loss due to unforeseen events<br>अप्रत्याशित घटनाओं के कारण फसल के नुकसान का सामना कर रहे किसानों को वित्तीय सहायता प्रदान करना",
+    "Promoting adoption of modern and innovative agricultural practices by farmers<br>किसानों द्वारा आधुनिक और अभिनव कृषि पद्धतियों को अपनाने को बढ़ावा देना"
+   ],
+   "my_ans": "B",
+   "sol": "न्यूनतम समर्थन मूल्य (MSP) एक अलग सरकारी नीति है, यह फसल बीमा योजना (PMFBY) का हिस्सा नहीं है।",
+   "trick": "PMFBY = बीमा, MSP = मूल्य समर्थन।",
+   "ans": "B"
+  },
+  {
+   "n": 133,
+   "lvl": "UG",
+   "en": "Government of India created the Rural Infrastructure Development Fund (RIDF) in NABARD in 1995-96, with an initial corpus of:",
+   "hi": "भारत सरकार ने 1995-96 में नाबार्ड (NABARD) में ग्रामीण अवसंरचना विकास कोष (RIDF) की स्थापना की थी, जिसका प्रारंभिक कॉर्पस __________ था।",
+   "opts": [
+    "₹2,000 crore<br>₹2,000 करोड़",
+    "₹4,500 crore<br>₹4,500 करोड़",
+    "₹5,000 crore<br>₹5,000 करोड़",
+    "₹3,000 crore<br>₹3,000 करोड़"
+   ],
+   "my_ans": "A",
+   "sol": "ग्रामीण बुनियादी ढांचे के वित्तपोषण के लिए 1995-96 में नाबार्ड के तहत RIDF की स्थापना ₹2,000 करोड़ के प्रारंभिक कोष के साथ की गई थी।",
+   "trick": "RIDF = 1995-96, ₹2,000 करोड़।",
+   "ans": "A"
+  },
+  {
+   "n": 134,
+   "lvl": "UG",
+   "en": "In which year did FEMA replace FERA?",
+   "hi": "FEMA ने FERA को किस वर्ष प्रतिस्थापित किया था?",
+   "opts": [
+    "1998",
+    "1994",
+    "1990",
+    "1999"
+   ],
+   "my_ans": "D",
+   "sol": "विदेशी मुद्रा प्रबंधन अधिनियम (FEMA) को 1999 में अधिनियमित किया गया था, जिसने पुराने FERA कानून की जगह ली।",
+   "trick": "FEMA = 1999 (FERA को हटाया)।",
+   "ans": "D"
+  },
+  {
+   "n": 135,
+   "lvl": "UG",
+   "en": "Which of the following is no more a stock exchange in the country?",
+   "hi": "निम्नलिखित में से कौन-सा अब देश में स्टॉक एक्सचेंज नहीं है?",
+   "opts": [
+    "Multi Commodity Exchange of India Ltd.",
+    "National Commodity & Derivatives Exchange Ltd.",
+    "National Stock Exchange of India Ltd.",
+    "Delhi Stock Exchange Ltd."
+   ],
+   "my_ans": "D",
+   "sol": "सेबी (SEBI) ने 2015 में दिल्ली स्टॉक एक्सचेंज (DSE) की मान्यता रद्द कर दी थी क्योंकि यह नियामक मानदंडों का पालन नहीं कर रहा था।",
+   "trick": "DSE अब बंद हो चुका है।",
+   "ans": "D"
+  },
+  {
+   "n": 136,
+   "lvl": "UG",
+   "en": "What is a key feature of globalisation?",
+   "hi": "वैश्वीकरण की मुख्य विशेषता क्या है?",
+   "opts": [
+    "Isolation of domestic markets<br>घरेलू बाजारों का अलगाव",
+    "Restriction on foreign investment<br>विदेशी निवेश पर प्रतिबंध",
+    "Increased trade barriers<br>व्यापार बाधाओं में वृद्धि",
+    "Integration of world economies<br>विश्व अर्थव्यवस्थाओं का एकीकरण"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण का अर्थ है विभिन्न देशों की अर्थव्यवस्थाओं का आपस में जुड़ना, जिससे व्यापार, निवेश और तकनीक का प्रवाह आसान हो जाता है।",
+   "trick": "वैश्वीकरण = दुनिया का एक बाजार बनना।",
+   "ans": "D"
+  }
+ ]
+}

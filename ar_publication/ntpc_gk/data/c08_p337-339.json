@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "337-339",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "During recession, which type of Fiscal Policy should be used?",
+   "hi": "मंदी के दौरान, किस प्रकार की राजकोषीय नीति का उपयोग किया जाना चाहिए?",
+   "opts": [
+    "Expansionary Fiscal Policy<br>विस्तारवादी राजकोषीय नीति",
+    "Neutral Fiscal Policy<br>तटस्थ राजकोषीय नीति",
+    "Stable Fiscal Policy<br>स्थिर राजकोषीय नीति",
+    "Contractionary Fiscal Policy<br>संकुचनकारी राजकोषीय नीति"
+   ],
+   "my_ans": "A",
+   "sol": "मंदी के समय अर्थव्यवस्था को बढ़ावा देने के लिए विस्तारवादी राजकोषीय नीति अपनाई जाती है, जिसमें सरकारी खर्च बढ़ाया जाता है और करों में कटौती की जाती है।",
+   "trick": "मंदी = विस्तार (Expansion) करो",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "What economic system was adopted by India post-1947 to balance the development of different sectors?",
+   "hi": "भारत ने 1947 के बाद विभिन्न क्षेत्रकों के विकास को संतुलित करने के लिए कौन-सी आर्थिक प्रणाली अपनाई थी?",
+   "opts": [
+    "Pure capitalism<br>शुद्ध पूँजीवाद",
+    "Mixed economy<br>मिश्रित अर्थव्यवस्था",
+    "Pure socialism<br>शुद्ध समाजवाद",
+    "Command economy<br>निर्देशित अर्थव्यवस्था"
+   ],
+   "my_ans": "B",
+   "sol": "भारत ने 1947 के बाद मिश्रित अर्थव्यवस्था को अपनाया, जिसमें सार्वजनिक और निजी दोनों क्षेत्रों का सह-अस्तित्व होता है।",
+   "trick": "भारत = मिश्रित (Mixed) अर्थव्यवस्था",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "What is rural development concerned with?",
+   "hi": "ग्रामीण विकास किन विषयों से संबंधित है?",
+   "opts": [
+    "Development of metropolitan areas<br>महानगर क्षेत्रों का विकास",
+    "Expansion of industrial zones<br>औद्योगिक क्षेत्रों का विस्तार",
+    "Economic growth and social justice<br>आर्थिक विकास और सामाजिक न्याय",
+    "Improvement of foreign trade relations<br>विदेशी व्यापार संबंधों में सुधार"
+   ],
+   "my_ans": "C",
+   "sol": "ग्रामीण विकास का मुख्य उद्देश्य कृषि और बुनियादी ढांचे के माध्यम से आर्थिक विकास करना और शिक्षा व स्वास्थ्य के जरिए सामाजिक न्याय सुनिश्चित करना है।",
+   "trick": "ग्रामीण विकास = आर्थिक विकास + सामाजिक न्याय",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "The National Small Industries Corporation was established in India in _____.",
+   "hi": "भारत में राष्ट्रीय लघु उद्योग निगम की स्थापना _____ में हुई थी।",
+   "opts": [
+    "1954",
+    "1975",
+    "1982",
+    "1955"
+   ],
+   "my_ans": "D",
+   "sol": "राष्ट्रीय लघु उद्योग निगम (NSIC) की स्थापना 1955 में हुई थी, जिसका उद्देश्य भारत में लघु उद्योगों को बढ़ावा देना और सहायता प्रदान करना है।",
+   "trick": "NSIC = 1955",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which central government scheme is primarily aimed at providing road connectivity to rural and remote areas in India?",
+   "hi": "केंद्र सरकार की किस योजना का मुख्य उद्देश्य भारत में ग्रामीण और दूरदराज के क्षेत्रों को सड़क संपर्क प्रदान करना है?",
+   "opts": [
+    "Rural Infrastructure Development Fund<br>ग्रामीण अवसंरचना विकास कोष",
+    "Setu Bharatam Scheme<br>सेतु भारतम योजना",
+    "Bharatmala Pariyojana<br>भारतमाला परियोजना",
+    "Pradhan Mantri Gram Sadak Yojana<br>प्रधानमंत्री ग्राम सड़क योजना"
+   ],
+   "my_ans": "D",
+   "sol": "प्रधानमंत्री ग्राम सड़क योजना (PMGSY) की शुरुआत 2000 में हुई थी, जिसका मुख्य उद्देश्य ग्रामीण क्षेत्रों की बस्तियों को बारहमासी सड़क संपर्क प्रदान करना है।",
+   "trick": "ग्रामीण सड़क = PMGSY",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which of the following is a limitation of increasing government expenditure to encourage economic growth in the Indian economy?",
+   "hi": "भारतीय अर्थव्यवस्था में आर्थिक विकास को बढ़ावा देने के लिए सरकारी व्यय बढ़ाने में निम्नलिखित में से कौन-सी सीमा है?",
+   "opts": [
+    "A substantial increase in social capital development<br>सामाजिक पूंजी विकास में उग्रता से वृद्धि करना",
+    "A substantial increase in foreign trade<br>विदेशी व्यापार में उग्रता से वृद्धि करना",
+    "Possibility of increased inflation<br>मुद्रास्फीति में वृद्धि की संभावना",
+    "Creation of a tendency toward stagflation<br>स्फीति-गतिरोध की प्रवृत्तियां बनाना"
+   ],
+   "my_ans": "C",
+   "sol": "सरकारी खर्च बढ़ाने से मांग बढ़ती है, और यदि यह उत्पादन क्षमता से अधिक हो जाए, तो मांग-जनित मुद्रास्फीति (Inflation) होने का खतरा रहता है।",
+   "trick": "ज्यादा खर्च = ज्यादा महंगाई (Inflation)",
+   "ans": "C"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "The Economic Survey 2024–25 states that India’s foreign exchange reserves were adequate to cover approximately what percentage of external debt as of December 2024?",
+   "hi": "आर्थिक सर्वेक्षण 2024–25 में कहा गया है कि भारत की विदेशी मुद्रा आरक्षित निधि दिसंबर 2024 तक की स्थिति के अनुसार विदेशी ऋण के लगभग कितने प्रतिशत को पूरा करने के लिए पर्याप्त थी?",
+   "opts": [
+    "About 75%",
+    "About 60%",
+    "More than 110%",
+    "About 90%"
+   ],
+   "my_ans": "D",
+   "sol": "आर्थिक सर्वेक्षण 2024-25 के अनुसार, दिसंबर 2024 तक भारत का विदेशी मुद्रा भंडार कुल विदेशी ऋण का लगभग 90% कवर करने के लिए पर्याप्त था।",
+   "trick": "विदेशी ऋण कवर = 90%",
+   "ans": "D"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "In a country with high informal employment and low social protection coverage, which policy is likely to be the most effective in both poverty alleviation and employment formalization?",
+   "hi": "अनौपचारिक रोजगार की उच्च दर और सामाजिक सुरक्षा कवरेज की निम्न दर वाले देश में, गरीबी उन्मूलन और रोजगार के औपचारिकीकरण दोनों में कौन-सी नीति सबसे प्रभावी होने की संभावना है?",
+   "opts": [
+    "Expand social insurance to informal sector<br>अनौपचारिक क्षेत्र में सामाजिक बीमा का विस्तार",
+    "Deregulate labor laws<br>नियंत्रण मुक्त श्रम कानून",
+    "Targeted food subsidies<br>लक्षित खाद्य सब्सिडी",
+    "Universal basic income<br>सार्वभौमिक मूल आय"
+   ],
+   "my_ans": "A",
+   "sol": "अनौपचारिक क्षेत्र में सामाजिक बीमा का विस्तार करने से श्रमिकों को सुरक्षा मिलती है और उन्हें पंजीकरण के लिए प्रोत्साहन मिलता है, जिससे रोजगार का औपचारिकीकरण होता है।",
+   "trick": "सामाजिक बीमा = सुरक्षा + औपचारिकीकरण",
+   "ans": "A"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "What is the inflation target set by the Government of India under the Monetary Policy Committee framework until April 2026?",
+   "hi": "भारत सरकार द्वारा मौद्रिक नीति समिति के ढांचे के अंतर्गत अप्रैल 2026 तक मुद्रास्फीति का लक्ष्य कितना निर्धारित किया गया है?",
+   "opts": [
+    "3% with a tolerance of ±1%<br>±1% की सहिष्णुता के साथ 3%",
+    "4% with a tolerance of ±2%<br>±2% की सहिष्णुता के साथ 4%",
+    "5% with a tolerance of ±2%<br>±2% की सहिष्णुता के साथ 5%",
+    "6% with no specified tolerance<br>बिना किसी विनिर्दिष्ट सहिष्णुता के 6%"
+   ],
+   "my_ans": "B",
+   "sol": "मौद्रिक नीति समिति (MPC) के तहत भारत का मुद्रास्फीति लक्ष्य 4% है, जिसमें ±2% की सहनशीलता सीमा (2% से 6%) निर्धारित की गई है।",
+   "trick": "लक्ष्य = 4% (±2%)",
+   "ans": "B"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "Which of the following is the outcome of Globalization in India's economy?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत की अर्थव्यवस्था में वैश्वीकरण का परिणाम है?",
+   "opts": [
+    "Privatisation<br>निजीकरण",
+    "Nationalisation<br>राष्ट्रीयकरण",
+    "Liberalisation<br>उदारीकरण",
+    "Outsourcing<br>बहिःस्रोत"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण के कारण भारत में आउटसोर्सिंग (Outsourcing) का काफी विस्तार हुआ है, जहाँ विदेशी कंपनियां अपने कार्य भारत में करवाती हैं।",
+   "trick": "वैश्वीकरण = आउटसोर्सिंग",
+   "ans": "D"
+  }
+ ]
+}

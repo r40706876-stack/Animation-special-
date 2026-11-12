@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "346-348",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "In the context of India's pre-1991 economic structure, which of the following best characterizes the contradiction between sectoral GDP contribution and employment absorption?",
+   "hi": "भारत की 1991 से पूर्व की आर्थिक संरचना के संदर्भ में निम्नलिखित में से कौन-सा, क्षेत्रीय GDP योगदान और रोजगार समावेश के बीच विरोधाभास को सर्वोत्तम रूप से दर्शाता है?",
+   "opts": [
+    "Agriculture contributed declining GDP share but absorbed majority employment<br>GDP की गिरावट में कृषि का योगदान रहा, लेकिन इसने अधिकांश रोजगार का समावेश किया।",
+    "Industry contributed the most to GDP and employment<br>GDP और रोजगार में सबसे अधिक योगदान उद्योग का था।",
+    "Manufacturing became the primary employment generator<br>विनिर्माण क्षेत्र, रोजगार का प्रमुख स्रोत बन गया।",
+    "Services led GDP growth and employment generation equally<br>सेवाओं ने GDP वृद्धि और रोजगार सृजन में समान रूप से योगदान दिया।"
+   ],
+   "my_ans": "A",
+   "sol": "1991 से पहले भारत में कृषि का GDP में हिस्सा लगातार घट रहा था, लेकिन अधिकांश कार्यबल (60-70%) अभी भी कृषि पर निर्भर था। इसे 'संरचनात्मक असंतुलन' कहा जाता है।",
+   "trick": "कृषि का घटता GDP हिस्सा, पर अधिकांश रोजगार।",
+   "ans": "A"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "The primary goal of fiscal policy reforms post-1991 was to ____________.",
+   "hi": "1991 के बाद राजकोषीय नीति सुधारों का प्राथमिक लक्ष्य ___________ था।",
+   "opts": [
+    "Ban private banks<br>निजी बैंकों पर प्रतिबंध लगाना",
+    "Increase budget deficits<br>बजटीय घाटे को बढ़ाना",
+    "Stop tax collection<br>कर संग्रह को रोकना",
+    "Reduce fiscal deficit and inflation<br>राजकोषीय घाटे और मुद्रास्फीति को कम करना"
+   ],
+   "my_ans": "D",
+   "sol": "1991 के आर्थिक सुधारों का मुख्य उद्देश्य उच्च राजकोषीय घाटे और बढ़ती मुद्रास्फीति को नियंत्रित करना था।",
+   "trick": "राजकोषीय सुधार = घाटा और महंगाई कम करना।",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Which of the following industrial financing institutions in India was formed in 1990?",
+   "hi": "भारत में निम्नलिखित में से कौन-सा औद्योगिक वित्तपोषण संस्थान 1990 में स्थापित किया गया था?",
+   "opts": [
+    "Industrial Finance Corporation of India (IFCI)<br>भारतीय औद्योगिक वित्त निगम (IFCI)",
+    "Small Industries Development Bank of India (SIDBI)<br>भारतीय लघु उद्योग विकास बैंक (SIDBI)",
+    "Industrial Credit and Investment Corporation of India (ICICI)<br>इंडस्ट्रियल क्रेडिट एंड इन्वेस्टमेंट कॉरपोरेशन ऑफ इंडिया (ICICI)",
+    "Industrial Development Bank of India (IDBI)<br>इंडस्ट्रीज डेवलपमेंट बैंक ऑफ इंडिया (IDBI)"
+   ],
+   "my_ans": "B",
+   "sol": "SIDBI की स्थापना 2 अप्रैल 1990 को लघु उद्योगों के वित्तपोषण और विकास के लिए की गई थी।",
+   "trick": "SIDBI = 1990 (लघु उद्योग विकास बैंक)।",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "In September 2025, which State Government launched a scheme 'KFC Machinery Loan Scheme for MSMEs' offering loans up to ₹5 crore (without collateral) under certain conditions?",
+   "hi": "सितंबर 2025 में, किस राज्य सरकार ने कुछ शर्तों के अंतर्गत ₹5 करोड़ तक का ऋण (बिना किसी संपाश्विक) देने के लिए 'एम.एस.एम.ई. (MSMEs) के लिए KFC मशीनरी लोन स्कीम' योजना शुरू की थी?",
+   "opts": [
+    "Assam<br>असम",
+    "Kerala<br>केरल",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "B",
+   "sol": "केरल सरकार ने सितंबर 2025 में MSMEs के लिए बिना कोलेटरल (संपाश्विक) के ₹5 करोड़ तक का ऋण देने हेतु यह योजना शुरू की।",
+   "trick": "KFC मशीनरी लोन = केरल।",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "FDI in Multi Brand Retail Trade is permitted up to what limit?",
+   "hi": "मल्टी ब्रांड रिटेल ट्रेड में FDI की अनुमत सीमा क्या है?",
+   "opts": [
+    "74%",
+    "49%",
+    "51%",
+    "100%"
+   ],
+   "my_ans": "C",
+   "sol": "भारत में मल्टी-ब्रांड खुदरा व्यापार में सरकारी अनुमोदन मार्ग के तहत 51% तक FDI की अनुमति है।",
+   "trick": "मल्टी ब्रांड = 51%।",
+   "ans": "C"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "Which of the following sectors observed a negative growth rate in Real GVA (Gross Value Added) during Q1 of FY 2025-26 as per the report published by NSO and MoSPI ?",
+   "hi": "NSO और MoSPI द्वारा प्रकाशित रिपोर्ट के अनुसार, निम्नलिखित में से किस क्षेत्र में वित्त वर्ष 2025-26 की पहली तिमाही के दौरान वास्तविक सकल मूल्य वर्धित (GVA) में नकारात्मक वृद्धि दर देखी गई?",
+   "opts": [
+    "Construction<br>निर्माण क्षेत्र",
+    "Tertiary Sector<br>तृतीयक क्षेत्र",
+    "Agriculture and Allied<br>कृषि और संबद्ध क्षेत्र",
+    "Mining & Quarrying<br>खनन और उत्खनन क्षेत्र"
+   ],
+   "my_ans": "D",
+   "sol": "NSO की रिपोर्ट के अनुसार, मांग की चुनौतियों के कारण खनन और उत्खनन क्षेत्र में नकारात्मक वृद्धि दर्ज की गई।",
+   "trick": "खनन = नकारात्मक वृद्धि।",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "In the Union Budget of India 2025–26 (presented on 1 February 2025), the Government proposed raising the FDI cap in the insurance sector from 74% to what level (subject to specified conditions)?",
+   "hi": "भारत के केंद्रीय बजट 2025-26 (1 फरवरी 2025 को प्रस्तुत) में, सरकार ने बीमा क्षेत्र में प्रत्यक्ष विदेशी निवेश (FDI) की सीमा को 74% से बढ़ाकर किस स्तर (निर्दिष्ट शर्तों के अधीन) तक करने का प्रस्ताव रखा?",
+   "opts": [
+    "49%",
+    "100%",
+    "80%",
+    "90%"
+   ],
+   "my_ans": "B",
+   "sol": "बजट 2025-26 में बीमा क्षेत्र में FDI की सीमा को 74% से बढ़ाकर 100% कर दिया गया है।",
+   "trick": "बीमा FDI = 100%।",
+   "ans": "B"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "What was a major reason for the slowdown in Total Factor Productivity (TFP) growth in the manufacturing sector, as found by Goldar and Kumari?",
+   "hi": "गोल्डर और कुमारी द्वारा किए गए अध्ययन के अनुसार, विनिर्माण क्षेत्र में कुल साधन उत्पादकता (TFP) वृद्धि में कार्यमंदन का प्रमुख कारण क्या था?",
+   "opts": [
+    "Deterioration in capacity utilisation<br>क्षमता उपयोग में गिरावट",
+    "Over-reliance on foreign capital<br>विदेशी पूंजी पर अत्यधिक निर्भरता",
+    "Shortage of skilled labour<br>कुशल श्रमिकों की कमी",
+    "Excessive regulation on exports<br>निर्यात पर अत्यधिक नियमन"
+   ],
+   "my_ans": "A",
+   "sol": "गोल्डर और कुमारी के शोध के अनुसार, विनिर्माण में क्षमता का कम उपयोग (underutilization) TFP वृद्धि में मंदी का मुख्य कारण था।",
+   "trick": "TFP मंदी = क्षमता उपयोग में गिरावट।",
+   "ans": "A"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Which index does NITI Aayog use to analyze poverty in India by considering multiple factors like education, health, and living standards?",
+   "hi": "नीति आयोग भारत में गरीबी का विश्लेषण करने के लिए किस सूचकांक का उपयोग करता है, जिसमें शिक्षा, स्वास्थ्य और जीवन स्तर जैसे कई कारकों पर विचार किया जाता है?",
+   "opts": [
+    "Income Poverty Index (IPI)<br>आय गरीबी सूचकांक (IPI)",
+    "Human Development Index (HDI)<br>मानव विकास सूचकांक (HDI)",
+    "Multidimensional Poverty Index (MPI)<br>बहुआयामी गरीबी सूचकांक (MPI)",
+    "Consumer Price Index (CPI)<br>उपभोक्ता मूल्य सूचकांक (CPI)"
+   ],
+   "my_ans": "C",
+   "sol": "नीति आयोग बहुआयामी गरीबी सूचकांक (MPI) का उपयोग करता है, जो स्वास्थ्य, शिक्षा और जीवन स्तर के संकेतकों पर आधारित है।",
+   "trick": "बहुआयामी = शिक्षा + स्वास्थ्य + जीवन स्तर।",
+   "ans": "C"
+  }
+ ]
+}

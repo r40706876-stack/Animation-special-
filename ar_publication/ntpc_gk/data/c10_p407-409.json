@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "407-409",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which of the following materials is a good conductor of electricity?",
+   "hi": "निम्नलिखित में से कौन-सा पदार्थ विद्युत का सुचालक है?",
+   "opts": [
+    "Copper<br>तांबा",
+    "Rubber<br>रबर",
+    "Wood<br>लकड़ी",
+    "Glass<br>कांच"
+   ],
+   "my_ans": "A",
+   "sol": "तांबा (Copper) एक धातु है जिसमें मुक्त इलेक्ट्रॉन प्रचुर मात्रा में होते हैं, जो विद्युत धारा को आसानी से प्रवाहित होने देते हैं।",
+   "trick": "धातुएं विद्युत की सुचालक होती हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "While cooking, if the exterior of the cooking vessel becomes blackened, what does it indicate?",
+   "hi": "खाना पकाते समय, यदि खाना पकाने वाले बर्तन का बाहरी हिस्सा काला हो जाता है, तो यह क्या दर्शाता है?",
+   "opts": [
+    "The fuel is fully burned.<br>ईंधन पूरी तरह जल गया है।",
+    "The combustion of the fuel is incomplete.<br>ईंधन का दहन अधूरा है।",
+    "The fuel contains moisture.<br>ईंधन में नमी है।",
+    "The food inside is undercooked.<br>अंदर का भोजन कम पका है।"
+   ],
+   "my_ans": "B",
+   "sol": "बर्तन का काला होना कार्बन के जमाव (कालिख) के कारण होता है, जो ईंधन के अपूर्ण दहन (अपर्याप्त ऑक्सीजन) को दर्शाता है।",
+   "trick": "कालिख = अपूर्ण दहन",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which of the following thickens sauces and soups due to its ability to absorb water and form a gel?",
+   "hi": "निम्नलिखित में से कौन-सा, जल को अवशोषित करके जेल बनाने की क्षमता के कारण सॉस और सूप को गाढ़ा करता है?",
+   "opts": [
+    "Salt<br>लवण (Salt)",
+    "Sugar<br>चीनी (Sugar)",
+    "Starch<br>मंड (Starch)",
+    "Oil<br>तेल (Oil)"
+   ],
+   "my_ans": "C",
+   "sol": "स्टार्च एक पॉलीसेकेराइड है जो गर्म करने पर पानी सोखकर फूल जाता है और जेल बनाकर गाढ़ापन प्रदान करता है।",
+   "trick": "स्टार्च = गाढ़ा करने वाला एजेंट",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following elements in the periodic table is NOT classified as a metal?",
+   "hi": "आवर्त सारणी में निम्नलिखित में से किस तत्व को धातु के रूप में वर्गीकृत नहीं किया जाता है?",
+   "opts": [
+    "Potassium<br>पोटैशियम",
+    "Calcium<br>कैल्शियम",
+    "Sulfur<br>सल्फर",
+    "Sodium<br>सोडियम"
+   ],
+   "my_ans": "C",
+   "sol": "सल्फर (S) एक अधातु है, जबकि पोटैशियम, कैल्शियम और सोडियम धातुएं हैं।",
+   "trick": "सल्फर = अधातु (Non-metal)",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Which of the following scientists gave the concept of atomic mass?",
+   "hi": "निम्नलिखित में से किस वैज्ञानिक ने परमाण्विक द्रव्यमान की अवधारणा दी?",
+   "opts": [
+    "J.J. Thomson<br>जे. जे. थॉमसन",
+    "Niels Bohr<br>नील्स बोहर",
+    "Ernest Rutherford<br>अर्नेस्ट रदरफोर्ड",
+    "John Dalton<br>जॉन डाल्टन"
+   ],
+   "my_ans": "D",
+   "sol": "जॉन डाल्टन ने 1808 में अपने परमाणु सिद्धांत के माध्यम से परमाणु द्रव्यमान की अवधारणा प्रस्तुत की थी।",
+   "trick": "डाल्टन = परमाणु सिद्धांत",
+   "ans": "D"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Boyle’s law describes the relationship between ___________.",
+   "hi": "बॉयल का नियम (Boyle’s law) ___________ के बीच संबंध का वर्णन करता है।",
+   "opts": [
+    "Volume And Pressure<br>आयतन और दाब",
+    "Energy And Volume<br>ऊर्जा और आयतन",
+    "Volume And Temperature<br>आयतन और तापमान",
+    "Pressure And Temperature<br>दाब और तापमान"
+   ],
+   "my_ans": "A",
+   "sol": "बॉयल के नियम के अनुसार, स्थिर तापमान पर गैस का दाब उसके आयतन के व्युत्क्रमानुपाती होता है (P ∝ 1/V)।",
+   "trick": "PV = नियतांक (स्थिर तापमान पर)",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The acid present in the atmosphere of Venus is:",
+   "hi": "शुक्र के वायुमंडल में मौजूद अम्ल ________ है।",
+   "opts": [
+    "H₂SO₄",
+    "HCl",
+    "HNO₃",
+    "HCOOH"
+   ],
+   "my_ans": "A",
+   "sol": "शुक्र ग्रह का वायुमंडल सल्फ्यूरिक एसिड (H₂SO₄) के घने बादलों से बना है।",
+   "trick": "शुक्र = सल्फ्यूरिक एसिड के बादल",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Who is credited with the discovery of the electron?",
+   "hi": "इलेक्ट्रॉन की खोज का श्रेय किसे दिया जाता है?",
+   "opts": [
+    "Albert Einstein<br>अल्बर्ट आइंस्टीन",
+    "Marie Curie<br>मैरी क्यूरी",
+    "Ernest Rutherford<br>अर्नेस्ट रदरफोर्ड",
+    "J.J. Thomson<br>जे. जे. थॉमसन"
+   ],
+   "my_ans": "D",
+   "sol": "जे. जे. थॉमसन ने 1897 में कैथोड किरण प्रयोगों के माध्यम से इलेक्ट्रॉन की खोज की थी।",
+   "trick": "ईंट पर नाच (इलेक्ट्रॉन = थॉमसन)",
+   "ans": "D"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "The state of matter where particles are far apart and move randomly and quickly is the:",
+   "hi": "पदार्थ की निम्नलिखित में से कौन-सी अवस्था में कण एक दूसरे से दूर होते हैं और यादृच्छिक रूप से तथा तेजी से गति करते है?",
+   "opts": [
+    "Solid state<br>ठोस अवस्था",
+    "Gaseous state<br>गैसीय अवस्था",
+    "Liquid state<br>द्रव अवस्था",
+    "Plasma state<br>प्लाज्मा अवस्था"
+   ],
+   "my_ans": "B",
+   "sol": "गैसीय अवस्था में कणों के बीच आकर्षण बल बहुत कम होता है, जिससे वे मुक्त होकर तेजी से गति करते हैं।",
+   "trick": "गैस = दूर-दूर कण, तेज रफ्तार",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which of the following gasses is NOT classified as a noble gas?",
+   "hi": "निम्नलिखित में से कौन-सी गैस उत्कृष्ट गैस (noble gas) के रूप में वर्गीकृत नहीं है?",
+   "opts": [
+    "Argon<br>आर्गन",
+    "Oxygen<br>ऑक्सीजन",
+    "Neon<br>नियॉन",
+    "Helium<br>हीलियम"
+   ],
+   "my_ans": "B",
+   "sol": "ऑक्सीजन समूह 16 का एक अत्यधिक क्रियाशील तत्व है, जबकि हीलियम, नियॉन और आर्गन समूह 18 की अक्रिय (उत्कृष्ट) गैसें हैं।",
+   "trick": "उत्कृष्ट गैसें = समूह 18",
+   "ans": "B"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which postulate of Dalton's Atomic Theory was proven wrong by the discovery of subatomic particles?",
+   "hi": "अवपरमाणुक (subatomic) कणों की खोज से डाल्टन के परमाणु सिद्धांत की कौन-सी अभिधारणा (postulate) गलत सिद्ध हुई?",
+   "opts": [
+    "Atoms of different elements have different masses.<br>विभिन्न तत्वों के परमाणुओं का द्रव्यमान भिन्न-भिन्न होता है।",
+    "Isotopes of the same element have different masses.<br>समान तत्व के समस्थानिकों का द्रव्यमान भिन्न-भिन्न होता है।",
+    "Matter consists of indivisible atoms.<br>द्रव्य (Matter) अविभाज्य परमाणुओं से बना होता है।",
+    "Atoms retain their identity in chemical reactions.<br>रासायनिक अभिक्रियाओं में परमाणु अपनी पहचान बनाए रखते हैं।"
+   ],
+   "my_ans": "C",
+   "sol": "डाल्टन ने कहा था कि परमाणु अविभाज्य हैं, लेकिन इलेक्ट्रॉन, प्रोटॉन और न्यूट्रॉन की खोज ने साबित किया कि परमाणु विभाजित हो सकते हैं।",
+   "trick": "परमाणु = विभाज्य (उप-परमाणु कणों से)",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Which option correctly completes the general word equation for a neutralisation reaction? Base + Acid → ________ + ________",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प उदासीनीकरण अभिक्रिया के लिए सामान्य शब्द समीकरण को सही प्रकार से पूरा करता है? क्षार + अम्ल → ________ + ________",
+   "opts": [
+    "Salt + Carbon Dioxide<br>लवण + कार्बन डाइऑक्साइड",
+    "Metal + Water<br>धातु + जल",
+    "Metal + Carbon Dioxide<br>धातु + कार्बन डाइऑक्साइड",
+    "Salt + Water<br>लवण + जल"
+   ],
+   "my_ans": "D",
+   "sol": "उदासीनीकरण अभिक्रिया में अम्ल और क्षार मिलकर लवण (Salt) और जल (Water) बनाते हैं।",
+   "trick": "अम्ल + क्षार = लवण + जल",
+   "ans": "D"
+  }
+ ]
+}

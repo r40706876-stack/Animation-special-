@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "165-167",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which season in India is characterised by hot, dry winds known as ‘Loo’?",
+   "hi": "भारत में कौन-सी ऋतु, तप्त, शुष्क पवनों से अभिलक्षित होती है जिसे 'लू (Loo)' के नाम से जाना जाता है?",
+   "opts": [
+    "Pre-monsoon showers<br>पूर्व मानसून बौछारें",
+    "Retreating monsoon<br>मानसून निवर्तन",
+    "Summer season<br>ग्रीष्म ऋतु",
+    "Cold weather season<br>शीत ऋतु"
+   ],
+   "my_ans": "C",
+   "sol": "लू (Loo) मई-जून के महीनों में चलने वाली तेज, गर्म और शुष्क पश्चिमी हवाएं हैं, जो ग्रीष्म ऋतु की मुख्य विशेषता हैं।",
+   "trick": "लू = ग्रीष्म ऋतु (गर्म हवाएं)",
+   "ans": "C"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "Population density is defined as the number of people per:",
+   "hi": "जनसंख्या घनत्व को प्रति इकाई क्या माना जाता है?",
+   "opts": [
+    "Urban center<br>शहरी केंद्र",
+    "Total population<br>कुल जनसंख्या",
+    "Arable land<br>कृषि योग्य भूमि",
+    "Unit of land area<br>भूमि क्षेत्र की इकाई"
+   ],
+   "my_ans": "D",
+   "sol": "जनसंख्या घनत्व का अर्थ है प्रति इकाई भूमि क्षेत्र (जैसे प्रति वर्ग किमी) में रहने वाले लोगों की संख्या।",
+   "trick": "घनत्व = कुल जनसंख्या / कुल क्षेत्रफल",
+   "ans": "D"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "Which feature separates the Malda Gap from the rest of the Ganga-Brahmaputra Plains?",
+   "hi": "कौन-सी भू-आकृति मालदा गैप को गंगा-ब्रह्मपुत्र के बाकी मैदानों से अलग करती है?",
+   "opts": [
+    "Aravalli Range<br>अरावली पर्वतमाला",
+    "Meghalaya Plateau<br>मेघालय पठार",
+    "Rajmahal Hills<br>राजमहल पहाड़ियाँ",
+    "Bundelkhand Plateau<br>बुंदेलखंड पठार"
+   ],
+   "my_ans": "C",
+   "sol": "मालदा गैप राजमहल पहाड़ियों (दक्षिण) और हिमालय की तलहटी (उत्तर) के बीच स्थित है, जो इसे प्रायद्वीपीय पठार से अलग करता है।",
+   "trick": "मालदा गैप = राजमहल पहाड़ियाँ",
+   "ans": "C"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "Which branch of the monsoon brings rainfall to India’s Western Coast?",
+   "hi": "मानसून की कौन-सी शाखा, भारत के पश्चिमी तट पर वर्षा लाती है?",
+   "opts": [
+    "North-East Monsoon<br>उत्तर-पूर्व मानसून",
+    "South-West Monsoon Arabian Sea branch<br>दक्षिण-पश्चिम मानसून (अरब सागर शाखा)",
+    "South-West Monsoon Bay of Bengal branch<br>दक्षिण-पश्चिम मानसून (बंगाल की खाड़ी शाखा)",
+    "Western Disturbances<br>पश्चिमी विक्षोभ"
+   ],
+   "my_ans": "B",
+   "sol": "दक्षिण-पश्चिम मानसून की अरब सागर शाखा पश्चिमी घाट और भारत के पश्चिमी तट पर भारी वर्षा करती है।",
+   "trick": "अरब सागर शाखा = पश्चिमी तट",
+   "ans": "B"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "Which among the following states had the largest population of children (0–6 years) as per the Census 2011 provisional figures?",
+   "hi": "जनगणना 2011 के अनंतिम आंकड़ों के अनुसार, निम्नलिखित में से किस राज्य में बच्चों (0–6 वर्ष) की जनसंख्या सबसे अधिक थी?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Maharashtra<br>महाराष्ट्र",
+    "Bihar<br>बिहार",
+    "Uttar Pradesh<br>उत्तर प्रदेश"
+   ],
+   "my_ans": "D",
+   "sol": "उत्तर प्रदेश की कुल जनसंख्या 2011 में सबसे अधिक थी, इसलिए यहाँ 0-6 वर्ष के बच्चों की संख्या भी सर्वाधिक रही।",
+   "trick": "सर्वाधिक जनसंख्या = उत्तर प्रदेश",
+   "ans": "D"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "The Terai belt is best described as:",
+   "hi": "तराई बेल्ट का सबसे सटीक वर्णन निम्नलिखित में से कौन-सा है?",
+   "opts": [
+    "A dry zone made of calcareous deposits<br>चूना पत्थर के निक्षेपों से बना शुष्क क्षेत्र",
+    "A high-altitude snow-covered plain<br>ऊंचाई पर स्थित बर्फ से ढका मैदान",
+    "A marshy tract with a high water table and thick forests<br>उच्च जल स्तर और घने जंगलों वाला एक दलदली क्षेत्र",
+    "A coastal plain formed by marine deposits<br>समुद्री निक्षेपों से बना तटीय मैदान"
+   ],
+   "my_ans": "C",
+   "sol": "तराई क्षेत्र हिमालय की तलहटी में स्थित एक दलदली और नम भूमि है, जहाँ उच्च जल स्तर और घने जंगल पाए जाते हैं।",
+   "trick": "तराई = दलदली + घने जंगल",
+   "ans": "C"
+  },
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "Which one of the following economic factors attracts population to an area?",
+   "hi": "निम्नलिखित में से कौन-सा आर्थिक कारक, जनसंख्या को किसी क्षेत्र की ओर आकर्षित करता है?",
+   "opts": [
+    "Industrial development<br>औद्योगिक विकास",
+    "High cost of living<br>उच्च जीवन निर्वाह लागत",
+    "Lack of job opportunities<br>रोजगार के अवसरों का अभाव",
+    "Limited transportation facilities<br>सीमित परिवहन सुविधाएं"
+   ],
+   "my_ans": "A",
+   "sol": "औद्योगिक विकास रोजगार के अवसर पैदा करता है, जो लोगों को काम के लिए उस क्षेत्र की ओर आकर्षित करता है।",
+   "trick": "विकास = रोजगार = आकर्षण",
+   "ans": "A"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "Which of the following states has high population density due to early human settlement and development?",
+   "hi": "निम्नलिखित में से किस राज्य में प्रारंभिक मानव बस्तियों और विकास के कारण उच्च जनसंख्या घनत्व है?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Sikkim<br>सिक्किम",
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "Meghalaya<br>मेघालय"
+   ],
+   "my_ans": "C",
+   "sol": "उत्तर प्रदेश सिंधु-गंगा के मैदानों में स्थित है, जहाँ उपजाऊ मिट्टी और ऐतिहासिक सभ्यता के कारण प्राचीन काल से ही सघन बसावट रही है।",
+   "trick": "गंगा का मैदान = उच्च घनत्व",
+   "ans": "C"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "Which of the following physiographic regions of India receives average annual rainfall of more than 200 cm?",
+   "hi": "भारत के निम्नलिखित में से किस भौगोलिक क्षेत्र में औसत वार्षिक वर्षा 200 cm से अधिक होती है?",
+   "opts": [
+    "Thar Desert<br>थार मरुस्थल",
+    "Western Ghats<br>पश्चिमी घाट",
+    "Ladakh region<br>लद्दाख क्षेत्र",
+    "Interior Deccan Plateau<br>आंतरिक दक्कन पठार"
+   ],
+   "my_ans": "B",
+   "sol": "पश्चिमी घाट का पवन-अभिमुख (windward) हिस्सा दक्षिण-पश्चिम मानसून से भारी पर्वतीय वर्षा प्राप्त करता है।",
+   "trick": "पश्चिमी घाट = भारी वर्षा",
+   "ans": "B"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "According to the Census of India 2011, what was the sex ratio (number of females per 1,000 males) among the Scheduled Tribe (ST) population in India?",
+   "hi": "भारत की जनगणना 2011 के अनुसार, भारत में अनुसूचित जनजाति (ST) आबादी में लिंग अनुपात (प्रति 1,000 पुरुषों पर महिलाओं की संख्या) क्या था?",
+   "opts": [
+    "990",
+    "970",
+    "1,010",
+    "950"
+   ],
+   "my_ans": "A",
+   "sol": "2011 की जनगणना के अनुसार, भारत की अनुसूचित जनजाति (ST) का लिंग अनुपात 990 था, जो राष्ट्रीय औसत से बेहतर था।",
+   "trick": "ST लिंग अनुपात = 990",
+   "ans": "A"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "According to the Census 2011, which of the following states has the highest population density among the northern Indian states?",
+   "hi": "2011 की जनगणना के अनुसार, उत्तरी भारतीय राज्यों में से किस राज्य का जनसंख्या घनत्व सबसे अधिक है?",
+   "opts": [
+    "Himachal Pradesh<br>हिमाचल प्रदेश",
+    "Bihar<br>बिहार",
+    "Uttarakhand<br>उत्तराखंड",
+    "Rajasthan<br>राजस्थान"
+   ],
+   "my_ans": "B",
+   "sol": "बिहार का जनसंख्या घनत्व उत्तरी भारतीय राज्यों में सर्वाधिक है, जो गंगा के मैदानी क्षेत्र में स्थित होने के कारण है।",
+   "trick": "बिहार = उच्च घनत्व",
+   "ans": "B"
+  }
+ ]
+}

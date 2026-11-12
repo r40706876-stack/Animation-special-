@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "560-562",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "Which of the following indicators is NOT a component of the Human Development Index (HDI)?",
+   "hi": "निम्नलिखित में से कौन-सा संकेतक, मानव विकास सूचकांक (HDI) का घटक नहीं है?",
+   "opts": [
+    "Gross National Income per capita<br>प्रति व्यक्ति सकल राष्ट्रीय आय",
+    "Life expectancy<br>जीवन प्रत्याशा",
+    "Education index<br>शिक्षा सूचकांक",
+    "Poverty line ratio<br>निर्धनता रेखा अनुपात"
+   ],
+   "my_ans": "D",
+   "sol": "HDI के तीन मुख्य घटक हैं: स्वास्थ्य (जीवन प्रत्याशा), शिक्षा (स्कूली वर्ष), और जीवन स्तर (प्रति व्यक्ति GNI)। निर्धनता रेखा अनुपात इसका हिस्सा नहीं है।",
+   "trick": "HDI = स्वास्थ्य + शिक्षा + जीवन स्तर (आय)",
+   "ans": "D"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "Which Census of India is known for transforming the Census Organisation into a major Cultural Repository through extensive studies on rural crafts, fairs, festivals, and ethnographic surveys, and also marked India’s early adoption of mechanical tabulation equipment such as key punches, sorters, and tabulators?",
+   "hi": "भारत की कौन-सी जनगणना, ग्रामीण शिल्पों, मेलों, उत्सवों और नृजातीय संबंधी सर्वेक्षणों पर व्यापक अध्ययनों के माध्यम से जनगणना संगठन को एक प्रमुख सांस्कृतिक निक्षेपागार में परिवर्तित करने के लिए और भारत में की-पंच, सॉर्टर और टैबुलेटर जैसे यांत्रिक सारणीयन उपकरणों को शुरुआती तौर पर अंगीकृत करने के लिए जानी जाती है?",
+   "opts": [
+    "1971 Census of India<br>1971 की भारत की जनगणना",
+    "1981 Census of India<br>1981 की भारत की जनगणना",
+    "1951 Census of India<br>1951 की भारत की जनगणना",
+    "1961 Census of India<br>1961 की भारत की जनगणना"
+   ],
+   "my_ans": "D",
+   "sol": "1961 की जनगणना ने पहली बार डेटा प्रोसेसिंग के लिए यांत्रिक उपकरणों (की-पंच, सॉर्टर) का उपयोग किया और ग्रामीण संस्कृति का व्यापक दस्तावेजीकरण किया।",
+   "trick": "1961: पहली बार यांत्रिक सारणीयन (Mechanical Tabulation)",
+   "ans": "D"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "Which historical policy skewed China’s gender ratio at birth?",
+   "hi": "किस ऐतिहासिक नीति ने चीन में जन्म के समय लिंगानुपात को असंतुलित (skewed) कर दिया?",
+   "opts": [
+    "Gender Equity Law<br>लैंगिक समानता कानून",
+    "Universal Healthcare Act<br>सार्वभौमिक स्वास्थ्य सेवा अधिनियम",
+    "One-Child Policy<br>एक-बच्चा नीति",
+    "Rural Migration Ban<br>ग्रामीण प्रवासन प्रतिबंध"
+   ],
+   "my_ans": "C",
+   "sol": "चीन की 'एक-बच्चा नीति' (1980-2015) के कारण पुत्रों की चाह में कन्या भ्रूण हत्या और जन्म के आंकड़ों में हेरफेर हुआ, जिससे लिंगानुपात बिगड़ गया।",
+   "trick": "एक-बच्चा नीति = लिंगानुपात में असंतुलन",
+   "ans": "C"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "Which trophy is contested between the England and Scotland teams in the Rugby Six Nations Championship, 2025?",
+   "hi": "रग्बी सिक्स नेशंस चैंपियनशिप 2025 में, इंग्लैंड और स्कॉटलैंड टीमों के बीच कौन-सी ट्रॉफी आयोजित की गई है?",
+   "opts": [
+    "Millennium Cup<br>मिलेनियम कप",
+    "Triple Crown Trophy<br>ट्रिपल क्राउन ट्रॉफी",
+    "Calcutta Cup<br>कलकत्ता कप",
+    "European Nations Trophy<br>यूरोपीय नेशंस ट्रॉफी"
+   ],
+   "my_ans": "C",
+   "sol": "कलकत्ता कप सबसे पुरानी अंतरराष्ट्रीय रग्बी ट्रॉफी है, जो 1879 से इंग्लैंड और स्कॉटलैंड के बीच खेली जाती है।",
+   "trick": "इंग्लैंड बनाम स्कॉटलैंड = कलकत्ता कप",
+   "ans": "C"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "Which Dravidian language is spoken outside India in Baluchistan?",
+   "hi": "कौन-सी द्रविड़ भाषा भारत के बाहर बलूचिस्तान में बोली जाती है?",
+   "opts": [
+    "Kannada<br>कन्नड़",
+    "Tamil<br>तमिल",
+    "Brahui<br>ब्राहूई",
+    "Malayalam<br>मलयालम"
+   ],
+   "my_ans": "C",
+   "sol": "ब्राहूई एकमात्र द्रविड़ भाषा है जो मुख्य रूप से भारत के बाहर बलूचिस्तान (पाकिस्तान, अफगानिस्तान, ईरान) क्षेत्र में बोली जाती है।",
+   "trick": "बलूचिस्तान = ब्राहूई (द्रविड़ भाषा)",
+   "ans": "C"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "In which year was the first \"Sanskrit Commission\" constituted?",
+   "hi": "पहला \"संस्कृत आयोग\" किस वर्ष गठित किया गया था?",
+   "opts": [
+    "1952",
+    "2013",
+    "1956",
+    "2019"
+   ],
+   "my_ans": "C",
+   "sol": "भारत सरकार ने संस्कृत भाषा के विकास और संरक्षण के लिए 1956 में पहला संस्कृत आयोग गठित किया था।",
+   "trick": "संस्कृत आयोग = 1956",
+   "ans": "C"
+  },
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "What is GII in the context of Human Development?",
+   "hi": "मानव विकास के संदर्भ में GII का पूर्ण रूप क्या है?",
+   "opts": [
+    "Gender Inability Index<br>जेंडर इनएबिलिटी इंडेक्स",
+    "Gender Inequality Index<br>जेंडर इनइक्वालिटी इंडेक्स",
+    "General Inequality Index<br>जनरल इनइक्वालिटी इंडेक्स",
+    "Gender Inequality Information<br>जेंडर इनइक्वालिटी इंफॉर्मेशन"
+   ],
+   "my_ans": "B",
+   "sol": "GII का अर्थ 'जेंडर इनइक्वालिटी इंडेक्स' (लैंगिक असमानता सूचकांक) है, जिसे UNDP द्वारा 2010 में शुरू किया गया था।",
+   "trick": "GII = Gender Inequality Index",
+   "ans": "B"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "Which of the following is NOT a prominent language of the Indo-Aryan family?",
+   "hi": "निम्नलिखित में से कौन-सी इंडो-आर्यन परिवार की एक प्रमुख भाषा नहीं है?",
+   "opts": [
+    "Kurukh<br>कुरुख",
+    "Urdu<br>उर्दू",
+    "Hindi<br>हिंदी",
+    "Bengali<br>बंगाली"
+   ],
+   "my_ans": "A",
+   "sol": "कुरुख (ओरांव) द्रविड़ भाषा परिवार से संबंधित है, जबकि हिंदी, उर्दू और बंगाली इंडो-आर्यन परिवार की भाषाएं हैं।",
+   "trick": "कुरुख = द्रविड़ परिवार",
+   "ans": "A"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Which of the following situations in football leads to a 'Penalty Kick' being awarded?",
+   "hi": "फुटबॉल में निम्नलिखित में से कौन-सी स्थिति 'पेनल्टी किक' दिए जाने का कारण बनती है?",
+   "opts": [
+    "A player scores three consecutive goals<br>एक खिलाड़ी लगातार तीन गोल करता है।",
+    "A foul is committed inside the penalty area<br>पेनल्टी क्षेत्र के अंदर एक फाउल किया जाता है।",
+    "A player is offside<br>एक खिलाड़ी ऑफसाइड होता है।",
+    "The goalkeeper handles the ball outside the goal<br>गोलकीपर गोल के बाहर गेंद को हैंडल करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "जब बचाव करने वाली टीम का खिलाड़ी अपने पेनल्टी क्षेत्र के अंदर कोई फाउल (जैसे धक्का देना या हैंडबॉल) करता है, तो पेनल्टी किक दी जाती है।",
+   "trick": "पेनल्टी क्षेत्र के अंदर फाउल = पेनल्टी किक",
+   "ans": "B"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "The Human Development Index (HDI) rankings are based on a score between _________.",
+   "hi": "मानव विकास सूचकांक (HDI) रैंकिंग _________ के बीच के स्कोर पर आधारित है।",
+   "opts": [
+    "1 to 2<br>1 से 2",
+    "0 to 1<br>0 से 1",
+    "0 to 5<br>0 से 5",
+    "1 to 10<br>1 से 10"
+   ],
+   "my_ans": "B",
+   "sol": "HDI का मान 0 से 1 के बीच होता है, जहाँ 0 न्यूनतम और 1 उच्चतम मानव विकास को दर्शाता है।",
+   "trick": "HDI स्कोर = 0 से 1",
+   "ans": "B"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Consider the following statements:1. Project Elephant was launched in 1992 to protect elephants in India.2. Project Tiger was launched in 1973 to conserve tigers in India3. Sundarbans Biosphere Reserve is located in West Bengal, India.4. Keoladeo National Park is located in Madhya Pradesh.Which of the above statements are correct?",
+   "hi": "निम्नलिखित कथनों पर विचार करें: 1. भारत में हाथियों की सुरक्षा के लिए 1992 में प्रोजेक्ट एलीफेंट शुरू किया गया था। 2. भारत में बाघों के संरक्षण के लिए 1973 में प्रोजेक्ट टाइगर शुरू किया गया था। 3. सुंदरबन बायोस्फीयर रिजर्व पश्चिम बंगाल, भारत में स्थित है। 4. केवलादेव राष्ट्रीय उद्यान मध्य प्रदेश में स्थित है। उपरोक्त में से कौन-से कथन सही हैं?",
+   "opts": [
+    "1, 2 and 3",
+    "2, 3 and 4",
+    "1, 3 and 4",
+    "All of the above"
+   ],
+   "my_ans": "A",
+   "sol": "कथन 1, 2 और 3 सही हैं। केवलादेव राष्ट्रीय उद्यान राजस्थान में स्थित है, मध्य प्रदेश में नहीं।",
+   "trick": "केवलादेव = राजस्थान",
+   "ans": "A"
+  }
+ ]
+}

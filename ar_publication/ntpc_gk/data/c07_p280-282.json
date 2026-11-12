@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "280-282",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 178,
+   "lvl": "UG",
+   "en": "Which Part of the Indian Constitution deals specifically with the Union executive structure?",
+   "hi": "भारतीय संविधान का कौन-सा भाग, विशेष रूप से संघ की कार्यपालिका संरचना से संबंधित है?",
+   "opts": [
+    "Part V<br>भाग V",
+    "Part IV<br>भाग IV",
+    "Part III<br>भाग III",
+    "Part VI<br>भाग VI"
+   ],
+   "my_ans": "A",
+   "sol": "संविधान का भाग V (अनुच्छेद 52-151) संघ की कार्यपालिका, संसद और न्यायपालिका से संबंधित है।",
+   "trick": "भाग 5 = संघ (Union) की कार्यपालिका।",
+   "ans": "A"
+  },
+  {
+   "n": 179,
+   "lvl": "UG",
+   "en": "Which Amendment created the National Judicial Appointments Commission (NJAC) in India?",
+   "hi": "भारत में राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) की स्थापना किस संशोधन द्वारा की गई?",
+   "opts": [
+    "102nd Amendment<br>102वां संशोधन",
+    "76th Amendment<br>76वां संशोधन",
+    "82nd Amendment<br>82वां संशोधन",
+    "99th Amendment<br>99वां संशोधन"
+   ],
+   "my_ans": "D",
+   "sol": "99वें संविधान संशोधन अधिनियम, 2014 द्वारा NJAC का गठन किया गया था, जिसे बाद में सुप्रीम कोर्ट ने असंवैधानिक घोषित कर दिया।",
+   "trick": "99वां संशोधन = NJAC (न्यायिक नियुक्ति)।",
+   "ans": "D"
+  },
+  {
+   "n": 180,
+   "lvl": "UG",
+   "en": "In which case did the Supreme Court lay down the principle that Parliament cannot alter the 'basic structure' of the Indian Constitution?",
+   "hi": "किस मामले में सर्वोच्च न्यायालय ने यह सिद्धांत प्रतिपादित किया कि संसद भारतीय संविधान की 'मूल संरचना' में परिवर्तन नहीं कर सकती है?",
+   "opts": [
+    "Golaknath case<br>गोलकनाथ मामला",
+    "Shankari Prasad case<br>शंकरी प्रसाद मामला",
+    "Minerva Mills case<br>मिनर्वा मिल्स मामला",
+    "Kesavananda Bharati case<br>केशवानंद भारती मामला"
+   ],
+   "my_ans": "D",
+   "sol": "1973 के ऐतिहासिक केशवानंद भारती मामले में सर्वोच्च न्यायालय ने 'मूल ढांचा' (Basic Structure) का सिद्धांत दिया।",
+   "trick": "केशवानंद भारती = मूल ढांचा सिद्धांत।",
+   "ans": "D"
+  },
+  {
+   "n": 181,
+   "lvl": "UG",
+   "en": "Under which article can the president summon, prorogue, or dissolve either house of Parliament?",
+   "hi": "किस अनुच्छेद के तहत राष्ट्रपति संसद के किसी भी सदन को आहूत, सत्रावसान या भंग कर सकते हैं?",
+   "opts": [
+    "Article 79<br>अनुच्छेद 79",
+    "Article 108<br>अनुच्छेद 108",
+    "Article 87<br>अनुच्छेद 87",
+    "Article 85<br>अनुच्छेद 85"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान के अनुच्छेद 85 के तहत राष्ट्रपति को संसद के सत्र बुलाने, सत्रावसान करने और लोकसभा को भंग करने की शक्ति प्राप्त है।",
+   "trick": "अनुच्छेद 85 = संसद के सत्र और भंग करना।",
+   "ans": "D"
+  },
+  {
+   "n": 182,
+   "lvl": "UG",
+   "en": "Which Article of the Indian constitution provides for Council of Ministers to aid and advise the President in the exercise of his powers?",
+   "hi": "भारतीय संविधान के किस अनुच्छेद में मंत्रिपरिषद के लिए राष्ट्रपति को अपनी शक्तियों का प्रयोग करते हुए सहायता और सलाह देने का प्रावधान है?",
+   "opts": [
+    "Article 74<br>अनुच्छेद 74",
+    "Article 84<br>अनुच्छेद 84",
+    "Article 64<br>अनुच्छेद 64",
+    "Article 94<br>अनुच्छेद 94"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 74 के अनुसार, राष्ट्रपति को सहायता और सलाह देने के लिए प्रधानमंत्री के नेतृत्व में एक मंत्रिपरिषद होगी।",
+   "trick": "अनुच्छेद 74 = राष्ट्रपति की सलाह के लिए मंत्रिपरिषद।",
+   "ans": "A"
+  },
+  {
+   "n": 183,
+   "lvl": "UG",
+   "en": "Which of the following cases for the first time held the Preamble to be part of the Constitution?",
+   "hi": "निम्नलिखित में से किस मामले में पहली बार प्रस्तावना को संविधान का हिस्सा माना गया था?",
+   "opts": [
+    "Golaknath Case, 1967<br>गोलकनाथ मामला, 1967",
+    "S.R. Bommai Case, 1994<br>एस.आर. बोम्मई मामला, 1994",
+    "Kesavananda Bharati Case, 1973<br>केशवानंद भारती मामला, 1973",
+    "Berubari Case, 1960<br>बेरुबारी मामला, 1960"
+   ],
+   "my_ans": "C",
+   "sol": "केशवानंद भारती मामले (1973) में सुप्रीम कोर्ट ने पहली बार माना कि प्रस्तावना संविधान का अभिन्न अंग है।",
+   "trick": "केशवानंद भारती = प्रस्तावना संविधान का भाग है।",
+   "ans": "C"
+  },
+  {
+   "n": 184,
+   "lvl": "UG",
+   "en": "Which Constitutional Amendment Act gave constitutional status to Urban Local Bodies (municipalities)?",
+   "hi": "निम्नलिखित में से किस संविधान संशोधन अधिनियम ने शहरी स्थानीय निकायों (नगरपालिकाओं) को संवैधानिक दर्जा दिया था?",
+   "opts": [
+    "86th Amendment Act<br>86वाँ संशोधन अधिनियम",
+    "42nd Amendment Act<br>42वाँ संशोधन अधिनियम",
+    "74th Amendment Act<br>74वाँ संशोधन अधिनियम",
+    "73rd Amendment Act<br>73वाँ संशोधन अधिनियम"
+   ],
+   "my_ans": "C",
+   "sol": "74वें संविधान संशोधन (1992) द्वारा शहरी स्थानीय निकायों (नगरपालिकाओं) को संवैधानिक दर्जा दिया गया।",
+   "trick": "73वां = पंचायत, 74वां = नगरपालिका।",
+   "ans": "C"
+  },
+  {
+   "n": 185,
+   "lvl": "UG",
+   "en": "Which Amendment limited the Council of Ministers size to fifteen percent of total Lok Sabha strength?",
+   "hi": "किस संशोधन ने मंत्रिपरिषद के आकार को लोकसभा के सदस्यों की कुल संख्या के पंद्रह प्रतिशत तक सीमित कर दिया?",
+   "opts": [
+    "42nd Amendment<br>42वां संशोधन",
+    "86th Amendment<br>86वां संशोधन",
+    "99th Amendment<br>99वां संशोधन",
+    "91st Amendment<br>91वां संशोधन"
+   ],
+   "my_ans": "D",
+   "sol": "91वें संविधान संशोधन (2003) द्वारा मंत्रिपरिषद का आकार लोकसभा (या विधानसभा) की कुल सदस्य संख्या के 15% तक सीमित किया गया।",
+   "trick": "91वां संशोधन = 15% मंत्री सीमा।",
+   "ans": "D"
+  },
+  {
+   "n": 186,
+   "lvl": "UG",
+   "en": "Under Article 164(1A), the total number of Ministers in a State, including the Chief Minister, shall NOT exceed:",
+   "hi": "अनुच्छेद 164(1A) के अंतर्गत, किसी राज्य में मुख्यमंत्री सहित मंत्रियों की कुल संख्या _________।",
+   "opts": [
+    "10% of the strength of the Legislative Assembly<br>उस राज्य की विधान सभा के सदस्यों की कुल संख्या के 10% से अधिक से नहीं होगी",
+    "15% of the strength of the Legislative Assembly<br>उस राज्य की विधान सभा के सदस्यों की कुल संख्या के 15% से अधिक से नहीं होगी",
+    "No limit is mentioned<br>की सीमा का उल्लेख नहीं किया गया है",
+    "20% of the strength of the Legislative Assembly<br>उस राज्य की विधान सभा के सदस्यों की कुल संख्या के 20% से अधिक से नहीं होगी"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 164(1A) के अनुसार, राज्य में मंत्रियों की कुल संख्या विधानसभा की कुल संख्या के 15% से अधिक नहीं हो सकती।",
+   "trick": "राज्य में भी 15% की सीमा लागू है।",
+   "ans": "B"
+  },
+  {
+   "n": 187,
+   "lvl": "UG",
+   "en": "Which of the following provisions requires ratification by the legislatures of NOT less than half the States for amendment under Article 368(2), making it a 'rigid' feature?",
+   "hi": "निम्नलिखित में से कौन-सा प्रावधान, अनुच्छेद 368(2) के अंतर्गत संशोधन के लिए कम से कम आधे राज्यों के विधानमंडलों द्वारा अनुसमर्थन की आवश्यकता रखता है, जो इसे एक 'अनम्य' विशेषता बनाता है?",
+   "opts": [
+    "Provisions related to citizenship acquisition and termination<br>नागरिकता अर्जन और समापन से संबंधित प्रावधान",
+    "Duration of the term of the Lok Sabha<br>लोक सभा के कार्यकाल की अवधि",
+    "Manner of election of the President of India<br>भारत के राष्ट्रपति के निर्वाचन की रीति",
+    "Composition of the Council of Ministers<br>मंत्रिपरिषद की संरचना"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रपति के निर्वाचन की प्रक्रिया संघीय ढांचे से संबंधित है, इसलिए इसमें संशोधन के लिए आधे राज्यों की सहमति अनिवार्य है।",
+   "trick": "संघीय प्रावधानों में संशोधन हेतु आधे राज्यों की सहमति जरूरी है।",
+   "ans": "C"
+  }
+ ]
+}

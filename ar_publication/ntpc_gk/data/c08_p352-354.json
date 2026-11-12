@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "352-354",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "What was the primary measure introduced in the 1991 for unlicensed manufacturing activities in India?",
+   "hi": "भारत में बिना लाइसेंस वाली विनिर्माण गतिविधियों के लिए वर्ष 1991 में कौन-सा प्राथमिक उपाय शुरू किया गया था?",
+   "opts": [
+    "Industrial Entrepreneurs Memoranda<br>औद्योगिक उद्यमी ज्ञापन",
+    "Entrepreneurial Clearance Form<br>उद्यमशीलता मंजूरी प्रपत्र",
+    "Special Economic Filing Certificate<br>विशेष आर्थिक फाइलिंग प्रमाणपत्र",
+    "Project Approval Licence<br>परियोजना अनुमोदन लाइसेंस"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के आर्थिक सुधारों के तहत, अधिकांश उद्योगों के लिए लाइसेंसिंग समाप्त कर दी गई थी। बिना लाइसेंस वाली विनिर्माण गतिविधियों के लिए उद्यमियों को 'उद्यमशीलता मंजूरी प्रपत्र' (Entrepreneurial Clearance Form) दाखिल करना होता था।",
+   "trick": "1991 सुधार = लाइसेंस राज का अंत और सरल अधिसूचना प्रणाली।",
+   "ans": "B"
+  },
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "Which sector's share in GDP increased significantly by 1990, reflecting a shift in the Indian economy?",
+   "hi": "1990 तक GDP में किस क्षेत्रक के शेयर में अत्यधिक वृद्धि हुई, जो भारतीय अर्थव्यवस्था में परिवर्तन को दर्शाती है?",
+   "opts": [
+    "Mining<br>खनन",
+    "Industry<br>उद्योग",
+    "Agriculture<br>कृषि",
+    "Services<br>सेवा"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के उदारीकरण से पहले ही, 1980 के दशक में औद्योगिक क्षेत्र का GDP में योगदान लगभग 26% से बढ़कर 1990 तक 28-30% हो गया था, जो औद्योगीकरण की ओर झुकाव दिखाता है।",
+   "trick": "1990 तक उद्योग का विस्तार हुआ, जबकि कृषि स्थिर रही।",
+   "ans": "B"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "Which of the following sectors contributes the most to the economy of the US?",
+   "hi": "निम्नलिखित में से कौन-सा क्षेत्र, अमेरिकी (US) अर्थव्यवस्था में सर्वाधिक योगदान देता है?",
+   "opts": [
+    "Tertiary Activity<br>तृतीयक क्रियाकलाप",
+    "Quaternary Activity<br>चतुर्थ क्रियाकलाप",
+    "Secondary Activity<br>द्वितीयक क्रियाकलाप",
+    "Primary Activity<br>प्राथमिक क्रियाकलाप"
+   ],
+   "my_ans": "A",
+   "sol": "अमेरिका एक सेवा-आधारित अर्थव्यवस्था है। यहाँ खुदरा, स्वास्थ्य, वित्त और अन्य सेवाएँ (तृतीयक क्षेत्र) GDP में लगभग 80% का योगदान देती हैं।",
+   "trick": "विकसित देश = सेवा क्षेत्र (तृतीयक) का प्रभुत्व।",
+   "ans": "A"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "By how much was the rupee devalued in July 1991?",
+   "hi": "जुलाई 1991 में रुपये का अवमूल्यन कितना हुआ था?",
+   "opts": [
+    "18 percent<br>18 प्रतिशत",
+    "10 percent<br>10 प्रतिशत",
+    "25 percent<br>25 प्रतिशत",
+    "30 percent<br>30 प्रतिशत"
+   ],
+   "my_ans": "A",
+   "sol": "जुलाई 1991 में भुगतान संतुलन संकट के दौरान, रुपये का अवमूल्यन दो चरणों में किया गया था (9% और 11%), जिसका कुल प्रभाव लगभग 18-19% था।",
+   "trick": "1991 संकट = 18% अवमूल्यन।",
+   "ans": "A"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "How many main approaches are there to human development?",
+   "hi": "मानव विकास के कितने मुख्य उपागम हैं?",
+   "opts": [
+    "Five: income, welfare, capabilities, rights-based, and sustainability approaches<br>पाँच: आय, कल्याण, क्षमता, अधिकार-आधारित और संधारणीयता उपागम",
+    "Four: income, welfare, minimum needs, and capabilities approaches<br>चार: आय, कल्याण, न्यूनतम आवश्यकता और क्षमता उपागम",
+    "Three: income, welfare, and capability approaches<br>तीन: आय, कल्याण और क्षमता उपागम",
+    "Six: income, welfare, basic needs, capabilities, rights-based, participatory approaches<br>छह: आय, कल्याण, मूल आवश्यकता, क्षमता, अधिकार-आधारित, सहभागी उपागम"
+   ],
+   "my_ans": "B",
+   "sol": "मानव विकास के चार मुख्य उपागम हैं: आय उपागम, कल्याण उपागम, न्यूनतम आवश्यकता उपागम और क्षमता उपागम (अमर्त्य सेन का सिद्धांत)।",
+   "trick": "मानव विकास के 4 स्तंभ: आय, कल्याण, जरूरत, क्षमता।",
+   "ans": "B"
+  },
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "During 1991–92 to 1998–99, which industrial sector showed a clear decline in the average annual growth according to the Index of Industrial Production (IIP)?",
+   "hi": "1991–92 से 1998–99 के दौरान, औद्योगिक उत्पादन सूचकांक (IIP) के अनुसार किस औद्योगिक क्षेत्र की औसत वार्षिक वृद्धि दर में स्पष्ट गिरावट देखी गई?",
+   "opts": [
+    "Mining and Quarrying<br>खनन और उत्खनन",
+    "Electricity and Utilities<br>बिजली और यूटिलिटी सेवाएँ",
+    "Basic and Capital Goods<br>बुनियादी और पूँजीगत वस्तुएँ",
+    "Manufacturing and Engineering<br>विनिर्माण और इंजीनियरिंग"
+   ],
+   "my_ans": "A",
+   "sol": "1991-99 की अवधि के दौरान, औद्योगिक उत्पादन सूचकांक (IIP) के आंकड़ों में खनन और उत्खनन क्षेत्र की औसत वार्षिक वृद्धि दर में गिरावट दर्ज की गई थी।",
+   "trick": "IIP में खनन क्षेत्र की वृद्धि दर 90 के दशक में सुस्त रही।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "GL",
+   "en": "Which of the following is NOT regarded as an advantage of the LPG reforms in India?",
+   "hi": "निम्नलिखित में से कौन-सा भारत में LPG सुधारों का लाभ नहीं माना जाता है?",
+   "opts": [
+    "Rise in trade restrictions<br>व्यापार प्रतिबंधों में वृद्धि",
+    "Expansion of the private sector<br>निजी क्षेत्र का विस्तार",
+    "Boost in international partnerships<br>अंतर्राष्ट्रीय साझेदारियों को बढ़ावा",
+    "Adoption of advanced technologies<br>उन्नत तकनीकों को अपनाना"
+   ],
+   "my_ans": "A",
+   "sol": "LPG (उदारीकरण, निजीकरण, वैश्वीकरण) का उद्देश्य व्यापार बाधाओं को कम करना था, न कि उन्हें बढ़ाना। इसलिए, व्यापार प्रतिबंधों में वृद्धि इसका लाभ नहीं है।",
+   "trick": "LPG = व्यापार खोलना, न कि बंद करना।",
+   "ans": "A"
+  },
+  {
+   "n": 84,
+   "lvl": "GL",
+   "en": "In the fiscal year 2024-25, the total remittances sent home by Indians overseas set a new record of:",
+   "hi": "वित्तीय वर्ष 2024-25 में, विदेशों में रहने वाले भारतीयों द्वारा घर भेजे गए ______________ के कुल परेषण ने एक नया रिकॉर्ड बनाया।",
+   "opts": [
+    "126.76 billion dollars<br>126.76 बिलियन डॉलर",
+    "122.57 billion dollars<br>122.57 बिलियन डॉलर",
+    "156.10 billion dollars<br>156.10 बिलियन डॉलर",
+    "135.46 billion dollars<br>135.46 बिलियन डॉलर"
+   ],
+   "my_ans": "D",
+   "sol": "वित्तीय वर्ष 2024-25 में, प्रवासी भारतीयों ने भारत में कुल 135.46 बिलियन डॉलर का प्रेषण (remittance) भेजा, जो एक नया रिकॉर्ड है।",
+   "trick": "भारत दुनिया में सबसे अधिक प्रेषण प्राप्त करने वाला देश है।",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "GL",
+   "en": "Which of the following is a tertiary activity?",
+   "hi": "निम्नलिखित में से कौन-सी एक तृतीयक गतिविधि है?",
+   "opts": [
+    "Metal working<br>धातु कर्मण",
+    "Extracting minerals<br>खनिज निष्कर्षण",
+    "Shoe shining<br>जूते चमकाना",
+    "Steel making<br>इस्पात निर्माण"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयक गतिविधि सेवा क्षेत्र से संबंधित है। जूता चमकाना (Shoe shining) ग्राहकों को दी जाने वाली एक प्रत्यक्ष सेवा है, इसलिए यह तृतीयक गतिविधि है।",
+   "trick": "प्राथमिक=प्राकृतिक, द्वितीयक=निर्माण, तृतीयक=सेवा।",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "GL",
+   "en": "Which of the following Indian regions shows least contribution to the formal tertiary sector despite large population and urban centers?",
+   "hi": "निम्नलिखित में से कौन-सा भारतीय क्षेत्र, विशाल जनसंख्या और शहरी केंद्रों के होते हुए भी औपचारिक तृतीयक क्षेत्रक में सबसे कम योगदान देता है?",
+   "opts": [
+    "Northern India<br>उत्तरी भारत",
+    "Southern India<br>दक्षिणी भारत",
+    "Northeastern India<br>उत्तर-पूर्वी भारत",
+    "Western India<br>पश्चिमी भारत"
+   ],
+   "my_ans": "C",
+   "sol": "भौगोलिक दुर्गमता और औद्योगिक विकास की कमी के कारण, उत्तर-पूर्वी भारत का औपचारिक तृतीयक (सेवा) क्षेत्र में योगदान अन्य क्षेत्रों की तुलना में कम है।",
+   "trick": "उत्तर-पूर्व = सेवा क्षेत्र में कम औपचारिक विकास।",
+   "ans": "C"
+  }
+ ]
+}

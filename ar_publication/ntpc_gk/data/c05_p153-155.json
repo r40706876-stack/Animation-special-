@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "153-155",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "Which basin is home to over 10% of known global biodiversity, including many species found nowhere else in the world?",
+   "hi": "कौन-सी बेसिन वैश्विक ज्ञात जैव विविधता के 10% से अधिक का निवास-स्थल है, जिसमें कई ऐसी प्रजातियाँ शामिल हैं जो विश्व में कहीं और नहीं पाई जाती हैं?",
+   "opts": [
+    "Mississippi Basin<br>मिसीसिपी बेसिन",
+    "Amazon Basin<br>अमेज़न बेसिन",
+    "Nile Basin<br>नील बेसिन",
+    "Danube Basin<br>डेन्यूब बेसिन"
+   ],
+   "my_ans": "B",
+   "sol": "अमेज़न बेसिन दक्षिण अमेरिका में स्थित है और इसमें पृथ्वी की 10% से अधिक ज्ञात प्रजातियाँ पाई जाती हैं।",
+   "trick": "अमेज़न = दुनिया का सबसे बड़ा वर्षावन = सबसे अधिक जैव विविधता।",
+   "ans": "B"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "Which of the following apparent forces, caused by Earth’s rotation, deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere?",
+   "hi": "पृथ्वी के घूर्णन के कारण उत्पन्न होने वाला निम्नलिखित में से कौन-सा आभासी बल उत्तरी गोलार्ध में पवनों को दाईं ओर और दक्षिणी गोलार्ध में पवनों को बाईं ओर विक्षेपित करता है?",
+   "opts": [
+    "Coriolis force<br>कोरिऑलिस बल",
+    "Frictional force<br>घर्षण बल",
+    "Pressure gradient force<br>दाब प्रवणता बल",
+    "Gravitational force<br>गुरूत्वीय बल"
+   ],
+   "my_ans": "A",
+   "sol": "कोरिऑलिस बल पृथ्वी के घूर्णन के कारण उत्पन्न एक आभासी बल है जो पवनों की दिशा को विक्षेपित करता है।",
+   "trick": "कोरिऑलिस बल = पृथ्वी का घूमना = पवनों का मुड़ना।",
+   "ans": "A"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "Which international waterway is most vital for world trade, linking the Mediterranean Sea with the Red Sea?",
+   "hi": "भूमध्य सागर को लाल सागर से जोड़ने वाला कौन-सा अंतर्राष्ट्रीय जलमार्ग विश्व व्यापार के लिए सबसे महत्वपूर्ण है?",
+   "opts": [
+    "Bosporus Strait<br>बोस्पोरस जलडमरूमध्य",
+    "Panama Canal<br>पनामा नहर",
+    "Strait of Malacca<br>मलक्का जलडमरूमध्य",
+    "Suez Canal<br>स्वेज नहर"
+   ],
+   "my_ans": "D",
+   "sol": "स्वेज नहर मिस्र में स्थित है जो भूमध्य सागर और लाल सागर को जोड़ती है, जिससे यूरोप और एशिया के बीच की दूरी कम हो जाती है।",
+   "trick": "स्वेज नहर = भूमध्य + लाल सागर = व्यापार का छोटा रास्ता।",
+   "ans": "D"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "Which of the following regions would you expect has the highest population density based on geographic factors?",
+   "hi": "भौगोलिक कारकों के आधार पर, निम्नलिखित में से किस क्षेत्र में जनसंख्या घनत्व सर्वाधिक होने की संभावना है?",
+   "opts": [
+    "Amazon rainforest in Brazil<br>ब्राज़ील में अमेज़न वर्षावन",
+    "Ganga River basin in India<br>भारत में गंगा नदी बेसिन",
+    "Sahara Desert in Africa<br>अफ़्रीका में सहारा मरुस्थल",
+    "Canadian Arctic tundra<br>कैनेडियन आर्कटिक टुंड्रा"
+   ],
+   "my_ans": "B",
+   "sol": "गंगा नदी बेसिन में उपजाऊ जलोढ़ मिट्टी, प्रचुर जल और अनुकूल जलवायु के कारण जनसंख्या घनत्व बहुत अधिक है।",
+   "trick": "उपजाऊ मैदान = अधिक कृषि = अधिक जनसंख्या।",
+   "ans": "B"
+  },
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "Which plateau belt in India is notably rich in both iron ore and coal resources?",
+   "hi": "भारत का कौन-सा पठारी क्षेत्र लौह अयस्क और कोयला संसाधनों दोनों में उल्लेखनीय रूप से समृद्ध है?",
+   "opts": [
+    "North-Eastern Plateau Region<br>पूर्वोत्तर पठार क्षेत्र",
+    "West-Eastern Plateau Region<br>पश्चिम-पूर्वी पठार क्षेत्र",
+    "North-Western Plateau Region<br>उत्तर-पश्चिमी पठार क्षेत्र",
+    "South-Western Plateau Region<br>दक्षिण-पश्चिमी पठार क्षेत्र"
+   ],
+   "my_ans": "A",
+   "sol": "छोटा नागपुर पठार (पूर्वोत्तर पठार) भारत का सबसे समृद्ध खनिज क्षेत्र है, जहाँ लोहा और कोयला प्रचुर मात्रा में मिलता है।",
+   "trick": "छोटा नागपुर = भारत का रूर = खनिजों का भंडार।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "GL",
+   "en": "The Supreme Court’s order dated 29 December 2025 was passed in a suo motu matter titled “In Re: Definition of ____ Hills and Ranges and Ancillary Issues.” Which hill range is being referred to?",
+   "hi": "उच्चतम न्यायालय का दिनांक 29 दिसंबर 2025 का आदेश एक स्वतः संज्ञान मामले में पारित किया गया था जिसका शीर्षक 'इन रे: ____ पहाड़ियों और पर्वत श्रृंखलाओं की परिभाषा और संबंधित मुद्दे' था। यहाँ किस पर्वत श्रृंखला का उल्लेख किया जा रहा है?",
+   "opts": [
+    "Shivalik Hills<br>शिवालिक पहाड़ियाँ",
+    "Aravalli Hills and Ranges<br>अरावली पहाड़ियाँ और पर्वत श्रृंखलाएं",
+    "Vindhya Range<br>विंध्य पर्वत श्रृंखलाएं",
+    "Satpura Range<br>सतपुड़ा पर्वत श्रृंखलाएं"
+   ],
+   "my_ans": "B",
+   "sol": "यह मामला अरावली पहाड़ियों की सुरक्षा और उनके सीमांकन से संबंधित है, जो NCR क्षेत्र के पारिस्थितिक संतुलन के लिए महत्वपूर्ण है।",
+   "trick": "अरावली = NCR का पर्यावरण रक्षक।",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "GL",
+   "en": "Between 2001 and 2011, the male-female gap in the literacy rate of India __________.",
+   "hi": "2001 और 2011 के बीच, भारत की साक्षरता दर में पुरुष-महिला अंतर __________ ।",
+   "opts": [
+    "decreased<br>कम हो गया है।",
+    "became zero<br>शून्य हो गया ।",
+    "increased<br>बढ़ा गया ।",
+    "remained the same<br>समान रहा ।"
+   ],
+   "my_ans": "A",
+   "sol": "2001 में यह अंतर लगभग 21.6% था, जो 2011 में घटकर 16.6% रह गया, क्योंकि महिला साक्षरता दर में तेजी से सुधार हुआ।",
+   "trick": "शिक्षा का प्रसार = लैंगिक अंतर में कमी।",
+   "ans": "A"
+  },
+  {
+   "n": 85,
+   "lvl": "GL",
+   "en": "On which of the following National Waterways of India is the floating terminal Farakka situated?",
+   "hi": "भारत के निम्नलिखित में से किस राष्ट्रीय जलमार्ग पर तैरता टर्मिनल (floating terminal) फरक्का स्थित है?",
+   "opts": [
+    "National Waterways 5<br>राष्ट्रीय जलमार्ग 5",
+    "National Waterways 1<br>राष्ट्रीय जलमार्ग 1",
+    "National Waterways 2<br>राष्ट्रीय जलमार्ग 2",
+    "National Waterways 3<br>राष्ट्रीय जलमार्ग 3"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रीय जलमार्ग 1 (NW-1) गंगा-भागीरथी-हुगली नदी प्रणाली पर स्थित है, और फरक्का टर्मिनल इसी मार्ग का हिस्सा है।",
+   "trick": "NW-1 = गंगा नदी = सबसे लंबा जलमार्ग।",
+   "ans": "B"
+  },
+  {
+   "n": 86,
+   "lvl": "GL",
+   "en": "As per Census of 2011, which of the following states is least densely populated?",
+   "hi": "2011 की जनगणना के अनुसार, निम्नलिखित में से किस राज्य का जनसंख्या घनत्व न्यूनतम है?",
+   "opts": [
+    "Mizoram<br>मिजोरम",
+    "Rajasthan<br>राजस्थान",
+    "Assam<br>असम",
+    "Arunachal Pradesh<br>अरुणाचल प्रदेश"
+   ],
+   "my_ans": "D",
+   "sol": "अरुणाचल प्रदेश का क्षेत्रफल अधिक है और जनसंख्या बहुत कम है, इसलिए इसका जनसंख्या घनत्व (17 व्यक्ति प्रति वर्ग किमी) सबसे कम है।",
+   "trick": "अरुणाचल = सबसे कम घनत्व।",
+   "ans": "D"
+  },
+  {
+   "n": 87,
+   "lvl": "GL",
+   "en": "Which ocean current is primarily responsible for moderating the climate of Western Europe by transporting warm water from the tropics?",
+   "hi": "कौन-सी महासागर धारा मुख्यतः उष्णकटिबंधीय क्षेत्रों से कोष्णजल का परिवहन करके पश्चिमी यूरोप की जलवायु को नियंत्रित करने के लिए जिम्मेदार है?",
+   "opts": [
+    "Canary Current<br>कैनरी धारा",
+    "North Atlantic Drift<br>उत्तरी अटलांटिक अपवाह",
+    "Humboldt Current<br>हम्बोल्ट धारा",
+    "Oyashio Current<br>ओयाशियो धारा"
+   ],
+   "my_ans": "B",
+   "sol": "उत्तरी अटलांटिक ड्रिफ्ट एक गर्म जलधारा है जो कैरेबियन से गर्म पानी लाकर पश्चिमी यूरोप के तापमान को सामान्य रखती है।",
+   "trick": "उत्तरी अटलांटिक ड्रिफ्ट = यूरोप का हीटर।",
+   "ans": "B"
+  }
+ ]
+}

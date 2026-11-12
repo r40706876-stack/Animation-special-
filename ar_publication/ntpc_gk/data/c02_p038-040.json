@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "38-40",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which port did the Portuguese capture in 1510, making it their colony’s capital in India?",
+   "hi": "1510 में पुर्तगालियों ने किस बंदरगाह पर कब्जा कर लिया था और उसे भारत में अपनी उपनिवेश की राजधानी बना दिया था?",
+   "opts": [
+    "Goa<br>गोवा",
+    "Calicut<br>कालीकट",
+    "Bombay<br>बॉम्बे",
+    "Surat<br>सूरत"
+   ],
+   "my_ans": "A",
+   "sol": "1510 में पुर्तगाली कमांडर अल्बुकर्क ने बीजापुर के सुल्तान से गोवा जीता और इसे पुर्तगाली भारत की राजधानी बनाया।",
+   "trick": "1510 में गोवा पर कब्जा, पुर्तगाली शक्ति का आधार।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Who among the following composed the work Rajashekharacharitra, which is a Prabandha dealing with the wars and loves of Rajashekhara, King of Avanti?",
+   "hi": "निम्नलिखित में से किसने 'राजशेखरचरित्र' की रचना की, जो अवंती के राजा राजशेखर के युद्धों और प्रेम प्रसंगों से संबंधित एक प्रबंध है?",
+   "opts": [
+    "Nachana Somanatha<br>नचना सोमनाथ",
+    "Allasani Peddana<br>अल्लासानी पेद्दाना",
+    "Krishnadevaraya<br>कृष्णदेवराय",
+    "Madayagari Mallana<br>मदय्यागरी मल्लाना"
+   ],
+   "my_ans": "D",
+   "sol": "राजशेखरचरित्र तेलुगु साहित्य का एक प्रसिद्ध प्रबंध काव्य है, जिसकी रचना मध्यकालीन तेलुगु कवि मदय्यागरी मल्लाना ने की थी।",
+   "trick": "राजशेखरचरित्र = मदय्यागरी मल्लाना।",
+   "ans": "D"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Which 13th-century 1193 CE monument was built by Qutb- ud -din Aibak?",
+   "hi": "1193 ईस्वी में निर्मित 13 वीं शताब्दी का कौन-सा स्मारक कुतुबुद्दीन ऐबक द्वारा बनवाया गया था?",
+   "opts": [
+    "Red Fort<br>लाल किला",
+    "Qutub Minar<br>कुतुब मीनार",
+    "Jama Masjid<br>जामा मस्जिद",
+    "Quwwatul Islam Masjid<br>क़ुव्वत-उल-इस्लाम मस्जिद"
+   ],
+   "my_ans": "B",
+   "sol": "कुतुब मीनार का निर्माण 1193 ईस्वी में कुतुबुद्दीन ऐबक ने शुरू करवाया था, जिसे बाद में इल्तुतमिश ने पूरा किया।",
+   "trick": "ऐबक ने शुरू की कुतुब मीनार।",
+   "ans": "B"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following temples is an example of Dravidian architecture?",
+   "hi": "निम्नलिखित में से कौन-सा मंदिर द्रविड़ वास्तुकला का उदाहरण है?",
+   "opts": [
+    "Meenakshi Temple, Madurai<br>मीनाक्षी मंदिर, मदुरै",
+    "Lingaraja Temple, Bhubaneshwar<br>लिंगराज मंदिर, भुवनेश्वर",
+    "Sun Temple, Konark<br>सूर्य मंदिर, कोणार्क",
+    "Kandariya Mahadeva Temple, Madhya Pradesh<br>कंदरिया महादेव मंदिर, मध्य प्रदेश"
+   ],
+   "my_ans": "A",
+   "sol": "मदुरै का मीनाक्षी मंदिर अपनी विशाल गोपुरम और पिरामिडनुमा विमान संरचना के कारण द्रविड़ वास्तुकला का उत्कृष्ट उदाहरण है।",
+   "trick": "द्रविड़ शैली = दक्षिण भारत (गोपुरम)।",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Who among the following was a prominent disciple of Ramanuja’s Sri Vaishnava tradition who played a significant role in spreading its Bhakti teachings to North India?",
+   "hi": "रामानुज के श्री वैष्णव परंपरा के निम्नलिखित में से किस प्रमुख अनुयायी ने उत्तर भारत में भक्ति संबंधी उपदेशों के प्रसार में महत्वपूर्ण भूमिका निभाई?",
+   "opts": [
+    "Ramananda<br>रामानंद",
+    "Madhvacharya<br>माधवाचार्य",
+    "Ramanujacharya<br>रामानुजाचार्य",
+    "Namdev<br>नामदेव"
+   ],
+   "my_ans": "A",
+   "sol": "रामानंद रामानुज की श्री वैष्णव परंपरा के शिष्य थे, जिन्होंने भक्ति आंदोलन को दक्षिण से उत्तर भारत तक पहुँचाया।",
+   "trick": "रामानंद = उत्तर भारत में भक्ति का प्रसार।",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Amir Khusrau, the famous historian, said about a particular language that 'common people do not know it, only the Brahmanas do'. Which of the following languages did the historian talk about?",
+   "hi": "प्रसिद्ध इतिहासकार अमीर ख़ुसरो ने एक विशेष भाषा के संबंध में कहा था कि 'आम लोग इसे नहीं जानते, केवल ब्राह्मण ही जानते हैं।' इतिहासकार ने निम्नलिखित में से किस भाषा की बात की थी?",
+   "opts": [
+    "Palli<br>पाली",
+    "Sanskrit<br>संस्कृत",
+    "Hindu<br>हिंदी",
+    "Urdu<br>उर्दू"
+   ],
+   "my_ans": "B",
+   "sol": "अमीर खुसरो ने संस्कृत के बारे में कहा था क्योंकि मध्यकाल में यह केवल विद्वान ब्राह्मणों तक सीमित थी और आम लोग क्षेत्रीय भाषाएं बोलते थे।",
+   "trick": "संस्कृत = विद्वानों की भाषा।",
+   "ans": "B"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "The Harappan cities were famous for their ________.",
+   "hi": "हड़प्पा नगर अपने ________ के लिए प्रसिद्ध था।",
+   "opts": [
+    "Grid system of town planning<br>नगर नियोजन के ग्रिड सिस्टम",
+    "Irregular street patterns<br>अनियमित सड़क पैटर्न",
+    "Wooden houses<br>लकड़ी के घरों",
+    "Stone palaces<br>पत्थर के महलों"
+   ],
+   "my_ans": "A",
+   "sol": "हड़प्पा सभ्यता अपनी उन्नत नगर नियोजन प्रणाली के लिए जानी जाती थी, जिसमें सड़कें एक-दूसरे को समकोण पर काटती थीं (ग्रिड सिस्टम)।",
+   "trick": "हड़प्पा = ग्रिड सिस्टम (समकोण सड़कें)।",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following is NOT an important monument inside the Daulatabad Fort Maharashtra, India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत के महाराष्ट्र के दौलताबाद किले के भीतर स्थित एक महत्वपूर्ण स्मारक नहीं है?",
+   "opts": [
+    "Sikandra Fort<br>सिकंदर किला",
+    "Jami Masjid<br>जामी मस्जिद",
+    "Bharatmata Mandir<br>भारतमाता मंदिर",
+    "Chand Minar<br>चांद मीनार"
+   ],
+   "my_ans": "A",
+   "sol": "सिकंदरा किला आगरा में स्थित है जहाँ अकबर का मकबरा है, यह दौलताबाद किले का हिस्सा नहीं है।",
+   "trick": "सिकंदरा = आगरा (अकबर का मकबरा)।",
+   "ans": "A"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Who is the author of the historical work ' Rajatarangini ', which records the history of Kashmir?",
+   "hi": "कश्मीर के इतिहास को दर्ज करने वाली ऐतिहासिक कृति, 'राजतरंगिणी' किसने लिखी है?",
+   "opts": [
+    "Bilhana<br>बिल्हण",
+    "Kalidasa<br>कालिदास",
+    "Kalhana<br>कल्हण",
+    "Bana<br>बाना"
+   ],
+   "my_ans": "C",
+   "sol": "राजतरंगिणी की रचना 12वीं शताब्दी में कल्हण ने की थी, जो कश्मीर के इतिहास का पहला प्रामाणिक संस्कृत ग्रंथ है।",
+   "trick": "राजतरंगिणी = कल्हण (कश्मीर का इतिहास)।",
+   "ans": "C"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "The Rashtrakutas were primarily known for which architectural marvel?",
+   "hi": "राष्ट्रकूट, मुख्य रूप से किस स्थापत्य कला के लिए प्रसिद्ध थे?",
+   "opts": [
+    "Kailasa Temple at Ellora<br>एलोरा में कैलाश मंदिर",
+    "Brihadeeswara Temple<br>बृहदेश्वर मंदिर",
+    "Sanchi Stupa<br>सांची स्तूप",
+    "Konark Sun Temple at Konark<br>कोणार्क में कोणार्क सूर्य मंदिर"
+   ],
+   "my_ans": "A",
+   "sol": "एलोरा का कैलाश मंदिर राष्ट्रकूट राजा कृष्ण प्रथम द्वारा एक ही चट्टान को काटकर बनाया गया था, जो विश्व की सबसे बड़ी अखंड संरचना है।",
+   "trick": "राष्ट्रकूट = एलोरा का कैलाश मंदिर।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "138-140",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Wheat is mainly a crop of which season in India?",
+   "hi": "भारत में गेहूँ मुख्य रूप से किस मौसम की फसल है?",
+   "opts": [
+    "Zaid<br>जायद",
+    "Pre-monsoon<br>मानसून-पूर्व",
+    "Kharif<br>खरीफ",
+    "Rabi<br>रबी"
+   ],
+   "my_ans": "D",
+   "sol": "गेहूँ रबी की फसल है, जिसे सर्दियों में बोया जाता है (अक्टूबर-नवंबर) और वसंत में काटा जाता है (मार्च-अप्रैल)।",
+   "trick": "रबी = रबी की फसलें (गेहूँ, जौ, सरसों) सर्दियों में होती हैं।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Barren Island, which witnessed two eruptions in 2025, is situated in which Union Territory of India?",
+   "hi": "बैरन द्वीप, जिसमें 2025 में दो ज्वालामुखी विस्फोट हुए थे, भारत के किस केंद्र शासित प्रदेश में स्थित है?",
+   "opts": [
+    "Dadra & Nagar Haveli and Daman & Diu<br>दादरा और नगर हवेली एवं दमन और दीव",
+    "Lakshadweep<br>लक्षद्वीप",
+    "Puducherry<br>पुदुचेरी",
+    "Andaman & Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह"
+   ],
+   "my_ans": "D",
+   "sol": "बैरन द्वीप अंडमान सागर में स्थित है और यह दक्षिण एशिया का एकमात्र सक्रिय ज्वालामुखी है, जो अंडमान और निकोबार द्वीप समूह का हिस्सा है।",
+   "trick": "बैरन = अंडमान (सक्रिय ज्वालामुखी)",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "The period of southwest monsoon season in India is:",
+   "hi": "भारत में दक्षिण-पश्चिम मानसून ऋतु की अवधि क्या है?",
+   "opts": [
+    "May to September<br>मई से सितंबर",
+    "June to November<br>जून से नवंबर",
+    "June to September<br>जून से सितंबर",
+    "July to December<br>जुलाई से दिसंबर"
+   ],
+   "my_ans": "C",
+   "sol": "दक्षिण-पश्चिम मानसून भारत की मुख्य वर्षा ऋतु है, जो जून की शुरुआत में केरल से प्रवेश करती है और सितंबर तक रहती है।",
+   "trick": "मानसून = जून से सितंबर (वर्षा ऋतु)",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "As per Census of India 2011, which union territory of India recorded the highest population growth rate?",
+   "hi": "भारत की जनगणना 2011 के अनुसार, भारत के किस केंद्र शासित प्रदेश में जनसंख्या वृद्धि दर सर्वाधिक दर्ज की गई?",
+   "opts": [
+    "Puducherry<br>पुदुचेरी",
+    "Daman and Diu<br>दमन और दीव",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप समूह",
+    "Dadra and Nagar Haveli<br>दादरा और नगर हवेली"
+   ],
+   "my_ans": "D",
+   "sol": "2011 की जनगणना के अनुसार, दादरा और नगर हवेली ने सभी केंद्र शासित प्रदेशों में सबसे अधिक 55.5% की दशकीय वृद्धि दर दर्ज की थी।",
+   "trick": "जनगणना 2011 = दादरा और नगर हवेली (सर्वाधिक वृद्धि)",
+   "ans": "D"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "What type of activity is tourism classified as?",
+   "hi": "पर्यटन को किस प्रकार की गतिविधि के रूप में वर्गीकृत किया जाता है?",
+   "opts": [
+    "Secondary<br>द्वितीयक",
+    "Primary<br>प्राथमिक",
+    "Quaternary<br>चतुर्थक",
+    "Tertiary<br>तृतीयक"
+   ],
+   "my_ans": "D",
+   "sol": "पर्यटन एक सेवा-आधारित गतिविधि है, इसलिए इसे तृतीयक (सेवा) क्षेत्र में रखा जाता है।",
+   "trick": "सेवा = तृतीयक क्षेत्र (पर्यटन, बैंकिंग, परिवहन)",
+   "ans": "D"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Which of the following terms is used for places that serve as the meeting point of two or more transport routes?",
+   "hi": "निम्नलिखित में से किस शब्द का प्रयोग उन स्थानों के लिए किया जाता है जो दो या अधिक परिवहन मार्गों के मिलन बिंदु के रूप में कार्य करते हैं?",
+   "opts": [
+    "Node<br>नोड",
+    "Grid<br>ग्रिड",
+    "Link<br>लिंक",
+    "Network<br>नेटवर्क"
+   ],
+   "my_ans": "A",
+   "sol": "परिवहन भूगोल में, वह बिंदु जहाँ दो या अधिक मार्ग मिलते हैं (जैसे रेलवे जंक्शन), उसे 'नोड' कहा जाता है।",
+   "trick": "मिलन बिंदु = नोड",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which volcano type is also known as a stratovolcano due to its layered structure?",
+   "hi": "किस प्रकार के ज्वालामुखी को उसकी परतदार संरचना के कारण स्तरित ज्वालामुखी (stratovolcano) के रूप में भी जाना जाता है?",
+   "opts": [
+    "Fissure volcano<br>दरारी ज्वालामुखी",
+    "Shield volcano<br>गुम्बदी ज्वालामुखी",
+    "Cinder cone volcano<br>सिंडर शंकु ज्वालामुखी",
+    "Composite volcano<br>मिश्र ज्वालामुखी"
+   ],
+   "my_ans": "D",
+   "sol": "मिश्र ज्वालामुखी (Composite volcano) लावा, राख और अन्य पदार्थों की परतों से बना होता है, इसलिए इसे स्ट्रैटो-ज्वालामुखी भी कहते हैं।",
+   "trick": "परतदार = मिश्र (Composite)",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "According to the United Nations World Population Prospects (2019), which region is projected to contribute most significantly to global population growth by 2050, thereby affecting future population density trends?",
+   "hi": "यूनाइटेड नेशंस वर्ल्ड पॉपुलेशन प्रॉस्पेक्ट्स (2019) के अनुसार, 2050 तक कौन-सा क्षेत्र वैश्विक जनसंख्या वृद्धि में सर्वाधिक महत्वपूर्ण योगदान देने के लिए अनुमानित है, जिससे भविष्य के जनसंख्या घनत्व के रुझान प्रभावित होंगे?",
+   "opts": [
+    "Eastern Southeastern Asia<br>पूर्वी दक्षिणपूर्वी एशिया",
+    "Latin America and the Caribbean<br>लैटिन अमेरिका और कैरिबियन",
+    "Europe North America<br>यूरोप उत्तरी अमेरिका",
+    "Sub Saharan Africa<br>उप-सहारा अफ्रीका"
+   ],
+   "my_ans": "D",
+   "sol": "उच्च प्रजनन दर और युवा जनसंख्या संरचना के कारण, उप-सहारा अफ्रीका 2050 तक वैश्विक जनसंख्या वृद्धि में आधे से अधिक योगदान देगा।",
+   "trick": "जनसंख्या वृद्धि = उप-सहारा अफ्रीका",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Canary Current occurs in which of the following oceans?",
+   "hi": "कैनरी धारा निम्नलिखित में से किस महासागर में प्रवाहित होती है?",
+   "opts": [
+    "Pacific Ocean<br>प्रशांत महासागर",
+    "Indian Ocean<br>हिंद महासागर",
+    "Southern Ocean<br>दक्षिणी महासागर",
+    "Atlantic Ocean<br>अटलांटिक महासागर"
+   ],
+   "my_ans": "D",
+   "sol": "कैनरी धारा एक ठंडी महासागरीय धारा है जो उत्तरी अटलांटिक महासागर में अफ्रीका के उत्तर-पश्चिमी तट के साथ बहती है।",
+   "trick": "कैनरी = अटलांटिक (ठंडी धारा)",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Which mountain ranges traverse the Trans-Himalayan zone in India?",
+   "hi": "भारत में कौन-सी पर्वत श्रृंखलाएँ पार-हिमालयी क्षेत्र (Trans-Himalayan zone) की पर्वत श्रृंखलाएं हैं?",
+   "opts": [
+    "Western Ghats, Eastern Ghats, Satpura<br>पश्चिमी घाट, पूर्वी घाट, सतपुड़ा",
+    "Zanskar, Ladakh, Karakoram<br>जास्कर, लद्दाख, काराकोरम",
+    "Himalayas, Aravalli, Vindhya<br>हिमालय, अरावली, विंध्य",
+    "Himalayas, Satpura, Karakoram<br>हिमालय, सतपुड़ा, काराकोरम"
+   ],
+   "my_ans": "B",
+   "sol": "ट्रांस-हिमालयी क्षेत्र महान हिमालय के उत्तर में स्थित है, जिसमें मुख्य रूप से काराकोरम, लद्दाख और जास्कर श्रेणियां शामिल हैं।",
+   "trick": "ट्रांस = काराकोरम, लद्दाख, जास्कर",
+   "ans": "B"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Which layer of the Earth plays the primary role in generating the planet’s magnetic field?",
+   "hi": "पृथ्वी की कौन-सी परत ग्रह के चुंबकीय क्षेत्र को उत्पन्न करने में प्राथमिक भूमिका निभाती है?",
+   "opts": [
+    "Mantle<br>मैंटल",
+    "Crust<br>पर्पटी",
+    "Outer core<br>बाह्य क्रोड",
+    "Inner core<br>आंतरिक क्रोड"
+   ],
+   "my_ans": "C",
+   "sol": "पृथ्वी का बाह्य क्रोड तरल लोहे और निकल से बना है, जिसमें संवहन धाराओं के कारण चुंबकीय क्षेत्र (जियोडायनेमो प्रभाव) उत्पन्न होता है।",
+   "trick": "चुंबकीय क्षेत्र = बाह्य क्रोड (तरल धातु)",
+   "ans": "C"
+  }
+ ]
+}

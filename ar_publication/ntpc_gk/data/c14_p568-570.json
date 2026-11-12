@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "568-570",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "In 2025, which state had One-Stop Centres that assisted approximately 2.39 lakh women?",
+   "hi": "2025 में, किस राज्य में वन-स्टॉप सेंटर (One-Stop Centres) थे जिन्होंने लगभग 2.39 लाख महिलाओं की सहायता की?",
+   "opts": [
+    "Gujarat<br>गुजरात",
+    "Maharashtra<br>महाराष्ट्र",
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "C",
+   "sol": "उत्तर प्रदेश में वन-स्टॉप सेंटर्स (OSCs) ने 2025 में लगभग 2.39 लाख महिलाओं को सहायता प्रदान की थी।",
+   "trick": "उत्तर प्रदेश की जनसंख्या अधिक है, इसलिए सहायता संख्या भी यहाँ सर्वाधिक रही।",
+   "ans": "C"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Where was the Nagpur Book Festival 2025 scheduled to be held?",
+   "hi": "नागपुर पुस्तक महोत्सव 2025 का आयोजन कहाँ हुआ था?",
+   "opts": [
+    "Reshimbagh Ground<br>रेशीमबाग मैदान",
+    "Kasturchand Park<br>कस्तूरचंद पार्क",
+    "Yeshwant Stadium<br>यशवंत स्टेडियम",
+    "Mankapur Stadium<br>मनकापुर स्टेडियम"
+   ],
+   "my_ans": "A",
+   "sol": "नागपुर पुस्तक महोत्सव 2025 का आयोजन रेशीमबाग मैदान में किया गया था, जो बड़े कार्यक्रमों के लिए प्रसिद्ध है।",
+   "trick": "रेशीमबाग मैदान नागपुर में सांस्कृतिक कार्यक्रमों का प्रमुख केंद्र है।",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "Which ministry in the Indian Government launched Mission Sudarshan Chakra in 2025?",
+   "hi": "भारत सरकार के किस मंत्रालय ने 2025 में मिशन सुदर्शन चक्र की शुरुआत की?",
+   "opts": [
+    "Ministry of Defence<br>रक्षा मंत्रालय",
+    "Ministry of Electronics & Information Technology<br>इलेक्ट्रॉनिकी और सूचना प्रौद्योगिकी मंत्रालय",
+    "Ministry of Home Affairs<br>गृह मंत्रालय",
+    "Ministry of Science & Technology<br>विज्ञान और प्रौद्योगिकी मंत्रालय"
+   ],
+   "my_ans": "A",
+   "sol": "मिशन सुदर्शन चक्र रक्षा मंत्रालय द्वारा लॉन्च किया गया एक काउंटर-ड्रोन रक्षा तंत्र है।",
+   "trick": "सुदर्शन चक्र भगवान विष्णु का अस्त्र है, जो रक्षा (Defence) का प्रतीक है।",
+   "ans": "A"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "Who made history in November 2025 as the first Muslim and South Asian American elected Lieutenant Governor of Virginia?",
+   "hi": "निम्न में से किसने नवंबर 2025 में वर्जीनिया की पहली मुस्लिम और दक्षिण एशियाई अमेरिकी निर्वाचित लेफ्टिनेंट गवर्नर बनकर इतिहास रचा?",
+   "opts": [
+    "Pramila Jayapal<br>प्रमिला जयपाल",
+    "Ghazala Hashmi<br>गज़ाला हाशमी",
+    "Suhas Subramanyam<br>सुहास सुब्रमण्यम",
+    "Zeeshan Siddiqui<br>ज़ीशान सिद्दीकी"
+   ],
+   "my_ans": "B",
+   "sol": "गज़ाला हाशमी नवंबर 2025 में वर्जीनिया की पहली मुस्लिम और दक्षिण एशियाई अमेरिकी लेफ्टिनेंट गवर्नर चुनी गईं।",
+   "trick": "गज़ाला हाशमी का नाम वर्जीनिया की राजनीति में ऐतिहासिक उपलब्धि से जुड़ा है।",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "After the Government merged 29 labour laws into four Labour Codes in November 2025, the provision permitting women to work in all establishments including night shifts falls under which of the following Codes?",
+   "hi": "नवंबर 2025 में सरकार द्वारा 29 श्रम कानूनों का चार श्रम संहिताओं में विलय करने के बाद, महिलाओं को रात्रि शिफ्ट सहित सभी प्रतिष्ठानों में काम करने की अनुमति देने वाला प्रावधान निम्नलिखित में से किस संहिता के अंतर्गत आता है?",
+   "opts": [
+    "The Occupational Safety, Health and Working Conditions Code, 2020<br>व्यावसायिक सुरक्षा, स्वास्थ्य और कार्य शर्त संहिता, 2020",
+    "The Industrial Relations Code, 2020<br>औद्योगिक संबंध संहिता, 2020",
+    "The Code on Wages, 2019<br>वेतन संहिता, 2019",
+    "The Code on Social Security, 2020<br>सामाजिक सुरक्षा संहिता, 2020"
+   ],
+   "my_ans": "A",
+   "sol": "कार्यस्थल की सुरक्षा और स्थितियों से संबंधित नियम 'व्यावसायिक सुरक्षा, स्वास्थ्य और कार्य शर्त संहिता, 2020' में आते हैं।",
+   "trick": "कार्य की शर्तें (Working Conditions) OSH कोड का हिस्सा हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "Which indigenous microprocessor, launched in 2025, marked a milestone in India’s technological self-reliance as the country’s first 1.0 GHz, 64-bit dual-core processor?",
+   "hi": "2025 में लॉन्च किया गया कौन-सा स्वदेशी माइक्रोप्रोसेसर भारत की तकनीकी आत्मनिर्भरता में एक मील का पत्थर साबित हुआ, क्योंकि यह देश का पहला 1.0 GHz, 64-बिट ड्यूल-कोर प्रोसेसर था?",
+   "opts": [
+    "DHRUV64 microprocessor<br>DHRUV64 माइक्रोप्रोसेसर",
+    "SHAKTI-X64 microprocessor<br>SHAKTI-X64 माइक्रोप्रोसेसर",
+    "BHARAT-Core 64 microprocessor<br>BHARAT-Core 64 माइक्रोप्रोसेसर",
+    "VEGA-64 indigenous processor<br>VEGA-64 स्वदेशी प्रोसेसर"
+   ],
+   "my_ans": "A",
+   "sol": "DHRUV64 भारत का पहला स्वदेशी 1.0 GHz, 64-बिट ड्यूल-कोर माइक्रोप्रोसेसर है।",
+   "trick": "ध्रुव (DHRUV) तारा स्थिर और आत्मनिर्भरता का प्रतीक है।",
+   "ans": "A"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "As per the World Economic Outlook January 2026, by the International Monetary Fund, global economic expansion in 2027, is expected to be which of the following rates?",
+   "hi": "अंतर्राष्ट्रीय मुद्रा कोष द्वारा वर्ल्ड इकोनॉमिक आउटलुक जनवरी 2026 के अनुसार, 2027 में वैश्विक आर्थिक विस्तार निम्नलिखित में से किस दर पर होने की अपेक्षा है?",
+   "opts": [
+    "4.0 percent<br>4.0 प्रतिशत",
+    "2.9 percent<br>2.9 प्रतिशत",
+    "3.2 percent<br>3.2 प्रतिशत",
+    "3.5 percent<br>3.5 प्रतिशत"
+   ],
+   "my_ans": "C",
+   "sol": "IMF की जनवरी 2026 की रिपोर्ट के अनुसार, 2027 में वैश्विक आर्थिक विकास दर 3.2 प्रतिशत रहने का अनुमान है।",
+   "trick": "IMF का 2027 का अनुमान 3.2% याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "Which of the following ports have NOT been identified for Port Modernization and Maritime Infrastructure Expansion under the Maritime Amrit Kaal Vision 2047 (MAKV 2047)?",
+   "hi": "निम्नलिखित में से किस बंदरगाह को मैरीटाइम अमृत काल विजन 2047 (MAKV 2047) के अंतर्गत बंदरगाह आधुनिकीकरण और समुद्री अवसंरचना विस्तार के लिए चिह्नित नहीं किया गया है?",
+   "opts": [
+    "V.O Chidambaranar Port Authority (Tuticorin)<br>वी. ओ. चिदंबरनार बंदरगाह प्राधिकरण (तूतीकोरिन)",
+    "Paradip Port Authority<br>पारादीप बंदरगाह प्राधिकरण",
+    "Panaji Port<br>पणजी बंदरगाह",
+    "Deendayal Port Authority (Kandla)<br>दीनदयाल बंदरगाह प्राधिकरण (कांडला)"
+   ],
+   "my_ans": "C",
+   "sol": "पणजी एक लघु बंदरगाह है, जबकि MAKV 2047 योजना मुख्य रूप से बड़े (Major) बंदरगाहों के आधुनिकीकरण पर केंद्रित है।",
+   "trick": "MAKV 2047 केवल 'प्रमुख' (Major) बंदरगाहों के लिए है।",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "In 2025, India was re-elected to the Council of which organization for the 2026–27 term under Category B?",
+   "hi": "2025 में, भारत को श्रेणी B के तहत 2026-27 की अवधि के लिए किस संगठन की परिषद् में पुनः निर्वाचित किया गया था?",
+   "opts": [
+    "International Maritime Organization (IMO)<br>अंतर्राष्ट्रीय समुद्री संगठन (IMO)",
+    "International Seabed Authority<br>अंतर्राष्ट्रीय समुद्र तल प्राधिकरण",
+    "International Civil Aviation Organization<br>अंतर्राष्ट्रीय नागर विमानन संगठन",
+    "World Trade Organization<br>विश्व व्यापार संगठन"
+   ],
+   "my_ans": "A",
+   "sol": "भारत को 2026-27 कार्यकाल के लिए अंतर्राष्ट्रीय समुद्री संगठन (IMO) की परिषद में श्रेणी B के तहत पुनः चुना गया है।",
+   "trick": "समुद्री व्यापार (Maritime trade) में भारत की बड़ी भूमिका है।",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "In 2025, who was named FIFA Men’s Player of the Year at the FIFA Best Football Awards held in Doha, Qatar?",
+   "hi": "वर्ष 2025 में, दोहा, क़तर में आयोजित फीफा बेस्ट फुटबॉल अवॉर्ड्स में 'फीफा मेन्स प्लेयर ऑफ द ईयर' किसे चुना गया?",
+   "opts": [
+    "Kylian Mbappé<br>किलियन म्बाप्पे",
+    "Erling Haaland<br>एर्लिंग हालैंड",
+    "Lionel Messi<br>लियोनेल मेस्सी",
+    "Ousmane Dembélé<br>उस्मान डेम्बेले"
+   ],
+   "my_ans": "D",
+   "sol": "2025 के फीफा बेस्ट फुटबॉल अवॉर्ड्स में उस्मान डेम्बेले को 'फीफा मेन्स प्लेयर ऑफ द ईयर' चुना गया।",
+   "trick": "2025 का फीफा पुरस्कार उस्मान डेम्बेले को मिला।",
+   "ans": "D"
+  }
+ ]
+}

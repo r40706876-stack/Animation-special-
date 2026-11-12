@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "462-464",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which file type is most suitable for storing structured data that can be imported into spreadsheet applications?",
+   "hi": "स्प्रेडशीट एप्लीकेशन में इम्पोर्ट किए जा सकने वाले संरचित डेटा को स्टोर करने के लिए फ़ाइल का कौन-सा प्रकार सबसे उपयुक्त होता है?",
+   "opts": [
+    ".csv",
+    ".exe",
+    ".png",
+    ".mp4"
+   ],
+   "my_ans": "A",
+   "sol": ".csv (Comma Separated Values) एक टेक्स्ट फॉर्मेट है जो सारणीबद्ध डेटा को स्टोर करता है, जिसे एक्सेल या गूगल शीट्स में आसानी से खोला जा सकता है।",
+   "trick": "CSV = Comma Separated Values (सारणीबद्ध डेटा के लिए)",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Movie studios use powerful computers to create special effects and animations. This is an application of computers in:",
+   "hi": "फिल्म स्टूडियो, स्पेशल इफेक्ट और एनिमेशन बनाने के लिए शक्तिशाली कंप्यूटरों का उपयोग करते हैं। यह ________ में कंप्यूटर का एक अनुप्रयोग है।",
+   "opts": [
+    "Accounting<br>लेखांकन",
+    "Entertainment<br>मनोरंजन",
+    "Banking<br>बैंकिंग",
+    "Scientific research only<br>केवल वैज्ञानिक अनुसंधान"
+   ],
+   "my_ans": "B",
+   "sol": "फिल्म निर्माण, स्पेशल इफेक्ट्स, एनिमेशन और वीडियो गेम का निर्माण मनोरंजन उद्योग (Entertainment Industry) के अंतर्गत आता है।",
+   "trick": "फिल्म/एनिमेशन = मनोरंजन",
+   "ans": "B"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following BEST differentiates system software from application software?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प सिस्टम सॉफ्टवेयर और एप्लीकेशन सॉफ्टवेयर के बीच अंतर को सर्वोत्तम रूप से स्पष्ट करता है?",
+   "opts": [
+    "Both are used only for entertainment<br>दोनों का उपयोग केवल मनोरंजन के लिए किया जाता है",
+    "System software creates documents; application software manages the CPU<br>सिस्टम सॉफ्टवेयर डॉक्यूमेंट क्रिएट करता है; एप्लीकेशन सॉफ्टवेयर CPU को मैनेज करता है",
+    "System software is user-oriented; application software is system-oriented<br>सिस्टम सॉफ्टवेयर यूज़र-ओरिएंटेड होता है; एप्लीकेशन सॉफ्टवेयर सिस्टम-ओरिएंटेड होता है",
+    "System software runs directly on hardware; application software runs after system software loads<br>सिस्टम सॉफ्टवेयर सीधे हार्डवेयर पर रन होता है; एप्लीकेशन सॉफ्टवेयर, सिस्टम सॉफ्टवेयर लोड होने के बाद रन होता है"
+   ],
+   "my_ans": "D",
+   "sol": "सिस्टम सॉफ्टवेयर (जैसे OS) सीधे हार्डवेयर को नियंत्रित करता है, जबकि एप्लीकेशन सॉफ्टवेयर (जैसे MS Word) सिस्टम सॉफ्टवेयर के ऊपर चलता है।",
+   "trick": "सिस्टम सॉफ्टवेयर = हार्डवेयर का आधार",
+   "ans": "D"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Which is the latest version of Windows?",
+   "hi": "विंडोज़ का नवीनतम संस्करण कौन-सा है?",
+   "opts": [
+    "Windows 18",
+    "Windows 11",
+    "Windows 10",
+    "Windows 7"
+   ],
+   "my_ans": "B",
+   "sol": "माइक्रोसॉफ्ट द्वारा जारी विंडोज़ का नवीनतम संस्करण विंडोज़ 11 है, जिसे 2021 में लॉन्च किया गया था।",
+   "trick": "Windows 11 = नवीनतम",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "Which metric indicates the average number of instructions a CPU executes per clock cycle?",
+   "hi": "कौन-सा मीट्रिक, CPU द्वारा प्रति क्लॉक साइकिल (per clock cycle) निष्पादित अनुदेशों की औसत संख्या को दर्शाता है?",
+   "opts": [
+    "IPC (Instructions Per Cycle)<br>IPC (प्रति साइकिल अनुदेश)",
+    "Bus speed<br>बस स्पीड",
+    "Core count<br>कोर काउंट",
+    "Clock speed<br>क्लॉक स्पीड"
+   ],
+   "my_ans": "A",
+   "sol": "IPC का पूर्ण रूप 'Instructions Per Cycle' है, जो यह मापता है कि CPU एक क्लॉक साइकिल में औसतन कितने निर्देश पूरे करता है।",
+   "trick": "IPC = Instructions Per Cycle",
+   "ans": "A"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Major storage media, such as CDs and DVDs, use optical technology, while HDDs rely on _______ technology to store bits.",
+   "hi": "CD और DVD जैसे प्रमुख स्टोरेज माध्यम ऑप्टिकल तकनीक का उपयोग करते हैं, जबकि HDD बिट्स को स्टोर करने के लिए _________ तकनीक पर निर्भर करते हैं।",
+   "opts": [
+    "solid-state memory<br>सॉलिड-स्टेट मेमोरी",
+    "magnetic field<br>मैग्नेटिक फील्ड",
+    "liquid crystal<br>लिक्विड क्रिस्टल",
+    "semiconductor chip<br>सेमीकंडक्टर चिप"
+   ],
+   "my_ans": "B",
+   "sol": "हार्ड डिस्क ड्राइव (HDD) डेटा को स्टोर करने के लिए चुंबकीय क्षेत्र (magnetic field) तकनीक का उपयोग करती है, जिसमें घूमने वाली प्लेटों पर डेटा लिखा जाता है।",
+   "trick": "HDD = Magnetic (चुंबकीय)",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "When a Windows computer is in Sleep mode, which common user action will typically bring the system back to an active state?",
+   "hi": "जब कोई विंडोज़ कंप्यूटर स्लीप मोड (Sleep mode) में होता है, तो सामान्यतः कौन-सा यूजर्स एक्शन, सिस्टम को सक्रिय अवस्था में वापस पहुंचाता है?",
+   "opts": [
+    "Battery fully drained<br>बैटरी का पूर्णतः खत्म होना",
+    "Network time sync<br>नेटवर्क टाइम सिंक",
+    "Moving the mouse<br>माउस को मूव करना",
+    "BIOS update<br>BIOS अपडेट"
+   ],
+   "my_ans": "C",
+   "sol": "स्लीप मोड से कंप्यूटर को जगाने के लिए माउस हिलाना, कीबोर्ड दबाना या पावर बटन दबाना सामान्य तरीके हैं।",
+   "trick": "स्लीप मोड = माउस हिलाना",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "Which of the following components of Windows provides quick access to frequently used applications and system settings?",
+   "hi": "विंडोज़ के निम्नलिखित घटकों में से कौन-सा घटक प्रायः उपयोग किए जाने वाले एप्लीकेशन और सिस्टम सेटिंग्स तक त्वरित एक्सेस प्रदान करता है?",
+   "opts": [
+    "Disk Cleanup<br>डिस्क क्लीनअप",
+    "Recycle Bin<br>रिसाइकिल बिन",
+    "Desktop Wallpaper<br>डेस्कटॉप वॉलपेपर",
+    "Taskbar<br>टास्कबार"
+   ],
+   "my_ans": "D",
+   "sol": "टास्कबार स्क्रीन के नीचे स्थित पट्टी है जहाँ से हम पिन किए गए ऐप्स और सिस्टम सेटिंग्स को तुरंत एक्सेस कर सकते हैं।",
+   "trick": "Taskbar = Quick Access",
+   "ans": "D"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Which shortcut opens the Properties of the selected item?",
+   "hi": "निम्न में से कौन-सा शॉर्टकट सेलेक्ट किए गए आइटम की प्रॉपर्टीज़ (Properties) को ओपन करता है?",
+   "opts": [
+    "Alt+E",
+    "Alt+Enter",
+    "Alt+Shift",
+    "Alt+Ctrl"
+   ],
+   "my_ans": "B",
+   "sol": "विंडोज़ में किसी भी फाइल या फोल्डर को सेलेक्ट करके 'Alt+Enter' दबाने से उसकी प्रॉपर्टीज़ विंडो खुल जाती है।",
+   "trick": "Properties = Alt + Enter",
+   "ans": "B"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which sector uses computers for online transactions, payroll processing, inventory control, and data analysis?",
+   "hi": "कौन-सा क्षेत्रक ऑनलाइन लेनदेन, पेरोल प्रसंस्करण, इन्वेंट्री नियंत्रण और डेटा विश्लेषण के लिए कंप्यूटर का उपयोग करता है?",
+   "opts": [
+    "Manufacturing Plants<br>विनिर्माण संयंत्र",
+    "Service Industry<br>सेवा उद्योग",
+    "Business and Commerce<br>व्यापार और वाणिज्य",
+    "Research<br>अनुसंधान"
+   ],
+   "my_ans": "C",
+   "sol": "ऑनलाइन लेनदेन, पेरोल और इन्वेंट्री प्रबंधन मुख्य रूप से व्यापार और वाणिज्य (Business and Commerce) के संचालन का हिस्सा हैं।",
+   "trick": "लेनदेन/पेरोल = व्यापार",
+   "ans": "C"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Physically, a CPU is placed on one or more microchips known as:",
+   "hi": "भौतिक रूप से, एक CPU को एक या अधिक माइक्रोचिप्स पर रखा जाता है जिन्हें कहा जाता है:",
+   "opts": [
+    "Motherboard<br>मदरबोर्ड",
+    "RAM",
+    "Hard Drive<br>हार्ड ड्राइव",
+    "Integrated Circuits<br>इंटीग्रेटेड सर्किट"
+   ],
+   "my_ans": "D",
+   "sol": "CPU को भौतिक रूप से इंटीग्रेटेड सर्किट (IC) या माइक्रोचिप पर बनाया जाता है, जो सिलिकॉन से बने होते हैं।",
+   "trick": "CPU = Integrated Circuit",
+   "ans": "D"
+  }
+ ]
+}

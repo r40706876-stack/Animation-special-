@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "413-415",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 25,
+   "lvl": "UG",
+   "en": "Which of the following statements is true for water when it is cooled from 4°C to 0°C?",
+   "hi": "जब जल को 4°C से 0°C तक ठंडा किया जाता है, तो उसके लिए कौन-सा कथन सत्य है?",
+   "opts": [
+    "Volume and density both increase<br>आयतन और घनत्व दोनों बढ़ते हैं",
+    "Volume decreases but density remains same<br>आयतन घटता है लेकिन घनत्व समान रहता है",
+    "Volume increases but density decreases<br>आयतन बढ़ता है लेकिन घनत्व घटता है",
+    "Volume and density both decrease<br>आयतन और घनत्व दोनों घटते हैं"
+   ],
+   "my_ans": "C",
+   "sol": "जल का घनत्व 4°C पर अधिकतम होता है। 4°C से 0°C तक ठंडा करने पर जल फैलता है (असामान्य व्यवहार), जिससे आयतन बढ़ता है और घनत्व घटता है।",
+   "trick": "4°C पर घनत्व अधिकतम, ठंडा करने पर जल फैलता है।",
+   "ans": "C"
+  },
+  {
+   "n": 26,
+   "lvl": "UG",
+   "en": "When lemon juice is added to milk, it forms paneer. This process is known as ______.",
+   "hi": "जब दूध में नींबू का रस मिलाया जाता है, तो पनीर बनता है। इस प्रक्रिया को __________ के रूप में जाना जाता है।",
+   "opts": [
+    "Hydrolysis<br>जल-अपघटन",
+    "Coagulation<br>स्कंदन",
+    "Crystallization<br>क्रिस्टलीकरण",
+    "Sedimentation<br>अवसादन"
+   ],
+   "my_ans": "B",
+   "sol": "नींबू के रस (अम्ल) के कारण दूध के प्रोटीन (केसीन) एक साथ जमा होकर तरल से अलग हो जाते हैं, जिसे स्कंदन (Coagulation) कहते हैं।",
+   "trick": "अम्ल + दूध प्रोटीन = स्कंदन (Coagulation)",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "UG",
+   "en": "Which of the following explains that during a chemical reaction, the sum of masses of the reactants and products remains unchanged?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प यह व्याख्या करता है कि रासायनिक अभिक्रिया के दौरान अभिकारकों और उत्पादों के द्रव्यमान का योग अपरिवर्तनीय होता है?",
+   "opts": [
+    "Law of Periodicity<br>आवर्तिता का नियम",
+    "Law of Conservation of Mass<br>द्रव्यमान संरक्षण का नियम",
+    "Law of Definite Composition<br>निश्चित संघटन का नियम",
+    "Law of Definite Proportions<br>निश्चित अनुपात का नियम"
+   ],
+   "my_ans": "B",
+   "sol": "द्रव्यमान संरक्षण के नियम के अनुसार, रासायनिक अभिक्रिया में द्रव्यमान न तो बनाया जा सकता है और न ही नष्ट किया जा सकता है।",
+   "trick": "द्रव्यमान का योग = अपरिवर्तनीय (Conservation)",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "UG",
+   "en": "Who among the following is credited with the discovery of the law of conservation of mass?",
+   "hi": "निम्नलिखित में से किसे द्रव्यमान संरक्षण के नियम की खोज का श्रेय दिया जाता है?",
+   "opts": [
+    "Dmitri Mendeleev<br>दिमित्री मेंडेलीव",
+    "Joseph Priestley<br>जोसेफ प्रीस्टली",
+    "Antoine Lavoisier<br>एंटोनी लावोइसियर",
+    "John Dalton<br>जॉन डाल्टन"
+   ],
+   "my_ans": "C",
+   "sol": "एंटोनी लावोइसियर ने 1789 में सावधानीपूर्वक प्रयोगों द्वारा द्रव्यमान संरक्षण के नियम को सिद्ध किया था।",
+   "trick": "द्रव्यमान संरक्षण = लावोइसियर",
+   "ans": "C"
+  },
+  {
+   "n": 29,
+   "lvl": "UG",
+   "en": "Since hydrogen ions cannot exist alone and exist only after combining with water molecules, they must always be shown as which among the following, represented as H₃O⁺?",
+   "hi": "चूँकि हाइड्रोजन आयन स्वतंत्र रूप में नहीं रह सकते, लेकिन ये जल के अणुओं के साथ मिलकर रह सकते हैं, इसलिए इन्हें सदैव ________________ से दर्शाना चाहिए, जिसे H₃O⁺ के रूप में निरूपित किया जाता है?",
+   "opts": [
+    "Hydrogen gas<br>हाइड्रोजन गैस",
+    "Oxide ion<br>ऑक्साइड आयन",
+    "Hydronium ion<br>हाइड्रोनियम आयन",
+    "Hydroxide ion<br>हाइड्रॉक्साइड आयन"
+   ],
+   "my_ans": "C",
+   "sol": "H⁺ आयन पानी में स्वतंत्र नहीं रह सकते, वे जल के अणुओं (H₂O) से जुड़कर हाइड्रोनियम आयन (H₃O⁺) बनाते हैं।",
+   "trick": "H⁺ + H₂O = H₃O⁺ (हाइड्रोनियम)",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "UG",
+   "en": "A student mixes aqueous solutions of barium chloride and sodium sulphate. A white curd-like substance forms instantly. What type of chemical reaction is primarily responsible for this observation?",
+   "hi": "एक छात्र बेरियम क्लोराइड और सोडियम सल्फेट के जलीय विलयनों को मिश्रित करता है। तत्काल एक श्वेत दही-जैसे पदार्थ का निर्माण होता है। इस प्रेक्षण के लिए प्राथमिक रूप से कौन-सी रासायनिक अभिक्रिया उत्तरदायी है?",
+   "opts": [
+    "Decomposition of sodium sulphate by barium chloride catalyst<br>बेरियम क्लोराइड उत्प्रेरक द्वारा सोडियम सल्फेट का अपघटन",
+    "Evolution of SO₂ gas during a displacement reaction<br>विस्थापन अभिक्रिया के दौरान SO₂ गैस का उत्सर्जन",
+    "Precipitation reaction forming insoluble barium sulphate<br>अवक्षेपण अभिक्रिया, जिससे अघुलनशील बेरियम सल्फेट का निर्माण होता है",
+    "Redox reaction resulting in electron transfer<br>रेडॉक्स अभिक्रिया, जिसके परिणामस्वरूप इलेक्ट्रॉन अंतरण होता है"
+   ],
+   "my_ans": "C",
+   "sol": "बेरियम क्लोराइड और सोडियम सल्फेट की अभिक्रिया से अघुलनशील बेरियम सल्फेट (BaSO₄) का सफेद अवक्षेप प्राप्त होता है।",
+   "trick": "अघुलनशील पदार्थ = अवक्षेपण (Precipitation)",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "UG",
+   "en": "Which pollutant from the following is mainly responsible for the formation of acid rain?",
+   "hi": "अम्लीय वर्षा के निर्माण के लिए निम्नलिखित में से कौन-सा प्रदूषक मुख्य रूप से उत्तरदायी है?",
+   "opts": [
+    "Carbon monoxide<br>कार्बन मोनोऑक्साइड",
+    "Ammonia<br>अमोनिया",
+    "Sulphur dioxide<br>सल्फर डाइऑक्साइड",
+    "Ozone<br>ओजोन"
+   ],
+   "my_ans": "C",
+   "sol": "सल्फर डाइऑक्साइड (SO₂) वायुमंडल में जल के साथ मिलकर सल्फ्यूरस और सल्फ्यूरिक अम्ल बनाती है, जो अम्लीय वर्षा का कारण है।",
+   "trick": "अम्लीय वर्षा = SO₂",
+   "ans": "C"
+  },
+  {
+   "n": 32,
+   "lvl": "UG",
+   "en": "Which Swiss chemist was the first to formulate his ideas about the structures of coordination compounds?",
+   "hi": "किस स्विस रसायनज्ञ ने सर्वप्रथम उपसहसंयोजन यौगिकों की संरचनाओं के संबंध में अपने विचारों को प्रतिपादित किया था?",
+   "opts": [
+    "Alfred Werner<br>अल्फ्रेड वर्नर",
+    "John Dalton<br>जॉन डाल्टन",
+    "Isaac Newton<br>आइज़ैक न्यूटन",
+    "Robert Bunsen<br>रॉबर्ट बुन्सेन"
+   ],
+   "my_ans": "A",
+   "sol": "अल्फ्रेड वर्नर ने 1893 में उपसहसंयोजन यौगिकों का सिद्धांत दिया था, जिसके लिए उन्हें 1913 में नोबेल पुरस्कार मिला।",
+   "trick": "उपसहसंयोजन = वर्नर",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "UG",
+   "en": "Which of the following is a non-point source of water pollution?",
+   "hi": "निम्नलिखित में से कौन-सा जल प्रदूषण का एक अबिंदु स्रोत है?",
+   "opts": [
+    "Industrial discharge pipe<br>औद्योगिक विसर्जन पाइप",
+    "Urban stormwater drain<br>शहरी झंझा नीर अपवाह",
+    "Sewage outlet<br>वाहितमल निकास",
+    "Agricultural runoff<br>कृषि अपवाह"
+   ],
+   "my_ans": "D",
+   "sol": "कृषि अपवाह (Agricultural runoff) किसी एक निश्चित पाइप या आउटलेट से नहीं आता, बल्कि यह वर्षा या सिंचाई के माध्यम से बड़े क्षेत्र से फैलता है।",
+   "trick": "निश्चित बिंदु नहीं = गैर-बिंदु स्रोत (Non-point)",
+   "ans": "D"
+  },
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Which of the following represents the correct electronic configurations of the element phosphorus?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प फास्फोरस तत्व के सही इलेक्ट्रॉनिक विन्यास को दर्शाता है?",
+   "opts": [
+    "2, 8, 5",
+    "2, 8, 8",
+    "2, 5, 8",
+    "2, 8, 3"
+   ],
+   "my_ans": "A",
+   "sol": "फास्फोरस का परमाणु क्रमांक 15 होता है। इसका इलेक्ट्रॉनिक विन्यास 2, 8, 5 (K, L, M कोश) है।",
+   "trick": "परमाणु क्रमांक 15 = 2, 8, 5",
+   "ans": "A"
+  }
+ ]
+}

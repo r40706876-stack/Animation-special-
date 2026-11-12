@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "492-494",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "Which combination of keys closes the active applications of the computer?",
+   "hi": "कंप्यूटर के सक्रिय एप्लिकेशन को बंद करने के लिए किस कुंजी संयोजन का उपयोग किया जाता है?",
+   "opts": [
+    "Alt Key + F4 Function Key",
+    "Alt Key + F8 Function Key",
+    "Alt Key + F1 Function Key",
+    "Alt Key + F6 Function Key"
+   ],
+   "my_ans": "A",
+   "sol": "विंडोज में किसी भी सक्रिय विंडो या एप्लिकेशन को बंद करने के लिए Alt + F4 शॉर्टकट का उपयोग किया जाता है।",
+   "trick": "Alt + F4 = बंद (Close)",
+   "ans": "A"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "The component inside the CPU responsible for arithmetic operations and logical comparisons is the __________.",
+   "hi": "CPU के अंदर, गणितीय संक्रियाओं और तार्किक तुलनाओं के लिए उत्तरदायी घटक, __________ है।",
+   "opts": [
+    "Motherboard<br>मदरबोर्ड",
+    "Arithmetic Logic Unit<br>अरिथमेटिक लॉजिक यूनिट",
+    "Control Unit<br>कंट्रोल यूनिट",
+    "Random Access Memory<br>रैंडम एक्सेस मेमोरी"
+   ],
+   "my_ans": "B",
+   "sol": "ALU (Arithmetic Logic Unit) CPU का वह भाग है जो सभी गणितीय गणनाओं (+, -, ×, ÷) और तार्किक तुलनाओं (>, <, =) को पूरा करता है।",
+   "trick": "ALU = Arithmetic (गणित) + Logic (तर्क)",
+   "ans": "B"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "Which shortcut is used to quickly search for a word in a webpage?",
+   "hi": "वेबपेज में किसी शब्द को शीघ्र खोजने के लिए किस शॉर्टकट का उपयोग किया जाता है?",
+   "opts": [
+    "Ctrl + S",
+    "Ctrl + F",
+    "Ctrl + Tab",
+    "Ctrl + V"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl + F का उपयोग ब्राउज़र या किसी भी डॉक्यूमेंट में 'Find' (खोजने) बॉक्स को खोलने के लिए किया जाता है।",
+   "trick": "F = Find (खोजना)",
+   "ans": "B"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "Which characteristic enables a computer to start and complete tasks automatically without human intervention once programmed?",
+   "hi": "वह कौन-सी विशेषता है जो एक बार प्रोग्राम किए जाने के बाद कंप्यूटर को मानवीय हस्तक्षेप के बिना स्वचालित रूप से टास्क को शुरू करने और पूरा करने में सक्षम बनाती है?",
+   "opts": [
+    "Accuracy<br>एक्यूरेसी",
+    "Portability<br>पोर्टेबिलिटी",
+    "Automation<br>ऑटोमेशन",
+    "Diligence<br>डिलिजेंस"
+   ],
+   "my_ans": "C",
+   "sol": "स्वचालन (Automation) कंप्यूटर की वह क्षमता है जिसके द्वारा वह बिना किसी मानवीय हस्तक्षेप के प्रोग्राम किए गए कार्यों को स्वतः पूरा करता है।",
+   "trick": "Auto = स्वतः (Automatic)",
+   "ans": "C"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "During group project file sharing in the CSE classroom, LAN connects which devices directly?",
+   "hi": "CSE क्लासरूम में समूह परियोजना के दौरान फाइल शेयर करते समय, LAN किन डिवाइसों को प्रत्यक्ष रूप से कनेक्ट करता है?",
+   "opts": [
+    "Local computers within the same building<br>एक ही भवन के भीतर स्थित स्थानीय कंप्यूटर",
+    "Printers connected via Bluetooth pairing<br>ब्लूटूथ पेयरिंग के माध्यम से जुड़े प्रिंटर",
+    "Satellite phones for remote areas only<br>केवल दूरस्थ क्षेत्रों के लिए सैटेलाइट फ़ोन",
+    "Global internet servers across continents<br>विभिन्न महाद्वीपों में फैले वैश्विक इंटरनेट सर्वर"
+   ],
+   "my_ans": "A",
+   "sol": "LAN (Local Area Network) एक सीमित भौगोलिक क्षेत्र जैसे एक भवन या ऑफिस के भीतर कंप्यूटरों को आपस में जोड़ने के लिए उपयोग किया जाता है।",
+   "trick": "LAN = Local (स्थानीय)",
+   "ans": "A"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "Which combination correctly matches the device with its primary function?",
+   "hi": "निम्नलिखित में से कौन-सा संयोजन, किसी डिवाइस का उसके मुख्य कार्य से सही मिलान करता है?",
+   "opts": [
+    "OCR – Recognizing magnetic ink characters<br>OCR – चुंबकीय इंक वाले अक्षरों को पहचानना",
+    "MICR – Reading barcodes<br>MICR – बारकोड पढ़ना",
+    "OMR – Detecting shaded marks on paper<br>OMR – पेपर पर बने शेड के निशानों का पता लगाना",
+    "Barcode Reader – Capturing handwritten text<br>Barcode Reader – हाथ से लिखे हुए टेक्स्ट को कैप्चर करना"
+   ],
+   "my_ans": "C",
+   "sol": "OMR (Optical Mark Recognition) का उपयोग उत्तर पुस्तिकाओं या सर्वेक्षणों में पेपर पर बने छायांकित निशानों (shaded marks) को पढ़ने के लिए किया जाता है।",
+   "trick": "OMR = Optical Mark (निशान)",
+   "ans": "C"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "Which of the following correctly describes secondary memory?",
+   "hi": "निम्नलिखित में से कौन-सा विकल्प, द्वितीयक मेमोरी (secondary memory) का सर्वोत्तम वर्णन करता है?",
+   "opts": [
+    "Faster and more expensive than main memory<br>मेन मेमोरी की तुलना में तेज और अत्यधिक महंगी",
+    "Volatile and faster than primary memory<br>वोलेटाइल और प्राथमिक मेमोरी से तेज",
+    "Non-volatile and larger in storage capacity<br>नॉन-वोलेटाइल और स्टोरेज क्षमता में बड़ी",
+    "Volatile and directly accessed by the CPU<br>वोलेटाइल और CPU द्वारा सीधे एक्सेस की जा सकने वाली"
+   ],
+   "my_ans": "C",
+   "sol": "द्वितीयक मेमोरी (जैसे हार्ड डिस्क) नॉन-वोलेटाइल होती है (बिजली जाने पर डेटा सुरक्षित रहता है) और इसकी क्षमता प्राथमिक मेमोरी से बहुत अधिक होती है।",
+   "trick": "Secondary = Non-volatile + Large Storage",
+   "ans": "C"
+  },
+  {
+   "n": 148,
+   "lvl": "UG",
+   "en": "Which memory is fastest and located very close to the CPU?",
+   "hi": "कौन-सी मेमोरी सबसे तेज होती है और CPU के अति निकट स्थित होती है?",
+   "opts": [
+    "Hard Disk<br>हार्ड डिस्क",
+    "Pen Drive<br>पेन ड्राइव",
+    "Cache Memory<br>कैश मेमोरी",
+    "CD-ROM"
+   ],
+   "my_ans": "C",
+   "sol": "कैश मेमोरी CPU के सबसे करीब स्थित होती है और यह RAM से भी तेज होती है, जो बार-बार उपयोग होने वाले डेटा को स्टोर करती है।",
+   "trick": "Cache = Fastest & Closest",
+   "ans": "C"
+  },
+  {
+   "n": 149,
+   "lvl": "UG",
+   "en": "In the Windows Operating System, when the dedicated Power Saver plan is activated, which of the following is the primary technical mechanism the operating system employs to significantly conserve energy, consequently leading to a noticeable reduction in system responsiveness and performance?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम में, जब डेडिकेटेड पावर सेवर प्लान सक्रिय होता है, तो ऑपरेटिंग सिस्टम महत्वपूर्ण रूप से एनर्जी सेव करने के लिए निम्नलिखित में से कौन-सा प्राथमिक तकनीकी तंत्र नियोजित करता है, जिसके परिणामस्वरुप सिस्टम के रिस्पॉन्स और परफॉरमेंस में उल्लेखनीय कमी आती है?",
+   "opts": [
+    "Disabling the Graphical Processing Unit (GPU) entirely and forcing all display rendering onto the CPU<br>ग्राफिकल प्रोसेसिंग यूनिट (GPU) को पूरी तरह से निष्क्रिय करना और डिस्प्ले रेंडरिंग के सभी कार्यों को GPU पर स्थानांतरित करना",
+    "Increasing the hard disk spin-down time to ensure the drive remains idle and consumes zero mechanical power<br>हार्ड डिस्क का स्पिन-डाउन टाइम बढ़ाना, ताकि यह सुनिश्चित किया जा सके कि ड्राइव निष्क्रिय रहे और इसमें शून्य मैकेनिकल पावर की खपत हो",
+    "Aggressively flushing the cache memory every few seconds to minimize the power drawn by the CPU's fastest memory components<br>CPU के सबसे तेज मेमोरी घटकों द्वारा खपत की जाने वाली पावर को कम करने के लिए प्रत्येक कुछ सेकंड में कैश मेमोरी को तेजी से खाली करना",
+    "Reducing the maximum processor state (clock speed/frequency) to cap the peak computational capacity and thermal output<br>अधिकतम गणना क्षमता और तापीय उत्सर्जन को सीमित करने के लिए अधिकतम प्रोसेसर स्थिति (क्लॉक स्पीड/फ्रीक्वेंसी) को कम करना"
+   ],
+   "my_ans": "D",
+   "sol": "पावर सेवर मोड में CPU की क्लॉक स्पीड (फ्रीक्वेंसी) को कम कर दिया जाता है, जिससे बिजली की खपत कम होती है लेकिन सिस्टम की गति भी धीमी हो जाती है।",
+   "trick": "Power Saver = CPU Throttling (स्पीड कम करना)",
+   "ans": "D"
+  },
+  {
+   "n": 150,
+   "lvl": "UG",
+   "en": "Which feature distinguishes ROM from RAM?",
+   "hi": "ROM को RAM से कौन-सी विशेषता अलग करती है?",
+   "opts": [
+    "ROM is volatile",
+    "RAM is non-volatile",
+    "ROM is used for temporary storage",
+    "ROM is non-volatile"
+   ],
+   "my_ans": "D",
+   "sol": "ROM (Read Only Memory) नॉन-वोलेटाइल होती है, यानी बिजली जाने पर भी इसमें डेटा सुरक्षित रहता है, जबकि RAM वोलेटाइल होती है।",
+   "trick": "ROM = Non-volatile (स्थायी)",
+   "ans": "D"
+  }
+ ]
+}

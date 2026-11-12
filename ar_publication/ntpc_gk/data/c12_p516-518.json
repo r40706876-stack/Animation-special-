@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "516-518",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 213,
+   "lvl": "UG",
+   "en": "In a Word document form, when you press the Tab key after filling a name field, to which element does the focus shift?",
+   "hi": "वर्ड डॉक्यूमेंट फॉर्म में, जब आप नाम फ़ील्ड भरने के बाद Tab कुंजी प्रेस करते हैं, तो फ़ोकस किस एलिमेंट पर स्थानांतरित होता है?",
+   "opts": [
+    "Deletes all entered form data instantly<br>फॉर्म में प्रविष्ट सभी डेटा तुरंत डिलीट कर देता है",
+    "Saves document and closes the form view<br>डॉक्यूमेंट सेव करता है और फॉर्म व्यू (form view) बंद कर देता है",
+    "Prints the form with current entries<br>वर्तमान प्रविष्टियों के साथ फॉर्म प्रिंट करता है",
+    "Moves cursor to subsequent input field or table cell<br>कर्सर (cursor) को अगले इनपुट फ़ील्ड या टेबल सेल पर ले जाता है"
+   ],
+   "my_ans": "D",
+   "sol": "फॉर्म में Tab कुंजी का उपयोग फ़ील्ड नेविगेशन के लिए किया जाता है, जिससे कर्सर अगले इनपुट फ़ील्ड या टेबल सेल पर चला जाता है।",
+   "trick": "Tab = अगला फ़ील्ड (Next Field)",
+   "ans": "D"
+  },
+  {
+   "n": 214,
+   "lvl": "UG",
+   "en": "A certain software component is critical for memory management and process scheduling, allowing multiple programs to run concurrently, and it is the first program loaded by the boot process. It generally operates in a privileged mode (kernel mode). Based on this description, which category of software does this component belong to?",
+   "hi": "एक निश्चित सॉफ्टवेयर घटक मेमोरी प्रबंधन और प्रोसेस शेड्यूलिंग के लिए महत्वपूर्ण है, जो कई प्रोग्रामों को एक साथ रन करने की सुविधा देता है, और यह बूट प्रोसेस द्वारा लोड किया जाने वाला पहला प्रोग्राम है। यह सामान्यतः प्रिविलेज्ड मोड (कर्नेल मोड) में कार्य करता है। इस विवरण के आधार पर, यह घटक किस श्रेणी के सॉफ़्टवेयर से संबंधित है?",
+   "opts": [
+    "System Software<br>सिस्टम सॉफ्टवेयर (System Software)",
+    "Utility Software<br>यूटिलिटी सॉफ्टवेयर (Utility Software)",
+    "Driver Software<br>ड्राइवर सॉफ्टवेयर (Driver Software)",
+    "Application Software<br>एप्लीकेशन सॉफ्टवेयर (Application Software)"
+   ],
+   "my_ans": "A",
+   "sol": "ऑपरेटिंग सिस्टम (OS) मेमोरी प्रबंधन, प्रोसेस शेड्यूलिंग और हार्डवेयर नियंत्रण का कार्य करता है, जो सिस्टम सॉफ्टवेयर की श्रेणी में आता है।",
+   "trick": "OS = सिस्टम का आधार (System Software)",
+   "ans": "A"
+  },
+  {
+   "n": 215,
+   "lvl": "UG",
+   "en": "A file with the extension “.docx” is usually created by:",
+   "hi": "\".docx\" एक्सटेंशन वाली फ़ाइल प्रायः ___________ द्वारा निर्मित की जाती है।",
+   "opts": [
+    "Notepad<br>नोटपैड",
+    "MS Paint<br>MS पेंट",
+    "Calculator<br>कैलकुलेटर",
+    "MS Word<br>MS वर्ड"
+   ],
+   "my_ans": "D",
+   "sol": ".docx माइक्रोसॉफ्ट वर्ड (2007 और बाद के संस्करणों) का डिफ़ॉल्ट फ़ाइल फॉर्मेट है।",
+   "trick": "docx = Document (Word)",
+   "ans": "D"
+  },
+  {
+   "n": 216,
+   "lvl": "UG",
+   "en": "In the search box of File Explorer, which search pattern finds all Word documents in the current folder whose names start with “Unit”?",
+   "hi": "फाइल एक्सप्लोरर के सर्च बॉक्स में, कौन-सा सर्च पैटर्न वर्तमान फोल्डर में उन सभी वर्ड डॉक्यूमेंट्स को ढूंढता है जिनके नाम \"Unit\" से शुरू होते हैं?",
+   "opts": [
+    "Unit* .docx",
+    "Unit*.docx",
+    "*Unit.docx",
+    "Unit?.txt"
+   ],
+   "my_ans": "B",
+   "sol": "वाइल्डकार्ड '*' का उपयोग किसी भी संख्या में अक्षरों को दर्शाने के लिए किया जाता है। 'Unit*.docx' का अर्थ है 'Unit' से शुरू होने वाली सभी .docx फाइलें।",
+   "trick": "* = कितने भी अक्षर",
+   "ans": "B"
+  },
+  {
+   "n": 217,
+   "lvl": "UG",
+   "en": "The bar at the bottom of the Windows screen that shows open applications is:",
+   "hi": "विंडोज स्क्रीन में सबसे नीचे मौजूद वह बार (bar), जो ओपन एप्लीकेशनों को दर्शाता है, ______ कहलाता है।",
+   "opts": [
+    "Title bar<br>टाइटल बार",
+    "Taskbar<br>टास्कबार",
+    "Menu bar<br>मेनू बार",
+    "Scroll bar<br>स्क्रॉल बार"
+   ],
+   "my_ans": "B",
+   "sol": "टास्कबार विंडोज स्क्रीन के सबसे नीचे स्थित होता है और खुले हुए प्रोग्रामों और एप्लीकेशनों को दिखाता है।",
+   "trick": "नीचे का बार = टास्कबार",
+   "ans": "B"
+  },
+  {
+   "n": 218,
+   "lvl": "UG",
+   "en": "When a program in Windows appears as “Not Responding” and the user ends it using Task Manager, which action is effectively being requested from the operating system?",
+   "hi": "जब विंडोज में कोई प्रोग्राम \"Not Responding\" के रूप में दिखाई देता है और उपयोगकर्ता उसे टास्क मैनेजर का उपयोग करके बंद कर देता है, तो वास्तव में ऑपरेटिंग सिस्टम से प्रभावी रूप से किस कार्रवाई का अनुरोध किया जा रहा है?",
+   "opts": [
+    "Force the process to terminate and release its resources<br>प्रोसेस को समाप्त करने और उसके रिसोर्स को रिलीज़ करने के लिए फोर्स करने का",
+    "Change the program’s file type<br>प्रोग्राम के फ़ाइल टाइप को बदलने का",
+    "Move the program to another drive<br>प्रोग्राम को किसी अन्य ड्राइव पर मूव करने का",
+    "Convert the program into a service<br>प्रोग्राम को सर्विस (service) में परिवर्तित करने का"
+   ],
+   "my_ans": "A",
+   "sol": "टास्क मैनेजर में 'End Task' का उपयोग करने से ऑपरेटिंग सिस्टम उस अटके हुए प्रोग्राम (प्रोसेस) को जबरन बंद कर देता है और उसकी मेमोरी खाली कर देता है।",
+   "trick": "End Task = प्रोसेस बंद करना",
+   "ans": "A"
+  },
+  {
+   "n": 219,
+   "lvl": "UG",
+   "en": "Which of the following file formats does not get affected by the destination format and version?",
+   "hi": "निम्नलिखित में से कौन-सा फ़ाइल फॉर्मेट, डेस्टिनेशन फॉर्मेट और वर्जन से प्रभावित नहीं होता है?",
+   "opts": [
+    ".docx",
+    ".ppt",
+    ".pptx",
+    ".pdf"
+   ],
+   "my_ans": "D",
+   "sol": "PDF (Portable Document Format) को प्लेटफॉर्म और वर्जन से स्वतंत्र रहने के लिए बनाया गया है, जिससे इसकी फॉर्मेटिंग हर जगह समान रहती है।",
+   "trick": "PDF = फिक्स्ड फॉर्मेट",
+   "ans": "D"
+  },
+  {
+   "n": 220,
+   "lvl": "UG",
+   "en": "Which shortcut saves the current file in Microsoft Word or Microsoft Excel?",
+   "hi": "कौन-सा शॉर्टकट, माइक्रोसॉफ्ट वर्ड या माइक्रोसॉफ्ट एक्सेल में वर्तमान फ़ाइल (current file) को सेव करता है?",
+   "opts": [
+    "Ctrl + F",
+    "Ctrl + V",
+    "Ctrl + Tab",
+    "Ctrl + S"
+   ],
+   "my_ans": "D",
+   "sol": "Ctrl + S का उपयोग लगभग सभी विंडोज एप्लीकेशनों में फाइल को सेव करने के लिए किया जाता है।",
+   "trick": "S = Save",
+   "ans": "D"
+  },
+  {
+   "n": 221,
+   "lvl": "UG",
+   "en": "In Windows 11 operating system, what happens when Alt + F4 is pressed while no applications or windows are open?",
+   "hi": "विंडोज 11 ऑपरेटिंग सिस्टम में, जब Alt + F4 दबाया जाता है जबकि कोई एप्लीकेशन या विंडो खुली नहीं है?",
+   "opts": [
+    "Opens the Task Manager window<br>टास्क मैनेजर विंडो खोलता है",
+    "Shows the system shutdown dialog<br>सिस्टम शटडाउन डायलॉग दिखाता है",
+    "Launches the File Explorer window<br>फाइल एक्सप्लोरर विंडो लॉन्च करता है",
+    "Refreshes the desktop environment<br>डेस्कटॉप वातावरण को रिफ्रेश करता है"
+   ],
+   "my_ans": "B",
+   "sol": "Alt + F4 सक्रिय विंडो को बंद करता है, लेकिन यदि कोई विंडो खुली न हो, तो यह शटडाउन डायलॉग बॉक्स खोलता है।",
+   "trick": "Alt+F4 = बंद करना/शटडाउन",
+   "ans": "B"
+  },
+  {
+   "n": 222,
+   "lvl": "UG",
+   "en": "Which of the following statements is/are true or false about the Windows 11 Task Manager?(i) It can monitor network usage and identify which app is using the most bandwidth.(ii) It can only view or end unresponsive apps, not start new programs or processes.",
+   "hi": "विंडोज 11 टास्क मैनेजर के बारे में निम्नलिखित में से कौन सा/से कथन सत्य या असत्य है/हैं? (i) यह नेटवर्क उपयोग की निगरानी कर सकता है और पहचान सकता है कि कौन सा ऐप सबसे अधिक बैंडविड्थ का उपयोग कर रहा है। (ii) यह केवल अनुत्तरदायी ऐप्स को देख या समाप्त कर सकता है, नए प्रोग्राम या प्रोसेस शुरू नहीं कर सकता है।",
+   "opts": [
+    "Both (i) and (ii) are true<br>दोनों (i) और (ii) सत्य हैं",
+    "Both (i) and (ii) are false<br>दोनों (i) और (ii) असत्य हैं",
+    "(i) is true and (ii) is false<br>(i) सत्य है और (ii) असत्य है",
+    "(i) is false and (ii) is true<br>(i) असत्य है और (ii) सत्य है"
+   ],
+   "my_ans": "C",
+   "sol": "टास्क मैनेजर नेटवर्क उपयोग दिखाता है (i सत्य है), लेकिन यह 'Run new task' विकल्प के जरिए नए प्रोग्राम भी शुरू कर सकता है (ii असत्य है)।",
+   "trick": "टास्क मैनेजर = मॉनिटरिंग + नया टास्क शुरू करना",
+   "ans": "C"
+  }
+ ]
+}

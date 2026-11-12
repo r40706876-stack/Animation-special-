@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "670-672",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 355,
+   "lvl": "UG",
+   "en": "Which edition of the Global Risks Report was released by the World Economic Forum in 2025?",
+   "hi": "2025 में विश्व आर्थिक मंच द्वारा वैश्विक जोखिम रिपोर्ट (Global Risks Report) का निम्नलिखित में से कौन-सा संस्करण जारी किया गया था?",
+   "opts": [
+    "18th Edition<br>18वां संस्करण",
+    "20th Edition<br>20वां संस्करण",
+    "21st Edition<br>21वां संस्करण",
+    "19th Edition<br>19वां संस्करण"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व आर्थिक मंच (WEF) ने जनवरी 2025 में अपनी वार्षिक 'वैश्विक जोखिम रिपोर्ट' का 20वां संस्करण जारी किया।",
+   "trick": "WEF की जोखिम रिपोर्ट 2025 में 20वें संस्करण पर पहुंची।",
+   "ans": "B"
+  },
+  {
+   "n": 356,
+   "lvl": "UG",
+   "en": "The IMD World Competitiveness Ranking 2025 listed which of the following among the top 3 most competitive economies?",
+   "hi": "IMD वर्ल्ड कॉम्पिटिटिवनेस रैंकिंग (World Competitiveness Ranking) 2025 में शीर्ष 3 सर्वाधिक प्रतिस्पर्धी अर्थव्यवस्थाओं में किसको सूचीबद्ध किया गया?",
+   "opts": [
+    "Brazil, Russia, South Africa<br>ब्राजील, रूस, दक्षिण अफ्रीका",
+    "Switzerland, Singapore, Hong Kong<br>स्विट्जरलैंड, सिंगापुर, हांगकांग",
+    "Germany, Japan, Canada<br>जर्मनी, जापान, कनाडा",
+    "USA, China, India<br>USA, चीन, भारत"
+   ],
+   "my_ans": "B",
+   "sol": "IMD वर्ल्ड कॉम्पिटिटिवनेस रैंकिंग 2025 में स्विट्जरलैंड, सिंगापुर और हांगकांग शीर्ष 3 सबसे प्रतिस्पर्धी अर्थव्यवस्थाएं हैं।",
+   "trick": "SSH (स्विट्जरलैंड, सिंगापुर, हांगकांग) शीर्ष पर हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 357,
+   "lvl": "UG",
+   "en": "Who topped the 2025 Times Higher Education Asia University Rankings?",
+   "hi": "2025 टाइम्स हायर एजुकेशन एशिया यूनिवर्सिटी रैंकिंग में शीर्ष स्थान पर, निम्नलिखित में से कौन-सी यूनिवर्सिटी रही?",
+   "opts": [
+    "Tsinghua University<br>सिंघुआ यूनिवर्सिटी",
+    "Seoul National University<br>सियोल नेशनल यूनिवर्सिटी",
+    "Kyoto University<br>क्योतो यूनिवर्सिटी",
+    "University of Hong Kong<br>यूनिवर्सिटी ऑफ हांगकांग"
+   ],
+   "my_ans": "A",
+   "sol": "2025 की टाइम्स हायर एजुकेशन एशिया यूनिवर्सिटी रैंकिंग में चीन की सिंघुआ यूनिवर्सिटी ने पहला स्थान हासिल किया।",
+   "trick": "एशिया में सिंघुआ (Tsinghua) नंबर 1 है।",
+   "ans": "A"
+  },
+  {
+   "n": 358,
+   "lvl": "UG",
+   "en": "In August 2025, which body released the first National Annual Report & Index on Women’s Safety (NARI 2025)?",
+   "hi": "अगस्त 2025 में, किस निकाय ने प्रथम 'राष्ट्रीय वार्षिक महिला सुरक्षा रिपोर्ट और सूचकांक' (NARI 2025) जारी किया?",
+   "opts": [
+    "Ministry of Women and Child Development<br>महिला और बाल विकास मंत्रालय",
+    "National Commission for Women<br>राष्ट्रीय महिला आयोग",
+    "National Human Rights Commission<br>राष्ट्रीय मानवाधिकार आयोग",
+    "NITI Aayog<br>नीति आयोग"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रीय महिला आयोग (NCW) ने अगस्त 2025 में भारत में महिला सुरक्षा पर पहला व्यापक सूचकांक (NARI 2025) जारी किया।",
+   "trick": "महिला सुरक्षा रिपोर्ट महिला आयोग ही जारी करेगा।",
+   "ans": "B"
+  },
+  {
+   "n": 359,
+   "lvl": "UG",
+   "en": "On 17 November 2025 which of the following institute has been selected to host the Centre of Excellence in Quantum AI and Computing?",
+   "hi": "17 नवंबर 2025 को निम्नलिखित में से किस संस्थान को क्वांटम AI और कंप्यूटिंग में उत्कृष्टता केंद्र की मेजबानी के लिए चुना गया?",
+   "opts": [
+    "Indian Institute of Technology, Dharwad<br>भारतीय प्रौद्योगिकी संस्थान, धारवाड़",
+    "Indian Institute of Information Technology, Dharwad<br>भारतीय सूचना प्रौद्योगिकी संस्थान, धारवाड़",
+    "Indian Institute of Science, Bengaluru<br>भारतीय विज्ञान संस्थान, बेंगलुरु",
+    "Indian Institute of Technology, Roorkee<br>भारतीय प्रौद्योगिकी संस्थान, रुड़की"
+   ],
+   "my_ans": "A",
+   "sol": "17 नवंबर 2025 को IIT धारवाड़ को क्वांटम AI और कंप्यूटिंग में उत्कृष्टता केंद्र स्थापित करने के लिए चुना गया।",
+   "trick": "क्वांटम AI केंद्र = IIT धारवाड़।",
+   "ans": "A"
+  },
+  {
+   "n": 360,
+   "lvl": "UG",
+   "en": "Which mission was announced by the Prime Minister of India during his address from the Red Fort on the occasion of the 79th Independence Day in 2025 to harness India’s offshore energy resources?",
+   "hi": "2025 में 79वें स्वतंत्रता दिवस के अवसर पर लाल किले से अपने संबोधन के दौरान भारत के प्रधानमंत्री द्वारा भारत के अपतटीय ऊर्जा संसाधनों का दोहन करने के लिए किस मिशन की घोषणा की गई?",
+   "opts": [
+    "National Deepwater Exploration Mission<br>राष्ट्रीय गहरे पानी अन्वेषण मिशन",
+    "Offshore Energy Security Programme<br>अपतटीय ऊर्जा सुरक्षा कार्यक्रम",
+    "Blue Energy Development Mission<br>ब्लू एनर्जी डेवलपमेंट मिशन",
+    "Strategic Hydrocarbon Independence Initiative<br>रणनीतिक हाइड्रोकार्बन स्वतंत्रता पहल"
+   ],
+   "my_ans": "A",
+   "sol": "प्रधानमंत्री ने 15 अगस्त 2025 को 'राष्ट्रीय गहरे पानी अन्वेषण मिशन' (National Deepwater Exploration Mission) की घोषणा की।",
+   "trick": "गहरे समुद्र में ऊर्जा = डीपवाटर एक्सप्लोरेशन मिशन।",
+   "ans": "A"
+  },
+  {
+   "n": 361,
+   "lvl": "UG",
+   "en": "As mentioned in the Economic Survey 2024-25, what was the diaspora population of India in 2020?",
+   "hi": "आर्थिक सर्वेक्षण 2024-25 में उल्लिखित आंकड़ों के अनुसार, 2020 में भारत की प्रवासी जनसंख्या कितनी थी?",
+   "opts": [
+    "18 million<br>18 मिलियन",
+    "12 million<br>12 मिलियन",
+    "26 million<br>26 मिलियन",
+    "32 million<br>32 मिलियन"
+   ],
+   "my_ans": "A",
+   "sol": "आर्थिक सर्वेक्षण 2024-25 के अनुसार, वर्ष 2020 में भारत की प्रवासी जनसंख्या 18 मिलियन थी।",
+   "trick": "2020 में प्रवासी संख्या 18 मिलियन थी।",
+   "ans": "A"
+  },
+  {
+   "n": 362,
+   "lvl": "UG",
+   "en": "IRIS chip, developed by ISRO in partnership with IIT-Madras, is designed for:",
+   "hi": "IRIS चिप, जिसे ISRO ने आईआईटी-मद्रास के साथ साझेदारी में विकसित किया है, ________ के लिए डिज़ाइन की गई है।",
+   "opts": [
+    "Gaming consoles<br>गेमिंग कंसोल",
+    "Commercial smartphones<br>वाणिज्यिक स्मार्टफोन",
+    "Space applications with SHAKTI<br>SHAKTI के साथ अंतरिक्ष अनुप्रयोग",
+    "Automotive systems<br>ऑटोमोटिव सिस्टम"
+   ],
+   "my_ans": "C",
+   "sol": "IRIS चिप को ISRO और IIT-मद्रास ने SHAKTI प्रोसेसर के साथ अंतरिक्ष मिशनों के लिए विकसित किया है।",
+   "trick": "IRIS = अंतरिक्ष अनुप्रयोग (SHAKTI के साथ)।",
+   "ans": "C"
+  },
+  {
+   "n": 363,
+   "lvl": "UG",
+   "en": "Which platform successfully completed in-orbit testing of an environmentally friendly green propulsion system?",
+   "hi": "किस प्लेटफॉर्म ने पर्यावरण के अनुकूल हरित प्रणोदन प्रणाली (green propulsion system) का कक्षा में परीक्षण सफलतापूर्वक पूरा किया?",
+   "opts": [
+    "PSLV payload module from TDF<br>TDF से PSLV पेलोड मॉड्यूल",
+    "Geosynchronous satellite<br>जिओसिंक्रोनस (Geosynchronous) उपग्रह",
+    "GSLV upper stage<br>GSLV ऊपरी चरण",
+    "Chandrayaan lander<br>चंद्रयान लैंडर"
+   ],
+   "my_ans": "A",
+   "sol": "TDF (Technology Demonstration Facility) के PSLV पेलोड मॉड्यूल ने हरित प्रणोदन प्रणाली का कक्षा में सफल परीक्षण किया।",
+   "trick": "हरित प्रणोदन = PSLV पेलोड मॉड्यूल।",
+   "ans": "A"
+  }
+ ]
+}

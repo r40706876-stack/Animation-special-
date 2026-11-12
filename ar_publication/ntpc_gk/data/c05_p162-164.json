@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "162-164",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 109,
+   "lvl": "GL",
+   "en": "Which of the following states finished as the overall champions of the Khelo India Beach Games 2026, held in the Union Territory of Diu, by leading the medal tally with 11 awards?",
+   "hi": "निम्नलिखित में से कौन-सा राज्य, केंद्र शासित प्रदेश दीव में आयोजित खेलो इंडिया बीच गेम्स 2026 का ओवरऑल चैंपियन बना, और 11 पदक जीतकर पदक तालिका में शीर्ष पर रहा?",
+   "opts": [
+    "Maharashtra<br>महाराष्ट्र",
+    "Karnataka<br>कर्नाटक",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Goa<br>गोवा"
+   ],
+   "my_ans": "B",
+   "sol": "खेलो इंडिया बीच गेम्स 2026 दीव में आयोजित हुए थे।<br>कर्नाटक ने कुल 11 पदक जीतकर पदक तालिका में शीर्ष स्थान प्राप्त किया।",
+   "trick": "बीच गेम्स 2026: कर्नाटक नंबर 1।",
+   "ans": "B"
+  },
+  {
+   "n": 110,
+   "lvl": "GL",
+   "en": "Which of the following statements is correct about the literacy of India between 2001 and 2011?",
+   "hi": "2001 और 2011 के बीच भारत की साक्षरता के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+   "opts": [
+    "Male literacy and female literacy have risen parallelly.<br>पुरुष साक्षरता और महिला साक्षरता में समानांतर रूप से वृद्धि हुई है।",
+    "Male literacy has declined whereas female literacy has risen.<br>पुरुष साक्षरता में गिरावट आई है जबकि महिला साक्षरता में वृद्धि हुई है।",
+    "Female literacy has risen faster than male literacy.<br>महिला साक्षरता में पुरुष साक्षरता की तुलना में अधिक तेजी से वृद्धि हुई है।",
+    "Male literacy has risen faster than female literacy.<br>महिला साक्षरता की तुलना में पुरुष साक्षरता में तेजी से वृद्धि हुई है।"
+   ],
+   "my_ans": "C",
+   "sol": "2001 से 2011 के बीच महिला साक्षरता दर में वृद्धि (11.8%) पुरुष साक्षरता दर में वृद्धि (6.8%) की तुलना में अधिक थी।",
+   "trick": "महिला साक्षरता की वृद्धि दर पुरुष से अधिक रही।",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "GL",
+   "en": "Which coastal region of India is associated with the Vembanad Lagoon being separated from the Arabian Sea by narrow barrier islands?",
+   "hi": "भारत का कौन-सा तटीय क्षेत्र, वेम्बनाड लैगून (Vembanad Lagoon) से संबंधित है जो संकीर्ण रोधिका द्वीपों द्वारा अरब सागर से पृथक होता है?",
+   "opts": [
+    "Northern Circar<br>उत्तरी सिरकार",
+    "Konkan Coast<br>कोंकण तट",
+    "Malabar Coast<br>मालाबार तट",
+    "Coromandal Coast<br>कोरोमंडल तट"
+   ],
+   "my_ans": "C",
+   "sol": "वेम्बनाड लैगून केरल में स्थित है, जो मालाबार तट का हिस्सा है।<br>यह संकीर्ण द्वीपों द्वारा अरब सागर से अलग होता है।",
+   "trick": "वेम्बनाड झील = मालाबार तट (केरल)।",
+   "ans": "C"
+  },
+  {
+   "n": 112,
+   "lvl": "GL",
+   "en": "As of March 31, 2025, the length of National Highways in India was reported to be:",
+   "hi": "31 मार्च 2025 तक की स्थिति के अनुसार, भारत में राष्ट्रीय राजमार्गों की कुल लंबाई _______ रिपोर्ट की गई।",
+   "opts": [
+    "91,287 km",
+    "1,46,204 km",
+    "1,20,076 km",
+    "1,75,123 km"
+   ],
+   "my_ans": "B",
+   "sol": "31 मार्च 2025 तक भारत में राष्ट्रीय राजमार्गों की कुल लंबाई 1,46,204 किमी दर्ज की गई है।",
+   "trick": "याद रखें: 1.46 लाख किमी (मार्च 2025 तक)।",
+   "ans": "B"
+  },
+  {
+   "n": 113,
+   "lvl": "GL",
+   "en": "The Thar Desert is also referred to as:",
+   "hi": "थार मरुस्थल को ______ के नाम से भी जाना जाता है?",
+   "opts": [
+    "The Great White Desert<br>विशाल श्वेत मरुस्थल",
+    "The Great Salt Desert<br>विशाल लवण मरुस्थल",
+    "The Great Indian Desert<br>विशाल भारतीय मरुस्थल",
+    "The Great Deccan Desert<br>विशाल दक्कन मरुस्थल"
+   ],
+   "my_ans": "C",
+   "sol": "थार मरुस्थल को इसके विशाल विस्तार के कारण 'ग्रेट इंडियन डेजर्ट' (महान भारतीय मरुस्थल) भी कहा जाता है।",
+   "trick": "थार = ग्रेट इंडियन डेजर्ट।",
+   "ans": "C"
+  },
+  {
+   "n": 114,
+   "lvl": "GL",
+   "en": "Which of the following is NOT a peninsular river?",
+   "hi": "निम्नलिखित में से कौन-सी नदी प्रायद्वीपीय नदी नहीं है?",
+   "opts": [
+    "Ganga<br>गंगा",
+    "Krishna<br>कृष्णा",
+    "Godavari<br>गोदावरी",
+    "Narmada<br>नर्मदा"
+   ],
+   "my_ans": "A",
+   "sol": "गंगा हिमालय से निकलने वाली नदी है, जबकि कृष्णा, गोदावरी और नर्मदा प्रायद्वीपीय नदियाँ हैं।",
+   "trick": "गंगा = हिमालयी नदी, न कि प्रायद्वीपीय।",
+   "ans": "A"
+  },
+  {
+   "n": 115,
+   "lvl": "GL",
+   "en": "Identify the tertiary activity from among the following.",
+   "hi": "निम्नलिखित में से तृतीयक गतिविधि की पहचान करें।",
+   "opts": [
+    "Drink industry<br>पेय उद्योग",
+    "Biotechnology<br>जैव प्रौद्योगिकी",
+    "Real estate<br>रियल एस्टेट",
+    "Construction industry<br>निर्माण उद्योग"
+   ],
+   "my_ans": "C",
+   "sol": "तृतीयक क्षेत्र सेवा क्षेत्र होता है। रियल एस्टेट (संपत्ति का क्रय-विक्रय) एक सेवा गतिविधि है।",
+   "trick": "सेवा क्षेत्र = तृतीयक (जैसे बैंकिंग, रियल एस्टेट)।",
+   "ans": "C"
+  },
+  {
+   "n": 116,
+   "lvl": "GL",
+   "en": "Which climatic factor plays the most significant role in shaping the distribution of natural vegetation across India?",
+   "hi": "संपूर्ण भारत में प्राकृतिक वनस्पति के वितरण को आकार देने में कौन-सा जलवायु कारक सबसे महत्वपूर्ण भूमिका निभाता है?",
+   "opts": [
+    "Altitudinal gradient<br>तुंगता प्रवणता",
+    "Annual precipitation (>250 cm)<br>वार्षिक वर्षा (>250 cm)",
+    "Soil nutrient quality<br>मृदा पोषक तत्व गुणवत्ता",
+    "Mean annual temperature variations<br>औसत वार्षिक तापमान भिन्नताएँ"
+   ],
+   "my_ans": "B",
+   "sol": "भारत में वनस्पति का प्रकार मुख्य रूप से वर्षा के पैटर्न (वार्षिक वर्षा) द्वारा निर्धारित होता है।",
+   "trick": "वनस्पति का आधार = वर्षा।",
+   "ans": "B"
+  },
+  {
+   "n": 117,
+   "lvl": "GL",
+   "en": "How does higher soil moisture retention in black soils influence cropping intensity in regions like Maharashtra and Madhya Pradesh?",
+   "hi": "काली मृदा में उच्च मृदा की नमी प्रतिधारण महाराष्ट्र और मध्य प्रदेश जैसे क्षेत्रों में फसल की तीव्रता को किस प्रकार प्रभावित करता है?",
+   "opts": [
+    "It encourages plantation crops over food grains due to deep root support<br>यह गंभीर मूलों वाले पौधों को सपोर्ट देकर खाद्यान्नों के स्थान पर रोपण फसलों को बढ़ावा देती है।",
+    "It supports multiple cropping cycles by sustaining moisture across seasons<br>यह विभिन्न मौसमों में नमी बनाए रखकर कई फसल चक्रों को सपोर्ट करती है।",
+    "It limits cropping to a single season to prevent waterlogging<br>यह जलाक्रांति को रोकने के लिए फसल को एक ही मौसम तक सीमित रखती है।",
+    "It reduces the need for crop rotation due to stable nutrient levels<br>यह स्थिर पोषक स्तरों के कारण सस्यावर्तन की आवश्यकता को कम करती है।"
+   ],
+   "my_ans": "C",
+   "sol": "काली मिट्टी में नमी सोखने की क्षमता बहुत अधिक होती है, जिससे बारिश में जलभराव का खतरा रहता है, इसलिए यह खेती को सीमित करती है।",
+   "trick": "काली मिट्टी = जलभराव का खतरा = सीमित खेती।",
+   "ans": "C"
+  },
+  {
+   "n": 118,
+   "lvl": "GL",
+   "en": "Which of the following rivers of India forms a delta on the eastern coastal plains?",
+   "hi": "भारत की निम्नलिखित में से कौन-सी नदी, पूर्वी तटीय मैदानों पर डेल्टा बनाती है?",
+   "opts": [
+    "Narmada<br>नर्मदा",
+    "Tapi<br>तापी",
+    "Mahi<br>माही",
+    "Godavari<br>गोदावरी"
+   ],
+   "my_ans": "D",
+   "sol": "गोदावरी, कृष्णा, महानदी और कावेरी पूर्वी तट पर डेल्टा बनाती हैं। नर्मदा और तापी पश्चिम की ओर बहकर ज्वारनदमुख (estuary) बनाती हैं।",
+   "trick": "पूर्वी तट = डेल्टा (गोदावरी)।",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "177-179",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 162,
+   "lvl": "UG",
+   "en": "Which river rises west of the Rohtang pass in the Kullu hills of Himachal Pradesh and flows through the Chamba valley of the state?",
+   "hi": "कौन-सी नदी, हिमाचल प्रदेश की कुल्लू पहाड़ियों में रोहतांग दर्रे के पश्चिम में निकलती है और राज्य की चंबा घाटी से होकर बहती है?",
+   "opts": [
+    "Jhelam river<br>झेलम नदी",
+    "Chenab river<br>चिनाब नदी",
+    "Ravi river<br>रावी नदी",
+    "Beas river<br>व्यास नदी"
+   ],
+   "my_ans": "C",
+   "sol": "रावी नदी हिमाचल प्रदेश की कुल्लू पहाड़ियों में रोहतांग दर्रे के पश्चिम से निकलती है और चंबा घाटी से होकर बहती है।",
+   "trick": "रावी नदी: रोहतांग के पश्चिम से निकलकर चंबा घाटी में बहती है।",
+   "ans": "C"
+  },
+  {
+   "n": 163,
+   "lvl": "UG",
+   "en": "Which of the following physiographic regions of India is primarily formed by the extensive deposition of alluvium brought by the Himalayan river systems?",
+   "hi": "भारत का निम्नलिखित में से कौन सा भौगोलिक क्षेत्र, मुख्यतः हिमालयी नदी तंत्रों द्वारा लाए गए जलोढ़ के व्यापक निक्षेपण से बना है?",
+   "opts": [
+    "The Northern Plains<br>उत्तरी मैदान",
+    "The Peninsular Plateau<br>प्रायद्वीपीय पठार",
+    "The Meghalaya Plateau<br>मेघालय पठार",
+    "The Western Coastal Plains<br>पश्चिमी तटीय मैदान"
+   ],
+   "my_ans": "A",
+   "sol": "उत्तरी मैदान सिंधु, गंगा और ब्रह्मपुत्र जैसी हिमालयी नदियों द्वारा लाए गए जलोढ़ निक्षेपों से बने हैं।",
+   "trick": "हिमालयी नदियाँ = जलोढ़ निक्षेप = उत्तरी मैदान।",
+   "ans": "A"
+  },
+  {
+   "n": 164,
+   "lvl": "UG",
+   "en": "What is the primary reason for the rapid population growth in developing countries during the second stage of the Demographic Transition Model?",
+   "hi": "जनांकिकीय संक्रमण मॉडल के दूसरे चरण के दौरान विकासशील देशों में तीव्र जनसंख्या वृद्धि का प्राथमिक कारण क्या है?",
+   "opts": [
+    "Low birth rates and high death rates<br>निम्न जन्म दर और उच्च मृत्यु दर",
+    "High birth rates and high death rates<br>उच्च जन्म दर और उच्च मृत्यु दर",
+    "High birth rates and declining death rates<br>उच्च जन्म दर और घटती मृत्यु दर",
+    "Low birth rates and low death rates<br>निम्न जन्म दर और निम्न मृत्यु दर"
+   ],
+   "my_ans": "C",
+   "sol": "दूसरे चरण में बेहतर स्वास्थ्य सुविधाओं के कारण मृत्यु दर गिरती है, जबकि जन्म दर उच्च बनी रहती है, जिससे जनसंख्या तेजी से बढ़ती है।",
+   "trick": "चरण 2: उच्च जन्म दर + गिरती मृत्यु दर = तीव्र जनसंख्या वृद्धि।",
+   "ans": "C"
+  },
+  {
+   "n": 165,
+   "lvl": "UG",
+   "en": "According to the Census 2011, which of the following states was the second most populous in the country?",
+   "hi": "2011 की जनगणना के अनुसार निम्नलिखित में से कौन-सा राज्य, देश का दूसरा सबसे अधिक आबादी वाला राज्य था?",
+   "opts": [
+    "Karnataka<br>कर्नाटक",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Maharashtra<br>महाराष्ट्र",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "C",
+   "sol": "2011 की जनगणना के अनुसार, उत्तर प्रदेश सबसे अधिक आबादी वाला राज्य था और महाराष्ट्र दूसरे स्थान पर था।",
+   "trick": "जनसंख्या क्रम: यूपी > महाराष्ट्र > बिहार।",
+   "ans": "C"
+  },
+  {
+   "n": 166,
+   "lvl": "UG",
+   "en": "Krishna Basin mainly extends over which of the following groups of states?",
+   "hi": "कृष्णा बेसिन मुख्य रूप से निम्नलिखित में से किन राज्यों के समूह में विस्तृत है?",
+   "opts": [
+    "Maharashtra, Gujarat and Madhya Pradesh<br>महाराष्ट्र, गुजरात और मध्य प्रदेश",
+    "Maharashtra, Odisha and Karnataka<br>महाराष्ट्र, ओडिशा और कर्नाटक",
+    "Maharashtra, Madhya Pradesh and Chhattisgarh<br>महाराष्ट्र, मध्य प्रदेश और छत्तीसगढ़",
+    "Maharashtra, Karnataka and Andhra Pradesh<br>महाराष्ट्र, कर्नाटक और आंध्र प्रदेश"
+   ],
+   "my_ans": "D",
+   "sol": "कृष्णा नदी का बेसिन मुख्य रूप से महाराष्ट्र, कर्नाटक और आंध्र प्रदेश राज्यों में फैला हुआ है।",
+   "trick": "कृष्णा नदी: महाराष्ट्र (उद्गम), कर्नाटक, आंध्र प्रदेश।",
+   "ans": "D"
+  },
+  {
+   "n": 167,
+   "lvl": "UG",
+   "en": "A country with a high birth rate and a high death rate typically reflects:",
+   "hi": "उच्च जन्म दर और उच्च मृत्यु दर वाला देश आमतौर पर _________ दर्शाता है।",
+   "opts": [
+    "Post-industrial society<br>उत्तर-औद्योगिक समाज",
+    "Low dependency ratio<br>निम्न निर्भरता अनुपात",
+    "Early stage of demographic transition<br>जनसांख्यिकीय संक्रमण का प्रारंभिक चरण",
+    "Advanced economy<br>उन्नत अर्थव्यवस्था"
+   ],
+   "my_ans": "C",
+   "sol": "जनसांख्यिकीय संक्रमण के पहले चरण में खराब स्वास्थ्य सेवाओं के कारण जन्म और मृत्यु दर दोनों उच्च होती हैं।",
+   "trick": "उच्च जन्म + उच्च मृत्यु = संक्रमण का पहला चरण।",
+   "ans": "C"
+  },
+  {
+   "n": 168,
+   "lvl": "UG",
+   "en": "Which of the following wind systems is primarily responsible for the rainfall over the Coromandel coast during the winter season?",
+   "hi": "निम्नलिखित में से कौन-सी पवन प्रणाली मुख्य रूप से शीत ऋतु के दौरान कोरोमंडल तट पर होने वाली वर्षा के लिए उत्तरदायी है?",
+   "opts": [
+    "Southwest monsoon winds<br>दक्षिण-पश्चिमी मानसूनी पवनें",
+    "Westerlies<br>पश्चिमी पवन",
+    "Western disturbances<br>पश्चिमी विक्षोभ",
+    "Northeast monsoon winds<br>उत्तर-पूर्व मानसून पवनें"
+   ],
+   "my_ans": "D",
+   "sol": "उत्तर-पूर्वी मानसून हवाएं बंगाल की खाड़ी से नमी लेकर लौटती हैं और कोरोमंडल तट पर शीतकालीन वर्षा करती हैं।",
+   "trick": "कोरोमंडल तट = लौटता हुआ मानसून (उत्तर-पूर्वी मानसून)।",
+   "ans": "D"
+  },
+  {
+   "n": 169,
+   "lvl": "UG",
+   "en": "Which type of natural vegetation covers the largest geographical area in India?",
+   "hi": "भारत में सबसे बड़े भौगोलिक क्षेत्र को कौन-सी प्रकार की प्राकृतिक वनस्पति कवर करती है?",
+   "opts": [
+    "Tropical Deciduous vegetation<br>उष्णकटिबंधीय पर्णपाती वनस्पति",
+    "Dry Tropical Thorn vegetation<br>शुष्क उष्णकटिबंधीय कंटक वनस्पति",
+    "Mountain vegetation<br>पर्वतीय वनस्पति",
+    "Tidal mangrove vegetation<br>ज्वारीय मैंग्रोव वनस्पति"
+   ],
+   "my_ans": "A",
+   "sol": "भारत के कुल वन क्षेत्र का लगभग 40-45% हिस्सा उष्णकटिबंधीय पर्णपाती वनों (मानसूनी वनों) का है।",
+   "trick": "भारत में सबसे अधिक पर्णपाती (मानसूनी) वन पाए जाते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 170,
+   "lvl": "UG",
+   "en": "The thorn and scrub vegetation of India is mainly found in which region?",
+   "hi": "भारत की कंटीले वन एवं झाड़ियों वाली वनस्पति मुख्य रूप से किस क्षेत्र में पाई जाती है?",
+   "opts": [
+    "Malabar Coast<br>मालाबार तट",
+    "Eastern Himalayas<br>पूर्वी हिमालय",
+    "Western Rajasthan<br>पश्चिमी राजस्थान",
+    "Sundarbans<br>सुंदरबन"
+   ],
+   "my_ans": "C",
+   "sol": "कंटीली और झाड़ीदार वनस्पति कम वर्षा (70 सेमी से कम) वाले क्षेत्रों में होती है, जैसे पश्चिमी राजस्थान का थार मरुस्थल।",
+   "trick": "कम वर्षा = कंटीली वनस्पति (राजस्थान)।",
+   "ans": "C"
+  },
+  {
+   "n": 171,
+   "lvl": "UG",
+   "en": "Which of the following states accounts for about three-fourths of India's total jute production?",
+   "hi": "निम्नलिखित में से कौन-सा राज्य, भारत के कुल जूट उत्पादन का लगभग तीन-चौथाई भाग उत्पादित करता है?",
+   "opts": [
+    "Assam<br>असम",
+    "Odisha<br>ओडिशा",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "C",
+   "sol": "पश्चिम बंगाल भारत का सबसे बड़ा जूट उत्पादक राज्य है, जो देश के कुल उत्पादन का लगभग 75% हिस्सा पैदा करता है।",
+   "trick": "जूट का सबसे बड़ा उत्पादक = पश्चिम बंगाल।",
+   "ans": "C"
+  },
+  {
+   "n": 172,
+   "lvl": "UG",
+   "en": "Which sector in India includes activities such as cotton textile production and iron and steel manufacturing?",
+   "hi": "भारत में किस क्षेत्र में सूती वस्त्र उत्पादन और लोहा एवं इस्पात निर्माण जैसी गतिविधियाँ शामिल हैं?",
+   "opts": [
+    "Primary sector<br>प्राथमिक क्षेत्र",
+    "Tertiary sector<br>तृतीयक क्षेत्र",
+    "Secondary sector<br>द्वितीयक क्षेत्र",
+    "Quaternary sector<br>चतुर्थक क्षेत्र"
+   ],
+   "my_ans": "C",
+   "sol": "विनिर्माण (Manufacturing) और औद्योगिक गतिविधियाँ अर्थव्यवस्था के द्वितीयक क्षेत्र के अंतर्गत आती हैं।",
+   "trick": "उद्योग = द्वितीयक क्षेत्र।",
+   "ans": "C"
+  }
+ ]
+}

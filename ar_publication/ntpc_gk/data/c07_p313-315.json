@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "313-315",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 290,
+   "lvl": "UG",
+   "en": "Which Part and Schedule of the Constitution of India deals with Municipalities?",
+   "hi": "भारत के संविधान का कौन-सा भाग और अनुसूची नगरपालिकाओं से संबंधित है?",
+   "opts": [
+    "Part IX and 11th Schedule<br>भाग IX और 11वीं अनुसूची",
+    "Part IX and 12th Schedule<br>भाग IX और 12वीं अनुसूची",
+    "Part IXA and 11th Schedule<br>भाग IXA और 11वीं अनुसूची",
+    "Part IXA and 12th Schedule<br>भाग IXA और 12वीं अनुसूची"
+   ],
+   "my_ans": "D",
+   "sol": "74वें संविधान संशोधन अधिनियम, 1992 द्वारा संविधान में भाग IXA और 12वीं अनुसूची जोड़ी गई, जो नगरपालिकाओं से संबंधित है।",
+   "trick": "नगरपालिका = भाग IXA, 12वीं अनुसूची",
+   "ans": "D"
+  },
+  {
+   "n": 291,
+   "lvl": "UG",
+   "en": "The laws to provide for the representation of the Chairpersons of the Panchayats are made by ___________.",
+   "hi": "पंचायतों के अध्यक्षों के प्रतिनिधित्व के लिए प्रावधान करने वाले कानून ___________ द्वारा बनाए जाते हैं।",
+   "opts": [
+    "State Legislature<br>राज्य विधानमंडल",
+    "The President of India<br>भारत के राष्ट्रपति",
+    "Governor of State<br>राज्य के राज्यपाल",
+    "The Parliament of India<br>भारत की संसद"
+   ],
+   "my_ans": "A",
+   "sol": "पंचायती राज राज्य का विषय है, इसलिए पंचायतों की संरचना और अध्यक्षों के प्रतिनिधित्व से संबंधित कानून बनाने की शक्ति राज्य विधानमंडल के पास है।",
+   "trick": "पंचायत = राज्य का विषय",
+   "ans": "A"
+  },
+  {
+   "n": 292,
+   "lvl": "UG",
+   "en": "According to the Constitution of India, the ‘Right to Freedom’ is specifically guaranteed under which exact set of Articles?",
+   "hi": "भारत के संविधान के अनुसार, ‘स्वतंत्रता का अधिकार’ विशेष रूप से किन अनुच्छेदों के अंतर्गत गारंटीकृत है?",
+   "opts": [
+    "Articles 19, 20, 21 and 22<br>अनुच्छेद 19, 20, 21 और 22",
+    "Articles 14, 15, 16 and 17<br>अनुच्छेद 14, 15, 16 और 17",
+    "Articles 32, 33, 34 and 35<br>अनुच्छेद 32, 33, 34 और 35",
+    "Articles 23, 24, 25 and 26<br>अनुच्छेद 23, 24, 25 और 26"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान के अनुच्छेद 19 से 22 तक 'स्वतंत्रता का अधिकार' प्रदान किया गया है।",
+   "trick": "स्वतंत्रता = 19-22",
+   "ans": "A"
+  },
+  {
+   "n": 293,
+   "lvl": "UG",
+   "en": "The 11th Schedule of the Constitution of India lists:",
+   "hi": "भारत के संविधान की 11वीं अनुसूची में ________ सूचीबद्ध हैं।",
+   "opts": [
+    "Fundamental Duties<br>मौलिक कर्तव्य",
+    "Concurrent List subjects<br>समवर्ती सूची विषय",
+    "29 subjects for Panchayats<br>पंचायतों के लिए 29 विषय",
+    "18 subjects for Municipalities<br>नगरपालिकाओं के लिए 18 विषय"
+   ],
+   "my_ans": "C",
+   "sol": "73वें संविधान संशोधन अधिनियम, 1992 द्वारा जोड़ी गई 11वीं अनुसूची में पंचायतों के लिए 29 कार्यात्मक विषय शामिल हैं।",
+   "trick": "11वीं अनुसूची = 29 विषय (पंचायत)",
+   "ans": "C"
+  },
+  {
+   "n": 294,
+   "lvl": "UG",
+   "en": "According to the Constitution of India, which constitutional body advises the President on the principles governing grants-in-aid to States from the Consolidated Fund of India?",
+   "hi": "भारत के संविधान के अनुसार, कौन-सा संवैधानिक निकाय राष्ट्रपति को भारत की संचित निधि में से राज्यों को सहायता-अनुदान देने के सिद्धांतों पर सलाह देता है?",
+   "opts": [
+    "Comptroller and Auditor General of India<br>भारत के नियंत्रक और महालेखा परीक्षक",
+    "Planning Commission<br>योजना आयोग",
+    "Finance Commission<br>वित्त आयोग",
+    "NITI Aayog<br>नीति आयोग"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 280 के तहत गठित वित्त आयोग का मुख्य कार्य केंद्र और राज्यों के बीच कर राजस्व का वितरण और सहायता-अनुदान के सिद्धांतों पर सलाह देना है।",
+   "trick": "अनुदान सलाह = वित्त आयोग",
+   "ans": "C"
+  },
+  {
+   "n": 295,
+   "lvl": "UG",
+   "en": "In which year did the Government of India declare Odia as a classical language?",
+   "hi": "भारत सरकार ने किस वर्ष ओडिया (Odia) को शास्त्रीय भाषा घोषित किया?",
+   "opts": [
+    "2014",
+    "2017",
+    "2004",
+    "2005"
+   ],
+   "my_ans": "A",
+   "sol": "भारत सरकार ने 20 फरवरी 2014 को ओडिया को भारत की छठी शास्त्रीय भाषा का दर्जा प्रदान किया।",
+   "trick": "ओडिया = 2014",
+   "ans": "A"
+  },
+  {
+   "n": 296,
+   "lvl": "UG",
+   "en": "What is a unitary feature of the Constitution of India?",
+   "hi": "भारत के संविधान की एकात्मक विशेषता क्या है?",
+   "opts": [
+    "Dual government<br>द्वैध शासन",
+    "Supremacy of the Constitution<br>संविधान की सर्वोच्चता",
+    "Bicameral legislature<br>द्विसदनीय विधानमंडल",
+    "Integrated judiciary<br>एकीकृत न्यायपालिका"
+   ],
+   "my_ans": "D",
+   "sol": "एकीकृत न्यायपालिका (Integrated Judiciary) एकात्मक विशेषता है क्योंकि भारत में सर्वोच्च न्यायालय के नीचे उच्च न्यायालय और अधीनस्थ न्यायालय एक ही पदानुक्रम में हैं।",
+   "trick": "एकात्मक = एकीकृत न्यायपालिका",
+   "ans": "D"
+  },
+  {
+   "n": 297,
+   "lvl": "UG",
+   "en": "Which of the following Schedules was added to the Constitution of India, to provide for the disqualification of the members of Parliament and the state legislatures on the ground of defection from one political party to another?",
+   "hi": "एक राजनीतिक दल से दूसरे राजनीतिक दल में दलबदल करने के आधार पर संसद और राज्य विधानसभाओं के सदस्यों को अयोग्य घोषित करने के लिए निम्नलिखित में से कौन-सी अनुसूची भारत के संविधान में जोड़ी गई थी?",
+   "opts": [
+    "Schedule XII<br>अनुसूची XII",
+    "Schedule X<br>अनुसूची X",
+    "Schedule IX<br>अनुसूची IX",
+    "Schedule XI<br>अनुसूची XI"
+   ],
+   "my_ans": "B",
+   "sol": "52वें संविधान संशोधन अधिनियम, 1985 द्वारा जोड़ी गई दसवीं अनुसूची (Schedule X) दलबदल विरोधी कानून से संबंधित है।",
+   "trick": "दलबदल = 10वीं अनुसूची",
+   "ans": "B"
+  },
+  {
+   "n": 298,
+   "lvl": "UG",
+   "en": "Which Indian state became the first in the country to enact its own Right to Information Act in 1997?",
+   "hi": "कौन-सा भारतीय राज्य वर्ष 1997 में अपना सूचना का अधिकार अधिनियम लागू करने वाला देश का पहला राज्य बना?",
+   "opts": [
+    "Punjab<br>पंजाब",
+    "Rajasthan<br>राजस्थान",
+    "Karnataka<br>कर्नाटक",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "D",
+   "sol": "तमिलनाडु भारत का पहला राज्य था जिसने 1997 में राष्ट्रीय RTI अधिनियम 2005 से पहले ही अपना सूचना का अधिकार अधिनियम लागू किया था।",
+   "trick": "RTI पहला राज्य = तमिलनाडु",
+   "ans": "D"
+  },
+  {
+   "n": 299,
+   "lvl": "UG",
+   "en": "Elections to Panchayats and Municipalities are managed by which body according to the Constitution?",
+   "hi": "संविधान के अनुसार, पंचायतों और नगरपालिकाओं के चुनावों का प्रबंधन किस निकाय द्वारा किया जाता है?",
+   "opts": [
+    "Lok Sabha Secretariat<br>लोकसभा सचिवालय",
+    "District Magistrates<br>जिला मजिस्ट्रेट",
+    "Central Election Commission<br>केंद्रीय निर्वाचन आयोग",
+    "State Election Commissions<br>राज्य निर्वाचन आयोग"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 243K और 243ZA के तहत, पंचायतों और नगरपालिकाओं के चुनाव कराने की जिम्मेदारी राज्य निर्वाचन आयोग की है।",
+   "trick": "स्थानीय चुनाव = राज्य निर्वाचन आयोग",
+   "ans": "D"
+  },
+  {
+   "n": 300,
+   "lvl": "UG",
+   "en": "Which of the following Union Territories of India was granted legislature through the Government of Union Territories Act, 1963?",
+   "hi": "निम्नलिखित में से भारत के किस केंद्र शासित प्रदेश को 'गवर्नमेंट ऑफ यूनियन टेरिटरीज एक्ट, 1963' के माध्यम से विधायिका प्रदान की गई थी?",
+   "opts": [
+    "Puducherry<br>पुडुचेरी",
+    "Chandigarh<br>चंडीगढ़",
+    "Lakshadweep<br>लक्षद्वीप",
+    "Dadra and Nagar Haveli<br>दादरा और नगर हवेली"
+   ],
+   "my_ans": "A",
+   "sol": "1963 के अधिनियम के तहत पुडुचेरी (तत्कालीन पांडिचेरी) को अपनी विधानसभा और मंत्रिपरिषद बनाने का अधिकार दिया गया था।",
+   "trick": "1963 एक्ट = पुडुचेरी",
+   "ans": "A"
+  }
+ ]
+}

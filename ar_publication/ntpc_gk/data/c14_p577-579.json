@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "577-579",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "Which of the following is the name of the Ethiopian volcano that erupted in November 2025?",
+   "hi": "उस इथियोपियाई ज्वालामुखी का नाम क्या है, जो नवंबर 2025 में फटा था?",
+   "opts": [
+    "Melissa<br>मेलिसा (Melissa)",
+    "Erta Ale<br>एर्टा एले (Erta Ale)",
+    "Nyiragongo<br>न्यारा गोंगो (Nyiragongo)",
+    "Hayli Gubbi<br>हायली गुब्बी (Hayli Gubbi)"
+   ],
+   "my_ans": "D",
+   "sol": "नवंबर 2025 में इथियोपिया के अफ़ार क्षेत्र में 'हेली गुब्बी' (Hayli Gubbi) ज्वालामुखी में विस्फोट हुआ था।",
+   "trick": "इथियोपिया का सक्रिय ज्वालामुखी: हेली गुब्बी (2025)",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "In which present-day state did the Jungle Mahal Uprising, also known as the Bhumij Revolt, take place?",
+   "hi": "वर्तमान में किस राज्य में जंगल महल विद्रोह (Jungle Mahal Uprising) हुआ था, जिसे भूमिज विद्रोह (Bhumij Revolt) के नाम से भी जाना जाता है?",
+   "opts": [
+    "Odisha<br>ओडिशा",
+    "Jharkhand<br>झारखंड",
+    "West Bengal<br>पश्चिम बंगाल",
+    "Bihar<br>बिहार"
+   ],
+   "my_ans": "C",
+   "sol": "भूमिज विद्रोह (1832-33) गंगा नारायण सिंह के नेतृत्व में वर्तमान पश्चिम बंगाल के जंगल महल क्षेत्र में हुआ था।",
+   "trick": "जंगल महल = पश्चिम बंगाल (भूमिज विद्रोह)",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "In 2025, which England cricketer was formally knighted during an investiture ceremony held at Windsor Castle on 28 October?",
+   "hi": "वर्ष 2025 में, इंग्लैंड के किस क्रिकेटर को 28 अक्टूबर को विंडसर कैसल (Windsor Castle) में आयोजित एक अलंकरण समारोह (investiture ceremony) के दौरान औपचारिक रूप से नाइटहुड (knighted) से सम्मानित किया गया?",
+   "opts": [
+    "Stuart Broad<br>स्टुअर्ट ब्रॉड (Stuart Broad)",
+    "James Anderson<br>जेम्स एंडरसन (James Anderson)",
+    "Alastair Cook<br>एलिस्टर कुक (Alastair Cook)",
+    "Joe Root<br>जो रूट (Joe Root)"
+   ],
+   "my_ans": "B",
+   "sol": "इंग्लैंड के महान तेज गेंदबाज जेम्स एंडरसन को 2025 में क्रिकेट में उनके योगदान के लिए नाइटहुड की उपाधि दी गई।",
+   "trick": "जेम्स एंडरसन = 700+ टेस्ट विकेट = नाइटहुड 2025",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which Indian cooperatives were ranked first and second, respectively, in the International Cooperative Alliance World Cooperative Monitor 2025, as announced at the ICA CM50 Conference in Doha in 2025?",
+   "hi": "2025 में दोहा में आयोजित ICA CM50 सम्मेलन में घोषित इंटरनेशनल कोऑपरेटिव अलायंस वर्ल्ड कोऑपरेटिव मॉनिटर 2025 में किन भारतीय सहकारी समितियों को क्रमशः पहला और दूसरा स्थान प्राप्त हुआ?",
+   "opts": [
+    "Amul (GCMMF) ranked first and IFFCO ranked second<br>अमूल (GCMMF) पहले स्थान पर और IFFCO दूसरे स्थान पर रहा।",
+    "IFFCO ranked first and Amul (GCMMF) ranked second<br>IFFCO पहले स्थान पर और अमूल (GCMMF) दूसरे स्थान पर रहा।",
+    "IFFCO ranked first and KRIBHCO ranked second<br>IFFCO पहले स्थान पर और KRIBHCO दूसरे स्थान पर रहा।",
+    "Amul (GCMMF) ranked first and KRIBHCO ranked second<br>अमूल (GCMMF) पहले स्थान पर और KRIBHCO दूसरे स्थान पर रहा।"
+   ],
+   "my_ans": "A",
+   "sol": "ICA मॉनिटर 2025 में अमूल (GCMMF) पहले और IFFCO दूसरे स्थान पर रही, जो भारत के मजबूत सहकारी क्षेत्र को दर्शाता है।",
+   "trick": "सहकारी रैंकिंग: अमूल (1), IFFCO (2)",
+   "ans": "A"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which of the following themes guided global campaigns for World Polio Day 2025?",
+   "hi": "निम्नलिखित में से कौन-सी थीम, विश्व पोलियो दिवस 2025 के लिए वैश्विक अभियानों का मार्गदर्शन करती है?",
+   "opts": [
+    "Immunization for All Ages across the country<br>देश भर में सभी आयु वर्ग के लोगों के लिए टीकाकरण",
+    "Vaccines for a Healthy Child and Healthy Future<br>स्वस्थ बच्चे और स्वस्थ भविष्य के लिए टीके",
+    "End Polio: Every Child, Every Vaccine, Everywhere<br>पोलियो का अंत: हर बच्चा, हर टीका, हर जगह",
+    "Protecting Children from Diseases, all at once<br>बच्चों को एक ही बार में सभी बीमारियों से बचाना"
+   ],
+   "my_ans": "C",
+   "sol": "विश्व पोलियो दिवस (24 अक्टूबर) 2025 की थीम 'End Polio: Every Child, Every Vaccine, Everywhere' थी।",
+   "trick": "पोलियो थीम: हर बच्चा, हर टीका, हर जगह",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following sectors is Shri Uday Kotak connected with, for which he was awarded the Padma Bhushan as announced in the Padma Awards 2026?",
+   "hi": "श्री उदय कोटक निम्नलिखित में से किस क्षेत्र से संबंधित हैं, जिसके लिए उन्हें पद्म पुरस्कार 2026 में घोषित पद्म भूषण से सम्मानित किया गया था?",
+   "opts": [
+    "Social Development<br>सामाजिक विकास",
+    "Science and Innovation<br>विज्ञान और नवाचार",
+    "Trade and Industry<br>व्यापार और उद्योग",
+    "Public Service<br>लोक सेवा"
+   ],
+   "my_ans": "C",
+   "sol": "उदय कोटक कोटक महिंद्रा बैंक के संस्थापक हैं, जो बैंकिंग और वित्तीय सेवाओं (व्यापार और उद्योग क्षेत्र) से जुड़े हैं।",
+   "trick": "उदय कोटक = बैंकिंग = व्यापार और उद्योग",
+   "ans": "C"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Which AI-powered diagnostic model, unveiled by Indian scientists in 2025, analyses cancer at the molecular level to improve classification and treatment outcomes?",
+   "hi": "भारतीय वैज्ञानिकों द्वारा 2025 में अनावरण किया गया कौन-सा AI-संचालित नैदानिक मॉडल, वर्गीकरण और उपचार परिणामों में सुधार करने हेतु कैंसर का आणविक स्तर पर विश्लेषण करता है?",
+   "opts": [
+    "BioScan AI-based tumour classification model<br>BioScan AI-आधारित ट्यूमर वर्गीकरण मॉडल",
+    "TumourTrack intelligent cancer analysis system<br>TumourTrack इंटेलिजेंट कैंसर विश्लेषण प्रणाली",
+    "OncoMark AI-powered cancer diagnostic model<br>OncoMark AI-संचालित कैंसर नैदानिक मॉडल",
+    "GeneMap advanced molecular oncology platform<br>GeneMap उन्नत आणविक ऑन्कोलॉजी प्लेटफॉर्म"
+   ],
+   "my_ans": "C",
+   "sol": "OncoMark एक AI-संचालित मॉडल है जिसे भारतीय वैज्ञानिकों ने कैंसर के आणविक विश्लेषण और बेहतर उपचार के लिए विकसित किया है।",
+   "trick": "कैंसर आणविक विश्लेषण = OncoMark",
+   "ans": "C"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "During which nationwide event, observed in 2025, did the Union Minister of Science and Technology emphasize inclusive participation in India’s biotechnology mission and the goal of achieving a $300 billion bioeconomy by 2030?",
+   "hi": "2025 में आयोजित किस राष्ट्रव्यापी कार्यक्रम के दौरान, केंद्रीय विज्ञान एवं प्रौद्योगिकी मंत्री ने भारत के जैव प्रौद्योगिकी मिशन में समावेशी भागीदारी और 2030 तक $300 बिलियन की जैव अर्थव्यवस्था प्राप्त करने के लक्ष्य पर बल दिया था?",
+   "opts": [
+    "Global Biotech Innovation and Sustainability Summit<br>वैश्विक बायोटेक नवाचार और सततता शिखर सम्मेलन",
+    "World Bioproduct Day – The BioE3 Way<br>विश्व जैव उत्पाद दिवस-द बायोई3 वे",
+    "National Biotechnology Awareness Week Programme<br>राष्ट्रीय जैव प्रौद्योगिकी जागरूकता सप्ताह कार्यक्रम",
+    "India Bioeconomy Vision 2030 Outreach Event<br>भारत जैव अर्थव्यवस्था दृष्टिकोण 2030 आउटरीच कार्यक्रम"
+   ],
+   "my_ans": "B",
+   "sol": "केंद्रीय मंत्री ने 'विश्व जैव उत्पाद दिवस – BioE3 वे' कार्यक्रम में 2030 तक $300 बिलियन की जैव अर्थव्यवस्था का लक्ष्य रखा।",
+   "trick": "BioE3 = जैव अर्थव्यवस्था = $300 बिलियन",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "According to the NIRF Rankings 2025 released in September 2025, which institute secured the top overall position?",
+   "hi": "सितंबर 2025 में जारी 'NIRF रैंकिंग 2025 (NIRF Rankings 2025)' के अनुसार, किस संस्थान ने समग्र श्रेणी में शीर्ष स्थान प्राप्त किया?",
+   "opts": [
+    "IIT Bombay<br>IIT बॉम्बे",
+    "AIIMS Delhi<br>AIIMS, दिल्ली",
+    "IISc Bengaluru<br>IISc बेंगलुरु",
+    "IIT Madras<br>IIT मद्रास"
+   ],
+   "my_ans": "D",
+   "sol": "NIRF रैंकिंग 2025 में IIT मद्रास ने समग्र श्रेणी (Overall Category) में लगातार शीर्ष स्थान बरकरार रखा है।",
+   "trick": "NIRF 2025 समग्र विजेता = IIT मद्रास",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "583-585",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "In 2025, which organization released the Global Carbon Budget, providing the most comprehensive annual assessment of global carbon sources, sinks, and emission trends?",
+   "hi": "2025 में, किस संगठन ने वैश्विक कार्बन बजट जारी किया था, जो वैश्विक कार्बन स्रोतों, सिंक और उत्सर्जन प्रवृत्तियों का सबसे व्यापक वार्षिक मूल्यांकन प्रदान करता है?",
+   "opts": [
+    "UN Environment Programme (UNEP)<br>संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP)",
+    "World Meteorological Organization (WMO)<br>विश्व मौसम विज्ञान संगठन (WMO)",
+    "Global Carbon Project (GCP)<br>ग्लोबल कार्बन प्रोजेक्ट (GCP)",
+    "Intergovernmental Panel on Climate Change (IPCC)<br>जलवायु परिवर्तन पर अंतर-सरकारी पैनल (IPCC)"
+   ],
+   "my_ans": "C",
+   "sol": "ग्लोबल कार्बन प्रोजेक्ट (GCP) एक अंतरराष्ट्रीय शोध संगठन है जो वार्षिक रूप से 'ग्लोबल कार्बन बजट' रिपोर्ट जारी करता है।",
+   "trick": "कार्बन बजट = ग्लोबल कार्बन प्रोजेक्ट (GCP)",
+   "ans": "C"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "In 2025, which Indian High Court issued the pioneering 'Policy Regarding the Use of AI Tools in District Judiciary', becoming the first in the country to frame comprehensive guidelines for artificial intelligence (AI) use in judicial work?",
+   "hi": "2025 में, किस भारतीय उच्च न्यायालय ने 'जिला न्यायपालिका में AI टूल के उपयोग संबंधी नीति' का अग्रणी आदेश जारी किया, और न्यायिक कार्यों में कृत्रिम बुद्धि (AI) के उपयोग के लिए व्यापक दिशानिर्देश तैयार करने वाला देश का पहला न्यायालय बन गया?",
+   "opts": [
+    "Delhi High Court<br>दिल्ली उच्च न्यायालय",
+    "Kerala High Court<br>केरल उच्च न्यायालय",
+    "Madras High Court<br>मद्रास उच्च न्यायालय",
+    "Bombay High Court<br>बॉम्बे उच्च न्यायालय"
+   ],
+   "my_ans": "B",
+   "sol": "केरल उच्च न्यायालय ने 2025 में न्यायिक कार्यों में AI के उपयोग के लिए पहली बार व्यापक और बाध्यकारी नीति जारी की।",
+   "trick": "AI नीति = केरल उच्च न्यायालय",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "Which publisher released 'Mother Mary Comes to Me' by Arundhati Roy in September 2025?",
+   "hi": "सितंबर 2025 में अरुंधति रॉय की पुस्तक 'मदर मैरी कम्स टु मी (Mother Mary Comes to Me)' किस प्रकाशक ने प्रकाशित की?",
+   "opts": [
+    "Penguin Random House India<br>पेंगुइन रैंडम हाउस इंडिया",
+    "HarperCollins India<br>हार्पर कॉलिन्स इंडिया",
+    "Rupa Publications<br>रूपा पब्लिकेशन्स",
+    "Hachette India<br>हैचेट इंडिया"
+   ],
+   "my_ans": "A",
+   "sol": "अरुंधति रॉय की नवीनतम कृति 'मदर मैरी कम्स टु मी' को पेंगुइन रैंडम हाउस इंडिया द्वारा प्रकाशित किया गया।",
+   "trick": "अरुंधति रॉय की प्रमुख प्रकाशक = पेंगुइन रैंडम हाउस",
+   "ans": "A"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "By November 2025, non-fossil power accounted for what percentage of the total installed electricity capacity in India?",
+   "hi": "नवंबर 2025 तक प्राप्त जानकारी के अनुसार, भारत की कुल स्थापित विद्युत क्षमता में गैर-जीवाश्म ईंधन विद्युत का योगदान कितना प्रतिशत है?",
+   "opts": [
+    "40.2%",
+    "51.5%",
+    "60.0%",
+    "45.8%"
+   ],
+   "my_ans": "B",
+   "sol": "नवंबर 2025 तक भारत की गैर-जीवाश्म ऊर्जा (नवीकरणीय + परमाणु) क्षमता कुल स्थापित क्षमता का 51.5% हो गई है।",
+   "trick": "गैर-जीवाश्म ऊर्जा = 51.5%",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "In November 2025, which company delivered the human-rated Vikas engine to ISRO for the Gaganyaan mission?",
+   "hi": "नवंबर 2025 में, किस कंपनी ने गगनयान मिशन के लिए ISRO को ह्यूमन-रेटेड विकास इंजन डिलीवर किया?",
+   "opts": [
+    "Bharat Electronics<br>भारत इलेक्ट्रॉनिक्स",
+    "HAL<br>एचएएल",
+    "ISRO<br>इसरो",
+    "Godrej Aerospace<br>गोदरेज एयरोस्पेस"
+   ],
+   "my_ans": "D",
+   "sol": "गोदरेज एयरोस्पेस ने गगनयान मिशन के लिए महत्वपूर्ण ह्यूमन-रेटेड विकास इंजन का निर्माण और आपूर्ति की है।",
+   "trick": "गगनयान विकास इंजन = गोदरेज एयरोस्पेस",
+   "ans": "D"
+  },
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "Which post-surgical intervention, demonstrated by Indian researchers in 2025, was shown to significantly reduce pelvic recurrence in high-risk bladder cancer patients?",
+   "hi": "2025 में भारतीय शोधकर्ताओं द्वारा प्रदर्शित कौन-सा शल्यक्रिया-पश्चात अंतःक्षेप, उच्च-जोखिम वाले मूत्राशय कैंसर के रोगियों में श्रोणि क्षेत्र में कैंसर पुनरावृत्ति को उल्लेखनीय रूप से कम करने में प्रभावी पाया गया?",
+   "opts": [
+    "Immunotherapy used as a standalone post-surgical treatment<br>शल्यक्रिया के बाद के उपचार के रूप में स्वतंत्र रूप से उपयोग की जाने वाली इम्यूनोथेरेपी",
+    "Targeted drug therapy replacing surgery for bladder cancer<br>मूत्राशय के कैंसर के लिए शल्यक्रिया की जगह लक्षित औषध चिकित्सा",
+    "Radiation therapy administered after bladder cancer surgery<br>मूत्राशय कैंसर शल्यक्रिया के बाद दी जाने वाली विकिरण चिकित्सा",
+    "Chemotherapy administered before bladder cancer surgery<br>मूत्राशय कैंसर शल्यक्रिया से पहले दी जाने वाली कीमोथेरेपी"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय शोधकर्ताओं ने पाया कि मूत्राशय कैंसर की सर्जरी के बाद विकिरण चिकित्सा (रेडियोथेरेपी) देने से कैंसर के दोबारा होने का खतरा काफी कम हो जाता है।",
+   "trick": "कैंसर पुनरावृत्ति कम = सर्जरी के बाद रेडिएशन",
+   "ans": "C"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "On 10 November 2025, the Pan American Health Organization (PAHO) stated that the Region of the Americas no longer retained its status of being free from endemic transmission of which of the following diseases?",
+   "hi": "10 नवंबर 2025 को, पैन अमेरिकन हेल्थ ऑर्गनाइजेशन (PAHO) ने घोषणा की कि अमेरिका क्षेत्र अब निम्नलिखित में से किस रोग के स्थानिक संचरण से मुक्त होने की स्थिति को बरकरार नहीं रख पाया है?",
+   "opts": [
+    "Yellow fever<br>पीत ज्वर",
+    "Cholera<br>हैज़ा",
+    "Measles<br>खसरा",
+    "Polio<br>पोलियो"
+   ],
+   "my_ans": "C",
+   "sol": "PAHO ने घोषणा की कि अमेरिका क्षेत्र ने खसरा-मुक्त स्थिति खो दी है, क्योंकि टीकाकरण दर में गिरावट के कारण इसका स्थानिक संचरण फिर से शुरू हो गया है।",
+   "trick": "अमेरिका ने खोई खसरा-मुक्त स्थिति",
+   "ans": "C"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "As per the 2025 Global Gender Gap Index, what rank did India secure among 148 countries?",
+   "hi": "2025 के ग्लोबल जेंडर गैप इंडेक्स के अनुसार, 148 देशों में भारत ने कौन-सा स्थान प्राप्त किया?",
+   "opts": [
+    "132",
+    "131",
+    "136",
+    "138"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व आर्थिक मंच (WEF) द्वारा जारी 2025 ग्लोबल जेंडर गैप इंडेक्स में भारत 148 देशों में 131वें स्थान पर है।",
+   "trick": "जेंडर गैप इंडेक्स 2025 = 131 रैंक",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Which facility, inaugurated in 2025 by the ISRO Chairman, became India’s first private-sector navigation innovation hub aimed at strengthening self-reliance in advanced navigation systems?",
+   "hi": "2025 में ISRO अध्यक्ष द्वारा उद्घाटित कौन-सा केंद्र, उन्नत नौवहन प्रणालियों में आत्मनिर्भरता को सुदृढ़ करने के उद्देश्य से भारत का पहला निजी क्षेत्र का नौवहन नवाचार केंद्र बन गया?",
+   "opts": [
+    "Centre for Indigenous Navigation Technologies<br>सेंटर फॉर इंडिजेनस नेविगेशन टेक्नोलॉजीज",
+    "National Hub for Advanced Satellite Navigation<br>नेशनल हब फॉर एडवांस्ड सैटेलाइट नेविगेशन",
+    "Ananth Centre of Excellence for Navigation<br>अनंत सेंटर ऑफ एक्सीलेंस फॉर नेविगेशन",
+    "Indian Navigation Research and Innovation Centre<br>इंडियन नेविगेशन रिसर्च एंड इनोवेशन सेंटर"
+   ],
+   "my_ans": "C",
+   "sol": "ISRO अध्यक्ष ने 'अनंत सेंटर ऑफ एक्सीलेंस फॉर नेविगेशन' का उद्घाटन किया, जो भारत का पहला निजी क्षेत्र का नेविगेशन इनोवेशन हब है।",
+   "trick": "निजी नेविगेशन हब = अनंत सेंटर",
+   "ans": "C"
+  }
+ ]
+}

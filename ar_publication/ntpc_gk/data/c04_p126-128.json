@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 4,
+  "en": "Art & Culture",
+  "hi": "कला एवं संस्कृति",
+  "total": 46,
+  "gl": 46,
+  "ug": 0
+ },
+ "source_pages": "126-128",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "Padma Shri Award winner Rani Karnaa was an exponent of which of the following dance forms?",
+   "hi": "पद्म श्री पुरस्कार विजेता रानी कर्ण ने निम्नलिखित में से किस नृत्य शैली का प्रतिपादन किया था?",
+   "opts": [
+    "Odissi<br>ओडिसी",
+    "Kathak<br>कथक",
+    "Kuchipudi<br>कुचीपुडी",
+    "Kathakali<br>कथकली"
+   ],
+   "my_ans": "B",
+   "sol": "रानी कर्णा एक प्रसिद्ध कथक नृत्यांगना थीं। उन्हें कथक नृत्य में उनके उत्कृष्ट योगदान के लिए पद्म श्री पुरस्कार से सम्मानित किया गया था।",
+   "trick": "रानी कर्णा = कथक",
+   "ans": "B"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which aspect of Hindu religion is reflected through the Raut Nacha dance form in Chhattisgarh?",
+   "hi": "छत्तीसगढ़ में राउत नाच नृत्य रूप के माध्यम से हिंदू धर्म का कौन-सा पहलू प्रतिबिंबित होता है?",
+   "opts": [
+    "Epics of Lord Rama<br>भगवान राम के महाकाव्य",
+    "Stories of Goddess Parvati<br>देवी पार्वती की कथाएं",
+    "Memories of Lord Krishna<br>भगवान कृष्ण की स्मृतियां",
+    "Legends of Lord Shiva<br>भगवान शिव का आख्यान"
+   ],
+   "my_ans": "C",
+   "sol": "राउत नाच छत्तीसगढ़ का एक पारंपरिक लोक नृत्य है जो भगवान कृष्ण की बाल-लीलाओं और ग्वाल जीवन को दर्शाता है।",
+   "trick": "राउत नाच = भगवान कृष्ण की लीलाएं",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "Which of the following pairs is INCORRECTLY matched?",
+   "hi": "निम्नलिखित में से कौन-सा युग्म गलत सुमेलित है?",
+   "opts": [
+    "1917 – Champaran Satyagraha<br>1917 – चंपारण सत्याग्रह",
+    "1929 – Gandhi–Irwin Pact<br>1929 – गांधी-इरविन समझौता",
+    "1918 – Kheda Satyagraha<br>1918 – खेड़ा सत्याग्रह",
+    "1928 – Bardoli Satyagraha<br>1928 – बारदोली सत्याग्रह"
+   ],
+   "my_ans": "B",
+   "sol": "गांधी-इरविन समझौता 1931 में हुआ था, 1929 में नहीं।",
+   "trick": "गांधी-इरविन समझौता = 1931",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which of the following is a compound wind instrument due to its use of two tubes for different functions?",
+   "hi": "निम्नलिखित में से कौन-सा, दो अलग-अलग कार्यों के लिए दो नलिकाओं के उपयोग के कारण एक मिश्रित सुषिर वाद्य है?",
+   "opts": [
+    "Magudi<br>मगुडी",
+    "Kombu<br>कोम्बु",
+    "Conch<br>शंख",
+    "Clarinet<br>क्लैरिनेट"
+   ],
+   "my_ans": "A",
+   "sol": "मगुडी एक पारंपरिक दक्षिण भारतीय वाद्य है जिसमें दो नलियाँ होती हैं: एक स्वर के लिए और दूसरी ड्रोन (निरंतर ध्वनि) के लिए।",
+   "trick": "मगुडी = दो नली (स्वर + ड्रोन)",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Match the following Folk Songs with their Origin States.",
+   "hi": "निम्नलिखित लोक गीतों को उनके मूल राज्यों के साथ सुमेलित करें।",
+   "opts": [
+    "1-a, 2-d, 3-b, 4-c",
+    "1-b, 2-d, 3-c, 4-a",
+    "1-c, 2-d, 3-b, 4-a",
+    "1-d, 2-a, 3-c, 4-b"
+   ],
+   "my_ans": "B",
+   "sol": "पनिहारी-राजस्थान, खोंगजोम परबा-मणिपुर, वानावान-जम्मू और कश्मीर, बाउल-पश्चिम बंगाल।",
+   "trick": "पनिहारी (पानी भरना) = राजस्थान",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Which of the following pairs of author and their work is correctly matched?",
+   "hi": "लेखक और उनकी कृति का निम्नलिखित में से कौन-सा युग्म सटीक रूप से सुमेलित है?",
+   "opts": [
+    "Rabindranath Tagore – Anandamath<br>रवींद्रनाथ टैगोर – आनंदमठ",
+    "Sharat Chandra Chatterjee – Devdas<br>शरत चंद्र चटर्जी – देवदास",
+    "Munshi Premchand – Madhushala<br>मुंशी प्रेमचंद – मधुशाला",
+    "Bankim Chandra Chatterjee – Kamayani<br>बंकिम चंद्र चटर्जी – कामायनी"
+   ],
+   "my_ans": "B",
+   "sol": "देवदास उपन्यास शरत चंद्र चटर्जी द्वारा लिखा गया था। आनंदमठ बंकिम चंद्र, मधुशाला बच्चन और कामायनी जयशंकर प्रसाद की रचना है।",
+   "trick": "देवदास = शरत चंद्र",
+   "ans": "B"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "In which Indian state is the percussion instrument Davandi primarily found?",
+   "hi": "दावंडी मुख्यतः भारत के किस राज्य का प्रमुख आघात वाद्य यंत्र है?",
+   "opts": [
+    "Odisha<br>ओडिशा",
+    "Kerala<br>केरल",
+    "Punjab<br>पंजाब",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "D",
+   "sol": "दावंडी एक पारंपरिक ताल वाद्य है जो मुख्य रूप से तमिलनाडु के लोक संगीत में उपयोग किया जाता है।",
+   "trick": "दावंडी = तमिलनाडु",
+   "ans": "D"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which of the following island groups in India is known to have an active volcano on Barren Island?",
+   "hi": "भारत में निम्नलिखित में से किस द्वीपसमूह में बैरन द्वीप पर सक्रिय ज्वालामुखी होने का पता चला है?",
+   "opts": [
+    "Minicoy Islands<br>मिनिकॉय द्वीप",
+    "Lakshadweep Islands<br>लक्षद्वीप",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीप",
+    "Rameswaram Islands<br>रामेश्वरम द्वीप"
+   ],
+   "my_ans": "C",
+   "sol": "बैरन द्वीप अंडमान और निकोबार द्वीप समूह का हिस्सा है और यह दक्षिण एशिया का एकमात्र सक्रिय ज्वालामुखी है।",
+   "trick": "बैरन द्वीप = अंडमान",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "In what way does the Union Cabinet differ from other government committees?",
+   "hi": "केंद्रीय मंत्रिमंडल किस तरह से अन्य सरकारी समितियों से भिन्न है?",
+   "opts": [
+    "It is elected by the public<br>इसका चुनाव जनता द्वारा किया जाता है",
+    "It serves as the supreme decision-making body of the executive branch<br>यह कार्यपालिका के सर्वोच्च निर्णय लेने वाले निकाय के रूप में कार्य करता है",
+    "It functions independently of the Prime Minister<br>यह प्रधानमंत्री से स्वतंत्र रूप से कार्य करता है",
+    "It includes members of the judiciary<br>इसमें न्यायपालिका के सदस्य शामिल होते हैं"
+   ],
+   "my_ans": "B",
+   "sol": "केंद्रीय मंत्रिमंडल कार्यपालिका का सर्वोच्च निर्णय लेने वाला निकाय है जो प्रधानमंत्री के नेतृत्व में कार्य करता है।",
+   "trick": "मंत्रिमंडल = सर्वोच्च निर्णय निकाय",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "Which classical Indian music form is primarily performed in temples as part of devotional worship, especially in Kerala?",
+   "hi": "भारतीय शास्त्रीय संगीत का कौन-सा रूप, मंदिरों में भक्ति उपासना के अंग के रूप में प्रस्तुत किया जाता है, विशेष रूप से केरल में?",
+   "opts": [
+    "Khayal<br>ख्याल",
+    "Dhrupad<br>ध्रुपद",
+    "Thumri<br>ठुमरी",
+    "Sopana Sangeetham<br>सोपान संगीतम्"
+   ],
+   "my_ans": "D",
+   "sol": "सोपान संगीतम् केरल के मंदिरों में भक्ति संगीत के रूप में गाया जाने वाला एक शास्त्रीय संगीत का प्रकार है।",
+   "trick": "सोपान संगीतम् = केरल मंदिर",
+   "ans": "D"
+  }
+ ]
+}

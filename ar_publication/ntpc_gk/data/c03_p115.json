@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "115-115",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 170,
+   "lvl": "UG",
+   "en": "The Arms Act of 1878 was introduced during the tenure of which Viceroy of British India?",
+   "hi": "सन् 1878 का शस्त्र अधिनियम ब्रिटिश भारत के किस वायसराय के कार्यकाल में लागू किया गया था?",
+   "opts": [
+    "Lord Ripon<br>लॉर्ड रिपन",
+    "Lord Lytton<br>लॉर्ड लिटन",
+    "Lord Curzon<br>लॉर्ड कर्जन",
+    "Lord Wellesley<br>लॉर्ड वेलेस्ली"
+   ],
+   "my_ans": "B",
+   "sol": "शस्त्र अधिनियम 1878 लॉर्ड लिटन (1876-1880) के कार्यकाल में पारित हुआ था।<br>इसने भारतीयों के लिए बिना लाइसेंस हथियार रखना प्रतिबंधित कर दिया था।",
+   "trick": "लिटन का शस्त्र कानून, भारतीयों को निहत्था करने का दमनकारी फरमान।",
+   "ans": "B"
+  },
+  {
+   "n": 171,
+   "lvl": "UG",
+   "en": "Who among the following worked for widow remarriage in India?",
+   "hi": "निम्नलिखित में से किसने, भारत में विधवा पुनर्विवाह के लिए व्यापक कार्य किया?",
+   "opts": [
+    "Jyotiba Phule<br>ज्योतिबा फुले",
+    "Ishwar Chandra Vidyasagar<br>ईश्वर चंद्र विद्यासागर",
+    "Swami Vivekananda<br>स्वामी विवेकानंद",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक"
+   ],
+   "my_ans": "B",
+   "sol": "ईश्वर चंद्र विद्यासागर ने विधवा पुनर्विवाह के लिए अथक प्रयास किए।<br>उन्हीं के प्रयासों से 1856 में 'हिंदू विधवा पुनर्विवाह अधिनियम' पारित हुआ था।",
+   "trick": "विद्यासागर का संकल्प, विधवाओं को मिले सम्मान और पुनर्विवाह का अधिकार।",
+   "ans": "B"
+  }
+ ]
+}

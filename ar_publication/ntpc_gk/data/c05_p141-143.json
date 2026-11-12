@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "141-143",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "What is the principal destructive force of tropical cyclones on coastlines?",
+   "hi": "तटीय क्षेत्रों पर उष्णकटिबंधीय चक्रवातों की प्रमुख विध्वंशकारी शक्ति क्या है?",
+   "opts": [
+    "Continuous rainfall<br>लगातार वर्षा",
+    "High temperature<br>उच्च तापमान",
+    "Storm surge<br>तूफानी लहर",
+    "Low atmospheric pressure<br>निम्न वायुमंडलीय दाब"
+   ],
+   "my_ans": "C",
+   "sol": "तूफानी लहर (Storm Surge) चक्रवात के दौरान समुद्र के जल स्तर का असामान्य उठाव है, जो तटीय क्षेत्रों में भारी बाढ़ और विनाश का मुख्य कारण बनता है।",
+   "trick": "चक्रवात = तूफानी लहर (तटीय विनाश)",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "According to the World Population Review Report, 2024, which of the following regions of the world has the highest population density?",
+   "hi": "विश्व जनसंख्या समीक्षा रिपोर्ट 2024 के अनुसार, विश्व के निम्नलिखित क्षेत्रों में से किस क्षेत्र में जनसंख्या घनत्व सबसे अधिक है?",
+   "opts": [
+    "Central Africa<br>मध्य अफ्रीका",
+    "North America<br>उत्तरी अमेरिका",
+    "Western Europe<br>पश्चिमी यूरोप",
+    "South-Central Asia<br>दक्षिण-मध्य एशिया"
+   ],
+   "my_ans": "D",
+   "sol": "दक्षिण-मध्य एशिया में भारत, बांग्लादेश और पाकिस्तान जैसे घनी आबादी वाले देश शामिल हैं, जिससे इस क्षेत्र का जनसंख्या घनत्व विश्व में सर्वाधिक है।",
+   "trick": "दक्षिण-मध्य एशिया = सर्वाधिक जनसंख्या घनत्व",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which of the following best explains the difference between weather and climate?",
+   "hi": "निम्नलिखित में से कौन-सा कथन मौसम और जलवायु के बीच अंतर को सर्वोत्तम रूप में स्पष्ट करता है?",
+   "opts": [
+    "Weather is permanent in nature; climate is temporary in nature<br>मौसम प्रकृति में स्थायी होता है; जलवायु अस्थायी होती है",
+    "Weather refers to long-term trends; climate refers to short-term changes<br>मौसम दीर्घकालिक रुझानों को संदर्भित करता है; जलवायु अल्पकालिक परिवर्तनों को संदर्भित करती है",
+    "Weather and climate mean exactly the same phenomenon<br>मौसम और जलवायु पूर्ण रूप से समान परिघटना है",
+    "Weather refers to short-term changes; climate refers to long-term patterns<br>मौसम अल्पकालिक परिवर्तनों को संदर्भित करता है; जलवायु दीर्घकालिक पैटर्न को संदर्भित करती है"
+   ],
+   "my_ans": "D",
+   "sol": "मौसम अल्पकालिक वायुमंडलीय स्थिति (घंटों या दिनों) को दर्शाता है, जबकि जलवायु लंबे समय (30+ वर्ष) के औसत मौसम पैटर्न को संदर्भित करती है।",
+   "trick": "मौसम = पल-पल का बदलाव, जलवायु = लंबा औसत",
+   "ans": "D"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "What was the route length of Indian Railways in 2019-2020?",
+   "hi": "2019-2020 में भारतीय रेलवे की मार्ग लंबाई (route length) कितनी थी?",
+   "opts": [
+    "67,415 km",
+    "66,935 km",
+    "66,918 km",
+    "67,956 km"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय रेलवे नेटवर्क की कुल मार्ग लंबाई 2019-2020 के आंकड़ों के अनुसार 67,956 किलोमीटर थी।",
+   "trick": "याद रखें: 67,956 किमी (2019-20)",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "Mango showers occur in which of the following groups of states?",
+   "hi": "निम्नलिखित में से किस राज्य समूह में आम्र-बौछार (Mango shower) होती है?",
+   "opts": [
+    "Bihar and West Bengal<br>बिहार और पश्चिम बंगाल",
+    "Kerala and Tamil Nadu<br>केरल और तमिलनाडु",
+    "Karnataka and Kerala<br>कर्नाटक और केरल",
+    "Andhra Pradesh and Telangana<br>आंध्र प्रदेश और तेलंगाना"
+   ],
+   "my_ans": "C",
+   "sol": "आम्र वर्षा (Mango Showers) अप्रैल-मई में दक्षिण भारत में होने वाली पूर्व-मानसून वर्षा है, जो मुख्य रूप से कर्नाटक और केरल में आम के पकने में सहायक होती है।",
+   "trick": "आम्र वर्षा = कर्नाटक + केरल",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "The Garo, Khasi, Jaintia, and Naga Hills, which run almost east–west, are connected to which hill chain that extends in a north–south direction?",
+   "hi": "गारो, खासी, जयंतिया और नागा पहाड़ियाँ, जो लगभग पूर्व-पश्चिम दिशा में फैली हुई हैं, उत्तर-दक्षिण दिशा में फैली किस पर्वत श्रृंखला से जुड़ी हुई हैं?",
+   "opts": [
+    "Nilgiri and Rakhine Hills<br>नीलगिरी और रखािन पहाड़ियाँ",
+    "Mizo and Rakhine Hills<br>मिज़ो और रखािन पहाड़ियाँ",
+    "Mizo and Vindhya Hills<br>मिज़ो और विंध्य पहाड़ियाँ",
+    "Satpura and Mizo Hills<br>सतपुड़ा और मिज़ो पहाड़ियाँ"
+   ],
+   "my_ans": "B",
+   "sol": "पूर्वोत्तर की गारो-खासी-जयंतिया पहाड़ियाँ मिज़ो और म्यांमार सीमा पर स्थित रखािन पहाड़ियों से जुड़ी हैं, जो उत्तर-दक्षिण दिशा में फैली हैं।",
+   "trick": "मिज़ो-रखािन = उत्तर-दक्षिण श्रृंखला",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "Which region is known as the “Ring of Fire” due to frequent volcanic activity?",
+   "hi": "बार-बार होने वाली ज्वालामुखीय सक्रियता के कारण किस क्षेत्र को 'रिंग ऑफ फायर' के रूप में जाना जाता है?",
+   "opts": [
+    "Indian Ocean Floor<br>हिंद महासागर तल",
+    "East African Rift<br>पूर्वी अफ्रीकी रिफ्ट",
+    "Pacific Ocean Rim<br>प्रशांत महासागर रिम",
+    "Mid Atlantic Ridge<br>मध्य अटलांटिक कटक"
+   ],
+   "my_ans": "C",
+   "sol": "प्रशांत महासागर के चारों ओर का क्षेत्र 'रिंग ऑफ फायर' कहलाता है, जहाँ विश्व के लगभग 75% सक्रिय ज्वालामुखी और 90% भूकंप आते हैं।",
+   "trick": "प्रशांत महासागर = रिंग ऑफ फायर",
+   "ans": "C"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "Which of the following scholars introduced the concept of human development?",
+   "hi": "निम्नलिखित में से किस विद्वान ने मानव विकास की अवधारणा प्रस्तुत की?",
+   "opts": [
+    "Amartya Sen<br>अमर्त्य सेन",
+    "Mahbub-ul-Haq<br>महबूब-उल-हक",
+    "Alexander Von Humboldt<br>अलेक्जेंडर वॉन हम्बोल्ट",
+    "Griffith Taylor<br>ग्रिफ़िथ टेलर"
+   ],
+   "my_ans": "B",
+   "sol": "पाकिस्तानी अर्थशास्त्री महबूब-उल-हक ने 1990 में मानव विकास की अवधारणा दी और UNDP के लिए मानव विकास सूचकांक (HDI) तैयार किया।",
+   "trick": "मानव विकास = महबूब-उल-हक",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "In July 2025, Himachal Pradesh government began temporarily relocating families, due to landslide threats, from a village called Kalang located in which district?",
+   "hi": "जुलाई 2025 में, हिमाचल प्रदेश सरकार ने भूस्खलन के खतरे के कारण, केलांग (Kalang) गांव से परिवारों को अस्थायी रूप से स्थानांतरित करना शुरू किया, यह गांव किस जिले में स्थित है?",
+   "opts": [
+    "Kullu district<br>कुल्लू जिला",
+    "Kangra district<br>कांगड़ा जिला",
+    "Mandi district<br>मंडी जिला",
+    "Shimla district<br>शिमला जिला"
+   ],
+   "my_ans": "C",
+   "sol": "हिमाचल प्रदेश का केलांग गांव मंडी जिले में स्थित है, जो मानसून के दौरान भूस्खलन के प्रति अत्यधिक संवेदनशील है।",
+   "trick": "केलांग गांव = मंडी जिला",
+   "ans": "C"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which of the following is NOT a feature of alluvial soils in India?",
+   "hi": "निम्नलिखित में से कौन-सी विशेषता, भारत में पाई जाने वाली जलोढ़ मृदा की विशेषता नहीं है?",
+   "opts": [
+    "Rich in potash<br>इसमें पोटैशियम प्रचुर मात्रा में होता है",
+    "Very fertile<br>यह अत्यधिक उपजाऊ होती है",
+    "Mainly consists of sand, silt and clay<br>इसमें मुख्यतः रेत, गाद और मृत्तिका होती है",
+    "Primarily found in the Deccan Plateau<br>यह मुख्यतः दक्कन पठार में पाई जाती है"
+   ],
+   "my_ans": "D",
+   "sol": "जलोढ़ मिट्टी मुख्य रूप से गंगा-सिंधु के मैदानों में पाई जाती है, जबकि दक्कन का पठार मुख्य रूप से काली मिट्टी (रेगुर) से ढका है।",
+   "trick": "जलोढ़ = मैदान, दक्कन = काली मिट्टी",
+   "ans": "D"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "The tropical climatic region is mainly confined to which latitudinal extent of the Earth?",
+   "hi": "उष्णकटिबंधीय जलवायु क्षेत्र मुख्य रूप से पृथ्वी के किस अक्षांशीय विस्तार तक सीमित है?",
+   "opts": [
+    "23.5°N and 23.5°S",
+    "30.5°N and 30.5°S",
+    "13.5°N and 13.5°S",
+    "28.5°N and 28.5°S"
+   ],
+   "my_ans": "A",
+   "sol": "उष्णकटिबंधीय क्षेत्र कर्क रेखा (23.5°N) और मकर रेखा (23.5°S) के बीच स्थित है, जहाँ सूर्य की किरणें वर्ष भर लगभग सीधी पड़ती हैं।",
+   "trick": "उष्णकटिबंधीय = 23.5° उत्तर से दक्षिण",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "241-243",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "Which Supreme Court case, decided in April 2025, led to the 16th Presidential Reference under Article 143 concerning timelines for assent to State Bills?",
+   "hi": "अप्रैल 2025 में सर्वोच्च न्यायालय द्वारा निर्णित किस मामले के कारण अनुच्छेद 143 के तहत राज्य विधेयकों की स्वीकृति के लिए समयसीमा से संबंधित 16 वां राष्ट्रपति संदर्भ (प्रेसिडेंशियल रेफरेंस) भेजा गया?",
+   "opts": [
+    "Kaiser-I-Hind Pvt. Ltd. vs National Textile Corporation<br>कैसर-ए-हिंद प्राइवेट लिमिटेड बनाम राष्ट्रीय वस्त्र निगम",
+    "S.R. Bommai vs Union of India<br>एस.आर. बोम्मई बनाम भारत संघ",
+    "State of Tamil Nadu vs Governor of Tamil Nadu<br>तमिलनाडु राज्य बनाम तमिलनाडु के राज्यपाल",
+    "Nabam Rebia vs Deputy Speaker, Arunachal Pradesh<br>नबाम रेबिया बनाम उपाध्यक्ष, अरुणाचल प्रदेश"
+   ],
+   "my_ans": "C",
+   "sol": "यह मामला अप्रैल 2025 में राज्य विधेयकों पर राज्यपाल की सहमति में देरी से संबंधित था, जिसके कारण राष्ट्रपति ने अनुच्छेद 143 के तहत सर्वोच्च न्यायालय से राय मांगी।",
+   "trick": "राज्यपाल की सहमति में देरी = तमिलनाडु बनाम राज्यपाल मामला।",
+   "ans": "C"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "Which of the following Articles of the Indian Constitution directs the State to ensure equal pay for equal work for both men and women?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से कौन-सा अनुच्छेद राज्य को पुरुषों और महिलाओं दोनों के लिए समान कार्य के लिए समान वेतन सुनिश्चित करने का निर्देश देता है?",
+   "opts": [
+    "Article 42(b)<br>अनुच्छेद 42(b)",
+    "Article 39(d)<br>अनुच्छेद 39(d)",
+    "Article 14<br>अनुच्छेद 14",
+    "Article 15<br>अनुच्छेद 15"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 39(d) राज्य के नीति निर्देशक सिद्धांतों का हिस्सा है, जो स्त्री और पुरुष दोनों के लिए समान कार्य के लिए समान वेतन का निर्देश देता है।",
+   "trick": "39(d) = समान कार्य, समान वेतन।",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "Which provisions were inserted into the Constitution by the 103rd Amendment Act, 2019, to enable reservation for Economically Weaker Sections (EWS)?",
+   "hi": "आर्थिक रूप से कमजोर वर्गों (EWS) के लिए आरक्षण को सक्षम बनाने हेतु 103 वें संशोधन अधिनियम, 2019 द्वारा संविधान में कौन-से प्रावधान सम्मिलित किए गए थे?",
+   "opts": [
+    "Articles 15(5) and 16(5)<br>अनुच्छेद 15(5) और 16(5)",
+    "Articles 15(4) and 16(4)<br>अनुच्छेद 15(4) और 16(4)",
+    "Articles 15(2) and 16(2)<br>अनुच्छेद 15(2) और 16(2)",
+    "Articles 15(6) and 16(6)<br>अनुच्छेद 15(6) और 16(6)"
+   ],
+   "my_ans": "D",
+   "sol": "103वें संविधान संशोधन द्वारा अनुच्छेद 15(6) और 16(6) जोड़े गए, जो आर्थिक रूप से कमजोर वर्गों (EWS) को 10% आरक्षण प्रदान करते हैं।",
+   "trick": "EWS आरक्षण = 15(6) और 16(6)।",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "GL",
+   "en": "Which of the following Articles of the Indian Constitution contains the fundamental duties?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से किस अनुच्छेद में मौलिक कर्तव्य शामिल है?",
+   "opts": [
+    "Article 41A<br>अनुच्छेद 41A",
+    "Article 31A<br>अनुच्छेद 31A",
+    "Article 51A<br>अनुच्छेद 51A",
+    "Article 61A<br>अनुच्छेद 61A"
+   ],
+   "my_ans": "C",
+   "sol": "संविधान के भाग IV-A के अनुच्छेद 51A में नागरिकों के मौलिक कर्तव्यों का उल्लेख है, जिसे 42वें संशोधन (1976) द्वारा जोड़ा गया था।",
+   "trick": "मौलिक कर्तव्य = 51A।",
+   "ans": "C"
+  },
+  {
+   "n": 60,
+   "lvl": "GL",
+   "en": "Which among following fundamental duties is INCORRECT related towards the protection and promotion of scientific and cultural values?",
+   "hi": "निम्नलिखित मौलिक कर्तव्यों में से कौन-सा, वैज्ञानिक और सांस्कृतिक मूल्यों के संरक्षण और संवर्धन से गलत संबंधित है?",
+   "opts": [
+    "To value and preserve the rich heritage of our composite culture.<br>हमारी सामासिक संस्कृति की समृद्ध विरासत को महत्व देना और संरक्षित करना",
+    "To safe guard the public property and to abjure violence<br>सार्वजनिक संपत्ति की रक्षा करना और हिंसा को छोड़ना",
+    "To develop the scientific temper, humanism and the spirit of inquiry and reform.<br>वैज्ञानिक दृष्टिकोण, मानवतावाद और जिज्ञासा एवं सुधार की भावना को विकसित करना",
+    "To strive towards excellence in all spheres of individual and collective activity.<br>व्यक्तिगत और सामूहिक गतिविधियों के सभी क्षेत्रों में उत्कृष्टता के लिए प्रयास करना"
+   ],
+   "my_ans": "B",
+   "sol": "सार्वजनिक संपत्ति की रक्षा करना और हिंसा का त्याग करना एक नागरिक जिम्मेदारी है, न कि वैज्ञानिक या सांस्कृतिक मूल्य।",
+   "trick": "सार्वजनिक संपत्ति = नागरिक जिम्मेदारी।",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "GL",
+   "en": "The appointing authority for the Chairman and members of a State Public Service Commission under Article 316 of the Constitution of India is:",
+   "hi": "भारत के संविधान के अनुच्छेद 316 के तहत राज्य लोक सेवा आयोग के अध्यक्ष और सदस्यों का नियुक्ति प्राधिकारी ______ होता है।",
+   "opts": [
+    "The President of India<br>भारत का राष्ट्रपति",
+    "The Governor of the State<br>राज्य का राज्यपाल",
+    "The Chief Minister of the State<br>राज्य का मुख्यमंत्री",
+    "The Speaker of the State Assembly<br>राज्य विधानसभा का अध्यक्ष"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 316 के अनुसार, राज्य लोक सेवा आयोग के अध्यक्ष और सदस्यों की नियुक्ति राज्य के राज्यपाल द्वारा की जाती है।",
+   "trick": "SPSC = राज्यपाल नियुक्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "GL",
+   "en": "Consider the following pairs. Article Provision 1. 63 The Vice-President of India 2. 64 The Vice-President to be ex-officio Chairman of the Council of States 3. 65 The Vice-President to act as President during the absence of the President 4. 66 Election of Vice-President. Which of the above pairs is/are correctly matched?",
+   "hi": "निम्नलिखित युग्मों पर विचार करें। अनुच्छेद प्रावधान 1. 63 भारत के उपराष्ट्रपति 2. 64 उपराष्ट्रपति, राज्य परिषद का पदेन अध्यक्ष होगा 3. 65 राष्ट्रपति की अनुपस्थिति में उपराष्ट्रपति, राष्ट्रपति के रूप में कार्य करेगा 4. 66 उपराष्ट्रपति का चुनाव। उपरोक्त युग्मों में से कौन-सा/से सुमेलित है/हैं?",
+   "opts": [
+    "1 and 2 only<br>केवल 1 और 2",
+    "1, 2, 3 and 4<br>1, 2, 3 और 4",
+    "1, 2 and 3 only<br>केवल 1, 2 और 3",
+    "2, 3 and 4 only<br>केवल 2, 3 और 4"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 63 (उपराष्ट्रपति), 64 (राज्यसभा के पदेन सभापति), 65 (राष्ट्रपति के रूप में कार्य करना) और 66 (चुनाव) सभी सही सुमेलित हैं।",
+   "trick": "63-66 = उपराष्ट्रपति के अनुच्छेद।",
+   "ans": "B"
+  },
+  {
+   "n": 63,
+   "lvl": "GL",
+   "en": "Which constitutional amendment to the Indian Constitution added the term 'Socialist' to the Preamble?",
+   "hi": "भारतीय संविधान में किस संवैधानिक संशोधन के माध्यम से उद्देशिका में 'समाजवादी' शब्द जोड़ा गया?",
+   "opts": [
+    "42nd Amendment, 1976<br>42 वां संशोधन, 1976",
+    "1st Amendment, 1951<br>प्रथम संशोधन, 1951",
+    "26th Amendment, 1971<br>26 वां संशोधन, 1971",
+    "44th Amendment, 1978<br>44 वां संशोधन, 1978"
+   ],
+   "my_ans": "A",
+   "sol": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा प्रस्तावना में 'समाजवादी', 'पंथनिरपेक्ष' और 'अखंडता' शब्द जोड़े गए।",
+   "trick": "42वां संशोधन = मिनी संविधान।",
+   "ans": "A"
+  }
+ ]
+}

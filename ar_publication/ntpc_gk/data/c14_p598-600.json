@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "598-600",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 108,
+   "lvl": "GL",
+   "en": "In 2025, which international organization reclassified India’s de facto exchange rate regime from a “stabilised” system to a crawl-like arrangement?",
+   "hi": "2025 में, किस अंतर्राष्ट्रीय संगठन ने भारत की तथ्यतः विनिमय दर व्यवस्था को 'स्थायीकृत (stabilised)' प्रणाली से क्रॉल-जैसी व्यवस्था में पुनर्वर्गीकृत किया?",
+   "opts": [
+    "International Monetary Fund (IMF)<br>अंतर्राष्ट्रीय मुद्रा कोष (IMF)",
+    "World Bank<br>विश्व बैंक",
+    "Asian Development Bank<br>एशियन डेवलपमेंट बैंक",
+    "Bank for International Settlements<br>बैंक फॉर इंटरनेशनल सेटलमेंट्स"
+   ],
+   "my_ans": "A",
+   "sol": "अंतर्राष्ट्रीय मुद्रा कोष (IMF) सदस्य देशों की विनिमय दर व्यवस्थाओं की निगरानी करता है। 2025 में इसने भारत की विनिमय दर को 'स्थिर' से 'क्रॉल-जैसी' व्यवस्था में पुनर्वर्गीकृत किया।",
+   "trick": "IMF विनिमय दर और वैश्विक वित्तीय स्थिरता की निगरानी करने वाली मुख्य संस्था है।",
+   "ans": "A"
+  },
+  {
+   "n": 109,
+   "lvl": "GL",
+   "en": "In 2025, Hindustan Aeronautics Ltd (HAL) signed an MoU in Moscow with which foreign aerospace company to jointly produce the SJ-100 civil commuter aircraft in India?",
+   "hi": "2025 में, हिंदुस्तान एयरोनॉटिक्स लिमिटेड (HAL) ने भारत में संयुक्त रूप से SJ-100 सिविल कम्यूटर एयरक्राफ्ट बनाने के लिए मॉस्को में किस विदेशी एयरोस्पेस कंपनी के साथ समझौता ज्ञापन पर हस्ताक्षर किए?",
+   "opts": [
+    "Irkut Corporation<br>इर्कुट कॉर्पोरेशन",
+    "Sukhoi Civil Aircraft Company<br>सुखोई सिविल एयरक्राफ्ट कंपनी",
+    "Russia’s United Aircraft Corporation (PJSC-UAC)<br>रूस की यूनाइटेड एयरक्राफ्ट कॉर्पोरेशन (PJSC-UAC)",
+    "Roscosmos State Corporation for Space Activities<br>स्पेस एक्टिविटीज़ के लिए रोस्कोस्मोस स्टेट कॉर्पोरेशन"
+   ],
+   "my_ans": "C",
+   "sol": "HAL ने SJ-100 विमान के उत्पादन के लिए रूस की यूनाइटेड एयरक्राफ्ट कॉर्पोरेशन (UAC) के साथ समझौता किया है। UAC रूसी नागरिक विमानन परियोजनाओं की मूल कंपनी है।",
+   "trick": "UAC रूस की प्रमुख विमानन कंपनी है जो नागरिक विमान परियोजनाओं का प्रबंधन करती है।",
+   "ans": "C"
+  },
+  {
+   "n": 110,
+   "lvl": "GL",
+   "en": "Salil’s salary is ₹18000 per month. He spends ₹5500 on house rent, ₹1500 on bills and the rest of the amount is his monthly savings. Find his savings (in ₹) in a year, if in the month of his birthday, he spent his complete monthly saving for birthday celebration.",
+   "hi": "सलिल का वेतन ₹18000 प्रति माह है। वह मकान किराए पर ₹5500, बिलों पर ₹1500 खर्च करता है और शेष राशि उसकी मासिक बचत है। यदि उसने अपने जन्मदिन के महीने में अपनी पूरी मासिक बचत जन्मदिन समारोह पर खर्च कर दी, तो एक वर्ष में उसकी बचत (₹ में) ज्ञात कीजिए।",
+   "opts": [
+    "132000",
+    "110000",
+    "121000",
+    "99000"
+   ],
+   "my_ans": "C",
+   "sol": "मासिक बचत = 18000 - 5500 - 1500 = 11000। जन्मदिन के महीने में बचत 0 है, इसलिए 11 महीनों की बचत = 11 × 11000 = 121000।",
+   "trick": "कुल बचत = (12 - 1) × मासिक बचत।",
+   "ans": "C"
+  },
+  {
+   "n": 111,
+   "lvl": "GL",
+   "en": "According to the International Renewable Energy Agency’s Renewable Energy Statistics 2025, what is India’s global rank in renewable energy installed capacity?",
+   "hi": "अंतर्राष्ट्रीय नवीकरणीय ऊर्जा एजेंसी के नवीकरणीय ऊर्जा सांख्यिकी 2025 के अनुसार, नवीकरणीय ऊर्जा की स्थापित क्षमता में भारत की वैश्विक रैंक कितनी है?",
+   "opts": [
+    "4th<br>चौथी",
+    "6th<br>छठी",
+    "9th<br>नौवीं",
+    "1st<br>पहली"
+   ],
+   "my_ans": "A",
+   "sol": "IRENA की 2025 रिपोर्ट के अनुसार, भारत नवीकरणीय ऊर्जा स्थापित क्षमता में विश्व में चौथे स्थान पर है।",
+   "trick": "भारत सौर और पवन ऊर्जा में तेजी से आगे बढ़ रहा है, रैंक 4 याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 112,
+   "lvl": "GL",
+   "en": "As part of a longstanding defence relationship, India participated in the Zapad-2025 military exercise with which country in September 2025?",
+   "hi": "दीर्घकालिक रक्षा संबंधों के भाग के रूप में, भारत ने सितंबर 2025 में किस देश के साथ जापाद-2025 (Zapad-2025) सैन्य अभ्यास में भाग लिया?",
+   "opts": [
+    "France<br>फ्रांस",
+    "USA<br>यूएसए",
+    "Russia<br>रूस",
+    "China<br>चीन"
+   ],
+   "my_ans": "C",
+   "sol": "जापाद (Zapad) सैन्य अभ्यास रूस द्वारा आयोजित किया जाता है। भारत और रूस के बीच लंबे समय से रक्षा संबंध हैं और भारत नियमित रूप से इसमें भाग लेता है।",
+   "trick": "जापाद (Zapad) अभ्यास रूस का प्रमुख रणनीतिक सैन्य अभ्यास है।",
+   "ans": "C"
+  },
+  {
+   "n": 113,
+   "lvl": "GL",
+   "en": "What additional species (apart from cheetahs) were released into the wild during the announcement of the third cheetah habitat at Nauradehi in October 2025?",
+   "hi": "अक्टूबर 2025 में नौरादेही में तीसरे चीता आवास की घोषणा के दौरान किन अतिरिक्त प्रजातियों (चीतों के अलावा) को वन में छोड़ा गया था?",
+   "opts": [
+    "Indian rhinoceros<br>भारतीय गैंडा",
+    "Leopards<br>तेंदुआ",
+    "Tigers<br>बाघ",
+    "Crocodiles<br>मगरमच्छ"
+   ],
+   "my_ans": "D",
+   "sol": "नौरादेही वन्यजीव अभयारण्य में चीता आवास की घोषणा के साथ, सरकार ने संरक्षण प्रयासों के तहत मगरमच्छों को भी जंगल में छोड़ा।",
+   "trick": "चीता परियोजना के साथ मगरमच्छों का पुनर्स्थापन भी वन्यजीव संरक्षण का हिस्सा था।",
+   "ans": "D"
+  },
+  {
+   "n": 114,
+   "lvl": "GL",
+   "en": "Who among the following became the first female President of Namibia in March 2025?",
+   "hi": "मार्च 2025 में निम्नलिखित में से कौन नामीबिया की पहली महिला राष्ट्रपति बनी?",
+   "opts": [
+    "Joyce Banda<br>जॉयस बांडा",
+    "Netumbo Nandi-Ndaitwah<br>नेटुम्बो नंदी-नदैतवाह",
+    "Ellen Johnson Sirleaf<br>एलेन जॉनसन सरलीफ",
+    "Saara Kuugongelwa<br>सारा कुगोंगेल्वा"
+   ],
+   "my_ans": "B",
+   "sol": "नेटुम्बो नंदी-नदैतवाह मार्च 2025 में नामीबिया की पहली महिला राष्ट्रपति बनीं। वह पहले उपराष्ट्रपति रह चुकी हैं।",
+   "trick": "नामीबिया की पहली महिला राष्ट्रपति 'नेटुम्बो' हैं।",
+   "ans": "B"
+  },
+  {
+   "n": 115,
+   "lvl": "GL",
+   "en": "Who released the book 'The Emergency Diaries-Years that Forged a Leader' in June 2025?",
+   "hi": "जून 2025 में 'द इमरजेंसी डायरीज़ - इयर्स दैट फोर्ज़्ड अ लीडर' नामक पुस्तक का विमोचन किसने किया?",
+   "opts": [
+    "Indira Gandhi<br>इंदिरा गांधी",
+    "Narendra Modi<br>नरेंद्र मोदी",
+    "Amit Shah<br>अमित शाह",
+    "Ashvini Vaishnaw<br>अश्विनी वैष्णव"
+   ],
+   "my_ans": "C",
+   "sol": "इस पुस्तक का विमोचन केंद्रीय गृह मंत्री अमित शाह ने जून 2025 में किया था। यह पुस्तक 1975-77 के आपातकाल के अनुभवों पर आधारित है।",
+   "trick": "आपातकाल पर आधारित पुस्तक का विमोचन गृह मंत्री अमित शाह ने किया।",
+   "ans": "C"
+  },
+  {
+   "n": 116,
+   "lvl": "GL",
+   "en": "Which organisation conducted the successful high-speed rocket-sled test of a fighter aircraft escape system in 2025, placing India among a select group of nations with advanced in-house testing capability?",
+   "hi": "किस संगठन ने 2025 में लड़ाकू विमान के बचाव तंत्र का सफल उच्च-गति रॉकेट-स्लेड परीक्षण किया, जिससे भारत उन्नत आंतरिक परीक्षण क्षमता वाले चुनिंदा देशों के समूह में शामिल हो गया?",
+   "opts": [
+    "Hindustan Aeronautics Limited<br>हिंदुस्तान एयरोनॉटिक्स लिमिटेड",
+    "Aeronautical Development Agency<br>एयरोनॉटिकल डेवलपमेंट एजेंसी",
+    "Defence Research and Development Organisation<br>रक्षा अनुसंधान एवं विकास संगठन",
+    "Indian Air Force<br>भारतीय वायु सेना"
+   ],
+   "my_ans": "C",
+   "sol": "DRDO ने 2025 में लड़ाकू विमान एस्केप सिस्टम का सफल रॉकेट-स्लेड परीक्षण किया, जिससे भारत की स्वदेशी रक्षा क्षमता सिद्ध हुई।",
+   "trick": "रक्षा अनुसंधान और परीक्षण के लिए DRDO मुख्य सरकारी संगठन है।",
+   "ans": "C"
+  },
+  {
+   "n": 117,
+   "lvl": "GL",
+   "en": "According to the Global Innovation Index Ranking 2025, which country has the 1st rank?",
+   "hi": "वैश्विक नवाचार सूचकांक रैंकिंग (Global Innovation Index Ranking) 2025 के अनुसार, निम्नलिखित में से किस देश ने प्रथम स्थान प्राप्त किया?",
+   "opts": [
+    "Finland<br>फिनलैंड",
+    "Denmark<br>डेनमार्क",
+    "Sweden<br>स्वीडन",
+    "Switzerland<br>स्विट्जरलैंड"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्विक नवाचार सूचकांक 2025 में स्विट्जरलैंड ने प्रथम स्थान प्राप्त किया है।",
+   "trick": "स्विट्जरलैंड अक्सर नवाचार सूचकांक में शीर्ष पर रहता है।",
+   "ans": "D"
+  }
+ ]
+}

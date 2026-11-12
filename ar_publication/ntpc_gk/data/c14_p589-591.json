@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "589-591",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 78,
+   "lvl": "GL",
+   "en": "When was the second edition of the RESPECT women prevention framework launched in 2025?",
+   "hi": "2025 में RESPECT वुमन प्रिवेंशन फ्रेमवर्क का दूसरा संस्करण कब लॉन्च किया गया था?",
+   "opts": [
+    "10 December<br>10 दिसंबर",
+    "25 November<br>25 नवंबर",
+    "19 November<br>19 नवंबर",
+    "8 March<br>8 मार्च"
+   ],
+   "my_ans": "C",
+   "sol": "WHO द्वारा RESPECT महिला रोकथाम फ्रेमवर्क का दूसरा संस्करण 19 नवंबर 2025 को लॉन्च किया गया था।",
+   "trick": "RESPECT फ्रेमवर्क का दूसरा संस्करण 19 नवंबर 2025 को आया।",
+   "ans": "C"
+  },
+  {
+   "n": 79,
+   "lvl": "GL",
+   "en": "In which year was the Padhe Bharat Badhe Bharat (PBBB) scheme launched?",
+   "hi": "पढ़े भारत बढ़े भारत (PBBB) योजना किस वर्ष शुरू की गई थी?",
+   "opts": [
+    "2010",
+    "2018",
+    "2007",
+    "2014"
+   ],
+   "my_ans": "D",
+   "sol": "पढ़े भारत बढ़े भारत (PBBB) योजना शिक्षा मंत्रालय द्वारा प्राथमिक कक्षाओं में पढ़ने की संस्कृति को बढ़ावा देने के लिए 2014 में शुरू की गई थी।",
+   "trick": "PBBB योजना 2014 में शुरू हुई।",
+   "ans": "D"
+  },
+  {
+   "n": 80,
+   "lvl": "GL",
+   "en": "Which institution released the policy report titled Internationalisation of Higher Education in India: Prospects, Potential, and Policy Recommendations in December 2025?",
+   "hi": "किस संस्थान ने दिसंबर 2025 में 'भारत में उच्च शिक्षा का अंतर्राष्ट्रीयकरण: संभावनाएं, क्षमता और नीतिगत अनुशंसाएं' शीर्षक वाली नीति रिपोर्ट जारी की?",
+   "opts": [
+    "All India Council for Technical Education<br>अखिल भारतीय तकनीकी शिक्षा परिषद",
+    "University Grants Commission<br>विश्वविद्यालय अनुदान आयोग",
+    "NITI Aayog<br>नीति आयोग",
+    "Ministry of Education<br>शिक्षा मंत्रालय"
+   ],
+   "my_ans": "C",
+   "sol": "नीति आयोग ने दिसंबर 2025 में उच्च शिक्षा के अंतर्राष्ट्रीयकरण पर यह नीति रिपोर्ट जारी की, क्योंकि यह एक प्रमुख नीति थिंक-टैंक है।",
+   "trick": "नीतिगत अनुशंसाएं अक्सर नीति आयोग द्वारा जारी की जाती हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "GL",
+   "en": "At the 2025 ICC Champions Trophy held in Dubai, which country did India defeat to secure their seventh ICC title in men’s senior cricket?",
+   "hi": "दुबई में आयोजित 2025 ICC चैंपियंस ट्रॉफी में, भारत ने किस देश को हराकर मेन्स सीनियर क्रिकेट में अपना सातवां ICC खिताब जीता?",
+   "opts": [
+    "Australia<br>ऑस्ट्रेलिया",
+    "South Africa<br>दक्षिण अफ्रीका",
+    "New Zealand<br>न्यूजीलैंड",
+    "England<br>इंग्लैंड"
+   ],
+   "my_ans": "C",
+   "sol": "2025 ICC चैंपियंस ट्रॉफी के फाइनल में भारत ने न्यूजीलैंड को हराकर अपना सातवां ICC खिताब जीता।",
+   "trick": "2025 चैंपियंस ट्रॉफी फाइनल में भारत ने न्यूजीलैंड को हराया।",
+   "ans": "C"
+  },
+  {
+   "n": 82,
+   "lvl": "GL",
+   "en": "According to the 2025 Financial Tracking Services report by the United Nations Office for the Coordination of Humanitarian Affairs, which two contributors ranked higher than UAE in global humanitarian aid?",
+   "hi": "संयुक्त राष्ट्र मानवीय कार्य के समन्वयक कार्यालय की 2025 फाइनेंशियल ट्रैकिंग सर्विस रिपोर्ट के अनुसार, वैश्विक मानवीय सहायता में UAE से ऊपर किन दो योगदानकर्ता देशों का स्थान रहा?",
+   "opts": [
+    "India and United Kingdom<br>भारत और यूनाइटेड किंगडम",
+    "China and Japan<br>चीन और जापान",
+    "Morocco and Denmark<br>मोरक्को और डेनमार्क",
+    "United States and European Union<br>संयुक्त राज्य अमेरिका और यूरोपीय संघ"
+   ],
+   "my_ans": "D",
+   "sol": "2025 की रिपोर्ट के अनुसार, संयुक्त राज्य अमेरिका और यूरोपीय संघ वैश्विक मानवीय सहायता में UAE से ऊपर थे।",
+   "trick": "USA और EU दुनिया के सबसे बड़े मानवीय दाता हैं।",
+   "ans": "D"
+  },
+  {
+   "n": 83,
+   "lvl": "GL",
+   "en": "Which of the following countries is the youngest country in terms of the lowest median age for the year 2024?",
+   "hi": "निम्नलिखित में से कौन-सा देश, 2024 के लिए सबसे कम औसत आयु के संदर्भ में सबसे युवा देश है?",
+   "opts": [
+    "Palestine<br>फिलिस्तीन",
+    "Iraq<br>इराक",
+    "Niger<br>नाइजर",
+    "Afghanistan<br>अफगानिस्तान"
+   ],
+   "my_ans": "C",
+   "sol": "नाइजर की औसत आयु 14.8 वर्ष है, जो 2024 में दुनिया के सभी देशों में सबसे कम है।",
+   "trick": "नाइजर की जनसंख्या सबसे युवा है (औसत आयु 14.8 वर्ष)।",
+   "ans": "C"
+  },
+  {
+   "n": 84,
+   "lvl": "GL",
+   "en": "In 2025, which state government announced the creation of a new eco-sensitive zone around the Bannerghatta National Park?",
+   "hi": "2025 में, किस राज्य सरकार ने बैनरघट्टा राष्ट्रीय उद्यान के आसपास एक नया पर्यावरण-संवेदनशील क्षेत्र (eco-sensitive zone) बनाने की घोषणा की?",
+   "opts": [
+    "Gujarat<br>गुजरात",
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Kerala<br>केरल",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "D",
+   "sol": "बैनरघट्टा राष्ट्रीय उद्यान कर्नाटक में स्थित है, इसलिए कर्नाटक सरकार ने ही इसके आसपास इको-सेंसिटिव ज़ोन बनाने की घोषणा की।",
+   "trick": "बैनरघट्टा उद्यान कर्नाटक में है।",
+   "ans": "D"
+  },
+  {
+   "n": 85,
+   "lvl": "GL",
+   "en": "In 2025, the historic live underwater interview highlighting ocean conservation and climate risks was conducted by the President of which country?",
+   "hi": "2025 में, समुद्र संरक्षण और जलवायु जोखिमों पर प्रकाश डालने वाला ऐतिहासिक लाइव अंडरवाटर इंटरव्यू किस देश के राष्ट्रपति द्वारा आयोजित किया गया था?",
+   "opts": [
+    "Palau<br>पलाऊ",
+    "Fiji<br>फिजी",
+    "Seychelles<br>सेशेल्स",
+    "Maldives<br>मालदीव"
+   ],
+   "my_ans": "A",
+   "sol": "पलाऊ के राष्ट्रपति सुरंगेल व्हिप्स जूनियर ने 2025 में समुद्र संरक्षण के लिए पानी के अंदर ऐतिहासिक लाइव इंटरव्यू दिया।",
+   "trick": "पलाऊ अपनी समुद्री संरक्षण नीतियों के लिए प्रसिद्ध है।",
+   "ans": "A"
+  },
+  {
+   "n": 86,
+   "lvl": "GL",
+   "en": "Who was the chief guest at the inauguration of the 58th Inter-IIT Sports Meet at IIT Hyderabad?",
+   "hi": "IIT हैदराबाद में 58वीं इंटर-IIT स्पोर्ट्स मीट के उद्घाटन समारोह में मुख्य अतिथि कौन थे?",
+   "opts": [
+    "Saina Nehwal<br>साइना नेहवाल",
+    "BVR Mohan Reddy<br>बी. वी. आर. मोहन रेड्डी",
+    "Prof B S Murty<br>प्रोफेसर बी. एस. मूर्ति",
+    "Pullela Gopichand<br>पुल्लेला गोपीचंद"
+   ],
+   "my_ans": "A",
+   "sol": "IIT हैदराबाद में आयोजित 58वीं इंटर-IIT स्पोर्ट्स मीट की मुख्य अतिथि बैडमिंटन खिलाड़ी साइना नेहवाल थीं।",
+   "trick": "साइना नेहवाल 58वीं इंटर-IIT स्पोर्ट्स मीट की मुख्य अतिथि थीं।",
+   "ans": "A"
+  },
+  {
+   "n": 87,
+   "lvl": "GL",
+   "en": "On the Eve of the 79th Independence Day in 2025, the Indian government unveiled which AI-powered tool to automatically generate structured minutes of meetings (MoMs) from Gram Sabha or other Panchayat meetings’ audio/video recordings?",
+   "hi": "2025 में 79वें स्वतंत्रता दिवस की पूर्व संध्या पर, भारत सरकार ने ग्राम सभा या अन्य पंचायत बैठकों की ऑडियो/वीडियो रिकॉर्डिंग से स्वचालित रूप से बैठकों के कार्यवृत्त (minutes of meetings - MoMs) तैयार करने के लिए किस AI-संचालित टूल का अनावरण किया?",
+   "opts": [
+    "GramSattva<br>ग्राम सत्त्व",
+    "SabhaSaar<br>सभासार",
+    "GramVivaran<br>ग्रामविवरण",
+    "SabhaSadan<br>सभासदन"
+   ],
+   "my_ans": "B",
+   "sol": "सरकार ने ग्राम सभा की बैठकों के कार्यवृत्त (MoMs) को स्वचालित रूप से तैयार करने के लिए 'सभासार' (SabhaSaar) टूल लॉन्च किया।",
+   "trick": "सभा की बैठकों का सार = सभासार।",
+   "ans": "B"
+  },
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "In which of the following states is the slash and burn agriculture known as ‘ Kuruwa ’?",
+   "hi": "निम्नलिखित में से किस राज्य में स्लैश एंड बर्न कृषि को 'कुरुवा' के नाम से जाना जाता है?",
+   "opts": [
+    "Jharkhand<br>झारखंड",
+    "Kerala<br>केरल",
+    "Odisha<br>ओडिशा",
+    "Assam<br>असम"
+   ],
+   "my_ans": "B",
+   "sol": "केरल में स्लैश एंड बर्न (झूम) कृषि को 'कुरुवा' कहा जाता है।",
+   "trick": "केरल = कुरुवा (झूम कृषि)।",
+   "ans": "B"
+  }
+ ]
+}

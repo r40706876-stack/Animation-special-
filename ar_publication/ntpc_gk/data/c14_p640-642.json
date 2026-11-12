@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "640-642",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 251,
+   "lvl": "UG",
+   "en": "The 2025 study detecting airborne microplastics in the mangroves of Sundarbans was done by scientists from which institute?",
+   "hi": "सुंदरबन के मैंग्रोव में वायुजनित सूक्ष्म प्लास्टिक का पता लगाने वाला 2025 का अध्ययन किस संस्थान के वैज्ञानिकों द्वारा किया गया था?",
+   "opts": [
+    "NIO Goa<br>NIO गोवा",
+    "IISER Kolkata<br>IISER कोलकाता",
+    "IIT Kharagpur<br>IIT खड़गपुर",
+    "WII Dehradun<br>WII देहरादून"
+   ],
+   "my_ans": "B",
+   "sol": "सुंदरबन के मैंग्रोव में वायुजनित माइक्रोप्लास्टिक पर पहला व्यापक अध्ययन IISER कोलकाता के वैज्ञानिकों द्वारा किया गया था।",
+   "trick": "सुंदरबन (पश्चिम बंगाल) के पास स्थित IISER कोलकाता ने यह अध्ययन किया।",
+   "ans": "B"
+  },
+  {
+   "n": 252,
+   "lvl": "UG",
+   "en": "Where did Narendra Modi inaugurate India’s first deepwater transshipment port in May 2025?",
+   "hi": "मई 2025 में नरेंद्र मोदी ने भारत के पहले डीपवॉटर ट्रांसशिपमेंट पोर्ट का उद्घाटन कहां किया था?",
+   "opts": [
+    "Karnataka<br>कर्नाटक",
+    "Maharashtra<br>महाराष्ट्र",
+    "Kerala<br>केरल",
+    "Gujarat<br>गुजरात"
+   ],
+   "my_ans": "C",
+   "sol": "भारत का पहला डीपवॉटर ट्रांसशिपमेंट पोर्ट केरल के विझिंजम में स्थित है, जिसका उद्घाटन मई 2025 में किया गया।",
+   "trick": "विझिंजम पोर्ट केरल में है, जो विदेशी बंदरगाहों पर निर्भरता कम करता है।",
+   "ans": "C"
+  },
+  {
+   "n": 253,
+   "lvl": "UG",
+   "en": "What was the theme for International Women's Day 2025?",
+   "hi": "अन्तर्राष्ट्रीय महिला दिवस 2025 की थीम क्या थी?",
+   "opts": [
+    "DigitALL: Innovation and technology for gender equality<br>DigitALL: लैंगिक समानता के लिए नवाचार और प्रौद्योगिकी",
+    "For ALL Women and Girls: Rights. Equality. Empowerment<br>सभी महिलाओं और लड़कियों के लिये: अधिकार, समानता, सशक्तीकरण",
+    "Invest in Women: Accelerate Progress<br>महिलाओं में निवेश करें: प्रगति को गति दें",
+    "Gender equality today for a sustainable tomorrow<br>स्थायी भविष्य के लिए आज लैंगिक समानता"
+   ],
+   "my_ans": "B",
+   "sol": "अंतर्राष्ट्रीय महिला दिवस 2025 की थीम 'सभी महिलाओं और लड़कियों के लिए: अधिकार, समानता, सशक्तीकरण' थी।",
+   "trick": "2025 की थीम महिलाओं के अधिकारों और सशक्तीकरण पर केंद्रित थी।",
+   "ans": "B"
+  },
+  {
+   "n": 254,
+   "lvl": "UG",
+   "en": "In April 2025, BRIC-InStem in Bengaluru collaborated with which medical institution to successfully conduct India’s first gene therapy trial for Haemophilia?",
+   "hi": "अप्रैल 2025 में, बेंगलुरु में ब्रिक-इनस्टेम (BRIC-InStem) ने किस चिकित्सा संस्थान के साथ मिलकर हीमोफीलिया के लिए भारत का पहला जीन थेरेपी परीक्षण सफलतापूर्वक संपन्न किया?",
+   "opts": [
+    "Christian Medical College, Vellore<br>क्रिश्चियन मेडिकल कॉलेज, वेल्लोर",
+    "Gandhi Medical College, Hyderabad<br>गांधी मेडिकल कॉलेज, हैदराबाद",
+    "All India Institute of Medical Sciences, New Delhi<br>अखिल भारतीय आयुर्विज्ञान संस्थान, नई दिल्ली",
+    "Indian Council of Medical Research<br>भारतीय आयुर्विज्ञान अनुसंधान परिषद"
+   ],
+   "my_ans": "A",
+   "sol": "BRIC-InStem ने क्रिश्चियन मेडिकल कॉलेज (CMC), वेल्लोर के साथ मिलकर हीमोफीलिया के लिए भारत का पहला जीन थेरेपी परीक्षण किया।",
+   "trick": "हीमोफीलिया का पहला जीन थेरेपी परीक्षण CMC वेल्लोर में हुआ।",
+   "ans": "A"
+  },
+  {
+   "n": 255,
+   "lvl": "UG",
+   "en": "What was the campaign theme of World Mental Health Day 2025 observed on 10 October?",
+   "hi": "10 अक्टूबर को मनाए गए विश्व मानसिक स्वास्थ्य दिवस 2025 की अभियान थीम क्या थी?",
+   "opts": [
+    "Mental Health is a Universal Human Right<br>मानसिक स्वास्थ्य एक सार्वभौमिक मानवाधिकार है",
+    "Mental Health in Humanitarian Emergencies<br>मानवीय आपात स्थितियों में मानसिक स्वास्थ्य",
+    "Make Mental Health & Well-being for All a Global Priority<br>सभी के लिए मानसिक स्वास्थ्य और कल्याण को वैश्विक प्राथमिकता बनाएं",
+    "Mental Health at Work<br>कार्यस्थल पर मानसिक स्वास्थ्य"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व मानसिक स्वास्थ्य दिवस 2025 की थीम 'मानवीय आपात स्थितियों में मानसिक स्वास्थ्य' थी, जो संकट और आपदाओं के दौरान मानसिक स्वास्थ्य पर केंद्रित थी।",
+   "trick": "2025 में संकट (आपात स्थिति) के दौरान मानसिक स्वास्थ्य पर जोर दिया गया।",
+   "ans": "B"
+  },
+  {
+   "n": 256,
+   "lvl": "UG",
+   "en": "Which AI-enabled digital governance tool, integrated with BHASHINI, was introduced to generate structured minutes of Gram Sabha and Panchayat meetings from audio or video inputs, with multilingual support across 14 Indian languages?",
+   "hi": "ग्राम सभा और पंचायत बैठकों के ऑडियो या वीडियो इनपुट से संरचित कार्यवृत्त तैयार करने के लिए, 14 भारतीय भाषाओं में मल्टीलिंगुअल सपोर्ट के साथ, BHASHINI के साथ एकीकृत कौन-सा AI-सक्षम डिजिटल गवर्नेंस टूल लॉन्च किया गया था?",
+   "opts": [
+    "Panchayat Digital Recorder System<br>पंचायत डिजिटल रिकॉर्डर सिस्टम",
+    "Rural Governance Documentation Tool<br>रूरल गवर्नेंस डॉक्यूमेंटेशन टूल",
+    "GramLekha AI Platform<br>ग्रामलेखा AI प्लेटफ़ॉर्म",
+    "SabhaSaar<br>सभासार"
+   ],
+   "my_ans": "D",
+   "sol": "पंचायती राज मंत्रालय द्वारा 'सभासार' नामक AI-सक्षम टूल लॉन्च किया गया, जो ग्राम सभा की बैठकों को संरचित कार्यवृत्त में बदलता है।",
+   "trick": "सभा की कार्यवाही का सार निकालने वाला टूल 'सभासार' है।",
+   "ans": "D"
+  },
+  {
+   "n": 257,
+   "lvl": "UG",
+   "en": "Which Indian city, as of October 2025, holds the world’s second-largest collection of Art Deco buildings, including the UNESCO-recognized Oval Maidan precinct with 94 structures?",
+   "hi": "अक्टूबर 2025 तक प्राप्त जानकारी के अनुसार, भारत के किस शहर में आर्ट डेको शैली की इमारतों का विश्व का दूसरा सबसे बड़ा संग्रह है, जिसमें 94 संरचनाओं के साथ यूनेस्को (UNESCO) द्वारा मान्यता प्राप्त अण्डाकार मैदान उपक्षेत्र भी शामिल है?",
+   "opts": [
+    "Kolkata<br>कोलकाता",
+    "Indore<br>इंदौर",
+    "Mumbai<br>मुंबई",
+    "Jaipur<br>जयपुर"
+   ],
+   "my_ans": "C",
+   "sol": "मुंबई में मियामी के बाद दुनिया का दूसरा सबसे बड़ा आर्ट डेको संग्रह है, जिसमें ओवल मैदान परिसर की 94 इमारतें शामिल हैं।",
+   "trick": "मरीन ड्राइव और चर्चगेट क्षेत्र अपनी आर्ट डेको इमारतों के लिए प्रसिद्ध हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 258,
+   "lvl": "UG",
+   "en": "In 2025, which wildlife sanctuary in Madhya Pradesh was notified as a tiger reserve?",
+   "hi": "2025 में, मध्य प्रदेश के किस वन्यजीव अभयारण्य को बाघ अभयारण्य के रूप में अधिसूचित किया गया था?",
+   "opts": [
+    "Pench Wildlife Sanctuary<br>पेंच वन्यजीव अभयारण्य",
+    "Kanha Sanctuary<br>कान्हा अभयारण्य",
+    "Panna Sanctuary<br>पन्ना अभयारण्य",
+    "Omkareshwar Sanctuary<br>ओंकारेश्वर अभयारण्य"
+   ],
+   "my_ans": "D",
+   "sol": "जनवरी 2025 में मध्य प्रदेश के खंडवा जिले में स्थित ओंकारेश्वर अभयारण्य को भारत का 55वां बाघ अभयारण्य घोषित किया गया।",
+   "trick": "ओंकारेश्वर 2025 में बना भारत का 55वां टाइगर रिजर्व है।",
+   "ans": "D"
+  },
+  {
+   "n": 259,
+   "lvl": "UG",
+   "en": "During Seva Parv 2025 (17 September–2 October), what plantation target was fixed for Uttar Pradesh as part of the nationwide SDG-linked drive?",
+   "hi": "सेवा पर्व 2025 (17 सितंबर-2 अक्टूबर) के दौरान, राष्ट्रव्यापी SDG-लिंक्ड अभियान के हिस्से के रूप में उत्तर प्रदेश के लिए वृक्षारोपण का क्या लक्ष्य निर्धारित किया गया था?",
+   "opts": [
+    "20 lakh saplings in the state<br>राज्य में 20 लाख पौधे",
+    "15 lakh saplings in the state<br>राज्य में 15 लाख पौधे",
+    "5 lakh saplings in the state<br>राज्य में 5 लाख पौधे",
+    "10 lakh saplings in the state<br>राज्य में 10 लाख पौधे"
+   ],
+   "my_ans": "B",
+   "sol": "सेवा पर्व 2025 के दौरान उत्तर प्रदेश के लिए 15 लाख पौधे लगाने का लक्ष्य रखा गया था।",
+   "trick": "सेवा पर्व में यूपी का वृक्षारोपण लक्ष्य 15 लाख था।",
+   "ans": "B"
+  }
+ ]
+}

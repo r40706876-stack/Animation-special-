@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "132-134",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Why did nearly 19% of India face drought or drought-like conditions by August 2025 despite earlier heavy rains?",
+   "hi": "पहले हुई भारी वर्षा के बावजूद अगस्त 2025 तक भारत के लगभग 19% हिस्से को सूखे या सूखे जैसी स्थिति का सामना क्यों करना पड़ा?",
+   "opts": [
+    "Unusually high temperatures reduced rainfall.<br>असामान्य रूप से उच्च तापमान के कारण वर्षा में कमी हुई।",
+    "A sharp reversal led to severe rainfall deficits in many regions.<br>तीव्र उत्क्रमण के कारण कई क्षेत्रों में भारी वर्षा की कमी हुई।",
+    "Excessive river damming caused water shortages.<br>नदियों पर अत्यधिक बांध बनाने से पानी की कमी हो गई।",
+    "Monsoon onset was delayed across all states.<br>सभी राज्यों में मॉनसून की शुरुआत में देरी हुई।"
+   ],
+   "my_ans": "B",
+   "sol": "मानसून के दौरान वर्षा के पैटर्न में अचानक और तीव्र उलटफेर (sharp reversal) हुआ, जिससे भारी वर्षा के बाद कई क्षेत्रों में गंभीर सूखा पड़ गया।",
+   "trick": "शुरुआती भारी वर्षा के बाद अचानक वर्षा में कमी (तीव्र उलटफेर) ही सूखे का कारण बनी।",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Jhunjhunu and Alwar districts are known for the production of which minerals?",
+   "hi": "झुंझुनू और अलवर जिले किस खनिज के उत्पादन के लिए प्रसिद्ध हैं?",
+   "opts": [
+    "Bauxite<br>बॉक्साइट",
+    "Gold<br>सोना",
+    "Copper<br>कॉपर",
+    "Mica<br>अभ्रक"
+   ],
+   "my_ans": "C",
+   "sol": "राजस्थान के झुंझुनू और अलवर जिले तांबा (Copper) उत्पादन के लिए प्रसिद्ध हैं, विशेषकर झुंझुनू की खेतड़ी कॉपर बेल्ट।",
+   "trick": "झुंझुनू = खेतड़ी कॉपर बेल्ट (तांबा)।",
+   "ans": "C"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "What type of agriculture is still widely practiced in India despite modern agricultural changes?",
+   "hi": "आधुनिक कृषि परिवर्तनों के बावजूद भारत में किस प्रकार की कृषि पद्धति अभी भी व्यापक रूप से प्रचलित है?",
+   "opts": [
+    "Plantation Agriculture<br>रोपण कृषि",
+    "Organic Agriculture<br>जैविक कृषि",
+    "Commercial Agriculture<br>वाणिज्यिक कृषि",
+    "Subsistence Agriculture<br>निर्वाह कृषि"
+   ],
+   "my_ans": "D",
+   "sol": "भारत में अधिकांश छोटे किसान अभी भी मुख्य रूप से अपने परिवार के उपभोग के लिए खेती करते हैं, जिसे निर्वाह कृषि कहते हैं।",
+   "trick": "स्वयं के उपभोग के लिए की जाने वाली खेती = निर्वाह कृषि।",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which of the following nuclear power stations has the highest capacity (Megawatt electric) as of 2023?",
+   "hi": "2023 तक की स्थिति के अनुसार, निम्नलिखित में से किस न्यूक्लियर पावर स्टेशन की क्षमता (मेगावाट विद्युत) सबसे अधिक है?",
+   "opts": [
+    "Kakrapar Atomic Power Plant<br>काकरापार परमाणु ऊर्जा संयंत्र",
+    "Narora Atomic Power Plant<br>नरोरा परमाणु ऊर्जा संयंत्र",
+    "Kudankulam Atomic Power Plant<br>कुडनकुलम परमाणु ऊर्जा संयंत्र",
+    "Tarapur Atomic Power Plant<br>तारापुर परमाणु ऊर्जा संयंत्र"
+   ],
+   "my_ans": "C",
+   "sol": "तमिलनाडु स्थित कुडनकुलम परमाणु ऊर्जा संयंत्र की क्षमता 2000 MWe (2x1000 MW) है, जो भारत में सबसे अधिक है।",
+   "trick": "कुडनकुलम = सबसे बड़ी क्षमता (2000 MW)।",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Manila hemp is found in ________.",
+   "hi": "मनीला हेम्प (Manila hemp) ________ में पाया जाता है।",
+   "opts": [
+    "Malaysia<br>मलेशिया",
+    "Philippines<br>फिलीपींस",
+    "Indonesia<br>इंडोनेशिया",
+    "Japan<br>जापान"
+   ],
+   "my_ans": "B",
+   "sol": "मनीला हेम्प (अबाका) फिलीपींस का मूल पौधा है और इसका नाम फिलीपींस की राजधानी मनीला के नाम पर पड़ा है।",
+   "trick": "मनीला (राजधानी) = फिलीपींस।",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "In climatology, what most accurately explains how seasonal conditions are experienced at a particular location?",
+   "hi": "जलवायु विज्ञान में, किसी विशेष स्थान पर मौसमी परिस्थितियों के बारे में सबसे सटीक रूप से व्याख्या कौन करता है?",
+   "opts": [
+    "Long-term average atmospheric patterns of the region<br>क्षेत्र के दीर्घकालिक औसत वायुमंडलीय पैटर्न",
+    "Latitudinal position of the place<br>स्थान की अक्षांशीय स्थिति",
+    "Short-term fluctuations in atmospheric elements<br>वायुमंडलीय तत्वों में अल्पकालिक उच्चावचन",
+    "Permanent climatic classification of the area<br>क्षेत्र का स्थायी जलवायु वर्गीकरण"
+   ],
+   "my_ans": "A",
+   "sol": "मौसम दीर्घकालिक (30+ वर्ष) वायुमंडलीय पैटर्न और औसत से निर्धारित होता है, न कि अल्पकालिक परिवर्तनों से।",
+   "trick": "मौसम = दीर्घकालिक औसत पैटर्न।",
+   "ans": "A"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Which name is given to the southern stretch of the western coastal plain of India?",
+   "hi": "भारत के पश्चिमी तटीय मैदान के दक्षिणी विस्तार को क्या कहा जाता है?",
+   "opts": [
+    "Kannad Coast<br>कन्नड़ तट",
+    "Malabar coast<br>मालाबार तट",
+    "Coromandel Coast<br>कोरोमंडल तट",
+    "Konkan Coast<br>कोंकण तट"
+   ],
+   "my_ans": "B",
+   "sol": "पश्चिमी तटीय मैदान का दक्षिणी भाग (केरल) मालाबार तट कहलाता है, जबकि उत्तरी भाग कोंकण और मध्य भाग कन्नड़ तट है।",
+   "trick": "दक्षिण = मालाबार (केरल)।",
+   "ans": "B"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "On which river in India is the National Waterway 57 (NW-57) developed?",
+   "hi": "भारत में किस नदी पर राष्ट्रीय जलमार्ग 57 (NW-57) विकसित किया गया है?",
+   "opts": [
+    "Kali River<br>काली नदी",
+    "Gandak River<br>गंडक नदी",
+    "Kopili River<br>कोपिली नदी",
+    "Zuari River<br>ज़ुआरी नदी"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय जलमार्ग 57 (NW-57) असम और मेघालय में बहने वाली ब्रह्मपुत्र की सहायक नदी 'कोपिली' पर स्थित है।",
+   "trick": "NW-57 = कोपिली नदी।",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "At approximately what depth inside the Earth is the boundary between the mantle and the core located?",
+   "hi": "पृथ्वी के भीतर लगभग कितनी गहराई पर मैंटल और क्रोड के बीच की सीमा स्थित है?",
+   "opts": [
+    "1,900 km",
+    "2,900 km",
+    "3,900 km",
+    "4,900 km"
+   ],
+   "my_ans": "B",
+   "sol": "पृथ्वी की आंतरिक संरचना में मैंटल और क्रोड के बीच की सीमा (गुटेनबर्ग असांतत्य) सतह से लगभग 2,900 किमी की गहराई पर है।",
+   "trick": "मैंटल-क्रोड सीमा = 2900 किमी।",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "What is the key difference between extensive and intensive farming systems?",
+   "hi": "विस्तीर्ण और गहन कृषि प्रणालियों के बीच मुख्य अंतर क्या है?",
+   "opts": [
+    "Size of seed<br>बीज का आकार",
+    "Irrigation used<br>प्रयुक्त सिंचाई",
+    "Machinery type<br>मशीनरी प्रकार",
+    "Production per land unit<br>प्रति भूमि इकाई उत्पादन"
+   ],
+   "my_ans": "D",
+   "sol": "गहन कृषि में कम भूमि पर अधिक निवेश से प्रति इकाई अधिक उत्पादन लिया जाता है, जबकि विस्तीर्ण कृषि में बड़े क्षेत्र पर कम उत्पादन होता है।",
+   "trick": "गहन = प्रति इकाई अधिक उत्पादन।",
+   "ans": "D"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which Indian city is known as the “Silicon Valley of India” due to its thriving IT services sector?",
+   "hi": "IT सेवा क्षेत्र में भारी समृद्धि के कारण किस भारतीय शहर को 'भारत की सिलिकॉन वैली' के नाम से जाना जाता है?",
+   "opts": [
+    "Bengaluru<br>बेंगलुरु",
+    "Mumbai<br>मुंबई",
+    "Hyderabad<br>हैदराबाद",
+    "Chennai<br>चेन्नई"
+   ],
+   "my_ans": "A",
+   "sol": "बेंगलुरु को भारत का प्रमुख आईटी हब होने के कारण 'सिलिकॉन वैली ऑफ इंडिया' कहा जाता है।",
+   "trick": "IT हब = बेंगलुरु।",
+   "ans": "A"
+  }
+ ]
+}

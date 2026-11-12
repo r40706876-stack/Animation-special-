@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "244-246",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 64,
+   "lvl": "GL",
+   "en": "In 2025, the Supreme Court of India (SC) in the case State of Tamil Nadu v. Governor of Tamil Nadu ruled that a State Governor cannot exercise which of the following over a bill duly passed by the State Legislature?",
+   "hi": "2025 में, भारत के सर्वोच्च न्यायालय (SC) ने तमिलनाडु राज्य बनाम तमिलनाडु के राज्यपाल मामले में निर्णय सुनाया कि किसी राज्य का राज्यपाल, राज्य विधानमंडल द्वारा विधिवत पारित विधेयक पर निम्नलिखित में से किसका प्रयोग नहीं कर सकता है?",
+   "opts": [
+    "Pocket Veto<br>पॉकेट वीटो",
+    "Line-item veto<br>लाइन-आइटम वीटो",
+    "Conditional assent<br>सशर्त स्वीकृति",
+    "Veto only on financial bills<br>केवल वित्तीय विधेयकों पर वीटो"
+   ],
+   "my_ans": "A",
+   "sol": "सर्वोच्च न्यायालय ने स्पष्ट किया कि राज्यपाल किसी विधेयक को अनिश्चितकाल तक लंबित (Pocket Veto) नहीं रख सकते, उन्हें या तो सहमति देनी होगी, पुनर्विचार हेतु भेजना होगा या राष्ट्रपति के लिए आरक्षित करना होगा।",
+   "trick": "राज्यपाल के पास पॉकेट वीटो की शक्ति नहीं है।",
+   "ans": "A"
+  },
+  {
+   "n": 65,
+   "lvl": "GL",
+   "en": "Which of the following objectives is mentioned in Article 39 of the Indian Constitution?",
+   "hi": "भारतीय संविधान के अनुच्छेद 39 में निम्नलिखित में से कौन-सा उद्देश्य उल्लिखित है?",
+   "opts": [
+    "To organise agriculture and animal husbandry<br>कृषि और पशुपालन का संगठन करना",
+    "To organise village panchayats<br>ग्राम पंचायतों का संगठन करना",
+    "To promote equal pay for equal work for both men and women<br>पुरुषों और महिलाओं दोनों के लिए समान कार्य के लिए समान वेतन को बढ़ावा देना",
+    "To ensure equal justice and provide free legal aid<br>समान न्याय सुनिश्चित करना और निःशुल्क कानूनी सहायता प्रदान करना"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 39(d) में स्त्री और पुरुष दोनों के लिए समान कार्य के लिए समान वेतन का प्रावधान है।",
+   "trick": "अनुच्छेद 39 = समान कार्य, समान वेतन।",
+   "ans": "C"
+  },
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "Which Article deals with the original jurisdiction of the Supreme Court?",
+   "hi": "निम्नलिखित में से कौन-सा अनुच्छेद सर्वोच्च न्यायालय के मूल क्षेत्राधिकार से संबंधित है?",
+   "opts": [
+    "Article 131<br>अनुच्छेद 131",
+    "Article 124<br>अनुच्छेद 124",
+    "Article 32<br>अनुच्छेद 32",
+    "Article 141<br>अनुच्छेद 141"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 131 सर्वोच्च न्यायालय के मूल क्षेत्राधिकार (Original Jurisdiction) से संबंधित है, जो केंद्र और राज्यों के बीच विवादों को सुलझाता है।",
+   "trick": "131 = मूल क्षेत्राधिकार।",
+   "ans": "A"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "According to ____ of the Indian Constitution, the Parliament may by law, constitute a High Court for a Union territory.",
+   "hi": "भारतीय संविधान के निम्नलिखित में से किसके अनुसार, संसद कानून बनाकर, किसी केंद्र शासित प्रदेश के लिए हाई कोर्ट बना सकती है?",
+   "opts": [
+    "Article 239<br>अनुच्छेद 239",
+    "Article 241<br>अनुच्छेद 241",
+    "Article 238<br>अनुच्छेद 238",
+    "Article 240<br>अनुच्छेद 240"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 241 संसद को यह शक्ति देता है कि वह किसी केंद्र शासित प्रदेश के लिए उच्च न्यायालय स्थापित कर सके।",
+   "trick": "241 = केंद्र शासित प्रदेश का उच्च न्यायालय।",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "Before each general election to the House of the People or to a State Legislative Assembly, the President may appoint Regional Commissioners after:",
+   "hi": "लोकसभा या राज्य विधानसभा के प्रत्येक आम चुनाव से पहले, राष्ट्रपति किसके साथ परामर्श करने के पश्चात क्षेत्रीय आयुक्तों की नियुक्ति कर सकते हैं?",
+   "opts": [
+    "consultation with the Chief Justice of India<br>भारत के मुख्य न्यायाधीश",
+    "consultation with the Speaker of the Lok Sabha<br>लोकसभा अध्यक्ष",
+    "consultation with the Prime Minister<br>प्रधानमंत्री",
+    "consultation with the Election Commission<br>निर्वाचन आयोग"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 324 के तहत राष्ट्रपति चुनाव आयोग के परामर्श से क्षेत्रीय आयुक्तों की नियुक्ति करते हैं।",
+   "trick": "चुनाव संबंधी नियुक्ति = निर्वाचन आयोग का परामर्श।",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "Which provision addresses citizenship for persons who migrated from Pakistan before India's Constitution commencement?",
+   "hi": "कौन-सा प्रावधान भारत के संविधान के लागू होने से पहले पाकिस्तान से आकर भारत में बसे व्यक्तियों की नागरिकता से संबंधित है?",
+   "opts": [
+    "Article 6<br>अनुच्छेद 6",
+    "Article 10<br>अनुच्छेद 10",
+    "Article 5<br>अनुच्छेद 5",
+    "Article 8<br>अनुच्छेद 8"
+   ],
+   "my_ans": "A",
+   "sol": "अनुच्छेद 6 उन व्यक्तियों के नागरिकता अधिकारों से संबंधित है जो पाकिस्तान से भारत आए थे।",
+   "trick": "अनुच्छेद 6 = पाकिस्तान से भारत आए प्रवासी।",
+   "ans": "A"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "In which language was the Sangam literature of South India, composed between 300 BCE and 300 CE, primarily written?",
+   "hi": "300 ईसा पूर्व और 300 ईस्वी के बीच संकलित दक्षिण-भारत का संगम साहित्य मुख्य रूप से किस भाषा में लिखा गया था?",
+   "opts": [
+    "Tamil<br>तमिल",
+    "Prakrit<br>प्राकृत",
+    "Pali<br>पालि",
+    "Sanskrit<br>संस्कृत"
+   ],
+   "my_ans": "A",
+   "sol": "दक्षिण भारत का संगम साहित्य मुख्य रूप से तमिल भाषा में रचा गया था।",
+   "trick": "संगम = तमिल साहित्य।",
+   "ans": "A"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "Which of the following is not contained in Article 51?",
+   "hi": "निम्नलिखित में से कौन-सा अनुच्छेद 51 में निहित नहीं है?",
+   "opts": [
+    "Just and honourable relations between nations<br>राष्ट्रों के बीच न्यायपूर्ण और सम्मानपूर्ण संबंध",
+    "Respect for international law and treaty obligations<br>अंतर्राष्ट्रीय कानून और संधि दायित्वों का सम्मान",
+    "Protection of forests and wildlife of India<br>भारत के वनों और वन्यजीवों का संरक्षण",
+    "Promotion of international peace and security<br>अंतर्राष्ट्रीय शांति और सुरक्षा को बढ़ावा देना"
+   ],
+   "my_ans": "C",
+   "sol": "वनों और वन्यजीवों का संरक्षण अनुच्छेद 48A में वर्णित है, न कि अनुच्छेद 51 में।",
+   "trick": "अनुच्छेद 51 = अंतर्राष्ट्रीय शांति।",
+   "ans": "C"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "Which Article empowers the President to specify the Scheduled Castes in various states and union territories?",
+   "hi": "निम्नलिखित में से कौन-सा अनुच्छेद राष्ट्रपति को विभिन्न राज्यों और केंद्र शासित प्रदेशों में अनुसूचित जातियों को निर्दिष्ट करने का अधिकार देता है?",
+   "opts": [
+    "Article 330<br>अनुच्छेद 330",
+    "Article 344<br>अनुच्छेद 344",
+    "Article 342<br>अनुच्छेद 342",
+    "Article 341<br>अनुच्छेद 341"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 341 राष्ट्रपति को राज्यों और केंद्र शासित प्रदेशों में अनुसूचित जातियों को अधिसूचित करने की शक्ति देता है।",
+   "trick": "341 = अनुसूचित जातियाँ (SC)।",
+   "ans": "D"
+  }
+ ]
+}

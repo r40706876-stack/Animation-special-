@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "295-297",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 229,
+   "lvl": "UG",
+   "en": "What is the term of an elected MLA in Indian State Legislatures, unless dissolved prematurely?",
+   "hi": "भारतीय राज्य विधानमंडलों, जब तक कि उन्हें समय से पहले भंग न किया जाए, में एक निर्वाचित विधायक (MLA) का कार्यकाल कितना होता है?",
+   "opts": [
+    "3 years<br>3 वर्ष",
+    "4 years<br>4 वर्ष",
+    "6 years<br>6 वर्ष",
+    "5 years<br>5 वर्ष"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान के अनुच्छेद 172 के अनुसार, राज्य विधानसभा का कार्यकाल उसकी पहली बैठक से 5 वर्ष का होता है।",
+   "trick": "विधानसभा = 5 साल",
+   "ans": "D"
+  },
+  {
+   "n": 230,
+   "lvl": "UG",
+   "en": "Which type of Centre-State relation is covered under Articles 245 to 255 of Part XI of the Indian Constitution?",
+   "hi": "भारतीय संविधान के भाग XI के अनुच्छेद 245 से 255 के अंतर्गत किस प्रकार के केंद्र-राज्य संबंधों को सम्मिलित किया गया है?",
+   "opts": [
+    "Legislative relations<br>विधायी संबंध",
+    "Financial relations<br>वित्तीय संबंध",
+    "Judicial relations<br>न्यायिक संबंध",
+    "Administrative relations<br>प्रशासनिक संबंध"
+   ],
+   "my_ans": "A",
+   "sol": "संविधान के भाग XI में अनुच्छेद 245 से 255 तक केंद्र और राज्यों के बीच विधायी संबंधों (Legislative relations) का वर्णन है।",
+   "trick": "245-255 = विधायी (Legislative)",
+   "ans": "A"
+  },
+  {
+   "n": 231,
+   "lvl": "UG",
+   "en": "How does the Vidhan Parishad elect its chairman?",
+   "hi": "विधान परिषद अपने सभापति का चुनाव किस प्रकार करती है?",
+   "opts": [
+    "Elected by members of the Vidhan Parishad<br>विधान परिषद के सदस्यों द्वारा निर्वाचित करके",
+    "Appointed by the President<br>राष्ट्रपति द्वारा नियुक्त करके",
+    "Elected by members of the Lok Sabha<br>लोकसभा के सदस्यों द्वारा निर्वाचित करके",
+    "Nominated by the Governor<br>राज्यपाल द्वारा मनोनीत"
+   ],
+   "my_ans": "A",
+   "sol": "विधान परिषद का सभापति परिषद के सदस्यों द्वारा अपने में से ही निर्वाचित किया जाता है।",
+   "trick": "आंतरिक चुनाव",
+   "ans": "A"
+  },
+  {
+   "n": 232,
+   "lvl": "UG",
+   "en": "Which of the following makes the Judiciary, the guardian of the Constitution?",
+   "hi": "निम्नलिखित में से क्या न्यायपालिका को संविधान का संरक्षक बनाता है?",
+   "opts": [
+    "Independence<br>स्वतंत्रता",
+    "Judicial overreach<br>न्यायिक अतिसक्रियता",
+    "Service conditions<br>सेवा शर्तें",
+    "Judicial review<br>न्यायिक समीक्षा"
+   ],
+   "my_ans": "D",
+   "sol": "न्यायिक समीक्षा (Judicial Review) वह शक्ति है जिसके द्वारा न्यायालय कानूनों की संवैधानिकता की जांच करते हैं और संविधान की रक्षा करते हैं।",
+   "trick": "समीक्षा = संरक्षक",
+   "ans": "D"
+  },
+  {
+   "n": 233,
+   "lvl": "UG",
+   "en": "According to the Indian Constitution, which Article governs the appointment of an Acting Chief Justice of India?",
+   "hi": "भारतीय संविधान के अनुसार, भारत के कार्यकारी मुख्य न्यायमूर्ति की नियुक्ति किस अनुच्छेद के अंतर्गत होती है?",
+   "opts": [
+    "Article 122<br>अनुच्छेद 122",
+    "Article 130<br>अनुच्छेद 130",
+    "Article 120<br>अनुच्छेद 120",
+    "Article 126<br>अनुच्छेद 126"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 126 के तहत, जब मुख्य न्यायाधीश का पद रिक्त हो या वे अनुपस्थित हों, तो राष्ट्रपति कार्यकारी मुख्य न्यायाधीश की नियुक्ति कर सकते हैं।",
+   "trick": "126 = कार्यकारी CJI",
+   "ans": "D"
+  },
+  {
+   "n": 234,
+   "lvl": "UG",
+   "en": "Suspension of enforcement of Fundamental Rights except Articles 20 and 21 occurs under which Article of the Indian Constitution?",
+   "hi": "भारतीय संविधान के किस अनुच्छेद के अंतर्गत, अनुच्छेद 20 और 21 को छोड़कर सभी प्रवर्तित मूल अधिकारों को निलंबित किया जाता है?",
+   "opts": [
+    "Article 360<br>अनुच्छेद 360",
+    "Article 353<br>अनुच्छेद 353",
+    "Article 352<br>अनुच्छेद 352",
+    "Article 359<br>अनुच्छेद 359"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 359 के तहत राष्ट्रपति आपातकाल के दौरान मौलिक अधिकारों के प्रवर्तन को निलंबित कर सकते हैं, लेकिन अनुच्छेद 20 और 21 निलंबित नहीं होते।",
+   "trick": "359 = निलंबन",
+   "ans": "D"
+  },
+  {
+   "n": 235,
+   "lvl": "UG",
+   "en": "Who among the following appoints judges of Family Courts in India?",
+   "hi": "भारत में पारिवारिक न्यायालयों के न्यायाधीशों की नियुक्ति निम्नलिखित में से कौन करता है?",
+   "opts": [
+    "State Government<br>राज्य सरकार",
+    "Union Home Minister<br>केंद्रीय गृह मंत्री",
+    "President<br>राष्ट्रपति",
+    "Governor<br>राज्यपाल"
+   ],
+   "my_ans": "A",
+   "sol": "पारिवारिक न्यायालय अधिनियम, 1984 के तहत, राज्य सरकार उच्च न्यायालय के परामर्श से पारिवारिक न्यायालयों के न्यायाधीशों की नियुक्ति करती है।",
+   "trick": "राज्य सरकार = नियुक्ति",
+   "ans": "A"
+  },
+  {
+   "n": 236,
+   "lvl": "UG",
+   "en": "The Eleventh Scheduled of the Constitution places how many functions within the purview of the Panchayati Raj bodies?",
+   "hi": "संविधान की ग्यारहवीं अनुसूची के अंतर्गत पंचायती राज निकायों के कार्यक्षेत्र में कितने कार्य आते हैं?",
+   "opts": [
+    "23",
+    "35",
+    "32",
+    "29"
+   ],
+   "my_ans": "D",
+   "sol": "73वें संविधान संशोधन द्वारा जोड़ी गई ग्यारहवीं अनुसूची में पंचायती राज संस्थाओं के लिए 29 विषय निर्धारित किए गए हैं।",
+   "trick": "11वीं अनुसूची = 29 विषय",
+   "ans": "D"
+  },
+  {
+   "n": 237,
+   "lvl": "UG",
+   "en": "Which type of Emergency could be implemented due to 'internal disturbance' before the 44th Amendment of the Indian Constitution?",
+   "hi": "भारतीय संविधान के 44वें संशोधन से पहले 'आंतरिक अशांति' के कारण निम्नलिखित में से किस प्रकार का आपातकाल लागू किया जा सकता था?",
+   "opts": [
+    "National Emergency<br>राष्ट्रीय आपातकाल",
+    "Financial Emergency<br>वित्तीय आपातकाल",
+    "President's Rule<br>राष्ट्रपति शासन",
+    "Martial Law<br>मार्शल लॉ"
+   ],
+   "my_ans": "A",
+   "sol": "44वें संशोधन (1978) से पहले 'आंतरिक अशांति' के आधार पर राष्ट्रीय आपातकाल (अनुच्छेद 352) लगाया जा सकता था, जिसे बाद में 'सशस्त्र विद्रोह' कर दिया गया।",
+   "trick": "आंतरिक अशांति = राष्ट्रीय आपातकाल",
+   "ans": "A"
+  },
+  {
+   "n": 238,
+   "lvl": "UG",
+   "en": "Under the Fifth Schedule of the Indian Constitution, which States are excluded from the definition of State?",
+   "hi": "भारतीय संविधान की पांचवीं अनुसूची के अंतर्गत, किन राज्यों को राज्य की परिभाषा से बाहर रखा गया है?",
+   "opts": [
+    "Assam, Meghalaya, Tripura, Mizoram<br>असम, मेघालय, त्रिपुरा, मिजोरम",
+    "Assam, Mizoram, Arunachal Pradesh, Sikkim<br>असम, मिजोरम, अरुणाचल प्रदेश, सिक्किम",
+    "Assam, Manipur, Meghalaya<br>असम, मणिपुर, मेघालय",
+    "Assam, Meghalaya, Tripura, Nagaland<br>असम, मेघालय, त्रिपुरा, नागालैंड"
+   ],
+   "my_ans": "A",
+   "sol": "पांचवीं अनुसूची में असम, मेघालय, त्रिपुरा और मिजोरम को शामिल नहीं किया गया है क्योंकि ये छठी अनुसूची के अंतर्गत आते हैं।",
+   "trick": "छठी अनुसूची = AMTM",
+   "ans": "A"
+  }
+ ]
+}

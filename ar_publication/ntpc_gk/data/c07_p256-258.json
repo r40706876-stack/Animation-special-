@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "256-258",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 100,
+   "lvl": "GL",
+   "en": "The 24th Constitutional Amendment gave the Parliament which of the following powers?",
+   "hi": "24वें संवैधानिक संशोधन ने संसद को निम्नलिखित में से कौन-सी शक्ति प्रदान की?",
+   "opts": [
+    "Amend Fundamental Rights<br>मूल अधिकारों में संशोधन",
+    "Suspend the High Court judgment<br>उच्च न्यायालय के निर्णय का निलंबन",
+    "Suspend elections<br>निर्वाचन का निलंबन",
+    "Override judicial review<br>न्यायिक पुनर्विलोकन का प्रत्यादेश"
+   ],
+   "my_ans": "A",
+   "sol": "24वां संविधान संशोधन (1971) संसद को संविधान के किसी भी भाग में संशोधन करने की शक्ति देता है, जिसमें मौलिक अधिकार भी शामिल हैं।",
+   "trick": "24वां संशोधन = संसद की सर्वोच्चता (मौलिक अधिकारों में संशोधन)",
+   "ans": "A"
+  },
+  {
+   "n": 101,
+   "lvl": "GL",
+   "en": "Under the 74th Amendment of the Indian Constitution, who is eligible for representation in a municipality without voting rights?",
+   "hi": "भारतीय संविधान के 74वें संशोधन के अंतर्गत, मताधिकारों के बिना नगरपालिका में प्रतिनिधित्व के लिए कौन पात्र होता है?",
+   "opts": [
+    "Governors of States<br>राज्यों के राज्यपाल",
+    "Persons with special knowledge in municipal administration<br>नगरपालिका प्रशासन में विशेष ज्ञान रखने वाले व्यक्ति",
+    "Members of the Gram Sabha<br>ग्राम सभा के सदस्य",
+    "The Chief Minister<br>मुख्यमंत्री"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 243R के तहत, राज्य विधानमंडल नगरपालिका प्रशासन में विशेष ज्ञान या अनुभव रखने वाले व्यक्तियों को प्रतिनिधित्व दे सकता है, लेकिन उन्हें मतदान का अधिकार नहीं होता।",
+   "trick": "विशेष ज्ञान = बिना वोट का प्रतिनिधित्व",
+   "ans": "B"
+  },
+  {
+   "n": 102,
+   "lvl": "GL",
+   "en": "The 97th Constitutional Amendment provided constitutional status to which of the following?",
+   "hi": "97वां संविधान संशोधन ने निम्नलिखित में से किसे संवैधानिक दर्जा प्रदान किया?",
+   "opts": [
+    "District Planning Committees<br>जिला योजना समितियां",
+    "Metropolitan Councils<br>महानगर परिषद",
+    "Cooperative Societies<br>सहकारी समितियां",
+    "Market Regulatory Boards<br>बाजार नियामक बोर्ड"
+   ],
+   "my_ans": "C",
+   "sol": "97वें संविधान संशोधन (2011) द्वारा सहकारी समितियों को संवैधानिक दर्जा और संरक्षण प्रदान किया गया तथा संविधान में भाग IXB जोड़ा गया।",
+   "trick": "97वां संशोधन = सहकारी समितियां",
+   "ans": "C"
+  },
+  {
+   "n": 103,
+   "lvl": "GL",
+   "en": "Which of the following Union Territories has a Legislative Assembly and Council of Ministers?",
+   "hi": "निम्नलिखित में से किस केंद्र शासित प्रदेश में विधानसभा और मंत्रिपरिषद है?",
+   "opts": [
+    "Puducherry<br>पुडुचेरी",
+    "Daman and Diu<br>दमन और दीव",
+    "Dadra and Nagar Haveli<br>दादरा और नगर हवेली",
+    "Andaman and Nicobar Islands<br>अंडमान और निकोबार द्वीपसमूह"
+   ],
+   "my_ans": "A",
+   "sol": "भारत में दिल्ली, पुडुचेरी और जम्मू-कश्मीर ऐसे केंद्र शासित प्रदेश हैं जहाँ विधानसभा और मंत्रिपरिषद का प्रावधान है।",
+   "trick": "दिल्ली, पुडुचेरी, जम्मू-कश्मीर = विधानसभा वाले UT",
+   "ans": "A"
+  },
+  {
+   "n": 104,
+   "lvl": "GL",
+   "en": "Under Article 275 of the Constitution, the sums provided by the Parliament as grants-in-aid to states are required to be charged on which fund?",
+   "hi": "संविधान के अनुच्छेद 275 के अंतर्गत, संसद द्वारा राज्यों को सहायता अनुदान के रूप में दी गई धनराशियाँ किस निधि पर भारित की जानी चाहिए?",
+   "opts": [
+    "Contingency Fund of India<br>भारत की आकस्मिकता निधि",
+    "Consolidated Fund of India<br>भारत की संचित निधि",
+    "Public Account of India<br>भारत का लोक लेखा",
+    "State Emergency Fund<br>राज्य आपातकालीन निधि"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 275 के तहत राज्यों को दी जाने वाली सहायता अनुदान भारत की संचित निधि (Consolidated Fund of India) पर भारित होती है।",
+   "trick": "अनुच्छेद 275 = संचित निधि से अनुदान",
+   "ans": "B"
+  },
+  {
+   "n": 105,
+   "lvl": "GL",
+   "en": "Article 243V of the Indian Constitution applies to disqualification for membership in which type of body?",
+   "hi": "भारतीय संविधान का अनुच्छेद 243V, किस प्रकार के निकाय में सदस्यता के लिए अयोग्यता पर लागू होता है?",
+   "opts": [
+    "State Legislature<br>राज्य विधानमंडल",
+    "Panchayats<br>पंचायत",
+    "District Council<br>जिला परिषद",
+    "Municipality<br>नगरपालिका"
+   ],
+   "my_ans": "D",
+   "sol": "संविधान का भाग IX-A नगरपालिकाओं से संबंधित है, और अनुच्छेद 243V विशेष रूप से नगरपालिकाओं की सदस्यता के लिए अयोग्यता से संबंधित है।",
+   "trick": "243V = नगरपालिका अयोग्यता",
+   "ans": "D"
+  },
+  {
+   "n": 106,
+   "lvl": "GL",
+   "en": "The Right to Property was removed from Part III of the Indian Constitution and added to _____.",
+   "hi": "संपत्ति का अधिकार भारतीय संविधान के भाग III से हटाकर _____ में जोड़ा गया।",
+   "opts": [
+    "Part XI<br>भाग XI",
+    "Part XIII<br>भाग XIII",
+    "Part XII<br>भाग XII",
+    "Part X<br>भाग X"
+   ],
+   "my_ans": "C",
+   "sol": "44वें संविधान संशोधन (1978) द्वारा संपत्ति के अधिकार को मौलिक अधिकार (भाग III) से हटाकर अनुच्छेद 300A के तहत कानूनी अधिकार के रूप में भाग XII में रखा गया।",
+   "trick": "44वां संशोधन = संपत्ति का अधिकार भाग XII में",
+   "ans": "C"
+  },
+  {
+   "n": 107,
+   "lvl": "GL",
+   "en": "As per the Constitution of India, Article 182 deals with which of the following?",
+   "hi": "भारत के संविधान के अनुसार, अनुच्छेद 182 निम्नलिखित में से किससे संबंधित है?",
+   "opts": [
+    "Disqualification for membership<br>सदस्यता के लिए अयोग्यता",
+    "Chairman and Deputy Chairman of the State Legislative Council<br>राज्य विधान परिषद के सभापति और उपसभापति",
+    "Special address by the Governor<br>राज्यपाल के विशेष संबोधन",
+    "Composition of State Legislative Assemblies<br>राज्य विधानसभाओं की संरचना"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 182 राज्य विधान परिषद के सभापति और उपसभापति के चुनाव और उनके पदों से संबंधित है।",
+   "trick": "182 = विधान परिषद के सभापति",
+   "ans": "B"
+  },
+  {
+   "n": 108,
+   "lvl": "GL",
+   "en": "What is the total number of languages listed under the 8th Schedule of the Constitution of India, as on 30 June 2024?",
+   "hi": "30 जून 2024 तक की स्थिति के अनुसार भारत के संविधान की आठवीं अनुसूची के अंतर्गत सूचीबद्ध भाषाओं की कुल संख्या कितनी है?",
+   "opts": [
+    "26",
+    "22",
+    "16",
+    "20"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय संविधान की 8वीं अनुसूची में वर्तमान में कुल 22 भाषाएं सूचीबद्ध हैं।",
+   "trick": "8वीं अनुसूची = 22 भाषाएं",
+   "ans": "B"
+  },
+  {
+   "n": 109,
+   "lvl": "GL",
+   "en": "Which of the following articles of the Indian Constitution deal with the Audit of accounts of the Panchayats and Municipalities?",
+   "hi": "भारतीय संविधान के निम्नलिखित में से कौन-से अनुच्छेद पंचायतों और नगरपालिकाओं के लेखा परीक्षा से संबंधित हैं?",
+   "opts": [
+    "Article 243 G and Article 243 ZB<br>अनुच्छेद 243 G और अनुच्छेद 243 ZB",
+    "Article 243 M and Article 243 ZA<br>अनुच्छेद 243 M और अनुच्छेद 243 ZA",
+    "Article 243 J and Article 243 Z<br>अनुच्छेद 243 J और अनुच्छेद 243 Z",
+    "Article 243 I and Article 243 Y<br>अनुच्छेद 243 I और अनुच्छेद 243 Y"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 243J पंचायतों के लेखा परीक्षा से और अनुच्छेद 243Z नगरपालिकाओं के लेखा परीक्षा से संबंधित है।",
+   "trick": "243J (पंचायत) & 243Z (नगरपालिका) = ऑडिट",
+   "ans": "C"
+  }
+ ]
+}

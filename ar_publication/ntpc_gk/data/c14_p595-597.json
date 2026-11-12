@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "595-597",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 99,
+   "lvl": "GL",
+   "en": "Which Bill, assented to by the President of India in 2025, consolidates civil nuclear laws and allows private sector participation?",
+   "hi": "भारत के राष्ट्रपति द्वारा 2025 में स्वीकृत वह कौन-सा विधेयक है, जो नागरिक परमाणु कानूनों को समेकित करता है और निजी क्षेत्र की भागीदारी की अनुमति देता है?",
+   "opts": [
+    "Civil Nuclear Governance and Private Sector Participation Framework Bill<br>नागरिक परमाणु शासन और निजी क्षेत्र की भागीदारी ढांचा विधेयक",
+    "National Policy for Nuclear Energy Expansion with Private Participation Bill<br>निजी भागीदारी सहित परमाणु ऊर्जा विस्तार के लिए राष्ट्रीय नीति विधेयक",
+    "Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India (SHANTI) Bill<br>भारत में बदलाव के लिए परमाणु ऊर्जा के सतत दोहन और विकास (शांति) विधेयक, 2025",
+    "Atomic Energy Reform and Private Participation in Nuclear Power Bill<br>परमाणु ऊर्जा सुधार और परमाणु ऊर्जा में निजी भागीदारी विधेयक"
+   ],
+   "my_ans": "C",
+   "sol": "शांति (SHANTI) विधेयक, 2025 भारत में नागरिक परमाणु कानूनों को समेकित करता है और पहली बार परमाणु ऊर्जा क्षेत्र में निजी भागीदारी की अनुमति देता है।",
+   "trick": "SHANTI विधेयक परमाणु ऊर्जा में निजी क्षेत्र के लिए है।",
+   "ans": "C"
+  },
+  {
+   "n": 100,
+   "lvl": "GL",
+   "en": "Under the Constitution (101st Amendment) Act, 2016, who has the exclusive power to make laws on GST, where the supply of goods or services takes place in the course of interstate trade or commerce?",
+   "hi": "संविधान (101 वाँ संशोधन) अधिनियम, 2016 के अंतर्गत, उन मामलों में जहाँ वस्तुओं या सेवाओं की आपूर्ति अंतर्राज्यीय व्यापार या वाणिज्य के दौरान होती है, GST पर कानून बनाने की अनन्य शक्ति किसके पास है?",
+   "opts": [
+    "NITI Ayog<br>नीति आयोग",
+    "Parliament<br>संसद",
+    "State Legislatures<br>राज्य विधानमंडल",
+    "President of India<br>भारत के राष्ट्रपति"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 269A(1) के तहत, अंतर्राज्यीय व्यापार या वाणिज्य के दौरान वस्तुओं या सेवाओं की आपूर्ति पर GST कानून बनाने की अनन्य शक्ति संसद के पास है।",
+   "trick": "अंतर्राज्यीय (Interstate) व्यापार = संसद (Parliament) की शक्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 101,
+   "lvl": "GL",
+   "en": "According to the 2025 Human Development Report, what was India’s Human Development Index (HDI) value for the year 2023?",
+   "hi": "2025 की मानव विकास रिपोर्ट के अनुसार, वर्ष 2023 में भारत का मानव विकास सूचकांक (HDI) मान क्या था?",
+   "opts": [
+    "0.683",
+    "0.685",
+    "0.676",
+    "0.672"
+   ],
+   "my_ans": "B",
+   "sol": "UNDP द्वारा जारी 2025 की मानव विकास रिपोर्ट के अनुसार, वर्ष 2023 के लिए भारत का HDI मान 0.685 है।",
+   "trick": "भारत का HDI मान 0.685 याद रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 102,
+   "lvl": "GL",
+   "en": "Where did the Pune Book Festival 2025 take place?",
+   "hi": "पुणे पुस्तक महोत्सव 2025 कहां आयोजित किया गया था?",
+   "opts": [
+    "Shaniwar Wada<br>शनिवार वाड़ा",
+    "Symbiosis Auditorium<br>सिम्बायोसिस ऑडिटोरियम",
+    "Fergusson College Grounds<br>फर्ग्यूसन कॉलेज ग्राउंड्स",
+    "Savitribai Phule University<br>सावित्रीबाई फुले यूनिवर्सिटी"
+   ],
+   "my_ans": "C",
+   "sol": "पुणे पुस्तक महोत्सव 2025 का आयोजन फर्ग्यूसन कॉलेज मैदान में किया गया था।",
+   "trick": "पुणे पुस्तक महोत्सव = फर्ग्यूसन कॉलेज मैदान।",
+   "ans": "C"
+  },
+  {
+   "n": 103,
+   "lvl": "GL",
+   "en": "Consider the following statements regarding Chandrapuram Ponnusamy Radhakrishnan. 1. He is the 24th and current Governor of Maharashtra since 31 July 2024. 2. Before becoming the Governor of Maharashtra, he served as the Governor of Jharkhand from February 2023 to July 2024. Which of the above statements is/are correct?",
+   "hi": "चंद्रपुरम पोन्नुसामी राधाकृष्णन के संबंध में निम्नलिखित कथनों पर विचार करें। 1. वे 31 जुलाई 2024 से महाराष्ट्र के 24वें और वर्तमान राज्यपाल हैं। 2. महाराष्ट्र का राज्यपाल बनने से पहले, उन्होंने फरवरी 2023 से जुलाई 2024 तक झारखंड के राज्यपाल के रूप में कार्य किया। उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+   "opts": [
+    "Neither 1 nor 2<br>न तो 1 और न ही 2",
+    "Both 1 and 2<br>दोनों 1 और 2",
+    "Only 2<br>केवल 2",
+    "Only 1<br>केवल 1"
+   ],
+   "my_ans": "B",
+   "sol": "सी.पी. राधाकृष्णन 31 जुलाई 2024 से महाराष्ट्र के राज्यपाल हैं और इससे पहले वे झारखंड के राज्यपाल थे। दोनों कथन सही हैं।",
+   "trick": "सी.पी. राधाकृष्णन: झारखंड से महाराष्ट्र के राज्यपाल।",
+   "ans": "B"
+  },
+  {
+   "n": 104,
+   "lvl": "GL",
+   "en": "Who is the author of the memoir 'Mother Mary Comes to Me' released in September 2025?",
+   "hi": "सितंबर 2025 में प्रकाशित संस्मरण 'मदर मैरी कम्स टू मी' किसने लिखा?",
+   "opts": [
+    "Jhumpa Lahiri<br>झुम्पा लाहिड़ी",
+    "Arundhati Roy<br>अरुंधति रॉय",
+    "Chetan Bhagat<br>चेतन भगत",
+    "Vikram Seth<br>विक्रम सेठ"
+   ],
+   "my_ans": "B",
+   "sol": "सितंबर 2025 में जारी संस्मरण 'मदर मैरी कम्स टू मी' की लेखिका प्रसिद्ध भारतीय लेखिका अरुंधति रॉय हैं।",
+   "trick": "अरुंधति रॉय = 'मदर मैरी कम्स टू मी'।",
+   "ans": "B"
+  },
+  {
+   "n": 105,
+   "lvl": "GL",
+   "en": "Which date marked World Mental Health Day in 2025, emphasizing access to mental health services during emergencies?",
+   "hi": "वर्ष 2025 में विश्व मानसिक स्वास्थ्य दिवस किस तिथि को मनाया गया, जिसमें आपात स्थितियों के दौरान मानसिक स्वास्थ्य सेवाओं तक पहुंच पर जोर दिया गया?",
+   "opts": [
+    "October 24, 2025<br>24 अक्टूबर, 2025",
+    "October 10, 2025<br>10 अक्टूबर, 2025",
+    "August 12, 2025<br>12 अगस्त, 2025",
+    "July 28, 2025<br>28 जुलाई, 2025"
+   ],
+   "my_ans": "B",
+   "sol": "विश्व मानसिक स्वास्थ्य दिवस प्रतिवर्ष 10 अक्टूबर को मनाया जाता है।",
+   "trick": "मानसिक स्वास्थ्य दिवस = 10 अक्टूबर।",
+   "ans": "B"
+  },
+  {
+   "n": 106,
+   "lvl": "GL",
+   "en": "In 2025, who was awarded the Nobel Peace Prize for her fearless advocacy of democracy, free elections, and peaceful transition from authoritarian rule in Venezuela?",
+   "hi": "वर्ष 2025 में, वेनेजुएला में लोकतंत्र, स्वतंत्र चुनाव और सत्तावादी शासन से शांतिपूर्ण संक्रमण के लिए उनके निर्भीक पक्ष-समर्थन हेतु किसे नोबेल शांति पुरस्कार से सम्मानित किया गया था?",
+   "opts": [
+    "Maria Corina Machado<br>मारिया कोरिना मचाडो",
+    "Leopoldo López<br>लियोपोल्डो लोपेज़",
+    "Michelle Bachelet<br>मिशेल बाचेलेट",
+    "Juan Guaidó<br>जुआन गुआइडो"
+   ],
+   "my_ans": "A",
+   "sol": "मारिया कोरिना मचाडो को वेनेजुएला में लोकतंत्र और स्वतंत्र चुनावों के लिए उनके संघर्ष हेतु 2025 का नोबेल शांति पुरस्कार दिया गया।",
+   "trick": "वेनेजुएला लोकतंत्र = मारिया कोरिना मचाडो।",
+   "ans": "A"
+  },
+  {
+   "n": 107,
+   "lvl": "GL",
+   "en": "As of December 2025, under the Pradhan Mantri Awas Yojana – Gramin (PMAY-G), what is the minimum size required for a house unit provided to beneficiaries?",
+   "hi": "दिसंबर 2025 तक की स्थिति के अनुसार, प्रधानमंत्री आवास योजना – ग्रामीण (PMAY-G) के अंतर्गत लाभार्थियों को प्रदान किए जाने वाले आवास इकाई के लिए आवश्यक न्यूनतम आकार कितना है?",
+   "opts": [
+    "25 sq. m",
+    "15 sq. m",
+    "20 sq. m",
+    "35 sq. m"
+   ],
+   "my_ans": "A",
+   "sol": "प्रधानमंत्री आवास योजना-ग्रामीण के तहत लाभार्थियों को दी जाने वाली आवास इकाई का न्यूनतम आकार 25 वर्ग मीटर निर्धारित है।",
+   "trick": "PMAY-G न्यूनतम आकार = 25 वर्ग मीटर।",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "592-594",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 89,
+   "lvl": "GL",
+   "en": "Which district in Mizoram was recognised as the best-performing district in NITI Aayog's SDG Index NE Districts 2023–24?",
+   "hi": "नीति आयोग के 'SDG इंडेक्स पूर्वोत्तर जिले 2023-24' में मिजोरम के किस जिले को सर्वश्रेष्ठ प्रदर्शन करने वाले जिले के रूप में मान्यता दी गई?",
+   "opts": [
+    "Hnahthial<br>ह्नाहथियाल",
+    "Aizawl<br>आईजोल",
+    "Champhai<br>चम्फाई",
+    "Lunglei<br>लुंगलेई"
+   ],
+   "my_ans": "A",
+   "sol": "नीति आयोग के SDG इंडेक्स (पूर्वोत्तर जिले 2023-24) में मिजोरम का ह्नाहथियाल जिला सर्वश्रेष्ठ प्रदर्शन करने वाला जिला रहा।",
+   "trick": "SDG इंडेक्स में ह्नाहथियाल (मिजोरम) शीर्ष पर।",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "GL",
+   "en": "In December 2025, which advanced brain stent was successfully trialed by AIIMS Delhi under the GRASSROOT trial?",
+   "hi": "दिसंबर 2025 में, AIIMS दिल्ली द्वारा ग्रासरूट (GRASSROOT) परीक्षण के तहत किस उन्नत ब्रेन स्टेंट का सफलतापूर्वक परीक्षण किया गया था?",
+   "opts": [
+    "Supernova stent<br>सुपरनोवा स्टेंट",
+    "OncoMark<br>ओन्कोमार्क",
+    "da Vinci<br>दा विंची",
+    "Vikram-I<br>विक्रम-I"
+   ],
+   "my_ans": "A",
+   "sol": "AIIMS दिल्ली में ग्रासरूट परीक्षण के तहत 'सुपरनोवा स्टेंट' का सफल परीक्षण किया गया, जो एक उन्नत न्यूरोवैस्कुलर उपकरण है।",
+   "trick": "ब्रेन स्टेंट = सुपरनोवा।",
+   "ans": "A"
+  },
+  {
+   "n": 91,
+   "lvl": "GL",
+   "en": "Which university signed a Memorandum of Understanding with the Defence Research and Development Organisation on 22 December 2025 to strengthen collaboration in defence and internal security research?",
+   "hi": "किस विश्वविद्यालय ने रक्षा और आंतरिक सुरक्षा अनुसंधान में सहयोग को सुदृढ़ करने के लिए 22 दिसंबर 2025 को रक्षा अनुसंधान एवं विकास संगठन (DRDO) के साथ समझौता ज्ञापन पर हस्ताक्षर किए?",
+   "opts": [
+    "Rashtriya Raksha University<br>राष्ट्रीय रक्षा यूनिवर्सिटी",
+    "Indian Institute of National Security Studies<br>इंडियन इंस्टीट्यूट ऑफ नेशनल सिक्योरिटी स्टडीज",
+    "Central University of Police Studies<br>सेंट्रल यूनिवर्सिटी ऑफ पुलिस स्टडीज",
+    "National Defence University<br>नेशनल डिफेंस यूनिवर्सिटी"
+   ],
+   "my_ans": "A",
+   "sol": "राष्ट्रीय रक्षा विश्वविद्यालय (RRU) ने रक्षा और आंतरिक सुरक्षा अनुसंधान में सहयोग के लिए DRDO के साथ समझौता ज्ञापन पर हस्ताक्षर किए।",
+   "trick": "RRU = राष्ट्रीय सुरक्षा और पुलिस अध्ययन।",
+   "ans": "A"
+  },
+  {
+   "n": 92,
+   "lvl": "GL",
+   "en": "According to the Banking Laws (Amendment) Act, 2025, the threshold for ‘substantial interest’ in a bank was revised from ₹5 lakh to which of the following amounts?",
+   "hi": "बैंकिंग कानून (संशोधन) अधिनियम, 2025 के अनुसार, बैंक में 'सबस्टेंशियल इंटरेस्ट (substantial interest)' की सीमा को ₹5 लाख से संशोधित करके निम्नलिखित में से कितनी राशि किया गया है?",
+   "opts": [
+    "₹1 crore<br>₹1 करोड़",
+    "₹5 crore<br>₹5 करोड़",
+    "₹50 lakh<br>₹50 लाख",
+    "₹2 crore<br>₹2 करोड़"
+   ],
+   "my_ans": "D",
+   "sol": "बैंकिंग कानून (संशोधन) अधिनियम, 2025 के तहत 'सबस्टेंशियल इंटरेस्ट' की सीमा को ₹5 लाख से बढ़ाकर ₹2 करोड़ कर दिया गया है।",
+   "trick": "सबस्टेंशियल इंटरेस्ट = 5 लाख से 2 करोड़।",
+   "ans": "D"
+  },
+  {
+   "n": 93,
+   "lvl": "GL",
+   "en": "Which mission, announced in August 2025, aims to provide India with a multi-layered indigenous air and missile defence system?",
+   "hi": "अगस्त 2025 में घोषित, किस मिशन का लक्ष्य भारत को बहुस्तरीय स्वदेशी वायु और मिसाइल रक्षा प्रणाली प्रदान करना है?",
+   "opts": [
+    "Integrated Air Defence Mission<br>एकीकृत वायु रक्षा मिशन",
+    "Mission Sudarshan Chakra<br>मिशन सुदर्शन चक्र",
+    "Agni Defence Initiative<br>अग्नि रक्षा पहल",
+    "Mission Shakti<br>मिशन शक्ति"
+   ],
+   "my_ans": "B",
+   "sol": "अगस्त 2025 में घोषित 'मिशन सुदर्शन चक्र' का उद्देश्य भारत को एक बहुस्तरीय स्वदेशी वायु और मिसाइल रक्षा प्रणाली प्रदान करना है।",
+   "trick": "सुदर्शन चक्र = बहुस्तरीय रक्षा प्रणाली।",
+   "ans": "B"
+  },
+  {
+   "n": 94,
+   "lvl": "GL",
+   "en": "What is the name of the powerful non-nuclear bomb unveiled by Turkey at the 17th International Defence Industry Fair (IDEF) in July 2025?",
+   "hi": "जुलाई 2025 में 17 वें इंटरनेशनल डिफेंस इंडस्ट्री फेयर (IDEF) में तुर्की द्वारा प्रदर्शित किए गए शक्तिशाली गैर-परमाणु बम का नाम क्या है?",
+   "opts": [
+    "Titan<br>टाइटन",
+    "Gazap<br>गज़ाप",
+    "Nebula<br>नेबुला",
+    "Phantom-X<br>फैंटम-X"
+   ],
+   "my_ans": "B",
+   "sol": "तुर्की ने जुलाई 2025 में IDEF में 'गज़ाप' (Gazap) नामक एक शक्तिशाली गैर-परमाणु बम का अनावरण किया।",
+   "trick": "तुर्की का बम = गज़ाप।",
+   "ans": "B"
+  },
+  {
+   "n": 95,
+   "lvl": "GL",
+   "en": "At UNEA-7, in December 2025, which initiative highlighted by India emphasizes individual and community action for environmental sustainability, contributing to SDG 12 (Responsible Consumption & Production) and SDG 13 (Climate Action)?",
+   "hi": "दिसंबर 2025 में UNEA-7 में, भारत द्वारा ऐसी किस पहल पर प्रकाश डाला गया है, जिसमें पर्यावरण संधारणीयता के लिए व्यक्तिगत और सामुदायिक कार्रवाई पर बल दिया गया है, जो SDG 12 (संवहनीय खपत और उत्पादन) और SDG 13 (जलवायु कार्रवाई) में योगदान करती है?",
+   "opts": [
+    "Make in India<br>मेक इन इंडिया",
+    "Digital India<br>डिजिटल इंडिया",
+    "Mission LiFE<br>मिशन लाइफ",
+    "Swachh Bharat Abhiyan<br>स्वच्छ भारत अभियान"
+   ],
+   "my_ans": "C",
+   "sol": "मिशन लाइफ (LiFE - Lifestyle for Environment) व्यक्तिगत और सामुदायिक व्यवहार परिवर्तन के माध्यम से पर्यावरण स्थिरता पर केंद्रित है।",
+   "trick": "पर्यावरण के लिए जीवनशैली = मिशन LiFE।",
+   "ans": "C"
+  },
+  {
+   "n": 96,
+   "lvl": "GL",
+   "en": "In 2025, which United Nations body released the Global Methane Status Report?",
+   "hi": "2025 में, संयुक्त राष्ट्र की किस संस्था ने ग्लोबल मीथेन स्टेटस रिपोर्ट (Global Methane Status Report) जारी की?",
+   "opts": [
+    "UN Framework Convention on Climate Change (UNFCCC)<br>जलवायु परिवर्तन पर संयुक्त राष्ट्र फ्रेमवर्क कन्वेंशन",
+    "World Meteorological Organization (WMO)<br>विश्व मौसम विज्ञान संगठन",
+    "UN Environment Programme (UNEP)<br>संयुक्त राष्ट्र पर्यावरण कार्यक्रम",
+    "Intergovernmental Panel on Climate Change (IPCC)<br>जलवायु परिवर्तन पर अंतर-सरकारी पैनल"
+   ],
+   "my_ans": "C",
+   "sol": "संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP) ने 2025 में ग्लोबल मीथेन स्टेटस रिपोर्ट जारी की, जो मीथेन उत्सर्जन पर नजर रखती है।",
+   "trick": "मीथेन रिपोर्ट = UNEP।",
+   "ans": "C"
+  },
+  {
+   "n": 97,
+   "lvl": "GL",
+   "en": "Which group at IIT Bombay developed the Quantum Diamond Microscope in November 2025?",
+   "hi": "नवंबर 2025 में IIT बॉम्बे के किस ग्रुप ने क्वांटम डायमंड माइक्रोस्कोप (Quantum Diamond Microscope) विकसित किया?",
+   "opts": [
+    "Quantum Leap Group<br>क्वांटम लीप ग्रुप",
+    "Vikas Research Group<br>विकास रिसर्च ग्रुप",
+    "P-Quest Group<br>पी-क्वेस्ट ग्रुप",
+    "NanoTech Group<br>नैनोटेक ग्रुप"
+   ],
+   "my_ans": "C",
+   "sol": "IIT बॉम्बे के 'पी-क्वेस्ट ग्रुप' (P-Quest Group) ने नवंबर 2025 में क्वांटम डायमंड माइक्रोस्कोप विकसित किया।",
+   "trick": "क्वांटम माइक्रोस्कोप = P-Quest ग्रुप।",
+   "ans": "C"
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "483-485",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 111,
+   "lvl": "UG",
+   "en": "A web browser such as Chrome is used to access the internet. This makes it a/an:",
+   "hi": "क्रोम (Chrome) जैसे वेब ब्राउजर का उपयोग इंटरनेट एक्सेस करने के लिए किया जाता है। इस प्रकार यह एक ___________ है।",
+   "opts": [
+    "Device troubleshooter<br>डिवाइस ट्रबलशूटर",
+    "Hardware<br>हार्डवेयर",
+    "Application software<br>एप्लीकेशन सॉफ्टवेयर",
+    "System software<br>सिस्टम सॉफ्टवेयर"
+   ],
+   "my_ans": "C",
+   "sol": "वेब ब्राउज़र (जैसे Chrome, Firefox) एक एप्लीकेशन सॉफ्टवेयर है जो इंटरनेट सर्फिंग और वेब सामग्री देखने के लिए उपयोग किया जाता है।",
+   "trick": "ब्राउज़र = एप्लीकेशन सॉफ्टवेयर (उपयोगकर्ता के विशिष्ट कार्यों के लिए)।",
+   "ans": "C"
+  },
+  {
+   "n": 112,
+   "lvl": "UG",
+   "en": "Which of the following key combinations is used to open the File menu in many applications?",
+   "hi": "कई एप्लीकेशनों में फ़ाइल मेनू (File menu) को ओपन करने के लिए निम्नलिखित में से किस कुंजी संयोजन (key combinations) का उपयोग किया जाता है?",
+   "opts": [
+    "Alt + Del",
+    "Alt + Insert",
+    "Alt + Tab",
+    "Alt + F"
+   ],
+   "my_ans": "D",
+   "sol": "अधिकांश विंडोज एप्लीकेशन में 'Alt + F' दबाने से फाइल मेनू खुलता है।",
+   "trick": "F = File, इसलिए Alt + F।",
+   "ans": "D"
+  },
+  {
+   "n": 113,
+   "lvl": "UG",
+   "en": "In a computer system, a running program stores currently required data in RAM. What does RAM stand for?",
+   "hi": "कंप्यूटर सिस्टम में, रन कर रहा प्रोग्राम वर्तमान आवश्यक डेटा को RAM में संग्रहित करता है। RAM का पूर्ण रूप क्या है?",
+   "opts": [
+    "Random Active Memory<br>रैंडम एक्टिव मेमोरी",
+    "Random Access Memory<br>रैंडम एक्सेस मेमोरी",
+    "Read Action Memory<br>रीड एक्शन मेमोरी",
+    "Random Access Mode<br>रैंडम एक्सेस मोड"
+   ],
+   "my_ans": "B",
+   "sol": "RAM का पूर्ण रूप Random Access Memory है। यह एक अस्थायी (volatile) मेमोरी है जो कंप्यूटर चालू रहने पर डेटा स्टोर करती है।",
+   "trick": "RAM = Random Access Memory (याद रखें)।",
+   "ans": "B"
+  },
+  {
+   "n": 114,
+   "lvl": "UG",
+   "en": "Which device is designed to integrate processing, memory, and input/output components into one compact unit?",
+   "hi": "कौन-सी युक्ति, प्रोसेसिंग, मेमोरी और इनपुट/आउटपुट घटकों को एक संहत एकक में एकीकृत करने के लिए अभिकल्पित की गई है?",
+   "opts": [
+    "Micro Board<br>माइक्रो बोर्ड",
+    "System Bus<br>सिस्टम बस",
+    "Microcontroller<br>माइक्रो-कंट्रोलर",
+    "Motherboard<br>मदरबोर्ड"
+   ],
+   "my_ans": "C",
+   "sol": "माइक्रो-कंट्रोलर एक छोटी चिप होती है जिसमें CPU, मेमोरी और I/O पोर्ट्स एक साथ एकीकृत होते हैं, जो एम्बेडेड सिस्टम में उपयोग होती है।",
+   "trick": "माइक्रो-कंट्रोलर = एक चिप पर सब कुछ।",
+   "ans": "C"
+  },
+  {
+   "n": 115,
+   "lvl": "UG",
+   "en": "Which of the following applications are supercomputers primarily used for?",
+   "hi": "निम्नलिखित में से किस अनुप्रयोग हेतु मुख्यतः सुपरकंप्यूटर का उपयोग किया जाता है?",
+   "opts": [
+    "Word processing<br>वर्ड प्रोसेसिंग",
+    "Internet browsing<br>इंटरनेट ब्राउज़िंग",
+    "Office automation<br>ऑफिस ऑटोमेशन",
+    "Complex mathematical calculations<br>जटिल गणितीय परिकलन"
+   ],
+   "my_ans": "D",
+   "sol": "सुपरकंप्यूटर का उपयोग बहुत अधिक डेटा और जटिल गणनाओं (जैसे मौसम पूर्वानुमान, वैज्ञानिक अनुसंधान) के लिए किया जाता है।",
+   "trick": "सुपरकंप्यूटर = जटिल गणनाओं का राजा।",
+   "ans": "D"
+  },
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "A computer lab server handles login requests from many students at the same time without confusion. Which characteristic does this scenario mainly highlight?",
+   "hi": "एक कंप्यूटर लैब सर्वर एक साथ कई छात्रों के लॉगिन अनुरोधों को बिना भ्रम के संभालता है। यह परिदृश्य मुख्य रूप से किस विशेषता को दर्शाता है?",
+   "opts": [
+    "Lack of memory",
+    "Versatility only",
+    "Multitasking and reliability",
+    "Portability"
+   ],
+   "my_ans": "C",
+   "sol": "एक साथ कई कार्यों को संभालना 'मल्टीटास्किंग' है और बिना त्रुटि के काम करना 'विश्वसनीयता' (reliability) है।",
+   "trick": "एक साथ कई काम = मल्टीटास्किंग।",
+   "ans": "C",
+   "fix_tries": 0
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "What does RAM stand for in a computer system?",
+   "hi": "कंप्यूटर सिस्टम में RAM का पूर्ण रूप क्या है?",
+   "opts": [
+    "Read Access Memory<br>रीड एक्सेस मेमोरी",
+    "Random Allocation Memory<br>रैंडम एलोकेशन मेमोरी",
+    "Random Access Memory<br>रैंडम एक्सेस मेमोरी",
+    "Read-Only Access Memory<br>रीड-ओनली एक्सेस मेमोरी"
+   ],
+   "my_ans": "C",
+   "sol": "RAM का अर्थ Random Access Memory है। यह कंप्यूटर की मुख्य अस्थायी मेमोरी है।",
+   "trick": "RAM = Random Access Memory।",
+   "ans": "C"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "The CPU mainly performs which of the following functions?",
+   "hi": "CPU मुख्य रूप से निम्नलिखित में से कौन-सा कार्य करता है?",
+   "opts": [
+    "Processing and control<br>प्रोसेसिंग और कंट्रोल",
+    "Storage and output<br>स्टोरेज और आउटपुट",
+    "Display and storage<br>डिस्प्ले और स्टोरेज",
+    "Input and calculation<br>इनपुट और कैलकुलेशन"
+   ],
+   "my_ans": "A",
+   "sol": "CPU कंप्यूटर का मस्तिष्क है जो निर्देशों को प्रोसेस करता है और सभी ऑपरेशन्स को नियंत्रित (Control) करता है।",
+   "trick": "CPU = Processing + Control।",
+   "ans": "A"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which component of the Central Processing Unit (CPU) is responsible for performing calculations and logical comparisons?",
+   "hi": "सेंट्रल प्रोसेसिंग यूनिट (CPU) का कौन-सा घटक, गणना और लॉजिकल कम्पेरिजन करने के लिए उत्तरदायी है?",
+   "opts": [
+    "Arithmetic Logic Unit (ALU)<br>अरिथमेटिक लॉजिक यूनिट (ALU)",
+    "Main Memory (RAM)<br>मेन मेमोरी (RAM)",
+    "Register<br>रजिस्टर",
+    "Control Unit (CU)<br>कंट्रोल यूनिट (CU)"
+   ],
+   "my_ans": "A",
+   "sol": "ALU (Arithmetic Logic Unit) का कार्य गणितीय गणना (+, -, *, /) और तार्किक तुलना (>, <, =) करना है।",
+   "trick": "ALU = Arithmetic (गणित) + Logic (तर्क)।",
+   "ans": "A"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "The statement \"A computer can work tirelessly and consistently for long periods without losing concentration\" represents which characteristics of the computer?",
+   "hi": "यह कथन कि \"कंप्यूटर बिना एकाग्रता खोए लंबे समय तक अथक और निरंतर कार्य कर सकता है\" कंप्यूटर की कौन-सी विशेषता को दर्शाता है?",
+   "opts": [
+    "Diligence<br>डिलिजेंस (परिश्रम)",
+    "Speed<br>स्पीड (गति)",
+    "Accuracy<br>एक्यूरेसी (सटीकता)",
+    "Versatility<br>वर्सटिलिटी (बहुमुखी प्रतिभा)"
+   ],
+   "my_ans": "A",
+   "sol": "बिना थके या बोर हुए लगातार काम करने की कंप्यूटर की क्षमता को 'डिलिजेंस' (परिश्रम) कहा जाता है।",
+   "trick": "बिना थके काम = डिलिजेंस (Diligence)।",
+   "ans": "A"
+  }
+ ]
+}

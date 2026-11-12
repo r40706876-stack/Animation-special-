@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "265-267",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 129,
+   "lvl": "GL",
+   "en": "Consider the following statements regarding the Finance Commission. 1. It is a quasi-judicial body. 2. It is related to Article 280. 3. It is constituted by the President. 4. It is constituted after each 6 years. Which of the above statements is/are correct.",
+   "hi": "वित्त आयोग के संदर्भ में निम्नलिखित कथनों पर विचार करें। 1. यह एक अर्ध-न्यायिक निकाय है। 2. यह अनुच्छेद 280 से संबंधित है। 3. इसका गठन राष्ट्रपति द्वारा किया जाता है। 4. इसका गठन प्रत्येक 6 वर्ष के बाद किया जाता है। उपरोक्त में से कौन-सा/से कथन सही है/हैं।",
+   "opts": [
+    "Only 4<br>केवल 4",
+    "2 and 3 only<br>केवल 2 और 3",
+    "1 and 2 only<br>केवल 1 और 2",
+    "1, 2, and 3 only<br>केवल 1, 2 और 3"
+   ],
+   "my_ans": "D",
+   "sol": "वित्त आयोग का गठन राष्ट्रपति द्वारा अनुच्छेद 280 के तहत हर 5 साल में किया जाता है, 6 साल में नहीं। यह एक अर्ध-न्यायिक निकाय है।",
+   "trick": "वित्त आयोग = अनुच्छेद 280, हर 5 साल में गठन।",
+   "ans": "D"
+  },
+  {
+   "n": 130,
+   "lvl": "GL",
+   "en": "Which Article of the Indian Constitution empowers the Supreme Court to review any judgment pronounced or order made by it?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, सर्वोच्च न्यायालय को उसके द्वारा सुनाए गए किसी भी निर्णय या दिए गए आदेश के पुनर्विलोकन का अधिकार देता है?",
+   "opts": [
+    "Article 145<br>अनुच्छेद 145",
+    "Article 141<br>अनुच्छेद 141",
+    "Article 136<br>अनुच्छेद 136",
+    "Article 137<br>अनुच्छेद 137"
+   ],
+   "my_ans": "D",
+   "sol": "अनुच्छेद 137 सर्वोच्च न्यायालय को अपने स्वयं के निर्णयों या आदेशों की समीक्षा (पुनर्विलोकन) करने की शक्ति प्रदान करता है।",
+   "trick": "137 = समीक्षा (Review) की शक्ति।",
+   "ans": "D"
+  },
+  {
+   "n": 131,
+   "lvl": "GL",
+   "en": "The National Commission for Scheduled Tribes (NCST) was created by which Constitutional Amendment?",
+   "hi": "राष्ट्रीय अनुसूचित जनजाति आयोग (NCST) का गठन किस संवैधानिक संशोधन द्वारा किया गया था?",
+   "opts": [
+    "97th Amendment<br>97 वें संशोधन",
+    "89th Amendment<br>89 वें संशोधन",
+    "102nd Amendment<br>102 वें संशोधन",
+    "65th Amendment<br>65 वें संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "89वें संविधान संशोधन अधिनियम, 2003 द्वारा अनुच्छेद 338 को विभाजित कर राष्ट्रीय अनुसूचित जनजाति आयोग (NCST) के लिए अनुच्छेद 338A बनाया गया।",
+   "trick": "89वां संशोधन = NCST का गठन।",
+   "ans": "B"
+  },
+  {
+   "n": 132,
+   "lvl": "GL",
+   "en": "Which amendment to the Indian constitution provided a special status to the Union Territory of Delhi, and redesignated it the National Capital Territory of Delhi?",
+   "hi": "भारतीय संविधान के किस संशोधन ने दिल्ली केंद्र शासित प्रदेश को विशेष दर्जा प्रदान किया और इसे दिल्ली राष्ट्रीय राजधानी क्षेत्र के रूप में पुनः नामित किया?",
+   "opts": [
+    "68th Constitutional Amendment<br>68वां संविधान संशोधन",
+    "70th Constitutional Amendment<br>70वां संविधान संशोधन",
+    "69th Constitutional Amendment<br>69वां संविधान संशोधन",
+    "71st Constitutional Amendment<br>71वां संविधान संशोधन"
+   ],
+   "my_ans": "C",
+   "sol": "69वें संविधान संशोधन अधिनियम, 1991 के तहत दिल्ली को 'राष्ट्रीय राजधानी क्षेत्र' (NCT) का विशेष दर्जा दिया गया और विधानसभा का प्रावधान किया गया।",
+   "trick": "69वां संशोधन = दिल्ली को विशेष दर्जा।",
+   "ans": "C"
+  },
+  {
+   "n": 133,
+   "lvl": "GL",
+   "en": "According to the Citizenship Act, 1955, a person born outside India on or after December 10, 1992, shall be a citizen of India by descent if:",
+   "hi": "नागरिकता अधिनियम, 1955 के अनुसार, 10 दिसंबर, 1992 को या उसके बाद भारत के बाहर पैदा हुआ व्यक्ति वंश के आधार पर भारत का नागरिक होगा यदि ______ ।",
+   "opts": [
+    "Either parent is a citizen of India at the time of birth<br>जन्म के समय माता-पिता में से कोई एक भारत का नागरिक हो",
+    "Both parents are ordinarily resident in India at the time of birth<br>जन्म के समय माता-पिता दोनों भारत में सामान्य रूप से निवासी हो",
+    "Only the mother is an Indian citizen<br>केवल माँ ही भारतीय नागरिक हो",
+    "Only the father is an Indian citizen<br>केवल पिता भारतीय नागरिक हो"
+   ],
+   "my_ans": "A",
+   "sol": "1992 के संशोधन के बाद, वंश के आधार पर नागरिकता के लिए जन्म के समय माता या पिता में से किसी एक का भारतीय नागरिक होना पर्याप्त है।",
+   "trick": "वंश = माता या पिता में से कोई एक।",
+   "ans": "A"
+  },
+  {
+   "n": 134,
+   "lvl": "GL",
+   "en": "Which of the following Acts granted Delhi, the National Capital Territory, a legislative assembly?",
+   "hi": "निम्नलिखित में से किस अधिनियम के अंतर्गत यह प्रावधान किया गया कि राष्ट्रीय राजधानी क्षेत्र दिल्ली की एक अपनी विधानसभा होगी?",
+   "opts": [
+    "Union Territories Act, 1963<br>केंद्र शासित प्रदेश अधिनियम, 1963",
+    "Delhi Governance Act, 2001<br>दिल्ली शासन अधिनियम, 2001",
+    "Government of NCT of Delhi Act, 1991<br>राष्ट्रीय राजधानी क्षेत्र दिल्ली सरकार अधिनियम, 1991",
+    "Delhi Administration Act, 1987<br>दिल्ली प्रशासन अधिनियम, 1987"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रीय राजधानी क्षेत्र दिल्ली सरकार अधिनियम, 1991 ने दिल्ली के लिए 70 सदस्यीय विधानसभा और मुख्यमंत्री के नेतृत्व वाली मंत्रिपरिषद का प्रावधान किया।",
+   "trick": "1991 का अधिनियम = दिल्ली विधानसभा।",
+   "ans": "C"
+  },
+  {
+   "n": 135,
+   "lvl": "GL",
+   "en": "Consider the following statements. 1. Before the Prime Minister enters upon his office, the President administers to him the oaths of office and secrecy. 2. The President can dismiss the Prime Minister at any time in an arbitrary way. 3. If the Prime Minister loses the confidence of the Lok Sabha, he must resign or the President can dismiss him. Which of the above statements is/are correct?",
+   "hi": "निम्नलिखित कथनों पर विचार करें। 1. प्रधानमंत्री के पदभार ग्रहण करने से पहले, राष्ट्रपति उसे पद और गोपनीयता की शपथ दिलाता है। 2. राष्ट्रपति किसी भी समय विवेकाधीन तरीके से प्रधानमंत्री को बर्खास्त कर सकता है। 3. यदि प्रधानमंत्री लोकसभा का विश्वास खो देता है, तो उसे इस्तीफा देना होगा या राष्ट्रपति उसे बर्खास्त कर सकता है। उपरोक्त कथनों में से कौन-सा/से कथन सही है/हैं?",
+   "opts": [
+    "2 and 3 only<br>केवल 2 और 3",
+    "1 and 2 only<br>केवल 1 और 2",
+    "1 and 3 only<br>केवल 1 और 3",
+    "1 only<br>केवल 1"
+   ],
+   "my_ans": "C",
+   "sol": "राष्ट्रपति प्रधानमंत्री को मनमाने ढंग से बर्खास्त नहीं कर सकते; प्रधानमंत्री लोकसभा के विश्वास तक पद पर बने रहते हैं। कथन 1 और 3 सही हैं।",
+   "trick": "PM = लोकसभा का विश्वास।",
+   "ans": "C"
+  },
+  {
+   "n": 136,
+   "lvl": "GL",
+   "en": "Which Schedule of the Indian Constitution deals with the allocation of seats in the Rajya Sabha to States and Union Territories?",
+   "hi": "भारतीय संविधान की कौन-सी अनुसूची, राज्यसभा में राज्यों और केंद्र शासित प्रदेशों को सीटों के आवंटन से संबंधित है?",
+   "opts": [
+    "Second Schedule<br>दूसरी अनुसूची",
+    "First Schedule<br>पहली अनुसूची",
+    "Sixth Schedule<br>छठी अनुसूची",
+    "Fourth Schedule<br>चौथी अनुसूची"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान की चौथी अनुसूची में राज्यसभा में राज्यों और केंद्र शासित प्रदेशों के लिए सीटों के आवंटन का विवरण दिया गया है।",
+   "trick": "चौथी अनुसूची = राज्यसभा सीटें।",
+   "ans": "D"
+  }
+ ]
+}

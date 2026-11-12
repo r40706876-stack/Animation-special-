@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "156-158",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 88,
+   "lvl": "GL",
+   "en": "Identify the southernmost atomic/nuclear power station of India from the following options.",
+   "hi": "निम्नलिखित विकल्पों में से भारत के सबसे दक्षिणी परमाणु/नाभिकीय पावर स्टेशन की पहचान कीजिए।",
+   "opts": [
+    "Kakrapar Atomic Power Station<br>काकरापार एटॉमिक पावर स्टेशन",
+    "Madras Atomic Power Station<br>मद्रास एटॉमिक पावर स्टेशन",
+    "Narora Atomic Power Station<br>नरौरा एटॉमिक पावर स्टेशन",
+    "Kudankulam Nuclear Power Station<br>कुडनकुलम न्यूक्लियर पावर स्टेशन"
+   ],
+   "my_ans": "D",
+   "sol": "कुडनकुलम परमाणु ऊर्जा स्टेशन तमिलनाडु के तिरुनेलवेली जिले में स्थित है, जो भारत का सबसे दक्षिणी और सबसे बड़ा परमाणु ऊर्जा केंद्र है।",
+   "trick": "कुडनकुलम = दक्षिणतम (तमिलनाडु)",
+   "ans": "D"
+  },
+  {
+   "n": 89,
+   "lvl": "GL",
+   "en": "A rise in the sea surface temperature in the Pacific Ocean accompanied by deficient rainfall in India is associated with which of the following phenomena?",
+   "hi": "भारत में कम वर्षा के साथ प्रशांत महासागर में समुद्र पृष्ठ ताप में वृद्धि निम्नलिखित में से किस घटना से संबंधित है?",
+   "opts": [
+    "Chi Nina<br>ची नीना",
+    "Pro Nino<br>प्रो निनो",
+    "Sa Nina<br>सा नीना",
+    "El Nino<br>एल नीनो"
+   ],
+   "my_ans": "D",
+   "sol": "एल नीनो के दौरान प्रशांत महासागर का तापमान बढ़ने से भारत में मानसूनी हवाएं कमजोर हो जाती हैं, जिससे कम वर्षा और सूखा पड़ता है।",
+   "trick": "एल नीनो = सूखा (भारत में)",
+   "ans": "D"
+  },
+  {
+   "n": 90,
+   "lvl": "GL",
+   "en": "The Golden Quadrilateral connects which of the following cities?",
+   "hi": "स्वर्णिम चतुर्भुज निम्नलिखित में से किन शहरों को जोड़ता है?",
+   "opts": [
+    "Chennai, Bangalore, Hyderabad, Kolkata<br>चेन्नई, बैंगलोर, हैदराबाद, कोलकाता",
+    "Delhi, Mumbai, Chennai, Kolkata<br>दिल्ली, मुंबई, चेन्नई, कोलकाता",
+    "Delhi, Bhopal, Ahmedabad, Mumbai<br>दिल्ली, भोपाल, अहमदाबाद, मुंबई",
+    "Mumbai, Pune, Hyderabad, Bangalore<br>मुंबई, पुणे, हैदराबाद, बैंगलोर"
+   ],
+   "my_ans": "B",
+   "sol": "स्वर्णिम चतुर्भुज परियोजना भारत के चार प्रमुख महानगरों दिल्ली, मुंबई, चेन्नई और कोलकाता को जोड़ती है।",
+   "trick": "चार दिशाएं: दिल्ली (उत्तर), मुंबई (पश्चिम), चेन्नई (दक्षिण), कोलकाता (पूर्व)",
+   "ans": "B"
+  },
+  {
+   "n": 91,
+   "lvl": "GL",
+   "en": "Which type of soil is most suitable for cotton cultivation in India?",
+   "hi": "भारत में कपास की खेती के लिए किस प्रकार की मृदा सबसे उपयुक्त है?",
+   "opts": [
+    "Red soil<br>लाल मृदा",
+    "Black soil<br>काली मृदा",
+    "Laterite soil<br>लैटेराइट मृदा",
+    "Alluvial soil<br>जलोढ़ मृदा"
+   ],
+   "my_ans": "B",
+   "sol": "काली मिट्टी (रेगुर मिट्टी) में नमी धारण करने की क्षमता अधिक होती है, जो कपास की खेती के लिए सबसे आदर्श है।",
+   "trick": "काली मिट्टी = कपास की मिट्टी",
+   "ans": "B"
+  },
+  {
+   "n": 92,
+   "lvl": "GL",
+   "en": "Which of the following are Plantation crops respectively in Assam and Karnataka?",
+   "hi": "निम्नलिखित में से कौन-सी क्रमशः असम और कर्नाटक में उगाई जाने वाली बागान फसलें (Plantation crops) हैं?",
+   "opts": [
+    "Sugarcane and mustard<br>गन्ना और सरसों",
+    "Barley and ragi<br>जौ और रागी",
+    "Tea and coffee<br>चाय और कॉफी",
+    "Rice and wheat<br>चावल और गेहूँ"
+   ],
+   "my_ans": "C",
+   "sol": "असम अपनी चाय के बागानों के लिए और कर्नाटक अपने कॉफी के बागानों (पश्चिमी घाट) के लिए विश्व प्रसिद्ध है।",
+   "trick": "असम = चाय, कर्नाटक = कॉफी",
+   "ans": "C"
+  },
+  {
+   "n": 93,
+   "lvl": "GL",
+   "en": "Which U.S. state experiences a Mediterranean climate that supports the cultivation of fruits, vegetables, and vineyards?",
+   "hi": "U.S. के किस राज्य में भूमध्यसागरीय जलवायु पाई जाती है, जो फलों, सब्जियों और अंगूर के बागानों (Vineyards) की खेती के लिए अनुकूल है?",
+   "opts": [
+    "Alaska<br>अलास्का",
+    "Florida<br>फ्लोरिडा",
+    "Texas<br>टेक्सास",
+    "California<br>कैलिफोर्निया"
+   ],
+   "my_ans": "D",
+   "sol": "कैलिफोर्निया में भूमध्यसागरीय जलवायु पाई जाती है, जहाँ गर्म-शुष्क ग्रीष्मकाल और हल्की-नम सर्दियाँ फलों और अंगूर की खेती के लिए उत्तम हैं।",
+   "trick": "कैलिफोर्निया = भूमध्यसागरीय जलवायु",
+   "ans": "D"
+  },
+  {
+   "n": 94,
+   "lvl": "GL",
+   "en": "Which of the following monsoon systems is also known as the retreating monsoon?",
+   "hi": "निम्नलिखित में से किस मानसून तंत्र को निवर्तनी मानसून (retreating monsoon) भी कहा जाता है?",
+   "opts": [
+    "Northeast Monsoon<br>पूर्वोत्तर मानसून",
+    "Advancing Monsoon<br>अग्रगामी मानसून",
+    "Western Disturbances<br>पश्चिमी विक्षोभ",
+    "Southwest Monsoon<br>दक्षिण-पश्चिम मानसून"
+   ],
+   "my_ans": "A",
+   "sol": "अक्टूबर-दिसंबर के दौरान जब दक्षिण-पश्चिम मानसून वापस लौटता है, तो उसे उत्तर-पूर्वी मानसून या लौटता हुआ (निवर्तनी) मानसून कहते हैं।",
+   "trick": "लौटना = उत्तर-पूर्व",
+   "ans": "A"
+  },
+  {
+   "n": 95,
+   "lvl": "GL",
+   "en": "Which of the following countries is India’s nearest neighbour in the northwest?",
+   "hi": "निम्नलिखित में से कौन-सा देश, उत्तर-पश्चिम में भारत का सबसे निकटतम पड़ोसी है?",
+   "opts": [
+    "Pakistan<br>पाकिस्तान",
+    "Nepal<br>नेपाल",
+    "China<br>चीन",
+    "Bhutan<br>भूटान"
+   ],
+   "my_ans": "A",
+   "sol": "भारत के उत्तर-पश्चिम में पाकिस्तान स्थित है, जो भारत के साथ थल सीमा साझा करता है।",
+   "trick": "उत्तर-पश्चिम = पाकिस्तान",
+   "ans": "A"
+  },
+  {
+   "n": 96,
+   "lvl": "GL",
+   "en": "Which of the following sectors of the western coastal plain extends between Mumbai and Goa?",
+   "hi": "पश्चिमी तटीय मैदान का निम्नलिखित में से कौन-सा क्षेत्र मुंबई और गोवा के बीच स्थित है?",
+   "opts": [
+    "Karnataka Coast<br>कर्नाटक तट",
+    "Malabar Coast<br>मालाबार तट",
+    "Coromandal Coast<br>कोरोमंडल तट",
+    "Konkan Coast<br>कोंकण तट"
+   ],
+   "my_ans": "D",
+   "sol": "पश्चिमी तटीय मैदान का कोंकण तट मुंबई से गोवा तक फैला है, जबकि कर्नाटक तट गोवा से मंगलौर तक है।",
+   "trick": "कोंकण = मुंबई से गोवा",
+   "ans": "D"
+  },
+  {
+   "n": 97,
+   "lvl": "GL",
+   "en": "Chilika Lake spans across which three districts of Odisha?",
+   "hi": "चिल्का झील ओडिशा के किन तीन जिलों में फैली हुई है?",
+   "opts": [
+    "Khurda, Balasore and Ganjam<br>खुर्दा, बालासोर और गंजम",
+    "Puri, Jagatsinghpur and Khurda<br>पुरी, जगतसिंहपुर और खुर्दा",
+    "Cuttack, Puri and Kendrapara<br>कटक, पुरी और केंद्रपाड़ा",
+    "Puri, Khurda and Ganjam<br>पुरी, खुर्दा और गंजम"
+   ],
+   "my_ans": "D",
+   "sol": "चिल्का झील ओडिशा की सबसे बड़ी खारे पानी की झील है, जो पुरी, खुर्दा और गंजम जिलों में फैली है।",
+   "trick": "चिल्का = पुरी, खुर्दा, गंजम",
+   "ans": "D"
+  },
+  {
+   "n": 98,
+   "lvl": "GL",
+   "en": "The splitting of the ancient Indo–Brahma river into the Indus, Ganga, and Brahmaputra drainage systems is believed to have been primarily caused by which geological event?",
+   "hi": "प्राचीन इंडो-ब्रह्मा नदी का सिंधु, गंगा और ब्रह्मपुत्र जल निकासी प्रणालियों में विभाजन मुख्य रूप से किस भूवैज्ञानिक घटना के कारण हुआ माना जाता है?",
+   "opts": [
+    "Volcanic eruptions<br>ज्वालामुखीय उद्भेदन",
+    "Pleistocene upheaval<br>अत्यंतनूतन प्रोत्थान",
+    "Glacial melting<br>हिमनदीय गलन",
+    "River capture by erosion<br>अपरदन द्वारा नदी प्रग्रहण"
+   ],
+   "my_ans": "B",
+   "sol": "हिमालय के उत्थान (Pleistocene upheaval) के कारण इंडो-ब्रह्मा नदी का मार्ग बाधित हुआ और वह तीन अलग-अलग नदी प्रणालियों में विभाजित हो गई।",
+   "trick": "विभाजन = अत्यंतनूतन प्रोत्थान (Pleistocene upheaval)",
+   "ans": "B"
+  }
+ ]
+}

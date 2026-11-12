@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "207-207",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 268,
+   "lvl": "UG",
+   "en": "Which statement accurately explains the nature of the Inter Tropical Convergence Zone (ITCZ)?",
+   "hi": "अंतर उष्णकटिबंधीय अभिसरण क्षेत्र (ITCZ) की प्रकृति को कौन सा कथन सटीक रूप से समझाता है?",
+   "opts": [
+    "It forms a cold frontal region near the Himalayan ranges.<br>यह हिमालय पर्वतमाला के पास एक शीत वाताग्र क्षेत्र बनाता है।",
+    "It is an equatorial low-pressure belt where trade winds meet.<br>यह एक भूमध्यरेखीय निम्न-दाब पेटी है जहाँ व्यापारिक पवनें मिलती हैं।",
+    "It marks a westerly wind system close to the Tropic of Capricorn.<br>यह मकर रेखा के पास एक पछुआ पवन प्रणाली को चिह्नित करता है।",
+    "It represents a zone of high pressure located near the poles.<br>यह ध्रुवों के पास स्थित उच्च दबाव का एक क्षेत्र है।"
+   ],
+   "my_ans": "B",
+   "sol": "ITCZ भूमध्य रेखा के पास स्थित एक निम्न-दाब क्षेत्र है, जहाँ उत्तरी और दक्षिणी गोलार्ध की व्यापारिक पवनें आपस में मिलती हैं।",
+   "trick": "ITCZ = भूमध्य रेखा + निम्न दाब + व्यापारिक पवनों का मिलन।",
+   "ans": "B"
+  },
+  {
+   "n": 269,
+   "lvl": "UG",
+   "en": "Which of the following geographical factors most directly influences the location and growth of human settlements?",
+   "hi": "निम्नलिखित में से कौन सा भौगोलिक कारक मानव बस्तियों के स्थान और विकास को सबसे अधिक प्रभावित करता है?",
+   "opts": [
+    "Availability of fresh water<br>ताजे पानी की उपलब्धता",
+    "Distance from the equator<br>भूमध्य रेखा से दूरी",
+    "Shape of nearby hills<br>आसपास की पहाड़ियों का आकार",
+    "Color of local soil<br>स्थानीय मिट्टी का रंग"
+   ],
+   "my_ans": "A",
+   "sol": "मानव सभ्यता के विकास के लिए पीने, कृषि और स्वच्छता हेतु ताजे पानी की उपलब्धता सबसे प्राथमिक और अनिवार्य आवश्यकता रही है।",
+   "trick": "जल ही जीवन है, इसलिए बस्तियाँ हमेशा जल स्रोतों के पास बसीं।",
+   "ans": "A"
+  },
+  {
+   "n": 270,
+   "lvl": "UG",
+   "en": "Which continent is entirely in the Southern and Eastern Hemispheres?",
+   "hi": "कौन सा महाद्वीप, संपूर्णतया दक्षिणी और पूर्वी गोलार्ध में स्थित है?",
+   "opts": [
+    "Africa<br>अफ्रीका",
+    "Europe<br>यूरोप",
+    "Australia<br>ऑस्ट्रेलिया",
+    "Asia<br>एशिया"
+   ],
+   "my_ans": "C",
+   "sol": "ऑस्ट्रेलिया महाद्वीप पूरी तरह से भूमध्य रेखा के दक्षिण (दक्षिणी गोलार्ध) और प्रधान मध्याह्न रेखा के पूर्व (पूर्वी गोलार्ध) में स्थित है।",
+   "trick": "ऑस्ट्रेलिया = दक्षिण + पूर्व में स्थित अकेला महाद्वीप।",
+   "ans": "C"
+  },
+  {
+   "n": 271,
+   "lvl": "UG",
+   "en": "Which of the following islands/island groups of India is of coral origin?",
+   "hi": "निम्नलिखित में से भारत का कौन-सा द्वीप/द्वीप समूह प्रवाल भित्ति (coral origin) से निर्मित है?",
+   "opts": [
+    "Diu Island<br>दीव द्वीप",
+    "Lakshadweep Islands<br>लक्षद्वीप द्वीप समूह",
+    "Nicobar Islands<br>निकोबार द्वीप समूह",
+    "Andaman Islands<br>अंडमान द्वीप समूह"
+   ],
+   "my_ans": "B",
+   "sol": "लक्षद्वीप समूह का निर्माण मूंगों (प्रवाल भित्तियों) के जमाव से हुआ है, जबकि अंडमान और निकोबार द्वीप समूह मुख्य रूप से ज्वालामुखी मूल के हैं।",
+   "trick": "लक्षद्वीप = प्रवाल (Coral) द्वीप।",
+   "ans": "B"
+  }
+ ]
+}

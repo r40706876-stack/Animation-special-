@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "44-46",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "In the Mansabdari system introduced by Akbar, the term Mansab refers to which of the following?",
+   "hi": "अकबर द्वारा शुरू की गई मनसबदारी प्रणाली में, 'मनसब' शब्द का क्या अर्थ है?",
+   "opts": [
+    "Rank or position of an official<br>एक अधिकारी का पद या रैंक",
+    "Standardized land revenue assessment<br>मानकीकृत भू-राजस्व मूल्यांकन",
+    "Spiritual leadership program<br>आध्यात्मिक नेतृत्व कार्यक्रम",
+    "Calendar for revenue collection<br>राजस्व संग्रह के लिए कैलेंडर"
+   ],
+   "my_ans": "A",
+   "sol": "मनसब एक फारसी शब्द है जिसका अर्थ 'पद' या 'रैंक' होता है। अकबर ने सैन्य और नागरिक प्रशासन को व्यवस्थित करने के लिए इसे लागू किया था।",
+   "trick": "मनसब = रैंक (पद)",
+   "ans": "A"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which feature of the 10th-century CE Lingaraja Temple in Bhubaneswar reflects the Nagara architectural style?",
+   "hi": "भुवनेश्वर में स्थित 10वीं शताब्दी ईस्वी के लिंगराज मंदिर की कौन-सी विशेषता नागर स्थापत्य शैली को दर्शाती है?",
+   "opts": [
+    "Curvilinear shikhara tower<br>वक्रनुमा शिखर मीनार",
+    "Stepped pyramid vimana<br>सोपानी पिरामिडनुमा विमान",
+    "Ornate gopuram entrance<br>सुशोभित गोपुरम प्रवेश द्वार",
+    "Circular stupa dome<br>वृत्ताकार स्तूप गुंबद"
+   ],
+   "my_ans": "A",
+   "sol": "नागर शैली की मुख्य विशेषता गर्भगृह के ऊपर वक्राकार शिखर (टावर) का होना है, जो मधुमक्खी के छत्ते जैसा दिखता है।",
+   "trick": "नागर शैली = वक्राकार शिखर",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which of the following administrative innovations is attributed to Alauddin Khilji’s reign?",
+   "hi": "निम्नलिखित में से कौन-सा प्रशासनिक नवाचार अलाउद्दीन खिलजी के शासनकाल से संबंधित है?",
+   "opts": [
+    "Foundation of Diwan-i-Arz for military reforms<br>सैन्य सुधारों के लिए दीवान-ए-अर्ज की नींव",
+    "Regulation of market prices and rationing<br>बाजार कीमतों और राशन-व्यवस्था का विनियमन",
+    "Establishment of iqta system<br>इक्ता व्यवस्था की स्थापना",
+    "Creation of mansabdari system<br>मनसबदारी व्यवस्था का निर्माण"
+   ],
+   "my_ans": "B",
+   "sol": "अलाउद्दीन खिलजी ने अपनी सेना के खर्च और अर्थव्यवस्था को स्थिर करने के लिए बाजार नियंत्रण और राशन प्रणाली लागू की थी।",
+   "trick": "अलाउद्दीन = बाजार नियंत्रण",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Why is the Paika Rebellion of Odisha regarded as distinct among early anti-colonial uprisings in terms of the social background and traditional functions of its participants?",
+   "hi": "ओडिशा के पाइका विद्रोह को इसके प्रतिभागियों की सामाजिक पृष्ठभूमि और पारंपरिक कार्यों के संदर्भ में प्रारंभिक उपनिवेश-विरोधी विद्रोहों के बीच विशिष्ट क्यों माना जाता है?",
+   "opts": [
+    "It was driven mainly by urban craft guilds and traders<br>यह मुख्य रूप से शहरी शिल्प संघों और व्यापारियों द्वारा संचालित था।",
+    "It was led by hereditary militia with local administrative roles<br>इसका नेतृत्व स्थानीय प्रशासनिक भूमिकाओं वाली वंशागत नागरिक सेना द्वारा किया गया था।",
+    "It was organised by large zamindars seeking revenue concessions<br>इसे राजस्व रियायतें चाहने वाले बड़े ज़मींदारों द्वारा संगठित किया गया था।",
+    "It depended on support from foreign mercenary forces<br>यह विदेशी भृतक सैनिकों के समर्थन पर निर्भर था।"
+   ],
+   "my_ans": "B",
+   "sol": "पाइका एक पारंपरिक सैन्य वर्ग था जो राजाओं के अधीन सैन्य और प्रशासनिक कार्य करता था, अंग्रेजों द्वारा उनकी जमीन छीनने पर उन्होंने विद्रोह किया।",
+   "trick": "पाइका = वंशागत सैन्य वर्ग",
+   "ans": "B"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "Which 16th-century CE heritage site near Agra was commissioned by Emperor Akbar as a planned capital city?",
+   "hi": "आगरा के निकट 16वीं शताब्दी CE के किस विरासत स्थल को सम्राट अकबर ने एक नियोजित राजधानी शहर के रूप में अधिकृत किया था?",
+   "opts": [
+    "Taj Mahal<br>ताजमहल",
+    "Fatehpur Sikri<br>फतेहपुर सीकरी",
+    "Agra Fort<br>आगरा किला",
+    "Akbar’s Tomb<br>अकबर का मकबरा"
+   ],
+   "my_ans": "B",
+   "sol": "अकबर ने 1571 में फतेहपुर सीकरी को अपनी राजधानी के रूप में बसाया था, जिसे बाद में पानी की कमी के कारण छोड़ दिया गया।",
+   "trick": "अकबर की राजधानी = फतेहपुर सीकरी",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "What was the dominant type of economy in the Harappan heartland?",
+   "hi": "हड़प्पा हार्टलैंड (Harappan heartland) में किस प्रकार की अर्थव्यवस्था प्रमुख थी?",
+   "opts": [
+    "Trade-based economy<br>व्यापार-आधारित अर्थव्यवस्था",
+    "Agro-pastoral<br>कृषि-पशुचारणिक",
+    "Hunting-gathering<br>शिकार-संग्रह",
+    "Spiritual-centric<br>आध्यात्मिक-केंद्रित"
+   ],
+   "my_ans": "B",
+   "sol": "हड़प्पा सभ्यता की अर्थव्यवस्था का मुख्य आधार कृषि (गेहूं, जौ) और पशुपालन था, व्यापार इसके पूरक के रूप में मौजूद था।",
+   "trick": "हड़प्पा = कृषि + पशुपालन",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which term is used to describe the conflict between the Gurjara-Pratiharas, Palas, and Rashtrakutas over the control of northern India?",
+   "hi": "उत्तरी भारत पर नियंत्रण को लेकर गुर्जर-प्रतिहारों, पालों और राष्ट्रकूटों के बीच हुए संघर्ष का वर्णन करने के लिए किस शब्द का उपयोग किया जाता है?",
+   "opts": [
+    "Chakravartin<br>चक्रवर्तिन्",
+    "Dharmayuddha<br>धर्मयुद्ध",
+    "Mahasangram<br>महासंग्राम",
+    "Tripartite<br>त्रिपक्षीय"
+   ],
+   "my_ans": "D",
+   "sol": "कन्नौज पर अधिकार के लिए तीन प्रमुख राजवंशों (गुर्जर-प्रतिहार, पाल, राष्ट्रकूट) के बीच लगभग 200 वर्षों तक चले संघर्ष को त्रिपक्षीय संघर्ष कहा जाता है।",
+   "trick": "तीन पक्ष = त्रिपक्षीय संघर्ष",
+   "ans": "D"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "What is a significant feature of Indian architecture related to caves?",
+   "hi": "गुफाओं से संबंधित भारतीय वास्तुकला की एक महत्वपूर्ण विशेषता क्या है?",
+   "opts": [
+    "Excavation of caves for religious purposes<br>धार्मिक प्रयोजनों के लिए गुफाओं का उत्खनन",
+    "Use of marble in construction<br>निर्माण में संगमरमर का उपयोग",
+    "Influence of European architecture<br>यूरोपीय वास्तुकला का प्रभाव",
+    "Development of skyscrapers<br>गगनचुंबी इमारतों का विकास"
+   ],
+   "my_ans": "A",
+   "sol": "प्राचीन भारत में चट्टानों को काटकर गुफाएं बनाई जाती थीं, जिनका उपयोग बौद्ध, हिंदू और जैन भिक्षुओं द्वारा पूजा और ध्यान के लिए किया जाता था।",
+   "trick": "गुफा = धार्मिक उत्खनन",
+   "ans": "A"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "The weekly journal Young India was associated with whom among the following?",
+   "hi": "साप्ताहिक पत्रिका यंग इंडिया निम्नलिखित में से किससे संबंधित थी?",
+   "opts": [
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Gopal Krishna Gokhale<br>गोपाल कृष्ण गोखले"
+   ],
+   "my_ans": "A",
+   "sol": "यंग इंडिया पत्रिका 1919 में महात्मा गांधी द्वारा शुरू की गई थी, जिसका उपयोग वे अपने विचारों और अहिंसक आंदोलन को बढ़ावा देने के लिए करते थे।",
+   "trick": "यंग इंडिया = गांधी",
+   "ans": "A"
+  }
+ ]
+}

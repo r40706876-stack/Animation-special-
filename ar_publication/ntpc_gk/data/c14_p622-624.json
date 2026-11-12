@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "622-624",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 189,
+   "lvl": "UG",
+   "en": "Which state government in March 2025 has passed the Coaching Centres (Control and Regulation) Bill 2025, which aims to regulate coaching centres across the state?",
+   "hi": "मार्च 2025 में, किस राज्य सरकार ने कोचिंग सेंटर (नियंत्रण एवं विनियमन) विधेयक 2025 पारित किया है, जिसका उद्देश्य राज्य भर में कोचिंग सेंटरों को विनियमित करना है?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Kerala<br>केरल",
+    "Madhya Pradesh<br>मध्य-प्रदेश",
+    "Andhra Pradesh<br>आंध्र प्रदेश"
+   ],
+   "my_ans": "A",
+   "sol": "राजस्थान सरकार ने मार्च 2025 में कोचिंग सेंटरों के शुल्क, बुनियादी ढांचे और छात्र सुरक्षा को विनियमित करने के लिए यह विधेयक पारित किया।",
+   "trick": "कोचिंग विनियमन विधेयक 2025 = राजस्थान",
+   "ans": "A"
+  },
+  {
+   "n": 190,
+   "lvl": "UG",
+   "en": "In May 2025, what operation did India launch, involving missile and drone strikes in Pakistan, that escalated tensions significantly?",
+   "hi": "मई 2025 में, भारत ने पाकिस्तान में मिसाइल और ड्रोन हमलों से जुड़ा कौन-सा अभियान चलाया, जिससे तनाव काफी बढ़ गया?",
+   "opts": [
+    "Operation Sunrise<br>ऑपरेशन सनराइज",
+    "Operation Horizon<br>ऑपरेशन होराइजन",
+    "Operation Trident<br>ऑपरेशन ट्राइडेंट",
+    "Operation Sindoor<br>ऑपरेशन सिन्दूर"
+   ],
+   "my_ans": "D",
+   "sol": "मई 2025 में भारत द्वारा पाकिस्तान के खिलाफ किए गए समन्वित मिसाइल और ड्रोन हमलों के अभियान को 'ऑपरेशन सिन्दूर' नाम दिया गया था।",
+   "trick": "पाकिस्तान पर 2025 का हमला = ऑपरेशन सिन्दूर",
+   "ans": "D"
+  },
+  {
+   "n": 191,
+   "lvl": "UG",
+   "en": "As reiterated by the Supreme Court of India in September 2025, under which legislation does a Tribunal have the authority to order the eviction of a child from the property of a senior citizen in cases of failure to maintain them?",
+   "hi": "सितंबर 2025 में, भारत के सर्वोच्च न्यायालय द्वारा दोहराए गए कथन के अनुसार, किस कानून के अंतर्गत किसी न्यायाधिकरण को वरिष्ठ नागरिक की संपत्ति से बच्चों को बेदखल करने का आदेश देने का अधिकार है, यदि वे वरिष्ठ नागरिक का भरणपोषण करने में विफल रहते हैं?",
+   "opts": [
+    "Maintenance and Welfare of Parents and Senior Citizens Act, 2006<br>माता-पिता और वरिष्ठ नागरिकों का भरणपोषण तथा कल्याण अधिनियम, 2006",
+    "Maintenance and Welfare of Parents and Senior Citizens Act, 2009<br>माता-पिता और वरिष्ठ नागरिकों का भरणपोषण तथा कल्याण अधिनियम, 2009",
+    "Maintenance and Welfare of Parents and Senior Citizens Act, 2007<br>माता-पिता और वरिष्ठ नागरिकों का भरणपोषण तथा कल्याण अधिनियम, 2007",
+    "Maintenance and Welfare of Parents and Senior Citizens Act, 2008<br>माता-पिता और वरिष्ठ नागरिकों का भरणपोषण तथा कल्याण अधिनियम, 2008"
+   ],
+   "my_ans": "C",
+   "sol": "माता-पिता और वरिष्ठ नागरिकों का भरण-पोषण और कल्याण अधिनियम, 2007 वरिष्ठ नागरिकों को कानूनी सुरक्षा देता है और बच्चों को बेदखल करने का अधिकार देता है।",
+   "trick": "वरिष्ठ नागरिक सुरक्षा कानून = 2007",
+   "ans": "C"
+  },
+  {
+   "n": 192,
+   "lvl": "UG",
+   "en": "Arundhati Roy’s first full-length memoir, published in 2025, is titled:",
+   "hi": "अरुंधति रॉय का पहला पूर्ण संस्मरण (full-length memoir), जो 2025 में प्रकाशित हुआ, उसका शीर्षक _______ है।",
+   "opts": [
+    "Notes from a Small Town<br>नोट्स फ्रॉम ए स्मॉल टाउन",
+    "Mother Mary Comes To Me<br>मदर मैरी कम्स टु मी",
+    "Walking with the Ants<br>वाकिंग विड्थ द ऑन्ट्स",
+    "The Ministry of Lost Stories<br>द मिनिस्ट्री ऑफ लॉस्ट स्टोरीज"
+   ],
+   "my_ans": "B",
+   "sol": "प्रसिद्ध लेखिका अरुंधति रॉय ने 2025 में अपना पहला पूर्ण संस्मरण 'मदर मैरी कम्स टू मी' प्रकाशित किया, जो उनकी व्यक्तिगत यात्रा पर आधारित है।",
+   "trick": "अरुंधति रॉय 2025 संस्मरण = मदर मैरी कम्स टू मी",
+   "ans": "B"
+  },
+  {
+   "n": 193,
+   "lvl": "UG",
+   "en": "Who is the author of the book \"The Great Conciliator: Lal Bahadur Shastri and the Transformation of India,\" which was launched in April 2025?",
+   "hi": "अप्रैल 2025 में विमोचित पुस्तक \"द ग्रेट कॉन्सिलिएटर: लाल बहादुर शास्त्री एंड द ट्रांसफॉर्मेशन ऑफ इंडिया\" के लेखक कौन हैं?",
+   "opts": [
+    "Arun Singhal and Devendra Kumar Sharma<br>अरुण सिंघल और देवेंद्र कुमार शर्मा",
+    "P.S. Raman<br>पी.एस. रमन",
+    "Rosie Thomas<br>रोजी थॉमस",
+    "Sanjeev Chopra<br>संजीव चोपड़ा"
+   ],
+   "my_ans": "D",
+   "sol": "यह पुस्तक संजीव चोपड़ा द्वारा लिखी गई है, जो लाल बहादुर शास्त्री के नेतृत्व और आधुनिक भारत के निर्माण में उनकी भूमिका को दर्शाती है।",
+   "trick": "शास्त्री जी पर 2025 पुस्तक = संजीव चोपड़ा",
+   "ans": "D"
+  },
+  {
+   "n": 194,
+   "lvl": "UG",
+   "en": "Which Indian naval ship is taking part in the Malabar exercise for the Quad Naval Drill in November 2025?",
+   "hi": "नवंबर 2025 में हुए क्वाड नेवल ड्रिल (Quad Naval Drill) के लिए मालाबार अभ्यास में किस भारतीय नौसैनिक जहाज ने भाग लिया?",
+   "opts": [
+    "INS Kolkata<br>आईएनएस कोलकाता",
+    "INS Shivalik<br>आईएनएस शिवालिक",
+    "INS Sahyadri<br>आईएनएस सह्याद्री",
+    "INS Vikrant<br>आईएनएस विक्रांत"
+   ],
+   "my_ans": "C",
+   "sol": "आईएनएस सह्याद्री, जो शिवालिक-श्रेणी का स्टील्थ फ्रिगेट है, ने नवंबर 2025 के मालाबार अभ्यास में भाग लिया।",
+   "trick": "मालाबार 2025 = आईएनएस सह्याद्री",
+   "ans": "C"
+  },
+  {
+   "n": 195,
+   "lvl": "UG",
+   "en": "As per RTI Rules 2012, a person below poverty line is liable to pay what amount as application fee to file an RTI?",
+   "hi": "RTI नियम 2012 के अनुसार, गरीबी रेखा से नीचे के व्यक्ति को RTI दाखिल करने के लिए आवेदन शुल्क के रूप में कितनी धनराशि का भुगतान करना होता है?",
+   "opts": [
+    "₹2",
+    "₹5",
+    "₹10",
+    "No payment<br>कोई भुगतान नहीं"
+   ],
+   "my_ans": "D",
+   "sol": "RTI अधिनियम के तहत गरीबी रेखा से नीचे (BPL) के व्यक्तियों को आवेदन शुल्क से छूट प्राप्त है, उन्हें केवल BPL प्रमाण पत्र देना होता है।",
+   "trick": "BPL के लिए RTI शुल्क = शून्य",
+   "ans": "D"
+  },
+  {
+   "n": 196,
+   "lvl": "UG",
+   "en": "What was the primary objective of Exercise INDRA, 2025?",
+   "hi": "अभ्यास INDRA, 2025 का प्राथमिक उद्देश्य क्या था?",
+   "opts": [
+    "To enhance maritime tourism<br>समुद्री पर्यटन को बढ़ावा देना",
+    "To improve interoperability against maritime threats<br>समुद्री खतरों के विरुद्ध अंतरप्रचालनीयता में सुधार करना",
+    "To conduct submarine repair training<br>पनडुब्बी मरम्मत प्रशिक्षण आयोजित करना",
+    "To develop joint aircraft manufacturing<br>संयुक्त विमान निर्माण को विकसित करना"
+   ],
+   "my_ans": "B",
+   "sol": "इंद्र 2025 भारत और रूस के बीच एक संयुक्त नौसैनिक अभ्यास था, जिसका मुख्य उद्देश्य समुद्री खतरों के खिलाफ दोनों नौसेनाओं की कार्यक्षमता को बेहतर बनाना था।",
+   "trick": "इंद्र अभ्यास = समुद्री सुरक्षा अंतरप्रचालनीयता",
+   "ans": "B"
+  },
+  {
+   "n": 197,
+   "lvl": "UG",
+   "en": "What is the title of the book, released in April 2025 in New Delhi, that compiles Prime Minister Narendra Modi’s speeches on culture?",
+   "hi": "अप्रैल 2025 में नई दिल्ली में प्रकाशित उस पुस्तक का शीर्षक क्या है, जिसमें प्रधानमंत्री नरेंद्र मोदी के संस्कृति पर दिए गए भाषणों का संकलन किया गया है?",
+   "opts": [
+    "Sanskriti Ke Shilpkar<br>संस्कृति के शिल्पकार",
+    "Modi on Culture and Heritage<br>संस्कृति और विरासत पर मोदी",
+    "Sanskriti Ka Panchva Adhyay<br>संस्कृति का पांचवा अध्याय",
+    "Bharat Ki Sanskritik Yatra<br>भारत की सांस्कृतिक यात्रा"
+   ],
+   "my_ans": "C",
+   "sol": "प्रधानमंत्री नरेंद्र मोदी के संस्कृति पर दिए गए भाषणों का संकलन 'संस्कृति का पांचवा अध्याय' पुस्तक में किया गया है, जिसे प्रकाशन विभाग ने जारी किया।",
+   "trick": "मोदी संस्कृति भाषण पुस्तक = संस्कृति का पांचवा अध्याय",
+   "ans": "C"
+  },
+  {
+   "n": 198,
+   "lvl": "UG",
+   "en": "According to the Union Budget 2025-26, the government announced the establishment of a Maritime Development Fund with a corpus of:",
+   "hi": "केंद्रीय बजट 2025-26 के अनुसार, सरकार ने कितनी धनराशि के साथ एक समुद्री विकास कोष की स्थापना करने की घोषणा की है?",
+   "opts": [
+    "₹25,000 crore<br>₹25,000 करोड़",
+    "₹30,000 crore<br>₹30,000 करोड़",
+    "₹35,000 crore<br>₹35,000 करोड़",
+    "₹20,000 crore<br>₹20,000 करोड़"
+   ],
+   "my_ans": "A",
+   "sol": "केंद्रीय बजट 2025-26 में समुद्री क्षेत्र के विकास के लिए ₹25,000 करोड़ के कोष के साथ 'समुद्री विकास कोष' की स्थापना की घोषणा की गई।",
+   "trick": "समुद्री विकास कोष = 25,000 करोड़",
+   "ans": "A"
+  }
+ ]
+}

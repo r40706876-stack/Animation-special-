@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "398-400",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "In physical science, understanding the dimension of a quantity helps to analyze formulas and relationships between variables. Which set of dimensions correctly represents the physical quantity 'force' in terms of mass, length, and time?",
+   "hi": "भौतिक विज्ञान में, किसी राशि की विमा को समझने से सूत्रों और चरों के बीच संबंधों का विश्लेषण करने में सहायता मिलती है। द्रव्यमान, लंबाई और समय के पदों में विमाओं का कौन-सा सेट, भौतिक राशि 'बल' को सही रूप से निरूपित करता है?",
+   "opts": [
+    "mass × length × time<br>द्रव्यमान × लंबाई × समय",
+    "mass × length × time²<br>द्रव्यमान × लंबाई × समय²",
+    "mass × length² × time⁻¹<br>द्रव्यमान × लंबाई² × समय⁻¹",
+    "mass × length × time⁻²<br>द्रव्यमान × लंबाई × समय⁻²"
+   ],
+   "my_ans": "D",
+   "sol": "बल = द्रव्यमान × त्वरण होता है। त्वरण की विमा [LT⁻²] होती है, इसलिए बल की विमा [MLT⁻²] होगी।",
+   "trick": "बल की विमा याद रखें: [MLT⁻²]",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "Heat generated in an electrical resistor is measured in which SI unit?",
+   "hi": "विद्युत प्रतिरोधक में उत्पन्न ऊष्मा को किस SI मात्रक में मापा जाता है?",
+   "opts": [
+    "Volt<br>वोल्ट",
+    "Joule<br>जूल",
+    "Coulomb<br>कूलाम",
+    "Watt<br>वाट"
+   ],
+   "my_ans": "B",
+   "sol": "ऊष्मा ऊर्जा का एक रूप है, इसलिए इसका SI मात्रक जूल (Joule) होता है।",
+   "trick": "ऊर्जा का कोई भी रूप हो, मात्रक जूल ही होगा।",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "In a classroom discussion about the measurement of work and energy, students are asked to identify the correct SI unit and dimensional formula for these quantities. Which option best represents units for both work or energy?",
+   "hi": "कार्य और ऊर्जा के मापन पर एक कक्षा चर्चा में, छात्रों से इन राशियों के लिए सही SI मात्रक और विमीय सूत्र की पहचान करने को कहा जाता है। कौन-सा विकल्प, कार्य या ऊर्जा दोनों के मात्रकों को सर्वोत्तम रूप से निरूपित करता है?",
+   "opts": [
+    "pascal and M L⁻¹ T⁻²<br>पास्कल और M L⁻¹ T⁻²",
+    "watt and M L² T⁻³<br>वाट और M L² T⁻³",
+    "newton and M L T⁻²<br>न्यूटन और M L T⁻²",
+    "joule and M L² T⁻²<br>जूल और M L² T⁻²"
+   ],
+   "my_ans": "D",
+   "sol": "कार्य = बल × विस्थापन होता है। इसका SI मात्रक जूल है और विमीय सूत्र [ML²T⁻²] है।",
+   "trick": "कार्य और ऊर्जा का मात्रक और विमा समान होते हैं।",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "How does increasing the Amplitude of a sound wave affect the sound produced?",
+   "hi": "ध्वनि तरंग के आयाम को बढ़ाने से उत्पन्न ध्वनि पर क्या प्रभाव पड़ता है?",
+   "opts": [
+    "The speed of the sound increases<br>ध्वनि की चाल बढ़ जाती है",
+    "The frequency decreases<br>आवृत्ति कम हो जाती है",
+    "The pitch increases<br>पिच बढ़ जाती है",
+    "The loudness increases<br>ध्वनि प्रबलता बढ़ जाती है"
+   ],
+   "my_ans": "D",
+   "sol": "ध्वनि तरंग का आयाम उसकी तीव्रता या प्रबलता (Loudness) को निर्धारित करता है। आयाम बढ़ने से ध्वनि तेज सुनाई देती है।",
+   "trick": "ज्यादा आयाम = ज्यादा प्रबलता (Loudness)",
+   "ans": "D"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "In a sound wave traveling through air, which of the following terms refers to a region where the particles are crowded together, resulting in high pressure and high density?",
+   "hi": "ध्वनि तरंग में, निम्नलिखित में से कौन सा शब्द उस क्षेत्र को संदर्भित करता है जहां कण एक साथ भीड़ में होते हैं, जिसके परिणामस्वरूप उच्च दबाव और उच्च घनत्व होता है?",
+   "opts": [
+    "Crest<br>शिखर",
+    "Wavelength<br>तरंगदैर्ध्य",
+    "Rarefaction<br>विरलन",
+    "Compression<br>संपीडन"
+   ],
+   "my_ans": "D",
+   "sol": "संपीडन (Compression) वह क्षेत्र है जहाँ ध्वनि तरंग के कण पास-पास होते हैं, जिससे उच्च दाब और घनत्व बनता है।",
+   "trick": "संपीडन = पास-पास (उच्च दाब)",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Pressure is measured in which SI unit?",
+   "hi": "दाब को किस SI यूनिट में मापा जाता है?",
+   "opts": [
+    "N/m",
+    "m²/N",
+    "N·m",
+    "N/m²"
+   ],
+   "my_ans": "D",
+   "sol": "दाब = बल / क्षेत्रफल होता है। बल का मात्रक न्यूटन (N) और क्षेत्रफल का वर्ग मीटर (m²) है, अतः दाब N/m² (पास्कल) है।",
+   "trick": "दाब = बल/क्षेत्रफल",
+   "ans": "D"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "Which optical instrument is used to correct the eye defect known as Hypermetropia (or long-sightedness), where light focuses behind the retina?",
+   "hi": "किस प्रकाशिक यंत्र का उपयोग हाइपरमेट्रोपिया (या दीर्घ-दृष्टि) नामक नेत्र दोष को ठीक करने के लिए किया जाता है जिसमें प्रकाश दृष्टि पटल (रेटिना) के पीछे फोकस होता है?",
+   "opts": [
+    "Concave Lens<br>अवतल लेन्स",
+    "Photochromic Lenses<br>फोटोक्रोमिक लेन्स",
+    "Cylindrical Lens<br>बेलनाकार लेन्स",
+    "Convex Lens<br>उत्तल लेन्स"
+   ],
+   "my_ans": "D",
+   "sol": "दूर-दृष्टि दोष (Hypermetropia) में प्रकाश रेटिना के पीछे बनता है, इसे ठीक करने के लिए उत्तल लेंस का उपयोग किया जाता है।",
+   "trick": "दूर = उत्तल (उत्तल में 3 अक्षर, दूर में 2, याद रखने हेतु)",
+   "ans": "D"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "What minimum distance should the reflecting surface be for an echo to be heard?",
+   "hi": "प्रतिध्वनि (echo) सुनाई देने के लिए परावर्तक सतह की न्यूनतम दूरी कितनी होनी चाहिए?",
+   "opts": [
+    "10 m",
+    "17.2 m",
+    "5 m",
+    "34.2 m"
+   ],
+   "my_ans": "B",
+   "sol": "प्रतिध्वनि के लिए ध्वनि को जाने और आने में कम से कम 0.1 सेकंड का समय चाहिए। 344 m/s की चाल से कुल दूरी 34.4 मीटर होती है, अतः एक तरफ की दूरी 17.2 मीटर है।",
+   "trick": "न्यूनतम दूरी = 17.2 मीटर",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Which quantities influence the kinetic energy of a moving body?",
+   "hi": "गतिमान पिंड की गतिज ऊर्जा को कौन-कौन सी राशियां प्रभावित करती है?",
+   "opts": [
+    "Only velocity<br>केवल वेग",
+    "Only mass<br>केवल द्रव्यमान",
+    "Its shape<br>इसका आकार",
+    "Both mass and velocity<br>द्रव्यमान और वेग दोनों"
+   ],
+   "my_ans": "D",
+   "sol": "गतिज ऊर्जा का सूत्र KE = ½mv² है। यह पिंड के द्रव्यमान (m) और वेग (v) दोनों पर निर्भर करती है।",
+   "trick": "KE = ½mv²",
+   "ans": "D"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "In which of the following cases is the work done negative?",
+   "hi": "निम्नलिखित में से किस स्थिति में किया गया कार्य ऋणात्मक होता है?",
+   "opts": [
+    "Force and displacement are between 0° and 90°<br>बल और विस्थापन 0° और 90° के बीच हैं",
+    "Force and displacement are between 90° and 180°<br>बल और विस्थापन 90° और 180° के बीच हैं",
+    "Force and displacement are in the same direction<br>बल और विस्थापन एक ही दिशा में हैं",
+    "Force and displacement are mutually perpendicular<br>बल और विस्थापन परस्पर लंबवत हैं"
+   ],
+   "my_ans": "B",
+   "sol": "कार्य का सूत्र W = Fd cos θ है। जब बल और विस्थापन के बीच का कोण 90° से 180° के बीच होता है, तो cos θ ऋणात्मक होता है, जिससे कार्य भी ऋणात्मक होता है।",
+   "trick": "90° से अधिक कोण = ऋणात्मक कार्य",
+   "ans": "B"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "According to Joule’s law of heating, heat produced in a resistor is expressed by which relation?",
+   "hi": "जूल के ऊष्मा नियम के अनुसार, प्रतिरोधक में उत्पन्न ऊष्मा को किस संबंध द्वारा व्यक्त किया जाता है?",
+   "opts": [
+    "H = I²Rt",
+    "H = Vt",
+    "H = V/I",
+    "H = IR"
+   ],
+   "my_ans": "A",
+   "sol": "जूल के नियम के अनुसार, प्रतिरोधक में उत्पन्न ऊष्मा (H) धारा के वर्ग, प्रतिरोध और समय के गुणनफल के बराबर होती है (H = I²Rt)।",
+   "trick": "H = I²Rt (जूल का नियम)",
+   "ans": "A"
+  }
+ ]
+}

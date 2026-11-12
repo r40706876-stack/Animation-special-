@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "61-63",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which European power was the last to arrive in India and the last to leave during the pre-independence period?",
+   "hi": "स्वतंत्रता-पूर्व काल में भारत में सबसे अंत में आने वाली और सबसे अंत में जाने वाली यूरोपीय शक्ति कौन-सी थी?",
+   "opts": [
+    "Portuguese<br>पुर्तगाली",
+    "French<br>फ़्रांसीसी",
+    "Americans<br>अमेरिकी",
+    "Dutch<br>डच"
+   ],
+   "my_ans": "A",
+   "sol": "पुर्तगाली सबसे पहले (1498) आए थे और 1961 में गोवा से सबसे अंत में गए।",
+   "trick": "पुर्तगाली: सबसे पहले आए, सबसे अंत में गए।",
+   "ans": "A"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "A book published in 2025, authored by Narendra Modi and titled 'The Emergency Diaries – Years That Forged a Leader', is thematically associated with which of the following periods in Indian political history?",
+   "hi": "नरेंद्र मोदी द्वारा लिखित और 'द इमरजेंसी डायरीज – इयर्स दैट फॉर्ज्ड ए लीडर' शीर्षक से 2025 में प्रकाशित पुस्तक, भारतीय राजनीतिक इतिहास के निम्नलिखित में से किस कालावधि से संबंधित है?",
+   "opts": [
+    "1975–1977",
+    "1962–1965",
+    "1989–1991",
+    "1969–1971"
+   ],
+   "my_ans": "A",
+   "sol": "यह पुस्तक भारत में इंदिरा गांधी द्वारा घोषित आपातकाल (25 जून 1975 से 21 मार्च 1977) के दौर पर आधारित है।",
+   "trick": "इमरजेंसी = 1975-77",
+   "ans": "A"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "Select the INCORRECT combination of the books and their respective authors.",
+   "hi": "पुस्तकों और उनके संबंधित लेखकों के गलत संयोजन का चयन कीजिए।",
+   "opts": [
+    "Baburnama – Babur<br>बाबरनामा – बाबर",
+    "Gita Govinda – Jayadeva Goswami<br>गीत गोविन्द – जयदेव गोस्वामी",
+    "Tughlaq Nama – Abul Fazal<br>तुगलक नामा – अबुल फजल",
+    "Prithiviraj Raso – Chand Bardai<br>पृथ्वीराज रासो – चंदबरदाई"
+   ],
+   "my_ans": "C",
+   "sol": "तुगलक नामा अमीर खुसरो द्वारा लिखी गई थी, अबुल फजल द्वारा नहीं।",
+   "trick": "तुगलक नामा = अमीर खुसरो",
+   "ans": "C"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "In which year did the Vellore Mutiny take place?",
+   "hi": "वेल्लोर विद्रोह (Vellore Mutiny) किस वर्ष हुआ था?",
+   "opts": [
+    "1806 CE<br>1806 ईस्वी",
+    "1799 CE<br>1799 ईस्वी",
+    "1857 CE<br>1857 ईस्वी",
+    "1817 CE<br>1817 ईस्वी"
+   ],
+   "my_ans": "A",
+   "sol": "वेल्लोर विद्रोह 10 जुलाई 1806 को हुआ था, जो 1857 के विद्रोह से पहले का एक बड़ा सैन्य विद्रोह था।",
+   "trick": "वेल्लोर = 1806",
+   "ans": "A"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "Who among the following leaders founded the Indian National Association in 1876?",
+   "hi": "किन नेताओं ने 1876 में 'इंडियन नेशनल एसोसिएशन (Indian National Association)' की स्थापना की थी?",
+   "opts": [
+    "Surendranath Banerjee and Ananda Mohan Bose<br>सुरेंद्रनाथ बनर्जी और आनंद मोहन बोस",
+    "Dadabhai Naoroji and Gopal Krishna Gokhale<br>दादाभाई नौरोजी और गोपाल कृष्ण गोखले",
+    "Bal Gangadhar Tilak and Bipin Chandra Pal<br>बाल गंगाधर तिलक और बिपिन चंद्र पाल",
+    "Dadabhai Naoroji and Debendranath Tagore<br>दादाभाई नौरोजी और देबेंद्रनाथ टैगोर"
+   ],
+   "my_ans": "A",
+   "sol": "इंडियन नेशनल एसोसिएशन की स्थापना 1876 में सुरेंद्रनाथ बनर्जी और आनंद मोहन बोस ने की थी।",
+   "trick": "INA (1876) = सुरेंद्रनाथ + आनंद मोहन",
+   "ans": "A"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "In which city was the World Conference on Cultural Policies and Sustainable Development – MONDIACULT 2025 held?",
+   "hi": "विश्व सांस्कृतिक नीति एवं सतत विकास सम्मेलन – MONDIACULT 2025 किस शहर में आयोजित किया गया था?",
+   "opts": [
+    "Paris, France<br>पेरिस, फ्रांस",
+    "Rome, Italy<br>रोम, इटली",
+    "Barcelona, Spain<br>बार्सिलोना, स्पेन",
+    "Madrid, Spain<br>मैड्रिड, स्पेन"
+   ],
+   "my_ans": "C",
+   "sol": "MONDIACULT 2025 सम्मेलन का आयोजन बार्सिलोना, स्पेन में किया गया था।",
+   "trick": "MONDIACULT 2025 = बार्सिलोना",
+   "ans": "C"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Behramji Merwanji Malabari, a Parsi social reformer, is credited for his efforts with the legislative enactment related to which of the following social evils?",
+   "hi": "पारसी समाज सुधारक बहरामजी मेरवानजी मालाबारी को निम्नलिखित में से किस सामाजिक कुरीति से संबंधित विधायी अधिनियम के लिए श्रेय दिया जाता है?",
+   "opts": [
+    "Child marriage<br>बाल विवाह",
+    "Untouchability<br>अस्पृश्यता",
+    "Widow burning or sati<br>विधवा को जलाने या सती",
+    "Female infanticide<br>बालिका शिशु हत्या"
+   ],
+   "my_ans": "A",
+   "sol": "मालाबारी के प्रयासों से 1891 का 'सहमति आयु अधिनियम' पारित हुआ, जिसने बाल विवाह को रोकने में मदद की।",
+   "trick": "मालाबारी = बाल विवाह",
+   "ans": "A"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Which of the following ministers was the Commander of the entire military under the king during the Mughal rule?",
+   "hi": "मुगल शासन के दौरान निम्नलिखित में से कौन-सा मंत्री, राजा के अधीन संपूर्ण सेना का सेनापति था?",
+   "opts": [
+    "Sadr-us-Sudur<br>सद्र-उस-सुदूर",
+    "Mir Saman<br>मीर सामाँ",
+    "Mir Bakshi<br>मीर बख्शी",
+    "Diwan-i-Insha<br>दीवान-ए-इन्शा"
+   ],
+   "my_ans": "C",
+   "sol": "मुगल प्रशासन में मीर बख्शी सैन्य विभाग का प्रमुख और सेना का सेनापति होता था।",
+   "trick": "मीर बख्शी = सैन्य प्रमुख",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which of the following Acts was enacted by the British Parliament to regulate the administration of the British East India Company’s territories in India, particularly in Bengal?",
+   "hi": "निम्नलिखित में से कौन-सा अधिनियम, ब्रिटिश संसद द्वारा भारत में, विशेष रूप से बंगाल में, ब्रिटिश ईस्ट इंडिया कंपनी के क्षेत्रों के प्रशासन को विनियमित करने के लिए अधिनियमित किया गया था?",
+   "opts": [
+    "Charter Act, 1813<br>चार्टर एक्ट, 1813",
+    "Regulating Act, 1773<br>रेगुलेटिंग एक्ट, 1773",
+    "Government of India Act, 1858<br>भारत सरकार एक्ट, 1858",
+    "Pitt’s India Act, 1784<br>पिट्स इंडिया एक्ट, 1784"
+   ],
+   "my_ans": "B",
+   "sol": "रेगुलेटिंग एक्ट 1773 कंपनी के प्रशासन को नियंत्रित करने वाला पहला ब्रिटिश संसदीय कानून था।",
+   "trick": "रेगुलेटिंग एक्ट = पहला नियंत्रण कानून",
+   "ans": "B"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "The first residential university of the world, Nalanda, was established under the patronage of which of the following rulers?",
+   "hi": "विश्व का पहला आवासीय विश्वविद्यालय, नालंदा, निम्नलिखित में से किस शासक के संरक्षण में स्थापित किया गया था?",
+   "opts": [
+    "Samudragupta<br>समुद्रगुप्त",
+    "Chandragupta I<br>चंद्रगुप्त प्रथम",
+    "Kumaragupta I<br>कुमारगुप्त प्रथम",
+    "Skandagupta<br>स्कंदगुप्त"
+   ],
+   "my_ans": "C",
+   "sol": "नालंदा विश्वविद्यालय की स्थापना 5वीं शताब्दी में गुप्त शासक कुमारगुप्त प्रथम के संरक्षण में हुई थी।",
+   "trick": "नालंदा = कुमारगुप्त",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Which of the following principle was most emphasized by Bal Gangadhar Tilak during the Extremist Phase?",
+   "hi": "चरमपंथी चरण के दौरान बाल गंगाधर तिलक ने निम्नलिखित में से किस सिद्धांत पर सर्वाधिक जोर दिया था?",
+   "opts": [
+    "Swaraj as the birthright of every Indian<br>स्वराज प्रत्येक भारतीय का जन्मसिद्ध अधिकार",
+    "Complete armed revolution against the British<br>ब्रिटिश के विरुद्ध पूर्ण सशस्त्र क्रांति",
+    "Support for communal representation<br>सांप्रदायिक प्रतिनिधित्व के लिए सपोर्ट",
+    "Exclusive focus on economic reforms<br>आर्थिक सुधारों पर विशेष ध्यान"
+   ],
+   "my_ans": "A",
+   "sol": "बाल गंगाधर तिलक ने 'स्वराज मेरा जन्मसिद्ध अधिकार है' का नारा दिया और इस पर सर्वाधिक जोर दिया।",
+   "trick": "तिलक = स्वराज्य मेरा जन्मसिद्ध अधिकार",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "85-87",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 80,
+   "lvl": "UG",
+   "en": "The Dutch lost influence in India mainly due to their defeat by which European power?",
+   "hi": "डचों ने भारत में अपना प्रभुत्व मुख्य रूप से किस यूरोपीय शक्ति से हार के कारण खोया था?",
+   "opts": [
+    "Danish<br>डेनिश",
+    "French<br>फ़्रांसीसी",
+    "British<br>ब्रिटिश",
+    "Portuguese<br>पुर्तगाली"
+   ],
+   "my_ans": "C",
+   "sol": "ब्रिटिश नौसैनिक श्रेष्ठता और बेदारा के युद्ध (1759) में हार के कारण डच भारत से बाहर हो गए।",
+   "trick": "डच हारे, ब्रिटिश जीते।",
+   "ans": "C"
+  },
+  {
+   "n": 81,
+   "lvl": "UG",
+   "en": "Which feature correctly describes the extremists’ use of religious symbolism?",
+   "hi": "कौन सी विशेषता चरमपंथियों द्वारा धार्मिक प्रतीकों के उपयोग का सही वर्णन करती है?",
+   "opts": [
+    "Cultural symbols like Shivaji and Ganapati were used for political mobilisation.<br>शिवाजी और गणपति जैसे सांस्कृतिक प्रतीकों का उपयोग राजनीतिक लामबंदी के लिए किया गया।",
+    "Ritual worship was introduced into political meetings to replace speeches.<br>भाषणों के स्थान पर राजनीतिक बैठकों में अनुष्ठानिक पूजा शुरू की गई थी।",
+    "All movements were confined exclusively to Hindu religious gatherings.<br>सभी आंदोलन विशेष रूप से केवल हिंदू धार्मिक सभाओं तक ही सीमित थे।",
+    "Festivals were reorganised to discourage participation from non-Hindu groups<br>गैर-हिंदू समूहों की भागीदारी को हतोत्साहित करने के लिए त्योहारों को पुनर्गठित किया गया था।"
+   ],
+   "my_ans": "A",
+   "sol": "तिलक जैसे नेताओं ने शिवाजी और गणपति उत्सव का उपयोग जनता को राजनीतिक रूप से जागरूक करने के लिए किया था।",
+   "trick": "प्रतीक = राजनीतिक उपकरण।",
+   "ans": "A"
+  },
+  {
+   "n": 82,
+   "lvl": "UG",
+   "en": "Which of the following was a major reason for the arrival of Europeans in India?",
+   "hi": "निम्नलिखित में से कौन-सा कारण यूरोपियों के भारत आगमन का एक प्रमुख कारण था?",
+   "opts": [
+    "To find a direct sea route for the spice trade<br>मसालों के व्यापार के लिए एक सीधा समुद्री मार्ग खोजना",
+    "To establish democratic governance<br>लोकतांत्रिक शासन व्यवस्था स्थापित करना",
+    "To promote European art and culture<br>यूरोपीय कला और संस्कृति को बढ़ावा देना",
+    "To spread industrialization<br>औद्योगीकरण का विस्तार करना"
+   ],
+   "my_ans": "A",
+   "sol": "यूरोपीय लोग मसालों के व्यापार के लिए अरबों के नियंत्रण वाले स्थल मार्ग के बजाय सीधा समुद्री मार्ग ढूंढ रहे थे।",
+   "trick": "मसाला व्यापार = मुख्य उद्देश्य।",
+   "ans": "A"
+  },
+  {
+   "n": 83,
+   "lvl": "UG",
+   "en": "In which year was the Hindustan Republican Association (HRA) formed?",
+   "hi": "हिंदुस्तान रिपब्लिकन एसोसिएशन (HRA) का गठन किस वर्ष हुआ था?",
+   "opts": [
+    "1920",
+    "1924",
+    "1922",
+    "1926"
+   ],
+   "my_ans": "B",
+   "sol": "HRA की स्थापना अक्टूबर 1924 में कानपुर में सचिन्द्र नाथ सान्याल और अन्य क्रांतिकारियों द्वारा की गई थी।",
+   "trick": "1924 में HRA बना।",
+   "ans": "B"
+  },
+  {
+   "n": 84,
+   "lvl": "UG",
+   "en": "Which contribution is correctly associated with Lala Lajpat Rai during the freedom struggle?",
+   "hi": "लाला लाजपत राय ने स्वतंत्रता संग्राम में कौन-सा प्रमुख योगदान दिया था?",
+   "opts": [
+    "Commanding the Congress Volunteers during the Salt March in Gujarat<br>गुजरात में नमक मार्च के दौरान कांग्रेस स्वयंसेवकों की कमान संभालना",
+    "Drafting the Nehru Report outlining complete independence for India<br>भारत के लिए पूर्ण स्वतंत्रता की रूपरेखा तैयार करने वाली 'नेहरू रिपोर्ट' का प्रारूप तैयार करना",
+    "Leading the anti-Simon Commission protests, where he suffered fatal injuries<br>साइमन कमीशन विरोधी प्रदर्शनों का नेतृत्व करना, जिनमें वे गंभीर रूप से घायल हो गए थे",
+    "Leading the Bardoli satyagraha against enhanced revenue-demand policies<br>राजस्व-मांग नीतियों में वृद्धि के विरुद्ध बारडोली सत्याग्रह का नेतृत्व करना"
+   ],
+   "my_ans": "C",
+   "sol": "1928 में साइमन कमीशन के विरोध के दौरान लाठीचार्ज में घायल होने से उनकी मृत्यु हो गई थी।",
+   "trick": "साइमन कमीशन = लाला लाजपत राय।",
+   "ans": "C"
+  },
+  {
+   "n": 85,
+   "lvl": "UG",
+   "en": "Which extremist leader authored the famous work, Gita Rahasya?",
+   "hi": "किस चरमपंथी नेता ने प्रसिद्ध कृति 'गीता रहस्य' की रचना की थी?",
+   "opts": [
+    "Aurobindo Ghose<br>अरबिंदो घोष",
+    "Lala Lajpat Rai<br>लाला लाजपत राय",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Bipin Chandra Pal<br>बिपिन चंद्र पाल"
+   ],
+   "my_ans": "C",
+   "sol": "बाल गंगाधर तिलक ने मांडले जेल में कारावास के दौरान 'गीता रहस्य' पुस्तक लिखी थी।",
+   "trick": "तिलक = गीता रहस्य।",
+   "ans": "C"
+  },
+  {
+   "n": 86,
+   "lvl": "UG",
+   "en": "Where was the capital of the Estado da India located?",
+   "hi": "एस्टाडो द इंडिया (Estado da India) की राजधानी कहाँ स्थित थी?",
+   "opts": [
+    "Cochin<br>कोचीन",
+    "Goa<br>गोवा",
+    "Lisbon<br>लिस्बन",
+    "Malacca<br>मक्का"
+   ],
+   "my_ans": "B",
+   "sol": "1530 में नूनो दा कुन्हा ने गोवा को पुर्तगाली एशियाई क्षेत्रों की राजधानी बनाया था।",
+   "trick": "पुर्तगाली राजधानी = गोवा।",
+   "ans": "B"
+  },
+  {
+   "n": 87,
+   "lvl": "UG",
+   "en": "Why were the early Congress leaders described as “Moderates” during the period 1885–1905?",
+   "hi": "1885-1905 की अवधि के दौरान कांग्रेस के शुरुआती लीडरों को 'उदारवादी (Moderates)' के रूप में क्यों वर्णित किया गया था?",
+   "opts": [
+    "They supported organised resistance through secret groups to push for administrative changes.<br>उन्होंने प्रशासनिक परिवर्तनों के लिए दबाव बनाने हेतु गुप्त समूहों के माध्यम से संगठित प्रतिरोध का समर्थन किया।",
+    "They pursued immediate self-rule through direct political confrontation with colonial authorities.<br>उन्होंने औपनिवेशिक अधिकारियों के साथ सीधे राजनीतिक टकराव के माध्यम से तत्काल स्वशासन का प्रयास किया।",
+    "They rejected council participation and insisted on mass mobilisation to secure wider reforms.<br>उन्होंने परिषद में भागीदारी को अस्वीकार कर दिया और व्यापक सुधारों के लिए जन लामबंदी पर बल दिया।",
+    "They adopted constitutional methods such as petitions and discussions to seek political reforms.<br>उन्होंने राजनीतिक सुधारों की मांग के लिए याचिकाओं और चर्चाओं जैसे संवैधानिक तरीकों को अपनाया।"
+   ],
+   "my_ans": "D",
+   "sol": "नरमपंथी नेता संवैधानिक तरीकों जैसे प्रार्थना, याचिका और चर्चा में विश्वास रखते थे।",
+   "trick": "नरमपंथी = संवैधानिक तरीके।",
+   "ans": "D"
+  },
+  {
+   "n": 88,
+   "lvl": "UG",
+   "en": "Which statement correctly describes the role of Gopal Krishna Gokhale in the early Indian National Movement?",
+   "hi": "निम्नलिखित में से कौन-सा कथन प्रारंभिक भारतीय राष्ट्रीय आंदोलन में गोपाल कृष्ण गोखले की भूमिका का सटीक वर्णन करता है?",
+   "opts": [
+    "He initiated armed revolutionary propaganda against British oppression.<br>उन्होंने ब्रिटिश उत्पीड़न के विरुद्ध सशस्त्र क्रांतिकारी प्रचार की शुरुआत की थी।",
+    "He founded the Swaraj Party in 1923 to contest British-imposed elections.<br>उन्होंने ब्रिटिश शासन द्वारा थोपे गए चुनावों में भाग लेने के लिए 1923 में स्वराज पार्टी की स्थापना की थी।",
+    "He worked via constitutional reforms and moderate methods, respected as Gandhi’s political mentor.<br>उन्होंने संवैधानिक सुधारों और उदारवादी तरीकों के माध्यम से कार्य किया और गांधी के राजनीतिक गुरु के रूप में सम्मानित थे।",
+    "He led the Salt March in 1930 as a protest against the salt tax.<br>उन्होंने नमक कर के विरोध में 1930 में नमक मार्च का नेतृत्व किया था।"
+   ],
+   "my_ans": "C",
+   "sol": "गोपाल कृष्ण गोखले नरमपंथी नेता थे और वे महात्मा गांधी के राजनीतिक गुरु माने जाते थे।",
+   "trick": "गोखले = गांधी के गुरु।",
+   "ans": "C"
+  }
+ ]
+}

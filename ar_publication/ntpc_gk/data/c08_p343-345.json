@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "343-345",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Why do large cities tend to have a higher proportion of tertiary activities in India?",
+   "hi": "भारत में बड़े शहरों में तृतीयक गतिविधियों का अनुपात अधिक क्यों होता है?",
+   "opts": [
+    "Due to agglomeration and services demand<br>शहरी समूहन और सेवाओं की मांग के कारण",
+    "Because of mining operations<br>खनन कार्यों के कारण",
+    "Because of fertile land<br>उपजाऊ भूमि के कारण",
+    "Due to lack of primary resources<br>प्राथमिक संसाधनों की कमी के कारण"
+   ],
+   "my_ans": "A",
+   "sol": "बड़े शहरों में व्यवसायों और जनसंख्या के केंद्रीकरण (समूहन) से सेवाओं की मांग बढ़ जाती है, जिससे तृतीयक क्षेत्र (सेवा क्षेत्र) का विकास होता है।",
+   "trick": "समूहन = केंद्रीकरण = अधिक सेवाएं",
+   "ans": "A"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "A, B, C, D, E and F are sitting around a circular table, facing the centre. Who sits to the immediate right of C?",
+   "hi": "A, B, C, D, E और F एक गोल मेज के परित: केंद्र की ओर अभिमुख होकर बैठे हैं। C के ठीक दाईं ओर पड़ोस में कौन बैठा है?",
+   "opts": [
+    "Data in Statement I alone is sufficient to answer the question while data in statement II is not.<br>प्रश्न का उत्तर देने के लिए, अकेले कथन I में दी गई जानकारी पर्याप्त है, जबकि कथन II में दी गई जानकारी पर्याप्त नहीं है।",
+    "Data in Statement II alone is sufficient to answer the question while data in statement I is not.<br>प्रश्न का उत्तर देने के लिए, अकेले कथन II में दी गई जानकारी पर्याप्त है, जबकि कथन I में दी गई जानकारी पर्याप्त नहीं है।",
+    "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question.<br>प्रश्न का उत्तर देने के लिए, कथन I और II, दोनों एक साथ (न कि अकेले कथन I या अकेले कथन II) पर्याप्त हैं।",
+    "Both statements I and II together are not sufficient to answer the question.<br>प्रश्न का उत्तर देने के लिए, कथन I और II दोनों एक साथ पर्याप्त नहीं हैं।"
+   ],
+   "my_ans": "D",
+   "sol": "दोनों कथनों को मिलाने पर भी C के दाईं ओर कौन बैठा है, यह निश्चित रूप से ज्ञात नहीं हो पाता है।",
+   "trick": "बैठने की व्यवस्था में जानकारी अधूरी होने पर उत्तर 'अपर्याप्त' होता है।",
+   "ans": "D"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "What are the three aims of economic policy listed in the 1991 document?",
+   "hi": "1991 के दस्तावेज में सूचीबद्ध आर्थिक नीति के तीन उद्देश्य क्या हैं?",
+   "opts": [
+    "Nationalisation, Deregulation, Decentralisation<br>राष्ट्रीयकरण, विनियमन, विकेंद्रीकरण",
+    "Liberalisation, Globalisation, Privatisation<br>उदारीकरण, वैश्वीकरण, निजीकरण",
+    "Market Liberalisation, Trade Restrictions, State Control<br>बाजार उदारीकरण, व्यापार प्रतिबंध, राज्य नियंत्रण",
+    "Protectionism, Regulation, Public Ownership<br>संरक्षणवाद, विनियमन, सार्वजनिक स्वामित्व"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के आर्थिक सुधारों (LPG) का मुख्य उद्देश्य उदारीकरण, वैश्वीकरण और निजीकरण को अपनाकर अर्थव्यवस्था को बाजार-उन्मुख बनाना था।",
+   "trick": "LPG = Liberalisation, Globalisation, Privatisation",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "Which system has become a cornerstone of government development policy and is tied to most rural development programs?",
+   "hi": "निम्नलिखित में से कौन-सी प्रणाली सरकारी विकास नीति की आधारशिला बन गई है और अधिकांश ग्रामीण विकास कार्यक्रमों से संबंधित है?",
+   "opts": [
+    "Swachh Bharat Abhiyan<br>स्वच्छ भारत अभियान",
+    "Public Distribution System (PDS)<br>सार्वजनिक वितरण प्रणाली (PDS)",
+    "Mahatma Gandhi National Rural Employment Empowerment Scheme (MGNRES)<br>महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार सशक्तिकरण योजना (MGNRES)",
+    "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)<br>महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी अधिनियम (MGNREGA)"
+   ],
+   "my_ans": "D",
+   "sol": "मनरेगा (MGNREGA) ग्रामीण परिवारों को प्रति वर्ष 100 दिन के रोजगार की कानूनी गारंटी देता है, जो ग्रामीण विकास की आधारशिला है।",
+   "trick": "मनरेगा = 100 दिन का रोजगार = ग्रामीण आधारशिला",
+   "ans": "D"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "What term describes a situation in which a person is employed but not in the desired capacity, in terms of compensation, hours, or skill level?",
+   "hi": "कौन-सा पद उस स्थिति का वर्णन करता है जिसमें एक व्यक्ति नियोजित तो होता है, लेकिन वेतन, कार्य-घंटे या कौशल स्तर के संदर्भ में वांछित क्षमता में नहीं होता है?",
+   "opts": [
+    "Involuntary employment<br>अनैच्छिक रोजगार",
+    "Underemployment<br>अल्प-रोजगार",
+    "Low wage employment<br>निम्न वेतन रोजगार",
+    "Part-time employment<br>अंशकालिक रोजगार"
+   ],
+   "my_ans": "B",
+   "sol": "अल्प-रोजगार (Underemployment) वह स्थिति है जहाँ व्यक्ति अपनी योग्यता या पूर्ण क्षमता से कम स्तर पर काम कर रहा होता है।",
+   "trick": "योग्यता > काम = अल्प-रोजगार",
+   "ans": "B"
+  },
+  {
+   "n": 56,
+   "lvl": "GL",
+   "en": "In December 2025, the rupee’s (₹) appreciation against the US dollar was most likely due to which of the following actions by the RBI?",
+   "hi": "दिसंबर 2025 में, US डॉलर के मुकाबले रुपये (₹) की मूल्यवृद्धि का सर्वाधिक संभावित कारण RBI द्वारा की गई निम्नलिखित में से कौन-सी कार्रवाई थी?",
+   "opts": [
+    "Gold imports<br>सोने का आयात",
+    "Bond purchases<br>बॉन्ड की खरीद",
+    "Interest rate hike<br>ब्याज दरों में वृद्धि",
+    "Dollar sales<br>डॉलर की बिक्री"
+   ],
+   "my_ans": "D",
+   "sol": "जब RBI बाजार में डॉलर बेचता है, तो डॉलर की आपूर्ति बढ़ती है और रुपये की मांग बढ़ती है, जिससे रुपया मजबूत (मूल्यवृद्धि) होता है।",
+   "trick": "डॉलर की बिक्री = रुपये की मजबूती",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "GL",
+   "en": "On 27 August 2025, which index reported that global consumer confidence remained unchanged for the second consecutive month, remaining stable at -0.1 points?",
+   "hi": "27 अगस्त 2025 को किस सूचकांक के अनुसार वैश्विक उपभोक्ता विश्वास लगातार दूसरे महीने अपरिवर्तित रहा और -0.1 अंक पर स्थिर बना रहा?",
+   "opts": [
+    "J.P.Morgan Global PMI Composite Index<br>J.P मॉर्गन वैश्विक PMI समग्र सूचकांक",
+    "UNDP Human Development Index Score<br>UNDP मानव विकास सूचकांक स्कोर",
+    "World Bank Global Findex Database<br>विश्व बैंक वैश्विक फिंडेक्स डेटाबेस",
+    "Ipsos Global Consumer Confidence Index<br>इप्सोस वैश्विक उपभोक्ता विश्वास सूचकांक"
+   ],
+   "my_ans": "D",
+   "sol": "इप्सोस (Ipsos) वैश्विक उपभोक्ता विश्वास सूचकांक विभिन्न देशों में उपभोक्ता भावना को ट्रैक करता है, जो अगस्त 2025 में -0.1 पर स्थिर रहा।",
+   "trick": "उपभोक्ता विश्वास = इप्सोस सूचकांक",
+   "ans": "D"
+  },
+  {
+   "n": 58,
+   "lvl": "GL",
+   "en": "Under the Union Budget 2025–26, the FDI limit in the insurance sector was increased from:",
+   "hi": "केंद्रीय बजट 2025-26 के तहत, बीमा क्षेत्र में FDI की सीमा को ____________ किया गया है।",
+   "opts": [
+    "74% to 100%<br>74% से बढ़ाकर 100%",
+    "51% to 100%<br>51% से बढ़ाकर 100%",
+    "26% to 49%<br>26% से बढ़ाकर 49%",
+    "49% to 74%<br>49% से बढ़ाकर 74%"
+   ],
+   "my_ans": "A",
+   "sol": "केंद्रीय बजट 2025-26 में बीमा क्षेत्र में विदेशी प्रत्यक्ष निवेश (FDI) की सीमा को 74% से बढ़ाकर 100% कर दिया गया है।",
+   "trick": "बीमा FDI = 74% से 100%",
+   "ans": "A"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 11,
+  "en": "Biology",
+  "hi": "जीव विज्ञान",
+  "total": 71,
+  "gl": 39,
+  "ug": 32
+ },
+ "source_pages": "431-433",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "Choose the correct statement regarding the process of photosynthesis in plants.",
+   "hi": "पौधों में प्रकाश संश्लेषण की प्रक्रिया के संबंध में सही कथन का चयन कीजिए।",
+   "opts": [
+    "It occurs in the mitochondria of plant cells.<br>यह पादप कोशिकाओं के माइटोकॉन्ड्रिया में होती है।",
+    "It involves the breakdown of glucose to produce energy.<br>इसमें ऊर्जा उत्पन्न करने के लिए ग्लूकोज़ का भंजन शामिल है।",
+    "It primarily takes place during the night to conserve water.<br>यह प्रक्रिया मुख्यत: रात के समय जल के संरक्षण के लिए की जाती है।",
+    "It converts light energy into chemical energy.<br>यह प्रकाश ऊर्जा को रासायनिक ऊर्जा में परिवर्तित करती है।"
+   ],
+   "my_ans": "D",
+   "sol": "प्रकाश संश्लेषण वह प्रक्रिया है जिसमें पौधे सूर्य के प्रकाश का उपयोग करके कार्बन डाइऑक्साइड और पानी को ग्लूकोज (रासायनिक ऊर्जा) में बदलते हैं। यह क्लोरोप्लास्ट में होती है।",
+   "trick": "प्रकाश संश्लेषण: प्रकाश ऊर्जा → रासायनिक ऊर्जा (ग्लूकोज)",
+   "ans": "D"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "The energy stored in human liver and muscle tissues is mainly in the form of which carbohydrate?",
+   "hi": "मानव यकृत् और पेशियों के ऊतकों में स्टोर ऊर्जा मुख्यत: किस कार्बोहाइड्रेट के रूप में होती है?",
+   "opts": [
+    "Glycogen<br>ग्लाइकोजन",
+    "Sucrose<br>सुक्रोस",
+    "Cellulose<br>सेल्यूलोस",
+    "Starch<br>स्टार्च"
+   ],
+   "my_ans": "A",
+   "sol": "मनुष्य अपने शरीर में अतिरिक्त ग्लूकोज को ग्लाइकोजन के रूप में यकृत और मांसपेशियों में संचित करता है, जो आवश्यकता पड़ने पर ऊर्जा प्रदान करता है।",
+   "trick": "जंतुओं में ऊर्जा संचय = ग्लाइकोजन",
+   "ans": "A"
+  },
+  {
+   "n": 13,
+   "lvl": "GL",
+   "en": "The F2 generation of a monohybrid cross typically shows which phenotypic ratio?",
+   "hi": "एकल संकर क्रॉस (monohybrid cross) की F2 पीढ़ी सामान्यतः किस लक्षणप्ररूपी अनुपात को दर्शाती है?",
+   "opts": [
+    "1:1",
+    "2:1",
+    "1:2:1",
+    "3:1"
+   ],
+   "my_ans": "D",
+   "sol": "मेंडल के एकल संकर क्रॉस में, F2 पीढ़ी में 3 पौधे प्रभावी लक्षण वाले और 1 पौधा अप्रभावी लक्षण वाला होता है, जिससे 3:1 का अनुपात प्राप्त होता है।",
+   "trick": "एकल संकर F2 फेनोटाइप = 3:1",
+   "ans": "D"
+  },
+  {
+   "n": 14,
+   "lvl": "GL",
+   "en": "In December 2025, which institution's scientists created the bioluminescent CRISPR protein 'GlowCas9' that can track gene editing?",
+   "hi": "दिसंबर 2025 में, किस संस्थान के वैज्ञानिकों ने जैव-संदीप्तिशील (bioluminescent) CRISPR प्रोटीन 'GlowCas9' बनाया है जो जीन एडिटिंग (gene editing) को ट्रैक कर सकता है?",
+   "opts": [
+    "IIT, Delhi<br>IIT, दिल्ली",
+    "Bose Institute, Kolkata<br>बोस इंस्टीट्यूट, कोलकाता",
+    "TIFR, Mumbai<br>TIFR, मुंबई",
+    "IISc, Bangalore<br>IISc, बैंगलोर"
+   ],
+   "my_ans": "B",
+   "sol": "दिसंबर 2025 में बोस इंस्टीट्यूट, कोलकाता के वैज्ञानिकों ने 'GlowCas9' विकसित किया, जो जैव-संदीप्ति का उपयोग करके जीन एडिटिंग की प्रक्रिया को ट्रैक करने में मदद करता है।",
+   "trick": "GlowCas9 = बोस इंस्टीट्यूट, कोलकाता",
+   "ans": "B"
+  },
+  {
+   "n": 15,
+   "lvl": "GL",
+   "en": "Which class of vertebrates possesses cold-blooded characteristics and scaly skin?",
+   "hi": "कशेरुकी जीवों के किस वर्ग में ठंडे रक्त के अभिलक्षण और शल्की त्वचा पाई जाती है?",
+   "opts": [
+    "Mammalia<br>मैमेलिया / स्तनी वर्ग",
+    "Amphibia<br>उभयचर (Amphibia)",
+    "Aves<br>एवीज / पक्षि वर्ग (Aves)",
+    "Reptilia<br>रेप्टिलिया (Reptilia)"
+   ],
+   "my_ans": "D",
+   "sol": "सरीसृप (Reptilia) वर्ग के जीव शीत-रक्त वाले (cold-blooded) होते हैं और उनकी त्वचा पर केराटिन से बनी शल्क (scales) पाई जाती है।",
+   "trick": "सरीसृप = शीत-रक्त + शल्की त्वचा",
+   "ans": "D"
+  },
+  {
+   "n": 16,
+   "lvl": "GL",
+   "en": "The primary \"food\" or energy source produced by the plant during photosynthesis is a type of:",
+   "hi": "प्रकाश संश्लेषण के दौरान पदपों द्वारा निर्मित प्राथमिक \"भोजन\" या ऊर्जा स्रोत किसका एक प्रकार है?",
+   "opts": [
+    "Vitamin<br>विटामिन",
+    "Mineral<br>खनिज",
+    "Protein<br>प्रोटीन",
+    "Carbohydrate<br>कार्बोहाइड्रेट"
+   ],
+   "my_ans": "D",
+   "sol": "प्रकाश संश्लेषण के दौरान पौधे ग्लूकोज का निर्माण करते हैं, जो एक सरल शर्करा है और कार्बोहाइड्रेट का ही एक प्रकार है।",
+   "trick": "प्रकाश संश्लेषण उत्पाद = कार्बोहाइड्रेट (ग्लूकोज)",
+   "ans": "D"
+  },
+  {
+   "n": 17,
+   "lvl": "GL",
+   "en": "What is the green pigment found in plants that is essential for capturing light energy during photosynthesis?",
+   "hi": "पादपों में पाया जाने वाला वह हरा वर्णक कौन-सा है जो प्रकाश संश्लेषण के दौरान प्रकाश ऊर्जा के प्रग्रहण के लिए आवश्यक है?",
+   "opts": [
+    "Chlorophyll<br>पर्णहरित",
+    "Insulin<br>इंसुलिन",
+    "Hemoglobin<br>हीमोग्लोबिन",
+    "Glucose<br>ग्लूकोज"
+   ],
+   "my_ans": "A",
+   "sol": "क्लोरोफिल पौधों में पाया जाने वाला हरा वर्णक है जो क्लोरोप्लास्ट में स्थित होता है और प्रकाश ऊर्जा को अवशोषित करने का कार्य करता है।",
+   "trick": "हरा रंग = क्लोरोफिल",
+   "ans": "A"
+  },
+  {
+   "n": 18,
+   "lvl": "GL",
+   "en": "What is the function of the anaphase-telophase transition in mitosis?",
+   "hi": "समसूत्रण (mitosis) में एनाफेज-टेलोफेज संक्रमण का क्या कार्य है?",
+   "opts": [
+    "Synthesis of new DNA strands<br>नए DNA स्ट्रैंड का संश्लेषण",
+    "Condensation of chromosomes<br>गुणसूत्रों का संघनन",
+    "Separation of chromatids and reformation of the nuclear envelope<br>क्रोमैटिड्स का पृथक्करण और केंद्रक आवरण का पुनर्निर्माण",
+    "Initiation of DNA replication<br>DNA प्रतिकृति की शुरुआत"
+   ],
+   "my_ans": "C",
+   "sol": "एनाफेज में क्रोमैटिड्स अलग होकर ध्रुवों पर जाते हैं और टेलोफेज में उनके चारों ओर केंद्रक आवरण का पुनर्निर्माण होता है।",
+   "trick": "एनाफेज-टेलोफेज = क्रोमैटिड पृथक्करण + केंद्रक निर्माण",
+   "ans": "C"
+  },
+  {
+   "n": 19,
+   "lvl": "GL",
+   "en": "What is the purpose of the Punnett square in genetics?",
+   "hi": "आनुवंशिकी में पनेट वर्ग (Punnett square) का उद्देश्य क्या है?",
+   "opts": [
+    "Predicting the outcomes of genetic crosses<br>आनुवंशिक क्रॉस के परिणामों की भविष्यवाणी करना",
+    "Determining the phenotype of an individual<br>किसी व्यक्ति के लक्षणप्ररूप का निर्धारण करना",
+    "Identifying the location of a gene on a chromosome<br>गुणसूत्र पर जीन के स्थान की पहचान करना",
+    "Analysing DNA replication<br>DNA पुनरावृत्ति का विश्लेषण करना"
+   ],
+   "my_ans": "A",
+   "sol": "पनेट वर्ग एक आरेख है जिसका उपयोग आनुवंशिक क्रॉस से उत्पन्न होने वाली संतानों के संभावित जीनोटाइप और फेनोटाइप की भविष्यवाणी करने के लिए किया जाता है।",
+   "trick": "पनेट वर्ग = क्रॉस के परिणाम की भविष्यवाणी",
+   "ans": "A"
+  },
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "Bamboo exhibits a specific type of leaf venation and root structure. What are the characteristics of these features?",
+   "hi": "बांस एक विशिष्ट प्रकार के पत्ती शिरा विन्यास और जड़ संरचना को प्रदर्शित करता है। इन विशेषताओं के लक्षण क्या हैं?",
+   "opts": [
+    "Parallel Venation and Fibrous Root<br>समानांतर शिरा विन्यास और रेशेदार जड़",
+    "Reticulate Venation and Fibrous Root<br>जालिकावत शिरा विन्यास और रेशेदार जड़",
+    "Reticulate Venation and Tap Root<br>जालिकावत शिरा विन्यास और मूसला जड़",
+    "Parallel Venation and Tap Root<br>समानांतर शिरा विन्यास और मूसला जड़"
+   ],
+   "my_ans": "A",
+   "sol": "बांस एक एकबीजपत्री (monocot) पौधा है। सभी एकबीजपत्री पौधों में समानांतर शिरा विन्यास और रेशेदार (झकड़ा) जड़ तंत्र पाया जाता है।",
+   "trick": "एकबीजपत्री = समानांतर शिरा + रेशेदार जड़",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "Deoxyribonucleic Acid (DNA) and Ribonucleic Acid (RNA) belong to which class of biomolecules?",
+   "hi": "डीऑक्सीराइबो न्यूक्लिक अम्ल (DNA) और राइबो न्यूक्लिक अम्ल (RNA), जैवअणुओं के किस वर्ग से संबंधित हैं?",
+   "opts": [
+    "Carbohydrate<br>कार्बोहाइड्रेट",
+    "Lipid<br>लिपिड",
+    "Protein<br>प्रोटीन",
+    "Nucleic acids<br>न्यूक्लिक अम्ल"
+   ],
+   "my_ans": "D",
+   "sol": "DNA और RNA न्यूक्लियोटाइड के बहुलक हैं और इन्हें न्यूक्लिक अम्ल कहा जाता है, जो आनुवंशिक जानकारी के भंडारण और संचरण के लिए जिम्मेदार होते हैं।",
+   "trick": "DNA/RNA = न्यूक्लिक अम्ल",
+   "ans": "D"
+  }
+ ]
+}

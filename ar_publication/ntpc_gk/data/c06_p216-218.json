@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 6,
+  "en": "Environment",
+  "hi": "पर्यावरण",
+  "total": 37,
+  "gl": 37,
+  "ug": 0
+ },
+ "source_pages": "216-218",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 20,
+   "lvl": "GL",
+   "en": "In which district of Gujarat is the Harappan archaeological site of Dholavira, recognized as a UNESCO World Heritage Site, situated?",
+   "hi": "UNESCO विश्व धरोहर स्थल के रूप में मान्यता प्राप्त धोलावीरा का हड़प्पाकालीन पुरास्थल गुजरात के किस जिले में स्थित है?",
+   "opts": [
+    "Kutch District<br>कच्छ जिला",
+    "Banaskantha District<br>बनासकांठा जिला",
+    "Patan District<br>पाटण जिला",
+    "Jamnagar District<br>जामनगर जिला"
+   ],
+   "my_ans": "A",
+   "sol": "धोलावीरा गुजरात के कच्छ जिले में स्थित है। यह 2021 में यूनेस्को विश्व धरोहर स्थल घोषित किया गया था।",
+   "trick": "धोलावीरा = कच्छ का रण (गुजरात)",
+   "ans": "A"
+  },
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "India’s National Clean Air Programme (NCAP) originally aimed to reduce particulate pollution by what percentage by 2024–25 compared to the 2017–18 baseline?",
+   "hi": "भारत के राष्ट्रीय स्वच्छ वायु कार्यक्रम (NCAP) का मूल लक्ष्य, 2017-18 के बेसलाइन की तुलना में 2024-25 तक कणिका प्रदूषण (particulate pollution) को कितने प्रतिशत कम करना था?",
+   "opts": [
+    "40–50%",
+    "20–30%",
+    "10–15%",
+    "60–70%"
+   ],
+   "my_ans": "B",
+   "sol": "NCAP की शुरुआत 2019 में हुई थी, जिसका मूल लक्ष्य 2024 तक PM10 और PM2.5 सांद्रता को 20-30% तक कम करना था।",
+   "trick": "NCAP = 2019 में शुरू, 20-30% कमी का लक्ष्य",
+   "ans": "B"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "What does the Environment Audit Rules, 2025, aim to establish across India?",
+   "hi": "पर्यावरण लेखापरीक्षा नियम, 2025 का उद्देश्य पूरे भारत में क्या स्थापित करना है?",
+   "opts": [
+    "A water conservation campaign<br>जल संरक्षण अभियान",
+    "A framework for environmental accountability<br>पर्यावरण जवाबदेही के लिए एक ढांचा",
+    "A new environmental tax system<br>नई पर्यावरण कर प्रणाली",
+    "A national reforestation program<br>राष्ट्रीय वन पुनर्स्थापन कार्यक्रम"
+   ],
+   "my_ans": "B",
+   "sol": "पर्यावरण लेखापरीक्षा नियम, 2025 का मुख्य उद्देश्य पर्यावरणीय अनुपालन के लिए एक जवाबदेही ढांचा बनाना और पारदर्शिता सुनिश्चित करना है।",
+   "trick": "ऑडिट = जवाबदेही (Accountability)",
+   "ans": "B"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "Which of the following is NOT a primary air pollutant?",
+   "hi": "निम्नलिखित में से कौन-सा प्राथमिक वायु प्रदूषक नहीं है?",
+   "opts": [
+    "Nitrogen oxide<br>नाइट्रोजन ऑक्साइड",
+    "Sulfur dioxide<br>सल्फर डाइऑक्साइड",
+    "Carbon monoxide<br>कार्बन मोनोऑक्साइड",
+    "Ozone<br>ओजोन"
+   ],
+   "my_ans": "D",
+   "sol": "ओजोन एक द्वितीयक प्रदूषक है क्योंकि यह वायुमंडल में नाइट्रोजन ऑक्साइड और सूर्य के प्रकाश की रासायनिक प्रतिक्रिया से बनता है।",
+   "trick": "प्राथमिक = सीधे स्रोत से, द्वितीयक = रासायनिक अभिक्रिया से (जैसे ओजोन)",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Under which Act were the Environment Audit Rules, 2025, issued on 29-8-2025?",
+   "hi": "29-8-2025 को पर्यावरण लेखापरीक्षा नियम, 2025 किस अधिनियम के अंतर्गत जारी किए गए थे?",
+   "opts": [
+    "Air (Prevention and Control of Pollution) Act, 1981<br>वायु (प्रदूषण निवारण एवं नियंत्रण) अधिनियम, 1981",
+    "Wildlife Protection Act, 1972<br>वन्यजीव संरक्षण अधिनियम, 1972",
+    "Forest Conservation Act, 1980<br>वन संरक्षण अधिनियम, 1980",
+    "Environment (Protection) Act, 1986<br>पर्यावरण (संरक्षण) अधिनियम, 1986"
+   ],
+   "my_ans": "D",
+   "sol": "पर्यावरण (संरक्षण) अधिनियम, 1986 एक व्यापक कानून है जो केंद्र सरकार को पर्यावरण संरक्षण के लिए नियम बनाने का अधिकार देता है।",
+   "trick": "पर्यावरण नियम = EPA 1986",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "By how much (approximately) was the area of Sariska Wildlife Sanctuary expanded in its 2025 update?",
+   "hi": "2025 के अद्यतन में सरिस्का वन्यजीव अभयारण्य के क्षेत्रफल में कितना (लगभग) विस्तार किया गया था?",
+   "opts": [
+    "~60,000 hectares<br>~60,000 हेक्टेयर",
+    "~44,000 hectares<br>~44,000 हेक्टेयर",
+    "~10,000 hectares<br>~10,000 हेक्टेयर",
+    "~25,000 hectares<br>~25,000 हेक्टेयर"
+   ],
+   "my_ans": "B",
+   "sol": "2025 में राजस्थान सरकार ने सरिस्का वन्यजीव अभयारण्य का विस्तार करते हुए इसके क्षेत्रफल में लगभग 44,000 हेक्टेयर की वृद्धि की।",
+   "trick": "सरिस्का विस्तार = 44,000 हेक्टेयर",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "The concept of sustainable development became popular after which report (1987)?",
+   "hi": "सतत विकास की अवधारणा किस रिपोर्ट (1987) के बाद लोकप्रिय हुई?",
+   "opts": [
+    "Brundtland Report<br>ब्रंटलैंड रिपोर्ट",
+    "Earth Report<br>अर्थ रिपोर्ट",
+    "Kyoto Report<br>क्योटो रिपोर्ट",
+    "Rio Report<br>रियो रिपोर्ट"
+   ],
+   "my_ans": "A",
+   "sol": "1987 की ब्रंटलैंड रिपोर्ट, जिसका शीर्षक 'अवर कॉमन फ्यूचर' था, ने सतत विकास की परिभाषा दी और इसे वैश्विक स्तर पर लोकप्रिय बनाया।",
+   "trick": "सतत विकास = ब्रंटलैंड रिपोर्ट (1987)",
+   "ans": "A"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "What was the central theme of the 11th World Green Economy Summit held in Dubai in November 2025?",
+   "hi": "नवंबर 2025 में दुबई में आयोजित 11वें विश्व हरित अर्थव्यवस्था शिखर सम्मेलन (World Green Economy Summit) की मुख्य थीम क्या थी?",
+   "opts": [
+    "Innovating for Impact<br>इनोवेटिंग फॉर इम्पैक्ट",
+    "Sustainable Future<br>सस्टेनेबल फ्यूचर",
+    "Climate Action Now<br>क्लाइमेट एक्शन नाउ",
+    "Leading with Technology<br>लीडिंग विथ टेक्नोलॉजी"
+   ],
+   "my_ans": "A",
+   "sol": "नवंबर 2025 में दुबई में आयोजित 11वें विश्व हरित अर्थव्यवस्था शिखर सम्मेलन का मुख्य विषय 'इनोवेटिंग फॉर इम्पैक्ट' था।",
+   "trick": "WGES 2025 = Innovating for Impact",
+   "ans": "A"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "Who is officially authorized to conduct environment audits under the Environment Audit Rules, 2025?",
+   "hi": "पर्यावरण लेखापरीक्षा नियमावली, 2025 के अंतर्गत पर्यावरण लेखापरीक्षा करने के लिए आधिकारिक रूप से कौन अधिकृत है?",
+   "opts": [
+    "Registered Environment Auditor<br>पंजीकृत पर्यावरण लेखा परीक्षक",
+    "Environment Audit Designated Agency<br>पर्यावरण लेखापरीक्षा नामित एजेंसी",
+    "Certified Environment Auditor<br>प्रमाणित पर्यावरण लेखा परीक्षक",
+    "Environmental Consultant<br>पर्यावरण सलाहकार"
+   ],
+   "my_ans": "A",
+   "sol": "पर्यावरण लेखापरीक्षा नियम, 2025 के तहत केवल 'पंजीकृत पर्यावरण लेखा परीक्षक' को ही ऑडिट करने के लिए अधिकृत किया गया है।",
+   "trick": "ऑडिट = पंजीकृत लेखा परीक्षक",
+   "ans": "A"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "According to the World Meteorological Organization (WMO), 2025, reporting based on 2023 data, which greenhouse gas/gases reached 151% of its/their pre-industrial concentration?",
+   "hi": "विश्व मौसम विज्ञान संगठन (WMO) के अनुसार, 2023 के आंकड़ों पर आधारित 2025 की रिपोर्ट में, कौन-सी ग्रीनहाउस गैस/गैसें अपने पूर्व-औद्योगिक सांद्रता के 151% तक पहुंच गई हैं?",
+   "opts": [
+    "Methane<br>मेथेन",
+    "Hydrochlorofluorocarbons<br>हाइड्रोक्लोरोफ्लुओरोकार्बन",
+    "Carbon dioxide<br>कार्बन डाइऑक्साइड",
+    "Nitrous oxide<br>नाइट्रस ऑक्साइड"
+   ],
+   "my_ans": "C",
+   "sol": "WMO की 2025 की रिपोर्ट के अनुसार, कार्बन डाइऑक्साइड (CO2) का स्तर पूर्व-औद्योगिक सांद्रता के 151% तक पहुंच गया है।",
+   "trick": "CO2 = 151% (पूर्व-औद्योगिक स्तर)",
+   "ans": "C"
+  }
+ ]
+}

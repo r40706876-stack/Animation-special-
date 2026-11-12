@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 10,
+  "en": "Chemistry",
+  "hi": "रसायन विज्ञान",
+  "total": 71,
+  "gl": 24,
+  "ug": 47
+ },
+ "source_pages": "422-424",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Which term refers to the quantitative study of reactants and products in a chemical reaction?",
+   "hi": "निम्नलिखित में से कौन-सा शब्द रासायनिक अभिक्रिया में अभिकारकों और उत्पादों के मात्रात्मक अध्ययन को संदर्भित करता है?",
+   "opts": [
+    "Mass per cent<br>द्रव्यमान प्रतिशत",
+    "Mole fraction<br>मोल अंश",
+    "Stoichiometry<br>स्टॉइकिओमीट्री",
+    "Molarity<br>मोलरता"
+   ],
+   "my_ans": "C",
+   "sol": "स्टॉइकिओमीट्री रसायन विज्ञान की वह शाखा है जो रासायनिक अभिक्रिया में अभिकारकों और उत्पादों के बीच मात्रात्मक संबंधों का अध्ययन करती है।",
+   "trick": "स्टॉइकिओमीट्री = रासायनिक अभिक्रिया में मात्रात्मक गणना",
+   "ans": "C"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "In the context of periodicity, elements in the same group tend to display similar chemical properties. Which primary factor is responsible for this similarity among group members?",
+   "hi": "आवर्तिता के संदर्भ में, एक ही समूह में स्थित तत्व समान रासायनिक गुणधर्म प्रदर्शित करते हैं। समूह के सदस्यों के बीच इस समानता के लिए कौन-सा मुख्य कारक उत्तरदायी है?",
+   "opts": [
+    "Similar valence electronic configuration<br>समान संयोजी इलेक्ट्रॉनिक विन्यास",
+    "Similar atomic masses<br>समान परमाणु द्रव्यमान",
+    "Constant atomic radius<br>स्थिर परमाणु त्रिज्या",
+    "Identical atomic numbers<br>एकसमान परमाणु क्रमांक"
+   ],
+   "my_ans": "A",
+   "sol": "एक ही समूह के तत्वों में संयोजी इलेक्ट्रॉनों की संख्या समान होती है, जिसके कारण उनके रासायनिक गुण भी समान होते हैं।",
+   "trick": "समान समूह = समान संयोजी इलेक्ट्रॉन = समान रासायनिक गुण",
+   "ans": "A"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "Which type of mixture is formed when Ethyl alcohol is dissolved in water?",
+   "hi": "जब एथिल ऐल्कोहॉल को जल में घोला जाता है, तो किस प्रकार के मिश्रण का निर्माण होता है?",
+   "opts": [
+    "Heterogeneous<br>विषमांगी",
+    "Compounds<br>यौगिक",
+    "New element<br>नया तत्व",
+    "Homogeneous<br>समांगी"
+   ],
+   "my_ans": "D",
+   "sol": "एथिल ऐल्कोहॉल और जल पूरी तरह से मिश्रणीय हैं और एक समान संरचना वाला एकल प्रावस्था मिश्रण बनाते हैं, जिसे समांगी मिश्रण कहते हैं।",
+   "trick": "पूरी तरह घुलने वाले तरल = समांगी मिश्रण",
+   "ans": "D"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "Which law governs the relationship between the pressure and volume of a fixed amount of gas at constant temperature?",
+   "hi": "स्थिर तापमान पर एक निश्चित मात्रा में गैस के दाब और आयतन के बीच संबंध को कौन-सा नियम नियंत्रित करता है?",
+   "opts": [
+    "Avogadro's Law<br>आवोगाद्रो का नियम",
+    "Charles's Law<br>चार्ल्स का नियम",
+    "Gay-Lussac's Law<br>गे-लुसैक का नियम",
+    "Boyle's Law<br>बॉयल का नियम"
+   ],
+   "my_ans": "D",
+   "sol": "बॉयल के नियम के अनुसार, स्थिर तापमान पर गैस का दाब उसके आयतन के व्युत्क्रमानुपाती होता है (P ∝ 1/V)।",
+   "trick": "बॉयल का नियम: स्थिर तापमान पर P और V का संबंध",
+   "ans": "D"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "The dissolution of which of the following in water makes the solution acidic due to the formation of sulphurous acid?",
+   "hi": "निम्नलिखित में से किस पदार्थ के जल में विलिनीकरण से सल्फ्यूरस अम्ल बनने के कारण विलयन अम्लीय हो जाता है?",
+   "opts": [
+    "Sulphur trioxide<br>सल्फर ट्राइऑक्साइड",
+    "Sulphonic acid<br>सल्फोनिक अम्ल",
+    "Sulphur hexafluoride<br>सल्फर हेक्साफ्लोराइड",
+    "Sulphur dioxide<br>सल्फर डाइऑक्साइड"
+   ],
+   "my_ans": "D",
+   "sol": "सल्फर डाइऑक्साइड (SO₂) जल के साथ अभिक्रिया करके सल्फ्यूरस अम्ल (H₂SO₃) बनाता है, जिससे विलयन अम्लीय हो जाता है।",
+   "trick": "SO₂ + H₂O = H₂SO₃ (सल्फ्यूरस अम्ल)",
+   "ans": "D"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Which substance would you use to test if lemon juice contains acid?",
+   "hi": "नींबू के रस में अम्ल की उपस्थिति का परीक्षण करने के लिए आप किस पदार्थ का उपयोग करेंगे?",
+   "opts": [
+    "Baking soda<br>बेकिंग सोडा",
+    "Water<br>जल",
+    "Sugar<br>शर्करा",
+    "Litmus paper<br>लिटमस पेपर"
+   ],
+   "my_ans": "D",
+   "sol": "लिटमस पेपर एक pH संकेतक है। नीला लिटमस पेपर अम्ल की उपस्थिति में लाल हो जाता है, जिससे नींबू के रस में अम्ल की पुष्टि होती है।",
+   "trick": "अम्ल = नीला लिटमस लाल",
+   "ans": "D"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "Which factors are responsible for the increase in metallic character down a group in the periodic table?",
+   "hi": "आवर्त सारणी में किसी वर्ग में नीचे की ओर जाने पर धात्विक लक्षण में वृद्धि के लिए कौन-से कारक उत्तरदायी होते हैं?",
+   "opts": [
+    "Decreasing ionization energy and increasing atomic size<br>ह्रासमान आयनन ऊर्जा और वर्धमान परमाणु आकार",
+    "Increasing ionization energy and decreasing atomic size<br>वर्धमान आयनन ऊर्जा और ह्रासमान परमाणु आकार",
+    "Constant ionization energy and decreasing atomic size<br>स्थिर आयनन ऊर्जा और ह्रासमान परमाणु आकार",
+    "Increasing atomic size and constant ionization energy<br>वर्धमान परमाणु आकार और स्थिर आयनन ऊर्जा"
+   ],
+   "my_ans": "A",
+   "sol": "समूह में नीचे जाने पर परमाणु आकार बढ़ता है और आयनन ऊर्जा घटती है, जिससे इलेक्ट्रॉन त्यागना आसान हो जाता है और धात्विक गुण बढ़ता है।",
+   "trick": "नीचे जाने पर: आकार बढ़ा, आयनन ऊर्जा घटी = धात्विक गुण बढ़ा",
+   "ans": "A"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "Why does iron replace copper when an iron nail is dipped in copper sulphate solution?",
+   "hi": "कॉपर सल्फेट के विलयन में आयरन की कील डुबोने पर आयरन, कॉपर को प्रतिस्थापित क्यों कर देता है?",
+   "opts": [
+    "Iron is less reactive<br>आयरन कम अभिक्रियाशील होता है",
+    "Both are equally reactive<br>दोनों समान रूप से अभिक्रियाशील होते हैं",
+    "Copper is insoluble in water<br>कॉपर जल में अघुलनशील होता है",
+    "Iron is more reactive<br>आयरन अधिक अभिक्रियाशील होता है"
+   ],
+   "my_ans": "D",
+   "sol": "आयरन, कॉपर की तुलना में अधिक अभिक्रियाशील है, इसलिए यह कॉपर सल्फेट के विलयन से कॉपर को विस्थापित कर देता है।",
+   "trick": "अधिक अभिक्रियाशील धातु कम अभिक्रियाशील को हटाती है",
+   "ans": "D"
+  },
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Which gas is the main contributor to acid rain formation?",
+   "hi": "अम्लीय वर्षा के निर्माण में मुख्य योगदानकर्ता कौन सी गैस है?",
+   "opts": [
+    "Methane<br>मीथेन",
+    "Sulphur dioxide<br>सल्फर डाइऑक्साइड",
+    "Hydrogen<br>हाइड्रोजन",
+    "Neon<br>नियॉन"
+   ],
+   "my_ans": "B",
+   "sol": "सल्फर डाइऑक्साइड (SO₂) वायुमंडल में जलवाष्प के साथ मिलकर सल्फ्यूरस और सल्फ्यूरिक अम्ल बनाती है, जो अम्लीय वर्षा का मुख्य कारण है।",
+   "trick": "अम्लीय वर्षा = मुख्य रूप से SO₂",
+   "ans": "B"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "How do antacids reduce pain during indigestion?",
+   "hi": "अपच के दौरान प्रतिअम्ल दर्द को कैसे कम करते हैं?",
+   "opts": [
+    "Thickening stomach walls<br>आमाशय की दीवारों को मोटा करके",
+    "Reducing food intake<br>भोजन के सेवन कम करके",
+    "Increasing acid production<br>अम्ल उत्पादन में वृद्धि करके",
+    "Neutralising excess stomach acid<br>आमाशय में मौजूद अतिरिक्त अम्ल को उदासीन करके"
+   ],
+   "my_ans": "D",
+   "sol": "प्रतिअम्ल (Antacids) क्षारीय होते हैं, जो पेट में बने अतिरिक्त अम्ल को उदासीन (neutralize) करके दर्द से राहत दिलाते हैं।",
+   "trick": "प्रतिअम्ल = अम्ल को उदासीन करना",
+   "ans": "D"
+  }
+ ]
+}

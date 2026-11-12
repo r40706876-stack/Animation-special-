@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "94-96",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 107,
+   "lvl": "UG",
+   "en": "The split between Moderates and Extremists in the Indian National Congress took place at the 1907 session held at:",
+   "hi": "1907 में आयोजित ___________ अधिवेशन में भारतीय राष्ट्रीय कांग्रेस में नरमपंथियों और चरमपंथियों के बीच विभाजन हुआ था?",
+   "opts": [
+    "Calcutta<br>कलकत्ता",
+    "Lahore<br>लाहौर",
+    "Bombay<br>बॉम्बे",
+    "Surat<br>सूरत"
+   ],
+   "my_ans": "D",
+   "sol": "1907 का कांग्रेस अधिवेशन सूरत में हुआ था, जहाँ नरमपंथियों और गरमपंथियों के बीच वैचारिक मतभेदों के कारण कांग्रेस का विभाजन हो गया।",
+   "trick": "सूरत में कांग्रेस का विभाजन हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 108,
+   "lvl": "UG",
+   "en": "What was the fundamental change introduced by the Extremist leaders in Indian nationalism?",
+   "hi": "भारतीय राष्ट्रवाद में उग्रवादी नेताओं द्वारा लाया गया मूलभूत परिवर्तन क्या था?",
+   "opts": [
+    "Articulation of ‘Swaraj’ with radical methods<br>क्रांतिकारी पद्धतियों के साथ 'स्वराज' की अभिव्यक्ति",
+    "Support for cooperative political dialogue<br>सहयोगात्मक राजनीतिक संवाद के लिए समर्थन",
+    "Emphasis on gradual constitutional reforms<br>क्रमिक संवैधानिक सुधारों पर जोर",
+    "Promotion of Western education<br>पश्चिमी शिक्षा को बढ़ावा"
+   ],
+   "my_ans": "A",
+   "sol": "उग्रवादी नेताओं ने नरमपंथियों की प्रार्थना और याचिका की नीति को त्यागकर 'स्वराज' को अपना जन्मसिद्ध अधिकार माना और क्रांतिकारी तरीके अपनाए।",
+   "trick": "उग्रवादी = स्वराज + क्रांतिकारी तरीके।",
+   "ans": "A"
+  },
+  {
+   "n": 109,
+   "lvl": "UG",
+   "en": "The rise of vernacular languages in modern Indian literature was mainly due to __________.",
+   "hi": "आधुनिक भारतीय साहित्य में क्षेत्रीय भाषाओं का उदय मुख्य रूप से __________ के कारण था।",
+   "opts": [
+    "British colonial education and printing technology<br>ब्रिटिश औपनिवेशिक शिक्षा और प्रिंटिंग तकनीक",
+    "Decline of regional kingdoms due to Western colonization<br>पश्चिमी उपनिवेशवाद के कारण क्षेत्रीय राज्यों का पतन",
+    "Printing of Mughal court documents in regional languages<br>क्षेत्रीय भाषाओं में मुगल दरबारी दस्तावेजों की छपाई",
+    "Increase in oral storytelling traditions in various Indian languages<br>विभिन्न भारतीय भाषाओं में मौखिक कहानी परंपराओं में वृद्धि"
+   ],
+   "my_ans": "A",
+   "sol": "ब्रिटिश काल में प्रिंटिंग प्रेस के आने और औपनिवेशिक शिक्षा प्रणाली के विस्तार से क्षेत्रीय भाषाओं में पुस्तकों और समाचार पत्रों का प्रकाशन बढ़ा।",
+   "trick": "प्रिंटिंग प्रेस = क्षेत्रीय भाषाओं का प्रसार।",
+   "ans": "A"
+  },
+  {
+   "n": 110,
+   "lvl": "UG",
+   "en": "Which outcome correctly reflects the impact of the Battle of Wandiwash on European rivalry in India?",
+   "hi": "निम्नलिखित में से कौन-सा परिणाम, भारत में यूरोपीय प्रतिद्वंद्विता पर वांडीवाश के युद्ध के प्रभाव को सही ढंग से दर्शाता है?",
+   "opts": [
+    "The French authority expanded through the successful seizure of British territories.<br>ब्रिटिश क्षेत्रों पर सफल कब्जे के माध्यम से फ्रांसीसी सत्ता का विस्तार हुआ।",
+    "British dominance increased as French military influence collapsed permanently.<br>ब्रिटिश प्रभुत्व में वृद्धि हुई क्योंकि फ्रांसीसी सैन्य प्रभाव स्थायी रूप से समाप्त हो गया।",
+    "British control weakened as their forces retreated from key southern ports.<br>प्रमुख दक्षिणी बंदरगाहों से सेनाओं के पीछे हटने के साथ ही ब्रिटिश नियंत्रण कमजोर हो गया।",
+    "French supremacy grew due to new alliances with Deccan-based rulers.<br>दक्कन स्थित शासकों के साथ नए गठबंधनों के कारण फ्रांसीसी वर्चस्व में वृद्धि हुई।"
+   ],
+   "my_ans": "B",
+   "sol": "1760 के वांडीवाश के युद्ध में अंग्रेजों ने फ्रांसीसियों को निर्णायक रूप से हराया, जिससे भारत में फ्रांसीसी सैन्य शक्ति समाप्त हो गई और ब्रिटिश वर्चस्व स्थापित हुआ।",
+   "trick": "वांडीवाश = फ्रांसीसी शक्ति का अंत।",
+   "ans": "B"
+  },
+  {
+   "n": 111,
+   "lvl": "UG",
+   "en": "What event caused Mahatma Gandhi to withdraw the non-cooperation movement in February 1922?",
+   "hi": "फरवरी 1922 में घटित किस घटना के कारण महात्मा गांधी द्वारा असहयोग आंदोलन वापस ले लिया गया था?",
+   "opts": [
+    "A nationwide strike by textile workers in Bombay and Ahmedabad.<br>मुंबई और अहमदाबाद में कपड़ा श्रमिकों की राष्ट्रव्यापी हड़ताल",
+    "The violent attack on policemen during the Chauri Chaura incident.<br>चौरी चौरा घटना के दौरान पुलिसकर्मियों पर हुआ हिंसक हमला",
+    "A decision by the British to suspend restrictions on civil liberties.<br>ब्रिटिश सरकार द्वारा नागरिक स्वतंत्रता पर लगे प्रतिबंधों को निलंबित करने का निर्णय",
+    "The approval of a new round of constitutional negotiations by London.<br>लंदन द्वारा संवैधानिक वार्ताओं के एक नए दौर की स्वीकृति"
+   ],
+   "my_ans": "B",
+   "sol": "चौरी चौरा में प्रदर्शनकारियों द्वारा पुलिस स्टेशन में आग लगाने और 22 पुलिसकर्मियों की मौत से आहत होकर गांधीजी ने असहयोग आंदोलन वापस ले लिया।",
+   "trick": "चौरी चौरा = असहयोग आंदोलन की समाप्ति।",
+   "ans": "B"
+  },
+  {
+   "n": 112,
+   "lvl": "UG",
+   "en": "Who led the Portuguese expedition that first landed in Calicut, India, in 1498?",
+   "hi": "1498 में भारत के कालीकट में सबसे पहले कदम रखने वाले पुर्तगाली अभियान का नेतृत्व किसने किया था?",
+   "opts": [
+    "Vasco da Gama<br>वास्को डी गामा",
+    "Alfonso de Albuquerque<br>अल्फांसो डी अल्बुकर्क",
+    "Pedro Álvares Cabral<br>पेड्रो अल्वारेस कैब्रल",
+    "Bartholomew Diaz<br>बार्थोलोम्यू डियाज़"
+   ],
+   "my_ans": "A",
+   "sol": "वास्को डी गामा ने 1498 में केप ऑफ गुड होप के रास्ते भारत के कालीकट पहुँचकर समुद्री मार्ग की खोज की थी।",
+   "trick": "वास्को डी गामा = भारत आने वाला पहला पुर्तगाली।",
+   "ans": "A"
+  },
+  {
+   "n": 113,
+   "lvl": "UG",
+   "en": "Which outcome resulted from the Indian Councils Act of 1909 (Morley–Minto Reforms)?",
+   "hi": "भारतीय परिषद अधिनियम 1909 (मार्ले-मिंटो सुधार) का क्या परिणाम हुआ?",
+   "opts": [
+    "Establishment of provincial autonomy, complete financial authority, and autonomous ministries<br>प्रांतीय स्वायत्तता की स्थापना, पूर्ण वित्तीय अधिकार और स्वायत्त मंत्रालय",
+    "Expansion of legislative councils, admission of Indians to Viceroy's executive council, and new deliberative powers.<br>विधान परिषदों का विस्तार, वायसराय की कार्यकारी परिषद में भारतीयों का प्रवेश, और नई विचार-विमर्श शक्तियां।",
+    "Abolition of nominated seats, imposition of direct elections, and removal of official majorities.<br>नामित सीटों का उन्मूलन, प्रत्यक्ष चुनाव का अधिरोपण, और आधिकारिक बहुमत को हटाना।",
+    "Reduction of legislative council size, replacement of budgetary rights, and elimination of Indian representatives.<br>विधान परिषद के आकार में कमी, बजटीय अधिकारों का प्रतिस्थापन, और भारतीय प्रतिनिधियों का उन्मूलन।"
+   ],
+   "my_ans": "B",
+   "sol": "1909 के अधिनियम द्वारा विधान परिषदों का विस्तार किया गया और वायसराय की कार्यकारी परिषद में पहली बार किसी भारतीय (सत्येंद्र प्रसाद सिन्हा) को शामिल किया गया।",
+   "trick": "मार्ले-मिंटो = विधान परिषद विस्तार + पृथक निर्वाचन।",
+   "ans": "B"
+  },
+  {
+   "n": 114,
+   "lvl": "UG",
+   "en": "Who among the following was a prominent Moderate leader of the Indian National Congress?",
+   "hi": "निम्नलिखित में से कौन, भारतीय राष्ट्रीय कांग्रेस के एक प्रमुख नरमपंथी नेता थे?",
+   "opts": [
+    "Subhas Chandra Bose<br>सुभाष चंद्र बोस",
+    "Bhagat Singh<br>भगत सिंह",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक",
+    "Pherozeshah Mehta<br>फिरोज़शाह मेहता"
+   ],
+   "my_ans": "D",
+   "sol": "फिरोज़शाह मेहता कांग्रेस के एक प्रमुख नरमपंथी नेता थे, जबकि तिलक उग्रवादी नेता थे और बोस व भगत सिंह क्रांतिकारी विचारधारा के थे।",
+   "trick": "नरमपंथी = फिरोज़शाह मेहता।",
+   "ans": "D"
+  },
+  {
+   "n": 115,
+   "lvl": "UG",
+   "en": "The Morley-Minto Reforms were introduced by the British Government in India in ______.",
+   "hi": "भारत में ब्रिटिश सरकार द्वारा मार्ले-मिंटो सुधार ______ में पेश किए गए थे।",
+   "opts": [
+    "1905",
+    "1909",
+    "1935",
+    "1919"
+   ],
+   "my_ans": "B",
+   "sol": "मार्ले-मिंटो सुधार अधिनियम 1909 में ब्रिटिश सरकार द्वारा पारित किया गया था।",
+   "trick": "मार्ले-मिंटो = 1909।",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "574-576",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which Ministry was primarily responsible for implementing online child safety initiatives as of December 2025?",
+   "hi": "दिसंबर 2025 तक की स्थिति के अनुसार कौन-सा मंत्रालय ऑनलाइन बाल सुरक्षा पहलों के कार्यान्वयन के लिए मुख्य रूप से उत्तरदायी था?",
+   "opts": [
+    "Ministry of Social Justice<br>सामाजिक न्याय मंत्रालय",
+    "Ministry of Education<br>शिक्षा मंत्रालय",
+    "Ministry of Home Affairs<br>गृह मंत्रालय",
+    "Ministry of Electronics and Information Technology (MeitY)<br>इलेक्ट्रॉनिकी और सूचना प्रौद्योगिकी मंत्रालय (MeitY)"
+   ],
+   "my_ans": "D",
+   "sol": "इलेक्ट्रॉनिकी और सूचना प्रौद्योगिकी मंत्रालय (MeitY) ऑनलाइन बाल सुरक्षा पहलों के कार्यान्वयन के लिए मुख्य नोडल मंत्रालय है।",
+   "trick": "ऑनलाइन सुरक्षा = MeitY (डिजिटल मंत्रालय)",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Dr. Budhri Tati, named for the Padma Shri in the Padma Awards announced in 2026, is linked to which of the following areas of contribution?",
+   "hi": "डॉ. बुधरी ताती, जिन्हें 2026 में घोषित पद्म पुरस्कारों में पद्म श्री के लिए नामित किया गया था, निम्नलिखित में से किस क्षेत्र में योगदान से संबंधित है?",
+   "opts": [
+    "Social Work<br>सामाजिक कार्य",
+    "Trade and Industry<br>व्यापार और उद्योग",
+    "Literature and Education<br>साहित्य और शिक्षा",
+    "Science and Engineering<br>विज्ञान और इंजीनियरिंग"
+   ],
+   "my_ans": "A",
+   "sol": "डॉ. बुधरी ताती ओडिशा की एक प्रसिद्ध समाज सेविका हैं, जिन्हें आदिवासी कल्याण और सामुदायिक विकास के लिए पद्म श्री मिला।",
+   "trick": "बुधरी ताती = आदिवासी समाज सेवा",
+   "ans": "A"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "With reference to the 93rd anniversary celebrations of the Indian Air Force (IAF) in 2025, where was the main ceremonial parade held?",
+   "hi": "2025 में भारतीय वायु सेना (IAF) की 93वीं वर्षगांठ के अवसर के संदर्भ में, मुख्य समारोह परेड कहाँ आयोजित की गई थी?",
+   "opts": [
+    "Guwahati<br>गुवाहाटी",
+    "Bengaluru (HAL Complex)<br>बेंगलुरु (HAL कॉम्प्लेक्स)",
+    "Air Force Station Hindan, Ghaziabad<br>एयर फ़ोर्स स्टेशन हिंडन, गाजियाबाद",
+    "Delhi Cantonment<br>दिल्ली कैंटोनमेंट"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय वायु सेना की 93वीं वर्षगांठ की मुख्य परेड एयर फ़ोर्स स्टेशन हिंडन, गाजियाबाद में आयोजित की गई थी।",
+   "trick": "वायु सेना दिवस परेड = हिंडन एयरबेस",
+   "ans": "C"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which of the following is a legislative reform aimed at modernizing India’s aviation sector by re-enacting the Aircraft Act, 1934, in alignment with contemporary needs and global standards?",
+   "hi": "निम्नलिखित में ऐसा कौन-सा विधायी सुधार है, जिसका उद्देश्य समकालीन आवश्यकताओं और वैश्विक मानकों के अनुरूप वायुयान अधिनियम, 1934 को पुनः अधिनियमित करके भारत के विमानन क्षेत्र का आधुनिकीकरण करना है?",
+   "opts": [
+    "Protection of Interests in Aircraft Objects Act, 2023<br>वायुयान वस्तुओं में हित संरक्षण अधिनियम, 2023",
+    "The Carriage by Air (Amendment) Act, 2022<br>विमानवहन (संशोधन) अधिनियम, 2022",
+    "Bharatiya Vayuyan Adhiniyam, 2024<br>भारतीय वायुयान अधिनियम, 2024",
+    "Aircraft (Security) Rules, 2020 & Amendments (2022)<br>वायुयान (सुरक्षा) नियमावली, 2020 और संशोधन (2022)"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय वायुयान अधिनियम, 2024 को पुराने 1934 के अधिनियम को आधुनिक बनाने और वैश्विक मानकों के अनुरूप बदलने के लिए लाया गया है।",
+   "trick": "नया विमानन कानून = भारतीय वायुयान अधिनियम 2024",
+   "ans": "C"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "In 2025, with the theme “My Great Story: Cultures and Development”, International Migrants Day was observed on which of the following dates?",
+   "hi": "2025 में, 'माई ग्रेट स्टोरी: कल्चर्स एंड डेवलपमेंट' थीम के साथ, अंतर्राष्ट्रीय प्रवासी दिवस निम्नलिखित में से किस तिथि को मनाया गया था?",
+   "opts": [
+    "December 21<br>21 दिसंबर",
+    "December 20<br>20 दिसंबर",
+    "December 19<br>19 दिसंबर",
+    "December 18<br>18 दिसंबर"
+   ],
+   "my_ans": "D",
+   "sol": "अंतर्राष्ट्रीय प्रवासी दिवस प्रतिवर्ष 18 दिसंबर को मनाया जाता है।",
+   "trick": "प्रवासी दिवस = 18 दिसंबर",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "Which of the following individuals was awarded the Nobel Peace Prize 2025 for persistent efforts in promoting democratic rights in Venezuela and striving for a just and peaceful transition from dictatorship to democracy?",
+   "hi": "निम्नलिखित में से किस व्यक्ति को वेनेजुएला में लोकतांत्रिक अधिकारों को बढ़ावा देने और तानाशाही से लोकतंत्र में न्यायपूर्ण और शांतिपूर्ण परिवर्तन के लिए निरंतर प्रयासों के लिए 2025 का नोबेल शांति पुरस्कार प्रदान किया गया?",
+   "opts": [
+    "Maria Corina Machado<br>मारिया कोरिना मचाडो",
+    "Juan Guaidó<br>जुआन गुआइदो",
+    "Mary E. Brunkow<br>मैरी ई. ब्रुनकोव",
+    "Delcy Rodríguez<br>डेल्सी रोड्रिगेज"
+   ],
+   "my_ans": "A",
+   "sol": "मारिया कोरिना मचाडो को वेनेजुएला में लोकतंत्र बहाली और मानवाधिकारों के लिए उनके संघर्ष हेतु 2025 का नोबेल शांति पुरस्कार दिया गया।",
+   "trick": "वेनेजुएला लोकतंत्र = मारिया कोरिना मचाडो",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which award was announced by the Government of India on 26 October 2025 to honour excellence in Science, Technology, and Innovation?",
+   "hi": "भारत सरकार द्वारा 26 अक्टूबर 2025 को विज्ञान, प्रौद्योगिकी और नवाचार में उत्कृष्टता को सम्मानित करने के लिए किस पुरस्कार की घोषणा की गई?",
+   "opts": [
+    "Padma Vibhushan<br>पद्म विभूषण",
+    "Rashtriya Vigyan Puraskar<br>राष्ट्रीय विज्ञान पुरस्कार",
+    "Bharat Ratna<br>भारत रत्न",
+    "Shanti Swarup Bhatnagar Prize<br>शांति स्वरूप भटनागर पुरस्कार"
+   ],
+   "my_ans": "B",
+   "sol": "राष्ट्रीय विज्ञान पुरस्कार भारत का सर्वोच्च बहु-विषयक विज्ञान पुरस्कार है, जिसकी घोषणा 26 अक्टूबर 2025 को की गई।",
+   "trick": "विज्ञान नवाचार = राष्ट्रीय विज्ञान पुरस्कार",
+   "ans": "B"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "In December 2025, which organization issued a Request for Proposal (RfP) to establish 'Space Labs' in universities across India?",
+   "hi": "दिसंबर 2025 में, किस संगठन ने भारत भर के विश्वविद्यालयों में 'अंतरिक्ष प्रयोगशालाएँ' स्थापित करने हेतु प्रस्ताव निवेदन (RfP) निर्गमित किया?",
+   "opts": [
+    "Indian National Space Promotion and Authorisation Centre (IN-SPACe)<br>भारतीय राष्ट्रीय अंतरिक्ष संवर्धन और प्राधिकरण केंद्र (IN-SPACe)",
+    "Department of Science and Technology (DST)<br>विज्ञान और प्रौद्योगिकी विभाग (DST)",
+    "Defence Research and Development Organisation (DRDO)<br>रक्षा अनुसंधान और विकास संगठन (DRDO)",
+    "Indian Space Research Organisation (ISRO)<br>भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO)"
+   ],
+   "my_ans": "A",
+   "sol": "IN-SPACe ने विश्वविद्यालयों में अंतरिक्ष शिक्षा और अनुसंधान को बढ़ावा देने के लिए 'स्पेस लैब्स' स्थापित करने का प्रस्ताव जारी किया।",
+   "trick": "स्पेस लैब्स = IN-SPACe",
+   "ans": "A"
+  }
+ ]
+}

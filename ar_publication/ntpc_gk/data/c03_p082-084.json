@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "82-84",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "Who was the leader of the Paika Rebellion of 1817, a significant early armed resistance against British East India Company rule in Odisha?",
+   "hi": "ओडिशा में ब्रिटिश ईस्ट इंडिया कंपनी के शासन के विरुद्ध एक महत्वपूर्ण प्रारंभिक सशस्त्र प्रतिरोध, '1817 के पाइका विद्रोह' के नेता कौन थे?",
+   "opts": [
+    "Chittu Singh<br>चित्तू सिंह",
+    "Bakshi Jagabandhu<br>बख्शी जगबंधु",
+    "Sidhu Murmu<br>सिद्धू मुर्मू",
+    "Alluri Sitarama Raju<br>अल्लूरी सीताराम राजू"
+   ],
+   "my_ans": "B",
+   "sol": "1817 का पाइका विद्रोह ओडिशा के खुर्दा क्षेत्र में हुआ था, जिसका नेतृत्व बख्शी जगबंधु ने किया था।",
+   "trick": "पाइका = बख्शी जगबंधु (खुर्दा का सैन्य प्रमुख)",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "Who was known as the 'Mother of Indian Feminism' for her pioneering work in women’s education and rights?",
+   "hi": "महिलाओं की शिक्षा और अधिकारों के क्षेत्र में अपने अग्रणी कार्यों के लिए किसे 'भारतीय नारीवाद की जननी' के रूप में जाना जाता था?",
+   "opts": [
+    "Pandita Ramabai<br>पंडिता रमाबाई",
+    "Rukhmabai<br>रुखमाबाई",
+    "Annie Besant<br>एनी बेसेंट",
+    "Savitribai Phule<br>सावित्रीबाई फुले"
+   ],
+   "my_ans": "D",
+   "sol": "सावित्रीबाई फुले भारत की पहली महिला शिक्षिका थीं और उन्होंने महिलाओं की शिक्षा के लिए पुणे में पहला स्कूल खोला था।",
+   "trick": "सावित्रीबाई फुले = महिला शिक्षा की अग्रदूत",
+   "ans": "D"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "Which of the following statements is INCORRECT about the newspaper 'The Hitavada'?",
+   "hi": "निम्नलिखित में से कौन-सा कथन समाचार पत्र 'द हितवाद (The Hitavada)' के संबंध में गलत है?",
+   "opts": [
+    "It was an English daily newspaper<br>यह एक अंग्रेजी दैनिक समाचार पत्र था।",
+    "It was the mouthpiece of the Ghadar movement<br>यह गदर आंदोलन का मुखपत्र था।",
+    "It was founded by Gopal Krishna Gokhale<br>इसकी स्थापना गोपाल कृष्ण गोखले ने की थी।",
+    "It was established at Nagpur in 1911<br>इसकी स्थापना 1911 में नागपुर में हुई थी।"
+   ],
+   "my_ans": "B",
+   "sol": "हितवाद की स्थापना गोपाल कृष्ण गोखले ने 1911 में नागपुर में की थी। गदर आंदोलन का मुखपत्र 'गदर' अखबार था।",
+   "trick": "हितवाद = गोखले, गदर = लाला हरदयाल",
+   "ans": "B"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "Who wrote the iconic nationalist novel Anandamath?",
+   "hi": "राष्ट्रवाद के प्रतीक माने जाने वाले उपन्यास आनंदमठ की रचना किसने की थी?",
+   "opts": [
+    "Rabindranath Tagore<br>रवींद्रनाथ टैगोर",
+    "Sarat Chandra Chattopadhyay<br>शरत चंद्र चट्टोपाध्याय",
+    "Bankim Chandra Chattopadhyay<br>बंकिम चंद्र चट्टोपाध्याय",
+    "Dinabandhu Mitra<br>दीनबंधु मित्र"
+   ],
+   "my_ans": "C",
+   "sol": "आनंदमठ उपन्यास बंकिम चंद्र चट्टोपाध्याय द्वारा 1882 में लिखा गया था, जिसमें प्रसिद्ध गीत 'वंदे मातरम' शामिल है।",
+   "trick": "आनंदमठ = बंकिम चंद्र",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "The French East India Company’s main settlement in India was located at which place?",
+   "hi": "भारत में फ्रेंच ईस्ट इंडिया कंपनी की मुख्य बस्ती किस स्थान पर स्थित थी?",
+   "opts": [
+    "Karaikal<br>कराईकल",
+    "Pondicherry<br>पांडिचेरी",
+    "Mahe<br>माहे",
+    "Chandernagore<br>चंदेरनगर"
+   ],
+   "my_ans": "B",
+   "sol": "पांडिचेरी 1674 में स्थापित फ्रांसीसी ईस्ट इंडिया कंपनी का मुख्य केंद्र और मुख्यालय था।",
+   "trick": "फ्रांसीसी मुख्यालय = पांडिचेरी",
+   "ans": "B"
+  },
+  {
+   "n": 75,
+   "lvl": "UG",
+   "en": "The Indian Council Act of ______ introduced the concept of 'separate electorate' in India.",
+   "hi": "______ के भारतीय परिषद अधिनियम ने भारत में 'पृथक निर्वाचन क्षेत्र' की अवधारणा प्रस्तुत की।",
+   "opts": [
+    "1903",
+    "1861",
+    "1862",
+    "1909"
+   ],
+   "my_ans": "D",
+   "sol": "1909 के भारतीय परिषद अधिनियम (मार्ले-मिंटो सुधार) ने मुसलमानों के लिए पृथक निर्वाचन प्रणाली की शुरुआत की थी।",
+   "trick": "1909 = पृथक निर्वाचन (सांप्रदायिकता की शुरुआत)",
+   "ans": "D"
+  },
+  {
+   "n": 76,
+   "lvl": "UG",
+   "en": "In 1905, the Swadeshi and Boycott movement was formally proclaimed in Bengal during a meeting held at:",
+   "hi": "1905 में, बंगाल में ________ में आयोजित एक बैठक के दौरान स्वदेशी और बहिष्कार आंदोलन की औपचारिक घोषणा की गई थी।",
+   "opts": [
+    "Nagpur Congress<br>नागपुर कांग्रेस",
+    "Benaras Congress<br>बनारस कांग्रेस",
+    "Calcutta Town Hall<br>कलकत्ता टाउन हॉल",
+    "Dacca Town Square<br>ढाका टाउन स्क्वायर"
+   ],
+   "my_ans": "C",
+   "sol": "7 अगस्त 1905 को कलकत्ता टाउन हॉल में आयोजित ऐतिहासिक बैठक में स्वदेशी और बहिष्कार आंदोलन की घोषणा की गई थी।",
+   "trick": "स्वदेशी आंदोलन = 7 अगस्त 1905, कलकत्ता टाउन हॉल",
+   "ans": "C"
+  },
+  {
+   "n": 77,
+   "lvl": "UG",
+   "en": "Which characteristic correctly describes the Dual System of Administration established in Bengal after 1765?",
+   "hi": "1765 के बाद बंगाल में स्थापित दोहरी प्रशासनिक प्रणाली का सही वर्णन निम्न में से कौन-सी विशेषता करती है?",
+   "opts": [
+    "Revenue collection was handled solely by Mughal officials without Company control.<br>राजस्व संग्रह का कार्य पूरी तरह से मुगल अधिकारियों द्वारा किया जाता था, जिसमें कंपनी का कोई नियंत्रण नहीं था।",
+    "Revenue powers lay with the Company, while administrative responsibility lay with the Nawab.<br>राजस्व संबंधी शक्तियां कंपनी के पास थीं, जबकि प्रशासनिक जिम्मेदारी नवाब के पास थी।",
+    "Judicial authority was fully consolidated under the Company’s direct rule.<br>कंपनी के प्रत्यक्ष शासन के अंतर्गत न्यायिक अधिकार पूरी तरह से समेकित हो गए थे।",
+    "Criminal justice remained independent of Company supervision throughout.<br>आपराधिक न्याय प्रणाली पूरी प्रक्रिया के दौरान कंपनी की निगरानी से स्वतंत्र रही।"
+   ],
+   "my_ans": "B",
+   "sol": "रॉबर्ट क्लाइव द्वारा शुरू की गई द्वैध शासन प्रणाली में कंपनी के पास दीवानी (राजस्व) अधिकार थे और नवाब के पास प्रशासनिक जिम्मेदारी थी।",
+   "trick": "द्वैध शासन = कंपनी के पास पैसा, नवाब के पास जिम्मेदारी",
+   "ans": "B"
+  },
+  {
+   "n": 78,
+   "lvl": "UG",
+   "en": "In pre-independence India, who among the following first discussed the concept of the poverty line in his book Poverty and Un-British Rule in India?",
+   "hi": "स्वतंत्रता-पूर्व भारत में, निम्नलिखित में से किसने अपनी पुस्तक 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' में सबसे पहले गरीबी रेखा की अवधारणा पर चर्चा की थी?",
+   "opts": [
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Ravindra Nath Tagore<br>रवींद्रनाथ टैगोर",
+    "Jawaharlal Nehru<br>जवाहरलाल नेहरू",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी"
+   ],
+   "my_ans": "D",
+   "sol": "दादाभाई नौरोजी ने अपनी पुस्तक (1901) में पहली बार भारत में गरीबी रेखा और धन के निष्कासन (Drain of Wealth) का सिद्धांत दिया था।",
+   "trick": "गरीबी रेखा = दादाभाई नौरोजी",
+   "ans": "D"
+  },
+  {
+   "n": 79,
+   "lvl": "UG",
+   "en": "Who among the following led the large-scale armed attack on the Chittagong armoury in April 1930?",
+   "hi": "निम्नलिखित में से किसने, अप्रैल 1930 में चटगांव शस्त्रागार पर बड़े पैमाने पर सशस्त्र हमले का नेतृत्व किया था?",
+   "opts": [
+    "Jatin Das<br>जतिन दास",
+    "Surya Sen<br>सूर्य सेन",
+    "Bhagat Singh<br>भगत सिंह",
+    "Chandrasekhar Azad<br>चंद्रशेखर आजाद"
+   ],
+   "my_ans": "B",
+   "sol": "अप्रैल 1930 में चटगांव शस्त्रागार छापे का नेतृत्व क्रांतिकारी सूर्य सेन (मास्टर दा) ने किया था।",
+   "trick": "चटगांव शस्त्रागार = सूर्य सेन",
+   "ans": "B"
+  }
+ ]
+}

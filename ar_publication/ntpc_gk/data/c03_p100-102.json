@@ -1,0 +1,142 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "100-102",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 125,
+   "lvl": "UG",
+   "en": "The Government of India Act, 1935, provided ______________.",
+   "hi": "भारत सरकार अधिनियम, 1935 में _____________ का प्रावधान किया गया था।",
+   "opts": [
+    "Dyarchy in provinces<br>प्रांतों में द्वैध शासन",
+    "Separate electorates for Hindus only<br>हिंदुओं के लिए अलग निर्वाचक मंडल",
+    "Separate electorates for all communities<br>सभी समुदायों के लिए अलग-अलग मतदाता क्षेत्र",
+    "Provincial autonomy and federal structure<br>प्रांतीय स्वायत्तता और संघीय संरचना"
+   ],
+   "my_ans": "D",
+   "sol": "इस अधिनियम ने प्रांतों में द्वैध शासन समाप्त कर उन्हें स्वायत्तता दी और एक संघीय ढांचा प्रस्तावित किया।",
+   "trick": "1935 = प्रांतीय स्वायत्तता + संघीय ढांचा",
+   "ans": "D"
+  },
+  {
+   "n": 126,
+   "lvl": "UG",
+   "en": "In which year was the Indian freedom fighter Tantia Tope, a prominent leader of the Revolt of 1857, executed by the British?",
+   "hi": "भारतीय स्वतंत्रता सेनानी तात्या टोपे, जो 1857 के विद्रोह के एक प्रमुख नेता थे, को अंग्रेजों द्वारा किस वर्ष फाँसी दी गई थी?",
+   "opts": [
+    "1857",
+    "1860",
+    "1859",
+    "1858"
+   ],
+   "my_ans": "C",
+   "sol": "तात्या टोपे को अप्रैल 1859 में पकड़ा गया और 18 अप्रैल 1859 को शिवपुरी में फाँसी दी गई।",
+   "trick": "1857 का विद्रोह, 1859 में तात्या टोपे की शहादत",
+   "ans": "C"
+  },
+  {
+   "n": 127,
+   "lvl": "UG",
+   "en": "What was the main purpose of the Commission of Inquiry, appointed by the Janata Party government in May 1977?",
+   "hi": "मई 1977 में, जनता पार्टी सरकार द्वारा नियुक्त जांच आयोग का मुख्य प्रयोजन क्या था?",
+   "opts": [
+    "To assess the impact of the Emergency on civil liberties<br>नागरिक स्वतंत्रता पर आपातकाल के प्रभाव का आकलन करना",
+    "To investigate the economic policies of the previous government<br>पिछली सरकार की आर्थिक नीतियों की जांच-पड़ताल करना",
+    "To examine allegations of abuse of authority during the Emergency<br>आपातकाल के दौरान प्राधिकार के दुरुपयोग के आरोपों की जांच करना",
+    "To evaluate the effectiveness of the Janata Party government<br>जनता पार्टी सरकार की प्रभावशीलता का मूल्यांकन करना"
+   ],
+   "my_ans": "C",
+   "sol": "जनता पार्टी ने आपातकाल (1975-77) के दौरान सत्ता के दुरुपयोग और अत्याचारों की जांच के लिए शाह आयोग का गठन किया था।",
+   "trick": "आपातकाल का दुरुपयोग = शाह आयोग",
+   "ans": "C"
+  },
+  {
+   "n": 128,
+   "lvl": "UG",
+   "en": "Which strategy was used by the British to regain control after initial rebel victories across northern India in the Revolt of 1857?",
+   "hi": "1857 के विद्रोह में उत्तरी भारत में शुरुआती विद्रोही विजयों के बाद अंग्रेजों ने नियंत्रण पुनः प्राप्त करने के लिए कौन-सी रणनीति अपनाई थी?",
+   "opts": [
+    "Recapturing key centres, enacting new laws, and offering rewards to loyal chiefs.<br>प्रमुख केंद्रों पर पुनः कब्जा करना, नए कानून लागू करना और वफादार सरदारों को पुरस्कार देना",
+    "Negotiating a settlement that restored regional rulers to their former positions.<br>एक समझौता करना जिसके अंतर्गत क्षेत्रीय शासकों को उनके पुराने पदों पर बहाल कर दिया गया",
+    "Allowing the Mughal emperor to govern Delhi under strict British supervision.<br>मुगल सम्राट को सख्त ब्रिटिश पर्यवेक्षण के अंतर्गत दिल्ली पर शासन करने की अनुमति देना",
+    "Withdrawing British forces from major towns to avoid further confrontation.<br>आगे के टकराव से बचने के लिए प्रमुख शहरों से ब्रिटिश सेना को वापस बुला लेना"
+   ],
+   "my_ans": "A",
+   "sol": "अंग्रेजों ने सैन्य बल से प्रमुख केंद्रों को पुनः जीता, 1858 का अधिनियम लागू किया और वफादार जमींदारों को पुरस्कृत कर विद्रोह को दबाया।",
+   "trick": "सैन्य बल + कानून + वफादारों को इनाम",
+   "ans": "A"
+  },
+  {
+   "n": 129,
+   "lvl": "UG",
+   "en": "Which prominent Indian reformer founded the Poona Sarvajanik Sabha during the Indian National movement?",
+   "hi": "निम्नलिखित में किस प्रमुख भारतीय समाज सुधारक ने भारतीय राष्ट्रीय आंदोलन के दौरान पूना सार्वजनिक सभा की स्थापना की थी?",
+   "opts": [
+    "Gopal Hari Deshmukh (Lokhitwadi)<br>गोपाल हरि देशमुख (लोकहितवादी)",
+    "Mahadev Govind Ranade<br>महादेव गोविंद रानाडे",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी",
+    "Gopal Krishna Gokhale<br>गोपाल कृष्ण गोखले"
+   ],
+   "my_ans": "B",
+   "sol": "पूना सार्वजनिक सभा की स्थापना 1870 में महादेव गोविंद रानाडे द्वारा पुणे में की गई थी।",
+   "trick": "रानाडे = पूना सार्वजनिक सभा (1870)",
+   "ans": "B"
+  },
+  {
+   "n": 130,
+   "lvl": "UG",
+   "en": "How did Sayyid Ahmad Khan’s Aligarh Movement differ from the Arya Samaj?",
+   "hi": "सैय्यद अहमद खान का अलीगढ़ आंदोलन, आर्य समाज से किस प्रकार भिन्न था?",
+   "opts": [
+    "Aligarh Movement opposed science, while Arya Samaj rejected old scriptures.<br>अलीगढ़ आंदोलन ने विज्ञान का विरोध किया, जबकि आर्य समाज ने पुराने धर्मग्रंथों को अस्वीकार कर दिया।",
+    "Aligarh Movement rejected modern learning, while Arya Samaj discouraged rational thinking.<br>अलीगढ़ आंदोलन ने आधुनिक शिक्षा को अस्वीकार कर दिया, जबकि आर्य समाज ने तर्कसंगत चिंतन को हतोत्साहित किया।",
+    "Aligarh Movement supported Western-style education, while Arya Samaj promoted Vedic studies.<br>अलीगढ़ आंदोलन ने पश्चिमी शैली की शिक्षा का समर्थन किया, जबकि आर्य समाज ने वैदिक अध्ययन को बढ़ावा दिया।",
+    "Aligarh Movement encouraged priestly control, while Arya Samaj rejected monotheism.<br>अलीगढ़ आंदोलन ने पुरोहितों के नियंत्रण को प्रोत्साहित किया, जबकि आर्य समाज ने एकेश्वरवाद को अस्वीकार कर दिया।"
+   ],
+   "my_ans": "C",
+   "sol": "अलीगढ़ आंदोलन ने मुसलमानों में पश्चिमी शिक्षा और विज्ञान को बढ़ावा दिया, जबकि आर्य समाज ने वेदों की ओर लौटने और वैदिक शिक्षा पर जोर दिया।",
+   "trick": "अलीगढ़ = पश्चिमी शिक्षा, आर्य समाज = वैदिक शिक्षा",
+   "ans": "C"
+  },
+  {
+   "n": 131,
+   "lvl": "UG",
+   "en": "Which tribal movement required the British to deploy troops from distant regions due to its intensity?",
+   "hi": "किस जनजातीय आंदोलन की तीव्रता के कारण अंग्रेजों को दूर-दराज के क्षेत्रों से सैनिकों को तैनात करना पड़ा?",
+   "opts": [
+    "The Santhal rebellion that ended with a limited military response<br>संथाल विद्रोह (Santhal rebellion), जिसका अंत एक सीमित सैन्य कार्रवाई के साथ हुआ।",
+    "The Mappila revolt was confined to coastal fishing villages.<br>माप्पिला विद्रोह (Mappila revolt), जो तटीय मछली पकड़ने वाले गाँवों तक सीमित था।",
+    "The Bhil uprising in Khandesh marked by sporadic local resistance.<br>खानदेश में भील विद्रोह, जो छिटपुट स्थानीय प्रतिरोध द्वारा चिह्नित था।",
+    "The Kol rebellion in Singhbhum challenged British authority.<br>सिंहभूम में कोल विद्रोह, जिसने ब्रिटिश सत्ता को चुनौती दी।"
+   ],
+   "my_ans": "A",
+   "sol": "संथाल विद्रोह (1855-56) इतना व्यापक था कि इसे दबाने के लिए अंग्रेजों को दूर-दराज से भारी सैन्य बल और तोपखाना बुलाना पड़ा।",
+   "trick": "संथाल विद्रोह = भारी सैन्य तैनाती",
+   "ans": "A"
+  },
+  {
+   "n": 132,
+   "lvl": "UG",
+   "en": "During the Revolt of 1857, the villagers of pargana Barout in Uttar Pradesh rallied under the leadership of which local figure?",
+   "hi": "1857 के विद्रोह के दौरान, उत्तर प्रदेश के परगना बड़ौत के ग्रामीणों ने किस स्थानीय व्यक्ति के नेतृत्व में रैली की थी?",
+   "opts": [
+    "Shah Mal<br>शाह मल (Shah Mal)",
+    "Gonoo Kol<br>गोनू कोल (Gonoo Kol)",
+    "Birjis Qadr<br>बिरजिस क़द्र (Birjis Qadr)",
+    "Nana Sahib<br>नाना साहेब (Nana Sahib)"
+   ],
+   "my_ans": "A",
+   "sol": "उत्तर प्रदेश के बड़ौत परगना में 1857 के विद्रोह का नेतृत्व स्थानीय नेता शाह मल ने किया था।",
+   "trick": "बड़ौत = शाह मल",
+   "ans": "A"
+  }
+ ]
+}

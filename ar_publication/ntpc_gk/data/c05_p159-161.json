@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "159-161",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 99,
+   "lvl": "GL",
+   "en": "Which of the following factors does NOT contribute to farming variety in India?",
+   "hi": "निम्नलिखित में से कौन-सा कारक, भारत में कृषि की विविधता में योगदान नहीं देता है?",
+   "opts": [
+    "Soil types<br>मृदा के प्रकार",
+    "Climate<br>जलवायु",
+    "Uniform landform<br>एकसमान भू-आकृति",
+    "Irrigation availability<br>सिंचाई की उपलब्धता"
+   ],
+   "my_ans": "C",
+   "sol": "भारत में कृषि विविधता के लिए विविध मिट्टी, जलवायु और सिंचाई की उपलब्धता जिम्मेदार हैं। एकसमान भू-आकृति (Uniform landform) विविधता को कम करती है, बढ़ाती नहीं है।",
+   "trick": "विविधता के लिए विविधता ही चाहिए, एकसमानता नहीं।",
+   "ans": "C"
+  },
+  {
+   "n": 100,
+   "lvl": "GL",
+   "en": "Which states suffered 30-70% below-normal rainfall in August 2025, contributing to crop stress and water shortages?",
+   "hi": "अगस्त 2025 में किन राज्यों में सामान्य से 30-70% कम वर्षा हुई, जिसके कारण फसलों पर प्रभाव पड़ा और पानी की कमी हुई?",
+   "opts": [
+    "Kerala, Tamil Nadu, Karnataka, Maharashtra, Goa, and Gujarat<br>केरल, तमिलनाडु, कर्नाटक, महाराष्ट्र, गोवा, और गुजरात",
+    "Rajasthan, Haryana, Sikkim, Assam, Manipur, and Tripura<br>राजस्थान, हरियाणा, सिक्किम, असम, मणिपुर, और त्रिपुरा",
+    "Ladakh, Arunachal Pradesh, Bihar, UP, Punjab, and the Northeast<br>लद्दाख, अरुणाचल प्रदेश, बिहार, UP, पंजाब, और उत्तर-पूर्व",
+    "Odisha, Madhya Pradesh, Chhattisgarh, Telangana, and Andhra Pradesh<br>ओडिशा, मध्य प्रदेश, छत्तीसगढ़, तेलंगाना, और आंध्र प्रदेश"
+   ],
+   "my_ans": "C",
+   "sol": "अगस्त 2025 में लद्दाख, पंजाब, हरियाणा, यूपी, बिहार और पूर्वोत्तर राज्यों में मानसून की भारी कमी देखी गई, जिससे खरीफ फसलों पर बुरा असर पड़ा।",
+   "trick": "उत्तर और पूर्वोत्तर भारत में 2025 का सूखा याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 101,
+   "lvl": "GL",
+   "en": "Which landform is formed when a glacier erodes a pre-existing river valley by widening, deepening, and smoothing it?",
+   "hi": "जब कोई हिमनद किसी पहले से मौजूद नदी घाटी को चौड़ी, गहरी और समतल करके उसका अपरदन करता है, तो कौन सी भू-आकृति बनती है?",
+   "opts": [
+    "V-shaped valley<br>V-आकृति की घाटी",
+    "Gorge<br>गॉर्ज",
+    "Floodplain<br>बाढ़ का मैदान",
+    "U-shaped valley<br>U-आकृति की घाटी"
+   ],
+   "my_ans": "A",
+   "sol": "हिमनद (Glacier) के अपरदन से नदी की पुरानी V-आकार की घाटी चौड़ी और गहरी होकर U-आकार की घाटी में बदल जाती है।",
+   "trick": "हिमनद = U-आकार, नदी = V-आकार।",
+   "ans": "A"
+  },
+  {
+   "n": 102,
+   "lvl": "GL",
+   "en": "What does the crude birth rate (CBR) measure in demographic studies?",
+   "hi": "जनसांख्यिकीय अध्ययनों में अशोधित जन्म दर (CBR) क्या मापती है?",
+   "opts": [
+    "Share of employed women in workforce<br>कार्यबल में नियोजित महिलाओं का हिस्सा",
+    "Ratio of deaths per hundred population<br>प्रति सौ जनसंख्या पर मृत्यु का अनुपात",
+    "Net rural to urban migration<br>नेट ग्रामीण से शहरी प्रवास",
+    "Number of live births per thousand annually<br>प्रति वर्ष प्रति हजार जीवित जन्मों की संख्या"
+   ],
+   "my_ans": "D",
+   "sol": "अशोधित जन्म दर (CBR) किसी दिए गए वर्ष में प्रति 1,000 जनसंख्या पर जीवित जन्मों की संख्या को मापती है।",
+   "trick": "CBR = प्रति हजार जीवित जन्म।",
+   "ans": "D"
+  },
+  {
+   "n": 103,
+   "lvl": "GL",
+   "en": "Which of the following three river systems are primarily responsible for the formation of the Northern Plains of India?",
+   "hi": "निम्नलिखित में से कौन-सी तीन नदी प्रणालियां मुख्य रूप से भारत के उत्तरी मैदानों के निर्माण के लिए उत्तरदायी हैं?",
+   "opts": [
+    "Krishna, Godavari, Yamuna<br>कृष्णा, गोदावरी, यमुना",
+    "Narmada, Tapti, Kaveri<br>नर्मदा, ताप्ती, कावेरी",
+    "Indus, Ganga, Brahmaputra<br>सिंधु, गंगा, ब्रह्मपुत्र",
+    "Mahanadi, Ganga, Brahmaputra<br>महानदी, गंगा, ब्रह्मपुत्र"
+   ],
+   "my_ans": "C",
+   "sol": "भारत के उत्तरी मैदानों का निर्माण सिंधु, गंगा और ब्रह्मपुत्र नदियों द्वारा लाए गए जलोढ़ निक्षेपों (alluvial deposits) से हुआ है।",
+   "trick": "सिंधु-गंगा-ब्रह्मपुत्र = उत्तरी मैदान के निर्माता।",
+   "ans": "C"
+  },
+  {
+   "n": 104,
+   "lvl": "GL",
+   "en": "Which of the following river delta is NOT located on the eastern coastal plain?",
+   "hi": "निम्नलिखित में से कौन-सा नदी डेल्टा, पूर्वी तटीय मैदान पर स्थित नहीं है?",
+   "opts": [
+    "Tapti<br>ताप्ती",
+    "Mahanadi<br>महानदी",
+    "Godavari<br>गोदावरी",
+    "Krishna<br>कृष्णा"
+   ],
+   "my_ans": "A",
+   "sol": "ताप्ती और नर्मदा नदियां पश्चिम की ओर बहती हैं और अरब सागर में गिरती हैं, इसलिए इनका डेल्टा पश्चिमी तट पर है।",
+   "trick": "ताप्ती-नर्मदा = पश्चिम की ओर बहने वाली नदियां।",
+   "ans": "A"
+  },
+  {
+   "n": 105,
+   "lvl": "GL",
+   "en": "Which of the following instruments is used to measure the intensity of earthquakes?",
+   "hi": "निम्नलिखित में से किस उपकरण का उपयोग भूकंप की तीव्रता मापने के लिए किया जाता है?",
+   "opts": [
+    "Tiltmeter<br>टिल्टमीटर",
+    "Barometer<br>बैरोमीटर",
+    "Seismograph<br>सीस्मोग्राफ",
+    "Anemometer<br>एनीमोमीटर"
+   ],
+   "my_ans": "C",
+   "sol": "सीस्मोग्राफ (Seismograph) भूकंपीय तरंगों को रिकॉर्ड करता है और भूकंप की तीव्रता या परिमाण को मापता है।",
+   "trick": "Seismo = भूकंप से संबंधित।",
+   "ans": "C"
+  },
+  {
+   "n": 106,
+   "lvl": "GL",
+   "en": "Port Victoria, where the First Training Squadron completed its visit, serves as the capital port of which African island nation?",
+   "hi": "पोर्ट विक्टोरिया, जहां प्रथम प्रशिक्षण स्क्वाड्रन (First Training Squadron) ने अपनी यात्रा पूरी की, किस अफ्रीकी द्वीप राष्ट्र की राजधानी है?",
+   "opts": [
+    "Comoros<br>कोमोरोस",
+    "Seychelles<br>सेशेल्स",
+    "Madagascar<br>मैडागास्कर",
+    "Mauritius<br>मॉरीशस"
+   ],
+   "my_ans": "B",
+   "sol": "पोर्ट विक्टोरिया सेशेल्स की राजधानी है, जो माहे द्वीप पर स्थित है और देश का मुख्य बंदरगाह है।",
+   "trick": "विक्टोरिया = सेशेल्स की राजधानी।",
+   "ans": "B"
+  },
+  {
+   "n": 107,
+   "lvl": "GL",
+   "en": "The Salem Steel Plant is located in which state?",
+   "hi": "सलेम स्टील प्लांट किस राज्य में स्थित है?",
+   "opts": [
+    "Jharkhand<br>झारखंड",
+    "Karnataka<br>कर्नाटक",
+    "Bihar<br>बिहार",
+    "Tamil Nadu<br>तमिलनाडु"
+   ],
+   "my_ans": "D",
+   "sol": "सलेम स्टील प्लांट तमिलनाडु के सलेम जिले में स्थित है और इसे सेल (SAIL) द्वारा संचालित किया जाता है।",
+   "trick": "सलेम = तमिलनाडु।",
+   "ans": "D"
+  },
+  {
+   "n": 108,
+   "lvl": "GL",
+   "en": "The telegraph cable was laid across the Atlantic Ocean in 1958 for rapid communication between North America and __________.",
+   "hi": "उत्तरी अमेरिका और __________ के बीच तीव्र संचार के लिए, 1958 में अटलांटिक महासागर में टेलीग्राफ केबल बिछाई गई।",
+   "opts": [
+    "Latin America<br>लैटिन अमेरिका",
+    "South Africa<br>दक्षिण अफ्रीका",
+    "West Indies<br>वेस्ट इंडीज",
+    "Europe<br>यूरोप"
+   ],
+   "my_ans": "D",
+   "sol": "अटलांटिक महासागर के पार पहली सफल टेलीग्राफ केबल उत्तरी अमेरिका और यूरोप के बीच संचार स्थापित करने के लिए बिछाई गई थी।",
+   "trick": "अटलांटिक के पार = अमेरिका और यूरोप।",
+   "ans": "D"
+  }
+ ]
+}

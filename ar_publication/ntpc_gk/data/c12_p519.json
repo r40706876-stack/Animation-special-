@@ -1,0 +1,46 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "519-519",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 223,
+   "lvl": "UG",
+   "en": "Programs like MS Word, MS Excel, and PowerPoint fall into which group?",
+   "hi": "एमएस वर्ड, एमएस एक्सेल और पावरप्वाइंट जैसे प्रोग्राम किस समूह में आते हैं?",
+   "opts": [
+    "Application software<br>एप्लीकेशन सॉफ्टवेयर",
+    "Booting programs<br>बूटिंग प्रोग्राम",
+    "Hardware components<br>हार्डवेयर कॉम्पोनेन्ट्स",
+    "System software<br>सिस्टम सॉफ्टवेयर"
+   ],
+   "my_ans": "A",
+   "sol": "एमएस वर्ड, एक्सेल और पावरप्वाइंट विशिष्ट कार्यों (जैसे टाइपिंग, डेटा विश्लेषण) के लिए बनाए गए हैं, इसलिए इन्हें एप्लीकेशन सॉफ्टवेयर कहा जाता है।",
+   "trick": "उपयोगकर्ता के विशिष्ट कार्यों के लिए बने प्रोग्राम 'एप्लीकेशन सॉफ्टवेयर' कहलाते हैं।",
+   "ans": "A"
+  },
+  {
+   "n": 224,
+   "lvl": "UG",
+   "en": "Which software type helps the operating system to manage hardware and provide services to applications?",
+   "hi": "कौन-सा सॉफ्टवेयर प्रकार, ऑपरेटिंग सिस्टम को हार्डवेयर मैनेज करने और एप्लीकेशनों को सर्विस प्रदान करने में सहायता करता है?",
+   "opts": [
+    "System software<br>सिस्टम सॉफ्टवेयर",
+    "Driver software<br>ड्राइवर सॉफ्टवेयर",
+    "Utility software<br>यूटिलिटी सॉफ्टवेयर",
+    "Application software<br>एप्लीकेशन सॉफ्टवेयर"
+   ],
+   "my_ans": "A",
+   "sol": "सिस्टम सॉफ्टवेयर हार्डवेयर और एप्लीकेशन के बीच इंटरफेस का कार्य करता है और ऑपरेटिंग सिस्टम को हार्डवेयर संसाधनों को प्रबंधित करने में मदद करता है।",
+   "trick": "सिस्टम सॉफ्टवेयर कंप्यूटर के बुनियादी संचालन और हार्डवेयर प्रबंधन के लिए जिम्मेदार है।",
+   "ans": "A"
+  }
+ ]
+}

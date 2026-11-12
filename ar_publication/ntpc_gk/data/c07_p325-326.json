@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "325-326",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 329,
+   "lvl": "UG",
+   "en": "Which article implicitly prohibits 'dual citizenship' in India?",
+   "hi": "भारत में कौन-सा अनुच्छेद, अव्यक्त रूप से 'दोहरी नागरिकता' को प्रतिबंधित करता है?",
+   "opts": [
+    "Article 7<br>अनुच्छेद 7",
+    "Article 3<br>अनुच्छेद 3",
+    "Article 5<br>अनुच्छेद 5",
+    "Article 9<br>अनुच्छेद 9"
+   ],
+   "my_ans": "D",
+   "sol": "भारतीय संविधान का अनुच्छेद 9 यह प्रावधान करता है कि यदि कोई व्यक्ति स्वेच्छा से किसी विदेशी देश की नागरिकता प्राप्त कर लेता है, तो वह भारत का नागरिक नहीं रहेगा।",
+   "trick": "अनुच्छेद 9 = विदेशी नागरिकता ली, तो भारत की गई।",
+   "ans": "D"
+  },
+  {
+   "n": 330,
+   "lvl": "UG",
+   "en": "The Preamble declares India to be a Secular State. What is the meaning of this?",
+   "hi": "उद्देशिका में भारत को एक पंथनिरपेक्ष राज्य घोषित किया गया है। इसका क्या अभिप्राय है?",
+   "opts": [
+    "Citizens must not practise any religion<br>नागरिकों को किसी भी धर्म का पालन नहीं करना चाहिए।",
+    "State protects all religions equally<br>राज्य सभी धर्मों की समान रूप से रक्षा करता है।",
+    "State promotes majority religion<br>राज्य बहुसंख्यक धर्म को बढ़ावा देता है।",
+    "Religion is banned by the State<br>राज्य द्वारा धर्म पर प्रतिबंध लगाया गया है।"
+   ],
+   "my_ans": "B",
+   "sol": "भारत एक धर्मनिरपेक्ष राज्य है जिसका अर्थ है कि राज्य का अपना कोई आधिकारिक धर्म नहीं है और वह सभी धर्मों का समान सम्मान और संरक्षण करता है।",
+   "trick": "धर्मनिरपेक्ष = सर्व धर्म समभाव (सभी धर्मों का समान सम्मान)।",
+   "ans": "B"
+  },
+  {
+   "n": 331,
+   "lvl": "UG",
+   "en": "India follows which model of citizenship under its Constitution?",
+   "hi": "भारत अपने संविधान के तहत नागरिकता के किस मॉडल का अनुसरण करता है?",
+   "opts": [
+    "One: only Indian citizenship<br>एक: केवल भारतीय नागरिकता",
+    "Three: local, state, national<br>तीन: स्थानीय, राज्य, राष्ट्रीय",
+    "Two: national and state<br>दो: राष्ट्रीय और राज्य",
+    "Two: national and regional<br>दो: राष्ट्रीय और क्षेत्रीय"
+   ],
+   "my_ans": "A",
+   "sol": "भारत में 'एकल नागरिकता' का प्रावधान है, जिसका अर्थ है कि पूरे देश के लिए केवल एक ही नागरिकता है, चाहे व्यक्ति किसी भी राज्य का निवासी हो।",
+   "trick": "भारत = एकल नागरिकता (ब्रिटिश मॉडल)।",
+   "ans": "A"
+  },
+  {
+   "n": 332,
+   "lvl": "UG",
+   "en": "In which of the following years was the Citizenship Act passed by the Indian Parliament?",
+   "hi": "निम्नलिखित में से किस वर्ष में भारतीय संसद द्वारा नागरिकता अधिनियम पारित किया गया था?",
+   "opts": [
+    "1955",
+    "1953",
+    "1952",
+    "1950"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संसद द्वारा नागरिकता अधिनियम 1955 में पारित किया गया था, जो 30 दिसंबर 1955 से लागू हुआ।",
+   "trick": "नागरिकता अधिनियम = 1955 याद रखें।",
+   "ans": "A"
+  }
+ ]
+}

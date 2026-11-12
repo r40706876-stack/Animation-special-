@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "144-146",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "Which of the following States/Union Territories shares a border with Afghanistan?",
+   "hi": "निम्नलिखित में से कौन-सा राज्य/केंद्र शासित प्रदेश, अफगानिस्तान के साथ सीमा साझा करता है?",
+   "opts": [
+    "Rajasthan<br>राजस्थान",
+    "Ladakh<br>लद्दाख",
+    "Jammu and Kashmir<br>जम्मू और कश्मीर",
+    "Punjab<br>पंजाब"
+   ],
+   "my_ans": "B",
+   "sol": "भारत की अफगानिस्तान के साथ 106 किमी की सीमा लद्दाख (केंद्र शासित प्रदेश) के माध्यम से है, जो वाखान गलियारे को छूती है।",
+   "trick": "अफगानिस्तान = लद्दाख (वाखान गलियारा)",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "The Bhabar and Terai regions of the Great Indian Plains differ primarily in:",
+   "hi": "भाबर और तराई क्षेत्र मुख्य रूप से किस आधार पर भिन्न हैं?",
+   "opts": [
+    "Rainfall and wind direction<br>वर्षा और हवा की दिशा",
+    "Human settlement patterns<br>मानव बस्ती के पैटर्न",
+    "Permeability of soil and groundwater availability<br>मिट्टी की पारगम्यता और भूजल उपलब्धता",
+    "Influenced by the Himalayan Rivers<br>हिमालयी नदियों का प्रभाव"
+   ],
+   "my_ans": "C",
+   "sol": "भाबर क्षेत्र कंकड़-पत्थरों से बना है जहाँ नदियाँ विलुप्त हो जाती हैं, जबकि तराई क्षेत्र महीन जलोढ़ से बना है जहाँ नदियाँ पुनः प्रकट होकर दलदली भूमि बनाती हैं।",
+   "trick": "भाबर = छिद्रयुक्त (पानी अंदर), तराई = दलदली (पानी बाहर)",
+   "ans": "C"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Which wind system blows consistently from high-pressure to low-pressure areas year-round?",
+   "hi": "कौन-सी पवन प्रणाली का सातत्य प्रवाह वर्ष भर उच्च दाब क्षेत्रों से निम्न दाब क्षेत्रों की ओर होता है?",
+   "opts": [
+    "Polar winds<br>ध्रुवीय पवन",
+    "Periodic winds<br>मौसमी पवन",
+    "Local winds<br>स्थानीय पवन",
+    "Planetary winds<br>भूमंडलीय पवन"
+   ],
+   "my_ans": "D",
+   "sol": "ग्रहीय पवनें (जैसे व्यापारिक पवनें) वर्ष भर एक ही दिशा में उच्च दाब से निम्न दाब की ओर चलती हैं।",
+   "trick": "ग्रहीय = स्थायी (वर्ष भर)",
+   "ans": "D"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "Tea cultivation in India is mainly concentrated in which of the following regions?",
+   "hi": "भारत में चाय की कृषि मुख्य रूप से निम्नलिखित में से किस क्षेत्र में संकेंद्रित है?",
+   "opts": [
+    "North-Eastern Hills<br>उत्तर-पूर्वी पहाड़ियाँ",
+    "Thar Desert<br>थार मरुस्थल",
+    "Central Plateau<br>मध्य पठार",
+    "Aravali Hills<br>अरावली पहाड़ियाँ"
+   ],
+   "my_ans": "A",
+   "sol": "भारत का 80% से अधिक चाय उत्पादन असम और पश्चिम बंगाल की उत्तर-पूर्वी पहाड़ियों में होता है।",
+   "trick": "चाय = असम/उत्तर-पूर्व",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "Which Koppen climate subtype is identified by a short wet season and long, severe dry period?",
+   "hi": "कोपेन जलवायु के किस उप-प्रकार की पहचान, लघु आर्द्र ऋतु और दीर्घ, कठोर शुष्क अवधि से की जाती है?",
+   "opts": [
+    "BSh climate subtype<br>BSh जलवायु उप-प्रकार",
+    "Aw climate subtype<br>Aw जलवायु उप-प्रकार",
+    "Am climate subtype<br>Am जलवायु उप-प्रकार",
+    "Af climate subtype<br>Af जलवायु उप-प्रकार"
+   ],
+   "my_ans": "B",
+   "sol": "Aw जलवायु (उष्णकटिबंधीय सवाना) में ग्रीष्मकाल में छोटी वर्षा ऋतु और शीतकाल में लंबी शुष्क अवधि होती है।",
+   "trick": "Aw = सवाना (शुष्क)",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Which island country, along with Sri Lanka, is identified as India’s southern neighbour across the Indian Ocean?",
+   "hi": "श्रीलंका के साथ, किस द्वीप देश की पहचान हिंद महासागर में भारत के दक्षिणी पड़ोसी के रूप में की गई है?",
+   "opts": [
+    "Indonesia<br>इंडोनेशिया",
+    "Maldives<br>मालदीव",
+    "Bhutan<br>भूटान",
+    "Thailand<br>थाईलैंड"
+   ],
+   "my_ans": "B",
+   "sol": "भारत के दक्षिण में हिंद महासागर में दो प्रमुख द्वीप देश श्रीलंका और मालदीव स्थित हैं।",
+   "trick": "दक्षिण पड़ोसी = श्रीलंका और मालदीव",
+   "ans": "B"
+  },
+  {
+   "n": 51,
+   "lvl": "GL",
+   "en": "Which of the following technological advances enabled the cultivation of heavier, wetter soils in the early Iron Age?",
+   "hi": "निम्नलिखित में से किस तकनीकी प्रगति ने प्रारंभिक लौह युग में भारी, नम मृदा की कृषि को संभव बनाया?",
+   "opts": [
+    "Bronze chisels and spades<br>कांसे की छेनी और कुदाल",
+    "Iron ploughshares and axes<br>लोहे के हल और कुल्हाड़ी",
+    "Stone microliths and scrapers<br>पत्थर की सूक्ष्मशिला और खुरचनी",
+    "Copper sickles and knives<br>तांबे की दरांती और चाकू"
+   ],
+   "my_ans": "B",
+   "sol": "लोहे के हल भारी मिट्टी को जोतने में सक्षम थे और लोहे की कुल्हाड़ियों ने घने जंगलों को साफ करना आसान बना दिया।",
+   "trick": "लोहा = भारी मिट्टी की जुताई",
+   "ans": "B"
+  },
+  {
+   "n": 52,
+   "lvl": "GL",
+   "en": "Which national park in India has been declared a UNESCO World Heritage since 1987 for its unique mangrove ecosystem?",
+   "hi": "भारत में किस राष्ट्रीय उद्यान को उसके अद्वितीय मैंग्रोव पारिस्थितिकी तंत्र के लिए 1987 से यूनेस्को की विश्व धरोहर घोषित किया गया है?",
+   "opts": [
+    "Sundarbans National Park<br>सुंदरबन राष्ट्रीय उद्यान",
+    "Kaziranga National Park<br>काजीरंगा राष्ट्रीय उद्यान",
+    "Gir National Park<br>गिर राष्ट्रीय उद्यान",
+    "Jim Corbett National Park<br>जिम कॉर्बेट राष्ट्रीय उद्यान"
+   ],
+   "my_ans": "A",
+   "sol": "सुंदरबन राष्ट्रीय उद्यान पश्चिम बंगाल में स्थित है और यह दुनिया के सबसे बड़े मैंग्रोव वन के लिए प्रसिद्ध है।",
+   "trick": "सुंदरबन = मैंग्रोव",
+   "ans": "A"
+  },
+  {
+   "n": 53,
+   "lvl": "GL",
+   "en": "In which region of the Himalayas is the variation in altitude the greatest?",
+   "hi": "हिमालय के किस क्षेत्र में अधिक तुंगता-जनित भिन्नता पाई जाती है?",
+   "opts": [
+    "Eastern Himalayan Region<br>पूर्वी हिमालय क्षेत्र",
+    "Northern Himalayan Region<br>उत्तरी हिमालय क्षेत्र",
+    "Western Himalayan Region<br>पश्चिमी हिमालय क्षेत्र",
+    "Southern Himalayan Region<br>दक्षिणी हिमालय क्षेत्र"
+   ],
+   "my_ans": "A",
+   "sol": "पूर्वी हिमालय में बहुत कम दूरी में ही समुद्र तल से लेकर 8000 मीटर से ऊंचे पर्वत शिखर पाए जाते हैं।",
+   "trick": "पूर्वी हिमालय = ऊँचाई में अधिक भिन्नता",
+   "ans": "A"
+  },
+  {
+   "n": 54,
+   "lvl": "GL",
+   "en": "Which of the following is the headquarters of ICAR-Central Institute on Fisheries Education?",
+   "hi": "निम्नलिखित में से कौन-सा, ICAR-केंद्रीय मत्स्यकी शिक्षा संस्थान का मुख्यालय है?",
+   "opts": [
+    "Thiruvananthapuram<br>तिरुवनंतपुरम",
+    "Panaji<br>पणजी",
+    "Mumbai<br>मुंबई",
+    "Vishakhapatnam<br>विशाखापत्तनम"
+   ],
+   "my_ans": "C",
+   "sol": "ICAR-केंद्रीय मत्स्यकी शिक्षा संस्थान (CIFE) मुंबई, महाराष्ट्र में स्थित है।",
+   "trick": "CIFE = मुंबई",
+   "ans": "C"
+  },
+  {
+   "n": 55,
+   "lvl": "GL",
+   "en": "The Satluj, Beas, Ravi, Chenab and Jhelum merge into which river system near Mithankot?",
+   "hi": "सतलुज, ब्यास, रावी, चिनाब और झेलम मिठानकोट के पास किस नदी तंत्र में मिल जाती हैं?",
+   "opts": [
+    "Indus<br>सिंधु",
+    "Godavari<br>गोदावरी",
+    "Ganga<br>गंगा",
+    "Brahmaputra<br>ब्रह्मपुत्र"
+   ],
+   "my_ans": "A",
+   "sol": "पंजाब की ये पाँचों नदियाँ पाकिस्तान के मिठानकोट के पास सिंधु नदी में मिल जाती हैं।",
+   "trick": "सिंधु = 5 सहायक नदियाँ",
+   "ans": "A"
+  }
+ ]
+}

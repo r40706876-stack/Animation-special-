@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "340-342",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "What major change happened in India's agriculture and industrial sectors after the economic reforms of 1991?",
+   "hi": "1991 के आर्थिक सुधारों के बाद भारत के कृषि और औद्योगिक क्षेत्रों में कौन-सा प्रमुख परिवर्तन आया?",
+   "opts": [
+    "The government increased control over private industries.<br>सरकार ने निजी उद्योगों पर नियंत्रण बढ़ा दिया।",
+    "More private companies and foreign investments were allowed.<br>अधिक निजी कंपनियों और विदेशी निवेश की अनुमति दी गई।",
+    "Farming became the only source of national income.<br>कृषि राष्ट्रीय आय का एकमात्र स्रोत बन गई।",
+    "Only agriculture was given importance, not industry.<br>केवल कृषि को महत्व दिया गया, उद्योग को नहीं।"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के आर्थिक सुधारों (LPG) के तहत उदारीकरण और निजीकरण को बढ़ावा दिया गया, जिससे निजी क्षेत्र और विदेशी निवेश के लिए दरवाजे खुल गए।",
+   "trick": "LPG = उदारीकरण, निजीकरण, वैश्वीकरण",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which of the following reflects the structural adjustment in India’s monetary policy after the 1991 economic reforms?",
+   "hi": "निम्नलिखित में से कौन-सा, 1991 के आर्थिक सुधारों के बाद भारत की मौद्रिक नीति में हुए संरचनात्मक समायोजन को प्रदर्शित करता है?",
+   "opts": [
+    "Controlled lending rates for agriculture and MSMEs<br>कृषि और MSME के लिए नियंत्रित ऋण दरें",
+    "Expansion of currency supply through deficit financing<br>घाटे के वित्तपोषण के माध्यम से मुद्रा आपूर्ति का विस्तार",
+    "Market-determined interest rates with reduced RBI intervention<br>रिज़र्व बैंक के हस्तक्षेप में कमी के साथ बाज़ार द्वारा निर्धारित ब्याज दरें",
+    "Elimination of open market operations as a regulatory tool<br>नियामक उपकरण के रूप में खुला बाज़ार के संचालन का उन्मूलन"
+   ],
+   "my_ans": "C",
+   "sol": "1991 के बाद ब्याज दरों को विनियमित करने के बजाय बाज़ार की शक्तियों पर छोड़ दिया गया और RBI का हस्तक्षेप कम हो गया।",
+   "trick": "1991 के बाद बाज़ार आधारित ब्याज दरें",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "GL",
+   "en": "Which of the following is NOT correct about the scheme of Jan Shikshan Sansthan of the Ministry of Skill Development and Entrepreneurship (MSDE)?",
+   "hi": "कौशल विकास एवं उद्यमिता मंत्रालय (MSDE) की जन शिक्षण संस्थान योजना के संदर्भ में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+   "opts": [
+    "It is implemented through Industrial Training Institutes (ITIs)<br>इसे औद्योगिक प्रशिक्षण संस्थानों (ITIs) के माध्यम से कार्यान्वित किया जाता है।",
+    "It focuses to improve the occupational skills and technical knowledge of the non/neo literates and persons having rudimentary level of education<br>यह निरक्षरों/नव-साक्षरों और शिक्षा के प्राथमिक स्तर वाले व्यक्तियों के व्यावसायिक कौशल और तकनीकी ज्ञान में सुधार पर केंद्रित है।",
+    "It focuses on creation of a pool of master trainers<br>इसका मुख्य उद्देश्य कुशल प्रशिक्षकों का एक समूह तैयार करना है।",
+    "It focuses on identifying and promoting traditional skills in the districts through skilling/upskilling<br>इसका उद्देश्य कौशल विकास/कौशल उन्नयन के माध्यम से जिलों में पारंपरिक कौशलों की पहचान करना और उन्हें बढ़ावा देना है।"
+   ],
+   "my_ans": "A",
+   "sol": "जन शिक्षण संस्थान (JSS) मुख्य रूप से NGO और पंजीकृत समितियों के माध्यम से काम करते हैं, न कि ITI के माध्यम से।",
+   "trick": "JSS = NGO आधारित, ITI अलग संस्था है",
+   "ans": "A"
+  },
+  {
+   "n": 45,
+   "lvl": "GL",
+   "en": "What is the primary purpose of the Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)?",
+   "hi": "दीन दयाल उपाध्याय ग्रामीण कौशल्य योजना (DDU-GKY) का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To skill rural youth and promote wage employment opportunities<br>ग्रामीण युवाओं को कौशल प्रदान करना और श्रम रोज़गार के अवसरों को बढ़ावा देना",
+    "To offer old-age pensions in villages<br>गांवों में वृद्धावस्था पेंशन प्रदान करना",
+    "To provide free food to rural households<br>ग्रामीण परिवारों को मुफ्त भोजन उपलब्ध कराना",
+    "To supply subsidised agricultural inputs to farmers<br>किसानों को सब्सिडी वाले कृषि इनपुट की आपूर्ति करना"
+   ],
+   "my_ans": "A",
+   "sol": "यह योजना 2014 में शुरू हुई, जिसका मुख्य उद्देश्य ग्रामीण गरीब युवाओं (15-35 वर्ष) को कौशल प्रशिक्षण देकर उन्हें रोज़गार दिलाना है।",
+   "trick": "DDU-GKY = ग्रामीण कौशल + रोज़गार",
+   "ans": "A"
+  },
+  {
+   "n": 46,
+   "lvl": "GL",
+   "en": "For which of the following was the industrial license not exempted during the 1991 reforms?",
+   "hi": "1991 के सुधारों के दौरान निम्नलिखित में से किसके लिए, औद्योगिक लाइसेंस में छूट नहीं दी गई थी?",
+   "opts": [
+    "Coal<br>कोयला",
+    "Alcohol<br>ऐल्कोहॉल",
+    "Food processing<br>खाद्य प्रसंस्करण",
+    "Steel<br>इस्पात"
+   ],
+   "my_ans": "B",
+   "sol": "1991 के बाद अधिकांश उद्योगों को लाइसेंस से मुक्त कर दिया गया, लेकिन शराब, सिगरेट और खतरनाक रसायनों जैसे क्षेत्रों में लाइसेंस अनिवार्य रखा गया।",
+   "trick": "शराब और खतरनाक रसायनों पर लाइसेंस जारी",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "GL",
+   "en": "Under the Merchandise Exports from India Scheme (MEIS), exporters are rewarded in the form of:",
+   "hi": "मर्चेंडाइज़ एक्सपोर्ट्स फ्रॉम इंडिया स्कीम (MEIS) के अंतर्गत निर्यातकों को निम्नलिखित में से किस रूप में पुरस्कृत किया जाता है?",
+   "opts": [
+    "Equity shares in export-oriented units<br>निर्यात-उन्मुख इकाइयों में इक्विटी शेयर",
+    "Non-transferable cash vouchers<br>अनंतरणीय (Non-transferable) नकद वाउचर",
+    "Freely transferable Duty Credit Scrips<br>स्वतंत्र रूप से अंतरणीय ड्यूटी क्रेडिट स्क्रिप",
+    "Export tax rebates that expire on use<br>उपयोग करने पर एक्सपायर (expire) होने वाली निर्यात कर छूट"
+   ],
+   "my_ans": "C",
+   "sol": "MEIS के तहत निर्यातकों को ड्यूटी क्रेडिट स्क्रिप दिए जाते हैं, जिनका उपयोग सीमा शुल्क भुगतान में किया जा सकता है और ये हस्तांतरणीय होते हैं।",
+   "trick": "MEIS = ड्यूटी क्रेडिट स्क्रिप",
+   "ans": "C"
+  },
+  {
+   "n": 48,
+   "lvl": "GL",
+   "en": "Which of the following statements is true about the role of Cabinet Ministers in India?",
+   "hi": "भारत में कैबिनेट मंत्रियों की भूमिका के बारे में निम्नलिखित में से कौन-सा कथन सत्य है?",
+   "opts": [
+    "They only assist other ministers in their duties.<br>वे केवल अन्य मंत्रियों की उनके कर्तव्यों में सहायता करते हैं।",
+    "They do not attend Cabinet meetings.<br>वे कैबिनेट बैठकों में भाग नहीं लेते हैं।",
+    "They head important ministries like Home, Defence, and Finance.<br>वे गृह, रक्षा और वित्त जैसे महत्वपूर्ण मंत्रालयों के प्रमुख होते हैं।",
+    "They are not involved in policy decisions.<br>वे नीतिगत निर्णयों में शामिल नहीं होते हैं।"
+   ],
+   "my_ans": "C",
+   "sol": "कैबिनेट मंत्री सरकार के सबसे वरिष्ठ मंत्री होते हैं जो गृह, रक्षा और वित्त जैसे प्रमुख मंत्रालयों का नेतृत्व करते हैं और नीतिगत निर्णय लेते हैं।",
+   "trick": "कैबिनेट = मुख्य निर्णय लेने वाली संस्था",
+   "ans": "C"
+  },
+  {
+   "n": 49,
+   "lvl": "GL",
+   "en": "When was the Pradhan Mantri Gram Sadak Yojna launched?",
+   "hi": "प्रधानमंत्री ग्राम सड़क योजना कब शुरू की गई थी?",
+   "opts": [
+    "2008",
+    "2000",
+    "2014",
+    "1991"
+   ],
+   "my_ans": "B",
+   "sol": "प्रधानमंत्री ग्राम सड़क योजना (PMGSY) की शुरुआत 25 दिसंबर 2000 को अटल बिहारी वाजपेयी सरकार द्वारा की गई थी।",
+   "trick": "PMGSY = 2000 (वाजपेयी सरकार)",
+   "ans": "B"
+  },
+  {
+   "n": 50,
+   "lvl": "GL",
+   "en": "Which process in the contemporary period is responsible for economic integration of countries on a global scale?",
+   "hi": "समकालीन काल में कौन-सी प्रक्रिया, वैश्विक स्तर पर देशों के आर्थिक एकीकरण के लिए उत्तरदायी है?",
+   "opts": [
+    "Glocalisation<br>विश्व-स्थानीय-समन्वय (Glocalisation)",
+    "Transnationalisation<br>पारराष्ट्रीयकरण (Transnationalisation)",
+    "Industrialisation<br>औद्योगीकरण (Industrialisation)",
+    "Globalisation<br>वैश्वीकरण (Globalisation)"
+   ],
+   "my_ans": "D",
+   "sol": "वैश्वीकरण वह प्रक्रिया है जिसके माध्यम से दुनिया भर की अर्थव्यवस्थाएं आपस में जुड़ती हैं और व्यापार का विस्तार होता है।",
+   "trick": "वैश्वीकरण = वैश्विक आर्थिक एकीकरण",
+   "ans": "D"
+  }
+ ]
+}

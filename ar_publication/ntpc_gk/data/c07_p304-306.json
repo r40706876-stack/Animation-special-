@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "304-306",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 260,
+   "lvl": "UG",
+   "en": "Which Article of the Indian Constitution provides for the constitution of Gram Sabha?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद, ग्राम सभा के गठन का प्रावधान करता है?",
+   "opts": [
+    "Article 243A<br>अनुच्छेद 243A",
+    "Article 243B<br>अनुच्छेद 243B",
+    "Article 224B<br>अनुच्छेद 224B",
+    "Article 224A<br>अनुच्छेद 224A"
+   ],
+   "my_ans": "A",
+   "sol": "73वें संविधान संशोधन अधिनियम, 1992 द्वारा जोड़े गए भाग IX के तहत अनुच्छेद 243A ग्राम सभा के गठन का प्रावधान करता है।",
+   "trick": "243A में 'A' से Assembly (ग्राम सभा) याद रखें।",
+   "ans": "A"
+  },
+  {
+   "n": 261,
+   "lvl": "UG",
+   "en": "Dr. BR Ambedkar described Directive Principles of State Policy as ______________.",
+   "hi": "डॉ. बी.आर. अंबेडकर ने राज्य के नीति निर्देशक सिद्धांतों को ______________ के रूप में वर्णित किया।",
+   "opts": [
+    "an essential feature<br>एक आवश्यक विशेषता",
+    "an inalienable feature<br>एक अविभाज्य विशेषता",
+    "a novel feature<br>एक नवीन विशेषता",
+    "a fundamental feature<br>एक मूलभूत विशेषता"
+   ],
+   "my_ans": "C",
+   "sol": "डॉ. बी.आर. अंबेडकर ने राज्य के नीति निर्देशक तत्वों (DPSP) को संविधान की 'एक नवीन विशेषता' (novel feature) कहा था।",
+   "trick": "अंबेडकर ने DPSP को नया और अनोखा (Novel) माना था।",
+   "ans": "C"
+  },
+  {
+   "n": 262,
+   "lvl": "UG",
+   "en": "How many Indian languages hold Classical Language status as of October 2025?",
+   "hi": "अक्टूबर 2025 तक की स्थिति के अनुसार, कितनी भारतीय भाषाओं को शास्त्रीय भाषा का दर्जा प्राप्त है?",
+   "opts": [
+    "6",
+    "8",
+    "11",
+    "10"
+   ],
+   "my_ans": "C",
+   "sol": "अक्टूबर 2024 में 5 नई भाषाओं (मराठी, पाली, प्राकृत, असमिया, बंगाली) को जोड़ने के बाद कुल शास्त्रीय भाषाओं की संख्या 11 हो गई है।",
+   "trick": "पहले 6 थीं, अब 5 और जुड़ने से 11 हो गई हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 263,
+   "lvl": "UG",
+   "en": "As per Indian Constitution the Election Commission of India is a _____________.",
+   "hi": "भारतीय संविधान के अनुसार, भारत का निर्वाचन आयोग एक _________ है।",
+   "opts": [
+    "Non-Constitutional body<br>गैर-संवैधानिक निकाय",
+    "Statutory body<br>सांविधिक निकाय",
+    "Constitutional body<br>संवैधानिक निकाय",
+    "Quasi-judicial body only<br>केवल अर्ध-न्यायिक निकाय"
+   ],
+   "my_ans": "C",
+   "sol": "भारत का निर्वाचन आयोग एक संवैधानिक निकाय है क्योंकि इसकी स्थापना संविधान के अनुच्छेद 324 के तहत की गई है।",
+   "trick": "अनुच्छेद 324 में वर्णित है, इसलिए यह संवैधानिक है।",
+   "ans": "C"
+  },
+  {
+   "n": 264,
+   "lvl": "UG",
+   "en": "Which Article of the Constitution of India grants the “Right to Constitutional Remedies,” empowering individuals to move the Supreme Court for enforcement of Fundamental Rights?",
+   "hi": "भारतीय संविधान का कौन-सा अनुच्छेद \"संवैधानिक उपचारों का अधिकार\" प्रदान करता है, जो व्यक्तियों को मौलिक अधिकारों के प्रवर्तन के लिए सर्वोच्च न्यायालय में जाने का अधिकार प्रदान करता है?",
+   "opts": [
+    "Article 226<br>अनुच्छेद 226",
+    "Article 32<br>अनुच्छेद 32",
+    "Article 19<br>अनुच्छेद 19",
+    "Article 21<br>अनुच्छेद 21"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 32 के तहत नागरिकों को मौलिक अधिकारों के उल्लंघन पर सीधे सर्वोच्च न्यायालय जाने का अधिकार है, जिसे अंबेडकर ने 'संविधान की आत्मा' कहा।",
+   "trick": "अनुच्छेद 32 = संवैधानिक उपचारों का अधिकार।",
+   "ans": "B"
+  },
+  {
+   "n": 265,
+   "lvl": "UG",
+   "en": "Article 371A of the Constitution of India states 'privilege of special status was also accorded to the North-Eastern State of Nagaland'. This represents which federalism?",
+   "hi": "भारतीय संविधान के अनुच्छेद 371A में कहा गया है कि 'उत्तर-पूर्वी राज्य नागालैंड को भी विशेष दर्जे का विशेषाधिकार प्रदान किया गया था'। यह किस संघवाद को निरूपित करता है?",
+   "opts": [
+    "Asymmetric federalism<br>असममित संघवाद",
+    "Competitive federalism<br>प्रतिस्पर्धी संघवाद",
+    "Centralised federalism<br>केंद्रीकृत संघवाद",
+    "Bargaining federalism<br>सौदेबाजी संघवाद"
+   ],
+   "my_ans": "A",
+   "sol": "जब अलग-अलग राज्यों को उनकी विशिष्ट आवश्यकताओं के अनुसार अलग-अलग शक्तियां दी जाती हैं, तो इसे असममित (Asymmetric) संघवाद कहते हैं।",
+   "trick": "विशेष दर्जा = असममित (Asymmetric) संघवाद।",
+   "ans": "A"
+  },
+  {
+   "n": 266,
+   "lvl": "UG",
+   "en": "Which of the following Articles of the Indian Constitution provides free legal aid to the poor and weaker sections of the society?",
+   "hi": "भारतीय संविधान का निम्नलिखित में से कौन-सा अनुच्छेद, समाज के गरीब और कमजोर वर्गों को निःशुल्क विधिक सहायता प्रदान करता है?",
+   "opts": [
+    "Article 51 A<br>अनुच्छेद 51 A",
+    "Article 39 A<br>अनुच्छेद 39 A",
+    "Article 29<br>अनुच्छेद 29",
+    "Article 78<br>अनुच्छेद 78"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 39A को 42वें संविधान संशोधन (1976) द्वारा जोड़ा गया था, जो गरीब और कमजोर वर्गों को मुफ्त कानूनी सहायता सुनिश्चित करता है।",
+   "trick": "39A = A for Aid (कानूनी सहायता)।",
+   "ans": "B"
+  },
+  {
+   "n": 267,
+   "lvl": "UG",
+   "en": "Which Constitutional Article established the office of Special Officer for Linguistic Minorities?",
+   "hi": "भाषाई अल्पसंख्यकों के लिए विशेष अधिकारी के कार्यालय की स्थापना, संविधान के किस अनुच्छेद के तहत किया गया है?",
+   "opts": [
+    "Article 348-A<br>अनुच्छेद 348-A",
+    "Article 350-B<br>अनुच्छेद 350-B",
+    "Article 315-B<br>अनुच्छेद 315-B",
+    "Article 338-A<br>अनुच्छेद 338-A"
+   ],
+   "my_ans": "B",
+   "sol": "संविधान का अनुच्छेद 350-B भाषाई अल्पसंख्यकों के लिए एक विशेष अधिकारी की नियुक्ति का प्रावधान करता है।",
+   "trick": "350-B में 'B' से 'भाषा' (Bhasha) याद रखें।",
+   "ans": "B"
+  },
+  {
+   "n": 268,
+   "lvl": "UG",
+   "en": "Article 243ZI of the Indian Constitution empowers the State Legislature to make laws regarding co-operative societies. Which principle is NOT included in its scope?",
+   "hi": "भारतीय संविधान का अनुच्छेद 243ZI राज्य विधानमंडल को सहकारी समितियों के संबंध में कानून बनाने की शक्ति देता है। कौन सा सिद्धांत इसके दायरे में शामिल नहीं है?",
+   "opts": [
+    "Autonomous functioning<br>स्वायत्त कार्यप्रणाली",
+    "Compulsory State supervision<br>अनिवार्य राज्य पर्यवेक्षण",
+    "Voluntary formation<br>स्वैच्छिक गठन",
+    "Democratic member control<br>लोकतांत्रिक सदस्य नियंत्रण"
+   ],
+   "my_ans": "B",
+   "sol": "सहकारी समितियों का गठन स्वैच्छिक और लोकतांत्रिक होता है, इसमें अनिवार्य राज्य पर्यवेक्षण का सिद्धांत शामिल नहीं है।",
+   "trick": "सहकारी समितियां स्वैच्छिक होती हैं, अनिवार्य नहीं।",
+   "ans": "B"
+  },
+  {
+   "n": 269,
+   "lvl": "UG",
+   "en": "Article 350B of the Indian Constitution provides for the appointment of which of the following?",
+   "hi": "भारतीय संविधान के अनुच्छेद 350B में निम्नलिखित में से किसकी नियुक्ति का प्रावधान निहित है?",
+   "opts": [
+    "Special Officer for Other Backward Classes<br>अन्य पिछड़े वर्गों के लिए विशेष अधिकारी",
+    "Special Officer for Linguistic Minorities<br>भाषाई अल्पसंख्यकों के लिए विशेष अधिकारी",
+    "Special Officer for Women and Children<br>महिलाओं और बच्चों के लिए विशेष अधिकारी",
+    "Special Officer for Scheduled Castes<br>अनुसूचित जाति के लिए विशेष अधिकारी"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 350B विशेष रूप से भाषाई अल्पसंख्यकों के हितों की रक्षा के लिए एक विशेष अधिकारी की नियुक्ति का प्रावधान करता है।",
+   "trick": "350B = भाषाई अल्पसंख्यक अधिकारी।",
+   "ans": "B"
+  }
+ ]
+}

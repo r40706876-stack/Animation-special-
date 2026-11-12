@@ -1,0 +1,158 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "97-99",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 116,
+   "lvl": "UG",
+   "en": "Which Indian ruler was the first to enter into a Subsidiary Alliance with the British in 1798?",
+   "hi": "सन् 1798 में अंग्रेजों के साथ सहायक संधि करने वाला प्रथम भारतीय शासक कौन था?",
+   "opts": [
+    "Nizam of Hyderabad<br>हैदराबाद के निज़ाम",
+    "Maharaja of Mysore<br>मैसूर के महाराजा",
+    "Nawab of Oudh<br>अवध के नवाब",
+    "Maharaja of Jaipur<br>जयपुर के महाराजा"
+   ],
+   "my_ans": "A",
+   "sol": "लॉर्ड वेलेजली द्वारा 1798 में शुरू की गई सहायक संधि को स्वीकार करने वाले हैदराबाद के निज़ाम पहले भारतीय शासक थे।",
+   "trick": "वेलेजली की सहायक संधि = हैदराबाद के निज़ाम (1798)",
+   "ans": "A"
+  },
+  {
+   "n": 117,
+   "lvl": "UG",
+   "en": "How did the Swadeshi movement aim to counter British policies after 1905?",
+   "hi": "1905 के बाद स्वदेशी आंदोलन का उद्देश्य किस प्रकार से ब्रिटिश नीतियों का विरोध करना था?",
+   "opts": [
+    "By creating diplomatic councils to negotiate tariff concessions.<br>शुल्क संबंधी रियायतों पर बातचीत करने के लिए राजनयिक परिषदों का गठन करके",
+    "By adopting military drills to train youth for organised defence.<br>युवाओं को संगठित रक्षा के लिए प्रशिक्षित करने हेतु सैन्य अभ्यास अपनाकर",
+    "By promoting indigenous industries and rejecting foreign products.<br>स्वदेशी उद्योगों को बढ़ावा देकर और विदेशी उत्पादों को अस्वीकार करके",
+    "By supporting colonial factory laws restricting local enterprises.<br>स्थानीय उद्यमों को प्रतिबंधित करने वाले औपनिवेशिक कारखाना कानूनों का समर्थन करके"
+   ],
+   "my_ans": "C",
+   "sol": "स्वदेशी आंदोलन का मुख्य उद्देश्य विदेशी वस्तुओं का बहिष्कार करना और भारतीय उद्योगों (खादी, हस्तशिल्प) को बढ़ावा देना था।",
+   "trick": "स्वदेशी अपनाओ, विदेशी हटाओ",
+   "ans": "C"
+  },
+  {
+   "n": 118,
+   "lvl": "UG",
+   "en": "Which achievement is correctly attributed to Vallabhbhai Patel during the freedom struggle?",
+   "hi": "स्वतंत्रता संग्राम के दौरान निम्नलिखित में से कौन-सी उपलब्धि सही रूप में वल्लभभाई पटेल से संबंधित है?",
+   "opts": [
+    "Leading the Bardoli Satyagraha that established him as the “Sardar”<br>बारडोली सत्याग्रह का नेतृत्व करना जिससे उन्हें 'सरदार' की उपाधि प्राप्त हुई।",
+    "Drafting the Lucknow Pact to unite moderates and extremists<br>नरमपंथियों और गरमपंथियों को एकजुट करने के लिए लखनऊ समझौते का मसौदा तैयार करना।",
+    "Commanding the INA forces during the Burma campaign<br>बर्मा अभियान के दौरान INA बलों की कमान संभालना।",
+    "Organising the Punjab protests during the anti-Rowlatt agitations<br>रॉलेट-विरोधी आंदोलनों के दौरान पंजाब में विरोध प्रदर्शनों का आयोजन करना।"
+   ],
+   "my_ans": "A",
+   "sol": "1928 के बारडोली सत्याग्रह में किसानों का सफल नेतृत्व करने के कारण वहां की महिलाओं ने उन्हें 'सरदार' की उपाधि दी थी।",
+   "trick": "बारडोली सत्याग्रह = सरदार पटेल",
+   "ans": "A"
+  },
+  {
+   "n": 119,
+   "lvl": "UG",
+   "en": "Which provision of the Treaty of Allahabad most strengthened British political authority in eastern India?",
+   "hi": "इलाहाबाद की संधि के किस प्रावधान ने पूर्वी भारत में ब्रिटिश राजनीतिक सत्ता को सबसे अधिक सुदृढ़ किया?",
+   "opts": [
+    "Restoration of Bengal’s sovereign authority under the Mughal emperor.<br>मुगल सम्राट के अधीन बंगाल की संप्रभु सत्ता की बहाली।",
+    "Granting of the Diwani rights of Bengal, Bihar, and Orissa to the Company.<br>कंपनी को बंगाल, बिहार और ओडिशा के दीवानी अधिकार प्रदान करना।",
+    "Withdrawal of the Company's revenue claims from all northern subas immediately.<br>सभी उत्तरी सूबों से कंपनी के राजस्व दावों को तत्काल वापस लेना।",
+    "Permanent transfer of Awadh territories under direct Company occupation.<br>अवध के क्षेत्रों का स्थायी रूप से कंपनी के सीधे कब्जे में स्थानांतरण।"
+   ],
+   "my_ans": "B",
+   "sol": "1765 की इलाहाबाद संधि के तहत कंपनी को बंगाल, बिहार और ओडिशा के दीवानी अधिकार (राजस्व वसूली) मिल गए, जिससे वे वास्तविक शासक बन गए।",
+   "trick": "दीवानी अधिकार = कंपनी की राजनीतिक शक्ति",
+   "ans": "B"
+  },
+  {
+   "n": 120,
+   "lvl": "UG",
+   "en": "How did Aurobindo Ghosh contribute to the extremist phase of the Indian national movement?",
+   "hi": "अरबिंदो घोष ने भारतीय राष्ट्रीय आंदोलन के चरमपंथी चरण में किस प्रकार योगदान दिया?",
+   "opts": [
+    "Promoting passive resistance and boycott by linking nationalism with spiritual ideals<br>राष्ट्रवाद को आध्यात्मिक आदर्शों से जोड़कर अहिंसक प्रतिरोध और बहिष्कार को बढ़ावा देकर",
+    "Promoting constitutional agitation through petitions and legislative reforms<br>याचिकाओं और विधायी सुधारों के माध्यम से संवैधानिक आंदोलन को बढ़ावा देकर",
+    "Organising revolutionary activities based on socialist and labour ideologies<br>समाजवादी और श्रमिक विचारधाराओं पर आधारित क्रांतिकारी गतिविधियों का आयोजन करके",
+    "Leading peasant movements focused on agrarian tax reduction campaigns<br>कृषि-संबंधी कर कटौती अभियानों पर केंद्रित कृषक आंदोलनों का नेतृत्व करके"
+   ],
+   "my_ans": "A",
+   "sol": "अरबिंदो घोष ने राष्ट्रवाद को आध्यात्मिक आधार दिया और निष्क्रिय प्रतिरोध (Passive Resistance) तथा बहिष्कार के माध्यम से उग्रवादी विचारधारा को बढ़ावा दिया।",
+   "trick": "अरबिंदो घोष = आध्यात्मिक राष्ट्रवाद",
+   "ans": "A"
+  },
+  {
+   "n": 121,
+   "lvl": "UG",
+   "en": "Who among the following highlighted the widespread poverty in India during the colonial period through the book Poverty and Un-British Rule in India?",
+   "hi": "निम्नलिखित में से किसने, 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' नामक पुस्तक के माध्यम से औपनिवेशिक काल के दौरान भारत में व्याप्त व्यापक गरीबी पर प्रकाश डाला?",
+   "opts": [
+    "Mahatma Gandhi<br>महात्मा गांधी",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी",
+    "Pherozeshah Mehta<br>फिरोज़शाह मेहता",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक"
+   ],
+   "my_ans": "B",
+   "sol": "दादाभाई नौरोजी ने अपनी पुस्तक में 'धन के निष्कासन' (Drain of Wealth) का सिद्धांत दिया और ब्रिटिश आर्थिक शोषण को उजागर किया।",
+   "trick": "ग्रैंड ओल्ड मैन = दादाभाई नौरोजी",
+   "ans": "B"
+  },
+  {
+   "n": 122,
+   "lvl": "UG",
+   "en": "Who among the following was NOT a founding member of the Indian National Congress?",
+   "hi": "निम्नलिखित में से कौन, भारतीय राष्ट्रीय कांग्रेस का संस्थापक सदस्य नहीं था?",
+   "opts": [
+    "Dinshaw Wacha<br>दिनशा वाचा",
+    "William Wedderburn<br>विलियम वेडरबर्न",
+    "John Jardine<br>जॉन जार्डिन",
+    "Bal Gangadhar Tilak<br>बाल गंगाधर तिलक"
+   ],
+   "my_ans": "D",
+   "sol": "बाल गंगाधर तिलक 1890 के दशक में कांग्रेस में शामिल हुए थे, वे 1885 के संस्थापक सदस्यों में नहीं थे।",
+   "trick": "तिलक = बाद में शामिल हुए",
+   "ans": "D"
+  },
+  {
+   "n": 123,
+   "lvl": "UG",
+   "en": "In the Santhal Rebellion (1855–57), Santhals mainly directed their anger against:",
+   "hi": "संथाल विद्रोह (1855-57) में, संथालों का क्रोध मुख्यतः निम्नलिखित में से किसके विरुद्ध निर्देशित था?",
+   "opts": [
+    "British officers, zamindars, traders and local moneylenders<br>ब्रिटिश अधिकारी, ज़मींदार, व्यापारी और स्थानीय साहूकार",
+    "Missionaries who distributed free food during the famine<br>अकाल के दौरान निःशुल्क भोजन वितरित करने वाले मिशनरी",
+    "Traditional village headmen and clan chiefs of their own tribe<br>पारंपरिक ग्राम प्रधान और अपनी ही जनजाति के कबीले के मुखिया",
+    "Soldiers of the Bengal army posted in distant cantonments<br>दूरस्थ छावनियों में तैनात बंगाल सेना के सैनिक"
+   ],
+   "my_ans": "A",
+   "sol": "संथालों ने ज़मींदारों, साहूकारों और भ्रष्ट ब्रिटिश अधिकारियों द्वारा किए जा रहे शोषण के विरुद्ध विद्रोह किया था।",
+   "trick": "संथाल हूल = शोषण के विरुद्ध",
+   "ans": "A"
+  },
+  {
+   "n": 124,
+   "lvl": "UG",
+   "en": "Who led the Ahom Revolt (1828–33) against British interference in Assam?",
+   "hi": "असम में ब्रिटिश हस्तक्षेप के विरुद्ध अहोम विद्रोह (1828-33) का नेतृत्व किसने किया?",
+   "opts": [
+    "Maniram Dewan<br>मनीराम दीवान",
+    "Piyali Phukan<br>पियली फुकन",
+    "Gomdhar Konwar<br>गोमधर कुंवर",
+    "Kandura Deka<br>कंदुरा डेका"
+   ],
+   "my_ans": "C",
+   "sol": "असम में अहोम विद्रोह का नेतृत्व गोमधर कुंवर ने किया था, जो ब्रिटिश शासन द्वारा अहोम साम्राज्य के प्रति किए गए वादों से मुकरने के कारण हुआ था।",
+   "trick": "अहोम विद्रोह = गोमधर कुंवर",
+   "ans": "C"
+  }
+ ]
+}

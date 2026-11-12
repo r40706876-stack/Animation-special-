@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "88-90",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 89,
+   "lvl": "UG",
+   "en": "Which of the following provisions was brought about by the Indian Councils Act of 1909?",
+   "hi": "भारतीय परिषद अधिनियम, 1909 द्वारा निम्नलिखित में से कौन-सा प्रावधान लाया गया था?",
+   "opts": [
+    "Introduction of separate electorates for Muslims<br>मुसलमानों के लिए पृथक निर्वाचन मंडल की शुरुआत",
+    "Elimination of Viceroy’s position<br>वायसराय पद की समाप्ति",
+    "Universal voting rights for all Indians<br>सभी भारतीयों के लिए सार्वभौमिक मताधिकार",
+    "Establishment of the Supreme Court in India<br>भारत में सर्वोच्च न्यायालय की स्थापना"
+   ],
+   "my_ans": "A",
+   "sol": "इस अधिनियम (मार्ले-मिंटो सुधार) ने मुसलमानों के लिए सांप्रदायिक आधार पर पृथक निर्वाचन मंडल की शुरुआत की थी।",
+   "trick": "1909 = मार्ले-मिंटो = मुसलमानों के लिए पृथक निर्वाचन",
+   "ans": "A"
+  },
+  {
+   "n": 90,
+   "lvl": "UG",
+   "en": "What was the Dual Government system introduced after the Battle of Buxar?",
+   "hi": "बक्सर के युद्ध के बाद किस द्वैध शासन व्यवस्था को लागू किया गया था?",
+   "opts": [
+    "A system where the French and British shared governance<br>एक ऐसी व्यवस्था, जिसमें फ्रांसीसी और ब्रिटिश शासन को साझा करते थे।",
+    "A system where the British ruled directly<br>एक ऐसी व्यवस्था, जिसमें अंग्रेजों ने प्रत्यक्ष रूप से शासन किया था।",
+    "A system where the Company collected revenue, and Nawab handled administration<br>एक ऐसी व्यवस्था, जिसमें कंपनी राजस्व एकत्र करती थी और नवाब प्रशासन संभालते थे।",
+    "A system where the Nawab collected revenue and the Company maintained the army<br>एक ऐसी व्यवस्था, जिसमें नवाब राजस्व एकत्र करता था और कंपनी सेना का रखरखाव करती थी।"
+   ],
+   "my_ans": "C",
+   "sol": "रॉबर्ट क्लाइव द्वारा शुरू की गई इस व्यवस्था में कंपनी के पास दीवानी (राजस्व) अधिकार थे और नवाब के पास प्रशासन की जिम्मेदारी थी।",
+   "trick": "द्वैध शासन = कंपनी के पास पैसा, नवाब के पास प्रशासन",
+   "ans": "C"
+  },
+  {
+   "n": 91,
+   "lvl": "UG",
+   "en": "Swami Vivekananda represented India at which international event in 1893?",
+   "hi": "स्वामी विवेकानंद ने 1893 में किस अंतर्राष्ट्रीय आयोजन में भारत का प्रतिनिधित्व किया था?",
+   "opts": [
+    "Chicago World’s Parliament of Religions<br>शिकागो विश्व धर्म संसद",
+    "First Indian National Congress<br>प्रथम भारतीय राष्ट्रीय कांग्रेस",
+    "Hague Peace Conference<br>हेग शांति सम्मेलन",
+    "London Missionary Conference<br>लंदन मिशनरी सम्मेलन"
+   ],
+   "my_ans": "A",
+   "sol": "स्वामी विवेकानंद ने 1893 में अमेरिका के शिकागो में आयोजित विश्व धर्म संसद में भारत का प्रतिनिधित्व किया था।",
+   "trick": "1893 शिकागो = विवेकानंद का ऐतिहासिक भाषण",
+   "ans": "A"
+  },
+  {
+   "n": 92,
+   "lvl": "UG",
+   "en": "Who among the following presided over the first session of the Indian National Congress held in 1885?",
+   "hi": "निम्नलिखित में से किसने 1885 में आयोजित भारतीय राष्ट्रीय कांग्रेस के प्रथम अधिवेशन की अध्यक्षता की थी?",
+   "opts": [
+    "Womesh Chandra Bonnerjee<br>व्योमेश चन्‍द्र बनर्जी",
+    "Dadabhai Naoroji<br>दादाभाई नौरोजी",
+    "Dinshaw Wacha<br>दिनशा वाचा",
+    "Allan Octavian Hume<br>एलन ऑक्टेवियन ह्यूम"
+   ],
+   "my_ans": "A",
+   "sol": "1885 में मुंबई में आयोजित कांग्रेस के पहले अधिवेशन की अध्यक्षता व्योमेश चंद्र बनर्जी ने की थी।",
+   "trick": "कांग्रेस का पहला अध्यक्ष = व्योमेश चंद्र बनर्जी",
+   "ans": "A"
+  },
+  {
+   "n": 93,
+   "lvl": "UG",
+   "en": "The Kakori train robbery of August 1925 was organised by the:",
+   "hi": "अगस्त 1925 में हुई काकोरी ट्रेन डकैती का आयोजन निम्नलिखित में से किसके द्वारा किया गया था?",
+   "opts": [
+    "Hindustan Republican Association in United Provinces<br>हिंदुस्तान रिपब्लिकन एसोसिएशन इन यूनाइटेड प्रोविंसेस",
+    "HSRA unit based in Lahore and Delhi<br>लाहौर और दिल्ली में स्थित HSRA इकाई",
+    "Anushilan Samiti in Bengal and Bihar<br>बंगाल और बिहार में अनुशीलन समिति",
+    "Ghadr Party working from North America<br>उत्तरी अमेरिका से काम कर रही गदर पार्टी"
+   ],
+   "my_ans": "A",
+   "sol": "काकोरी ट्रेन डकैती का आयोजन हिंदुस्तान रिपब्लिकन एसोसिएशन (HRA) के क्रांतिकारियों द्वारा किया गया था।",
+   "trick": "काकोरी कांड = HRA (राम प्रसाद बिस्मिल)",
+   "ans": "A"
+  },
+  {
+   "n": 94,
+   "lvl": "UG",
+   "en": "Gopal Krishan Gokhale went to England in 1897 to give evidence before which commission?",
+   "hi": "गोपाल कृष्ण गोखले 1897 में किस आयोग के समक्ष गवाही देने के लिए इंग्लैंड गए थे?",
+   "opts": [
+    "Welby Commission<br>वेल्बी आयोग",
+    "Hunter Commission<br>हंटर आयोग",
+    "Raleigh Commission<br>रैले आयोग",
+    "Fraser Commission<br>फ्रेजर आयोग"
+   ],
+   "my_ans": "A",
+   "sol": "गोखले 1897 में भारत के आर्थिक शोषण और वित्तीय मामलों पर साक्ष्य देने के लिए वेल्बी आयोग के सामने पेश हुए थे।",
+   "trick": "गोखले + 1897 = वेल्बी आयोग",
+   "ans": "A"
+  },
+  {
+   "n": 95,
+   "lvl": "UG",
+   "en": "Who were the founding members of the 'Servants of India Society' along with Gopal Krishna Gokhale?",
+   "hi": "गोपाल कृष्ण गोखले के साथ 'सर्वेंट्स ऑफ इंडिया सोसाइटी' के संस्थापक सदस्य कौन थे?",
+   "opts": [
+    "Subhas Chandra Bose, Jawaharlal Nehru, Sardar Patel<br>सुभाष चंद्र बोस, जवाहरलाल नेहरू, सरदार पटेल",
+    "Rajendra Prasad, C.R. Das, Mahatma Gandhi<br>राजेंद्र प्रसाद, सी.आर. दास, महात्मा गांधी",
+    "A.O. Hume, Dadabhai Naoroji, Lala Lajpat Rai<br>ए.ओ. ह्यूम, दादाभाई नौरोजी, लाला लाजपत राय",
+    "Natesh Appaji Dravid, Gopal Krishna Deodhar, Anant Vinayak Patwardhan<br>नतेश अप्पाजी द्रविड़, गोपाल कृष्ण देवधर, अनंत विनायक पटवर्धन"
+   ],
+   "my_ans": "D",
+   "sol": "गोपाल कृष्ण गोखले ने 1905 में पुणे में सर्वेंट्स ऑफ इंडिया सोसाइटी की स्थापना की थी, जिसमें नतेश अप्पाजी द्रविड़, जी.के. देवधर और ए.वी. पटवर्धन शामिल थे।",
+   "trick": "गोखले + द्रविड़ + देवधर + पटवर्धन = सर्वेंट्स ऑफ इंडिया सोसाइटी",
+   "ans": "D"
+  },
+  {
+   "n": 96,
+   "lvl": "UG",
+   "en": "Which period is associated with the Extremist phase of the Indian National Congress?",
+   "hi": "भारतीय राष्ट्रीय कांग्रेस के उग्रवादी चरण से कौन-सा काल संबंधित है?",
+   "opts": [
+    "1905–1919",
+    "1920–1947",
+    "1947–1950",
+    "1885–1905"
+   ],
+   "my_ans": "A",
+   "sol": "कांग्रेस का उग्रवादी चरण 1905 (बंगाल विभाजन) से शुरू होकर 1919 तक माना जाता है।",
+   "trick": "उग्रवादी चरण = 1905-1919",
+   "ans": "A"
+  },
+  {
+   "n": 97,
+   "lvl": "UG",
+   "en": "The British gained control over Bengal after which major battle?",
+   "hi": "किस प्रमुख युद्ध के बाद अंग्रेजों ने बंगाल पर नियंत्रण प्राप्त किया था?",
+   "opts": [
+    "Battle of Buxar<br>बक्सर का युद्ध",
+    "Battle of Panipat<br>पानीपत का युद्ध",
+    "Battle of Plassey<br>प्लासी का युद्ध",
+    "Battle of Wandiwash<br>वांडीवाश का युद्ध"
+   ],
+   "my_ans": "C",
+   "sol": "1757 के प्लासी के युद्ध में जीत के बाद अंग्रेजों ने बंगाल में अपना राजनीतिक प्रभुत्व स्थापित कर लिया था।",
+   "trick": "बंगाल पर नियंत्रण = प्लासी का युद्ध (1757)",
+   "ans": "C"
+  },
+  {
+   "n": 98,
+   "lvl": "UG",
+   "en": "The assassination attempt on Viceroy Lord Hardinge in Delhi in 1912 was organised by revolutionaries led by:",
+   "hi": "1912 में दिल्ली में वायसराय लॉर्ड हार्डिंग पर किए गए हत्या के प्रयास का षड्यंत्र जिन क्रांतिकारियों द्वारा किया गया था, उनका नेतृत्व _____________________ द्वारा किया गया था।",
+   "opts": [
+    "Madanlal Dhingra and VD Savarkar<br>मदनलाल ढींगरा और वी.डी. सावरकर",
+    "Khudiram Bose and Prafulla Chaki<br>खुदीराम बोस और प्रफुल्ल चाकी",
+    "Rasbehari Bose and Sachindranath Sanyal<br>रासबिहारी बोस और सचिंद्रनाथ सान्याल",
+    "Surya Sen and Jatin Mukherjee<br>सूर्य सेन और जतिन मुखर्जी"
+   ],
+   "my_ans": "C",
+   "sol": "1912 में दिल्ली में लॉर्ड हार्डिंग पर बम फेंकने की योजना रासबिहारी बोस और सचिंद्रनाथ सान्याल के नेतृत्व में बनाई गई थी।",
+   "trick": "हार्डिंग बम कांड = रासबिहारी बोस",
+   "ans": "C"
+  }
+ ]
+}

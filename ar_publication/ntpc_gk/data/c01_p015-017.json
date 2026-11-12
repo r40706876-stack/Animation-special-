@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "15-17",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "According to the Prayaga Prashasti, Samudragupta is compared to which god associated with wealth?",
+   "hi": "प्रयाग प्रशस्ति के अनुसार, समुद्रगुप्त की तुलना धन से संबंधित किस देवता से की जाती है?",
+   "opts": [
+    "Kubera<br>कुबेर",
+    "Indra<br>इंद्र",
+    "Varuna<br>वरुण",
+    "Yama<br>यम"
+   ],
+   "my_ans": "A",
+   "sol": "प्रयाग प्रशस्ति में समुद्रगुप्त की तुलना धन के देवता कुबेर से की गई है, जो उसकी उदारता और धन-संपदा को दर्शाता है।",
+   "trick": "कुबेर = धन का देवता",
+   "ans": "A"
+  },
+  {
+   "n": 34,
+   "lvl": "GL",
+   "en": "Which of the following administrative features was a key characteristic of the Mauryan Empire under Chandragupta Maurya?",
+   "hi": "चंद्रगुप्त मौर्य के अधीन मौर्य साम्राज्य की एक प्रमुख प्रशासनिक विशेषता निम्नलिखित में से कौन-सी थी?",
+   "opts": [
+    "Revenue collection by religious institutions<br>धार्मिक संस्थानों द्वारा राजस्व संग्रह",
+    "Centralised bureaucracy guided by Arthashastra<br>अर्थशास्त्र द्वारा निर्देशित केंद्रीकृत नौकरशाही",
+    "Feudal land grant system<br>सामंती भूमि अनुदान प्रणाली",
+    "Hereditary provincial governors<br>वंशानुगत प्रांतीय राज्यपाल"
+   ],
+   "my_ans": "B",
+   "sol": "चंद्रगुप्त मौर्य का प्रशासन कौटिल्य के अर्थशास्त्र पर आधारित था, जिसमें एक अत्यंत केंद्रीकृत नौकरशाही व्यवस्था थी।",
+   "trick": "अर्थशास्त्र = केंद्रीकृत प्रशासन",
+   "ans": "B"
+  },
+  {
+   "n": 35,
+   "lvl": "GL",
+   "en": "The ‘Prayaga prashasti’ also known as the ‘Allahabad pillar’ is composed in praise of which of the following rulers?",
+   "hi": "‘प्रयाग प्रशस्ति’, जिसे ‘इलाहाबाद स्तंभ’ के नाम से भी जाना जाता है, निम्नलिखित में से किस शासक की स्तुति में बनाई गई है?",
+   "opts": [
+    "Chandragupta II<br>चंद्रगुप्त II",
+    "Rudradaman<br>रुद्रदामन",
+    "Asoka<br>अशोक",
+    "Samudragupta<br>समुद्रगुप्त"
+   ],
+   "my_ans": "D",
+   "sol": "प्रयाग प्रशस्ति (इलाहाबाद स्तंभ लेख) समुद्रगुप्त के दरबारी कवि हरिषेण द्वारा रचित है, जिसमें समुद्रगुप्त की विजयों का वर्णन है।",
+   "trick": "प्रयाग प्रशस्ति = समुद्रगुप्त",
+   "ans": "D"
+  },
+  {
+   "n": 36,
+   "lvl": "GL",
+   "en": "The Lilatilakam, a 14th-century treatise, played a significant role in establishing the classical status of which Indian language through its grammatical and poetic principles?",
+   "hi": "चौदहवीं शताब्दी की ग्रंथ लीलातिलकम् ने अपने व्याकरणिक और काव्य सिद्धांतों के माध्यम से किस भारतीय भाषा को शास्त्रीय दर्जा दिलाने में महत्वपूर्ण भूमिका निभाई?",
+   "opts": [
+    "Malayalam<br>मलयालम",
+    "Kannada<br>कन्नड़",
+    "Tamil<br>तमिल",
+    "Odia<br>ओडिया"
+   ],
+   "my_ans": "A",
+   "sol": "लीलातिलकम् 14वीं सदी का संस्कृत ग्रंथ है जिसने मणिप्रवालम शैली के माध्यम से मलयालम भाषा के व्याकरण और काव्य को शास्त्रीय आधार दिया।",
+   "trick": "लीलातिलकम् = मलयालम",
+   "ans": "A"
+  },
+  {
+   "n": 37,
+   "lvl": "GL",
+   "en": "Which Buddhist text, compiled around the 1st century CE, narrates stories of the Buddha’s past lives?",
+   "hi": "लगभग पहली शताब्दी ईस्वी में संकलित, कौन-सा बौद्ध ग्रंथ बुद्ध के पिछले जीवन की कहानियों का वर्णन करता है?",
+   "opts": [
+    "Jataka Tales<br>जातक कथाएँ",
+    "Vinaya Pitaka<br>विनय पिटक",
+    "Dhammapada<br>धम्मपद",
+    "Sutta Pitaka<br>सुत्त पिटक"
+   ],
+   "my_ans": "A",
+   "sol": "जातक कथाएँ बुद्ध के पूर्व जन्मों की कहानियों का संग्रह हैं, जो नैतिक शिक्षाओं को दर्शाती हैं।",
+   "trick": "जातक = बुद्ध के पूर्व जन्म",
+   "ans": "A"
+  },
+  {
+   "n": 38,
+   "lvl": "GL",
+   "en": "What did the term 'gopati' refer to in Early Vedic society?",
+   "hi": "प्रारंभिक वैदिक समाज में 'गोपति' शब्द का क्या अभिप्राय था?",
+   "opts": [
+    "Priest who conducts rituals<br>अनुष्ठान संपन्न कराने वाला पुरोहित",
+    "Warrior who leads battles<br>युद्धों का नेतृत्व करने वाला योद्धा",
+    "Chief who protects cows<br>गायों की रक्षा करने वाला प्रधान",
+    "Head of the family<br>परिवार का मुखिया"
+   ],
+   "my_ans": "C",
+   "sol": "वैदिक काल में 'गो' का अर्थ गाय और 'पति' का अर्थ रक्षक होता था, अतः गोपति वह मुखिया था जो पशुधन की रक्षा करता था।",
+   "trick": "गो (गाय) + पति (रक्षक) = गोपति",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "GL",
+   "en": "The Harappan civilisation primarily sourced its copper from which region?",
+   "hi": "हड़प्पा सभ्यता मुख्य रूप से किस क्षेत्र से अपना तांबा प्राप्त करती थी?",
+   "opts": [
+    "Madhya Pradesh<br>मध्य प्रदेश",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Rajasthan<br>राजस्थान",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "C",
+   "sol": "हड़प्पा सभ्यता के लोग तांबे की आपूर्ति मुख्य रूप से राजस्थान की खेतड़ी खानों से करते थे।",
+   "trick": "तांबा = खेतड़ी (राजस्थान)",
+   "ans": "C"
+  },
+  {
+   "n": 40,
+   "lvl": "GL",
+   "en": "What was the name given to the special officials appointed by Ashoka to spread his policy of Dhamma?",
+   "hi": "अशोक द्वारा अपनी धम्म की नीति का प्रसार करने के लिए नियुक्त किए गए विशेष अधिकारियों को क्या नाम दिया गया था?",
+   "opts": [
+    "Dhamma Mahamatta<br>धम्म महामत्ता",
+    "Dhamma Mukhyas<br>धम्म मुखिया",
+    "Dhamma Lekhakas<br>धम्म लेखक",
+    "Dhamma Janapada<br>धम्म जनपद"
+   ],
+   "my_ans": "A",
+   "sol": "अशोक ने अपने शासन के 13वें वर्ष में धम्म के प्रचार और नैतिक मूल्यों के प्रसार के लिए 'धम्म महामत्ता' नामक अधिकारी नियुक्त किए थे।",
+   "trick": "धम्म का प्रचार = धम्म महामत्ता",
+   "ans": "A"
+  },
+  {
+   "n": 41,
+   "lvl": "GL",
+   "en": "Which of the following is a significant component of the Harappan citadel?",
+   "hi": "निम्नलिखित में से कौन-सा, हड़प्पा नगर-दुर्ग का एक महत्वपूर्ण घटक है?",
+   "opts": [
+    "Grand palaces<br>भव्य महल",
+    "Dwelling houses<br>आवासीय गृह",
+    "Huge temples<br>विशाल मंदिर",
+    "The Great Bath<br>विशाल स्नानागार"
+   ],
+   "my_ans": "D",
+   "sol": "मोहनजोदड़ो का 'विशाल स्नानागार' (Great Bath) हड़प्पा सभ्यता के दुर्ग का सबसे महत्वपूर्ण और विशिष्ट ढांचा है।",
+   "trick": "दुर्ग = विशाल स्नानागार",
+   "ans": "D"
+  },
+  {
+   "n": 42,
+   "lvl": "GL",
+   "en": "King Kharavela belonged to which of the following dynasties?",
+   "hi": "राजा खारवेल का संबंध निम्नलिखित में से किस वंश से था?",
+   "opts": [
+    "Shunga dynasty<br>शुंग वंश",
+    "Chedi dynasty<br>चेदि वंश",
+    "Kanva dynasty<br>कण्व वंश",
+    "Satavahana dynasty<br>सातवाहन वंश"
+   ],
+   "my_ans": "B",
+   "sol": "राजा खारवेल कलिंग के चेदि वंश (महामेघवाहन वंश) के सबसे महान शासक थे, जो हाथीगुम्फा शिलालेख के लिए प्रसिद्ध हैं।",
+   "trick": "खारवेल = चेदि वंश",
+   "ans": "B"
+  },
+  {
+   "n": 43,
+   "lvl": "GL",
+   "en": "Which Harappan city, around 2500 BCE, is noted for its dockyard, indicating advanced architectural planning for trade?",
+   "hi": "लगभग 2500 ईसा पूर्व का कौन-सा हड़प्पा शहर अपने व्यापारिक बंदरगाह के लिए प्रसिद्ध है, जो कि व्यापार के लिए उन्नत स्थापत्य योजना को दर्शाता है?",
+   "opts": [
+    "Lothal<br>लोथल",
+    "Dholavira<br>धोलावीरा",
+    "Kalibangan<br>कालीबंगन",
+    "Mohenjodaro<br>मोहनजोदड़ो"
+   ],
+   "my_ans": "A",
+   "sol": "गुजरात में स्थित लोथल हड़प्पा सभ्यता का प्रमुख बंदरगाह (गोदीवाड़ा) था, जो समुद्री व्यापार का केंद्र था।",
+   "trick": "बंदरगाह = लोथल",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "The dominant sights at Lothal are the ________, which have helped make this place so important to international archaeology.",
+   "hi": "लोथल में प्रमुख दृश्य ________ हैं, जिसने इस स्थान को अंतरराष्ट्रीय पुरातत्व के लिए इतना महत्वपूर्ण बना दिया है।",
+   "opts": [
+    "Temples<br>मंदिर",
+    "Palaces<br>महल",
+    "Dockyard<br>बंदरगाह",
+    "Forts<br>किले"
+   ],
+   "my_ans": "C",
+   "sol": "लोथल का कृत्रिम गोदीवाड़ा (Dockyard) इसे विश्व के सबसे पुराने ज्ञात बंदरगाहों में से एक बनाता है।",
+   "trick": "लोथल = डॉकयार्ड (बंदरगाह)",
+   "ans": "C"
+  }
+ ]
+}

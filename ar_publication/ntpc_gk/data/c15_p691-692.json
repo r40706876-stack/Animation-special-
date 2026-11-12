@@ -1,0 +1,78 @@
+{
+ "chapter": {
+  "no": 15,
+  "en": "International Affairs",
+  "hi": "अंतर्राष्ट्रीय मामले",
+  "total": 25,
+  "gl": 25,
+  "ug": 0
+ },
+ "source_pages": "691-692",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "What was the theme of the 16th session of the United Nations Conference on Trade and Development (UNCTAD16) held in Geneva in October 2025?",
+   "hi": "अक्टूबर 2025 में जिनेवा में आयोजित संयुक्त राष्ट्र व्यापार एवं विकास सम्मेलन (UNCTAD16) के 16वें सत्र की थीम क्या थी?",
+   "opts": [
+    "Climate Action for a Sustainable Future<br>सतत भविष्य के लिए जलवायु कार्रवाई",
+    "Promoting global trade and financial stability<br>वैश्विक व्यापार और वित्तीय स्थिरता को बढ़ावा देना",
+    "Shaping the future: Driving economic transformation for equitable, inclusive and sustainable development<br>भविष्य को आकार देना: समतामूलक, समावेशी और सतत विकास के लिए आर्थिक परिवर्तन को गति देना",
+    "Advancing technology and innovation for sustainable economies<br>सतत अर्थव्यवस्थाओं के लिए प्रौद्योगिकी और नवाचार को बढ़ावा देना"
+   ],
+   "my_ans": "C",
+   "sol": "UNCTAD16 का आयोजन अक्टूबर 2025 में जिनेवा में हुआ था। इसकी मुख्य थीम 'भविष्य को आकार देना: समतामूलक, समावेशी और सतत विकास के लिए आर्थिक परिवर्तन को गति देना' थी।",
+   "trick": "UNCTAD16 थीम: भविष्य का आकार, आर्थिक परिवर्तन और सतत विकास।",
+   "ans": "C"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "In December 2025, India and Russia signed the RELOS agreement. What is the primary purpose of this agreement?",
+   "hi": "दिसंबर 2025 में भारत और रूस ने RELOS समझौते पर हस्ताक्षर किए। इस समझौते का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To promote civilian technology sharing between India and Russia<br>भारत और रूस के बीच नागरिक प्रौद्योगिकी साझाकरण को बढ़ावा देना",
+    "To enhance educational exchange programs between India and Russia<br>भारत और रूस के बीच शैक्षिक आदान-प्रदान कार्यक्रमों को बढ़ाना",
+    "To establish joint agricultural research centers<br>संयुक्त कृषि अनुसंधान केंद्र स्थापित करना",
+    "To facilitate reciprocal military logistics support between India and Russia<br>भारत और रूस के बीच पारस्परिक सैन्य रसद सहायता को सुगम बनाना"
+   ],
+   "my_ans": "D",
+   "sol": "RELOS (Reciprocal Exchange of Logistics and Supplies Agreement) का मुख्य उद्देश्य दोनों देशों की सेनाओं को एक-दूसरे के सैन्य अड्डों का उपयोग करने की सुविधा देना है।",
+   "trick": "RELOS = सैन्य रसद (Logistics) आदान-प्रदान समझौता।",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Which organization concluded its 46th summit in Manama, where leaders adopted the Sakhir Declaration, reaffirming their commitment to deeper political, security, and economic integration?",
+   "hi": "किस संगठन ने मनामा में अपना 46वां शिखर सम्मेलन समाप्त किया, जहाँ नेताओं ने गहन राजनीतिक, सुरक्षा और आर्थिक एकीकरण के लिए अपनी प्रतिबद्धता की पुष्टि करते हुए 'सखीर घोषणा' को अपनाया?",
+   "opts": [
+    "Gulf Cooperation Council (GCC)<br>खाड़ी सहयोग परिषद (GCC)",
+    "Arab League<br>अरब लीग",
+    "Organization of Islamic Cooperation (OIC)<br>इस्लामिक सहयोग संगठन (OIC)",
+    "United Nations (UN)<br>संयुक्त राष्ट्र (UN)"
+   ],
+   "my_ans": "A",
+   "sol": "46वां GCC शिखर सम्मेलन दिसंबर 2025 में मनामा, बहरीन में आयोजित हुआ था, जिसमें 'सखीर घोषणा' अपनाई गई।",
+   "trick": "सखीर घोषणा = GCC शिखर सम्मेलन (मनामा, बहरीन)।",
+   "ans": "A"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which three countries formed the ACITI Partnership announced in November 2025?",
+   "hi": "नवंबर 2025 में घोषित ACITI पार्टनरशिप का गठन किन तीन देशों ने किया?",
+   "opts": [
+    "Canada, USA, India<br>कनाडा, USA, भारत",
+    "India, Australia, Canada<br>भारत, ऑस्ट्रेलिया, कनाडा",
+    "Australia, Japan, Canada<br>ऑस्ट्रेलिया, जापान, कनाडा",
+    "India, UK, Australia<br>भारत, UK, ऑस्ट्रेलिया"
+   ],
+   "my_ans": "B",
+   "sol": "ACITI का पूर्ण रूप 'ऑस्ट्रेलिया-कनाडा-भारत त्रिपक्षीय पहल' (Australia-Canada-India Trilateral Initiative) है, जो महत्वपूर्ण खनिजों और स्वच्छ ऊर्जा पर केंद्रित है।",
+   "trick": "ACITI = A (ऑस्ट्रेलिया) + C (कनाडा) + I (इंडिया/भारत)।",
+   "ans": "B"
+  }
+ ]
+}

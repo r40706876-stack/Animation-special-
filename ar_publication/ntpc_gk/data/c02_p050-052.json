@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "50-52",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "Razia, the daughter of Iltutmish, ruled Delhi Sultanate between which years before being overthrown by Turkish nobles?",
+   "hi": "इल्तुतमिश की पुत्री रजिया ने तुर्की शासकों द्वारा सत्ता से बेदखल किए जाने से पहले किन वर्षों के दौरान दिल्ली सल्तनत पर शासन किया?",
+   "opts": [
+    "1246–1250",
+    "1240–1246",
+    "1230–1236",
+    "1236–1240"
+   ],
+   "my_ans": "D",
+   "sol": "रजिया सुल्तान दिल्ली सल्तनत की पहली महिला शासक थीं। उन्होंने 1236 से 1240 ई. तक शासन किया था।",
+   "trick": "रजिया का शासनकाल 1236-1240 याद रखें।",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "A Sultan of Delhi attempted to strengthen control over the Deccan by shifting his capital from Delhi to Deogir (Daulatabad), a decision that later proved controversial due to administrative difficulties. Who took this measure?",
+   "hi": "दिल्ली के एक सुल्तान ने अपनी राजधानी को दिल्ली से देवगिरी (दौलताबाद) स्थानांतरित करके दक्कन पर अपना नियंत्रण मजबूत करने का प्रयास किया, यह निर्णय बाद में प्रशासनिक कठिनाइयों के कारण विवादास्पद सिद्ध हुआ। यह निर्णय किसने लिया था?",
+   "opts": [
+    "Muhammad bin Tughlaq<br>मुहम्मद बिन तुगलक",
+    "Firoz Shah Tughlaq<br>फिरोज शाह तुगलक",
+    "Alauddin Khalji<br>अलाउद्दीन खिलजी",
+    "Ghiyasuddin Tughlaq<br>गयासुद्दीन तुगलक"
+   ],
+   "my_ans": "A",
+   "sol": "मुहम्मद बिन तुगलक ने 1327 ई. में अपनी राजधानी दिल्ली से दौलताबाद स्थानांतरित की थी, जो प्रशासनिक विफलता के कारण असफल रही।",
+   "trick": "राजधानी परिवर्तन = मुहम्मद बिन तुगलक।",
+   "ans": "A"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "Which of the following battles took place in 1761 between the Northern Expeditionary Force of the Maratha Empire and the alliance of the King of Afghanistan?",
+   "hi": "निम्नलिखित में से कौन-सा युद्ध, 1761 में मराठा साम्राज्य के उत्तरी अभियान दल और अफ़ग़ानिस्तान के शासक के गठबंधन के बीच लड़ा गया था?",
+   "opts": [
+    "First Anglo-Afghan War<br>प्रथम आंग्ल-अफगान युद्ध",
+    "Third Battle of Panipat<br>पानीपत का तृतीय युद्ध",
+    "Second Battle of Tarain<br>तराइन का द्वितीय युद्ध",
+    "Battle of Peshawar<br>पेशावर का युद्ध"
+   ],
+   "my_ans": "B",
+   "sol": "पानीपत का तीसरा युद्ध 1761 में मराठा साम्राज्य और अहमद शाह अब्दाली (अफगान शासक) के बीच लड़ा गया था।",
+   "trick": "1761 = पानीपत का तीसरा युद्ध।",
+   "ans": "B"
+  },
+  {
+   "n": 45,
+   "lvl": "UG",
+   "en": "In 1309 CE, Malik Kafur invaded which of the following kingdoms in South India?",
+   "hi": "1309 CE में, मलिक काफूर ने दक्षिण भारत में निम्नलिखित में से किस साम्राज्य पर आक्रमण किया?",
+   "opts": [
+    "Yadava Kingdom<br>यादव साम्राज्य",
+    "Kakatiya Kingdom<br>काकतीय साम्राज्य",
+    "Pandya Kingdom<br>पांड्य साम्राज्य",
+    "Hoysala Kingdom<br>होयसल साम्राज्य"
+   ],
+   "my_ans": "B",
+   "sol": "मलिक काफूर ने 1309 ई. में काकतीय साम्राज्य की राजधानी वारंगल पर आक्रमण किया था।",
+   "trick": "1309 = काकतीय (वारंगल) विजय।",
+   "ans": "B"
+  },
+  {
+   "n": 46,
+   "lvl": "UG",
+   "en": "The Battle of Chausa, fought on 26 June 1539, was a military engagement between:",
+   "hi": "चौसा की लड़ाई (Battle of Chausa) जो 26 जून 1539 को लड़ी गई थी, __________ के बीच एक सैन्य संघर्ष था।",
+   "opts": [
+    "Akbar and Hemu<br>अकबर और हेमू",
+    "Humayun and Sher Shah Suri<br>हुमायूँ और शेर शाह सूरी",
+    "Aurangzeb and Dara Shikoh<br>औरंगजेब और दारा शिकोह",
+    "Babur and Ibrahim Lodi<br>बाबर और इब्राहिम लोदी"
+   ],
+   "my_ans": "B",
+   "sol": "चौसा का युद्ध 1539 में मुगल सम्राट हुमायूँ और अफगान शासक शेर शाह सूरी के बीच हुआ था, जिसमें हुमायूँ की हार हुई।",
+   "trick": "चौसा = हुमायूँ बनाम शेरशाह।",
+   "ans": "B"
+  },
+  {
+   "n": 47,
+   "lvl": "UG",
+   "en": "Who was the great general responsible for executing Alauddin Khilji’s Deccan campaigns successfully?",
+   "hi": "अलाउद्दीन खिलजी के दक्कन अभियानों को सफलतापूर्वक क्रियान्वित करने के लिए उत्तरदायी महान सेनापति कौन था?",
+   "opts": [
+    "Ghiyasuddin Tughlaq<br>गियासुद्दीन तुगलक",
+    "Malik Kafur<br>मलिक काफूर",
+    "Balban<br>बलबन",
+    "Qutbuddin Aibak<br>कुतुबुद्दीन ऐबक"
+   ],
+   "my_ans": "B",
+   "sol": "मलिक काफूर अलाउद्दीन खिलजी का सबसे विश्वसनीय सेनापति था जिसने दक्षिण भारत के अभियानों का नेतृत्व किया था।",
+   "trick": "अलाउद्दीन का दक्षिण अभियान = मलिक काफूर।",
+   "ans": "B"
+  },
+  {
+   "n": 48,
+   "lvl": "UG",
+   "en": "Consider the following statements regarding the provincial administration in the Mughal period and select the correct option. Statement I: The subedar was head of the province and responsible for the maintenance of general law and order. Statement II: The head of the revenue department in the suba was Diwan.",
+   "hi": "मुगल काल में प्रांतीय प्रशासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए और सही विकल्प का चयन कीजिए। कथन I: सूबेदार प्रांत का प्रमुख होता था और सामान्य कानून-व्यवस्था बनाए रखने के लिए उत्तरदायी होता था। कथन II: सूबे में राजस्व विभाग का प्रमुख दीवान होता था।",
+   "opts": [
+    "Both statements I and II are correct.<br>कथन I और II दोनों सही हैं।",
+    "Statement I is correct, while statement II is incorrect.<br>कथन I सही है, जबकि कथन II गलत है।",
+    "Both statements I and II are incorrect.<br>कथन I और II दोनों गलत हैं।",
+    "Statement I is incorrect, while statement II is correct.<br>कथन I गलत है, जबकि कथन II सही है।"
+   ],
+   "my_ans": "A",
+   "sol": "मुगल प्रशासन में सूबेदार प्रांत का प्रशासनिक प्रमुख था और दीवान राजस्व विभाग का प्रमुख होता था। दोनों कथन सही हैं।",
+   "trick": "सूबेदार = प्रशासन, दीवान = राजस्व।",
+   "ans": "A"
+  },
+  {
+   "n": 49,
+   "lvl": "UG",
+   "en": "Which of the following architectural techniques was introduced to India during the Sultanate period?",
+   "hi": "सल्तनत काल के दौरान भारत में निम्नलिखित में से किस वास्तुकला तकनीक की शुरुआत हुई?",
+   "opts": [
+    "Arch and dome construction technique<br>मेहराब और गुंबद निर्माण तकनीक",
+    "Barrel vaulting<br>ढोलाकार कोष्ठ निर्माण",
+    "Wooden truss construction<br>लकड़ी के ट्रस का निर्माण",
+    "Slab-and-beam roofing<br>स्लैब-एंड-बीम छत-अस्तर"
+   ],
+   "my_ans": "A",
+   "sol": "दिल्ली सल्तनत के दौरान तुर्क-अफगान शासकों ने भारत में मेहराब (Arch) और गुंबद (Dome) निर्माण की तकनीक शुरू की थी।",
+   "trick": "सल्तनत = मेहराब और गुंबद।",
+   "ans": "A"
+  },
+  {
+   "n": 50,
+   "lvl": "UG",
+   "en": "Which Mughal ruler is credited with introducing the Zabti revenue system across major parts of empire?",
+   "hi": "साम्राज्य के प्रमुख हिस्सों में जब्ती (Zabti) राजस्व प्रणाली शुरू करने का श्रेय किस मुगल शासक को दिया जाता है?",
+   "opts": [
+    "Akbar<br>अकबर",
+    "Humayun<br>हुमायूँ",
+    "Babar<br>बाबर",
+    "Aurangzeb<br>औरंगजेब"
+   ],
+   "my_ans": "A",
+   "sol": "अकबर ने अपने राजस्व मंत्री राजा टोडरमल की सहायता से 'जब्ती' या 'दहसाला' राजस्व प्रणाली लागू की थी।",
+   "trick": "जब्ती प्रणाली = अकबर।",
+   "ans": "A"
+  },
+  {
+   "n": 51,
+   "lvl": "UG",
+   "en": "Khut, Muqaddam and Patwari during the Delhi Sultanate were _________.",
+   "hi": "दिल्ली सल्तनत के दौरान खुत, मुकद्दम और पटवारी _________ थे।",
+   "opts": [
+    "royal court functionaries<br>शाही दरबार के पदाधिकारी",
+    "provincial functionaries<br>प्रांतीय पदाधिकारी",
+    "town functionaries<br>नगर पदाधिकारी",
+    "village functionaries<br>ग्राम पदाधिकारी"
+   ],
+   "my_ans": "D",
+   "sol": "खुत, मुकद्दम और पटवारी दिल्ली सल्तनत के प्रशासनिक ढांचे में ग्राम-स्तरीय राजस्व अधिकारी थे।",
+   "trick": "खुत/मुकद्दम/पटवारी = ग्राम अधिकारी।",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 8,
+  "en": "Economics",
+  "hi": "अर्थशास्त्र",
+  "total": 174,
+  "gl": 91,
+  "ug": 83
+ },
+ "source_pages": "334-336",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 21,
+   "lvl": "GL",
+   "en": "During the 1990–91 balance of payments crisis, India’s foreign exchange reserves were sufficient to finance imports for only:",
+   "hi": "1990-91 के भुगतान संतुलन संकट के दौरान, भारत का विदेशी मुद्रा भंडार केवल __________ के आयात के वित्तपोषण के लिए पर्याप्त था।",
+   "opts": [
+    "two weeks<br>दो सप्ताह",
+    "one week<br>एक सप्ताह",
+    "three months<br>तीन माह",
+    "one month<br>एक माह"
+   ],
+   "my_ans": "A",
+   "sol": "1990-91 के आर्थिक संकट के समय भारत का विदेशी मुद्रा भंडार घटकर केवल 1 बिलियन डॉलर रह गया था, जो केवल दो सप्ताह के आयात के लिए पर्याप्त था।",
+   "trick": "1991 संकट = 2 सप्ताह का विदेशी मुद्रा भंडार",
+   "ans": "A"
+  },
+  {
+   "n": 22,
+   "lvl": "GL",
+   "en": "In the post-liberalization era, the agricultural marketing system remained inefficient due to which structural factor?",
+   "hi": "उदारीकरण के बाद के युग में, कृषि विपणन प्रणाली किस संरचनात्मक कारक के कारण अप्रभावी बनी रही?",
+   "opts": [
+    "Weak APMC reform implementation<br>APMC सुधार का अप्रभावी कार्यान्वयन",
+    "Full deregulation of exports<br>निर्यात का पूर्ण विनियमन",
+    "Over-corporatization of produce<br>उत्पादों का अति-निगमीकरण",
+    "Uniform E-NAM adoption<br>एकसमान E-NAM अंगीकरण"
+   ],
+   "my_ans": "A",
+   "sol": "अधिकांश राज्यों ने APMC अधिनियम में सुधारों को प्रभावी ढंग से लागू नहीं किया, जिससे किसानों की खरीदारों तक पहुंच सीमित रही और बाजार एकाधिकार बना रहा।",
+   "trick": "APMC सुधारों की कमी = कृषि विपणन में अक्षमता",
+   "ans": "A"
+  },
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "What does the Food for Work Programme aim to provide to the rural poor of backward districts?",
+   "hi": "फूड फॉर वर्क प्रोग्राम (Food for Work Programme) का उद्देश्य पिछड़े जिलों के ग्रामीण गरीबों को क्या प्रदान करना है?",
+   "opts": [
+    "Free electricity and water supply<br>निःशुल्क बिजली और जल की आपूर्ति",
+    "Free education and training abroad<br>विदेश में निःशुल्क शिक्षा और प्रशिक्षण",
+    "Access to private healthcare schemes<br>निजी स्वास्थ्य योजनाओं तक पहुंच",
+    "Supplementary wage employment<br>अनुपूरक मजदूरी रोजगार"
+   ],
+   "my_ans": "D",
+   "sol": "यह कार्यक्रम ग्रामीण क्षेत्रों में कृषि के सुस्त मौसम के दौरान ग्रामीण गरीबों को अतिरिक्त मजदूरी रोजगार प्रदान करने के लिए शुरू किया गया था।",
+   "trick": "फूड फॉर वर्क = मजदूरी रोजगार",
+   "ans": "D"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "The conceptual framework of Human Development was pioneered by:",
+   "hi": "मानव विकास के संकल्पनात्मक फ्रेमवर्क का प्रतिपादन ____________ के द्वारा किया गया था।",
+   "opts": [
+    "Dr. Abdus Salam<br>डॉ. अब्दुस सलाम",
+    "Prof. Amartya Sen<br>प्रो. अमर्त्य सेन",
+    "Ellen C. Semple<br>एलन सी. सेम्पुल",
+    "Dr. Mahbub-ul-Haq<br>डॉ. महबूब-उल-हक़"
+   ],
+   "my_ans": "D",
+   "sol": "मानव विकास सूचकांक (HDI) की अवधारणा और इसकी रूपरेखा पाकिस्तानी अर्थशास्त्री डॉ. महबूब-उल-हक ने 1990 में तैयार की थी।",
+   "trick": "HDI = महबूब-उल-हक",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "Which national financial performance milestone was reported by the Department of Commerce for H1 FY 2025-26 (April–September 2025), highlighting best-ever export figures?",
+   "hi": "वाणिज्य विभाग द्वारा H1 FY 2025-26 (अप्रैल-सितंबर 2025) के लिए राष्ट्रीय वित्तीय प्रदर्शन की किस महत्वपूर्ण उपलब्धि की रिपोर्ट जारी की गई, जिसमें अब तक के सर्वश्रेष्ठ निर्यात आंकड़ों पर प्रकाश डाला गया है?",
+   "opts": [
+    "Highest FDI inflow in 5 years<br>5 वर्षों में उच्चतम FDI अंतर्वाह",
+    "Highest export quarter in H1<br>H1 में उच्चतम निर्यात तिमाही",
+    "Largest export diversification program<br>बृहत्तम निर्यात विविधीकरण कार्यक्रम",
+    "Lowest trade deficit in a decade<br>एक दशक में निम्नतम व्यापार घाटा"
+   ],
+   "my_ans": "B",
+   "sol": "वित्त वर्ष 2025-26 की पहली छमाही (H1) में भारत ने अब तक की सबसे अधिक निर्यात तिमाही दर्ज की, जो मजबूत आर्थिक प्रदर्शन को दर्शाती है।",
+   "trick": "H1 2025-26 = उच्चतम निर्यात तिमाही",
+   "ans": "B"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "What was the main purpose of the India–MERCOSUR Preferential Trade Agreement discussions held in New Delhi on 16 October 2025?",
+   "hi": "16 अक्टूबर 2025 को नई दिल्ली में आयोजित भारत-MERCOSUR अधिमान्य व्यापार समझौते (India–MERCOSUR Preferential Trade Agreement) पर चर्चा का मुख्य उद्देश्य क्या था?",
+   "opts": [
+    "To promote trade and investment<br>व्यापार और निवेश को बढ़ावा देना",
+    "To establish a common currency<br>एक सार्व मुद्रा स्थापित करना",
+    "To coordinate defense policies<br>रक्षा नीतियों का समन्वय करना",
+    "To standardize education systems<br>शिक्षा प्रणालियों का मानकीकरण करना"
+   ],
+   "my_ans": "A",
+   "sol": "इस समझौते का मुख्य उद्देश्य सीमा शुल्क को कम करके और बाजार पहुंच बढ़ाकर भारत और मर्कोसुर देशों के बीच द्विपक्षीय व्यापार और निवेश को बढ़ावा देना है।",
+   "trick": "व्यापार समझौता = व्यापार और निवेश",
+   "ans": "A"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "In which year did Mahatma Gandhi break the Salt Act at Dandi?",
+   "hi": "महात्मा गांधी ने किस वर्ष दांडी में नमक अधिनियम (Salt Act) तोड़ा था?",
+   "opts": [
+    "1929",
+    "1930",
+    "1928",
+    "1931"
+   ],
+   "my_ans": "B",
+   "sol": "महात्मा गांधी ने 12 मार्च 1930 को साबरमती आश्रम से दांडी मार्च शुरू किया और 6 अप्रैल 1930 को दांडी में नमक बनाकर कानून तोड़ा।",
+   "trick": "दांडी मार्च = 1930",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "In December 2025, the PNGRB tariff revamp was expected to cut city gas distribution (CGD) transport costs by how much (in ₹) annually?",
+   "hi": "दिसंबर 2025 में, PNGRB के टैरिफ में किए गए संशोधन से शहरी गैस वितरण (CGD) परिवहन लागत में सालाना कितनी (₹ में) कटौती होने की उम्मीद थी?",
+   "opts": [
+    "500 crore<br>500 करोड़",
+    "1,000 crore<br>1,000 करोड़",
+    "750 crore<br>750 करोड़",
+    "2,000 crore<br>2,000 करोड़"
+   ],
+   "my_ans": "B",
+   "sol": "PNGRB द्वारा टैरिफ संशोधन का उद्देश्य शहरी गैस वितरण (CGD) परिवहन लागत को कम करना था, जिससे सालाना 1,000 करोड़ रुपये की बचत का अनुमान था।",
+   "trick": "PNGRB संशोधन = 1000 करोड़ बचत",
+   "ans": "B"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Which of the following is a key element of the monetary system infrastructure of India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत की मौद्रिक प्रणाली अवसंरचना का एक प्रमुख तत्व है?",
+   "opts": [
+    "Banks<br>बैंक (Bank)",
+    "Railways<br>रेलवे (Railway)",
+    "Roads<br>सड़कें (Roads)",
+    "Power stations<br>पावर स्टेशन (Power station)"
+   ],
+   "my_ans": "A",
+   "sol": "मौद्रिक प्रणाली का संबंध मुद्रा आपूर्ति, ऋण और वित्तीय लेनदेन से है, जिसमें बैंक और RBI मुख्य भूमिका निभाते हैं, जबकि अन्य भौतिक बुनियादी ढांचा हैं।",
+   "trick": "मौद्रिक प्रणाली = बैंक और RBI",
+   "ans": "A"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Which Indian government initiative has been introduced to support informal workers in urban areas?",
+   "hi": "शहरी क्षेत्रों में अनौपचारिक श्रमिकों को सहायता प्रदान करने के लिए भारत सरकार द्वारा कौन-सी पहल शुरू की गई है?",
+   "opts": [
+    "PM Ujjwala Yojana<br>पीएम उज्ज्वला योजना",
+    "PM-KISAN<br>पीएम-किसान",
+    "Jal Shakti Abhiyan<br>जल शक्ति अभियान",
+    "PM-SVANidhi<br>पीएम-स्वनिधि"
+   ],
+   "my_ans": "D",
+   "sol": "PM-SVANidhi योजना जून 2020 में शुरू की गई थी ताकि शहरी रेहड़ी-पटरी वालों को बिना गारंटी के कार्यशील पूंजी ऋण प्रदान किया जा सके।",
+   "trick": "स्ट्रीट वेंडर = PM-SVANidhi",
+   "ans": "D"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "Which organization was the implementing agency for the National Agricultural Insurance Scheme (NAIS) launched in 1999?",
+   "hi": "1999 में शुरू की गई राष्ट्रीय कृषि बीमा योजना (NAIS) के लिए कार्यान्वयन एजेंसी कौन सी संस्था थी?",
+   "opts": [
+    "GIC",
+    "LIC",
+    "NABARD",
+    "AIC"
+   ],
+   "my_ans": "D",
+   "sol": "राष्ट्रीय कृषि बीमा योजना (NAIS) को भारतीय कृषि बीमा कंपनी (AIC) द्वारा कार्यान्वित किया गया था।",
+   "trick": "NAIS = AIC",
+   "ans": "D"
+  }
+ ]
+}

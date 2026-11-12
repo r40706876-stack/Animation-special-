@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 7,
+  "en": "Indian Polity",
+  "hi": "भारतीय राजव्यवस्था",
+  "total": 332,
+  "gl": 149,
+  "ug": 183
+ },
+ "source_pages": "274-276",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "Which of the following Constitutional Amendments introduced Part IX related to Panchayats in India?",
+   "hi": "निम्नलिखित में से किस संवैधानिक संशोधन द्वारा भारत में पंचायतों से संबंधित भाग IX समाविष्ट किया गया?",
+   "opts": [
+    "44th Amendment<br>44वें संशोधन",
+    "73rd Amendment<br>73वें संशोधन",
+    "42nd Amendment<br>42वें संशोधन",
+    "86th Amendment<br>86वें संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "73वें संविधान संशोधन अधिनियम, 1992 द्वारा संविधान में भाग IX जोड़ा गया, जिसने पंचायती राज संस्थाओं को संवैधानिक दर्जा प्रदान किया।",
+   "trick": "73वां संशोधन = पंचायती राज (भाग 9)",
+   "ans": "B"
+  },
+  {
+   "n": 158,
+   "lvl": "UG",
+   "en": "What is the President's primary constitutional duty as per the oath under Article 60?",
+   "hi": "अनुच्छेद 60 के तहत शपथ के अनुसार राष्ट्रपति का प्राथमिक संवैधानिक कर्तव्य क्या है?",
+   "opts": [
+    "Manage finances for the governance of India<br>भारतीय शासन के लिए वित्त का प्रबंधन करना",
+    "Preserve, protect and defend the Constitution<br>संविधान का परिरक्षण, संरक्षण और प्रतिरक्षण करना",
+    "Formulate policies for the governance of India<br>भारतीय शासन के लिए नीतियों का सूत्रीकरण",
+    "Control Council of Ministers headed by Prime Minister<br>प्रधानमंत्री की अध्यक्षता वाली मंत्रिपरिषद को नियंत्रित करना"
+   ],
+   "my_ans": "B",
+   "sol": "अनुच्छेद 60 के तहत राष्ट्रपति की शपथ में संविधान और कानून का परिरक्षण, संरक्षण और प्रतिरक्षण करना उनका मुख्य कर्तव्य बताया गया है।",
+   "trick": "अनुच्छेद 60 = राष्ट्रपति की शपथ (रक्षा, संरक्षण, सुरक्षा)",
+   "ans": "B"
+  },
+  {
+   "n": 159,
+   "lvl": "UG",
+   "en": "Which case recognised judicial review as part of the basic structure?",
+   "hi": "निम्नलिखित में से किस मामले ने न्यायिक समीक्षा को मूल संरचना के हिस्से के रूप में मान्यता दी?",
+   "opts": [
+    "Indra Sawhney case<br>इंद्रा साहनी मामला",
+    "Keshavananda Bharati case<br>केशवानंद भारती मामला",
+    "Menaka Gandhi case<br>मेनका गांधी मामला",
+    "Minerva Mills case<br>मिनर्वा मिल्स मामला"
+   ],
+   "my_ans": "B",
+   "sol": "1973 के ऐतिहासिक केशवानंद भारती मामले में सर्वोच्च न्यायालय ने मूल संरचना का सिद्धांत दिया और न्यायिक समीक्षा को इसका हिस्सा माना।",
+   "trick": "केशवानंद भारती = मूल संरचना का सिद्धांत",
+   "ans": "B"
+  },
+  {
+   "n": 160,
+   "lvl": "UG",
+   "en": "The 106th Constitutional Amendment inserted which of the following new Articles in the Constitution?",
+   "hi": "106वें संवैधानिक संशोधन द्वारा संविधान में निम्नलिखित में से कौन-से नए अनुच्छेद शामिल किए गए?",
+   "opts": [
+    "325A, 327A",
+    "371A, 371B",
+    "339A, 341B",
+    "330A, 332A"
+   ],
+   "my_ans": "D",
+   "sol": "106वें संशोधन (नारी शक्ति वंदन अधिनियम) ने अनुच्छेद 330A और 332A जोड़कर लोकसभा और विधानसभाओं में महिलाओं के लिए 33% आरक्षण सुनिश्चित किया।",
+   "trick": "106वां संशोधन = महिला आरक्षण (330A, 332A)",
+   "ans": "D"
+  },
+  {
+   "n": 161,
+   "lvl": "UG",
+   "en": "Which Constitutional Amendment introduced 10% reservation for Economically Weaker Sections in education and jobs?",
+   "hi": "शिक्षा और नौकरियों में आर्थिक रूप से कमजोर वर्गों के लिए 10% आरक्षण किस संवैधानिक संशोधन द्वारा लागू किया गया था?",
+   "opts": [
+    "102nd Amendment<br>102वां संशोधन",
+    "103rd Amendment<br>103वां संशोधन",
+    "98th Amendment<br>98वां संशोधन",
+    "104th Amendment<br>104वां संशोधन"
+   ],
+   "my_ans": "B",
+   "sol": "103वें संविधान संशोधन अधिनियम, 2019 द्वारा आर्थिक रूप से कमजोर वर्गों (EWS) के लिए शिक्षा और सरकारी नौकरियों में 10% आरक्षण का प्रावधान किया गया।",
+   "trick": "103वां संशोधन = EWS आरक्षण",
+   "ans": "B"
+  },
+  {
+   "n": 162,
+   "lvl": "UG",
+   "en": "Parliament, the legislative organ of the Union government, is mentioned in which part of the Constitution of India?",
+   "hi": "भारत के संविधान के किस भाग में संघ सरकार के विधायी अंग, संसद का उल्लेख है?",
+   "opts": [
+    "Part VI<br>भाग VI",
+    "Part V<br>भाग V",
+    "Part VIII<br>भाग VIII",
+    "Part VII<br>भाग VII"
+   ],
+   "my_ans": "B",
+   "sol": "भारतीय संविधान का भाग V 'संघ' से संबंधित है, जिसमें अनुच्छेद 79 से 122 तक संसद की संरचना और शक्तियों का वर्णन है।",
+   "trick": "भाग 5 = संघ (संसद)",
+   "ans": "B"
+  },
+  {
+   "n": 163,
+   "lvl": "UG",
+   "en": "In 2022, the President pardoned a woman jailed for a minor crime. Which Article of the Indian Constitution allows the President to grant pardons?",
+   "hi": "2022 में, राष्ट्रपति ने एक मामूली अपराध के लिए जेल में बंद एक महिला को क्षमादान दिया। भारतीय संविधान का कौन-सा अनुच्छेद राष्ट्रपति को क्षमादान देने का अधिकार देता है?",
+   "opts": [
+    "Article 72<br>अनुच्छेद 72",
+    "Article 74<br>अनुच्छेद 74",
+    "Article 53<br>अनुच्छेद 53",
+    "Article 75<br>अनुच्छेद 75"
+   ],
+   "my_ans": "A",
+   "sol": "भारतीय संविधान का अनुच्छेद 72 राष्ट्रपति को किसी भी अपराध के लिए दोषी ठहराए गए व्यक्ति को क्षमा, लघुकरण या दंड में छूट देने की शक्ति देता है।",
+   "trick": "अनुच्छेद 72 = राष्ट्रपति की क्षमादान शक्ति",
+   "ans": "A"
+  },
+  {
+   "n": 164,
+   "lvl": "UG",
+   "en": "What is the primary purpose of a Parliamentary Committee in India?",
+   "hi": "भारत में संसदीय समिति का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To amend provisions of the Constitution<br>संविधान के प्रावधानों में संशोधन करना",
+    "To appoint ministers to executive offices<br>मंत्रियों को कार्यकारी पदों पर नियुक्त करना",
+    "To examine bills and policies in detail<br>विधेयकों और नीतियों की विस्तारपूर्वक जांच करना",
+    "To supervise elections across the country<br>देश भर में चुनावों की निगरानी करना"
+   ],
+   "my_ans": "C",
+   "sol": "संसदीय समितियां संसद द्वारा गठित विशेष निकाय हैं जो विधायी और प्रशासनिक मामलों, विशेषकर विधेयकों और नीतियों की विस्तृत जांच करती हैं।",
+   "trick": "संसदीय समिति = विधेयकों की विस्तृत जांच",
+   "ans": "C"
+  },
+  {
+   "n": 165,
+   "lvl": "UG",
+   "en": "The governor can dissolve Vidhan Sabha before the completion of its term on the advice of the _______.",
+   "hi": "राज्यपाल, _________ की सलाह पर विधानसभा का कार्यकाल पूर्ण होने से पहले उसे भंग कर सकता है।",
+   "opts": [
+    "Election Commission<br>चुनाव आयोग",
+    "High Court of the State<br>राज्य उच्च न्यायालय",
+    "Chief Minister<br>मुख्यमंत्री",
+    "President<br>राष्ट्रपति"
+   ],
+   "my_ans": "C",
+   "sol": "अनुच्छेद 174 के तहत, राज्यपाल मुख्यमंत्री और मंत्रिपरिषद की सलाह पर विधानसभा को भंग कर सकते हैं।",
+   "trick": "विधानसभा भंग = मुख्यमंत्री की सलाह",
+   "ans": "C"
+  },
+  {
+   "n": 166,
+   "lvl": "UG",
+   "en": "Joint Sitting of both the houses of the Parliament is summoned by:",
+   "hi": "संसद के दोनों सदनों की संयुक्त बैठक ________ द्वारा बुलाई जाती है।",
+   "opts": [
+    "Prime Minister of India<br>भारत के प्रधानमंत्री",
+    "Speaker of Lok Sabha<br>लोकसभा के अध्यक्ष",
+    "Chairman Rajya Sabha<br>राज्यसभा के सभापति",
+    "President of India<br>भारत के राष्ट्रपति"
+   ],
+   "my_ans": "D",
+   "sol": "संसद के दोनों सदनों की संयुक्त बैठक बुलाने का अधिकार भारत के राष्ट्रपति के पास है, जबकि इसकी अध्यक्षता लोकसभा अध्यक्ष करते हैं।",
+   "trick": "संयुक्त बैठक बुलाना = राष्ट्रपति",
+   "ans": "D"
+  }
+ ]
+}

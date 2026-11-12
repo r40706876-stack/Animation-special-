@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "450-452",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 1,
+   "lvl": "GL",
+   "en": "Which feature primarily differentiates spreadsheet software from word processing software?",
+   "hi": "निम्नलिखित में से कौन-सा फीचर, मुख्यत: स्प्रेडशीट सॉफ्टवेयर को वर्ड प्रोसेसिंग सॉफ्टवेयर से अलग करता है?",
+   "opts": [
+    "Ability to change font and size<br>फॉन्ट और साइज़ बदलने की क्षमता",
+    "Calculation using formulas<br>फॉर्मूले का उपयोग करके कैलकुलेशन",
+    "Creating slides<br>स्लाइड बनाना",
+    "Ability to format text<br>टेक्स्ट को फॉर्मेट करने की क्षमता"
+   ],
+   "my_ans": "B",
+   "sol": "स्प्रेडशीट सॉफ्टवेयर का मुख्य कार्य डेटा को पंक्तियों और स्तंभों में व्यवस्थित करना और फॉर्मूले का उपयोग करके स्वचालित गणना करना है।",
+   "trick": "स्प्रेडशीट = गणना (Calculation)",
+   "ans": "B"
+  },
+  {
+   "n": 2,
+   "lvl": "GL",
+   "en": "Which file type is most likely to be classified as a system file in Windows OS?",
+   "hi": "विंडोज OS में, किस प्रकार की फ़ाइल को सिस्टम फ़ाइल के रूप में वर्गीकृत किए जाने की सबसे अधिक संभावना है?",
+   "opts": [
+    ".zip",
+    ".dll",
+    ".mp3",
+    ".docx"
+   ],
+   "my_ans": "B",
+   "sol": ".dll (Dynamic Link Library) फाइलें विंडोज के मुख्य सिस्टम फाइलें हैं जिनमें प्रोग्राम चलाने के लिए आवश्यक कोड और डेटा होता है।",
+   "trick": "DLL = Dynamic Link Library (सिस्टम फाइल)",
+   "ans": "B"
+  },
+  {
+   "n": 3,
+   "lvl": "GL",
+   "en": "A printer receives information from the computer and produces a hard copy on paper. This behavior makes the printer a/an/the:",
+   "hi": "एक प्रिंटर, कंप्यूटर से सूचना प्राप्त करता है और कागज पर उसकी हार्ड कॉपी उत्पन्न करता है। इस गतिविधि के कारण प्रिंटर को _________ कहा जाता है।",
+   "opts": [
+    "Input device<br>इनपुट उपकरण",
+    "Network device<br>नेटवर्क उपकरण",
+    "Primary memory<br>प्राथमिक मेमोरी",
+    "Output device<br>आउटपुट उपकरण"
+   ],
+   "my_ans": "D",
+   "sol": "प्रिंटर कंप्यूटर से प्रोसेस की गई जानकारी प्राप्त करता है और उसे कागज पर हार्ड कॉपी के रूप में बाहर निकालता है, इसलिए यह एक आउटपुट डिवाइस है।",
+   "trick": "प्रिंटर = बाहर निकालना (Output)",
+   "ans": "D"
+  },
+  {
+   "n": 4,
+   "lvl": "GL",
+   "en": "Which shortcut is used to undo the last action?",
+   "hi": "पिछली क्रिया को पूर्ववत (अनडू) करने के लिए किस शॉर्टकट का उपयोग किया जाता है?",
+   "opts": [
+    "Ctrl+U",
+    "Ctrl+E",
+    "Ctrl+Z",
+    "Ctrl+X"
+   ],
+   "my_ans": "C",
+   "sol": "Ctrl+Z का उपयोग अधिकांश कंप्यूटर अनुप्रयोगों में अंतिम क्रिया को रद्द करने या पूर्ववत (Undo) करने के लिए किया जाता है।",
+   "trick": "Z = Zero (पिछली क्रिया को शून्य करना)",
+   "ans": "C"
+  },
+  {
+   "n": 5,
+   "lvl": "GL",
+   "en": "A file name is highlighted, and you want to copy it to another folder while keeping it in the original folder as well. Which pair of steps matches this task?",
+   "hi": "एक फ़ाइल का नाम हाइलाइट किया गया है, और आप इसे ओरिजिनल फोल्डर में रखते हुए, किसी दूसरे फोल्डर में कॉपी करना चाहते हैं। कौन-से चरण इस कार्य से मेल खाते हैं?",
+   "opts": [
+    "Press Ctrl + X, then Ctrl + V<br>पहले Ctrl + X प्रेस करें, फिर Ctrl + V प्रेस करें",
+    "Press Ctrl + C, then Ctrl + V<br>पहले Ctrl + C प्रेस करें, फिर Ctrl + V प्रेस करें",
+    "Press Ctrl + S, then Ctrl + V<br>पहले Ctrl + S प्रेस करें, फिर Ctrl + V प्रेस करें",
+    "Press Ctrl + C, then Ctrl + B<br>पहले Ctrl + C प्रेस करें, फिर Ctrl + B प्रेस करें"
+   ],
+   "my_ans": "B",
+   "sol": "Ctrl+C का उपयोग फाइल को कॉपी करने के लिए किया जाता है और Ctrl+V का उपयोग उसे नई जगह पर पेस्ट करने के लिए किया जाता है।",
+   "trick": "C = Copy, V = Paste",
+   "ans": "B"
+  },
+  {
+   "n": 6,
+   "lvl": "GL",
+   "en": "Which power mode uses the least electricity while maintaining an open session?",
+   "hi": "निम्नलिखित में से कौन-सा पावर मोड, खुले सत्र (open session) को बनाए रखते हुए सबसे कम विद्युत का उपयोग करता है?",
+   "opts": [
+    "Active mode<br>एक्टिव मोड",
+    "Hibernate<br>हाइबरनेट",
+    "Standby<br>स्टैंडबाय",
+    "Sleep<br>स्लीप"
+   ],
+   "my_ans": "D",
+   "sol": "स्लीप मोड में कंप्यूटर रैम (RAM) को न्यूनतम बिजली देता है ताकि खुला सत्र बना रहे, जबकि अन्य घटक बंद रहते हैं।",
+   "trick": "स्लीप = कम बिजली, खुला सत्र",
+   "ans": "D"
+  },
+  {
+   "n": 7,
+   "lvl": "GL",
+   "en": "Why is RAM called “Random Access”?",
+   "hi": "रैम (RAM) को 'रैंडम एक्सेस (Random Access)' क्यों कहा जाता है?",
+   "opts": [
+    "Data is permanently stored<br>डेटा स्थायी रूप से संग्रहित किया जाता है",
+    "Data is stored randomly without structure<br>डेटा बिना संरचना के यादृच्छिक रूप से संग्रहित किया जाता है।",
+    "Data can only be accessed sequentially<br>डेटा को केवल क्रमिक रूप से ही एक्सेस किया जा सकता है।",
+    "Data can be accessed directly from any location<br>डेटा को सीधे किसी भी स्थान से एक्सेस किया जा सकता है।"
+   ],
+   "my_ans": "D",
+   "sol": "रैंडम एक्सेस का अर्थ है कि मेमोरी के किसी भी हिस्से को उसकी भौतिक स्थिति की परवाह किए बिना सीधे और समान समय में एक्सेस किया जा सकता है।",
+   "trick": "Random = Direct Access",
+   "ans": "D"
+  },
+  {
+   "n": 8,
+   "lvl": "GL",
+   "en": "Under which section can we find the total processor utilization across all cores on a computer?",
+   "hi": "कंप्यूटर के सभी कोर (cores) में कुल प्रोसेसर यूटिलाइजेशन किस सेक्शन के अंतर्गत पाया जा सकता है?",
+   "opts": [
+    "My Computer",
+    "Recycle Bin",
+    "Task Manager",
+    "Settings"
+   ],
+   "my_ans": "C",
+   "sol": "टास्क मैनेजर (Task Manager) विंडोज की एक उपयोगिता है जो सिस्टम के प्रदर्शन (CPU, मेमोरी, डिस्क) की वास्तविक समय में निगरानी करती है।",
+   "trick": "Task Manager = Performance monitor",
+   "ans": "C"
+  },
+  {
+   "n": 9,
+   "lvl": "GL",
+   "en": "Which shortcut selects all content in a document?",
+   "hi": "निम्न में से किस शॉर्टकट द्वारा डॉक्यूमेंट में संपूर्ण कंटेंट को सेलेक्ट किया जाता है?",
+   "opts": [
+    "Ctrl+E",
+    "Ctrl+R",
+    "Ctrl+S",
+    "Ctrl+A"
+   ],
+   "my_ans": "D",
+   "sol": "Ctrl+A का उपयोग डॉक्यूमेंट या फोल्डर में मौजूद सभी फाइलों या टेक्स्ट को एक साथ चुनने (Select All) के लिए किया जाता है।",
+   "trick": "A = All",
+   "ans": "D"
+  },
+  {
+   "n": 10,
+   "lvl": "GL",
+   "en": "Which of the following devices functions as both an input and an output device?",
+   "hi": "निम्नलिखित में से कौन-सा डिवाइस, इनपुट और आउटपुट दोनों के रूप में कार्य करता है?",
+   "opts": [
+    "Printer<br>प्रिंटर",
+    "Speaker<br>स्पीकर",
+    "Touchscreen<br>टचस्क्रीन",
+    "Keyboard<br>कीबोर्ड"
+   ],
+   "my_ans": "C",
+   "sol": "टचस्क्रीन एक इनपुट डिवाइस है क्योंकि यह स्पर्श को पहचानता है और एक आउटपुट डिवाइस भी है क्योंकि यह स्क्रीन पर परिणाम प्रदर्शित करता है।",
+   "trick": "टचस्क्रीन = इनपुट + आउटपुट",
+   "ans": "C"
+  },
+  {
+   "n": 11,
+   "lvl": "GL",
+   "en": "What is the purpose of Pressing ALT + F4 in Windows operating system?",
+   "hi": "विंडोज ऑपरेटिंग सिस्टम में ALT + F4 दबाने का क्या उद्देश्य है?",
+   "opts": [
+    "Close the current window or application<br>करंट विंडो या एप्लिकेशन को बंद करना",
+    "Delete selected text<br>सेलेक्ट किए गए टेक्स्ट को डिलीट करना",
+    "Open the Find dialog<br>फाइंड डायलॉग (Find dialog) ओपन करना",
+    "Switch tabs<br>टैब (tabs) बदलना"
+   ],
+   "my_ans": "A",
+   "sol": "ALT + F4 एक यूनिवर्सल शॉर्टकट है जिसका उपयोग वर्तमान में सक्रिय विंडो या एप्लिकेशन को बंद करने के लिए किया जाता है।",
+   "trick": "ALT+F4 = Close",
+   "ans": "A"
+  },
+  {
+   "n": 12,
+   "lvl": "GL",
+   "en": "Maria wants to manage startup programs and services that run automatically when Windows 11 starts. Which Windows utility provides dedicated \"Startup\" and \"Services\" task for this purpose?",
+   "hi": "मारिया उन स्टार्टअप प्रोग्राम और सेवाओं को प्रबंधित करना चाहती है जो विंडोज 11 शुरू होने पर स्वचालित रूप से चलते हैं। इस उद्देश्य के लिए कौन सी विंडोज उपयोगिता समर्पित 'स्टार्टअप' और 'सेवाएं' कार्य प्रदान करती है?",
+   "opts": [
+    "Control Panel",
+    "Task Manager",
+    "Device Manager",
+    "System Configuration"
+   ],
+   "my_ans": "B",
+   "sol": "टास्क मैनेजर में 'Startup' टैब होता है जहाँ से उपयोगकर्ता उन प्रोग्रामों को सक्षम या अक्षम कर सकता है जो कंप्यूटर शुरू होने पर चलते हैं।",
+   "trick": "Startup = Task Manager",
+   "ans": "B"
+  }
+ ]
+}

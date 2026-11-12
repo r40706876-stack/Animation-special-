@@ -1,0 +1,206 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "150-152",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 66,
+   "lvl": "GL",
+   "en": "The Taiga Type region is best described as which major natural region?",
+   "hi": "टैगा प्रकार के क्षेत्र को किस प्रमुख प्राकृतिक क्षेत्र के रूप में सर्वोत्तम रूप से वर्णित किया जा सकता है?",
+   "opts": [
+    "Equatorial Lowland Region<br>विषुवतीय निम्नभूमि क्षेत्र",
+    "Coniferous Forests Region<br>शंकुधारी वन क्षेत्र",
+    "Cold Deserts Region<br>शीत मरूस्थल क्षेत्र",
+    "Cool Temperate Grassland Region<br>शीतल शीतोष्ण घासस्थल क्षेत्र"
+   ],
+   "my_ans": "B",
+   "sol": "टैगा को बोरियल या शंकुधारी वन भी कहा जाता है। यह 50°-70° उत्तरी अक्षांश के उप-आर्कटिक क्षेत्रों में पाया जाता है जहाँ पाइन और स्प्रूस जैसे वृक्ष मिलते हैं।",
+   "trick": "टैगा = शंकुधारी वन (Boreal Forest)",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "GL",
+   "en": "Which irrigation method delivers water directly to roots using emitters for optimal moisture control and efficiency?",
+   "hi": "कौन सी सिंचाई विधि एमिटर का उपयोग करके सीधे जड़ों तक पानी पहुँचाती है ताकि नमी का इष्टतम नियंत्रण और दक्षता बनी रहे?",
+   "opts": [
+    "Flood<br>बाढ़",
+    "Overhead<br>ओवरहेड",
+    "Sprinkler<br>स्प्रिंकलर",
+    "Drip<br>ड्रिप"
+   ],
+   "my_ans": "D",
+   "sol": "ड्रिप सिंचाई में पानी सीधे पौधों की जड़ों तक बूंद-बूंद करके पहुँचाया जाता है, जिससे पानी की बर्बादी कम होती है और दक्षता सबसे अधिक (90-95%) होती है।",
+   "trick": "ड्रिप = बूंद-बूंद सिंचाई (जड़ों के लिए सर्वोत्तम)",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "Which of the following is a non-metallic natural resource?",
+   "hi": "निम्नलिखित में से कौन-सा अधात्विक (non-metallic) प्राकृतिक संसाधन है?",
+   "opts": [
+    "Copper<br>तांबा",
+    "Iron ore<br>लौह अयस्क",
+    "Gold<br>सोना",
+    "Limestone<br>चूना पत्थर"
+   ],
+   "my_ans": "D",
+   "sol": "चूना पत्थर (लाइमस्टोन) एक अवसादी चट्टान है जो कैल्शियम कार्बोनेट से बनी होती है। इसमें धातु नहीं होती, इसलिए यह अधात्विक संसाधन है।",
+   "trick": "धातु = चमक/चालकता; चूना पत्थर = अधात्विक",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "Which mountain range encompasses the Kashmir, Kangra, and Kullu valleys within the Himalayas?",
+   "hi": "हिमालय के अंतर्गत कश्मीर, कांगड़ा और कुल्लू घाटियाँ किस पर्वत श्रृंखला से परिबद्ध हैं?",
+   "opts": [
+    "Aravalli<br>अरावली",
+    "Vindhya<br>विंध्य",
+    "Lesser Himalayas<br>लघु हिमालय",
+    "Great Himalayas<br>विशाल हिमालय"
+   ],
+   "my_ans": "C",
+   "sol": "लघु हिमालय (हिमाचल श्रेणी) में कश्मीर, कांगड़ा और कुल्लू जैसी प्रसिद्ध घाटियाँ स्थित हैं। इसकी ऊँचाई 3,700 से 4,500 मीटर के बीच है।",
+   "trick": "लघु हिमालय = पर्यटन और घाटियों का घर",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "What is the primary reason for the intensification of the monsoon trough over North India by the end of May?",
+   "hi": "मई के अंत तक उत्तर भारत में मानसून गर्त के तीव्र हो जाने का मुख्य कारण क्या है?",
+   "opts": [
+    "Shift in wind patterns<br>पवन के पैटर्न में परिवर्तन",
+    "High temperature in the region<br>क्षेत्र में उच्च तापमान",
+    "Decrease in humidity<br>आर्द्रता में कमी",
+    "Increase in atmospheric pressure<br>वायुमंडलीय दाब में वृद्धि"
+   ],
+   "my_ans": "B",
+   "sol": "मई के अंत में उत्तर भारत में अत्यधिक गर्मी के कारण निम्न वायुदाब का क्षेत्र बनता है, जो मानसून की हवाओं को आकर्षित करता है और मानसून गर्त को तीव्र करता है।",
+   "trick": "गर्मी = निम्न दाब = मानसून का आगमन",
+   "ans": "B"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "The total area covered by the Andaman & Nicobar Islands is approximately:",
+   "hi": "अंडमान और निकोबार द्वीप द्वारा कवर किया गया कुल क्षेत्रफल लगभग कितना है?",
+   "opts": [
+    "6,249 sq. kms",
+    "8,249 sq. kms",
+    "7,567 sq. kms",
+    "5,163 sq. kms"
+   ],
+   "my_ans": "B",
+   "sol": "अंडमान और निकोबार द्वीप समूह का कुल भौगोलिक क्षेत्रफल लगभग 8,249 वर्ग किलोमीटर है। इसमें 572 द्वीप शामिल हैं।",
+   "trick": "अंडमान = 8249 वर्ग किमी",
+   "ans": "B"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "Which of the following separates the Andaman from Nicobar Islands?",
+   "hi": "निम्नलिखित में से क्या अंडमान और निकोबार द्वीप समूह को पृथक करता है?",
+   "opts": [
+    "Ten Degree Channel<br>दस डिग्री चैनल",
+    "Palk Strait<br>पाक जलडमरूमध्य",
+    "Nine Degree Channel<br>नौ डिग्री चैनल",
+    "Six Degree Channel<br>छह डिग्री चैनल"
+   ],
+   "my_ans": "A",
+   "sol": "10 डिग्री चैनल अंडमान द्वीप समूह (उत्तर) को निकोबार द्वीप समूह (दक्षिण) से अलग करता है। यह लगभग 10° उत्तरी अक्षांश पर स्थित है।",
+   "trick": "10 डिग्री = अंडमान-निकोबार का विभाजन",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "Which of the following types of weathering is primarily responsible for the formation of karst landscapes?",
+   "hi": "कार्स्ट दृश्यभूमियों के निर्माण के लिए मुख्य रूप से किस प्रकार का अपक्षय उत्तरदायी है?",
+   "opts": [
+    "Mechanical weathering<br>बलकृत अपक्षय",
+    "Thermal weathering<br>तापीय अपक्षय",
+    "Biological weathering<br>जैविक अपक्षय",
+    "Chemical weathering<br>रासायनिक अपक्षय"
+   ],
+   "my_ans": "D",
+   "sol": "कार्स्ट भू-दृश्य चूना पत्थर के क्षेत्रों में रासायनिक अपक्षय (कार्बोनेशन) द्वारा बनते हैं, जहाँ पानी और CO2 मिलकर चट्टान को घोल देते हैं।",
+   "trick": "कार्स्ट = रासायनिक अपक्षय (घुलन)",
+   "ans": "D"
+  },
+  {
+   "n": 74,
+   "lvl": "GL",
+   "en": "The summer solstice occurs when the Sun is directly overhead at which of the following latitudes?",
+   "hi": "उत्तर अयनांत तब होता है जब सूर्य निम्नलिखित में से किस अक्षांश पर प्रत्यक्ष रूप से शिरोपरि होता है?",
+   "opts": [
+    "Equator<br>भूमध्य रेखा",
+    "Arctic Circle<br>आर्कटिक वृत्त",
+    "Tropic of Capricorn<br>मकर रेखा",
+    "Tropic of Cancer<br>कर्क रेखा"
+   ],
+   "my_ans": "D",
+   "sol": "20-21 जून को ग्रीष्म संक्रांति के दौरान सूर्य कर्क रेखा (23.5°N) पर लंबवत चमकता है, जिससे उत्तरी गोलार्ध में सबसे लंबा दिन होता है।",
+   "trick": "ग्रीष्म संक्रांति = कर्क रेखा",
+   "ans": "D"
+  },
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "The 'Kudankulam Nuclear Power Plant' is located in which state?",
+   "hi": "'कुडनकुलम परमाणु ऊर्जा संयंत्र' किस राज्य में स्थित है?",
+   "opts": [
+    "Kerala<br>केरल",
+    "Tamil Nadu<br>तमिलनाडु",
+    "Andhra Pradesh<br>आंध्र प्रदेश",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "B",
+   "sol": "कुडनकुलम परमाणु ऊर्जा संयंत्र तमिलनाडु के तिरुनेलवेली जिले में स्थित है। यह रूस के सहयोग से बनाया गया भारत का सबसे बड़ा परमाणु ऊर्जा स्टेशन है।",
+   "trick": "कुडनकुलम = तमिलनाडु",
+   "ans": "B"
+  },
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "Which of the following continents is NOT crossed by the Equator?",
+   "hi": "निम्नलिखित में से कौन-सा महाद्वीप भूमध्य रेखा पर नहीं है?",
+   "opts": [
+    "South America<br>दक्षिण अमेरिका",
+    "Europe<br>यूरोप",
+    "Africa<br>अफ्रीका",
+    "Asia<br>एशिया"
+   ],
+   "my_ans": "B",
+   "sol": "भूमध्य रेखा दक्षिण अमेरिका, अफ्रीका और एशिया (इंडोनेशिया) से होकर गुजरती है, लेकिन यूरोप पूरी तरह से उत्तरी गोलार्ध में स्थित है और भूमध्य रेखा इसे नहीं छूती।",
+   "trick": "यूरोप = भूमध्य रेखा से दूर",
+   "ans": "B"
+  },
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "In which of the following states is the Baishagu festival celebrated by the Boro Kacharis in the month of April?",
+   "hi": "निम्नलिखित में से किस राज्य में बोरो कचारीज (Boro Kacharis) द्वारा अप्रैल महीने में बैशागु उत्सव मनाया जाता है?",
+   "opts": [
+    "Assam<br>असम",
+    "Odisha<br>ओडिशा",
+    "Bihar<br>बिहार",
+    "Karnataka<br>कर्नाटक"
+   ],
+   "my_ans": "A",
+   "sol": "बैशागु उत्सव असम की बोरो कचारी जनजाति द्वारा अप्रैल के महीने में नए साल के स्वागत के रूप में मनाया जाता है।",
+   "trick": "बैशागु = असम (बोरो जनजाति)",
+   "ans": "A"
+  }
+ ]
+}

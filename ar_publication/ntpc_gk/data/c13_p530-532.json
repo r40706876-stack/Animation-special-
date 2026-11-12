@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 13,
+  "en": "Static GK",
+  "hi": "स्थैतिक सामान्य ज्ञान",
+  "total": 155,
+  "gl": 31,
+  "ug": 124
+ },
+ "source_pages": "530-532",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 34,
+   "lvl": "UG",
+   "en": "Who is credited with codifying the method of Carnatic music?",
+   "hi": "कर्नाटक संगीत पद्धति को संहिताबद्ध (codifying) करने का श्रेय किसे दिया जाता है?",
+   "opts": [
+    "Purandara Dasa<br>पुरंदर दास",
+    "Gopala Dasa<br>गोपाल दास",
+    "Jagannatha Dasa<br>जगन्नाथ दास",
+    "Kanaka Dasa<br>कनक दास"
+   ],
+   "my_ans": "A",
+   "sol": "पुरंदर दास (1484-1564) को 'कर्नाटक संगीत का जनक' माना जाता है। उन्होंने ही संगीत शिक्षण की व्यवस्थित पद्धति विकसित की थी।",
+   "trick": "पुरंदर दास = कर्नाटक संगीत के जनक",
+   "ans": "A"
+  },
+  {
+   "n": 35,
+   "lvl": "UG",
+   "en": "Ustad Bismillah Khan was most closely associated with which musical instrument?",
+   "hi": "उस्ताद बिस्मिल्लाह खान का सबसे निकट संबंध किस वाद्य यंत्र से था?",
+   "opts": [
+    "Sarod<br>सरोद",
+    "Shehnai<br>शहनाई",
+    "Tabla<br>तबला",
+    "Sitar<br>सितार"
+   ],
+   "my_ans": "B",
+   "sol": "उस्ताद बिस्मिल्लाह खान एक महान शहनाई वादक थे, जिन्होंने शहनाई को शास्त्रीय वाद्य के रूप में वैश्विक पहचान दिलाई।",
+   "trick": "बिस्मिल्लाह खान = शहनाई",
+   "ans": "B"
+  },
+  {
+   "n": 36,
+   "lvl": "UG",
+   "en": "Which of the following compositions in Hindustani music is especially associated with Sufi devotional music?",
+   "hi": "हिंदुस्तानी संगीत की निम्नलिखित में से कौन-सी रचना विशेष रूप से सूफी भक्ति संगीत से संबंधित है?",
+   "opts": [
+    "Tappa<br>टप्पा",
+    "Dhrupad<br>ध्रुपद",
+    "Qawwali<br>कव्वाली",
+    "Tarana<br>तराना"
+   ],
+   "my_ans": "C",
+   "sol": "कव्वाली सूफी भक्ति संगीत का एक रूप है जो दरगाहों में अल्लाह और सूफी संतों की भक्ति व्यक्त करने के लिए गाया जाता है।",
+   "trick": "सूफी भक्ति = कव्वाली",
+   "ans": "C"
+  },
+  {
+   "n": 37,
+   "lvl": "UG",
+   "en": "Aruna Mohanty, who received the Padma Shree award in 2017, is associated with which of the following dance forms?",
+   "hi": "2017 में पद्म श्री पुरस्कार से सम्मानित अरुणा मोहंती निम्नलिखित में से किस नृत्य शैली से संबंधित है?",
+   "opts": [
+    "Manipuri<br>मणिपुरी",
+    "Bharatanatyam<br>भरतनाट्यम",
+    "Kathakali<br>कथकली",
+    "Odissi<br>ओडिसी"
+   ],
+   "my_ans": "D",
+   "sol": "अरुणा मोहंती ओडिशा की एक प्रसिद्ध ओडिसी नृत्यांगना हैं और उन्होंने ओडिसी नृत्य को बढ़ावा देने के लिए 'ओरिसा डांस एकेडमी' की स्थापना की।",
+   "trick": "अरुणा मोहंती = ओडिसी",
+   "ans": "D"
+  },
+  {
+   "n": 38,
+   "lvl": "UG",
+   "en": "Who among the following personalities received the Bharat Ratna in 2008 and is widely famous with his performance in 'Mile Sur Mera Tumhara'?",
+   "hi": "निम्नलिखित में से किस व्यक्तित्व को 2008 में भारत रत्न प्राप्त हुआ और 'मिले सुर मेरा तुम्हारा' में अपने अभिनय से व्यापक रूप से प्रसिद्ध हुए?",
+   "opts": [
+    "Gangubai Hangal<br>गंगूबाई हंगल",
+    "Bade Fateh Ali Khan<br>बड़े फ़तेह अली खान",
+    "Pandit Bhimsen Joshi<br>पंडित भीमसेन जोशी",
+    "Nayak Gopal<br>नायक गोपाल"
+   ],
+   "my_ans": "C",
+   "sol": "पंडित भीमसेन जोशी हिंदुस्तानी शास्त्रीय संगीत के महान गायक थे। उन्हें 2008 में भारत रत्न मिला और वे 'मिले सुर मेरा तुम्हारा' गीत के लिए प्रसिद्ध हैं।",
+   "trick": "भीमसेन जोशी = भारत रत्न 2008",
+   "ans": "C"
+  },
+  {
+   "n": 39,
+   "lvl": "UG",
+   "en": "'Playing It My Way' is the autobiography of which of the following sportspersons?",
+   "hi": "'प्लेइंग इट माय वे (Playing It My Way)' निम्नलिखित में से किस खिलाड़ी की आत्मकथा है?",
+   "opts": [
+    "Subhadra Pradhan<br>सुभद्रा प्रधान",
+    "Sachin Tendulkar<br>सचिन तेंदुलकर",
+    "Mohammed Shahid<br>मोहम्मद शाहिद",
+    "Debashish Mishra<br>देबाशीष मिश्रा"
+   ],
+   "my_ans": "B",
+   "sol": "'प्लेइंग इट माय वे' महान क्रिकेटर सचिन तेंदुलकर की आत्मकथा है, जो 2014 में प्रकाशित हुई थी।",
+   "trick": "सचिन तेंदुलकर = प्लेइंग इट माय वे",
+   "ans": "B"
+  },
+  {
+   "n": 40,
+   "lvl": "UG",
+   "en": "Who was the winner of the 2024 Ramon Magsaysay Award from Indonesia?",
+   "hi": "इंडोनेशिया से 2024 रेमन मैग्सेसे पुरस्कार के विजेता कौन थे?",
+   "opts": [
+    "Karma Phuntsho<br>कर्मा फुंटशो",
+    "Hayao Miyazaki<br>हयाओ मियाजाकी",
+    "Dr. Nguyen Thi Ngoc Phuong<br>डॉ. गुयेन थी न्गोक फुओंग",
+    "Farwiza Farhan<br>फरविजा फरहान"
+   ],
+   "my_ans": "D",
+   "sol": "फरविजा फरहान इंडोनेशिया की एक पर्यावरण कार्यकर्ता हैं, जिन्हें 2024 में सुमात्रा के पारिस्थितिकी तंत्र की रक्षा के लिए रेमन मैग्सेसे पुरस्कार मिला।",
+   "trick": "फरविजा फरहान = 2024 मैग्सेसे (इंडोनेशिया)",
+   "ans": "D"
+  },
+  {
+   "n": 41,
+   "lvl": "UG",
+   "en": "Which album brought Dr. L. Subramaniam, the celebrated Indian violinist, a Grammy Award nomination in 1981?",
+   "hi": "किस एल्बम के कारण प्रसिद्ध भारतीय वायलिन वादक डॉ. एल. सुब्रमण्यम को 1981 में ग्रैमी पुरस्कार के लिए नामांकित किया गया था?",
+   "opts": [
+    "West Meets East<br>वेस्ट मीट्स ईस्ट",
+    "Fantasy With Truth<br>फैंटेसी विद ट्रुथ",
+    "Eternal Melodies<br>इटरनल मेलोडीज़",
+    "Music Festival of India<br>म्यूजिक फेस्टिवल ऑफ इंडिया"
+   ],
+   "my_ans": "B",
+   "sol": "डॉ. एल. सुब्रमण्यम के एल्बम 'फैंटेसी विद ट्रुथ' (1981) को ग्रैमी पुरस्कार के लिए नामांकित किया गया था।",
+   "trick": "एल. सुब्रमण्यम = फैंटेसी विद ट्रुथ",
+   "ans": "B"
+  },
+  {
+   "n": 42,
+   "lvl": "UG",
+   "en": "'The Mango Season' is a book written by _________ and is a story of an Indian woman of modern India.",
+   "hi": "'द मैंगो सीज़न (The Mango Season)' _________ द्वारा लिखी गई एक पुस्तक है और यह आधुनिक भारत की एक भारतीय महिला की कहानी है।",
+   "opts": [
+    "Sandhya Menon<br>संध्या मेनन",
+    "Sara Desai<br>सारा देसाई",
+    "Alka Joshi<br>अलका जोशी",
+    "Amulya Malladi<br>अमूल्य मल्लाडी"
+   ],
+   "my_ans": "D",
+   "sol": "'द मैंगो सीज़न' उपन्यास अमूल्य मल्लाडी द्वारा लिखा गया है, जो पारंपरिक मूल्यों और आधुनिक जीवनशैली के बीच के संघर्ष को दर्शाता है।",
+   "trick": "अमूल्य मल्लाडी = द मैंगो सीज़न",
+   "ans": "D"
+  },
+  {
+   "n": 43,
+   "lvl": "UG",
+   "en": "Which of the following traditions are the two major streams of Indian classical music?",
+   "hi": "निम्नलिखित में से कौन-सी दो परंपराएँ भारतीय शास्त्रीय संगीत की दो मुख्य शाखाएँ हैं?",
+   "opts": [
+    "Tribal Folk and Bhakti<br>जनजातीय लोक संगीत और भक्ति संगीत",
+    "Hindustani and Western Classical<br>हिंदुस्तानी और पश्चिमी शास्त्रीय संगीत",
+    "Hindustani and Carnatic<br>हिंदुस्तानी और कर्नाटक संगीत",
+    "Carnatic and Rajasthani Folk<br>कर्नाटक शैली और राजस्थानी लोक संगीत"
+   ],
+   "my_ans": "C",
+   "sol": "भारतीय शास्त्रीय संगीत की दो मुख्य धाराएँ हैं: हिंदुस्तानी (उत्तर भारतीय) और कर्नाटक (दक्षिण भारतीय)।",
+   "trick": "शास्त्रीय संगीत = हिंदुस्तानी + कर्नाटक",
+   "ans": "C"
+  },
+  {
+   "n": 44,
+   "lvl": "UG",
+   "en": "Which of the following is the primary association of the Ektara, a folk musical instrument?",
+   "hi": "लोक संगीत वाद्ययंत्र एकतारा का प्राथमिक संबंध, निम्नलिखित में से किससे है?",
+   "opts": [
+    "Court dances of Tamil Nadu<br>तमिलनाडु के दरबारी नृत्य",
+    "Folk and devotional string music<br>लोक और भक्तिवादी तंतु संगीत",
+    "Martial arts performances in Chhau dance<br>छाऊ नृत्य में युद्ध कला प्रदर्शन",
+    "Temple rituals in Odisha<br>ओडिशा में मंदिर अनुष्ठान"
+   ],
+   "my_ans": "B",
+   "sol": "एकतारा एक तंतु वाद्य (string instrument) है, जिसका उपयोग मुख्य रूप से लोक गीतों और भक्ति संगीत में किया जाता है।",
+   "trick": "एकतारा = भक्ति/लोक संगीत",
+   "ans": "B"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 1,
+  "en": "Ancient History",
+  "hi": "प्राचीन इतिहास",
+  "total": 104,
+  "gl": 43,
+  "ug": 61
+ },
+ "source_pages": "24-26",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "Which of the following Harappan sites yielded excellent examples of metal-cast sculptures?",
+   "hi": "निम्नलिखित में से किस हड़प्पा स्थल से धातु से ढली मूर्तियों (metal-cast sculptures) के उत्कृष्ट उदाहरण मिले हैं?",
+   "opts": [
+    "Nageshwar<br>नागेश्वर",
+    "Daimabad<br>दैमाबाद",
+    "Kalibangan<br>कालीबंगा",
+    "Rangpur<br>रंगपुर"
+   ],
+   "my_ans": "B",
+   "sol": "दैमाबाद (महाराष्ट्र) अपनी कांस्य मूर्तियों के लिए प्रसिद्ध है, जहाँ से रथ, हाथी, गैंडा और भैंस की मूर्तियाँ मिली हैं।",
+   "trick": "दैमाबाद = कांस्य मूर्तियाँ (लॉस्ट-वैक्स तकनीक)",
+   "ans": "B"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "Which of the following Vedas is known as the ‘Veda of Music’?",
+   "hi": "निम्नलिखित में से किस वेद को 'संगीत का वेद' के रूप में जाना जाता है?",
+   "opts": [
+    "Atharvaveda<br>अथर्ववेद",
+    "Samaveda<br>सामवेद",
+    "Yajurveda<br>यजुर्वेद",
+    "Rigveda<br>ऋग्वेद"
+   ],
+   "my_ans": "B",
+   "sol": "सामवेद को 'संगीत का वेद' कहा जाता है क्योंकि इसमें धार्मिक अनुष्ठानों के दौरान गाए जाने वाले मंत्र और संगीत के स्वर हैं।",
+   "trick": "सामवेद = संगीत (S for Samaveda, S for Sangeet)",
+   "ans": "B"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "The inscriptions of Ashoka and Kharavela were primarily written in which of the following languages?",
+   "hi": "अशोक और खारवेल के शिलालेख मुख्य रूप से निम्नलिखित में से किस भाषा में लिखे गए थे?",
+   "opts": [
+    "Sanskrit<br>संस्कृत",
+    "Prakrit<br>प्राकृत",
+    "Pali<br>पालि",
+    "Bengali<br>बंगाली"
+   ],
+   "my_ans": "B",
+   "sol": "प्राचीन काल में प्राकृत जनसाधारण की भाषा थी, इसलिए अशोक के शिलालेख और खारवेल का हाथीगुम्फा अभिलेख प्राकृत में लिखे गए थे।",
+   "trick": "अशोक = प्राकृत (ब्राह्मी लिपि)",
+   "ans": "B"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Which among the following best represents the change in society from the Early to the Later Vedic period?",
+   "hi": "निम्नलिखित में से कौन-सा, प्रारंभिक वैदिक काल से उत्तर वैदिक काल तक समाज में आए परिवर्तन को सर्वोत्तम रूप से दर्शाता है?",
+   "opts": [
+    "End of religious practices and rituals<br>धार्मिक प्रथाओं और अनुष्ठानों का अंत",
+    "Decline of agriculture and rise in hunting<br>कृषि में गिरावट और शिकार में वृद्धि",
+    "Shift from settled villages to nomadic life<br>बसे हुए गाँवों से चलवासी (यायावर) जीवन की ओर स्थानांतरण",
+    "Emergence of a complex varna hierarchy<br>एक जटिल वर्ण पदानुक्रम का उद्भव"
+   ],
+   "my_ans": "D",
+   "sol": "उत्तर वैदिक काल में समाज अधिक जटिल हो गया और जन्म-आधारित वर्ण व्यवस्था (ब्राह्मण, क्षत्रिय, वैश्य, शूद्र) कठोर हो गई।",
+   "trick": "उत्तर वैदिक = वर्ण व्यवस्था का कठोर होना",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Which highly revered Śvetāmbara Jain text describes the lives of the 24 Tīrthaṅkaras, the lineage of pontiffs, and the monastic rules observed during the Paryuṣaṇa festival?",
+   "hi": "श्वेतांबर जैन धर्म का कौन-सा अत्यंत पूजनीय ग्रंथ, 24 तीर्थंकरों के जीवन, धर्माधिकारियों की वंश-परम्परा और पर्युषण पर्व के दौरान पालन किए जाने वाले मठवासी नियमों का वर्णन करता है?",
+   "opts": [
+    "Kalpa-samant<br>कल्प-समन्त",
+    "Kalpa-yoga<br>कल्प-योग",
+    "Kalpa-sutradham<br>कल्प-सूत्रधाम",
+    "Kalpa-sutra<br>कल्प-सूत्र"
+   ],
+   "my_ans": "D",
+   "sol": "कल्प-सूत्र श्वेतांबर जैन धर्म का प्रमुख ग्रंथ है, जिसमें 24 तीर्थंकरों की जीवनी और पर्युषण पर्व के नियम दिए गए हैं।",
+   "trick": "कल्प-सूत्र = जैन तीर्थंकर जीवनी",
+   "ans": "D"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "Who commissioned the Konark Sun Temple?",
+   "hi": "कोणार्क सूर्य मंदिर का निर्माण किसने करवाया था?",
+   "opts": [
+    "Chandragupta II<br>चंद्रगुप्त द्वितीय",
+    "Harshavardhana<br>हर्षवर्धन",
+    "Ashoka<br>अशोक",
+    "Narasimhadeva I<br>नरसिंहदेव प्रथम"
+   ],
+   "my_ans": "D",
+   "sol": "कोणार्क सूर्य मंदिर का निर्माण 13वीं शताब्दी में पूर्वी गंग वंश के राजा नरसिंहदेव प्रथम ने करवाया था।",
+   "trick": "कोणार्क = नरसिंहदेव प्रथम",
+   "ans": "D"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "Name the popular technique used by the Harappans for casting bronze.",
+   "hi": "हड़प्पावासियों द्वारा कांस्य ढलाई के लिए प्रयुक्त लोकप्रिय तकनीक का नाम बताइए।",
+   "opts": [
+    "Lost-Wax Technique<br>लॉस्ट-वैक्स तकनीक",
+    "Open Mould Casting Technique<br>ओपन मोल्ड कास्टिंग तकनीक",
+    "Die Casting Technique<br>डाई कास्टिंग तकनीक",
+    "Sand Casting Technique<br>सैंड कास्टिंग तकनीक"
+   ],
+   "my_ans": "A",
+   "sol": "हड़प्पावासी कांस्य मूर्तियों के लिए 'लॉस्ट-वैक्स' (मोम पिघलाने वाली) तकनीक का उपयोग करते थे, जैसे मोहनजोदड़ो की नर्तकी की मूर्ति।",
+   "trick": "कांस्य ढलाई = लॉस्ट-वैक्स तकनीक",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Which innovation correctly illustrates Mesolithic advances in subsistence and technology in India?",
+   "hi": "भारत में निर्वाह और प्रौद्योगिकी में मेसोलिथिक काल की प्रगति को कौन-सा नवाचार सही रूप से व्यक्त करता है?",
+   "opts": [
+    "Manufacture of heavy flake tools similar to Lower Paleolithic hand-axes<br>निम्न पुरापाषाण काल की हाथ की कुल्हाड़ियों के समान भारी परतदार औजारों का निर्माण।",
+    "Adoption of iron tools indicates an early transition to metal-using cultures<br>लोहे के औजारों का उपयोग धातु-उपयोग करने वाली संस्कृतियों में प्रारंभिक संक्रमण का संकेत देता है।",
+    "Emergence of polished stone axes associated with settled agricultural villages<br>स्थायी कृषि गाँवों से जुड़ी पॉलिश की हुई पत्थर की कुल्हाड़ियों का उद्भव।",
+    "Use of microlithic tools along with bow-and-arrow and plant-processing implements<br>धनुष-बाण और फसलों का प्रसंस्करण करने वाले उपकरणों के साथ सूक्ष्मपाषाण काल के औजारों का उपयोग।"
+   ],
+   "my_ans": "D",
+   "sol": "मध्यपाषाण काल (मेसोलिथिक) की मुख्य पहचान सूक्ष्म पत्थर के औजार (माइक्रोलिथ), धनुष-बाण और अनाज पीसने वाले पत्थर हैं।",
+   "trick": "मेसोलिथिक = माइक्रोलिथ + धनुष-बाण",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "Which archaeological sites, besides Keeladi, have contributed to validating Sangam texts?",
+   "hi": "कीलाडी के अलावा, किन पुरातात्विक स्थलों ने संगम ग्रंथों की प्रामाणिकता को प्रमाणित करने में योगदान दिया है?",
+   "opts": [
+    "Ajanta, Ellora, Hampi<br>अजंता, एलोरा, हम्पी",
+    "Adichanallur, Korkai, Alangulam<br>आदिचनल्लूर, कोरकाई, अलंगुलम",
+    "Lothal, Dholavira, Harappa<br>लोथल, धोलावीरा, हड़प्पा",
+    "Nal, Kalibangan, Mohenjo-Daro<br>नल, कालीबंगा, मोहनजोदड़ो"
+   ],
+   "my_ans": "B",
+   "sol": "आदिचनल्लूर, कोरकाई और अलंगुलम जैसे तमिलनाडु के स्थल संगम काल की सभ्यता और व्यापारिक गतिविधियों की पुष्टि करते हैं।",
+   "trick": "संगम स्थल = आदिचनल्लूर, कोरकाई, अलंगुलम",
+   "ans": "B"
+  },
+  {
+   "n": 74,
+   "lvl": "UG",
+   "en": "The roads and streets of the Harappan Lower Town were laid out in which pattern?",
+   "hi": "हड़प्पा के निचले शहर की सड़कें और गलियाँ किस पैटर्न में बनी थीं?",
+   "opts": [
+    "Grid pattern<br>ग्रिड पैटर्न",
+    "Circular pattern<br>वृत्ताकार पैटर्न",
+    "Radial pattern<br>रेडियल पैटर्न",
+    "Triangular pattern<br>त्रिकोणीय पैटर्न"
+   ],
+   "my_ans": "A",
+   "sol": "हड़प्पा सभ्यता के नगर ग्रिड प्रणाली (Grid System) पर आधारित थे, जहाँ सड़कें एक-दूसरे को समकोण पर काटती थीं।",
+   "trick": "हड़प्पा = ग्रिड (समकोण) पैटर्न",
+   "ans": "A"
+  }
+ ]
+}

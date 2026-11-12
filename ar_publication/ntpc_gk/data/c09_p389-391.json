@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 9,
+  "en": "Physics",
+  "hi": "भौतिक विज्ञान",
+  "total": 85,
+  "gl": 33,
+  "ug": 52
+ },
+ "source_pages": "389-391",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 23,
+   "lvl": "GL",
+   "en": "When a motorcar makes a sharp turn at high speed, we tend to get thrown to one side. Which of the following explains this phenomenon?",
+   "hi": "जब कोई मोटरगाड़ी तेज चाल से अचानक मोड़ लेती है, तो हम एक तरफ उछल जाते हैं। निम्नलिखित में से कौन-सा कथन इस परिघटना की व्याख्या करता है?",
+   "opts": [
+    "Change in air pressure inside the car pushes us outwards.<br>कार के अंदर वायु दाब में परिवर्तन हमें बाहर की ओर धकेलता है।",
+    "The law of inertia causes our body to resist the change in direction.<br>जड़त्व नियम के कारण हमारा शरीर दिशा परिवर्तन का प्रतिरोध करता है।",
+    "The friction between the road and the tires decreases.<br>सड़क और टायरों के बीच घर्षण कम हो जाता है।",
+    "The force of gravity acts in the opposite direction.<br>गुरुत्वीय बल विपरीत दिशा में कार्य करता है।"
+   ],
+   "my_ans": "B",
+   "sol": "जड़त्व (Inertia) के कारण हमारा शरीर अपनी गति की दिशा बनाए रखना चाहता है, इसलिए मोड़ आने पर शरीर दिशा परिवर्तन का विरोध करता है।",
+   "trick": "जड़त्व = अपनी अवस्था (गति/दिशा) को बनाए रखने का गुण।",
+   "ans": "B"
+  },
+  {
+   "n": 24,
+   "lvl": "GL",
+   "en": "Raising an object from the ground results in the storage of which type of energy?",
+   "hi": "किसी वस्तु को भूमि से ऊपर उठाने पर किस प्रकार की ऊर्जा संग्रहित होती है?",
+   "opts": [
+    "Heat energy<br>ऊष्मा ऊर्जा",
+    "Electrical energy<br>विद्युत ऊर्जा",
+    "Kinetic energy<br>गतिज ऊर्जा",
+    "Potential energy<br>स्थितिज ऊर्जा"
+   ],
+   "my_ans": "D",
+   "sol": "किसी वस्तु को ऊँचाई पर ले जाने पर उसमें गुरुत्वीय स्थितिज ऊर्जा (PE = mgh) संचित हो जाती है।",
+   "trick": "ऊँचाई = स्थितिज ऊर्जा (Potential Energy)।",
+   "ans": "D"
+  },
+  {
+   "n": 25,
+   "lvl": "GL",
+   "en": "What is the amount of heat per unit mass transferred during change of state of a substance called?",
+   "hi": "किसी पदार्थ की अवस्था परिवर्तन के दौरान प्रति इकाई द्रव्यमान में स्थानांतरित ऊष्मा की मात्रा को क्या कहते हैं?",
+   "opts": [
+    "Latent heat<br>गुप्त ऊष्मा",
+    "Induced heat<br>प्रेरित ऊष्मा",
+    "Thermal heat<br>तापीय ऊष्मा",
+    "Specific heat<br>विशिष्ट ऊष्मा"
+   ],
+   "my_ans": "A",
+   "sol": "अवस्था परिवर्तन (जैसे बर्फ का पानी बनना) के समय तापमान स्थिर रहता है, इस दौरान दी गई ऊष्मा गुप्त ऊष्मा कहलाती है।",
+   "trick": "अवस्था बदली, तापमान नहीं = गुप्त ऊष्मा।",
+   "ans": "A"
+  },
+  {
+   "n": 26,
+   "lvl": "GL",
+   "en": "Working of hydraulic lift and hydraulic brakes is based on:",
+   "hi": "द्रवचालित लिफ्ट और द्रवचालित ब्रेक की कार्यप्रणाली निम्नलिखित में से किस पर आधारित है?",
+   "opts": [
+    "Coulomb's law<br>कूलॉम का नियम",
+    "Gay-Lussac’s law<br>गे-लुसैक का नियम",
+    "Pascal’s law<br>पास्कल का नियम",
+    "Faraday's law<br>फैराडे का नियम"
+   ],
+   "my_ans": "C",
+   "sol": "पास्कल के नियम के अनुसार, बंद द्रव पर लगाया गया दाब सभी दिशाओं में समान रूप से संचारित होता है।",
+   "trick": "हाइड्रोलिक = पास्कल का नियम।",
+   "ans": "C"
+  },
+  {
+   "n": 27,
+   "lvl": "GL",
+   "en": "The interference of two identical waves moving in opposite directions produces:",
+   "hi": "विपरीत दिशाओं में चलने वाली दो एक जैसी तरंगों के इंटरफेरेंस से क्या उत्पन्न होता है?",
+   "opts": [
+    "Longitudinal Waves<br>अनुदैर्ध्य तरंगे",
+    "Standing Waves<br>अप्रगामी तरंगें",
+    "Incident Waves<br>आपतित तरंगें",
+    "Transversal waves<br>अनुप्रस्थ तरंगे"
+   ],
+   "my_ans": "B",
+   "sol": "जब दो समान तरंगें विपरीत दिशा में अध्यारोपित होती हैं, तो वे अप्रगामी (Standing) तरंगें बनाती हैं जिनमें कुछ बिंदु स्थिर रहते हैं।",
+   "trick": "विपरीत दिशा + समान तरंग = अप्रगामी तरंग।",
+   "ans": "B"
+  },
+  {
+   "n": 28,
+   "lvl": "GL",
+   "en": "An object is placed between the focus and the pole of a concave mirror. The image formed is _______.",
+   "hi": "एक वस्तु को अवतल दर्पण के फोकस और ध्रुव के बीच रखा जाता है। निर्मित प्रतिबिंब _______ होगा।",
+   "opts": [
+    "real and inverted<br>वास्तविक और उल्टा",
+    "real and upright<br>वास्तविक और सीधा",
+    "virtual and inverted<br>आभासी और उल्टा",
+    "virtual and upright<br>आभासी और सीधा"
+   ],
+   "my_ans": "D",
+   "sol": "अवतल दर्पण में जब वस्तु फोकस और ध्रुव के बीच होती है, तो प्रतिबिंब दर्पण के पीछे, आभासी और सीधा बनता है।",
+   "trick": "अवतल दर्पण में केवल एक स्थिति (F और P के बीच) में प्रतिबिंब सीधा बनता है।",
+   "ans": "D"
+  },
+  {
+   "n": 29,
+   "lvl": "GL",
+   "en": "Momentum of an object is defined as the product of its mass and velocity, hence what are its SI units?",
+   "hi": "किसी वस्तु के संवेग को उसके द्रव्यमान और वेग के गुणनफल के रूप में परिभाषित किया जाता है, तो उसकी SI इकाइयां क्या हैं?",
+   "opts": [
+    "kg m s",
+    "g m s⁻¹",
+    "kg m s⁻¹",
+    "kg m s⁻²"
+   ],
+   "my_ans": "C",
+   "sol": "संवेग = द्रव्यमान (kg) × वेग (m/s) = kg m s⁻¹।",
+   "trick": "संवेग = mv (मात्रक kg m/s)।",
+   "ans": "C"
+  },
+  {
+   "n": 30,
+   "lvl": "GL",
+   "en": "Free fall corresponds to which type of motion?",
+   "hi": "मुक्त पतन (Free fall) किस प्रकार की गति से संबंधित है?",
+   "opts": [
+    "Non-uniform motion<br>असमान गति",
+    "Uniform motion<br>एकसमान गति",
+    "Uniformly accelerated motion<br>एकसमान रूप से त्वरित गति",
+    "Periodic motion<br>आवर्त गति"
+   ],
+   "my_ans": "C",
+   "sol": "मुक्त पतन में वस्तु गुरुत्वीय त्वरण (g = 9.8 m/s²) के अधीन गिरती है, जो नियत रहता है, इसलिए यह एकसमान त्वरित गति है।",
+   "trick": "मुक्त पतन = नियत त्वरण (g) = एकसमान त्वरित गति।",
+   "ans": "C"
+  },
+  {
+   "n": 31,
+   "lvl": "GL",
+   "en": "The foundational understanding of the law of inertia was established through the experiments of which physicist?",
+   "hi": "निम्नलिखित में से किस भौतिक विज्ञानी के प्रयोगों के माध्यम से जड़त्व नियम की मूलभूत समझ स्थापित हुई?",
+   "opts": [
+    "Archimedes<br>आर्किमिडीज़",
+    "Albert Einstein<br>अल्बर्ट आइंस्टीन",
+    "Michael Faraday<br>माइकल फैराडे",
+    "Galileo Galilei<br>गैलीलियो गैलीली"
+   ],
+   "my_ans": "D",
+   "sol": "गैलीलियो ने झुके हुए तलों पर प्रयोग करके जड़त्व के नियम की नींव रखी थी, जिसे बाद में न्यूटन ने अपने प्रथम नियम के रूप में दिया।",
+   "trick": "जड़त्व का जनक = गैलीलियो।",
+   "ans": "D"
+  },
+  {
+   "n": 32,
+   "lvl": "GL",
+   "en": "Polaroid glass is used in photographic cameras because:",
+   "hi": "पोलेरॉइड ग्लास (Polaroid glass) का उपयोग फोटोग्राफिक कैमरों में क्यों किया जाता है?",
+   "opts": [
+    "it improves the resolution of camera<br>यह कैमरे के रिज़ॉल्यूशन में सुधार करता है",
+    "it improves image processing<br>यह छवि प्रसंस्करण में सुधार करता है",
+    "it helps in auto focus of the lens<br>यह लेंस के ऑटो फोकस में सहायता करता है",
+    "it reduces the light intensity to half on account of polarisation<br>ध्रुवीकरण के कारण यह प्रकाश की तीव्रता को आधा कर देता है"
+   ],
+   "my_ans": "D",
+   "sol": "पोलेरॉइड ग्लास ध्रुवीकरण (polarisation) के सिद्धांत पर कार्य करता है, जो प्रकाश की तीव्रता को कम करके चकाचौंध को रोकता है।",
+   "trick": "पोलेरॉइड = ध्रुवीकरण = तीव्रता कम करना।",
+   "ans": "D"
+  },
+  {
+   "n": 33,
+   "lvl": "GL",
+   "en": "The formation of a spectrum by a glass prism occurs due to ________.",
+   "hi": "कांच के प्रिज्म द्वारा स्पेक्ट्रम का निर्माण ________ के कारण होता है।",
+   "opts": [
+    "Dispersion<br>परिक्षेपण",
+    "Scattering<br>प्रकीर्णन",
+    "Reflection<br>परावर्तन",
+    "Refraction<br>अपवर्तन"
+   ],
+   "my_ans": "A",
+   "sol": "श्वेत प्रकाश का सात रंगों में विभाजित होना वर्ण-विक्षेपण (Dispersion) कहलाता है, जो प्रिज्म में होता है।",
+   "trick": "प्रिज्म = विक्षेपण (Dispersion) = सात रंग।",
+   "ans": "A"
+  }
+ ]
+}

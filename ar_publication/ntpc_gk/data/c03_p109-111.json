@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 3,
+  "en": "Modern History",
+  "hi": "आधुनिक इतिहास",
+  "total": 171,
+  "gl": 72,
+  "ug": 99
+ },
+ "source_pages": "109-111",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "Who among the following succeeded Raja Ram Mohan Roy as the leader of the Brahmo Samaj?",
+   "hi": "निम्नलिखित में से किसने ब्रह्म समाज के नेता के रूप में राजा राम मोहन राय का उत्तराधिकार संभाला?",
+   "opts": [
+    "Debendra Nath Tagore<br>देबेंद्रनाथ टैगोर",
+    "Dwarkanath Tagore<br>द्वारकानाथ टैगोर",
+    "Keshub Chandra Sen<br>केशव चंद्र सेन",
+    "Swami Vivekananda<br>स्वामी विवेकानंद"
+   ],
+   "my_ans": "A",
+   "sol": "राजा राम मोहन राय की मृत्यु (1833) के बाद, देबेंद्रनाथ टैगोर ने 1843 में ब्रह्म समाज का नेतृत्व संभाला।",
+   "trick": "राजा राम मोहन राय के बाद देबेंद्रनाथ टैगोर ने बागडोर संभाली।",
+   "ans": "A"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Which issue acted as the immediate trigger for the uprising that began in 1857?",
+   "hi": "वह कौन-सा मुद्दा था जिसने 1857 में शुरू हुए विद्रोह के लिए तात्कालिक कारण के रूप में कार्य किया था?",
+   "opts": [
+    "Suspension of military pensions for long-serving Indian sepoys.<br>लंबे समय तक सेवा देने वाले भारतीय सिपाहियों की सैन्य पेंशन का निलंबन।",
+    "Introduction of the Enfield rifle with cartridges feared to contain animal fat.<br>एनफील्ड राइफल का प्रचलन, जिसमें उपयोग होने वाले कारतूसों में पशु वसा होने का डर था।",
+    "New rules requiring sepoys to abandon traditional dress and customs.<br>नए नियम जिनके अंतर्गत सिपाहियों को अपनी पारंपरिक वेशभूषा और रीति-रिवाजों को छोड़ने की आवश्यकता थी।",
+    "Mandatory service postings across overseas territories for all regiments.<br>सभी रेजिमेंटों के लिए विदेशी क्षेत्रों में अनिवार्य सेवा तैनाती।"
+   ],
+   "my_ans": "B",
+   "sol": "एनफील्ड राइफल के कारतूसों में गाय और सूअर की चर्बी के प्रयोग की अफवाह ने सैनिकों की धार्मिक भावनाओं को आहत किया, जो विद्रोह का तात्कालिक कारण बना।",
+   "trick": "चर्बी वाले कारतूस = 1857 का तात्कालिक कारण।",
+   "ans": "B"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "The Rowlatt Satyagraha of 1919 was launched by Gandhi to protest against:",
+   "hi": "गांधी जी ने 1919 में रॉलेट सत्याग्रह की शुरुआत, निम्नलिखित में से किसके विरोध में की थी?",
+   "opts": [
+    "Ban on vernacular press and public meetings<br>स्थानीय भाषा में प्रेस और सार्वजनिक सभाओं पर प्रतिबंध",
+    "Partition of Bengal and separate electorates<br>बंगाल का विभाजन और अलग निर्वाचक मंडल",
+    "New salt tax and increase in land revenue<br>नमक पर नया कर और भू-राजस्व में वृद्धि",
+    "Laws allowing detention and punishment without trial<br>बिना मुकदमे के नज़रबंदी और सजा की अनुमति देने वाले कानून"
+   ],
+   "my_ans": "D",
+   "sol": "रॉलेट एक्ट के तहत ब्रिटिश सरकार को किसी भी व्यक्ति को बिना मुकदमा चलाए दो साल तक जेल में रखने का अधिकार मिल गया था, जिसके विरोध में यह सत्याग्रह हुआ।",
+   "trick": "रॉलेट एक्ट = बिना वकील, बिना दलील, बिना अपील।",
+   "ans": "D"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Which of the following groups at the Second Round Table Conference claimed that Congress had no authority in their territories?",
+   "hi": "द्वितीय गोलमेज सम्मेलन में निम्नलिखित में से किस समूह ने यह दावा किया कि कांग्रेस का उनके नियंत्रण वाले भूभाग पर कोई अधिकार नहीं है?",
+   "opts": [
+    "Zamindars<br>जमींदार",
+    "Indian princes<br>भारतीय राजे-रजवाड़ों",
+    "Provincial governors<br>प्रांतीय राज्यपाल",
+    "British officials<br>ब्रिटिश अधिकारी"
+   ],
+   "my_ans": "B",
+   "sol": "द्वितीय गोलमेज सम्मेलन (1931) में भारतीय रियासतों के राजाओं ने दावा किया कि कांग्रेस का उनकी रियासतों पर कोई अधिकार नहीं है क्योंकि वे ब्रिटिश भारत से अलग थे।",
+   "trick": "रियासतों के राजा = कांग्रेस का अधिकार नहीं।",
+   "ans": "B"
+  },
+  {
+   "n": 156,
+   "lvl": "UG",
+   "en": "In which of the following years was Rani Lakshmi Bai killed?",
+   "hi": "रानी लक्ष्मी बाई की मृत्यु निम्नलिखित में से किस वर्ष हुई थी?",
+   "opts": [
+    "1858",
+    "1854",
+    "1857",
+    "1878"
+   ],
+   "my_ans": "A",
+   "sol": "झांसी की रानी लक्ष्मीबाई 1857 के विद्रोह की प्रमुख नेता थीं और 18 जून 1858 को ग्वालियर के युद्ध में शहीद हुईं।",
+   "trick": "1857 का विद्रोह, 1858 में रानी की शहादत।",
+   "ans": "A"
+  },
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "Who among the following was associated with the Farazi Movement in Bengal during the 19th century?",
+   "hi": "निम्नलिखित में से कौन, 19वीं शताब्दी के दौरान बंगाल में फ़राज़ी आंदोलन (Farazi Movement) से जुड़ा था?",
+   "opts": [
+    "Dadu Mian<br>दादू मियां",
+    "Birsa Munda<br>बिरसा मुंडा",
+    "Maznoom Shah<br>मज़नूम शाह",
+    "U Kiang Nongbah<br>यू कियांग नांगबाह"
+   ],
+   "my_ans": "A",
+   "sol": "बंगाल में फराज़ी आंदोलन की शुरुआत हाजी शरीयतुल्लाह ने की थी, लेकिन 1840 के बाद उनके पुत्र दादू मियां ने इसका नेतृत्व किया।",
+   "trick": "फराज़ी = दादू मियां।",
+   "ans": "A"
+  },
+  {
+   "n": 158,
+   "lvl": "UG",
+   "en": "Which of the following major battles did Maulvi Ahmadullah Shah participate in during the revolt of 1857?",
+   "hi": "1857 के विद्रोह के दौरान मौलवी अहमदुल्ला शाह ने निम्नलिखित में से किस प्रमुख युद्ध में हिस्सा लिया?",
+   "opts": [
+    "Battle of Plassey<br>प्लासी का युद्ध",
+    "Battle of Kanpur<br>कानपुर का युद्ध",
+    "Battle of Chinhat<br>चिनहट का युद्ध",
+    "Battle of Jhansi<br>झांसी का युद्ध"
+   ],
+   "my_ans": "C",
+   "sol": "मौलवी अहमदुल्ला शाह ने 30 जून 1857 को लखनऊ के पास चिनहट के युद्ध में विद्रोही सेना का नेतृत्व किया और अंग्रेजों को हराया।",
+   "trick": "अहमदुल्ला = चिनहट की जीत।",
+   "ans": "C"
+  },
+  {
+   "n": 159,
+   "lvl": "UG",
+   "en": "Which circumstance directly triggered Gandhi’s decision to launch the Rowlatt Satyagraha in 1919?",
+   "hi": "1919 में गांधी जी द्वारा रॉलेट सत्याग्रह शुरू करने के निर्णय को किस परिस्थिति ने प्रत्यक्ष रूप से प्रेरित किया था?",
+   "opts": [
+    "The rejection of Indian demands for complete dominion status by Britain.<br>ब्रिटेन द्वारा भारतीयों की पूर्ण अधिराज्य स्थिति की मांग को अस्वीकार करना",
+    "The enactment of laws enabling detention without trial despite resistance.<br>प्रतिरोध के बावजूद बिना मुकदमे के हिरासत में रखने की अनुमति देने वाले कानूनों का अधिनियमन",
+    "The cancellation of wartime recruitment policies in northern India.<br>उत्तरी भारत में युद्धकालीन भर्ती नीतियों को रद्द करना",
+    "The British announcement of new taxation on agricultural harvests.<br>ब्रिटेन द्वारा कृषि उपज पर नए कर लगाने की घोषणा"
+   ],
+   "my_ans": "B",
+   "sol": "रॉलेट एक्ट के तहत बिना किसी न्यायिक प्रक्रिया के गिरफ्तारी और नजरबंदी के कानून ने गांधी जी को सत्याग्रह शुरू करने के लिए प्रेरित किया।",
+   "trick": "बिना मुकदमा = रॉलेट सत्याग्रह।",
+   "ans": "B"
+  },
+  {
+   "n": 160,
+   "lvl": "UG",
+   "en": "What prompted the Kol uprising in the Chhotanagpur region during 1831–32?",
+   "hi": "1831-32 के दौरान छोटानागपुर क्षेत्र में हुए कोल विद्रोह का कारण क्या था?",
+   "opts": [
+    "Transfer of tribal lands and intrusion of moneylenders and merchants.<br>जनजाति भूमि का हस्तांतरण और साहूकारों और व्यापारियों का अतिक्रमण",
+    "The spread of famines caused by failures in rice-growing regions.<br>चावल उत्पादन वाले क्षेत्रों में फसल खराब होने के कारण अकाल का प्रसार",
+    "Ban on local festivals perceived as a threat to public order.<br>सार्वजनिक व्यवस्था के लिए खतरा माने जाने वाले स्थानीय त्योहारों पर प्रतिबंध",
+    "Conscription of young men into British units for foreign service.<br>विदेशी सेवा के लिए ब्रिटिश इकाइयों में युवा पुरुषों की अनिवार्य भर्ती"
+   ],
+   "my_ans": "A",
+   "sol": "छोटानागपुर में कोल विद्रोह का मुख्य कारण बाहरी लोगों (साहूकारों और व्यापारियों) द्वारा आदिवासियों की जमीन हड़पना और उनका आर्थिक शोषण था।",
+   "trick": "कोल विद्रोह = जमीन और साहूकार।",
+   "ans": "A"
+  },
+  {
+   "n": 161,
+   "lvl": "UG",
+   "en": "The North-West Frontier Province’s non-violent mass organisation, the Khudai Khidmatgars (Red Shirts), was led by:",
+   "hi": "उत्तर-पश्चिम सीमांत प्रांत के अहिंसक जन संगठन, खुदाई खिदमतगार (लाल कुर्ती) का नेतृत्व किसके द्वारा किया गया था?",
+   "opts": [
+    "Maulana Abul Kalam Azad<br>मौलाना अबुल कलाम आजाद",
+    "Khan Abdul Ghaffar Khan<br>खान अब्दुल गफ्फार खान",
+    "Mohammad Ali Jinnah<br>मोहम्मद अली जिन्ना",
+    "Shaukat Ali<br>शौकत अली"
+   ],
+   "my_ans": "D",
+   "sol": "खुदाई खिदमतगार संगठन की स्थापना खान अब्दुल गफ्फार खान ने की थी, जिन्हें 'सीमांत गांधी' भी कहा जाता है।",
+   "trick": "लाल कुर्ती = खान अब्दुल गफ्फार खान।",
+   "ans": "D"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "53-55",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 52,
+   "lvl": "UG",
+   "en": "The Bahmani kingdom stretched from Mandu in north to which southern boundary?",
+   "hi": "बहमनी साम्राज्य उत्तर में मांडू से लेकर दक्षिण में किस सीमा तक फैला हुआ था?",
+   "opts": [
+    "Tiruchirapalli<br>तिरुचिरापल्ली",
+    "Raichur<br>रायचूर",
+    "Madurai<br>मदुरै",
+    "Mysore<br>मैसूर"
+   ],
+   "my_ans": "B",
+   "sol": "बहमनी साम्राज्य (1347-1527) की उत्तरी सीमा मांडू थी और दक्षिणी सीमा रायचूर दोआब थी, जो विजयनगर साम्राज्य के साथ विवादित क्षेत्र था।",
+   "trick": "बहमनी साम्राज्य: उत्तर में मांडू, दक्षिण में रायचूर।",
+   "ans": "B"
+  },
+  {
+   "n": 53,
+   "lvl": "UG",
+   "en": "Jnanadeva’s renowned work Bhavarthadipika (Jnaneshwari) serves as an elaborate commentary on which of the following scriptures?",
+   "hi": "ज्ञानदेव की प्रसिद्ध रचना भावार्थदीपिका (ज्ञानेश्वरी) निम्नलिखित में से किस धर्मग्रंथ पर विस्तृत टीका है?",
+   "opts": [
+    "Vishnu Purana<br>विष्णु पुराण",
+    "Bhagavad Gita<br>भगवद गीता",
+    "Upanishads<br>उपनिषद",
+    "Brahma Sutras<br>ब्रह्म सूत्र"
+   ],
+   "my_ans": "B",
+   "sol": "ज्ञानेश्वरी (भावार्थदीपिका) संत ज्ञानेश्वर द्वारा 1290 ई. में मराठी भाषा में लिखी गई भगवद गीता पर एक प्रसिद्ध टीका है।",
+   "trick": "ज्ञानेश्वरी = भगवद गीता की मराठी टीका।",
+   "ans": "B"
+  },
+  {
+   "n": 54,
+   "lvl": "UG",
+   "en": "Basavanna, the 12th-century saint and pioneer of the Vachana movement, made significant contributions to the devotional literature of which language?",
+   "hi": "12वीं शताब्दी के संत और वचन आंदोलन (Vachana movement) के अग्रदूत, बसवन्ना (Basavanna) ने किस भाषा के भक्ति साहित्य में महत्वपूर्ण योगदान दिया था?",
+   "opts": [
+    "Kannada<br>कन्नड़",
+    "Oriya<br>उड़िया",
+    "Hindi<br>हिंदी",
+    "Marathi<br>मराठी"
+   ],
+   "my_ans": "A",
+   "sol": "बसवन्ना 12वीं सदी के कर्नाटक के संत थे, जिन्होंने कन्नड़ भाषा में 'वचन' नामक भक्ति साहित्य की रचना की और लिंगायत संप्रदाय की स्थापना की।",
+   "trick": "बसवन्ना = कन्नड़ वचन आंदोलन।",
+   "ans": "A"
+  },
+  {
+   "n": 55,
+   "lvl": "UG",
+   "en": "Consider the following statements regarding the provincial administration in the Mughal period and select the correct option. Statement I: Each Suba was placed under a Subedar or provincial governor who was directly appointed by the Emperor. Statement II: Daroga-i-Dak was responsible for maintaining the communication channel.",
+   "hi": "मुगल काल में प्रांतीय प्रशासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए और सही विकल्प का चयन कीजिए। कथन I: प्रत्येक सूबे को एक सूबेदार या प्रांतीय गवर्नर के अधीन रखा जाता था, जिसकी नियुक्ति प्रत्यक्ष रूप से सम्राट द्वारा की जाती थी। कथन II: दारोगा-ए-डाक (Daroga-i-Dak) संचार व्यवस्था को बनाए रखने के लिए उत्तरदायी था।",
+   "opts": [
+    "Statement I is incorrect, while statement II is correct.<br>कथन I गलत है, जबकि कथन II सही है।",
+    "Statement I is correct, while statement II is incorrect.<br>कथन I सही है, जबकि कथन II गलत है।",
+    "Both statements I and II are incorrect.<br>कथन I और II दोनों गलत हैं।",
+    "Both statements I and II are correct.<br>कथन I और II दोनों सही हैं।"
+   ],
+   "my_ans": "D",
+   "sol": "मुगल काल में सूबेदार प्रांत का प्रमुख होता था जिसे सम्राट नियुक्त करता था, और दारोगा-ए-डाक डाक व संचार व्यवस्था का अधीक्षक होता था।",
+   "trick": "सूबेदार = प्रांत प्रमुख, दारोगा-ए-डाक = संचार प्रमुख।",
+   "ans": "D"
+  },
+  {
+   "n": 56,
+   "lvl": "UG",
+   "en": "Through his renowned work Jnaneshwari, Sant Gyaneshwar rendered the Bhagavad Gita into which regional language?",
+   "hi": "संत ज्ञानेश्वर ने अपनी प्रसिद्ध रचना ज्ञानेश्वरी के माध्यम से भगवद गीता का किस क्षेत्रीय भाषा में अनुवाद किया?",
+   "opts": [
+    "Malayalam<br>मलयालम",
+    "Punjabi<br>पंजाबी",
+    "Odia<br>ओडिया",
+    "Marathi<br>मराठी"
+   ],
+   "my_ans": "D",
+   "sol": "संत ज्ञानेश्वर ने 1290 ई. में भगवद गीता का मराठी भाषा में अनुवाद और व्याख्या की, जिसे ज्ञानेश्वरी कहा जाता है।",
+   "trick": "ज्ञानेश्वरी = मराठी भाषा।",
+   "ans": "D"
+  },
+  {
+   "n": 57,
+   "lvl": "UG",
+   "en": "Which of the following was a major military reason behind the construction of Siri Fort?",
+   "hi": "सिरी किले के निर्माण के पीछे एक प्रमुख सैन्य कारण, निम्नलिखित में से क्या था?",
+   "opts": [
+    "To house Buddhist monasteries<br>बौद्ध मठों को बसाना",
+    "To protect Delhi from Mongol attacks<br>दिल्ली को मंगोल हमलों से बचाना",
+    "To serve as a trading hub for the Songara Rajputs<br>सोनगरा राजपूतों के लिए एक व्यापारिक केंद्र के रूप में काम करना",
+    "To celebrate Khilji's victory over the Cholas<br>चोलों पर खिलजी की जीत का जश्न मनाना"
+   ],
+   "my_ans": "B",
+   "sol": "अलाउद्दीन खिलजी ने 1303 ई. में सिरी किले का निर्माण दिल्ली को मंगोल आक्रमणों से सुरक्षित रखने के लिए किया था।",
+   "trick": "सिरी किला = मंगोलों से सुरक्षा।",
+   "ans": "B"
+  },
+  {
+   "n": 58,
+   "lvl": "UG",
+   "en": "Who among the following introduced the system of branding of horses (dagh) and maintaining descriptive rolls of soldiers (chehra)?",
+   "hi": "निम्नलिखित में से किसने घोड़ों की ब्रांडिंग (दाग़) और सैनिकों का विस्तृत विवरण (चेहरा) रखने की प्रणाली शुरू की?",
+   "opts": [
+    "Alauddin Khalji<br>अलाउद्दीन खिलजी",
+    "Muhammad bin Tughlaq<br>मुहम्मद बिन तुगलक",
+    "Iltutmish<br>इल्तुतमिश",
+    "Balban<br>बलबन"
+   ],
+   "my_ans": "A",
+   "sol": "अलाउद्दीन खिलजी ने सेना में भ्रष्टाचार रोकने के लिए घोड़ों को दागने (दाग) और सैनिकों का हुलिया लिखने (चेहरा) की प्रथा शुरू की थी।",
+   "trick": "दाग और चेहरा = अलाउद्दीन खिलजी।",
+   "ans": "A"
+  },
+  {
+   "n": 59,
+   "lvl": "UG",
+   "en": "Which of the following Chola rulers is credited with building a powerful navy and conquering Sri Lanka, Maldives, and Lakshadweep?",
+   "hi": "निम्नलिखित में से किस चोल शासक को एक शक्तिशाली नौसेना के निर्माण और श्रीलंका, मालदीव एवं लक्षद्वीप पर विजय प्राप्त करने का श्रेय दिया जाता है?",
+   "opts": [
+    "Vijayalaya<br>विजयालय",
+    "Rajaraja I<br>राजराज प्रथम",
+    "Rajendra I<br>राजेंद्र प्रथम",
+    "Kulottunga I<br>कुलोत्तुंग प्रथम"
+   ],
+   "my_ans": "B",
+   "sol": "राजराज प्रथम ने एक शक्तिशाली चोल नौसेना का निर्माण किया और श्रीलंका के उत्तरी भाग, मालदीव और लक्षद्वीप को जीता था।",
+   "trick": "राजराज प्रथम = शक्तिशाली नौसेना।",
+   "ans": "B"
+  },
+  {
+   "n": 60,
+   "lvl": "UG",
+   "en": "Which dynasty of the Delhi Sultanate is known for introducing the “Iqta system”?",
+   "hi": "दिल्ली सल्तनत का कौन-सा राजवंश, 'इक्ता प्रणाली' की शुरुआत करने के लिए जाना जाता है?",
+   "opts": [
+    "Sayyid dynasty<br>सय्यद राजवंश",
+    "Mamluk dynasty<br>मामलुक राजवंश",
+    "Khilji dynasty<br>खिलजी राजवंश",
+    "Tughlaq dynasty<br>तुगलक राजवंश"
+   ],
+   "my_ans": "B",
+   "sol": "इक्ता प्रणाली की शुरुआत कुतुबुद्दीन ऐबक ने की थी और इसे इल्तुतमिश (मामलुक/गुलाम वंश) ने व्यवस्थित रूप दिया था।",
+   "trick": "इक्ता = मामलुक (गुलाम) वंश।",
+   "ans": "B"
+  },
+  {
+   "n": 61,
+   "lvl": "UG",
+   "en": "At which place did Sher Shah first defeat Humayun in 1539?",
+   "hi": "1539 में, शेर शाह ने हुमायूं को सर्वप्रथम किस स्थान पर पराजित किया था?",
+   "opts": [
+    "Panipat<br>पानीपत",
+    "Chausa<br>चौसा",
+    "Kannauj<br>कन्नौज",
+    "Gwalior<br>ग्वालियर"
+   ],
+   "my_ans": "B",
+   "sol": "1539 में चौसा के युद्ध में शेरशाह सूरी ने मुगल सम्राट हुमायूं को पहली बार बुरी तरह पराजित किया था।",
+   "trick": "चौसा का युद्ध = 1539 (शेरशाह की जीत)।",
+   "ans": "B"
+  },
+  {
+   "n": 62,
+   "lvl": "UG",
+   "en": "What was a significant reason behind the popularity of Tamil Bhakti hymns during the Chola rule?",
+   "hi": "चोल शासन के दौरान तमिल भक्ति रचनाओं की लोकप्रियता का महत्वपूर्ण कारण क्या था?",
+   "opts": [
+    "Their rejection of temple rituals<br>मंदिर के कर्मकांडों का उनका द्वारा परित्याग",
+    "Their support from Vellala peasants and rulers<br>वेल्लाल कृषकों और शासकों से उन्हें प्राप्त समर्थन",
+    "Their opposition to Vedic practices<br>वैदिक प्रथाओं के प्रति उनका विरोध",
+    "Their focus on the worship of local tribal deities<br>स्थानीय जनजातीय देवताओं की पूजा पर उनका ध्यान"
+   ],
+   "my_ans": "B",
+   "sol": "चोल काल में तमिल भक्ति गीतों को वेल्लाल कृषकों और चोल शासकों का व्यापक संरक्षण और समर्थन प्राप्त था, जिससे वे लोकप्रिय हुए।",
+   "trick": "भक्ति लोकप्रियता = वेल्लाल कृषक और शासक समर्थन।",
+   "ans": "B"
+  }
+ ]
+}

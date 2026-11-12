@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 5,
+  "en": "Geography",
+  "hi": "भूगोल",
+  "total": 271,
+  "gl": 118,
+  "ug": 153
+ },
+ "source_pages": "198-200",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 236,
+   "lvl": "UG",
+   "en": "Which of the following regions in India is characterised by brackish lakes locally known as playas?",
+   "hi": "भारत में निम्नलिखित में से कौन-सा क्षेत्र, स्थानीय रूप से प्लाया (playas) के नाम से जानी जाने वाली खारी झीलों से पहचाना जाता है?",
+   "opts": [
+    "Western Ghats<br>पश्चिमी घाट",
+    "Thar Desert<br>थार मरुस्थल",
+    "Deccan Plateau<br>दक्कन का पठार",
+    "Malabar Coast<br>मालाबार तट"
+   ],
+   "my_ans": "B",
+   "sol": "प्लाया मरुस्थलीय क्षेत्रों में बनने वाली अस्थायी खारे पानी की झीलें हैं। भारत में ये मुख्य रूप से थार मरुस्थल (राजस्थान) में पाई जाती हैं।",
+   "trick": "प्लाया = मरुस्थल की अस्थायी खारी झीलें",
+   "ans": "B"
+  },
+  {
+   "n": 237,
+   "lvl": "UG",
+   "en": "Which of the following coastal plains is correctly matched with its state?",
+   "hi": "निम्नलिखित में से कौन-सा तटीय मैदान अपने राज्य से सुमेलित है?",
+   "opts": [
+    "Coromandel Plain – Kerala<br>कोरोमंडल मैदान – केरल",
+    "Utkal Plain – Odisha<br>उत्कल मैदान – ओडिशा",
+    "Konkan Plain – Tamil Nadu<br>कोंकण मैदान – तमिलनाडु",
+    "Malabar Plain – Gujarat<br>मालाबार मैदान – गुजरात"
+   ],
+   "my_ans": "B",
+   "sol": "उत्कल मैदान ओडिशा राज्य में स्थित है। कोंकण महाराष्ट्र/गोवा में, कोरोमंडल तमिलनाडु/आंध्र प्रदेश में और मालाबार केरल/कर्नाटक में है।",
+   "trick": "उत्कल = ओडिशा (ओडिशा का प्राचीन नाम उत्कल है)",
+   "ans": "B"
+  },
+  {
+   "n": 238,
+   "lvl": "UG",
+   "en": "Which Indian state has the Konkan Coast along its western shoreline?",
+   "hi": "किस भारतीय राज्य के पश्चिमी तट के साथ कोंकण तट स्थित है?",
+   "opts": [
+    "Karnataka<br>कर्नाटक",
+    "Kerala<br>केरल",
+    "Odisha<br>ओडिशा",
+    "Maharashtra<br>महाराष्ट्र"
+   ],
+   "my_ans": "D",
+   "sol": "कोंकण तट भारत के पश्चिमी तट का एक हिस्सा है जो महाराष्ट्र और गोवा के तटीय जिलों में फैला हुआ है।",
+   "trick": "कोंकण = महाराष्ट्र और गोवा का तट",
+   "ans": "D"
+  },
+  {
+   "n": 239,
+   "lvl": "UG",
+   "en": "Which of the following is a landlocked inland river port in India?",
+   "hi": "निम्नलिखित में से कौन-सा, भारत में स्थित एक स्थल रुद्ध अंतर्देशीय नदी बंदरगाह है?",
+   "opts": [
+    "Chennai port<br>चेन्नई बंदरगाह",
+    "Mumbai port<br>मुंबई बंदरगाह",
+    "Pandu port<br>पांडु बंदरगाह",
+    "Kandla port<br>कांडला बंदरगाह"
+   ],
+   "my_ans": "C",
+   "sol": "पांडु बंदरगाह असम में ब्रह्मपुत्र नदी के किनारे स्थित भारत का पहला भूमि-बद्ध अंतर्देशीय नदी बंदरगाह है।",
+   "trick": "पांडु = ब्रह्मपुत्र नदी का बंदरगाह",
+   "ans": "C"
+  },
+  {
+   "n": 240,
+   "lvl": "UG",
+   "en": "Which of the following is an inland riverine port?",
+   "hi": "निम्नलिखित में से कौन-सा, एक अंतर्देशीय नदी-बंदरगाह है?",
+   "opts": [
+    "Kochi<br>कोच्चि",
+    "Kandla<br>कांडला",
+    "Visakhapatnam<br>विशाखापत्तनम",
+    "Kolkata<br>कोलकाता"
+   ],
+   "my_ans": "D",
+   "sol": "कोलकाता बंदरगाह हुगली नदी (गंगा की सहायक) पर स्थित है, जो समुद्र तट से लगभग 128 किमी दूर है।",
+   "trick": "कोलकाता = हुगली नदी पर स्थित बंदरगाह",
+   "ans": "D"
+  },
+  {
+   "n": 241,
+   "lvl": "UG",
+   "en": "Which of the following types of weathering is common in areas with large temperature differences between day and night?",
+   "hi": "दिन और रात के बीच अत्यधिक तापांतर वाले क्षेत्रों में निम्नलिखित में से किस प्रकार का अपक्षय (weathering) सामान्य है?",
+   "opts": [
+    "Carbonation<br>कार्बोनेटीकरण",
+    "Solution<br>विलयन",
+    "Exfoliation<br>अपशल्कन",
+    "Oxidation<br>ऑक्सीकरण"
+   ],
+   "my_ans": "C",
+   "sol": "दिन-रात के बड़े तापांतर से चट्टानें बार-बार फैलती और सिकुड़ती हैं, जिससे उनकी बाहरी परतें प्याज की तरह छिल जाती हैं, इसे अपशल्कन कहते हैं।",
+   "trick": "तापमान का अंतर = अपशल्कन (Exfoliation)",
+   "ans": "C"
+  },
+  {
+   "n": 242,
+   "lvl": "UG",
+   "en": "Which of the following is a depositional landform formed by wind action?",
+   "hi": "निम्नलिखित में से कौन-सी, पवन क्रिया द्वारा निर्मित एक निक्षेपण भू-आकृति है?",
+   "opts": [
+    "Barchan<br>बरखान",
+    "Inselberg<br>इन्सेलबर्ग",
+    "Moraine<br>मोरेन",
+    "Yardang<br>यार्डांग"
+   ],
+   "my_ans": "A",
+   "sol": "बरखान मरुस्थल में पवन द्वारा रेत के जमाव से बनने वाला अर्धचंद्राकार टीला है।",
+   "trick": "बरखान = पवन द्वारा निक्षेपित रेत का टीला",
+   "ans": "A"
+  },
+  {
+   "n": 243,
+   "lvl": "UG",
+   "en": "Which mountain range lies immediately to the south of the Vindhyan Range, separated by the Narmada Valley?",
+   "hi": "कौन-सी पर्वत श्रृंखला, विंध्य पर्वतमाला के ठीक दक्षिण में स्थित है जो नर्मदा घाटी द्वारा पृथक होती है?",
+   "opts": [
+    "Aravalli Range<br>अरावली पर्वत श्रृंखला",
+    "Western Ghats<br>पश्चिमी घाट",
+    "Satpura Range<br>सतपुड़ा पर्वत श्रृंखला",
+    "Eastern Ghats<br>पूर्वी घाट"
+   ],
+   "my_ans": "C",
+   "sol": "सतपुड़ा पर्वत श्रृंखला विंध्य के दक्षिण में स्थित है और इन दोनों के बीच से नर्मदा नदी बहती है।",
+   "trick": "विंध्य-नर्मदा-सतपुड़ा (उत्तर से दक्षिण क्रम)",
+   "ans": "C"
+  },
+  {
+   "n": 244,
+   "lvl": "UG",
+   "en": "Which of the following statements is NOT correct regarding the Indian Desert (Thar Desert)?",
+   "hi": "भारतीय मरुस्थल (थार मरुस्थल) के संबंध में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+   "opts": [
+    "It has an arid climate with low vegetation cover<br>यहां निम्न वनस्पति आवरण के साथ शुष्क जलवायु पाई जाती है।",
+    "This region receives low rainfall below 15 mm per year<br>इस क्षेत्र में प्रति वर्ष 15 mm से कम वर्षा होती है।",
+    "To the northwest of the Aravali hills lies the Great Indian desert<br>अरावली पहाड़ियों के उत्तर-पश्चिम में विशाल भारतीय मरुस्थल स्थित है।",
+    "During the Mesozoic era, this region is believed to have been under the sea.<br>मध्यजीवी महाकल्प के दौरान ऐसा माना जाता है कि यह क्षेत्र, समुद्र के नीचे था।"
+   ],
+   "my_ans": "B",
+   "sol": "थार मरुस्थल में वार्षिक वर्षा 100-150 मिमी होती है, न कि 15 मिमी से कम।",
+   "trick": "थार में 100-150 मिमी वर्षा होती है",
+   "ans": "B"
+  },
+  {
+   "n": 245,
+   "lvl": "UG",
+   "en": "Which seismic waves are the fastest and travel through both solids and liquids inside the Earth?",
+   "hi": "निम्नलिखित में से कौन-सी भूकंपी तरंगें सबसे तीव्र होती हैं, जो पृथ्वी के भीतर ठोस और द्रव दोनों माध्यमों से होकर गमन करती हैं?",
+   "opts": [
+    "Rayleigh waves<br>रैले तरंगें",
+    "S waves<br>S तरंगें",
+    "Surface waves<br>पृष्ठीय तरंगें",
+    "P waves<br>P तरंगें"
+   ],
+   "my_ans": "D",
+   "sol": "P तरंगें (प्राथमिक तरंगें) सबसे तेज होती हैं और ये ठोस, द्रव और गैस तीनों माध्यमों से गुजर सकती हैं।",
+   "trick": "P = Primary (सबसे तेज)",
+   "ans": "D"
+  },
+  {
+   "n": 246,
+   "lvl": "UG",
+   "en": "Which of the following sequences correctly matches the coastal sections from north to south on the western coast?",
+   "hi": "निम्नलिखित में से कौन-सा अनुक्रम, पश्चिमी तट पर उत्तर से दक्षिण तक के तटीय खंडों से सुमेलित है?",
+   "opts": [
+    "Konkan → Karnataka → Malabar<br>कोंकण → कर्नाटक → मालाबार",
+    "Kathiawar → Malabar → Konkan<br>काठियावाड़ → मालाबार → कोंकण",
+    "Malabar → Konkan → Karnataka<br>मालाबार → कोंकण → कर्नाटक",
+    "Karnataka → Konkan → Malabar<br>कर्नाटक → कोंकण → मालाबार"
+   ],
+   "my_ans": "A",
+   "sol": "पश्चिमी तट का उत्तर से दक्षिण क्रम है: कोंकण (महाराष्ट्र/गोवा) → कर्नाटक (कनारा) → मालाबार (केरल)।",
+   "trick": "कोंकण-कर्नाटक-मालाबार (उत्तर से दक्षिण)",
+   "ans": "A"
+  }
+ ]
+}

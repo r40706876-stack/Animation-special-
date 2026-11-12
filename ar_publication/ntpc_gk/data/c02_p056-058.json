@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 2,
+  "en": "Medieval History",
+  "hi": "मध्यकालीन इतिहास",
+  "total": 75,
+  "gl": 39,
+  "ug": 36
+ },
+ "source_pages": "56-58",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 63,
+   "lvl": "UG",
+   "en": "Akbar's revenue minister Todar Mal introduced an efficient revenue system based on crop yields, land surveys, and prices called:",
+   "hi": "अकबर के राजस्व मंत्री टोडर मल ने फसल उपज, भूमि सर्वेक्षण और कीमतों के आधार पर एक कुशल राजस्व प्रणाली प्रारंभ की, जिसे _______ कहा जाता था।",
+   "opts": [
+    "Ryotwari system<br>रैयतवाड़ी प्रणाली",
+    "Mansabdari system<br>मनसबदारी प्रणाली",
+    "Jagirdari system<br>जागीरदारी प्रणाली",
+    "Zabti system<br>ज़ब्ती प्रणाली"
+   ],
+   "my_ans": "D",
+   "sol": "राजा टोडरमल ने 10 वर्षों की फसल उपज और भूमि उत्पादकता के आधार पर 'ज़ब्ती प्रणाली' (बंदोबस्त प्रणाली) लागू की थी।",
+   "trick": "टोडरमल = ज़ब्ती (बंदोबस्त)",
+   "ans": "D"
+  },
+  {
+   "n": 64,
+   "lvl": "UG",
+   "en": "Who succeeded Bahlol Lodi and ascended the throne in AD 1489?",
+   "hi": "बहलोल लोदी के उत्तराधिकारी के रूप में किसने 1489 ईस्वी में सिंहासन संभाला था?",
+   "opts": [
+    "Ibrahim Lodi<br>इब्राहिम लोदी",
+    "Muhammad Shah<br>मुहम्मद शाह",
+    "Sikandar Lodi<br>सिकंदर लोदी",
+    "Alam Shah<br>आलम शाह"
+   ],
+   "my_ans": "C",
+   "sol": "बहलोल लोदी की मृत्यु 1489 में हुई, जिसके बाद उनके दूसरे पुत्र सिकंदर लोदी ने दिल्ली का शासन संभाला।",
+   "trick": "बहलोल के बाद सिकंदर",
+   "ans": "C"
+  },
+  {
+   "n": 65,
+   "lvl": "UG",
+   "en": "Dharmapala, the Pala ruler, is credited with founding which of the following famous universities near Bhagalpur in Bihar?",
+   "hi": "पाल शासक धर्मपाल को बिहार में भागलपुर के पास निम्नलिखित में से किस प्रसिद्ध विश्वविद्यालय की स्थापना का श्रेय दिया जाता है?",
+   "opts": [
+    "Vallabhi University<br>वल्लभी विश्वविद्यालय",
+    "Odantapuri University<br>ओदंतपुरी विश्वविद्यालय",
+    "Nalanda University<br>नालंदा विश्वविद्यालय",
+    "Vikramashila University<br>विक्रमशिला विश्वविद्यालय"
+   ],
+   "my_ans": "D",
+   "sol": "पाल वंश के शासक धर्मपाल ने 8वीं शताब्दी में बिहार के भागलपुर के पास विक्रमशिला विश्वविद्यालय की स्थापना की थी।",
+   "trick": "धर्मपाल = विक्रमशिला",
+   "ans": "D"
+  },
+  {
+   "n": 66,
+   "lvl": "UG",
+   "en": "The work Tarikh-i-Rashidi, which provides valuable information about Central Asia and early Mughal history, was written by:",
+   "hi": "तारीख़-ए-रशीदी (Tarikh-i-Rashidi) नामक कृति जो मध्य एशिया और प्रारंभिक मुगल इतिहास के संबंध में मूल्यवान जानकारी प्रदान करती है, किसके द्वारा लिखी गई?",
+   "opts": [
+    "Ziauddin Barani<br>ज़ियाउद्दीन बरनी",
+    "Abdul Fazl<br>अब्दुल फजल",
+    "Minhaj-us-Siraj<br>मिन्हाज-उस-सिराज",
+    "Mirza Haidar Dughlat<br>मिर्ज़ा हैदर दुगलत"
+   ],
+   "my_ans": "D",
+   "sol": "तारीख़-ए-रशीदी की रचना मिर्ज़ा हैदर दुगलत ने 1546 में फारसी भाषा में की थी।",
+   "trick": "रशीदी = मिर्ज़ा हैदर",
+   "ans": "D"
+  },
+  {
+   "n": 67,
+   "lvl": "UG",
+   "en": "The Battle of Khanwa (1527) was fought between Babur and which of the following rulers?",
+   "hi": "खानवा का युद्ध (1527) बाबर और निम्नलिखित में से किस शासक के बीच लड़ा गया था?",
+   "opts": [
+    "Ibrahim Lodi<br>इब्राहिम लोदी",
+    "Sher Shah Suri<br>शेर शाह सूरी",
+    "Bairam Khan<br>बैरम खान",
+    "Rana Sanga<br>राणा सांगा"
+   ],
+   "my_ans": "D",
+   "sol": "खानवा का युद्ध 1527 में बाबर और मेवाड़ के राणा सांगा के बीच हुआ था, जिसमें बाबर विजयी रहा।",
+   "trick": "खानवा = बाबर बनाम राणा सांगा",
+   "ans": "D"
+  },
+  {
+   "n": 68,
+   "lvl": "UG",
+   "en": "Which among the following measures was introduced by Muhammad bin Tughlaq to address the shortage of silver?",
+   "hi": "निम्नलिखित में से कौन-सा उपाय, मुहम्मद बिन तुगलक द्वारा चांदी की कमी को दूर करने के लिए अपनाया गया था?",
+   "opts": [
+    "Garrison towns<br>गैरीसन नगर",
+    "Token currency<br>सांकेतिक मुद्रा",
+    "Land revenue reforms<br>भूमि राजस्व सुधार",
+    "Prohibition of wine<br>वाइन का निषेध"
+   ],
+   "my_ans": "B",
+   "sol": "चांदी की कमी को पूरा करने के लिए मुहम्मद बिन तुगलक ने तांबे और पीतल के सिक्कों की 'सांकेतिक मुद्रा' चलाई थी।",
+   "trick": "तुगलक = सांकेतिक मुद्रा",
+   "ans": "B"
+  },
+  {
+   "n": 69,
+   "lvl": "UG",
+   "en": "Which among the following kings from the early medieval period assumed the title 'Gangaikonda'?",
+   "hi": "प्रारंभिक मध्यकालीन काल के निम्नलिखित राजाओं में से किसने 'गंगईकोंडा (Gangaikonda)' की उपाधि धारण की थी?",
+   "opts": [
+    "Pulakesin II<br>पुलकेशिन द्वितीय",
+    "Rajendra I<br>राजेंद्र प्रथम",
+    "Rajaraja I<br>राजराज प्रथम",
+    "Vijayalaya<br>विजयालय"
+   ],
+   "my_ans": "B",
+   "sol": "चोल शासक राजेंद्र प्रथम ने गंगा घाटी तक सफल सैन्य अभियान के बाद 'गंगईकोंडा चोल' की उपाधि धारण की थी।",
+   "trick": "राजेंद्र = गंगा विजेता",
+   "ans": "B"
+  },
+  {
+   "n": 70,
+   "lvl": "UG",
+   "en": "Gangaikondacholapuram was established as a capital city by which Chola ruler?",
+   "hi": "गंगईकोंडा चोलपुरम को किस चोल शासक ने राजधानी के रूप में स्थापित किया था?",
+   "opts": [
+    "Rajadhiraja I<br>राजाधिराज प्रथम",
+    "Kulottunga I<br>कुलोत्तुंग प्रथम",
+    "Rajaraja I<br>राजराज प्रथम",
+    "Rajendra I<br>राजेंद्र प्रथम"
+   ],
+   "my_ans": "D",
+   "sol": "राजेंद्र प्रथम ने गंगा अभियान की जीत के उपलक्ष्य में गंगईकोंडा चोलपुरम को अपनी नई राजधानी बनाया था।",
+   "trick": "राजेंद्र = गंगईकोंडा चोलपुरम",
+   "ans": "D"
+  },
+  {
+   "n": 71,
+   "lvl": "UG",
+   "en": "The Kadamba dynasty was founded by _______, an expert in guerrilla warfare.",
+   "hi": "कदंब राजवंश की स्थापना गुरिल्ला युद्ध में विशेषज्ञ _______ ने की थी।",
+   "opts": [
+    "Pulakesin<br>पुलकेशिन",
+    "Mayurasarman<br>मयूरसरमन",
+    "Vinayaditya<br>विनयादित्य",
+    "Mahendravarman<br>महेन्द्रवर्मन"
+   ],
+   "my_ans": "B",
+   "sol": "कदंब राजवंश की स्थापना 345 ईस्वी में मयूरशर्मन ने की थी, जो छापामार युद्ध में निपुण थे।",
+   "trick": "कदंब = मयूरशर्मन",
+   "ans": "B"
+  },
+  {
+   "n": 72,
+   "lvl": "UG",
+   "en": "Which Mughal emperor strengthened imperial authority by introducing the Mansabdari system and a centralized bureaucracy?",
+   "hi": "किस मुग़ल सम्राट ने मनसबदारी व्यवस्था और एक केंद्रीकृत नौकरशाही को लागू करके शाही सत्ता को सुदृढ़ किया?",
+   "opts": [
+    "Akbar<br>अकबर",
+    "Muhammad Shah<br>मुहम्मद शाह",
+    "Humayun<br>हुमायूँ",
+    "Shah Jahan<br>शाह जहाँ"
+   ],
+   "my_ans": "A",
+   "sol": "अकबर ने मनसबदारी प्रणाली शुरू की, जिससे सैन्य और प्रशासनिक व्यवस्था पर केंद्रीकृत नियंत्रण स्थापित हुआ।",
+   "trick": "अकबर = मनसबदारी",
+   "ans": "A"
+  },
+  {
+   "n": 73,
+   "lvl": "UG",
+   "en": "The Mansabdari System, introduced by Akbar in 1571, was mainly a system of __________.",
+   "hi": "अकबर द्वारा 1571 में शुरू की गई मनसबदारी प्रणाली मुख्य रूप से __________ की एक प्रणाली थी।",
+   "opts": [
+    "Land Revenue Collection<br>भूमि राजस्व संग्रह",
+    "Judicial Reforms<br>न्यायिक सुधार",
+    "Military Administration<br>सैन्य प्रशासन",
+    "Religious Reformation<br>धार्मिक सुधार"
+   ],
+   "my_ans": "C",
+   "sol": "मनसबदारी प्रणाली मुख्य रूप से एक सैन्य और प्रशासनिक पदानुक्रम प्रणाली थी, जिसमें अधिकारियों को रैंक दी जाती थी।",
+   "trick": "मनसबदारी = सैन्य प्रशासन",
+   "ans": "C"
+  }
+ ]
+}

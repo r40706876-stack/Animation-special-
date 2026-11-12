@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 12,
+  "en": "Computer Awareness",
+  "hi": "कंप्यूटर जागरूकता",
+  "total": 224,
+  "gl": 96,
+  "ug": 128
+ },
+ "source_pages": "495-497",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 151,
+   "lvl": "UG",
+   "en": "Which digital file format is widely used to save three-dimensional models for 3D printing? It is the standard format supported by most 3D printers.",
+   "hi": "3D प्रिंटिंग के लिए थ्री-डाइमेंशनल मॉडल (three-dimensional model) को सेव करने हेतु कौन-सा डिजिटल फाइल फॉर्मेट व्यापक रूप से उपयोग होता है? यह अधिकतर 3D प्रिंटर द्वारा सपोर्ट किया जाने वाला स्टैंडर्ड फॉर्मेट है।",
+   "opts": [
+    "PDF",
+    "STL",
+    "XLSX",
+    "DOCX"
+   ],
+   "my_ans": "B",
+   "sol": "STL (Stereolithography) 3D प्रिंटिंग के लिए मानक फाइल फॉर्मेट है जो 3D सतह को त्रिकोणीय जाल (triangular mesh) के रूप में दर्शाता है।",
+   "trick": "3D Printing = STL",
+   "ans": "B"
+  },
+  {
+   "n": 152,
+   "lvl": "UG",
+   "en": "Which is the main difference between Sleep and Hibernate modes in Windows 11?",
+   "hi": "विंडोज 11 में स्लीप और हाइबरनेट मोड के बीच मुख्य अंतर क्या है?",
+   "opts": [
+    "Sleep saves data on hard disk; Hibernate saves in RAM.<br>स्लीप मोड में डेटा हार्ड डिस्क में सेव होता है; हाइबरनेट मोड में डेटा RAM में सेव होता है।",
+    "Hibernate keeps programs open on the screen.<br>हाइबरनेट प्रोग्रामों को स्क्रीन पर ओपन रखता है।",
+    "Sleep completely shuts down the system.<br>स्लीप मोड सिस्टम को पूरी तरह से बंद कर देता है।",
+    "Sleep uses more power than Hibernate.<br>स्लीप मोड हाइबरनेट की तुलना में अधिक पॉवर खपत करता है।"
+   ],
+   "my_ans": "D",
+   "sol": "स्लीप मोड में RAM चालू रहती है इसलिए अधिक बिजली खर्च होती है, जबकि हाइबरनेट में डेटा डिस्क पर सेव होकर बिजली पूरी तरह बंद हो जाती है।",
+   "trick": "Sleep = RAM (अधिक बिजली), Hibernate = Disk (शून्य बिजली)",
+   "ans": "D"
+  },
+  {
+   "n": 153,
+   "lvl": "UG",
+   "en": "Which of the following shortcut keys opens File Explorer directly in MS Windows?",
+   "hi": "निम्नलिखित में से कौन-सी शॉर्टकट कुंजी (key) एमएस विंडोज (MS Windows) में प्रत्यक्ष रूप से फाइल एक्सप्लोरर (File Explorer) ओपन करती है?",
+   "opts": [
+    "Shift + E",
+    "Alt + E",
+    "Windows logo key + E",
+    "Ctrl + E"
+   ],
+   "my_ans": "C",
+   "sol": "Windows लोगो कुंजी के साथ 'E' दबाने से फाइल एक्सप्लोरर सीधे खुल जाता है।",
+   "trick": "Win + E = Explorer",
+   "ans": "C"
+  },
+  {
+   "n": 154,
+   "lvl": "UG",
+   "en": "In Windows, which file extension represents a dynamic-link library containing reusable code shared across applications?",
+   "hi": "विंडोज़ में, कौन-सा फाइल एक्सटेंशन एक डायनामिक-लिंक लाइब्रेरी (dynamic-link library) को निरूपित करता है, जिसमें विभिन्न एप्लीकेशन में साझा किए जाने वाले पुनः प्रयोज्य कोड (reusable code) होते हैं?",
+   "opts": [
+    ".is",
+    ".dll",
+    ".tmp",
+    ".drv"
+   ],
+   "my_ans": "B",
+   "sol": ".dll (Dynamic-Link Library) फाइलें साझा कोड रखती हैं जो कई प्रोग्रामों द्वारा उपयोग की जाती हैं।",
+   "trick": "DLL = Dynamic Link Library",
+   "ans": "B"
+  },
+  {
+   "n": 155,
+   "lvl": "UG",
+   "en": "Which option is used in Windows 11 to temporarily turn off the computer to save power while keeping programs open?",
+   "hi": "विंडोज 11 में प्रोग्रामों को खुला रखते हुए पॉवर बचाने के लिए कंप्यूटर को अस्थायी रूप से बंद करने के लिए किस ऑप्शन का उपयोग किया जाता है?",
+   "opts": [
+    "Restart",
+    "Wake Up",
+    "Hibernate",
+    "Shut Down"
+   ],
+   "my_ans": "C",
+   "sol": "हाइबरनेट (Hibernate) मोड खुले प्रोग्रामों को हार्ड डिस्क में सेव कर कंप्यूटर को पूरी तरह बंद कर देता है, जिससे बिजली की बचत होती है।",
+   "trick": "Hibernate = Save state + Power off",
+   "ans": "C"
+  },
+  {
+   "n": 156,
+   "lvl": "UG",
+   "en": "A computer cannot open a printer without a driver. This driver is an example of a/an:",
+   "hi": "कंप्यूटर, ड्राइवर (driver) के बिना प्रिंटर को ओपन नहीं कर सकता है। यह ड्राइवर, ______________ का एक उदाहरण है।",
+   "opts": [
+    "Game<br>गेम",
+    "Document file<br>डॉक्यूमेंट फ़ाइल",
+    "System software<br>सिस्टम सॉफ्टवेयर",
+    "Input device<br>इनपुट डिवाइस"
+   ],
+   "my_ans": "C",
+   "sol": "डिवाइस ड्राइवर सिस्टम सॉफ्टवेयर होते हैं जो ऑपरेटिंग सिस्टम और हार्डवेयर के बीच अनुवादक (translator) का कार्य करते हैं।",
+   "trick": "Driver = System Software",
+   "ans": "C"
+  },
+  {
+   "n": 157,
+   "lvl": "UG",
+   "en": "Which user interface requires users to type instructions using the keyboard to perform tasks?",
+   "hi": "निम्नलिखित में से किस यूज़र इंटरफेस में यूज़र्स को टास्क को करने के लिए कीबोर्ड का उपयोग करके निर्देश टाइप करने की आवश्यकता होती है?",
+   "opts": [
+    "Graphical User Interface<br>ग्राफिकल यूज़र इंटरफेस",
+    "Voice-based Interface<br>वॉइस-बेस्ड इंटरफेस",
+    "Touch-based Interface<br>टच-बेस्ड इंटरफेस",
+    "Command-based Interface<br>कमांड-बेस्ड इंटरफेस"
+   ],
+   "my_ans": "D",
+   "sol": "कमांड-बेस्ड इंटरफेस (CLI) में उपयोगकर्ता को कीबोर्ड से टेक्स्ट कमांड टाइप करके निर्देश देने होते हैं (जैसे DOS)।",
+   "trick": "CLI = Command Line (Type)",
+   "ans": "D"
+  },
+  {
+   "n": 158,
+   "lvl": "UG",
+   "en": "A game installed on your computer belongs to:",
+   "hi": "आपके कंप्यूटर पर इंस्टॉल किया गया गेम किसका हिस्सा है?",
+   "opts": [
+    "Application software<br>एप्लीकेशन सॉफ्टवेयर",
+    "System utilities<br>सिस्टम यूटिलिटीज",
+    "Device drivers<br>डिवाइस ड्राइवर्स",
+    "Primary memory<br>प्राइमरी मेमोरी"
+   ],
+   "my_ans": "A",
+   "sol": "एप्लीकेशन सॉफ्टवेयर वे प्रोग्राम होते हैं जो उपयोगकर्ता के विशिष्ट कार्यों (जैसे गेमिंग, ऑफिस वर्क) के लिए बनाए जाते हैं।",
+   "trick": "Game = Application",
+   "ans": "A"
+  },
+  {
+   "n": 159,
+   "lvl": "UG",
+   "en": "Which software helps in maintaining and optimizing the system e.g., disk cleanup?",
+   "hi": "निम्नलिखित में से कौन-सा सॉफ्टवेयर, सिस्टम को मेंटेन रखने और ऑप्टिमाइज़ करने में सहायता करता है जिसमें उदाहरण के लिए डिस्क क्लीनअप शामिल है?",
+   "opts": [
+    "Utility software<br>यूटिलिटी सॉफ्टवेयर",
+    "Firmware<br>फर्मवेयर",
+    "Programming software<br>प्रोग्रामिंग सॉफ्टवेयर",
+    "Application software<br>एप्लीकेशन सॉफ्टवेयर"
+   ],
+   "my_ans": "A",
+   "sol": "यूटिलिटी सॉफ्टवेयर सिस्टम के रखरखाव, ऑप्टिमाइज़ेशन और प्रबंधन (जैसे डिस्क क्लीनअप, एंटीवायरस) के लिए डिज़ाइन किए जाते हैं।",
+   "trick": "Maintenance = Utility",
+   "ans": "A"
+  },
+  {
+   "n": 160,
+   "lvl": "UG",
+   "en": "Which description best matches the purpose of the Startup apps tab in newer Windows Task Manager versions?",
+   "hi": "नए विंडोज टास्क मैनेजर संस्करणों में स्टार्टअप ऐप्स टैब का उद्देश्य किस विवरण से सबसे अच्छी तरह मेल खाता है?",
+   "opts": [
+    "To manage system hardware drivers.<br>सिस्टम हार्डवेयर ड्राइवरों को प्रबंधित करने के लिए।",
+    "To enable or disable programs that launch automatically when Windows starts.<br>विंडोज शुरू होने पर स्वचालित रूप से लॉन्च होने वाले प्रोग्रामों को सक्षम या अक्षम करने के लिए।",
+    "To view currently running background processes.<br>वर्तमान में चल रही बैकग्राउंड प्रक्रियाओं को देखने के लिए।",
+    "To uninstall unused applications.<br>अप्रयुक्त एप्लिकेशन को अनइंस्टॉल करने के लिए।"
+   ],
+   "my_ans": "B",
+   "sol": "स्टार्टअप ऐप्स टैब का उपयोग उन प्रोग्रामों को नियंत्रित करने के लिए किया जाता है जो कंप्यूटर चालू होते ही अपने आप शुरू हो जाते हैं।",
+   "trick": "Startup = Auto-launch control",
+   "ans": "B"
+  }
+ ]
+}

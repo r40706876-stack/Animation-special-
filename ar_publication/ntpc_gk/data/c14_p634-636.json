@@ -1,0 +1,190 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "634-636",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 230,
+   "lvl": "UG",
+   "en": "Which state, as of December 2025, holds the highest number of UNESCO World Heritage Sites in India with a total of five?",
+   "hi": "दिसंबर 2025 तक प्राप्त जानकारी के अनुसार, भारत के किस राज्य में यूनेस्को (UNESCO) विश्व धरोहर स्थलों की संख्या सबसे अधिक है, जिनकी कुल संख्या पांच है?",
+   "opts": [
+    "Karnataka<br>कर्नाटक",
+    "Uttar Pradesh<br>उत्तर प्रदेश",
+    "Maharashtra<br>महाराष्ट्र",
+    "Rajasthan<br>राजस्थान"
+   ],
+   "my_ans": "C",
+   "sol": "महाराष्ट्र में 5 यूनेस्को विश्व धरोहर स्थल हैं (अजंता, एलोरा, एलीफेंटा, छत्रपति शिवाजी टर्मिनस, और मुंबई के विक्टोरियन गोथिक और आर्ट डेको समूह), जो भारत में सर्वाधिक हैं।",
+   "trick": "महाराष्ट्र में सबसे ज्यादा 5 यूनेस्को साइट्स हैं।",
+   "ans": "C"
+  },
+  {
+   "n": 231,
+   "lvl": "UG",
+   "en": "On 16 September 2025, World Ozone Day was observed under which theme?",
+   "hi": "16 सितंबर 2025 को 'विश्व ओजोन दिवस (World Ozone Day)' किस थीम के अंतर्गत मनाया गया?",
+   "opts": [
+    "Ozone for Life<br>जीवन के लिए ओज़ोन",
+    "Global Cooperation Protecting Life on Earth<br>पृथ्वी पर जीवन की रक्षा करने के लिए वैश्विक सहयोग",
+    "From Science to Global Action<br>विज्ञान से वैश्विक कार्रवाई तक",
+    "Montreal Protocol: Our Shield, Our Future<br>मॉन्ट्रियल प्रोटोकॉल: हमारा कवच, हमारा भविष्य"
+   ],
+   "my_ans": "C",
+   "sol": "विश्व ओजोन दिवस 2025 की थीम 'From Science to Global Action' थी, जो ओजोन क्षरण की खोज से लेकर मॉन्ट्रियल प्रोटोकॉल तक की यात्रा को दर्शाती है।",
+   "trick": "ओजोन दिवस 16 सितंबर को मनाया जाता है।",
+   "ans": "C"
+  },
+  {
+   "n": 232,
+   "lvl": "UG",
+   "en": "As per International Renewable Energy Agency (IRENA) data, which country has the largest installed hydropower capacity in the world as of 2025?",
+   "hi": "2025 तक की स्थिति के अनुसार, अंतर्राष्ट्रीय नवीकरणीय ऊर्जा एजेंसी (IRENA) के आंकड़ों के आधार पर किस देश के पास विश्व में सर्वाधिक स्थापित जलविद्युत क्षमता है?",
+   "opts": [
+    "Canada<br>कनाडा",
+    "United States<br>संयुक्त राज्य अमेरिका",
+    "China<br>चीन",
+    "Brazil<br>ब्राज़ील"
+   ],
+   "my_ans": "C",
+   "sol": "चीन के पास 370 GW से अधिक जलविद्युत क्षमता है, जो इसे विश्व में प्रथम स्थान पर रखती है।",
+   "trick": "चीन जलविद्युत क्षमता में दुनिया में नंबर 1 है।",
+   "ans": "C"
+  },
+  {
+   "n": 233,
+   "lvl": "UG",
+   "en": "Which Indian city hosted the 23rd Asian Oceanian Congress of Radiology (AOCR) 2025?",
+   "hi": "किस भारतीय शहर ने 23वीं एशियन ओशेनियन कांग्रेस ऑफ रेडियोलॉजी (Asian Oceanian Congress of Radiology - AOCR) 2025 की मेजबानी की?",
+   "opts": [
+    "Hyderabad<br>हैदराबाद",
+    "Chandigarh<br>चंडीगढ़",
+    "Jaipur<br>जयपुर",
+    "Chennai<br>चेन्नई"
+   ],
+   "my_ans": "D",
+   "sol": "23वीं एशियन ओशेनियन कांग्रेस ऑफ रेडियोलॉजी (AOCR) 2025 का आयोजन चेन्नई, भारत में किया गया था।",
+   "trick": "AOCR 2025 का आयोजन चेन्नई में हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 234,
+   "lvl": "UG",
+   "en": "World Water Day, observed on 22 March 2025, highlighted concerns related to:",
+   "hi": "22 मार्च 2025 को मनाए जाने वाले विश्व जल दिवस पर ___________ से संबंधित चिंताओं पर प्रकाश डाला गया।",
+   "opts": [
+    "Glacier melting and water security<br>ग्लेशियरों के पिघलने और जल सुरक्षा",
+    "Coastal erosion<br>तटीय अपरदन",
+    "Fisheries development<br>मत्स्य पालन के विकास",
+    "Ocean pollution<br>महासागर प्रदूषण"
+   ],
+   "my_ans": "A",
+   "sol": "विश्व जल दिवस 2025 का मुख्य फोकस ग्लेशियरों के पिघलने और उससे उत्पन्न जल सुरक्षा संकट पर था।",
+   "trick": "जल दिवस 22 मार्च को मनाया जाता है।",
+   "ans": "A"
+  },
+  {
+   "n": 235,
+   "lvl": "UG",
+   "en": "In August 2025, India’s first-ever grassland bird census using passive acoustic monitoring and AI tools was highlighted by the Prime Minister in his Mann ki Baat address. In which national park was this census conducted?",
+   "hi": "अगस्त 2025 में, निष्क्रिय ध्वनिक निगरानी और AI टूल का उपयोग करके भारत की पहली ग्रासलैंड बर्ड सेंसस को प्रधानमंत्री ने अपने 'मन की बात' संबोधन में प्रकाश डाला था। यह संगणना किस राष्ट्रीय उद्यान में आयोजित की गई थी?",
+   "opts": [
+    "Kaziranga National Park, Assam<br>काजीरंगा राष्ट्रीय उद्यान, असम",
+    "Sultanpur National Park, Haryana<br>सुल्तानपुर राष्ट्रीय उद्यान, हरियाणा",
+    "Keoladeo National Park, Rajasthan<br>केवलादेव राष्ट्रीय उद्यान, राजस्थान",
+    "Jim Corbett National Park, Uttarakhand<br>जिम कॉर्बेट राष्ट्रीय उद्यान, उत्तराखंड"
+   ],
+   "my_ans": "A",
+   "sol": "भारत की पहली ग्रासलैंड बर्ड सेंसस असम के काजीरंगा राष्ट्रीय उद्यान में आयोजित की गई थी।",
+   "trick": "काजीरंगा असम में है और यह एक सींग वाले गैंडे के लिए प्रसिद्ध है।",
+   "ans": "A"
+  },
+  {
+   "n": 236,
+   "lvl": "UG",
+   "en": "Which of the following is listed as an effect of global warming?",
+   "hi": "निम्नलिखित में से किसे ग्लोबल वार्मिंग के प्रभाव के रूप में सूचीबद्ध किया गया है?",
+   "opts": [
+    "Permanent cooling of ocean surface waters<br>महासागरीय सतही जल का स्थायी शीतलन",
+    "Decrease in sea levels worldwide<br>विश्वभर में समुद्र-स्तर में कमी",
+    "Reduction in atmospheric temperature<br>वायुमंडलीय तापमान में कमी",
+    "Melting of glaciers and flooding of coastal areas<br>ग्लेशियरों का पिघलना और तटीय क्षेत्रों में बाढ़ का आना"
+   ],
+   "my_ans": "D",
+   "sol": "ग्लोबल वार्मिंग से तापमान बढ़ता है, जिससे ग्लेशियर पिघलते हैं और समुद्र का स्तर बढ़ने से तटीय इलाकों में बाढ़ आती है।",
+   "trick": "ग्लोबल वार्मिंग = बर्फ पिघलना + समुद्र स्तर बढ़ना।",
+   "ans": "D"
+  },
+  {
+   "n": 237,
+   "lvl": "UG",
+   "en": "In December 2025, in which of the following cities did the All Living Things Environmental Film Festival (ALT EFF) festival spark public dialogue on environmental issues through impactful films and discussions?",
+   "hi": "दिसंबर 2025 में, निम्नलिखित में से किस शहर में ऑल लिविंग थिंग्स एनवायरनमेंटल फिल्म फेस्टिवल (ALT EFF) ने प्रभावशाली फिल्मों और परिचर्चाओं के माध्यम से पर्यावरणीय मुद्दों पर लोक संवाद को बढ़ावा दिया?",
+   "opts": [
+    "Jaipur<br>जयपुर",
+    "Patna<br>पटना",
+    "Ahmedabad<br>अहमदाबाद",
+    "Bengaluru<br>बेंगलुरु"
+   ],
+   "my_ans": "D",
+   "sol": "ऑल लिविंग थिंग्स एनवायरनमेंटल फिल्म फेस्टिवल (ALT EFF) दिसंबर 2025 में बेंगलुरु में आयोजित किया गया था।",
+   "trick": "ALT EFF 2025 बेंगलुरु में हुआ।",
+   "ans": "D"
+  },
+  {
+   "n": 238,
+   "lvl": "UG",
+   "en": "World Toilet Day was observed on which date in 2025?",
+   "hi": "वर्ष 2025 में विश्व शौचालय दिवस किस तिथि को मनाया गया?",
+   "opts": [
+    "19 November<br>19 नवंबर",
+    "19 October<br>19 अक्टूबर",
+    "9 October<br>9 अक्टूबर",
+    "9 November<br>9 नवंबर"
+   ],
+   "my_ans": "A",
+   "sol": "विश्व शौचालय दिवस हर साल 19 नवंबर को मनाया जाता है, जिसका उद्देश्य स्वच्छता संकट के प्रति जागरूकता फैलाना है।",
+   "trick": "शौचालय दिवस 19 नवंबर को होता है।",
+   "ans": "A"
+  },
+  {
+   "n": 239,
+   "lvl": "UG",
+   "en": "In which year was the Pune Metro Rail Project inaugurated by the Prime Minister of India?",
+   "hi": "भारत के प्रधानमंत्री द्वारा पुणे मेट्रो रेल प्रोजेक्ट का उद्घाटन किस वर्ष किया गया था?",
+   "opts": [
+    "2015",
+    "2018",
+    "2020",
+    "2022"
+   ],
+   "my_ans": "D",
+   "sol": "पुणे मेट्रो रेल परियोजना का उद्घाटन प्रधानमंत्री नरेंद्र मोदी द्वारा 6 मार्च 2022 को किया गया था।",
+   "trick": "पुणे मेट्रो 2022 में शुरू हुई।",
+   "ans": "D"
+  },
+  {
+   "n": 240,
+   "lvl": "UG",
+   "en": "What was the primary theme of ClimateNXT 2025, the Indian summit held on World Environment Day (June 5, 2025)?",
+   "hi": "विश्व पर्यावरण दिवस (5 जून, 2025) पर आयोजित भारतीय शिखर सम्मेलन ClimateNXT 2025 का प्राथमिक विषय क्या था?",
+   "opts": [
+    "Sustainable Urban Living<br>सतत शहरी जीवन",
+    "Renewable Energy Transition<br>नवीकरणीय ऊर्जा संक्रमण",
+    "Climate Resilience and Adaptation<br>जलवायु लचीलापन और अनुकूलन",
+    "Plastic Waste Management<br>प्लास्टिक कचरा प्रबंधन"
+   ],
+   "my_ans": "C",
+   "sol": "ClimateNXT 2025 का मुख्य विषय जलवायु लचीलापन और अनुकूलन (Climate Resilience and Adaptation) था।",
+   "trick": "ClimateNXT 2025 का विषय जलवायु अनुकूलन था।",
+   "ans": "C"
+  }
+ ]
+}

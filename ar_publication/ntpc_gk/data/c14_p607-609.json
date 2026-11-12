@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "607-609",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 138,
+   "lvl": "UG",
+   "en": "The female labour force participation rate (LFPR) for persons aged 15+ in October 2025 reached approximately:",
+   "hi": "अक्टूबर 2025 में 15 वर्ष और उससे अधिक आयु की महिलाओं की श्रम बल भागीदारी दर (LFPR) लगभग कितनी हो गई?",
+   "opts": [
+    "30.0 %",
+    "32.0 %",
+    "34.2 %",
+    "38.0 %"
+   ],
+   "my_ans": "C",
+   "sol": "PLFS आंकड़ों (अक्टूबर 2025) के अनुसार, 15+ वर्ष की महिलाओं की श्रम बल भागीदारी दर (LFPR) में सुधार होकर यह लगभग 34.2% तक पहुंच गई है।",
+   "trick": "PLFS 2025: महिला LFPR 34.2% याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 139,
+   "lvl": "UG",
+   "en": "In September 2025, what principle did the Supreme Court affirm in Competition Commission of India v. Kerala Film Exhibitors Federation?",
+   "hi": "सितंबर 2025 में, भारतीय प्रतिस्पर्धा आयोग बनाम केरल फिल्म एग्जीबिटर्स फेडरेशन के मामले में सर्वोच्च न्यायालय ने किस सिद्धांत की पुष्टि की?",
+   "opts": [
+    "CCI may drop cases against trade bodies at its discretion<br>CCI अपने विवेक से व्यापारिक निकायों के खिलाफ मामलों को छोड़ सकता है।",
+    "CCI orders need prior clearance from the Union Cabinet<br>CCI के आदेशों के लिए केंद्रीय मंत्रिमंडल से पूर्व अनुमति की आवश्यकता होती है।",
+    "CCI may impose remedies and fix liability on office-bearers<br>CCI उपचार लागू कर सकता है और पदाधिकारियों पर उत्तरदायित्व निर्धारित कर सकता है।",
+    "CCI may impose only monetary fines on enterprises<br>CCI उद्यमों पर केवल मौद्रिक जुर्माना लगा सकता है।"
+   ],
+   "my_ans": "C",
+   "sol": "सर्वोच्च न्यायालय ने स्पष्ट किया कि CCI को व्यापारिक निकायों के पदाधिकारियों पर दायित्व तय करने और उपचार लागू करने का अधिकार है।",
+   "trick": "CCI के पास पदाधिकारियों पर दायित्व तय करने की शक्ति है।",
+   "ans": "C"
+  },
+  {
+   "n": 140,
+   "lvl": "UG",
+   "en": "Which Indian political leader was appointed as the central observer for the Bharatiya Janata Party’s legislative-party-leader selection in Bihar in Nov 2025?",
+   "hi": "नवंबर 2025 में बिहार में भारतीय जनता पार्टी के विधायक दल के नेता के चयन के लिए किस भारतीय राजनीतिक नेता को केंद्रीय पर्यवेक्षक के रूप में नियुक्त किया गया था?",
+   "opts": [
+    "Yogi Adityanath<br>योगी आदित्यनाथ",
+    "Keshav Prasad Maurya<br>केशव प्रसाद मौर्य",
+    "Arjun Ram Meghwal<br>अर्जुन राम मेघवाल",
+    "Sadhvi Niranjan Jyoti<br>साध्वी निरंजन ज्योति"
+   ],
+   "my_ans": "B",
+   "sol": "नवंबर 2025 में बिहार में भाजपा विधायक दल के नेता के चयन के लिए उत्तर प्रदेश के उपमुख्यमंत्री केशव प्रसाद मौर्य को केंद्रीय पर्यवेक्षक नियुक्त किया गया था।",
+   "trick": "बिहार भाजपा पर्यवेक्षक: केशव प्रसाद मौर्य।",
+   "ans": "B"
+  },
+  {
+   "n": 141,
+   "lvl": "UG",
+   "en": "In which of the following years did the Tata Group take over state-owned Air India?",
+   "hi": "निम्नलिखित में से किस वर्ष में, टाटा ग्रुप ने सरकारी स्वामित्व वाली एयर इंडिया का अधिग्रहण किया था?",
+   "opts": [
+    "2016",
+    "2019",
+    "2022",
+    "2013"
+   ],
+   "my_ans": "C",
+   "sol": "टाटा समूह ने जनवरी 2022 में एयर इंडिया के अधिग्रहण की बोली जीती और 27 जनवरी 2022 को इसका नियंत्रण अपने हाथ में ले लिया।",
+   "trick": "एयर इंडिया की टाटा में वापसी: 2022।",
+   "ans": "C"
+  },
+  {
+   "n": 142,
+   "lvl": "UG",
+   "en": "The Prime Minister of which of the following countries was conferred the ‘Speaker of the Knesset Medal’ by the Israeli Parliament in February 2026?",
+   "hi": "फरवरी 2026 में इजराइल की संसद द्वारा निम्नलिखित में से किस देश के प्रधानमंत्री को 'स्पीकर ऑफ द नेसेट मेडल' से सम्मानित किया गया?",
+   "opts": [
+    "Belgium<br>बेल्जियम",
+    "Luxembourg<br>लक्ज़मबर्ग",
+    "Spain<br>स्पेन",
+    "India<br>भारत"
+   ],
+   "my_ans": "D",
+   "sol": "फरवरी 2026 में, भारत-इजराइल संबंधों को मजबूत करने के लिए भारतीय प्रधानमंत्री को इजरायली संसद (नेसेट) द्वारा 'स्पीकर ऑफ द नेसेट मेडल' से सम्मानित किया गया।",
+   "trick": "इजराइल का सम्मान: भारतीय प्रधानमंत्री।",
+   "ans": "D"
+  },
+  {
+   "n": 143,
+   "lvl": "UG",
+   "en": "Who among the following was awarded the Col. CK Nayudu Lifetime Achievement Award in the men’s category at the BCCI Naman Awards 2025?",
+   "hi": "निम्नलिखित में से किसे BCCI नमन पुरस्कार 2025 में पुरुष वर्ग में कर्नल सीके नायडू लाइफटाइम अचीवमेंट पुरस्कार से सम्मानित किया गया?",
+   "opts": [
+    "Rahul Dravid<br>राहुल द्रविड़",
+    "Sourav Ganguly<br>सौरव गांगुली",
+    "Sachin Tendulkar<br>सचिन तेंदुलकर",
+    "Rohit Sharma<br>रोहित शर्मा"
+   ],
+   "my_ans": "C",
+   "sol": "BCCI नमन पुरस्कार 2025 में पुरुष वर्ग में कर्नल सीके नायडू लाइफटाइम अचीवमेंट पुरस्कार महान बल्लेबाज सचिन तेंदुलकर को प्रदान किया गया।",
+   "trick": "CK नायडू पुरस्कार 2025: सचिन तेंदुलकर।",
+   "ans": "C"
+  },
+  {
+   "n": 144,
+   "lvl": "UG",
+   "en": "Launched in 2019 by the Union Ministry of Housing and Urban Affairs, which initiative evaluates cities on climate resilience and sustainability performance?",
+   "hi": "केंद्रीय आवास और शहरी कार्य मंत्रालय द्वारा 2019 में शुरू की गई, कौन-सी पहल शहरों का मूल्यांकन, जलवायु प्रत्यास्थता और स्थिरता प्रदर्शन के आधार पर करती है?",
+   "opts": [
+    "Climate Smart Cities Assessment Framework<br>जलवायु-स्मार्ट शहरों का आकलन ढांचा",
+    "Urban Climate Change Adaptation Programme<br>शहरी जलवायु परिवर्तन अनुकूलन कार्यक्रम",
+    "National Action Plan on Climate Change<br>जलवायु परिवर्तन पर राष्ट्रीय कार्य योजना",
+    "National Mission on Sustainable Habitat<br>सतत पर्यावास पर राष्ट्रीय मिशन"
+   ],
+   "my_ans": "A",
+   "sol": "जलवायु-स्मार्ट शहरों का आकलन ढांचा (CSCAF) 2019 में शुरू किया गया था, जो शहरों के जलवायु लचीलेपन और स्थिरता का मूल्यांकन करता है।",
+   "trick": "जलवायु मूल्यांकन: CSCAF (2019)।",
+   "ans": "A"
+  },
+  {
+   "n": 145,
+   "lvl": "UG",
+   "en": "As announced in December 2025, Union Coal Minister G. Kishan Reddy stated that the target of 100 million tonnes under the Coal Gasification Mission is to be achieved by which year?",
+   "hi": "दिसंबर 2025 में की गई घोषणा के अनुसार, केंद्रीय कोयला मंत्री जी. किशन रेड्डी के अनुसार, कोयला गैसीकरण मिशन के अंतर्गत 100 मिलियन टन का लक्ष्य किस वर्ष तक प्राप्त किया जाना है?",
+   "opts": [
+    "2030",
+    "2034",
+    "2028",
+    "2032"
+   ],
+   "my_ans": "A",
+   "sol": "कोयला गैसीकरण मिशन के तहत 100 मिलियन टन कोयला गैसीकरण का लक्ष्य 2030 तक पूरा करने का निर्णय लिया गया है।",
+   "trick": "कोयला गैसीकरण लक्ष्य: 2030।",
+   "ans": "A"
+  },
+  {
+   "n": 146,
+   "lvl": "UG",
+   "en": "What was the Worker Population Ratio (WPR) for persons aged 15+ in India in October 2025 according to the Periodic Labour Force Survey (PLFS)?",
+   "hi": "आवधिक श्रम बल सर्वेक्षण (PLFS) के अनुसार, अक्टूबर 2025 में भारत में 15 वर्ष से अधिक आयु के व्यक्तियों के लिए श्रमिक जनसंख्या अनुपात (WPR) कितना था?",
+   "opts": [
+    "50.1 %",
+    "48.5 %",
+    "52.5 %",
+    "42.5 %"
+   ],
+   "my_ans": "C",
+   "sol": "PLFS (अक्टूबर 2025) के अनुसार, 15+ वर्ष की आयु के व्यक्तियों के लिए श्रमिक जनसंख्या अनुपात (WPR) 52.5% दर्ज किया गया।",
+   "trick": "WPR 2025: 52.5% याद रखें।",
+   "ans": "C"
+  },
+  {
+   "n": 147,
+   "lvl": "UG",
+   "en": "As per Haj Policy 2025, out of the total number of quota allocated to the Government of India (GoI), what percentage of Haj Seats are allocated to the Haj Committee of India (HCoI) and Haj Group Organisers (HGOs), respectively?",
+   "hi": "हज पॉलिसी 2025 के अनुसार, भारत सरकार (GoI) को आवंटित कुल कोटे में से, भारत की हज समिति (HCoI) और हज ग्रुप आयोजकों (HGOs) को क्रमशः कितने प्रतिशत हज सीटें आवंटित की गई हैं?",
+   "opts": [
+    "70% and 30%<br>70% और 30%",
+    "50% and 50%<br>50% और 50%",
+    "40% and 60%<br>40% और 60%",
+    "60% and 40%<br>60% और 40%"
+   ],
+   "my_ans": "A",
+   "sol": "हज नीति 2025 के तहत, भारत सरकार के कोटे का 70% हज कमेटी ऑफ इंडिया (HCoI) को और 30% हज ग्रुप ऑर्गनाइजर्स (HGOs) को आवंटित किया गया है।",
+   "trick": "हज कोटा: 70% (HCoI) और 30% (HGOs)।",
+   "ans": "A"
+  }
+ ]
+}

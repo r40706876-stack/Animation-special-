@@ -1,0 +1,174 @@
+{
+ "chapter": {
+  "no": 14,
+  "en": "Current Affairs",
+  "hi": "समसामयिकी",
+  "total": 400,
+  "gl": 118,
+  "ug": 282
+ },
+ "source_pages": "586-588",
+ "model": "gemini-3.1-flash-lite",
+ "questions": [
+  {
+   "n": 68,
+   "lvl": "GL",
+   "en": "World Mental Health Day 2025 (10 October) focused on which theme/campaign message, observed internationally and in India?",
+   "hi": "विश्व मानसिक स्वास्थ्य दिवस 2025 (10 अक्टूबर) किस थीम / अभियान संदेश पर केंद्रित था, जिसे अंतरराष्ट्रीय स्तर पर और भारत में मनाया गया?",
+   "opts": [
+    "Youth and Well-being<br>युवा और कल्याण",
+    "Mental Health at Work<br>कार्यस्थल पर मानसिक स्वास्थ्य",
+    "Universal Right to Care<br>देखभाल का सार्वभौमिक अधिकार",
+    "Mental health in humanitarian emergencies<br>मानवीय आपात स्थितियों में मानसिक स्वास्थ्य"
+   ],
+   "my_ans": "D",
+   "sol": "विश्व मानसिक स्वास्थ्य दिवस 2025 की थीम 'मानवीय आपात स्थितियों में मानसिक स्वास्थ्य' थी।<br>यह संकट, आपदाओं और संघर्षों के दौरान मानसिक स्वास्थ्य आवश्यकताओं पर केंद्रित है।",
+   "trick": "10 अक्टूबर: मानसिक स्वास्थ्य - आपातकालीन स्थितियों में देखभाल।",
+   "ans": "D"
+  },
+  {
+   "n": 69,
+   "lvl": "GL",
+   "en": "In 2025, India achieved which milestone in the UN Sustainable Development Goals (SDGs) rankings?",
+   "hi": "2025 में, भारत ने UN सस्टेनेबल डेवलपमेंट गोल्स (SDGs) रैंकिंग में किस उपलब्धि को प्राप्त किया?",
+   "opts": [
+    "India ranked first globally.<br>भारत ने विश्व स्तर पर प्रथम रैंक प्राप्त किया।",
+    "India dropped out of the top 100.<br>भारत टॉप 100 से बाहर हो गया।",
+    "India entered the top 100 for the first time.<br>भारत पहली बार टॉप 100 में शामिल हुआ।",
+    "India achieved all SDGs.<br>भारत ने सभी SDG प्राप्त कर लिए।"
+   ],
+   "my_ans": "C",
+   "sol": "2025 में भारत ने सतत विकास लक्ष्यों (SDG) की रैंकिंग में उल्लेखनीय सुधार किया और पहली बार शीर्ष 100 देशों में स्थान बनाया।",
+   "trick": "SDG रैंकिंग 2025: भारत पहली बार टॉप 100 में।",
+   "ans": "C"
+  },
+  {
+   "n": 70,
+   "lvl": "GL",
+   "en": "Who shared the 'Best Actor in a Comedy Series' award at the Filmfare OTT Awards in December 2025?",
+   "hi": "दिसंबर 2025 में फिल्मफेयर OTT अवार्ड्स में 'कॉमेडी सीरीज में बेस्ट एक्टर' का अवार्ड किनको संयुक्त रूप से दिया गया?",
+   "opts": [
+    "Barun Sobti and Sparsh Shrivastava<br>बरुण सोबती और स्पर्श श्रीवास्तव",
+    "Jaideep Ahlawat and Vikramaditya Motwane<br>जयदीप अहलावत और विक्रमादित्य मोटवानी",
+    "Sanya Malhotra and Monika Panwar<br>सान्या मल्होत्रा और मोनिका पंवार",
+    "Vinay Pathak and Rahul Bhatt<br>विनय पाठक और राहुल भट्ट"
+   ],
+   "my_ans": "A",
+   "sol": "दिसंबर 2025 के फिल्मफेयर OTT अवार्ड्स में बरुण सोबती और स्पर्श श्रीवास्तव को कॉमेडी सीरीज में उनके उत्कृष्ट प्रदर्शन के लिए संयुक्त रूप से बेस्ट एक्टर का पुरस्कार मिला।",
+   "trick": "OTT कॉमेडी बेस्ट एक्टर: बरुण सोबती और स्पर्श श्रीवास्तव।",
+   "ans": "A"
+  },
+  {
+   "n": 71,
+   "lvl": "GL",
+   "en": "What is the primary purpose of the Sustainable Development Goals – National Indicator Framework Progress Report, 2025?",
+   "hi": "सतत विकास लक्ष्य – राष्ट्रीय संकेतक ढांचा प्रगति रिपोर्ट, 2025 का प्राथमिक उद्देश्य क्या है?",
+   "opts": [
+    "To monitor national-level progress of the 17 SDGs<br>17 सतत विकास लक्ष्यों की राष्ट्रीय स्तर पर हुई प्रगति की निगरानी करना।",
+    "To allocate national funds for SDG projects<br>सतत विकास परियोजनाओं के लिए राष्ट्रीय निधि आवंटित करना",
+    "To conduct environmental fieldwork<br>पर्यावरण संबंधी क्षेत्रकार्य करने के लिए",
+    "To compare Indian SDGs with other countries<br>भारत के सतत विकास लक्ष्यों की तुलना अन्य देशों से करना।"
+   ],
+   "my_ans": "A",
+   "sol": "सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) द्वारा जारी इस रिपोर्ट का मुख्य उद्देश्य 17 सतत विकास लक्ष्यों (SDGs) पर भारत की प्रगति को ट्रैक और मॉनिटर करना है।",
+   "trick": "SDG-NIF रिपोर्ट: 17 लक्ष्यों की प्रगति की निगरानी।",
+   "ans": "A"
+  },
+  {
+   "n": 72,
+   "lvl": "GL",
+   "en": "In 2025, which United Nations body released the World Urbanization Prospects report using the Degree of Urbanization methodology?",
+   "hi": "2025 में, किस संयुक्त राष्ट्र निकाय ने शहरीकरण पद्धति की डिग्री (Degree of Urbanization methodology) का उपयोग करके विश्व शहरीकरण संभावनाएं रिपोर्ट जारी की?",
+   "opts": [
+    "UN Human Settlements Programme (UN-Habitat)<br>संयुक्त राष्ट्र मानव आवास कार्यक्रम (UN-Habitat)",
+    "UN Statistical Commission<br>संयुक्त राष्ट्र सांख्यिकी आयोग",
+    "UN Development Programme (UNDP)<br>संयुक्त राष्ट्र विकास कार्यक्रम (UNDP)",
+    "UN Department of Economic and Social Affairs (UN DESA)<br>संयुक्त राष्ट्र आर्थिक और सामाजिक मामलों का विभाग (UN DESA)"
+   ],
+   "my_ans": "D",
+   "sol": "विश्व शहरीकरण संभावनाएं (World Urbanization Prospects) रिपोर्ट संयुक्त राष्ट्र के आर्थिक और सामाजिक मामलों के विभाग (UN DESA) द्वारा जारी की जाती है।",
+   "trick": "शहरीकरण रिपोर्ट: UN DESA द्वारा प्रकाशित।",
+   "ans": "D"
+  },
+  {
+   "n": 73,
+   "lvl": "GL",
+   "en": "Which wildlife sanctuary in Madhya Pradesh was announced in October 2025 to be developed as the third cheetah habitat in the state?",
+   "hi": "अक्टूबर 2025 में, मध्य प्रदेश में किस वन्यजीव अभयारण्य को राज्य के तीसरे चीता प्राकृतिक आवास के रूप में विकसित करने की घोषणा की गई थी?",
+   "opts": [
+    "Gandhi Sagar Wildlife Sanctuary<br>गांधी सागर वन्यजीव अभयारण्य",
+    "Kuno National Park<br>कूनो राष्ट्रीय उद्यान",
+    "Nauradehi Wildlife Sanctuary<br>नौरादेही वन्यजीव अभयारण्य",
+    "Madhav National Park<br>माधव राष्ट्रीय उद्यान"
+   ],
+   "my_ans": "C",
+   "sol": "अक्टूबर 2025 में नौरादेही वन्यजीव अभयारण्य को मध्य प्रदेश का तीसरा चीता आवास घोषित किया गया। यह राज्य का सबसे बड़ा वन्यजीव अभयारण्य है।",
+   "trick": "MP का तीसरा चीता आवास: नौरादेही।",
+   "ans": "C"
+  },
+  {
+   "n": 74,
+   "lvl": "GL",
+   "en": "In 2025, the 2nd WHO Global Summit on Traditional Medicine officially began on 17 December in which city?",
+   "hi": "2025 में, पारंपरिक चिकित्सा पर द्वितीय WHO वैश्विक शिखर सम्मेलन आधिकारिक तौर पर 17 दिसंबर को किस शहर में आयोजित किया गया?",
+   "opts": [
+    "Bangkok<br>बैंकॉक",
+    "New Delhi<br>नई दिल्ली",
+    "Beijing<br>बीजिंग",
+    "Geneva<br>जिनेवा"
+   ],
+   "my_ans": "B",
+   "sol": "पारंपरिक चिकित्सा पर दूसरा WHO वैश्विक शिखर सम्मेलन 17 दिसंबर 2025 को नई दिल्ली में आयोजित किया गया था।",
+   "trick": "WHO पारंपरिक चिकित्सा शिखर सम्मेलन 2025: नई दिल्ली।",
+   "ans": "B"
+  },
+  {
+   "n": 75,
+   "lvl": "GL",
+   "en": "Which of the following number series was prescribed by the Telecom Regulatory Authority of India (TRAI) on 16 December 2025, for IRDAI-regulated entities to use for consumer service and transactional calls, to be implemented by 15 February 2026?",
+   "hi": "भारतीय दूरसंचार नियामक प्राधिकरण (TRAI) द्वारा 16 दिसंबर, 2025 को IRDAI-विनियमित संस्थाओं को उपभोक्ताओं को सेवा तथा लेनदेन संबंधी कॉल करने के लिए निम्नलिखित में से कौन-सी नंबर श्रृंखला निर्धारित की गई थी, जिसे 15 फरवरी, 2026 तक लागू किया जाना था?",
+   "opts": [
+    "1600 series<br>1600 श्रृंखला",
+    "1900 series<br>1900 श्रृंखला",
+    "1500 series<br>1500 श्रृंखला",
+    "1400 series<br>1400 श्रृंखला"
+   ],
+   "my_ans": "A",
+   "sol": "TRAI ने बीमा कंपनियों (IRDAI-विनियमित संस्थाओं) के लिए उपभोक्ता सेवा और लेनदेन कॉल हेतु '1600' नंबर श्रृंखला निर्धारित की है।",
+   "trick": "IRDAI कॉल श्रृंखला: 1600।",
+   "ans": "A"
+  },
+  {
+   "n": 76,
+   "lvl": "GL",
+   "en": "In 2025, which country officially became the 90th State Member of the International Union for Conservation of Nature (IUCN)?",
+   "hi": "2025 में, कौन-सा देश आधिकारिक तौर पर अंतरराष्ट्रीय प्रकृति संरक्षण संघ (IUCN) का 90वां राज्य सदस्य बना है?",
+   "opts": [
+    "Tuvalu<br>तुवालू",
+    "Nauru<br>नाउरु",
+    "Kiribati<br>किरिबाती",
+    "Maldives<br>मालदीव"
+   ],
+   "my_ans": "A",
+   "sol": "2025 में प्रशांत महासागरीय द्वीप देश तुवालू आधिकारिक तौर पर IUCN का 90वां सदस्य देश बना।",
+   "trick": "IUCN 90वां सदस्य: तुवालू।",
+   "ans": "A"
+  },
+  {
+   "n": 77,
+   "lvl": "GL",
+   "en": "In 2025, Bagram Air Base, the largest air base mentioned in the news after U.S. President Donald Trump’s bid to retake it, is located in which country?",
+   "hi": "वर्ष 2025 में, बगराम एयर बेस, जो कि अमेरिकी राष्ट्रपति डोनाल्ड ट्रम्प द्वारा इसे पुनः अपने स्वामित्व में लेने के प्रयास के बाद सुर्खियों में रहा है, किस देश में स्थित सबसे बड़ा एयर बेस है?",
+   "opts": [
+    "Afghanistan<br>अफगानिस्तान",
+    "Uzbekistan<br>उज्बेकिस्तान",
+    "Iran<br>ईरान",
+    "Pakistan<br>पाकिस्तान"
+   ],
+   "my_ans": "A",
+   "sol": "बगराम एयर बेस अफगानिस्तान में स्थित है, जो कभी अमेरिकी सेना का सबसे बड़ा सैन्य अड्डा था।",
+   "trick": "बगराम एयर बेस: अफगानिस्तान।",
+   "ans": "A"
+  }
+ ]
+}
