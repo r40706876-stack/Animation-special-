@@ -131,6 +131,8 @@ def call(body):
 
 def save_fig(q, pages, ch):
     f = q.pop("fig", None)
+    if not isinstance(f, dict) or not isinstance(f.get("box"), list) or len(f["box"]) != 4:
+        return  # chitra nahi hai - kuch nahi karna
     try:
         pg = int(f["page"]) if isinstance(f, dict) and f.get("page") else pages[0]
         y0, x0, y1, x1 = [max(0, min(1000, float(v))) for v in f["box"]]
