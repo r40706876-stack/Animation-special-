@@ -189,6 +189,57 @@ def add_tricks():
         time.sleep(6)
 
 
+BAD = re.compile(r"विकल्प के अनुसार|लेकिन विकल्प|उत्तर कुंजी|answer key|key के अनुसार|दिए गए उत्तर|विकल्पों में नहीं|कोई विकल्प नहीं|त्रुटि|not match|मेल नहीं|शायद|संभवतः|पुन: जाँच|पुनः जाँच|प्रश्न के अनुसार सही|निकटतम है", re.I)
+GOOD_MODELS = [m for m in MODELS if "lite" not in m]
+
+FIX_PROMPT = """The image is a page of an RRB NTPC {subject} PYQ book. Solve question Q.{n} on it ({lvl}) properly.
+The OFFICIAL correct answer is option ({ans}) = {opt}. Write a correct, clean, SHORT solution in simple Hindi (1-3 steps joined with <br>)
+that logically reaches exactly this answer. Re-read the question carefully from the IMAGE (the earlier solution misread it).
+NEVER mention errors, answer key, options, doubt or words like शायद/संभवतः/त्रुटि. If the printed question really has a typo,
+silently use the most likely intended reading. Also give "trick": one short Hindi memory line.
+Plain text/HTML only (x², a/b, <br>), no LaTeX, no double quotes.
+Return ONLY JSON: {{"sol": "...", "trick": "..."}}
+Question text: {q}"""
+
+
+def fix_bad():
+    """Gol-mol hal (त्रुटि/विकल्प के अनुसार...) ko achhe model se dobara likhwana. Har sawaal max 2 koshish."""
+    global MODELS
+    keep, MODELS = MODELS, GOOD_MODELS or MODELS
+    try:
+        for f in sorted(glob.glob(os.path.join(DATA, "c*_p*.json"))):
+            d = json.load(open(f, encoding="utf-8"))
+            changed = False
+            for q in d["questions"]:
+                if not BAD.search(q.get("sol", "")) or q.get("fix_tries", 0) >= 2:
+                    continue
+                pages = [int(x) for x in re.findall(r"\d+", d.get("source_pages", ""))]
+                pages = list(range(pages[0], pages[-1] + 1)) if pages else []
+                ans = q["ans"]
+                opt = re.sub("<[^>]+>", " ", q["opts"]["ABCD".index(ans)]) if ans in "ABCD" and len(q["opts"]) == 4 else ans
+                parts = [{"inline_data": {"mime_type": "image/png", "data": page_png_b64(p)}} for p in pages[:3]]
+                parts.append({"text": FIX_PROMPT.format(subject=SUBJECT, n=q["n"], lvl=q.get("lvl", ""), ans=ans, opt=opt,
+                                                        q=re.sub("<[^>]+>", " ", q["en"]))})
+                q["fix_tries"] = q.get("fix_tries", 0) + 1; changed = True
+                try:
+                    got, m = call({"contents": [{"parts": parts}], "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})
+                except RuntimeError as e:
+                    if "HTTP 429" in str(e):
+                        print("fix: aaj ki achhe model ki limit khatam, agle run mein"); q["fix_tries"] -= 1
+                        json.dump(d, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1); return
+                    continue
+                if isinstance(got, dict) and got.get("sol") and not BAD.search(got["sol"]):
+                    q["sol"] = got["sol"]
+                    if got.get("trick"):
+                        q["trick"] = got["trick"]
+                    print(f"fix: {os.path.basename(f)} Q.{q['n']} hal sudhara ({m})")
+                time.sleep(4)
+            if changed:
+                json.dump(d, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    finally:
+        MODELS = keep
+
+
 def main():
     if not KEYS:
         sys.exit("GEMINI_API_KEY secret nahi mila")
@@ -256,6 +307,7 @@ def main():
         print(f"pages {pages}: {len(qs)} sawaal ({model})")
         time.sleep(5)
     add_tricks()
+    fix_bad()
     if review:
         open(REVIEW, "a", encoding="utf-8").write("\n".join(review) + "\n")
         print("REVIEW:\n" + "\n".join(review))

@@ -101,7 +101,7 @@ def strip_tags(s):
 
 
 def q_html(q, k):
-    q = dict(q, en=clean(q["en"]), hi=clean(q["hi"]), sol=clean(q["sol"]), opts=[clean(o) for o in q["opts"]],
+    q = dict(q, en=clean(q["en"]), hi=clean(q["hi"]), sol=clean(q["sol"]), opts=([clean(o) for o in q["opts"]] + ["–"] * 4)[:4],
              trick=clean(q["trick"]) if q.get("trick") else "")
     c, s = QCOL[k % 4]
     fig = (f'<div class="fig"><img src="file://{os.path.join(BOOK_DIR, q["img"])}"></div>'

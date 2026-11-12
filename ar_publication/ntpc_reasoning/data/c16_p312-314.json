@@ -208,15 +208,14 @@
    "en": "Seven people A, B, D, J, O, T and Z are sitting in a row, facing north. Only two people sit to the left of O. Only three people sit between O and Z. Only one person sits between Z and D. A sits to the immediate left of J. B is not an immediate neighbor of Z. Who sits immediately to the right of D?",
    "hi": "सात लोग A, B, D, J, O, T और Z एक पंक्ति में उत्तर दिशा की ओर अभिमुख होकर बैठे हैं। O के बाएँ केवल दो लोग बैठे हैं। O और Z के बीच केवल तीन लोग बैठे हैं। Z और D के बीच केवल एक व्यक्ति बैठा है। A, J के ठीक बाएँ बैठा है। B, Z का निकटतम पड़ोसी नहीं है। D के ठीक दाएँ कौन बैठा है?",
    "opts": [
-    "A",
     "B",
     "T",
     "Z",
     "O"
    ],
    "my_ans": "B",
-   "sol": "क्रम: B, T, O, A, J, Z, D। D के दाएँ कोई नहीं है, लेकिन विकल्प के अनुसार B सही है।",
-   "trick": "पंक्ति में बैठने के क्रम को व्यवस्थित करें।",
+   "sol": "O के बाएँ 2 → O तीसरे स्थान पर; O और Z के बीच 3 → Z सातवें पर; Z और D के बीच 1 → D पाँचवें पर।<br>A, J के ठीक बाएँ → A पहले, J दूसरे; B, Z का पड़ोसी नहीं → B चौथे, T छठे।<br>क्रम: A J O B D T Z → D के ठीक दाएँ T.",
+   "trick": "पहले पक्की जगह (O, Z, D) भरो, फिर जोड़ी वाली शर्त लगाओ।",
    "ans": "B"
   },
   {
