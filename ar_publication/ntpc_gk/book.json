@@ -1,0 +1,159 @@
+{
+ "subject_en": "GK",
+ "subject_hi": "सामान्य ज्ञान",
+ "last_page": 693,
+ "pdf_name": "RRB_NTPC_GK_PYQ_Solutions_AR_Publication.pdf",
+ "sol_hint": "This is a General Knowledge book: instead of calculation steps, write a SHORT factual explanation in simple Hindi (1-2 lines: why this option is correct, with the key fact/date/person/article). For science/computer/economics give the key concept.",
+ "chapters": [
+  [
+   1,
+   "Ancient History",
+   "प्राचीन इतिहास",
+   5,
+   104,
+   43,
+   61,
+   "🏺"
+  ],
+  [
+   2,
+   "Medieval History",
+   "मध्यकालीन इतिहास",
+   37,
+   75,
+   39,
+   36,
+   "🏰"
+  ],
+  [
+   3,
+   "Modern History",
+   "आधुनिक इतिहास",
+   60,
+   171,
+   72,
+   99,
+   "📜"
+  ],
+  [
+   4,
+   "Art & Culture",
+   "कला एवं संस्कृति",
+   116,
+   46,
+   46,
+   0,
+   "🎭"
+  ],
+  [
+   5,
+   "Geography",
+   "भूगोल",
+   131,
+   271,
+   118,
+   153,
+   "🌍"
+  ],
+  [
+   6,
+   "Environment",
+   "पर्यावरण",
+   209,
+   37,
+   37,
+   0,
+   "🌿"
+  ],
+  [
+   7,
+   "Indian Polity",
+   "भारतीय राजव्यवस्था",
+   222,
+   332,
+   149,
+   183,
+   "⚖️"
+  ],
+  [
+   8,
+   "Economics",
+   "अर्थशास्त्र",
+   327,
+   174,
+   91,
+   83,
+   "📈"
+  ],
+  [
+   9,
+   "Physics",
+   "भौतिक विज्ञान",
+   382,
+   85,
+   33,
+   52,
+   "⚛️"
+  ],
+  [
+   10,
+   "Chemistry",
+   "रसायन विज्ञान",
+   406,
+   71,
+   24,
+   47,
+   "🧪"
+  ],
+  [
+   11,
+   "Biology",
+   "जीव विज्ञान",
+   427,
+   71,
+   39,
+   32,
+   "🧬"
+  ],
+  [
+   12,
+   "Computer Awareness",
+   "कंप्यूटर जागरूकता",
+   449,
+   224,
+   96,
+   128,
+   "💻"
+  ],
+  [
+   13,
+   "Static GK",
+   "स्थैतिक सामान्य ज्ञान",
+   520,
+   155,
+   31,
+   124,
+   "📚"
+  ],
+  [
+   14,
+   "Current Affairs",
+   "समसामयिकी",
+   564,
+   400,
+   118,
+   282,
+   "📰"
+  ],
+  [
+   15,
+   "International Affairs",
+   "अंतर्राष्ट्रीय मामले",
+   684,
+   25,
+   25,
+   0,
+   "🌐"
+  ]
+ ]
+}

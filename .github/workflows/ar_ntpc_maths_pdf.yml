@@ -1,4 +1,4 @@
-name: AR Publication - NTPC Maths + Reasoning PDF (Gemini)
+name: AR Publication - NTPC Maths + Reasoning + GK PDF (Gemini)
 # Ab ek se zyada books: ntpc_maths, ntpc_reasoning (har book ka folder ar_publication/<book>/ mein, book.json ke saath)
 
 on:
@@ -8,7 +8,7 @@ on:
         description: "Kaun si book (all = sab)"
         default: "all"
         type: choice
-        options: [all, ntpc_reasoning, ntpc_maths]
+        options: [all, ntpc_gk, ntpc_reasoning, ntpc_maths]
       start_page:
         description: "Book ka pehla page"
         default: "1"
@@ -56,7 +56,7 @@ jobs:
         continue-on-error: true   # beech mein ruke tab bhi bane hue page save honge
         run: |
           BOOKS="${{ inputs.book || 'all' }}"
-          [ "$BOOKS" = "all" ] && BOOKS="ntpc_reasoning ntpc_maths"
+          [ "$BOOKS" = "all" ] && BOOKS="ntpc_gk ntpc_reasoning ntpc_maths"
           for B in $BOOKS; do
             echo "=== $B ==="
             BOOK_DIR=ar_publication/$B python -u ar_publication/ntpc_maths/gemini_solve.py "${{ inputs.start_page || '1' }}" "${{ inputs.end_page || '999' }}" || true
@@ -74,7 +74,7 @@ jobs:
       - name: PDF banao
         if: always()
         run: |
-          for B in ntpc_reasoning ntpc_maths; do
+          for B in ntpc_gk ntpc_reasoning ntpc_maths; do
             ls ar_publication/$B/data/*.json >/dev/null 2>&1 && BOOK_DIR=ar_publication/$B python ar_publication/ntpc_maths/build_pdf.py || true
           done
 

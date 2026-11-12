@@ -29,6 +29,7 @@ DEAD = set()  # (key, model) jinki aaj ki limit khatam
 CHAPTERS = [tuple(c[:7]) for c in CFG["chapters"]]
 LAST_PAGE = CFG["last_page"]
 SUBJECT = CFG.get("subject_en", "Maths")
+HINT = ("\n  " + CFG["sol_hint"].replace("{", "(").replace("}", ")")) if CFG.get("sol_hint") else ""
 
 
 _PDF = None
@@ -58,8 +59,8 @@ def answer_key(ch):
     end = CHAPTERS[i + 1][3] - 1 if i + 1 < len(CHAPTERS) else LAST_PAGE
     txt = "".join(page_text(p) for p in range(ch[3], end + 1))
     k = txt.find("Answer Key")
-    if k < 0:
-        return {}
+    if k < 0:  # kuch books (GK) mein har sawaal ke saath hi "Q.12 GL Ans: (B)"
+        return {int(n): a for n, a in re.findall(r"Q\.(\d+)\s+(?:GL|UG)\s+Ans:\s*\(([ABCD])\)", txt)}
     return {int(n): a for n, a in re.findall(r"(?<![\d.])(\d{1,3})\s+([ABCD])\b", txt[k:])}
 
 
@@ -84,11 +85,11 @@ For EVERY question on this page return a JSON list. Each item:
 - "en": clean English question text, "hi": clean Hindi question text (fix spacing like "कु ल"→"कुल", "दू सरी"→"दूसरी")
 - "opts": exactly 4 option strings in order A,B,C,D (if an option has Hindi too, write "English<br>हिन्दी")
 - "my_ans": your own answer letter
-- "sol": a SHORT solution in simple Hindi (Devanagari), 1-3 lines joined with <br>, show only key steps and numbers, easy for a weak student. Do NOT write the final "उत्तर" line.
+- "sol": a SHORT solution in simple Hindi (Devanagari), 1-3 lines joined with <br>, show only key steps and numbers, easy for a weak student. Do NOT write the final "उत्तर" line.{hint}
 - "fig": ONLY if the question/options contain a diagram, figure or table that cannot be written as plain text: {{"page": <page number>, "box": [ymin, xmin, ymax, xmax]}} with coordinates 0-1000 on THAT page image, tightly around the figure only. Otherwise omit "fig".
 - "trick": ONE short Hindi line (max ~15 words) - a memory rule / shortcut / formula behind this question that the student should remember for the exam.
 Math formatting: use plain text/HTML only: x², 2³, √, ÷, ×, fractions as a/b, <sup>..</sup>, recurring as 0.<span style='text-decoration:overline'>5</span>, variables in <i>x</i>. No LaTeX, no markdown, no double quotes inside strings (use single quotes).
-Never write any coaching / channel / telegram name. Skip anything that is not a question (headers, answer-key tables).
+Never write any coaching / channel / telegram name. Write the solution in your OWN words - never copy any explanation printed on the page. Skip anything that is not a question (headers, answer-key tables).
 Official answers from the book key (use them; your solution must reach this answer): {keys}
 Return ONLY the JSON list. Example item: {example}
 
@@ -153,7 +154,7 @@ def save_fig(q, pages, ch):
 def ask_gemini(pages, text, keys):
     parts = [{"inline_data": {"mime_type": "image/png", "data": page_png_b64(p)}} for p in pages]
     note = f"There are {len(pages)} consecutive page images (pages {pages}). Cover EVERY question on ALL of them.\n" if len(pages) > 1 else ""
-    parts.append({"text": note + PROMPT.format(subject=SUBJECT, keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)})
+    parts.append({"text": note + PROMPT.format(subject=SUBJECT, hint=HINT, keys=json.dumps(keys), example=json.dumps(EXAMPLE, ensure_ascii=False), text=text)})
     return call({"contents": [{"parts": parts}],
                  "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})
 
